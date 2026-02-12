@@ -1,0 +1,44 @@
+{
+  "doc_id": "oaid-service",
+  "title": "开放匿名设备标识服务",
+  "path": "zh-cn/application-dev/ads-service/oaid/oaid-service.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ads-service/oaid/oaid-service.md",
+  "metadata": {
+    "kit": "Ads Kit",
+    "subsystem": "Advertising",
+    "owner": "@SukiEvas",
+    "designer": "@zhansf1988",
+    "tester": "@hongmei_may",
+    "adviser": "@RayShih"
+  },
+  "summary": "开放匿名设备标识符（Open Anonymous Device Identifier，简称 OAID）是一种非永久性设备标识符。基于 OAID，可以在保护用户个人数据隐私安全的前提下，向用户提供个性化广告，同时第三方监测平台也可以向广告主提供转化归因分析。媒体应用、广告平台、第三方监测平台等开发者可以获取设备上的 OAID，基于 OAID 进行个性化广告推荐或广告转化归因分析。",
+  "structure": {
+    "title": "开放匿名设备标识服务",
+    "sections": [
+      {
+        "section_id": "0001",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 21,
+        "summary": "介绍 OAID 的使用场景。OAID 会在以下场景中发生变化：用户将设备恢复出厂设置、用户操作重置 OAID。"
+      },
+      {
+        "section_id": "0002",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 36,
+        "summary": "提供 getOAID 接口，通过 Promise 异步返回结果。接口需要申请 ohos.permission.APP_TRACKING_CONSENT 权限并获取用户授权。"
+      },
+      {
+        "section_id": "0003",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 75,
+        "summary": "详细介绍开发步骤，包括在 module.json5 文件中申请权限、获取 context、调用 getOAID 接口、处理授权结果等。提供完整的代码示例。"
+      }
+    ]
+  }
+}

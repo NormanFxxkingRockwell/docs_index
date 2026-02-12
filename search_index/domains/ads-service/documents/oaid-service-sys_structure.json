@@ -1,0 +1,44 @@
+{
+  "doc_id": "oaid-service-sys",
+  "title": "重置OAID信息（仅对系统应用开放）",
+  "path": "zh-cn/application-dev/ads-service/oaid/oaid-service-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ads-service/oaid/oaid-service-sys.md",
+  "metadata": {
+    "kit": "Ads Kit",
+    "subsystem": "Advertising",
+    "owner": "@SukiEvas",
+    "designer": "@zhansf1988",
+    "tester": "@hongmei_may",
+    "adviser": "@RayShih"
+  },
+  "summary": "介绍重置 OAID 的场景和接口说明。提供 resetOAID 接口，此接口为系统接口，仅对系统应用开放。当用户操作重置 OAID 时，会触发此接口，系统应用需要实现并处理重置逻辑。",
+  "structure": {
+    "title": "重置OAID信息（仅对系统应用开放）",
+    "sections": [
+      {
+        "section_id": "0001",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 21,
+        "summary": "介绍 OAID 会在以下场景中发生变化：用户将设备恢复出厂设置、用户操作重置 OAID。当这些场景发生时，需要重置 OAID。"
+      },
+      {
+        "section_id": "0002",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 36,
+        "summary": "提供 resetOAID 接口，此接口为系统接口，仅对系统应用开放。系统应用需要实现此接口来处理 OAID 重置逻辑。"
+      },
+      {
+        "section_id": "0003",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 94,
+        "summary": "详细介绍系统应用的开发步骤，包括在 module.json5 文件中声明系统接口、实现 resetOAID 方法、处理重置逻辑等。提供完整的代码示例。"
+      }
+    ]
+  }
+}
