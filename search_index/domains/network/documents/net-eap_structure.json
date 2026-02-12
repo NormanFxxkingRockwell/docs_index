@@ -1,0 +1,44 @@
+{
+  "doc_id": "net-eap",
+  "title": "扩展认证",
+  "path": "zh-cn/application-dev/network/net-eap.md",
+  "relative_path": "../../docs/zh-cn/application-dev/network/net-eap.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@foredward",
+    "designer": "@h00918518",
+    "tester": "@WIFIroam-test",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍扩展认证（EAP）功能，支持定制化802.1X认证流程。提供监听与修改802.1X报文交互流程的能力，以及对eth网口发起802.1X认证和去认证的能力。从API version 20开始支持。",
+  "structure": {
+    "title": "扩展认证",
+    "sections": [
+      {
+        "section_id": "0001",
+        "title": "简介",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 30,
+        "summary": "介绍扩展认证的背景和功能。部分企业用户使用802.1X认证方式，需要操作系统提供三方客户端介入认证流程的机制。"
+      },
+      {
+        "section_id": "0002",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 45,
+        "summary": "介绍定制化802.1X认证流程的典型场景，包括企业网管应用在Wi-Fi的802.1X认证流程中加入自定义安全校验、使用eth网口进行802.1X安全认证等。"
+      },
+      {
+        "section_id": "0003",
+        "title": "802.1X认证流程中加入自定义的安全校验",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 200,
+        "summary": "详细介绍如何在802.1X认证流程中加入自定义安全校验，包括导入模块、注册EAP报文监听、处理认证报文等步骤。"
+      }
+    ]
+  }
+}

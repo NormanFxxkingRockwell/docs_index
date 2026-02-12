@@ -1,0 +1,147 @@
+{
+  "domain": "Network",
+  "domain_summary": "Network Kit 是 OpenHarmony 提供的网络通信服务框架，涵盖 HTTP、WebSocket、Socket、网络连接管理、DNS 解析、VPN、网络防火墙、流量统计、MDNS、网络共享、以太网连接、扩展认证等多种网络相关功能。",
+  "core_concepts": [
+    "HTTP请求",
+    "WebSocket双向通信",
+    "Socket连接",
+    "网络连接管理",
+    "DNS解析",
+    "VPN虚拟专用网络",
+    "网络防火墙",
+    "流量统计",
+    "MDNS多播DNS",
+    "网络共享",
+    "以太网连接",
+    "扩展认证EAP"
+  ],
+  "document_count": 18,
+  "documents": [
+    {
+      "doc_id": "Readme-CN",
+      "title": "Network Kit（网络服务）",
+      "path": "../../docs/zh-cn/application-dev/network/Readme-CN.md",
+      "summary": "Network Kit（网络服务）的总体介绍，包含HTTP数据请求、WebSocket连接、Socket连接、网络连接管理、MDNS管理、网络共享、以太网连接、VPN、网络防火墙、流量统计、扩展认证等功能模块的导航。",
+      "key_topics": ["Network Kit", "网络服务"]
+    },
+    {
+      "doc_id": "network-terminology",
+      "title": "Network Kit术语",
+      "path": "../../docs/zh-cn/application-dev/network/network-terminology.md",
+      "summary": "Network Kit相关术语解释，包括DNS、HTTP、HTTPS、MDNS、SSL、TCP、TLS、UDP、VPN等网络协议和技术的定义。",
+      "key_topics": ["术语", "网络协议"]
+    },
+    {
+      "doc_id": "http-request",
+      "title": "使用HTTP访问网络",
+      "path": "../../docs/zh-cn/application-dev/network/http-request.md",
+      "summary": "介绍如何使用HTTP发起网络请求，支持GET、POST、OPTIONS、HEAD、PUT、DELETE、TRACE、CONNECT方法。提供两种HTTP请求方式：普通请求和流式传输（用于大文件上传下载）。支持请求头设置、超时配置、代理设置、证书验证、DNS解析等功能。",
+      "key_topics": ["HTTP", "网络请求", "GET", "POST"]
+    },
+    {
+      "doc_id": "websocket-connection",
+      "title": "使用WebSocket访问网络",
+      "path": "../../docs/zh-cn/application-dev/network/websocket-connection.md",
+      "summary": "介绍WebSocket协议的使用，支持客户端和服务端双向实时通信。WebSocket与HTTP的主要区别是支持全双工通信，适用于在线聊天、实时游戏等场景。提供心跳检测机制，从API version 23开始支持全设备使用服务端。",
+      "key_topics": ["WebSocket", "双向通信", "实时通信"]
+    },
+    {
+      "doc_id": "native-websocket-guidelines",
+      "title": "使用WebSocket访问网络(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/network/native-websocket-guidelines.md",
+      "summary": "介绍WebSocket模块的C/C++接口，提供建立服务器与客户端双向连接的能力。包括客户端构造、连接、发送、关闭、销毁等接口。使用Native C++开发。",
+      "key_topics": ["WebSocket", "C/C++", "Native API"]
+    },
+    {
+      "doc_id": "socket-connection",
+      "title": "使用Socket访问网络",
+      "path": "../../docs/zh-cn/application-dev/network/socket-connection.md",
+      "summary": "介绍Socket连接的使用，支持TCP/UDP/Multicast/TLS协议进行数据传输。支持TCP/UDP客户端和服务器端、多播通信、Local Socket进程间通信、TLS加密传输等多种场景。",
+      "key_topics": ["Socket", "TCP", "UDP", "TLS"]
+    },
+    {
+      "doc_id": "net-mdns",
+      "title": "使用MDNS访问局域网服务",
+      "path": "../../docs/zh-cn/application-dev/network/net-mdns.md",
+      "summary": "介绍MDNS（多播DNS）功能，提供局域网内的本地服务添加、删除、发现、解析等能力。支持管理本地服务和发现本地服务两种典型场景。",
+      "key_topics": ["MDNS", "多播DNS", "局域网"]
+    },
+    {
+      "doc_id": "net-dns",
+      "title": "使用DNS解析域名",
+      "path": "../../docs/zh-cn/application-dev/network/net-dns.md",
+      "summary": "介绍DNS域名解析功能，支持中文字符与ASCII码之间的转换、获取指定域名的IP地址列表、以及在不同网络环境下进行域名解析。从API version 23开始支持中文域名转码。",
+      "key_topics": ["DNS", "域名解析", "中文域名"]
+    },
+    {
+      "doc_id": "net-connection-manager",
+      "title": "管理网络连接",
+      "path": "../../docs/zh-cn/application-dev/network/net-connection-manager.md",
+      "summary": "网络连接管理提供管理网络的基础能力，包括WiFi/蜂窝/Ethernet等多网络连接优先级管理、网络质量评估、订阅默认/指定网络连接状态变化、查询网络连接信息、DNS解析等功能。",
+      "key_topics": ["网络连接管理", "WiFi", "蜂窝", "Ethernet"]
+    },
+    {
+      "doc_id": "native-netmanager-guidelines",
+      "title": "管理网络连接(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/network/native-netmanager-guidelines.md",
+      "summary": "介绍NetConnection模块的网络信息查询能力，提供检查默认网络、获取默认网络、检查网络是否计量、获取连接信息、DNS解析等接口。使用Native C++开发。",
+      "key_topics": ["网络连接管理", "C/C++", "Native API"]
+    },
+    {
+      "doc_id": "net-vpnExtension",
+      "title": "连接VPN",
+      "path": "../../docs/zh-cn/application-dev/network/net-vpnExtension.md",
+      "summary": "介绍VPN（虚拟专用网络）功能，提供创建虚拟网卡及配置VPN路由信息的能力。连接隧道过程及内部连接的协议需要应用内部自行实现。",
+      "key_topics": ["VPN", "虚拟专用网络", "VPN Extension"]
+    },
+    {
+      "doc_id": "net-vpn-sys",
+      "title": "VPN管理（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/network/net-vpn-sys.md",
+      "summary": "介绍VPN（虚拟专网）管理功能，在公用网络上建立专用网络的技术。提供建立VPN网络、保护VPN隧道、销毁VPN网络等能力。使用Native C++方式开发。仅对系统应用开放。",
+      "key_topics": ["VPN", "系统应用", "Native C++"]
+    },
+    {
+      "doc_id": "net-statistics",
+      "title": "统计网络流量消耗",
+      "path": "../../docs/zh-cn/application-dev/network/net-statistics.md",
+      "summary": "介绍流量管理功能，提供基于物理网络的数据流量统计能力，支持基于网卡/UID的实时流量统计、历史流量统计和流量变化订阅。",
+      "key_topics": ["流量统计", "网络流量", "网卡"]
+    },
+    {
+      "doc_id": "net-netfirewall",
+      "title": "使用网络防火墙",
+      "path": "../../docs/zh-cn/application-dev/network/net-netfirewall.md",
+      "summary": "介绍网络防火墙功能，包括防火墙基础能力（使能、规则启用与禁用、审计）、防火墙规则配置（名称、描述、操作、应用、协议、地址、端口等）、DNS策略配置（禁止/允许解析域名、DNS服务器）。",
+      "key_topics": ["防火墙", "网络安全", "访问控制"]
+    },
+    {
+      "doc_id": "net-eap",
+      "title": "扩展认证",
+      "path": "../../docs/zh-cn/application-dev/network/net-eap.md",
+      "summary": "介绍扩展认证（EAP）功能，支持定制化802.1X认证流程。提供监听与修改802.1X报文交互流程的能力，以及对eth网口发起802.1X认证和去认证的能力。从API version 20开始支持。",
+      "key_topics": ["EAP", "802.1X认证", "扩展认证"]
+    },
+    {
+      "doc_id": "net-sharing-sys",
+      "title": "网络共享（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/network/net-sharing-sys.md",
+      "summary": "介绍网络共享管理功能，分享设备已有网络给其他连接设备。支持Wi-Fi热点共享、蓝牙共享和USB共享，同时提供网络共享状态、共享流量查询功能。仅对系统应用开放。",
+      "key_topics": ["网络共享", "热点共享", "蓝牙共享", "USB共享"]
+    },
+    {
+      "doc_id": "net-ethernet-sys",
+      "title": "以太网连接管理（仅对系统应用开放））",
+      "path": "../../docs/zh-cn/application-dev/network/net-ethernet-sys.md",
+      "summary": "介绍以太网连接功能，提供支持设备通过硬件接口，以插入网线的形式访问互联网的能力。设备接入网线后，可以获取动态分配的IP地址，子网掩码，Gateway，DNS等一系列网络属性；通过静态模式，可以手动配置与获取设备的网络属性。仅对系统应用开放。",
+      "key_topics": ["以太网", "有线网络", "DHCP", "静态配置"]
+    },
+    {
+      "doc_id": "net-mgmt-overview",
+      "title": "Network Kit简介",
+      "path": "../../docs/zh-cn/application-dev/network/net-mgmt-overview.md",
+      "summary": "Network Kit（网络服务）提供HTTP数据请求、WebSocket连接、Socket连接、网络连接管理、MDNS管理、网络共享、以太网连接等功能。使用网络管理模块需要申请相应权限，如ohos.permission.GET_NETWORK_INFO和ohos.permission.INTERNET。",
+      "key_topics": ["Network Kit", "网络服务", "权限"]
+    }
+  ]
+}
