@@ -1,0 +1,76 @@
+{
+  "doc_id": "idl-guidelines",
+  "title": "OpenHarmony IDL工具规格及使用说明书（仅对系统应用开放）",
+  "path": "zh-cn/application-dev/IDL/idl-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/IDL/idl-guidelines.md",
+  "metadata": {
+    "kit": "IDL",
+    "subsystem": "SystemManagementServices",
+    "owner": "@c_bing_b",
+    "designer": "@liveery",
+    "tester": "@alien0208",
+    "adviser": "@huipeizi"
+  },
+  "summary": "OpenHarmony IDL（Interface Definition Language）是一种定义接口的工具，用于客户端和服务器进行IPC通信时定义双方都认可的接口。支持声明系统服务和Ability对外提供的服务接口，根据接口声明在编译时生成跨进程调用（IPC）或跨设备调用（RPC）的代理和桩代码。提供基础数据类型、sequenceable数据类型、接口类型、数组类型和容器类型，支持TS和C++两种开发语言。",
+  "structure": {
+    "title": "OpenHarmony IDL工具规格及使用说明书（仅对系统应用开放）",
+    "sections": [
+      {
+        "section_id": "0001",
+        "title": "IDL接口描述语言简介",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 31,
+        "summary": "介绍OpenHarmony IDL的基本概念和用途。IDL是一种定义接口的工具，用于客户端和服务器进行IPC通信时定义双方都认可的接口。主要用于声明系统服务对外提供的服务接口和Ability对外提供的服务接口，根据接口声明生成跨进程调用或跨设备调用的代理和桩代码。"
+      },
+      {
+        "section_id": "0002",
+        "title": "IDL接口描述语言构成",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 158,
+        "summary": "介绍IDL接口描述语言的构成，包括基础数据类型、sequenceable数据类型、接口类型、数组类型和容器类型。基础数据类型包括void、boolean、byte、short、int、long、float、double、String等，映射到C++和TS的基本数据类型。"
+      },
+      {
+        "section_id": "0003",
+        "title": "IDL文件编写规范",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 158,
+        "summary": "说明IDL文件的编写规范。一个idl文件只能定义一个interface类型，且该interface名称必须和文件名相同。接口定义使用BNF范式描述，支持oneway属性表示单向方法。"
+      },
+      {
+        "section_id": "0004",
+        "title": "获取IDL工具",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 182,
+        "summary": "介绍获取IDL工具的两种方法。方法一（推荐）：在Linux系统下载OpenHarmony的两个仓并执行make命令。方法二：通过DevEco Studio查看SDK路径并使用SDK中的idl工具。"
+      },
+      {
+        "section_id": "0005",
+        "title": "TS开发步骤",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 424,
+        "summary": "详细介绍使用TS开发IDL的步骤，包括创建.idl文件、服务端公开接口、客户端调用IPC方法、IPC传递sequenceable对象等。提供完整的代码示例和说明。"
+      },
+      {
+        "section_id": "0006",
+        "title": "C++开发SA步骤（编译期自动生成SA接口模板代码）",
+        "level": 2,
+        "line_start": 425,
+        "line_end": 896,
+        "summary": "详细介绍使用C++开发SA的步骤，包括创建.idl文件、BUILD.gn文件修改方法一和二、配置依赖、编译生成so等。提供以应用快速修复服务为例的完整示例。"
+      },
+      {
+        "section_id": "0007",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 897,
+        "line_end": 898,
+        "summary": "提供相关实例的参考链接，包括Ability与ServiceExtensionAbility通信的示例。"
+      }
+    ]
+  }
+}
