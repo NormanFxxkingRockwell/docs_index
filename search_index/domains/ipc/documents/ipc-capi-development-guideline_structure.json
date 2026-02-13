@@ -1,0 +1,44 @@
+{
+  "doc_id": "ipc-capi-development-guideline",
+  "title": "IPC与RPC通信开发指导(C/C++)",
+  "path": "zh-cn/application-dev/ipc/ipc-capi-development-guideline.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ipc/ipc-capi-development-guideline.md",
+  "metadata": {
+    "kit": "IPC Kit",
+    "subsystem": "Communication",
+    "owner": "@xdx19211@luodonghui0157",
+    "designer": "@zhaopeng_gitee",
+    "tester": "@Lyuxin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍如何使用C/C++开发IPC与RPC通信，包括IPC CAPI接口说明、开发步骤、动态库文件、头文件、子进程实现等。",
+  "structure": {
+    "title": "IPC与RPC通信开发指导(C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 18,
+        "summary": "介绍IPC CAPI的使用场景和进程间IPC通道的建立方式。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 33,
+        "summary": "介绍IPC CAPI侧关键接口，包括OH_OnRemoteRequestCallback、OH_IPCRemoteStub_Create、OH_IPCRemoteProxy_SendRequest等。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 100,
+        "summary": "介绍IPC CAPI的开发步骤，包括创建服务端Stub对象、获取客户端代理Proxy对象、注册远端对象的死亡通知回调等。"
+      }
+    ]
+  }
+}
