@@ -1,0 +1,138 @@
+{
+  "domain": "Notification",
+  "domain_summary": "Notification Kit（用户通知服务）为开发者提供本地通知发布通道，支持文本、进度条、实况窗等多种通知类型，提供通知授权、通知角标管理、通知渠道管理、通知更新与取消、跨设备协同通知、通知订阅扩展能力等功能。支持ArkTS开发，部分功能仅对系统应用开放。",
+  "core_concepts": [
+    "通知授权",
+    "文本通知",
+    "进度条通知",
+    "通知角标",
+    "通知渠道",
+    "通知更新",
+    "取消通知",
+    "WantAgent行为意图",
+    "跨设备协同通知",
+    "通知订阅扩展能力"
+  ],
+  "document_count": 17,
+  "documents": [
+    {
+      "doc_id": "Readme-CN",
+      "title": "Notification Kit（用户通知服务）",
+      "path": "../../docs/zh-cn/application-dev/notification/Readme-CN.md",
+      "summary": "Notification Kit（用户通知服务）的总体介绍，包含通知授权、通知角标管理、通知渠道管理、文本类型通知、进度条类型通知、实况窗类型通知、通知行为意图、通知更新、取消通知、订阅通知、跨设备协同通知、通知订阅扩展能力等功能模块的导航。",
+      "key_topics": ["Notification Kit", "用户通知服务", "通知发布", "跨设备协同"]
+    },
+    {
+      "doc_id": "notification-overview",
+      "title": "Notification Kit简介",
+      "path": "../../docs/zh-cn/application-dev/notification/notification-overview.md",
+      "summary": "Notification Kit（用户通知服务）为开发者提供本地通知发布通道，支持发布文本、进度条等类型通知，携带或更新应用通知数字角标，取消通知，查询已发布的通知列表，查询应用自身通知开关状态，请求用户授权发布通知等功能。",
+      "key_topics": ["Notification Kit", "本地通知", "通知授权", "通知样式"]
+    },
+    {
+      "doc_id": "notification-enable",
+      "title": "请求通知授权",
+      "path": "../../docs/zh-cn/application-dev/notification/notification-enable.md",
+      "summary": "应用需要获取用户授权才能发送通知。提供isNotificationEnabled()查询通知是否授权、requestEnableNotification()请求发送通知的许可、openNotificationSettings()拉起通知管理弹窗等接口。",
+      "key_topics": ["通知授权", "权限请求", "通知管理"]
+    },
+    {
+      "doc_id": "text-notification",
+      "title": "发布文本类型通知",
+      "path": "../../docs/zh-cn/application-dev/notification/text-notification.md",
+      "summary": "文本类型通知主要应用于发送短信息、提示信息等，支持普通文本类型（NOTIFICATION_CONTENT_BASIC_TEXT）和多行文本类型（NOTIFICATION_CONTENT_MULTILINE）。普通文本类型由标题、文本内容和附加信息三个字段组成，多行文本类型还包含多行文本内容、内容概要和通知展开时的标题。",
+      "key_topics": ["文本通知", "普通文本", "多行文本", "通知发布"]
+    },
+    {
+      "doc_id": "progress-bar-notification",
+      "title": "发布进度条类型通知",
+      "path": "../../docs/zh-cn/application-dev/notification/progress-bar-notification.md",
+      "summary": "进度条通知主要应用于文件下载、事务处理进度显示。系统提供进度条模板downloadTemplate，应用应设置好进度条模板的属性值（模板名、模板数据），通过通知子系统发送到通知栏显示。提供isSupportTemplate()接口查询模板是否支持。",
+      "key_topics": ["进度条通知", "通知模板", "进度显示", "downloadTemplate"]
+    },
+    {
+      "doc_id": "notification-with-wantagent",
+      "title": "为通知添加行为意图",
+      "path": "../../docs/zh-cn/application-dev/notification/notification-with-wantagent.md",
+      "summary": "应用向Ability Kit申请WantAgent，并将WantAgent封装至通知中。用户可以通过点击通知栏中的消息或按钮，拉起目标应用组件或发布公共事件。支持创建拉起UIAbility的WantAgent和发布公共事件的WantAgent两种场景。",
+      "key_topics": ["WantAgent", "行为意图", "通知交互", "公共事件"]
+    },
+    {
+      "doc_id": "notification-update",
+      "title": "更新通知",
+      "path": "../../docs/zh-cn/application-dev/notification/notification-update.md",
+      "summary": "更新已发布的通知，主要用于上传下载进度更新、IM会话消息更新等场景。通过NotificationRequest携带updateOnly字段来指定更新行为：当updateOnly为true时，若相同ID通知存在则更新，不存在则更新失败；当updateOnly为false时，若相同ID通知存在则更新，不存在则创建通知。",
+      "key_topics": ["通知更新", "进度更新", "updateOnly"]
+    },
+    {
+      "doc_id": "notification-cancel",
+      "title": "取消通知",
+      "path": "../../docs/zh-cn/application-dev/notification/notification-cancel.md",
+      "summary": "用户点击通知并拉起应用到前台时，应用可以取消某条通知、部分通知或所有通知。提供cancel()接口取消指定的通知，cancelAll()接口取消所有该应用发布的通知。适用于用户查看消息后取消相关通知提醒的场景。",
+      "key_topics": ["取消通知", "cancel", "cancelAll"]
+    },
+    {
+      "doc_id": "notification-slot",
+      "title": "管理通知渠道",
+      "path": "../../docs/zh-cn/application-dev/notification/notification-slot.md",
+      "summary": "系统支持多种通知渠道，不同通知渠道对应的通知提醒方式不同。提供SOCIAL_COMMUNICATION（社交通信）、SERVICE_INFORMATION（服务提醒）、CONTENT_INFORMATION（内容资讯）、CUSTOMER_SERVICE（客服消息）等渠道类型。支持addSlot()创建、getSlot()查询、removeSlot()删除通知渠道。",
+      "key_topics": ["通知渠道", "SlotType", "社交通信", "服务提醒", "内容资讯", "客服消息"]
+    },
+    {
+      "doc_id": "notification-badge",
+      "title": "管理通知角标",
+      "path": "../../docs/zh-cn/application-dev/notification/notification-badge.md",
+      "summary": "针对未读的通知，系统提供角标设置接口，将未读通知个数显示在桌面图标的右上角角标上。角标设定个数取值小于或等于0时表示清除角标，取值大于99时显示99+。支持通过NotificationRequest的badgeNumber字段携带或调用setBadgeNumber()接口设置。",
+      "key_topics": ["通知角标", "角标管理", "setBadgeNumber", "未读通知"]
+    },
+    {
+      "doc_id": "notification-distributed-overview",
+      "title": "跨设备协同通知概述",
+      "path": "../../docs/zh-cn/application-dev/notification/notification-distributed-overview.md",
+      "summary": "跨设备协同通知旨在以手机为中心，实现与手表等其他设备的通知消息协同交互。从API Version 18开始支持手机与手表之间通知消息的协同，从API Version 20开始支持手机与平板、2in1设备之间通知消息的协同。支持的通知渠道包括社交通信、服务提醒、实况窗、客服消息等。",
+      "key_topics": ["跨设备协同", "通知同步", "手表", "平板", "2in1"]
+    },
+    {
+      "doc_id": "notification-distributed-messageid",
+      "title": "清除跨设备场景下的重复通知",
+      "path": "../../docs/zh-cn/application-dev/notification/notification-distributed-messageid.md",
+      "summary": "从API version 20开始，为了避免不同渠道发布的通知之间重复打扰用户（例如手机协同到当前设备的通知与Push推送服务发布的通知重复），可以使用通知去重功能。应用发送通知时携带唯一标识字段appMessageId，分布式通知接收到多渠道发布的通知后，会根据该字段进行判断，从而实现通知去重。",
+      "key_topics": ["通知去重", "appMessageId", "跨设备", "重复通知"]
+    },
+    {
+      "doc_id": "notification-subscriber-extension-ability",
+      "title": "NotificationSubscriberExtensionAbility (开发概述)",
+      "path": "../../docs/zh-cn/application-dev/notification/notification-subscriber-extension-ability.md",
+      "summary": "NotificationSubscriberExtensionAbility扩展能力的核心作用是让三方应用接收系统通知，应用可在此扩展能力中实现手机与穿戴设备之间的数据传输。支持低功耗蓝牙（Bluetooth Low Energy）和传统蓝牙两种同步方式。三方穿戴应用需申请ohos.permission.SUBSCRIBE_NOTIFICATION权限。",
+      "key_topics": ["NotificationSubscriberExtensionAbility", "通知订阅", "穿戴设备", "蓝牙同步"]
+    },
+    {
+      "doc_id": "notification-subscriber-extension-ability-development-steps",
+      "title": "通知订阅扩展能力开发步骤",
+      "path": "../../docs/zh-cn/application-dev/notification/notification-subscriber-extension-ability-development-steps.md",
+      "summary": "介绍NotificationSubscriberExtensionAbility的开发步骤，包括创建NotificationSubscriberExtensionAbility、实现onDestroy()、onReceiveMessage()、onCancelMessages()等回调接口、连接穿戴设备、配置extensionAbilities等。需要申请ohos.permission.SUBSCRIBE_NOTIFICATION和ohos.permission.ACCESS_BLUETOOTH权限。",
+      "key_topics": ["NotificationSubscriberExtensionAbility", "开发步骤", "蓝牙连接", "SppClientManager"]
+    },
+    {
+      "doc_id": "notification-subscription-sys",
+      "title": "订阅通知（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/notification/notification-subscription-sys.md",
+      "summary": "应用需要接收通知，必须先发起订阅，通知子系统提供订阅所有应用发布的通知和订阅某些应用发布的通知两种接口。系统提供NotificationSubscriber对象，用于提供订阅成功、通知接收、通知取消、订阅取消等回调接口。仅对系统应用开放，需要申请ohos.permission.NOTIFICATION_CONTROLLER权限。",
+      "key_topics": ["通知订阅", "NotificationSubscriber", "系统应用", "IPC通信"]
+    },
+    {
+      "doc_id": "notification-distributed-notdistributed-sys",
+      "title": "通知消息跨设备协同管理（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/notification/notification-distributed-notdistributed-sys.md",
+      "summary": "支持系统应用对分布式通知的协同设备进行管理。通过NotificationRequest的notDistributed字段配置应用通知消息仅在当前设备发布，通过notDistributed和forceDistributed字段配置应用通知消息按设备管控名单发布。仅对系统应用开放。",
+      "key_topics": ["跨设备协同管理", "notDistributed", "forceDistributed", "系统应用"]
+    },
+    {
+      "doc_id": "live-view-notification-sys",
+      "title": "发布实况窗类型通知（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/notification/live-view-notification-sys.md",
+      "summary": "实况窗类型的通知可以让用户实时感知当前任务的进度，主要用于展示录音、录屏、音视频播放、计时、通话等长时任务的实时进展。此类通知不会进行持久化存储，其生命周期与通知发布方的生命周期一致。包含类型标识符、胶囊、按钮、时间和进度等字段。仅对系统应用开放。",
+      "key_topics": ["实况窗通知", "长时任务", "进度显示", "系统应用"]
+    }
+  ]
+}
