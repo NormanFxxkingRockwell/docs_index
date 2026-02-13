@@ -1,0 +1,84 @@
+{
+  "doc_id": "telephony-sms",
+  "title": "短信服务",
+  "path": "zh-cn/application-dev/telephony/telephony-sms.md",
+  "relative_path": "../../docs/zh-cn/application-dev/telephony/telephony-sms.md",
+  "metadata": {
+    "kit": "Telephony Kit",
+    "subsystem": "Telephony",
+    "owner": "@shao-yikai",
+    "designer": "@wnazgul",
+    "tester": "@jiang_99",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍短信服务模块的基础能力，包括创建/发送短信、获取/设置发送短信的默认SIM卡槽ID、获取/设置短信服务中心地址，以及检查当前设备是否具备短信发送和接收能力等。",
+  "structure": {
+    "title": "短信服务",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 19,
+        "summary": "介绍短信服务的常见应用场景，包括从网页拉起和从应用拉起。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 31,
+        "summary": "介绍短信服务的基本概念，包括短信服务（SMS）、短信服务中心（SMSC）、协议数据单元（PDU）。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "约束与限制",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 36,
+        "summary": "介绍短信服务的约束与限制，包括仅支持在标准系统上运行、需授予发送短信权限且插入SIM卡才可成功发送短信。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 50,
+        "summary": "介绍短信服务相关的接口，包括sendShortMessage、createMessage、getDefaultSmsSlotId等。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "发送短信（仅供系统应用使用）",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 88,
+        "summary": "介绍如何使用sendShortMessage接口发送短信，仅供系统应用使用。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "应用内跳转到短信编辑界面",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 154,
+        "summary": "介绍如何在应用内实现跳转到短信编辑的功能，通过调用元能力startAbility接口实现。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "sms方式跳转到短信编辑界面",
+        "level": 2,
+        "line_start": 155,
+        "line_end": 222,
+        "summary": "介绍如何通过sms协议创建指向短信收件人的超链接，方便用户通过网页或应用中的超链接直接跳转到短信应用。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 227,
+        "summary": "提供短信服务的相关实例代码参考链接。"
+      }
+    ]
+  }
+}
