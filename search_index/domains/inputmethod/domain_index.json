@@ -1,0 +1,86 @@
+{
+  "domain": "inputmethod",
+  "domain_summary": "IME Kit 提供输入法开发服务，负责建立编辑框所在应用与输入法应用之间的通信通道，确保两者可以共同协作提供文本输入功能，也为系统应用提供管理输入法应用的能力。",
+  "core_concepts": [
+    "输入法应用",
+    "InputMethodExtensionAbility",
+    "输入法子类型",
+    "自绘编辑框",
+    "输入法管理",
+    "沉浸模式",
+    "Ime工具"
+  ],
+  "document_count": 10,
+  "documents": [
+    {
+      "doc_id": "ime-kit-intro",
+      "title": "IME Kit简介",
+      "path": "../../docs/zh-cn/application-dev/inputmethod/ime-kit-intro.md",
+      "summary": "介绍IME Kit的功能和作用，负责建立编辑框所在应用与输入法应用之间的通信通道，确保两者可以共同协作提供文本输入功能，也为系统应用提供管理输入法应用的能力。",
+      "key_topics": ["IME Kit", "输入法框架", "输入法服务", "InputMethodExtensionAbility"]
+    },
+    {
+      "doc_id": "inputmethod-application-guide",
+      "title": "实现一个输入法应用",
+      "path": "../../docs/zh-cn/application-dev/inputmethod/inputmethod-application-guide.md",
+      "summary": "详细介绍如何实现一个输入法应用，包括InputMethodExtensionAbility生命周期、开发步骤、文件介绍以及约束与限制。",
+      "key_topics": ["InputMethodExtensionAbility", "输入法应用", "软键盘", "Panel", "生命周期"]
+    },
+    {
+      "doc_id": "use-inputmethod-in-custom-edit-box",
+      "title": "在自绘编辑框中使用输入法",
+      "path": "../../docs/zh-cn/application-dev/inputmethod/use-inputmethod-in-custom-edit-box.md",
+      "summary": "介绍在自绘编辑框中使用输入法的方法，通过getController方法获取InputMethodController实例来绑定输入法并监听输入法应用的各种操作。",
+      "key_topics": ["自绘编辑框", "InputMethodController", "绑定输入法", "自定义控件"]
+    },
+    {
+      "doc_id": "switch-inputmethod-guide",
+      "title": "切换输入法应用",
+      "path": "../../docs/zh-cn/application-dev/inputmethod/switch-inputmethod-guide.md",
+      "summary": "介绍切换输入法应用的方法，输入法框架服务提供了切换输入法应用的API，支持切换输入法、切换输入法和子类型、切换当前输入法的子类型。",
+      "key_topics": ["切换输入法", "switchInputMethod", "switchCurrentInputMethodSubtype", "输入法子类型"]
+    },
+    {
+      "doc_id": "input-method-sub-methodtype-guide",
+      "title": "输入法子类型开发指南",
+      "path": "../../docs/zh-cn/application-dev/inputmethod/input-method-subtype-guide.md",
+      "summary": "介绍输入法子类型的开发方法，输入法子类型允许输入法展现不同的输入模式或语言，用户可以根据需要在不同模式和语言中切换。",
+      "key_topics": ["输入法子类型", "InputMethodSubtype", "子类型配置", "子类型切换"]
+    },
+    {
+      "doc_id": "use-inputmethod-in-custom-edit-box-ndk",
+      "title": "在自绘编辑框中使用输入法开发指导 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/inputmethod/use-inputmethod-in-custom-edit-box-ndk.md",
+      "summary": "介绍使用C/C++在自绘编辑框中使用输入法的方法，包括绑定输入法、显示/隐藏面板功能、监听输入法应用的请求/通知、解绑输入法等完整流程。",
+      "key_topics": ["C/C++", "NDK", "自绘编辑框", "InputMethodController", "绑定输入法"]
+    },
+    {
+      "doc_id": "inputmethod-immersive-mode-guide",
+      "title": "输入法应用沉浸模式",
+      "path": "../../docs/zh-cn/application-dev/inputmethod/inputmethod-immersive-mode-guide.md",
+      "summary": "介绍输入法应用沉浸模式的实现方法，通过前台应用和输入法应用之间的通信机制，输入法应用根据前台应用设置的沉浸模式来决定最终沉浸模式。",
+      "key_topics": ["沉浸模式", "ImmersiveMode", "editorAttributeChanged", "setImmersiveMode"]
+    },
+    {
+      "doc_id": "inputmethod-hdc-commands-guide",
+      "title": "Ime工具",
+      "path": "../../docs/zh-cn/application-dev/inputmethod/inputmethod-hdc-commands-guide.md",
+      "summary": "介绍Ime工具的使用方法，通过通过hdc命令管理输入法，包括启用输入法、禁用输入法、切换输入法、获取当前输入法、列出所有输入法等操作。",
+      "key_topics": ["Ime工具", "hdc命令", "输入法管理", "启用输入法", "禁用输入法"]
+    },
+    {
+      "doc_id": "use-inputmethod-in-not-focusable-window",
+      "title": "不可获焦窗口中输入框与输入法交互指南",
+      "path": "../../docs/zh-cn/application-dev/inputmethod/use-inputmethod-in-not-focusable-window.md",
+      "summary": "介绍在不可获焦窗口中输入框与输入法交互的方法，说明系统限制和推荐方案，包括在主窗中创建子窗、将子窗设置为可获焦、切换焦点窗口等步骤。",
+      "key_topics": ["不可获焦窗口", "焦点切换", "setWindowFocusable", "shiftAppWindowFocus", "子窗口"]
+    },
+    {
+      "doc_id": "Readme-CN",
+      "title": "IME Kit（输入法开发服务）",
+      "path": "../../docs/zh-cn/application-dev/inputmethod/Readme-CN.md",
+      "summary": "IME Kit的导航页面，提供输入法开发服务的完整文档索引，包括IME Kit简介、实现输入法应用、在自绘编辑框中使用输入法、切换输入法应用等功能的文档链接。",
+      "key_topics": ["IME Kit", "输入法", "导航"]
+    }
+  ]
+}
