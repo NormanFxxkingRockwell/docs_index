@@ -1,0 +1,73 @@
+{
+  "domain": "task-management",
+  "domain_summary": "Background Tasks Kit 提供后台任务开发服务，包括短时任务、长时任务、延迟任务、代理提醒、能效资源申请等功能，帮助应用在后台执行任务，扩展应用在后台的运行时间，降低设备耗电速度、保障用户使用流畅度。",
+  "core_concepts": [
+    "短时任务",
+    "长时任务",
+    "延迟任务",
+    "代理提醒",
+    "能效资源申请",
+    "后台任务管理",
+    "WorkScheduler",
+    "ReminderAgent"
+  ],
+  "document_count": 8,
+  "documents": [
+    {
+      "doc_id": "background-task-overview",
+      "title": "Background Tasks Kit简介",
+      "path": "../../docs/zh-cn/application-dev/task-management/background-task-overview.md",
+      "summary": "介绍Background Tasks Kit的功能和作用，提供规范内受约束的后台任务，包括短时任务、长时任务、延迟任务、代理提醒等类型，扩展应用在后台的运行时间，降低设备耗电速度、保障用户使用流畅度。",
+      "key_topics": ["Background Tasks Kit", "后台任务", "短时任务", "长时任务", "延迟任务", "代理提醒"]
+    },
+    {
+      "doc_id": "transient-task",
+      "title": "短时任务(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/task-management/transient-task.md",
+      "summary": "介绍短时任务功能，应用退至后台一小段时间后，应用进程会被挂起，通过申请短时任务扩展应用在后台的运行时间，适用于执行耗时不长的任务如状态保存、消息发送等。",
+      "key_topics": ["短时任务", "后台任务", "配额机制", "requestSuspendDelay"]
+    },
+    {
+      "doc_id": "native-transient-task",
+      "title": "短时任务(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/task-management/native-transient-task.md",
+      "summary": "介绍使用C/C++开发短时任务的方法，应用退至后台一小段时间后，应用进程会被挂起，通过申请短时任务扩展应用在后台的运行时间，适用于执行耗时不长的任务如状态保存等。",
+      "key_topics": ["短时任务", "C/C++", "Native API", "NAPI"]
+    },
+    {
+      "doc_id": "continuous-task",
+      "title": "长时任务(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/task-management/continuous-task.md",
+      "summary": "介绍长时任务功能，适用于长时间运行在后台、用户可感知的任务，如播放音乐、导航等，防止应用进程被挂起，支持多种任务类型包括数据传输、音视频播放、录制、定位导航、蓝牙相关业务等。",
+      "key_topics": ["长时任务", "后台任务", "startBackgroundRunning", "音视频播放", "蓝牙", "导航"]
+    },
+    {
+      "doc_id": "work-scheduler",
+      "title": "延迟任务(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/task-management/work-scheduler.md",
+      "summary": "介绍延迟任务功能，适用于时效性要求不高的任务，当应用满足设定的触发条件时，将任务添加到执行队列，系统会根据内存、功耗、设备温度、用户使用习惯等统一调度拉起应用执行任务。",
+      "key_topics": ["延迟任务", "WorkScheduler", "WorkSchedulerExtensionAbility", "任务调度"]
+    },
+    {
+      "doc_id": "agent-powered-reminder",
+      "title": "代理提醒(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/task-management/agent-powered-reminder.md",
+      "summary": "介绍代理提醒功能，应用退到后台或进程终止后，系统会代理应用做定时提醒，支持倒计时、日历和闹钟三种提醒，包括申请权限、请求通知授权、发布和取消提醒等完整开发流程。",
+      "key_topics": ["代理提醒", "倒计时", "日历", "闹钟", "ReminderAgent", "通知"]
+    },
+    {
+      "doc_id": "efficiency-resource-request-sys",
+      "title": "能效资源申请(ArkTS)（仅对系统特权应用开放）",
+      "path": "../../docs/zh-cn/application-dev/task-management/efficiency-resource-request-sys.md",
+      "summary": "介绍能效资源申请功能，仅对系统特权应用开放，用于为进程申请CPU等资源，保障系统应用在后台执行的诉求，支持申请CPU、公共事件、Timer、延迟任务、蓝牙、GPS、音频等多种资源类型。",
+      "key_topics": ["能效资源", "系统特权应用", "CPU资源", "applyEfficiencyResources"]
+    },
+    {
+      "doc_id": "Readme-CN",
+      "title": "Background Tasks Kit（后台任务开发服务）",
+      "path": "../../docs/zh-cn/application-dev/task-management/Readme-CN.md",
+      "summary": "Background Tasks Kit的导航页面，提供后台任务开发服务的完整文档索引，包括Background Tasks Kit简介、短时任务、长时任务、延迟任务、代理提醒、能效资源申请等功能的文档链接。",
+      "key_topics": ["Background Tasks Kit", "后台任务", "导航"]
+    }
+  ]
+}

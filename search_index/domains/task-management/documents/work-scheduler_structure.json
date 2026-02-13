@@ -1,0 +1,60 @@
+{
+  "doc_id": "work-scheduler",
+  "title": "延迟任务(ArkTS)",
+  "path": "zh-cn/application-dev/task-management/work-scheduler.md",
+  "relative_path": "../../docs/zh-cn/application-dev/task-management/work-scheduler.md",
+  "metadata": {
+    "kit": "Background Tasks Kit",
+    "subsystem": "ResourceSchedule",
+    "owner": "@cheng-shichang",
+    "designer": "@zhouben25",
+    "tester": "@leetestnady",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍延迟任务功能，适用于时效性要求不高的任务，当应用满足设定的触发条件时，将任务添加到执行队列，系统会根据内存、功耗、设备温度、用户使用习惯等统一调度拉起应用执行任务。",
+  "structure": {
+    "title": "延迟任务(ArkTS)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 59,
+        "summary": "介绍延迟任务的功能介绍、运行原理和约束限制，说明延迟任务如何根据触发条件和系统状态统一调度，以及数量限制、执行频率限制、超时处理等约束。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 84,
+        "summary": "列出延迟任务开发使用的主要接口和回调接口，包括申请延迟任务、取消延迟任务、获取延迟任务状态、获取所有延迟任务等接口，以及延迟任务开始和结束的回调接口。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 195,
+        "summary": "详细介绍延迟任务的开发步骤，分为实现延迟任务调度扩展能力和实现延迟任务调度两部分，说明如何实现WorkSchedulerExtensionAbility回调接口、申请和取消延迟任务等完整流程。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "延迟任务调度功能验证",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 209,
+        "summary": "说明延迟任务调度功能的验证方法，包括确认延迟任务回调方法实现是否正确，以及通过hidumper命令手动触发延迟任务执行回调进行快速验证。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 214,
+        "summary": "提供延迟任务调度开发的相关实例参考。"
+      }
+    ]
+  }
+}

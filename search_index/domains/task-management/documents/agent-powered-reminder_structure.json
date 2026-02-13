@@ -1,0 +1,76 @@
+{
+  "doc_id": "agent-powered-reminder",
+  "title": "代理提醒(ArkTS)",
+  "path": "zh-cn/application-dev/task-management/agent-powered-reminder.md",
+  "relative_path": "../../docs/zh-cn/application-dev/task-management/agent-powered-reminder.md",
+  "metadata": {
+    "kit": "Background Tasks Kit",
+    "subsystem": "Resourceschedule",
+    "owner": "@cheng-shichang",
+    "designer": "@zhouben25",
+    "tester": "@leetestnady",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍代理提醒功能，应用退到后台或进程终止后，系统会代理应用做定时提醒，支持倒计时、日历和闹钟三种提醒类型，包括申请权限、请求通知授权、发布和取消提醒等完整开发流程。",
+  "structure": {
+    "title": "代理提醒(ArkTS)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "功能介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 12,
+        "summary": "介绍代理提醒的基本功能，应用退到后台或进程终止后，系统会代理应用做定时提醒，支持倒计时、日历和闹钟三种提醒类型。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "约束与限制",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 28,
+        "summary": "说明代理提醒的个数限制和跳转限制，普通应用最多支持30个有效提醒，系统应用最多支持10000个有效提醒，点击提醒通知后跳转的应用必须是申请代理提醒的本应用。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "与相关Kit的关系",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 31,
+        "summary": "说明代理提醒与Notification Kit的关系，到达设置的提醒时间点后，代理提醒使用Notification Kit发布通知，通知会显示在通知中心。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "模拟器支持情况",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 35,
+        "summary": "说明代理提醒从API version 20开始支持模拟器开发。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 49,
+        "summary": "列出代理提醒的主要接口，包括发布提醒、取消提醒、获取有效提醒、取消所有提醒、添加和删除通知渠道等接口。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 176,
+        "summary": "详细介绍代理提醒的开发步骤，包括申请权限、请求通知授权、功能开发（定义倒计时、日历、闹钟实例）、发布和取消提醒代理等完整流程。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 184,
+        "summary": "提供基于代理提醒的相关实例参考，包括后台代理提醒和翻页时钟等示例。"
+      }
+    ]
+  }
+}

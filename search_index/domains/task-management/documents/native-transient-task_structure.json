@@ -1,0 +1,52 @@
+{
+  "doc_id": "native-transient-task",
+  "title": "短时任务(C/C++)",
+  "path": "zh-cn/application-dev/task-management/native-transient-task.md",
+  "relative_path": "../../docs/zh-cn/application-dev/task-management/native-transient-task.md",
+  "metadata": {
+    "kit": "Background Tasks Kit",
+    "subsystem": "ResourceSchedule",
+    "owner": "@cheng-shichang",
+    "designer": "@zhouben25",
+    "tester": "@leetestnady",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍使用C/C++开发短时任务的方法，应用退至后台一小段时间后，应用进程会被挂起，通过申请短时任务扩展应用在后台的运行时间，适用于执行耗时不长的任务如状态保存等。",
+  "structure": {
+    "title": "短时任务(C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 12,
+        "summary": "介绍短时任务的使用场景，应用退至后台一小段时间后，应用进程会被挂起，通过申请短时任务扩展应用在后台的运行时间。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 24,
+        "summary": "列出短时任务的常用接口，包括申请短时任务、获取剩余时间、取消短时任务、获取所有短时任务信息等接口。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 281,
+        "summary": "详细介绍使用C/C++开发短时任务的步骤，包括在napi_init.cpp文件中封装接口并注册模块、在index.d.ts文件中声明函数、在index.ets文件中调用函数、配置库依赖等。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "测试步骤",
+        "level": 2,
+        "line_start": 282,
+        "line_end": 310,
+        "summary": "提供短时任务的测试步骤，包括连接设备并运行程序、点击各按钮查看控制台日志输出等验证方法。"
+      }
+    ]
+  }
+}
