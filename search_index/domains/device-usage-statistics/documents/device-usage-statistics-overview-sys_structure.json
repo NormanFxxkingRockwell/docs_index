@@ -1,0 +1,68 @@
+{
+  "doc_id": "device-usage-statistics-overview-sys",
+  "title": "设备使用信息统计概述（仅对系统应用开放）",
+  "path": "zh-cn/application-dev/device-usage-statistics/device-usage-statistics-overview-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/device-usage-statistics/device-usage-statistics-overview-sys.md",
+  "metadata": {
+    "kit": "Background Tasks Kit",
+    "subsystem": "ResourceSchedule",
+    "owner": "@cheng-shichang",
+    "designer": "@zhouben25",
+    "tester": "@leetestnady",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "设备使用信息统计，包括app usage、notification usage、system usage等使用统计。目前只支持app usage使用统计。应用使用信息统计，用于保存和查询应用使用详情（app usage）、事件日志数据（event log）、应用分组（bundle group）情况。部件缓存的应用记录（使用历史统计）会在事件上报后30分钟内刷新到数据库持久化保存。",
+  "structure": {
+    "title": "设备使用信息统计概述（仅对系统应用开放）",
+    "sections": [
+      {
+        "section_id": "0001",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 14,
+        "summary": "设备使用信息统计，包括app usage、notification usage、system usage等使用统计。目前只支持app usage使用统计。应用使用信息统计，用于保存和查询应用使用详情（app usage）、事件日志数据（event log）、应用分组（bundle group）情况。部件缓存的应用记录（使用历史统计）会在事件上报后30分钟内刷新到数据库持久化保存。"
+      },
+      {
+        "section_id": "0002",
+        "title": "功能说明",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 45,
+        "summary": "设备使用信息统计接口众多，目前只支持app usage使用统计，接下来介绍app usage的接口逻辑。"
+      },
+      {
+        "section_id": "0003",
+        "title": "应用使用信息统计落盘时机",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 52,
+        "summary": "设备使用信息统计会在以下时机进行：每隔30分钟触发一次刷新、系统时间变更触发一次刷新、一天开始触发一次刷新。"
+      },
+      {
+        "section_id": "0004",
+        "title": "应用查询接口",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 70,
+        "summary": "提供多种查询接口，包括queryBundleEvents、queryCurrentBundleEvents、queryBundleStatsInfos、queryCurrentBundleEvents、queryAppGroup、isIdleState、isIdleStateSync、queryModuleUsageRecords、queryFA使用记录、queryNotificationEventStats、queryDeviceEventStats等。"
+      },
+      {
+        "section_id": "0005",
+        "title": "注册接口",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 107,
+        "summary": "给应用名称为bundleName的应用分组设置为newGroup。"
+      },
+      {
+        "section_id": "0006",
+        "title": "解除注册接口",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 111,
+        "summary": "解除应用分组变化回调监听。"
+      }
+    ]
+  }
+}
