@@ -1,0 +1,44 @@
+{
+  "doc_id": "ason-parsing-generation-Abnormal-1",
+  "title": "验证示例代码同源--异常场景1",
+  "path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-1.md",
+  "summary": "验证示例代码同源的异常场景1，测试代码不一致（存在空行）、文档中的ID在Sample中不存在、注释不一致（新增注释）、docs代码中未去除Exclude字段、嵌套ID（docs中不含嵌套部分）的场景。",
+  "key_topics": ["代码同源", "异常场景", "ASON解析"],
+  "sections": [
+    {
+      "title": "ID无嵌套，存在空行",
+      "level": 2,
+      "line": 4
+    },
+    {
+      "title": "docs文档中的ID在Sample中不存在(不匹配)",
+      "level": 2,
+      "line": 22
+    },
+    {
+      "title": "引用部分代码（Exclude字段）",
+      "level": 2,
+      "line": 39
+    },
+    {
+      "title": "注释不一致（新增注释），代码内容一致",
+      "level": 3,
+      "line": 41
+    },
+    {
+      "title": "docs代码中未去除Exclude字段",
+      "level": 3,
+      "line": 81
+    },
+    {
+      "title": "嵌套的ID，docs中不含嵌套部分(修改4的部分，是否因为空行导致的报错，此文档中，已经取消了空行)",
+      "level": 2,
+      "line": 140
+    }
+  ],
+  "metadata": {
+    "folder": "arkts-utils",
+    "test_type": "ASON解析异常场景1",
+    "total_sections": 6
+  }
+}
