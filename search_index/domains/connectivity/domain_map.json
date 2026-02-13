@@ -1,0 +1,134 @@
+{
+  "domain": "Connectivity",
+  "domain_summary": "Connectivity Kit（短距通信服务）提供蓝牙、NFC、WLAN等短距通信能力。蓝牙支持传统蓝牙和低功耗蓝牙，包含A2DP、HFP、HID、GATT等多种协议；NFC支持标签读写、HCE卡模拟和安全单元访问；WLAN支持STA、P2P、AP三种工作模式。",
+  "learning_paths": [
+    {
+      "name": "蓝牙开发入门",
+      "description": "学习蓝牙基础概念和开发流程",
+      "steps": [
+        "bluetooth-overview",
+        "br-development-guide",
+        "br-discovery-development-guide",
+        "br-pair-device-development-guide",
+        "spp-development-guide"
+      ]
+    },
+    {
+      "name": "低功耗蓝牙（BLE）开发",
+      "description": "掌握BLE扫描、广播和GATT通信",
+      "steps": [
+        "bluetooth-overview",
+        "ble-development-guide",
+        "gatt-development-guide"
+      ]
+    },
+    {
+      "name": "NFC开发入门",
+      "description": "学习NFC标签读写、HCE卡模拟和安全单元访问",
+      "steps": [
+        "nfc-tag-access-guide",
+        "nfc-hce-guide",
+        "nfc-se-access-guide"
+      ]
+    },
+    {
+      "name": "WLAN开发入门",
+      "description": "掌握Wi-Fi连接、扫描和P2P通信",
+      "steps": [
+        "wlan-overview",
+        "sta-development-guide",
+        "scan-development-guide",
+        "p2p-development-guide"
+      ]
+    }
+  ],
+  "quick_reference": {
+    "蓝牙": {
+      "description": "蓝牙短距无线通信技术",
+      "modules": [
+        {
+          "name": "传统蓝牙",
+          "doc_id": "br-development-guide",
+          "key_apis": ["access.enableBluetooth", "connection.startBluetoothDiscovery", "connection.pairDevice", "socket.sppConnect"]
+        },
+        {
+          "name": "低功耗蓝牙",
+          "doc_id": "ble-development-guide",
+          "key_apis": ["ble.startBLEScan", "ble.startAdvertising", "ble.createGattClientDevice"]
+        },
+        {
+          "name": "GATT协议",
+          "doc_id": "gatt-development-guide",
+          "key_apis": ["getServices", "readCharacteristicValue", "writeCharacteristicValue", "notifyCharacteristicChanged"]
+        }
+      ]
+    },
+    "NFC": {
+      "description": "近场通信技术",
+      "modules": [
+        {
+          "name": "NFC标签读写",
+          "doc_id": "nfc-tag-access-guide",
+          "key_apis": ["tag.on", "tag.getTagInfo", "tag.getNfcA", "tag.getIsoDep"]
+        },
+        {
+          "name": "HCE卡模拟",
+          "doc_id": "nfc-hce-guide",
+          "key_apis": ["cardEmulation.start", "cardEmulation.on", "cardEmulation.transmit"]
+        },
+        {
+          "name": "安全单元访问",
+          "doc_id": "nfc-se-access-guide",
+          "key_apis": ["omapi.createService", "openSession", "openLogicalChannel", "transmit"]
+        }
+      ]
+    },
+    "WLAN": {
+      "description": "无线局域网技术",
+      "modules": [
+        {
+          "name": "STA模式",
+          "doc_id": "sta-development-guide",
+          "key_apis": ["wifiManager.isWifiActive", "wifiManager.addCandidateConfig", "wifiManager.connectToCandidateConfig"]
+        },
+        {
+          "name": "P2P模式",
+          "doc_id": "p2p-development-guide",
+          "key_apis": ["wifiManager.createGroup", "wifiManager.startDiscoverDevices", "wifiManager.p2pConnect"]
+        },
+        {
+          "name": "Wi-Fi扫描",
+          "doc_id": "scan-development-guide",
+          "key_apis": ["wifiManager.getScanInfoList", "wifiManager.on"]
+        }
+      ]
+    }
+  },
+  "common_use_cases": [
+    {
+      "name": "蓝牙耳机连接",
+      "description": "连接蓝牙耳机并传输音频",
+      "related_docs": ["br-development-guide", "br-discovery-development-guide", "br-pair-device-development-guide"]
+    },
+    {
+      "name": "BLE设备数据采集",
+      "description": "扫描BLE设备并采集传感器数据",
+      "related_docs": ["ble-development-guide", "gatt-development-guide"]
+    },
+    {
+      "name": "NFC一碰传",
+      "description": "通过NFC标签实现数据传输",
+      "related_docs": ["nfc-tag-access-guide"]
+    },
+    {
+      "name": "Wi-Fi连接管理",
+      "description": "管理Wi-Fi连接和扫描",
+      "related_docs": ["sta-development-guide", "scan-development-guide"]
+    },
+    {
+      "name": "P2P文件传输",
+      "description": "通过Wi-Fi Direct实现点对点文件传输",
+      "related_docs": ["p2p-development-guide"]
+    }
+  ]
+}

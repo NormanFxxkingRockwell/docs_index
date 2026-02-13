@@ -1,0 +1,159 @@
+{
+  "domain": "Connectivity",
+  "domain_summary": "Connectivity Kit（短距通信服务）提供蓝牙、NFC、WLAN等短距通信能力。蓝牙支持传统蓝牙和低功耗蓝牙，包含A2DP、HFP、HID、GATT等多种协议；NFC支持标签读写、HCE卡模拟和安全单元访问；WLAN支持STA、P2P、AP三种工作模式。",
+  "core_concepts": [
+    "蓝牙",
+    "低功耗蓝牙",
+    "GATT协议",
+    "NFC",
+    "HCE卡模拟",
+    "安全单元",
+    "WLAN",
+    "Wi-Fi",
+    "P2P模式",
+    "STA模式"
+  ],
+  "document_count": 20,
+  "documents": [
+    {
+      "doc_id": "Readme-CN",
+      "title": "Connectivity Kit（短距通信服务）",
+      "path": "../../docs/zh-cn/application-dev/connectivity/Readme-CN.md",
+      "summary": "Connectivity Kit（短距通信服务）的总体介绍，包含蓝牙、NFC、WLAN等功能模块的导航。",
+      "key_topics": ["Connectivity Kit", "短距通信服务", "蓝牙", "NFC", "WLAN"]
+    },
+    {
+      "doc_id": "connectivity-kit-intro",
+      "title": "Connectivity Kit简介",
+      "path": "../../docs/zh-cn/application-dev/connectivity/connectivity-kit-intro.md",
+      "summary": "Connectivity Kit开发概述，介绍蓝牙、WLAN、NFC三种短距通信技术的基本概念和功能模块。蓝牙包括ACCESS、CONNECTION、BLE、SOCKET、A2DP、HFP、HID、PAN、MAP、PBAP等模块；WLAN包括STA、P2P、AP三种模式；NFC包括NFC开关、NFC标签读写、NFC卡模拟等功能。",
+      "key_topics": ["Connectivity Kit", "蓝牙", "WLAN", "NFC", "BLE", "A2DP", "HFP", "HID", "PAN", "MAP", "PBAP", "STA模式", "P2P模式", "AP模式"]
+    },
+    {
+      "doc_id": "terminology",
+      "title": "Connectivity Kit术语",
+      "path": "../../docs/zh-cn/application-dev/connectivity/terminology.md",
+      "summary": "Connectivity Kit相关术语解释，包括A2DP、A2DP Sink、A2DP Source、ACL、BLE、BR、Bluetooth SIG、Characteristic、Descriptor、EDR、GATT、HF、HFP、HFP AG、HID、HID Device、HID Host、HOGP、L2CAP、MAP、MCE、MSE、MTU、NAP、OPP、OOB、PAN、PANU、PBAP、PCE、PSE、Profile、PSM、RFCOMM、RSSI、SDP、Service、SPP、UUID等蓝牙协议术语。",
+      "key_topics": ["术语", "A2DP", "BLE", "GATT", "HFP", "HID", "PAN", "MAP", "PBAP", "SPP", "UUID", "蓝牙协议"]
+    },
+    {
+      "doc_id": "bluetooth-readme",
+      "title": "蓝牙",
+      "path": "../../docs/zh-cn/application-dev/connectivity/bluetooth/Readme-CN.md",
+      "summary": "蓝牙服务开发入口文档，提供蓝牙服务开发概述、蓝牙设置、传统蓝牙（查找设备、配对与连接设备、连接和传输数据）、低功耗蓝牙（查找设备、连接和传输数据）等功能模块的导航。",
+      "key_topics": ["蓝牙", "传统蓝牙", "低功耗蓝牙", "BLE", "GATT", "SPP"]
+    },
+    {
+      "doc_id": "bluetooth-overview",
+      "title": "蓝牙服务开发概述",
+      "path": "../../docs/zh-cn/application-dev/connectivity/bluetooth/bluetooth-overview.md",
+      "summary": "蓝牙服务开发概述，介绍蓝牙技术的基本原理、传统蓝牙（BR/EDR）和低功耗蓝牙（BLE）的特点和应用场景。传统蓝牙支持音频分发、免提通话、个人局域网、电话簿访问等协议；BLE具有低功耗特点，广泛应用于穿戴设备、智能家居和物联网传感器。介绍蓝牙设备地址类型和设备角色（中心设备和外围设备）。",
+      "key_topics": ["蓝牙", "传统蓝牙", "BR", "EDR", "低功耗蓝牙", "BLE", "中心设备", "外围设备", "设备地址类型"]
+    },
+    {
+      "doc_id": "br-development-guide",
+      "title": "蓝牙设置",
+      "path": "../../docs/zh-cn/application-dev/connectivity/bluetooth/br-development-guide.md",
+      "summary": "蓝牙设置开发指南，提供开启蓝牙、关闭蓝牙和获取蓝牙开关状态的开发指导。需要申请ohos.permission.ACCESS_BLUETOOTH权限。通过订阅蓝牙开关状态变化事件可以获取实时的蓝牙开关状态，包括STATE_OFF、STATE_TURNING_ON、STATE_ON、STATE_TURNING_OFF、STATE_BLE_TURNING_ON、STATE_BLE_ON、STATE_BLE_TURNING_OFF等状态。",
+      "key_topics": ["蓝牙设置", "开启蓝牙", "关闭蓝牙", "蓝牙状态", "ACCESS_BLUETOOTH权限"]
+    },
+    {
+      "doc_id": "br-discovery-development-guide",
+      "title": "查找设备",
+      "path": "../../docs/zh-cn/application-dev/connectivity/bluetooth/br-discovery-development-guide.md",
+      "summary": "传统蓝牙查找设备开发指南，提供扫描周边设备、设置本机蓝牙扫描模式以及查找已配对设备信息的开发指导。支持API version 18开始的扫描结果上报方式，可获取设备地址、设备信号强度、设备名称和设备类型。支持设置本机蓝牙扫描模式为可被扫描和可被连接、可被连接等模式。",
+      "key_topics": ["查找设备", "扫描设备", "蓝牙扫描", "已配对设备", "扫描模式"]
+    },
+    {
+      "doc_id": "br-pair-device-development-guide",
+      "title": "配对与连接设备",
+      "path": "../../docs/zh-cn/application-dev/connectivity/bluetooth/br-pair-device-development-guide.md",
+      "summary": "传统蓝牙配对与连接设备开发指南，提供主动配对设备和连接设备可用profile能力的开发指导。支持订阅配对状态变化事件，获取实时配对状态。支持API version 20及以前的配对方式和API version 21开始支持的配对方式。配对完成后可连接A2DP、HFP和HID等profile能力。",
+      "key_topics": ["配对", "连接设备", "profile连接", "A2DP", "HFP", "HID", "配对状态"]
+    },
+    {
+      "doc_id": "spp-development-guide",
+      "title": "连接和传输数据",
+      "path": "../../docs/zh-cn/application-dev/connectivity/bluetooth/spp-development-guide.md",
+      "summary": "基于串口通信协议（SPP）实现传统蓝牙设备间连接和传输数据的开发指南。区分客户端和服务端两种角色。客户端通过sppConnect发起连接，服务端通过sppListen创建服务端套接字。支持sppWrite发送数据、订阅sppRead事件接收数据、sppCloseClientSocket断开连接、sppCloseServerSocket删除服务端套接字等操作。",
+      "key_topics": ["SPP", "串口通信协议", "连接", "传输数据", "客户端", "服务端", "sppConnect", "sppListen", "sppWrite", "sppRead"]
+    },
+    {
+      "doc_id": "ble-development-guide",
+      "title": "查找设备",
+      "path": "../../docs/zh-cn/application-dev/connectivity/bluetooth/ble-development-guide.md",
+      "summary": "低功耗蓝牙（BLE）扫描和广播开发指南，提供BLE扫描和BLE广播相关操作的开发指导。支持API version 15开始的多路扫描方式和API version 14及以前的单路扫描方式。支持API version 11开始的多路广播方式和API version 10及以前的单路广播方式。BLE扫描可发现周边BLE设备，BLE广播可实现被其他设备发现。",
+      "key_topics": ["BLE扫描", "BLE广播", "多路扫描", "单路扫描", "多路广播", "单路广播", "BleScanner", "startScan", "startAdvertising"]
+    },
+    {
+      "doc_id": "gatt-development-guide",
+      "title": "连接和传输数据",
+      "path": "../../docs/zh-cn/application-dev/connectivity/bluetooth/gatt-development-guide.md",
+      "summary": "基于通用属性协议（GATT）实现BLE设备间连接和传输数据的开发指南。区分GATT客户端和GATT服务端两种角色。客户端通过createGattClientDevice创建实例、connect发起连接、getServices进行服务发现、readCharacteristicValue/writeCharacteristicValue读写特征值、readDescriptorValue/writeDescriptorValue读写描述符、setCharacteristicChangeNotification/setCharacteristicChangeIndication使能通知或指示。服务端通过createGattServer创建实例、addService添加服务、notifyCharacteristicChanged发送特征值变化通知或指示。",
+      "key_topics": ["GATT", "通用属性协议", "BLE连接", "传输数据", "GATT客户端", "GATT服务端", "服务发现", "特征值", "描述符", "通知", "指示"]
+    },
+    {
+      "doc_id": "nfc-readme",
+      "title": "NFC",
+      "path": "../../docs/zh-cn/application-dev/connectivity/nfc/Readme-CN.md",
+      "summary": "NFC服务开发入口文档，提供NFC标签读写开发指南、HCE卡模拟开发指南、安全单元访问开发指南等功能模块的导航。",
+      "key_topics": ["NFC", "NFC标签读写", "HCE卡模拟", "安全单元访问"]
+    },
+    {
+      "doc_id": "nfc-tag-access-guide",
+      "title": "NFC标签读写开发指南",
+      "path": "../../docs/zh-cn/application-dev/connectivity/nfc/nfc-tag-access-guide.md",
+      "summary": "NFC标签读写开发指南，支持NfcA、NfcB、NfcF、NfcV、IsoDep、NDEF、MifareClassic、MifareUltralight等多种技术类型。区分前台读写和后台读写两种场景。前台读写通过tag.on或registerForegroundDispatch动态注册，后台读写需要在module.json5中静态声明过滤读取NFC标签的技术类型。需要申请ohos.permission.NFC_TAG权限。",
+      "key_topics": ["NFC标签", "标签读写", "前台读写", "后台读写", "NfcA", "NfcB", "NfcF", "NfcV", "IsoDep", "NDEF", "MifareClassic", "MifareUltralight", "NFC_TAG权限"]
+    },
+    {
+      "doc_id": "nfc-hce-guide",
+      "title": "HCE卡模拟开发指南",
+      "path": "../../docs/zh-cn/application-dev/connectivity/nfc/nfc-hce-guide.md",
+      "summary": "HCE（Host Card Emulation）卡模拟开发指南，支持基于主机的卡模拟和基于安全单元的卡模拟（OFFHOST）。区分前台刷卡和后台刷卡两种场景。前台刷卡通过start动态注册AID列表，后台刷卡需要在module.json5中静态声明AID。从API version 22开始支持OFFHOST能力。需要申请ohos.permission.NFC_CARD_EMULATION权限。",
+      "key_topics": ["HCE", "卡模拟", "Host Card Emulation", "OFFHOST", "前台刷卡", "后台刷卡", "AID", "安全单元", "NFC_CARD_EMULATION权限"]
+    },
+    {
+      "doc_id": "nfc-se-access-guide",
+      "title": "安全单元访问开发指南",
+      "path": "../../docs/zh-cn/application-dev/connectivity/nfc/nfc-se-access-guide.md",
+      "summary": "安全单元（SecureElement，SE）访问开发指南，支持访问eSE和SIM卡等安全单元。通过omapi.createService建立连接、getReaders获取所有可用SE Reader、openSession创建连接会话、openLogicalChannel打开逻辑通道、transmit发送APDU数据、close关闭通道。安全单元的访问控制通过GPAC规范实现，需要将构建模式设置为release进行打包。",
+      "key_topics": ["安全单元", "SecureElement", "SE", "eSE", "SIM", "GPAC", "APDU", "逻辑通道", "会话", "访问控制"]
+    },
+    {
+      "doc_id": "wlan-readme",
+      "title": "WLAN",
+      "path": "../../docs/zh-cn/application-dev/connectivity/wlan/Readme-CN.md",
+      "summary": "WLAN服务开发入口文档，提供WLAN服务开发概述、P2P模式开发指南、STA模式开发指南、Wi-Fi扫描开发指南等功能模块的导航。",
+      "key_topics": ["WLAN", "Wi-Fi", "P2P模式", "STA模式", "Wi-Fi扫描"]
+    },
+    {
+      "doc_id": "wlan-overview",
+      "title": "WLAN服务开发概述",
+      "path": "../../docs/zh-cn/application-dev/connectivity/wlan/wlan-overview.md",
+      "summary": "WLAN服务开发概述，介绍无线局域网（WLAN）和Wi-Fi的基本概念、实现原理和三种工作模式。STA模式（工作站模式）作为客户端接入无线局域网；P2P模式（Wi-Fi Direct）实现点对点连接，不需要AP参与；AP模式（热点模式）为客户端提供下行数据业务，相当于WLAN的中心设备。",
+      "key_topics": ["WLAN", "Wi-Fi", "STA模式", "P2P模式", "AP模式", "热点模式", "Wi-Fi Direct"]
+    },
+    {
+      "doc_id": "p2p-development-guide",
+      "title": "P2P模式开发指南",
+      "path": "../../docs/zh-cn/application-dev/connectivity/wlan/p2p-development-guide.md",
+      "summary": "P2P模式开发指南，提供WLAN设备点对点连接技术的开发指导。支持创建/删除P2P群组、建立P2P连接、获取对端IP以及Socket通信等场景。通过createGroup创建群组、removeGroup删除群组、startDiscoverDevices开始发现设备、p2pConnect执行P2P连接、getP2pLinkedInfo获取P2P连接信息。需要SystemCapability.Communication.WiFi.P2P系统能力。",
+      "key_topics": ["P2P模式", "Wi-Fi Direct", "点对点连接", "创建群组", "删除群组", "P2P连接", "Group Owner", "Group Client"]
+    },
+    {
+      "doc_id": "sta-development-guide",
+      "title": "STA模式开发指南",
+      "path": "../../docs/zh-cn/application-dev/connectivity/wlan/sta-development-guide.md",
+      "summary": "STA模式开发指南，提供Wi-Fi STA模式（站点模式）的开发指导。支持判断Wi-Fi状态、建立Wi-Fi连接等场景。通过isWifiActive查询WLAN开关状态、addCandidateConfig添加候选网络配置、connectToCandidateConfig连接到候选网络、isConnected查询WLAN是否已连接、getLinkedInfo获取连接信息、getSignalLevel查询信号强度。需要申请ohos.permission.GET_WIFI_INFO和ohos.permission.SET_WIFI_INFO权限。",
+      "key_topics": ["STA模式", "站点模式", "Wi-Fi连接", "候选网络", "Wi-Fi状态", "信号强度", "GET_WIFI_INFO权限", "SET_WIFI_INFO权限"]
+    },
+    {
+      "doc_id": "scan-development-guide",
+      "title": "Wi-Fi扫描开发指南",
+      "path": "../../docs/zh-cn/application-dev/connectivity/wlan/scan-development-guide.md",
+      "summary": "Wi-Fi扫描开发指南，提供Wi-Fi扫描、PNO扫描、周期扫描、扫描管控等场景的开发指导。通过getScanInfoList获取扫描结果，可获取网络名称、信号强度、加密方式等信息。PNO扫描用于降低移动设备功耗，周期扫描按照一定时间间隔自动搜索周围可用WiFi网络。需要申请ohos.permission.GET_WIFI_INFO权限，扫描接口从API version 10开始废弃。",
+      "key_topics": ["Wi-Fi扫描", "PNO扫描", "周期扫描", "扫描管控", "扫描结果", "首选分流网络扫描", "GET_WIFI_INFO权限"]
+    }
+  ]
+}
