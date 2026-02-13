@@ -1,0 +1,164 @@
+{
+  "doc_id": "uitest-guidelines",
+  "title": "UI测试框架使用指导指导",
+  "path": "zh-cn/application-dev/application-test/uitest-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/application-test/uitest-guidelines.md",
+  "metadata": {
+    "kit": "Test Kit",
+    "subsystem": "Test",
+    "owner": "@inter515",
+    "designer": "@inter515",
+    "tester": "@laonie666",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "UI测试框架（UITest）为开发者提供UI界面查找和模拟操作能力，可覆盖UI自动化测试的关键场景，包括界面控件精准查找、UI交互操作、外设行为模拟等。",
+  "structure": {
+    "title": "UI测试框架使用指导指导",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 12,
+        "summary": "介绍UI测试框架的基本概念和功能，支持界面控件查找和模拟操作能力。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "功能全景",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 34,
+        "summary": "说明UITest支持的ArkTS API与命令行两种方式，以及客户端和服务端的架构。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "使用ArkTS接口进行UI测试",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 605,
+        "summary": "介绍UI测试框架ArkTS API的具体使用方法，包括UI测试示例、控件查找与操作、模拟触摸屏手指操作等。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "UI测试示例",
+        "level": 3,
+        "line_start": 42,
+        "line_end": 130,
+        "summary": "提供一个UI测试的简单示例，介绍如何在单元测试脚本基础上进行UI测试的增量开发。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "控件查找与操作",
+        "level": 3,
+        "line_start": 132,
+        "line_end": 176,
+        "summary": "介绍如何依据多种属性构造匹配器进行控件查找，并对控件对象进行操作或获取属性信息。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "模拟触摸屏手指操作",
+        "level": 3,
+        "line_start": 178,
+        "line_end": 224,
+        "summary": "介绍如何模拟包括点击、双击、长按、滑动、拖拽、多指操作等触摸屏手指操作。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "页面加载等待",
+        "level": 3,
+        "line_start": 225,
+        "line_end": 258,
+        "summary": "介绍如何通过等待某控件的出现或等待页面空闲来判断页面跳转是否完成。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "模拟文本输入",
+        "level": 3,
+        "line_start": 260,
+        "line_end": 332,
+        "summary": "介绍如何向指定坐标点或指定控件输入文本内容，支持指定输入方式。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "截图",
+        "level": 3,
+        "line_start": 333,
+        "line_end": 380,
+        "summary": "介绍如何进行屏幕截图，指定屏幕id和截取屏幕区域，并将截图保存到指定路径下。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "UI事件监听",
+        "level": 3,
+        "line_start": 383,
+        "line_end": 409,
+        "summary": "介绍如何设置监听回调函数，监听toast、dialog等控件的出现。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "模拟键鼠操作",
+        "level": 3,
+        "line_start": 411,
+        "line_end": 455,
+        "summary": "介绍如何模拟键盘按键、组合键输入操作，以及鼠标点击、移动、拖拽操作和键鼠组合操作。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "窗口查找与操作",
+        "level": 3,
+        "line_start": 457,
+        "line_end": 485,
+        "summary": "介绍如何根据窗口属性查找窗口，并进行窗口最小化等操作。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "模拟触摸板操作",
+        "level": 3,
+        "line_start": 487,
+        "line_end": 517,
+        "summary": "介绍如何模拟触摸板操作，包括三指上滑返回桌面、三指下滑恢复应用窗口。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "模拟手写笔操作",
+        "level": 3,
+        "line_start": 519,
+        "line_end": 545,
+        "summary": "介绍如何模拟手写笔操作，包括点击、、双击、长按、滑动等操作，支持设置压力值。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "模拟表冠操作",
+        "level": 3,
+        "line_start": 547,
+        "line_end": 577,
+        "summary": "介绍如何模拟表冠操作，包括表冠的顺/逆时针旋转。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "屏幕显示操作",
+        "level": 3,
+        "line_start": 579,
+        "line_end": 605,
+        "summary": "介绍如何获取屏幕大小、分辨率等属性和屏幕唤醒、屏幕旋转等操作。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "基于命令行进行UI测试",
+        "level": 2,
+        "line_start": 607,
+        "line_end": 867,
+        "summary": "介绍如何通过命令行进行UI测试，包括环境要求、命令列表和各种命令的使用方法。"
+      },
+      {
+        "section_id": "section-18",
+        "title": "常见问题",
+        "level": 2,
+        "line_start": 910,
+        "line_end": 954,
+        "summary": "解答UI测试框架使用过程中的常见问题和错误处理方法。"
+      }
+    ]
+  }
+}

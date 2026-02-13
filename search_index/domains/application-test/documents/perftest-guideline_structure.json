@@ -1,0 +1,100 @@
+{
+  "doc_id": "perftest-guideline",
+  "title": "白盒性能测试框架使用指导",
+  "path": "zh-cn/application-dev/application-test/perftest-guideline.md",
+  "relative_path": "../../docs/zh-cn/application-dev/application-test/perftest-guideline.md",
+  "metadata": {
+    "kit": "Test Kit",
+    "subsystem": "Test",
+    "owner": "@inter515",
+    "designer": "@inter515",
+    "tester": "@laonie666",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "白盒性能测试框架（PerfTest）提供针对指定代码段运行时的白盒性能测试能力，用于度量应用进程的性能表现。支持耗时、CPU使用率等基础数据和启动时延、滑动帧率等场景化性能数据的采集和度量。",
+  "structure": {
+    "title": "白盒性能测试框架使用指导",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "简介",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 12,
+        "summary": "介绍白盒性能测试框架（PerfTest）的基本概念和功能，包括多轮迭代执行机制和环境复位机制。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "实现原理",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 28,
+        "summary": "说明PerfTest的架构设计，包括ArkTS API层、跨语言通信层和服务端的功能职责。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 45,
+        "summary": "概述使用PerfTest接口进行白盒性能测试的完整流程，包括定义策略、创建任务、启动测试、获取结果和销毁对象。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "定义测试策略",
+        "level": 3,
+        "line_start": 48,
+        "line_end": 100,
+        "summary": "详细介绍如何定义性能测试策略，包括测试指标列表、被测代码段、环境复位代码段和测试策略对象的构造。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "创建测试任务和启动测试",
+        "level": 3,
+        "line_start": 102,
+        "line_end": 111,
+        "summary": "说明如何使用PerfTest.create()创建测试任务并调用PerfTest.run()启动测试。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "获取测试结果",
+        "level": 3,
+        "line_start": 113,
+        "line_end": 122,
+        "summary": "介绍如何调用PerfTest.getMeasureResult()获取各个指标的测试结果。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "销毁创建的对象",
+        "level": 3,
+        "line_start": 124,
+        "line_end": 132,
+        "summary": "说明性能测试完成后如何调用PerfTest.destroy()销毁对象以释放内存。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "完整示例",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 326,
+        "summary": "提供基础性能数据采集和场景化性能数据采集的完整代码示例。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "基础性能数据采集示例",
+        "level": 3,
+        "line_start": 136,
+        "line_end": 206,
+        "summary": "演示如何测试应用内指定逻辑执行时的基础性能数据，包括耗时和CPU占用率。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "场景化性能数据采集示例",
+        "level": 3,
+        "line_start": 208,
+        "line_end": 323,
+        "summary": "演示如何测试应用内列表滑动的帧率，包括打开应用、查找可滚动组件和进行滑动操作。"
+      }
+    ]
+  }
+}
