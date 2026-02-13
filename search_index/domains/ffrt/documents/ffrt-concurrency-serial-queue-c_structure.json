@@ -1,0 +1,52 @@
+{
+  "doc_id": "ffrt-concurrency-serial-queue-c",
+  "title": "Function Flow Runtime串行队列(C)",
+  "path": "zh-cn/application-dev/ffrt/ffrt-concurrency-serial-queue-c.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ffrt/ffrt-concurrency-serial-queue-c.md",
+  "metadata": {
+    "kit": "Function Flow Runtime Kit",
+    "subsystem": "Resourceschedule",
+    "owner": "@chuchihtung; @yanleo",
+    "designer": "@geoffrey_guo; @huangyouzhong",
+    "tester": "@lotsof; @sunxuhao",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "介绍FFRT串行队列的使用方法，通过异步日志系统示例展示如何创建串行队列、提交日志任务、实现异步日志写入，保证日志顺序性并避免阻塞主线程。",
+  "structure": {
+    "title": "Function Flow Runtime串行队列(C)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 20,
+        "summary": "说明FFRT串行队列基于协程调度模型实现，提供高效的消息队列功能，支持异步通信、流量削峰、无锁化状态和资源管理等业务场景。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "示例：异步日志系统",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 143,
+        "summary": "通过异步日志系统示例展示串行队列的使用，包括创建日志系统、提交日志任务、销毁日志系统等完整实现。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 149,
+        "line_end": 163,
+        "summary": "列出示例中涉及的主要FFRT接口，包括队列创建、销毁和任务提交等。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 164,
+        "line_end": 169,
+        "summary": "说明使用串行队列的约束限制，包括避免提交超长任务、同步原语使用规范和全局变量中队列管理等。"
+      }
+    ]
+  }
+}

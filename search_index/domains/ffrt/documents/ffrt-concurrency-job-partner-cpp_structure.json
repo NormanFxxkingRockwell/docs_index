@@ -1,0 +1,52 @@
+{
+  "doc_id": "ffrt-concurrency-job-partner-cpp",
+  "title": "Function Flow Runtime任务伙伴(C++)",
+  "path": "zh-cn/application-dev/ffrt/ffrt-concurrency-job-partner-cpp.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ffrt/ffrt-concurrency-job-partner-cpp.md",
+  "metadata": {
+    "kit": "Function Flow Runtime Kit",
+    "subsystem": "Resourceschedule",
+    "owner": "@chuchihtung; @yanleo",
+    "designer": "@geoffrey_guo; @huangyouzhong",
+    "tester": "@lotsof; @sunxuhao",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "介绍FFRT任务伙伴功能，用于解决单线程任务过长的问题，支持将大任务拆分为小任务交给其他线程执行，同时支持任务在指定线程上执行和批量任务合并等特性。",
+  "structure": {
+    "title": "Function Flow Runtime任务伙伴(C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 25,
+        "summary": "说明Job Partner功能用于解决单线程任务过长的问题，支持动态管理partner线程、任务在指定线程执行和批量任务合并等特性。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "示例：某商城系统",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 72,
+        "summary": "通过商城系统节点并行化创建示例展示Job Partner的使用，展示如何将必须在JS线程执行的代码片段和其他可任意线程执行的代码片段分离处理。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 86,
+        "summary": "列出示例中涉及的主要FFRT接口，主要是job_partner接口。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 92,
+        "summary": "说明使用Job Partner的约束限制，包括适用场景、任务粒度推荐和批量任务特征要求等。"
+      }
+    ]
+  }
+}

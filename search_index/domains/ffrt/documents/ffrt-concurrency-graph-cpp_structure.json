@@ -1,0 +1,76 @@
+{
+  "doc_id": "ffrt-concurrency-graph-cpp",
+  "title": "Function Flow Runtime图依赖并发(C++)",
+  "path": "zh-cn/application-dev/ffrt/ffrt-concurrency-graph-cpp.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ffrt/ffrt-concurrency-graph-cpp.md",
+  "metadata": {
+    "kit": "Function Flow Runtime Kit",
+    "subsystem": "Resourceschedule",
+    "owner": "@chuchihtung; @yanleo",
+    "designer": "@geoffrey_guo; @huangyouzhong",
+    "tester": "@lotsof; @sunxuhao",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "介绍FFRT图依赖并发的C++使用方法，支持任务依赖和数据依赖两种方式构建任务依赖图，通过流媒体视频处理和斐波那契数列示例展示如何使用C++ API实现复杂任务流。",
+  "structure": {
+    "title": "Function Flow Runtime图依赖并发(C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 58,
+        "summary": "说明FFRT图依赖并发范式支持任务依赖和数据依赖两种方式构建任务依赖图，介绍任务依赖和数据依赖的概念和适用场景。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "任务依赖",
+        "level": 3,
+        "line_start": 19,
+        "line_end": 30,
+        "summary": "说明任务依赖的概念和适用场景，包括顺序执行的任务、逻辑流程控制和多级任务链等。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "数据依赖",
+        "level": 3,
+        "line_start": 31,
+        "line_end": 43,
+        "summary": "说明数据依赖的概念和适用场景，介绍Producer-Consumer依赖、Consumer-Producer依赖和Producer-Producer依赖三种依赖关系。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "示例：流媒体视频处理",
+        "level": 2,
+        "line_start": 78,
+        "line_end": 114,
+        "summary": "通过流媒体视频处理示例展示如何使用C++ API实现图依赖并发，实现视频解析、转码、缩略图生成、水印添加和发布的并行处理。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "示例：斐波那契数列",
+        "level": 2,
+        "line_start": 115,
+        "line_end": 159,
+        "summary": "通过斐波那契数列示例展示如何使用C++ API实现数据依赖的递归计算并行化，提高计算并行度。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 174,
+        "summary": "列出示例中涉及的主要FFRT C++接口，包括submit、submit_h和wait等。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 175,
+        "line_end": 180,
+        "summary": "说明使用图依赖的约束限制，包括依赖数量限制和参数统计规则等。"
+      }
+    ]
+  }
+}

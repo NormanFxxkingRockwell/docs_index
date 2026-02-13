@@ -1,0 +1,103 @@
+{
+  "domain": "ffrt",
+  "domain_summary": "Function Flow Runtime (FFRT) 是一种并发编程框架，旨在简化并发编程和任务调度的复杂性。FFRT采用基于任务的调度方式，开发者只需关注任务及其依赖关系，而无需处理底层的线程和计算资源；同时，FFRT采用基于协程的任务执行方式，可以提高任务并行度、提升线程利用率并充分利用多核平台的计算资源，保证系统对所有资源的集约化管理，最终解决系统线程资源滥用问题。",
+  "core_concepts": [
+    "任务管理",
+    "任务队列",
+    "同步原语",
+    "任务依赖",
+    "数据依赖",
+    "QoS等级",
+    "任务优先级",
+    "并发度控制",
+    "协程调度",
+    "任务伙伴"
+  ],
+  "document_count": 12,
+  "documents": [
+    {
+      "doc_id": "ffrt-overview",
+      "title": "Function Flow Runtime Kit概述",
+      "path": "../../docs/zh-cn/application-dev/ffrt/ffrt-overview.md",
+      "summary": "介绍Function Flow Runtime Kit的基本概念、特性和编程模型，包括任务、任务依赖、QoS、Worker、调度等基本概念，以及Task-Based、Queue-Enabled和Graph-Driven等特性。",
+      "key_topics": ["FFRT", "并发编程", "任务调度", "协程", "任务依赖", "QoS", "编程模型"]
+    },
+    {
+      "doc_id": "ffrt-concurrency-paradigm",
+      "title": "Function Flow Runtime并发范式",
+      "path": "../../docs/zh-cn/application-dev/ffrt/ffrt-concurrency-paradigm.md",
+      "summary": "介绍FFRT支持的三种并发范式：串行队列、并发队列、图依赖和任务伙伴，分别说明各自的适用场景和特性。",
+      "key_topics": ["串行队列", "并发队列", "图依赖", "任务伙伴", "并发范式"]
+    },
+    {
+      "doc_id": "ffrt-concurrency-serial-queue-c",
+      "title": "Function Flow Runtime串行队列(C)",
+      "path": "../../docs/zh-cn/application-dev/ffrt/ffrt-concurrency-serial-queue-c.md",
+      "summary": "介绍FFRT串行队列的C API使用方法，通过异步日志系统示例展示如何创建串行队列、提交日志任务、实现异步日志写入，保证日志顺序性并避免阻塞主线程。",
+      "key_topics": ["串行队列", "C API", "异步日志", "任务提交", "任务等待"]
+    },
+    {
+      "doc_id": "ffrt-concurrency-serial-queue-cpp",
+      "title": "Function Flow Runtime串行队列(C++)",
+      "path": "../../docs/zh-cn/application-dev/ffrt/ffrt-concurrency-serial-queue-cpp.md",
+      "summary": "介绍FFRT串行队列的C++ API使用方法，通过异步日志系统示例展示如何使用C++ API创建串行队列、提交日志任务、实现异步日志写入，保证日志顺序性并避免阻塞主线程。",
+      "key_topics": ["串行队列", "C++ API", "异步日志", "Logger类", "队列管理"]
+    },
+    {
+      "doc_id": "ffrt-concurrency-concurrent-queue-c",
+      "title": "Function Flow Runtime并发队列(C)",
+      "path": "../../docs/zh-cn/application-dev/ffrt/ffrt-concurrency-concurrent-queue-c.md",
+      "summary": "介绍FFRT并发队列的C API使用方法，通过银行服务系统示例展示如何创建并发队列、设置任务优先级、控制并发度，实现VIP用户优先服务的业务场景。",
+      "key_topics": ["并发队列", "C API", "任务优先级", "并发度", "VIP服务"]
+    },
+    {
+      "doc_id": "ffrt-concurrency-concurrent-queue-cpp",
+      "title": "Function Flow Runtime并发队列(C++)",
+      "path": "../../docs/zh-cn/application-dev/ffrt/ffrt-concurrency-concurrent-queue-cpp.md",
+      "summary": "介绍FFRT并发队列的C++ API使用方法，通过银行服务系统示例展示如何使用C++ API创建并发队列、设置任务优先级、控制并发度，实现VIP用户优先服务的业务场景。",
+      "key_topics": ["并发队列", "C++ API", "任务优先级", "并发度", "BankQueueSystem类"]
+    },
+    {
+      "doc_id": "ffrt-concurrency-graph-c",
+      "title": "Function Flow Runtime图依赖并发(C)",
+      "path": "../../docs/zh-cn/application-dev/ffrt/ffrt-concurrency-graph-c.md",
+      "summary": "介绍FFRT图依赖并发的C API使用方法，通过流媒体视频处理和斐波那契数列示例展示如何使用任务依赖和数据依赖构建任务依赖图，实现复杂任务流的并行化。",
+      "key_topics": ["图依赖", "C API", "任务依赖", "数据依赖", "并行化"]
+    },
+    {
+      "doc_id": "ffrt-concurrency-graph-cpp",
+      "title": "Function Flow Runtime图依赖并发(C++)",
+      "path": "../../docs/zh-cn/application-dev/ffrt/ffrt-concurrency-graph-cpp.md",
+      "summary": "介绍FFRT图依赖并发的C++ API使用方法，通过流媒体视频处理和斐波那契数列示例展示如何使用任务依赖和数据依赖构建任务依赖图，实现复杂任务流的并行化。",
+      "key_topics": ["图依赖", "C++ API", "任务依赖", "数据依赖", "并行化"]
+    },
+    {
+      "doc_id": "ffrt-concurrency-job-partner-cpp",
+      "title": "Function Flow Runtime任务伙伴(C++)",
+      "path": "../../docs/zh-cn/application-dev/ffrt/ffrt-concurrency-job-partner-cpp.md",
+      "summary": "介绍FFRT任务伙伴功能，用于解决单线程任务过长的问题，支持将大任务拆分为小任务交给其他线程执行，同时支持任务在指定线程上执行和批量任务合并等特性。",
+      "key_topics": ["任务伙伴", "C++ API", "多线程协作", "批量任务合并"]
+    },
+    {
+      "doc_id": "ffrt-development-guideline",
+      "title": "Function Flow Runtime开发指导",
+      "path": "../../docs/zh-cn/application-dev/ffrt/ffrt-development-guideline.md",
+      "summary": "提供FFRT开发指导，包括监测机制、开发步骤、使用建议、约束限制和在DevEco Studio中的使用方法等，帮助开发者快速掌握FFRT编程模型。",
+      "key_topics": ["开发指导", "监测机制", "开发步骤", "使用建议", "约束限制"]
+    },
+    {
+      "doc_id": "ffrt-api-guideline-c",
+      "title": "Function Flow Runtime C API",
+      "path": "../../docs/zh-cn/application-dev/ffrt/ffrt-api-guideline-c.md",
+      "summary": "介绍Function Flow Runtime的C API接口，包括任务管理、任务队列和同步原语等功能，提供任务提交、依赖管理、队列调度、互斥等接口。",
+      "key_topics": ["C API", "任务管理", "任务队列", "同步原语", "互斥锁", "读写锁", "条件变量"]
+    },
+    {
+      "doc_id": "ffrt-Readme-CN",
+      "title": "FFRT",
+      "path": "../../docs/zh-cn/application-dev/ffrt/Readme-CN.md",
+      "summary": "FFRT文档索引，提供Function Flow Runtime Kit相关的所有文档链接，包括概述、并发范式、开发样例、开发指导和C API文档等。",
+      "key_topics": ["文档索引", "FFRT", "开发指南", "API文档"]
+    }
+  ]
+}

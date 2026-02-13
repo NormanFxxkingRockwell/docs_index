@@ -1,0 +1,44 @@
+{
+  "doc_id": "ffrt-api-guideline-c",
+  "title": "Function Flow Runtime C API",
+  "path": "zh-cn/application-dev/ffrt/ffrt-api-guideline-c.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ffrt/ffrt-api-guideline-c.md",
+  "metadata": {
+    "kit": "Function Flow Runtime Kit",
+    "subsystem": "Resourceschedule",
+    "owner": "@chuchihtung; @yanleo",
+    "designer": "@geoffrey_guo; @huangyouzhong",
+    "tester": "@lotsof; @sunxuhao",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "介绍Function Flow Runtime的C API接口，包括任务管理、任务队列和同步原语等功能，提供任务提交、依赖管理、队列调度、互斥锁、读写锁和条件变量等接口，帮助开发者实现高效的并发编程。",
+  "structure": {
+    "title": "Function Flow Runtime C API",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "任务管理",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 889,
+        "summary": "介绍任务依赖、任务属性、任务提交和任务句柄管理等接口，包括ffrt_deps_t、ffrt_task_attr_t、ffrt_alloc_auto_managed_function_storage_base、ffrt_submit_base、ffrt_submit_f、ffrt_submit_h_base、ffrt_submit_h_f等。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "任务队列",
+        "level": 2,
+        "line_start": 890,
+        "line_end": 1373,
+        "summary": "介绍任务队列相关的接口，包括队列属性、队列创建、任务提交、任务等待、任务取消等操作。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "同步原语",
+        "level": 2,
+        "line_start": 1374,
+        "line_end": 2000,
+        "summary": "介绍同步原语相关的接口，包括互斥锁、读写锁和条件变量等，提供线程安全的同步机制。"
+      }
+    ]
+  }
+}

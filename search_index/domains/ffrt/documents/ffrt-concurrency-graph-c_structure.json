@@ -1,0 +1,76 @@
+{
+  "doc_id": "ffrt-concurrency-graph-c",
+  "title": "Function Flow Runtime图依赖并发(C)",
+  "path": "zh-cn/application-dev/ffrt/ffrt-concurrency-graph-c.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ffrt/ffrt-concurrency-graph-c.md",
+  "metadata": {
+    "kit": "Function Flow Runtime Kit",
+    "subsystem": "Resourceschedule",
+    "owner": "@chuchihtung; @yanleo",
+    "designer": "@geoffrey_guo; @huangyouzhong",
+    "tester": "@lotsof; @sunxuhao",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "介绍FFRT图依赖并发范式，支持任务依赖和数据依赖两种方式构建任务依赖图，通过流媒体视频处理和斐波那契数列示例展示如何使用数据依赖实现复杂任务流。",
+  "structure": {
+    "title": "Function Flow Runtime图依赖并发(C)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 58,
+        "summary": "说明FFRT图依赖并发范式支持任务依赖和数据依赖两种方式构建任务依赖图，介绍任务依赖和数据依赖的概念和适用场景。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "任务依赖",
+        "level": 3,
+        "line_start": 19,
+        "line_end": 30,
+        "summary": "说明任务依赖的概念和适用场景，包括顺序执行的任务、逻辑流程控制和多级任务链等。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "数据依赖",
+        "level": 3,
+        "line_start": 31,
+        "line_end": 43,
+        "summary": "说明数据依赖的概念和适用场景，介绍Producer-Consumer依赖、Consumer-Producer依赖和Producer-Producer依赖三种依赖关系。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "示例：流媒体视频处理",
+        "level": 2,
+        "line_start": 78,
+        "line_end": 160,
+        "summary": "通过流媒体视频处理示例展示如何使用图依赖并发范式，实现视频解析、转码、缩略图生成、水印添加和发布的并行处理。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "示例：斐波那契数列",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 233,
+        "summary": "通过斐波那契数列示例展示如何使用数据依赖实现递归计算的并行化，提高计算并行度。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 238,
+        "line_end": 252,
+        "summary": "列出示例中涉及的主要FFRT接口，包括任务提交和依赖等待等。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 258,
+        "summary": "说明使用图依赖的约束限制，包括依赖数量限制和参数统计规则等。"
+      }
+    ]
+  }
+}

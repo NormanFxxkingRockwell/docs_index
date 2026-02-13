@@ -1,0 +1,52 @@
+{
+  "doc_id": "ffrt-concurrency-concurrent-queue-c",
+  "title": "Function Flow Runtime并发队列(C)",
+  "path": "zh-cn/application-dev/ffrt/ffrt-concurrency-concurrent-queue-c.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ffrt/ffrt-concurrency-concurrent-queue-c.md",
+  "metadata": {
+    "kit": "Function Flow Runtime Kit",
+    "subsystem": "Resourceschedule",
+    "owner": "@chuchihtung; @yanleo",
+    "designer": "@geoffrey_guo; @huangyouzhong",
+    "tester": "@lotsof; @sunxuhao",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "介绍FFRT并发队列的使用方法，通过银行服务系统示例展示如何创建并发队列、设置任务优先级、控制并发度，实现VIP用户优先服务的业务场景。",
+  "structure": {
+    "title": "Function Flow Runtime并发队列(C)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 16,
+        "summary": "说明FFRT并发队列提供任务优先级和队列并发度能力，使任务能同时在多个线程上执行，获得更高并行效果。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "示例：银行服务系统",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 127,
+        "summary": "通过银行服务系统示例展示并发队列的使用，包括创建银行系统、提交服务请求、取消请求和等待完成等操作。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 128,
+        "line_end": 149,
+        "summary": "列出示例中涉及的主要FFRT接口，包括队列创建、销毁、任务优先级设置、并发度设置和任务提交等。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 149,
+        "summary": "说明使用并发队列的约束限制，包括队列属性初始化、队列销毁和并发度配置等注意事项。"
+      }
+    ]
+  }
+}
