@@ -322,7 +322,6 @@ reference: 3295
 
 **操作**：
 - 保存到 `search_index/domains/{domain}/documents/{doc_id}_structure.json`
-- 使用 JSON 格式
 
 **使用的工具**：
 - `write`：写入文件
@@ -331,9 +330,11 @@ reference: 3295
 - [ ] 文档索引已保存
 - [ ] 文件路径正确
 - [ ] 文件内容正确
+- [ ] JSON 格式有效（summary 字段不为空或 `.md`）
 
 **错误处理**：
 - 如果保存失败，记录错误并继续处理下一个文档
+- 如果 JSON 格式无效，记录错误并修复
 
 ---
 
