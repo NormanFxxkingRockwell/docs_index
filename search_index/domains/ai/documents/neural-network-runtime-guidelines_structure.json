@@ -1,0 +1,132 @@
+{
+  "doc_id": "neural-network-runtime-guidelines",
+  "title": "Neural Network Runtime对接AI推理框架开发指导",
+  "path": "zh-cn/application-dev/ai/nnrt/neural-network-runtime-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ai/nnrt/neural-network-runtime-guidelines.md",
+  "metadata": {
+    "kit": "Neural Network Runtime Kit",
+    "subsystem": "AI",
+    "owner": "@GbuzhidaoR",
+    "designer": "@GbuzhidaoR",
+    "tester": "@GbuzhidaoR",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "介绍如何使用Neural Network Runtime Native接口开发AI推理应用，包括环境准备、接口说明、模型构造、模型编译和推理执行等完整开发流程。",
+  "structure": {
+    "title": "Neural Network Runtime对接AI推理框架开发指导",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 18,
+        "summary": "说明Neural Network Runtime作为AI推理引擎和加速芯片的桥梁，为AI推理引擎提供精简的Native接口，满足推理引擎通过加速芯片执行端到端推理的需求。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "环境准备",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 35,
+        "summary": "介绍Neural Network Runtime部件的环境要求和环境搭建步骤，包括开发环境、接入设备和使用DevEco Studio搭建环境。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "环境要求",
+        "level": 3,
+        "line_start": 21,
+        "line_end": 29,
+        "summary": "说明Neural Network Runtime部件的环境要求，包括开发环境为Ubuntu 18.04及以上，接入设备为系统定义的标准设备。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "环境搭建",
+        "level": 3,
+        "line_start": 30,
+        "line_end": 35,
+        "summary": "介绍环境搭建的具体步骤，包括使用Ubuntu编译服务器终端和指定native工具链路径来编译代码。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 139,
+        "summary": "列出Neural Network Runtime开发流程中的常用接口，包括结构体、模型构造接口、模型编译接口、张量描述接口、张量接口、执行推理接口和设备管理接口。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "结构体",
+        "level": 3,
+        "line_start": 40,
+        "line_end": 50,
+        "summary": "列出Neural Network Runtime的主要结构体，包括OH_NNModel、OH_NNCompilation、OH_NNExecutor、NN_QuantParam、NN_TensorDesc和NN_Tensor等。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "模型构造接口",
+        "level": 3,
+        "line_start": 51,
+        "line_end": 62,
+        "summary": "列出模型构造相关的接口，包括创建模型实例、添加张量、设置张量数值、添加算子、指定输入输出和完成模型构图等。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "模型编译接口",
+        "level": 3,
+        "line_start": 64,
+        "line_end": 82,
+        "summary": "列出模型编译相关的接口，包括创建编译实例、设置设备、设置缓存、设置性能模式、设置优先级、启用FP16和执行模型编译等。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "张量描述接口",
+        "level": 3,
+        "line_start": 83,
+        "line_end": 99,
+        "summary": "列出张量描述相关的接口，包括创建张量描述、设置和获取名称、数据类型、形状、格式等属性。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "张量接口",
+        "level": 3,
+        "line_start": 100,
+        "line_end": 113,
+        "summary": "列出张量相关的接口，包括创建张量实例、获取张量描述、获取数据缓冲区、获取共享内存文件描述符和大小等。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "执行推理接口",
+        "level": 3,
+        "line_start": 114,
+        "line_end": 130,
+        "summary": "列出执行推理相关的接口，包括创建执行器实例、获取输入输出数量、创建输入输出张量描述、设置回调函数、执行同步和异步推理等。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "设备管理接口",
+        "level": 3,
+        "line_start": 131,
+        "line_end": 139,
+        "summary": "列出设备管理相关的接口，包括获取所有硬件ID、获取硬件名称和获取硬件类别信息等。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 140,
+        "line_end": 599,
+        "summary": "详细介绍Neural Network Runtime的开发流程，包括创建应用样例文件、导入Neural Network Runtime、定义辅助函数、构造模型、查询AI加速芯片、编译模型、创建执行器和执行推理计算等完整步骤。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "调测验证",
+        "level": 2,
+        "line_start": 601,
+        "line_end": 679,
+        "summary": "提供调测验证步骤，包括准备应用样例的编译配置文件、编译应用样例、执行样例和检查模型缓存等。"
+      }
+    ]
+  }
+}

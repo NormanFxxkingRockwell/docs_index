@@ -1,0 +1,124 @@
+{
+  "doc_id": "mindspore-asr-based-native",
+  "title": "使用MindSpore Lite实现语音识别（C/C++）",
+  "path": "zh-cn/application-dev/ai/mindspore/mindspore-asr-based-native.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ai/mindspore/mindspore-asr-based-native.md",
+  "metadata": {
+    "kit": "MindSpore Lite Kit",
+    "subsystem": "AI",
+    "owner": "@zhuguodong8",
+    "designer": "@zhuguodong8; @jjfeffing",
+    "tester": "@principal87",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "介绍如何使用MindSpore Lite在C/C++中实现语音识别应用，包括环境配置、模型选择、音频播放代码编写、识别代码编写、N-API封装、推理执行和结果处理等完整开发流程。",
+  "structure": {
+    "title": "使用MindSpore Lite实现语音识别（C/C++）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景说明",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 15,
+        "summary": "说明使用MindSpore Lite实现语音识别的应用场景，语音识别可将音频转换文本，在智能语音助手、语音输入、语音搜索等领域有广泛应用。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "环境配置",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 19,
+        "summary": "介绍使用模拟器运行应用的环境配置要求，提供相关参考文档链接。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 23,
+        "summary": "介绍N-API概念，N-API是用于构建ArkTS本地化组件的一套接口，可将C/C++开发的库封装成ArkTS模块。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "开发流程",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 29,
+        "summary": "概述语音识别应用的开发流程，包括选择语音识别模型和使用MindSpore Lite推理模型实现语音识别两个主要步骤。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 32,
+        "summary": "介绍以语音识别模型推理为例的完整开发指导，包括模型选择、音频播放代码编写、识别代码编写等步骤。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "选择模型",
+        "level": 3,
+        "line_start": 33,
+        "line_end": 36,
+        "summary": "说明本示例使用的语音识别模型文件为tiny-encoder.ms、tiny-decoder-main.ms、tiny-decoder-loop.ms，放置在工程rawfile目录下。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "编写播放音频代码",
+        "level": 3,
+        "line_start": 37,
+        "line_end": 139,
+        "summary": "介绍调用多媒体API实现播放音频功能的代码实现，包括AVPlayer的创建、状态机回调设置、资源文件获取和播放控制等。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "编写识别音频代码",
+        "level": 3,
+        "line_start": 142,
+        "line_end": 647,
+        "summary": "详细介绍语音识别的核心推理代码实现，包括头文件引用、音频文件读取、模型加载、输入数据设置、模型推理、结果处理等完整流程。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "使用N-API将C++动态库封装成ArkTS模块",
+        "level": 3,
+        "line_start": 689,
+        "line_end": 709,
+        "summary": "介绍如何通过N-API将C++动态库封装成ArkTS模块，包括定义ArkTS接口和配置oh-package.json5文件。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "调用封装的ArkTS模块进行推理并输出结果",
+        "level": 3,
+        "line_start": 710,
+        "line_end": 801,
+        "summary": "介绍在ArkTS代码中调用封装的模块进行推理并处理结果的实现，包括UI界面构建、按钮事件处理和结果显示。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "调测验证",
+        "level": 3,
+        "line_start": 803,
+        "line_end": 849,
+        "summary": "提供调测验证步骤，包括在DevEco Studio中编译运行应用、点击按钮测试功能和查看日志输出结果。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "效果示意",
+        "level": 3,
+        "line_start": 852,
+        "line_end": 859,
+        "summary": "展示应用在设备上的运行效果，包括初始页面和识别语音后的页面截图。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 861,
+        "line_end": 867,
+        "summary": "提供相关实例参考链接，包括基于Native接口的MindSpore Lite ASR应用开发示例代码。"
+      }
+    ]
+  }
+}

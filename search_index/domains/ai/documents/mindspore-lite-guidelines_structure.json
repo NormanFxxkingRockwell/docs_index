@@ -1,0 +1,92 @@
+{
+  "doc_id": "mindspore-lite-guidelines",
+  "title": "使用MindSpore Lite进行模型推理 (C/C++)",
+  "path": "zh-cn/application-dev/ai/mindspore/mindspore-lite-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ai/mindspore/mindspore-lite-guidelines.md",
+  "metadata": {
+    "kit": "MindSpore Lite Kit",
+    "subsystem": "AI",
+    "owner": "@zhuguodong8",
+    "designer": "@zhuguodong8; @jjfeing",
+    "tester": "@principal87",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "介绍使用MindSpore Lite推理引擎进行模型推理的通用开发流程，包括模型准备、上下文创建、模型加载、输入数据设置、推理执行和结果获取等完整步骤。",
+  "structure": {
+    "title": "使用MindSpore Lite进行模型推理 (C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 15,
+        "summary": "说明MindSpore Lite是一款AI引擎，提供面向不同硬件设备的AI模型推理功能，已在图像分类、目标识别、人脸识别、文字识别等应用中广泛使用。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 23,
+        "summary": "介绍张量和Float16推理模式等基本概念，张量是MindSpore Lite网络运算中的基本数据结构，Float16推理模式表示使用半精度进行推理。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 57,
+        "summary": "列出MindSpore Lite推理的通用开发流程中涉及的主要接口，包括Context相关接口、Model相关接口和Tensor相关接口。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Context 相关接口",
+        "level": 3,
+        "line_start": 28,
+        "line_end": 39,
+        "summary": "列出Context相关的接口，包括创建上下文、设置线程数、设置线程绑定策略、创建设备信息、设置FP16模式和添加设备信息等。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Model 相关接口",
+        "level": 3,
+        "line_start": 40,
+        "line_end": 47,
+        "summary": "列出Model相关的接口，包括创建模型对象、从文件加载模型和释放模型对象等。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Tensor 相关接口",
+        "level": 3,
+        "line_start": 48,
+        "line_end": 57,
+        "summary": "列出Tensor相关的接口，包括获取输入张量、获取张量元素数量、获取张量名称、获取数据类型和获取可变数据指针等。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 58,
+        "line_end": 271,
+        "summary": "详细介绍使用MindSpore Lite进行模型推理的完整开发步骤，包括模型准备、创建上下文、加载与编译模型、输入数据、执行推理、获取输出和释放模型。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "调测验证",
+        "level": 2,
+        "line_start": 272,
+        "line_end": 312,
+        "summary": "提供调测验证步骤，包括编写CMakeLists.txt、使用ohos-sdk交叉编译和运行可执行程序获取推理结果。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 313,
+        "line_end": 318,
+        "summary": "提供相关实例参考链接，包括简易MSLite教程示例代码。"
+      }
+    ]
+  }
+}

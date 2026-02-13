@@ -1,0 +1,108 @@
+{
+  "doc_id": "mindspore-guidelines-based-js",
+  "title": "使用MindSpore Lite实现图像分类（ArkTS）",
+  "path": "zh-cn/application-dev/ai/mindspore/mindspore-guidelines-based-js.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ai/mindspore/mindspore-guidelines-based-js.md",
+  "metadata": {
+    "kit": "MindSpore Lite Kit",
+    "subsystem": "AI",
+    "owner": "@zhuguodong8",
+    "designer": "@zhuguodong8; @jjfeing",
+    "tester": "@principal87",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "介绍如何使用MindSpore Lite ArkTS API实现图像分类应用，包括模型选择、推理代码编写、图像预处理、模型加载和推理执行等完整开发流程。",
+  "structure": {
+    "title": "使用MindSpore Lite实现图像分类（ArkTS）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景说明",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 15,
+        "summary": "说明使用MindSpore Lite实现图像分类的应用场景，图像分类可识别图像中物体，在医学影像分析、自动驾驶、电子商务、人脸识别等领域有广泛应用。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 23,
+        "summary": "介绍张量和Float16推理推理模式等基本概念，张量是MindSpore Lite网络运算中的基本数据结构。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 35,
+        "summary": "列出MindSpore Lite推理的通用开发流程中涉及的主要接口，包括loadModelFromFile、getInputs、predict、getData、setData等。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "开发流程",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 40,
+        "summary": "概述图像分类应用的开发流程，包括选择图像分类模型和使用MindSpore Lite推理模型实现图像分类两个主要步骤。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 41,
+        "line_end": 44,
+        "summary": "介绍以相册图片推理为例的完整开发指导，包括模型选择、推理代码编写和图像预处理等步骤。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "选择模型",
+        "level": 3,
+        "line_start": 45,
+        "line_end": 50,
+        "summary": "说明本示例使用的图像分类模型文件为mobilenetv2.ms，放置在工程rawfile目录下，并提供模型转换参考文档。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "编写推理代码",
+        "level": 3,
+        "line_start": 51,
+        "line_end": 113,
+        "summary": "详细介绍MindSpore Lite推理代码的实现，包括创建上下文、加载模型、设置输入数据和执行推理等步骤。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "实现图像输入和预处理，并执行推理",
+        "level": 3,
+        "line_start": 115,
+        "line_end": 327,
+        "summary": "介绍图像输入和预处理的实现，包括获取相册图片、图像裁剪、标准化处理、模型加载和推理结果处理等完整流程。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "调测验证",
+        "level": 3,
+        "line_start": 329,
+        "line_end": 357,
+        "summary": "提供调测验证步骤，包括在DevEco Studio中编译运行应用、选择图片进行分类测试和查看日志输出结果。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "效果示意",
+        "level": 3,
+        "line_start": 359,
+        "line_end": 365,
+        "summary": "展示应用在设备上的运行效果，包括图片选择和分类结果显示的截图。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 367,
+        "line_end": 373,
+        "summary": "提供相关实例参考链接，包括基于ArkTS接口的MindSpore Lite应用开发示例代码。"
+      }
+    ]
+  }
+}

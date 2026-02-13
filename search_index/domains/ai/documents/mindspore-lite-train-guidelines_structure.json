@@ -1,0 +1,60 @@
+{
+  "doc_id": "mindspore-lite-train-guidelines",
+  "title": "使用MindSpore Lite进行端侧训练 (C/C++)",
+  "path": "zh-cn/application-dev/ai/mindspore/mindspore-lite-train-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ai/mindspore/mindspore-lite-train-guidelines.md",
+  "metadata": {
+    "kit": "MindSpore Lite Kit",
+    "subsystem": "AI",
+    "owner": "@zhuguodong8",
+    "designer": "@zhuguodong8; @jjfeing",
+    "tester": "@principal87",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "介绍使用MindSpore Lite端侧AI引擎进行模型训练的通用开发流程，包括模型准备、上下文创建、模型加载、训练执行、模型导出和释放等完整步骤。",
+  "structure": {
+    "title": "使用MindSpore Lite进行端侧训练 (C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 15,
+        "summary": "说明MindSpore Lite是一款AI引擎，提供面向不同硬件设备的AI模型推理功能，同时支持在端侧设备上进行部署训练，让模型在实际业务场景中自适应用户的行为。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 34,
+        "summary": "列出使用MindSpore Lite进行模型训练相关的部分接口，包括创建上下文、创建设备信息、创建训练配置、加载训练模型、执行训练步骤、设置训练模式和导出模型等。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 211,
+        "summary": "详细介绍使用MindSpore Lite进行模型训练的完整开发步骤，包括模型准备、创建上下文和训练配置、加载与编译模型、输入数据、执行训练、导出训练后模型和释放模型。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "调测验证",
+        "level": 2,
+        "line_start": 213,
+        "line_end": 266,
+        "summary": "提供调测验证步骤，包括编写CMakeLists.txt、使用ohos-sdk交叉编译和运行编译的可执行程序获取训练结果。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "完整示例",
+        "level": 2,
+        "line_start": 268,
+        "line_end": 499,
+        "summary": "提供完整的模型训练和推理示例代码，包括生成随机输入数据、模型预测函数和训练演示函数的完整实现。"
+      }
+    ]
+  }
+}
