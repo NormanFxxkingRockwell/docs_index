@@ -1,0 +1,36 @@
+{
+  "doc_id": "game-controller-monitor-device",
+  "title": "监听设备上下线（C/C++）",
+  "path": "zh-cn/application-dev/game-controller/game-controller-monitor-device.md",
+  "relative_path": "../../docs/zh-cn/application-dev/game-controller/game-controller-monitor-device.md",
+  "metadata": {
+    "kit": "Game Controller Kit",
+    "subsystem": "Game",
+    "owner": "@zhaoshuhao123",
+    "designer": "@wudejun2025",
+    "tester": "@csp1992",
+    "adviser": "@luwy2025"
+  },
+  "summary": "Game Controller Kit提供设备上下线事件监听和查询在线设备信息的功能。注册监听事件后，设备拔插时可获取实时回调通知，同时支持查询当前所有在线设备的具体信息。",
+  "structure": {
+    "title": "监听设备上下线（C/C++）",
+    "sections": [
+      {
+        "section_id": "0001",
+        "title": "功能介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 12,
+        "summary": "Game Controller Kit提供设备上下线事件监听和查询在线设备信息的功能。"
+      },
+      {
+        "section_id": "0002",
+        "title": "业务流程",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 21,
+        "summary": "游戏启动 -> 游戏调用OH_GameDevice_RegisterDeviceMonitor接口注册设备状态变化事件监听 -> 家家插拔设备 -> 终端系统将设备状态变化通知Game Controller Kit -> Game Controller Kit向游戏反馈设备状态变化。"
+      }
+    ]
+  }
+}

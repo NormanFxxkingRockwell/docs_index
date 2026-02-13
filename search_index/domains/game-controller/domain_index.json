@@ -1,0 +1,83 @@
+{
+  "domain": "GameController",
+  "domain_summary": "Game Controller Kit（游戏控制器服务）支持游戏适配控制器外设（当前仅支持手柄），解决玩家操控性问题，保障用户体验。游戏开发者可通过接入该服务轻松实现游戏外设的上下线和按键及轴事件监听等功能。",
+  "core_concepts": [
+    "设备上下线监听",
+    "查询在线设备信息",
+    "游戏手柄轴事件监听",
+    "游戏手柄按键事件监听",
+    "C/C++开发",
+    "OH_GameDevice_RegisterDeviceMonitor",
+    "OH_GameDevice_UnregisterDeviceMonitor",
+    "OH_GameDevice_GetAllDeviceInfos",
+    "OH_GamePad_LeftShoulder_RegisterButtonInputMonitor",
+    "OH_GamePad_RightShoulder_RegisterButtonInputMonitor",
+    "OH_GamePad_LeftTrigger_RegisterButtonInputMonitor",
+    "OH_GamePad_RightTrigger_RegisterButtonInputMonitor",
+    "OH_GamePad_ButtonMenu_RegisterButtonInputMonitor",
+    "OH_GamePad_ButtonHome_RegisterButtonInputMonitor",
+    "OH_GamePad_ButtonA_RegisterButtonInputMonitor",
+    "OH_GamePad_ButtonB_RegisterButtonInputMonitor",
+    "OH_GamePad_ButtonX_RegisterButtonInputMonitor",
+    "OH_GamePad_ButtonY_RegisterButtonInputMonitor",
+    "OH_GamePad_ButtonC_RegisterButtonInputMonitor",
+    "OH_GamePad_Dpad_LeftButton_RegisterButtonInputMonitor",
+    "OH_GamePad_Dpad_RightButton_RegisterButtonInputMonitor",
+    "OH_GamePad_Dpad_UpButton_RegisterButtonInputMonitor",
+    "OH_GamePad_Dpad_DownButton_RegisterButtonInputMonitor",
+    "OH_GamePad_LeftThumbstick_RegisterButtonInputMonitor",
+    "OH_GamePad_RightThumbstick_RegisterButtonInputMonitor",
+    "OH_GamePad_LeftTrigger_RegisterAxisInputMonitor",
+    "OH_GamePad_RightTrigger_RegisterAxisInputMonitor",
+    "OH_GamePad_Dpad_RegisterAxisInputMonitor",
+    "OH_GamePad_LeftThumbstick_RegisterAxisInputMonitor",
+    "OH_GamePad_RightThumbstick_RegisterAxisInputMonitor"
+    "OH_GamePad_LeftThumbstick_RegisterAxisInputMonitor",
+    "OH_GamePad_LeftTrigger_RegisterAxisInputMonitor",
+    "OH_GamePad_RightTrigger_RegisterAxisInputMonitor",
+    "OH_GamePad_AxisEvent_GetXAxisValue",
+    "OH_GamePad_AxisEvent_GetYAxisValue",
+    "OH_GamePad_AxisEvent_GetZAxisValue",
+    "OH_GamePad_AxisEvent_GetRZAxisValue",
+    "OH_GamePad_AxisEvent_GetHatXAxisValue",
+    "OH_GamePad_AxisEvent_GetHatYAxisValue",
+    "OH_GamePad_AxisEvent_GetBrakeAxisValue",
+    "OH_GamePad_AxisEvent_GetGasAxisValue"
+    "LeftThumbstick",
+    "RightThumbstick",
+    "DPAD",
+    "LeftTrigger",
+    "RightTrigger"
+  ],
+  "document_count": 4,
+  "documents": [
+    {
+      "doc_id": "game-controller-introduction",
+      "title": "Game Controller Kit简介",
+      "path": "../../docs/zh-cn/application-dev/game-controller/game-controller-introduction.md",
+      "summary": "Game Controller Kit（游戏控制器服务）支持游戏适配控制器外设（当前仅支持手柄），解决玩家操控性问题，保障用户体验。游戏开发者可通过接入该服务轻松实现游戏外设的上下线和按键及轴事件监听等功能。",
+      "key_topics": ["游戏控制器服务", "手柄", "上下线监听", "按键事件", "轴事件"]
+    },
+    {
+      "doc_id": "game-controller-monitor-device",
+      "title": "监听设备上下线（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/game-controller/game-controller-monitor-device.md",
+      "summary": "Game Controller Kit提供设备上下线事件监听和查询在线设备信息的功能。注册监听事件后，设备拔插时可获取实时回调通知，同时支持查询当前所有在线设备的具体信息。",
+      "key_topics": ["设备上下线", "事件监听", "查询在线设备", "OH_GameDevice_RegisterDeviceMonitor", "OH_GameDevice_UnregisterDeviceMonitor", "OH_GameDevice_GetAllDeviceInfos"]
+    },
+    {
+      "doc_id": "game-controller-monitor-pad",
+      "title": "监听游戏手柄的轴和按键事件（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/game-controller/game-controller-monitor-pad.md",
+      "summary": "Game Controller Kit提供游戏手柄轴事件和按键事件的监听能力。通过轴事件和按键事件的监听注册，在玩家操作手柄按键和摇杆时可获得对应回调通知。",
+      "key_topics": ["轴事件", "按键事件", "LeftThumbstick", "RightThumbstick", "LeftTrigger", "RightTrigger", "Menu", "Home", "A", "B", "C", "Dpad"]
+    },
+    {
+      "doc_id": "Readme-CN",
+      "title": "Game Controller Kit开发指南",
+      "path": "../../docs/zh-cn/application-dev/game-controller/Readme-CN.md",
+      "summary": "Game Controller Kit开发指南，包括设备上下线监听、游戏手柄的轴和按键事件监听等功能。Game Controller Kit（游戏控制器服务）支持游戏适配控制器外设（当前仅支持手柄），解决玩家操控性问题，保障用户体验。",
+      "key_topics": ["开发指南", "C/C++", "设备上下线", "轴事件", "按键事件"]
+    }
+  ]
+}
