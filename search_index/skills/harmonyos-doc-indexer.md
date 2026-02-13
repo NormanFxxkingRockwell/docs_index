@@ -322,19 +322,29 @@ reference: 3295
 
 **操作**：
 - 保存到 `search_index/domains/{domain}/documents/{doc_id}_structure.json`
+- 验证 JSON 格式正确性
+- 确保 summary 字段不为空
 
 **使用的工具**：
 - `write`：写入文件
+- `bash`：验证 JSON 格式 `python -m json.tool {file} > /dev/null 2>&1`
 
 **检查点**：
 - [ ] 文档索引已保存
 - [ ] 文件路径正确
 - [ ] 文件内容正确
-- [ ] JSON 格式有效（summary 字段不为空或 `.md`）
+- [ ] JSON 格式有效
+- [ ] summary 字段不为空且长度 > 10
 
 **错误处理**：
 - 如果保存失败，记录错误并继续处理下一个文档
-- 如果 JSON 格式无效，记录错误并修复
+- 如果 JSON 格式无效，记录错误并详细检查 JSON 结构
+- 如果 summary 为空或过短，重新生成摘要
+
+**关键验证**：
+1. 确保 metadata 对象后没有多余的逗号或括号
+2. 确保 summary 字段存在且有效
+3. 确保 structure 对象格式正确
 
 ---
 
@@ -347,15 +357,17 @@ reference: 3295
 - 收集所有文档的标题和摘要
 - 提取 5-10 个核心概念
 - 概念应涵盖领域的主要功能点
-- 去除重复概念
+- 去除重复概念（使用集合去重）
+- 验证没有重复项
 
 **使用的工具**：
 - 无（由 AI Agent 生成）
+- `bash`：验证无重复 `python -c "import json; from collections import Counter; data=json.load(open('domain_index.json', encoding='utf-8')); c=Counter(data['core_concepts']); print('Duplicates:', [k for k,v in c.items() if v>1])"`
 
 **检查点**：
 - [ ] 核心概念已提取
 - [ ] 概念数量在 5-10 个之间
-- [ ] 概念无重复
+- [ ] 概念无重复（验证通过）
 
 **示例**：
 ```json
@@ -451,13 +463,23 @@ reference: 3295
 
 **操作**：
 - 保存到 `search_index/domains/{domain}/domain_index.json`
+- 验证 JSON 格式
+- 验证核心概念无重复
 
 **使用的工具**：
 - `write`：写入文件
+- `bash`：验证 JSON 格式和重复项
 
 **检查点**：
 - [ ] 领域索引已保存
 - [ ] 文件路径正确
+- [ ] JSON 格式有效
+- [ ] 核心概念无重复
+
+**错误处理**：
+- 如果保存失败，记录错误
+- 如果 JSON 格式无效，修复并重新保存
+- 如果有重复概念，去重后重新保存
 
 ---
 
@@ -886,6 +908,36 @@ Network Kit 是 OpenHarmony 提供的网络通信服务框架...
 
 ---
 
+## 常见错误与修复
+
+### JSON 格式错误
+1. **metadata 对象后多余的逗号或括号**
+   - 错误示例：`"metadata": {...} }, "summary": "..."`
+   - 正确示例：`"metadata": {...}, "summary": "..."`
+   - 修复：检查 metadata 对象后是否有多余的 `}` 或 `,`
+
+2. **重复的核心概念**
+   - 错误：core_concepts 数组中有重复项
+   - 修复：使用集合去重，生成前验证
+
+3. **空的 summary 字段**
+   - 错误：summary 为空字符串或长度过短
+   - 修复：确保 summary 长度至少 10 个字符
+
+### 验证命令
+```bash
+# 验证所有 JSON 文件格式
+cd search_index/domains
+for f in $(find . -name "*.json"); do
+  python -c "import json; json.load(open('$f', encoding='utf-8'))" 2>&1 && echo "OK: $f" || echo "ERROR: $f"
+done
+
+# 检查重复的核心概念
+python -c "import json; from collections import Counter; data=json.load(open('domain_index.json', encoding='utf-8')); c=Counter(data['core_concepts']); print('Duplicates:', [k for k,v in c.items() if v>1])"
+```
+
+---
+
 ## 注意事项
 
 ### 文档处理
@@ -893,6 +945,7 @@ Network Kit 是 OpenHarmony 提供的网络通信服务框架...
 2. **引用转换**：所有文档引用转换为指向 docs 目录的相对路径
 3. **摘要质量**：摘要应准确概括内容，避免过于详细或过于简略
 4. **元数据提取**：从文档前 20 行提取元数据
+5. **JSON 编码**：所有 JSON 文件使用 UTF-8 编码
 
 ### 领域处理
 1. **核心概念**：提取 5-10 个最能代表领域的概念
@@ -934,3 +987,49 @@ Network Kit 是 OpenHarmony 提供的网络通信服务框架...
 **选项 3**：增量更新特定领域
 
 请选择下一步行动。
+
+---
+
+## 质量保证检查清单
+
+### 每个领域完成后必须验证
+- [ ] 所有 JSON 文件格式正确（UTF-8 编码）
+- [ ] 所有 structure 文件的 summary 字段不为空且长度 > 10
+- [ ] domain_index.json 中的 core_concepts 无重复
+- [ ] domain_map.json 的 domain 字段正确（无截断）
+- [ ] 所有文档路径格式正确（../../docs/...）
+
+### 批量验证脚本
+```bash
+# 1. 验证所有 JSON 文件格式
+cd search_index/domains
+for f in $(find . -name "*.json"); do
+  python -c "import json; json.load(open('$f', encoding='utf-8'))" 2>&1 && echo "OK: $f" || echo "ERROR: $f"
+done | grep ERROR
+
+# 2. 检查空的 summary 字段
+find . -name "*_structure.json" | while read f; do
+  python -c "import json; data=json.load(open('$f', encoding='utf-8')); s=data.get('summary',''); print('$f: ' + ('OK' if s and len(s)>10 else 'BAD'))"
+done | grep BAD
+
+# 3. 检查重复的核心概念
+for d in */; do
+  if [ -f "$d/domain_index.json" ]; then
+    echo "=== $d ==="
+    python -c "import json; from collections import Counter; data=json.load(open('$d/domain_index.json', encoding='utf-8')); c=Counter(data['core_concepts']); print('Duplicates:', [k for k,v in c.items() if v>1])"
+  fi
+done
+```
+
+### 已知问题与解决方案
+1. **metadata 对象后多余的括号**
+   - 原因：构建 JSON 时语法错误
+   - 解决：仔细检查 JSON 括号匹配
+
+2. **重复的核心概念**
+   - 原因：收集概念时未去重
+   - 解决：使用集合去重
+
+3. **domain 字段截断**
+   - 原因：字符串拼接错误
+   - 解决：确保引号和字符串正确闭合
