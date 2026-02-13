@@ -1,0 +1,271 @@
+{
+  "domain": "Form",
+  "domain_summary": "Form Kit（卡片开发服务）提供了一种在桌面上嵌入显示应用信息的开发框架和API，支持ArkTS卡片和JS卡片两种开发方式。ArkTS卡片支持声明式开发范式、动效能力、自定义绘制和逻辑代码运行，分为动态卡片、静态卡片和互动卡片三种类型。支持卡片主动刷新、被动刷新、页面交互、卡片编辑、互动卡片等功能。",
+  "core_concepts": [
+    "ArkTS卡片",
+    "JS卡片",
+    "动态卡片",
+    "静态卡片",
+    "互动卡片",
+    "卡片刷新",
+    "卡片交互",
+    "FormExtensionAbility",
+    "postCardAction",
+    "卡片生命周期"
+  ],
+  "document_count": 38,
+  "documents": [
+    {
+      "doc_id": "arkts-form-overview",
+      "title": "ArkTS卡片概述",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-form-overview.md",
+      "summary": "ArkTS卡片概述，介绍基于ArkTS声明式开发范式语言开发卡片。包含统一开发范式、卡片能力增强（动效、自定义绘制、逻辑代码运行）、实现原理、ArkTS卡片类型（动态卡片、静态卡片、互动卡片）以及约束与限制。",
+      "key_topics": ["ArkTS卡片", "动态卡片", "静态卡片", "互动卡片"]
+    },
+    {
+      "doc_id": "arkts-ui-liveform-funinteraction-development",
+      "title": "趣味交互类型互动卡片开发指导",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-liveform-funinteraction-development.md",
+      "summary": "趣味交互类型互动卡片开发指导，当前仅支持基于快游戏开发的卡片小游戏。包含激活态、暂停态和非激活态三个状态的说明和约束限制。",
+      "key_topics": ["互动卡片", "趣味交互", "快游戏"]
+    },
+    {
+      "doc_id": "arkts-ui-liveform-overview",
+      "title": "互动卡片概述",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-liveform-overview.md",
+      "summary": "互动卡片概述，从API version 20开始支持。互动卡片提供卡片动效能力，例如卡片破框动效，丰富信息提醒、浅层交互功能。包含趣味交互类型和场景动效类型两种互动卡片。",
+      "key_topics": ["互动卡片", "破框动效", "场景动效"]
+    },
+    {
+      "doc_id": "arkts-ui-liveform-sceneanimation-development-sys",
+      "title": "场景动效类型互动卡片开发指导（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-liveform-sceneanimation-development-sys.md",
+      "summary": "场景动效类型互动卡片开发指导（仅对系统应用开放），提供手势禁用配置和卡片长时间保持激活态两个扩展能力。",
+      "key_topics": ["互动卡片", "场景动效", "系统应用"]
+    },
+    {
+      "doc_id": "arkts-ui-liveform-sceneanimation-development",
+      "title": "场景动效类型互动卡片开发指导",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-liveform-sceneanimation-development.md",
+      "summary": "场景动效类型互动卡片开发指导，包括卡片非激活态和激活态UI界面开发、卡片配置文件开发。支持破框动效能力。",
+      "key_topics": ["互动卡片", "场景动效", "破框动效"]
+    },
+    {
+      "doc_id": "arkts-ui-liveform-sceneanimation-overview",
+      "title": "场景动效类型互动卡片概述",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-liveform-sceneanimation-overview.md",
+      "summary": "场景动效类型互动卡片概述，从API version 20开始支持。支持在特定场景下触发互动卡片的特有效果，例如破框动效。包含基本概念、实现原理和约束限制。",
+      "key_topics": ["互动卡片", "场景动效", "破框动效"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-active-refresh",
+      "title": "ArkTS卡片主动刷新",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-active-refresh.md",
+      "summary": "ArkTS卡片主动刷新开发指导，包括卡片提供方主动刷新卡片内容、卡片提供方批量请求刷新卡片内容（reloadForms和reloadAllForms接口）以及卡片使用方主动刷新卡片内容（仅对系统应用开放）。",
+      "key_topics": ["卡片刷新", "主动刷新", "批量刷新"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-adapt-faq",
+      "title": "ArkTS卡片适配常见问题",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-adapt-faq.md",
+      "summary": "ArkTS卡片适配常见问题，介绍ArkTS卡片开发是否支持V2装饰器以及如何从V1迁移。",
+      "key_topics": ["V2装饰器", "状态管理", "迁移"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-configuration",
+      "title": "配置ArkTS卡片的配置文件",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-configuration.md",
+      "summary": "配置ArkTS卡片的配置文件，包括FormExtensionAbility配置、独立卡片包配置、卡片配置（form_config.json）以及各种配置标签的详细说明。",
+      "key_topics": ["配置文件", "form_config.json", "module.json5"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-creation",
+      "title": "创建ArkTS卡片",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-creation.md",
+      "summary": "创建ArkTS卡片，介绍两种创建卡片包的方式：共包方式（卡片和应用代码在一个module内）和独立包方式（卡片UI和应用代码在不同module内）。从API version 20开始支持独立包方式。",
+      "key_topics": ["创建卡片", "共包方式", "独立包方式"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-dark-light-color-adapt",
+      "title": "ArkTS卡片界面适配深浅色模式",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-dark-light-color-adapt.md",
+      "summary": "ArkTS卡片界面适配深浅色模式，当前系统存在深浅色两种显示模式，ArkTS卡片支持适配深浅色模式，保障卡片与页面视觉体验一致性。",
+      "key_topics": ["深浅色模式", "颜色适配"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-effect-sys",
+      "title": "ArkTS卡片新材质适配（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-effect-sys.md",
+      "summary": "ArkTS卡片新材质适配（仅对系统应用开放），从API version 23开始支持。提供炫彩透光视觉效果，提升用户体验。包括新材质内容和新材质背板。",
+      "key_topics": ["新材质", "系统应用", "视觉效果"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-event-call",
+      "title": "卡片拉起应用UIAbility到后台（call事件）",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-event-call.md",
+      "summary": "卡片拉起应用UIAbility到后台（call事件），使用postCardAction接口的call能力，能够将卡片提供方应用的指定UIAbility拉到后台，同时提供调用应用指定方法、传递数据的功能。",
+      "key_topics": ["call事件", "后台运行", "UIAbility"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-event-formeditextensionability-overview",
+      "title": "ArkTS卡片编辑概述",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-event-formeditextensionability-overview.md",
+      "summary": "ArkTS卡片编辑概述，从API version 18开始支持。提供卡片页面编辑能力，支持实现用户自定义卡片内容的功能，例如编辑联系人卡片、修改卡片中展示的联系人、编辑天气卡片等。",
+      "key_topics": ["卡片编辑", "FormEditExtensionAbility"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-event-formeditextensionability",
+      "title": "卡片编辑开发指导",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-event-formeditextensionability.md",
+      "summary": "卡片编辑开发指导，从API version 18开始支持。桌面提供统一的卡片编辑页，卡片提供方使用FormEditExtensionAbility开发卡片编辑功能。",
+      "key_topics": ["卡片编辑", "FormEditExtensionAbility"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-event-overview",
+      "title": "ArkTS卡片页面交互概述",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-event-overview.md",
+      "summary": "ArkTS卡片页面交互概述，介绍ArkTS卡片的页面交互能力，包括卡片与卡片提供方的页面跳转、卡片拉起卡片提供方进程、卡片与卡片提供方的消息传递。支持router、message和call三种类型的事件。",
+      "key_topics": ["页面交互", "router事件", "message事件", "call事件"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-event-router",
+      "title": "卡片跳转到应用页面（router事件）",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-event-router.md",
+      "summary": "卡片跳转到应用页面（router事件），在动态卡片中使用postCardAction接口的router能力，能够快速拉起动态卡片提供方应用的指定UIAbility，实现一键直达的效果。",
+      "key_topics": ["router事件", "页面跳转", "UIAbility"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-event-uiability",
+      "title": "通过router或call事件刷新卡片内容",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-event-uiability.md",
+      "summary": "通过router或call事件刷新卡片内容，使用router事件点击卡片可拉起对应应用的UIAbility至前台并刷新卡片，使用call事件点击卡片可拉起对应应用的UIAbility至后台并刷新卡片。",
+      "key_topics": ["router事件", "call事件", "卡片刷新"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-image-update",
+      "title": "刷新本地图片和网络图片",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-image-update.md",
+      "summary": "刷新本地图片和网络图片，介绍如何在卡片上显示本地图片或从网络上下载的图片，通过FormExtensionAbility来实现图片刷新。",
+      "key_topics": ["图片刷新", "本地图片", "网络图片"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-interaction-overview",
+      "title": "ArkTS卡片页面刷新概述",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-interaction-overview.md",
+      "summary": "ArkTS卡片页面刷新概述，介绍卡片刷新方式包括：卡片提供方主动触发刷新、卡片使用方主动触发刷新以及卡片定时定点刷新。分为主动刷新和被动刷新两种方式。",
+      "key_topics": ["卡片刷新", "主动刷新", "被动刷新", "定时刷新"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-lifecycle",
+      "title": "管理ArkTS卡片生命周期",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-lifecycle.md",
+      "summary": "管理ArkTS卡片生命周期，介绍如何创建ArkTS卡片并实现FormExtensionAbility生命周期接口，包括onAddForm、onCastToNormalForm、onUpdateForm、onChangeFormVisibility、onFormEvent、onRemoveForm、onConfigurationUpdate、onAcquireFormState等回调。",
+      "key_topics": ["生命周期", "FormExtensionAbility"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-load-custom-font",
+      "title": "ArkTS卡片使用自定义字体",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-load-custom-font.md",
+      "summary": "ArkTS卡片使用自定义字体，API version 22开始新增了getLocalInstance接口获取本地字体集实例，应用可以通过这个本地实例为卡片加载自定义字体。",
+      "key_topics": ["自定义字体", "FontCollection"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-open-formmanager",
+      "title": "应用内拉起卡片管理加桌",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-open-formmanager.md",
+      "summary": "应用内拉起卡片管理加桌，从API version 18开始支持。Form Kit提供在应用内将ArkTS卡片添加到桌面的能力，以方便用户后续便捷查看信息或快速进入应用。",
+      "key_topics": ["openFormManager", "卡片管理"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-page-custom-drawing",
+      "title": "ArkTS卡片使用画布组件绘制自定义图形",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-page-custom-drawing.md",
+      "summary": "ArkTS卡片使用画布组件绘制自定义图形，ArkTS卡片开放了自定义绘制的能力，在卡片上可以通过Canvas组件创建一块画布，然后通过CanvasRenderingContext2D对象在画布上进行自定义图形的绘制。",
+      "key_topics": ["Canvas", "自定义绘制", "CanvasRenderingContext2D"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-page-overview",
+      "title": "ArkTS卡片界面开发概述",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-page-overview.md",
+      "summary": "ArkTS卡片界面开发概述，ArkTS卡片开发采用通用ArkTS语言，开发者可以使用ArkTS声明式开发范式开发ArkTS卡片页面。支持ArkTS声明式开发范式的部分组件、事件、动效、数据管理、状态管理能力。",
+      "key_topics": ["ArkTS", "声明式开发", "UI开发"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-passive-refresh",
+      "title": "ArkTS卡片被动刷新",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-passive-refresh.md",
+      "summary": "ArkTS卡片被动刷新开发指导，包括卡片定时刷新（updateDuration和setFormNextRefreshTime）、卡片定点刷新（scheduledUpdateTime和multiScheduledUpdateTime）以及卡片条件刷新（network）。",
+      "key_topics": ["被动刷新", "定时刷新", "定点刷新", "条件刷新"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-process",
+      "title": "ArkTS卡片进程模型",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-process.md",
+      "summary": "ArkTS卡片进程模型，介绍卡片从创建到显示整个过程中各个进程的含义，包括卡片使用方进程、卡片渲染服务进程、卡片管理服务进程、卡片提供方进程。",
+      "key_topics": ["进程模型", "卡片渲染服务", "卡片管理服务"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-update-by-proxy-sys",
+      "title": "卡片代理刷新（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-update-by-proxy-sys.md",
+      "summary": "卡片代理刷新（仅对系统应用开放），是一种通过系统应用刷新卡片的机制。卡片提供方不在运行时，仍然可以通过开启了数据共享能力的系统应用完成卡片数据的更新。",
+      "key_topics": ["代理刷新", "系统应用", "数据共享"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-update-by-status",
+      "title": "根据卡片状态刷新不同内容",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-update-by-status.md",
+      "summary": "根据卡片状态刷新不同内容，相同的卡片可以添加到桌面上实现不同的功能，比如添加两张桌面的卡片，一张显示杭州的天气，一张显示北京的天气。",
+      "key_topics": ["卡片状态", "状态刷新", "数据持久化"]
+    },
+    {
+      "doc_id": "arkts-ui-widget-visual-effect-sys",
+      "title": "ArkTS卡片玻璃材质适配（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/form/arkts-ui-widget-visual-effect-sys.md",
+      "summary": "ArkTS卡片玻璃材质适配（仅对系统应用开放），从API version 22开始支持。提供高端精致的用户体验，建议在透明卡片上使用。",
+      "key_topics": ["玻璃材质", "系统应用", "视觉效果"]
+    },
+    {
+      "doc_id": "formkit-overview",
+      "title": "Form Kit简介",
+      "path": "../../docs/zh-cn/application-dev/form/formkit-overview.md",
+      "summary": "Form Kit（卡片开发服务）简介，提供了一种在桌面上嵌入显示应用信息的开发框架和API，可以将应用内用户关注的重要信息或常用操作抽取到服务卡片上。支持Stage和FA两种开发模型，支持ArkTS卡片和JS卡片。",
+      "key_topics": ["Form Kit", "卡片开发", "Stage模型", "FA模型"]
+    },
+    {
+      "doc_id": "js-ui-widget-development",
+      "title": "JS卡片开发指导（Stage模型）",
+      "path": "../../docs/zh-cn/application-dev/form/js-ui-widget-development.md",
+      "summary": "JS卡片开发指导（Stage模型），Stage模型是从API version 9开始支持，目前主推且会长期演进的模型。采用面向对象的方式，将应用组件以类接口的形式开放给开发者。",
+      "key_topics": ["JS卡片", "Stage模型", "类Web范式"]
+    },
+    {
+      "doc_id": "js-ui-widget-overview",
+      "title": "JS卡片概述",
+      "path": "../../docs/zh-cn/application-dev/form/js-ui-widget-overview.md",
+      "summary": "JS卡片概述，使用类Web范式（HML+CSS+JSON）开发页面的卡片，现在已经支持FA模型和Stage模型两种应用模型。在开发新卡片时，推荐采用ArkTS声明式来构建UI。",
+      "key_topics": ["JS卡片", "类Web范式", "HML"]
+    },
+    {
+      "doc_id": "Readme-CN",
+      "title": "Form Kit（卡片开发服务）",
+      "path": "../../docs/zh-cn/application-dev/form/Readme-CN.md",
+      "summary": "Form Kit（卡片开发服务）目录导航，包含Form Kit简介、ArkTS卡片开发（推荐）、JS卡片开发等完整文档索引。",
+      "key_topics": ["Form Kit", "目录导航"]
+    },
+    {
+      "doc_id": "widget-development-fa",
+      "title": "JS卡片开发指导（FA模型）",
+      "path": "../../docs/zh-cn/application-dev/form/widget-development-fa.md",
+      "summary": "JS卡片开发指导（FA模型），FA模型从API version 7开始支持，已经不再主推。该应用模型通过导出匿名对象、固定入口文件的方式指定应用组件，开发者无法进行派生，不利于扩展能力。",
+      "key_topics": ["JS卡片", "FA模型", "类Web范式"]
+    },
+    {
+      "doc_id": "widget-host-development-guide-sys",
+      "title": "ArkTS卡片使用方开发指导（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/form/widget-host-development-guide-sys.md",
+      "summary": "ArkTS卡片使用方开发指导（仅对系统应用开放），卡片使用方负责显示卡片。包括卡片组件FormComponent的使用和formHost模块提供的卡片使用方相关接口。",
+      "key_topics": ["卡片使用方", "系统应用", "FormComponent"]
+    }
+  ]
+}
