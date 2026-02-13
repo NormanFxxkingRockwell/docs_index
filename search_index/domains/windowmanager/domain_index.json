@@ -1,0 +1,112 @@
+{
+  "domain": "windowmanager",
+  "domain_summary": "窗口管理模块用于在同一块物理屏幕上提供多个应用界面显示、交互的机制，包括应用窗口和系统窗口两种基本类型，支持多种窗口模式、沉浸式布局、窗口旋转等功能。",
+  "core_concepts": [
+    "窗口管理",
+    "WindowStage",
+    "应用窗口",
+    "系统窗口",
+    "主窗口",
+    "子窗口",
+    "全局悬浮窗",
+    "沉浸式布局",
+    "窗口模式",
+    "自由窗口",
+    "启动页",
+    "窗口旋转"
+  ],
+  "document_count": 14,
+  "documents": [
+    {
+      "doc_id": "window-overview",
+      "title": "窗口开发概述",
+      "path": "../../docs/zh-cn/application-dev/windowmanager/window-overview.md",
+      "summary": "介绍窗口模块的定义、用途和基本概念，包括窗口模块的用途、基本概念、窗口类型、应用窗口模式、自由窗口、沉浸式布局、主窗口的生命周期等。",
+      "key_topics": ["窗口模块", "WindowStage", "应用窗口", "系统窗口", "主窗口", "子窗口", "沉浸式布局", "生命周期"]
+    },
+    {
+      "doc_id": "application-window-stage",
+      "title": "管理应用窗口（Stage模型）",
+      "path": "../../docs/zh-cn/application-dev/windowmanager/application-window-stage.md",
+      "summary": "介绍Stage模型下管理应用窗口的典型场景，包括设置应用主窗口、子窗口、沉浸式能力、全局悬浮窗、监听窗口事件等。",
+      "key_topics": ["Stage模型", "UIAbility", "WindowStage", "主窗口", "子窗口", "沉浸式布局", "全局悬浮窗", "窗口事件"]
+    },
+    {
+      "doc_id": "application-window-fa",
+      "title": "管理应用窗口（FA模型）",
+      "path": "../../docs/zh-cn/application-dev/windowmanager/application-window-fa.md",
+      "summary": "介绍FA模型下管理应用窗口的典型场景，包括设置应用子窗口、体验窗口沉浸式能力等。",
+      "key_topics": ["FA模型", "子窗口", "沉浸式布局"]
+    },
+    {
+      "doc_id": "window-rotation",
+      "title": "窗口旋转",
+      "path": "../../docs/zh-cn/application-dev/windowmanager/window-rotation.md",
+      "summary": "介绍窗口旋转的相关概念和开发指导，包括全局坐标系、窗口类型、应用窗口模式、悬浮窗、自由窗口、沉浸式布局、全局坐标系等概念和实现方式。",
+      "key_topics": ["窗口旋转", "全局坐标系", "窗口类型", "应用窗口模式", "悬浮窗", "自由窗口", "沉浸式布局"]
+    },
+    {
+      "doc_id": "window-config-m",
+      "title": "窗口元数据配置",
+      "path": "../../docs/zh-cn/application-dev/windowmanager/window-config-m.md",
+      "summary": "介绍窗口元数据配置，包括metadata标签的使用方式和各种配置场景，如配置主窗口的默认大小和位置、配置启动页、配置自由多窗口等。",
+      "key_topics": ["metadata", "元数据配置", "主窗口配置", "启动页", "自由多窗"]
+    },
+    {
+      "doc_id": "window-faqs",
+      "title": "窗口开发常见问题",
+      "path": "../../docs/zh-cn/application-dev/windowmanager/window-faqs.md",
+      "summary": "介绍窗口开发的常见问题和解决方案，包括如何在应用A启动过程中拉起另一个应用B、动态获取窗口宽高、获取软键盘高度、获取PC设备顶部系统默认标题栏的高度、实现或判断窗口沉浸式布局、隐藏状态栏和底部导航区域等。",
+      "key_topics": ["窗口开发", "常见问题", "启动应用", "窗口宽高", "软键盘高度", "沉浸式布局", "状态栏"]
+    },
+    {
+      "doc_id": "launch-page-config",
+      "title": "配置应用启动页",
+      "path": "../../docs/zh-cn/application-dev/windowmanager/launch-page-config.md",
+      "summary": "介绍应用启动页的分类和实现方式，包括简易启动页和增强启动页，开发者通过在module.json5配置文件中的abilities标签配置启动页资源。",
+      "key_topics": ["启动页", "简易启动页", "增强启动页", "module.json5"]
+    },
+    {
+      "doc_id": "launch-page-overview",
+      "title": "应用启动页简介",
+      "path": "../../docs/zh-cn/application-dev/windowmanager/launch-page-overview.md",
+      "summary": "介绍启动页的概念和展示场景，启动页是应用冷启动时显示的首个页面，同时承载了应用展示品牌特性的功能。",
+      "key_topics": ["启动页", "冷启动", "多任务卡片", "品牌展示"]
+    },
+    {
+      "doc_id": "launch-page-resource-config",
+      "title": "启动页资源分类配置",
+      "path": "../../docs/zh-cn/application-dev/windowmanager/launch-page-resource-config.md",
+      "summary": "介绍启动页资源的分类配置，支持资源分类配置，可针对不同的场景配置不同资源，常用于在深色模式或不同设备类型上配置不同的启动页内容。",
+      "key_topics": ["启动页", "资源分类配置", "深色模式", "设备类型"]
+    },
+    {
+      "doc_id": "native-window-event-filter",
+      "title": "使用WindowManager管理多模输入事件（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/windowmanager/native-window-event-filter.md",
+      "summary": "介绍如何使用WindowManager管理多模输入事件，包括过滤多模输入事件和将多模触摸事件注入给目标窗口。",
+      "key_topics": ["WindowManager", "C/C++", "多模输入事件", "事件过滤", "触摸事件注入"]
+    },
+    {
+      "doc_id": "system-window-stage-sys",
+      "title": "管理系统窗口 (仅Stage模型支持) (仅对系统应用开放)",
+      "path": "../../docs/zh-cn/application-dev/windowmanager/system-window-stage-sys.md",
+      "summary": "介绍如何管理系统窗口，包括音量条、壁纸、通知栏、状态栏、导航栏等系统窗口，仅对系统应用开放。",
+      "key_topics": ["系统窗口", "Stage模型", "ServiceExtensionAbility", "音量条", "壁纸", "通知栏", "状态栏", "导航栏"]
+    },
+    {
+      "doc_id": "application-window-as",
+      "title": "管理应用窗口（原子化服务）",
+      "path": "../../docs/zh-cn/application-dev/windowmanager/application-window-as.md",
+      "summary": "介绍管理应用窗口的典型场景，包括设置应用主窗口属性及目标页面、设置应用子窗口属性及目标页面、监听窗口不可交互与可交互事件等。",
+      "key_topics": ["原子化服务", "主窗口", "子窗口", "窗口事件", "隐私模式"]
+    },
+    {
+      "doc_id": "Readme-CN",
+      "title": "窗口管理",
+      "path": "../../docs/zh-cn/application-dev/windowmanager/Readme-CN.md",
+      "summary": "窗口管理的导航页面，提供窗口管理服务的完整文档索引，包括窗口开发概述、管理应用窗口、窗口旋转、窗口元数据配置、窗口开发术语等功能的文档链接。",
+      "key_topics": ["窗口管理", "导航"]
+    }
+  ]
+}

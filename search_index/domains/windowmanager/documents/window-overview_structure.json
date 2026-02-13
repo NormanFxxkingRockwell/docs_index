@@ -1,0 +1,84 @@
+{
+  "doc_id": "window-overview",
+  "title": "窗口开发概述",
+  "path": "zh-cn/application-dev/windowmanager/window-overview.md",
+  "relative_path": "../../docs/zh-cn/application-dev/windowmanager/window-overview.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "Window",
+    "owner": "@Pakoo007",
+    "designer": "@ki_ja",
+    "tester": "@qinliwen0417",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "介绍窗口模块的定义、用途和基本概念，包括窗口模块的用途、基本概念、窗口类型、应用窗口模式、自由窗口、沉浸式布局、主窗口的生命周期等。",
+  "structure": {
+    "title": "窗口开发概述",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "窗口模块的定义",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 18,
+        "summary": "介绍窗口模块的定义，包括对应用开发者、终端用户、整个操作系统的不同作用。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "窗口模块的用途",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 32,
+        "summary": "介绍窗口模块在OpenHarmony中的主要职责，包括提供应用和系统界面的窗口对象、组织不同窗口的显示关系、提供窗口装饰、提供窗口动效、指导输入事件分发等。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 37,
+        "summary": "介绍窗口模块的基本概念，包括窗口类型、应用窗口模式、自由窗口、沉浸式布局等。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "主窗口的生命周期",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 83,
+        "summary": "介绍主窗口的生命周期，包括UIAbility、WindowStage和应用主窗三者之间的关系，以及通过onWindowStageCreate和onWindowStageDestroy接收主窗口创建和销毁的通知。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "生命周期状态",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 108,
+        "summary": "介绍主窗口的生命周期状态，包括切到前台（SHOWN）、可交互状态（RESUMED）、不可交互状态（PAUSED）和切到后台（HIDDEN）。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "监听生命周期状态变化",
+        "level": 2,
+        "line_start": 115,
+        "line_end": 121,
+        "summary": "介绍如何监听生命周期状态变化，包括通过on('windowStageEvent')和on('windowStageLifecycleEvent')注册WindowStage生命周期变化的监听。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "不同设备生命周期的差异化行为",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 140,
+        "summary": "介绍Stage模型下，应用主窗口从前台进入后台状态也会驱动UIAbility的生命周期，需要额外关注这个机制在不同类型产品的差异化行为。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "约束与限制",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 144,
+        "summary": "介绍窗口存在大小限制WindowLimits，该限制由产品配置决定。"
+      }
+    ]
+  }
+}

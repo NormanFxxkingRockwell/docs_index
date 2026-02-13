@@ -1,0 +1,140 @@
+{
+  "doc_id": "window-faqs",
+  "title": "窗口开发常见问题",
+  "path": "zh-cn/application-dev/windowmanager/window-faqs.md",
+  "relative_path": "../../docs/zh-cn/application-dev/windowmanager/window-faqs.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "Window",
+    "owner": "@JUGaaab",
+    "designer": "@ki_ja",
+    "tester": "@qinliwen0417",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "介绍窗口开发的常见问题和解决方案，包括如何在应用A启动过程中拉起另一个应用B、动态获取窗口宽高、获取软键盘高度、获取PC设备顶部系统默认标题栏的高度、实现或判断窗口沉浸式布局、隐藏状态栏和底部导航区域等。",
+  "structure": {
+    "title": "窗口开发常见问题",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "如何在应用A启动过程中拉起另一个应用B",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 61,
+        "summary": "介绍如何在应用A启动过程中拉起另一个应用B，通过监听windowStageEvent接口监听WindowStageEventType.ACTIVE事件后调用startAbility接口拉起应用B。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "如何动态获取窗口宽高",
+        "level": 2,
+        "line_start": 63,
+        "line_end": 92,
+        "summary": "介绍如何动态获取窗口宽高，用于实现响应式布局，以适应不同尺寸的设备或窗口状态变化。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "如何获取软键盘高度",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 128,
+        "summary": "介绍如何获取软键盘高度，通过getWindowAvoidArea和on('avoidAreaChange')动态监听软键盘避让区高度的变化。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "如何获取PC设备顶部系统默认标题栏的高度",
+        "level": 2,
+        "line_start": 131,
+        "line_end": 160,
+        "summary": "介绍如何获取PC设备顶部系统默认标题栏的高度，通过调用getWindowDecorHeight获取窗口的标题栏高度。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "如何实现或判断窗口沉浸式布局",
+        "level": 2,
+        "line_start": 163,
+        "line_end": 197,
+        "summary": "介绍如何实现或判断窗口沉浸式布局，非自由窗口可以通过调用setWindowLayoutFullScreen设置沉浸式布局，自由窗口可以通过setWindowDecorVisible控制窗口标题栏显隐。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "如何隐藏状态栏和底部导航区域",
+        "level": 2,
+        "line_start": 200,
+        "line_end": 228,
+        "summary": "介绍如何隐藏状态栏和底部导航区域，通过调用setSpecificSystemBarEnabled接口设置状态栏和底部导航区域。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "如何获取状态栏高度",
+        "level": 2,
+        "line_start": 231,
+        "line_end": 259,
+        "summary": "介绍如何获取状态栏高度，通过getWindowAvoidArea获取到包含状态栏的避让区域，间接获取到状态栏的高度。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "如何设置窗口背景透明",
+        "level": 2,
+        "line_start": 263,
+        "line_end": 299,
+        "summary": "介绍如何设置窗口背景透明，通过调用setWindowBackgroundColor接口，传入'\\#00XXXXXX'（其中X代表任意十六进制数字）或者透明的ColorMetrics实现窗口背景透明。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "如何实现横竖屏切换",
+        "level": 2,
+        "line_start": 301,
+        "line_end": 337,
+        "summary": "介绍如何实现横竖屏切换，需要先获取到主窗实例，然后调用setPreferredOrientation接口设置窗口方向。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "如何获取设备的横竖屏状态",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 383,
+        "summary": "介绍如何获取设备的横竖屏状态，先通过display.getDefaultDisplaySync获取当前默认的Display实例对象，再通过该实例对象获取对应的Orientation属性。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "如何设置应用默认横屏宽高比例",
+        "level": 2,
+        "line_start": 389,
+        "line_end": 425,
+        "summary": "介绍如何设置应用默认横屏宽高比例，推荐使用setContentAspectRatio设置窗口内容布局的比例。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "如何设置窗口支持的显示模式supportWindowMode",
+        "level": 2,
+        "line_start": 427,
+        "line_end": 478,
+        "summary": "介绍如何设置窗口支持的显示模式，包括通过module.json5配置、通过StartOptions配置、使用metadata配置、通过SetSupportedWindowModes接口配置等多种方式。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "如何判断当前窗口是否为自由悬浮窗口模式",
+        "level": 2,
+        "line_start": 484,
+        "line_end": 529,
+        "summary": "介绍如何判断当前窗口是否为自由悬浮窗口模式，可通过getWindowStatus直接查询当前的窗口模式，或通过on('windowStatusChange')监听窗口模式变化。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "如何设置隐私窗口",
+        "level": 2,
+        "line_start": 551,
+        "line_end": 576,
+        "summary": "介绍如何设置隐私窗口，通过调用setWindowPrivacyMode接口设置窗口为隐私模式，设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "如何将创建的窗口移动到扩展屏",
+        "level": 2,
+        "line_start": 578,
+        "line_end": 650,
+        "summary": "介绍如何将创建的窗口移动到扩展屏，应用可通过主动调用moveWindowToGlobal接口将当前窗口移动到目标屏幕。"
+      }
+    ]
+  }
+}
