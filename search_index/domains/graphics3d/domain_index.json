@@ -1,0 +1,75 @@
+{
+  "domain": "Graphics3D",
+  "domain_summary": "ArkGraphics 3D（方舟3D图形）是HarmonyOS 3D图形渲染的核心模块，基于轻量级的3D引擎以及渲染管线为开发者提供基础3D场景绘制能力。支持场景搭建、模型加载、相机管理、光源配置、材质系统、着色器、图片资源、环境资源和动画控制等功能，采用基于物理的渲染（PBR）模型。",
+  "core_concepts": [
+    "3D场景",
+    "模型加载",
+    "相机管理",
+    "光源配置",
+    "材质系统",
+    "着色器",
+    "图片资源",
+    "环境资源",
+    "动画控制",
+    "PBR渲染"
+  ],
+  "document_count": 8,
+  "documents": [
+    {
+      "doc_id": "graphics3d-readme",
+      "title": "ArkGraphics 3D（方舟3D图形）",
+      "path": "../../docs/zh-cn/application-dev/graphics3d/Readme-CN.md",
+      "summary": "ArkGraphics 3D（方舟3D图形）是HarmonyOS 3D图形渲染的核心模块，提供完整的3D场景渲染能力。",
+      "key_topics": ["ArkGraphics 3D", "3D图形", "场景渲染"]
+    },
+    {
+      "doc_id": "arkgraphics3D-overview",
+      "title": "ArkGraphics 3D简介",
+      "path": "../../docs/zh-cn/application-dev/graphics3d/arkgraphics3D-overview.md",
+      "summary": "ArkGraphics 3D（方舟3D图形）基于轻量级的3D引擎以及渲染管线为开发者提供基础3D场景绘制能力，供开发者便捷、高效地构建3D场景并完成渲染。包含功能介绍、架构原理和约束限制。",
+      "key_topics": ["架构", "渲染管线", "功能介绍"]
+    },
+    {
+      "doc_id": "arkgraphics3D-scene",
+      "title": "ArkGraphics 3D场景搭建以及管理",
+      "path": "../../docs/zh-cn/application-dev/graphics3d/arkgraphics3D-scene.md",
+      "summary": "一个3D场景通常由光源、相机、模型三个关键部分组成。模型用于描述对象的形状结构和外观，光源提供光照，相机提供观察视角。介绍模型的加载及呈现、相机的创建及管理、光源的创建及管理。",
+      "key_topics": ["3D场景", "模型", "相机", "光源", "glTF"]
+    },
+    {
+      "doc_id": "arkgraphics3D-animation",
+      "title": "ArkGraphics 3D场景动画控制以及管理",
+      "path": "../../docs/zh-cn/application-dev/graphics3d/arkgraphics3D-animation.md",
+      "summary": "ArkGraphics 3D提供播放并控制场景动画的能力，支持开发者灵活地控制动画的状态，达到预期的渲染效果。包含导入模块、加载场景资源、获取动画并注册回调、创建相机与设置场景渲染参数、构建界面与动画控制等开发步骤。",
+      "key_topics": ["动画", "场景动画", "动画控制"]
+    },
+    {
+      "doc_id": "arkgraphics3D-resource-material",
+      "title": "创建并使用材质资源",
+      "path": "../../docs/zh-cn/application-dev/graphics3d/arkgraphics3D-resource-material.md",
+      "summary": "材质是用于定义物体表面视觉效果的重要资源。ArkGraphics 3D采用基于物理的渲染（PBR）模型，其材质实现遵循通用的PBR原理。介绍材质类型（SHADER和METALLIC_ROUGHNESS）、材质属性、PBR材质属性、创建Shader材质和PBR材质的方法。",
+      "key_topics": ["材质", "PBR", "着色器", "金属度", "粗糙度"]
+    },
+    {
+      "doc_id": "arkgraphics3D-resource-image",
+      "title": "创建并使用图片资源",
+      "path": "../../docs/zh-cn/application-dev/graphics3d/arkgraphics3D-resource-image.md",
+      "summary": "图片是储存信息的二维内存块，用于储存3D渲染计算过程需要的相关信息，比如基础色、法线等等。ArkGraphics 3D提供基于png、jpg、ktx格式创建Image资源的能力。包含导入模块、加载场景、创建图片资源并绑定到材质、应用图片材质到模型节点等开发步骤。",
+      "key_topics": ["图片资源", "PNG", "JPG", "KTX", "纹理"]
+    },
+    {
+      "doc_id": "arkgraphics3D-resource-environment",
+      "title": "创建并使用环境资源",
+      "path": "../../docs/zh-cn/application-dev/graphics3d/arkgraphics3D-resource-environment.md",
+      "summary": "环境是3D场景背景的一种描述，可以基于图片进行创建。通过将图片进行正方体或者球体的映射处理，将图片贴在正方体或者球体上，在3D场景中模拟真实的环境。包含加载场景、创建环境并绑定图片、应用环境到场景等开发步骤。",
+      "key_topics": ["环境资源", "环境贴图", "背景", "立方体贴图", "球体贴图"]
+    },
+    {
+      "doc_id": "arkgraphics3D-shader-resource",
+      "title": ".shader资源文件格式要求",
+      "path": "../../docs/zh-cn/application-dev/graphics3d/arkgraphics3D-shader-resource.md",
+      "summary": "ArkGraphics 3D中支持的.shader文件基于JSON格式，书写.shader文件时需符合JSON语法要求。介绍compatibility_info、vert、frag、vertexInputDeclaration、state（rasterizationState、depthStencilState、colorBlendState）等字段格式要求。",
+      "key_topics": ["着色器", "Shader", "JSON格式", "顶点着色器", "片元着色器"]
+    }
+  ]
+}

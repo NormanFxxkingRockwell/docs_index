@@ -1,0 +1,84 @@
+{
+  "doc_id": "arkgraphics3D-shader-resource",
+  "title": ".shader资源文件格式要求",
+  "path": "zh-cn/application-dev/graphics3d/arkgraphics3D-shader-resource.md",
+  "relative_path": "../../docs/zh-cn/application-dev/graphics3d/arkgraphics3D-shader-resource.md",
+  "metadata": {
+    "kit": "ArkGraphics 3D",
+    "subsystem": "Graphics",
+    "owner": "@zzhao0",
+    "designer": "@zdustc",
+    "tester": "@zhangyue283",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 3D中支持的.shader文件基于JSON格式，书写.shader文件时需符合JSON语法要求。",
+  "structure": {
+    "title": ".shader资源文件格式要求",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "compatibility_info",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 17,
+        "summary": "说明向引擎声明shader版本兼容性信息。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "vert",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 29,
+        "summary": "说明指定使用该shader的DrawCall中使用的vertex shader文件。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "frag",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 42,
+        "summary": "说明指定使用该shader的DrawCall中使用的fragment shader文件。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "vertexInputDeclaration",
+        "level": 2,
+        "line_start": 45,
+        "line_end": 50,
+        "summary": "说明指定输入vertex数据中的attributes排列方式。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "state",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 83,
+        "summary": "说明指定本次渲染管线中的pipeline state，包括rasterizationState、depthStencilState、colorBlendState三部分。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "rasterizationState",
+        "level": 3,
+        "line_start": 58,
+        "line_end": 63,
+        "summary": "用于表示光栅化过程中的属性配置。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "depthStencilState",
+        "level": 3,
+        "line_start": 84,
+        "line_end": 90,
+        "summary": "用于表示深度测试和模板测试的状态属性。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "colorBlendState",
+        "level": 2,
+        "line_start": 102,
+        "line_end": 103,
+        "summary": "用于指定本次渲染中渲染源与渲染目标的混合状态属性。"
+      }
+    ]
+  }
+}
