@@ -1,0 +1,425 @@
+{
+  "domain": "Web",
+  "domain_summary": "ArkWeb（方舟Web）是OpenHarmony提供的Web组件框架，基于Chromium内核开发，支持在应用中显示Web页面内容。涵盖Web页面加载、生命周期管理、JavaScript交互、渲染模式、深色模式、Cookie与存储管理、安全与隐私、文件上传下载、WebRTC、打印PDF、调试等功能。",
+  "core_concepts": [
+    "Web组件",
+    "ArkWeb内核",
+    "JavaScript交互",
+    "页面加载",
+    "渲染模式",
+    "深色模式",
+    "Cookie管理",
+    "User-Agent",
+    "隐私模式",
+    "安全与隐私"
+  ],
+  "document_count": 58,
+  "documents": [
+    {
+      "doc_id": "Readme-CN",
+      "title": "ArkWeb（方舟Web）",
+      "path": "../../docs/zh-cn/application-dev/web/Readme-CN.md",
+      "summary": "ArkWeb（方舟Web）的总体介绍，包含Web组件概述、ArkWeb进程、生命周期、基本属性设置、渲染和布局、JavaScript交互、网页交互管理、网络安全与隐私、网页加载与浏览记录管理、文件上传下载、多媒体使用、网页内容处理、同层渲染、离线Web组件、原生消息通信、调试维测等功能模块的导航。",
+      "key_topics": ["ArkWeb", "Web组件", "导航"]
+    },
+    {
+      "doc_id": "web-component-overview",
+      "title": "ArkWeb简介",
+      "path": "../../docs/zh-cn/application-dev/web/web-component-overview.md",
+      "summary": "ArkWeb（方舟Web）提供了Web组件，用于在应用程序中显示Web页面内容。包括使用场景（应用集成Web页面、浏览器网页浏览、小程序）、能力范围（页面加载、生命周期管理、属性与事件、JavaScript交互、安全与隐私、维测能力、高阶能力）、需要权限（ohos.permission.INTERNET）、约束与限制（Chromium内核版本对应关系）。",
+      "key_topics": ["ArkWeb", "Web组件", "使用场景", "能力范围"]
+    },
+    {
+      "doc_id": "web_component_process",
+      "title": "ArkWeb进程",
+      "path": "../../docs/zh-cn/application-dev/web/web_component_process.md",
+      "summary": "ArkWeb是多进程模型，分为应用进程、Web渲染进程、Web GPU进程、Web孵化进程和Foundation进程。介绍各进程职责、渲染进程模式设置（单进程/多进程）、渲染进程终止、渲染进程退出事件监听、渲染进程无响应状态监听、共享渲染进程token的使用。",
+      "key_topics": ["进程模型", "渲染进程", "GPU进程", "孵化进程", "Foundation进程"]
+    },
+    {
+      "doc_id": "web-event-sequence",
+      "title": "Web组件的生命周期",
+      "path": "../../docs/zh-cn/application-dev/web/web-event-sequence.md",
+      "summary": "介绍Web组件的生命周期，包括Controller绑定到Web组件、网页加载开始、网页加载进度、网页加载结束、页面即将可见等状态。提供onControllerAttached、onLoadIntercept、onInterceptRequest、onPageBegin、onProgressChange、onPageEnd、onPageVisible、onRenderExited等回调事件，以及Web组件网页加载的性能指标（FCP、FMP、LCP）。",
+      "key_topics": ["Web组件", "生命周期", "回调事件", "onControllerAttached", "onPageBegin", "onPageEnd"]
+    },
+    {
+      "doc_id": "web-default-userAgent",
+      "title": "User-Agent开发指导",
+      "path": "../../docs/zh-cn/application-dev/web/web-default-userAgent.md",
+      "summary": "介绍User-Agent（UA）的结构、默认UA格式、字段说明（DeviceType、OSName、OSVersion、ChromeCompatibleVersion、ArkWeb VersionCode等）、自定义UA设置方法（setCustomUserAgent、setAppCustomUserAgent、setUserAgentForHosts）、接口优先级、常见问题（识别OpenHarmony设备、模拟UA调试、H5兼容性、UA兼容性问题解决）。",
+      "key_topics": ["User-Agent", "UA", "自定义UA", "设备识别", "H5兼容"]
+    },
+    {
+      "doc_id": "web-cookie-and-data-storage-mgmt",
+      "title": "管理Cookie及数据存储",
+      "path": "../../docs/zh-cn/application-dev/web/web-cookie-and-data-storage-mgmt.md",
+      "summary": "介绍Cookie管理（WebCookieManager类、configCookieSync接口、Cookie存储位置、SameSite属性默认值）和缓存与存储管理（Cache模式配置、removeCache清除缓存、Dom Storage的Session Storage和Local Storage、domStorageAccess使能配置）。",
+      "key_topics": ["Cookie", "缓存", "存储", "WebCookieManager", "Dom Storage"]
+    },
+    {
+      "doc_id": "web-set-dark-mode",
+      "title": "Web深色模式适配",
+      "path": "../../docs/zh-cn/application-dev/web/web-set-dark-mode.md",
+      "summary": "介绍网页深色模式适配（color-scheme和prefers-color-scheme属性）、Web深色模式设置（darkMode接口、WebDarkMode枚举、forceDarkAccess强制深色模式）、Web组件背景色适配、常见问题（网页未切换深色样式、强制深色模式样式异常、未开启深色模式背景变深）。",
+      "key_topics": ["深色模式", "color-scheme", "prefers-color-scheme", "forceDarkAccess", "背景色适配"]
+    },
+    {
+      "doc_id": "web-open-in-new-window",
+      "title": "在新窗口中打开页面",
+      "path": "../../docs/zh-cn/application-dev/web/web-open-in-new-window.md",
+      "summary": "介绍Web组件在新窗口打开页面的能力，通过multiWindowAccess接口设置是否允许网页在新窗口打开，onWindowNew和onWindowNewExt接口接收新窗口事件，allowWindowOpenMethod接口设置前端页面通过JavaScript函数打开新窗口，window.open与Web组件绑定关系。",
+      "key_topics": ["新窗口", "multiWindowAccess", "onWindowNew", "window.open", "窗口管理"]
+    },
+    {
+      "doc_id": "web-geolocation-permission",
+      "title": "管理位置权限",
+      "path": "../../docs/zh-cn/application-dev/web/web-geolocation-permission.md",
+      "summary": "介绍Web组件的GeolocationPermissions类和onGeolocationShow方法对网页进行位置权限管理。包括需要权限（ohos.permission.LOCATION、APPROXIMATELY_LOCATION、LOCATION_IN_BACKGROUND）、申请位置权限、管理位置权限（allowGeolocation、getAccessibleGeolocation、deleteAllGeolocation）。",
+      "key_topics": ["位置权限", "GeolocationPermissions", "onGeolocationShow", "地理位置"]
+    },
+    {
+      "doc_id": "web-incognito-mode",
+      "title": "使用隐私模式",
+      "path": "../../docs/zh-cn/application-dev/web/web-incognito-mode.md",
+      "summary": "介绍隐私模式的使用，通过incognitoMode参数开启Web组件的隐私模式，浏览网页时的Cookie、Cache Data等数据不会保存在本地持久化文件。包括创建隐私模式Web组件、判断是否为隐私模式、隐私模式下的地理位置、Cookie、Cache Data管理接口。",
+      "key_topics": ["隐私模式", "incognitoMode", "无痕浏览", "Cookie", "缓存"]
+    },
+    {
+      "doc_id": "web-sensor",
+      "title": "使用运动和方向传感器监测设备状态",
+      "path": "../../docs/zh-cn/application-dev/web/web-sensor.md",
+      "summary": "介绍通过W3C标准协议接口访问运动和方向传感器（Accelerometer加速度、Gyroscope陀螺仪、AbsoluteOrientationSensor绝对定位、RelativeOrientationSensor相对定位、DeviceMotionEvent设备运动事件、DeviceOrientationEvent设备方向事件），需要权限（ohos.permission.ACCELEROMETER、GYROSCOPE）。",
+      "key_topics": ["传感器", "加速度", "陀螺仪", "DeviceMotionEvent", "DeviceOrientationEvent"]
+    },
+    {
+      "doc_id": "web-render-mode",
+      "title": "Web组件渲染模式",
+      "path": "../../docs/zh-cn/application-dev/web/web-render-mode.md",
+      "summary": "介绍Web组件的两种渲染模式：异步渲染模式（RenderMode.ASYNC_RENDER，Web组件作为图形surface节点独立送显，适用于仅由Web组件构成的应用页面）和同步渲染模式（RenderMode.SYNC_RENDER，Web组件作为图形canvas节点跟随系统组件送显，适用于超长页面渲染）。",
+      "key_topics": ["渲染模式", "ASYNC_RENDER", "SYNC_RENDER", "surface节点", "canvas节点"]
+    },
+    {
+      "doc_id": "web-fit-content",
+      "title": "Web组件大小自适应页面内容布局",
+      "path": "../../docs/zh-cn/application-dev/web/web-fit-content.md",
+      "summary": "介绍使用Web组件大小自适应页面内容布局模式（layoutMode(WebLayoutMode.FIT_CONTENT)），使Web组件大小根据页面内容自适应变化。包括使用场景（浏览长文章、长页面首页）、规格与约束（建议同步渲染模式、关闭过滚动模式、不支持缩放、不支持瀑布流页面）、常见问题。",
+      "key_topics": ["FIT_CONTENT", "自适应布局", "layoutMode", "页面高度"]
+    },
+    {
+      "doc_id": "web-in-app-frontend-page-function-invoking",
+      "title": "应用侧调用前端页面函数",
+      "path": "../../docs/zh-cn/application-dev/web/web-in-app-frontend-page-function-invoking.md",
+      "summary": "介绍应用侧通过runJavaScript和runJavaScriptExt方法调用前端页面的JavaScript相关函数。runJavaScript仅支持string类型参数，runJavaScriptExt支持string和ArrayBuffer类型参数。包括调用有参函数、无参函数、传递JavaScript代码的示例。",
+      "key_topics": ["JavaScript交互", "runJavaScript", "runJavaScriptExt", "应用调用前端"]
+    },
+    {
+      "doc_id": "web-in-page-app-function-invoking",
+      "title": "前端页面调用应用侧函数",
+      "path": "../../docs/zh-cn/application-dev/web/web-in-page-app-function-invoking.md",
+      "summary": "介绍将应用侧代码注册到前端页面中，前端页面使用注册的对象名称调用应用侧方法。包括javaScriptProxy和registerJavaScriptProxy两种注册方式、复杂类型使用方法（Array、非Function、Callback、Object里的Function、Promise场景）、验证通道是否建立成功。",
+      "key_topics": ["JavaScript交互", "javaScriptProxy", "registerJavaScriptProxy", "前端调用应用", "JSBridge"]
+    },
+    {
+      "doc_id": "web-nested-scrolling",
+      "title": "Web组件嵌套滚动",
+      "path": "../../docs/zh-cn/application-dev/web/web-nested-scrolling.md",
+      "summary": "介绍Web组件嵌套滚动的两种实现方案：方案1使用nestedScroll属性实现嵌套滚动（设置上下左右或前后方向的嵌套滚动模式），方案2滚动偏移量由滚动父组件统一派发（自定义控制Web组件和其他滚动组件滚动）。适用于多个独立区域需进行滚动的场景。",
+      "key_topics": ["嵌套滚动", "nestedScroll", "滚动联动", "NestedScrollMode", "滚动偏移量"]
+    },
+    {
+      "doc_id": "web-cross-origin",
+      "title": "解决Web组件本地资源跨域问题",
+      "path": "../../docs/zh-cn/application-dev/web/web-cross-origin.md",
+      "summary": "介绍解决本地资源跨域问题的两种方法：方法一使用http或https协议替代file或resource协议，通过onInterceptRequest方法对本地资源进行拦截和替换；方法二通过setPathAllowingUniversalAccess设置路径列表，允许file协议访问列表中的资源进行跨域访问。",
+      "key_topics": ["跨域", "CORS", "file协议", "resource协议", "onInterceptRequest"]
+    },
+    {
+      "doc_id": "web-adsblock",
+      "title": "使用Web组件的广告过滤功能",
+      "path": "../../docs/zh-cn/application-dev/web/web-adsblock.md",
+      "summary": "介绍ArkWeb的广告过滤功能，支持通过云端推送默认的easylist规则或应用设定自定义规则文件。包括常用easylist语法规则（URL拦截规则、例外规则、元素隐藏规则）、约束与限制、使用场景（开启广告过滤、关闭特定域名页面的广告过滤、收集广告过滤的信息）。",
+      "key_topics": ["广告过滤", "easylist", "AdsBlockManager", "enableAdsBlock", "onAdsBlocked"]
+    },
+    {
+      "doc_id": "web-secure-shield-mode",
+      "title": "坚盾守护模式",
+      "path": "../../docs/zh-cn/application-dev/web/web-secure-shield-mode.md",
+      "summary": "介绍坚盾守护模式，提供给高安全需求用户的系统级别安全模式，通过限制设备基础功能增强安全性。包括ArkWeb限制的HTML5特性（禁止WebAssembly、WebGL、PDF Viewer、MathML、Web Speech API、RTCDataChannel、MediaDevices.getUserMedia、Service Worker、非代理UDP流量、即时编译JIT）、评估对应用的影响。",
+      "key_topics": ["坚盾守护模式", "安全模式", "HTML5限制", "WebAssembly", "WebGL"]
+    },
+    {
+      "doc_id": "web-file-upload",
+      "title": "使用Web组件上传文件",
+      "path": "../../docs/zh-cn/application-dev/web/web-file-upload.md",
+      "summary": "介绍Web组件支持前端页面选择文件上传功能，应用开发者使用onShowFileSelector接口处理前端页面文件上传请求。包括使用onShowFileSelector拉起文件管理器、拉起图库、拉起相机、使用ArkWeb默认方式处理文件上传请求、自定义处理js接口拉起的文件请求（API version 23新增支持showSaveFilePicker、showOpenFilePicker、showDirectoryPicker）。",
+      "key_topics": ["文件上传", "onShowFileSelector", "文件选择器", "图库", "相机"]
+    },
+    {
+      "doc_id": "web-download",
+      "title": "使用Web组件的下载能力",
+      "path": "../../docs/zh-cn/application-dev/web/web-download.md",
+      "summary": "介绍Web组件的下载能力，通过setDownloadDelegate注册DownloadDelegate监听页面触发的下载任务。包括监听页面触发的下载（onBeforeDownload、onDownloadUpdated、onDownloadFailed、onDownloadFinish）、使用Web组件发起一个下载任务（startDownload）、使用Web组件恢复进程退出时未下载完成的任务（resumeDownload）。",
+      "key_topics": ["下载", "DownloadDelegate", "setDownloadDelegate", "startDownload", "resumeDownload"]
+    },
+    {
+      "doc_id": "web-rtc",
+      "title": "在Web中打开摄像头和麦克风",
+      "path": "../../docs/zh-cn/application-dev/web/web-rtc.md",
+      "summary": "介绍WebRTC（Web Real-Time Communications）实时通讯技术，允许网络应用或站点建立浏览器之间的点对点连接，实现视频流、音频流或任意数据的传输。Web组件通过W3C标准协议接口navigator.mediaDevices.getUserMedia()拉起摄像头和麦克风，需要权限（ohos.permission.CAMERA、MICROPHONE）。",
+      "key_topics": ["WebRTC", "摄像头", "麦克风", "getUserMedia", "实时通讯"]
+    },
+    {
+      "doc_id": "web-print",
+      "title": "使用Web组件打印前端页面",
+      "path": "../../docs/zh-cn/application-dev/web/web-print.md",
+      "summary": "介绍Web组件打印html页面的两种方式：使用W3C标准协议接口拉起打印（window.print()方法，可通过前端css样式@media print控制是否打印）和通过调用应用侧接口拉起打印（createWebPrintDocumentAdapter创建打印适配器，通过print.print接口调起打印）。需要权限ohos.permission.PRINT。",
+      "key_topics": ["打印", "window.print", "createWebPrintDocumentAdapter", "print", "PDF"]
+    },
+    {
+      "doc_id": "web-createpdf",
+      "title": "使用Web组件保存前端页面为PDF",
+      "path": "../../docs/zh-cn/application-dev/web/web-createpdf.md",
+      "summary": "介绍从API version 14开始，使用Web组件的createPdf方法保存前端页面为PDF的功能。包括需要权限（涉及网络文档获取需ohos.permission.INTERNET）、callback方式保存PDF、Promise方式保存PDF、PdfConfiguration配置（调整PDF每页大小、前端页面缩放比例等）。",
+      "key_topics": ["PDF", "createPdf", "PdfConfiguration", "保存PDF", "二进制数据流"]
+    },
+    {
+      "doc_id": "web-debugging-with-devtools",
+      "title": "使用DevTools工具调试前端页面",
+      "path": "../../docs/zh-cn/application-dev/web/web-debugging-with-devtools.md",
+      "summary": "介绍Web组件支持使用DevTools工具调试前端页面。包括无线调试（setWebDebuggingAccess接口指定TCP Socket端口号启用Web调试功能）和USB连接调试（通过hdc命令进行端口转发）。需要权限ohos.permission.INTERNET，常见问题与解决方法。",
+      "key_topics": ["调试", "DevTools", "setWebDebuggingAccess", "无线调试", "USB调试"]
+    },
+    {
+      "doc_id": "web-white-screen",
+      "title": "定位与解决Web白屏问题",
+      "path": "../../docs/zh-cn/application-dev/web/web-white-screen.md",
+      "summary": "介绍Web页面白屏问题的排查步骤：检查权限和网络状态、使用DevTools工具定位具体报错类型（跨域、资源404、JS异常）、排查渲染模式及组件约束条件、处理H5代码兼容性问题、从日志中排查生命周期和网络加载相关关键字、检查是否开启坚盾守护模式。",
+      "key_topics": ["白屏", "问题排查", "权限", "DevTools", "兼容性"]
+    },
+    {
+      "doc_id": "web-offline-mode",
+      "title": "使用离线Web组件",
+      "path": "../../docs/zh-cn/application-dev/web/web-offline-mode.md",
+      "summary": "介绍离线Web组件基于NodeContainer实现，可以预先创建Web组件，实现性能优化。包括整体架构、创建离线Web组件、预启动渲染进程、预渲染Web页面、复用和释放离线Web组件、常见白屏问题排查。",
+      "key_topics": ["离线Web组件", "NodeContainer", "预渲染", "性能优化", "复用组件"]
+    },
+    {
+      "doc_id": "web-page-loading-with-web-components",
+      "title": "使用Web组件加载页面",
+      "path": "../../docs/zh-cn/application-dev/web/web-page-loading-with-web-components.md",
+      "summary": "介绍Web组件加载页面的三种常用场景：加载网络页面（通过loadUrl接口加载指定网页）、加载本地页面（通过$rawfile或file协议加载本地html文件）、加载HTML格式的文本数据（通过loadData接口加载HTML格式的文本数据）、resource协议加载本地资源。",
+      "key_topics": ["页面加载", "loadUrl", "loadData", "本地页面", "HTML文本"]
+    },
+    {
+      "doc_id": "web-redirection-and-browsing-history-mgmt",
+      "title": "管理页面跳转及浏览记录导航",
+      "path": "../../docs/zh-cn/application-dev/web/web-redirection-and-browsing-history-mgmt.md",
+      "summary": "介绍浏览记录导航和页面跳转功能。历史记录导航：通过forward和backward接口向前/向后浏览历史记录，accessBackward和accessForward检查是否存在历史记录。页面跳转：通过onLoadIntercept接口实现应用内页面跳转，支持跨应用跳转（如跳转到电话应用的拨号界面）。",
+      "key_topics": ["浏览记录", "页面跳转", "forward", "backward", "onLoadIntercept"]
+    },
+    {
+      "doc_id": "web-scheme-handler",
+      "title": "拦截Web组件发起的网络请求",
+      "path": "../../docs/zh-cn/application-dev/web/web-scheme-handler.md",
+      "summary": "介绍通过SchemeHandler机制拦截Web组件发起的网络请求。包括为Web组件设置SchemeHandler（ArkTS和NDK两套接口）、设置自定义scheme需要遵循的规则、获取被拦截请求的信息（url、method、referrer、headers、resource type、post data）、拦截请求并提供自定义响应信息。",
+      "key_topics": ["SchemeHandler", "网络请求拦截", "onRequestStart", "onRequestStop", "自定义响应"]
+    },
+    {
+      "doc_id": "web-resource-interception-request-mgmt",
+      "title": "自定义页面请求响应",
+      "path": "../../docs/zh-cn/application-dev/web/web-resource-interception-request-mgmt.md",
+      "summary": "介绍Web组件支持在应用拦截到页面请求后自定义响应请求能力。开发者通过onInterceptRequest接口实现自定义资源请求响应，包括自定义页面响应场景、为JavaScript请求响应生成CodeCache（在响应头中添加ResponseDataID字段）。",
+      "key_topics": ["onInterceptRequest", "自定义响应", "页面请求", "CodeCache", "资源拦截"]
+    },
+    {
+      "doc_id": "app-takeovers-web-media",
+      "title": "托管网页中的媒体播放",
+      "path": "../../docs/zh-cn/application-dev/web/app-takeovers-web-media.md",
+      "summary": "介绍Web组件的媒体播放托管能力，允许应用接管网页中的媒体播放，实现统一的媒体播放控制。",
+      "key_topics": ["媒体托管", "媒体播放", "接管播放"]
+    },
+    {
+      "doc_id": "arkweb-ndk-jsbridge",
+      "title": "应用侧与前端页面的相互调用(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/web/arkweb-ndk-jsbridge.md",
+      "summary": "介绍使用Native C++开发的应用侧与前端页面的相互调用能力，通过NDK接口实现JavaScriptBridge功能。",
+      "key_topics": ["JavaScript交互", "C/C++", "Native API", "JSBridge"]
+    },
+    {
+      "doc_id": "arkweb-ndk-page-data-channel",
+      "title": "建立应用侧与前端页面数据通道(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/web/arkweb-ndk-page-data-channel.md",
+      "summary": "介绍使用Native C++开发的应用侧与前端页面建立数据通道的能力，通过NDK接口实现数据通道功能。",
+      "key_topics": ["数据通道", "C/C++", "Native API"]
+    },
+    {
+      "doc_id": "web-app-page-data-channel",
+      "title": "建立应用侧与前端页面数据通道",
+      "path": "../../docs/zh-cn/application-dev/web/web-app-page-data-channel.md",
+      "summary": "介绍建立应用侧与前端页面数据通道的能力，支持应用侧与前端页面之间的数据传输。",
+      "key_topics": ["数据通道", "应用与前端通信"]
+    },
+    {
+      "doc_id": "web-clipboard",
+      "title": "使用Web组件与系统剪贴板交互处理网页内容",
+      "path": "../../docs/zh-cn/application-dev/web/web-clipboard.md",
+      "summary": "介绍通过Web组件和系统剪贴板进行交互，实现各种类型数据的复制和粘贴。支持通过菜单、键盘快捷键以及W3C剪贴板接口对网页内容执行剪切、复制和粘贴操作。需要权限ohos.permission.READ_PASTEBOARD。",
+      "key_topics": ["剪贴板", "复制", "粘贴", "W3C剪贴板接口"]
+    },
+    {
+      "doc_id": "web-component-migrate",
+      "title": "Web组件在不同窗口间迁移",
+      "path": "../../docs/zh-cn/application-dev/web/web-component-migrate.md",
+      "summary": "介绍Web组件在不同窗口间迁移的能力，支持Web组件的跨窗口使用。",
+      "key_topics": ["组件迁移", "跨窗口", "窗口管理"]
+    },
+    {
+      "doc_id": "web-content-scrolling",
+      "title": "Web页面显示内容滚动",
+      "path": "../../docs/zh-cn/application-dev/web/web-content-scrolling.md",
+      "summary": "介绍Web页面显示内容滚动的功能，支持网页内容的滚动控制。",
+      "key_topics": ["页面滚动", "滚动控制"]
+    },
+    {
+      "doc_id": "web-crashpad",
+      "title": "使用crashpad收集Web组件崩溃信息",
+      "path": "../../docs/zh-cn/application-dev/web/web-crashpad.md",
+      "summary": "介绍使用crashpad收集Web组件崩溃信息的能力，用于崩溃信息的收集和分析。",
+      "key_topics": ["崩溃信息", "crashpad", "调试"]
+    },
+    {
+      "doc_id": "web-data-detector",
+      "title": "使用Web组件的智能分词能力",
+      "path": "../../docs/zh-cn/application-dev/web/web-data-detector.md",
+      "summary": "介绍Web组件的智能分词能力，支持对网页内容进行智能分词识别。",
+      "key_topics": ["智能分词", "内容识别"]
+    },
+    {
+      "doc_id": "web-dialog",
+      "title": "使用Web组件显示网页弹框",
+      "path": "../../docs/zh-cn/application-dev/web/web-dialog.md",
+      "summary": "介绍使用Web组件显示网页弹框的能力，支持网页中的弹框显示。",
+      "key_topics": ["弹框", "对话框"]
+    },
+    {
+      "doc_id": "web-docking-softkeyboard",
+      "title": "Web组件对接软键盘",
+      "path": "../../docs/zh-cn/application-dev/web/web-docking-softkeyboard.md",
+      "summary": "介绍Web组件对接软键盘的能力，支持Web组件与软键盘的交互。",
+      "key_topics": ["软键盘", "输入法"]
+    },
+    {
+      "doc_id": "web-focus",
+      "title": "Web组件焦点管理",
+      "path": "../../docs/zh-cn/application-dev/web/web-focus.md",
+      "summary": "介绍Web组件焦点管理的能力，支持Web组件焦点的获取和设置。",
+      "key_topics": ["焦点管理", "焦点"]
+    },
+    {
+      "doc_id": "web-gesture",
+      "title": "使用Web组件的手势与应用交互",
+      "path": "../../docs/zh-cn/application-dev/web/web-gesture.md",
+      "summary": "介绍使用Web组件的手势与应用交互的能力，支持Web组件的手势识别和应用交互。",
+      "key_topics": ["手势", "交互"]
+    },
+    {
+      "doc_id": "web-getpage-height",
+      "title": "获取网页内容高度",
+      "path": "../../docs/zh-cn/application-dev/web/web-getpage-height.md",
+      "summary": "介绍获取网页内容高度的能力，支持获取Web页面的实际高度。",
+      "key_topics": ["页面高度", "页面属性"]
+    },
+    {
+      "doc_id": "web-intelligent-tracking-prevention",
+      "title": "使用智能防跟踪功能",
+      "path": "../../docs/zh-cn/application-dev/web/web-intelligent-tracking-prevention.md",
+      "summary": "介绍智能防跟踪功能，用于防止网页中的跟踪行为，保护用户隐私。",
+      "key_topics": ["防跟踪", "隐私保护"]
+    },
+    {
+      "doc_id": "web-native-messaging",
+      "title": "使用WebNativeMessagingExtensionAbility组件实现浏览器扩展和原生应用通信场景",
+      "path": "../../docs/zh-cn/application-dev/web/web-native-messaging.md",
+      "summary": "介绍使用WebNativeMessagingExtensionAbility组件实现浏览器扩展和原生应用通信场景的能力。",
+      "key_topics": ["原生消息", "浏览器扩展", "应用通信"]
+    },
+    {
+      "doc_id": "web-pdf-preview",
+      "title": "使用Web组件的PDF文档预览能力",
+      "path": "../../docs/zh-cn/application-dev/web/web-pdf-preview.md",
+      "summary": "介绍Web组件的PDF文档预览能力，支持在Web组件中预览PDF文档。",
+      "key_topics": ["PDF", "文档预览"]
+    },
+    {
+      "doc_id": "web-picture-in-picture",
+      "title": "使用Web组件支持画中画",
+      "path": "../../docs/zh-cn/application-dev/web/web-picture-in-picture.md",
+      "summary": "介绍Web组件支持画中画的能力，支持视频的画中画播放模式。",
+      "key_topics": ["画中画", "视频播放"]
+    },
+    {
+      "doc_id": "web-predictor",
+      "title": "加速Web页面的访问",
+      "path": "../../docs/zh-cn/application-dev/web/web-predictor.md",
+      "summary": "介绍加速Web页面访问的能力，通过预测用户行为提前加载资源，提升页面访问速度。",
+      "key_topics": ["页面加速", "性能优化"]
+    },
+    {
+      "doc_id": "web-router-flash-optimization",
+      "title": "优化跳转至新Web组件过程中的页面闪烁现象",
+      "path": "../../docs/zh-cn/application-dev/web/web-router-flash-optimization.md",
+      "summary": "介绍优化跳转至新Web组件过程中的页面闪烁现象的能力，提升用户体验。",
+      "key_topics": ["页面闪烁", "优化", "用户体验"]
+    },
+    {
+      "doc_id": "web-safe-area-insets",
+      "title": "网页中安全区域计算和避让适配",
+      "path": "../../docs/zh-cn/application-dev/web/web-safe-area-insets.md",
+      "summary": "介绍网页中安全区域计算和避让适配的能力，支持安全区域的计算和避让。",
+      "key_topics": ["安全区域", "避让适配"]
+    },
+    {
+      "doc_id": "web-same-layer",
+      "title": "同层渲染",
+      "path": "../../docs/zh-cn/application-dev/web/web-same-layer.md",
+      "summary": "介绍同层渲染能力，支持Web组件与系统组件的同层渲染，提升渲染性能。",
+      "key_topics": ["同层渲染", "渲染性能"]
+    },
+    {
+      "doc_id": "web-scale-zoom",
+      "title": "使用Web组件管理网页缩放",
+      "path": "../../docs/zh-cn/application-dev/web/web-scale-zoom.md",
+      "summary": "介绍使用Web组件管理网页缩放的能力，支持网页的缩放控制。",
+      "key_topics": ["缩放", "页面缩放"]
+    },
+    {
+      "doc_id": "web-set-back-forward-cache",
+      "title": "设置Web组件前进后退缓存",
+      "path": "../../docs/zh-cn/application-dev/web/web-set-back-forward-cache.md",
+      "summary": "介绍设置Web组件前进后退缓存的能力，优化页面导航性能。",
+      "key_topics": ["缓存", "前进后退", "性能优化"]
+    },
+    {
+      "doc_id": "web_drag",
+      "title": "使用Web组件的拖拽功能与网页交互",
+      "path": "../../docs/zh-cn/application-dev/web/web_drag.md",
+      "summary": "介绍使用Web组件的拖拽功能与网页交互的能力，支持Web组件的拖拽操作。",
+      "key_topics": ["拖拽", "交互"]
+    },
+    {
+      "doc_id": "web_full_screen",
+      "title": "Web组件支持视频沉浸式全屏播放",
+      "path": "../../docs/zh-cn/application-dev/web/web_full_screen.md",
+      "summary": "介绍Web组件支持视频沉浸式全屏播放的能力，支持视频的全屏播放模式。",
+      "key_topics": ["全屏播放", "视频播放"]
+    },
+    {
+      "doc_id": "web_menu",
+      "title": "使用Web组件菜单处理网页内容",
+      "path": "../../docs/zh-cn/application-dev/web/web_menu.md",
+      "summary": "介绍使用Web组件菜单处理网页内容的能力，支持网页菜单的自定义和处理。",
+      "key_topics": ["菜单", "内容处理"]
+    }
+  ]
+}

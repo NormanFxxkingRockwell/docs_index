@@ -1,0 +1,247 @@
+{
+  "domain": "Web",
+  "domain_summary": "ArkWeb（方舟Web）是OpenHarmony提供的Web组件框架，基于Chromium内核开发，支持在应用中显示Web页面内容。涵盖Web页面加载、生命周期管理、JavaScript交互、渲染模式、深色模式、Cookie与存储管理、安全与隐私、文件上传下载、WebRTC、打印PDF、调试等功能。",
+  "learning_path": [
+    {
+      "step": 1,
+      "title": "基础入门",
+      "description": "了解ArkWeb的基本概念、使用场景和能力范围",
+      "documents": [
+        "web-component-overview",
+        "web_component_process",
+        "web-event-sequence"
+      ]
+    },
+    {
+      "step": 2,
+      "title": "页面加载与渲染",
+      "description": "学习Web组件的页面加载方式、渲染模式和布局适配",
+      "documents": [
+        "web-page-loading-with-web-components",
+        "web-render-mode",
+        "web-fit-content",
+        "web-getpage-height"
+      ]
+    },
+    {
+      "step": 3,
+      "title": "基本属性配置",
+      "description": "掌握User-Agent、Cookie、存储、深色模式等基本属性设置",
+      "documents": [
+        "web-default-userAgent",
+        "web-cookie-and-data-storage-mgmt",
+        "web-set-dark-mode",
+        "web-geolocation-permission",
+        "web-incognito-mode"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "JavaScript交互",
+      "description": "学习应用侧与前端页面的双向JavaScript调用",
+      "documents": [
+        "web-in-app-frontend-page-function-invoking",
+        "web-in-page-app-function-invoking",
+        "web-app-page-data-channel",
+        "arkweb-ndk-jsbridge",
+        "arkweb-ndk-page-data-channel"
+      ]
+    },
+    {
+      "step": 5,
+      "title": "页面交互管理",
+      "description": "掌握Web组件的滚动、焦点、手势、缩放等交互功能",
+      "documents": [
+        "web-nested-scrolling",
+        "web-content-scrolling",
+        "web-focus",
+        "web-gesture",
+        "web-scale-zoom",
+        "web-docking-softkeyboard",
+        "web-dialog"
+      ]
+    },
+    {
+      "step": 6,
+      "title": "安全与隐私",
+      "description": "了解Web组件的安全机制和隐私保护功能",
+      "documents": [
+        "web-cross-origin",
+        "web-adsblock",
+        "web-intelligent-tracking-prevention",
+        "web-secure-shield-mode"
+      ]
+    },
+    {
+      "step": 7,
+      "title": "网络与浏览管理",
+      "description": "学习页面跳转、浏览记录、网络请求拦截等功能",
+      "documents": [
+        "web-redirection-and-browsing-history-mgmt",
+        "web-scheme-handler",
+        "web-resource-interception-request-mgmt",
+        "web-predictor",
+        "web-set-back-forward-cache"
+      ]
+    },
+    {
+      "step": 8,
+      "title": "文件操作",
+      "description": "掌握文件上传和下载功能",
+      "documents": [
+        "web-file-upload",
+        "web-download"
+      ]
+    },
+    {
+      "step": 9,
+      "title": "多媒体功能",
+      "description": "学习WebRTC、画中画、全屏播放、媒体托管等多媒体功能",
+      "documents": [
+        "web-rtc",
+        "web-picture-in-picture",
+        "web_full_screen",
+        "app-takeovers-web-media"
+      ]
+    },
+    {
+      "step": 10,
+      "title": "内容处理",
+      "description": "掌握打印、PDF、剪贴板、菜单、智能分词等内容处理功能",
+      "documents": [
+        "web-print",
+        "web-createpdf",
+        "web-pdf-preview",
+        "web-clipboard",
+        "web-menu",
+        "web-data-detector"
+      ]
+    },
+    {
+      "step": 11,
+      "title": "高级功能",
+      "description": "学习离线Web组件、同层渲染、原生消息、组件迁移等高级功能",
+      "documents": [
+        "web-offline-mode",
+        "web-same-layer",
+        "web-native-messaging",
+        "web-component-migrate",
+        "web-safe-area-insets"
+      ]
+    },
+    {
+      "step": 12,
+      "title": "调试与问题排查",
+      "description": "掌握DevTools调试、崩溃信息收集、白屏问题定位",
+      "documents": [
+        "web-debugging-with-devtools",
+        "web-crashpad",
+        "web-white-screen",
+        "web-router-flash-optimization"
+      ]
+    }
+  ],
+  "quick_reference": {
+    "core_apis": [
+      {
+        "name": "Web组件",
+        "description": "用于在应用中显示Web页面内容的核心组件",
+        "usage": "Web({ src: 'www.example.com', controller: this.controller })"
+      },
+      {
+        "name": "WebviewController",
+        "description": "Web组件的控制器，提供页面操作接口",
+        "usage": "controller: webview.WebviewController = new webview.WebviewController()"
+      },
+      {
+        "name": "javaScriptProxy",
+        "description": "将应用侧对象注册到前端页面",
+        "usage": ".javaScriptProxy({ object: this.testObj, name: 'testObjName', methodList: ['test'], controller: this.controller })"
+      },
+      {
+        "name": "runJavaScript",
+        "description": "应用侧调用前端页面JavaScript函数",
+        "usage": "this.controller.runJavaScript('htmlTest()')"
+      },
+      {
+        "name": "loadUrl",
+        "description": "加载指定URL的页面",
+        "usage": "this.controller.loadUrl('www.example.com')"
+      }
+    ],
+    "common_events": [
+      {
+        "name": "onPageBegin",
+        "description": "网页开始加载时触发"
+      },
+      {
+        "name": "onPageEnd",
+        "description": "网页加载完成时触发"
+      },
+      {
+        "name": "onControllerAttached",
+        "description": "Controller成功绑定到Web组件时触发"
+      },
+      {
+        "name": "onLoadIntercept",
+        "description": "Web组件加载url之前触发，用于判断是否阻止此次访问"
+      },
+      {
+        "name": "onInterceptRequest",
+        "description": "Web组件加载url之前触发，用于拦截url并返回响应数据"
+      }
+    ],
+    "permissions": [
+      {
+        "name": "ohos.permission.INTERNET",
+        "description": "网络访问权限，访问在线网页必需"
+      },
+      {
+        "name": "ohos.permission.CAMERA",
+        "description": "摄像头权限，使用WebRTC访问摄像头必需"
+      },
+      {
+        "name": "ohos.permission.MICROPHONE",
+        "description": "麦克风权限，使用WebRTC访问麦克风必需"
+      },
+      {
+        "name": "ohos.permission.LOCATION",
+        "description": "精准定位权限"
+      },
+      {
+        "name": "ohos.permission.APPROXIMATELY_LOCATION",
+        "description": "模糊定位权限"
+      },
+      {
+        "name": "ohos.permission.READ_PASTEBOARD",
+        "description": "访问剪贴板权限"
+      },
+      {
+        "name": "ohos.permission.PRINT",
+        "description": "打印权限"
+      }
+    ],
+    "best_practices": [
+      {
+        "title": "User-Agent设置",
+        "description": "建议在onControllerAttached回调中设置User-Agent，避免设置失败"
+      },
+      {
+        "title": "JavaScript执行",
+        "description": "建议在onPageEnd回调中执行JavaScript脚本，确保页面加载完成"
+      },
+      {
+        "title": "内存管理",
+        "description": "离线Web组件会占用内存（约200MB），避免一次性创建大量离线Web组件"
+      },
+      {
+        "title": "渲染模式选择",
+        "description": "仅由Web组件构成的应用页面使用异步渲染模式，需要与ArkUI组件协同滚动使用同步渲染模式"
+      },
+      {
+        "title": "跨域资源访问",
+        "description": "使用http/https协议替代file/resource协议，通过onInterceptRequest拦截替换资源"
+      }
+    ]
+  }
+}
