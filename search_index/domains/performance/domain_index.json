@@ -1,0 +1,523 @@
+{
+  "domain": "Performance",
+  "domain_summary": "Performance 领域提供应用性能优化的全面指导，包括ArkTS高性能编程、减少丢帧卡顿、提升应用启动和响应速度、多线程并发、组件复用、布局优化、状态管理、性能分析工具等多个方面的优化方法和最佳实践。",
+  "core_concepts": [
+    "高性能编程",
+    "多线程并发",
+    "组件复用",
+    "布局优化",
+    "状态管理",
+    "性能分析工具",
+    "减少丢帧卡顿",
+    "提升启动速度",
+    "懒加载优化",
+    "动画性能优化"
+  ],
+  "document_count": 72,
+  "documents": [
+    {
+      "doc_id": "readme-cn",
+      "title": "性能",
+      "path": "../../docs/zh-cn/application-dev/performance/Readme-CN.md",
+      "summary": "性能优化领域导航文档，提供性能优化概览、ArkTS高性能编程、减少卡顿丢帧、提升应用启动和响应速度等各方面的文档索引和指导。",
+      "key_topics": ["性能优化", "导航", "概览"]
+    },
+    {
+      "doc_id": "lazy-import-instructions",
+      "title": "延迟加载lazy-import使用指导",
+      "path": "../../docs/zh-cn/application-dev/performance/Lazy-Import-Instructions.md",
+      "summary": "介绍延迟加载lazy-import的使用方法，通过延缓对冗余文件的加载，使待加载文件在冷启动阶段不被加载，而在后续导出变量被真正使用时再同步加载执行，节省资源以提高应用冷启动性能。",
+      "key_topics": ["延迟加载", "lazy-import", "冷启动优化"]
+    },
+    {
+      "doc_id": "animation-practice",
+      "title": "应用程序动效能力实践",
+      "path": "../../docs/zh-cn/application-dev/performance/animation_practice.md",
+      "summary": "介绍如何在开发应用程序时合理地使用动效来获得更好的性能，主要通过减少布局和属性的变更频次、避免冗余刷新来降低性能开销。",
+      "key_topics": ["动效", "动画", "性能优化"]
+    },
+    {
+      "doc_id": "application-performance-analysis",
+      "title": "应用性能分析工具CPU Profiler的使用指导",
+      "path": "../../docs/zh-cn/application-dev/performance/application-performance-analysis.md",
+      "summary": "介绍应用性能分析工具CPU Profiler的使用方法，该工具为开发者提供性能采样分析手段，可在不插桩情况下获取调用栈上各层函数的执行时间，并展示在时间轴上，帮助发现热点函数及性能瓶颈。",
+      "key_topics": ["CPU Profiler", "性能分析", "性能采样"]
+    },
+    {
+      "doc_id": "application-performance-optimization-guidance",
+      "title": "应用开发性能优化入门引导",
+      "path": "../../docs/zh-cn/application-dev/performance/application-performance-optimization-guidance.md",
+      "summary": "介绍应用开发过程中常见的一些性能问题，并提供相应的解决方案，配合相关参考示例，帮助开发者解决大部分性能问题，包括合理使用并行化预加载和缓存、减少布局嵌套层数、合理管理状态变量、合理使用系统接口避免冗余操作四个要素。",
+      "key_topics": ["性能优化", "入门引导", "并行化", "布局优化", "状态管理"]
+    },
+    {
+      "doc_id": "arkui-inspector",
+      "title": "页面布局检查器ArkUI Inspector使用指导",
+      "path": "../../docs/zh-cn/application-dev/performance/arkUI-inspector.md",
+      "summary": "介绍DevEco Studio内置ArkUI Inspector工具的使用方法，开发者可以使用ArkUI Inspector在DevEco Studio上查看应用在真机上的UI显示效果，快速定位布局问题或其他UI相关问题。",
+      "key_topics": ["ArkUI Inspector", "布局检查", "UI调试"]
+    },
+    {
+      "doc_id": "arkts-performance-improvement-recommendation",
+      "title": "性能提升的其他方法",
+      "path": "../../docs/zh-cn/application-dev/performance/arkts-performance-improvement-recommendation.md",
+      "summary": "列举出了一些可提升性能的场景供开发者参考，包括设置List组件的宽高、使用Column/Row替代Flex、减少应用滑动白块等方法，避免应用实现上带来的性能劣化。",
+      "key_topics": ["性能提升", "List优化", "Flex优化", "滑动优化"]
+    },
+    {
+      "doc_id": "audio-video-synchronization",
+      "title": "音画同步最佳实践",
+      "path": "../../docs/zh-cn/application-dev/performance/audio-video-synchronization.md",
+      "summary": "指导第三方视频播放应用正确获取并使用音频相关信息来保证播放时的音视频同步，采用连续播放音频帧方案，使用音频播放位置作为主时间参考，并将视频播放位置与其匹配。",
+      "key_topics": ["音画同步", "视频播放", "音频渲染"]
+    },
+    {
+      "doc_id": "avoid-high-frequency-callback-execute-lengthy-operation",
+      "title": "避免在滑动场景的高频回调接口中处理耗时操作",
+      "path": "../../docs/zh-cn/application-dev/performance/avoid_high_frequency_callback_execute_lengthy_operation.md",
+      "summary": "介绍四种需要避免处理耗时操作的高频场景：组件复用时避免在aboutToReuse中执行耗时操作、避免在aboutToAppear和aboutToDisappear中执行耗时操作、避免在LazyForEach的itemGenerator等函数中执行耗时操作、避免在组件的属性中执行耗时操作。",
+      "key_topics": ["高频回调", "耗时操作", "滑动优化", "组件复用"]
+    },
+    {
+      "doc_id": "avoid-time-consuming-operations-in-mainthread",
+      "title": "避免在主线程中执行耗时操作",
+      "path": "../../docs/zh-cn/application-dev/performance/avoid_time_consuming_operations_in_mainthread.md",
+      "summary": "介绍如何在应用开发中避免在主线程中执行耗时操作，使用多线程能力TaskPool处理耗时操作，避免主线程阻塞导致卡顿，并介绍使用@Sendable装饰器提升数据传输和同步效率的方法。",
+      "key_topics": ["主线程", "耗时操作", "TaskPool", "@Sendable"]
+    },
+    {
+      "doc_id": "avoiding-redundant-operations",
+      "title": "避免开发过程中的冗余操作",
+      "path": "../../docs/zh-cn/application-dev/performance/avoiding-redundant-operations.md",
+      "summary": "介绍如何识别并减少冗余操作，包括避免在系统高频回调中进行冗余和耗时操作、删除冗余Trace和日志打印、避免设置冗余系统回调监听等方法，提升代码质量与运行性能。",
+      "key_topics": ["冗余操作", "Trace", "日志", "回调优化"]
+    },
+    {
+      "doc_id": "close-cpu-access-window-buffer-data",
+      "title": "主动关闭CPU访问窗口缓冲区数据降低功耗",
+      "path": "../../docs/zh-cn/application-dev/performance/close_CPU_access_window_buffer_data.md",
+      "summary": "介绍如何主动关闭CPU访问窗口缓冲区数据以降低功耗，当开发者确定应用无需CPU访问时可手动关闭该能力，由硬件平台选择最佳的图像格式以提高能效。",
+      "key_topics": ["CPU访问", "窗口缓冲区", "功耗优化"]
+    },
+    {
+      "doc_id": "common-trace-using-instructions",
+      "title": "常用Trace使用指导",
+      "path": "../../docs/zh-cn/application-dev/performance/common-trace-using-instructions.md",
+      "summary": "介绍OpenHarmony中常用的Trace，解释它们的含义和用途，并阐述如何通过这些Trace来识别潜在的性能问题，帮助开发者对应用运行过程中的性能热点进行分析。",
+      "key_topics": ["Trace", "性能分析", "性能热点"]
+    },
+    {
+      "doc_id": "component-recycle",
+      "title": "组件复用实践",
+      "path": "../../docs/zh-cn/application-dev/performance/component-recycle.md",
+      "summary": "介绍组件复用机制的使用方法和约束限制，通过复用已存在的组件节点而非创建新的节点，大幅度降低了因频繁创建与销毁组件带来的性能损耗。",
+      "key_topics": ["组件复用", "@Reusable", "性能优化"]
+    },
+    {
+      "doc_id": "component-reuse-overview",
+      "title": "组件复用总览",
+      "path": "../../docs/zh-cn/application-dev/performance/component-reuse-overview.md",
+      "summary": "系统描述了六种复用类型及其应用场景，帮助开发者更好地理解和实施组件复用策略以优化应用性能，包括标准型、有限变化型、组合型、全局型、嵌套型和无法复用型。",
+      "key_topics": ["组件复用", "复用类型", "性能优化"]
+    },
+    {
+      "doc_id": "component-recycle-case",
+      "title": "组件复用性能优化指导",
+      "path": "../../docs/zh-cn/application-dev/performance/component_recycle_case.md",
+      "summary": "重点介绍如何通过组件复用性能优化四建议提升复用性能，包括减少组件复用的嵌套层级、优化状态管理、使用reuseId标记不同结构的组件、不要使用函数作为复用组件的入参。",
+      "key_topics": ["组件复用", "性能优化", "嵌套层级", "状态管理"]
+    },
+    {
+      "doc_id": "cross-thread-serialization-time-consumption-analysis",
+      "title": "跨线程序列化耗时点分析",
+      "path": "../../docs/zh-cn/application-dev/performance/cross-thread-serialization-time-consumption-analysis.md",
+      "summary": "介绍应用主线程序列化/反序列化超时检测工具，帮助开发者识别代码中潜在的涉及主线程序列化/反序列化的耗时点，通过Sendable改造或者通信数据改造进行优化。",
+      "key_topics": ["序列化", "反序列化", "跨线程", "性能分析"]
+    },
+    {
+      "doc_id": "custom-component-freeze",
+      "title": "合理使用自定义组件冻结功能",
+      "path": "../../docs/zh-cn/application-dev/performance/custom_component_freeze.md",
+      "summary": "介绍自定义组件冻结功能的原理机制和使用场景，通过设置freezeWhenInactive属性对非激活页面或者自定义组件进行冻结，使其不响应状态变量引起的UI刷新。",
+      "key_topics": ["组件冻结", "freezeWhenInactive", "UI刷新"]
+    },
+    {
+      "doc_id": "delay-related-performance",
+      "title": "时延类性能问题分析实践",
+      "path": "../../docs/zh-cn/application-dev/performance/delay_related_performance.md",
+      "summary": "介绍时延问题分析思路，结合案例实践，实操定位分析并优化时延问题，包括性能指标介绍、问题分析流程、信息准备、Trace抓取等内容。",
+      "key_topics": ["时延", "性能分析", "Trace抓取"]
+    },
+    {
+      "doc_id": "develop-native-modules-using-napi-safely-and-efficiently",
+      "title": "安全和高效地使用N-API开发Native模块",
+      "path": "../../docs/zh-cn/application-dev/performance/develop-Native-modules-using-NAPI-safely-and-efficiently.md",
+      "summary": "从对象生命周期管理、跨语言调用开销、异步操作和线程安全四个角度出发，给出安全、高效的N-API开发指导，帮助开发者编写高性能的Native扩展模块。",
+      "key_topics": ["N-API", "Native模块", "生命周期管理", "线程安全"]
+    },
+    {
+      "doc_id": "efficient-concurrent-programming",
+      "title": "高效并发编程",
+      "path": "../../docs/zh-cn/application-dev/performance/efficient-concurrent-programming.md",
+      "summary": "介绍并发编程的基本概念和ArkTS支持的异步并发和多线程并发能力，帮助开发者根据不同场景选择相应的并发策略进行优化和开发。",
+      "key_topics": ["并发编程", "异步并发", "多线程并发"]
+    },
+    {
+      "doc_id": "flex-development-performance-boost",
+      "title": "Flex布局性能提升使用指导",
+      "path": "../../docs/zh-cn/application-dev/performance/flex-development-performance-boost.md",
+      "summary": "介绍Flex布局性能提升的方法，由于Flex容器组件默认情况下存在shrink导致二次布局，推荐使用Column/Row替代Flex构建线性布局。",
+      "key_topics": ["Flex", "布局优化", "Column/Row"]
+    },
+    {
+      "doc_id": "fuzzy-scene-performance-optimization",
+      "title": "图像模糊动效优化：静态模糊与动态模糊的性能对比解析",
+      "path": "../../docs/zh-cn/application-dev/performance/fuzzy_scene_performance_optimization.md",
+      "summary": "介绍图像模糊动效的优化方法，对比静态模糊与动态模糊的性能差异，提供性能优化建议。",
+      "key_topics": ["模糊动效", "性能优化", "静态模糊", "动态模糊"]
+    },
+    {
+      "doc_id": "grid-optimization",
+      "title": "Grid高性能开发指导",
+      "path": "../../docs/zh-cn/application-dev/performance/grid_optimization.md",
+      "summary": "介绍Grid组件的高性能开发方法，包括使用LazyForEach、组件复用、设置宽高等优化技巧。",
+      "key_topics": ["Grid", "高性能开发", "LazyForEach", "组件复用"]
+    },
+    {
+      "doc_id": "high-performance-programming",
+      "title": "TS&JS高性能编程实践及使用工具的指导",
+      "path": "../../docs/zh-cn/application-dev/performance/high-performance-programming.md",
+      "summary": "从应用编程指南、高性能编程实践、性能优化调试工具等维度，为应用开发者提供参考指导，助力开发者开发出高性能的应用。",
+      "key_topics": ["高性能编程", "TS&JS", "性能优化工具"]
+    },
+    {
+      "doc_id": "imperative-dynamic-layouts",
+      "title": "命令式动态布局性能优化",
+      "path": "../../docs/zh-cn/application-dev/performance/imperative_dynamic_layouts.md",
+      "summary": "介绍命令式动态布局的性能优化方法，帮助开发者提升动态布局场景下的应用性能。",
+      "key_topics": ["动态布局", "性能优化", "命令式"]
+    },
+    {
+      "doc_id": "improve-application-cold-start-speed",
+      "title": "提升应用冷启动速度",
+      "path": "../../docs/zh-cn/application-dev/performance/improve-application-cold-start-speed.md",
+      "summary": "介绍如何提升应用冷启动速度，包括延迟加载、异步执行耗时操作、减少首帧绘制时的冗余操作等方法。",
+      "key_topics": ["冷启动", "启动速度", "延迟加载"]
+    },
+    {
+      "doc_id": "improve-application-response",
+      "title": "提升应用响应速度",
+      "path": "../../docs/zh-cn/application-dev/performance/improve-application-response.md",
+      "summary": "介绍如何提升应用响应速度，包括使用并行化、预加载、缓存等方法提升系统资源利用率，减少主线程负载。",
+      "key_topics": ["响应速度", "并行化", "预加载", "缓存"]
+    },
+    {
+      "doc_id": "improve-file-upload-and-download-performance",
+      "title": "文件上传下载性能提升指导",
+      "path": "../../docs/zh-cn/application-dev/performance/improve-file-upload-and-download-performance.md",
+      "summary": "介绍文件上传下载的性能提升方法，包括使用多线程、分片上传下载、断点续传等技术。",
+      "key_topics": ["文件上传", "文件下载", "多线程", "分片传输"]
+    },
+    {
+      "doc_id": "invisible-refresh-performance",
+      "title": "不可见刷新性能优化",
+      "path": "../../docs/zh-cn/application-dev/performance/invisible-refresh-performance.md",
+      "summary": "介绍不可见刷新的性能优化方法，避免对不可见组件进行不必要的刷新操作。",
+      "key_topics": ["不可见刷新", "性能优化"]
+    },
+    {
+      "doc_id": "lazyforeach-optimization",
+      "title": "LazyForEach优化",
+      "path": "../../docs/zh-cn/application-dev/performance/lazyforeach_optimization.md",
+      "summary": "介绍LazyForEach的优化方法，包括正确使用keyGenerator、避免在itemGenerator中执行耗时操作等。",
+      "key_topics": ["LazyForEach", "懒加载", "性能优化"]
+    },
+    {
+      "doc_id": "list-perf-improvement",
+      "title": "列表场景性能提升实践",
+      "path": "../../docs/zh-cn/application-dev/performance/list-perf-improvement.md",
+      "summary": "介绍列表场景的性能提升方法，包括使用LazyForEach、组件复用、缓存列表项等优化技巧。",
+      "key_topics": ["列表", "性能提升", "LazyForEach", "组件复用"]
+    },
+    {
+      "doc_id": "long-frame-optimization",
+      "title": "长帧优化",
+      "path": "../../docs/zh-cn/application-dev/performance/long-frame-optimization.md",
+      "summary": "介绍长帧问题的优化方法，帮助开发者识别和解决单帧渲染时间过长导致的卡顿问题。",
+      "key_topics": ["长帧", "卡顿优化", "渲染优化"]
+    },
+    {
+      "doc_id": "multi-thread-capability",
+      "title": "多线程能力场景化示例实践",
+      "path": "../../docs/zh-cn/application-dev/performance/multi_thread_capability.md",
+      "summary": "介绍多线程能力的场景化示例实践，包括并发模型概述、Worker和TaskPool的基本概念和运作原理，帮助开发者理解和使用多线程并发能力。",
+      "key_topics": ["多线程", "Worker", "TaskPool", "并发模型"]
+    },
+    {
+      "doc_id": "native-threads-call-js",
+      "title": "利用native的方式实现跨线程调用",
+      "path": "../../docs/zh-cn/application-dev/performance/native-threads-call-js.md",
+      "summary": "介绍如何利用native的方式实现跨线程调用，采用线程安全函数和libuv异步I/O工具库两种策略，优化程序性能并保持流畅的用户体验。",
+      "key_topics": ["跨线程调用", "native", "线程安全函数", "libuv"]
+    },
+    {
+      "doc_id": "native-drawing-substitute-canvas",
+      "title": "复杂绘制场景下使用Native Drawing自绘制能力替代Canvas提升性能",
+      "path": "../../docs/zh-cn/application-dev/performance/native_drawing_substitute_canvas.md",
+      "summary": "介绍在复杂绘制场景下使用Native Drawing自绘制能力替代Canvas提升性能的方法。",
+      "key_topics": ["Native Drawing", "Canvas", "性能优化"]
+    },
+    {
+      "doc_id": "node-custom-component-reusable-pool",
+      "title": "全局自定义组件复用实现",
+      "path": "../../docs/zh-cn/application-dev/performance/node_custom_component_reusable_pool.md",
+      "summary": "介绍如何使用BuilderNode自定义复用组件池，实现全局自定义组件复用，使组件可在不同的父组件中复用。",
+      "key_topics": ["组件复用", "BuilderNode", "全局复用"]
+    },
+    {
+      "doc_id": "online-video-playback-lags-practice",
+      "title": "在线视频播放卡顿实践",
+      "path": "../../docs/zh-cn/application-dev/performance/online_video_playback_lags_practice.md",
+      "summary": "介绍在线视频播放卡顿问题的分析和解决方法，帮助开发者优化视频播放性能。",
+      "key_topics": ["视频播放", "卡顿", "性能优化"]
+    },
+    {
+      "doc_id": "performance-camera-shot2see",
+      "title": "性能相机拍摄实践",
+      "path": "../../docs/zh-cn/application-dev/performance/performance-camera-shot2see.md",
+      "summary": "介绍相机拍摄场景的性能优化方法，帮助开发者提升相机应用的性能。",
+      "key_topics": ["相机", "拍摄", "性能优化"]
+    },
+    {
+      "doc_id": "performance-dynamic-import",
+      "title": "性能动态导入",
+      "path": "../../docs/zh-cn/application-dev/performance/performance-dynamic-import.md",
+      "summary": "介绍动态导入的性能优化方法，帮助开发者优化应用的加载性能。",
+      "key_topics": ["动态导入", "加载性能"]
+    },
+    {
+      "doc_id": "performance-optimization-practical-guidance",
+      "title": "应用性能优化常见问题解决指导",
+      "path": "../../docs/zh-cn/application-dev/performance/performance-optimization-practical-guidance.md",
+      "summary": "介绍应用性能优化的常见问题解决指导，帮助开发者快速定位和解决性能问题。",
+      "key_topics": ["性能优化", "问题解决", "常见问题"]
+    },
+    {
+      "doc_id": "performance-optimization-using-aot",
+      "title": "使用AOT进行性能优化",
+      "path": "../../docs/zh-cn/application-dev/performance/performance-optimization-using-aot.md",
+      "summary": "介绍如何使用AOT（Ahead Of Time）编译器进行性能优化，通过PGO方式提前生成高性能机器码，提升程序运行速度。",
+      "key_topics": ["AOT", "编译优化", "PGO"]
+    },
+    {
+      "doc_id": "performance-optimization-using-hidumper",
+      "title": "使用HiDumper进行性能优化",
+      "path": "../../docs/zh-cn/application-dev/performance/performance-optimization-using-hidumper.md",
+      "summary": "介绍如何使用HiDumper工具进行性能优化，帮助开发者分析应用的性能问题。",
+      "key_topics": ["HiDumper", "性能分析", "性能优化"]
+    },
+    {
+      "doc_id": "performance-optimization-using-smartperf-host",
+      "title": "性能优化工具SmartPerf-Host",
+      "path": "../../docs/zh-cn/application-dev/performance/performance-optimization-using-smartperf-host.md",
+      "summary": "介绍SmartPerf-Host性能优化工具的使用方法，该工具是一款深入挖掘数据、细粒度展示数据的性能功耗调优工具。",
+      "key_topics": ["SmartPerf-Host", "性能分析", "功耗调优"]
+    },
+    {
+      "doc_id": "performance-overview",
+      "title": "应用性能优化概览",
+      "path": "../../docs/zh-cn/application-dev/performance/performance-overview.md",
+      "summary": "介绍优化应用性能的方法，包括ArkTS高性能编程、减少丢帧卡顿、提升应用启动和响应速度等，以及常用的性能调优工具。",
+      "key_topics": ["性能优化", "概览", "调优工具"]
+    },
+    {
+      "doc_id": "performance-quick-switch-short-video",
+      "title": "性能快速切换短视频",
+      "path": "../../docs/zh-cn/application-dev/performance/performance-quick-switch-short-video.md",
+      "summary": "介绍短视频快速切换场景的性能优化方法，帮助开发者提升短视频应用的切换性能。",
+      "key_topics": ["短视频", "快速切换", "性能优化"]
+    },
+    {
+      "doc_id": "performance-web-import",
+      "title": "Web组件性能优化",
+      "path": "../../docs/zh-cn/application-dev/performance/performance-web-import.md",
+      "summary": "介绍Web组件的性能优化方法，包括预连接、预加载、预渲染等能力，提升Web应用的加载和渲染性能。",
+      "key_topics": ["Web组件", "性能优化", "预加载"]
+    },
+    {
+      "doc_id": "precisely-control-render-scope",
+      "title": "精准控制组件的更新范围",
+      "path": "../../docs/zh-cn/application-dev/performance/precisely-control-render-scope.md",
+      "summary": "介绍如何精准控制组件的更新范围，避免状态变量的滥用引起的容器组件的刷新，减少系统的组件渲染负载。",
+      "key_topics": ["组件更新", "状态变量", "渲染范围"]
+    },
+    {
+      "doc_id": "proper-choice-between-if-and-visibility",
+      "title": "合理选择条件渲染和显隐控制",
+      "path": "../../docs/zh-cn/application-dev/performance/proper-choice-between-if-and-visibility.md",
+      "summary": "介绍如何合理选择条件渲染和显隐控制，避免频繁创建与销毁组件，提高性能。",
+      "key_topics": ["条件渲染", "显隐控制", "性能优化"]
+    },
+    {
+      "doc_id": "proper-state-management",
+      "title": "合理进行状态管理",
+      "path": "../../docs/zh-cn/application-dev/performance/proper_state_management.md",
+      "summary": "介绍如何合理进行状态管理，控制对象级状态变量的成员变量关联组件数，减少系统的组件渲染负载。",
+      "key_topics": ["状态管理", "状态变量", "组件渲染"]
+    },
+    {
+      "doc_id": "qos-protect-critical-threads",
+      "title": "高负载场景下线程优先级设置防止关键线程被打断",
+      "path": "../../docs/zh-cn/application-dev/performance/qos-protect-critical-threads.md",
+      "summary": "介绍在高负载场景下如何设置线程优先级，防止关键线程被打断，保证关键任务的执行。",
+      "key_topics": ["线程优先级", "QoS", "关键线程"]
+    },
+    {
+      "doc_id": "reasonable-running-backgroundtask",
+      "title": "合理使用后台任务",
+      "path": "../../docs/zh-cn/application-dev/performance/reasonable-running-backgroundTask.md",
+      "summary": "介绍如何合理使用后台任务，避免在后台任务中执行耗时操作影响应用性能。",
+      "key_topics": ["后台任务", "性能优化"]
+    },
+    {
+      "doc_id": "reasonable-using-animation",
+      "title": "合理使用动画",
+      "path": "../../docs/zh-cn/application-dev/performance/reasonable-using-animation.md",
+      "summary": "介绍如何合理使用动画，避免动画性能问题，提升应用流畅度。",
+      "key_topics": ["动画", "性能优化", "流畅度"]
+    },
+    {
+      "doc_id": "reasonable-using-rendergroup",
+      "title": "合理使用renderGroup",
+      "path": "../../docs/zh-cn/application-dev/performance/reasonable-using-renderGroup.md",
+      "summary": "介绍如何合理使用renderGroup缓存提升属性动画性能，通过离屏绘制和等存降低绘制负载。",
+      "key_topics": ["renderGroup", "缓存", "属性动画"]
+    },
+    {
+      "doc_id": "reasonable-using-cache-improve-performance",
+      "title": "合理使用缓存提升性能",
+      "path": "../../docs/zh-cn/application-dev/performance/reasonable_using_cache_improve_performance.md",
+      "summary": "介绍如何合理使用缓存提升性能，包括数据缓存、图片缓存、组件缓存等方法。",
+      "key_topics": ["缓存", "性能优化"]
+    },
+    {
+      "doc_id": "reasonable-using-system-interfaces",
+      "title": "合理使用系统接口",
+      "path": "../../docs/zh-cn/application-dev/performance/reasonable_using_system_interfaces.md",
+      "summary": "介绍如何合理使用系统接口，避免冗余操作，减少系统开销。",
+      "key_topics": ["系统接口", "冗余操作", "性能优化"]
+    },
+    {
+      "doc_id": "reasonably-dispose-highly-loaded-component-render",
+      "title": "合理释放高负载组件渲染",
+      "path": "../../docs/zh-cn/application-dev/performance/reasonably-dispose-highly-loaded-component-render.md",
+      "summary": "介绍如何合理释放高负载组件的渲染，避免不必要的渲染开销，提升应用性能。",
+      "key_topics": ["组件渲染", "性能优化"]
+    },
+    {
+      "doc_id": "reduce-package-size",
+      "title": "减少包体积",
+      "path": "../../docs/zh-cn/application-dev/performance/reduce-package-size.md",
+      "summary": "介绍如何减少应用包体积，包括资源压缩、代码混淆、按需加载等方法。",
+      "key_topics": ["包体积", "资源压缩", "代码混淆"]
+    },
+    {
+      "doc_id": "reduce-redundant-operations-when-render-first-frame",
+      "title": "减少首帧绘制时的冗余操作",
+      "path": "../../docs/zh-cn/application-dev/performance/reduce-redundant-operations-when-render-first-frame.md",
+      "summary": "介绍如何减少首帧绘制时的冗余操作，提升应用启动速度和首帧渲染性能。",
+      "key_topics": ["首帧绘制", "冗余操作", "启动速度"]
+    },
+    {
+      "doc_id": "reduce-view-nesting-levels",
+      "title": "优化布局性能",
+      "path": "../../docs/zh-cn/application-dev/performance/reduce-view-nesting-levels.md",
+      "summary": "介绍如何优化布局性能，通过减少视图的嵌套层次或者使用高性能布局节点，减少丢帧卡顿。",
+      "key_topics": ["布局优化", "嵌套层次", "丢帧卡顿"]
+    },
+    {
+      "doc_id": "resolve-sliding-white-blocks",
+      "title": "解决滑动白块",
+      "path": "../../docs/zh-cn/application-dev/performance/resolve_sliding_white_blocks.md",
+      "summary": "介绍如何解决滑动白块问题，通过预加载、缓存等方法提升滑动性能。",
+      "key_topics": ["滑动白块", "预加载", "缓存", "滑动性能"]
+    },
+    {
+      "doc_id": "screen-flicker-solution",
+      "title": "应用闪屏问题解决方案",
+      "path": "../../docs/zh-cn/application-dev/performance/screen_flicker_solution.md",
+      "summary": "介绍应用闪屏问题的解决方案，帮助开发者解决应用启动或页面切换时的闪屏问题。",
+      "key_topics": ["闪屏", "启动优化", "页面切换"]
+    },
+    {
+      "doc_id": "state-variable-dfx-pratice",
+      "title": "状态变量组件定位工具使用实践",
+      "path": "../../docs/zh-cn/application-dev/performance/state_variable_dfx_pratice.md",
+      "summary": "介绍状态变量组件定位工具的使用方法，帮助开发者获取状态管理相关信息，了解状态变量影响UI的范围。",
+      "key_topics": ["状态变量", "组件定位", "DFX"]
+    },
+    {
+      "doc_id": "swiper-optimization",
+      "title": "Swiper高性能开发指导",
+      "path": "../../docs/zh-cn/application-dev/performance/swiper_optimization.md",
+      "summary": "介绍Swiper组件的高性能开发方法，包括使用LazyForEach、组件复用、设置cachedCount等优化技巧。",
+      "key_topics": ["Swiper", "高性能开发", "LazyForEach", "组件复用"]
+    },
+    {
+      "doc_id": "thread-data-transfer",
+      "title": "线程数据传输",
+      "path": "../../docs/zh-cn/application-dev/performance/thread_data_transfer.md",
+      "summary": "介绍线程间数据传输的方法，包括序列化、反序列化、共享内存等方式，帮助开发者优化跨线程通信性能。",
+      "key_topics": ["线程数据传输", "序列化", "共享内存"]
+    },
+    {
+      "doc_id": "thread-memory-shared",
+      "title": "多线程共享内存",
+      "path": "../../docs/zh-cn/application-dev/performance/thread_memory_shared.md",
+      "summary": "介绍多线程共享内存的使用方法，通过@Sendable装饰器实现内存共享，降低序列化和反序列化开销。",
+      "key_topics": ["共享内存", "@Sendable", "多线程"]
+    },
+    {
+      "doc_id": "using-animation-insteadof-animator",
+      "title": "使用animation代替animator",
+      "path": "../../docs/zh-cn/application-dev/performance/using-animation-insteadof-animator.md",
+      "summary": "介绍使用animation代替animator的方法，帮助开发者优化动画性能。",
+      "key_topics": ["animation", "animator", "动画性能"]
+    },
+    {
+      "doc_id": "utilize-hwc-efficiently",
+      "title": "高效利用HWC",
+      "path": "../../docs/zh-cn/application-dev/performance/utilize_hwc_efficiently.md",
+      "summary": "介绍如何高效利用HWC（Hardware Composer）硬件合成器，提升渲染性能。",
+      "key_topics": ["HWC", "硬件合成器", "渲染性能"]
+    },
+    {
+      "doc_id": "waterflow-optimization",
+      "title": "WaterFlow高性能开发指导",
+      "path": "../../docs/zh-cn/application-dev/performance/waterflow_optimization.md",
+      "summary": "介绍WaterFlow组件的高性能开发方法，包括使用LazyForEach、组件复用、设置cachedCount等优化技巧。",
+      "key_topics": ["WaterFlow", "高性能开发", "LazyForEach", "组件复用"]
+    },
+    {
+      "doc_id": "web-analyse",
+      "title": "Web性能分析",
+      "path": "../../docs/zh-cn/application-dev/performance/web-analyse.md",
+      "summary": "介绍Web组件的性能分析方法，帮助开发者优化Web应用的性能。",
+      "key_topics": ["Web组件", "性能分析"]
+    },
+    {
+      "doc_id": "webview-render-app-components",
+      "title": "WebView渲染应用组件",
+      "path": "../../docs/zh-cn/application-dev/performance/webview-render-app-components.md",
+      "summary": "介绍WebView渲染应用组件的性能优化方法，帮助开发者提升WebView应用的渲染性能。",
+      "key_topics": ["WebView", "渲染性能", "性能优化"]
+    },
+    {
+      "doc_id": "application-performance-guide",
+      "title": "应用性能问题分析指导",
+      "path": "../../docs/zh-cn/application-dev/performance/application-performance-guide.md",
+      "summary": "介绍应用性能问题的分析方法，从丢帧问题和响应速度问题两个角度去分析，说明丢帧和响应速度度问题相关的性能指标检测方法，阐述不同角度下的问题分析思路。",
+      "key_topics": ["性能分析", "丢帧问题", "响应速度", "性能指标"]
+    }
+  ]
+}

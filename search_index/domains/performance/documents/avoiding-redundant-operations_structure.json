@@ -1,0 +1,52 @@
+{
+  "doc_id": "avoiding-redundant-operations",
+  "title": "避免开发过程中的冗余操作",
+  "path": "zh-cn/application-dev/performance/avoiding-redundant-operations.md",
+  "relative_path": "../../docs/zh-cn/application-dev/performance/avoiding-redundant-operations.md",
+  "metadata": {
+    "kit": "Common",
+    "subsystem": "Demo&Sample",
+    "owner": "@mgy917",
+    "designer": "@jiangwensai",
+    "tester": "@Lyuxin",
+    "adviser": "@huipeizi"
+  },
+  "summary": "介绍如何识别并减少冗余操作，包括避免在系统高频回调中进行冗余和耗时操作、删除冗余Trace和日志打印、避免设置冗余系统回调监听等方法，提升代码质量与运行性能。",
+  "structure": {
+    "title": "避免开发过程中的冗余操作",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 12,
+        "summary": "介绍识别并减少冗余操作的重要性。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "避免在系统高频回调用进行冗余和耗时操作",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 106,
+        "summary": "介绍在高频回调接口中避免执行冗余的日志记录、Trace追踪以及耗时操作的方法。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "删除冗余Trace和日志打印",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 214,
+        "summary": "介绍在release版本中删除Trace和debug日志的方法，避免不必要的性能开销。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "避免设置冗余系统回调监听",
+        "level": 2,
+        "line_start": 226,
+        "line_end": 278,
+        "summary": "介绍避免设置无实际功能的空回调函数的方法，减少系统开销。"
+      }
+    ]
+  }
+}

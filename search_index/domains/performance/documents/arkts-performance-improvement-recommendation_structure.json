@@ -1,0 +1,44 @@
+{
+  "doc_id": "arkts-performance-improvement-recommendation",
+  "title": "性能提升的其他方法",
+  "path": "zh-cn/application-dev/performance/arkts-performance-improvement-recommendation.md",
+  "relative_path": "../../docs/zh-cn/application-dev/performance/arkts-performance-improvement-recommendation.md",
+  "metadata": {
+    "kit": "Common",
+    "subsystem": "Demo&Sample",
+    "owner": "@mgy917",
+    "designer": "@jiangwensai",
+    "tester": "@Lyuxin",
+    "adviser": "@huipeizi"
+  },
+  "summary": "列举出了一些可提升性能的场景供开发者参考，包括设置List组件的宽高、使用Column/Row替代Flex、减少应用滑动白块等方法，避免应用实现上带来的性能劣化。",
+  "structure": {
+    "title": "性能提升的其他方法",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "设置List组件的宽高",
+        "level": 2,
+        "line_start": 12,
+        "line_end": 230,
+        "summary": "介绍在使用Scroll容器组件嵌套List组件加载长列表时，若不指定List的宽高尺寸则默认全部加载的问题，建议设置List子组件的宽高。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用Column/Row替代Flex",
+        "level": 2,
+        "line_start": 246,
+        "line_end": 302,
+        "summary": "介绍由于Flex容器组件默认情况下存在shrink导致二次布局，会在一定程度上造成页面渲染上的性能劣化，推荐使用Column/Row替代Flex。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "减少应用滑动白块",
+        "level": 2,
+        "line_start": 316,
+        "line_end": 366,
+        "summary": "介绍通过增大List/Grid控件的cachedCount参数，调整UI的加载范围，提前下载内容从而减少滑动白块的方法。"
+      }
+    ]
+  }
+}

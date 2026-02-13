@@ -1,0 +1,68 @@
+{
+  "doc_id": "application-performance-optimization-guidance",
+  "title": "应用开发性能优化入门引导",
+  "path": "zh-cn/application-dev/performance/application-performance-optimization-guidance.md",
+  "relative_path": "../../docs/zh-cn/application-dev/performance/application-performance-optimization-guidance.md",
+  "metadata": {
+    "kit": "Common",
+    "subsystem": "Demo&Sample",
+    "owner": "@mgy917",
+    "designer": "@jiangwensai",
+    "tester": "@Lyuxin",
+    "adviser": "@huipeizi"
+  },
+  "summary": "介绍应用开发过程中常见的一些性能问题，并提供相应的解决方案，配合相关参考示例，帮助开发者解决大部分性能问题，包括合理使用并行化预加载和缓存、减少布局嵌套层数、合理管理状态变量、合理使用系统接口避免冗余操作四个要素。",
+  "structure": {
+    "title": "应用开发性能优化入门引导",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 23,
+        "summary": "介绍性能分析四要素，包括合理使用并行化预加载和缓存、减少布局嵌套层数、合理管理状态变量、合理使用系统接口避免冗余操作。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "第一要素：合理使用并行化、预加载和缓存",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 409,
+        "summary": "介绍如何使用并行化、预加载和缓存等方法提升系统资源利用率，减少主线程负载，加快应用的启动速度和响应速度。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "第二要素：尽量减少布局的嵌套层数",
+        "level": 2,
+        "line_start": 411,
+        "line_end": 5922,
+        "summary": "介绍如何去除冗余的布局嵌套，使用相对布局、绝对定位、自定义布局、Grid、GridRow等扁平化布局，减少布局的嵌套层数。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "第三要素：合理管理状态变量",
+        "level": 2,
+        "line_start": 594,
+        "line_end": 1296,
+        "summary": "介绍如何合理地使用状态变量，精准控制组件的更新范围，控制状态变量关联组件数量，减少系统的组件渲染负载。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "第四要素：合理使用系统接口，避免冗余操作",
+        "level": 2,
+        "line_start": 1297,
+        "line_end": 1548,
+        "summary": "介绍如何合理使用系统的高频回调接口，删除不必要的Trace和日志打印，避免注册系统冗余回调，减少系统开销。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "使用性能工具分析和定位问题",
+        "level": 2,
+        "line_start": 1550,
+        "line_end": 1568,
+        "summary": "介绍如何使用IDE的Profiler工具、SmartPerf-Host、状态变量组件定位工具、常用trace使用指导等工具进行问题分析和定位。"
+      }
+    ]
+  }
+}

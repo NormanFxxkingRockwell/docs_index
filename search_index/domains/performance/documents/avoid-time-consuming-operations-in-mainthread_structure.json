@@ -1,0 +1,44 @@
+{
+  "doc_id": "avoid-time-consuming-operations-in-mainthread",
+  "title": "避免在主线程中执行耗时操作",
+  "path": "zh-cn/application-dev/performance/avoid_time_consuming_operations_in_mainthread.md",
+  "relative_path": "../../docs/zh-cn/application-dev/performance/avoid_time_consuming_operations_in_mainthread.md",
+  "metadata": {
+    "kit": "Common",
+    "subsystem": "Demo&Sample",
+    "owner": "@mgy917",
+    "designer": "@jiangwensai",
+    "tester": "@Lyuxin",
+    "adviser": "@huipeizi"
+  },
+  "summary": "介绍如何在应用开发中避免在主线程中执行耗时操作，使用多线程能力TaskPool处理耗时操作，避免主线程阻塞导致卡顿，并介绍使用@Sendable装饰器提升数据传输和同步效率的方法。",
+  "structure": {
+    "title": "避免在主线程中执行耗时操作",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "简介",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 11,
+        "summary": "介绍在应用开发中避免在主线程中执行耗时操作的重要性。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "问题场景",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 16,
+        "summary": "介绍列表无限滑动场景中在主线程处理请求数据导致滑动动画被中断的问题。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "优化示例",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 266,
+        "summary": "介绍使用多线程能力TaskPool处理耗时操作和使用@Sendable装饰器提升数据传输效率的优化方法。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "doc_id": "close-cpu-access-window-buffer-data",
+  "title": "主动关闭CPU访问窗口缓冲区数据降低功耗",
+  "path": "zh-cn/application-dev/performance/close_CPU_access_window_buffer_data.md",
+  "relative_path": "../../docs/zh-cn/application-dev/performance/close_CPU_access_window_buffer_data.md",
+  "metadata": {
+    "kit": "",
+    "subsystem": "",
+    "owner": "",
+    "designer": "",
+    "tester": "",
+    "adviser": ""
+  },
+  "summary": "介绍如何主动关闭CPU访问窗口缓冲区数据以降低功耗，当开发者确定应用无需CPU访问时可手动关闭该能力，由硬件平台选择最佳的图像格式以提高能效。",
+  "structure": {
+    "title": "主动关闭CPU访问窗口缓冲区数据降低功耗",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 3,
+        "line_end": 5,
+        "summary": "介绍窗口缓冲区CPU访问和GPU访问的能效差异。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "问题现象",
+        "level": 2,
+        "line_start": 7,
+        "line_end": 9,
+        "summary": "介绍自绘制应用使用CPU访问缓冲区导致性能开销较大的问题。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "解决措施",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 26,
+        "summary": "介绍如何在首次获取窗口句柄时关闭CPU访问能力，提高应用能效。"
+      }
+    ]
+  }
+}
