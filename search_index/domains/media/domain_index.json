@@ -1,0 +1,957 @@
+{
+  "domain": "Media",
+  "domain_summary": "Media Kit 是 OpenHarmony 提供的媒体服务框架，涵盖音频播放录制、音视频编解码、音视频播控、相机拍照录像、数字版权保护、图片处理、媒体播放录制、媒体文件管理等多种媒体相关功能。支持 ArkTS 和 C/C++ 两种开发语言，部分功能仅对系统应用开放。",
+  "core_concepts": [
+    "音频播放录制",
+    "音视频编解码",
+    "音视频播控",
+    "相机拍照录像",
+    "数字版权保护",
+    "图片处理",
+    "媒体播放录制",
+    "媒体文件管理",
+    "屏幕录制",
+    "媒体转码"
+  ],
+  "document_count": 200,
+  "documents": [
+    {
+      "doc_id": "Readme-CN",
+      "title": "媒体",
+      "path": "../../docs/zh-cn/application-dev/media/Readme-CN.md",
+      "summary": "媒体领域的总体介绍，包含 Audio Kit（音频服务）、AVCodec Kit（音视频编解码服务）、AVSession Kit（音视频播控服务）、Camera Kit（相机服务）、DRM Kit（数字版权保护服务）、Image Kit（图片处理服务）、Media Kit（媒体服务）、Media Library Kit（媒体文件管理服务）等模块的导航。",
+      "key_topics": ["媒体", "Audio Kit", "AVCodec Kit", "AVSession Kit", "Camera Kit", "DRM Kit", "Image Kit", "Media Kit", "Media Library Kit"]
+    },
+    {
+      "doc_id": "audio-Readme-CN",
+      "title": "Audio Kit（音频服务）",
+      "path": "../../docs/zh-cn/application-dev/media/audio/Readme-CN.md",
+      "summary": "Audio Kit（音频服务）的总体介绍，包含音频焦点和音频会话管理、音频播放、音频录制、音频设备路由管理、音频通话、音频性能调优、音频编创、OpenSL ES开发指导等功能模块的导航。",
+      "key_topics": ["Audio Kit", "音频服务", "音频播放", "音频录制"]
+    },
+    {
+      "doc_id": "audio-kit-intro",
+      "title": "Audio Kit简介",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-kit-intro.md",
+      "summary": "Audio Kit（音频服务）旨在提供场景化的音频播放和录制接口，助力开发者迅速构建音频高清采集及沉浸式播放能力。提供低时延播放、低功耗播放、音效模式、空间音频、音振协同等特性。",
+      "key_topics": ["Audio Kit", "音频服务", "低时延播放", "空间音频", "音振协同"]
+    },
+    {
+      "doc_id": "using-right-streamusage-and-sourcetype",
+      "title": "使用合适的音频类型",
+      "path": "../../docs/zh-cn/application-dev/media/audio/using-right-streamusage-and-sourcetype.md",
+      "summary": "介绍如何选择合适的音频流类型，包括播放场景（StreamUsage）和录制场景（SourceType）的选择，帮助开发者根据应用场景配置正确的音频流参数。",
+      "key_topics": ["音频流流类型", "StreamUsage", "SourceType", "音频场景"]
+    },
+    {
+      "doc_id": "audio-playback-concurrency",
+      "title": "音频焦点和音频会话介绍",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-playback-concurrency.md",
+      "summary": "介绍音频焦点和音频会话的概念，以及多个音频应用并发播放时的处理策略，帮助开发者理解音频焦点机制和会话管理。",
+      "key_topics": ["音频焦点", "音频会话", "并发播放"]
+    },
+    {
+      "doc_id": "audio-session-management",
+      "title": "使用AudioSession管理应用音频焦点(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-session-management.md",
+      "summary": "介绍如何使用AudioSession管理应用音频焦点，实现音频焦点的获取、释放和监听，确保多个音频应用之间的协调播放。",
+      "key_topics": ["AudioSession", "音频焦点", "ArkTS"]
+    },
+    {
+      "doc_id": "using-ohaudio-for-session",
+      "title": "使用AudioSession管理应用音频焦点(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/using-ohaudio-for-session.md",
+      "summary": "介绍如何使用OHAudio的AudioSession管理应用音频焦点，实现音频焦点的获取、释放和监听，确保多个音频应用之间的协调播放。",
+      "key_topics": ["AudioSession", "音频焦点", "C/C++", "OHAudio"]
+    },
+    {
+      "doc_id": "audio-playback-overview",
+      "title": "音频播放开发概述",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-playback-overview.md",
+      "summary": "音频播放开发的总体介绍，包含OHAudio、AudioRenderer、TonePlayer、SoundPlayer等多种音频播放方式的概述和选择建议。",
+      "key_topics": ["音频播放", "OHAudio", "AudioRenderer", "TonePlayer"]
+    },
+    {
+      "doc_id": "using-ohaudio-for-playback",
+      "title": "推荐使用OHAudio开发音频播放功能(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/using-ohaudio-for-playback.md",
+      "summary": "介绍如何使用OHAudio开发音频播放功能，OHAudio是系统在API version 10中引入的一套C API，同时支持普通音频通路和低时延通路，仅支持PCM格式。",
+      "key_topics": ["OHAudio", "音频播放", "C/C++", "低时延"]
+    },
+    {
+      "doc_id": "using-audiorenderer-for-playback",
+      "title": "使用AudioRenderer开发音频播放功能(ArkTs)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/using-audiorenderer-for-playback.md",
+      "summary": "介绍如何使用AudioRenderer开发音频播放功能，AudioRenderer是ArkTS提供的音频播放接口，支持PCM格式的音频数据播放。",
+      "key_topics": ["AudioRenderer", "音频播放", "ArkTS"]
+    },
+    {
+      "doc_id": "using-toneplayer-for-playback-sys",
+      "title": "使用TonePlayer开发音频播放功能(仅对系统应用开放)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/using-toneplayer-for-playback-sys.md",
+      "summary": "介绍如何使用TonePlayer开发音频播放功能，TonePlayer用于播放系统提示音和DTMF音，仅对系统应用开放。",
+      "key_topics": ["TonePlayer", "音频播放", "系统应用", "提示音"]
+    },
+    {
+      "doc_id": "audio-fast-playback",
+      "title": "低时延音频播放(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-fast-playback.md",
+      "summary": "介绍如何实现低时延音频播放，适用于游戏、提示/告警音、K歌等对时延需要求较高的场景。",
+      "key_topics": ["低时延", "音频播放", "C/C++"]
+    },
+    {
+      "doc_id": "power-saving-for-playback",
+      "title": "低功耗音频播放",
+      "path": "../../docs/zh-cn/application-dev/media/audio/power-saving-for-playback.md",
+      "summary": "介绍如何实现低功耗音频播放，针对应用播放音乐、听书类长时间音频播放场景，采用差异化音频缓冲区处理机制来降低功耗。",
+      "key_topics": ["低功耗", "音频播放", "续航"]
+    },
+    {
+      "doc_id": "using-audiohaptic-for-playback",
+      "title": "使用AudioHaptic开发音振协同播放功能(ArkTs)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/using-audiohaptic-for-playback.md",
+      "summary": "介绍如何使用AudioHaptic开发音振协同播放功能，实现音频及振动流的低时延同步控制，适用于输入法、来电铃声等场景。",
+      "key_topics": ["AudioHaptic", "音振协同", "ArkTS"]
+    },
+    {
+      "doc_id": "using-soundplayer-for-playback",
+      "title": "使用SoundPlayer开发系统音效播放功能",
+      "path": "../../docs/zh-cn/application-dev/media/audio/using-soundplayer-for-playback.md",
+      "summary": "介绍如何使用SoundPlayer开发系统音效播放功能，用于播放系统音效，如按键音、通知音等。",
+      "key_topics": ["SoundPlayer", "系统音效", "播放"]
+    },
+    {
+      "doc_id": "volume-management",
+      "title": "播放音量管理",
+      "path": "../../docs/zh-cn/application-dev/media/audio/volume-management.md",
+      "summary": "介绍如何管理播放音量，包括设置音量、获取音量、监听音量变化等功能。",
+      "key_topics": ["音量管理", "播放音量"]
+    },
+    {
+      "doc_id": "public-audio-spatialization-management",
+      "title": "空间音频能力查询和状态订阅",
+      "path": "../../docs/zh-cn/application-dev/media/audio/public-audio-spatialization-management.md",
+      "summary": "介绍如何查询空间音频能力和订阅空间音频状态，支持用户佩戴TWS耳机时感受到空间音频渲染效果。",
+      "key_topics": ["空间音频", "能力查询", "状态订阅"]
+    },
+    {
+      "doc_id": "audio-spatialization-management-sys",
+      "title": "空间音频管理(仅对系统应用开放)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-spatialization-management-sys.md",
+      "summary": "介绍如何管理空间音频，包括开启/关闭空间音频、设置空间音频参数等功能，仅对系统应用开放。",
+      "key_topics": ["空间音频", "系统应用", "管理"]
+    },
+    {
+      "doc_id": "audio-playback-stream-management",
+      "title": "音频播放流管理",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-playback-stream-management.md",
+      "summary": "介绍如何管理音频播放流，包括获取播放流列表、监听播放流变化等功能。",
+      "key_topics": ["音频播放流", "流管理"]
+    },
+    {
+      "doc_id": "distributed-audio-playback-sys",
+      "title": "分布式音频播放(仅对系统应用开放)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/distributed-audio-playback-sys.md",
+      "summary": "介绍如何实现分布式音频播放，支持跨设备的音频播放功能，仅对系统应用开放。",
+      "key_topics": ["分布式音频", "播放", "系统应用"]
+    },
+    {
+      "doc_id": "audio-collaborative-management-sys",
+      "title": "移动全景声管理（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-collaborative-management-sys.md",
+      "summary": "介绍如何管理移动全景声，仅对系统应用开放。",
+      "key_topics": ["移动全景声", "系统应用"]
+    },
+    {
+      "doc_id": "audio-recording-overview",
+      "title": "音频录制开发概述",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-recording-overview.md",
+      "summary": "音频录制开发的总体介绍，包含OHAudio、AudioCapturer等多种音频录制方式的概述和选择建议。",
+      "key_topics": ["音频录制", "OHAudio", "AudioCapturer"]
+    },
+    {
+      "doc_id": "using-ohaudio-for-recording",
+      "title": "推荐使用OHAudio开发音频录制功能(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/using-ohaudio-for-recording.md",
+      "summary": "介绍如何使用OHAudio开发音频录制功能，OHAudio是系统在API version 10中引入的一套C API，同时支持普通音频通路和低时延通路，仅支持PCM格式。",
+      "key_topics": ["OHAudio", "音频录制", "C/C++"]
+    },
+    {
+      "doc_id": "using-audiocapturer-for-recording",
+      "title": "使用AudioCapturer开发音频录制功能(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/using-audiocapturer-for-recording.md",
+      "summary": "介绍如何使用AudioCapturer开发音频录制功能，AudioCapturer是ArkTS提供的音频录制接口，支持PCM格式的音频数据录制。",
+      "key_topics": ["AudioCapturer", "音频录制", "ArkTS"]
+    },
+    {
+      "doc_id": "audio-fast-recording",
+      "title": "低时延音频录制(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-fast-recording.md",
+      "summary": "介绍如何实现低时延音频录制，适用于语音通话、语音识别等对时延需要求较高的场景。",
+      "key_topics": ["低时延", "音频录制", "C/C++"]
+    },
+    {
+      "doc_id": "mic-management",
+      "title": "管理麦克风静音状态",
+      "path": "../../docs/zh-cn/application-dev/media/audio/mic-management.md",
+      "summary": "介绍如何管理麦克风静音状态，包括设置静音、获取静音状态、监听静音状态变化等功能。",
+      "key_topics": ["麦克风", "静音", "管理"]
+    },
+    {
+      "doc_id": "audio-recording-stream-management",
+      "title": "查询和监听其他应用录制状态",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-recording-stream-management.md",
+      "summary": "介绍如何查询和监听其他应用的录制状态，包括获取录制流列表、监听录制流变化等功能。",
+      "key_topics": ["音频录制", "流管理", "监听"]
+    },
+    {
+      "doc_id": "audio-recording-concurrency",
+      "title": "录音并发策略说明",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-recording-concurrency.md",
+      "summary": "介绍录音并发策略，说明多个应用同时录音时的处理规则和限制。",
+      "key_topics": ["录音", "并发策略"]
+    },
+    {
+      "doc_id": "audio-ear-monitor",
+      "title": "实现音频耳返",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-ear-monitor.md",
+      "summary": "介绍如何实现音频耳返功能，将麦克风输入的音频实时输出到耳机，适用于K歌、语音通话等场景。",
+      "key_topics": ["耳返", "音频"]
+    },
+    {
+      "doc_id": "audio-ear-monitor-loopback",
+      "title": "实现音频低时延耳返",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-ear-monitor-loopback.md",
+      "summary": "介绍如何实现音频低时延耳返功能，通过硬件回环实现更低时延的耳返效果。",
+      "key_topics": ["耳返", "低时延", "音频"]
+    },
+    {
+      "doc_id": "audio-input-device-management",
+      "title": "查询和监听音频输入设备",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-input-device-management.md",
+      "summary": "介绍如何查询和监听音频输入设备，包括获取输入设备列表、监听设备变化等功能。",
+      "key_topics": ["音频输入设备", "查询", "监听"]
+    },
+    {
+      "doc_id": "audio-output-device-management",
+      "title": "查询和监听音频输出设备",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-output-device-management.md",
+      "summary": "介绍如何查询和监听音频输出设备，包括获取输出设备列表、监听设备变化等功能。",
+      "key_topics": ["音频输出设备", "查询", "监听"]
+    },
+    {
+      "doc_id": "audio-input-device-switcher",
+      "title": "实现音频输入设备路由切换",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-input-device-switcher.md",
+      "summary": "介绍如何实现音频输入设备路由切换，包括选择输入设备、监听设备切换等功能。",
+      "key_topics": ["音频输入设备", "路由切换"]
+    },
+    {
+      "doc_id": "audio-output-device-switcher",
+      "title": "实现音频输出设备路由切换",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-output-device-switcher.md",
+      "summary": "介绍如何实现音频输出设备路由切换，包括选择输出设备、监听设备切换等功能。",
+      "key_topics": ["音频输出设备", "路由切换"]
+    },
+    {
+      "doc_id": "audio-output-device-change",
+      "title": "响应输出设备变更时合理暂停",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-output-device-change.md",
+      "summary": "介绍如何响应输出设备变更，在设备变更时合理暂停ES播放，避免音频输出异常。",
+      "key_topics": ["音频输出设备", "设备变更", "暂停"]
+    },
+    {
+      "doc_id": "audio-call-overview",
+      "title": "音频通话开发概述",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-call-overview.md",
+      "summary": "音频通话开发的总体介绍，包含音频通话的基本概念和开发流程。",
+      "key_topics": ["音频通话", "开发概述"]
+    },
+    {
+      "doc_id": "audio-call-development",
+      "title": "开发音频通话功能",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-call-development.md",
+      "summary": "介绍如何开发音频通话功能，包括创建通话、控制通话、销毁通话等操作。",
+      "key_topics": ["音频通话", "开发"]
+    },
+    {
+      "doc_id": "audio-performance",
+      "title": "提升音频性能体验",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-performance.md",
+      "summary": "介绍如何提升音频性能体验，包括优化音频处理、降低时延、减少功耗等建议。",
+      "key_topics": ["音频性能", "优化"]
+    },
+    {
+      "doc_id": "audio-workgroup",
+      "title": "音频工作组管理",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-workgroup.md",
+      "summary": "介绍如何管理音频工作组，将音频相关的任务分组管理，提升音频处理性能。",
+      "key_topics": ["音频工作组", "管理"]
+    },
+    {
+      "doc_id": "audio-suite",
+      "title": "音频编创开发概述(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-suite.md",
+      "summary": "音频编创开发的总体介绍，包含离线编辑和实时渲染两种模式的概述。",
+      "key_topics": ["音频编创", "C/C++"]
+    },
+    {
+      "doc_id": "audio-suite-manual-rendering",
+      "title": "离线编辑(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-suite-manual-rendering.md",
+      "summary": "介绍如何使用音频编创进行离线编辑，包括音频剪辑、混音、特效处理等功能。",
+      "key_topics": ["音频编创", "离线编辑", "C/C++"]
+    },
+    {
+      "doc_id": "audio-suite-real-time-rendering",
+      "title": "实时渲染(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/audio-suite-real-time-rendering.md",
+      "summary": "介绍如何使用音频编创进行实时渲染，包括实时音效处理、混音等功能。",
+      "key_topics": ["音频编创", "实时渲染", "C/C++"]
+    },
+    {
+      "doc_id": "replace-opensles-by-ohaudio",
+      "title": "从OpenSL ES切换OHAudio(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/replace-opensles-by-ohaudio.md",
+      "summary": "介绍如何从OpenSL ES切换到OHAudio，提供迁移指南和API对比。",
+      "key_topics": ["OpenSL ES", "OHAudio", "迁移", "C/C++"]
+    },
+    {
+      "doc_id": "using-opensl-es-for-playback",
+      "title": "使用OpenSL ES开发音频播放功能(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/using-opensl-es-for-playback.md",
+      "summary": "介绍如何使用OpenSL ES开发音频播放功能，OpenSL ES是标准的音频API，不再推荐使用。",
+      "key_topics": ["OpenSL ES", "音频播放", "C/C++"]
+    },
+    {
+      "doc_id": "using-opensl-es-for-recording",
+      "title": "使用OpenSL ES开发音频录制功能(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/audio/using-opensl-es-for-recording.md",
+      "summary": "介绍如何使用OpenSL ES开发音频录制功能，OpenSL ES是标准的音频API，不再推荐使用。",
+      "key_topics": ["OpenSL ES", "音频录制", "C/C++"]
+    },
+    {
+      "doc_id": "avcodec-Readme-CN",
+      "title": "AVCodec Kit（音视频编解码服务）",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/Readme-CN.md",
+      "summary": "AVCodec Kit（音视频编解码服务）的总体介绍，包含音视频编解码、媒体数据封装与解析等功能模块的导航。",
+      "key_topics": ["AVCodec Kit", "音视频编解码", "封装解析"]
+    },
+    {
+      "doc_id": "avcodec-kit-intro",
+      "title": "AVCodec Kit简介",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/avcodec-kit-intro.md",
+      "summary": "AVCodec Kit（Audio & Video Codec Kit，音视频编解码，封装解析）是媒体系统中的音视频的编解码、媒体文件的解析、封装、媒体数据输入等原子能力。基于性能考虑，AVCodec Kit仅提供C接口。",
+      "key_topics": ["AVCodec Kit", "音视频编解码", "封装解析", "C接口"]
+    },
+    {
+      "doc_id": "avcodec-support-formats",
+      "title": "AVCodec支持的格式",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/avcodec-support-formats.md",
+      "summary": "介绍AVCodec支持的格式，包括音视频编码格式、封装格式、媒体数据解析格式等。",
+      "key_topics": ["AVCodec", "支持格式", "编码格式", "封装格式"]
+    },
+    {
+      "doc_id": "obtain-supported-codecs",
+      "title": "获取支持的编解码能力",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/obtain-supported-codecs.md",
+      "summary": "介绍如何获取系统支持的编解码能力，包括查询支持的编码器、解码器、编解码参数等。",
+      "key_topics": ["编解码能力", "查询"]
+    },
+    {
+      "doc_id": "audio-encoding",
+      "title": "音频编码",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/audio-encoding.md",
+      "summary": "介绍如何使用AVCodec进行音频编码，包括创建编码器、设置编码参数、输入数据、获取编码结果等。",
+      "key_topics": ["音频编码", "AVCodec"]
+    },
+    {
+      "doc_id": "synchronous-audio-encoding",
+      "title": "音频编码同步模式",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/synchronous-audio-encoding.md",
+      "summary": "介绍如何使用AVCodec进行音频编码同步模式，同步模式下编码操作会阻塞等待结果。",
+      "key_topics": ["音频编码", "同步模式", "AVCodec"]
+    },
+    {
+      "doc_id": "audio-decoding",
+      "title": "音频解码",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/audio-decoding.md",
+      "summary": "介绍如何使用AVCodec进行音频解码，包括创建解码器、设置解码参数、输入数据、获取解码结果等。",
+      "key_topics": ["音频解码", "AVCodec"]
+    },
+    {
+      "doc_id": "synchronous-audio-decoding",
+      "title": "音频解码同步模式",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/synchronous-audio-decoding.md",
+      "summary": "介绍如何使用AVCodec进行音频解码同步模式，同步模式下解码操作会阻塞等待结果。",
+      "key_topics": ["音频解码", "同步模式", "AVCodec"]
+    },
+    {
+      "doc_id": "video-encoding",
+      "title": "视频编码",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/video-encoding.md",
+      "summary": "介绍如何使用AVCodec进行视频编码，包括创建编码器、设置编码参数、输入数据、获取编码结果等，支持Surface模式。",
+      "key_topics": ["视频编码", "AVCodec", "Surface模式"]
+    },
+    {
+      "doc_id": "synchronous-video-encoding",
+      "title": "视频编码同步模式",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/synchronous-video-encoding.md",
+      "summary": "介绍如何使用AVCodec进行视频编码同步模式，同步模式下编码操作会阻塞等待结果。",
+      "key_topics": ["视频编码", "同步模式", "AVCodec"]
+    },
+    {
+      "doc_id": "video-encoding-temporal-scalability",
+      "title": "时域可分层视频编码",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/video-encoding-temporal-scalability.md",
+      "summary": "介绍如何实现时域可分层视频编码，支持生成不同帧率的视频流，适应不同网络条件。",
+      "key_topics": ["视频编码", "时域可分层", "分层编码"]
+    },
+    {
+      "doc_id": "video-encoding-b-frame",
+      "title": "B帧视频编码",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/video-encoding-b-frame.md",
+      "summary": "介绍如何使用B帧进行视频编码，B帧可以提高压缩效率，但会增加编码延迟。",
+      "key_topics": ["视频编码", "B帧"]
+    },
+    {
+      "doc_id": "video-encoding-configuration-typical-scenarios",
+      "title": "典型场景的视频编码配置",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/video-encoding-configuration-typical-scenarios.md",
+      "summary": "介绍典型场景的视频编码配置，包括直播、录播、视频通话等场景的编码参数配置建议。",
+      "key_topics": ["视频编码", "配置", "典型场景"]
+    },
+    {
+      "doc_id": "video-encoding-ROI",
+      "title": "ROI视频编码",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/video-encoding-ROI.md",
+      "summary": "介绍如何实现ROI（Region of Interest）视频编码，对感兴趣区域分配更多码率，提升主观画质。",
+      "key_topics": ["视频编码", "ROI", "感兴趣区域"]
+    },
+    {
+      "doc_id": "video-decoding",
+      "title": "视频解码",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/video-decoding.md",
+      "summary": "介绍如何使用AVCodec进行视频解码，包括创建解码器、设置解码参数、输入数据、获取解码结果等，支持Surface模式。",
+      "key_topics": ["视频解码", "AVCodec", "Surface模式"]
+    },
+    {
+      "doc_id": "synchronous-video-decoding",
+      "title": "视频解码同步模式",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/synchronous-video-decoding.md",
+      "summary": "介绍如何使用AVCodec进行视频解码同步模式，同步模式下解码操作会阻塞等待结果。",
+      "key_topics": ["视频解码", "同步模式", "AVCodec"]
+    },
+    {
+      "doc_id": "parallel-decoding-nativeWindow",
+      "title": "创建视频解码器和NativeWindow初始化并行",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/parallel-decoding-nativeWindow.md",
+      "summary": "介绍如何并行创建视频解码器和NativeWindow初始化，提升视频解码启动速度。",
+      "key_topics": ["视频解码", "NativeWindow", "并行"]
+    },
+    {
+      "doc_id": "video-variable-refreshrate",
+      "title": "视频可变帧率",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/video-variable-refreshrate.md",
+      "summary": "介绍如何实现视频可变帧率编码，根据内容复杂度动态调整帧率，优化码率分配。",
+      "key_topics": ["视频编码", "可变帧率", "VFR"]
+    },
+    {
+      "doc_id": "audio-video-muxer",
+      "title": "媒体数据封装",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/audio-video-muxer.md",
+      "summary": "介绍如何使用AVCodec进行媒体数据封装，将音视频码流封装成媒体文件（如mp4、m4a）。",
+      "key_topics": ["媒体封装", "AVCodec", "Muxer"]
+    },
+    {
+      "doc_id": "audio-video-demuxer",
+      "title": "媒体数据解析",
+      "path": "../../docs/zh-cn/application-dev/media/avcodec/audio-video-demuxer.md",
+      "summary": "介绍如何使用AVCodec进行媒体数据解析，从媒体文件中解析出音视频码流和元数据。",
+      "key_topics": ["媒体解析", "AVCodec", "Demuxer"]
+    },
+    {
+      "doc_id": "avsession-Readme-CN",
+      "title": "AVSession Kit（音视频播控服务）",
+      "path": "../../docs/zh-cn/application-dev/media/avsession/Readme-CN.md",
+      "summary": "AVSession Kit（音视频播控服务）的总体介绍，包含本地媒体会话、分布式媒体会话等功能模块的导航。",
+      "key_topics": ["AVSession Kit", "音视频播控", "媒体会话"]
+    },
+    {
+      "doc_id": "avsession-overview",
+      "title": "AVSession Kit简介",
+      "path": "../../docs/zh-cn/application-dev/media/avsession/avsession-overview.md",
+      "summary": "AVSession Kit（Audio & Video Session Kit，音视频播控服务）是系统提供的音视频管控服务，用于统一管理系统中所有音视频行为，帮助开发者快速构建音视频统一展示和控制能力。",
+      "key_topics": ["AVSession Kit", "音视频播控", "统一管控"]
+    },
+    {
+      "doc_id": "local-avsession-overview",
+      "title": "本地媒体会话概述",
+      "path": "../../docs/zh-cn/application-dev/media/avsession/local-avsession-overview.md",
+      "summary": "本地媒体会话的概述，介绍本地媒体会话的概念、作用和基本流程。",
+      "key_topics": ["本地媒体会话", "概述"]
+    },
+    {
+      "doc_id": "using-avsession-developer",
+      "title": "媒体会话提供方",
+      "path": "../../docs/zh-cn/application-dev/media/avsession/using-avsession-developer.md",
+      "summary": "介绍如何实现媒体会话提供方，，音视频应用接入AVSession后，需要向媒体会话提供播放的媒体信息，并响应控制命令。",
+      "key_topics": ["媒体会话", "提供方", "ArkTS"]
+    },
+    {
+      "doc_id": "using-ohavsession-developer",
+      "title": "媒体会话提供方(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/avsession/using-ohavsession-developer.md",
+      "summary": "介绍如何使用C/C++实现媒体会话提供方，音视频应用接入AVSession后，需要向媒体会话提供播放的媒体信息，并响应控制命令。",
+      "key_topics": ["媒体会话", "提供方", "C/C++"]
+    },
+    {
+      "doc_id": "avsession-access-scene",
+      "title": "应用接入AVSession场景介绍",
+      "path": "../../docs/zh-cn/application-dev/media/avsession/avsession-access-scene.md",
+      "summary": "介绍应用接入AVSession的场景，包括音乐播放、视频播放、直播等场景的接入方式。",
+      "key_topics": ["AVSession", "接入场景"]
+    },
+    {
+      "doc_id": "avsession-background-scene",
+      "title": "后台播放",
+      "path": "../../docs/zh-cn/application-dev/media/avsession/avsession-background-scene.md",
+      "summary": "介绍如何实现后台播放，应用接入AVSession后，可以进行后台音频播放，需要同时申请长时任务。",
+      "key_topics": ["后台播放", "AVSession", "长时任务"]
+    },
+    {
+      "doc_id": "using-avsession-controller-sys",
+      "title": "媒体会话控制方(仅对系统应用开放)",
+      "path": "../../docs/zh-cn/application-dev/media/avsession/using-avsession-controller-sys.md",
+      "summary": "介绍如何实现媒体会话控制方，系统应用接入AVSession后，可以控制其他应用的播放行为，仅对系统应用开放。",
+      "key_topics": ["媒体会话", "控制方", "系统应用"]
+    },
+    {
+      "doc_id": "distributed-avsession-overview-sys",
+      "title": "分布式媒体会话概述(仅对系统应用开放)",
+      "path": "../../docs/zh-cn/application-dev/media/avsession/distributed-avsession-overview-sys.md",
+      "summary": "分布式媒体会话的概述，介绍分布式媒体会话的概念、作用和基本流程，仅对系统应用开放。",
+      "key_topics": ["分布式媒体会话", "概述", "系统应用"]
+    },
+    {
+      "doc_id": "using-distributed-avsession-sys",
+      "title": "使用分布式媒体会话(仅对系统应用开放)",
+      "path": "../../docs/zh-cn/application-dev/media/avsession/using-distributed-avsession-sys.md",
+      "summary": "介绍如何使用分布式媒体会话，实现跨设备的音视频播放控制和媒体信息显示，仅对系统应用开放。",
+      "key_topics": ["分布式媒体会话", "跨设备", "系统应用"]
+    },
+    {
+      "doc_id": "using-switch-call-devices",
+      "title": "使用通话设备切换组件",
+      "path": "../../docs/zh-cn/application-dev/media/avsession/using-switch-call-devices.md",
+      "summary": "介绍如何使用通话设备切换组件，实现通话设备的切换功能。",
+      "key_topics": ["通话设备切换", "组件"]
+    },
+    {
+      "doc_id": "camera-Readme-CN",
+      "title": "Camera Kit（相机服务）",
+      "path": "../../docs/zh-cn/application-dev/media/camera/Readme-CN.md",
+      "summary": "Camera Kit（相机服务）的总体介绍，包含相机管理、设备输入、会话管理、预览、拍照、录像等功能模块的导航。",
+      "key_topics": ["Camera Kit", "相机服务", "拍照", "录像"]
+    },
+    {
+      "doc_id": "camera-overview",
+      "title": "Camera Kit简介",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-overview.md",
+      "summary": "开发者通过调用Camera Kit（相机服务）提供的接口可以开发相机应用，应用通过访问和操作相机硬件，实现基础操作，如预览、拍照和录像；还可以通过接口组合完成更多操作，如控制闪光灯和曝光时间、对焦或调焦等。",
+      "key_topics": ["Camera Kit", "相机服务", "预览", "拍照", "录像"]
+    },
+    {
+      "doc_id": "camera-preparation",
+      "title": "申请相机开发的权限",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-preparation.md",
+      "summary": "介绍如何申请相机开发所需的权限，包括相机权限、麦克风权限等。",
+      "key_topics": ["相机", "权限申请"]
+    },
+    {
+      "doc_id": "camera-device-management",
+      "title": "相机管理(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-device-management.md",
+      "summary": "介绍如何进行相机管理，包括获取相机设备列表、创建相机设备、释放相机设备等操作。",
+      "key_topics": ["相机管理", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-device-input",
+      "title": "设备输入(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-device-input.md",
+      "summary": "介绍如何配置相机设备输入，包括选择相机镜头、配置输入流等操作。",
+      "key_topics": ["相机输入", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-session-management",
+      "title": "会话管理(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-session-management.md",
+      "summary": "介绍如何进行相机会话管理，包括创建会话、配置会话、开始会话、停止会话等操作。",
+      "key_topics": ["相机会话", "会话管理", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-picker",
+      "title": "通过系统相机拍照和录像(CameraPicker)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-picker.md",
+      "summary": "介绍如何使用CameraPicker拉起系统相机进行拍照和录像，无需申请相机权限。",
+      "key_topics": ["CameraPicker", "系统相机", "拍照", "录像"]
+    },
+    {
+      "doc_id": "camera-preview",
+      "title": "预览(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-preview.md",
+      "summary": "介绍如何实现相机预览功能，预览是启动相机后看见的画面，通常在拍照和录像前执行。",
+      "key_topics": ["相机预览", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-dual-channel-preview",
+      "title": "双路预览(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-dual-channel-preview.md",
+      "summary": "介绍如何实现双路预览功能，同时显示两个相机镜头的预览画面。",
+      "key_topics": ["相机预览", "双路预览", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-shooting",
+      "title": "拍照(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-shooting.md",
+      "summary": "介绍如何实现相机拍照功能，包括配置拍照参数、触发拍照、获取拍照结果等操作。",
+      "key_topics": ["相机拍照", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-shooting-case",
+      "title": "拍照实践(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-shooting-case.md",
+      "summary": "介绍相机拍照的实践案例，包括完整的拍照流程和最佳实践。",
+      "key_topics": ["相机拍照", "实践", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-recording",
+      "title": "录像(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-recording.md",
+      "summary": "介绍如何实现相机录像功能，包括配置录像参数、开始录像、停止录像等操作。",
+      "key_topics": ["相机录像", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-recording-case",
+      "title": "录像实践(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-recording-case.md",
+      "summary": "介绍相机录像的实践案例，包括完整的录像流程和最佳实践。",
+      "key_topics": ["相机录像", "实践", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-metadata",
+      "title": "元数据(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-metadata.md",
+      "summary": "介绍如何获取和设置相机元数据，包括曝光时间、ISO、白平衡等参数。",
+      "key_topics": ["相机元数据", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-torch-use",
+      "title": "手电筒使用(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-torch-use.md",
+      "summary": "介绍如何使用相机手电筒，包括开启手电筒、关闭手电筒、切换手电筒模式等操作。",
+      "key_topics": ["手电筒", "相机", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-foldable-display",
+      "title": "适配不同折叠状态的摄像头变更(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-foldable-display.md",
+      "summary": "介绍如何适配不同折叠状态的摄像头变更，在折叠屏设备上正确切换前后摄像头。",
+      "key_topics": ["相机", "折叠屏", "摄像头切换", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-deferred-capture",
+      "title": "分段式拍照(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-deferred-capture.md",
+      "summary": "介绍如何实现分段式拍照功能，支持多次拍照后合成一张高质量照片。",
+      "key_topics": ["相机拍照", "分段式拍照", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-deferred-capture-case",
+      "title": "分段式拍照实践(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-deferred-capture-case.md",
+      "summary": "介绍分段式拍照的实践案例，包括完整的分段式拍照流程和最佳实践。",
+      "key_topics": ["相机拍照", "分段式ES拍照", "实践", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-moving-photo",
+      "title": "动态照片拍摄(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-moving-photo.md",
+      "summary": "介绍如何拍摄动态照片，动态照片包含静态图片和短视频，支持播放动态效果。",
+      "key_topics": ["动态照片", "相机拍照", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-animation",
+      "title": "相机基础动效(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-animation.md",
+      "summary": "介绍如何实现相机基础动效，包括拍照动画、录像动画等。",
+      "key_topics": ["相机", "动效", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-worker",
+      "title": "在Worker线程ES中使用相机(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-worker.md",
+      "summary": "介绍如何在Worker线程中使用相机，避免阻塞主线程，提升用户体验。",
+      "key_topics": ["相机", "Worker线程", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-background-recovery",
+      "title": "相机启动恢复实践(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-background-recovery.md",
+      "summary": "介绍相机启动恢复的实践，包括相机在后台被杀死后的恢复策略。",
+      "key_topics": ["相机", "后台恢复", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-auto-switch",
+      "title": "自动切换摄像头实践(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-auto-switch.md",
+      "summary": "介绍自动切换摄像头的实践，包括根据场景自动切换前后摄像头。",
+      "key_topics": ["相机", "自动切换", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-whitebalance",
+      "title": "白平衡设置(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-whitebalance.md",
+      "summary": "介绍如何设置相机白平衡，包括自动白平衡和手动白平衡。",
+      "key_topics": ["相机", "白平衡", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-system-pressure",
+      "title": "压力管控(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-system-pressure.md",
+      "summary": "介绍如何进行相机压力管控，包括监听系统压力、调整相机参数等。",
+      "key_topics": ["相机", "压力管控", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-control-center",
+      "title": "相机控制器(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-control-center.md",
+      "summary": "介绍如何使用相机控制器，实现对相机的统一管理和控制。",
+      "key_topics": ["相机", "控制器", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-macro",
+            "title": "微距能力设置(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-macro.md",
+      "summary": "介绍如何设置相机微距能力，包括开启微距模式、设置微距参数等。",
+      "key_topics": ["相机", "微距", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-concurrent-open",
+      "title": "多摄同开(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-concurrent-open.md",
+      "summary": "介绍如何实现多摄同开功能，同时使用多个摄像头进行拍照或录像。",
+      "key_topics": ["相机", "多摄同开", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-deferred-photo-sys",
+      "title": "高性能拍照(仅对系统应用开放)(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-deferred-photo-sys.md",
+      "summary": "介绍如何实现高性能拍照功能，支持零延迟拍照，仅对系统应用开放。",
+      "key_topics": ["相机拍照", "高性能", "系统应用", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-deferred-photo-case-sys",
+      "title": "高性能拍照实践(仅对系统应用开放)(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-deferred-photo-case-sys.md",
+      "summary": "介绍高性能拍照的实践案例，包括完整的高性能拍照流程和最佳实践，仅对系统应用开放。",
+      "key_topics": ["相机拍照", "高性能", "实践", "系统应用", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-depth-data-sys",
+      "title": "深度信息(仅对系统应用开放)(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-depth-data-sys.md",
+      "summary": "介绍如何获取相机深度信息，用于实现人像虚化、AR等效果，仅对系统应用开放。",
+      "key_topics": ["相机", "深度信息", "系统应用", "ArkTS"]
+    },
+    {
+      "doc_id": "camera-performance-improvement-sys",
+      "title": "性能提升实践(仅对系统应用开放)(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/camera-performance-improvement-sys.md",
+      "summary": "介绍相机性能提升的实践，包括优化相机启动速度、降低功耗等，仅对系统应用开放。",
+      "key_topics": ["相机", "性能优化", "系统应用", "ArkTS"]
+    },
+    {
+      "doc_id": "native-camera-device-management",
+      "title": "相机管理(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-device-management.md",
+      "summary": "介绍如何进行相机管理，包括获取相机设备列表、创建相机设备、释放相机设备等操作。",
+      "key_topics": ["相机管理", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-device-input",
+      "title": "设备输入(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-device-input.md",
+      "summary": "介绍如何配置相机设备输入，包括选择相机镜头、配置输入流等操作。",
+      "key_topics": ["相机输入", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-session-management",
+      "title": "会话管理(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-session-management.md",
+      "summary": "介绍如何进行相机会话管理，包括创建会话、配置会话、开始会话、停止会话等操作。",
+      "key_topics": ["相机会话", "会话管理", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-preview",
+      "title": "预览(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-preview.md",
+      "summary": "介绍如何实现相机预览功能，预览是启动相机后看见的画面，通常在拍照和录像前执行。",
+      "key_topics": ["相机预览", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-preview-imageReceiver",
+      "title": "预览流二次处理(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-preview-imageReceiver.md",
+      "summary": "介绍如何对相机预览流进行二次处理，包括添加滤镜、特效等。",
+      "key_topics": ["相机预览", "二次处理", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-shooting",
+      "title": "拍照(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-shooting.md",
+      "summary": "介绍如何实现相机拍照功能，包括配置拍照参数、触发拍照、获取拍照结果等操作。",
+      "key_topics": ["相机拍照", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-shooting-case",
+      "title": "拍照实践(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-shooting-case.md",
+      "summary": "介绍相机拍照的实践案例，包括完整的拍照流程和最佳实践。",
+      "key_topics": ["相机拍照", "实践", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-deferred-capture",
+      "title": "分段式拍照(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-deferred-capture.md",
+      "summary": "介绍如何实现分段式拍照功能，支持多次拍照后合成一张高质量照片。",
+      "key_topics": ["相机拍照", "分段式拍照", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-recording",
+      "title": "录像(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-recording.md",
+      "summary": "介绍如何实现相机录像功能，包括配置录像参数、开始录像、停止录像等操作。",
+      "key_topics": ["相机录像", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-recording-case",
+      "title": "录像实践(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-recording-case.md",
+      "summary": "介绍相机录像的实践案例，包括完整的录像流程和最佳实践。",
+      "key_topics": ["相机录像", "实践", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-metadata",
+      "title": "元数据(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-metadata.md",
+      "summary": "介绍如何获取和设置相机元数据，包括曝光时间、ISO、白平衡等参数。",
+      "key_topics": ["相机元数据", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-torch-use",
+      "title": "手电筒使用(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-torch-use.md",
+      "summary": "介绍如何使用相机手电筒，包括开启手电筒、关闭手电筒、切换手电筒模式等操作。",
+      "key_topics": ["手电筒", "相机", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-system-pressure",
+      "title": "压力管控(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-system-pressure.md",
+      "summary": "介绍如何进行相机压力管控，包括监听系统压力、调整相机参数等。",
+      "key_topics": ["相机", "压力管控", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-macro",
+      "title": "微距能力设置(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-macro.md",
+      "summary": "介绍如何设置相机微距能力，包括开启微距模式、设置微距参数等。",
+      "key_topics": ["相机", "微距", "C/C++"]
+    },
+    {
+      "doc_id": "native-camera-concurrent-open",
+      "title": "多摄同开(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/camera/native-camera-concurrent-open.md",
+      "summary": "介绍如何实现多摄同开功能，同时使用多个摄像头进行拍照或录像。",
+      "key_topics": ["相机", "多摄同开", "C/C++"]
+    },
+    {
+      "doc_id": "drm-Readme-CN",
+      "title": "DRM Kit（数字版权保护服务）",
+      "path": "../../docs/zh-cn/application-dev/media/drm/Readme-CN.md",
+      "summary": "DRM Kit（数字版权保护服务）的总体介绍，包含数字版权保护、DRM解决方案开发指导、基于AVPlayer/AVCodec播放DRM节目等功能模块的导航。",
+      "key_topics": ["DRM Kit", "数字版权保护", "DRM"]
+    },
+    {
+      "doc_id": "drm-overview",
+      "title": "DRM Kit 简介",
+      "path": "../../docs/zh-cn/application-dev/media/drm/drm-overview.md",
+      "summary": "DRM Kit（Digital Rights Management Kit，数字版权保护服务）提供了DRM加密节目授权解密的功能，包括DRM插件管理、DRM证书管理、DRM许可证管理、DRM节目授权、DRM节目解密等功E能。",
+      "key_topics": ["DRM Kit", "数字版权保护", "DRM"]
+    },
+    {
+      "doc_id": "drm-arkts-dev-guide",
+      "title": "数字版权保护(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/drm/drm-arkts-dev-guide.md",
+      "summary": "介绍如何使用ArkTS实现数字版权保护功能，包括创建MediaKeySystem、下载证书、获取许可证、解密节目等。",
+      "key_topics": ["DRM", "数字版权保护", "ArkTS"]
+    },
+    {
+      "doc_id": "drm-c-dev-guide",
+      "title": "数字版权保护(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/drm/drm-c-dev-guide.md",
+      "summary": "介绍如何使用C/C++实现数字版权保护功能，包括创建MediaKeySystem、下载证书、获取许可证、解密节目等。",
+      "key_topics": ["DRM", "数字版权保护", "C/C++"]
+    },
+    {
+      "doc_id": "drm-solution-dev-guide",
+      "title": "DRM解决方案开发指导",
+      "path": "../../docs/zh-cn/application-dev/media/drm/drm-solution-dev-guide.md",
+      "summary": "介绍如何开发DRM解决方案，包括实现DRM HDI接口、集成DRM解决方案等。",
+      "key_topics": ["DRM", "解决方案开发"]
+    },
+    {
+      "doc_id": "drm-avplayer-arkts-integration",
+      "title": "基于AVPlayer播放DRM节目(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/media/drm/drm-avplayer-arkts-integration.md",
+      "summary": "介绍如何基于AVPlayer播放DRM节目，将MediaKeySession设置到AVPlayer，实现DRM节目的播放。",
+      "key_topics": ["DRM", "AVPlayer", "播放", "ArkTS"]
+    },
+    {
+      "doc_id": "drm-avcodec-integration",
+      "title": "基于AVCodec播放DRM节目(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/media/drm/drm-avcodec-integration.md",
+      "summary": "介绍如何基于AVCodec播放DRM节目，将MediaKeySession设置到AVCodec，实现DRM节目的播放。",
+      "key_topics": ["DRM", "AVCodec", "播放", "C/C++"]
+    },
+    {
+      "doc_id": "image-Readme-CN",
+      "title": "Image Kit（图片处理服务）",
+      "path": "../../docs/zh-cn/application-dev/media/image/Readme-CN.md",
+      "summary": "Image Kit（图片处理服务）的总体介绍，包含图片解码、编码、编辑和处理、图片接收等功能模块的导航。",
+      "key_topics": ["Image Kit", "图片处理", "图片解码", "图片编码"]
+    },
+    {
+      "doc_id": "image-overview",
+      "title": "Image Kit简介",
+      "path": "../../docs/zh-cn/application-dev/media/image/image-overview.md",
+      "summary": "开发者通过调用Image Kit（图片处理服务）提供的接口，可以实现图片的解码、编码、编辑、元数据处理和图片接收等功能。支持HEIF、JPEG、PNG、WebP等主流图片格式，支持HDR图片编解码。",
+      "key_topics": ["Image Kit", "图片处理", "HEIF", "HDR"]
+    },
+    {
+      "doc_id": "image-decoding",
+      "title": "使用ImageSource完成图片解码",
+      "path": "../../docs/zh-cn/application-dev/media/image/image-decoding.md",
+      "summary": "介绍如何使用ImageSource完成图片解码，将图片文件解码成PixelMap，以便在应用或系统中进行图片显示或图片处理。",
+      "key_topics": ["图片解码", "ImageSource", "PixelMap"]
+    },
+    {
+      "doc_id": "image-picture-decoding",
+      "title": "使用ImageSource完成多图对象解码",
+      "path": "../../docs/zh-cn/application-dev/media/image/image-picture-decoding.md",
+      "summary": "介绍如何使用ImageSource完成多图对象解码，将HEIF等多图文件解码成Picture对象。",
+      "key_topics": ["图片解码", "ImageSource", "Picture", "多图对象"]
+    }
+  ]
+}
