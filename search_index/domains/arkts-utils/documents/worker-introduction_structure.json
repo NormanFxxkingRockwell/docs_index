@@ -1,0 +1,60 @@
+{
+  "doc_id": "worker-introduction",
+  "title": "Worker简介",
+  "path": "zh-cn/application-dev/arkts-utils/worker-introduction.md",
+  "relative_path": "../../docs/zh-cn/application-dev/arkts-utils/worker-introduction.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@wang_zhaoyong",
+    "designer": "@weng-changcheng",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "Worker为应用程序提供一个多线程的运行环境，实现应用程序执行过程与宿主线程分离。通过在后台线程运行脚本处理耗时操作，避免计算密集型或高延迟任务阻塞宿主线程。每个Worker子线程和宿主线程拥有独立的实例。",
+  "structure": {
+    "title": "Worker简介",
+    "sections": [
+      {
+        "section_id": "0001",
+        "title": "Worker运作机制",
+        "level": 2,
+        "line_start": 12,
+        "line_end": 18,
+        "summary": "Worker子线程和宿主线程拥有独立的实例，包含独立执行环境、对象、代码段等。通过消息传递机制通信，利用序列化、引用传递或转移所有权的机制完成命令和数据的交互。"
+      },
+      {
+        "section_id": "0002",
+        "title": "创建Worker的注意事项",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 52,
+        "summary": "Worker线程文件需要放在'{moduleName}/src/main/ets/'目录层级之下，有手动和自动两种创建Worker线程目录及文件的方式。"
+      },
+      {
+        "section_id": "0003",
+        "title": "文件路径注意事项",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 232,
+        "summary": "介绍Worker构造函数中的scriptURL路径规则，包括Stage模型和FA模型下的不同写法。"
+      },
+      {
+        "section_id": "0004",
+        "title": "生命周期注意事项",
+        "level": 2,
+        "line_start": 234,
+        "line_end": 247,
+        "summary": "Worker创建后需要手动管理生命周期，Worker的数量由内存管理策略决定，系统最多可以同时运行64个Worker。"
+      },
+      {
+        "section_id": "0005",
+        "title": "多级Worker生命周期管理",
+        "level": 2,
+        "line_start": 350,
+        "line_end": 532,
+        "summary": "支持创建多级Worker，即父Worker可以创建子Worker，形成层级线程关系。需要正确管理多级Worker的生命周期，销毁父Worker前，先销毁所有子Worker。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "doc_id": "arkts-sendable",
+  "title": "Sendable对象简介",
+  "path": "zh-cn/application-dev/arkts-utils/arkts-sendable.md",
+  "relative_path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-sendable.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@lijiammin2025",
+    "designer": "@weng-changcheng",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS提供了Sendable对象类型，在并发通信时支持通过引用传递来解决对象并发通信开销问题。Sendable对象可共享，跨线程前后指向同一个JS对象。提供异步锁机制来避免数据竞争，并提供异步等待机制来控制多线程处理数据的时序。",
+  "structure": {
+    "title": "Sendable对象简介",
+    "sections": [
+      {
+        "section_id": "0001",
+        "title": "基础概念",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 107,
+        "summary": "介绍Sendable协议、ISendable、Sendable class、Sendable function、Sendable interface等基础概念，以及Sendable支持的数据类型。"
+      },
+      {
+        "section_id": "0002",
+        "title": "Sendable的实现原理",
+        "level": 2,
+        "line_start": 171,
+        "line_end": 183,
+        "summary": "Sendable共享对象分配在共享堆中，实现跨并发实例的内存共享。SharedHeap是进程级别的堆空间，可被所有线程访问。"
+      },
+      {
+        "section_id": "0003",
+        "title": "@Sendable装饰器",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 199,
+        "summary": "声明并校验Sendable class和Sendable function的装饰器，包括装饰器参数、使用场景限制、装饰的函数类型限制等。"
+      }
+    ]
+  }
+}

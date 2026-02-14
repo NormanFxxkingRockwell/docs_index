@@ -1,0 +1,52 @@
+{
+  "doc_id": "taskpool-introduction",
+  "title": "TaskPool简介",
+  "path": "zh-cn/application-dev/arkts-utils/taskpool-introduction.md",
+  "relative_path": "../../docs/zh-cn/application-dev/arkts-utils/taskpool-introduction.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@wang_zhaoyong",
+    "designer": "@weng-changcheng",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "TaskPool为应用程序提供多线程环境，降低资源消耗并提高系统性能。支持在宿主线程提交任务到任务队列，系统选择合适的工作线程执行任务，并将结果返回给宿主线程。提供@Concurrent装饰器标注并发函数，支持任务执行、取消和指定优先级。",
+  "structure": {
+    "title": "TaskPool简介",
+    "sections": [
+      {
+        "section_id": "0001",
+        "title": "TaskPool运作机制",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 17,
+        "summary": "TaskPool支持在宿主线程提交任务到任务队列，系统选择合适的工作线程执行任务，并将结果返回给宿主线程。通过系统统一，结合动态调度和负载均衡算法，节约系统资源。"
+      },
+      {
+        "section_id": "0002",
+        "title": "TaskPool注意事项",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 68,
+        "summary": "介绍TaskPool使用的注意事项，包括@Concurrent装饰器使用、任务执行时长限制、序列化支持类型、线程安全模块使用、数据量限制等。"
+      },
+      {
+        "section_id": "0003",
+        "title": "@Concurrent装饰器",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 86,
+        "summary": "介绍@Concurrent装饰器的使用规则，包括装饰器参数、使用场景、装饰的函数类型、函数内的变量类型和返回值类型等要求。"
+      },
+      {
+        "section_id": "0004",
+        "title": "TaskPool扩缩容机制",
+        "level": 2,
+        "line_start": 439,
+        "line_end": 456,
+        "summary": "介绍TaskPool的扩容和缩容机制，扩容通过负载计算确定所需工作线程数并创建，缩容每30秒检测一次当前负载并尝试释放空闲的工作线程。"
+      }
+    ]
+  }
+}

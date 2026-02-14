@@ -1,0 +1,152 @@
+{
+  "domain": "arkts-utils",
+  "domain_summary": "ArkTS Utils 是 OpenHarmony 应用开发的核心工具集，包含 ArkTS 语言、基础类库、并发编程、运行时、编译工具链等多个方面。涵盖 XML 处理、Buffer、容器类库、TaskPool/Worker 并发、Sendable 对象、GC 垃圾回收、模块化运行、字节码、混淆工具等丰富功能。",
+  "core_concepts": [
+    "ArkTS语言",
+    "基础类库",
+    "并发编程",
+    "TaskPool",
+    "Worker",
+    "Sendable对象",
+    "容器类库",
+    "GC垃圾回收",
+    "字节码",
+    "代码混淆"
+  ],
+  "document_count": 93,
+  "documents": [
+    {
+      "doc_id": "Readme-CN",
+      "title": "ArkTS（方舟编程语言）",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/Readme-CN.md",
+      "summary": "ArkTS（方舟编程语言）的总体导航文档，包含ArkTS简介、ArkTS基础类库、ArkTS并发、ArkTS跨语言交互、ArkTS运行时、ArkTS编译工具链等模块的完整索引。",
+      "key_topics": ["ArkTS", "导航"]
+    },
+    {
+      "doc_id": "arkts-overview",
+      "title": "ArkTS简介",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-overview.md",
+      "summary": "ArkTS是OpenHarmony应用开发的官方高级语言，在TypeScript生态基础上做了进一步扩展，保持TS的基本风格，同时通过规范定义强化开发期静态检查和分析，提升代码健壮性。",
+      "key_topics": ["ArkTS", "TypeScript", "语言扩展"]
+    },
+    {
+      "doc_id": "arkts-utils-overview",
+      "title": "ArkTS基础类库概述",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-utils-overview.md",
+      "summary": "ArkTS基础类库是一个功能齐全的API集合，主要提供了XML生成解析转换、二进制Buffer、多种容器类库、URL字符串解析和高精度浮点计算等能力。",
+      "key_topics": ["基础类库", "XML", "Buffer", "容器"]
+    },
+    {
+      "doc_id": "arkts-runtime-overview",
+      "title": "ArkTS运行时概述",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-runtime-overview.md",
+      "summary": "ArkTS运行时是OpenHarmony上应用的默认语言运行时，支持ArkTS、TS和JS语言的字节码及相关标准库。提供解释器、AOT和JIT高效执行方式。",
+      "key_topics": ["运行时", "AOT", "JIT", "Node-API"]
+    },
+    {
+      "doc_id": "taskpool-introduction",
+      "title": "TaskPool简介",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/taskpool-introduction.md",
+      "summary": "TaskPool为应用程序提供多线程环境，降低资源消耗并提高系统性能。支持在宿主线程提交任务到任务队列，系统选择合适的工作线程执行任务。",
+      "key_topics": ["TaskPool", "多线程", "@Concurrent"]
+    },
+    {
+      "doc_id": "worker-introduction",
+      "title": "Worker简介",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/worker-introduction.md",
+      "summary": "Worker为应用程序提供一个多线程的运行环境，实现应用程序执行过程与宿主线程分离。通过在后台线程运行脚本处理耗时操作，避免计算密集型或高延迟任务阻塞宿主线程。",
+      "key_topics": ["Worker", "多线程", "后台线程"]
+    },
+    {
+      "doc_id": "sendable-guide",
+      "title": "Sendable使用场景",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/sendable-guide.md",
+      "summary": "Sendable对象在不同并发实例间默认采用引用传递，这种方式比序列化更高效，且不会丢失类成员方法。适用于跨并发实例传输大数据和跨并发实例传递带方法的class实例对象。",
+      "key_topics": ["Sendable", "引用传递", "并发通信"]
+    },
+    {
+      "doc_id": "xml-overview",
+      "title": "XML概述",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/xml-overview.md",
+      "summary": "XML（可扩展标记语言）是一种用于描述数据的标记语言，提供通用的数据传输和存储方式。语言基础类库提供了XML的生成、XML的解析和XML的转换相关能力。",
+      "key_topics": ["XML", "数据传输", "标记语言"]
+    },
+    {
+      "doc_id": "buffer",
+      "title": "Buffer与FastBuffer",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/buffer.md",
+      "summary": "Buffer和FastBuffer模块将内存区域抽象为可读写、修改的逻辑对象，提供高效的二进制数据处理接口。主要应用场景包括大数据传输、图像和音频处理、二进制数据操作等。",
+      "key_topics": ["Buffer", "FastBuffer", "二进制数据"]
+    },
+    {
+      "doc_id": "container-overview",
+      "title": "容器类库概述",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/container-overview.md",
+      "summary": "容器类库用于存储各种数据类型的元素，提供一系列处理数据的方法，作为纯数据结构容器具有一定的优势。当前提供了线性和非线性两类容器。",
+      "key_topics": ["容器类库", "线性容器", "非线性容器"]
+    },
+    {
+      "doc_id": "linear-container",
+      "title": "线性容器",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/linear-container.md",
+      "summary": "线性容器实现能按顺序访问的数据结构，其底层主要通过数组实现，包括ArrayList、Vector、List、LinkedList、Deque、Queue和Stack。",
+      "key_topics": ["线性容器", "ArrayList", "List", "LinkedList", "Deque", "Queue", "Stack"]
+    },
+    {
+      "doc_id": "gc-introduction",
+      "title": "GC垃圾回收",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/gc-introduction.md",
+      "summary": "GC（Garbage Collection）即垃圾回收，识别并释放内存中的不再使用的对象，以回收内存空间。ArkTS运行时选择基于对象追踪算法设计GC，采用HPP GC算法。",
+      "key_topics": ["GC", "垃圾回收", "内存管理", "HPP GC"]
+    },
+    {
+      "doc_id": "module-principle",
+      "title": "模块化运行简介",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/module-principle.md",
+      "summary": "ArkTS支持应用模块化编译、打包和运行，简化代码的编写与维护。支持ECMAScript模块规范及CommonJS模块规范，以及动态加载、静态加载、延迟加载等多种加载方式。",
+      "key_topics": ["模块化", "ECMAScript", "CommonJS", "动态加载"]
+    },
+    {
+      "doc_id": "arkts-bytecode-overview",
+      "title": "方舟字节码概述",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-bytecode-overview.md",
+      "summary": "方舟字节码文件是ArkTS/TS/JS源码编译后的二进制产物。介绍方舟字节码文件的各个部分，包括方舟字节码文件格式、方舟字节码基本原理、方舟字节码函数命名规则等。",
+      "key_topics": ["字节码", "编译产物", "文件格式"]
+    },
+    {
+      "doc_id": "bytecode-obfuscation-overview",
+      "title": "ArkGuard字节码混淆工具概述",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/bytecode-obfuscation-overview.md",
+      "summary": "从API version 20开始，ArkGuard提供了基础字节码混淆能力，将代码中的函数名、类名、文件名等名字变成简短无意义的名字，提高通过阅读代码猜测其用途的难度。",
+      "key_topics": ["混淆", "字节码混淆", "ArkGuard", "代码保护"]
+    },
+    {
+      "doc_id": "concurrency-overview",
+      "title": "并发概述",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/concurrency-overview.md",
+      "summary": "并发指在同一时间内，多个任务同时执行。ArkTS提供了异步并发和多线程并发两种处理策略。异步并发通过Promise和async/await提供，多线程并发通过TaskPool和Worker提供。",
+      "key_topics": ["并发", "异步并发", "多线程并发"]
+    },
+    {
+      "doc_id": "arkts-sendable",
+      "title": "Sendable对象简介",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-sendable.md",
+      "summary": "ArkTS提供了Sendable对象类型，在并发通信时支持通过引用传递来解决对象并发通信开销问题。Sendable对象可共享，跨线程前后指向同一个JS对象。",
+      "key_topics": ["Sendable", "引用传递", "共享堆", "@Sendable装饰器"]
+    },
+    {
+      "doc_id": "serializable-overview",
+      "title": "线程间通信对象概述",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/serializable-overview.md",
+      "summary": "在多线程并发场景中，不同线程间需要进行数据交互。由于线程间内存隔离，线程间通信对象必须通过序列化实现值拷贝或内存共享。",
+      "key_topics": ["线程间通信", "序列化", "对象传递"]
+    },
+    {
+      "doc_id": "compilation-tool-chain-overview",
+      "title": "ArkTS编译工具链概述",
+      "path": "../../docs/zh-cn/application-dev/arkts-utils/compilation-tool-chain-overview.md",
+      "summary": "ArkTS SDK提供了一套完整的编译工具链，支持将应用的ArkTS/TS/JS源码编译生成方舟字节码文件。主要功能包括语法检查、UI转换、源码混淆、字节码编译等。",
+      "key_topics": ["编译工具链", "语法检查", "字节码编译", "反汇编"]
+    }
+  ]
+}

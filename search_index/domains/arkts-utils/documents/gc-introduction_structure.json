@@ -1,0 +1,60 @@
+{
+  "doc_id": "gc-introduction",
+  "title": "GC垃圾回收",
+  "path": "zh-cn/application-dev/arkts-utils/gc-introduction.md",
+  "relative_path": "../../docs/zh-cn/application-dev/arkts-utils/gc-introduction.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "ArkCompiler",
+    "owner": "@dwhuawei",
+    "designer": "@yingguofeng",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "GC（Garbage Collection）即垃圾回收，识别并释放内存中的不再使用的对象，以回收内存空间。ArkTS运行时选择基于对象追踪（Tracing GC）算法设计GC，采用HPP GC（高性能部分垃圾回收）算法，包含分代模型、混合算法和GC流程优化。",
+  "structure": {
+    "title": "GC垃圾回收",
+    "sections": [
+      {
+        "section_id": "0001",
+        "title": "GC算法简述",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 53,
+        "summary": "介绍引用计数和对象追踪两种GC算法的类型、优缺点。ArkTS运行时选择基于对象追踪算法设计GC。"
+      },
+      {
+        "section_id": "0002",
+        "title": "HPP GC",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 113,
+        "summary": "HPP GC（高性能部分垃圾回收）包含分代模型、混合算法和GC流程优化三个方面。"
+      },
+      {
+        "section_id": "0003",
+        "title": "Heap结构及其配置参数",
+        "level": 2,
+        "line_start": 115,
+        "line_end": 202,
+        "summary": "介绍Heap结构（包括Young Space、OldSpace、HugeObjectSpace等）及相关配置参数。"
+      },
+      {
+        "section_id": "0004",
+        "title": "GC流程",
+        "level": 2,
+        "line_start": 204,
+        "line_end": 280,
+        "summary": "介绍GC的类型（Young GC、Old GC、Full GC）、触发策略和执行策略。"
+      },
+      {
+        "section_id": "0005",
+        "title": "Smart GC",
+        "level": 2,
+        "line_start": 305,
+        "line_end": 326,
+        "summary": "Smart GC在应用性能敏感场景，通过将线程GC触发水线临时调整到线程的堆最大值，尽量避免触发GC导致应用掉帧。"
+      }
+    ]
+  }
+}
