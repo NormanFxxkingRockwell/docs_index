@@ -2,32 +2,6 @@
   "doc_id": "faqs-arkts-utils",
   "title": "ArkTS语言基础类库开发常见问题",
   "path": "../../docs/zh-cn/application-dev/faqs/faqs-arkts-utils.md",
-  "summary": "ArkTS语言基础类库开发常见问题解答，包括TaskPool和Worker内存隔离、TaskPool生命周期、任务时间限制、TaskPool与Worker对比、动态加载模块、多线程数据共享、线程数量限制、任务优先级、线程模型转换、Context跨线程传递、SharedArrayBuffer、类方法重载、await主线程阻塞、C/C++调用TS接口、类型转换、模块动态加载、AST开发、线程内存占用、长时任务等。",
-  "key_topics": ["TaskPool", "Worker", "并发", "多线程", "SharedArrayBuffer", "SendableClass"],
-  "sections": [
-    {
-      "title": "TaskPool与Worker",
-      "topics": ["内存隔离", "生命周期", "任务限制", "线程数量", "对比选择"]
-    },
-    {
-      "title": "多线程并发",
-      "topics": ["数据共享", "线程通信", "SharedArrayBuffer", "Atomics"]
-    },
-    {
-      "title": "TaskPool特性",
-      "topics": ["任务优先级", "动态加载", "长时任务", "onReceiveData"]
-    },
-    {
-      "title": "线程模型",
-      "topics": ["内存隔离", "Actor模型", "JS引擎", "异步I/O"]
-    },
-    {
-      "title": "类型与模块",
-      "topics": ["SendableClass", "方法重载", "类型转换", "动态import", "AST"]
-    },
-    {
-      "title": "线程安全",
-      "topics": ["Context传递", "线程安全容器", "await阻塞"]
-    }
-  ]
+  "summary": "ArkTS语言基础类库开发常见问题解答，包括TaskPool Worker和各个ArkTS引擎实例内存隔离、TaskPool生命周期线程销毁、TaskPool任务时间限制、预加载任务量大场景推荐使用Worker还是TaskPool、存在线程复用并发场景推荐使用Worker还是TaskPool、TaskPool中动态加载模块、实现多线程数据共享、线程间JS对象数据通信依赖序列化方式性能问题、Worker可用线程数量少无法满足应用平移适配需求、并发任务调度及实时性设置Task优先级、将内存共享线程模型转换成ArkTS线程模型实现方式、TaskPool Worker中任务调度机制、系统多线程模型、Context跨线程传递、多线程并发场景实现安全访问同一块共享内存、子线程和主线程优先级任务执行策略、ArkTS全局强制切换线程执行和调度接口、ArkTS支持共享内存模型多线程开发、ArkTS SendableClass对象内存共享原理限制使用、ArkTs类方法重载、系统线程机制、TaskPool在任务执行过程中跟主线程通信操作同一块内存变量、多线程操作首选项和数据库线程安全、大部分后台任务使用异步并发方式引起主线程卡顿丢帧、简单实现函数同步调用、ArkTS主线程中使用await堵塞主线程、C/C++开发子线程直接调用H系统SDK提供TS接口、系统使用ArkTS作为开发语言底层解释运行环境、ArkTS数据类型转换方法、TaskPool后台I/O任务池应用自行管控、操作系统TS文件开发后续支持、模块动态加载实现、ArkTS开发AST数据结构接口、系统多线程内存占用大如何解决、taskpool线程使用emitter.on等长时间监听接口、taskpool监听任务接口调用顺序、HAR中使用Sendable class、使用TS HAR中UI组件编译报错、hdc属性开关、当前ArkTS采用类Node.js异步I/O机制、网络请求I/O密集型任务是否需要多线程处理、@ohos.net.http网络框架是否需要使用TaskPool处理等问题。",
+  "key_topics": ["TaskPool", "Worker", "多线程", "并发", "线程安全"]
 }
