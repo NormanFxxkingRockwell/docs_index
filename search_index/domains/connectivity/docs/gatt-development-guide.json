@@ -1,7 +1,47 @@
 {
   "doc_id": "gatt-development-guide",
-  "title": "连接和传输数据",
+  "title": "连接和传输数据（GATT）",
   "path": "../../docs/zh-cn/application-dev/connectivity/bluetooth/gatt-development-guide.md",
-  "summary": "基于通用属性协议（GATT）实现BLE设备间连接和传输数据的开发指南。区分GATT客户端和GATT服务端两种角色。客户端通过createGattClientDevice创建实例、connect发起连接、getServices进行服务发现、readCharacteristicValue/writeCharacteristicValue读写特征值、readDescriptorValue/writeDescriptorValue读写描述符、setCharacteristicChangeNotification/setCharacteristicChangeIndication使能通知或指示。服务端通过createGattServer创建实例、addService添加服务、notifyCharacteristicChanged发送特征值变化通知或指示。",
-  "key_topics": ["GATT", "通用属性协议", "BLE连接", "传输数据", "GATT客户端", "GATT服务端", "服务发现", "特征值", "描述符", "通知", "指示"]
+  "summary": "基于通用属性协议（GATT）实现BLE设备间连接和传输数据的开发指导，包括GATT客户端和GATT服务端的实现方法，涵盖服务发现、读写特征值、读写描述符、接收特征值变化通知或指示等操作。",
+  "key_topics": ["BLE", "GATT", "客户端", "服务端", "服务发现", "特征值", "描述符", "通知", "指示"],
+  "sections": [
+    {
+      "title": "简介",
+      "level": 2,
+      "content": "基于GATT实现BLE设备间连接和传输数据的开发指导"
+    },
+    {
+      "title": "实现原理",
+      "level": 2,
+      "content": "客户端和服务端的实现原理"
+    },
+    {
+      "title": "开发步骤",
+      "level": 2,
+      "content": "申请蓝牙权限、导入所需API模块"
+    },
+    {
+      "title": "客户端",
+      "level": 3,
+      "content": "创建客户端实例、订阅连接状态变化事件、发起连接、服务发现、传输数据（读写特征值、读写描述符、接收特征值变化通知或指示）、断开连接"
+    },
+    {
+      "title": "服务端",
+      "level": 3,
+      "content": "创建服务端实例、添加服务、订阅连接状态变化事件、传输数据（订阅特征值读写事件、订阅描述符读写事件、发送特征值变化通知或指示）、关闭服务端实例"
+    },
+    {
+      "title": "完整示例",
+      "level": 2,
+      "content": "客户端和服务端的完整示例代码"
+    }
+  ],
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  }
 }

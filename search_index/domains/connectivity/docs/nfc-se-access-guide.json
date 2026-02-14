@@ -2,6 +2,36 @@
   "doc_id": "nfc-se-access-guide",
   "title": "安全单元访问开发指南",
   "path": "../../docs/zh-cn/application-dev/connectivity/nfc/nfc-se-access-guide.md",
-  "summary": "安全单元（SecureElement，SE）访问开发指南，支持访问eSE和SIM卡等安全单元。通过omapi.createService建立连接、getReaders获取所有可用SE Reader、openSession创建连接会话、openLogicalChannel打开逻辑通道、transmit发送APDU数据、close关闭通道。安全单元的访问控制通过GPAC规范实现，需要将构建模式设置为release进行打包。",
-  "key_topics": ["安全单元", "SecureElement", "SE", "eSE", "SIM", "GPAC", "APDU", "逻辑通道", "会话", "访问控制"]
+  "summary": "安全单元（SecureElement，SE）访问开发指南，介绍应用程序如何通过接口访问安全单元（如eSE和SIM卡），实现数据的读取或写入。",
+  "key_topics": ["NFC", "安全单元", "SecureElement", "eSE", "SIM", "访问控制", "GPAC"],
+  "sections": [
+    {
+      "title": "简介",
+      "level": 2,
+      "content": "安全单元访问介绍"
+    },
+    {
+      "title": "场景介绍",
+      "level": 2,
+      "content": "应用程序访问安全单元的场景"
+    },
+    {
+      "title": "接口说明",
+      "level": 2,
+      "content": "实现安全单元访问的接口说明"
+    },
+    {
+      "title": "主要场景开发步骤",
+      "level": 2,
+      "content": "应用程序访问安全单元"
+    }
+  ],
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@amunra03",
+    "designer": "@wenxiaolin",
+    "tester": "@zs_111",
+    "adviser": "@zhang_yixin13"
+  }
 }

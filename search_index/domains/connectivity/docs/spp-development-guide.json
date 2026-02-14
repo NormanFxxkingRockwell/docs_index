@@ -1,7 +1,47 @@
 {
   "doc_id": "spp-development-guide",
-  "title": "连接和传输数据",
+  "title": "连接和传输数据（SPP）",
   "path": "../../docs/zh-cn/application-dev/connectivity/bluetooth/spp-development-guide.md",
-  "summary": "基于串口通信协议（SPP）实现传统蓝牙设备间连接和传输数据的开发指南。区分客户端和服务端两种角色。客户端通过sppConnect发起连接，服务端通过sppListen创建服务端套接字。支持sppWrite发送数据、订阅sppRead事件接收数据、sppCloseClientSocket断开连接、sppCloseServerSocket删除服务端套接字等操作。",
-  "key_topics": ["SPP", "串口通信协议", "连接", "传输数据", "客户端", "服务端", "sppConnect", "sppListen", "sppWrite", "sppRead"]
+  "summary": "基于串口通信协议（SPP）实现传统蓝牙设备间连接和传输数据的开发指导，包括客户端和服务端的实现方法，涵盖发起连接、传输数据（发送和接收）、断开连接等操作。",
+  "key_topics": ["传统蓝牙", "SPP", "串口通信协议", "客户端", "服务端", "连接", "传输数据"],
+  "sections": [
+    {
+      "title": "简介",
+      "level": 2,
+      "content": "基于SPP实现设备间连接和传输数据的开发指导"
+    },
+    {
+      "title": "实现原理",
+      "level": 2,
+      "content": "客户端和服务端的实现原理"
+    },
+    {
+      "title": "开发步骤",
+      "level": 2,
+      "content": "申请蓝牙权限、导入所需API模块"
+    },
+    {
+      "title": "客户端",
+      "level": 3,
+      "content": "发起连接、传输数据（发送和接收）、断开连接"
+    },
+    {
+      "title": "服务端",
+      "level": 3,
+      "content": "创建服务端套接字、监听客户端连接、传输数据（发送和接收）、断开连接、删除服务端套接字"
+    },
+    {
+      "title": "完整示例",
+      "level": 2,
+      "content": "客户端和服务端的完整示例代码"
+    }
+  ],
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  }
 }
