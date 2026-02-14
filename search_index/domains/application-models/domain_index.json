@@ -1,0 +1,264 @@
+{
+  "domain": "Application Models",
+  "domain_summary": "Application Models（应用模型）是OpenHarmony提供的应用程序开发和运行的应用模型框架，包括Stage模型和FA模型两种应用模型。Stage模型是主推模型，提供UIAbility、ExtensionAbility等应用组件，支持应用组件级的跨端迁移和多端协同、多设备和多窗口形态。FA模型是早期模型，提供PageAbility、ServiceAbility、DataAbility等应用组件。",
+  "core_concepts": [
+    "Stage模型",
+    "FA模型",
+    "UIAbility组件",
+    "ExtensionAbility组件",
+    "应用组件",
+    "生命周期管理",
+    "应用间跳转",
+    "Want信息传递",
+    "Context应用上下文",
+    "进程模型"
+  ],
+  "document_count": 129,
+  "documents": [
+    {
+      "doc_id": "Readme-CN",
+      "title": "Ability Kit（程序框架服务）",
+      "path": "../../docs/zh-cn/application-dev/application-models/Readme-CN.md",
+      "summary": "Ability Kit（程序框架服务）的总体介绍，包含Stage模型开发指导、FA模型开发指导、FA模型与Stage模型应用组件互通指导、FA模型切换Stage模型指导、Native子进程开发指导等内容导航。",
+      "key_topics": ["Ability Kit", "程序框架服务", "Stage模型", "FA模型"]
+    },
+    {
+      "doc_id": "abilitykit-overview",
+      "title": "Ability Kit简介",
+      "path": "../../docs/zh-cn/application-dev/application-models/abilitykit-overview.md",
+      "summary": "Ability Kit（程序框架服务）提供了应用程序开发和运行的应用模型，支持应用组件开发、生命周期管理、组件间交互、进程线程管理等。支持UI与业务逻辑分离、应用组件级的跨端迁移和多端协同、多设备和多窗口形态。",
+      "key_topics": ["Ability Kit", "应用模型", "生命周期管理", "组件交互"]
+    },
+    {
+      "doc_id": "application-models",
+      "title": "应用模型",
+      "path": "../../docs/zh-cn/application-dev/application-models/application-models.md",
+      "summary": "应用模型的构成要素包括应用组件、应用进程模型、应用线程模型、应用任务管理模型、应用配置文件。系统提供了FA模型和Stage模型两种应用模型，Stage模型是主推模型，支持多个应用组件共享同一个ArkTS引擎实例。",
+      "key_topics": ["应用模型", "Stage模型", "FA模型", "应用组件", "进程模型", "线程模型"]
+    },
+    {
+      "doc_id": "ability-terminology",
+      "title": "Ability Kit术语",
+      "path": "../../docs/zh-cn/application-dev/application-models/ability-terminology.md",
+      "summary": "Ability Kit相关术语解释，包括AbilityStage、Context、App Linking、Deep Linking、FA模型、Stage模型、UIAbility、PageAbility组件、多实例模式、跨端迁移、显式Want启动、隐式Want启动等术语定义。",
+      "key_topics": ["术语", "AbilityStage", "Context", "App Linking", "Deep Linking", "Stage模型", "FA模型", "UIAbility", "Want"]
+    },
+    {
+      "doc_id": "uiability-overview",
+      "title": "UIAbility组件概述",
+      "path": "../../docs/zh-cn/application-dev/application-models/uiability-overview.md",
+      "summary": "UIAbility组件是一种包含UI的应用组件，主要用于和用户交互。支持应用组件级的跨端迁移和多端协同、支持多设备和多窗口形态。开发者可以根据场景选择单个或多个UIAbility实现不同功能。",
+      "key_topics": ["UIAbility", "应用组件", "跨端迁移", "多端协同", "窗口形态"]
+    },
+    {
+      "doc_id": "extensionability-overview",
+      "title": "ExtensionAbility组件",
+      "path": "../../docs/zh-cn/application-dev/application-models/extensionability-overview.md",
+      "summary": "ExtensionAbility组件是一种面向特定场景的应用组件，如FormExtensionAbility（卡片）、InputMethodExtensionAbility（输入法）、WorkSchedulerExtensionAbility（延时任务）等。开发者使用不同类型的ExtensionAbility组件可以扩展和丰富应用功能。",
+      "key_topics": ["ExtensionAbility", "卡片", "输入法", "延时任务", "扩展能力"]
+    },
+    {
+      "doc_id": "stage-model-development-overview",
+      "title": "Stage模型开发概述",
+      "path": "../../docs/zh-cn/application-dev/application-models/stage-model-development-overview.md",
+      "summary": "Stage模型开发的基本概念包括AbilityStage、UIAbility组件、ExtensionAbility组件、WindowStage、Context、ArkUI页面、Application、Bundle等。构成要素包括应用组件、配置文件、进程模型、线程模型和任务管理模型。",
+      "key_topics": ["Stage模型", "AbilityStage", "UIAbility", "ExtensionAbility", "WindowStage", "Context"]
+    },
+    {
+      "doc_id": "uiability-lifecycle",
+      "title": "UIAbility组件生命周期",
+      "path": "../../docs/zh-cn/application-dev/application-models/uiability-lifecycle.md",
+      "summary": "UIAbility组件的核心生命周期回调包括onCreate、onForeground、onBackground、onDestroy。还包括onWindowStageCreate、onWindowStageWillDestroy、onWindowStageDestroy、onNewWant等回调。生命周期回调在应用主线程执行，建议仅执行必要的轻量级操作。",
+      "key_topics": ["UIAbility", "生命周期", "onCreate", "onForeground", "onBackground", "onDestroy", "WindowStage"]
+    },
+    {
+      "doc_id": "want-overview",
+      "title": "Want概述",
+      "path": "../../docs/zh-cn/application-dev/application-models/want-overview.md",
+      "summary": "Want是一种对象，用于在应用组件之间传递信息。分为显式Want（指定abilityName和bundleName）和隐式Want（未指定abilityName）。显式Want通常用于应用内组件启动，隐式Want用于调用其他应用提供的某项能力。",
+      "key_topics": ["Want", "信息传递", "显式Want", "隐式Want", "组件启动"]
+    },
+    {
+      "doc_id": "link-between-apps-overview",
+      "title": "应用间跳转概述",
+      "path": "../../docs/zh-cn/application-dev/application-models/link-between-apps-overview.md",
+      "summary": "应用跳转是指从一个应用跳转至另外一个应用，传递相应的数据、执行特定的功能。应用跳转在社交分享、推广营销等场景广泛使用。分为拉起指定应用和拉起指定类型的应用两种类型。",
+      "key_topics": ["应用间跳转", "拉起指定应用", "拉起指定类型应用", "社交分享", "推广营销"]
+    },
+    {
+      "doc_id": "process-model-stage",
+      "title": "进程模型",
+      "path": "../../docs/zh-cn/application-dev/application-models/process-model-stage.md",
+      "summary": "Stage模型的进程类型包括主进程、ExtensionAbility进程、Render进程。还支持模块独立进程、动态指定进程、静态指定进程、子进程等其他进程类型。线程模型包括主线程、TaskPool线程、Worker线程。",
+      "key_topics": ["进程模型", "主进程", "ExtensionAbility进程", "Render进程", "子进程", "线程模型"]
+    },
+    {
+      "doc_id": "thread-model-stage",
+      "title": "线程模型",
+      "path": "../../docs/zh-cn/application-dev/application-models/thread-model-stage.md",
+      "summary": "Stage模型下的线程主要有主线程（执行UI绘制、管理ArkTS引擎实例、分发交互事件、处理回调）、TaskPool线程（执行耗时操作）、Worker线程（执行耗时操作）。支持使用EventHub进行线程内通信。",
+      "key_topics": ["线程模型", "主线程", "TaskPool", "Worker", "EventHub", "线程内通信"]
+    },
+    {
+      "doc_id": "application-context-stage",
+      "title": "应用上下文Context",
+      "path": "../../docs/zh-cn/application-dev/application-models/application-context-stage.md",
+      "summary": "Context是应用中对象的上下文，提供应用的一些基础信息，如resourceManager、applicationInfo、area等。不同类型Context包括ApplicationContext、AbilityStageContext、UIAbilityContext、ExtensionContext、UIContext等，具有不同的能力和使用场景。",
+      "key_topics": ["Context", "应用上下文", "ApplicationContext", "UIAbilityContext", "ExtensionContext", "UIContext"]
+    },
+    {
+      "doc_id": "app-startup",
+      "title": "应用启动框架AppStartup",
+      "path": "../../docs/zh-cn/application-dev/application-models/app-startup.md",
+      "summary": "AppStartup提供了一种简单高效的应用启动方式，支持任务的异步启动，加快应用启动速度。通过在一个配置文件中统一设置多个启动任务的执行顺序以及依赖关系，让执行启动任务的代码变得更加简洁清晰、容易维护。",
+      "key_topics": ["AppStartup", "应用启动框架", "启动任务", "异步启动", "依赖关系"]
+    },
+    {
+      "doc_id": "uiability-intra-device-interaction",
+      "title": "启动应用内的UIAbility组件",
+      "path": "../../docs/zh-cn/application-dev/application-models/uiability-intra-device-interaction.md",
+      "summary": "介绍启动应用内的UIAbility组件的方式，包括启动应用内的UIAbility、启动应用内的UIAbility并获取返回结果、启动UIAbility的指定页面。支持UIAbility冷启动和UIAbility热启动两种情况。",
+      "key_topics": ["UIAbility", "应用内交互", "startAbility", "startAbilityForResult", "冷启动", "热启动"]
+    },
+    {
+      "doc_id": "app-startup-overview",
+      "title": "拉起指定应用概述",
+      "path": "../../docs/zh-cn/application-dev/application-models/app-startup-overview.md",
+      "summary": "介绍如何通过应用链接跳转的方式拉起指定应用。应用链接分为Deep Linking（支持自定义scheme，缺乏域名校验）和App Linking（限定scheme为https，增加域名校验机制，安全性更高）两种方式。",
+      "key_topics": ["拉起指定应用", "应用链接", "Deep Linking", "App Linking", "域名校验"]
+    },
+    {
+      "doc_id": "fa-model-development-overview",
+      "title": "FA模型开发概述",
+      "path": "../../docs/zh-cn/application-dev/application-models/fa-model-development-overview.md",
+      "summary": "基于FA模型开发应用时，涉及应用组件开发（PageAbility、ServiceAbility、DataAbility、服务卡片）、了解进程模型、了解线程模型、应用配置文件等开发过程。",
+      "key_topics": ["FA模型", "PageAbility", "ServiceAbility", "DataAbility", "服务卡片", "进程模型", "线程模型"]
+    },
+    {
+      "doc_id": "pageability-overview",
+      "title": "PageAbility组件概述",
+      "path": "../../docs/zh-cn/application-dev/application-models/pageability-overview.md",
+      "summary": "PageAbility是FA模型下的包含UI、提供展示UI能力的应用组件，主要用于与用户交互。开发者通过DevEco Studio开发平台创建PageAbility时，DevEco Studio会自动创建相关模板代码。",
+      "key_topics": ["PageAbility", "FA模型", "应用组件", "UI组件"]
+    },
+    {
+      "doc_id": "serviceability-overview",
+      "title": "ServiceAbility组件概述",
+      "path": "../../docs/zh-cn/application-dev/application-models/serviceability-overview.md",
+      "summary": "ServiceAbility是基于Service模板的Ability，主要用于后台运行任务（如执行音乐播放、文件下载等），不提供用户交互界面。ServiceAbility可由其他应用或PageAbility启动，即使用户切换到其他应用，ServiceAbility仍将在后台继续运行。",
+      "key_topics": ["ServiceAbility", "FA模型", "后台服务", "后台任务"]
+    },
+    {
+      "doc_id": "dataability-overview",
+      "title": "DataAbility组件概述",
+      "path": "../../docs/zh-cn/application-dev/application-models/dataability-overview.md",
+      "summary": "DataAbility是使用Data模板的Ability，主要用于对外部提供统一的数据访问对象，不提供用户交互界面。DataAbility可由PageAbility、ServiceAbility或其他应用启动，支持同设备不同应用的数据共享和跨设备不同应用的数据共享。",
+      "key_topics": ["DataAbility", "FA模型", "数据共享", "数据访问"]
+    },
+    {
+      "doc_id": "uiability-cross-device-interaction",
+      "title": "通过Call调用实现多端协同",
+      "path": "../../docs/zh-cn/application-dev/application-models/uiability-cross-device-interaction.md",
+      "summary": "Call调用是UIAbility能力的扩展，为UIAbility提供一种能够被外部调用并与外部进行通信的能力。支持前台与后台两种启动方式，通过建立跨进程通信（IPC）链路，在调用方与被调用方间构建起数据通道。在分布式场景下使用时，可以实现跨端迁移。",
+      "key_topics": ["Call调用", "多端协同", "跨进程通信", "IPC", "跨端迁移", "startAbilityByCall"]
+    },
+    {
+      "doc_id": "insight-intent-overview",
+      "title": "意图框架概述",
+      "path": "../../docs/zh-cn/application-dev/application-models/insight-intent-overview.md",
+      "summary": "意图框架允许开发者将应用功能以意图形式集成至系统入口，用户通过系统入口（如语音助手、智能推荐卡片）触发意图执行，即可便捷使用应用提供的功能。提供通过配置文件开发意图和通过装饰器开发意图两种方式。",
+      "key_topics": ["意图框架", "意图开发", "配置文件", "装饰器", "系统入口"]
+    },
+    {
+      "doc_id": "inter-device-interaction-hop-overview",
+      "title": "流转概述",
+      "path": "../../docs/zh-cn/application-dev/application-models/inter-device-interaction-hop-overview.md",
+      "summary": "流转指跨多设备的分布式操作，分为跨端迁移和多端协同两种具体场景。跨端迁移指在A端运行的UIAbility迁移到B端上继续任务；多端协同指多端上的不同UIAbility/ServiceExtensionAbility同时运行或交替运行实现完整的业务。",
+      "key_topics": ["流转", "跨端迁移", "多端协同", "分布式操作", "跨设备交互"]
+    },
+    {
+      "doc_id": "start-intent-panel",
+      "title": "拉起指定类型的应用概述",
+      "path": "../../docs/zh-cn/application-dev/application-models/start-intent-panel.md",
+      "summary": "介绍拉起指定类型应用的方式，包括通过startAbilityByType接口拉起垂类面板（导航、金融、邮件、航班、快递类应用）、通过mailto方式跳转电子邮件应用、通过startAbility接口打开文件。",
+      "key_topics": ["拉起指定类型应用", "垂类面板", "startAbilityByType", "mailto", "文件处理"]
+    },
+    {
+      "doc_id": "system-app-startup",
+      "title": "拉起系统应用",
+      "path": "../../docs/zh-cn/application-dev/application-models/system-app-startup.md",
+      "summary": "介绍拉起系统应用的方式，包括使用系统Picker组件（相机、文件管理、联系人等）和特定接口（设置、电话、日历等）。支持拉起权限设置、通知管理、网络管理、拨号界面、创建日程、选择联系人、拍照录像、文件选择、图库访问等功能。",
+      "key_topics": ["拉起系统应用", "系统Picker", "设置", "电话", "日历", "联系人", "相机", "文件管理", "图库"]
+    },
+    {
+      "doc_id": "process-model-fa",
+      "title": "进程模型概述",
+      "path": "../../docs/zh-cn/application-dev/application-models/process-model-fa.md",
+      "summary": "FA模型的进程模型包括：应用中所有PageAbility、ServiceAbility、DataAbility、FormAbility运行在同一个独立进程（Main Process）；WebView拥有独立的渲染进程（Render Process）。基于当前的进程模型，系统提供了公共事件机制用于进程间通信。",
+      "key_topics": ["FA模型", "进程模型", "Main Process", "Render Process", "进程间通信", "公共事件"]
+    },
+    {
+      "doc_id": "thread-model-fa",
+      "title": "线程模型",
+      "path": "../../docs/zh-cn/application-dev/application-models/thread-model-fa.md",
+      "summary": "FA模型下的线程包括主线程（负责管理其他线程）、Ability线程（每个Ability一个线程，负责输入事件分发、UI绘制、应用代码回调、接收Worker发送的消息）、Worker线程（执行耗时操作）。线程间通信主要有Emitter和Worker两种方式。",
+      "key_topics": ["FA模型", "线程模型", "主线程", "Ability线程", "Worker线程", "Emitter", "线程间通信"]
+    },
+    {
+      "doc_id": "config-file-stage",
+      "title": "Stage模型应用配置文件",
+      "path": "../../docs/zh-cn/application-dev/application-models/config-file-stage.md",
+      "summary": "应用配置文件中包含应用配置信息、应用组件信息、权限信息、开发者自定义信息等。Stage模型下包含app.json5（一个）和module.json5（一个或多个）两种配置文件，常用配置项参见应用/组件级配置文档。",
+      "key_topics": ["Stage模型", "配置文件", "app.json5", "module.json5", "应用配置", "组件配置"]
+    },
+    {
+      "doc_id": "config-file-fa",
+      "title": "FA模型应用配置文件",
+      "path": "../../docs/zh-cn/application-dev/application-models/config-file-fa.md",
+      "summary": "应用配置文件中包含应用配置信息、应用组件信息、权限信息、开发者自定义信息等。FA模型下包含一个config.json配置文件，常用配置项参见应用/组件级配置文档。",
+      "key_topics": ["FA模型", "配置文件", "config.json", "应用配置", "组件配置"]
+    },
+    {
+      "doc_id": "abilitystage",
+      "title": "AbilityStage组件管理器",
+      "path": "../../docs/zh-cn/application-dev/application-models/abilitystage.md",
+      "summary": "AbilityStage是一个Module级别的组件管理器，应用的HAP在首次加载时会创建一个AbilityStage实例。拥有onCreate、onDestroy生命周期回调和onAcceptWant、onConfigurationUpdate、onMemoryLevel、onNewProcessRequest、onPrepareTermination等事件回调。",
+      "key_topics": ["AbilityStage", "组件管理器", "Module", "生命周期回调", "事件回调"]
+    },
+    {
+      "doc_id": "component-startup-rules",
+      "title": "组件启动规则（Stage模型）",
+      "path": "../../docs/zh-cn/application-dev/application-models/component-startup-rules.md",
+      "summary": "组件启动规则包括跨应用启动组件需校验exported字段、后台应用启动组件需校验BACKGROUND权限、跨设备使用startAbilityByCall接口需校验分布式权限。分为同设备组件启动规则和分布式跨设备组件启动规则。",
+      "key_topics": ["组件启动规则", "exported字段", "BACKGROUND权限", "分布式权限", "启动校验"]
+    },
+    {
+      "doc_id": "uiability-launch-type",
+      "title": "UIAbility组件启动模式",
+      "path": "../../docs/zh-cn/application-dev/application-models/uiability-launch-type.md",
+      "summary": "UIAbility的启动模式包括singleton（单实例模式，默认）、multiton（多实例模式）、specified（指定实例模式）。singleton模式下系统中只存在唯一一个该UIAbility实例；multiton模式下每次调用都会创建新的UIAbility实例；specified模式针对特殊场景使用。",
+      "key_topics": ["UIAbility", "启动模式", "singleton", "multiton", "specified", "单实例", "多实例"]
+    },
+    {
+      "doc_id": "uiability-usage",
+      "title": "UIAbility组件基本用法",
+      "path": "../../docs/zh-cn/application-dev/application-models/uiability-usage.md",
+      "summary": "UIAbility组件的基本用法包括指定UIAbility的启动页面、获取UIAbility的上下文UIAbilityContext、获取UIAbility拉起方的信息。可以在UIAbility的onWindowStageCreate生命周期回调中通过WindowStage对象的loadContent方法设置启动页面。",
+      "key_topics": ["UIAbility", "启动页面", "UIAbilityContext", "上下文信息", "拉起方信息"]
+    },
+    {
+      "doc_id": "deep-linking-startup",
+      "title": "使用Deep Linking实现应用间跳转",
+      "path": "../../docs/zh-cn/application-dev/application-models/deep-linking-startup.md",
+      "summary": "Deep Linking基于隐式Want匹配机制中的uri匹配来查询、拉起目标应用。目标应用需要在module.json5配置文件中配置skills标签，拉起方应用可以使用openLink或startAbility接口实现应用跳转。",
+      "key_topics": ["Deep Linking", "应用间跳转", "隐式Want", "uri匹配", "skills配置"]
+    },
+    {
+      "doc_id": "app-linking-startup",
+      "title": "使用App Linking实现应用间跳转",
+      "path": "../../docs/zh-cn/application-dev/application-models/app-linking-startup.md",
+      "summary": "App Linking在Deep Linking基础上增加了域名校验环节，通过域名校验可帮助用户消除歧义，识别合法归属于域名的应用。目标应用需要在module.json5中声明关联的网站域名，并在开发者网站上关联应用。",
+      "key_topics": ["App Linking", "应用间跳转", "域名校验", "网站域名", "安全性"]
+    }
+  ]
+}
