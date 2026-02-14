@@ -1,0 +1,194 @@
+{
+  "domain": "UI",
+  "domain_summary": "ArkUI（方为UI框架）为应用的UI开发提供了完整的基础设施，包括ArkTS声明式开发范式和兼容JS的类Web开发范式两种开发方式。涵盖ArkTS语言、布局、组件、页面路由和组件导航、图形、动画、交互事件、状态管理、渲染控制、自定义能力、弹出框、菜单、气泡提示、NDK构建UI等功能。",
+  "core_concepts": [
+    "ArkTS声明式开发范式",
+    "状态管理",
+    "布局开发",
+    "组件开发",
+    "动画效果",
+    "转场动画",
+    "交互事件",
+    "页面路由",
+    "自定义能力",
+    "弹出框"
+  ],
+  "document_count": 311,
+  "documents": [
+    {
+      "doc_id": "Readme-CN",
+      "title": "ArkUI（方舟UI框架）",
+      "path": "../../docs/zh-cn/application-dev/ui/Readme-CN.md",
+      "summary": "ArkUI（方舟UI框架）的总体介绍和导航，包含ArkTS声明式开发范式和类Web开发范式两种开发方式的完整文档索引。",
+      "key_topics": ["ArkUI", "方舟UI框架", "声明式开发范式", "类Web开发范式"]
+    },
+    {
+      "doc_id": "arkts-ui-development-overview",
+      "title": "UI开发（ArkTS声明式开发范式）概述",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-ui.2",
+      "summary": "介绍基于ArkTS的声明式开发范式，包括ArkTS语言、布局、组件、页面路由和组件导航、图形、动画、交互事件和自定义能力等核心概念。",
+      "key_topics": ["ArkTS", "声明式开发范式", "布局", "组件", "动画", "交互事件"]
+    },
+    {
+      "doc_id": "arkui-overview",
+      "title": "ArkUI简介",
+      "path": "../../docs/zh-cn/application-dev/ui/arkui-overview.md",
+      "summary": "ArkUI（方舟UI框架）为应用的UI开发提供了完整的基础设施，包括简洁的UI语法、丰富的UI功能（组件、布局、动画以及交互事件），以及实时界面预览工具等。",
+      "key_topics": ["ArkUI", "方舟UI框架", "组件", "布局", "动画", "交互事件"]
+    },
+    {
+      "doc_id": "arkts-state-management-overview",
+      "title": "状态管理概述",
+      "path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-state-management-overview.md",
+      "summary": "介绍状态管理的概念和作用，状态变量的改变会引起UI的渲染刷新。当前状态管理分为V1、V2两个版本，V2是V1的增强版本，建议新开发的应用直接使用V2版本。",
+      "key_topics": ["状态管理", "V1", "V2", "状态变量", "UI渲染刷新"]
+    },
+    {
+      "doc_id": "arkts-appstorage",
+      "title": "AppStorage：应用全局的UI状态存储",
+      "path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-appstorage.md",
+      "summary": "介绍AppStorage应用全局的UI状态存储，是与应用进程绑定的全局UI状态存储中心，由UI框架在应用启动时创建，将UI状态数据存储于运行内存，实现应用级全局状态共享。",
+      "key_topics": ["AppStorage", "全局状态存储", "应用级状态共享"]
+    },
+    {
+      "doc_id": "arkts-prop",
+      "title": "@Prop装饰器：父子单向同步",
+      "path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-prop.md",
+      "summary": "介绍@Prop装饰器的器，用于父子组件间的单向数据同步。@Prop装饰的变量可以和父组件建立单向同步关系，允许本地修改但不会同步回父组件。",
+      "key_topics": ["@Prop", "父子组件", "单向同步", "状态变量"]
+    },
+    {
+      "doc_id": "arkts-navigation-introduction",
+      "title": "组件导航和页面路由概述",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-navigation-introduction.md",
+      "summary": "介绍组件导航（Navigation）和页面路由（@ohos.router）两种页面跳转能力。Navigation推荐使用，具备更强的一次开发多端部署能力、更灵活的页面栈操作和更丰富的动效和生命周期。",
+      "key_topics": ["Navigation", "页面路由", "页面跳转", "NavDestination", "Router"]
+    },
+    {
+      "doc_id": "arkts-layout-development-overview",
+      "title": "布局概述",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-layout-development-overview.md",
+      "summary": "介绍布局的概念和开发流程，包括确定页面的布局结构、分析页面中的元素构成、选用适合的布局容器组件或属性控制页面中各个元素的位置和大小。",
+      "key_topics": ["布局", "布局结构", "布局容器", "组件位置", "组件大小"]
+    },
+    {
+      "doc_id": "arkts-animation",
+      "title": "动画概述",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-animation.md",
+      "summary": "介绍动画的目的和ArkUI提供的多种动画接口，包括属性动画、转场动画、粒子动画、组件动画、动画曲线、动画衔接、动画效果和帧动画等。",
+      "key_topics": ["动画", "属性动画", "转场动画", "粒子动画", "动画曲线"]
+    },
+    {
+      "doc_id": "arkts-transition-overview",
+      "title": "转场动画概述",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-transition-overview.md",
+      "summary": "介绍转场动画的概念和分类，包括出现/消失转场、模态转场、共享元素转场、旋转屏动画、页面转场动画和导航转场。",
+      "key_topics": ["转场动画", "出现/消失转场", "模态转场", "共享元素转场"]
+    },
+    {
+      "doc_id": "arkts-rendering-control-overview",
+      "title": "渲染控制概述",
+      "path": "../../docs/zh-cn/application-dev/ui/rendering-control/arkts-rendering-control-overview.md",
+      "summary": "介绍渲染控制的概念，包括条件渲染和循环渲染。循环渲染包括全量加载和懒加载两种方式，ArkUI提供了ForEach、LazyForEach和Repeat组件。",
+      "key_topics": ["渲染控制", "条件渲染", "循环渲染", "全量加载", "懒加载"]
+    },
+    {
+      "doc_id": "arkts-common-components-button",
+      "title": "按钮 (Button)",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-common-components-button.md",
+      "summary": "介绍按钮组件Button的使用，包括创建按钮（通过label和ButtonOptions或通过ButtonOptions）、设置按钮类型（胶囊、圆形、普通、圆角矩形）和按钮样式。",
+      "key_topics": ["Button", "按钮", "组件", "胶囊按钮", "圆形按钮"]
+    },
+    {
+      "doc_id": "arkts-common-components-text-display",
+      "title": "文本显示 (Text/Span)",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-common-components-text-display.md",
+      "summary": "介绍文本显示组件Text和Span的使用，Text用于展示用户视图，Span用于展示行内文本。支持绑定自定义文本选择菜单和扩展自定义菜单。",
+      "key_topics": ["Text", "Span", "文本显示", "文本选择菜单"]
+    },
+    {
+      "doc_id": "arkts-common-components-custom-dialog",
+      "title": "基础自定义弹出框 (CustomDialog)",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-common-components-custom-dialog.md",
+      "summary": "介绍基础自定义弹出框CustomDialog的使用，包括生命周期、创建自定义弹出框、配置弹出框属性和显示/关闭弹出框。",
+      "key_topics": ["CustomDialog", "自定义弹出框", "弹出框", "模态"]
+    },
+    {
+      "doc_id": "arkts-common-components-progress-indicator",
+      "title": "进度条 (Progress)",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-common-components-progress-indicator.md",
+      "summary": "介绍进度条组件Progress的使用，包括创建进度条和设置进度条样式（线性、环形无刻度、环形有刻度、圆形、胶囊）。",
+      "key_topics": ["Progress", "进度条", "组件", "线性样式", "环形样式"]
+    },
+    {
+      "doc_id": "arkts-common-components-richeditor",
+      "title": "富文本编辑（RichEditor）",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-common-components-richeditor.md",
+      "summary": "介绍富文本编辑组件RichEditor的使用，支持图文混排和文本交互式编辑，通常用于响应应用户对图文混合内容的输入操作。",
+      "key_topics": ["RichEditor", "富文本编辑", "图文混排", "文本编辑"]
+    },
+    {
+      "doc_id": "arkts-attribute-animation-apis",
+      "title": "实现属性动画",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-attribute-animation-apis.md",
+      "summary": "介绍属性动画的三种接口：animateTo、animation和keyframeAnimateTo，分别适用于不同场景。animateTo适用于闭包内改变属性引起的界面变化，animation适用于组件通过属性接口绑定的属性变化，keyframeAnimateTo适用于同一属性需要做连续多个动画的场景。",
+      "key_topics": ["属性动画", "animateTo", "animation", "keyframeAnimateTo"]
+    },
+    {
+      "doc_id": "arkts-animator",
+      "title": "帧动画（ohos.animator）",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-animator.md",
+      "summary": "介绍帧动画ohos.animator的使用，具备逐帧回调的特性，便于开发者在每一帧中处理需调整的属性。与属性动画相比，帧动画具备事件即时响应和可暂停的优势。",
+      "key_topics": ["帧动画", "ohos.animator", "逐帧回调", "可暂停"]
+    },
+    {
+      "doc_id": "arkts-navigation-animation",
+      "title": "Navigation转场动画",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-navigation-animation.md",
+      "summary": "介绍Navigation转场动画，包括系统默认转场、自定义转场（Navigation自定义转场和NavDestination自定义转场）和共享元素转场。",
+      "key_topics": ["Navigation转场动画", "系统默认转场", "自定义转场", "共享元素转场"]
+    },
+    {
+      "doc_id": "arkts-modal-transition",
+      "title": "模态转场",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-modal-transition.md",
+      "summary": "介绍模态转场，新的界面覆盖在旧的界面上，旧的界面不消失。包括bindContentCover（全屏模态）、bindSheet（半模态）、bindMenu、bindContextMenu、bindPopup等接口。",
+      "key_topics": ["模态转场", "bindContentCover", "bindSheet", "bindMenu", "bindPopup"]
+    },
+    {
+      "doc_id": "arkts-gesture-events-binding",
+      "title": "绑定手势方法",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-gesture-events-binding.md",
+      "summary": "介绍手势绑定方法，包括gesture（常规手势绑定方法）、priorityGesture（优先手势绑定方法）和parallelGesture（并行手势绑定方法）。",
+      "key_topics": ["手势绑定", "gesture", "priorityGesture", "parallelGesture"]
+    },
+    {
+      "doc_id": "arkts-user-defined",
+      "title": "自定义能力概述",
+      "path": "../../docs/zh-cn/application-dev/ui/arkts-user-defined.md",
+      "summary": "介绍ArkUI开发框架提供的自定义能力，包括自定义组合、自定义扩展、自定义节点和自定义渲染四个层次，用于实现不同场景的应用开发。",
+      "key_topics": ["自定义能力", "自定义组合", "自定义扩展", "自定义节点", "自定义渲染"]
+    },
+    {
+      "doc_id": "ndk-build-ui-overview",
+      "title": "基于NDK构建UI概述",
+      "path": "../../docs/zh-cn/application-dev/ui/ndk-build-ui-overview.md",
+      "summary": "介绍基于NDK构建UI的能力，包括布局、组件、弹窗、动画和交互事件等NDK接口，用于在应用中使用C和C++代码构建UI界面。",
+      "key_topics": ["NDK", "C/C++", "布局", "组件", "弹窗", "动画"]
+    },
+    {
+      "doc_id": "ui-js-overview",
+      "title": "UI开发 (兼容JS的类Web开发范式)概述",
+      "path": "../../docs/zh-cn/application-dev/ui/ui-js-overview.md",
+      "summary": "介绍兼容JS的类Web开发范式，采用经典的HML、CSS、JavaScript三段式开发方式。UI组件与数据之间通过单向数据绑定的方式建立关联，更接近Web前端开发者的使用习惯。",
+      "key_topics": ["类Web开发范式", "HML", "CSS", "JavaScript", "单向数据绑定"]
+    },
+    {
+      "doc_id": "ui-performance-perview",
+      "title": "UI高性能开发",
+      "path": "../../docs/zh-cn/application-dev/ui/ui-performance-overview.md",
+      "summary": "介绍UI性能优化的核心思路，包括工具驱动优化、惰性加载优先、布局计算简化、更新代替重建和状态精确控制。",
+      "key_topics": ["UI性能优化", "工具驱动优化", "惰性加载", "布局计算简化", "更新代替重建"]
+    }
+  ]
+}
