@@ -1,0 +1,2763 @@
+[
+  {
+    "doc_id": "security_app-provision-structure",
+    "title": "HarmonyAppProvision配置文件说明",
+    "path": "../../docs/security/app-provision-structure.md",
+    "summary": "在应用的开发过程中，应用的权限、签名信息等需要在HarmonyAppProvision配置文件（该文件在部分文档中也称为profile文件）中声明。 HarmonyAppProvision文件包含version-code对象、version-name对象、uuid对象、type对象、issuer对象、validity对象、bundle-info对象、acls对象、permissions对象、debug-info对象、app-privilege-capabilities对象等部分组成。 HarmonyAppProvision文件示例：",
+    "key_topics": [
+      "配置文件的内部结构",
+      "validity对象内部结构",
+      "bundle-info对象内部结构",
+      "acls对象内部结构",
+      "permissions对象内部结构"
+    ]
+  },
+  {
+    "doc_id": "security_hapsigntool-errorcode",
+    "title": "签名工具错误码",
+    "path": "../../docs/security/hapsigntool-errorcode.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "11010001 未知错误",
+      "11011001 不支持当前命令",
+      "11011002 参数检查错误",
+      "11011003 参数数量错误",
+      "11011004 空参错误"
+    ]
+  },
+  {
+    "doc_id": "security_hapsigntool-guidelines",
+    "title": "应用包签名工具指导",
+    "path": "../../docs/security/hapsigntool-guidelines.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "编译构建",
+      "开发指导",
+      "场景介绍",
+      "签名步骤",
+      "Java版本工具常见问题"
+    ]
+  },
+  {
+    "doc_id": "security_hapsigntool-overview",
+    "title": "应用包签名工具概述",
+    "path": "../../docs/security/hapsigntool-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "基本概念",
+      "约束与限制"
+    ]
+  },
+  {
+    "doc_id": "security_Readme-CN",
+    "title": "安全",
+    "path": "../../docs/security/Readme-CN.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "安全"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_access-token-overview",
+    "title": "访问控制概述",
+    "path": "../../docs/security/AccessToken/access-token-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "应用沙箱",
+      "应用权限",
+      "安全访问机制"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_app-permission-group-list",
+    "title": "应用权限组列表",
+    "path": "../../docs/security/AccessToken/app-permission-group-list.md",
+    "summary": "以位置信息权限组和相机权限组为例说明。 - 当应用只申请权限ohos.permission.APPROXIMATELY_LOCATION（属于位置信息权限组）时，用户将收到一个请求位置信息的弹窗，包含单个权限的申请。 - 当应用同时申请权限ohos.permission.APPROXIMATELY_LOCATION和ohos.permission.LOCATION（均属于位置信息权限组）时，用户将收到一个请求位置信息的弹窗，包含两个权限的申请。",
+    "key_topics": [
+      "使用须知",
+      "位置<!--Del-->信息<!--DelEnd-->",
+      "相机",
+      "麦克风",
+      "通讯录"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_app-permission-mgmt-overview",
+    "title": "应用权限管控概述",
+    "path": "../../docs/security/AccessToken/app-permission-mgmt-overview.md",
+    "summary": "场景举例：如开发者正在开发APL等级为normal的A应用，由于功能场景需要，A应用需要跨级申请等级为system_basic的P权限。当P权限的ACL使能为TRUE时，A应用可以通过ACL方式跨级申请权限P。 - 携带数据的权限类型 在传统的权限模型中，权限呈现非是即否的状态，每个权限所包含的内容有限，在逐步精细化的权限管控模型中显得力不从心。",
+    "key_topics": [
+      "简介",
+      "权限使用的基本原则",
+      "授权方式",
+      "system_grant（系统授权）",
+      "user_grant（用户授权）"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_app-permissions",
+    "title": "应用权限列表",
+    "path": "../../docs/security/AccessToken/app-permissions.md",
+    "summary": "- MDM应用可用权限 仅MDM应用可申请。应用在申请时，需确认其授权方式，按照合适的方式申请。",
+    "key_topics": [
+      "应用权限列表"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_declare-permissions-in-acl",
+    "title": "申请受限权限",
+    "path": "../../docs/security/AccessToken/declare-permissions-in-acl.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "申请受限权限"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_declare-permissions",
+    "title": "声明权限",
+    "path": "../../docs/security/AccessToken/declare-permissions.md",
+    "summary": "应用必须在module.json5配置文件的requestPermissions标签中声明权限。 > 说明： > 在多HAP场景下，已在entry模块中声明的权限，无需在feature模块中重复添加，权限将在整个应用中生效。",
+    "key_topics": [
+      "在配置文件中声明权限",
+      "声明样例",
+      "权限使用理由的文案内容规范",
+      "reason字段的内容写作规范及建议",
+      "权限使用理由展示方式"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_determine-application-mode",
+    "title": "选择申请权限的方式",
+    "path": "../../docs/security/AccessToken/determine-application-mode.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "<!--Del-->normal等级<!--DelEnd-->应用申请权限的方式",
+      "system_basic等级应用申请权限的方式"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_one-time-authorization",
+    "title": "向用户申请单次授权",
+    "path": "../../docs/security/AccessToken/one-time-authorization.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "支持范围",
+      "使用限制"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_pastebutton",
+    "title": "使用粘贴控件",
+    "path": "../../docs/security/AccessToken/pastebutton.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "约束与限制",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_permissions-for-all-user",
+    "title": "开放权限（用户授权）",
+    "path": "../../docs/security/AccessToken/permissions-for-all-user.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "申请方式",
+      "ohos.permission.ACCESS_BLUETOOTH",
+      "ohos.permission.MEDIA_LOCATION",
+      "ohos.permission.APP_TRACKING_CONSENT",
+      "ohos.permission.ACTIVITY_MOTION"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_permissions-for-all",
+    "title": "开放权限（系统授权）",
+    "path": "../../docs/security/AccessToken/permissions-for-all.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "申请方式",
+      "ohos.permission.USE_BLUETOOTH",
+      "ohos.permission.GET_BUNDLE_INFO",
+      "ohos.permission.PREPARE_APP_TERMINATE",
+      "ohos.permission.PRINT"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_permissions-for-enterprise-apps",
+    "title": "企业类应用可用权限",
+    "path": "../../docs/security/AccessToken/permissions-for-enterprise-apps.md",
+    "summary": "企业类应用包括企业普通应用和MDM（Mobile Device Management）设备管理应用。 企业类应用有以下特征： - 仅在企业定制设备上运行，不会在普通消费者设备上运行。",
+    "key_topics": [
+      "ohos.permission.SET_FILE_GUARD_POLICY",
+      "ohos.permission.FILE_GUARD_MANAGER",
+      "ohos.permission.FILE_GUARD_FILE_WRITE",
+      "ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS",
+      "ohos.permission.GET_RUNNING_INFO"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_permissions-for-mdm-apps",
+    "title": "仅MDM应用可用权限",
+    "path": "../../docs/security/AccessToken/permissions-for-mdm-apps.md",
+    "summary": "起始版本：10 允许设备管理应用查询网络信息。 包括查询网卡设置、IP地址、MAC地址，网卡启用状态。",
+    "key_topics": [
+      "ohos.permission.ENTERPRISE_GET_DEVICE_INFO",
+      "ohos.permission.ENTERPRISE_GET_NETWORK_INFO",
+      "ohos.permission.ENTERPRISE_INSTALL_BUNDLE",
+      "ohos.permission.ENTERPRISE_RESET_DEVICE",
+      "ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_permissions-for-system-apps-no-acl",
+    "title": "不可通过ACL申请的系统应用可用权限（系统授权）",
+    "path": "../../docs/security/AccessToken/permissions-for-system-apps-no-acl.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "ohos.permission.hsdr.HSDR_ACCESS",
+      "ohos.permission.SYSTEM_LIGHT_CONTROL",
+      "ohos.permission.GET_ALL_APP_ACCOUNTS",
+      "ohos.permission.MANAGE_DEVICE_AUTH_CRED",
+      "ohos.permission.ACCESS_AUTH_RESPOOL"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_permissions-for-system-apps-user",
+    "title": "系统应用可用权限（用户授权）",
+    "path": "../../docs/security/AccessToken/permissions-for-system-apps-user.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "ohos.permission.GET_INSTALLED_BUNDLE_LIST",
+      "ohos.permission.ANSWER_CALL",
+      "ohos.permission.MANAGE_VOICEMAIL",
+      "ohos.permission.READ_CALL_LOG",
+      "ohos.permission.READ_CELL_MESSAGES"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_permissions-for-system-apps",
+    "title": "可使用ACL申请的系统应用可用权限（系统授权）",
+    "path": "../../docs/security/AccessToken/permissions-for-system-apps.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "ohos.permission.RUNNING_LOCK",
+      "ohos.permission.SET_WALLPAPER",
+      "ohos.permission.MODIFY_AUDIO_SETTINGS",
+      "ohos.permission.RECEIVER_STARTUP_COMPLETED",
+      "ohos.permission.PRE_START_ATOMIC_SERVICE"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_Readme-CN",
+    "title": "程序访问控制",
+    "path": "../../docs/security/AccessToken/Readme-CN.md",
+    "summary": "- 应用权限管控概述 - 申请应用权限<!--request-app-permissions--> - 选择申请权限的方式",
+    "key_topics": [
+      "程序访问控制"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_request-user-authorization-second",
+    "title": "再次向用户申请授权",
+    "path": "../../docs/security/AccessToken/request-user-authorization-second.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "再次向用户申请授权"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_request-user-authorization",
+    "title": "向用户申请授权",
+    "path": "../../docs/security/AccessToken/request-user-authorization.md",
+    "summary": "路径：设置 \\> 隐私 \\> 权限管理 \\> 应用 \\> 目标应用<!--RP3End-->",
+    "key_topics": [
+      "约束与限制",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_restricted-permissions",
+    "title": "受限开放权限",
+    "path": "../../docs/security/AccessToken/restricted-permissions.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "申请方式",
+      "ohos.permission.SYSTEM_FLOAT_WINDOW",
+      "ohos.permission.READ_CONTACTS",
+      "ohos.permission.WRITE_CONTACTS",
+      "ohos.permission.READ_AUDIO"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_savebutton",
+    "title": "使用保存控件",
+    "path": "../../docs/security/AccessToken/savebutton.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "约束与限制",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_AccessToken_security-component-overview",
+    "title": "安全控件概述",
+    "path": "../../docs/security/AccessToken/security-component-overview.md",
+    "summary": "开发者调用接口时，运作流程如图所示。 1. 应用开发者在ETS文件中集成安全控件，通过JS引擎解析后，在ArkUI框架中生成具体的控件。 2. 安全控件注册控件信息到安全控件管理服务，安全控件管理服务检查控件信息的合法性。",
+    "key_topics": [
+      "安全控件列表",
+      "运作机制",
+      "约束与限制"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-as-user-sys",
+    "title": "操作指定用户空间下的关键资产(仅对系统应用开放)(ArkTS)",
+    "path": "../../docs/security/AssetStoreKit/asset-as-user-sys.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "约束与限制",
+      "接口介绍"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-js-add",
+    "title": "新增关键资产(ArkTS)",
+    "path": "../../docs/security/AssetStoreKit/asset-js-add.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口介绍",
+      "约束和限制",
+      "代码示例"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-js-group-access-control",
+    "title": "管理群组关键资产(ArkTS)",
+    "path": "../../docs/security/AssetStoreKit/asset-js-group-access-control.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "前置条件",
+      "新增群组关键资产",
+      "删除群组关键资产",
+      "更新群组关键资产",
+      "查询单条群组关键资产明文"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-js-query-auth",
+    "title": "查询需要用户认证的关键资产(ArkTS)",
+    "path": "../../docs/security/AssetStoreKit/asset-js-query-auth.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口介绍",
+      "代码示例"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-js-query",
+    "title": "查询关键资产(ArkTS)",
+    "path": "../../docs/security/AssetStoreKit/asset-js-query.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口介绍",
+      "约束和限制",
+      "代码示例",
+      "查询单条关键资产明文",
+      "查询单条关键资产属性"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-js-remove",
+    "title": "删除关键资产(ArkTS)",
+    "path": "../../docs/security/AssetStoreKit/asset-js-remove.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口介绍",
+      "代码示例"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-js-sync",
+    "title": "同步（备份恢复）关键资产(ArkTS)",
+    "path": "../../docs/security/AssetStoreKit/asset-js-sync.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "新增支持同步的关键资产",
+      "接入备份恢复扩展能力",
+      "查询关键资产同步结果",
+      "接口介绍",
+      "代码示例"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-js-update",
+    "title": "更新关键资产(ArkTS)",
+    "path": "../../docs/security/AssetStoreKit/asset-js-update.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口介绍",
+      "代码示例"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-native-add",
+    "title": "新增关键资产(C/C++)",
+    "path": "../../docs/security/AssetStoreKit/asset-native-add.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口介绍",
+      "约束和限制",
+      "代码示例"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-native-group-access-control",
+    "title": "管理群组关键资产(C/C++)",
+    "path": "../../docs/security/AssetStoreKit/asset-native-group-access-control.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "前置条件",
+      "新增群组关键资产",
+      "删除群组关键资产",
+      "更新群组关键资产",
+      "查询单条群组关键资产明文"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-native-query",
+    "title": "查询关键资产(C/C++)",
+    "path": "../../docs/security/AssetStoreKit/asset-native-query.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口介绍",
+      "约束和限制",
+      "代码示例",
+      "查询单条关键资产明文",
+      "查询单条关键资产属性"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-native-remove",
+    "title": "删除关键资产(C/C++)",
+    "path": "../../docs/security/AssetStoreKit/asset-native-remove.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口介绍",
+      "代码示例"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-native-sync",
+    "title": "同步（备份恢复）关键资产(C/C++)",
+    "path": "../../docs/security/AssetStoreKit/asset-native-sync.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "添加依赖",
+      "新增支持同步的关键资产",
+      "接入备份恢复扩展能力",
+      "查询关键资产同步结果",
+      "接口介绍"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-native-update",
+    "title": "更新关键资产(C/C++)",
+    "path": "../../docs/security/AssetStoreKit/asset-native-update.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口介绍",
+      "代码示例"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-scenario1",
+    "title": "保护密码类数据",
+    "path": "../../docs/security/AssetStoreKit/asset-scenario1.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "场景描述",
+      "关键流程"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-scenario2",
+    "title": "保护需要用户认证的密码类数据",
+    "path": "../../docs/security/AssetStoreKit/asset-scenario2.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "场景描述",
+      "关键流程"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_asset-store-kit-overview",
+    "title": "Asset Store Kit简介",
+    "path": "../../docs/security/AssetStoreKit/asset-store-kit-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "基本概念",
+      "约束与限制",
+      "与相关Kit的关系"
+    ]
+  },
+  {
+    "doc_id": "security_AssetStoreKit_Readme-CN",
+    "title": "Asset Store Kit（关键资产存储服务）",
+    "path": "../../docs/security/AssetStoreKit/Readme-CN.md",
+    "summary": "- 保护密码类数据 - 保护需要用户认证的密码类数据 - Asset Store Kit开发指导(ArkTS)<!--asset-arkts-->",
+    "key_topics": [
+      "Asset Store Kit（关键资产存储服务）"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-3des-sym-encrypt-decrypt-ecb-ndk",
+    "title": "使用3DES对称密钥加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-3des-sym-encrypt-decrypt-ecb-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "开发示例",
+      "设置加解密参数IV"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-3des-sym-encrypt-decrypt-ecb",
+    "title": "使用3DES对称密钥加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-3des-sym-encrypt-decrypt-ecb.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "开发示例",
+      "设置加解密参数IV"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-aes-decryption-error-faq",
+    "title": "AES解密失败返回17630001",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-aes-decryption-error-faq.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "AES-GCM算法",
+      "AES-CBC算法"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-aes-sym-encrypt-decrypt-cbc-ndk",
+    "title": "使用AES对称密钥（CBC模式）加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-cbc-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-aes-sym-encrypt-decrypt-cbc",
+    "title": "使用AES对称密钥（CBC模式）加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-cbc.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用AES对称密钥（CBC模式）加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-aes-sym-encrypt-decrypt-ccm-ndk",
+    "title": "使用AES对称密钥（CCM模式）加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-ccm-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-aes-sym-encrypt-decrypt-ccm",
+    "title": "使用AES对称密钥（CCM模式）加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-ccm.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用AES对称密钥（CCM模式）加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-aes-sym-encrypt-decrypt-ecb-ndk",
+    "title": "使用AES对称密钥（ECB模式）加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-ecb-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-aes-sym-encrypt-decrypt-ecb",
+    "title": "使用AES对称密钥（ECB模式）加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-ecb.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用AES对称密钥（ECB模式）加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-aes-sym-encrypt-decrypt-gcm-by-segment-ndk",
+    "title": "使用AES对称密钥（GCM模式）分段加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm-by-segment-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-aes-sym-encrypt-decrypt-gcm-by-segment",
+    "title": "使用AES对称密钥（GCM模式）分段加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm-by-segment.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用AES对称密钥（GCM模式）分段加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-aes-sym-encrypt-decrypt-gcm-ndk",
+    "title": "使用AES对称密钥（GCM模式）加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-aes-sym-encrypt-decrypt-gcm",
+    "title": "使用AES对称密钥（GCM模式）加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用AES对称密钥（GCM模式）加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-aes-wrap-encrypt-decrypt-ndk",
+    "title": "使用AES-WRAP算法对对称密钥加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-aes-wrap-encrypt-decrypt-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-aes-wrap-encrypt-decrypt",
+    "title": "使用AES-WRAP算法对对称密钥加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-aes-wrap-encrypt-decrypt.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用AES-WRAP算法对对称密钥加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-architecture-kit-intro",
+    "title": "Crypto Architecture Kit简介",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-architecture-kit-intro.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "约束与限制",
+      "能力范围",
+      "基本概念",
+      "与相关Kit的关系"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-asym-encrypt-decrypt-spec",
+    "title": "非对称密钥加解密算法规格",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-asym-encrypt-decrypt-spec.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "RSA",
+      "填充模式为NoPadding",
+      "填充模式为PKCS1",
+      "填充模式为PKCS1_OAEP",
+      "获取/设置OAEP填充模式的参数"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-asym-key-generation-conversion-spec",
+    "title": "非对称密钥生成和转换规格",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "RSA",
+      "使用字符串参数生成",
+      "使用密钥参数生成",
+      "ECC",
+      "使用曲线名生成密钥参数"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-chacha20-encrypt-decrypt-ndk",
+    "title": "使用ChaCha20对称密钥加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-chacha20-encrypt-decrypt-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-chacha20-encrypt-decrypt-poly1305-ndk",
+    "title": "使用ChaCha20对称密钥（Poly1305模式）加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-chacha20-encrypt-decrypt-poly1305-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-chacha20-encrypt-decrypt-poly1305",
+    "title": "使用ChaCha20对称密钥（Poly1305模式）加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-chacha20-encrypt-decrypt-poly1305.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-chacha20-encrypt-decrypt",
+    "title": "使用ChaCha20对称密钥加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-chacha20-encrypt-decrypt.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-compute-cmac-ndk",
+    "title": "消息认证码计算CMAC(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-compute-cmac-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "CMAC（一次性传入）",
+      "CMAC（分段传入）"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-compute-cmac",
+    "title": "消息认证码计算CMAC(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-compute-cmac.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "CMAC（一次性传入数据）",
+      "分段CMAC"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-compute-hmac-ndk",
+    "title": "消息认证码计算HMAC(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-compute-hmac-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "HMAC（一次性传入）",
+      "HMAC（分段传入）"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-compute-hmac",
+    "title": "消息认证码计算HMAC(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-compute-hmac.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "HMAC（一次性传入）",
+      "分段HMAC",
+      "HMAC(HmacSpec作为参数传入)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-compute-mac-overview",
+    "title": "消息认证码计算介绍及算法规格",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-compute-mac-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "HMAC",
+      "CMAC"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-convert-binary-data-to-asym-key-pair-ndk",
+    "title": "指定二进制数据转换非对称密钥对(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-convert-binary-data-to-asym-key-pair-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "指定二进制数据转换RSA密钥对",
+      "指定二进制数据转换ECC密钥对",
+      "指定二进制数据转换SM2密钥对"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-convert-binary-data-to-asym-key-pair",
+    "title": "指定二进制数据转换非对称密钥对(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-convert-binary-data-to-asym-key-pair.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "指定二进制数据转换RSA密钥对",
+      "指定二进制数据转换ECC密钥对",
+      "指定PKCS8二进制数据转换ECC私钥",
+      "指定二进制数据转换SM2密钥对"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-convert-binary-data-to-sym-key-ndk",
+    "title": "指定二进制数据转换对称密钥(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-convert-binary-data-to-sym-key-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "指定二进制数据转换3DES密钥",
+      "指定二进制数据转换HMAC密钥"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-convert-binary-data-to-sym-key",
+    "title": "指定二进制数据转换对称密钥(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-convert-binary-data-to-sym-key.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "指定二进制数据转换3DES密钥",
+      "指定二进制数据转换HMAC密钥"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-convert-compressed-or-uncompressed-ECC-point-ndk",
+    "title": "使用ECC压缩/非压缩点格式转换(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-convert-compressed-or-uncompressed-ECC-point-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "指定非压缩点数据转换为压缩点数据",
+      "指定压缩点数据获取密钥对象"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-convert-compressed-or-uncompressed-ECC-point",
+    "title": "使用ECC压缩/非压缩点格式转换(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-convert-compressed-or-uncompressed-ECC-point.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "指定非压缩点数据转换为压缩点数据",
+      "指定压缩点数据获取密钥对象"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-convert-compressed-or-uncompressed-ECC-pubkey-ndk",
+    "title": "使用ECC压缩/非压缩公钥格式转换(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-convert-compressed-or-uncompressed-ECC-pubkey-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "指定非压缩公钥数据转换为压缩公钥数据"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-convert-compressed-or-uncompressed-ECC-pubkey",
+    "title": "使用ECC压缩/非压缩公钥格式转换(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-convert-compressed-or-uncompressed-ECC-pubkey.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "指定非压缩公钥数据转换为压缩公钥数据"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-convert-string-data-to-asym-key-pair-ndk",
+    "title": "指定PEM格式字符串数据转换非对称密钥对(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-convert-string-data-to-asym-key-pair-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "指定PEM格式字符串数据转换RSA密钥对"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-convert-string-data-to-asym-key-pair",
+    "title": "指定PEM格式字符串数据转换非对称密钥对(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-convert-string-data-to-asym-key-pair.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "指定PEM格式字符串数据转换密钥对"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-des-sym-encrypt-decrypt-ecb-ndk",
+    "title": "使用DES对称密钥（ECB模式）加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-des-sym-encrypt-decrypt-ecb-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-des-sym-encrypt-decrypt-ecb",
+    "title": "使用DES对称密钥（ECB模式）加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-des-sym-encrypt-decrypt-ecb.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用DES对称密钥（ECB模式）加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-ecdsa-sign-sig-verify-ndk",
+    "title": "使用ECDSA密钥对签名验签 (C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-ecdsa-sign-sig-verify-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "签名开发步骤",
+      "验签开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-ecdsa-sign-sig-verify",
+    "title": "使用ECDSA密钥对签名验签(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-ecdsa-sign-sig-verify.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用ECDSA密钥对签名验签(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-encrypt-decrypt-by-segment",
+    "title": "分段加解密说明",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-encrypt-decrypt-by-segment.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "对称加解密",
+      "非对称加解密",
+      "常见问题"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-encryption-decryption-overview",
+    "title": "加解密介绍",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-encryption-decryption-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "加解密介绍"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-asym-key-pair-from-key-spec-ndk",
+    "title": "指定密钥参数生成非对称密钥对(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-asym-key-pair-from-key-spec-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "指定密钥参数生成RSA密钥对",
+      "指定密钥参数生成ECC密钥对",
+      "根据椭圆曲线名生成SM2密钥对"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-asym-key-pair-from-key-spec",
+    "title": "指定密钥参数生成非对称密钥对(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-asym-key-pair-from-key-spec.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "指定密钥参数生成RSA公钥",
+      "指定密钥参数生成ECC密钥对",
+      "根据椭圆曲线名生成SM2密钥对"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-asym-key-pair-randomly-ndk",
+    "title": "随机生成非对称密钥对(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-asym-key-pair-randomly-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "随机生成RSA密钥对",
+      "随机生成SM2密钥对"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-asym-key-pair-randomly",
+    "title": "随机生成非对称密钥对(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-asym-key-pair-randomly.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "随机生成RSA密钥对",
+      "随机生成SM2密钥对"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-message-digest-md5-ndk",
+    "title": "消息摘要计算MD5(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-message-digest-md5-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "摘要算法（一次性传入）",
+      "分段摘要算法"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-message-digest-md5",
+    "title": "消息摘要计算MD5(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-message-digest-md5.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "摘要算法（一次性传入）",
+      "分段摘要算法"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-message-digest-ndk",
+    "title": "消息摘要计算SHA256(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-message-digest-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "摘要算法（一次性传入）",
+      "分段摘要算法"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-message-digest-overview",
+    "title": "消息摘要计算介绍及算法规格",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "支持的算法与规格"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-message-digest-sha3-ndk",
+    "title": "消息摘要计算SHA3-256(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-message-digest-sha3-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "摘要算法（一次性传入）",
+      "分段摘要算法"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-message-digest-sha3",
+    "title": "消息摘要计算SHA3(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-message-digest-sha3.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "摘要算法（一次性传入）",
+      "分段摘要算法"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-message-digest",
+    "title": "消息摘要计算SHA256(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-message-digest.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "摘要算法（一次性传入）",
+      "分段摘要算法"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-random-number-hardware-ndk",
+    "title": "使用硬件熵源生成安全随机数(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-random-number-hardware-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "支持的算法与规格",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-random-number-hardware",
+    "title": "使用硬件熵源生成安全随机数(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-random-number-hardware.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "支持的算法与规格",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-random-number-ndk",
+    "title": "安全随机数生成(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-random-number-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "支持的算法与规格",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-random-number",
+    "title": "安全随机数生成(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-random-number.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "支持的算法与规格",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-sym-key-randomly-ndk",
+    "title": "随机生成对称密钥(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-sym-key-randomly-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "随机生成AES密钥",
+      "随机生成SM4密钥"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-generate-sym-key-randomly",
+    "title": "随机生成对称密钥(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-generate-sym-key-randomly.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "随机生成AES密钥",
+      "随机生成SM4密钥"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-agreement-overview",
+    "title": "密钥协商介绍及算法规格",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-agreement-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "ECDH",
+      "X25519",
+      "DH"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-agreement-using-dh-ndk",
+    "title": "使用DH进行密钥协商(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-agreement-using-dh-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-agreement-using-dh",
+    "title": "使用DH进行密钥协商(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-agreement-using-dh.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-agreement-using-ecdh-ndk",
+    "title": "使用ECDH进行密钥协商(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-agreement-using-ecdh-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-agreement-using-ecdh",
+    "title": "使用ECDH进行密钥协商(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-agreement-using-ecdh.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-agreement-using-x25519-ndk",
+    "title": "使用X25519进行密钥协商(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-agreement-using-x25519-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-agreement-using-x25519",
+    "title": "使用X25519进行密钥协商(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-agreement-using-x25519.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-derivation-overview",
+    "title": "密钥派生介绍及算法规格",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-derivation-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "PBKDF2算法",
+      "HKDF算法",
+      "SCRYPT算法",
+      "X963KDF算法"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-derivation-using-hkdf-ndk",
+    "title": "使用HKDF进行密钥派生(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-derivation-using-hkdf-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-derivation-using-hkdf",
+    "title": "使用HKDF进行密钥派生(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-derivation-using-hkdf.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-derivation-using-pbkdf2-ndk",
+    "title": "使用PBKDF2进行密钥派生(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-derivation-using-pbkdf2-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-derivation-using-pbkdf2",
+    "title": "使用PBKDF2进行密钥派生(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-derivation-using-pbkdf2.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-derivation-using-scrypt-ndk",
+    "title": "使用SCRYPT进行密钥派生(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-derivation-using-scrypt-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-derivation-using-scrypt",
+    "title": "使用SCRYPT进行密钥派生(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-derivation-using-scrypt.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-derivation-using-x963kdf-ndk",
+    "title": "使用X963KDF进行密钥派生(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-derivation-using-x963kdf-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-derivation-using-x963kdf",
+    "title": "使用X963KDF进行密钥派生(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-derivation-using-x963kdf.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-key-generation-conversion-overview",
+    "title": "密钥生成与转换介绍",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-key-generation-conversion-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "密钥生成与转换介绍"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-prikey-to-get-pubkey-ndk",
+    "title": "使用私钥对象获取公钥对象(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-prikey-to-get-pubkey-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-prikey-to-get-pubkey",
+    "title": "使用私钥对象获取公钥对象(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-prikey-to-get-pubkey.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-asym-encrypt-decrypt-by-segment-ndk",
+    "title": "使用RSA非对称密钥分段加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt-by-segment-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用RSA非对称密钥分段加解密(C/C++)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-asym-encrypt-decrypt-by-segment",
+    "title": "使用RSA非对称密钥分段加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt-by-segment.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用RSA非对称密钥分段加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-asym-encrypt-decrypt-pkcs1-ndk",
+    "title": "使用RSA非对称密钥（PKCS1模式）加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt-pkcs1-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用RSA非对称密钥（PKCS1模式）加解密(C/C++)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-asym-encrypt-decrypt-pkcs1",
+    "title": "使用RSA非对称密钥（PKCS1模式）加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt-pkcs1.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用RSA非对称密钥（PKCS1模式）加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-asym-encrypt-decrypt-pkcs1_oaep",
+    "title": "使用RSA非对称密钥（PKCS1_OAEP模式）加解密",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt-pkcs1_oaep.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用RSA非对称密钥（PKCS1_OAEP模式）加解密"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-encoded-decoded-ndk",
+    "title": "使用RSA私钥进行编码解码(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-encoded-decoded-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用RSA私钥进行编码解码(C/C++)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-encoded-decoded",
+    "title": "使用RSA私钥进行编码解码(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-encoded-decoded.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用RSA私钥进行编码解码(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-sign-sig-verify-pkcs1-by-segment-ndk",
+    "title": "使用RSA密钥对分段签名验签 (PKCS1模式)(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "签名开发步骤",
+      "验签开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-sign-sig-verify-pkcs1-by-segment",
+    "title": "使用RSA密钥对分段签名验签（PKCS1模式）(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用RSA密钥对分段签名验签（PKCS1模式）(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-sign-sig-verify-pkcs1-ndk",
+    "title": "使用RSA密钥对签名验签 (PKCS1模式)(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "签名开发步骤",
+      "验签开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-sign-sig-verify-pkcs1",
+    "title": "使用RSA密钥对（PKCS1模式）签名验签(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用RSA密钥对（PKCS1模式）签名验签(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-sign-sig-verify-pss-ndk",
+    "title": "使用RSA密钥对签名验签 (PSS模式)(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pss-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "签名开发步骤",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-sign-sig-verify-pss",
+    "title": "使用RSA密钥对签名验签（PSS模式）(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pss.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用RSA密钥对签名验签（PSS模式）(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-sign-sig-verify-recover-pkcs1-ndk",
+    "title": "使用RSA密钥对（PKCS1模式）签名恢复(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-recover-pkcs1-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-rsa-sign-sig-verify-recover-pkcs1",
+    "title": "使用RSA密钥对（PKCS1模式）签名及签名恢复(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-recover-pkcs1.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用RSA密钥对（PKCS1模式）签名及签名恢复(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sign-sig-verify-overview",
+    "title": "签名验签介绍及算法规格",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "RSA",
+      "填充模式为PKCS1",
+      "填充模式为PSS",
+      "获取/设置PSS填充模式的参数",
+      "签名模式为OnlySign"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm2-asym-encrypt-decrypt-ndk",
+    "title": "使用SM2非对称密钥加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm2-asym-encrypt-decrypt-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用SM2非对称密钥加解密(C/C++)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm2-asym-encrypt-decrypt",
+    "title": "使用SM2非对称密钥加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm2-asym-encrypt-decrypt.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用SM2非对称密钥加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm2-ciphertext-conversion-ndk",
+    "title": "使用SM2密文格式转换(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm2-ciphertext-conversion-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用SM2密文格式转换(C/C++)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm2-ciphertext-conversion",
+    "title": "使用SM2密文格式转换(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm2-ciphertext-conversion.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用SM2密文格式转换(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm2-sign-data-format-conversion-ndk",
+    "title": "SM2签名数据格式转换 (C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm2-sign-data-format-conversion-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "SM2签名数据格式转换 (C/C++)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm2-sign-data-format-conversion",
+    "title": "SM2签名数据格式转换(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm2-sign-data-format-conversion.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "SM2签名数据格式转换(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm2-sign-sig-verify-pkcs1-ndk",
+    "title": "使用SM2密钥对签名验签 (C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm2-sign-sig-verify-pkcs1-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "签名开发步骤",
+      "验签开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm2-sign-sig-verify-pkcs1",
+    "title": "使用SM2密钥对签名验签(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm2-sign-sig-verify-pkcs1.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用SM2密钥对签名验签(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm4-sym-encrypt-decrypt-cbc-ndk",
+    "title": "使用SM4对称密钥（CBC模式）加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm4-sym-encrypt-decrypt-cbc-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm4-sym-encrypt-decrypt-cbc",
+    "title": "使用SM4对称密钥（CBC模式）加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm4-sym-encrypt-decrypt-cbc.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用SM4对称密钥（CBC模式）加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm4-sym-encrypt-decrypt-ecb-ndk",
+    "title": "使用SM4对称密钥（ECB模式）加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm4-sym-encrypt-decrypt-ecb-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm4-sym-encrypt-decrypt-ecb",
+    "title": "使用SM4对称密钥（ECB模式）加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm4-sym-encrypt-decrypt-ecb.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用SM4对称密钥（ECB模式）加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm4-sym-encrypt-decrypt-gcm-by-segment-ndk",
+    "title": "使用SM4对称密钥（GCM模式）分段加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm4-sym-encrypt-decrypt-gcm-by-segment-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm4-sym-encrypt-decrypt-gcm-by-segment",
+    "title": "使用SM4对称密钥（GCM模式）分段加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm4-sym-encrypt-decrypt-gcm-by-segment.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用SM4对称密钥（GCM模式）分段加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm4-sym-encrypt-decrypt-gcm-ndk",
+    "title": "使用SM4对称密钥（GCM模式）加解密(C/C++)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm4-sym-encrypt-decrypt-gcm-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sm4-sym-encrypt-decrypt-gcm",
+    "title": "使用SM4对称密钥（GCM模式）加解密(ArkTS)",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sm4-sym-encrypt-decrypt-gcm.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "使用SM4对称密钥（GCM模式）加解密(ArkTS)"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sym-encrypt-decrypt-spec",
+    "title": "对称密钥加解密算法规格",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sym-encrypt-decrypt-spec.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "AES",
+      "DES",
+      "3DES",
+      "SM4",
+      "AES-WRAP"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_crypto-sym-key-generation-conversion-spec",
+    "title": "对称密钥生成和转换规格",
+    "path": "../../docs/security/CryptoArchitectureKit/crypto-sym-key-generation-conversion-spec.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "AES",
+      "DES",
+      "3DES",
+      "SM4",
+      "HMAC"
+    ]
+  },
+  {
+    "doc_id": "security_CryptoArchitectureKit_Readme-CN",
+    "title": "Crypto Architecture Kit（加解密算法框架服务）",
+    "path": "../../docs/security/CryptoArchitectureKit/Readme-CN.md",
+    "summary": "- 密钥生成与转换介绍 - 密钥生成和转换规格<!--crypto-key-generation-conversion-spec--> - 对称密钥生成和转换规格",
+    "key_topics": [
+      "Crypto Architecture Kit（加解密算法框架服务）"
+    ]
+  },
+  {
+    "doc_id": "security_DataProtectionKit_dlp-guidelines",
+    "title": "数据防泄漏服务开发指导",
+    "path": "../../docs/security/DataProtectionKit/dlp-guidelines.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "模拟器支持情况",
+      "沙箱限制",
+      "接口说明",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DataProtectionKit_dlp-overview",
+    "title": "数据防泄漏服务简介",
+    "path": "../../docs/security/DataProtectionKit/dlp-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "运作流程"
+    ]
+  },
+  {
+    "doc_id": "security_DataProtectionKit_Readme-CN",
+    "title": "Data Protection Kit（数据保护服务）",
+    "path": "../../docs/security/DataProtectionKit/Readme-CN.md",
+    "summary": "- 数据防泄漏服务简介 - 数据防泄漏服务开发指导<!--RP1--><!--RP1End-->",
+    "key_topics": [
+      "Data Protection Kit（数据保护服务）"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_allow-download-Intermediate-Cert",
+    "title": "证书链校验时下载缺失的中间CA证书",
+    "path": "../../docs/security/DeviceCertificateKit/allow-download-Intermediate-Cert.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_certificate-framework-overview",
+    "title": "证书算法库框架概述",
+    "path": "../../docs/security/DeviceCertificateKit/certificate-framework-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "基本概念",
+      "证书规格",
+      "证书链校验不包含对时间有效性的校验",
+      "证书格式",
+      "X509证书的基本结构"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_certManager-ca-certs-guidelines",
+    "title": "CA证书开发指导",
+    "path": "../../docs/security/DeviceCertificateKit/certManager-ca-certs-guidelines.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "场景说明",
+      "接口说明",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_certManager-overview",
+    "title": "证书管理概述",
+    "path": "../../docs/security/DeviceCertificateKit/certManager-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "证书管理基本概念",
+      "证书生命周期管理概述",
+      "证书管理对话框概述",
+      "约束与限制",
+      "开发总览"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_certManager-private-credential-guidelines",
+    "title": "应用证书凭据开发指导",
+    "path": "../../docs/security/DeviceCertificateKit/certManager-private-credential-guidelines.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "场景说明",
+      "接口说明",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_certManagerDialog-guidelines",
+    "title": "证书管理对话框开发指导",
+    "path": "../../docs/security/DeviceCertificateKit/certManagerDialog-guidelines.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口说明",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_create-cms-decapsulation-object",
+    "title": "证书CMS解封装",
+    "path": "../../docs/security/DeviceCertificateKit/create-cms-decapsulation-object.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_create-cms-enveloped-object",
+    "title": "证书CMS封装",
+    "path": "../../docs/security/DeviceCertificateKit/create-cms-enveloped-object.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_create-cms-sign-object",
+    "title": "证书CMS签名",
+    "path": "../../docs/security/DeviceCertificateKit/create-cms-sign-object.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_create-cms-verify-object",
+    "title": "证书CMS验签",
+    "path": "../../docs/security/DeviceCertificateKit/create-cms-verify-object.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_create-get-cert-crl-object",
+    "title": "证书集合及证书吊销列表集合对象的创建和获取",
+    "path": "../../docs/security/DeviceCertificateKit/create-get-cert-crl-object.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_create-parse-pkcs12",
+    "title": "证书PKCS12的创建和解析",
+    "path": "../../docs/security/DeviceCertificateKit/create-parse-pkcs12.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_create-parse-verify-cert-object",
+    "title": "证书对象的创建、解析和校验",
+    "path": "../../docs/security/DeviceCertificateKit/create-parse-verify-cert-object.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_create-parse-verify-certextension-object",
+    "title": "证书扩展信息对象的创建、解析和校验",
+    "path": "../../docs/security/DeviceCertificateKit/create-parse-verify-certextension-object.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_create-parse-verify-crl-object",
+    "title": "证书吊销列表对象的创建、解析和校验",
+    "path": "../../docs/security/DeviceCertificateKit/create-parse-verify-crl-object.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_create-trustanchor-from-p12",
+    "title": "证书链校验时从p12文件构造TrustAnchor对象数组",
+    "path": "../../docs/security/DeviceCertificateKit/create-trustanchor-from-p12.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_create-verify-cerchainvalidator-object",
+    "title": "证书链校验器对象的创建和校验",
+    "path": "../../docs/security/DeviceCertificateKit/create-verify-cerchainvalidator-object.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_create-verify-cerchainvalidator-revocation-object",
+    "title": "证书链在线校验证书吊销状态",
+    "path": "../../docs/security/DeviceCertificateKit/create-verify-cerchainvalidator-revocation-object.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "本地证书链吊销状态校验时仅校验终端实体证书",
+      "开发步骤",
+      "在线校验证书链中的中间CA证书的吊销状态",
+      "证书链校验时忽略在线证书吊销检查的网络不可达异常"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_create-verify-certchain-object",
+    "title": "证书链对象的创建和校验",
+    "path": "../../docs/security/DeviceCertificateKit/create-verify-certchain-object.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_device-certificate-kit-intro",
+    "title": "Device Certificate Kit简介",
+    "path": "../../docs/security/DeviceCertificateKit/device-certificate-kit-intro.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "证书算法库",
+      "框架原理",
+      "与相关Kit的关系",
+      "证书管理",
+      "约束与限制"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_Readme-CN",
+    "title": "Device Certificate Kit（设备证书服务）",
+    "path": "../../docs/security/DeviceCertificateKit/Readme-CN.md",
+    "summary": "- 证书算法库框架概述 - 证书对象的创建、解析和校验 - 证书扩展信息对象的创建、解析和校验",
+    "key_topics": [
+      "Device Certificate Kit（设备证书服务）"
+    ]
+  },
+  {
+    "doc_id": "security_DeviceCertificateKit_verify-certchain-by-systemca",
+    "title": "使用系统预置CA证书校验证书链",
+    "path": "../../docs/security/DeviceCertificateKit/verify-certchain-by-systemca.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_SecurityPrivacyCenter_auto-menu-guidelines",
+    "title": "接入安全隐私框架",
+    "path": "../../docs/security/SecurityPrivacyCenter/auto-menu-guidelines.md",
+    "summary": "安全隐私接入框架允许两种接入方式：ExtensionAbility和UIAbility方式接入。 应用接入后，将按照bundleName的字母顺序在隐私中心展示。 业务接入方需在本应用模块下的module.json5配置文件中配置相应的action和metadata，供安全隐私中心菜单接入框架扫描、解析。",
+    "key_topics": [
+      "新增元数据资源配置文件",
+      "修改应用配置文件",
+      "配置action",
+      "配置metadata",
+      "配置权限"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-as-user-sys",
+    "title": "指定用户身份操作(仅对系统应用开放)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-as-user-sys.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "约束与限制",
+      "接口说明"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-check-key-arkts",
+    "title": "查询密钥是否存在(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-check-key-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-check-key-ndk",
+    "title": "查询密钥是否存在(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-check-key-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-concepts",
+    "title": "本地密钥管理基础概念",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-concepts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "可信执行环境（TEE）",
+      "密钥材料格式",
+      "密钥对材料格式",
+      "公钥材料格式",
+      "私钥材料格式"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-delete-key-arkts",
+    "title": "密钥删除(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-delete-key-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-delete-key-ndk",
+    "title": "密钥删除(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-delete-key-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-encryption-decryption-arkts",
+    "title": "加解密(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-encryption-decryption-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "开发案例",
+      "AES/CBC/PKCS7",
+      "AES/GCM/NoPadding",
+      "AES/CCM/NoPadding"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-encryption-decryption-ndk",
+    "title": "加解密(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-encryption-decryption-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "开发案例",
+      "AES/CBC/PKCS7",
+      "AES/GCM/NoPadding"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-encryption-decryption-overview",
+    "title": "加密/解密介绍及算法规格",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-encryption-decryption-overview.md",
+    "summary": "<!--RP2-->轻量级设备<!--RP2End-->规格",
+    "key_topics": [
+      "支持的算法"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-export-key-arkts",
+    "title": "密钥导出(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-export-key-arkts.md",
+    "summary": "从API 23开始支持群组密钥特性。 1. 指定密钥别名，密钥别名命名规范参考密钥生成介绍及算法规格。 2. 调用接口exportKeyItem，传入参数keyAlias和options。options为预留参数，当前可传入空。",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-export-key-ndk",
+    "title": "密钥导出(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-export-key-ndk.md",
+    "summary": "从API 23开始支持群组密钥特性。 ```txt target_link_libraries(entry PUBLIC libhuks_ndk.z.so)",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-extension-ability-support-dev",
+    "title": "CryptoExtensionAbility适配开发指导",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-extension-ability-support-dev.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "适配指导",
+      "驱动应用注册、解注册CryptoExtensionAbility适配",
+      "注册CryptoExtensionAbility",
+      "解注册CryptoExtensionAbility"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-extension-ability-support-overview",
+    "title": "CryptoExtensionAbility扩展能力介绍",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-extension-ability-support-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "核心能力实现"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-extension-registration-and-unregistration-arkts",
+    "title": "注册/注销Provider(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-extension-registration-and-unregistration-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "注册Provider",
+      "开发步骤",
+      "开发案例",
+      "注销Provider"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-extension-registration-and-unregistration-ndk",
+    "title": "注册/注销Provider(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-extension-registration-and-unregistration-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "注册Provider",
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "开发案例",
+      "注销Provider"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-external-hardware-key-management-overview",
+    "title": "外部密钥管理扩展简介",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-external-hardware-key-management-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "运作机制"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-group-key-arkts",
+    "title": "群组密钥(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-group-key-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "AES/CBC/PKCS7加解密",
+      "开发步骤",
+      "开发示例",
+      "X25519非对称密钥协商",
+      "PBKDF2派生密钥"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-group-key-ndk",
+    "title": "群组密钥(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-group-key-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "AES/CBC/PKCS7加解密",
+      "开发步骤",
+      "开发示例",
+      "X25519非对称密钥协商"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-group-key-overview",
+    "title": "群组密钥介绍",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-group-key-overview.md",
+    "summary": "> - 群组密钥严格限定在同一开发者相同组的HAP范围内。不同开发者的相同组或者相同开发者的不同组，都无法相互访问对方的群组密钥，从而保障密钥的隔离性与安全性。",
+    "key_topics": [
+      "规格说明"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-hmac-arkts",
+    "title": "HMAC(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-hmac-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-hmac-ndk",
+    "title": "HMAC(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-hmac-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-hmac-overview",
+    "title": "HMAC介绍及算法规格",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-hmac-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "支持的算法"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-identity-authentication-overview",
+    "title": "用户身份认证访问控制简介",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-identity-authentication-overview.md",
+    "summary": "从API 23开始支持群组密钥特性。 整个用户身份认证访问控制，涉及多个环节，介绍如下。 生成/导入密钥时，可以指定密钥必须经过用户身份认证后才能使用。应用可以指定用于解锁设备锁屏的凭据（锁屏密码、指纹、人脸）的子集进行身份认证，详情请参考用户身份认证和授权访问类型详细规格。",
+    "key_topics": [
+      "使用场景及开发流程",
+      "用户身份认证",
+      "设置授权访问类型",
+      "支持挑战值校验",
+      "二次认证密钥访问控制"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-import-envelop-key-arkts",
+    "title": "数字信封导入密钥(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-import-envelop-key-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "RSA",
+      "AES"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-import-envelop-key-ndk",
+    "title": "数字信封密钥(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-import-envelop-key-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "RSA导入示例",
+      "AES导入示例"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-import-key-in-plaintext-arkts",
+    "title": "明文导入密钥(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-import-key-in-plaintext-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "导入AES256密钥",
+      "导入RSA2048密钥对",
+      "导入X25519密钥公钥",
+      "调测验证"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-import-key-in-plaintext-ndk",
+    "title": "明文导入密钥(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-import-key-in-plaintext-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "导入AES256密钥",
+      "导入RSA2048密钥对",
+      "导入X25519密钥公钥"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-import-wrapped-key-arkts",
+    "title": "加密导入密钥(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-import-wrapped-key-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "开发案例",
+      "调测验证"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-import-wrapped-key-ndk",
+    "title": "加密导入密钥(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-import-wrapped-key-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "开发案例",
+      "调测验证"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-agreement-arkts",
+    "title": "密钥协商(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-agreement-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "开发案例",
+      "X25519非对称密钥协商用例",
+      "DH密钥协商用例",
+      "ECDH密钥协商用例"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-agreement-ndk",
+    "title": "密钥协商(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-agreement-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "开发案例",
+      "X25519非对称密钥协商用例",
+      "DH密钥协商用例"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-agreement-overview",
+    "title": "密钥协商介绍及算法规格",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-agreement-overview.md",
+    "summary": "> * 使用现有密钥别名作为协商结果密钥别名会把现有密钥覆盖。 从API 23开始支持群组密钥特性。 以下为密钥协商支持的规格说明。",
+    "key_topics": [
+      "支持的算法"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-anon-attestation-arkts",
+    "title": "匿名密钥证明(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-anon-attestation-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "开发案例"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-anon-attestation-ndk",
+    "title": "匿名密钥证明(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-anon-attestation-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "开发案例"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-attestation-arkts-sys",
+    "title": "非匿名密钥证明(仅对系统应用开放)(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-attestation-arkts-sys.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-attestation-ndk-sys",
+    "title": "非匿名密钥证明(仅对系统应用开放)(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-attestation-ndk-sys.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-attestation-overview",
+    "title": "密钥证明介绍及算法规格",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-attestation-overview.md",
+    "summary": "> * 支持生成密钥和导入密钥进行密钥证明，业务方在服务器侧需要通过业务证书中的密钥来源字段校验密钥来源是否符合预期。 从API 23开始支持群组密钥特性。 密钥证明扩展域段为Asn.1 DER标准编码格式，数据结构定义如下：",
+    "key_topics": [
+      "支持的算法"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-derivation-arkts",
+    "title": "密钥派生(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-derivation-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "开发案例",
+      "HKDF",
+      "PBKDF2"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-derivation-ndk",
+    "title": "密钥派生(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-derivation-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "开发案例",
+      "HKDF",
+      "PBKDF2"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-derivation-overview",
+    "title": "密钥派生介绍及算法规格",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-derivation-overview.md",
+    "summary": "> * 使用现有密钥别名作为派生结果密钥别名会把现有密钥覆盖。 从API 23开始支持群组密钥特性。 以下为密钥派生支持的规格说明。",
+    "key_topics": [
+      "支持的算法"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-generation-arkts",
+    "title": "生成密钥(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-generation-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-generation-ndk",
+    "title": "生成密钥(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-generation-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-generation-overview",
+    "title": "密钥生成介绍及算法规格",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-generation-overview.md",
+    "summary": "> 说明： > DH算法采用FFDHE知名安全素数群。 > DES和3DES算法仅提供给特定场景使用，其他场景下不推荐使用。",
+    "key_topics": [
+      "密钥存储安全等级",
+      "支持的算法"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-import-overview",
+    "title": "密钥导入介绍及算法规格",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-import-overview.md",
+    "summary": "- 推荐使用该方式导入的密钥类型：非对称密钥的公钥。 - 不推荐使用该方式导入的密钥类型：对称密钥、非对称密钥对。 > 说明：",
+    "key_topics": [
+      "明文导入",
+      "加密导入",
+      "加密导入密钥材料格式",
+      "数字信封导入",
+      "支持的算法"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-key-use-overview",
+    "title": "密钥使用介绍及通用流程",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-key-use-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "通用开发流程"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-list-aliases-arkts",
+    "title": "查询密钥别名集(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-list-aliases-arkts.md",
+    "summary": "从API 23开始支持群组密钥特性。 1. 初始化密钥属性集，用于查询指定密钥别名集TAG。TAG仅支持HUKS_TAG_AUTH_STORAGE_LEVEL。 2. 调用接口listAliases，查询密钥别名集。",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-list-aliases-ndk",
+    "title": "查询密钥别名集(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-list-aliases-ndk.md",
+    "summary": "从API 23开始支持群组密钥特性。 ```txt target_link_libraries(entry PUBLIC libhuks_ndk.z.so)",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-obtain-key-properties-arkts",
+    "title": "获取密钥属性(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-obtain-key-properties-arkts.md",
+    "summary": "从API 23开始支持群组密钥特性。 1. 指定待查询的密钥别名keyAlias，密钥别名最大长度为128字节。 2. 调用接口getKeyItemProperties，传入参数keyAlias和options。options为预留参数，当前可传入空。",
+    "key_topics": [
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-obtain-key-properties-ndk",
+    "title": "获取密钥属性(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-obtain-key-properties-ndk.md",
+    "summary": "从API 23开始支持群组密钥特性。 ```txt target_link_libraries(entry PUBLIC libhuks_ndk.z.so)",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-open-close-resource-ndk",
+    "title": "打开资源/关闭资源(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-open-close-resource-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "打开资源",
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "开发案例",
+      "关闭资源"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-overview",
+    "title": "Universal Keystore Kit简介",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-overview.md",
+    "summary": "HUKS为开发者提供了密钥全生命周期的管理能力，其核心功能按照密钥生命周期划分如下： 基于用户身份认证的密钥访问控制，依赖于User Authentication Kit（用户身份认证）。",
+    "key_topics": [
+      "整体架构",
+      "核心功能",
+      "密钥生成",
+      "密钥使用",
+      "密钥删除"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-provider-management-overview",
+    "title": "Provider管理介绍及规格",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-provider-management-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "Provider管理介绍及规格"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-query-authentication-status-arkts",
+    "title": "查询认证状态(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-query-authentication-status-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "开发案例"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-query-authentication-status-ndk",
+    "title": "查询认证状态(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-query-authentication-status-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "开发案例"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-refined-user-identity-authentication",
+    "title": "细粒度用户身份认证访问控制开发指导",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-refined-user-identity-authentication.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "密钥生成和数据加密",
+      "用户认证",
+      "数据解密和验证"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-resource-management-overview",
+    "title": "资源管理介绍及规格",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-resource-management-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "资源管理介绍及规格"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-signing-signature-verification-arkts",
+    "title": "签名/验签(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-signing-signature-verification-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "开发案例",
+      "ECC256/SHA256",
+      "SM2/SM3",
+      "SM2/NoDigest"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-signing-signature-verification-ndk",
+    "title": "签名/验签(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-signing-signature-verification-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "开发案例",
+      "ECC256/SHA256",
+      "SM2/SM3"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-signing-signature-verification-overview",
+    "title": "签名/验签介绍及算法规格",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-signing-signature-verification-overview.md",
+    "summary": "<!--RP4-->轻量级设备<!--RP4End-->规格",
+    "key_topics": [
+      "支持的算法"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-ukey-general-query-arkts",
+    "title": "通用查询(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-ukey-general-query-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "开发案例"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-ukey-general-query-ndk",
+    "title": "通用查询(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-ukey-general-query-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "开发案例"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-ukey-general-query-overview",
+    "title": "通用查询介绍及规格",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-ukey-general-query-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "支持的属性函数名称（示例）"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-ukey-pin-authentication-arkts-sys",
+    "title": "Ukey PIN码认证(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-ukey-pin-authentication-arkts-sys.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "开发案例"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-ukey-pin-authentication-management-overview",
+    "title": "Ukey PIN码认证介绍及规格",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-ukey-pin-authentication-management-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "Ukey PIN码认证介绍及规格"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-ukey-signing-signature-verification-arkts",
+    "title": "签名/验签(ArkTS)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-ukey-signing-signature-verification-arkts.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "开发案例",
+      "RSA/SHA256/PSS"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-ukey-signing-signature-verification-ndk",
+    "title": "签名/验签(C/C++)",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-ukey-signing-signature-verification-ndk.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "在CMake脚本中链接相关动态库",
+      "开发步骤",
+      "开发案例",
+      "RSA/SHA384/PSS"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-ukey-signing-signature-verification-overview",
+    "title": "签名/验签介绍及算法规格",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-ukey-signing-signature-verification-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "规格"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_huks-user-identity-authentication",
+    "title": "用户身份认证访问控制开发指导",
+    "path": "../../docs/security/UniversalKeystoreKit/huks-user-identity-authentication.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发步骤",
+      "生成密钥",
+      "开发案例",
+      "通过PIN码认证获取授权令牌",
+      "使用认证令牌进行加密操作"
+    ]
+  },
+  {
+    "doc_id": "security_UniversalKeystoreKit_Readme-CN",
+    "title": "Universal Keystore Kit（密钥管理服务）",
+    "path": "../../docs/security/UniversalKeystoreKit/Readme-CN.md",
+    "summary": "- 本地密钥管理基础概念 - 密钥生成/导入<!--huks-key-generation-import--> - 密钥生成<!--huks-key-generation-->",
+    "key_topics": [
+      "Universal Keystore Kit（密钥管理服务）"
+    ]
+  },
+  {
+    "doc_id": "security_UserAuthenticationKit_apply-custom-authentication",
+    "title": "切换自定义认证",
+    "path": "../../docs/security/UserAuthenticationKit/apply-custom-authentication.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "开发示例",
+      "示例代码"
+    ]
+  },
+  {
+    "doc_id": "security_UserAuthenticationKit_cancel-authentication",
+    "title": "认证过程中取消认证",
+    "path": "../../docs/security/UserAuthenticationKit/cancel-authentication.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口说明",
+      "开发步骤",
+      "示例代码"
+    ]
+  },
+  {
+    "doc_id": "security_UserAuthenticationKit_obtain-auth-lock-state-capabilities",
+    "title": "查询指定认证类型的认证冻结状态",
+    "path": "../../docs/security/UserAuthenticationKit/obtain-auth-lock-state-capabilities.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口说明",
+      "开发步骤",
+      "示例代码"
+    ]
+  },
+  {
+    "doc_id": "security_UserAuthenticationKit_obtain-enrolled-state-capabilities",
+    "title": "查询用户注册凭据的状态",
+    "path": "../../docs/security/UserAuthenticationKit/obtain-enrolled-state-capabilities.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口说明",
+      "开发步骤",
+      "示例代码"
+    ]
+  },
+  {
+    "doc_id": "security_UserAuthenticationKit_obtain-supported-authentication-capabilities",
+    "title": "查询支持的认证能力",
+    "path": "../../docs/security/UserAuthenticationKit/obtain-supported-authentication-capabilities.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口说明",
+      "开发步骤",
+      "示例代码"
+    ]
+  },
+  {
+    "doc_id": "security_UserAuthenticationKit_perceive-adjust-authentication-process",
+    "title": "感知和调整认证过程",
+    "path": "../../docs/security/UserAuthenticationKit/perceive-adjust-authentication-process.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口说明",
+      "开发步骤",
+      "示例代码"
+    ]
+  },
+  {
+    "doc_id": "security_UserAuthenticationKit_prerequisites",
+    "title": "开发准备",
+    "path": "../../docs/security/UserAuthenticationKit/prerequisites.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "申请权限"
+    ]
+  },
+  {
+    "doc_id": "security_UserAuthenticationKit_Readme-CN",
+    "title": "User Authentication Kit（用户认证服务）",
+    "path": "../../docs/security/UserAuthenticationKit/Readme-CN.md",
+    "summary": "- 开发准备 - 查询支持的认证能力 - 发起认证",
+    "key_topics": [
+      "User Authentication Kit（用户认证服务）"
+    ]
+  },
+  {
+    "doc_id": "security_UserAuthenticationKit_start-authentication",
+    "title": "发起认证",
+    "path": "../../docs/security/UserAuthenticationKit/start-authentication.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "接口说明",
+      "统一用户认证控件介绍",
+      "开发步骤",
+      "示例代码"
+    ]
+  },
+  {
+    "doc_id": "security_UserAuthenticationKit_user-auth-icon",
+    "title": "使用嵌入式用户身份认证控件",
+    "path": "../../docs/security/UserAuthenticationKit/user-auth-icon.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "示例"
+    ]
+  },
+  {
+    "doc_id": "security_UserAuthenticationKit_user-authentication-overview",
+    "title": "User Authentication Kit简介",
+    "path": "../../docs/security/UserAuthenticationKit/user-authentication-overview.md",
+    "summary": "暂无摘要",
+    "key_topics": [
+      "亮点/特征",
+      "运作机制",
+      "AuthToken数据结构",
+      "生物认证可信等级划分原则",
+      "系统身份认证约束与限制"
+    ]
+  }
+]
