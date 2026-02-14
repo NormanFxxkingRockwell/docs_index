@@ -1,208 +1,271 @@
 {
   "domain": "Internationalization",
-  "domain_summary": "Localization Kit（本地化开发服务）是 OpenHarmony 提供的国际化与本地化开发框架，涵盖区域ID与文化习惯、系统语言与区域、应用偏好语言、时间日期国际化、数字与度量衡国际化、电话号码格式化、日历和历法设置、时区与夏令时、多语言排序、字符处理、本地化名称、多语言资源配置、伪本地化测试、语言测试等功能。",
+  "domain_summary": "Localization Kit 是 OpenHarmony 提供的本地化开发服务框架，涵盖国际化I18n和本地化L10n两大功能。",
   "core_concepts": [
-    "国际化(I18n)",
-    "本地化(L10n)",
+    "国际化I18n",
+    "本地化L10n",
     "区域ID",
-    "多语言资源",
-    "时间日期格式化",
-    "数字度量衡格式化",
     "时区与夏令时",
     "多语言排序",
     "字符处理",
-    "伪本地化测试"
+    "伪本地化测试",
+    "界面镜像",
+    "多语言资源",
+    "单复数"
   ],
   "document_count": 27,
   "documents": [
     {
       "doc_id": "Readme-CN",
-      "title": "Localization Kit（本地化开发服务）",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/Readme-CN.md",
-      "summary": "Localization Kit（本地化开发服务）的总体介绍，包含应用国际化（界面设计、区域ID、语言与用户偏好、时间日期、数字与度量衡、电话号码、日历历法、时区夏令时、多语言排序、字符处理、本地化名称）和应用本地化（多语言资源、提升可翻译性）以及本地化测试（伪本地化测试、语言测试）的导航。",
-      "key_topics": ["Localization Kit", "本地化开发服务", "国际化", "本地化", "I18n", "L10n"]
+      "title": "Localization Kit本地化开发服务",
+      "path": "../../docs/zh-cn/application-dev/internationalization/Readme-CN.md",
+      "summary": "Localization Kit本地化开发服务的总体介绍",
+      "key_topics": [
+        "Localization Kit",
+        "本地化开发服务"
+      ]
     },
     {
       "doc_id": "i18n-l10n",
       "title": "国际化和本地化概述",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-l10n.md",
-      "summary": "介绍国际化（I18n）和本地化（L10n）的概念与区别。国际化是系统提供的能力集，支持设置区域特性、时区和夏令时等，满足应用多语言多文化的设计需求。本地化是针对具体目标语言对应用进行翻译和定制。",
-      "key_topics": ["国际化", "本地化", "I18n", "L10n", "区域特性", "时区", "夏令时"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-l10n.md",
+      "summary": "介绍国际化I18n和本地化L10n的基本概念",
+      "key_topics": [
+        "国际化",
+        "本地化"
+      ]
     },
     {
       "doc_id": "i18n-ui-design",
       "title": "国际化界面设计",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-ui-design.md",
-      "summary": "介绍国际化界面布局设计规则，包括界面空间预留与灵活布局（根据不同语言译文长度差异预留空间）和界面镜像（支持从右到左的RTL语言，包括UI布局镜像、UI元素镜像、触控与操作、混合文本支持）。",
-      "key_topics": ["界面设计", "空间预留", "灵活布局", "界面镜像", "RTL", "从右到左"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-ui-design.md",
+      "summary": "介绍国际化界面布局设计规则",
+      "key_topics": [
+        "界面设计",
+        "界面镜像"
+      ]
     },
     {
       "doc_id": "i18n-locale-culture",
       "title": "区域ID与文化习惯划分",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-locale-culture.md",
-      "summary": "介绍区域ID的组成（语言、脚本、国家地区、扩展参数）和扩展参数的含义（历法、排序规则、小时周期、数字系统等）。区域ID是对用户群体的抽象，是应用实现国际化能力的基础。",
-      "key_topics": ["区域ID", "语言", "脚本", "国家地区", "扩展参数", "文化习惯"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-locale-culture.md",
+      "summary": "介绍区域ID的组成和实现原理",
+      "key_topics": [
+        "区域ID"
+      ]
     },
     {
       "doc_id": "i18n-system-language-region",
       "title": "系统语言与区域",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-system-language-region.md",
-      "summary": "介绍系统语言、系统地区和系统区域的获取与设置。系统语言是语言列表中的第一个语言。设置/切换系统语言时，系统会检查扩展参数与系统语言是否匹配。支持通过监听公共事件感知系统语言、地区或区域变化。",
-      "key_topics": ["系统语言", "系统地区", "系统区域", "语言列表", "扩展参数"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-system-language-region.md",
+      "summary": "介绍系统语言与区域的管理",
+      "key_topics": [
+        "系统语言",
+        "系统区域"
+      ]
     },
     {
       "doc_id": "i18n-preferred-language",
       "title": "应用偏好语言",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-preferred-language.md",
-      "summary": "介绍应用偏好语言的获取、设置和清除。对于多语言用户，可以将应用的语言设置为与系统语言不同的语言。设置应用偏好语言后，应用界面会切换为目标语言，仅影响应用本身，不影响系统语言设置。",
-      "key_topics": ["应用偏好语言", "getAppPreferredLanguage", "setAppPreferredLanguage"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-preferred-language.md",
+      "summary": "介绍应用偏好语言的设置和管理",
+      "key_topics": [
+        "应用偏好语言"
+      ]
     },
     {
       "doc_id": "i18n-user-preferences",
       "title": "用户偏好",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-user-preferences.md",
-      "summary": "介绍用户偏好的获取，当前支持本地数字和时制两种偏好。用户偏好设置会保存到系统区域及应用偏好语言中，最终体现在用户界面的国际化特性上。支持通过监听公共事件感知系统时制变化。",
-      "key_topics": ["用户偏好", "本地数字", "24小时制", "时制"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-user-preferences.md",
+      "summary": "介绍用户偏好的设置和管理",
+      "key_topics": [
+        "用户偏好"
+      ]
     },
     {
       "doc_id": "i18n-time-date",
       "title": "时间日期国际化",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-time-date.md",
-      "summary": "介绍时间日期国际化，包括时间日期格式化、相对时间格式化和时间段格式化。时间日期格式化是指将时间和日期转换为指定格式的字符串。相对时间格式化是指将一个时间点与另一个时间点之间的时间差转换为指定格式。",
-      "key_topics": ["时间日期", "格式化", "相对时间", "时间段", "DateTimeFormat"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-time-date.md",
+      "summary": "介绍时间日期国际化功能",
+      "key_topics": [
+        "时间日期",
+        "格式化"
+      ]
     },
     {
       "doc_id": "i18n-numbers-weights-measures",
       "title": "数字与度量衡国际化",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-numbers-weights-measures.md",
-      "summary": "介绍数字、货币和度量衡的格式化。在不同国家和文化中，数字、货币和度量衡的表示方法各异。支持数字格式化、数字范围格式化、货币和单位格式化以及度量衡转换。",
-      "key_topics": ["数字格式化", "货币格式化", "度量衡", "单位转换", "NumberFormat"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-numbers-weights-measures.md",
+      "summary": "介绍数字货币和度量衡的格式化与转换",
+      "key_topics": [
+        "数字格式化",
+        "货币",
+        "度量衡"
+      ]
     },
     {
       "doc_id": "i18n-phone-numbers",
       "title": "电话号码格式化",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-phone-numbers.md",
-      "summary": "介绍电话号码格式化功能。不同国家和地区的电话号码在号码位数、组合方式、呈现方式等都存在差异。支持E164、INTERNATIONAL、NATIONAL、RFC3966、TYPING等多种格式类型。",
-      "key_topics": ["电话号码", "格式化", "PhoneNumberFormat", "E164", "RFC3966"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-phone-numbers.md",
+      "summary": "介绍电话号码格式化功能",
+      "key_topics": [
+        "电话号码",
+        "格式化"
+      ]
     },
     {
       "doc_id": "i18n-calendar",
       "title": "设置日历和历法",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-calendar.md",
-      "summary": "介绍Calendar类的使用，支持设置历法、日期、时区、一周的起始日期和一年中第一周的最小天数。支持公历、农历、佛历、希伯来历、伊斯兰历、日本历、波斯历等多种历法。",
-      "key_topics": ["日历", "历法", "Calendar", "公历", "农历", "佛历", "希伯来历", "伊斯兰历"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-calendar.md",
+      "summary": "介绍日历和历法的设置",
+      "key_topics": [
+        "日历",
+        "历法"
+      ]
     },
     {
       "doc_id": "i18n-time-zone",
       "title": "时区",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-time-zone.md",
-      "summary": "介绍时区模块的使用，支持获取时区列表、时区偏移量、时区名称、时区跳变规则等。可用于实现双时钟应用。从API version 20开始，还可用于获取时区跳变时间点和偏移量等。",
-      "key_topics": ["时区", "TimeZone", "时区偏移", "夏令时", "双时钟"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-time-zone.md",
+      "summary": "介绍时区管理功能",
+      "key_topics": [
+        "时区"
+      ]
     },
     {
       "doc_id": "i18n-dst-transition",
       "title": "夏令时跳变",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-dst-transition.md",
-      "summary": "介绍夏令时跳变的原理和处理方法。夏令时是一种为节约能源而规定的地方时间制度。系统会配置夏令时跳变规则，当系统时间到达跳变点时，会自动实现跳变。建议使用0时区标准时间（UTC或GMT）存储和传输时间数据。",
-      "key_topics": ["夏令时", "DST", "时间跳变", "UTC", "GMT"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-dst-transition.md",
+      "summary": "介绍夏令时跳变的处理",
+      "key_topics": [
+        "夏令时"
+      ]
     },
     {
       "doc_id": "i18n-sorting-overview",
       "title": "多语言排序概述",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-sorting-overview.md",
-      "summary": "介绍多语言排序的功能。世界各地的语言、文化不同，对相同的字符可能有不同的排序规则。为了满足不同国家、地区和语言用户的使用习惯，需提供不同的排序规则。多语言排序分为按本地习惯排序和创建索引两种方式。",
-      "key_topics": ["多语言排序", "排序规则", "本地习惯排序", "创建索引"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-sorting-overview.md",
+      "summary": "介绍多语言排序功能",
+      "key_topics": [
+        "多语言排序"
+      ]
     },
     {
       "doc_id": "i18n-sorting-local",
       "title": "本地习惯排序",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-sorting-local.md",
-      "summary": "介绍本地习惯排序的使用场景。在用户使用到排序的场景下，提供符合用户使用习惯的排序方法展示内容。例如，设置中\"系统和语言\"的语言列表，需要按照当地用户习惯进行排序。",
-      "key_topics": ["本地习惯排序", "Collator", "排序"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-sorting-local.md",
+      "summary": "介绍按本地习惯排序的功能",
+      "key_topics": [
+        "本地习惯排序"
+      ]
     },
     {
       "doc_id": "i18n-sorting-index",
       "title": "创建索引",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-sorting-index.md",
-      "summary": "介绍创建索引的方法。当列表选项过多时，可以使用创建索引的方式快速让窗口滑动到相应范围，找到目标选项。创建索引方式实质是打标签，例如联系人页面右侧的\"ABCD\"标记。支持多语言索引混排。",
-      "key_topics": ["创建索引", "IndexUtil", "索引列表", "多语言索引"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-sorting-index.md",
+      "summary": "介绍创建索引的功能",
+      "key_topics": [
+        "创建索引"
+      ]
     },
     {
       "doc_id": "i18n-character-processing",
       "title": "字符处理",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-character-processing.md",
-      "summary": "介绍字符处理功能，包括字符属性判断、音译（中文汉字转拼音等）、文本标准化（NFC、NFD、NFKC、NFKD范式）、获取文本可换行点、文件路径镜像处理。",
-      "key_topics": ["字符处理", "字符属性", "音译", "Transliterator", "文本标准化", "换行点", "文件路径镜像"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-character-processing.md",
+      "summary": "介绍字符处理功能",
+      "key_topics": [
+        "字符处理"
+      ]
     },
     {
       "doc_id": "i18n-display-overview",
       "title": "本地化名称概述",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-display-overview.md",
-      "summary": "介绍本地化表示的概念。本地化表示是指将语言、地区、脚本、时区、历法和日期等区域性元素按照本地的语言习惯显示。可以通过Intl.DisplayNames接口或i18n.System接口实现本地化表示。",
-      "key_topics": ["本地化名称", "DisplayNames", "本地化表示"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-display-overview.md",
+      "summary": "介绍本地化名称的表示方式",
+      "key_topics": [
+        "本地化名称"
+      ]
     },
     {
       "doc_id": "i18n-language-region-display",
       "title": "本地化语言与地区名称",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/i18n-language-region-display.md",
-      "summary": "介绍本地化语言与地区名称功能。语言和地区按照本地的语言习惯显示，确保用户可识别。支持获取语言名称在不同语言下的翻译，以及获取国家/地区名称在不同语言下的翻译。",
-      "key_topics": ["本地化语言名称", "本地化地区名称", "getDisplayLanguage", "getDisplayCountry"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/i18n-language-region-display.md",
+      "summary": "介绍本地化语言与地区名称的显示",
+      "key_topics": [
+        "本地化语言"
+      ]
     },
     {
       "doc_id": "l10n-multilingual-resources",
       "title": "提供多语言资源",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/l10n-multilingual-resources.md",
-      "summary": "介绍多语言资源的配置方法和资源匹配规则。需要创建多个不同的资源目录，放置多种资源。当用户运行应用时，系统根据语言区域自动选择并加载与设备最匹配的资源。",
-      "key_topics": ["多语言资源", "资源目录", "资源匹配", "限定词目录"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/l10n-multilingual-resources.md",
+      "summary": "介绍多语言资源的配置和匹配规则",
+      "key_topics": [
+        "多语言资源"
+      ]
     },
     {
       "doc_id": "l10n-hard-coding-concatenate",
       "title": "避免硬编码与拼接",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/l10n-hard-coding-concatenate.md",
-      "summary": "介绍在本地化开发中应避免硬编码与拼接。硬编码是将数据、参数或常量直接写入程序代码中，导致难以本地化。字符串直接拼接可能导致翻译时无法获取句子完整信息。",
-      "key_topics": ["硬编码", "字符串拼接", "占位符", "资源文件"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/l10n-hard-coding-concatenate.md",
+      "summary": "介绍本地化开发中避免硬编码与拼接的约束与限制",
+      "key_topics": [
+        "硬编码"
+      ]
     },
     {
       "doc_id": "l10n-translation-scene",
       "title": "提供翻译场景",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/l10n-translation-scene.md",
-      "summary": "介绍提供翻译场景的重要性。同样的内容在不同场景和语境中，翻译结果可能存在差异。应提供给译员完整的场景和足够的场景信息，包括通过字符串资源文件进行注释或标注，以及提供界面截图。",
-      "key_topics": ["翻译场景", "上下文", "翻译注释", "界面截图"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/l10n-translation-scene.md",
+      "summary": "介绍提供翻译场景的必要性",
+      "key_topics": [
+        "翻译场景"
+      ]
     },
     {
       "doc_id": "l10n-singular-plural",
       "title": "支持单复数",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/l10n-singular-plural.md",
-      "summary": "介绍单复数支持。不同语言对于名词或单位表达式的单复数格式要求各不相同。国际上通过zero、one、two、few、many、other等类别区分单复数。",
-      "key_topics": ["单复数", "zero", "one", "two", "few", "many", "other"]
-    },
-    {
-      "doc_id": "pseudo-i18n-testing-overview",
-      "title": "伪本地化测试概述",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/pseudo-i18n-testing-overview.md",
-      "summary": "介绍伪本地化测试的概念。伪本地化又称伪翻译，是在正式的本地化之前，通过模拟本地化过程帮助发现潜在问题，避免功能缺陷。包括翻译伪本地化和界面镜像伪本地化。",
-      "key_topics": ["伪本地化测试", "伪翻译", "模拟本地化"]
-    },
-    {
-      "doc_id": "pseudo-i18n-testing-translation",
-      "title": "翻译伪本地化测试",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/pseudo-i18n-testing-translation.md",
-      "summary": "介绍翻译伪本地化测试的方法。通过切换到伪本地化测试区域（如en-XA），模拟应用翻译的过程，提前识别应用翻译后可能出现的界面布局或文字显示异常等问题。",
-      "key_topics": ["翻译伪本地化", "en-XA", "界面截断", "硬编码", "字符串拼接"]
-    },
-    {
-      "doc_id": "pseudo-i18n-testing-mirror",
-      "title": "界面镜像伪本地化测试",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/pseudo-i18n-testing-mirror.md",
-      "summary": "介绍界面镜像伪本地化测试的方法。通过切换到伪本地化测试区域（如ar-XB），检查文字阅读顺序是否出现问题。需要检查界面布局、文字方向和控制逻辑是否符合从右至左的阅读习惯。",
-      "key_topics": ["界面镜像伪本地化", "ar-XB", "RTL", "从右到左", "镜像布局"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/l10n-singular-plural.md",
+      "summary": "介绍支持单复数的功能",
+      "key_topics": [
+        "单复数"
+      ]
     },
     {
       "doc_id": "linguistic-testing",
       "title": "语言测试",
-      "path": "../../docs/zh-cn/application-dev/int/internationalization/linguistic-testing.md",
-      "summary": "介绍语言测试的重要性。语言测试是指应用国际化和本地化完成后，在正式发布和上市前，需要本地用户专家进行巡检，查看界面显示等是否符合当地应用习惯。需要关注敏感禁忌。",
-      "key_topics": ["语言测试", "本地化测试", "敏感禁忌", "出海安全"]
+      "path": "../../docs/zh-cn/application-dev/internationalization/linguistic-testing.md",
+      "summary": "介绍语言测试的重要性",
+      "key_topics": [
+        "语言测试"
+      ]
+    },
+    {
+      "doc_id": "pseudo-i18n-testing-overview",
+      "title": "伪本地化测试概述",
+      "path": "../../docs/zh-cn/application-dev/internationalization/pseudo-i18n-testing-overview.md",
+      "summary": "介绍伪本地化测试的概念和作用",
+      "key_topics": [
+        "伪本地化"
+      ]
+    },
+    {
+      "doc_id": "pseudo-i18n-testing-translation",
+      "title": "翻译伪本地化测试",
+      "path": "../../docs/zh-cn/application-dev/internationalization/pseudo-i18n-testing-translation.md",
+      "summary": "介绍翻译伪本地化测试的流程和测试事项",
+      "key_topics": [
+        "翻译伪本地化"
+      ]
+    },
+    {
+      "doc_id": "pseudo-i18n-testing-mirror",
+      "title": "界面镜像伪本地化测试",
+      "path": "../../docs/zh-cn/application-dev/internationalization/pseudo-i18n-testing-mirror.md",
+      "summary": "介绍界面镜像伪本地化测试的流程和测试事项",
+      "key_topics": [
+        "界面镜像"
+      ]
     }
   ]
 }
