@@ -1,0 +1,29 @@
+{
+  "doc_id": "hitracechain-intro",
+  "title": "HiTraceChain介绍",
+  "path": "../../docs/zh-cn/application-dev/dfx/hitracechain-intro.md",
+  "summary": "HiTraceChain是基于分布式跟踪调用链思想，在端侧业务流程（涉及跨线程、跨进程、跨设备）中的一种轻量级分布式跟踪的实现。HiTraceChain在业务流程中生成和传递唯一跟踪标识，在业务流程输出的各类信息中记录该跟踪标识。为开发者提供业务流程调用链跟踪的维测接口，帮助开发者迅速获取指定业务流程调用链的运行日志，定位跨设备/跨进程/跨线程的故障问题。",
+  "key_topics": ["HiTraceChain", "分布式调用链跟踪", "调用链"],
+  "sections": [
+    {
+      "title": "简介",
+      "level": 2,
+      "content": "HiTraceChain基本概念和功能介绍"
+    },
+    {
+      "title": "基本概念",
+      "level": 2,
+      "content": "HiTraceId、chainId、spanId、parentSpanId"
+    },
+    {
+      "title": "实现原理",
+      "level": 2,
+      "content": "生成唯一跟踪标识、获取HiTraceId、传递HiTraceId、信息记录"
+    },
+    {
+      "title": "约束与限制",
+      "level": 2,
+      "content": "HiTraceChain自动传递机制、不支持自动传递的场景"
+    }
+  ]
+}
