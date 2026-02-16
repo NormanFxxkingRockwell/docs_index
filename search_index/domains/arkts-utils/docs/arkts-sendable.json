@@ -1,0 +1,24 @@
+{
+  "doc_id": "arkts-sendable",
+  "title": "Sendable对象简介",
+  "path": "../../docs/zh-cn/application-dev/arkts-utils\\arkts-sendable.md",
+  "summary": "在传统JS引擎中，要优化对象的并发通信开销，唯一的方法是将实现下沉到Native侧，通过[Transferable对象](transferabled-object.md)的转移或共享来降低开销。然而，开发者仍有大量对象并发通信的需求，这个问题在业界JS引擎中尚未解决。 ArkTS提供了Sendable对象类型，在并发通信时支持通过引用传递来解决上述问题。 Sendable对象可共享，跨线程前后指向同一个JS对象。如果Sendable对象通过调用Napi接口与一个Native对象绑定，当共享传递Sendable对象时，其绑定的Native对象也会一并共享传递。通信过程如下图所示：",
+  "key_topics": [
+    "Sendable对象简介",
+    "基础概念",
+    "Sendable协议",
+    "ISendable",
+    "Sendable class"
+  ],
+  "sections": [
+    "基础概念",
+    "Sendable协议",
+    "ISendable",
+    "Sendable class",
+    "Sendable function",
+    "Sendable interface",
+    "Sendable支持的数据类型",
+    "Sendable的实现原理",
+    "\\@Sendable装饰器"
+  ]
+}

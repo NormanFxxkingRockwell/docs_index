@@ -1,0 +1,30 @@
+{
+  "doc_id": "bytecode-obfuscation-questions",
+  "title": "ArkGuard字节码混淆常见问题",
+  "path": "../../docs/zh-cn/application-dev/arkts-utils\\bytecode-obfuscation-questions.md",
+  "summary": "**json文件** 字节码混淆在开启`-enable-filename-obfuscation`混淆项后，json文件名会参与混淆。 1. 字节码混淆开关，默认关闭，在[开启混淆功能](bytecode-obfuscation-guide.md#开启混淆步骤)后，需要额外在模块目录下`obfuscation-rules.txt`文件中配置`-enable-bytecode-obfuscation` 、`-enable-bytecode-obfuscation-debugging`。 2. 字节码混淆，不支持以下混淆项`-remove-comments`。 **目录差异**",
+  "key_topics": [
+    "ArkGuard字节码混淆常见问题",
+    "字节码混淆与源码混淆差异",
+    "混淆范围差异",
+    "混淆选项差异",
+    "混淆后文件结构差异"
+  ],
+  "sections": [
+    "字节码混淆与源码混淆差异",
+    "混淆范围差异",
+    "混淆选项差异",
+    "混淆后文件结构差异",
+    "切换注意点",
+    "如何排查功能异常",
+    "常规配置问题处理",
+    "开启enable-bytecode-obfuscation-debugging，没有生成pa文件如何处理",
+    "混淆如何查看混淆效果",
+    "编译报错处理",
+    "运行异常处理",
+    "开启-enable-property-obfuscation选项可能出现的问题",
+    "同时开启-enable-export-obfuscation和-enable-toplevel-obfuscation选项可能出现的问题",
+    "未开启-enable-string-property-obfuscation混淆选项，字符串字面量属性名却被混淆，导致字符串字面量属性名的值为undefined",
+    "开启-enable-filename-obfuscation选项后，可能会出现的问题"
+  ]
+}

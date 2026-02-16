@@ -1,0 +1,19 @@
+{
+  "doc_id": "es2abc-faq",
+  "title": "方舟字节码生成常见问题",
+  "path": "../../docs/zh-cn/application-dev/arkts-utils\\es2abc-faq.md",
+  "summary": "在ArkTS工程的构建流程中，方舟字节码（*.abc）的生成由工具链中的es2abc编译器组件完成。 在Hvigor构建任务中，es2abc编译器会被自动调用，用于将TypeScript/JavaScript源代码转换为方舟虚拟机能够执行的字节码文件（*.abc）。这些生成的文件随后被打包进HAP/HAR/HSP中，并由系统加载。 本FAQ汇总了字节码生成在实际编译中常见的异常场景，并提供原因分析与排查方式，帮助开发者更高效定位字节码编译阶段的问题。",
+  "key_topics": [
+    "方舟字节码生成常见问题",
+    "字节码生成流程",
+    "编译时报owns a higher api version错误",
+    "编译异常，无具体错误日志",
+    "在ArkTS工程的构建流程中，方舟字节码（*.abc）的生成由工具链中的es2abc编译器组件完成"
+  ],
+  "sections": [
+    "字节码生成流程",
+    "编译时报owns a higher api version错误",
+    "编译时报Field {&harname/Index&1.0.0.moduleRecordIdx} has different value错误",
+    "编译异常，无具体错误日志"
+  ]
+}

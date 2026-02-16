@@ -1,0 +1,14 @@
+{
+  "doc_id": "commonlibrary-faq",
+  "title": "基础库常见问题",
+  "path": "../../docs/zh-cn/application-dev/arkts-utils\\commonlibrary-faq.md",
+  "summary": "由于ArkTS侧提供的XML解析接口暂不支持流式解析模式，建议通过Native工程调用第三方C/C++库来实现。推荐使用**libxml2**库，该库具有成熟稳定、性能优越的特点，能够完美支持SAX等流式解析方式，有效降低内存占用。 具体实施步骤如下： 1. **创建Native工程**：在OpenHarmony项目中创建C++模块。 2. **集成libxml2**：下载并配置libxml2库源码或预编译库，在`CMakeLists.txt`中进行引用。 3. **编写解析代码**：使用libxml2提供的API实现流式解析逻辑。",
+  "key_topics": [
+    "基础库常见问题",
+    "解析大文件xml发生内存溢出（Out of Memory）",
+    "由于ArkTS侧提供的XML解析接口暂不支持流式解析模式，建议通过Native工程调用第三方C/C++库来实现"
+  ],
+  "sections": [
+    "解析大文件xml发生内存溢出（Out of Memory）"
+  ]
+}

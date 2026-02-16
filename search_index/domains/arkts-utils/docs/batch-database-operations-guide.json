@@ -1,0 +1,18 @@
+{
+  "doc_id": "batch-database-operations-guide",
+  "title": "批量数据写数据库场景",
+  "path": "../../docs/zh-cn/application-dev/arkts-utils\\batch-database-operations-guide.md",
+  "summary": "对于需要频繁数据库操作的场景，由于读写数据库存在耗时，因此推荐在子线程中操作，避免阻塞UI线程。 通过ArkTS提供的TaskPool能力，可以将数据库操作任务移到子线程中，实现如下。 1. 创建多个子任务，支持数据库的创建、插入、查询和清除等操作。",
+  "key_topics": [
+    "批量数据写数据库场景",
+    "使用TaskPool进行频繁数据库操作",
+    "使用Sendable进行大容量数据库操作",
+    "复杂类实例对象使用Sendable进行大容量数据库操作",
+    "对于需要频繁数据库操作的场景，由于读写数据库存在耗时，因此推荐在子线程中操作，避免阻塞UI线程"
+  ],
+  "sections": [
+    "使用TaskPool进行频繁数据库操作",
+    "使用Sendable进行大容量数据库操作",
+    "复杂类实例对象使用Sendable进行大容量数据库操作"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "doc_id": "concurrency-faq",
+  "title": "并发常见问题",
+  "path": "../../docs/zh-cn/application-dev/arkts-utils\\concurrency-faq.md",
+  "summary": "开发者发现TaskPool任务不执行时，可按照以下步骤快速定位。 1. **taskpool.execute接口是否调用**。 taskpool.execute被调用时，Hilog会打印TaskPool调用态日志（Task Allocation: taskId:）。",
+  "key_topics": [
+    "并发常见问题",
+    "TaskPool任务不执行快速定位指导",
+    "TaskPool任务执行慢排查思路",
+    "排查方向：晚执行的TaskPool任务是串行任务或者依赖其他任务",
+    "排查方向：@Concurrent标记的方法所在的ets文件里import过多模块"
+  ],
+  "sections": [
+    "TaskPool任务不执行快速定位指导",
+    "TaskPool任务执行慢排查思路",
+    "排查方向：出问题的TaskPool任务优先级较低，应用后续新增较多优先级更高的TaskPool任务，导致原有低优先级的TaskPool任务执行延后",
+    "排查方向：晚执行的TaskPool任务是串行任务或者依赖其他任务",
+    "排查方向：@Concurrent标记的方法所在的ets文件里import过多模块",
+    "TaskPool序列化失败问题定位指导",
+    "Sendable类A的实例对象a传递到子线程后，使用a instanceof A判断返回false",
+    "使用Sendable特性抛JS异常排查指导",
+    "属性类型不一致异常",
+    "新增属性异常",
+    "ArkTS提供的Promise能力的原理是什么",
+    "TaskPool线程是否可以执行不需要@Concurrent和@Sendable修饰的JS闭包函数",
+    "TaskPool任务执行后的结果如何保存到自定义的数据结构",
+    "Sendable类在子线程无法加载"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "doc_id": "arkts-runtime-faq",
+  "title": "ArkTS运行时常见问题",
+  "path": "../../docs/zh-cn/application-dev/arkts-utils\\arkts-runtime-faq.md",
+  "summary": "如果使用正则运算时结果与期望不符，请检查以下场景。 ``` TypeScript let str = '\\u2642'; let res = str.replace(/\\b/g, '/'); console.info('res = ' + res); // 期望输出: res = ♂。 // 实际输出: res = /♂/。 ``` 规避方案：暂无。",
+  "key_topics": [
+    "ArkTS运行时常见问题",
+    "正则运算与预期输出结果不一致场景",
+    "正则运算对于\\b处理与预期不一致",
+    "正则运算对于大小写的处理与预期不一致",
+    "正则运算/()/ug匹配时lastIndex与预期不一致"
+  ],
+  "sections": [
+    "正则运算与预期输出结果不一致场景",
+    "正则运算对于\\b处理与预期不一致",
+    "正则运算对于先行断言((?=pattern)或(?!pattern)) 嵌套在后行断言((?<=pattern)或(?<!pattern))内部的场景与预期不一致",
+    "正则运算对于大小写的处理与预期不一致",
+    "正则运算/()/ug匹配时lastIndex与预期不一致",
+    "正则运算[]内部使用'-'与预期不一致",
+    "正则运算具名捕获组获取与预期不一致",
+    "正则匹配使用'|'与预期不一致",
+    "TypedArray.prototype.map触发内联缓存优化后，在回调中将数值number转为浮点数number与期望不一致",
+    "Number.parseFloat解析浮点数number类型非规格化数值与期望不一致",
+    "Set constructor入参为多维数组的解析与期望不一致",
+    "Object.entries处理Uint8Array与Uint16Array数组结果与期望不一致",
+    "字符串 `replace` 接口对于第一个参数为空字符串的场景与预期不一致",
+    "Async函数内部异常的处理机制",
+    "Array.flatMap()接口常见问题",
+    "ArkTS使用场景",
+    "ArkUI使用场景",
+    "Array.flatMap规避方案",
+    "Proxy的handler对象中key类型与EcmaScript规范定义不一致",
+    "JSON.stringify的replacer函数中数组索引的key类型与EcmaScript规范定义不一致"
+  ]
+}
