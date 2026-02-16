@@ -1,0 +1,300 @@
+{
+  "domain": "Database",
+  "domain_summary": "ArkData（方舟数据管理）为开发者提供数据存储、数据管理和数据同步能力，包括标准化数据定义、应用数据持久化（用户首选项、键值型数据库、关系型数据库、向量数据库）、跨设备数据同步、数据可靠性与安全性（备份恢复、加密、访问控制）、跨应用数据共享、应用数据向量化等功能。支持 ArkTS 和 C/C++ 两种开发语言。",
+  "core_concepts": [
+    "用户首选项",
+    "键值型数据库",
+    "关系型数据库",
+    "向量数据库",
+    "跨设备数据同步",
+    "数据库备份与恢复",
+    "数据库加密",
+    "数据分类分级",
+    "跨应用数据共享",
+    "标准化数据定义",
+    "统一数据管理框架"
+  ],
+  "document_count": 40,
+  "documents": [
+    {
+      "doc_id": "Readme-CN",
+      "title": "ArkData（方舟数据管理）",
+      "path": "../../docs/zh-cn/application-dev/database/Readme-CN.md",
+      "summary": "ArkData（方舟数据管理）的总体介绍，包含标准化数据定义、应用数据持久化、同应用跨设备数据同步、数据可靠性与安全性、跨应用数据共享、应用数据向量化等功能模块的导航。",
+      "key_topics": ["ArkData", "方舟数据管理", "数据管理框架"]
+    },
+    {
+      "doc_id": "data-mgmt-overview",
+      "title": "ArkData简介",
+      "path": "../../docs/zh-cn/application-dev/database/data-mgmt-overview.md",
+      "summary": "ArkData（方舟数据管理）为开发者提供数据存储、数据管理和数据同步能力，包括标准化数据定义、数据存储、数据管理、数据同步等功能。",
+      "key_topics": ["ArkData", "数据管理", "数据存储", "数据同步"]
+    },
+    {
+      "doc_id": "data-terminology",
+      "title": "ArkData术语",
+      "path": "../../docs/zh-cn/application-dev/database/data-terminology.md",
+      "summary": "ArkData相关术语解释，包括WAL（Write Ahead Log）模式和FULL模式等SQLite相关术语的定义和说明。",
+      "key_topics": ["术语", "WAL模式", "FULL模式", "SQLite"]
+    },
+    {
+      "doc_id": "app-data-persistence-overview",
+      "title": "应用数据持久化概述",
+      "path": "../../docs/zh-cn/application-dev/database/app-data-persistence-overview.md",
+      "summary": "应用数据持久化是指应用将内存中的数据通过文件或数据库的形式保存到设备上。OpenHarmony支持用户首选项、键值型数据库和关系型数据库三种典型的存储数据形态。",
+      "key_topics": ["数据持久化", "用户首选项", "键值型数据库", "关系型数据库"]
+    },
+    {
+      "doc_id": "data-persistence-by-preferences",
+      "title": "通过用户首选项实现数据持久化 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/data-persistence-by-preferences.md",
+      "summary": "用户首选项(Preferences)为应用提供Key-Value键值型的数据处理能力，支持应用持久化轻量级数据。支持XML和GSKV两种存储模式。",
+      "key_topics": ["用户首选项", "Preferences", "数据持久化", "XML存储", "GSKV存储"]
+    },
+    {
+      "doc_id": "preferences-guidelines",
+      "title": "通过用户首选项实现数据持久化 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/database/preferences-guidelines.md",
+      "summary": "用户首选项(Preferences)的C/C++接口，为应用提供Key-Value键值型的数据处理能力，支持应用持久化轻量级数据。",
+      "key_topics": ["用户首选项", "Preferences", "数据持久化", "C/C++", "Native API"]
+    },
+    {
+      "doc_id": "data-persistence-by-kv-store",
+      "title": "通过键值型数据库实现数据持久化 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/data-persistence-by-kv-store.md",
+      "summary": "键值型数据库存储键值对形式的数据，当需要存储的数据没有复杂的关系模型时推荐使用。支持Schema定义、数据加密、分布式同步等功能。",
+      "key_topics": ["键值型数据库", "KV-Store", "数据持久化", "Schema", "分布式数据库"]
+    },
+    {
+      "doc_id": "data-persistence-by-rdb-store",
+      "title": "通过关系型数据库实现数据持久化 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/data-persistence-by-rdb-store.md",
+      "summary": "关系型数据库基于SQLite组件，适用于存储包含复杂关系数据的场景。支持增删改查、事务、索引、视图、触发器等功能。还提供向量数据库能力。",
+      "key_topics": ["关系型数据库", "RelationalStore", "SQLite", "数据持久化", "向量数据库"]
+    },
+    {
+      "doc_id": "native-relational-store-guidelines",
+      "title": "通过关系型数据库实现数据持久化 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/database/native-relational-store-guidelines.md",
+      "summary": "关系型数据库的C/C++接口，基于SQLite组件，适用于存储包含复杂关系数据的场景。支持增删改查、事务、索引、视图、触发器等功能。",
+      "key_topics": ["关系型数据库", "RelationalStore", "SQLite", "数据持久化", "C/C++", "Native API"]
+    },
+    {
+      "doc_id": "data-persistence-by-vector-store",
+      "title": "通过向量数据库实现数据持久化 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/data-persistence-by-vector-store.md",
+      "summary": "向量数据库是一种支持存储、管理和检索向量数据的数据库，也支持标量的关系型数据处理。支持向量索引、数据老化、数据压缩等功能。",
+      "key_topics": ["向量数据库", "floatvector", "数据持久化", "向量索引", "相似度计算"]
+    },
+    {
+      "doc_id": "native-vector-store-guidelines",
+      "title": "通过向量数据库实现数据持久化 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/database/native-vector-store-guidelines.md",
+      "summary": "向量数据库的C/C++接口，是一种支持存储、管理和检索向量数据的数据库，也支持标量的关系型数据处理。",
+      "key_topics": ["向量数据库", "floatvector", "数据持久化", "C/C++", "Native API"]
+    },
+    {
+      "doc_id": "sync-app-data-across-devices-overview",
+      "title": "同应用跨设备数据同步概述",
+      "path": "../../docs/zh-cn/application-dev/database/sync-app-data-across-devices-overview.md",
+      "summary": "跨设备数据同步功能指将数据库中的数据同步到组网环境中的其他设备。支持强一致性、弱一致性和最终一致性，同应用跨设备数据同步仅支持最终一致性。",
+      "key_topics": ["跨设备数据同步", "分布式数据", "数据一致性", "分布式数据对象"]
+    },
+    {
+      "doc_id": "data-sync-of-kv-store",
+      "title": "键值型数据库跨设备数据同步 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/data-sync-of-kv-store.md",
+      "summary": "键值型数据库适合不涉及过多数据关系和业务关系的业务数据存储。提供单版本数据库和多设备协同数据库两种类型，支持手动同步和自动同步。",
+      "key_topics": ["键值型数据库", "跨设备数据同步", "分布式数据库", "单版本数据库", "多设备协同数据库"]
+    },
+    {
+      "doc_id": "data-sync-of-rdb-store",
+      "title": "关系型数据库跨设备数据同步 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/data-sync-of-rdb-store.md",
+      "summary": "关系型数据库跨设备数据同步，支持应用在多设备间同步存储的关系型数据。支持多设备协同表模式和单版本表模式两种数据同步存储机制。",
+      "key_topics": ["关系型数据库", "跨设备数据同步", "分布式表", "多设备协同表", "单版本表"]
+    },
+    {
+      "doc_id": "data-sync-of-distributed-data-object",
+      "title": "分布式数据对象跨设备数据同步 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/data-sync-of-distributed-data-object.md",
+      "summary": "分布式数据对象提供对象型结构数据的分布式能力，适用于临时数据生命周期较短的场景。支持内存对象跨设备共享能力。",
+      "key_topics": ["分布式数据对象", "跨设备数据同步", "DataObject"]
+    },
+    {
+      "doc_id": "data-reliability-security-overview",
+      "title": "数据可靠性与安全性概述",
+      "path": "../../docs/zh-cn/application-dev/database/data-reliability-security-overview.md",
+      "summary": "数据管理提供了数据可靠性与安全性相关的解决方案和能力保障，包括备份恢复功能、数据库加密功能、数据库分类分级、E类加密数据库等功能。",
+      "key_topics": ["数据可靠性", "数据安全性", "数据库备份", "数据库加密", "数据分类分级"]
+    },
+    {
+      "doc_id": "data-backup-and-restore",
+      "title": "数据库备份与恢复 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/data-backup-and-restore.md",
+      "summary": "数据库备份与恢复功能用于在数据库被篡改、删除、或者设备断电场景下，将数据库恢复至可用状态。键值型数据库和关系型数据库均支持。",
+      "key_topics": ["数据库备份", "数据库恢复", "数据可靠性"]
+    },
+    {
+      "doc_id": "native-backup-and-restore",
+      "title": "数据库备份与恢复 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/database/native-backup-and-restore.md",
+      "summary": "数据库备份与恢复的C/C++接口，用于在数据库被篡改、删除、或者设备断电场景下，将数据库恢复至可用状态。",
+      "key_topics": ["数据库备份", "数据库恢复", "数据可靠性", "C/C++", "Native API"]
+    },
+    {
+      "doc_id": "data-encryption",
+      "title": "数据库加密 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/data-encryption.md",
+      "summary": "数据库加密了功能用于增强数据库的安全性，对数据库存储的内容实施有效保护。键值型数据库和关系型数据库均支持。",
+      "key_topics": ["数据库加密", "数据安全性", "cryptoParam"]
+    },
+    {
+      "doc_id": "native-data-encryption",
+      "title": "数据库加密 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/database/native-data-encryption.md",
+      "summary": "数据库加密的C/C++接口，用于增强数据库的安全性，对数据库存储的内容实施有效保护。",
+      "key_topics": ["数据库加密", "数据安全性", "C/C++", "Native API"]
+    },
+    {
+      "doc_id": "access-control-by-device-and-data-level",
+      "title": "基于设备分类和数据分级的访问控制 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/access-control-by-device-and-data-level.md",
+      "summary": "分布式数据管理对数据实施分类分级保护，提供基于数据安全标签以及设备安全等级的访问控制机制。数据安全标签分为S1-S4，设备安全等级分为SL1-SL5。",
+      "key_topics": ["访问控制", "数据分类分级", "数据安全标签", "设备安全等级"]
+    },
+    {
+      "doc_id": "native-access-control-by-device-and-data-level",
+      "title": "基于设备分类和数据分级的访问控制 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/database/native-access-control-by-device-and-data-level.md",
+      "summary": "基于设备分类和数据分级的访问控制的C/C++接口，分布式数据管理对数据实施分类分级保护，提供基于数据安全标签以及设备安全等级的访问控制机制。",
+      "key_topics": ["访问控制", "数据分类分级", "数据安全标签", "设备安全等级", "C/C++", "Native API"]
+    },
+    {
+      "doc_id": "encrypted-estore-guidelines",
+      "title": "E类加密数据库的使用 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/encrypted-estore-guidelines.md",
+      "summary": "E类加密数据库用于存储用户敏感信息，在锁屏的情况下，满足一定条件时，会触发密钥的销毁。当锁屏解锁后，密钥会恢复，E类数据库恢复正常读写操作。",
+      "key_topics": ["E类加密数据库", "数据安全性", "密钥管理"]
+    },
+    {
+      "doc_id": "data-share-overview",
+      "title": "跨应用数据共享概述",
+      "path": "../../docs/zh-cn/application-dev/database/data-share-overview.md",
+      "summary": "跨应用数据共享提供了向其他应用共享以及管理其数据的方法，支持不同应用之间的数据协同。支持一对多跨应用数据共享和多对多跨应用数据共享的能力。",
+      "key_topics": ["跨应用数据ari共享", "DataShare", "UDMF", "数据提供方", "数据访问方"]
+    },
+    {
+      "doc_id": "share-data-by-datashareextensionability-sys",
+      "title": "通过DataShareExtensionAbility实现数据共享 (ArkTS)(仅对系统应用开放)",
+      "path": "../../docs/zh-cn/application-dev/database/share-data-by-datashareextensionability-sys.md",
+      "summary": "通过在HAP中实现一个DataShareExtensionAbility extension，在extension中可以实现回调，在访问方调用对应接口时，会自动拉起提供方对应的extension。仅对系统应用开放。",
+      "key_topics": ["DataShare", "跨应用数据共享", "DataShareExtensionAbility", "系统应用"]
+    },
+    {
+      "doc_id": "share-data-by-silent-access-sys",
+      "title": "通过数据管理服务实现数据共享静默访问 (ArkTS)(仅对系统应用开放)",
+      "path": "../../docs/zh-cn/application-dev/database/share-data-by-silent-access-sys.md",
+      "summary": "通过在HAP中配置数据库的访问规则，在访问方调用对应接口时，会自动通过系统服务读取HAP配置规则，按照规则返回数据，不会拉起数据提供方。仅对系统应用开放。",
+      "key_topics": ["DataShare", "跨应用数据共享", "静默访问", "系统应用"]
+    },
+    {
+      "doc_id": "share-config",
+      "title": "应用间配置共享 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/share-config.md",
+      "summary": "通过集中管理公共配置信息，在不同应用间共享配置，提升协作效率。适用于跨应用共享配置信息。",
+      "key_topics": ["配置共享", "跨应用数据共享"]
+    },
+    {
+      "doc_id": "unified-data-definition-overview",
+      "title": "标准化数据定义概述",
+      "path": "../../docs/zh-cn/application-dev/database/unified-data-definition-overview.md",
+      "summary": "统一数据管理框架（UDMF）提供了标准化数据定义作为统一的OpenHarmony数据语言，用于构建跨应用、跨设备的统一数据标准与交互共识。",
+      "key_topics": ["标准化数据定义", "UDMF", "标准化数据类型", "标准化数据结构"]
+    },
+    {
+      "doc_id": "uniform-data-type-descriptors",
+      "title": "标准化数据类型 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/uniform-data-type-descriptors.md",
+      "summary": "标准化数据类型描述符（Uniform Type Descriptor, UTD）定义了包括标识数据类型的ID、类型归属关系等相关信息，用于解决OpenHarmony系统中的类型模糊问题。",
+      "key_topics": ["标准化数据类型", "UTD", "Uniform Type Descriptor"]
+    },
+    {
+      "doc_id": "uniform-data-type-descriptors-c",
+      "title": "标准化数据类型 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/database/uniform-data-type-descriptors-c.md",
+      "summary": "标准化数据类型描述符（Uniform Type Descriptor, UTD）的C/C++接口，定义了包括标识数据类型的ID、类型归属关系等相关信息。",
+      "key_topics": ["标准化数据类型", "UTD", "C/C++", "Native API"]
+    },
+    {
+      "doc_id": "uniform-data-structure",
+      "title": "标准化数据结构 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/uniform-data-structure.md",
+      "summary": "标准化数据结构为部分标准化数据类型定义了统一的数据内容结构，并明确了对应的描述信息。应用间使用标准化数据结构进行数据交互后，将遵从统一的解析标准。",
+      "key_topics": ["标准化数据结构", "UDMF"]
+    },
+    {
+      "doc_id": "uniform-data-structure-c",
+      "title": "标准化数据结构 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/database/uniform-data-structure-c.md",
+      "summary": "标准化数据结构的C/C++接口，为部分标准化数据类型定义了统一的数据内容结构，并明确了对应的描述信息。",
+      "key_topics": ["标准化数据结构", "UDMF", "C/C++", "Native API"]
+    },
+    {
+      "doc_id": "components-based-on-uniform-data-structure",
+      "title": "基于标准化数据结构的控件（ArkTS）",
+      "path": "../../docs/zh-cn/application-dev/database/components-based-on-uniform-data-structure.md",
+      "summary": "基于标准化数据结构的控件，提供基于UDMF标准化数据结构的UI组件，简化开发流程，提升开发效率。",
+      "key_topics": ["标准化数据结构", "UDMF", "UI组件"]
+    },
+    {
+      "doc_id": "uniform-data-type-list",
+      "title": "Uniform Type Descriptor(UTD)预置类型列表",
+      "path": "../../docs/zh-cn/application-dev/database/uniform-data-type-list.md",
+      "summary": "Uniform Type Descriptor(UTD)预置类型列表，列出了系统预定义的标准化数据类型。",
+      "key_topics": ["UTD", "预置类型", "标准化数据类型"]
+    },
+    {
+      "doc_id": "unified-data-channels",
+      "title": "通过标准化数据通路实现数据共享 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/unified-data-channels.md",
+      "summary": "通过标准化数据通路实现数据共享，应用可以根据UDMF标准化数据通路提供的数据接入与读取接口，将符合标准化数据定义的数据写入UDMF不同的数据共享通路。",
+      "key_topics": ["标准化数据通路", "UDMF", "跨应用数据共享", "多对多数据共享"]
+    },
+    {
+      "doc_id": "unified-data-channels-c",
+      "title": "通过标准化数据通路实现数据共享 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/database/unified-data-channels-c.md",
+      "summary": "通过标准化数据通路实现数据共享的C/C++接口，应用可以根据UDMF标准化数据通路提供的数据接入与读取接口，将符合标准化数据定义的数据写入UDMF不同的数据共享通路。",
+      "key_topics": ["标准化数据通路", "UDMF", "跨应用数据共享", "C/C++", "Native API"]
+    },
+    {
+      "doc_id": "native-unified-data-management-framework-guidelines",
+      "title": "统一数据管理框架 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/database/native-unified-data-management-framework-guidelines.md",
+      "summary": "统一数据管理框架（UDMF）的C/C++接口，提供了数据跨应用、跨设备交互标准，定义了跨应用、跨设备数据交互过程中的数据语言，提升数据交互效率。",
+      "key_topics": ["UDMF", "统一数据管理框架", "C/C++", "Native API"]
+    },
+    {
+      "doc_id": "aip-data-intelligenceATembedding",
+      "title": "应用数据向量化 (ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/database/aip-data-intelligence-embedding.md",
+      "summary": "应用数据向量化功能，提供将应用数据转换为向量数据的能力，支持向量数据的存储、管理和检索，实现对这些数据的快速检索和相似性搜索。",
+      "key_topics": ["数据向量化", "向量数据库", "相似度计算"]
+    },
+    {
+      "doc_id": "sqlite-database-debug-tool",
+      "title": "SQLite调试工具指导",
+      "path": "../../docs/zh-cn/application-dev/database/sqlite-database-debug-tool.md",
+      "summary": "SQLite调试工具基于hdc命令实现对SQLite数据库的操作，提供一种通过命令行接口高效管理SQLite数据库的方式，适用于开发、调试和运维阶段。",
+      "key_topics": ["SQLite", "调试工具", "hdc", "数据库管理"]
+    },
+    {
+      "doc_id": "data-faq",
+      "title": "ArkData常见问题",
+      "path": "../../docs/zh-cn/application-dev/database/data-faq.md",
+      "summary": "ArkData常见问题解答，包括如何查看关系型数据库详细的SQL执行异常信息、如何查看关系型数据库生成的SQL语句等。",
+      "key_topics": ["常见问题", "FAQ", "SQL调试"]
+    }
+  ]
+}
