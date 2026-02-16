@@ -1,6 +1,6 @@
 {
   "domain": "Tools",
-  "domain_summary": "Tools 领域包含 OpenHarmony 开发过程中使用的各种命令行工具和调试工具，涵盖应用调试、包管理、资源编译、网络配置、系统参数操作、电源管理、媒体资源访问、通知管理、账号管理、访问控制管理、企业设备管理、SDK升级辅助、二进制签名、堆快照分析等多种开发辅助工具。",
+  "overview": "Tools 领域包含 OpenHarmony 开发过程中使用的各种命令行工具和调试工具，涵盖应用调试、包管理、资源编译、网络配置、系统参数操作、电源管理、媒体资源访问、通知管理、账号管理、访问控制管理、企业设备管理、SDK 升级辅助、二进制签名、堆快照分析等多种开发辅助工具。",
   "core_concepts": [
     "应用调试工具",
     "包管理工具",
@@ -11,168 +11,57 @@
     "媒体资源访问",
     "通知管理工具",
     "账号管理工具",
-    "访问控制管理",
+    "访问了制管理",
     "企业设备管理",
-    "SDK升级辅助"
+    "SDK 升级辅助"
   ],
-  "document_count": 23,
-  "documents": [
-    {
-      "doc_id": "Readme-CN",
-      "title": "调试工具",
-      "path": "../../docs/zh-cn/application-dev/tools/Readme-CN.md",
-      "summary": "调试工具目录导航，包含SDK命令行工具简介、aa工具、bm工具、打包拆包工具、扫描工具、cem工具、anm工具、edm工具、restool工具、LLDB工具、param工具、power-shell工具、OpenHarmony SDK升级助手、atm工具、network-cfg工具、acm工具、toybox工具、mediatool工具、devicedebug工具、rawheap-translator工具、二进制签名工具等。",
-      "key_topics": ["调试工具", "命令行工具", "工具导航"]
-    },
-    {
-      "doc_id": "aa-tool",
-      "title": "aa工具",
-      "path": "../../docs/zh-cn/application-dev/tools/aa-tool.md",
-      "summary": "Ability助手工具，用于启动应用和启动测试用例，提供基本的应用调试和测试能力，包括启动应用组件、强制停止进程、打印应用组件相关信息、启动测试框架、进入/退出调试模式、应用调试/调优、触发onMemoryLevel回调等功能。",
-      "key_topics": ["aa工具", "Ability助手", "应用启动", "应用调试", "测试框架"]
-    },
-    {
-      "doc_id": "acm-tool",
-      "title": "acm工具",
-      "path": "../../docs/zh-cn/application-dev/tools/acm-tool.md",
-      "summary": "账号管理工具，实现账号创建、删除、查询、切换、注销、设置约束等功能，为开发者提供基本的管理本地账号的能力。需要root权限才能使用。",
-      "key_topics": ["acm工具", "账号管理", "本地账号", "账号操作"]
-    },
-    {
-      "doc_id": "anm-tool",
-      "title": "anm工具",
-      "path": "../../docs/zh-cn/application-dev/tools/anm-tool.md",
-      "summary": "通知管理工具，实现通知打印、设置通知参数等功能，为开发者提供基本的通知调试和测试能力，包括打印已发布通知详细信息、设置通知缓存个数、使能通知、设置通知跨设备协同开关等。仅支持在eng版本中使用。",
-      "key_topics": ["anm工具", "通知管理", "通知调试", "跨设备协同"]
-    },
-    {
-      "doc_id": "app-check-tool",
-      "title": "扫描工具",
-      "path": "../../docs/zh-cn/application-dev/tools/app-check-tool.md",
-      "summary": "应用包扫描工具，用于分析检测应用安装包，支持扫描重复文件、扫描超出指定大小的文件、统计分析各类型文件的总大小和占比。扫描结果默认以JSON和HTML两种文件格式输出。",
-      "key_topics": ["扫描工具", "app_check_tool", "包分析", "重复文件检测", "文件大小统计"]
-    },
-    {
-      "doc_id": "atm-tool",
-      "title": "atm工具",
-      "path": "../../docs/zh-cn/application-dev/tools/atm-tool.md",
-      "summary": "程序访问控制管理工具，用于查询应用进程的权限、使用类型等信息，提供根据tokenid、包名、进程名等信息进行访问控制管理的能力，包括查询权限定义、查询应用进程信息、查询权限使用记录等。",
-      "key_topics": ["atm工具", "访问控制管理", "权限查询", "权限使用记录"]
-    },
-    {
-      "doc_id": "binary-sign-tool",
-      "title": "二进制签名工具",
-      "path": "../../docs/zhzh-cn/application-dev/tools/binary-sign-tool.md",
-      "summary": "Binary Sign Tool用于对二进制文件进行代码签名，支持通过命令行的方式对标准ELF文件进行代码签名或打印已签名ELF的权限、证书信息。支持证书签名和自签名两种模式。",
-      "key_topics": ["二进制签名", "binary-sign-tool", "代码签名", "ELF文件"]
-    },
-    {
-      "doc_id": "bm-tool",
-      "title": "bm工具",
-      "path": "../../docs/zh-cn/application-dev/tools/bm-tool.md",
-      "summary": "包管理工具，实现应用安装、卸载、更新、查询等功能，提供基本的应用安装包的调试能力，包括安装、卸载、查询应用信息、清理缓存和数据、快速修复、共享库查询、overlay应用查询、插件安装卸载等，包含详细的错误码说明。",
-      "key_topics": ["bm工具", "包管理", "应用安装", "应用卸载", "快速修复"]
-    },
-    {
-      "doc_id": "cem-tool",
-      "title": "cem工具",
-      "path": "../../docs/zh-cn/application-dev/tools/cem-tool.md",
-      "summary": "公共事件管理工具，实现公共事件信息打印、发布公共事件等功能，为开发者提供基本的公共事件调试和测试能力，包括打印所有公共事件订阅者、已发送公共事件和接收者、模拟发布公共事件等。dump命令仅支持在eng版本中使用。",
-      "key_topics": ["cem工具", "公共事件管理", "事件调试", "事件发布"]
-    },
-    {
-      "doc_id": "devicedebug-tool",
-      "title": "devicedebug工具",
-      "path": "../../docs/zh-cn/application-dev/tools/devicedebug-tool.md",
-      "summary": "设备调试工具，向开发者提供对调试应用发送信号的能力，目前仅支持向AMS管理的debug类型的应用进程的pid发送signal信号，达到终止对应pid进程的能力。",
-      "key_topics": ["devicedebug工具", "进程终止", "调试信号"]
-    },
-    {
-      "doc_id": "edm-tool",
-      "title": "edm工具",
-      "path": "../../docs/zh-cn/application-dev/tools/edm-tool.md",
-      "summary": "企业设备管理工具，为设备管理应用提供调试和测试能力，包括激活企业设备管理拓展能力、解除激活企业设备管理拓展能力。目标组件必须为enterpriseAdmin类型的ExtensionAbility。",
-      "key_topics": ["edm工具", "企业设备管理", "MDM", "设备管控"]
-    },
-    {
-      "doc_id": "lldb-tool-sys",
-      "title": "LLDB工具（仅对系统应用开放）",
-      "path": "../../docs/zh-cn/application-dev/tools/lldb-tool-sys.md",
-      "summary": "LLDB是新一代高性能调试器，基于llvm15.0.4适配演进，是DevEco Studio工具链的默认调试器，支持调试C和C++应用程序。具备断点设置、变量查看与修改、内存操作、线程控制、表达式计算、堆栈回溯等功能，并支持跨平台和插件扩展。支持本地调试和远程调试。",
-      "key_topics": ["LLDB", "调试器", "C/C++调试", "断点调试", "本地调试", "远程调试"]
-    },
-    {
-      "doc_id": "mediatool",
-      "title": "媒体库资源访问工具",
-      "path": "../../docs/zh-cn/application-dev/tools/mediatool.md",
-      "summary": "媒体库资源访问工具，开发者可通过mediatool工具或hdc命令操作媒体库资源。支持导入媒体文件、打印资源信息、导出资源、删除资源、查询资源、列举目录等功能。媒体库为图库提供和管理数据，媒体库中的图片视频会在图库界面呈现。",
-      "key_topics": ["mediatool工具", "媒体库", "资源管理", "图片视频", "图库"]
-    },
-    {
-      "doc_id": "network-cfg",
-      "title": "network-cfg工具",
-      "path": "../../docs/zh-cn/application-dev/tools/network-cfg.md",
-      "summary": "网络配置工具，为开发人员提供用于设置网络相关参数的功能，例如给WiFi设置代理等。从API version 20开始支持。需要当前WiFi处于连接状态时才可设置代理。",
-      "key_topics": ["network-cfg工具", "网络配置", "WiFi代理", "网络参数"]
-    },
-    {
-      "doc_id": "openharmony_sdk_upgrade_assistant",
-      "title": "OpenHarmony SDK 升级助手",
-      "path": "../../docs/zh-cn/application-dev/tools/openharmony_sdk_upgrade_assistant.md",
-      "summary": "OpenHarmony SDK升级助手，用于帮助开发者快速解决OpenHarmony应用SDK升级导致的API不兼容问题。由于OpenHarmony SDK Beta版本不承诺API稳定性，在SDK升级后可能存在API不兼容的问题，该工具可以帮助开发者快速了解升级适配全貌，并通过工具提示快速适配升级，显著提高SDK升级效率。",
-      "key_topics": ["SDK升级助手", "API兼容", "SDK升级", "版本适配"]
-    },
-    {
-      "doc_id": "packing-tool",
-      "title": "打包工具",
-      "path": "../../docs/zh-cn/application-dev/tools/packing-tool.md",
-      "summary": "打包工具用于在程序编译完成后，对编译出的文件等进行打包，以供安装发布。支持生成HAP、HSP、App、HQF、APPQF等包类型。包括HAP打包、HSP打包、App打包、多工程打包、HQF打包、APPQF打包、版本归一、包名归一、通用归一、res模式打包、fastApp模式打包等多种指令。",
-      "key_topics": ["打包工具", "HAP打包", "HSP打包", "App打包", "HQF打包", "快速修复"]
-    },
-    {
-      "doc_id": "param-tool",
-      "title": "param工具",
-      "path": "../../docs/zh-cn/application-dev/tools/param-tool.md",
-      "summary": "系统参数操作工具，为开发人员提供用于操作系统参数的工具，该工具只支持标准系统。支持显示匹配name的系统参数信息、获取指定name系统参数的值、设置指定name系统参数的值、同步等待指定name系统参数与指定值value匹配、保存persist参数到工作空间等功能。",
-      "key_topics": ["param工具", "系统参数", "参数操作", "persist参数"]
-    },
-    {
-      "doc_id": "power-shell",
-      "title": "power-shell工具",
-      "path": "../../docs/zh-cn/application-dev/tools/power-shell.md",
-      "summary": "电源状态管理工具，实现设备电源状态转换等功能，为开发者提供基本的设备电源状态调试能力，包括设置电源模式（正常模式、省电模式、性能模式、超级省电模式）、亮屏、熄屏、设置自动熄屏时间等。",
-      "key_topics": ["power-shell工具", "电源管理", "屏幕控制", "电源模式"]
-    },
-    {
-      "doc_id": "rawheap-translator",
-      "title": "rawheap-translator工具",
-      "path": "../../docs/zh-cn/application-dev/tools/rawheap-translator.md",
-      "summary": "原始堆快照翻译工具，用于解析ArkTS应用OOM时自动生成的.rawheap二进制文件，生成.heapsnapshot文件。该文件可通过DevEco Studio的Heap Snapshot离线导入或Chrome浏览器的开发者工具中的内存工具导入并查看。支持OHOS、Windows、Linux和MacOS平台。",
-      "key_topics": ["rawheap-translator工具", "堆快照", "OOM分析", "内存分析", "ArkTS调试"]
-    },
-    {
-      "doc_id": "restool",
-      "title": "restool工具",
-      "path": "../../docs/zh-cn/application-dev/tools/restool.md",
-      "summary": "应用工程资源编译工具，通过编译资源文件创建资源索引、解析资源，开发者可以调用资源管理接口获取到对应资源。支持全量资源编译、增量资源编译、叠加资源编译、资源ID固定等功能，包含详细的错误码说明。",
-      "key_topics": ["restool工具", "资源编译", "资源索引", "资源管理"]
-    },
-    {
-      "doc_id": "toybox",
-      "title": "toybox工具",
-      "path": "../../docs/zh-cn/application-dev/tools/toybox.md",
-      "summary": "toybox是一个轻量级的Linux命令行工具集合，它将常用的Linux命令行工具合并到一个单独的可执行文件中。包含数学与计算机基础函数、终端操作、sh逻辑命令、系统操作、时间日期、登录用户操作、进程操作、设备节点操作、网络操作、文件操作等多类命令。",
-      "key_topics": ["toybox工具", "Linux命令", "命令行工具", "系统操作", "文件操作", "进程操作"]
-    },
-    {
-      "doc_id": "unpacking-tool",
-      "title": "拆包工具",
-      "path": "../../docs/zh-cn/application-dev/tools/unpacking-tool.md",
-      "summary": "拆包工具是OpenHarmony提供的一种调试工具，支持通过命令行方式将HAP、HSP、App等文件解压成文件夹，并且提供Java接口对HAP、HSP、App等文件进行解析。支持HAP包模式拆包、App包模式拆包、从HAP包中获取rpcid文件、按照架构类型拆分HAP包、HSP包模式拆包、APPQF模式拆包等功能。",
-      "key_topics": ["拆包工具", "包解析", "HAP解压", "App解压", "包分析"]
-    },
-    {
-      "doc_id": "command-line-tools-overview",
-      "title": "SDK命令行工具简介",
-      "path": "../../docs/zh-cn/application-dev/tools/command-line-tools-overview.md",
-      "s
+  "learning_path": [
+    "../../docs/zh-cn/application-dev/tools/command-line-tools-overview.md",
+    "../../docs/zh-cn/application-dev/tools/Readme-CN.md",
+    "../../docs/zh-cn/application-dev/tools/aa-tool.md",
+    "../../docs/zh-cn/application-dev/tools/bm-tool.md",
+    "../../docs/zh-cn/application-dev/tools/packing-tool.md",
+    "../../docs/zh-cn/application-dev/tools/unpacking-tool.md",
+    "../../docs/zh-cn/application-dev/tools/app-check-tool.md",
+    "../../docs/zh-cn/application-dev/tools/atm-tool.md",
+    "../../docs/zh-cn/application-dev/tools/cem-tool.md",
+    "../../docs/zh-cn/application-dev/tools/anm-tool.md",
+    "../../docs/zh-cn/application-dev/tools/restool.md",
+    "../../docs/zh-cn/application-dev/tools/param-tool.md",
+    "../../docs/zh-cn/application-dev/tools/power-shell.md",
+    "../../docs/zh-cn/application-dev/tools/mediatool.md",
+    "../../docs/zh-cn/application-dev/tools/network-cfg.md",
+    "../../docs/zh-cn/application-dev/tools/acm-tool.md",
+    "../../docs/zh-cn/application-dev/tools/toybox.md",
+    "../../docs/zh-cn/application-dev/tools/edm-tool.md",
+    "../../docs/zh-cn/application-dev/tools/lldb-tool-sys.md",
+    "../../docs/zh-cn/application-dev/tools/rawheap-translator.md",
+    "../../docs/zh-cn/application-dev/tools/binary-sign-tool.md",
+    "../../docs/zh-cn/application-dev/tools/openharmony_sdk_upgrade_assistant.md",
+    "../../docs/zh-cn/application-dev/tools/devicedebug-tool.md"
+  ],
+  "quick_reference": {
+    "aa 工具": "../../docs/zh-cn/application-dev/tools/aa-tool.md",
+    "bm 工具": "../../docs/zh-cn/application-dev/tools/bm-tool.md",
+    "打包工具": "../../docs/zh-cn/application-dev/tools/packing-tool.md",
+    "拆包工具": "../../docs/zh-cn/application-dev/tools/unpacking-tool.md",
+    "扫描工具": "../../docs/zh-cn/application-dev/tools/app-check-tool.md",
+    "atm 工具": "../../docs/zh-cn/application-dev/tools/atm-tool.md",
+    "cem 工具": "../../docs/zh-cn/application-dev/tools/cem-tool.md",
+    "anm 工具": "../../docs/zh-cn/application-dev/tools/anm-tool.md",
+    "restool 工具": "../../docs/zh-cn/application-dev/tools/restool.md",
+    "param 工具": "../../docs/zh-cn/application-dev/tools/param-tool.md",
+    "power-shell 工具": "../../docs/zh-cn/application-dev/tools/power-shell.md",
+    "mediatool 工具": "../../docs/zh-cn/application-dev/tools/mediatool.md",
+    "network-cfg 工具": "../../docs/zh-cn/application-dev/tools/network-cfg.md",
+    "acm 工具": "../../docs/zh-cn/application-dev/tools/acm-tool.md",
+    "edm 工具": "../../docs/zh-cn/application-dev/tools/edm-tool.md",
+    "LLDB 工具": "../../docs/zh-cn/application-dev/tools/lldb-tool-sys.md",
+    "rawheap-translator 工具": "../../docs/zh-cn/application-dev/tools/rawheap-translator.md",
+    "toybox 工具": "../../docs/zh-cn/application-dev/tools/toybox.md",
+    "devicedebug 工具": "../../docs/zh-cn/application-dev/tools/devicedebug-tool.md",
+    "二进制签名工具": "../../docs/zh-cn/application-dev/tools/binary-sign-tool.md",
+    "SDK 升级助手": "../../docs/zh-cn/application-dev/tools/openharmony_sdk_upgrade_assistant.md"
+  },
+  "document_count": 23
+}
