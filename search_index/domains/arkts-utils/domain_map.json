@@ -1,50 +1,583 @@
 {
   "domain": "ArkTS",
-  "overview": "ArkTS是OpenHarmony应用开发的官方高级语言，在TypeScript生态基础上做了进一步扩展。ArkTS基础类库提供XML生成解析转换、Buffer与FastBuffer、容器类库、JSON扩展等能力。ArkTS并发编程提供TaskPool和Worker两种多线程并发API，以及Sendable对象支持跨线程引用传递。ArkTS运行时支持解释了器、AOT和JIT高效执行方式，提供GC垃圾回收、模块化运行、动态加载等能力。ArkTS编译工具链支持语法检查、UI转换、源码混淆、字节码编译、反汇编等功能。",
-  "core_concepts": [
-    "ArkTS编程语言",
-    "TaskPool多线程",
-    "Worker线程",
-    "Sendable对象",
-    "并发编程",
-    "容器类库",
-    "XML处理",
-    "Buffer二进制",
-    "GC垃圾回收",
-    "模块化运行"
+  "submodules": [
+    {
+      "name": "arkts-overview",
+      "description": "ArkTS编程语言基础，包括语言简介、TypeScript扩展、与TS/JS互操作等。",
+      "document_count": 3,
+      "documents": [
+        {
+          "doc_id": "Readme-CN",
+          "title": "ArkTS（方舟编程语言）",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/Readme-CN.md"
+        },
+        {
+          "doc_id": "arkts-overview",
+          "title": "ArkTS简介",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-overview.md"
+        },
+        {
+          "doc_id": "arkts-utils-overview",
+          "title": "ArkTS基础类库概述",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-utils-overview.md"
+        }
+      ]
+    },
+    {
+      "name": "compilation",
+      "description": "ArkTS编译工具链，包括配置、编译选项等。",
+      "document_count": 2,
+      "documents": [
+        {
+          "doc_id": "arkoptions-guide",
+          "title": "在build-profile.json5中配置arkOptions",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkoptions-guide.md"
+        },
+        {
+          "doc_id": "compilation-tool-chain-overview",
+          "title": "ArkTS编译工具链概述",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/compilation-tool-chain-overview.md"
+        }
+      ]
+    },
+    {
+      "name": "concurrency",
+      "description": "并发编程相关，包括异步锁、条件变量、线程同步等机制。",
+      "document_count": 7,
+      "documents": [
+        {
+          "doc_id": "arkts-async-lock-introduction",
+          "title": "异步锁",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-async-lock-introduction.md"
+        },
+        {
+          "doc_id": "arkts-condition-variable-introduction",
+          "title": "异步等待",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-condition-variable-introduction.md"
+        },
+        {
+          "doc_id": "async-concurrency-overview",
+          "title": "异步并发 (Promise和async/await)",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/async-concurrency-overview.md"
+        },
+        {
+          "doc_id": "concurrency-faq",
+          "title": "并发常见问题",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/concurrency-faq.md"
+        },
+        {
+          "doc_id": "concurrency-overview",
+          "title": "并发概述",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/concurrency-overview.md"
+        },
+        {
+          "doc_id": "multi-thread-cancel-task",
+          "title": "多线程取消TaskPool任务场景",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/multi-thread-cancel-task.md"
+        },
+        {
+          "doc_id": "multi-thread-concurrency-overview",
+          "title": "多线程并发概述",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/multi-thread-concurrency-overview.md"
+        }
+      ]
+    },
+    {
+      "name": "bytecode",
+      "description": "字节码编译和处理，包括字节码格式、反汇编等。",
+      "document_count": 12,
+      "documents": [
+        {
+          "doc_id": "arkts-bytecode-file-format",
+          "title": "方舟字节码文件格式",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-bytecode-file-format.md"
+        },
+        {
+          "doc_id": "arkts-bytecode-function-name",
+          "title": "方舟字节码函数命名规则",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-bytecode-function-name.md"
+        },
+        {
+          "doc_id": "arkts-bytecode-fundamentals",
+          "title": "方舟字节码基本原理",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-bytecode-fundamentals.md"
+        },
+        {
+          "doc_id": "arkts-bytecode-overview",
+          "title": "方舟字节码概述",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-bytecode-overview.md"
+        },
+        {
+          "doc_id": "bytecode-obfuscation-guide",
+          "title": "ArkGuard字节码混淆开启指南",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/bytecode-obfuscation-guide.md"
+        },
+        {
+          "doc_id": "bytecode-obfuscation-overview",
+          "title": "ArkGuard字节码混淆工具概述",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/bytecode-obfuscation-overview.md"
+        },
+        {
+          "doc_id": "bytecode-obfuscation-practice",
+          "title": "不同包类型的字节码混淆建议",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/bytecode-obfuscation-practice.md"
+        },
+        {
+          "doc_id": "bytecode-obfuscation-questions",
+          "title": "ArkGuard字节码混淆常见问题",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/bytecode-obfuscation-questions.md"
+        },
+        {
+          "doc_id": "bytecode-obfuscation",
+          "title": "ArkGuard字节码混淆原理及功能",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/bytecode-obfuscation.md"
+        },
+        {
+          "doc_id": "customize-bytecode-during-compilation",
+          "title": "编译期自定义修改方舟字节码",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/customize-bytecode-during-compilation.md"
+        },
+        {
+          "doc_id": "es2abc-faq",
+          "title": "方舟字节码生成常见问题",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/es2abc-faq.md"
+        },
+        {
+          "doc_id": "tool-disassembler",
+          "title": "Disassembler反汇编工具",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/tool-disassembler.md"
+        }
+      ]
+    },
+    {
+      "name": "default",
+      "description": "通用ArkTS文档，包括线程间通信、开发实践等。",
+      "document_count": 22,
+      "documents": [
+        {
+          "doc_id": "arkts-collections-introduction",
+          "title": "共享容器",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-collections-introduction.md"
+        },
+        {
+          "doc_id": "arkts-cross-language-interaction",
+          "title": "ArkTS跨语言交互",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-cross-language-interaction.md"
+        },
+        {
+          "doc_id": "batch-database-operations-guide",
+          "title": "批量数据写数据库场景",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/batch-database-operations-guide.md"
+        },
+        {
+          "doc_id": "commonlibrary-faq",
+          "title": "基础库常见问题",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/commonlibrary-faq.md"
+        },
+        {
+          "doc_id": "cpu-intensive-task-development",
+          "title": "CPU密集型任务开发指导 (TaskPool和Worker)",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/cpu-intensive-task-development.md"
+        },
+        {
+          "doc_id": "global-configuration-guide",
+          "title": "全局配置项功能场景",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/global-configuration-guide.md"
+        },
+        {
+          "doc_id": "independent-time-consuming-task",
+          "title": "使用TaskPool执行独立的耗时任务",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/independent-time-consuming-task.md"
+        },
+        {
+          "doc_id": "interthread-communication-overview",
+          "title": "ArkTS线程间通信概述",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/interthread-communication-overview.md"
+        },
+        {
+          "doc_id": "io-intensive-task-development",
+          "title": "I/O密集型任务开发指导 (TaskPool)",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/io-intensive-task-development.md"
+        },
+        {
+          "doc_id": "long-time-task-guide",
+          "title": "长时任务开发指导（TaskPool）",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/long-time-task-guide.md"
+        },
+        {
+          "doc_id": "long-time-task-overview",
+          "title": "长时任务并发场景简介",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/long-time-task-overview.md"
+        },
+        {
+          "doc_id": "multi-time-consuming-tasks",
+          "title": "使用TaskPool执行多个耗时任务",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/multi-time-consuming-tasks.md"
+        },
+        {
+          "doc_id": "multithread-develop-overview",
+          "title": "应用多线程开发概述",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/multithread-develop-overview.md"
+        },
+        {
+          "doc_id": "napi-coerce-to-native-binding-object",
+          "title": "自定义Native Transferable对象的多线程操作场景",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/napi-coerce-to-native-binding-object.md"
+        },
+        {
+          "doc_id": "native-interthread-shared",
+          "title": "C++线程间数据共享场景",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/native-interthread-shared.md"
+        },
+        {
+          "doc_id": "normal-object",
+          "title": "普通对象",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/normal-object.md"
+        },
+        {
+          "doc_id": "resident-task-guide",
+          "title": "常驻任务开发指导（Worker）",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/resident-task-guide.md"
+        },
+        {
+          "doc_id": "resident-task-overview",
+          "title": "常驻任务并发场景简介",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/resident-task-overview.md"
+        },
+        {
+          "doc_id": "serializable-overview",
+          "title": "线程间通信对象概述",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/serializable-overview.md"
+        },
+        {
+          "doc_id": "sync-task-development",
+          "title": "同步任务开发指导 (TaskPool和Worker)",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/sync-task-development.md"
+        },
+        {
+          "doc_id": "time-consuming-task-overview",
+          "title": "耗时任务并发场景简介",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/time-consuming-task-overview.md"
+        },
+        {
+          "doc_id": "transferabled-object",
+          "title": "Transferable对象（NativeBinding对象）",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/transferabled-object.md"
+        }
+      ]
+    },
+    {
+      "name": "module",
+      "description": "模块化运行，包括动态加载、懒加载、模块导入等。",
+      "document_count": 8,
+      "documents": [
+        {
+          "doc_id": "arkts-dynamic-import",
+          "title": "动态加载",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-dynamic-import.md"
+        },
+        {
+          "doc_id": "arkts-import-native-module",
+          "title": "静态方式加载Native模块",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-import-native-module.md"
+        },
+        {
+          "doc_id": "arkts-lazy-import",
+          "title": "延迟加载（lazy import）",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-lazy-import.md"
+        },
+        {
+          "doc_id": "arkts-module-side-effects",
+          "title": "模块加载副作用及优化",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-module-side-effects.md"
+        },
+        {
+          "doc_id": "concurrent-loading-modules-guide",
+          "title": "业务模块并发加载场景",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/concurrent-loading-modules-guide.md"
+        },
+        {
+          "doc_id": "js-apis-load-native-module",
+          "title": "同步方式动态加载Native模块",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/js-apis-load-native-module.md"
+        },
+        {
+          "doc_id": "load-module-base-nodeapi",
+          "title": "基于Node-API加载模块",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/load-module-base-nodeapi.md"
+        },
+        {
+          "doc_id": "module-principle",
+          "title": "模块化运行简介",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/module-principle.md"
+        }
+      ]
+    },
+    {
+      "name": "json",
+      "description": "JSON扩展库，提供ASON等JSON处理能力。",
+      "document_count": 2,
+      "documents": [
+        {
+          "doc_id": "arkts-json",
+          "title": "JSON扩展库",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-json.md"
+        },
+        {
+          "doc_id": "ason-parsing-generation",
+          "title": "ASON解析与生成",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/ason-parsing-generation.md"
+        }
+      ]
+    },
+    {
+      "name": "runtime",
+      "description": "ArkTS运行时，包括GC垃圾回收、模块化运行等。",
+      "document_count": 2,
+      "documents": [
+        {
+          "doc_id": "arkts-runtime-faq",
+          "title": "ArkTS运行时常见问题",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-runtime-faq.md"
+        },
+        {
+          "doc_id": "arkts-runtime-overview",
+          "title": "ArkTS运行时概述",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-runtime-overview.md"
+        }
+      ]
+    },
+    {
+      "name": "sendable",
+      "description": "Sendable对象，支持跨线程引用传递，提升并发实例间通信性能。",
+      "document_count": 8,
+      "documents": [
+        {
+          "doc_id": "arkts-sendable-module",
+          "title": "共享模块",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-sendable-module.md"
+        },
+        {
+          "doc_id": "arkts-sendable",
+          "title": "Sendable对象简介",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arkts-sendable.md"
+        },
+        {
+          "doc_id": "makeobserved-sendable",
+          "title": "ArkUI数据更新场景",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/makeobserved-sendable.md"
+        },
+        {
+          "doc_id": "napi-define-sendable-object",
+          "title": "自定义Native Sendable对象的多线程操作场景",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/napi-define-sendable-object.md"
+        },
+        {
+          "doc_id": "sendable-constraints",
+          "title": "Sendable使用规则与约束",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/sendable-constraints.md"
+        },
+        {
+          "doc_id": "sendable-freeze",
+          "title": "Sendable对象冻结",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/sendable-freeze.md"
+        },
+        {
+          "doc_id": "sendable-guide",
+          "title": "Sendable使用场景",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/sendable-guide.md"
+        },
+        {
+          "doc_id": "sendablelrucache-recent-list",
+          "title": "获取最近访问列表场景",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/sendablelrucache-recent-list.md"
+        }
+      ]
+    },
+    {
+      "name": "buffer",
+      "description": "Buffer二进制数据处理，包括ArrayBuffer、DataView等。",
+      "document_count": 3,
+      "documents": [
+        {
+          "doc_id": "arraybuffer-object",
+          "title": "ArrayBuffer对象",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/arraybuffer-object.md"
+        },
+        {
+          "doc_id": "buffer",
+          "title": "Buffer与FastBuffer",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/buffer.md"
+        },
+        {
+          "doc_id": "shared-arraybuffer-object",
+          "title": "SharedArrayBuffer对象",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/shared-arraybuffer-object.md"
+        }
+      ]
+    },
+    {
+      "name": "container",
+      "description": "容器类库，提供线性容器（ArrayList、Vector等）和非线性容器（HashMap、TreeMap等）。",
+      "document_count": 4,
+      "documents": [
+        {
+          "doc_id": "container-object",
+          "title": "容器类对象",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/container-object.md"
+        },
+        {
+          "doc_id": "container-overview",
+          "title": "容器类库概述",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/container-overview.md"
+        },
+        {
+          "doc_id": "linear-container",
+          "title": "线性容器",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/linear-container.md"
+        },
+        {
+          "doc_id": "nonlinear-container",
+          "title": "非线性容器",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/nonlinear-container.md"
+        }
+      ]
+    },
+    {
+      "name": "gc",
+      "description": "GC垃圾回收机制，提供内存管理和垃圾回收功能。",
+      "document_count": 1,
+      "documents": [
+        {
+          "doc_id": "gc-introduction",
+          "title": "GC垃圾回收",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/gc-introduction.md"
+        }
+      ]
+    },
+    {
+      "name": "obfuscation",
+      "description": "源码和字节码混淆，提供代码保护功能。",
+      "document_count": 5,
+      "documents": [
+        {
+          "doc_id": "source-obfuscation-guide",
+          "title": "ArkGuard混淆开启指南",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/source-obfuscation-guide.md"
+        },
+        {
+          "doc_id": "source-obfuscation-overview",
+          "title": "ArkGuard源码混淆工具概述",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/source-obfuscation-overview.md"
+        },
+        {
+          "doc_id": "source-obfuscation-practice",
+          "title": "不同包类型的源码混淆建议",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/source-obfuscation-practice.md"
+        },
+        {
+          "doc_id": "source-obfuscation-questions",
+          "title": "ArkGuard混淆常见问题",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/source-obfuscation-questions.md"
+        },
+        {
+          "doc_id": "source-obfuscation",
+          "title": "ArkGuard混淆原理及功能",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/source-obfuscation.md"
+        }
+      ]
+    },
+    {
+      "name": "taskpool",
+      "description": "TaskPool多任务池，提供任务队列管理、任务优先级、任务组等功能。",
+      "document_count": 6,
+      "documents": [
+        {
+          "doc_id": "taskpool-async-task-guide",
+          "title": "TaskPool指定任务并发度场景",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/taskpool-async-task-guide.md"
+        },
+        {
+          "doc_id": "taskpool-communicates-with-mainthread",
+          "title": "TaskPool任务与宿主线程通信",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/taskpool-communicates-with-mainthread.md"
+        },
+        {
+          "doc_id": "taskpool-introduction",
+          "title": "TaskPool简介",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/taskpool-introduction.md"
+        },
+        {
+          "doc_id": "taskpool-vs-worker",
+          "title": "TaskPool和Worker的对比 (TaskPool和Worker)",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/taskpool-vs-worker.md"
+        },
+        {
+          "doc_id": "taskpool-waterflow",
+          "title": "ArkUI瀑布流渲染场景",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/taskpool-waterflow.md"
+        },
+        {
+          "doc_id": "worker-and-taskpool",
+          "title": "Worker常驻线程通过TaskPool进行多任务并发处理",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/worker-and-taskpool.md"
+        }
+      ]
+    },
+    {
+      "name": "worker",
+      "description": "Worker多线程，提供独立线程环境、线程间通信、后台任务处理等。",
+      "document_count": 4,
+      "documents": [
+        {
+          "doc_id": "worker-communicates-with-mainthread",
+          "title": "Worker和宿主线程的即时消息通信",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/worker-communicates-with-mainthread.md"
+        },
+        {
+          "doc_id": "worker-introduction",
+          "title": "Worker简介",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/worker-introduction.md"
+        },
+        {
+          "doc_id": "worker-invoke-mainthread-interface",
+          "title": "Worker同步调用宿主线程的接口",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/worker-invoke-mainthread-interface.md"
+        },
+        {
+          "doc_id": "worker-postMessage-sendable",
+          "title": "多级Worker间高性能消息通信",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/worker-postMessage-sendable.md"
+        }
+      ]
+    },
+    {
+      "name": "xml",
+      "description": "XML处理，提供XML生成、解析、转换等功能。",
+      "document_count": 4,
+      "documents": [
+        {
+          "doc_id": "xml-conversion",
+          "title": "XML转换",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/xml-conversion.md"
+        },
+        {
+          "doc_id": "xml-generation",
+          "title": "XML生成",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/xml-generation.md"
+        },
+        {
+          "doc_id": "xml-overview",
+          "title": "XML概述",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/xml-overview.md"
+        },
+        {
+          "doc_id": "xml-parsing",
+          "title": "XML解析",
+          "path": "../../docs/zh-cn/application-dev/arkts-utils/xml-parsing.md"
+        }
+      ]
+    }
   ],
-  "learning_path": [
-    "../../docs/zh-cn/application-dev/arkts-utils/arkts-overview.md",
-    "../../docs/zh-cn/application-dev/arkts-utils/arkts-utils-overview.md",
-    "../../docs/zh-cn/application-dev/arkts-utils/concurrency-overview.md",
-    "../../docs/zh-cn/application-dev/arkts-utils/taskpool-introduction.md",
-    "../../docs/zh-cn/application-dev/arkts-utils/worker-introduction.md",
-    "../../docs/zh-cn/application-dev/arkts-utils/arkts-sendable.md",
-    "../../docs/zh-cn/application-dev/arkts-utils/arkts-runtime-overview.md",
-    "../../docs/zh-cn/application-dev/arkts-utils/compilation-tool-chain-overview.md",
-    "../../docs/zh-cn/application-dev/arkts-utils/container-overview.md",
-    "../../docs/zh-cn/application-dev/arkts-utils/xml-overview.md",
-    "../../docs/zh-cn/application-dev/arkts-utils/buffer.md",
-    "../../docs/zh-cn/application-dev/arkts-utils/gc-introduction.md",
-    "../../docs/zh-cn/application-dev/arkts-utils/module-principle.md"
-  ],
-  "quick_reference": {
-    "ArkTS简介": "../../docs/zh-cn/application-dev/arkts-utils/arkts-overview.md",
-    "基础类库概述": "../../docs/zh-cn/application-dev/arkts-utils/arkts-utils-overview.md",
-    "并发概述": "../../docs/zh-cn/application-dev/arkts-utils/concurrency-overview.md",
-    "TaskPool": "../../docs/zh-cn/application-dev/arkts-utils/taskpool-introduction.md",
-    "Worker": "../../docs/zh-cn/application-dev/arkts-utils/worker-introduction.md",
-    "Sendable对象": "../../docs/zh-cn/application-dev/arkts-utils/arkts-sendable.md",
-    "运行时概述": "../../docs/zh-cn/application-dev/arkts-utils/arkts-runtime-overview.md",
-    "编译工具链": "../../docs/zh-cn/application-dev/arkts-utils/compilation-tool-chain-overview.md",
-    "容器类库": "../../docs/zh-cn/application-dev/arkts-utils/container-overview.md",
-    "XML": "../../docs/zh-cn/application-dev/arkts-utils/xml-overview.md",
-    "Buffer": "../../docs/zh-cn/application-dev/arkts-utils/buffer.md",
-    "GC垃圾回收": "../../docs/zh-cn/application-dev/arkts-utils/gc-introduction.md",
-    "模块化运行": "../../docs/zh-cn/application-dev/arkts-utils/module-principle.md",
-    "异步并发": "../../docs/zh-cn/application-dev/arkts-utils/async-concurrency-overview.md",
-    "线性容器": "../../docs/zh-cn/application-dev/arkts-utils/linear-container.md",
-    "非线性容器": "../../docs/zh-cn/application-dev/arkts-utils/nonlinear-container.md"
-  },
-  "document_count": 93
+  "total_documents": 93
 }
