@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-inner-application-eventHub",
+  "title": "EventHub",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-inner-application-eventHub.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-inner-application-eventHub.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@zexin_c",
+    "designer": "@li-weifeng2024",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 EventHub，提供相关接口和功能说明。",
+  "structure": {
+    "title": "EventHub",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 30,
+        "summary": "- 不支持在进程间通过Eventhub对象进行数据通信。\n- 不支持在Worker、TaskPool线程间通过EventHub对象进行数据通信。如需进行跨线程通信，参考[使用Emitter进行线程间"
+      },
+      {
+        "section_id": "section-2",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 36,
+        "summary": "```ts\nimport { common } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-3",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 59,
+        "summary": "开发者需要通过Context对象获取EventHub。以下示例通过UIAbility实例的Context对象获取其EventHub对象。\n\n```ts\nimport { common, UIAbil"
+      },
+      {
+        "section_id": "section-4",
+        "title": "EventHub.on",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 166,
+        "summary": "on(event: string, callback: Function): void;\n\n订阅指定事件。\n> **说明：**\n>\n>  callback被emit触发时，调用方是EventHub对"
+      },
+      {
+        "section_id": "section-5",
+        "title": "EventHub.off",
+        "level": 2,
+        "line_start": 167,
+        "line_end": 224,
+        "summary": "off(event: string, callback?: Function): void;\n\n取消订阅指定事件。\n - 传入callback：取消指定的callback对指定事件的订阅，当该事件触"
+      },
+      {
+        "section_id": "section-6",
+        "title": "EventHub.emit",
+        "level": 2,
+        "line_start": 225,
+        "line_end": 284,
+        "summary": "emit(event: string, ...args: Object[]): void;\n\n触发指定事件。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中"
+      }
+    ]
+  }
+}

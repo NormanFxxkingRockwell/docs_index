@@ -1,0 +1,60 @@
+{
+  "doc_id": "arkts-apis-webview-WebDownloadDelegate",
+  "title": "Class (WebDownloadDelegate)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebDownloadDelegate.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebDownloadDelegate.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Class (WebDownloadDelegate)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (WebDownloadDelegate)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { webview } from '@kit.ArkWeb';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "onBeforeDownload<sup>11+</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 130,
+        "summary": "onBeforeDownload(callback: Callback\\<WebDownloadItem>): void\n\n下载开始前通知给用户，用户需要在此接口中调用WebDownloadItem"
+      },
+      {
+        "section_id": "section-3",
+        "title": "onDownloadUpdated<sup>11+</sup>",
+        "level": 2,
+        "line_start": 131,
+        "line_end": 232,
+        "summary": "onDownloadUpdated(callback: Callback\\<WebDownloadItem>): void\n\n下载过程中的回调，通过该回调的参数可以了解下载进度等信息。\n\n**系统能"
+      },
+      {
+        "section_id": "section-4",
+        "title": "onDownloadFinish<sup>11+</sup>",
+        "level": 2,
+        "line_start": 233,
+        "line_end": 334,
+        "summary": "onDownloadFinish(callback: Callback\\<WebDownloadItem>): void\n\n下载完成的通知。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-5",
+        "title": "onDownloadFailed<sup>11+</sup>",
+        "level": 2,
+        "line_start": 335,
+        "line_end": 435,
+        "summary": "onDownloadFailed(callback: Callback\\<WebDownloadItem>): void\n\n下载失败的通知。\n\n**系统能力：** SystemCapability."
+      }
+    ]
+  }
+}

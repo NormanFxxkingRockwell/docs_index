@@ -1,0 +1,124 @@
+{
+  "doc_id": "arkts-apis-data-relationalStore-f",
+  "title": "Functions",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-f.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-f.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 Functions，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Functions",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 18,
+        "summary": "```ts\nimport { relationalStore } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "relationalStore.getRdbStore",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 124,
+        "summary": "getRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback&lt;RdbStore&gt;): void"
+      },
+      {
+        "section_id": "section-3",
+        "title": "relationalStore.getRdbStore",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 229,
+        "summary": "getRdbStore(context: Context, config: StoreConfig): Promise&lt;RdbStore&gt;\n\n创建或打开已有的关系型数据库，开发者可以根据"
+      },
+      {
+        "section_id": "section-4",
+        "title": "relationalStore.deleteRdbStore",
+        "level": 2,
+        "line_start": 230,
+        "line_end": 303,
+        "summary": "deleteRdbStore(context: Context, name: string, callback: AsyncCallback&lt;void&gt;): void\n\n删除数据库文件，"
+      },
+      {
+        "section_id": "section-5",
+        "title": "relationalStore.deleteRdbStore",
+        "level": 2,
+        "line_start": 304,
+        "line_end": 378,
+        "summary": "deleteRdbStore(context: Context, name: string): Promise&lt;void&gt;\n\n使用指定的数据库文件配置删除数据库，使用Promise异步回"
+      },
+      {
+        "section_id": "section-6",
+        "title": "relationalStore.deleteRdbStore<sup>10+</sup>",
+        "level": 2,
+        "line_start": 379,
+        "line_end": 463,
+        "summary": "deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback\\<void>): void\n\n使用指定的数"
+      },
+      {
+        "section_id": "section-7",
+        "title": "relationalStore.deleteRdbStore<sup>10+</sup>",
+        "level": 2,
+        "line_start": 464,
+        "line_end": 549,
+        "summary": "deleteRdbStore(context: Context, config: StoreConfig): Promise\\<void>\n\n使用指定的数据库文件配置删除数据库，使用Promise异"
+      },
+      {
+        "section_id": "section-8",
+        "title": "relationalStore.isVectorSupported<sup>18+</sup>",
+        "level": 2,
+        "line_start": 550,
+        "line_end": 600,
+        "summary": "isVectorSupported(): boolean\n\n判断系统是否提供向量数据库能力。\n\n**系统能力：** SystemCapability.DistributedDataManager.R"
+      },
+      {
+        "section_id": "section-9",
+        "title": "relationalStore.isTokenizerSupported<sup>18+</sup>",
+        "level": 2,
+        "line_start": 601,
+        "line_end": 639,
+        "summary": "isTokenizerSupported(tokenizer: Tokenizer): boolean\n\n判断当前平台是否支持传入的分词器，此为同步接口。\n\n如果当前平台支持传入的分词器时，此接口返"
+      },
+      {
+        "section_id": "section-10",
+        "title": "relationalStore.getInsertSqlInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 640,
+        "line_end": 686,
+        "summary": "getInsertSqlInfo(table: string, values: ValuesBucket, conflict?: ConflictResolution): SqlInfo\n\n获取用于"
+      },
+      {
+        "section_id": "section-11",
+        "title": "relationalStore.getUpdateSqlInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 687,
+        "line_end": 734,
+        "summary": "getUpdateSqlInfo(predicates: RdbPredicates, values: ValuesBucket, conflict?: ConflictResolution): S"
+      },
+      {
+        "section_id": "section-12",
+        "title": "relationalStore.getDeleteSqlInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 735,
+        "line_end": 772,
+        "summary": "getDeleteSqlInfo(predicates: RdbPredicates): SqlInfo\n\n获取用于删除数据的SQL语句，此为同步接口。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-13",
+        "title": "relationalStore.getQuerySqlInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 773,
+        "line_end": 811,
+        "summary": "getQuerySqlInfo(predicates: RdbPredicates, columns?: Array\\<string>): SqlInfo\n\n获取用于查询数据的SQL语句，此为同步接"
+      }
+    ]
+  }
+}

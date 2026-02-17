@@ -1,0 +1,348 @@
+{
+  "doc_id": "js-apis-inputmethod",
+  "title": "@ohos.inputMethod (输入法框架)",
+  "path": "zh-cn/application-dev/reference/apis-ime-kit/js-apis-inputmethod.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ime-kit/js-apis-inputmethod.md",
+  "metadata": {
+    "kit": "IME Kit",
+    "subsystem": "MiscServices",
+    "owner": "@illybyy",
+    "designer": "@andeszhang",
+    "tester": "@murphy84",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "IME Kit MiscServices 模块的 @ohos.inputMethod (输入法框架)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.inputMethod (输入法框架)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { inputMethod } from '@kit.IMEKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "常量",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 31,
+        "summary": "常量值。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 参数名 | 类型 | 常量值 | 说明 |\n| -----"
+      },
+      {
+        "section_id": "section-3",
+        "title": "InputMethodProperty<sup>8+</sup>",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 50,
+        "summary": "输入法应用属性。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |"
+      },
+      {
+        "section_id": "section-4",
+        "title": "CapitalizeMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 63,
+        "summary": "枚举，定义了文本首字母大写的不同模式。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 值 | 说明 |"
+      },
+      {
+        "section_id": "section-5",
+        "title": "inputMethod.getController<sup>9+</sup>",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 91,
+        "summary": "getController(): InputMethodController\n\n获取客户端实例[InputMethodController](#inputmethodcontroller)。\n\n**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "inputMethod.getDefaultInputMethod<sup>11+</sup>",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 119,
+        "summary": "getDefaultInputMethod(): InputMethodProperty\n\n获取默认输入法。\n\n**系统能力：** SystemCapability.MiscServices.Inp"
+      },
+      {
+        "section_id": "section-7",
+        "title": "inputMethod.getSystemInputMethodConfigAbility<sup>11+</sup>",
+        "level": 2,
+        "line_start": 120,
+        "line_end": 149,
+        "summary": "getSystemInputMethodConfigAbility(): ElementName\n\n获取系统输入法设置界面Ability信息。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-8",
+        "title": "inputMethod.getSetting<sup>9+</sup>",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 177,
+        "summary": "getSetting(): InputMethodSetting\n\n获取客户端设置实例[InputMethodSetting](#inputmethodsetting8)。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-9",
+        "title": "inputMethod.switchInputMethod<sup>9+</sup>",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 229,
+        "summary": "switchInputMethod(target: InputMethodProperty, callback: AsyncCallback&lt;boolean&gt;): void\n\n切换输入法"
+      },
+      {
+        "section_id": "section-10",
+        "title": "inputMethod.switchInputMethod<sup>9+</sup>",
+        "level": 2,
+        "line_start": 230,
+        "line_end": 283,
+        "summary": "switchInputMethod(target: InputMethodProperty): Promise&lt;boolean&gt;\n\n切换输入法，使用promise异步回调。\n> **说明："
+      },
+      {
+        "section_id": "section-11",
+        "title": "inputMethod.getCurrentInputMethod<sup>9+</sup>",
+        "level": 2,
+        "line_start": 284,
+        "line_end": 303,
+        "summary": "getCurrentInputMethod(): InputMethodProperty\n\n使用同步方法获取当前输入法。\n\n**系统能力：** SystemCapability.MiscServic"
+      },
+      {
+        "section_id": "section-12",
+        "title": "inputMethod.switchCurrentInputMethodSubtype<sup>9+</sup>",
+        "level": 2,
+        "line_start": 304,
+        "line_end": 367,
+        "summary": "switchCurrentInputMethodSubtype(target: InputMethodSubtype, callback: AsyncCallback\\<boolean>): voi"
+      },
+      {
+        "section_id": "section-13",
+        "title": "inputMethod.switchCurrentInputMethodSubtype<sup>9+</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 434,
+        "summary": "switchCurrentInputMethodSubtype(target: InputMethodSubtype): Promise&lt;boolean&gt;\n\n切换当前输入法的子类型。使用"
+      },
+      {
+        "section_id": "section-14",
+        "title": "inputMethod.getCurrentInputMethodSubtype<sup>9+</sup>",
+        "level": 2,
+        "line_start": 435,
+        "line_end": 456,
+        "summary": "getCurrentInputMethodSubtype(): InputMethodSubtype\n\n获取当前输入法的子类型。\n\n**系统能力：** SystemCapability.MiscSe"
+      },
+      {
+        "section_id": "section-15",
+        "title": "inputMethod.switchCurrentInputMethodAndSubtype<sup>9+</sup>",
+        "level": 2,
+        "line_start": 457,
+        "line_end": 512,
+        "summary": "switchCurrentInputMethodAndSubtype(inputMethodProperty: InputMethodProperty, inputMethodSubtype: In"
+      },
+      {
+        "section_id": "section-16",
+        "title": "inputMethod.switchCurrentInputMethodAndSubtype<sup>9+</sup>",
+        "level": 2,
+        "line_start": 513,
+        "line_end": 571,
+        "summary": "switchCurrentInputMethodAndSubtype(inputMethodProperty: InputMethodProperty, inputMethodSubtype: In"
+      },
+      {
+        "section_id": "section-17",
+        "title": "inputMethod.getInputMethodController<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 572,
+        "line_end": 595,
+        "summary": "getInputMethodController(): InputMethodController\n\n获取客户端实例[InputMethodController](#inputmethodcontr"
+      },
+      {
+        "section_id": "section-18",
+        "title": "inputMethod.getInputMethodSetting<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 596,
+        "line_end": 619,
+        "summary": "getInputMethodSetting(): InputMethodSetting\n\n获取客户端设置实例[InputMethodSetting](#inputmethodsetting8)。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "inputMethod.setSimpleKeyboardEnabled<sup>20+</sup>",
+        "level": 2,
+        "line_start": 620,
+        "line_end": 640,
+        "summary": "setSimpleKeyboardEnabled(enable: boolean): void\n\n编辑框应用设置简单键盘标志。\n\n**系统能力：** SystemCapability.MiscSer"
+      },
+      {
+        "section_id": "section-20",
+        "title": "inputMethod.onAttachmentDidFail<sup>22+</sup>",
+        "level": 2,
+        "line_start": 641,
+        "line_end": 669,
+        "summary": "onAttachmentDidFail(callback: Callback&lt;AttachFailureReason&gt;): void\n\n订阅绑定失败事件。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-21",
+        "title": "inputMethod.offAttachmentDidFail<sup>22+</sup>",
+        "level": 2,
+        "line_start": 670,
+        "line_end": 699,
+        "summary": "offAttachmentDidFail(callback?:  Callback&lt;AttachFailureReason&gt;): void\n\n取消订阅绑定失败事件。使用callback异"
+      },
+      {
+        "section_id": "section-22",
+        "title": "TextInputType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 700,
+        "line_end": 723,
+        "summary": "文本输入类型。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 值 |说明 |\n| -------- |"
+      },
+      {
+        "section_id": "section-23",
+        "title": "EnterKeyType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 724,
+        "line_end": 741,
+        "summary": "Enter键的功能类型。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 值 |说明 |\n| ------"
+      },
+      {
+        "section_id": "section-24",
+        "title": "KeyboardStatus<sup>10+</sup>",
+        "level": 2,
+        "line_start": 742,
+        "line_end": 753,
+        "summary": "输入法软键盘状态。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 值 |说明 |\n| --------"
+      },
+      {
+        "section_id": "section-25",
+        "title": "Direction<sup>10+</sup>",
+        "level": 2,
+        "line_start": 754,
+        "line_end": 766,
+        "summary": "光标移动方向。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 值 |说明 |\n| -------- |"
+      },
+      {
+        "section_id": "section-26",
+        "title": "ExtendAction<sup>10+</sup>",
+        "level": 2,
+        "line_start": 767,
+        "line_end": 779,
+        "summary": "编辑框中文本的扩展编辑操作类型，如剪切、复制等。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 值 |说"
+      },
+      {
+        "section_id": "section-27",
+        "title": "FunctionKey<sup>10+</sup>",
+        "level": 2,
+        "line_start": 780,
+        "line_end": 789,
+        "summary": "输入法功能键类型。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |"
+      },
+      {
+        "section_id": "section-28",
+        "title": "InputAttribute<sup>10+</sup>",
+        "level": 2,
+        "line_start": 790,
+        "line_end": 802,
+        "summary": "编辑框属性，包含文本输入类型和Enter键功能类型。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-29",
+        "title": "TextConfig<sup>10+</sup>",
+        "level": 2,
+        "line_start": 803,
+        "line_end": 817,
+        "summary": "编辑框的配置信息。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |"
+      },
+      {
+        "section_id": "section-30",
+        "title": "CursorInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 818,
+        "line_end": 830,
+        "summary": "光标信息。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -"
+      },
+      {
+        "section_id": "section-31",
+        "title": "Range<sup>10+</sup>",
+        "level": 2,
+        "line_start": 831,
+        "line_end": 841,
+        "summary": "文本的选中范围。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |"
+      },
+      {
+        "section_id": "section-32",
+        "title": "Movement<sup>10+</sup>",
+        "level": 2,
+        "line_start": 842,
+        "line_end": 851,
+        "summary": "选中文本时，光标移动的方向。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 类型 | 只读 | 可选 |"
+      },
+      {
+        "section_id": "section-33",
+        "title": "InputWindowInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 852,
+        "line_end": 866,
+        "summary": "输入法软键盘的窗口信息。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 类型 | 只读 | 可选 | 说"
+      },
+      {
+        "section_id": "section-34",
+        "title": "EnabledState<sup>15+</sup>",
+        "level": 2,
+        "line_start": 867,
+        "line_end": 878,
+        "summary": "输入法启用状态。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 值 |说明 |\n| -------- |"
+      },
+      {
+        "section_id": "section-35",
+        "title": "RequestKeyboardReason<sup>15+</sup>",
+        "level": 2,
+        "line_start": 879,
+        "line_end": 891,
+        "summary": "请求键盘输入的原因。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 值 |说明 |\n| --------"
+      },
+      {
+        "section_id": "section-36",
+        "title": "MessageHandler<sup>15+</sup>",
+        "level": 2,
+        "line_start": 892,
+        "line_end": 970,
+        "summary": "自定义通信对象。\n\n> **说明：**\n>\n> 开发者可通过注册此对象来接收输入法应用发送的自定义通信数据，接收到自定义通信数据时会触发此对象中[onMessage](#onmessage15)回调"
+      },
+      {
+        "section_id": "section-37",
+        "title": "SetPreviewTextCallback<sup>17+</sup>",
+        "level": 2,
+        "line_start": 971,
+        "line_end": 985,
+        "summary": "type SetPreviewTextCallback = (text: string, range: Range) => void\n\n当输入法框架需要显示预览文本时触发的回调。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-38",
+        "title": "AttachFailureReason<sup>22+</sup>",
+        "level": 2,
+        "line_start": 986,
+        "line_end": 997,
+        "summary": "枚举，绑定失败的原因。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramework\n\n| 名称 | 值 |说明 |\n| -------"
+      },
+      {
+        "section_id": "section-39",
+        "title": "AttachOptions<sup>23+</sup>",
+        "level": 2,
+        "line_start": 998,
+        "line_end": 1010,
+        "summary": "绑定输入法的附加选项。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability.MiscServices.InputMethodFramew"
+      },
+      {
+        "section_id": "section-40",
+        "title": "InputMethodController",
+        "level": 2,
+        "line_start": 1011,
+        "line_end": 3287,
+        "summary": "下列API示例中都需使用[getController](#inputmethodgetcontroller9)获取到InputMethodController实例，再通过实例调用对应方法。\n\n###"
+      },
+      {
+        "section_id": "section-41",
+        "title": "InputMethodSetting<sup>8+</sup>",
+        "level": 2,
+        "line_start": 3288,
+        "line_end": 3997,
+        "summary": "下列API均需使用[getSetting](#inputmethodgetsetting9)获取到InputMethodSetting实例后，通过实例调用。\n\n### on('imeChange')"
+      }
+    ]
+  }
+}

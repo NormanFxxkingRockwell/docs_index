@@ -1,0 +1,164 @@
+{
+  "doc_id": "js-apis-file-volumemanager-sys",
+  "title": "@ohos.file.volumeManager (卷管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-volumemanager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-volumemanager-sys.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@wang_zhangjun; @gzhuangzhuang",
+    "designer": "@wang_zhangjun; @gzhuangzhuang; @renguang1116",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.file.volumeManager (卷管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.volumeManager (卷管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { volumeManager } from '@kit.CoreFileKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "volumemanager.getAllVolumes",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 62,
+        "summary": "getAllVolumes(): Promise&lt;Array&lt;Volume&gt;&gt;\n\n异步获取当前外置存储中所有卷设备信息，使用Promise异步回调。\n\n**系统接口**：此接"
+      },
+      {
+        "section_id": "section-3",
+        "title": "volumemanager.getAllVolumes",
+        "level": 2,
+        "line_start": 63,
+        "line_end": 101,
+        "summary": "getAllVolumes(callback: AsyncCallback&lt;Array&lt;Volume&gt;&gt;): void\n\n异步获取当前外置存储中所有卷设备信息，使用callb"
+      },
+      {
+        "section_id": "section-4",
+        "title": "volumemanager.mount",
+        "level": 2,
+        "line_start": 102,
+        "line_end": 153,
+        "summary": "mount(volumeId: string): Promise&lt;void&gt;\n\n异步挂载指定卷设备，使用Promise异步回调。当前仅支持vfat、exfat以及ntfs三种文件系统的卷"
+      },
+      {
+        "section_id": "section-5",
+        "title": "volumemanager.mount",
+        "level": 2,
+        "line_start": 154,
+        "line_end": 198,
+        "summary": "mount(volumeId: string, callback:AsyncCallback&lt;void&gt;):void\n\n异步挂载指定卷设备，使用callback异步回调。当前仅支持vfa"
+      },
+      {
+        "section_id": "section-6",
+        "title": "volumemanager.unmount",
+        "level": 2,
+        "line_start": 199,
+        "line_end": 250,
+        "summary": "unmount(volumeId: string): Promise&lt;void&gt;\n\n异步卸载指定卷设备，使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权"
+      },
+      {
+        "section_id": "section-7",
+        "title": "volumemanager.unmount",
+        "level": 2,
+        "line_start": 251,
+        "line_end": 295,
+        "summary": "unmount(volumeId: string, callback: AsyncCallback&lt;void&gt;): void\n\n异步卸载指定卷设备，使用callback异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-8",
+        "title": "volumemanager.getVolumeByUuid",
+        "level": 2,
+        "line_start": 296,
+        "line_end": 344,
+        "summary": "getVolumeByUuid(uuid: string): Promise&lt;Volume&gt;\n\n异步通过卷设备uuid获得指定卷设备信息，使用Promise异步回调。\n\n**系统接口**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "volumemanager.getVolumeByUuid",
+        "level": 2,
+        "line_start": 345,
+        "line_end": 386,
+        "summary": "getVolumeByUuid(uuid: string, callback: AsyncCallback&lt;Volume&gt;): void\n\n异步通过卷设备uuid获得指定卷设备信息，使用"
+      },
+      {
+        "section_id": "section-10",
+        "title": "volumemanager.getVolumeById",
+        "level": 2,
+        "line_start": 387,
+        "line_end": 435,
+        "summary": "getVolumeById(volumeId: string): Promise&lt;Volume&gt;\n\n异步通过卷设备id获得指定卷设备信息，使用Promise异步回调。\n\n**系统接口**"
+      },
+      {
+        "section_id": "section-11",
+        "title": "volumemanager.getVolumeById",
+        "level": 2,
+        "line_start": 436,
+        "line_end": 477,
+        "summary": "getVolumeById(volumeId: string, callback: AsyncCallback&lt;Volume&gt;): void\n\n异步通过指定卷设备id获得卷设备信息，使用"
+      },
+      {
+        "section_id": "section-12",
+        "title": "volumemanager.setVolumeDescription",
+        "level": 2,
+        "line_start": 478,
+        "line_end": 530,
+        "summary": "setVolumeDescription(uuid: string, description: string): Promise&lt;void&gt;\n\n异步修改指定卷设备描述，使用Promise"
+      },
+      {
+        "section_id": "section-13",
+        "title": "volumemanager.setVolumeDescription",
+        "level": 2,
+        "line_start": 531,
+        "line_end": 576,
+        "summary": "setVolumeDescription(uuid: string, description: string, callback: AsyncCallback&lt;void&gt;): void"
+      },
+      {
+        "section_id": "section-14",
+        "title": "volumemanager.format",
+        "level": 2,
+        "line_start": 577,
+        "line_end": 629,
+        "summary": "format(volumeId: string, fsType: string): Promise&lt;void&gt;\n\n异步对指定卷设备进行格式化，使用Promise异步回调。当前仅支持vfa"
+      },
+      {
+        "section_id": "section-15",
+        "title": "volumemanager.format",
+        "level": 2,
+        "line_start": 630,
+        "line_end": 675,
+        "summary": "format(volumeId: string, fsType: string, callback: AsyncCallback&lt;void&gt;): void\n\n异步对指定卷设备进行格式化，"
+      },
+      {
+        "section_id": "section-16",
+        "title": "volumemanager.partition",
+        "level": 2,
+        "line_start": 676,
+        "line_end": 726,
+        "summary": "partition(diskId: string, type: number): Promise&lt;void&gt;\n\n异步对磁盘设备进行分区，使用Promise异步回调。当前仅支持将磁盘设备重"
+      },
+      {
+        "section_id": "section-17",
+        "title": "volumemanager.partition",
+        "level": 2,
+        "line_start": 727,
+        "line_end": 770,
+        "summary": "partition(diskId: string, type: number, callback: AsyncCallback&lt;void&gt;): void\n\n异步对磁盘进行分区，使用cal"
+      },
+      {
+        "section_id": "section-18",
+        "title": "Volume",
+        "level": 2,
+        "line_start": 771,
+        "line_end": 788,
+        "summary": "**系统接口**：此接口为系统接口。\n\n**系统能力**：以下各项对应的系统能力均为SystemCapability.FileManagement.StorageService.Volume。\n\n#"
+      }
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "doc_id": "js-apis-logs",
+  "title": "Console (控制台)",
+  "path": "zh-cn/application-dev/reference/common/js-apis-logs.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/common/js-apis-logs.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@yao_dashuai",
+    "designer": "@yao_dashuai",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 Console (控制台)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Console (控制台)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "console.debug",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 45,
+        "summary": "static debug(message: string, ...arguments: any[]): void\n\n以格式化输出方式打印调试信息。\n\n**卡片能力：** 从API version 9"
+      },
+      {
+        "section_id": "section-2",
+        "title": "console.log",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 76,
+        "summary": "static log(message: string, ...arguments: any[]): void\n\n以格式化输出方式打印日志信息。\n\n**卡片能力：** 从API version 9开始"
+      },
+      {
+        "section_id": "section-3",
+        "title": "console.info",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 107,
+        "summary": "static info(message: string, ...arguments: any[]): void\n\n以格式化输出方式打印日志信息。(console.log()的别名）。\n\n**卡片能力"
+      },
+      {
+        "section_id": "section-4",
+        "title": "console.warn",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 138,
+        "summary": "static warn(message: string, ...arguments: any[]): void\n\n以格式化输出方式打印警告信息。\n\n**卡片能力：** 从API version 9开"
+      },
+      {
+        "section_id": "section-5",
+        "title": "console.error",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 169,
+        "summary": "static error(message: string, ...arguments: any[]): void\n\n以格式化输出方式打印错误信息。\n\n**卡片能力：** 从API version 9"
+      },
+      {
+        "section_id": "section-6",
+        "title": "console.assert<sup>10+</sup>",
+        "level": 2,
+        "line_start": 170,
+        "line_end": 207,
+        "summary": "static assert(value?: Object, ...arguments: Object[]): void\n\n断言打印。\n\n**原子化服务API：** 从API version 12开始"
+      },
+      {
+        "section_id": "section-7",
+        "title": "console.count<sup>10+</sup>",
+        "level": 2,
+        "line_start": 208,
+        "line_end": 248,
+        "summary": "static count(label?: string): void\n\n维护一个内部计数器，调用时，打印此标签名以及对应的计数次数。\n\n**原子化服务API：** 从API version 12开始"
+      },
+      {
+        "section_id": "section-8",
+        "title": "console.countReset<sup>10+</sup>",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 282,
+        "summary": "static countReset(label?: string): void\n\n清除指定标签名的计数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-9",
+        "title": "console.dir<sup>10+</sup>",
+        "level": 2,
+        "line_start": 283,
+        "line_end": 320,
+        "summary": "static dir(dir?: Object): void\n\n打印对象内容。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-10",
+        "title": "console.dirxml<sup>10+</sup>",
+        "level": 2,
+        "line_start": 321,
+        "line_end": 348,
+        "summary": "static dirxml(...arguments: Object[]): void \n\n此方法通过内部调用console.log()实现。此方法不会产生任何 XML 格式。使用方法与consol"
+      },
+      {
+        "section_id": "section-11",
+        "title": "console.group<sup>10+</sup>",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 380,
+        "summary": "static group(...arguments: Object[]): void\n\n默认将后续行的缩进增加两个空格。\n\n如果提供需要打印的信息，则首先打印信息，没有额外的缩进。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-12",
+        "title": "console.groupCollapsed<sup>10+</sup>",
+        "level": 2,
+        "line_start": 381,
+        "line_end": 410,
+        "summary": "static groupCollapsed(...arguments: Object[]): void\n\n使用与功能同console.group()一致。\n\n**原子化服务API：** 从API v"
+      },
+      {
+        "section_id": "section-13",
+        "title": "console.groupEnd<sup>10+</sup>",
+        "level": 2,
+        "line_start": 411,
+        "line_end": 433,
+        "summary": "static groupEnd(): void\n\n将后续行的缩进减少两个空格。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "console.table<sup>10+</sup>",
+        "level": 2,
+        "line_start": 434,
+        "line_end": 472,
+        "summary": "static table(tableData?: Object): void\n\n以表格形式打印数据。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "console.time<sup>10+</sup>",
+        "level": 2,
+        "line_start": 473,
+        "line_end": 502,
+        "summary": "static time(label?: string): void\n\n启动可用于计算操作持续时间的计时器。可使用console.timeEnd()关闭计时器并打印经过的时间(单位：ms)。\n\n**原"
+      },
+      {
+        "section_id": "section-16",
+        "title": "console.timeEnd<sup>10+</sup>",
+        "level": 2,
+        "line_start": 503,
+        "line_end": 534,
+        "summary": "static timeEnd(label?: string): void\n\n停止之前通过调用 console.time() 启动的计时器并将打印经过的时间(单位：ms)。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-17",
+        "title": "console.timeLog<sup>10+</sup>",
+        "level": 2,
+        "line_start": 535,
+        "line_end": 569,
+        "summary": "static timeLog(label?: string, ...arguments: Object[]): void\n\n对于先前通过调用 console.time() 启动的计时器，打印经过时间"
+      },
+      {
+        "section_id": "section-18",
+        "title": "console.trace<sup>10+</sup>",
+        "level": 2,
+        "line_start": 570,
+        "line_end": 596,
+        "summary": "static trace(...arguments: Object[]): void\n\n打印当前堆栈。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-19",
+        "title": "console.traceHybridStack<sup>12+</sup>",
+        "level": 2,
+        "line_start": 597,
+        "line_end": 613,
+        "summary": "static traceHybridStack(): void\n\n在主线程/worker线程中可打印当前线程混合堆栈信息。\n\n**原子化服务API：** 从API version 12开始，该接口支"
+      }
+    ]
+  }
+}

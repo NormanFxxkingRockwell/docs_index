@@ -1,0 +1,644 @@
+{
+  "doc_id": "arkts-basic-components-web-events",
+  "title": "事件",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-basic-components-web-events.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-basic-components-web-events.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@yp99ustc; @aohui; @zourongchun",
+    "designer": "@LongLie; @yaomingliu; @zhufenghao",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 事件，提供相关接口和功能说明。",
+  "structure": {
+    "title": "事件",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "onAlert",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 90,
+        "summary": "onAlert(callback: Callback\\<OnAlertEvent, boolean\\>)\n\n网页触发alert()告警弹窗时触发回调。若不调用[handleCancel](./ark"
+      },
+      {
+        "section_id": "section-2",
+        "title": "onBeforeUnload",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 175,
+        "summary": "onBeforeUnload(callback: Callback\\<OnBeforeUnloadEvent, boolean\\>)\n\n即将完成页面刷新或关闭当前页面时触发此回调。\n\n> **说明："
+      },
+      {
+        "section_id": "section-3",
+        "title": "onConfirm",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 264,
+        "summary": "onConfirm(callback: Callback\\<OnConfirmEvent, boolean\\>)\n\n网页调用confirm()告警时触发此回调。若不调用[handleCancel]("
+      },
+      {
+        "section_id": "section-4",
+        "title": "onPrompt<sup>9+</sup>",
+        "level": 2,
+        "line_start": 265,
+        "line_end": 383,
+        "summary": "onPrompt(callback: Callback\\<OnPromptEvent, boolean\\>)\n\n网页调用prompt()告警时触发此回调。若不调用[handleCancel](./a"
+      },
+      {
+        "section_id": "section-5",
+        "title": "onConsole",
+        "level": 2,
+        "line_start": 384,
+        "line_end": 445,
+        "summary": "onConsole(callback: Callback\\<OnConsoleEvent, boolean\\>)\n\n通知宿主应用JavaScript console消息。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-6",
+        "title": "onDownloadStart",
+        "level": 2,
+        "line_start": 446,
+        "line_end": 487,
+        "summary": "onDownloadStart(callback: Callback\\<OnDownloadStartEvent\\>)\n\n通知主应用开始下载一个文件。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-7",
+        "title": "onErrorReceive",
+        "level": 2,
+        "line_start": 488,
+        "line_end": 536,
+        "summary": "onErrorReceive(callback: Callback\\<OnErrorReceiveEvent\\>)\n\n网页加载遇到错误时触发该回调。主资源与子资源出错都会回调该接口，可以通过[isM"
+      },
+      {
+        "section_id": "section-8",
+        "title": "onHttpErrorReceive",
+        "level": 2,
+        "line_start": 537,
+        "line_end": 592,
+        "summary": "onHttpErrorReceive(callback: Callback\\<OnHttpErrorReceiveEvent\\>)\n\n网页加载资源遇到的HTTP错误（响应码>=400）时触发该回调。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "onPageBegin",
+        "level": 2,
+        "line_start": 593,
+        "line_end": 630,
+        "summary": "onPageBegin(callback: Callback\\<OnPageBeginEvent\\>)\n\n网页开始加载时触发该回调，且只在主frame触发，iframe或者frameset的内容加载"
+      },
+      {
+        "section_id": "section-10",
+        "title": "onPageEnd",
+        "level": 2,
+        "line_start": 631,
+        "line_end": 668,
+        "summary": "onPageEnd(callback: Callback\\<OnPageEndEvent\\>)\n\n网页加载完成时触发该回调，且只在主frame触发，iframe或者frameset的内容加载时不会触"
+      },
+      {
+        "section_id": "section-11",
+        "title": "onLoadStarted<sup>20+</sup>",
+        "level": 2,
+        "line_start": 669,
+        "line_end": 710,
+        "summary": "onLoadStarted(callback: Callback\\<OnLoadStartedEvent\\>)\n\n通知宿主应用页面开始加载。此方法在每次主frame加载时调用一次，因此对于包含ifr"
+      },
+      {
+        "section_id": "section-12",
+        "title": "onLoadFinished<sup>20+</sup>",
+        "level": 2,
+        "line_start": 711,
+        "line_end": 754,
+        "summary": "onLoadFinished(callback: Callback\\<OnLoadFinishedEvent\\>)\n\n通知宿主应用页面已加载完成。此方法仅在主frame加载完成时被调用。对于片段跳转"
+      },
+      {
+        "section_id": "section-13",
+        "title": "onProgressChange",
+        "level": 2,
+        "line_start": 755,
+        "line_end": 791,
+        "summary": "onProgressChange(callback: Callback\\<OnProgressChangeEvent\\>)\n\n网页加载进度变化时触发该回调。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-14",
+        "title": "onTitleReceive",
+        "level": 2,
+        "line_start": 792,
+        "line_end": 830,
+        "summary": "onTitleReceive(callback: Callback\\<OnTitleReceiveEvent\\>)\n\n当页面文档标题`<title>`元素发生变更时，触发回调。若当前页面未显示设置标"
+      },
+      {
+        "section_id": "section-15",
+        "title": "onRefreshAccessedHistory",
+        "level": 2,
+        "line_start": 831,
+        "line_end": 869,
+        "summary": "onRefreshAccessedHistory(callback: Callback\\<OnRefreshAccessedHistoryEvent\\>)\n\n导航完成时触发该回调，用于应用更新其访问"
+      },
+      {
+        "section_id": "section-16",
+        "title": "onRenderExited<sup>9+</sup>",
+        "level": 2,
+        "line_start": 870,
+        "line_end": 912,
+        "summary": "onRenderExited(callback: Callback\\<OnRenderExitedEvent\\>)\n\n应用渲染进程异常退出时触发该回调。\n\n多个Web组件可能共享单个渲染进程，每个受"
+      },
+      {
+        "section_id": "section-17",
+        "title": "onRenderProcessNotResponding<sup>12+</sup>",
+        "level": 2,
+        "line_start": 913,
+        "line_end": 953,
+        "summary": "onRenderProcessNotResponding(callback: OnRenderProcessNotRespondingCallback)\n\n渲染进程无响应时触发该回调函数。如果Web"
+      },
+      {
+        "section_id": "section-18",
+        "title": "onRenderProcessResponding<sup>12+</sup>",
+        "level": 2,
+        "line_start": 954,
+        "line_end": 989,
+        "summary": "onRenderProcessResponding(callback: OnRenderProcessRespondingCallback)\n\n渲染进程由无响应状态变回正常运行状态时触发该回调函数，"
+      },
+      {
+        "section_id": "section-19",
+        "title": "onShowFileSelector<sup>9+</sup>",
+        "level": 2,
+        "line_start": 990,
+        "line_end": 1146,
+        "summary": "onShowFileSelector(callback: Callback\\<OnShowFileSelectorEvent, boolean\\>)\n\n调用此函数以处理具有“文件”输入类型的HTML"
+      },
+      {
+        "section_id": "section-20",
+        "title": "onResourceLoad<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1147,
+        "line_end": 1182,
+        "summary": "onResourceLoad(callback: Callback\\<OnResourceLoadEvent\\>)\n\n通知Web组件所加载的资源文件url信息。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-21",
+        "title": "onScaleChange<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1183,
+        "line_end": 1218,
+        "summary": "onScaleChange(callback: Callback\\<OnScaleChangeEvent\\>)\n\n当页面显示比例发生变化时，触发该回调。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-22",
+        "title": "onInterceptRequest<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1219,
+        "line_end": 1294,
+        "summary": "onInterceptRequest(callback: Callback<OnInterceptRequestEvent, WebResourceResponse>)\n\n当Web组件加载URL之前"
+      },
+      {
+        "section_id": "section-23",
+        "title": "onHttpAuthRequest<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1295,
+        "line_end": 1361,
+        "summary": "onHttpAuthRequest(callback: Callback\\<OnHttpAuthRequestEvent, boolean\\>)\n\n通知收到http auth认证请求。\n\n**系统能"
+      },
+      {
+        "section_id": "section-24",
+        "title": "onSslErrorEventReceive<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1362,
+        "line_end": 1468,
+        "summary": "onSslErrorEventReceive(callback: Callback\\<OnSslErrorEventReceiveEvent\\>)\n\n通知用户加载资源时发生SSL错误，只支持主资源。"
+      },
+      {
+        "section_id": "section-25",
+        "title": "onSslErrorEvent<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1469,
+        "line_end": 1578,
+        "summary": "onSslErrorEvent(callback: OnSslErrorEventCallback)\n\n通知用户加载资源（主资源+子资源）时发生SSL错误，如果只想处理主资源的SSL错误，请用[is"
+      },
+      {
+        "section_id": "section-26",
+        "title": "onClientAuthenticationRequest<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1579,
+        "line_end": 1824,
+        "summary": "onClientAuthenticationRequest(callback: Callback\\<OnClientAuthenticationEvent\\>)\n\n通知用户收到SSL客户端证书请求事"
+      },
+      {
+        "section_id": "section-27",
+        "title": "onVerifyPin<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1825,
+        "line_end": 1929,
+        "summary": "onVerifyPin(callback: OnVerifyPinCallback)\n\n通知用户进行PIN码认证。使用callback异步回调。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-28",
+        "title": "onPermissionRequest<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1930,
+        "line_end": 2039,
+        "summary": "onPermissionRequest(callback: Callback\\<OnPermissionRequestEvent\\>)\n\n通知收到获取权限请求，需配置\"ohos.permission"
+      },
+      {
+        "section_id": "section-29",
+        "title": "onContextMenuShow<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2040,
+        "line_end": 2221,
+        "summary": "onContextMenuShow(callback: Callback\\<OnContextMenuShowEvent, boolean\\>)\n\n长按特定元素（例如图片，链接）或鼠标右键，跳出菜单"
+      },
+      {
+        "section_id": "section-30",
+        "title": "onContextMenuHide<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2222,
+        "line_end": 2257,
+        "summary": "onContextMenuHide(callback: OnContextMenuHideCallback)\n\n长按特定元素（例如图片，链接）或鼠标右键，隐藏菜单。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-31",
+        "title": "onScroll<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2258,
+        "line_end": 2302,
+        "summary": "onScroll(callback: Callback\\<OnScrollEvent\\>)\n\n通知网页全局滚动位置。\n\n> **说明：**\n>\n> 通知的是页面全局滚动位置，局部滚动位置的变化是无法"
+      },
+      {
+        "section_id": "section-32",
+        "title": "onGeolocationShow",
+        "level": 2,
+        "line_start": 2303,
+        "line_end": 2400,
+        "summary": "onGeolocationShow(callback: Callback\\<OnGeolocationShowEvent\\>)\n\n通知用户收到地理位置信息获取请求，需配置\"ohos.permissi"
+      },
+      {
+        "section_id": "section-33",
+        "title": "onGeolocationHide",
+        "level": 2,
+        "line_start": 2401,
+        "line_end": 2437,
+        "summary": "onGeolocationHide(callback: () => void)\n\n通知用户先前被调用[onGeolocationShow](#ongeolocationshow)时收到地理位置信息获"
+      },
+      {
+        "section_id": "section-34",
+        "title": "onFullScreenEnter<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2438,
+        "line_end": 2477,
+        "summary": "onFullScreenEnter(callback: OnFullScreenEnterCallback)\n\n通知开发者Web组件进入全屏模式。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-35",
+        "title": "onFullScreenExit<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2478,
+        "line_end": 2520,
+        "summary": "onFullScreenExit(callback: () => void)\n\n通知开发者Web组件退出全屏模式。\n\n**系统能力：** SystemCapability.Web.Webview.C"
+      },
+      {
+        "section_id": "section-36",
+        "title": "onWindowNew<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2521,
+        "line_end": 2621,
+        "summary": "onWindowNew(callback: Callback\\<OnWindowNewEvent\\>)\n\n使能multiWindowAccess情况下，通知用户新建窗口请求。\n\n若不调用[setWe"
+      },
+      {
+        "section_id": "section-37",
+        "title": "onWindowNewExt<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2622,
+        "line_end": 2728,
+        "summary": "onWindowNewExt(callback: Callback\\<OnWindowNewExtEvent\\>)\n\n在启用[multiWindowAccess](./arkts-basic-com"
+      },
+      {
+        "section_id": "section-38",
+        "title": "onActivateContent<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2729,
+        "line_end": 2830,
+        "summary": "onActivateContent(callback: Callback\\<void>)\n\n当Web页面触发window.open(url, name)时，会根据name查找是否存在已绑定的Web实"
+      },
+      {
+        "section_id": "section-39",
+        "title": "onWindowExit<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2831,
+        "line_end": 2866,
+        "summary": "onWindowExit(callback: () => void)\n\n通知用户窗口关闭请求。和[onWindowNew](#onwindownew9)一样，从安全角度讲，应用应该确保用户可以知道他"
+      },
+      {
+        "section_id": "section-40",
+        "title": "onSearchResultReceive<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2867,
+        "line_end": 2905,
+        "summary": "onSearchResultReceive(callback: Callback\\<OnSearchResultReceiveEvent\\>)\n\n回调通知调用方网页页内查找的结果。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-41",
+        "title": "onDataResubmitted<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2906,
+        "line_end": 2969,
+        "summary": "onDataResubmitted(callback: Callback\\<OnDataResubmittedEvent\\>)\n\n设置网页表单可以重新提交时触发的回调函数。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-42",
+        "title": "onPageVisible<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2970,
+        "line_end": 3005,
+        "summary": "onPageVisible(callback: Callback\\<OnPageVisibleEvent\\>)\n\n设置旧页面不再呈现，新页面即将可见时触发的回调函数。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-43",
+        "title": "onInterceptKeyEvent<sup>9+</sup>",
+        "level": 2,
+        "line_start": 3006,
+        "line_end": 3045,
+        "summary": "onInterceptKeyEvent(callback: (event: KeyEvent) => boolean)\n\n设置键盘事件的回调函数，该回调在被Webview使用前触发。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-44",
+        "title": "onTouchIconUrlReceived<sup>9+</sup>",
+        "level": 2,
+        "line_start": 3046,
+        "line_end": 3081,
+        "summary": "onTouchIconUrlReceived(callback: Callback\\<OnTouchIconUrlReceivedEvent\\>)\n\n设置接收到apple-touch-icon ur"
+      },
+      {
+        "section_id": "section-45",
+        "title": "onFaviconReceived<sup>9+</sup>",
+        "level": 2,
+        "line_start": 3082,
+        "line_end": 3120,
+        "summary": "onFaviconReceived(callback: Callback\\<OnFaviconReceivedEvent\\>)\n\n设置应用为当前页面接收到新的favicon时的回调函数。\n\n**系统"
+      },
+      {
+        "section_id": "section-46",
+        "title": "onAudioStateChanged<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3121,
+        "line_end": 3158,
+        "summary": "onAudioStateChanged(callback: Callback\\<OnAudioStateChangedEvent\\>)\n\n设置网页上的音频播放状态发生改变时的回调函数。\n\n**系统能"
+      },
+      {
+        "section_id": "section-47",
+        "title": "onFirstContentfulPaint<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3159,
+        "line_end": 3198,
+        "summary": "onFirstContentfulPaint(callback: Callback\\<OnFirstContentfulPaintEvent\\>)\n\n设置网页首次内容绘制回调函数。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-48",
+        "title": "onFirstMeaningfulPaint<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3199,
+        "line_end": 3235,
+        "summary": "onFirstMeaningfulPaint(callback: [OnFirstMeaningfulPaintCallback](./arkts-basic-components-web-t.md"
+      },
+      {
+        "section_id": "section-49",
+        "title": "onLargestContentfulPaint<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3236,
+        "line_end": 3276,
+        "summary": "onLargestContentfulPaint(callback: [OnLargestContentfulPaintCallback](./arkts-basic-components-web-"
+      },
+      {
+        "section_id": "section-50",
+        "title": "onLoadIntercept<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3277,
+        "line_end": 3316,
+        "summary": "onLoadIntercept(callback: Callback\\<OnLoadInterceptEvent, boolean\\>)\n\n当Web组件加载url之前触发该回调，用于判断是否阻止此次"
+      },
+      {
+        "section_id": "section-51",
+        "title": "onRequestSelected",
+        "level": 2,
+        "line_start": 3317,
+        "line_end": 3351,
+        "summary": "onRequestSelected(callback: () => void)\n\n当Web组件获取焦点时触发回调。如果组件在未获焦状态下加载网页并成功获取焦点，将触发两次回调。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-52",
+        "title": "onScreenCaptureRequest<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3352,
+        "line_end": 3408,
+        "summary": "onScreenCaptureRequest(callback: Callback\\<OnScreenCaptureRequestEvent\\>)\n\n通知收到屏幕捕获请求。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-53",
+        "title": "onOverScroll<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3409,
+        "line_end": 3445,
+        "summary": "onOverScroll(callback: Callback\\<OnOverScrollEvent\\>)\n\n该接口在网页过度滚动时触发，用于通知网页过度滚动的偏移量。\n\n**系统能力：** Sys"
+      },
+      {
+        "section_id": "section-54",
+        "title": "onControllerAttached<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3446,
+        "line_end": 3525,
+        "summary": "onControllerAttached(callback: () => void)\n\n当Controller成功绑定到Web组件时触发该回调，并且该Controller必须为WebviewCont"
+      },
+      {
+        "section_id": "section-55",
+        "title": "onNavigationEntryCommitted<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3526,
+        "line_end": 3565,
+        "summary": "onNavigationEntryCommitted(callback: [OnNavigationEntryCommittedCallback](./arkts-basic-components-"
+      },
+      {
+        "section_id": "section-56",
+        "title": "onSafeBrowsingCheckResult<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3566,
+        "line_end": 3602,
+        "summary": "onSafeBrowsingCheckResult(callback: OnSafeBrowsingCheckResultCallback)\n\n收到网站安全风险检查结果时触发的回调。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-57",
+        "title": "onSafeBrowsingCheckFinish<sup>21+</sup>",
+        "level": 2,
+        "line_start": 3603,
+        "line_end": 3639,
+        "summary": "onSafeBrowsingCheckFinish(callback: OnSafeBrowsingCheckResultCallback)\n\n网站安全风险检查结束时触发的回调。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-58",
+        "title": "onNativeEmbedLifecycleChange<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3640,
+        "line_end": 3815,
+        "summary": "onNativeEmbedLifecycleChange(callback: (event: NativeEmbedDataInfo) => void)\n\n当同层标签生命周期变化时触发该回调。\n\n*"
+      },
+      {
+        "section_id": "section-59",
+        "title": "onNativeEmbedGestureEvent<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3816,
+        "line_end": 3975,
+        "summary": "onNativeEmbedGestureEvent(callback: (event: NativeEmbedTouchInfo) => void)\n\n当手指触摸到同层标签时触发该回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-60",
+        "title": "onIntelligentTrackingPreventionResult<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3976,
+        "line_end": 4022,
+        "summary": "onIntelligentTrackingPreventionResult(callback: OnIntelligentTrackingPreventionCallback)\n\n智能防跟踪功能使能"
+      },
+      {
+        "section_id": "section-61",
+        "title": "onOverrideUrlLoading<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4023,
+        "line_end": 4082,
+        "summary": "onOverrideUrlLoading(callback: OnOverrideUrlLoadingCallback)\n\n当URL将要加载到当前Web中时触发该回调，让宿主应用程序有机会获得控制权"
+      },
+      {
+        "section_id": "section-62",
+        "title": "onViewportFitChanged<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4083,
+        "line_end": 4140,
+        "summary": "onViewportFitChanged(callback: OnViewportFitChangedCallback)\n\n网页meta中viewport-fit配置项更改时触发该回调，应用可在此回"
+      },
+      {
+        "section_id": "section-63",
+        "title": "onInterceptKeyboardAttach<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4141,
+        "line_end": 4318,
+        "summary": "onInterceptKeyboardAttach(callback: WebKeyboardCallback)\n\n网页中可编辑元素（如input标签）拉起软键盘之前会回调该接口，应用可以使用该接口"
+      },
+      {
+        "section_id": "section-64",
+        "title": "onNativeEmbedVisibilityChange<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4319,
+        "line_end": 4461,
+        "summary": "onNativeEmbedVisibilityChange(callback: OnNativeEmbedVisibilityChangeCallback)\n\n当网页中同层标签（例如<embed\\>"
+      },
+      {
+        "section_id": "section-65",
+        "title": "onNativeEmbedMouseEvent<sup>20+</sup>",
+        "level": 2,
+        "line_start": 4462,
+        "line_end": 4607,
+        "summary": "onNativeEmbedMouseEvent(callback: MouseInfoCallback)\n\n在同层标签上执行以下行为时触发该回调：\n\n- 使用鼠标左键、中键、右键进行点击或长按。\n-"
+      },
+      {
+        "section_id": "section-66",
+        "title": "onNativeEmbedObjectParamChange<sup>21+</sup>",
+        "level": 2,
+        "line_start": 4608,
+        "line_end": 4752,
+        "summary": "onNativeEmbedObjectParamChange(callback: OnNativeEmbedObjectParamChangeCallback)\n\n当同层渲染object标签内嵌pa"
+      },
+      {
+        "section_id": "section-67",
+        "title": "onOverrideErrorPage<sup>20+</sup>",
+        "level": 2,
+        "line_start": 4753,
+        "line_end": 4801,
+        "summary": "onOverrideErrorPage(callback: OnOverrideErrorPageCallback)\n\n网页加载遇到错误时触发，只有主资源出错才会回调该接口，可以使用该接口自定义错误"
+      },
+      {
+        "section_id": "section-68",
+        "title": "onSslErrorReceive<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4802,
+        "line_end": 4819,
+        "summary": "onSslErrorReceive(callback: (event?: { handler: Function, error: object }) => void)\n\n通知用户加载资源时发生SSL"
+      },
+      {
+        "section_id": "section-69",
+        "title": "onFileSelectorShow<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4820,
+        "line_end": 4838,
+        "summary": "onFileSelectorShow(callback: (event?: { callback: Function, fileSelector: object }) => void)\n\n调用此函数"
+      },
+      {
+        "section_id": "section-70",
+        "title": "onUrlLoadIntercept<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4839,
+        "line_end": 4881,
+        "summary": "onUrlLoadIntercept(callback: (event?: { data:string | WebResourceRequest }) => boolean)\n\n当Web组件加载ur"
+      },
+      {
+        "section_id": "section-71",
+        "title": "onPdfLoadEvent<sup>20+</sup>",
+        "level": 2,
+        "line_start": 4882,
+        "line_end": 4918,
+        "summary": "onPdfLoadEvent(callback: Callback\\<OnPdfLoadEvent\\>)\n\n通知用户PDF页面加载状态，包括成功或失败。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-72",
+        "title": "onPdfScrollAtBottom<sup>20+</sup>",
+        "level": 2,
+        "line_start": 4919,
+        "line_end": 4955,
+        "summary": "onPdfScrollAtBottom(callback: Callback\\<OnPdfScrollEvent\\>)\n\n通知用户PDF页面已滚动到底。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-73",
+        "title": "onDetectedBlankScreen<sup>22+</sup>",
+        "level": 2,
+        "line_start": 4956,
+        "line_end": 5002,
+        "summary": "onDetectedBlankScreen(callback: OnDetectBlankScreenCallback)\n\nWeb组件检测到白屏时触发此回调。\n\n> **说明：**\n>\n> - 需配"
+      },
+      {
+        "section_id": "section-74",
+        "title": "onRenderExited<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 5003,
+        "line_end": 5026,
+        "summary": "onRenderExited(callback: (event?: { detail: object }) => boolean)\n\n应用渲染进程因错误或崩溃退出时触发回调。\n\n多个Web组件可能共"
+      },
+      {
+        "section_id": "section-75",
+        "title": "onCameraCaptureStateChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 5027,
+        "line_end": 5163,
+        "summary": "onCameraCaptureStateChange(callback: OnCameraCaptureStateChangeCallback)\n\n通知用户当前网页的摄像头状态，摄像头有三个状态，无"
+      },
+      {
+        "section_id": "section-76",
+        "title": "onMicrophoneCaptureStateChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 5164,
+        "line_end": 5306,
+        "summary": "onMicrophoneCaptureStateChange(callback: OnMicrophoneCaptureStateChangeCallback)\n\n通知用户当前网页中麦克风状态，麦克"
+      },
+      {
+        "section_id": "section-77",
+        "title": "onTextSelectionChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 5307,
+        "line_end": 5363,
+        "summary": "onTextSelectionChange(callback: TextSelectionChangeCallback)\n\n设置Web组件选区文本改变时的回调函数，使用callback异步回调。"
+      },
+      {
+        "section_id": "section-78",
+        "title": "onFirstScreenPaint<sup>23+</sup>",
+        "level": 2,
+        "line_start": 5364,
+        "line_end": 5410,
+        "summary": "onFirstScreenPaint(callback: OnFirstScreenPaintCallback)\n\n网页首屏渲染结束时触发此回调，使用callback异步回调。<br>\n\n> **说"
+      }
+    ]
+  }
+}

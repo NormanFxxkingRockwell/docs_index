@@ -1,0 +1,324 @@
+{
+  "doc_id": "js-apis-enterprise-systemManager",
+  "title": "@ohos.enterprise.systemManager （系统管理）",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-systemManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-systemManager.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.systemManager （系统管理），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.systemManager （系统管理）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { systemManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "systemManager.setNTPServer",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 77,
+        "summary": "setNTPServer(admin: Want, server: string): void\n\n设置NTP时间服务器。\n\n**需要权限：** ohos.permission.ENTERPRISE_"
+      },
+      {
+        "section_id": "section-3",
+        "title": "systemManager.getNTPServer",
+        "level": 2,
+        "line_start": 78,
+        "line_end": 131,
+        "summary": "getNTPServer(admin: Want): string\n\n获取NTP时间服务器信息。\n\n**需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTE"
+      },
+      {
+        "section_id": "section-4",
+        "title": "systemManager.setOtaUpdatePolicy",
+        "level": 2,
+        "line_start": 132,
+        "line_end": 247,
+        "summary": "setOtaUpdatePolicy(admin: Want, policy: OtaUpdatePolicy): void\n\n设置升级策略。内网升级场景下，需要先调用[systemManager."
+      },
+      {
+        "section_id": "section-5",
+        "title": "systemManager.getOtaUpdatePolicy",
+        "level": 2,
+        "line_start": 248,
+        "line_end": 301,
+        "summary": "getOtaUpdatePolicy(admin: Want): OtaUpdatePolicy\n\n查询升级策略。\n\n**需要权限：** ohos.permission.ENTERPRISE_MAN"
+      },
+      {
+        "section_id": "section-6",
+        "title": "systemManager.notifyUpdatePackages",
+        "level": 2,
+        "line_start": 302,
+        "line_end": 406,
+        "summary": "notifyUpdatePackages(admin: Want, packageInfo: UpdatePackageInfo): Promise&lt;void&gt;\n\n通知系统更新包信息。内"
+      },
+      {
+        "section_id": "section-7",
+        "title": "systemManager.getUpdateResult",
+        "level": 2,
+        "line_start": 407,
+        "line_end": 460,
+        "summary": "getUpdateResult(admin: Want, version: string): Promise&lt;UpdateResult&gt;\n\n获取系统更新结果。\n\n**需要权限：** oh"
+      },
+      {
+        "section_id": "section-8",
+        "title": "systemManager.getUpdateAuthData<sup>19+</sup>",
+        "level": 2,
+        "line_start": 461,
+        "line_end": 513,
+        "summary": "getUpdateAuthData(admin: Want): Promise&lt;string&gt;\n\n获取系统更新的鉴权数据，用于校验系统更新信息。使用Promise异步回调。\n\n**需要权"
+      },
+      {
+        "section_id": "section-9",
+        "title": "systemManager.addDisallowedNearLinkProtocols<sup>20+</sup>",
+        "level": 2,
+        "line_start": 514,
+        "line_end": 579,
+        "summary": "addDisallowedNearLinkProtocols(admin: Want, protocols: Array&lt;NearLinkProtocol&gt;, accountId: nu"
+      },
+      {
+        "section_id": "section-10",
+        "title": "systemManager.removeDisallowedNearLinkProtocols<sup>20+</sup>",
+        "level": 2,
+        "line_start": 580,
+        "line_end": 642,
+        "summary": "removeDisallowedNearLinkProtocols(admin: Want, protocols: Array&lt;NearLinkProtocol&gt;, accountId:"
+      },
+      {
+        "section_id": "section-11",
+        "title": "systemManager.getDisallowedNearLinkProtocols<sup>20+</sup>",
+        "level": 2,
+        "line_start": 643,
+        "line_end": 703,
+        "summary": "getDisallowedNearLinkProtocols(admin: Want, accountId: number): Array&lt;NearLinkProtocol&gt;\n\n获取指定"
+      },
+      {
+        "section_id": "section-12",
+        "title": "systemManager.setInstallLocalEnterpriseAppEnabled<sup>20+</sup>",
+        "level": 2,
+        "line_start": 704,
+        "line_end": 759,
+        "summary": "setInstallLocalEnterpriseAppEnabled(admin: Want, isEnable: boolean): void\n\n设置是否支持本地安装企业应用。设置为支持安装后，"
+      },
+      {
+        "section_id": "section-13",
+        "title": "systemManager.getInstallLocalEnterpriseAppEnabled<sup>20+</sup>",
+        "level": 2,
+        "line_start": 760,
+        "line_end": 816,
+        "summary": "getInstallLocalEnterpriseAppEnabled(admin: Want): boolean\n\n查询是否支持本地安装企业应用。\n\n**需要权限：** ohos.permissi"
+      },
+      {
+        "section_id": "section-14",
+        "title": "systemManager.setAutoUnlockAfterReboot<sup>20+</sup>",
+        "level": 2,
+        "line_start": 817,
+        "line_end": 870,
+        "summary": "setAutoUnlockAfterReboot(admin: Want, isAllowed: boolean): void\n\n设置设备重启自动解锁，仅针对无锁屏密码设备生效。\n\n**需要权限：*"
+      },
+      {
+        "section_id": "section-15",
+        "title": "systemManager.getAutoUnlockAfterReboot<sup>20+</sup>",
+        "level": 2,
+        "line_start": 871,
+        "line_end": 926,
+        "summary": "getAutoUnlockAfterReboot(admin: Want): boolean\n\n获取设备是否重启自动解锁。\n\n**需要权限：** ohos.permission.ENTERPRISE"
+      },
+      {
+        "section_id": "section-16",
+        "title": "systemManager.addKeyEventPolicies<sup>23+</sup>",
+        "level": 2,
+        "line_start": 927,
+        "line_end": 991,
+        "summary": "addKeyEventPolicies(admin: Want, keyPolicies: Array&lt;KeyEventPolicy&gt;): void\n\n添加按键事件处理策略。系统触发按键"
+      },
+      {
+        "section_id": "section-17",
+        "title": "systemManager.removeKeyEventPolicies<sup>23+</sup>",
+        "level": 2,
+        "line_start": 992,
+        "line_end": 1048,
+        "summary": "removeKeyEventPolicies(admin: Want, keyCodes: Array&lt;KeyCode&gt;): void\n\n删除按键事件处理策略。\n\n**需要权限：** o"
+      },
+      {
+        "section_id": "section-18",
+        "title": "systemManager.getKeyEventPolicies<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1049,
+        "line_end": 1105,
+        "summary": "getKeyEventPolicies(admin: Want): Array&lt;KeyEventPolicy&gt;\n\n获取按键事件处理策略。\n\n**需要权限：** ohos.permissi"
+      },
+      {
+        "section_id": "section-19",
+        "title": "systemManager.startCollectLog<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1106,
+        "line_end": 1170,
+        "summary": "startCollectLog(admin: Want): Promise&lt;void&gt;\n\n开始收集设备上已生成并存储至硬盘的[faultlog](../apis-performance-"
+      },
+      {
+        "section_id": "section-20",
+        "title": "systemManager.finishLogCollected<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1171,
+        "line_end": 1227,
+        "summary": "finishLogCollected(admin: Want): void\n\n删除本MDM应用在当前用户下收集到的设备日志。\n\n> **说明：**\n> \n> 在应用调用[startCollectLo"
+      },
+      {
+        "section_id": "section-21",
+        "title": "SystemUpdateInfo",
+        "level": 2,
+        "line_start": 1228,
+        "line_end": 1239,
+        "summary": "待更新的系统版本信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-22",
+        "title": "OtaUpdatePolicy",
+        "level": 2,
+        "line_start": 1240,
+        "line_end": 1255,
+        "summary": "升级策略。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称         | 类型     | 只读"
+      },
+      {
+        "section_id": "section-23",
+        "title": "PolicyType",
+        "level": 2,
+        "line_start": 1256,
+        "line_end": 1269,
+        "summary": "升级策略类型枚举。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称                |"
+      },
+      {
+        "section_id": "section-24",
+        "title": "UpdatePackageInfo",
+        "level": 2,
+        "line_start": 1270,
+        "line_end": 1282,
+        "summary": "系统更新包信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称                | 类"
+      },
+      {
+        "section_id": "section-25",
+        "title": "Package",
+        "level": 2,
+        "line_start": 1283,
+        "line_end": 1294,
+        "summary": "系统更新包详情。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称                | 类"
+      },
+      {
+        "section_id": "section-26",
+        "title": "PackageDescription",
+        "level": 2,
+        "line_start": 1295,
+        "line_end": 1304,
+        "summary": "系统更新包描述信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称                |"
+      },
+      {
+        "section_id": "section-27",
+        "title": "NotifyDescription",
+        "level": 2,
+        "line_start": 1305,
+        "line_end": 1315,
+        "summary": "企业自定义更新通知说明。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-28",
+        "title": "UpdateResult",
+        "level": 2,
+        "line_start": 1316,
+        "line_end": 1327,
+        "summary": "系统更新结果信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称                |"
+      },
+      {
+        "section_id": "section-29",
+        "title": "ErrorInfo",
+        "level": 2,
+        "line_start": 1328,
+        "line_end": 1338,
+        "summary": "系统更新错误信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称                |"
+      },
+      {
+        "section_id": "section-30",
+        "title": "PackageType",
+        "level": 2,
+        "line_start": 1339,
+        "line_end": 1348,
+        "summary": "系统更新包类型。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称                | 值"
+      },
+      {
+        "section_id": "section-31",
+        "title": "UpdateStatus",
+        "level": 2,
+        "line_start": 1349,
+        "line_end": 1362,
+        "summary": "系统更新状态。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称               | 值"
+      },
+      {
+        "section_id": "section-32",
+        "title": "NearLinkProtocol<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1363,
+        "line_end": 1375,
+        "summary": "星闪协议枚举。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**模型约束：** 此接口仅可在Stage模型下"
+      },
+      {
+        "section_id": "section-33",
+        "title": "KeyEventPolicy<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1376,
+        "line_end": 1388,
+        "summary": "按键事件处理策略。按键事件发生时，仅拦截响应已下发按键事件处理策略的按键。对于未下发按键事件处理策略的按键事件，系统执行原先的响应逻辑。\n\n**系统能力：** SystemCapability.Cu"
+      },
+      {
+        "section_id": "section-34",
+        "title": "KeyCode<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1389,
+        "line_end": 1405,
+        "summary": "按键编码。[添加按键事件策略](#systemmanageraddkeyeventpolicies23)、[删除按键事件策略](#systemmanagerremovekeyeventpolicie"
+      },
+      {
+        "section_id": "section-35",
+        "title": "KeyPolicy<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1406,
+        "line_end": 1418,
+        "summary": "按键策略。MDM应用下发按键策略的按键编码与系统按键事件匹配后的系统行为。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceMan"
+      },
+      {
+        "section_id": "section-36",
+        "title": "KeyEvent<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1419,
+        "line_end": 1433,
+        "summary": "按键事件。[EnterpriseAdminExtensionAbility.onKeyEvent](js-apis-EnterpriseAdminExtensionAbility.md#onkeye"
+      },
+      {
+        "section_id": "section-37",
+        "title": "KeyAction<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1434,
+        "line_end": 1447,
+        "summary": "按键动作。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**模型约束：** 此接口仅可在Stage模型下使用"
+      },
+      {
+        "section_id": "section-38",
+        "title": "KeyItem<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1448,
+        "line_end": 1460,
+        "summary": "其他按键信息。当前[KeyCode](#keycode23)事件发生时，其他已被按下的按键信息。\n\n**系统能力：** SystemCapability.Customization.Enterpri"
+      }
+    ]
+  }
+}

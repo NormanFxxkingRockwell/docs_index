@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-arkui-componentSnapshot",
+  "title": "@ohos.arkui.componentSnapshot (组件截图)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-componentSnapshot.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-componentSnapshot.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yihao-lin",
+    "designer": "@piggyguy",
+    "tester": "@songyanhong",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 @ohos.arkui.componentSnapshot (组件截图)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.arkui.componentSnapshot (组件截图)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 32,
+        "summary": "```ts\nimport { componentSnapshot } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "componentSnapshot.get<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 116,
+        "summary": "get(id: string, callback: AsyncCallback<image.PixelMap>, options?: SnapshotOptions): void\n\n获取已加载的组件"
+      },
+      {
+        "section_id": "section-3",
+        "title": "componentSnapshot.get<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 117,
+        "line_end": 204,
+        "summary": "get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>\n\n获取已加载的组件的截图，传入组件的[组件标识](arkui-"
+      },
+      {
+        "section_id": "section-4",
+        "title": "componentSnapshot.createFromBuilder<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 314,
+        "summary": "createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>, delay?: number,"
+      },
+      {
+        "section_id": "section-5",
+        "title": "componentSnapshot.createFromBuilder<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 315,
+        "line_end": 426,
+        "summary": "createFromBuilder(builder: CustomBuilder, delay?: number, checkImageStatus?: boolean, options?: Sna"
+      },
+      {
+        "section_id": "section-6",
+        "title": "componentSnapshot.getSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 427,
+        "line_end": 512,
+        "summary": "getSync(id: string, options?: SnapshotOptions): image.PixelMap\n\n获取已加载的组件的截图，传入组件的[组件标识](arkui-ts/ts"
+      },
+      {
+        "section_id": "section-7",
+        "title": "SnapshotOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 513,
+        "line_end": 524,
+        "summary": "**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称           | 类型            |    只读       |    可选"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ColorModeOptions<sup>23+</sup>",
+        "level": 2,
+        "line_start": 525,
+        "line_end": 584,
+        "summary": "定义截图时所使用的色彩空间。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.A"
+      },
+      {
+        "section_id": "section-9",
+        "title": "DynamicRangeModeOptions<sup>23+</sup>",
+        "level": 2,
+        "line_start": 585,
+        "line_end": 643,
+        "summary": "定义截图所使用的动态范围模式。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI."
+      },
+      {
+        "section_id": "section-10",
+        "title": "SnapshotRegionType<sup>15+</sup>",
+        "level": 2,
+        "line_start": 644,
+        "line_end": 658,
+        "summary": "type SnapshotRegionType =  SnapshotRegion | LocalizedSnapshotRegion\n\n表示组件截图区域，取值类型为下表中的任一类型。\n\n**原子化"
+      },
+      {
+        "section_id": "section-11",
+        "title": "SnapshotRegion<sup>15+</sup>",
+        "level": 2,
+        "line_start": 659,
+        "line_end": 673,
+        "summary": "定义组件截图的矩形区域。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-12",
+        "title": "LocalizedSnapshotRegion<sup>15+</sup>",
+        "level": 2,
+        "line_start": 674,
+        "line_end": 752,
+        "summary": "定义组件截图的矩形区域，start和end的值在布局方向为LTR时指定为left和right，在布局方向为RTL时指定为right和left。\n\n**原子化服务API：** 从API version"
+      }
+    ]
+  }
+}

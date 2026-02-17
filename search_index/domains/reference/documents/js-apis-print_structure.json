@@ -1,0 +1,404 @@
+{
+  "doc_id": "js-apis-print",
+  "title": "@ohos.print (打印)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-print.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-print.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Print",
+    "owner": "@guoshengbang",
+    "designer": "@gcw_4D6e0BBd",
+    "tester": "@guoshengbang",
+    "adviser": "@RayShih"
+  },
+  "summary": "Basic Services Kit Print 模块的 @ohos.print (打印)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.print (打印)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { print } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "PrintTask",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 368,
+        "summary": "打印任务完成后的事件监听回调接口类。\n\n### on\n\non(type: 'block', callback: Callback&lt;void&gt;): void\n\n注册打印任务阻塞的监听，使用"
+      },
+      {
+        "section_id": "section-3",
+        "title": "PrintDocumentAdapter<sup>11+</sup>",
+        "level": 2,
+        "line_start": 369,
+        "line_end": 478,
+        "summary": "第三方应用程序实现此接口来渲染要打印的文件。\n\n### onStartLayoutWrite<sup>11+</sup>\n\nonStartLayoutWrite(jobId: string, old"
+      },
+      {
+        "section_id": "section-4",
+        "title": "print.print<sup>10+</sup>",
+        "level": 2,
+        "line_start": 479,
+        "line_end": 524,
+        "summary": "print(files: Array&lt;string&gt;, callback: AsyncCallback&lt;PrintTask&gt;): void\n\n打印接口，传入文件进行打印，使用"
+      },
+      {
+        "section_id": "section-5",
+        "title": "print.print<sup>10+</sup>",
+        "level": 2,
+        "line_start": 525,
+        "line_end": 572,
+        "summary": "print(files: Array&lt;string&gt;): Promise&lt;PrintTask&gt;\n\n打印接口，传入文件进行打印，使用Promise异步回调。拉起系统打印预览界面"
+      },
+      {
+        "section_id": "section-6",
+        "title": "print.print<sup>11+</sup>",
+        "level": 2,
+        "line_start": 573,
+        "line_end": 635,
+        "summary": "print(files: Array&lt;string&gt;, context: Context, callback: AsyncCallback&lt;PrintTask&gt;): void"
+      },
+      {
+        "section_id": "section-7",
+        "title": "print.print<sup>11+</sup>",
+        "level": 2,
+        "line_start": 636,
+        "line_end": 700,
+        "summary": "print(files: Array&lt;string&gt;, context: Context): Promise&lt;PrintTask&gt;\n\n打印接口，传入文件进行打印，使用Prom"
+      },
+      {
+        "section_id": "section-8",
+        "title": "print.print<sup>11+</sup>",
+        "level": 2,
+        "line_start": 701,
+        "line_end": 780,
+        "summary": "print(jobName: string, printAdapter: PrintDocumentAdapter, printAttributes: PrintAttributes, contex"
+      },
+      {
+        "section_id": "section-9",
+        "title": "PrintAttributes<sup>11+</sup>",
+        "level": 2,
+        "line_start": 781,
+        "line_end": 796,
+        "summary": "定义打印参数的接口。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**属性：**\n| **名称** | **类型** | **只读** | *"
+      },
+      {
+        "section_id": "section-10",
+        "title": "PrintPageRange<sup>11+</sup>",
+        "level": 2,
+        "line_start": 797,
+        "line_end": 810,
+        "summary": "定义打印范围的接口。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**属性：**\n| **名称** | **类型** | **只读** | *"
+      },
+      {
+        "section_id": "section-11",
+        "title": "PrintPageSize<sup>11+</sup>",
+        "level": 2,
+        "line_start": 811,
+        "line_end": 826,
+        "summary": "定义打印页面尺寸的接口。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**属性：**\n| **名称** | **类型** | **只读** |"
+      },
+      {
+        "section_id": "section-12",
+        "title": "PrintDirectionMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 827,
+        "line_end": 838,
+        "summary": "打印纸张方向的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| --------"
+      },
+      {
+        "section_id": "section-13",
+        "title": "PrintColorMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 839,
+        "line_end": 849,
+        "summary": "打印色彩模式的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| --------"
+      },
+      {
+        "section_id": "section-14",
+        "title": "PrintDuplexMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 850,
+        "line_end": 861,
+        "summary": "打印单双面模式的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| -------"
+      },
+      {
+        "section_id": "section-15",
+        "title": "PrintPageType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 862,
+        "line_end": 882,
+        "summary": "打印纸张类型的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| --------"
+      },
+      {
+        "section_id": "section-16",
+        "title": "PrintDocumentAdapterState<sup>11+</sup>",
+        "level": 2,
+        "line_start": 883,
+        "line_end": 896,
+        "summary": "打印任务状态的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| --------"
+      },
+      {
+        "section_id": "section-17",
+        "title": "PrintFileCreationState<sup>11+</sup>",
+        "level": 2,
+        "line_start": 897,
+        "line_end": 908,
+        "summary": "打印文件创建状态的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| ------"
+      },
+      {
+        "section_id": "section-18",
+        "title": "PrinterState<sup>14+</sup>",
+        "level": 2,
+        "line_start": 909,
+        "line_end": 923,
+        "summary": "打印机状态的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| --------"
+      },
+      {
+        "section_id": "section-19",
+        "title": "PrintJobState<sup>14+</sup>",
+        "level": 2,
+        "line_start": 924,
+        "line_end": 937,
+        "summary": "打印任务状态的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| --------"
+      },
+      {
+        "section_id": "section-20",
+        "title": "PrintJobSubState<sup>14+</sup>",
+        "level": 2,
+        "line_start": 938,
+        "line_end": 979,
+        "summary": "打印任务子状态的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| -------"
+      },
+      {
+        "section_id": "section-21",
+        "title": "PrintErrorCode<sup>14+</sup>",
+        "level": 2,
+        "line_start": 980,
+        "line_end": 999,
+        "summary": "打印错误代码的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| --------"
+      },
+      {
+        "section_id": "section-22",
+        "title": "ApplicationEvent<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1000,
+        "line_end": 1011,
+        "summary": "打印应用事件的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| --------"
+      },
+      {
+        "section_id": "section-23",
+        "title": "print.addPrinterToDiscovery<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1012,
+        "line_end": 1062,
+        "summary": "addPrinterToDiscovery(printerInformation: PrinterInformation): Promise&lt;void&gt;\n\n添加打印机到系统打印机发现列表"
+      },
+      {
+        "section_id": "section-24",
+        "title": "print.updatePrinterInDiscovery<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1063,
+        "line_end": 1131,
+        "summary": "updatePrinterInDiscovery(printerInformation: PrinterInformation): Promise&lt;void&gt;\n\n更新打印机能力到系统打印"
+      },
+      {
+        "section_id": "section-25",
+        "title": "print.removePrinterFromDiscovery<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1132,
+        "line_end": 1174,
+        "summary": "removePrinterFromDiscovery(printerId: string): Promise&lt;void&gt;\n\n从系统打印机发现列表里移除打印机，使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-26",
+        "title": "print.getPrinterInformationById<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1175,
+        "line_end": 1217,
+        "summary": "getPrinterInformationById(printerId: string): Promise&lt;PrinterInformation&gt;\n\n根据打印机id获取打印机信息，使用P"
+      },
+      {
+        "section_id": "section-27",
+        "title": "PrinterInformation<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1218,
+        "line_end": 1237,
+        "summary": "定义打印机信息的接口。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**属性：**\n| **名称** | **类型** | **只读** |"
+      },
+      {
+        "section_id": "section-28",
+        "title": "PrinterCapabilities<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1238,
+        "line_end": 1254,
+        "summary": "定义打印机能力的接口。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**属性：**\n| **名称** | **类型** | **只读** |"
+      },
+      {
+        "section_id": "section-29",
+        "title": "PrintQuality<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1255,
+        "line_end": 1266,
+        "summary": "打印质量的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| -------- |"
+      },
+      {
+        "section_id": "section-30",
+        "title": "PrintOrientationMode<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1267,
+        "line_end": 1280,
+        "summary": "打印方向的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| -------- |"
+      },
+      {
+        "section_id": "section-31",
+        "title": "PrinterStatus<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1281,
+        "line_end": 1292,
+        "summary": "打印机状态的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| --------"
+      },
+      {
+        "section_id": "section-32",
+        "title": "PrinterPreferences<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1293,
+        "line_end": 1309,
+        "summary": "定义打印机首选项的接口。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**属性：**\n| **名称** | **类型** | **只读** |"
+      },
+      {
+        "section_id": "section-33",
+        "title": "PrinterEvent<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1310,
+        "line_end": 1324,
+        "summary": "打印机相关事件的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| -------"
+      },
+      {
+        "section_id": "section-34",
+        "title": "DefaultPrinterType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1325,
+        "line_end": 1335,
+        "summary": "默认打印类型的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| --------"
+      },
+      {
+        "section_id": "section-35",
+        "title": "print.getAddedPrinters<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1336,
+        "line_end": 1372,
+        "summary": "getAddedPrinters(): Promise&lt;Array&lt;string&gt;&gt;\n\n获取系统中已添加的打印机列表，使用Promise异步回调。\n\n**需要权限：** oh"
+      },
+      {
+        "section_id": "section-36",
+        "title": "PrinterChangeCallback<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1373,
+        "line_end": 1386,
+        "summary": "type PrinterChangeCallback = (event: PrinterEvent, printerInformation: PrinterInformation) => void"
+      },
+      {
+        "section_id": "section-37",
+        "title": "print.on<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1387,
+        "line_end": 1424,
+        "summary": "on(type: 'printerChange', callback: PrinterChangeCallback): void\n\n注册打印机变动事件回调，使用callback回调。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-38",
+        "title": "print.off<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1425,
+        "line_end": 1463,
+        "summary": "off(type: 'printerChange', callback?: PrinterChangeCallback): void\n\n取消注册打印机变动事件回调，使用callback回调。\n\n**"
+      },
+      {
+        "section_id": "section-39",
+        "title": "print.startDiscoverPrinter<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1464,
+        "line_end": 1506,
+        "summary": "startDiscoverPrinter(extensionList: Array&lt;string&gt;, callback: AsyncCallback&lt;void&gt;): void"
+      },
+      {
+        "section_id": "section-40",
+        "title": "print.startDiscoverPrinter<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1507,
+        "line_end": 1551,
+        "summary": "startDiscoverPrinter(extensionList: Array&lt;string&gt;): Promise&lt;void&gt;\n\n通过指定“打印扩展能力列表”来发现打印机"
+      },
+      {
+        "section_id": "section-41",
+        "title": "print.stopDiscoverPrinter<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1552,
+        "line_end": 1589,
+        "summary": "stopDiscoverPrinter(callback: AsyncCallback&lt;void&gt;): void\n\n停止发现打印机，使用callback异步回调。\n\n**需要权限：**"
+      },
+      {
+        "section_id": "section-42",
+        "title": "print.stopDiscoverPrinter<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1590,
+        "line_end": 1625,
+        "summary": "stopDiscoverPrinter(): Promise&lt;void&gt;\n\n停止发现打印机，使用Promise异步回调。\n\n**需要权限：** ohos.permission.MANAG"
+      },
+      {
+        "section_id": "section-43",
+        "title": "print.connectPrinter<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1626,
+        "line_end": 1665,
+        "summary": "connectPrinter(printerId: string, callback: AsyncCallback&lt;void&gt;): void\n\n通过打印机ID连接打印机，使用callba"
+      },
+      {
+        "section_id": "section-44",
+        "title": "print.connectPrinter<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1666,
+        "line_end": 1707,
+        "summary": "connectPrinter(printerId: string): Promise&lt;void&gt;\n\n通过打印机ID连接打印机，使用Promise异步回调。\n\n**需要权限：** ohos"
+      },
+      {
+        "section_id": "section-45",
+        "title": "startPrint<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1708,
+        "line_end": 1768,
+        "summary": "startPrint(job: PrintJobData): Promise&lt;void&gt;\n\n打印接口，传入文件或者二进制数据进行打印，使用Promise异步回调。\n\n**需要权限：**"
+      },
+      {
+        "section_id": "section-46",
+        "title": "PrintDocumentFormat<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1769,
+        "line_end": 1785,
+        "summary": "打印数据格式的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n| 名称 | 值"
+      },
+      {
+        "section_id": "section-47",
+        "title": "DocFlavor<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1786,
+        "line_end": 1798,
+        "summary": "打印数据来源形式的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n| 名称 |"
+      },
+      {
+        "section_id": "section-48",
+        "title": "printJobData<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1799,
+        "line_end": 1829,
+        "summary": "定义打印任务的接口。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n| 名称 | 类型"
+      }
+    ]
+  }
+}

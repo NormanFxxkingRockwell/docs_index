@@ -1,0 +1,260 @@
+{
+  "doc_id": "js-apis-net-sharing-sys",
+  "title": "@ohos.net.sharing (网络共享管理)（系统接口）",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-net-sharing-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-net-sharing-sys.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.sharing (网络共享管理)（系统接口），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.sharing (网络共享管理)（系统接口）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```js\nimport { sharing } from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "sharing.isSharingSupported",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 62,
+        "summary": "isSharingSupported(callback: AsyncCallback\\<boolean>): void\n\n判断是否支持网络共享，使用 callback 异步回调。\n\n**系统接口**"
+      },
+      {
+        "section_id": "section-3",
+        "title": "sharing.isSharingSupported",
+        "level": 2,
+        "line_start": 63,
+        "line_end": 106,
+        "summary": "isSharingSupported(): Promise\\<boolean>\n\n判断是否支持网络共享，使用 Promise 异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**："
+      },
+      {
+        "section_id": "section-4",
+        "title": "sharing.isSharing",
+        "level": 2,
+        "line_start": 107,
+        "line_end": 146,
+        "summary": "isSharing(callback: AsyncCallback\\<boolean>): void\n\n获取当前网络共享状态，使用 callback 异步回调。\n\n**系统接口**：此接口为系统接口"
+      },
+      {
+        "section_id": "section-5",
+        "title": "sharing.isSharing",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 190,
+        "summary": "isSharing(): Promise\\<boolean>\n\n获取当前网络共享状态，使用 Promise 异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：ohos.perm"
+      },
+      {
+        "section_id": "section-6",
+        "title": "sharing.startSharing",
+        "level": 2,
+        "line_start": 191,
+        "line_end": 237,
+        "summary": "startSharing(type: SharingIfaceType, callback: AsyncCallback\\<void>): void\n\n开启指定类型共享，使用 callback 异步"
+      },
+      {
+        "section_id": "section-7",
+        "title": "sharing.startSharing",
+        "level": 2,
+        "line_start": 238,
+        "line_end": 294,
+        "summary": "startSharing(type: SharingIfaceType): Promise\\<void>\n\n开启指定类型共享，使用 Promise 异步回调。\n\n**系统接口**：此接口为系统接口。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "sharing.stopSharing",
+        "level": 2,
+        "line_start": 295,
+        "line_end": 340,
+        "summary": "stopSharing(type: SharingIfaceType, callback: AsyncCallback\\<void>): void\n\n关闭指定类型共享，使用 callback 异步回"
+      },
+      {
+        "section_id": "section-9",
+        "title": "sharing.stopSharing",
+        "level": 2,
+        "line_start": 341,
+        "line_end": 396,
+        "summary": "stopSharing(type: SharingIfaceType): Promise\\<void>\n\n关闭指定类型共享，使用 Promise 异步回调。\n\n**系统接口**：此接口为系统接口。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "sharing.getStatsRxBytes",
+        "level": 2,
+        "line_start": 397,
+        "line_end": 436,
+        "summary": "getStatsRxBytes(callback: AsyncCallback\\<number>): void\n\n获取共享网络接收数据量，使用 callback 异步回调。\n\n**系统接口**：此接"
+      },
+      {
+        "section_id": "section-11",
+        "title": "sharing.getStatsRxBytes",
+        "level": 2,
+        "line_start": 437,
+        "line_end": 480,
+        "summary": "getStatsRxBytes(): Promise\\<number>\n\n获取共享网络接收数据量，使用 Promise 异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：oho"
+      },
+      {
+        "section_id": "section-12",
+        "title": "sharing.getStatsTxBytes",
+        "level": 2,
+        "line_start": 481,
+        "line_end": 520,
+        "summary": "getStatsTxBytes(callback: AsyncCallback\\<number>): void\n\n获取共享网络发送数据量，使用 callback 异步回调。\n\n**系统接口**：此接"
+      },
+      {
+        "section_id": "section-13",
+        "title": "sharing.getStatsTxBytes",
+        "level": 2,
+        "line_start": 521,
+        "line_end": 564,
+        "summary": "getStatsTxBytes(): Promise\\<number>\n\n获取共享网络发送数据量，使用 Promise 异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：oho"
+      },
+      {
+        "section_id": "section-14",
+        "title": "sharing.getStatsTotalBytes",
+        "level": 2,
+        "line_start": 565,
+        "line_end": 604,
+        "summary": "getStatsTotalBytes(callback: AsyncCallback\\<number>): void\n\n获取共享网络总数据量，使用 callback 异步回调。\n\n**系统接口**："
+      },
+      {
+        "section_id": "section-15",
+        "title": "sharing.getStatsTotalBytes",
+        "level": 2,
+        "line_start": 605,
+        "line_end": 648,
+        "summary": "getStatsTotalBytes(): Promise\\<number>\n\n获取共享网络总数据量，使用 Promise 异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：o"
+      },
+      {
+        "section_id": "section-16",
+        "title": "sharing.getSharingIfaces",
+        "level": 2,
+        "line_start": 649,
+        "line_end": 691,
+        "summary": "getSharingIfaces(state: SharingIfaceState, callback: AsyncCallback\\<Array\\<string>>): void\n\n获取指定状态的"
+      },
+      {
+        "section_id": "section-17",
+        "title": "sharing.getSharingIfaces",
+        "level": 2,
+        "line_start": 692,
+        "line_end": 743,
+        "summary": "getSharingIfaces(state: SharingIfaceState): Promise\\<Array\\<string>>\n\n获取指定状态的网卡名称列表，使用 Promise 异步回调"
+      },
+      {
+        "section_id": "section-18",
+        "title": "sharing.getSharingState",
+        "level": 2,
+        "line_start": 744,
+        "line_end": 786,
+        "summary": "getSharingState(type: SharingIfaceType, callback: AsyncCallback\\<SharingIfaceState\\>): void\n\n获取指定类型"
+      },
+      {
+        "section_id": "section-19",
+        "title": "sharing.getSharingState",
+        "level": 2,
+        "line_start": 787,
+        "line_end": 838,
+        "summary": "getSharingState(type: SharingIfaceType): Promise\\<SharingIfaceState\\>\n\n获取指定类型网络共享状态，使用 Promise 异步回调"
+      },
+      {
+        "section_id": "section-20",
+        "title": "sharing.getSharableRegexes",
+        "level": 2,
+        "line_start": 839,
+        "line_end": 881,
+        "summary": "getSharableRegexes(type: SharingIfaceType, callback: AsyncCallback\\<Array\\<string\\>\\>): void\n\n获取指定类"
+      },
+      {
+        "section_id": "section-21",
+        "title": "sharing.getSharableRegexes",
+        "level": 2,
+        "line_start": 882,
+        "line_end": 933,
+        "summary": "getSharableRegexes(type: SharingIfaceType): Promise\\<Array\\<string>>\n\n获取指定类型网卡名称正则表达式列表，使用 Promise"
+      },
+      {
+        "section_id": "section-22",
+        "title": "sharing.on('sharingStateChange')",
+        "level": 2,
+        "line_start": 934,
+        "line_end": 970,
+        "summary": "on(type: 'sharingStateChange', callback: Callback\\<boolean>): void\n\n注册网络共享状态变化事件，使用 callback 异步回调。"
+      },
+      {
+        "section_id": "section-23",
+        "title": "sharing.off('sharingStateChange')",
+        "level": 2,
+        "line_start": 971,
+        "line_end": 1007,
+        "summary": "off(type: 'sharingStateChange', callback?: Callback\\<boolean>): void\n\n注销网络共享状态变化事件，使用 callback 异步回调"
+      },
+      {
+        "section_id": "section-24",
+        "title": "sharing.on('interfaceSharingStateChange')",
+        "level": 2,
+        "line_start": 1008,
+        "line_end": 1044,
+        "summary": "on(type: 'interfaceSharingStateChange', callback: Callback\\<InterfaceSharingStateInfo\\>): void\n\n注册网"
+      },
+      {
+        "section_id": "section-25",
+        "title": "sharing.off('interfaceSharingStateChange')",
+        "level": 2,
+        "line_start": 1045,
+        "line_end": 1081,
+        "summary": "off(type: 'interfaceSharingStateChange', callback?: Callback\\<InterfaceSharingStateInfo\\>): void\n\n注"
+      },
+      {
+        "section_id": "section-26",
+        "title": "sharing.on('sharingUpstreamChange')",
+        "level": 2,
+        "line_start": 1082,
+        "line_end": 1118,
+        "summary": "on(type: 'sharingUpstreamChange', callback: Callback\\<NetHandle>): void\n\n注册上行网络变化事件，使用 callback 异步回"
+      },
+      {
+        "section_id": "section-27",
+        "title": "sharing.off('sharingUpstreamChange')",
+        "level": 2,
+        "line_start": 1119,
+        "line_end": 1155,
+        "summary": "off(type: 'sharingUpstreamChange', callback?: Callback\\<NetHandle>): void\n\n注销上行网络变化事件，使用 callback 异"
+      },
+      {
+        "section_id": "section-28",
+        "title": "InterfaceSharingStateInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1156,
+        "line_end": 1169,
+        "summary": "唤醒在网络共享模式下的变化时的监听器。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.NetShar"
+      },
+      {
+        "section_id": "section-29",
+        "title": "SharingIfaceState",
+        "level": 2,
+        "line_start": 1170,
+        "line_end": 1183,
+        "summary": "网络共享状态。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.NetSharing\n\n| 名称"
+      },
+      {
+        "section_id": "section-30",
+        "title": "SharingIfaceType",
+        "level": 2,
+        "line_start": 1184,
+        "line_end": 1197,
+        "summary": "网络共享类型。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.NetSharing\n\n| 名称"
+      }
+    ]
+  }
+}

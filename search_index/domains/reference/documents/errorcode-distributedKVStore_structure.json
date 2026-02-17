@@ -1,0 +1,60 @@
+{
+  "doc_id": "errorcode-distributedKVStore",
+  "title": "分布式键值数据库错误码",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@ding_dong_dong",
+    "designer": "@ding_dong_dong",
+    "tester": "@logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 分布式键值数据库错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "分布式键值数据库错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "15100001 超过最大订阅数量",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 32,
+        "summary": "**错误信息**\n\nOver max  limits.\n\n**错误描述**\n\n超过数据库订阅数目或者打开结果集数目最大支持上限。\n\n**可能原因**\n\n1.  在调用订阅数据库变化接口on时，对数据"
+      },
+      {
+        "section_id": "section-2",
+        "title": "15100002 打开已有数据库时参数配置发生变化",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 53,
+        "summary": "**错误信息**\n\nOpen existed database with changed options.\n\n**错误描述**\n\n该错误码表示在调用getKVStore接口打开已创建的数据库时，op"
+      },
+      {
+        "section_id": "section-3",
+        "title": "15100003 数据库损坏",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 72,
+        "summary": "**错误信息**\n\nDatabase corrupted.\n\n**错误描述**\n\n该错误码表示在调用数据库增、删、查、数据同步等接口时，数据库已损坏。\n\n**可能原因**\n\n调用数据库增、删、查、数"
+      },
+      {
+        "section_id": "section-4",
+        "title": "15100004 未找到相关数据",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 95,
+        "summary": "**错误信息**\n\nNot found.\n\n**错误描述**\n\n该错误码表示在调用数据库deleteKVStore、sync、get等接口时，未找到相关数据。\n\n**可能原因**\n\n在调用删除数据库"
+      },
+      {
+        "section_id": "section-5",
+        "title": "15100005 数据库或查询结果集已关闭",
+        "level": 2,
+        "line_start": 96,
+        "line_end": 114,
+        "summary": "**错误信息**\n\nDatabase or result set already closed.\n\n**错误描述**\n\n该错误码表示在调用数据库或查询结果集相关接口时，数据库或查询结果集为关闭状态。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "doc_id": "js-apis-bytrace",
+  "title": "@ohos.bytrace (性能打点)",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-bytrace.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-bytrace.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@qq_437963121",
+    "designer": "@kutcherzhou1; @MontSaintMichel",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.bytrace (性能打点)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bytrace (性能打点)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { bytrace } from '@kit.PerformanceAnalysisKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "bytrace.startTrace",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 49,
+        "summary": "startTrace(name: string, taskId: number, expectedTime?: number): void\n\n标记一个时间片跟踪任务的开始。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-3",
+        "title": "bytrace.finishTrace",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 96,
+        "summary": "finishTrace(name: string, taskId: number): void\n\n标记一个时间片跟踪事件的结束。\n\n> **说明：**\n>\n> finishTrace的name和ta"
+      },
+      {
+        "section_id": "section-4",
+        "title": "bytrace.traceByValue",
+        "level": 2,
+        "line_start": 97,
+        "line_end": 121,
+        "summary": "traceByValue(name: string, count: number): void\n\n标记预追踪耗时任务的数值变量，该变量的数值会不断变化。\n\n**系统能力**：SystemCapabi"
+      }
+    ]
+  }
+}

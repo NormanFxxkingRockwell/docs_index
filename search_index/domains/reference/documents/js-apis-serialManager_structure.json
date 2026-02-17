@@ -1,0 +1,172 @@
+{
+  "doc_id": "js-apis-serialManager",
+  "title": "@ohos.usbManager.serial (串口管理)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-serialManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-serialManager.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "USB",
+    "owner": "@hwymlgitcode",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Basic Services Kit USB 模块的 @ohos.usbManager.serial (串口管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.usbManager.serial (串口管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { serialManager } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "serialManager.getPortList",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 58,
+        "summary": "getPortList(): Readonly&lt;SerialPort&gt;[]\n\n查询串口设备清单，包括设备名称和对应的端口号。\n\n**系统能力：**  SystemCapability.U"
+      },
+      {
+        "section_id": "section-3",
+        "title": "serialManager.hasSerialRight",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 119,
+        "summary": "hasSerialRight(portId: number): boolean\n\n检查应用程序是否具有访问串口设备的权限。应用退出后再拉起时，需要重新申请授权。\n\n**系统能力：**  System"
+      },
+      {
+        "section_id": "section-4",
+        "title": "serialManager.requestSerialRight",
+        "level": 2,
+        "line_start": 120,
+        "line_end": 186,
+        "summary": "requestSerialRight(portId: number): Promise&lt;boolean&gt;\n\n请求应用程序访问串口设备的权限。应用退出自动移除对串口设备的访问权限，在应用重"
+      },
+      {
+        "section_id": "section-5",
+        "title": "serialManager.open",
+        "level": 2,
+        "line_start": 187,
+        "line_end": 256,
+        "summary": "open(portId: number): void\n\n打开串口设备。\n\n**系统能力：**  SystemCapability.USB.USBManager.Serial\n\n**参数：**\n\n|"
+      },
+      {
+        "section_id": "section-6",
+        "title": "serialManager.getAttribute",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 344,
+        "summary": "getAttribute(portId: number): Readonly&lt;SerialAttribute&gt;\n\n获取指定串口的配置参数。\n\n**系统能力：**  SystemCapab"
+      },
+      {
+        "section_id": "section-7",
+        "title": "serialManager.setAttribute",
+        "level": 2,
+        "line_start": 345,
+        "line_end": 429,
+        "summary": "setAttribute(portId: number, attribute: SerialAttribute): void\n\n设置串口的配置参数。如果未调用该方法，使用默认配置参数（波特率：960"
+      },
+      {
+        "section_id": "section-8",
+        "title": "serialManager.read",
+        "level": 2,
+        "line_start": 430,
+        "line_end": 516,
+        "summary": "read(portId: number, buffer: Uint8Array, timeout?: number): Promise&lt;number&gt;\n\n从串口设备异步读取数据。使用Pr"
+      },
+      {
+        "section_id": "section-9",
+        "title": "serialManager.readSync",
+        "level": 2,
+        "line_start": 517,
+        "line_end": 604,
+        "summary": "readSync(portId: number, buffer: Uint8Array, timeout?: number): number\n\n从串口设备同步读取数据。\n\n**系统能力：**  Sy"
+      },
+      {
+        "section_id": "section-10",
+        "title": "serialManager.write",
+        "level": 2,
+        "line_start": 605,
+        "line_end": 692,
+        "summary": "write(portId: number, buffer: Uint8Array, timeout?: number): Promise&lt;number&gt;\n\n向串口设备异步写入数据。使用P"
+      },
+      {
+        "section_id": "section-11",
+        "title": "serialManager.writeSync",
+        "level": 2,
+        "line_start": 693,
+        "line_end": 781,
+        "summary": "writeSync(portId: number, buffer: Uint8Array, timeout?: number): number\n\n向串口设备同步写数据。\n\n**系统能力：**  Sy"
+      },
+      {
+        "section_id": "section-12",
+        "title": "serialManager.close",
+        "level": 2,
+        "line_start": 782,
+        "line_end": 859,
+        "summary": "close(portId: number): void\n\n关闭串口。\n\n**系统能力：**  SystemCapability.USB.USBManager.Serial\n\n**参数：**\n\n| 参"
+      },
+      {
+        "section_id": "section-13",
+        "title": "serialManager.cancelSerialRight",
+        "level": 2,
+        "line_start": 860,
+        "line_end": 929,
+        "summary": "cancelSerialRight(portId: number): void\n\n移除应用程序运行时访问串口设备的权限。此接口会调用close关闭已打开的串口。\n\n**系统能力：**  System"
+      },
+      {
+        "section_id": "section-14",
+        "title": "SerialAttribute",
+        "level": 2,
+        "line_start": 930,
+        "line_end": 942,
+        "summary": "串口的配置参数。\n\n**系统能力：**  SystemCapability.USB.USBManager.Serial\n\n| 名称       |          类型        |  只读"
+      },
+      {
+        "section_id": "section-15",
+        "title": "SerialPort",
+        "level": 2,
+        "line_start": 943,
+        "line_end": 953,
+        "summary": "串口参数。\n\n**系统能力：**  SystemCapability.USB.USBManager.Serial\n\n| 名称     | 类型  |  只读 | 可选 | 说明    |\n|----"
+      },
+      {
+        "section_id": "section-16",
+        "title": "BaudRates",
+        "level": 2,
+        "line_start": 954,
+        "line_end": 992,
+        "summary": "表示波特率的枚举\n\n**系统能力：**  SystemCapability.USB.USBManager.Serial\n\n| 名称     | 值     | 说明    |\n|----------"
+      },
+      {
+        "section_id": "section-17",
+        "title": "DataBits",
+        "level": 2,
+        "line_start": 993,
+        "line_end": 1005,
+        "summary": "表示数据位宽的枚举\n\n**系统能力：**  SystemCapability.USB.USBManager.Serial\n\n| 名称     | 值     | 说明    |\n|---------"
+      },
+      {
+        "section_id": "section-18",
+        "title": "Parity",
+        "level": 2,
+        "line_start": 1006,
+        "line_end": 1019,
+        "summary": "表示校验位的校验方式的枚举\n\n**系统能力：**  SystemCapability.USB.USBManager.Serial\n\n| 名称     | 值     | 说明    |\n|-----"
+      },
+      {
+        "section_id": "section-19",
+        "title": "StopBits",
+        "level": 2,
+        "line_start": 1020,
+        "line_end": 1030,
+        "summary": "表示停止位宽的枚举\n\n**系统能力：**  SystemCapability.USB.USBManager.Serial\n\n| 名称     | 值     | 说明    |\n|---------"
+      }
+    ]
+  }
+}

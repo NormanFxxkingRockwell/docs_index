@@ -1,0 +1,76 @@
+{
+  "doc_id": "js-apis-enterprise-wifiManager-sys",
+  "title": "@ohos.enterprise.wifiManager（Wi-Fi管理）(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-wifiManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-wifiManager-sys.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.wifiManager（Wi-Fi管理）(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.wifiManager（Wi-Fi管理）(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { wifiManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "wifiManager.isWifiActive",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 80,
+        "summary": "isWifiActive(admin: Want, callback: AsyncCallback&lt;boolean&gt;): void\n\n查询当前设备的Wi-Fi开启状态。使用callbac"
+      },
+      {
+        "section_id": "section-3",
+        "title": "wifiManager.isWifiActive",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 138,
+        "summary": "isWifiActive(admin: Want): Promise&lt;boolean&gt;\n\n查询当前设备的Wi-Fi开启状态。使用Promise异步回调。\n\n**需要权限：** ohos."
+      },
+      {
+        "section_id": "section-4",
+        "title": "wifiManager.setWifiProfile",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 199,
+        "summary": "setWifiProfile(admin: Want, profile: WifiProfile, callback: AsyncCallback&lt;void&gt;): void\n\n为当前设备"
+      },
+      {
+        "section_id": "section-5",
+        "title": "wifiManager.setWifiProfile",
+        "level": 2,
+        "line_start": 200,
+        "line_end": 264,
+        "summary": "setWifiProfile(admin: Want, profile: WifiProfile): Promise&lt;void&gt;\n\n为当前设备配置Wi-Fi，使连接到指定网络。使用Pro"
+      },
+      {
+        "section_id": "section-6",
+        "title": "wifiManager.isWifiDisabled<sup>11+</sup>",
+        "level": 2,
+        "line_start": 265,
+        "line_end": 321,
+        "summary": "isWifiDisabled(admin: Want): boolean\n\n查询当前设备Wi-Fi是否被禁用。\n\n**需要权限：** ohos.permission.ENTERPRISE_MANAG"
+      },
+      {
+        "section_id": "section-7",
+        "title": "wifiManager.setWifiDisabled<sup>11+</sup>",
+        "level": 2,
+        "line_start": 322,
+        "line_end": 374,
+        "summary": "setWifiDisabled(admin: Want, disabled: boolean): void\n\n设置禁用Wi-Fi策略。\n\n**需要权限：** ohos.permission.ENTE"
+      }
+    ]
+  }
+}

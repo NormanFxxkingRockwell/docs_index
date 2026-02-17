@@ -1,0 +1,284 @@
+{
+  "doc_id": "js-apis-enterprise-networkManager",
+  "title": "@ohos.enterprise.networkManager（网络管理）",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-networkManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-networkManager.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.networkManager（网络管理），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.networkManager（网络管理）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { networkManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "networkManager.getAllNetworkInterfacesSync",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 80,
+        "summary": "getAllNetworkInterfacesSync(admin: Want): Array&lt;string&gt;\n\n获取所有激活的有线网络接口。\n\n**需要权限：** ohos.permi"
+      },
+      {
+        "section_id": "section-3",
+        "title": "networkManager.getIpAddressSync",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 137,
+        "summary": "getIpAddressSync(admin: Want, networkInterface: string): string\n\n根据网络接口获取设备IP地址。\n\n**需要权限：** ohos.pe"
+      },
+      {
+        "section_id": "section-4",
+        "title": "networkManager.getMacSync",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 194,
+        "summary": "getMacSync(admin: Want, networkInterface: string): string\n\n根据网络接口获取设备MAC地址。\n\n**需要权限：** ohos.permiss"
+      },
+      {
+        "section_id": "section-5",
+        "title": "networkManager.isNetworkInterfaceDisabledSync",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 251,
+        "summary": "isNetworkInterfaceDisabledSync(admin: Want, networkInterface: string): boolean\n\n查询指定网络接口是否被禁用。\n\n**需"
+      },
+      {
+        "section_id": "section-6",
+        "title": "networkManager.setNetworkInterfaceDisabledSync",
+        "level": 2,
+        "line_start": 252,
+        "line_end": 305,
+        "summary": "setNetworkInterfaceDisabledSync(admin: Want, networkInterface: string, isDisabled: boolean): void"
+      },
+      {
+        "section_id": "section-7",
+        "title": "networkManager.setGlobalProxySync",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 367,
+        "summary": "setGlobalProxySync(admin: Want, httpProxy: connection.HttpProxy): void\n\n设置网络全局代理。\n\n**需要权限：** ohos.p"
+      },
+      {
+        "section_id": "section-8",
+        "title": "networkManager.setGlobalProxyForAccount<sup>15+</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 432,
+        "summary": "setGlobalProxyForAccount(admin: Want, httpProxy: connection.HttpProxy, accountId: number): void\n\n设置"
+      },
+      {
+        "section_id": "section-9",
+        "title": "networkManager.getGlobalProxySync",
+        "level": 2,
+        "line_start": 433,
+        "line_end": 488,
+        "summary": "getGlobalProxySync(admin: Want): connection.HttpProxy\n\n获取网络全局代理。\n\n**需要权限：** ohos.permission.ENTERPR"
+      },
+      {
+        "section_id": "section-10",
+        "title": "networkManager.getGlobalProxyForAccount<sup>15+</sup>",
+        "level": 2,
+        "line_start": 489,
+        "line_end": 548,
+        "summary": "getGlobalProxyForAccount(admin: Want | null, accountId: number): connection.HttpProxy\n\n获取指定用户下的网络代理"
+      },
+      {
+        "section_id": "section-11",
+        "title": "networkManager.addFirewallRule",
+        "level": 2,
+        "line_start": 549,
+        "line_end": 621,
+        "summary": "addFirewallRule(admin: Want, firewallRule: FirewallRule): void\n\n为设备添加防火墙过滤规则。\n\nAPI version 21及之前版本，"
+      },
+      {
+        "section_id": "section-12",
+        "title": "networkManager.removeFirewallRule",
+        "level": 2,
+        "line_start": 622,
+        "line_end": 702,
+        "summary": "removeFirewallRule(admin: Want, firewallRule?: FirewallRule): void\n\n移除设备防火墙过滤规则。\n\nAPI version 21及之前"
+      },
+      {
+        "section_id": "section-13",
+        "title": "networkManager.getFirewallRules",
+        "level": 2,
+        "line_start": 703,
+        "line_end": 761,
+        "summary": "getFirewallRules(admin: Want): Array\\<FirewallRule>\n\n查询设备防火墙过滤规则。\n\nAPI version 21及之前版本，仅支持IPv4。从API"
+      },
+      {
+        "section_id": "section-14",
+        "title": "networkManager.addDomainFilterRule",
+        "level": 2,
+        "line_start": 762,
+        "line_end": 832,
+        "summary": "addDomainFilterRule(admin: Want, domainFilterRule: DomainFilterRule): void\n\n为设备添加域名过滤规则。\n\nAPI versi"
+      },
+      {
+        "section_id": "section-15",
+        "title": "networkManager.removeDomainFilterRule",
+        "level": 2,
+        "line_start": 833,
+        "line_end": 908,
+        "summary": "removeDomainFilterRule(admin: Want, domainFilterRule?: DomainFilterRule): void\n\n移除设备域名过滤规则。\n\nAPI ve"
+      },
+      {
+        "section_id": "section-16",
+        "title": "networkManager.getDomainFilterRules",
+        "level": 2,
+        "line_start": 909,
+        "line_end": 967,
+        "summary": "getDomainFilterRules(admin: Want): Array\\<DomainFilterRule>\n\n查询设备域名过滤规则。\n\nAPI version 21及之前版本，仅支持IP"
+      },
+      {
+        "section_id": "section-17",
+        "title": "networkManager.turnOnMobileData<sup>20+</sup>",
+        "level": 2,
+        "line_start": 968,
+        "line_end": 1017,
+        "summary": "turnOnMobileData(admin: Want, isForce: boolean): void\n\n开启移动数据网络。\n\n**需要权限：** ohos.permission.ENTERPR"
+      },
+      {
+        "section_id": "section-18",
+        "title": "networkManager.turnOffMobileData<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1018,
+        "line_end": 1066,
+        "summary": "turnOffMobileData(admin: Want): void\n\n关闭移动数据网络。\n\n**需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWOR"
+      },
+      {
+        "section_id": "section-19",
+        "title": "networkManager.addApn<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1067,
+        "line_end": 1123,
+        "summary": "addApn(admin: Want, apnInfo: Record\\<string, string>): void\n\n添加APN（Access Point Name，接入点名称）。\n\n**需要权"
+      },
+      {
+        "section_id": "section-20",
+        "title": "networkManager.deleteApn<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1124,
+        "line_end": 1174,
+        "summary": "deleteApn(admin: Want, apnId: string): void\n\n删除APN。\n\n**需要权限：** ohos.permission.ENTERPRISE_MANAGE_AP"
+      },
+      {
+        "section_id": "section-21",
+        "title": "networkManager.updateApn<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1175,
+        "line_end": 1233,
+        "summary": "updateApn(admin: Want, apnInfo: Record\\<string, string>, apnId: string): void\n\n更新APN。\n\n**需要权限：** oh"
+      },
+      {
+        "section_id": "section-22",
+        "title": "networkManager.setPreferredApn<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1234,
+        "line_end": 1284,
+        "summary": "setPreferredApn(admin: Want, apnId: string): void\n\n设置优选APN。\n\n**需要权限：** ohos.permission.ENTERPRISE_M"
+      },
+      {
+        "section_id": "section-23",
+        "title": "networkManager.queryApn<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1285,
+        "line_end": 1345,
+        "summary": "queryApn(admin: Want, apnInfo: Record\\<string, string>): Array\\<string>\n\n查询符合特定APN信息的APN ID。\n\n**需要权"
+      },
+      {
+        "section_id": "section-24",
+        "title": "networkManager.queryApn<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1346,
+        "line_end": 1400,
+        "summary": "queryApn(admin: Want, apnId: string): Record\\<string, string>\n\n查询特定APN的APN参数信息。\n\n**需要权限：** ohos.per"
+      },
+      {
+        "section_id": "section-25",
+        "title": "networkManager.setEthernetConfig<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1401,
+        "line_end": 1462,
+        "summary": "setEthernetConfig(admin: Want, networkInterface: string, config: InterfaceConfig): void\n\n设置特定以太网网络接"
+      },
+      {
+        "section_id": "section-26",
+        "title": "FirewallRule",
+        "level": 2,
+        "line_start": 1463,
+        "line_end": 1486,
+        "summary": "防火墙过滤规则。\n\nAPI version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。\n\n从API version 23开始，支持[LogType]"
+      },
+      {
+        "section_id": "section-27",
+        "title": "DomainFilterRule",
+        "level": 2,
+        "line_start": 1487,
+        "line_end": 1506,
+        "summary": "域名过滤规则。\n\nAPI version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。\n\n从API version 23开始，支持[LogType]("
+      },
+      {
+        "section_id": "section-28",
+        "title": "Direction",
+        "level": 2,
+        "line_start": 1507,
+        "line_end": 1519,
+        "summary": "规则链。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n| 名称   | 值   | 说明     |\n|"
+      },
+      {
+        "section_id": "section-29",
+        "title": "Action",
+        "level": 2,
+        "line_start": 1520,
+        "line_end": 1532,
+        "summary": "数据包的行为。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n| 名称  | 值   | 说明"
+      },
+      {
+        "section_id": "section-30",
+        "title": "Protocol",
+        "level": 2,
+        "line_start": 1533,
+        "line_end": 1546,
+        "summary": "网络协议。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n| 名称 | 值   | 说明"
+      },
+      {
+        "section_id": "section-31",
+        "title": "LogType<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1547,
+        "line_end": 1557,
+        "summary": "日志类型。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n| 名称  | 值   | 说明"
+      },
+      {
+        "section_id": "section-32",
+        "title": "InterfaceConfig<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1558,
+        "line_end": 1572,
+        "summary": "以太网的网络接口配置。仅支持IPv4。<br/>\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n| 名称"
+      },
+      {
+        "section_id": "section-33",
+        "title": "IpSetMode<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1573,
+        "line_end": 1585,
+        "summary": "以太网连接模式。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n| 名称 | 值   | 说明"
+      }
+    ]
+  }
+}

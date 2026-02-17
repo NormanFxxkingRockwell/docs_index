@@ -1,0 +1,148 @@
+{
+  "doc_id": "ts-universal-attributes-transformation",
+  "title": "图形变换",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@CCFFWW",
+    "designer": "@CCFFWW",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 图形变换，提供相关接口和功能说明。",
+  "structure": {
+    "title": "图形变换",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "rotate",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 38,
+        "summary": "rotate(value: RotateOptions): T\n\n设置组件旋转。\n\n**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API："
+      },
+      {
+        "section_id": "section-2",
+        "title": "rotate<sup>18+</sup>",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 62,
+        "summary": "rotate(options: Optional\\<RotateOptions>): T\n\n设置组件旋转。与[rotate](#rotate)相比，options参数新增了对undefined类型的"
+      },
+      {
+        "section_id": "section-3",
+        "title": "rotate<sup>20+</sup>",
+        "level": 2,
+        "line_start": 63,
+        "line_end": 86,
+        "summary": "rotate(options: Optional<RotateOptions | RotateAngleOptions>): T\n\n设置组件旋转效果。与[rotate](#rotate18)相比，o"
+      },
+      {
+        "section_id": "section-4",
+        "title": "translate",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 110,
+        "summary": "translate(value: TranslateOptions): T\n\n设置组件平移。\n\n**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中使用。\n\n**原子化"
+      },
+      {
+        "section_id": "section-5",
+        "title": "translate<sup>18+</sup>",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 134,
+        "summary": "translate(translate: Optional\\<TranslateOptions>): T\n\n设置组件平移。与[translate](#translate)相比，translate参数"
+      },
+      {
+        "section_id": "section-6",
+        "title": "scale",
+        "level": 2,
+        "line_start": 135,
+        "line_end": 158,
+        "summary": "scale(value: ScaleOptions): T\n\n设置组件缩放。\n\n**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "scale<sup>18+</sup>",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 182,
+        "summary": "scale(options: Optional\\<ScaleOptions>): T\n\n设置组件缩放。与[scale](#scale)相比，options参数新增了对undefined类型的支持。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "transform",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 204,
+        "summary": "transform(value: object): T\n\n可用于显示二维变换时的矩阵变换。包含三维变换时应使用[transform3D](#transform3d20)接口。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-9",
+        "title": "transform<sup>18+</sup>",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 226,
+        "summary": "transform(transform: Optional\\<object>): T\n\n可用于显示二维变换时的矩阵变换。包含三维变换时应使用[transform3D](#transform3d20)"
+      },
+      {
+        "section_id": "section-10",
+        "title": "transform3D<sup>20+</sup>",
+        "level": 2,
+        "line_start": 227,
+        "line_end": 248,
+        "summary": "transform3D(transform: Optional\\<Matrix4Transit>): T\n\n设置组件的三维变换矩阵。当涉及包含透视效果的三维变换时，transform接口显示效果可能"
+      },
+      {
+        "section_id": "section-11",
+        "title": "Matrix4Transit<sup>20+</sup>",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 260,
+        "summary": "type Matrix4Transit = Matrix4Transit\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-12",
+        "title": "RotateOptions对象说明",
+        "level": 2,
+        "line_start": 261,
+        "line_end": 279,
+        "summary": "组件旋转参数。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-13",
+        "title": "RotateAngleOptions<sup>20+</sup>对象说明",
+        "level": 2,
+        "line_start": 280,
+        "line_end": 298,
+        "summary": "指定各轴旋转角的旋转参数选项。\n\n**卡片能力：** 从API version 20开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 20开始，该接口支"
+      },
+      {
+        "section_id": "section-14",
+        "title": "TranslateOptions对象说明",
+        "level": 2,
+        "line_start": 299,
+        "line_end": 312,
+        "summary": "**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ScaleOptions对象说明",
+        "level": 2,
+        "line_start": 313,
+        "line_end": 332,
+        "summary": "**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-16",
+        "title": "示例",
+        "level": 2,
+        "line_start": 333,
+        "line_end": 584,
+        "summary": "### 示例1（为组件添加图形变换效果）\n\n该示例通过[rotate](#rotate)、[translate](#translate)、[scale](#scale)、[transform](#t"
+      }
+    ]
+  }
+}

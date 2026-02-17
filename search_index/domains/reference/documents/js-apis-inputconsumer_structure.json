@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-inputconsumer",
+  "title": "@ohos.multimodalInput.inputConsumer (全局快捷键)",
+  "path": "zh-cn/application-dev/reference/apis-input-kit/js-apis-inputconsumer.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-input-kit/js-apis-inputconsumer.md",
+  "metadata": {
+    "kit": "Input Kit",
+    "subsystem": "MultimodalInput",
+    "owner": "@zhaoxueyuan",
+    "designer": "@hanruofei",
+    "tester": "@Lyuxin",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Input Kit MultimodalInput 模块的 @ohos.multimodalInput.inputConsumer (全局快捷键)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalInput.inputConsumer (全局快捷键)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 25,
+        "summary": "```js\nimport { inputConsumer, KeyEvent } from '@kit.InputKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "HotkeyOptions",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 37,
+        "summary": "快捷键选项。\n\n**系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer\n\n| 名称        | 类型   | 只读   |"
+      },
+      {
+        "section_id": "section-3",
+        "title": "KeyPressedConfig<sup>16+</sup>",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 51,
+        "summary": "按键事件消费设置。\n\n**系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer\n\n**设备行为差异**：API version 2"
+      },
+      {
+        "section_id": "section-4",
+        "title": "inputConsumer.getAllSystemHotkeys",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 99,
+        "summary": "getAllSystemHotkeys(): Promise&lt;Array&lt;HotkeyOptions&gt;&gt;\n\n获取所有系统快捷键，使用Promise异步回调。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-5",
+        "title": "inputConsumer.on('hotkeyChange')",
+        "level": 2,
+        "line_start": 100,
+        "line_end": 161,
+        "summary": "on(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback: Callback&lt;HotkeyOptions&gt;): vo"
+      },
+      {
+        "section_id": "section-6",
+        "title": "inputConsumer.off('hotkeyChange')",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 250,
+        "summary": "off(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback?: Callback&lt;HotkeyOptions&gt;):"
+      },
+      {
+        "section_id": "section-7",
+        "title": "inputConsumer.on('keyPressed')<sup>16+</sup>",
+        "level": 2,
+        "line_start": 251,
+        "line_end": 309,
+        "summary": "on(type: 'keyPressed', options: KeyPressedConfig, callback: Callback&lt;KeyEvent&gt;): void\n\n订阅按键按下"
+      },
+      {
+        "section_id": "section-8",
+        "title": "inputConsumer.off('keyPressed')<sup>16+</sup>",
+        "level": 2,
+        "line_start": 310,
+        "line_end": 370,
+        "summary": "off(type: 'keyPressed', callback?: Callback&lt;KeyEvent&gt;): void\n\n取消对'keyPressed'事件的订阅，使用callback"
+      }
+    ]
+  }
+}

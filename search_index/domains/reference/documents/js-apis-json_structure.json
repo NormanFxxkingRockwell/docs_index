@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-json",
+  "title": "@ohos.util.json (JSON解析与生成)",
+  "path": "zh-cn/application-dev/reference/apis-arkts/js-apis-json.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/js-apis-json.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@xliu-huanwei; @shilei123; @huanghello",
+    "designer": "@yuanyao14",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 @ohos.util.json (JSON解析与生成)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.util.json (JSON解析与生成)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { JSON } from '@kit.ArkTS';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Transformer",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 47,
+        "summary": "type Transformer = (this: Object, key: string, value: Object) => Object | undefined | null\n\n用于转换结果函"
+      },
+      {
+        "section_id": "section-3",
+        "title": "BigIntMode",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 61,
+        "summary": "定义处理BigInt的模式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Utils.L"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ParseOptions",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 73,
+        "summary": "解析的选项，可定义处理BigInt的模式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-5",
+        "title": "JSON.parse",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 142,
+        "summary": "parse(text: string, reviver?: Transformer, options?: ParseOptions): Object | null\n\n解析JSON字符串生成ArkTS"
+      },
+      {
+        "section_id": "section-6",
+        "title": "JSON.stringify",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 216,
+        "summary": "stringify(value: Object, replacer?: (number | string)[] | null, space?: string | number): string\n\n该"
+      },
+      {
+        "section_id": "section-7",
+        "title": "JSON.stringify",
+        "level": 2,
+        "line_start": 217,
+        "line_end": 281,
+        "summary": "stringify(value: Object, replacer?: Transformer, space?: string | number): string\n\n该方法将一个ArkTS对象或数组"
+      },
+      {
+        "section_id": "section-8",
+        "title": "JSON.has",
+        "level": 2,
+        "line_start": 282,
+        "line_end": 325,
+        "summary": "has(obj: object, property: string): boolean\n\n检查ArkTS对象是否包含某种属性，可用于[JSON.parse](#jsonparse)解析JSON字符串"
+      },
+      {
+        "section_id": "section-9",
+        "title": "JSON.remove",
+        "level": 2,
+        "line_start": 326,
+        "line_end": 362,
+        "summary": "remove(obj: object, property: string): void\n\n从ArkTS对象中删除某种属性，可用于[JSON.parse](#jsonparse)解析JSON字符串之后"
+      }
+    ]
+  }
+}

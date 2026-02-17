@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-hiappevent",
+  "title": "@ohos.hiAppEvent (应用打点)",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hiappevent.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hiappevent.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@liujiaxing2024",
+    "designer": "@junjie_shi",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.hiAppEvent (应用打点)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.hiAppEvent (应用打点)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport hiAppEvent from '@ohos.hiAppEvent';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 54,
+        "summary": "开发者在使用应用事件打点功能前，需要首先了解应用事件相关的参数规格定义。\n\n**事件名称**\n\n事件名称为string类型，字符串非空且长度在48个字符以内，首字符必须为字母字符或$字符，中间字符必"
+      },
+      {
+        "section_id": "section-3",
+        "title": "hiAppEvent.write",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 93,
+        "summary": "write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback&lt;void&g"
+      },
+      {
+        "section_id": "section-4",
+        "title": "hiAppEvent.write",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 134,
+        "summary": "write(eventName: string, eventType: EventType, keyValues: object): Promise&lt;void&gt;\n\n应用事件打点方法，将事"
+      },
+      {
+        "section_id": "section-5",
+        "title": "hiAppEvent.configure",
+        "level": 2,
+        "line_start": 135,
+        "line_end": 170,
+        "summary": "configure(config: ConfigOption): boolean\n\n应用事件打点配置方法，可用于配置打点开关、文件目录存储限额大小等功能。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ConfigOption",
+        "level": 2,
+        "line_start": 171,
+        "line_end": 182,
+        "summary": "此接口提供了应用打点的配置选项。\n\n**系统能力：** SystemCapability.HiviewDFX.HiAppEvent\n\n| 名称       | 类型    | 只读 | 可选 | 说"
+      },
+      {
+        "section_id": "section-7",
+        "title": "EventType",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 196,
+        "summary": "事件类型枚举。\n\n**系统能力：** SystemCapability.HiviewDFX.HiAppEvent\n\n| 名称      | 值   | 说明           |\n| ------"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Event",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 209,
+        "summary": "此接口提供了所有预定义事件的事件名称常量。\n\n**系统能力：** SystemCapability.HiviewDFX.HiAppEvent\n\n| 名称                      |"
+      },
+      {
+        "section_id": "section-9",
+        "title": "Param",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 220,
+        "summary": "此接口提供了所有预定义参数的参数名称常量。\n\n**系统能力：** SystemCapability.HiviewDFX.HiAppEvent\n\n| 名称"
+      }
+    ]
+  }
+}

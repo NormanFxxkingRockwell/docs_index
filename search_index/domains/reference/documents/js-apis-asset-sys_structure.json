@@ -1,0 +1,76 @@
+{
+  "doc_id": "js-apis-asset-sys",
+  "title": "@ohos.security.asset (关键资产存储服务)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-asset-store-kit/js-apis-asset-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-asset-store-kit/js-apis-asset-sys.md",
+  "metadata": {
+    "kit": "Asset Store Kit",
+    "subsystem": "Security",
+    "owner": "@JeremyXu",
+    "designer": "@skye_you",
+    "tester": "@nacyli",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Asset Store Kit Security 模块的 @ohos.security.asset (关键资产存储服务)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.security.asset (关键资产存储服务)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```typescript\nimport { asset } from '@kit.AssetStoreKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "asset.addAsUser",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 94,
+        "summary": "addAsUser(userId: number, attributes: AssetMap): Promise\\<void>\n\n在指定用户空间中新增一条关键资产。使用Promise异步回调。\n\n设"
+      },
+      {
+        "section_id": "section-3",
+        "title": "asset.removeAsUser",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 158,
+        "summary": "removeAsUser(userId: number, query: AssetMap): Promise\\<void>\n\n从指定用户空间中删除符合条件的一条或多条关键资产。使用Promise异步"
+      },
+      {
+        "section_id": "section-4",
+        "title": "asset.updateAsUser",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 227,
+        "summary": "updateAsUser(userId: number, query: AssetMap, attributesToUpdate: AssetMap): Promise\\<void>\n\n在指定用户空"
+      },
+      {
+        "section_id": "section-5",
+        "title": "asset.preQueryAsUser",
+        "level": 2,
+        "line_start": 228,
+        "line_end": 294,
+        "summary": "preQueryAsUser(userId: number, query: AssetMap): Promise\\<Uint8Array>\n\n在指定用户空间中查询的预处理，用于需要用户认证的关键资产"
+      },
+      {
+        "section_id": "section-6",
+        "title": "asset.queryAsUser",
+        "level": 2,
+        "line_start": 295,
+        "line_end": 366,
+        "summary": "queryAsUser(userId: number, query: AssetMap): Promise\\<Array\\<AssetMap>>\n\n在指定用户空间中查询一条或多条符合条件的关键资产。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "asset.postQueryAsUser",
+        "level": 2,
+        "line_start": 367,
+        "line_end": 420,
+        "summary": "postQueryAsUser(userId: number, handle: AssetMap): Promise\\<void>\n\n在指定用户空间中查询的后置处理，用于需要用户认证的关键资产（与["
+      }
+    ]
+  }
+}

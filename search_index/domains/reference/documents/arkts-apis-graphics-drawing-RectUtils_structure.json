@@ -1,0 +1,204 @@
+{
+  "doc_id": "arkts-apis-graphics-drawing-RectUtils",
+  "title": "Class (RectUtils)",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-RectUtils.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-RectUtils.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphics 模块的 Class (RectUtils)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (RectUtils)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 33,
+        "summary": "```ts\nimport { drawing } from '@kit.ArkGraphics2D';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "makeEmpty<sup>20+</sup>",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 55,
+        "summary": "static makeEmpty(): common2D.Rect\n\n创建一个上下左右边界坐标都是0的矩形。\n\n**系统能力：** SystemCapability.Graphics.Drawing"
+      },
+      {
+        "section_id": "section-3",
+        "title": "makeLtrb<sup>20+</sup>",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 86,
+        "summary": "static makeLtrb(left: number, top: number, right: number, bottom: number): common2D.Rect\n\n创建指定上下左右边"
+      },
+      {
+        "section_id": "section-4",
+        "title": "makeCopy<sup>20+</sup>",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 120,
+        "summary": "static makeCopy(src: common2D.Rect): common2D.Rect\n\n拷贝一个矩形。\n\n**系统能力**：SystemCapability.Graphics.Dra"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getWidth<sup>20+</sup>",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 151,
+        "summary": "static getWidth(rect: common2D.Rect): number\n\n获取矩形的宽度。\n\n**系统能力：** SystemCapability.Graphics.Drawing"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getHeight<sup>20+</sup>",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 180,
+        "summary": "static getHeight(rect: common2D.Rect): number\n\n获取矩形的高度。\n\n**系统能力：** SystemCapability.Graphics.Drawin"
+      },
+      {
+        "section_id": "section-7",
+        "title": "centerX<sup>20+</sup>",
+        "level": 2,
+        "line_start": 181,
+        "line_end": 209,
+        "summary": "static centerX(rect: common2D.Rect): number\n\n获取矩形中心的横坐标。\n\n**系统能力：** SystemCapability.Graphics.Drawi"
+      },
+      {
+        "section_id": "section-8",
+        "title": "centerY<sup>20+</sup>",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 238,
+        "summary": "static centerY(rect: common2D.Rect): number\n\n获取矩形中心的纵坐标。\n\n**系统能力：** SystemCapability.Graphics.Drawi"
+      },
+      {
+        "section_id": "section-9",
+        "title": "contains<sup>20+</sup>",
+        "level": 2,
+        "line_start": 239,
+        "line_end": 270,
+        "summary": "static contains(rect: common2D.Rect, other: common2D.Rect): boolean\n\n判断一个矩形是否完全包含另外一个矩形。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-10",
+        "title": "contains<sup>20+</sup>",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 304,
+        "summary": "static contains(rect: common2D.Rect, left: number, top: number, right: number, bottom: number): boo"
+      },
+      {
+        "section_id": "section-11",
+        "title": "contains<sup>20+</sup>",
+        "level": 2,
+        "line_start": 305,
+        "line_end": 336,
+        "summary": "static contains(rect: common2D.Rect, x: number, y: number): boolean\n\n判断一个矩形是否完全包含一个点。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-12",
+        "title": "inset<sup>20+</sup>",
+        "level": 2,
+        "line_start": 337,
+        "line_end": 367,
+        "summary": "static inset(rect: common2D.Rect, left: number, top: number, right: number, bottom: number): void"
+      },
+      {
+        "section_id": "section-13",
+        "title": "intersect<sup>20+</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 403,
+        "summary": "static intersect(rect: common2D.Rect, other: common2D.Rect): boolean\n\n计算两个矩形的交集区域，并将交集结果更新到第一个入参代表的"
+      },
+      {
+        "section_id": "section-14",
+        "title": "isIntersect<sup>20+</sup>",
+        "level": 2,
+        "line_start": 404,
+        "line_end": 435,
+        "summary": "static isIntersect(rect: common2D.Rect, other: common2D.Rect): boolean\n\n判断两个矩形是否相交。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-15",
+        "title": "union<sup>20+</sup>",
+        "level": 2,
+        "line_start": 436,
+        "line_end": 464,
+        "summary": "static union(rect: common2D.Rect, other: common2D.Rect): void\n\n计算矩形的并集区域，并将并集结果更新到第一个入参表示的矩形区域。如果第一"
+      },
+      {
+        "section_id": "section-16",
+        "title": "isEmpty<sup>20+</sup>",
+        "level": 2,
+        "line_start": 465,
+        "line_end": 497,
+        "summary": "static isEmpty(rect: common2D.Rect): boolean\n\n判断矩形是否为空（左边界大于等于右边界或者上边界大于等于下边界）。\n\n**系统能力：** SystemCa"
+      },
+      {
+        "section_id": "section-17",
+        "title": "offset<sup>20+</sup>",
+        "level": 2,
+        "line_start": 498,
+        "line_end": 526,
+        "summary": "static offset(rect: common2D.Rect, dx: number, dy: number): void\n\n对矩形进行平移。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-18",
+        "title": "offsetTo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 527,
+        "line_end": 555,
+        "summary": "static offsetTo(rect: common2D.Rect, newLeft: number, newTop: number): void\n\n将矩形平移到指定位置。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-19",
+        "title": "setRect<sup>20+</sup>",
+        "level": 2,
+        "line_start": 556,
+        "line_end": 584,
+        "summary": "static setRect(rect: common2D.Rect, other: common2D.Rect): void\n\n使用另一个矩形对当前矩形进行赋值。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-20",
+        "title": "setLtrb<sup>20+</sup>",
+        "level": 2,
+        "line_start": 585,
+        "line_end": 615,
+        "summary": "static setLtrb(rect: common2D.Rect, left: number, top: number, right: number, bottom: number): void"
+      },
+      {
+        "section_id": "section-21",
+        "title": "setEmpty<sup>20+</sup>",
+        "level": 2,
+        "line_start": 616,
+        "line_end": 642,
+        "summary": "static setEmpty(rect: common2D.Rect): void\n\n将矩形的上下左右边界都设为0。\n\n**系统能力：** SystemCapability.Graphics.Dr"
+      },
+      {
+        "section_id": "section-22",
+        "title": "sort<sup>20+</sup>",
+        "level": 2,
+        "line_start": 643,
+        "line_end": 671,
+        "summary": "static sort(rect: common2D.Rect): void\n\n如果矩形存在反转的情况（即左边界大于右边界或上边界大于下边界），则对矩形的上下（左右）边界值进行交换，使得上边界小于下"
+      },
+      {
+        "section_id": "section-23",
+        "title": "isEqual<sup>20+</sup>",
+        "level": 2,
+        "line_start": 672,
+        "line_end": 702,
+        "summary": "static isEqual(rect: common2D.Rect, other: common2D.Rect): boolean\n\n判断两个矩形是否相等。\n\n**系统能力：** SystemCa"
+      }
+    ]
+  }
+}

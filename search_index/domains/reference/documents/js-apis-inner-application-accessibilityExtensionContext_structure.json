@@ -1,0 +1,188 @@
+{
+  "doc_id": "js-apis-inner-application-accessibilityExtensionContext",
+  "title": "AccessibilityExtensionContext (辅助功能扩展上下文)",
+  "path": "zh-cn/application-dev/reference/apis-accessibility-kit/js-apis-inner-application-accessibilityExtensionContext.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-accessibility-kit/js-apis-inner-application-accessibilityExtensionContext.md",
+  "metadata": {
+    "kit": "Accessibility Kit",
+    "subsystem": "BarrierFree",
+    "owner": "@qiiiiiiian",
+    "designer": "@z7o",
+    "tester": "@A_qqq",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Accessibility Kit BarrierFree 模块的 AccessibilityExtensionContext (辅助功能扩展上下文)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "AccessibilityExtensionContext (辅助功能扩展上下文)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 31,
+        "summary": "在使用AccessibilityExtensionContext的功能前，需要通过AccessibilityExtensionAbility子类实例获取AccessibilityExtensionC"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ElementAttributeValues",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 100,
+        "summary": "节点元素具备的属性名称及属性值类型信息。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.BarrierFree.Accessibili"
+      },
+      {
+        "section_id": "section-3",
+        "title": "FocusDirection",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 117,
+        "summary": "type FocusDirection = 'up' | 'down' | 'left' | 'right' | 'forward' | 'backward'\n\n表示查询下一焦点元素的方向。\n\n**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "FocusType",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 130,
+        "summary": "type FocusType = 'accessibility' | 'normal'\n\n表示查询焦点元素的类型。\n\n**系统能力**：SystemCapability.BarrierFree.Ac"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Rect",
+        "level": 2,
+        "line_start": 131,
+        "line_end": 143,
+        "summary": "表示矩形区域。\n\n**系统能力**：SystemCapability.BarrierFree.Accessibility.Core\n\n| 名称     | 类型     | 只读   | 可选"
+      },
+      {
+        "section_id": "section-6",
+        "title": "WindowType",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 156,
+        "summary": "type WindowType = 'application' | 'system'\n\n表示窗口的类型。\n\n**系统能力**：SystemCapability.BarrierFree.Accessi"
+      },
+      {
+        "section_id": "section-7",
+        "title": "AccessibilityExtensionContext.setTargetBundleName<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 201,
+        "summary": "setTargetBundleName(targetNames: Array\\<string>): Promise\\<void>;\n\n设置关注的目标包名，使用Promise异步回调。\n\n> **说明"
+      },
+      {
+        "section_id": "section-8",
+        "title": "AccessibilityExtensionContext.setTargetBundleName<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 202,
+        "line_end": 247,
+        "summary": "setTargetBundleName(targetNames: Array\\<string>, callback: AsyncCallback\\<void>): void;\n\n设置关注的目标包名，"
+      },
+      {
+        "section_id": "section-9",
+        "title": "AccessibilityExtensionContext.getFocusElement<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 248,
+        "line_end": 295,
+        "summary": "getFocusElement(isAccessibilityFocus?: boolean): Promise\\<AccessibilityElement>;\n\n获取焦点元素, 使用Promise"
+      },
+      {
+        "section_id": "section-10",
+        "title": "AccessibilityExtensionContext.getFocusElement<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 296,
+        "line_end": 340,
+        "summary": "getFocusElement(callback: AsyncCallback\\<AccessibilityElement>): void;\n\n获取焦点元素, 使用callback异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-11",
+        "title": "AccessibilityExtensionContext.getFocusElement<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 341,
+        "line_end": 387,
+        "summary": "getFocusElement(isAccessibilityFocus: boolean, callback: AsyncCallback\\<AccessibilityElement>): voi"
+      },
+      {
+        "section_id": "section-12",
+        "title": "AccessibilityExtensionContext.getWindowRootElement<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 388,
+        "line_end": 436,
+        "summary": "getWindowRootElement(windowId?: number): Promise\\<AccessibilityElement>;\n\n获取指定窗口的根节点元素, 使用Promise异步"
+      },
+      {
+        "section_id": "section-13",
+        "title": "AccessibilityExtensionContext.getWindowRootElement<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 437,
+        "line_end": 481,
+        "summary": "getWindowRootElement(callback: AsyncCallback\\<AccessibilityElement>): void;\n\n获取指定窗口的根节点元素, 使用callba"
+      },
+      {
+        "section_id": "section-14",
+        "title": "AccessibilityExtensionContext.getWindowRootElement<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 482,
+        "line_end": 528,
+        "summary": "getWindowRootElement(windowId: number, callback: AsyncCallback\\<AccessibilityElement>): void;\n\n获取指定"
+      },
+      {
+        "section_id": "section-15",
+        "title": "AccessibilityExtensionContext.getWindows<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 529,
+        "line_end": 574,
+        "summary": "getWindows(displayId?: number): Promise\\<Array\\<AccessibilityElement>>;\n\n获取指定屏幕中的所有窗口，使用Promise异步回调"
+      },
+      {
+        "section_id": "section-16",
+        "title": "AccessibilityExtensionContext.getWindows<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 575,
+        "line_end": 616,
+        "summary": "getWindows(callback: AsyncCallback\\<Array\\<AccessibilityElement>>): void;\n\n获取指定屏幕中的所有窗口，使用callback异"
+      },
+      {
+        "section_id": "section-17",
+        "title": "AccessibilityExtensionContext.getWindows<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 617,
+        "line_end": 660,
+        "summary": "getWindows(displayId: number, callback: AsyncCallback\\<Array\\<AccessibilityElement>>): void;\n\n获取指定屏"
+      },
+      {
+        "section_id": "section-18",
+        "title": "AccessibilityExtensionContext.injectGesture<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 661,
+        "line_end": 711,
+        "summary": "injectGesture(gesturePath: GesturePath): Promise\\<void>;\n\n> **说明：**\n>\n> 从API version 9开始支持，从API ver"
+      },
+      {
+        "section_id": "section-19",
+        "title": "AccessibilityExtensionContext.injectGesture<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 712,
+        "line_end": 758,
+        "summary": "injectGesture(gesturePath: GesturePath, callback: AsyncCallback\\<void>): void\n\n> **说明：**\n>\n> 从API v"
+      },
+      {
+        "section_id": "section-20",
+        "title": "AccessibilityExtensionContext.injectGestureSync<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 759,
+        "line_end": 798,
+        "summary": "injectGestureSync(gesturePath: GesturePath): void\n\n注入手势。\n\n> **说明：**\n>\n> 从API version 10开始支持，从API ve"
+      },
+      {
+        "section_id": "section-21",
+        "title": "AccessibilityElement<sup>9+</sup>",
+        "level": 2,
+        "line_start": 799,
+        "line_end": 1500,
+        "summary": "无障碍节点元素, 在调用AccessibilityElement的方法前，需要先通过[AccessibilityExtensionContext.getFocusElement() ](#acces"
+      }
+    ]
+  }
+}

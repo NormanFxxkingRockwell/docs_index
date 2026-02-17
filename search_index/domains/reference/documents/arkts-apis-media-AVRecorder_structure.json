@@ -1,0 +1,308 @@
+{
+  "doc_id": "arkts-apis-media-AVRecorder",
+  "title": "Interface (AVRecorder)",
+  "path": "zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-AVRecorder.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-AVRecorder.md",
+  "metadata": {
+    "kit": "Media Kit",
+    "subsystem": "Multimedia",
+    "owner": "@shiwei75",
+    "designer": "@HmQQQ",
+    "tester": "@xdlinc",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Kit Multimedia 模块的 Interface (AVRecorder)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AVRecorder)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { media } from '@kit.MediaKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 33,
+        "summary": "**系统能力：** SystemCapability.Multimedia.Media.AVRecorder\n\n| 名称    | 类型"
+      },
+      {
+        "section_id": "section-3",
+        "title": "prepare<sup>9+</sup>",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 104,
+        "summary": "prepare(config: AVRecorderConfig, callback: AsyncCallback\\<void>): void\n\n音视频录制的参数设置。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "prepare<sup>9+</sup>",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 181,
+        "summary": "prepare(config: AVRecorderConfig): Promise\\<void>\n\n音视频录制的参数设置。使用Promise异步回调。\n\n**需要权限：** ohos.permis"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getInputSurface<sup>9+</sup>",
+        "level": 2,
+        "line_start": 182,
+        "line_end": 228,
+        "summary": "getInputSurface(callback: AsyncCallback\\<string>): void\n\n获得录制需要的surface。使用callback异步回调。\n\n开发者从此surfa"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getInputSurface<sup>9+</sup>",
+        "level": 2,
+        "line_start": 229,
+        "line_end": 273,
+        "summary": "getInputSurface(): Promise\\<string>\n\n获得录制需要的surface。使用Promise异步回调。\n\n开发者从此surface中获取surfaceBuffer，填入"
+      },
+      {
+        "section_id": "section-7",
+        "title": "updateRotation<sup>12+</sup>",
+        "level": 2,
+        "line_start": 274,
+        "line_end": 321,
+        "summary": "updateRotation(rotation: number): Promise\\<void>\n\n更新视频旋转角度。使用Promise异步回调。\n\n当且仅当[prepare()](#prepare"
+      },
+      {
+        "section_id": "section-8",
+        "title": "setWillMuteWhenInterrupted<sup>20+</sup>",
+        "level": 2,
+        "line_start": 322,
+        "line_end": 363,
+        "summary": "setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise&lt;void&gt;\n\n设置当前录制音频流是否启用静音打断模式。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "start<sup>9+</sup>",
+        "level": 2,
+        "line_start": 364,
+        "line_end": 403,
+        "summary": "start(callback: AsyncCallback\\<void>): void\n\n开始视频录制。使用callback异步回调。\n\n纯音频录制需在[prepare()](#prepare9)事"
+      },
+      {
+        "section_id": "section-10",
+        "title": "start<sup>9+</sup>",
+        "level": 2,
+        "line_start": 404,
+        "line_end": 444,
+        "summary": "start(): Promise\\<void>\n\n开始视频录制。使用Promise异步回调。\n\n纯音频录制需在[prepare()](#prepare9-1)事件成功触发后，才能调用start方法。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "pause<sup>9+</sup>",
+        "level": 2,
+        "line_start": 445,
+        "line_end": 484,
+        "summary": "pause(callback: AsyncCallback\\<void>): void\n\n暂停视频录制。使用callback异步回调。\n\n需要[start()](#start9)事件成功触发后，才能"
+      },
+      {
+        "section_id": "section-12",
+        "title": "pause<sup>9+</sup>",
+        "level": 2,
+        "line_start": 485,
+        "line_end": 525,
+        "summary": "pause(): Promise\\<void>\n\n暂停视频录制。使用Promise异步回调。\n\n需要[start()](#start9-1)事件成功触发后，才能调用pause方法，可以通过调用[re"
+      },
+      {
+        "section_id": "section-13",
+        "title": "resume<sup>9+</sup>",
+        "level": 2,
+        "line_start": 526,
+        "line_end": 565,
+        "summary": "resume(callback: AsyncCallback\\<void>): void\n\n恢复视频录制。使用callback异步回调。\n\n需要在[pause()](#pause9)事件成功触发后，"
+      },
+      {
+        "section_id": "section-14",
+        "title": "resume<sup>9+</sup>",
+        "level": 2,
+        "line_start": 566,
+        "line_end": 606,
+        "summary": "resume(): Promise\\<void>\n\n恢复视频录制。使用Promise异步回调。\n\n需要在[pause()](#pause9-1)事件成功触发后，才能调用resume方法。\n\n**原子"
+      },
+      {
+        "section_id": "section-15",
+        "title": "stop<sup>9+</sup>",
+        "level": 2,
+        "line_start": 607,
+        "line_end": 648,
+        "summary": "stop(callback: AsyncCallback\\<void>): void\n\n停止视频录制。使用callback异步回调。\n\n需要在[start()](#start9)或[pause()]"
+      },
+      {
+        "section_id": "section-16",
+        "title": "stop<sup>9+</sup>",
+        "level": 2,
+        "line_start": 649,
+        "line_end": 691,
+        "summary": "stop(): Promise\\<void>\n\n停止视频录制。使用Promise异步回调。\n\n需要在[start()](#start9-1)或[pause()](#pause9-1)事件成功触发后，"
+      },
+      {
+        "section_id": "section-17",
+        "title": "reset<sup>9+</sup>",
+        "level": 2,
+        "line_start": 692,
+        "line_end": 730,
+        "summary": "reset(callback: AsyncCallback\\<void>): void\n\n重置音视频录制。使用callback异步回调。\n\n纯音频录制时，需要重新调用[prepare()](#pre"
+      },
+      {
+        "section_id": "section-18",
+        "title": "reset<sup>9+</sup>",
+        "level": 2,
+        "line_start": 731,
+        "line_end": 768,
+        "summary": "reset(): Promise\\<void>\n\n重置音视频录制。使用Promise异步回调。\n\n纯音频录制时，需要重新调用[prepare()](#prepare9-1)接口才能重新录制。纯视频录"
+      },
+      {
+        "section_id": "section-19",
+        "title": "release<sup>9+</sup>",
+        "level": 2,
+        "line_start": 769,
+        "line_end": 806,
+        "summary": "release(callback: AsyncCallback\\<void>): void\n\n释放音视频录制资源。使用callback异步回调。\n\n释放音视频录制资源之后，该AVRecorder实例"
+      },
+      {
+        "section_id": "section-20",
+        "title": "release<sup>9+</sup>",
+        "level": 2,
+        "line_start": 807,
+        "line_end": 845,
+        "summary": "release(): Promise\\<void>\n\n释放音视频录制资源。使用Promise异步回调。\n\n释放音视频录制资源之后，该AVRecorder实例不能再进行任何操作。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-21",
+        "title": "getCurrentAudioCapturerInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 846,
+        "line_end": 889,
+        "summary": "getCurrentAudioCapturerInfo(callback: AsyncCallback\\<audio.AudioCapturerChangeInfo>): void\n\n获取当前音频采"
+      },
+      {
+        "section_id": "section-22",
+        "title": "getCurrentAudioCapturerInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 890,
+        "line_end": 932,
+        "summary": "getCurrentAudioCapturerInfo(): Promise\\<audio.AudioCapturerChangeInfo>\n\n获取当前音频采集参数。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-23",
+        "title": "getAudioCapturerMaxAmplitude<sup>11+</sup>",
+        "level": 2,
+        "line_start": 933,
+        "line_end": 976,
+        "summary": "getAudioCapturerMaxAmplitude(callback: AsyncCallback\\<number>): void\n\n获取当前音频最大振幅。使用callback异步回调。\n\n在"
+      },
+      {
+        "section_id": "section-24",
+        "title": "getAudioCapturerMaxAmplitude<sup>11+</sup>",
+        "level": 2,
+        "line_start": 977,
+        "line_end": 1019,
+        "summary": "getAudioCapturerMaxAmplitude(): Promise\\<number>\n\n获取当前音频最大振幅。使用Promise异步回调。\n\n在[prepare()](#prepare9"
+      },
+      {
+        "section_id": "section-25",
+        "title": "getAvailableEncoder<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1020,
+        "line_end": 1063,
+        "summary": "getAvailableEncoder(callback: AsyncCallback\\<Array\\<EncoderInfo>>): void\n\n获取可用的编码器参数。使用callback异步回调"
+      },
+      {
+        "section_id": "section-26",
+        "title": "getAvailableEncoder<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1064,
+        "line_end": 1106,
+        "summary": "getAvailableEncoder(): Promise\\<Array\\<EncoderInfo>>\n\n获取可用的编码器参数。使用Promise异步回调。\n\n**系统能力**：SystemCap"
+      },
+      {
+        "section_id": "section-27",
+        "title": "getAVRecorderConfig<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1107,
+        "line_end": 1149,
+        "summary": "getAVRecorderConfig(callback: AsyncCallback\\<AVRecorderConfig>): void\n\n获取实时的配置参数。使用callback异步回调。\n\n只"
+      },
+      {
+        "section_id": "section-28",
+        "title": "getAVRecorderConfig<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1150,
+        "line_end": 1191,
+        "summary": "getAVRecorderConfig(): Promise\\<AVRecorderConfig>;\n\n获取实时的配置参数。使用Promise异步回调。\n\n只能在[prepare()](#prepa"
+      },
+      {
+        "section_id": "section-29",
+        "title": "on('stateChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1192,
+        "line_end": 1225,
+        "summary": "on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler): void\n\n订阅录制状态机AVRecorderState切换的事"
+      },
+      {
+        "section_id": "section-30",
+        "title": "off('stateChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1226,
+        "line_end": 1248,
+        "summary": "off(type: 'stateChange', callback?: OnAVRecorderStateChangeHandler): void\n\n取消订阅录制状态机[AVRecorderStat"
+      },
+      {
+        "section_id": "section-31",
+        "title": "on('error')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1249,
+        "line_end": 1294,
+        "summary": "on(type: 'error', callback: ErrorCallback): void\n\n订阅AVRecorder的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。如果此时[AVR"
+      },
+      {
+        "section_id": "section-32",
+        "title": "off('error')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1295,
+        "line_end": 1317,
+        "summary": "off(type: 'error', callback?: ErrorCallback): void\n\n取消订阅录制错误事件，取消后不再接收到AVRecorder的错误事件。使用callback异步"
+      },
+      {
+        "section_id": "section-33",
+        "title": "on('audioCapturerChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1318,
+        "line_end": 1355,
+        "summary": "on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo>): void\n\n订阅录音配置变化的"
+      },
+      {
+        "section_id": "section-34",
+        "title": "off('audioCapturerChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1356,
+        "line_end": 1376,
+        "summary": "off(type: 'audioCapturerChange', callback?: Callback<audio.AudioCapturerChangeInfo>): void\n\n取消订阅录音变"
+      },
+      {
+        "section_id": "section-35",
+        "title": "on('photoAssetAvailable')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1377,
+        "line_end": 1435,
+        "summary": "on(type: 'photoAssetAvailable', callback: Callback\\<photoAccessHelper.PhotoAsset>): void\n\n订阅媒体资源回调事"
+      },
+      {
+        "section_id": "section-36",
+        "title": "off('photoAssetAvailable')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1436,
+        "line_end": 1455,
+        "summary": "off(type: 'photoAssetAvailable', callback?: Callback<photoAccessHelper.PhotoAsset>): void\n\n取消订阅媒体资源"
+      }
+    ]
+  }
+}

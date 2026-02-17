@@ -1,0 +1,60 @@
+{
+  "doc_id": "arkts-apis-photoAccessHelper-MovingPhoto",
+  "title": "Interface (MovingPhoto)",
+  "path": "zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-MovingPhoto.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-MovingPhoto.md",
+  "metadata": {
+    "kit": "Media Library Kit",
+    "subsystem": "Multimedia",
+    "owner": "@yixiaoff",
+    "designer": "@liweilu1",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Library Kit Multimedia 模块的 Interface (MovingPhoto)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (MovingPhoto)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { photoAccessHelper } from '@kit.MediaLibraryKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getUri<sup>12+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 90,
+        "summary": "getUri(): string\n\n获取动态照片的uri。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapa"
+      },
+      {
+        "section_id": "section-3",
+        "title": "requestContent<sup>12+</sup>",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 184,
+        "summary": "requestContent(imageFileUri: string, videoFileUri: string): Promise\\<void>\n\n同时请求动态照片的图片内容和视频内容，并写入参"
+      },
+      {
+        "section_id": "section-4",
+        "title": "requestContent<sup>12+</sup>",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 273,
+        "summary": "requestContent(resourceType: ResourceType, fileUri: string): Promise\\<void>\n\n请求指定资源类型的动态照片内容，并写入参数指"
+      },
+      {
+        "section_id": "section-5",
+        "title": "requestContent<sup>12+</sup>",
+        "level": 2,
+        "line_start": 274,
+        "line_end": 359,
+        "summary": "requestContent(resourceType: ResourceType): Promise\\<ArrayBuffer>\n\n请求指定资源类型的动态照片内容，以ArrayBuffer的形式返"
+      }
+    ]
+  }
+}

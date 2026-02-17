@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-service-widget-syntax-hml",
+  "title": "HML语法参考",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-service-widget-ui/js-service-widget-syntax-hml.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-service-widget-ui/js-service-widget-syntax-hml.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yihao-lin",
+    "designer": "@piggyguy",
+    "tester": "@songyanhong",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 HML语法参考，提供相关接口和功能说明。",
+  "structure": {
+    "title": "HML语法参考",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "页面结构",
+        "level": 2,
+        "line_start": 12,
+        "line_end": 25,
+        "summary": "```html\n<!-- xxx.hml -->\n<div class=\"item-container\">\n  <text class=\"item-title\">Image Show</text>"
+      },
+      {
+        "section_id": "section-2",
+        "title": "数据绑定",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 71,
+        "summary": "```html\n<!-- xxx.hml -->\n<div class=\"item-container\">\n  <text>{{content}}</text>            <!-- 输"
+      },
+      {
+        "section_id": "section-3",
+        "title": "事件绑定",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 133,
+        "summary": "卡片的事件需要在json文件的actions字段下进行声明。卡片仅支持click通用事件，事件的定义只能是直接命令式，事件定义必须包含action字段，用以说明事件类型。卡片支持两种事件类型：跳转事"
+      },
+      {
+        "section_id": "section-4",
+        "title": "列表渲染",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 187,
+        "summary": "```html\n<!-- xxx.hml -->\n<div class=\"array-container\">\n  <!-- div列表渲染 -->\n  <!-- 默认$item代表数组中的元素,"
+      },
+      {
+        "section_id": "section-5",
+        "title": "条件渲染",
+        "level": 2,
+        "line_start": 188,
+        "line_end": 231,
+        "summary": "条件渲染分为2种：if/elif/else和show。\n\n当使用if/elif/else写法时，节点必须是兄弟节点，否则编译无法通过。实例如下：\n\n\n```html\n<!-- xxx.hml -->"
+      },
+      {
+        "section_id": "section-6",
+        "title": "逻辑控制块",
+        "level": 2,
+        "line_start": 232,
+        "line_end": 255,
+        "summary": "&lt;block&gt;控制块使得循环渲染和条件渲染变得更加灵活；block在构建时不会被当作真实的节点编译。block标签只支持if属性。\n\n\n```html\n<!-- xxx.hml -->"
+      }
+    ]
+  }
+}

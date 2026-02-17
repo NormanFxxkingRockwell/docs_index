@@ -1,0 +1,436 @@
+{
+  "doc_id": "js-apis-accessibility",
+  "title": "@ohos.accessibility (辅助应用)",
+  "path": "zh-cn/application-dev/reference/apis-accessibility-kit/js-apis-accessibility.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-accessibility-kit/js-apis-accessibility.md",
+  "metadata": {
+    "kit": "Accessibility Kit",
+    "subsystem": "BarrierFree",
+    "owner": "@qiiiiiiian",
+    "designer": "@z7o",
+    "tester": "@A_qqq",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Accessibility Kit BarrierFree 模块的 @ohos.accessibility (辅助应用)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.accessibility (辅助应用)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { accessibility } from '@kit.AccessibilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "AbilityState",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 39,
+        "summary": "type AbilityState = 'enable' | 'disable' | 'install'\n\n辅助应用状态类型。\n\n**卡片能力：** 从API version 23开始，该接口支持在"
+      },
+      {
+        "section_id": "section-3",
+        "title": "AbilityType",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 60,
+        "summary": "type AbilityType = 'audible' | 'generic' | 'haptic' | 'spoken' | 'visual' | 'all'\n\n无障碍辅助应用类型。\n\n**卡片"
+      },
+      {
+        "section_id": "section-4",
+        "title": "AccessibilityAbilityInfo",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 85,
+        "summary": "辅助应用信息。\n\n**卡片能力：** 从API version 23开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Action",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 126,
+        "summary": "type Action = 'accessibilityFocus' | 'clearAccessibilityFocus' | 'focus' | 'clearFocus' | 'clearSel"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Capability",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 146,
+        "summary": "type Capability = 'retrieve' | 'touchGuide' | 'keyEventObserver' | 'zoom' | 'gesture'\n\n辅助应用能力类型。\n\n*"
+      },
+      {
+        "section_id": "section-7",
+        "title": "CaptionsFontEdgeType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 166,
+        "summary": "type CaptionsFontEdgeType = 'none' | 'raised' | 'depressed' | 'uniform' | 'dropShadow'\n\n字幕字体边缘类型。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "CaptionsFontFamily<sup>8+</sup>",
+        "level": 2,
+        "line_start": 167,
+        "line_end": 190,
+        "summary": "type CaptionsFontFamily = 'default' | 'monospacedSerif' | 'serif' | 'monospacedSansSerif' |\n  'sans"
+      },
+      {
+        "section_id": "section-9",
+        "title": "CaptionsStyle<sup>8+</sup>",
+        "level": 2,
+        "line_start": 191,
+        "line_end": 209,
+        "summary": "字幕风格。\n\n**卡片能力：** 从API version 23开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-10",
+        "title": "CaptionsManager<sup>8+</sup>",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 444,
+        "summary": "字幕配置管理，在调用CaptionsManager的方法前，需要先通过 [accessibility.getCaptionsManager() ](#accessibilitygetcaptions"
+      },
+      {
+        "section_id": "section-11",
+        "title": "EventInfo",
+        "level": 2,
+        "line_start": 445,
+        "line_end": 535,
+        "summary": "界面变更事件。\n\n**卡片能力：** 从API version 23开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-12",
+        "title": "EventType",
+        "level": 2,
+        "line_start": 536,
+        "line_end": 571,
+        "summary": "type EventType = 'accessibilityFocus' | 'accessibilityFocusClear' |\n'click' | 'longClick' | 'focus'"
+      },
+      {
+        "section_id": "section-13",
+        "title": "TextMoveUnit",
+        "level": 2,
+        "line_start": 572,
+        "line_end": 591,
+        "summary": "type TextMoveUnit = 'char' | 'word' | 'line' | 'page' | 'paragraph'\n\n文本无障碍导航移动粒度。\n\n**卡片能力：** 从API v"
+      },
+      {
+        "section_id": "section-14",
+        "title": "WindowUpdateType",
+        "level": 2,
+        "line_start": 592,
+        "line_end": 611,
+        "summary": "type WindowUpdateType = 'add' | 'remove' | 'bounds' | 'active' | 'focus'\n\n窗口变化类型。\n\n**卡片能力：** 从API v"
+      },
+      {
+        "section_id": "section-15",
+        "title": "accessibility.getAbilityLists<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 612,
+        "line_end": 652,
+        "summary": "getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Promise&lt;Array&lt;Accessibili"
+      },
+      {
+        "section_id": "section-16",
+        "title": "accessibility.getAbilityLists<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 653,
+        "line_end": 690,
+        "summary": "getAbilityLists(abilityType: AbilityType, stateType: AbilityState,callback: AsyncCallback&lt;Array&"
+      },
+      {
+        "section_id": "section-17",
+        "title": "accessibility.getAccessibilityExtensionList<sup>9+</sup>",
+        "level": 2,
+        "line_start": 691,
+        "line_end": 773,
+        "summary": "getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState): Promise&lt;Array&"
+      },
+      {
+        "section_id": "section-18",
+        "title": "accessibility.getAccessibilityExtensionList<sup>9+</sup>",
+        "level": 2,
+        "line_start": 774,
+        "line_end": 857,
+        "summary": "getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCal"
+      },
+      {
+        "section_id": "section-19",
+        "title": "accessibility.getAccessibilityExtensionListSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 858,
+        "line_end": 943,
+        "summary": "getAccessibilityExtensionListSync(abilityType: AbilityType, stateType: AbilityState): Array&lt;Acce"
+      },
+      {
+        "section_id": "section-20",
+        "title": "accessibility.getCaptionsManager<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 944,
+        "line_end": 969,
+        "summary": "getCaptionsManager(): CaptionsManager\n\n获取无障碍字幕配置管理实例。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API versio"
+      },
+      {
+        "section_id": "section-21",
+        "title": "accessibility.on('accessibilityStateChange')",
+        "level": 2,
+        "line_start": 970,
+        "line_end": 1012,
+        "summary": "on(type: 'accessibilityStateChange', callback: Callback&lt;boolean&gt;): void\n\n监听辅助应用启用状态变化事件，使用cal"
+      },
+      {
+        "section_id": "section-22",
+        "title": "accessibility.on('touchGuideStateChange')",
+        "level": 2,
+        "line_start": 1013,
+        "line_end": 1052,
+        "summary": "on(type: 'touchGuideStateChange', callback: Callback&lt;boolean&gt;): void\n\n监听触摸浏览功能启用状态变化事件，使用call"
+      },
+      {
+        "section_id": "section-23",
+        "title": "accessibility.on('screenReaderStateChange')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1053,
+        "line_end": 1089,
+        "summary": "on(type: 'screenReaderStateChange', callback: Callback&lt;boolean&gt;): void\n\n监听屏幕朗读功能启用状态变化事件，使用ca"
+      },
+      {
+        "section_id": "section-24",
+        "title": "accessibility.on('touchModeChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1090,
+        "line_end": 1140,
+        "summary": "on(type: 'touchModeChange', callback: Callback&lt;string&gt;): void\n\n监听触摸浏览功能下的单击/双击操作模式变化事件，使用call"
+      },
+      {
+        "section_id": "section-25",
+        "title": "accessibility.onAnimationReduceStateChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1141,
+        "line_end": 1180,
+        "summary": "onAnimationReduceStateChange(callback: Callback&lt;boolean&gt;): void\n\n监听减弱动效功能启用状态变化事件。使用callback异"
+      },
+      {
+        "section_id": "section-26",
+        "title": "accessibility.onFlashReminderStateChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1181,
+        "line_end": 1220,
+        "summary": "onFlashReminderStateChange(callback: Callback&lt;boolean&gt;): void\n\n监听闪烁提醒功能启用状态变化事件。使用callback异步回"
+      },
+      {
+        "section_id": "section-27",
+        "title": "accessibility.onAudioMonoStateChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1221,
+        "line_end": 1260,
+        "summary": "onAudioMonoStateChange(callback: Callback&lt;boolean&gt;): void\n\n监听单声道音频功能启用状态变化事件。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-28",
+        "title": "accessibility.off('accessibilityStateChange')",
+        "level": 2,
+        "line_start": 1261,
+        "line_end": 1297,
+        "summary": "off(type: 'accessibilityStateChange', callback?: Callback&lt;boolean&gt;): void\n\n取消监听辅助应用启用状态变化事件，使"
+      },
+      {
+        "section_id": "section-29",
+        "title": "accessibility.off('touchGuideStateChange')",
+        "level": 2,
+        "line_start": 1298,
+        "line_end": 1334,
+        "summary": "off(type: 'touchGuideStateChange', callback?: Callback&lt;boolean&gt;): void\n\n取消监听触摸浏览启用状态变化事件，使用ca"
+      },
+      {
+        "section_id": "section-30",
+        "title": "accessibility.off('screenReaderStateChange')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1335,
+        "line_end": 1371,
+        "summary": "off(type: 'screenReaderStateChange', callback?: Callback&lt;boolean&gt;): void\n\n取消监听屏幕朗读启用状态变化事件，使用"
+      },
+      {
+        "section_id": "section-31",
+        "title": "accessibility.off('touchModeChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1372,
+        "line_end": 1426,
+        "summary": "off(type: 'touchModeChange', callback?: Callback&lt;string&gt;): void\n\n取消监听触摸浏览功能下的单击/双击操作模式变化事件，使用"
+      },
+      {
+        "section_id": "section-32",
+        "title": "accessibility.offAnimationReduceStateChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1427,
+        "line_end": 1470,
+        "summary": "offAnimationReduceStateChange(callback?: Callback&lt;boolean&gt;): void\n\n取消监听减弱动效模式变化事件。使用callback异"
+      },
+      {
+        "section_id": "section-33",
+        "title": "accessibility.offFlashReminderStateChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1471,
+        "line_end": 1514,
+        "summary": "offFlashReminderStateChange(callback?: Callback&lt;boolean&gt;): void\n\n取消监听闪烁提醒模式变化事件。使用callback异步回"
+      },
+      {
+        "section_id": "section-34",
+        "title": "accessibility.offAudioMonoStateChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1515,
+        "line_end": 1558,
+        "summary": "offAudioMonoStateChange(callback?: Callback&lt;boolean&gt;): void\n\n取消监听单声道音频模式变化事件。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-35",
+        "title": "accessibility.isOpenAccessibility<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1559,
+        "line_end": 1589,
+        "summary": "isOpenAccessibility(): Promise&lt;boolean&gt;\n\n判断是否启用了辅助应用，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API versi"
+      },
+      {
+        "section_id": "section-36",
+        "title": "accessibility.isOpenAccessibility<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1590,
+        "line_end": 1622,
+        "summary": "isOpenAccessibility(callback: AsyncCallback&lt;boolean&gt;): void\n\n判断是否启用了辅助应用，使用callback异步回调。\n\n> *"
+      },
+      {
+        "section_id": "section-37",
+        "title": "accessibility.isOpenAccessibilitySync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1623,
+        "line_end": 1652,
+        "summary": "isOpenAccessibilitySync(): boolean\n\n查询当前系统内是否存在已开启的辅助应用。如需获取系统内辅助应用信息，推荐使用[accessibility.getAccessi"
+      },
+      {
+        "section_id": "section-38",
+        "title": "accessibility.isOpenTouchGuide<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1653,
+        "line_end": 1683,
+        "summary": "isOpenTouchGuide(): Promise&lt;boolean&gt;\n\n判断触摸浏览模式是否开启，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API version"
+      },
+      {
+        "section_id": "section-39",
+        "title": "accessibility.isOpenTouchGuide<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1684,
+        "line_end": 1716,
+        "summary": "isOpenTouchGuide(callback: AsyncCallback&lt;boolean&gt;): void\n\n判断触摸浏览模式是否开启，使用callback异步回调。\n\n> **说"
+      },
+      {
+        "section_id": "section-40",
+        "title": "accessibility.isOpenTouchGuideSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1717,
+        "line_end": 1742,
+        "summary": "isOpenTouchGuideSync(): boolean\n\n是否开启了触摸浏览模式。\n\n**卡片能力：** 从API version 23开始，该接口支持在ArkTS卡片中使用。\n\n**原子化"
+      },
+      {
+        "section_id": "section-41",
+        "title": "accessibility.isScreenReaderOpenSync<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1743,
+        "line_end": 1768,
+        "summary": "isScreenReaderOpenSync(): boolean\n\n是否开启了屏幕朗读模式。\n\n**卡片能力：** 从API version 23开始，该接口支持在ArkTS卡片中使用。\n\n**原"
+      },
+      {
+        "section_id": "section-42",
+        "title": "accessibility.isAnimationReduceEnabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1769,
+        "line_end": 1808,
+        "summary": "isAnimationReduceEnabled(): Promise&lt;boolean&gt;\n\n判断减弱动效模式是否开启。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在St"
+      },
+      {
+        "section_id": "section-43",
+        "title": "accessibility.isAnimationReduceEnabledSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1809,
+        "line_end": 1844,
+        "summary": "isAnimationReduceEnabledSync(): boolean\n\n使用同步方法判断减弱动效模式是否开启。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力**"
+      },
+      {
+        "section_id": "section-44",
+        "title": "accessibility.isFlashReminderEnabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1845,
+        "line_end": 1884,
+        "summary": "isFlashReminderEnabled(): Promise&lt;boolean&gt;\n\n判断闪烁提醒模式是否开启。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在Stag"
+      },
+      {
+        "section_id": "section-45",
+        "title": "accessibility.isFlashReminderEnabledSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1885,
+        "line_end": 1920,
+        "summary": "isFlashReminderEnabledSync(): boolean\n\n使用同步方法判断闪烁提醒模式是否开启。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-46",
+        "title": "accessibility.isAudioMonoEnabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1921,
+        "line_end": 1960,
+        "summary": "isAudioMonoEnabled(): Promise&lt;boolean&gt;\n\n判断单声道音频模式是否开启。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在Stage模型"
+      },
+      {
+        "section_id": "section-47",
+        "title": "accessibility.isAudioMonoEnabledSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1961,
+        "line_end": 1996,
+        "summary": "isAudioMonoEnabledSync(): boolean\n\n使用同步方法判断单声道音频模式是否开启。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力**：Syst"
+      },
+      {
+        "section_id": "section-48",
+        "title": "accessibility.sendEvent<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1997,
+        "line_end": 2039,
+        "summary": "sendEvent(event: EventInfo): Promise&lt;void&gt;\n\n发送无障碍事件，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API versio"
+      },
+      {
+        "section_id": "section-49",
+        "title": "accessibility.sendEvent<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2040,
+        "line_end": 2079,
+        "summary": "sendEvent(event: EventInfo, callback: AsyncCallback&lt;void&gt;): void\n\n发送无障碍事件，使用callback异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-50",
+        "title": "accessibility.sendAccessibilityEvent<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2080,
+        "line_end": 2130,
+        "summary": "sendAccessibilityEvent(event: EventInfo): Promise&lt;void&gt;\n\n发送无障碍事件，使用Promise异步回调。\n\n**卡片能力：** 从A"
+      },
+      {
+        "section_id": "section-51",
+        "title": "accessibility.sendAccessibilityEvent<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2131,
+        "line_end": 2235,
+        "summary": "sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback&lt;void&gt;): void\n\n发送无障碍事件，使用call"
+      },
+      {
+        "section_id": "section-52",
+        "title": "accessibility.getTouchModeSync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2236,
+        "line_end": 2270,
+        "summary": "getTouchModeSync(): string\n\n查询触摸浏览功能下的单击/双击操作模式。\n\n**卡片能力：** 从API version 23开始，该接口支持在ArkTS卡片中使用。\n\n**"
+      }
+    ]
+  }
+}

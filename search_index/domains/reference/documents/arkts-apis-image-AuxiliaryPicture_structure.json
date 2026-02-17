@@ -1,0 +1,92 @@
+{
+  "doc_id": "arkts-apis-image-AuxiliaryPicture",
+  "title": "Interface (AuxiliaryPicture)",
+  "path": "zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-AuxiliaryPicture.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-AuxiliaryPicture.md",
+  "metadata": {
+    "kit": "Image Kit",
+    "subsystem": "Multimedia",
+    "owner": "@aulight02",
+    "designer": "@liyang_bryan",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Image Kit Multimedia 模块的 Interface (AuxiliaryPicture)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AuxiliaryPicture)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { image } from '@kit.ImageKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "writePixelsFromBuffer<sup>13+</sup>",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 76,
+        "summary": "writePixelsFromBuffer(data: ArrayBuffer): Promise\\<void>\n\n读取ArrayBuffer中的辅助图片数据，并将数据写入AuxiliaryPict"
+      },
+      {
+        "section_id": "section-3",
+        "title": "readPixelsToBuffer<sup>13+</sup>",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 117,
+        "summary": "readPixelsToBuffer(): Promise\\<ArrayBuffer>\n\n读取图像像素映射数据并将数据写入ArrayBuffer。使用Promise异步回调。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getType<sup>13+</sup>",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 144,
+        "summary": "getType(): AuxiliaryPictureType\n\n获取辅助图的类型。\n\n**系统能力：** SystemCapability.Multimedia.Image.Core\n\n**返回值"
+      },
+      {
+        "section_id": "section-5",
+        "title": "setMetadata<sup>13+</sup>",
+        "level": 2,
+        "line_start": 145,
+        "line_end": 208,
+        "summary": "setMetadata(metadataType: MetadataType, metadata: Metadata): Promise\\<void>\n\n设置辅助图元数据。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getMetadata<sup>13+</sup>",
+        "level": 2,
+        "line_start": 209,
+        "line_end": 255,
+        "summary": "getMetadata(metadataType: MetadataType): Promise\\<Metadata>\n\n从辅助图中获取元数据。使用Promise异步回调。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getAuxiliaryPictureinfo<sup>13+</sup>",
+        "level": 2,
+        "line_start": 256,
+        "line_end": 285,
+        "summary": "getAuxiliaryPictureInfo(): AuxiliaryPictureInfo\n\n获取有关此辅助图的图像信息。\n\n**系统能力：** SystemCapability.Multime"
+      },
+      {
+        "section_id": "section-8",
+        "title": "setAuxiliaryPictureinfo<sup>13+</sup>",
+        "level": 2,
+        "line_start": 286,
+        "line_end": 327,
+        "summary": "setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void\n\n设置辅助图的图像信息。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-9",
+        "title": "release<sup>13+</sup>",
+        "level": 2,
+        "line_start": 328,
+        "line_end": 357,
+        "summary": "release():void\n\n释放辅助图对象，无返回值。\n\n由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用该方法，及时释放内存。\n\n释放时应确保该对象的所有"
+      }
+    ]
+  }
+}

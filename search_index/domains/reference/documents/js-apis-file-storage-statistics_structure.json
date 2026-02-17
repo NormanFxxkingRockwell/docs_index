@@ -1,0 +1,100 @@
+{
+  "doc_id": "js-apis-file-storage-statistics",
+  "title": "@ohos.file.storageStatistics (应用空间统计)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-storage-statistics.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-storage-statistics.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@wang_zhangjun; @gzhuangzhuang",
+    "designer": "@wang_zhangjun; @gzhuangzhuang; @renguang1116",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.file.storageStatistics (应用空间统计)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.storageStatistics (应用空间统计)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { storageStatistics } from '@kit.CoreFileKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "storageStatistics.getCurrentBundleStats<sup>9+</sup>",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 55,
+        "summary": "getCurrentBundleStats(): Promise&lt;BundleStats&gt;\n\n应用异步获取当前应用存储空间大小（单位为Byte），使用Promise异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-3",
+        "title": "storageStatistics.getCurrentBundleStats<sup>9+</sup>",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 93,
+        "summary": "getCurrentBundleStats(callback: AsyncCallback&lt;BundleStats&gt;): void\n\n应用异步获取当前应用存储空间大小（单位为Byte），"
+      },
+      {
+        "section_id": "section-4",
+        "title": "storageStatistics.getTotalSize<sup>15+</sup>",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 127,
+        "summary": "getTotalSize(): Promise&lt;number&gt;\n\n获取内置存储的总空间大小（单位为Byte），使用Promise异步回调。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-5",
+        "title": "storageStatistics.getTotalSize<sup>15+</sup>",
+        "level": 2,
+        "line_start": 128,
+        "line_end": 165,
+        "summary": "getTotalSize(callback: AsyncCallback&lt;number&gt;): void\n\n获取内置存储的总空间大小（单位为Byte），使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "storageStatistics.getTotalSizeSync<sup>15+</sup>",
+        "level": 2,
+        "line_start": 166,
+        "line_end": 201,
+        "summary": "getTotalSizeSync(): number\n\n同步获取内置存储的总空间大小（单位为Byte）。\n\n**系统能力**：SystemCapability.FileManagement.Stor"
+      },
+      {
+        "section_id": "section-7",
+        "title": "storageStatistics.getFreeSize<sup>15+</sup>",
+        "level": 2,
+        "line_start": 202,
+        "line_end": 235,
+        "summary": "getFreeSize(): Promise&lt;number&gt;\n\n获取内置存储的可用空间大小（单位为Byte），使用Promise异步回调。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-8",
+        "title": "storageStatistics.getFreeSize<sup>15+</sup>",
+        "level": 2,
+        "line_start": 236,
+        "line_end": 273,
+        "summary": "getFreeSize(callback: AsyncCallback&lt;number&gt;): void\n\n获取内置存储的可用空间大小（单位为Byte），使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-9",
+        "title": "storageStatistics.getFreeSizeSync<sup>15+</sup>",
+        "level": 2,
+        "line_start": 274,
+        "line_end": 309,
+        "summary": "getFreeSizeSync(): number\n\n同步获取内置存储的可用空间大小（单位为Byte）。\n\n**系统能力**：SystemCapability.FileManagement.Stor"
+      },
+      {
+        "section_id": "section-10",
+        "title": "BundleStats<sup>9+</sup>",
+        "level": 2,
+        "line_start": 310,
+        "line_end": 319,
+        "summary": "**系统能力**：SystemCapability.FileManagement.StorageService.SpatialStatistics\n\n| 名称"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-videoProcessingEngine",
+  "title": "@ohos.multimedia.videoProcessingEngine (视频处理引擎)",
+  "path": "zh-cn/application-dev/reference/apis-image-kit/js-apis-videoProcessingEngine.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-image-kit/js-apis-videoProcessingEngine.md",
+  "metadata": {
+    "kit": "Image Kit",
+    "subsystem": "Multimedia",
+    "owner": "@pxh123456",
+    "designer": "@gongzheng92",
+    "tester": "@gongzheng92",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Image Kit Multimedia 模块的 @ohos.multimedia.videoProcessingEngine (视频处理引擎)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimedia.videoProcessingEngine (视频处理引擎)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { videoProcessingEngine } from '@kit.ImageKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "videoProcessingEngine.initializeEnvironment",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 61,
+        "summary": "initializeEnvironment(): Promise\\<void>\n\n初始化环境。使用Promise异步回调。\n\n**卡片能力**：从API version 18开始，该接口支持在Ark"
+      },
+      {
+        "section_id": "section-3",
+        "title": "videoProcessingEngine.deinitializeEnvironment",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 96,
+        "summary": "deinitializeEnvironment(): Promise\\<void>\n\n释放处理资源。使用Promise异步回调。\n\n**卡片能力**：从API version 18开始，该接口支持在"
+      },
+      {
+        "section_id": "section-4",
+        "title": "videoProcessingEngine.create",
+        "level": 2,
+        "line_start": 97,
+        "line_end": 133,
+        "summary": "create(): ImageProcessor\n\n如果操作成功，创建图片处理模块实例，否则返回null。\n\n**卡片能力**：从API version 18开始，该接口支持在ArkTS卡片中使用。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ImageProcessor",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 338,
+        "summary": "图像处理类，提供图片内容的清晰度增强及缩放能力。根据源图像的宽度和高度进行必要的缩放操作，生成目标图像。提供不同级别的缩放方法以平衡性能和图像质量。\n\n规格约束如下：\n\n- 当前仅支持处理SDR（S"
+      },
+      {
+        "section_id": "section-6",
+        "title": "QualityLevel",
+        "level": 2,
+        "line_start": 339,
+        "line_end": 353,
+        "summary": "枚举，算法档位。\n\n**卡片能力**：从API version 18开始，该接口支持在ArkTS卡片中使用。\n\n**系统能力：** SystemCapability.Multimedia.Video"
+      }
+    ]
+  }
+}

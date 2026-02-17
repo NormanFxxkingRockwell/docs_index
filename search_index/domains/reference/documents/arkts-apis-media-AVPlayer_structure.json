@@ -1,0 +1,732 @@
+{
+  "doc_id": "arkts-apis-media-AVPlayer",
+  "title": "Interface (AVPlayer)",
+  "path": "zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-AVPlayer.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-AVPlayer.md",
+  "metadata": {
+    "kit": "Media Kit",
+    "subsystem": "Multimedia",
+    "owner": "@xushubo; @chennotfound",
+    "designer": "@dongyu_dy",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Kit Multimedia 模块的 Interface (AVPlayer)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AVPlayer)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { media } from '@kit.MediaKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 48,
+        "summary": "**系统能力：** SystemCapability.Multimedia.Media.AVPlayer\n\n| 名称"
+      },
+      {
+        "section_id": "section-3",
+        "title": "on('stateChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 107,
+        "summary": "on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle): void\n\n监听播放状态机AVPlayerState切换的事件。\n\n*"
+      },
+      {
+        "section_id": "section-4",
+        "title": "off('stateChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 133,
+        "summary": "off(type: 'stateChange', callback?: OnAVPlayerStateChangeHandle): void\n\n取消监听播放状态机[AVPlayerState](ar"
+      },
+      {
+        "section_id": "section-5",
+        "title": "on('error')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 193,
+        "summary": "on(type: 'error', callback: ErrorCallback): void\n\n监听[AVPlayer](arkts-apis-media-AVPlayer.md)的错误事件，该"
+      },
+      {
+        "section_id": "section-6",
+        "title": "off('error')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 194,
+        "line_end": 221,
+        "summary": "off(type: 'error', callback?: ErrorCallback): void\n\n取消监听播放的错误事件。\n\n**原子化服务API：** 从API version 11开始，该"
+      },
+      {
+        "section_id": "section-7",
+        "title": "setMediaSource<sup>12+</sup>",
+        "level": 2,
+        "line_start": 222,
+        "line_end": 273,
+        "summary": "setMediaSource(src:MediaSource, strategy?: PlaybackStrategy): Promise\\<void>\n\n流媒体预下载资源设置，下载url对应的流媒"
+      },
+      {
+        "section_id": "section-8",
+        "title": "setPlaybackStrategy<sup>12+</sup>",
+        "level": 2,
+        "line_start": 274,
+        "line_end": 326,
+        "summary": "setPlaybackStrategy(strategy: PlaybackStrategy): Promise\\<void>\n\n设置播放策略，只能在initialized状态下调用。使用Promi"
+      },
+      {
+        "section_id": "section-9",
+        "title": "setPlaybackRange<sup>18+</sup>",
+        "level": 2,
+        "line_start": 327,
+        "line_end": 374,
+        "summary": "setPlaybackRange(startTimeMs: number, endTimeMs: number, mode?: SeekMode) : Promise\\<void>\n\n设置播放区间，"
+      },
+      {
+        "section_id": "section-10",
+        "title": "prepare<sup>9+</sup>",
+        "level": 2,
+        "line_start": 375,
+        "line_end": 417,
+        "summary": "prepare(callback: AsyncCallback\\<void>): void\n\n准备播放音频/视频，需在[stateChange](#onstatechange9)事件成功触发至ini"
+      },
+      {
+        "section_id": "section-11",
+        "title": "prepare<sup>9+</sup>",
+        "level": 2,
+        "line_start": 418,
+        "line_end": 460,
+        "summary": "prepare(): Promise\\<void>\n\n准备播放音频/视频，需在[stateChange](#onstatechange9)事件成功触发至initialized状态后，才能调用。使用P"
+      },
+      {
+        "section_id": "section-12",
+        "title": "setMediaMuted<sup>12+</sup>",
+        "level": 2,
+        "line_start": 461,
+        "line_end": 513,
+        "summary": "setMediaMuted(mediaType: MediaType,  muted: boolean ): Promise\\<void>\n\n设置音频静音/取消音频静音。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "play<sup>9+</sup>",
+        "level": 2,
+        "line_start": 514,
+        "line_end": 555,
+        "summary": "play(callback: AsyncCallback\\<void>): void\n\n开始播放音视频资源，只能在prepared/paused/completed状态调用。使用callback方式"
+      },
+      {
+        "section_id": "section-14",
+        "title": "play<sup>9+</sup>",
+        "level": 2,
+        "line_start": 556,
+        "line_end": 595,
+        "summary": "play(): Promise\\<void>\n\n开始播放音视频资源，只能在prepared/paused/completed状态调用。使用Promise异步回调。\n\n**原子化服务API：** 从A"
+      },
+      {
+        "section_id": "section-15",
+        "title": "pause<sup>9+</sup>",
+        "level": 2,
+        "line_start": 596,
+        "line_end": 637,
+        "summary": "pause(callback: AsyncCallback\\<void>): void\n\n暂停播放音视频资源，只能在playing状态调用。使用callback方式异步获取返回值。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-16",
+        "title": "pause<sup>9+</sup>",
+        "level": 2,
+        "line_start": 638,
+        "line_end": 677,
+        "summary": "pause(): Promise\\<void>\n\n暂停播放音视频资源，只能在playing状态调用。使用Promise异步回调。\n\n**原子化服务API：** 从API version 11开始，该"
+      },
+      {
+        "section_id": "section-17",
+        "title": "stop<sup>9+</sup>",
+        "level": 2,
+        "line_start": 678,
+        "line_end": 719,
+        "summary": "stop(callback: AsyncCallback\\<void>): void\n\n停止播放音视频资源，只能在prepared/playing/paused/completed状态调用。使用ca"
+      },
+      {
+        "section_id": "section-18",
+        "title": "stop<sup>9+</sup>",
+        "level": 2,
+        "line_start": 720,
+        "line_end": 759,
+        "summary": "stop(): Promise\\<void>\n\n停止播放音视频资源，只能在prepared/playing/paused/completed状态调用。使用Promise异步回调。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-19",
+        "title": "reset<sup>9+</sup>",
+        "level": 2,
+        "line_start": 760,
+        "line_end": 801,
+        "summary": "reset(callback: AsyncCallback\\<void>): void\n\n重置播放，只能在initialized/prepared/playing/paused/completed/"
+      },
+      {
+        "section_id": "section-20",
+        "title": "reset<sup>9+</sup>",
+        "level": 2,
+        "line_start": 802,
+        "line_end": 841,
+        "summary": "reset(): Promise\\<void>\n\n重置播放，只能在initialized/prepared/playing/paused/completed/stopped/error状态调用。使用"
+      },
+      {
+        "section_id": "section-21",
+        "title": "release<sup>9+</sup>",
+        "level": 2,
+        "line_start": 842,
+        "line_end": 883,
+        "summary": "release(callback: AsyncCallback\\<void>): void\n\n销毁播放资源，除released状态外，均可以调用。使用callback方式异步获取返回值。\n\n**原子"
+      },
+      {
+        "section_id": "section-22",
+        "title": "release<sup>9+</sup>",
+        "level": 2,
+        "line_start": 884,
+        "line_end": 923,
+        "summary": "release(): Promise\\<void>\n\n销毁播放资源，除released状态，都可以调用。使用Promise异步回调。\n\n**原子化服务API：** 从API version 11开始"
+      },
+      {
+        "section_id": "section-23",
+        "title": "getTrackDescription<sup>9+</sup>",
+        "level": 2,
+        "line_start": 924,
+        "line_end": 965,
+        "summary": "getTrackDescription(callback: AsyncCallback\\<Array\\<MediaDescription>>): void\n\n获取音视频轨道信息，可以在prepare"
+      },
+      {
+        "section_id": "section-24",
+        "title": "getTrackDescription<sup>9+</sup>",
+        "level": 2,
+        "line_start": 966,
+        "line_end": 1005,
+        "summary": "getTrackDescription(): Promise\\<Array\\<MediaDescription>>\n\n获取音视频轨道信息，可以在prepared/playing/paused状态调用"
+      },
+      {
+        "section_id": "section-25",
+        "title": "getSelectedTracks<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1006,
+        "line_end": 1045,
+        "summary": "getSelectedTracks(): Promise\\<Array\\<number>>\n\n获取已选择的音视频轨道索引，可以在prepared/playing/paused状态调用。使用Promi"
+      },
+      {
+        "section_id": "section-26",
+        "title": "getPlaybackInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1046,
+        "line_end": 1084,
+        "summary": "getPlaybackInfo(): Promise\\<PlaybackInfo>\n\n获取播放过程信息，可以在prepared/playing/paused状态调用。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-27",
+        "title": "getPlaybackPosition<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1085,
+        "line_end": 1126,
+        "summary": "getPlaybackPosition(): number\n\n获取当前播放位置，可以在prepared/playing/paused/completed状态调用。\n\n**原子化服务API：** 从A"
+      },
+      {
+        "section_id": "section-28",
+        "title": "getCurrentPresentationTimestamp<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1127,
+        "line_end": 1170,
+        "summary": "getCurrentPresentationTimestamp() : number\n\n获取当前播放位置，可以在播放（playing）/暂停（paused）/完成（completed）状态调用。"
+      },
+      {
+        "section_id": "section-29",
+        "title": "selectTrack<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1171,
+        "line_end": 1229,
+        "summary": "selectTrack(index: number, mode?: SwitchMode): Promise\\<void>\n\n使用AVPlayer播放多音视频轨资源时，选择指定轨道播放，使用Prom"
+      },
+      {
+        "section_id": "section-30",
+        "title": "deselectTrack<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1230,
+        "line_end": 1287,
+        "summary": "deselectTrack(index: number): Promise\\<void>\n\n使用AVPlayer播放多音轨视频时取消指定音视频轨道播放，使用Promise异步回调。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-31",
+        "title": "setDecryptionConfig<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1288,
+        "line_end": 1333,
+        "summary": "setDecryptionConfig(mediaKeySession: drm.MediaKeySession, secureVideoPath: boolean): void\n\n设置解密配置。当"
+      },
+      {
+        "section_id": "section-32",
+        "title": "getMediaKeySystemInfos<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1334,
+        "line_end": 1367,
+        "summary": "getMediaKeySystemInfos(): Array\\<drm.MediaKeySystemInfo>\n\n获取当前播放的媒体资源的MediaKeySystemInfo。需要在[mediaK"
+      },
+      {
+        "section_id": "section-33",
+        "title": "seek<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1368,
+        "line_end": 1412,
+        "summary": "seek(timeMs: number, mode?:SeekMode): void\n\n跳转到指定播放位置，只能在prepared/playing/paused/completed状态调用，可以通过"
+      },
+      {
+        "section_id": "section-34",
+        "title": "isSeekContinuousSupported<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1413,
+        "line_end": 1438,
+        "summary": "isSeekContinuousSupported() : boolean\n\n查询媒体源是否支持以SEEK_CONTINUOUS模式[SeekMode](arkts-apis-media-e.md#"
+      },
+      {
+        "section_id": "section-35",
+        "title": "on('seekDone')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1439,
+        "line_end": 1466,
+        "summary": "on(type: 'seekDone', callback: Callback\\<number>): void\n\n监听seek生效的事件。\n\n**系统能力：** SystemCapability.M"
+      },
+      {
+        "section_id": "section-36",
+        "title": "off('seekDone')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1467,
+        "line_end": 1492,
+        "summary": "off(type: 'seekDone', callback?: Callback\\<number>): void\n\n取消监听seek生效的事件。\n\n**原子化服务API：** 从API versi"
+      },
+      {
+        "section_id": "section-37",
+        "title": "setSpeed<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1493,
+        "line_end": 1522,
+        "summary": "setSpeed(speed: PlaybackSpeed): void\n\n设置倍速模式，只能在prepared/playing/paused/completed状态调用，可以通过[speedDon"
+      },
+      {
+        "section_id": "section-38",
+        "title": "on('speedDone')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1523,
+        "line_end": 1550,
+        "summary": "on(type: 'speedDone', callback: Callback\\<number>): void\n\n监听setSpeed生效的事件。\n\n**原子化服务API：** 从API vers"
+      },
+      {
+        "section_id": "section-39",
+        "title": "off('speedDone')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1551,
+        "line_end": 1576,
+        "summary": "off(type: 'speedDone', callback?: Callback\\<number>): void\n\n取消监听setSpeed生效的事件。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-40",
+        "title": "setPlaybackRate<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1577,
+        "line_end": 1615,
+        "summary": "setPlaybackRate(rate: number): void\n\n设置倍速模式。只能在prepared/playing/paused/completed状态调用，取值范围是[0.125, 4"
+      },
+      {
+        "section_id": "section-41",
+        "title": "getPlaybackRate<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1616,
+        "line_end": 1640,
+        "summary": "getPlaybackRate(): Promise\\<number>\n\n获取当前播放器的播放速率。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multim"
+      },
+      {
+        "section_id": "section-42",
+        "title": "on('playbackRateDone')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1641,
+        "line_end": 1668,
+        "summary": "on(type: 'playbackRateDone', callback: OnPlaybackRateDone): void\n\n监听[setPlaybackRate](#setplaybackr"
+      },
+      {
+        "section_id": "section-43",
+        "title": "off('playbackRateDone')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1669,
+        "line_end": 1694,
+        "summary": "off(type: 'playbackRateDone', callback?: OnPlaybackRateDone): void\n\n取消监听[setPlaybackRate](#setplayb"
+      },
+      {
+        "section_id": "section-44",
+        "title": "setBitrate<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1695,
+        "line_end": 1721,
+        "summary": "setBitrate(bitrate: number): void\n\n设置比特率，以播放所指定比特率的流媒体资源，当前仅对**HLS/DASH协议网络流**有效。默认情况下，AVPlayer会根据网"
+      },
+      {
+        "section_id": "section-45",
+        "title": "on('bitrateDone')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1722,
+        "line_end": 1749,
+        "summary": "on(type: 'bitrateDone', callback: Callback\\<number>): void\n\n监听setBitrate生效的事件。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-46",
+        "title": "off('bitrateDone')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1750,
+        "line_end": 1775,
+        "summary": "off(type: 'bitrateDone', callback?: Callback\\<number>): void\n\n取消监听setBitrate生效的事件。\n\n**原子化服务API：** 从"
+      },
+      {
+        "section_id": "section-47",
+        "title": "on('availableBitrates')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1776,
+        "line_end": 1803,
+        "summary": "on(type: 'availableBitrates', callback: Callback\\<Array\\<number>>): void\n\n监听HLS/DASH协议网络流可用的比特率列表，只"
+      },
+      {
+        "section_id": "section-48",
+        "title": "off('availableBitrates')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1804,
+        "line_end": 1830,
+        "summary": "off(type: 'availableBitrates', callback?: Callback\\<Array\\<number>>): void\n\n取消监听HLS/DASH协议网络流可用的比特率"
+      },
+      {
+        "section_id": "section-49",
+        "title": "on('mediaKeySystemInfoUpdate')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1831,
+        "line_end": 1863,
+        "summary": "on(type: 'mediaKeySystemInfoUpdate', callback: Callback\\<Array\\<drm.MediaKeySystemInfo>>): void\n\n监听"
+      },
+      {
+        "section_id": "section-50",
+        "title": "off('mediaKeySystemInfoUpdate')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1864,
+        "line_end": 1889,
+        "summary": "off(type: 'mediaKeySystemInfoUpdate', callback?: Callback\\<Array\\<drm.MediaKeySystemInfo>>): void;"
+      },
+      {
+        "section_id": "section-51",
+        "title": "setLoudnessGain<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1890,
+        "line_end": 1942,
+        "summary": "setLoudnessGain(loudnessGain: number): Promise\\<void>\n\n设置播放器的响度。调用该接口后，响度增益立即生效。使用Promise异步回调。\n\n> *"
+      },
+      {
+        "section_id": "section-52",
+        "title": "setVolume<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1943,
+        "line_end": 1968,
+        "summary": "setVolume(volume: number): void\n\n设置媒体播放音量，只能在prepared/playing/paused/completed状态调用，可以通过[volumeChang"
+      },
+      {
+        "section_id": "section-53",
+        "title": "on('volumeChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1969,
+        "line_end": 1996,
+        "summary": "on(type: 'volumeChange', callback: Callback\\<number>): void\n\n监听setVolume生效的事件。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-54",
+        "title": "off('volumeChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1997,
+        "line_end": 2022,
+        "summary": "off(type: 'volumeChange', callback?: Callback\\<number>): void\n\n取消监听setVolume生效的事件。\n\n**原子化服务API：** 从"
+      },
+      {
+        "section_id": "section-55",
+        "title": "on('endOfStream')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2023,
+        "line_end": 2050,
+        "summary": "on(type: 'endOfStream', callback: Callback\\<void>): void\n\n监听资源播放至结尾的事件；如果用户设置[loop](#属性)=true，播放会跳转"
+      },
+      {
+        "section_id": "section-56",
+        "title": "off('endOfStream')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2051,
+        "line_end": 2076,
+        "summary": "off(type: 'endOfStream', callback?: Callback\\<void>): void\n\n取消监听资源播放至结尾的事件。\n\n**原子化服务API：** 从API ver"
+      },
+      {
+        "section_id": "section-57",
+        "title": "on('timeUpdate')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2077,
+        "line_end": 2146,
+        "summary": "on(type: 'timeUpdate', callback: Callback\\<number>): void\n\n监听资源播放当前时间，单位为毫秒（ms），用于刷新进度条当前位置，默认间隔100"
+      },
+      {
+        "section_id": "section-58",
+        "title": "off('timeUpdate')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2147,
+        "line_end": 2172,
+        "summary": "off(type: 'timeUpdate', callback?: Callback\\<number>): void\n\n取消监听资源播放当前时间。\n\n**原子化服务API：** 从API vers"
+      },
+      {
+        "section_id": "section-59",
+        "title": "on('durationUpdate')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2173,
+        "line_end": 2205,
+        "summary": "on(type: 'durationUpdate', callback: Callback\\<number>): void\n\n监听资源播放资源的时长，单位为毫秒（ms），用于刷新进度条长度，默认只"
+      },
+      {
+        "section_id": "section-60",
+        "title": "off('durationUpdate')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2206,
+        "line_end": 2231,
+        "summary": "off(type: 'durationUpdate', callback?: Callback\\<number>): void\n\n取消监听资源播放资源的时长。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-61",
+        "title": "on('bufferingUpdate')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2232,
+        "line_end": 2259,
+        "summary": "on(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler): void\n\n订阅音视频缓存更新事件，仅网络播放支持该订阅事件。\n\n*"
+      },
+      {
+        "section_id": "section-62",
+        "title": "off('bufferingUpdate')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2260,
+        "line_end": 2285,
+        "summary": "off(type: 'bufferingUpdate', callback?: OnBufferingUpdateHandler): void\n\n取消监听音视频缓存更新事件。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-63",
+        "title": "on('startRenderFrame')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2286,
+        "line_end": 2313,
+        "summary": "on(type: 'startRenderFrame', callback: Callback\\<void>): void\n\n订阅视频播放开始首帧渲染的更新事件，仅视频播放支持该订阅事件，该事件仅代"
+      },
+      {
+        "section_id": "section-64",
+        "title": "off('startRenderFrame')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2314,
+        "line_end": 2339,
+        "summary": "off(type: 'startRenderFrame', callback?: Callback\\<void>): void\n\n取消监听视频播放开始首帧渲染的更新事件。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-65",
+        "title": "on('videoSizeChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2340,
+        "line_end": 2367,
+        "summary": "on(type: 'videoSizeChange', callback: OnVideoSizeChangeHandler): void\n\n监听视频播放宽高变化事件，仅视频播放支持该订阅事件，默认"
+      },
+      {
+        "section_id": "section-66",
+        "title": "off('videoSizeChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2368,
+        "line_end": 2393,
+        "summary": "off(type: 'videoSizeChange', callback?: OnVideoSizeChangeHandler): void\n\n取消监听视频播放宽高变化事件。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-67",
+        "title": "on('audioInterrupt')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2394,
+        "line_end": 2423,
+        "summary": "on(type: 'audioInterrupt', callback: Callback\\<audio.InterruptEvent>): void\n\n监听音频焦点变化事件，多个音视频资源同时播放"
+      },
+      {
+        "section_id": "section-68",
+        "title": "off('audioInterrupt')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2424,
+        "line_end": 2449,
+        "summary": "off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void\n\n取消监听音频焦点变化事件。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-69",
+        "title": "on('audioOutputDeviceChangeWithInfo')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2450,
+        "line_end": 2487,
+        "summary": "on(type: 'audioOutputDeviceChangeWithInfo', callback: Callback\\<audio.AudioStreamDeviceChangeInfo>)"
+      },
+      {
+        "section_id": "section-70",
+        "title": "off('audioOutputDeviceChangeWithInfo')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2488,
+        "line_end": 2519,
+        "summary": "off(type: 'audioOutputDeviceChangeWithInfo', callback?: Callback\\<audio.AudioStreamDeviceChangeInfo"
+      },
+      {
+        "section_id": "section-71",
+        "title": "addSubtitleFromFd<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2520,
+        "line_end": 2563,
+        "summary": "addSubtitleFromFd(fd: number, offset?: number, length?: number): Promise\\<void>\n\n依据fd为视频添加外挂字幕，当前仅支"
+      },
+      {
+        "section_id": "section-72",
+        "title": "addSubtitleFromUrl<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2564,
+        "line_end": 2603,
+        "summary": "addSubtitleFromUrl(url: string): Promise\\<void>\n\n依据url为视频添加外挂字幕，当前仅支持与视频资源同时设置（在avplayer设置fdSrc视频资源"
+      },
+      {
+        "section_id": "section-73",
+        "title": "on('subtitleUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2604,
+        "line_end": 2638,
+        "summary": "on(type: 'subtitleUpdate', callback: Callback\\<SubtitleInfo>): void\n\n订阅获取外挂字幕的事件，当有外挂字幕时，会通过订阅的回调方法"
+      },
+      {
+        "section_id": "section-74",
+        "title": "off('subtitleUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2639,
+        "line_end": 2664,
+        "summary": "off(type: 'subtitleUpdate', callback?: Callback\\<SubtitleInfo>): void\n\n取消订阅获取外挂字幕的事件。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-75",
+        "title": "on('trackChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2665,
+        "line_end": 2692,
+        "summary": "on(type: 'trackChange', callback: OnTrackChangeHandler): void\n\n订阅获取轨道变更的事件，当播放的轨道变更时，会通过订阅的回调方法通知用户"
+      },
+      {
+        "section_id": "section-76",
+        "title": "off('trackChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2693,
+        "line_end": 2718,
+        "summary": "off(type: 'trackChange', callback?: OnTrackChangeHandler): void\n\n取消订阅获取轨道变更的事件。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-77",
+        "title": "on('trackInfoUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2719,
+        "line_end": 2754,
+        "summary": "on(type: 'trackInfoUpdate', callback: Callback\\<Array\\<MediaDescription>>): void\n\n订阅获取轨道信息更新的事件，当播放"
+      },
+      {
+        "section_id": "section-78",
+        "title": "off('trackInfoUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2755,
+        "line_end": 2780,
+        "summary": "off(type: 'trackInfoUpdate', callback?: Callback\\<Array\\<MediaDescription>>): void\n\n取消订阅获取轨道信息更新的事件"
+      },
+      {
+        "section_id": "section-79",
+        "title": "on('amplitudeUpdate')<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2781,
+        "line_end": 2806,
+        "summary": "on(type: 'amplitudeUpdate', callback: Callback\\<Array\\<number>>): void\n\n订阅音频最大电平值，音频资源播放时定时上报。\n\n**系"
+      },
+      {
+        "section_id": "section-80",
+        "title": "off('amplitudeUpdate')<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2807,
+        "line_end": 2830,
+        "summary": "off(type: 'amplitudeUpdate', callback?: Callback\\<Array\\<number>>): void\n\n取消订阅获取音频最大电平值事件。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-81",
+        "title": "on('seiMessageReceived')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2831,
+        "line_end": 2873,
+        "summary": "on(type: 'seiMessageReceived', payloadTypes: Array\\<number>, callback: OnSeiMessageHandle): void\n\n订"
+      },
+      {
+        "section_id": "section-82",
+        "title": "off('seiMessageReceived')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2874,
+        "line_end": 2900,
+        "summary": "off(type: 'seiMessageReceived', payloadTypes?: Array\\<number>, callback?: OnSeiMessageHandle): void"
+      },
+      {
+        "section_id": "section-83",
+        "title": "setSuperResolution<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2901,
+        "line_end": 2944,
+        "summary": "setSuperResolution(enabled: boolean) : Promise\\<void>\n\n动态开启/关闭超分算法，可在 'initialized' | 'prepared' |"
+      },
+      {
+        "section_id": "section-84",
+        "title": "setVideoWindowSize<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2945,
+        "line_end": 2992,
+        "summary": "setVideoWindowSize(width: number, height: number) : Promise\\<void>\n\n动态设置超分算法的输出分辨率。可在 'initialized'"
+      },
+      {
+        "section_id": "section-85",
+        "title": "on('superResolutionChanged')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2993,
+        "line_end": 3020,
+        "summary": "on(type:'superResolutionChanged', callback: OnSuperResolutionChanged): void\n\n订阅监听超分算法开启/关闭事件。\n\n**原子"
+      },
+      {
+        "section_id": "section-86",
+        "title": "off('superResolutionChanged')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3021,
+        "line_end": 3046,
+        "summary": "off(type:'superResolutionChanged', callback?: OnSuperResolutionChanged): void\n\n取消监听超分算法开启/关闭事件。\n\n**"
+      },
+      {
+        "section_id": "section-87",
+        "title": "getPlaybackStatisticMetrics<sup>23+</sup>",
+        "level": 2,
+        "line_start": 3047,
+        "line_end": 3085,
+        "summary": "getPlaybackStatisticMetrics(): Promise\\<PlaybackMetrics>\n\n获取当前播放器的统计指标信息，可以在准备（prepared）/播放（playing"
+      },
+      {
+        "section_id": "section-88",
+        "title": "onMetricsEvent<sup>23+</sup>",
+        "level": 2,
+        "line_start": 3086,
+        "line_end": 3116,
+        "summary": "onMetricsEvent(callback: Callback\\<Array\\<AVMetricsEvent>>): void\n\n订阅播放过程中的指标事件。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-89",
+        "title": "offMetricsEvent<sup>23+</sup>",
+        "level": 2,
+        "line_start": 3117,
+        "line_end": 3139,
+        "summary": "offMetricsEvent(callback?: Callback\\<Array\\<AVMetricsEvent>>): void\n\n取消订阅播放过程中的指标事件。\n\n**系统能力：** Sys"
+      }
+    ]
+  }
+}

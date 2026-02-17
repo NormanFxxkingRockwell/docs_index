@@ -1,0 +1,92 @@
+{
+  "doc_id": "errorcode-certManager",
+  "title": "证书管理错误码",
+  "path": "zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md",
+  "metadata": {
+    "kit": "Device Certificate Kit",
+    "subsystem": "Security",
+    "owner": "@chaceli",
+    "designer": "@chande",
+    "tester": "@zhangzhi1995",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Device Certificate Kit Security 模块的 证书管理错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "证书管理错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "17500001 内部错误",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 27,
+        "summary": "**错误信息**\n\nInternal error. Possible causes: 1. IPC communication failed; 2. Memory operation error;"
+      },
+      {
+        "section_id": "section-2",
+        "title": "17500002 证书不存在",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 41,
+        "summary": "**错误信息**\n\nThe certificate does not exist.\n\n**可能原因**\n\n证书管理过程中发现证书不存在。\n\n**处理步骤**\n\n检查证书是否存在。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "17500003 证书或凭据无效",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 55,
+        "summary": "**错误信息**\n\nThe keystore is in an invalid format or the keystore password is incorrect.\n\n**可能原因**\n\n输入"
+      },
+      {
+        "section_id": "section-4",
+        "title": "17500004 证书或凭据数量达到上限",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 69,
+        "summary": "**错误信息**\n\nThe number of certificates or credentials reaches the maximum allowed.\n\n**可能原因**\n\n已安装的证书或"
+      },
+      {
+        "section_id": "section-5",
+        "title": "17500005 应用未经用户授权",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 83,
+        "summary": "**错误信息**\n\nThe application is not authorized by the user.\n\n**可能原因**\n\n用户没有将输入的凭据授权给当前应用使用。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "17500007 设备进入坚盾守护模式",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 97,
+        "summary": "**错误信息**\n\nThe device enters advanced security mode.\n\n**可能原因**\n\n用户已开启坚盾守护模式。\n\n**处理步骤**\n\n需要在应用界面提醒用户关"
+      },
+      {
+        "section_id": "section-7",
+        "title": "17500009 不支持指定的证书存储路径",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 111,
+        "summary": "**错误信息**\n\nThe device does not support the specified certificate store path.\n\n**可能原因**\n\n设备不支持指定的证书存储"
+      },
+      {
+        "section_id": "section-8",
+        "title": "17500010 访问USB证书凭据失败",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 125,
+        "summary": "**错误信息**\n\nThe USB key service access failed.\n\n**可能原因**\n\nUSB硬件驱动服务发生异常。\n\n**处理步骤**\n\n检查USB是否正常连接或USB驱动"
+      },
+      {
+        "section_id": "section-9",
+        "title": "17500011 入参校验失败",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 139,
+        "summary": "**错误信息**\n\nThe input parameters validation failed.\n\n**可能原因**\n\n参数格式异常或参数范围无效。\n\n**处理步骤**\n\n检查接口入参格式或范围。"
+      }
+    ]
+  }
+}

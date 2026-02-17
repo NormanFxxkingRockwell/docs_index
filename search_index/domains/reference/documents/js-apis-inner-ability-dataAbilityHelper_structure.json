@@ -1,0 +1,308 @@
+{
+  "doc_id": "js-apis-inner-ability-dataAbilityHelper",
+  "title": "DataAbilityHelper",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-inner-ability-dataAbilityHelper.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-inner-ability-dataAbilityHelper.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@xialiangwei",
+    "designer": "@jsjzju",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 DataAbilityHelper，提供相关接口和功能说明。",
+  "structure": {
+    "title": "DataAbilityHelper",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport ability from '@ohos.ability.ability';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 28,
+        "summary": "使用前根据具体情况引入如下模块\n```ts\nimport ohos_data_ability from '@ohos.data.dataAbility';\nimport relationalStor"
+      },
+      {
+        "section_id": "section-3",
+        "title": "DataAbilityHelper.openFile",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 66,
+        "summary": "openFile(uri: string, mode: string, callback: AsyncCallback\\<number>): void\n\n打开指定uri对应的文件，返回文件描述符。使"
+      },
+      {
+        "section_id": "section-4",
+        "title": "DataAbilityHelper.openFile",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 105,
+        "summary": "openFile(uri: string, mode: string): Promise\\<number>\n\n打开指定uri对应的文件，返回文件描述符。使用Promise异步回调。\n\n**系统能力*"
+      },
+      {
+        "section_id": "section-5",
+        "title": "DataAbilityHelper.on('dataChange')",
+        "level": 2,
+        "line_start": 106,
+        "line_end": 143,
+        "summary": "on(type: 'dataChange', uri: string, callback: AsyncCallback\\<void>): void\n\n注册观察者以监听uri指定数据的数据变化通知。使"
+      },
+      {
+        "section_id": "section-6",
+        "title": "DataAbilityHelper.off('dataChange')",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 185,
+        "summary": "off(type: 'dataChange', uri: string, callback?: AsyncCallback\\<void>): void\n\n注销观察者以停止监听uri指定数据的数据变化"
+      },
+      {
+        "section_id": "section-7",
+        "title": "DataAbilityHelper.getType",
+        "level": 2,
+        "line_start": 186,
+        "line_end": 221,
+        "summary": "getType(uri: string, callback: AsyncCallback\\<string>): void\n\n获取给定uri指向数据的媒体资源类型。使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "DataAbilityHelper.getType",
+        "level": 2,
+        "line_start": 222,
+        "line_end": 258,
+        "summary": "getType(uri: string): Promise\\<string>\n\n获取给定uri指向数据的媒体资源类型。使用Promise异步回调。\n\n**系统能力**：SystemCapabilit"
+      },
+      {
+        "section_id": "section-9",
+        "title": "DataAbilityHelper.getFileTypes",
+        "level": 2,
+        "line_start": 259,
+        "line_end": 295,
+        "summary": "getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array\\<string>>): void\n\n获"
+      },
+      {
+        "section_id": "section-10",
+        "title": "DataAbilityHelper.getFileTypes",
+        "level": 2,
+        "line_start": 296,
+        "line_end": 333,
+        "summary": "getFileTypes(uri: string, mimeTypeFilter: string): Promise\\<Array\\<string>>\n\n获取支持的文件媒体资源类型。使用Promis"
+      },
+      {
+        "section_id": "section-11",
+        "title": "DataAbilityHelper.normalizeUri",
+        "level": 2,
+        "line_start": 334,
+        "line_end": 369,
+        "summary": "normalizeUri(uri: string, callback: AsyncCallback\\<string>): void\n\n将引用数据功能的给定uri转换为规范化uri。使用callbac"
+      },
+      {
+        "section_id": "section-12",
+        "title": "DataAbilityHelper.normalizeUri",
+        "level": 2,
+        "line_start": 370,
+        "line_end": 406,
+        "summary": "normalizeUri(uri: string): Promise\\<string>\n\n将引用数据功能的给定uri转换为规范化uri。使用Promise异步回调。\n\n**系统能力**：System"
+      },
+      {
+        "section_id": "section-13",
+        "title": "DataAbilityHelper.denormalizeUri",
+        "level": 2,
+        "line_start": 407,
+        "line_end": 442,
+        "summary": "denormalizeUri(uri: string, callback: AsyncCallback\\<string>): void\n\n将由normalizeUri（uri）生成的给定规范化uri"
+      },
+      {
+        "section_id": "section-14",
+        "title": "DataAbilityHelper.denormalizeUri",
+        "level": 2,
+        "line_start": 443,
+        "line_end": 479,
+        "summary": "denormalizeUri(uri: string): Promise\\<string>\n\n将由normalizeUri（uri）生成的给定规范化uri转换为非规范化uri。使用Promise异步"
+      },
+      {
+        "section_id": "section-15",
+        "title": "DataAbilityHelper.notifyChange",
+        "level": 2,
+        "line_start": 480,
+        "line_end": 515,
+        "summary": "notifyChange(uri: string, callback: AsyncCallback\\<void>): void\n\n通知注册的观察者，uri指定数据的数据变化。使用callback异步"
+      },
+      {
+        "section_id": "section-16",
+        "title": "DataAbilityHelper.notifyChange",
+        "level": 2,
+        "line_start": 516,
+        "line_end": 552,
+        "summary": "notifyChange(uri: string): Promise\\<void>\n\n通知注册的观察者，uri指定数据的数据变化。使用Promise异步回调。\n\n**系统能力**：SystemCap"
+      },
+      {
+        "section_id": "section-17",
+        "title": "DataAbilityHelper.insert",
+        "level": 2,
+        "line_start": 553,
+        "line_end": 596,
+        "summary": "insert(uri: string, valuesBucket: [rdb.ValuesBucket](../apis-arkdata/js-apis-data-rdb.md#valuesbuck"
+      },
+      {
+        "section_id": "section-18",
+        "title": "DataAbilityHelper.insert",
+        "level": 2,
+        "line_start": 597,
+        "line_end": 641,
+        "summary": "insert(uri: string, valuesBucket: [rdb.ValuesBucket](../apis-arkdata/js-apis-data-rdb.md#valuesbuck"
+      },
+      {
+        "section_id": "section-19",
+        "title": "DataAbilityHelper.batchInsert",
+        "level": 2,
+        "line_start": 642,
+        "line_end": 681,
+        "summary": "batchInsert(uri: string, valuesBuckets: Array\\<rdb.ValuesBucket>, callback: AsyncCallback\\<number>)"
+      },
+      {
+        "section_id": "section-20",
+        "title": "DataAbilityHelper.batchInsert",
+        "level": 2,
+        "line_start": 682,
+        "line_end": 723,
+        "summary": "batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise\\<number>\n\n将多个数据记录插入数据库。使用"
+      },
+      {
+        "section_id": "section-21",
+        "title": "DataAbilityHelper.delete",
+        "level": 2,
+        "line_start": 724,
+        "line_end": 762,
+        "summary": "delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback\\<number>"
+      },
+      {
+        "section_id": "section-22",
+        "title": "DataAbilityHelper.delete",
+        "level": 2,
+        "line_start": 763,
+        "line_end": 802,
+        "summary": "delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise\\<number>\n\n从数据库中删除一个或多个"
+      },
+      {
+        "section_id": "section-23",
+        "title": "DataAbilityHelper.delete",
+        "level": 2,
+        "line_start": 803,
+        "line_end": 838,
+        "summary": "delete(uri: string, callback: AsyncCallback\\<number>): void\n\npredicates筛选条件为空，自定义数据库删除数据记录的处理逻辑。使用c"
+      },
+      {
+        "section_id": "section-24",
+        "title": "DataAbilityHelper.update",
+        "level": 2,
+        "line_start": 839,
+        "line_end": 885,
+        "summary": "update(uri: string, valuesBucket: rdb.ValuesBucket, predicates: dataAbility.DataAbilityPredicates,"
+      },
+      {
+        "section_id": "section-25",
+        "title": "DataAbilityHelper.update",
+        "level": 2,
+        "line_start": 886,
+        "line_end": 933,
+        "summary": "update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.DataAbilityPredicates)"
+      },
+      {
+        "section_id": "section-26",
+        "title": "DataAbilityHelper.update",
+        "level": 2,
+        "line_start": 934,
+        "line_end": 977,
+        "summary": "update(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback\\<number>): void\n\npredic"
+      },
+      {
+        "section_id": "section-27",
+        "title": "DataAbilityHelper.query",
+        "level": 2,
+        "line_start": 978,
+        "line_end": 1018,
+        "summary": "query(uri: string, columns: Array\\<string>, predicates: dataAbility.DataAbilityPredicates, callback"
+      },
+      {
+        "section_id": "section-28",
+        "title": "DataAbilityHelper.query",
+        "level": 2,
+        "line_start": 1019,
+        "line_end": 1054,
+        "summary": "query(uri: string, callback: AsyncCallback\\<ResultSet>): void\n\n查询数据库中的数据。使用callback异步回调。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-29",
+        "title": "DataAbilityHelper.query",
+        "level": 2,
+        "line_start": 1055,
+        "line_end": 1092,
+        "summary": "query(uri: string, columns: Array\\<string>, callback: AsyncCallback\\<ResultSet>): void\n\n查询数据库中的数据。使"
+      },
+      {
+        "section_id": "section-30",
+        "title": "DataAbilityHelper.query",
+        "level": 2,
+        "line_start": 1093,
+        "line_end": 1131,
+        "summary": "query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback\\<ResultSe"
+      },
+      {
+        "section_id": "section-31",
+        "title": "DataAbilityHelper.query",
+        "level": 2,
+        "line_start": 1132,
+        "line_end": 1173,
+        "summary": "query(uri: string, columns?: Array\\<string>, predicates?: dataAbility.DataAbilityPredicates): Promi"
+      },
+      {
+        "section_id": "section-32",
+        "title": "DataAbilityHelper.call",
+        "level": 2,
+        "line_start": 1174,
+        "line_end": 1213,
+        "summary": "call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCallback\\<PacMap>): v"
+      },
+      {
+        "section_id": "section-33",
+        "title": "DataAbilityHelper.call",
+        "level": 2,
+        "line_start": 1214,
+        "line_end": 1257,
+        "summary": "call(uri: string, method: string, arg: string, extras: PacMap): Promise\\<PacMap>\n\n调用DataAbility的扩展接"
+      },
+      {
+        "section_id": "section-34",
+        "title": "DataAbilityHelper.executeBatch",
+        "level": 2,
+        "line_start": 1258,
+        "line_end": 1296,
+        "summary": "executeBatch(uri: string, operations: Array\\<DataAbilityOperation>, callback: AsyncCallback\\<Array\\"
+      },
+      {
+        "section_id": "section-35",
+        "title": "DataAbilityHelper.executeBatch",
+        "level": 2,
+        "line_start": 1297,
+        "line_end": 1340,
+        "summary": "executeBatch(uri: string, operations: Array\\<DataAbilityOperation>): Promise\\<Array\\<DataAbilityRes"
+      },
+      {
+        "section_id": "section-36",
+        "title": "PacMap",
+        "level": 2,
+        "line_start": 1341,
+        "line_end": 1350,
+        "summary": "用于存储数据的PacMap类型。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.FAModel\n\n| 名称 | 类型 | 只读 | 可选 | 说"
+      }
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "doc_id": "ts-container-scrollable-common",
+  "title": "滚动组件通用接口",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yylong; @zcdqs",
+    "designer": "@yylong; @zcdqs",
+    "tester": "@liuzhenshuo",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 滚动组件通用接口，提供相关接口和功能说明。",
+  "structure": {
+    "title": "滚动组件通用接口",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "属性",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 397,
+        "summary": "### scrollBar<sup>11+</sup>\n\nscrollBar(barState: BarState): T\n\n设置滚动条状态。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-2",
+        "title": "事件",
+        "level": 2,
+        "line_start": 398,
+        "line_end": 713,
+        "summary": "### onReachStart<sup>11+</sup>\n\nonReachStart(event: () => void): T\n\n滚动组件到达起始位置时触发。\n\n滚动组件初始化时会触发一次，滚"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ItemDragInfo对象说明",
+        "level": 2,
+        "line_start": 714,
+        "line_end": 726,
+        "summary": "拖拽点信息对象。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-4",
+        "title": "NestedScrollOptions<sup>10+</sup>对象说明",
+        "level": 2,
+        "line_start": 727,
+        "line_end": 739,
+        "summary": "[nestedScroll](#nestedscroll11)属性参数对象。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "EdgeEffectOptions<sup>11+</sup>对象说明",
+        "level": 2,
+        "line_start": 740,
+        "line_end": 750,
+        "summary": "[edgeEffect](#edgeeffect11)属性参数对象。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称   | 类型  | 只读"
+      },
+      {
+        "section_id": "section-6",
+        "title": "FadingEdgeOptions<sup>14+</sup>对象说明",
+        "level": 2,
+        "line_start": 751,
+        "line_end": 762,
+        "summary": "[fadingEdge](#fadingedge14)属性边缘渐隐参数对象。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "EditModeOptions<sup>23+</sup>对象说明",
+        "level": 2,
+        "line_start": 763,
+        "line_end": 777,
+        "summary": "List/Grid组件编辑模式选项属性参数对象。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-8",
+        "title": "EffectEdge<sup>18+</sup>枚举说明",
+        "level": 2,
+        "line_start": 778,
+        "line_end": 790,
+        "summary": "表示当前边缘效果要生效的边缘。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI."
+      },
+      {
+        "section_id": "section-9",
+        "title": "ContentClipMode<sup>14+</sup>枚举说明",
+        "level": 2,
+        "line_start": 791,
+        "line_end": 808,
+        "summary": "表示滚动容器的内容裁剪模式。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.A"
+      },
+      {
+        "section_id": "section-10",
+        "title": "OnWillScrollCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 809,
+        "line_end": 832,
+        "summary": "type OnWillScrollCallback = (scrollOffset: number, scrollState: ScrollState, scrollSource: ScrollSo"
+      },
+      {
+        "section_id": "section-11",
+        "title": "OnScrollCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 833,
+        "line_end": 851,
+        "summary": "type OnScrollCallback = (scrollOffset: number, scrollState: ScrollState) => void\n\n滚动组件滑动时触发的回调。\n\n**"
+      },
+      {
+        "section_id": "section-12",
+        "title": "OnItemDragStartCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 852,
+        "line_end": 874,
+        "summary": "type OnItemDragStartCallback = (event: ItemDragInfo, itemIndex: number) => CustomBuilder\n\n开始拖拽列表或网格"
+      },
+      {
+        "section_id": "section-13",
+        "title": "OnGetPreviewBadgeCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 875,
+        "line_end": 892,
+        "summary": "type OnGetPreviewBadgeCallback = () => boolean | number\n\n即将启动多选长按聚拢动画时，触发用于获取选中数量的回调。\n\n**模型约束：** 此接"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ScrollResult<sup>12+</sup>对象说明",
+        "level": 2,
+        "line_start": 893,
+        "line_end": 904,
+        "summary": "[OnWillScrollCallback](#onwillscrollcallback12)返回值对象。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ChildrenMainSize<sup>12+</sup>对象说明",
+        "level": 2,
+        "line_start": 905,
+        "line_end": 1039,
+        "summary": "维护List组件或ListItemGroup组件的子组件在主轴方向的大小信息，仅支持一对一绑定到List组件或ListItemGroup组件。\n\n> **说明：**\n>\n> - 提供的主轴方向大小信"
+      },
+      {
+        "section_id": "section-16",
+        "title": "UIScrollableCommonEvent<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1040,
+        "line_end": 1134,
+        "summary": "用于设置滚动事件回调。\n### setOnReachStart<sup>19+</sup>\n\nsetOnReachStart(callback: Callback\\<void> | undefined"
+      },
+      {
+        "section_id": "section-17",
+        "title": "OnWillStopDraggingCallback<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1135,
+        "line_end": 1152,
+        "summary": "type OnWillStopDraggingCallback = (velocity: number) => void\n\n滚动组件划动离手时触发的回调。\n\n**卡片能力：** 从API versi"
+      },
+      {
+        "section_id": "section-18",
+        "title": "OnDidStopDraggingCallback<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1153,
+        "line_end": 1170,
+        "summary": "type OnDidStopDraggingCallback = (willFling: boolean) => void\n\n滚动组件在结束拖拽时触发的回调。\n\n**卡片能力：** 从API ver"
+      },
+      {
+        "section_id": "section-19",
+        "title": "示例",
+        "level": 2,
+        "line_start": 1171,
+        "line_end": 1403,
+        "summary": "### 示例1（支持滚动手势）\n该示例通过设置[enableScrollInteraction](ts-container-scrollable-common.md#enablescrollinte"
+      }
+    ]
+  }
+}

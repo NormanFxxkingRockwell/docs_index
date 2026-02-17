@@ -1,0 +1,228 @@
+{
+  "doc_id": "js-apis-inner-notification-notificationSubscriber-sys",
+  "title": "NotificationSubscriber(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-notification-kit/js-apis-inner-notification-notificationSubscriber-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-notification-kit/js-apis-inner-notification-notificationSubscriber-sys.md",
+  "metadata": {
+    "kit": "Notification Kit",
+    "subsystem": "Notification",
+    "owner": "@michael_woo888",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Notification Kit Notification 模块的 NotificationSubscriber(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "NotificationSubscriber(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```js\nimport { notificationSubscribe } from '@kit.NotificationKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "onConsume",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 64,
+        "summary": "onConsume?: (data: SubscribeCallbackData) => void\n\n接收到新通知的回调函数。\n\n**系统能力**：SystemCapability.Notifica"
+      },
+      {
+        "section_id": "section-3",
+        "title": "onCancel",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 106,
+        "summary": "onCancel?: (data: SubscribeCallbackData) => void\n\n取消通知的回调函数。\n\n**系统能力**：SystemCapability.Notificatio"
+      },
+      {
+        "section_id": "section-4",
+        "title": "onUpdate",
+        "level": 2,
+        "line_start": 107,
+        "line_end": 144,
+        "summary": "onUpdate?: (data: NotificationSortingMap) => void\n\n更新通知排序的回调函数。预留能力，暂未支持。\n\n**系统能力**：SystemCapabilit"
+      },
+      {
+        "section_id": "section-5",
+        "title": "onConnect",
+        "level": 2,
+        "line_start": 145,
+        "line_end": 184,
+        "summary": "onConnect?: () => void\n\n订阅完成的回调函数。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此"
+      },
+      {
+        "section_id": "section-6",
+        "title": "onDisconnect",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 238,
+        "summary": "onDisconnect?: () => void\n\n取消订阅的回调函数。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口*"
+      },
+      {
+        "section_id": "section-7",
+        "title": "onDestroy",
+        "level": 2,
+        "line_start": 239,
+        "line_end": 278,
+        "summary": "onDestroy?: () => void\n\n服务失联回调函数。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接"
+      },
+      {
+        "section_id": "section-8",
+        "title": "onDoNotDisturbDateChange<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 279,
+        "line_end": 323,
+        "summary": "onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void\n\n免打扰时间选项发生变更时的回调函数。\n\n> **说"
+      },
+      {
+        "section_id": "section-9",
+        "title": "onDoNotDisturbChanged<sup>11+</sup>",
+        "level": 2,
+        "line_start": 324,
+        "line_end": 364,
+        "summary": "onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void\n\n免打扰时间选项发生变更时的回调函数。\n\n*"
+      },
+      {
+        "section_id": "section-10",
+        "title": "onEnabledNotificationChanged<sup>8+</sup>",
+        "level": 2,
+        "line_start": 365,
+        "line_end": 406,
+        "summary": "onEnabledNotificationChanged?: (callbackData: EnabledNotificationCallbackData) => void\n\n监听应用通知使能变化。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "onEnabledSilentReminderChanged<sup>24+</sup>",
+        "level": 2,
+        "line_start": 407,
+        "line_end": 450,
+        "summary": "onEnabledSilentReminderChanged?: EnabledSilentReminderChangedCallback\n\n监听应用通知静默提醒的使能状态变化。\n\n**系统能力**"
+      },
+      {
+        "section_id": "section-12",
+        "title": "onBadgeChanged<sup>10+</sup>",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 490,
+        "summary": "onBadgeChanged?: (data: BadgeNumberCallbackData) => void\n\n监听应用角标个数变化。\n\n**系统能力**：SystemCapability.No"
+      },
+      {
+        "section_id": "section-13",
+        "title": "onBadgeEnabledChanged<sup>12+</sup>",
+        "level": 2,
+        "line_start": 491,
+        "line_end": 530,
+        "summary": "onBadgeEnabledChanged?: BadgeEnabledChangedCallback\n\n监听应用角标使能状态变化。\n\n**系统能力**：SystemCapability.Notif"
+      },
+      {
+        "section_id": "section-14",
+        "title": "onBatchCancel<sup>11+</sup>",
+        "level": 2,
+        "line_start": 531,
+        "line_end": 572,
+        "summary": "onBatchCancel?: (data: Array<SubscribeCallbackData\\>) => void\n\n批量删除的回调函数。\n\n**系统能力**：SystemCapabilit"
+      },
+      {
+        "section_id": "section-15",
+        "title": "onEnabledPriorityChanged<sup>23+</sup>",
+        "level": 2,
+        "line_start": 573,
+        "line_end": 603,
+        "summary": "onEnabledPriorityChanged?: (callbackData: EnabledPriorityNotificationCallbackData) => void\n\n通知优先级总开"
+      },
+      {
+        "section_id": "section-16",
+        "title": "onEnabledPriorityByBundleChanged<sup>23+</sup>",
+        "level": 2,
+        "line_start": 604,
+        "line_end": 634,
+        "summary": "onEnabledPriorityByBundleChanged?: (callbackData: EnabledPriorityNotificationByBundleCallbackData)"
+      },
+      {
+        "section_id": "section-17",
+        "title": "onSystemUpdate<sup>23+</sup>",
+        "level": 2,
+        "line_start": 635,
+        "line_end": 668,
+        "summary": "onSystemUpdate?: SystemUpdateCallback\n\n通知系统属性值变化的回调函数。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力**：Syste"
+      },
+      {
+        "section_id": "section-18",
+        "title": "SubscribeCallbackData",
+        "level": 2,
+        "line_start": 669,
+        "line_end": 683,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称            | 类型"
+      },
+      {
+        "section_id": "section-19",
+        "title": "EnabledNotificationCallbackData<sup>8+</sup>",
+        "level": 2,
+        "line_start": 684,
+        "line_end": 695,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称   | 类型    | 只读 | 可选 |"
+      },
+      {
+        "section_id": "section-20",
+        "title": "EnabledSilentReminderCallbackData<sup>24+</sup>",
+        "level": 2,
+        "line_start": 696,
+        "line_end": 709,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口"
+      },
+      {
+        "section_id": "section-21",
+        "title": "EnabledSilentReminderChangedCallback<sup>24+</sup>",
+        "level": 2,
+        "line_start": 710,
+        "line_end": 727,
+        "summary": "type EnabledSilentReminderChangedCallback = (callbackData: EnabledSilentReminderCallbackData) => vo"
+      },
+      {
+        "section_id": "section-22",
+        "title": "BadgeNumberCallbackData<sup>10+</sup>",
+        "level": 2,
+        "line_start": 728,
+        "line_end": 742,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称        | 类型   | 只读 |"
+      },
+      {
+        "section_id": "section-23",
+        "title": "BadgeEnabledChangedCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 743,
+        "line_end": 758,
+        "summary": "type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void\n\n注册应用角标使能状态变化的回调"
+      },
+      {
+        "section_id": "section-24",
+        "title": "EnabledPriorityNotificationCallbackData<sup>23+</sup>",
+        "level": 2,
+        "line_start": 759,
+        "line_end": 768,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称        | 类型   | 只读 |"
+      },
+      {
+        "section_id": "section-25",
+        "title": "EnabledPriorityNotificationByBundleCallbackData<sup>23+</sup>",
+        "level": 2,
+        "line_start": 769,
+        "line_end": 780,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称        | 类型   | 只读 |"
+      },
+      {
+        "section_id": "section-26",
+        "title": "SystemUpdateCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 781,
+        "line_end": 795,
+        "summary": "type SystemUpdateCallback = (data: SubscribeCallbackData) => void\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系"
+      }
+    ]
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "doc_id": "arkts-apis-audio-AudioRoutingManager",
+  "title": "Interface (AudioRoutingManager)",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioRoutingManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioRoutingManager.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@songshenke",
+    "designer": "@caixuejiang; @hao-liangfei; @zhanganxiang",
+    "tester": "@Filger",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 Interface (AudioRoutingManager)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AudioRoutingManager)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { audio } from '@kit.AudioKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getDevices<sup>9+</sup>",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 52,
+        "summary": "getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback&lt;AudioDeviceDescriptors&gt;): void\n\n获取"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getDevices<sup>9+</sup>",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 84,
+        "summary": "getDevices(deviceFlag: DeviceFlag): Promise&lt;AudioDeviceDescriptors&gt;\n\n获取音频设备列表。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getDevicesSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 85,
+        "line_end": 127,
+        "summary": "getDevicesSync(deviceFlag: DeviceFlag): AudioDeviceDescriptors\n\n获取音频设备列表。同步返回结果。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-5",
+        "title": "isMicBlockDetectionSupported<sup>13+</sup>",
+        "level": 2,
+        "line_start": 128,
+        "line_end": 149,
+        "summary": "isMicBlockDetectionSupported(): Promise&lt;boolean&gt;\n\n获取当前设备是否支持麦克风状态检测。使用Promise异步回调。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "on('micBlockStatusChanged')<sup>13+</sup>",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 189,
+        "summary": "on(type: 'micBlockStatusChanged', callback: Callback<DeviceBlockStatusInfo\\>): void\n\n监听麦克风堵塞状态变化事件。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "off('micBlockStatusChanged')<sup>13+</sup>",
+        "level": 2,
+        "line_start": 190,
+        "line_end": 229,
+        "summary": "off(type: 'micBlockStatusChanged', callback?: Callback<DeviceBlockStatusInfo\\>): void\n\n取消监听麦克风堵塞状态变"
+      },
+      {
+        "section_id": "section-8",
+        "title": "on('deviceChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 230,
+        "line_end": 265,
+        "summary": "on(type: 'deviceChange', deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction\\>): void\n\n监听"
+      },
+      {
+        "section_id": "section-9",
+        "title": "off('deviceChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 266,
+        "line_end": 308,
+        "summary": "off(type: 'deviceChange', callback?: Callback<DeviceChangeAction\\>): void\n\n取消监听音频设备连接状态变化事件。使用callb"
+      },
+      {
+        "section_id": "section-10",
+        "title": "setCommunicationDevice<sup>9+</sup>",
+        "level": 2,
+        "line_start": 309,
+        "line_end": 342,
+        "summary": "setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean, callback: AsyncCallbac"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getAvailableDevices<sup>12+</sup>",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 385,
+        "summary": "getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors\n\n获取音频可选设备列表。同步返回结果。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-12",
+        "title": "on('availableDeviceChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 386,
+        "line_end": 421,
+        "summary": "on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction\\>"
+      },
+      {
+        "section_id": "section-13",
+        "title": "off('availableDeviceChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 422,
+        "line_end": 464,
+        "summary": "off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction\\>): void\n\n取消监听音频可选设备连接状态变"
+      },
+      {
+        "section_id": "section-14",
+        "title": "setCommunicationDevice<sup>9+</sup>",
+        "level": 2,
+        "line_start": 465,
+        "line_end": 497,
+        "summary": "setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean): Promise&lt;void&gt;"
+      },
+      {
+        "section_id": "section-15",
+        "title": "isCommunicationDeviceActive<sup>9+</sup>",
+        "level": 2,
+        "line_start": 498,
+        "line_end": 526,
+        "summary": "isCommunicationDeviceActive(deviceType: CommunicationDeviceType, callback: AsyncCallback&lt;boolean"
+      },
+      {
+        "section_id": "section-16",
+        "title": "isCommunicationDeviceActive<sup>9+</sup>",
+        "level": 2,
+        "line_start": 527,
+        "line_end": 554,
+        "summary": "isCommunicationDeviceActive(deviceType: CommunicationDeviceType): Promise&lt;boolean&gt;\n\n获取指定通信设备的"
+      },
+      {
+        "section_id": "section-17",
+        "title": "isCommunicationDeviceActiveSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 555,
+        "line_end": 597,
+        "summary": "isCommunicationDeviceActiveSync(deviceType: CommunicationDeviceType): boolean\n\n获取指定通信设备的激活状态。同步返回结果"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getPreferOutputDeviceForRendererInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 598,
+        "line_end": 640,
+        "summary": "getPreferOutputDeviceForRendererInfo(rendererInfo: AudioRendererInfo, callback: AsyncCallback&lt;Au"
+      },
+      {
+        "section_id": "section-19",
+        "title": "getPreferOutputDeviceForRendererInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 641,
+        "line_end": 686,
+        "summary": "getPreferOutputDeviceForRendererInfo(rendererInfo: AudioRendererInfo): Promise&lt;AudioDeviceDescrip"
+      },
+      {
+        "section_id": "section-20",
+        "title": "getPreferredOutputDeviceForRendererInfoSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 687,
+        "line_end": 733,
+        "summary": "getPreferredOutputDeviceForRendererInfoSync(rendererInfo: AudioRendererInfo): AudioDeviceDescriptors"
+      },
+      {
+        "section_id": "section-21",
+        "title": "on('preferOutputDeviceChangeForRendererInfo')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 734,
+        "line_end": 771,
+        "summary": "on(type: 'preferOutputDeviceChangeForRendererInfo', rendererInfo: AudioRendererInfo, callback: Call"
+      },
+      {
+        "section_id": "section-22",
+        "title": "off('preferOutputDeviceChangeForRendererInfo')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 772,
+        "line_end": 813,
+        "summary": "off(type: 'preferOutputDeviceChangeForRendererInfo', callback?: Callback<AudioDeviceDescriptors\\>):"
+      },
+      {
+        "section_id": "section-23",
+        "title": "getPreferredInputDeviceForCapturerInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 814,
+        "line_end": 856,
+        "summary": "getPreferredInputDeviceForCapturerInfo(capturerInfo: AudioCapturerInfo, callback: AsyncCallback&lt;"
+      },
+      {
+        "section_id": "section-24",
+        "title": "getPreferredInputDeviceForCapturerInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 857,
+        "line_end": 903,
+        "summary": "getPreferredInputDeviceForCapturerInfo(capturerInfo: AudioCapturerInfo): Promise&lt;AudioDeviceDesc"
+      },
+      {
+        "section_id": "section-25",
+        "title": "getPreferredInputDeviceForCapturerInfoSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 904,
+        "line_end": 951,
+        "summary": "getPreferredInputDeviceForCapturerInfoSync(capturerInfo: AudioCapturerInfo): AudioDeviceDescriptors"
+      },
+      {
+        "section_id": "section-26",
+        "title": "on('preferredInputDeviceChangeForCapturerInfo')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 952,
+        "line_end": 989,
+        "summary": "on(type: 'preferredInputDeviceChangeForCapturerInfo', capturerInfo: AudioCapturerInfo, callback: Ca"
+      },
+      {
+        "section_id": "section-27",
+        "title": "off('preferredInputDeviceChangeForCapturerInfo')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 990,
+        "line_end": 1031,
+        "summary": "off(type: 'preferredInputDeviceChangeForCapturerInfo', callback?: Callback<AudioDeviceDescriptors\\>"
+      }
+    ]
+  }
+}

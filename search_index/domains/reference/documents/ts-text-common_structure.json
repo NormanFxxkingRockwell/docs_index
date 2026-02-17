@@ -1,0 +1,468 @@
+{
+  "doc_id": "ts-text-common",
+  "title": "文本组件公共接口",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-text-common.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-text-common.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@kangshihui",
+    "designer": "@xiangyuan6",
+    "tester": "@jiaoaozihao",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 文本组件公共接口，提供相关接口和功能说明。",
+  "structure": {
+    "title": "文本组件公共接口",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "CaretStyle<sup>10+</sup>",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 24,
+        "summary": "**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称"
+      },
+      {
+        "section_id": "section-2",
+        "title": "LayoutManager<sup>12+</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 124,
+        "summary": "布局管理器对象。\n\n> **说明：**\n>\n> 文本内容变更后，需等待布局完成才可获取到最新的布局信息。\n\n### 导入对象\n以Text组件为例，完整示例请参考Text组件的[示例10获取文本信息]"
+      },
+      {
+        "section_id": "section-3",
+        "title": "PositionWithAffinity<sup>12+</sup>",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 137,
+        "summary": "位置以及亲和度。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-4",
+        "title": "TextMenuItemId<sup>12+</sup>",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 213,
+        "summary": "自定义菜单项的Id值。用于识别菜单选项，内置菜单项Id值见下列属性表格。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-5",
+        "title": "TextMenuItem<sup>12+</sup>对象说明",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 224,
+        "summary": "**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称  | 类型                              | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-6",
+        "title": "EditMenuOptions",
+        "level": 2,
+        "line_start": 225,
+        "line_end": 283,
+        "summary": "**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n### 属"
+      },
+      {
+        "section_id": "section-7",
+        "title": "OnPrepareMenuCallback<sup>20+</sup>",
+        "level": 2,
+        "line_start": 284,
+        "line_end": 305,
+        "summary": "type OnPrepareMenuCallback = (menuItems: Array\\<TextMenuItem\\>) => Array\\<TextMenuItem\\>\n\n当文本选择区域变化"
+      },
+      {
+        "section_id": "section-8",
+        "title": "TextRange<sup>12+</sup>",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 318,
+        "summary": "文本范围。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-9",
+        "title": "EditableTextOnChangeCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 319,
+        "line_end": 336,
+        "summary": "type EditableTextOnChangeCallback = (value: string, previewText?: PreviewText, options?: TextChange"
+      },
+      {
+        "section_id": "section-10",
+        "title": "TextDataDetectorType<sup>11+</sup>枚举说明",
+        "level": 2,
+        "line_start": 337,
+        "line_end": 350,
+        "summary": "**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称"
+      },
+      {
+        "section_id": "section-11",
+        "title": "TextDeleteDirection<sup>12+</sup>枚举说明",
+        "level": 2,
+        "line_start": 351,
+        "line_end": 363,
+        "summary": "定义删除文本方向。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-12",
+        "title": "SuperscriptStyle<sup>20+</sup>枚举说明",
+        "level": 2,
+        "line_start": 364,
+        "line_end": 377,
+        "summary": "定义文本上下角标样式。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkU"
+      },
+      {
+        "section_id": "section-13",
+        "title": "MenuType<sup>13+</sup>枚举说明",
+        "level": 2,
+        "line_start": 378,
+        "line_end": 390,
+        "summary": "菜单类型。\n\n**原子化服务API：** 从API version 13开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-14",
+        "title": "KeyboardAppearance<sup>15+</sup>枚举说明",
+        "level": 2,
+        "line_start": 391,
+        "line_end": 405,
+        "summary": "键盘外观。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-15",
+        "title": "InsertValue<sup>12+</sup>对象说明",
+        "level": 2,
+        "line_start": 406,
+        "line_end": 416,
+        "summary": "**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称"
+      },
+      {
+        "section_id": "section-16",
+        "title": "DeleteValue<sup>12+</sup>对象说明",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 428,
+        "summary": "**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称"
+      },
+      {
+        "section_id": "section-17",
+        "title": "TextDataDetectorConfig<sup>11+</sup>对象说明",
+        "level": 2,
+        "line_start": 429,
+        "line_end": 442,
+        "summary": "该配置只支持[Text](ts-basic-components-text.md)组件和[RichEditor](ts-basic-components-richeditor.md)组件。\n\n**系"
+      },
+      {
+        "section_id": "section-18",
+        "title": "PreviewText<sup>12+</sup>",
+        "level": 2,
+        "line_start": 443,
+        "line_end": 455,
+        "summary": "预上屏信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Ful"
+      },
+      {
+        "section_id": "section-19",
+        "title": "FontSettingOptions<sup>12+</sup>对象说明",
+        "level": 2,
+        "line_start": 456,
+        "line_end": 469,
+        "summary": "字体配置项。\n\n**卡片能力：** 从API version 12开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-20",
+        "title": "OnDidChangeCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 470,
+        "line_end": 486,
+        "summary": "type OnDidChangeCallback = (rangeBefore: TextRange, rangeAfter: TextRange) => void\n\n文本变换后回调。\n\n**原子化"
+      },
+      {
+        "section_id": "section-21",
+        "title": "StyledStringChangedListener<sup>12+</sup>",
+        "level": 2,
+        "line_start": 487,
+        "line_end": 499,
+        "summary": "属性字符串的文本内容变化监听器。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-22",
+        "title": "StyledStringChangeValue<sup>12+</sup>",
+        "level": 2,
+        "line_start": 500,
+        "line_end": 513,
+        "summary": "属性字符串的文本变化信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ar"
+      },
+      {
+        "section_id": "section-23",
+        "title": "AutoCapitalizationMode<sup>20+</sup>枚举说明",
+        "level": 2,
+        "line_start": 514,
+        "line_end": 528,
+        "summary": "自动大小写模式类型，只提供接口能力，具体实现以输入法应用为主。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-24",
+        "title": "TextBaseController<sup>12+</sup>",
+        "level": 2,
+        "line_start": 529,
+        "line_end": 594,
+        "summary": "文本选择控制器。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-25",
+        "title": "TextEditControllerEx<sup>12+</sup>",
+        "level": 2,
+        "line_start": 595,
+        "line_end": 684,
+        "summary": "文本扩展编辑控制器。\n\n继承自[TextBaseController](#textbasecontroller12)。\n\n**原子化服务API：** 从API version 12开始，该接口支持在"
+      },
+      {
+        "section_id": "section-26",
+        "title": "StyledStringController<sup>12+</sup>",
+        "level": 2,
+        "line_start": 685,
+        "line_end": 724,
+        "summary": "定义StyledString控制器。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Ark"
+      },
+      {
+        "section_id": "section-27",
+        "title": "DecorationStyleResult<sup>12+</sup>",
+        "level": 2,
+        "line_start": 725,
+        "line_end": 737,
+        "summary": "后端返回的文本装饰线样式信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称  | 类型"
+      },
+      {
+        "section_id": "section-28",
+        "title": "LineMetrics<sup>12+</sup>",
+        "level": 2,
+        "line_start": 738,
+        "line_end": 751,
+        "summary": "type LineMetrics = LineMetrics\n\n用于描述文本布局中单行文字的度量信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-29",
+        "title": "Affinity<sup>12+</sup>",
+        "level": 2,
+        "line_start": 752,
+        "line_end": 765,
+        "summary": "type Affinity = Affinity\n\n位置亲和度枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-30",
+        "title": "TextBox<sup>14+</sup>",
+        "level": 2,
+        "line_start": 766,
+        "line_end": 779,
+        "summary": "type TextBox = TextBox\n\n文本矩形区域。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-31",
+        "title": "Paragraph<sup>20+</sup>",
+        "level": 2,
+        "line_start": 780,
+        "line_end": 791,
+        "summary": "type Paragraph = Paragraph\n\n保存文本内容及样式的载体，支持排版与绘制操作。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n|"
+      },
+      {
+        "section_id": "section-32",
+        "title": "RectHeightStyle<sup>14+</sup>",
+        "level": 2,
+        "line_start": 792,
+        "line_end": 805,
+        "summary": "type RectHeightStyle = RectHeightStyle\n\n矩形区域高度规格枚举。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-33",
+        "title": "RectWidthStyle<sup>14+</sup>",
+        "level": 2,
+        "line_start": 806,
+        "line_end": 819,
+        "summary": "type RectWidthStyle = RectWidthStyle\n\n矩形区域宽度规格枚举。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-34",
+        "title": "TextChangeOptions<sup>15+</sup>对象说明",
+        "level": 2,
+        "line_start": 820,
+        "line_end": 834,
+        "summary": "变化前的文本信息，以及变化后的选区范围。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.A"
+      },
+      {
+        "section_id": "section-35",
+        "title": "EditableTextChangeValue<sup>15+</sup>",
+        "level": 2,
+        "line_start": 835,
+        "line_end": 848,
+        "summary": "文本变化的详细信息，包括预上屏。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-36",
+        "title": "TextMenuShowMode<sup>16+</sup>",
+        "level": 2,
+        "line_start": 849,
+        "line_end": 861,
+        "summary": "菜单的显示模式。\n\n**原子化服务API：** 从API version 16开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-37",
+        "title": "TextMenuOptions<sup>16+</sup>对象说明",
+        "level": 2,
+        "line_start": 862,
+        "line_end": 873,
+        "summary": "菜单选项。\n\n**原子化服务API：** 从API version 16开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-38",
+        "title": "ShaderStyle<sup>20+</sup>",
+        "level": 2,
+        "line_start": 874,
+        "line_end": 881,
+        "summary": "文本着色器效果基类。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-39",
+        "title": "LinearGradientStyle<sup>20+</sup>",
+        "level": 2,
+        "line_start": 882,
+        "line_end": 915,
+        "summary": "显示为线性渐变。LinearGradientStyle继承自[ShaderStyle](#shaderstyle20)。\n\n**原子化服务API：** 从API version 20开始，该接口支持"
+      },
+      {
+        "section_id": "section-40",
+        "title": "RadialGradientStyle<sup>20+</sup>",
+        "level": 2,
+        "line_start": 916,
+        "line_end": 949,
+        "summary": "显示为径向渐变。RadialGradientStyle继承自[ShaderStyle](#shaderstyle20)。\n\n**原子化服务API：** 从API version 20开始，该接口支持"
+      },
+      {
+        "section_id": "section-41",
+        "title": "ColorShaderStyle<sup>20+</sup>",
+        "level": 2,
+        "line_start": 950,
+        "line_end": 983,
+        "summary": "显示为纯色。ColorShaderStyle继承自[ShaderStyle](#shaderstyle20)。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服"
+      },
+      {
+        "section_id": "section-42",
+        "title": "IMEClient<sup>20+</sup>对象说明",
+        "level": 2,
+        "line_start": 984,
+        "line_end": 1013,
+        "summary": "输入控件绑定输入法客户端类型。\n\n### 属性\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-43",
+        "title": "MaxLinesOptions<sup>20+</sup>对象说明",
+        "level": 2,
+        "line_start": 1014,
+        "line_end": 1025,
+        "summary": "配置TextArea组件，文本超长时的显示效果。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-44",
+        "title": "MaxLinesMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1026,
+        "line_end": 1038,
+        "summary": "TextArea组件在文本超长时显示效果。默认值为CLIP，按最大行截断显示。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-45",
+        "title": "LineSpacingOptions<sup>20+</sup>对象说明",
+        "level": 2,
+        "line_start": 1039,
+        "line_end": 1052,
+        "summary": "设置文本的行间距，是否仅在行与行之间生效。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-46",
+        "title": "TextVerticalAlign<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1053,
+        "line_end": 1067,
+        "summary": "文本垂直对齐的方式。默认值BASELINE，沿基线对齐。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-47",
+        "title": "ContentTransition<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1068,
+        "line_end": 1075,
+        "summary": "文本动效基类。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-48",
+        "title": "NumericTextTransition<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1076,
+        "line_end": 1112,
+        "summary": "数字翻牌动效。仅限正整数，不支持小数和负数。不支持渐变色和Text跑马灯模式。不支持选中，[copyOption](../arkui-ts/ts-basic-components-text.md#c"
+      },
+      {
+        "section_id": "section-49",
+        "title": "NumericTextTransitionOptions<sup>20+</sup>对象说明",
+        "level": 2,
+        "line_start": 1113,
+        "line_end": 1125,
+        "summary": "数字翻牌的参数。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-50",
+        "title": "FlipDirection<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1126,
+        "line_end": 1138,
+        "summary": "翻牌方向。默认值为DOWN。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.A"
+      },
+      {
+        "section_id": "section-51",
+        "title": "TextLayoutOptions对象说明<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1139,
+        "line_end": 1148,
+        "summary": "文本布局选项。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------- | -----"
+      },
+      {
+        "section_id": "section-52",
+        "title": "SelectedDragPreviewStyle<sup>23+</sup>对象说明",
+        "level": 2,
+        "line_start": 1149,
+        "line_end": 1160,
+        "summary": "文本拖拽时的背板样式。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkU"
+      },
+      {
+        "section_id": "section-53",
+        "title": "TextContentAlign<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1161,
+        "line_end": 1174,
+        "summary": "文本内容区垂直对齐方向。\n\n**原子化服务API：** 从API version 21开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-54",
+        "title": "TextDirection<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1175,
+        "line_end": 1187,
+        "summary": "文本排版方向。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称                   | 值  | 说明"
+      },
+      {
+        "section_id": "section-55",
+        "title": "InputMethodExtraConfig<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1188,
+        "line_end": 1201,
+        "summary": "type InputMethodExtraConfig = InputMethodExtraConfig\n\n输入法扩展信息。\n\n**原子化服务API：** 从API version 22开始，该接口"
+      },
+      {
+        "section_id": "section-56",
+        "title": "AccessibilitySpanOptions<sup>23+</sup>对象说明",
+        "level": 2,
+        "line_start": 1202,
+        "line_end": 1218,
+        "summary": "Span的无障碍朗读功能属性。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统"
+      }
+    ]
+  }
+}

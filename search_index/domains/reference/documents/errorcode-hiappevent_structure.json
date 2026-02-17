@@ -1,0 +1,148 @@
+{
+  "doc_id": "errorcode-hiappevent",
+  "title": "应用事件打点错误码",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@liujiaxing2024",
+    "designer": "@junjie_shi",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 应用事件打点错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "应用事件打点错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "11100001 打点功能被关闭",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 40,
+        "summary": "**错误信息**\n\nFunction disabled. Possible caused by the param disable in ConfigOption is true.\n\n**错误描述*"
+      },
+      {
+        "section_id": "section-2",
+        "title": "11101001 非法的事件领域名称",
+        "level": 2,
+        "line_start": 41,
+        "line_end": 62,
+        "summary": "**错误信息**\n\nInvalid event domain. Possible causes: 1. Contain invalid characters; 2. Length is invalid"
+      },
+      {
+        "section_id": "section-3",
+        "title": "11101002 非法的事件名称",
+        "level": 2,
+        "line_start": 63,
+        "line_end": 85,
+        "summary": "**错误信息**\n\nInvalid event name. Possible causes: 1. Contain invalid characters; 2. Length is invalid."
+      },
+      {
+        "section_id": "section-4",
+        "title": "11101003 非法的事件参数数量",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 103,
+        "summary": "**错误信息**\n\nInvalid number of event parameters. Possible caused by the number of parameters is over 3"
+      },
+      {
+        "section_id": "section-5",
+        "title": "11101004 非法的事件参数字符串长度",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 123,
+        "summary": "**错误信息**\n\nInvalid string length of the event parameter.\n\n**错误描述**\n\n- 在调用write接口进行应用事件打点时，由于事件参数值传入了"
+      },
+      {
+        "section_id": "section-6",
+        "title": "11101005 非法的事件参数名称",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 146,
+        "summary": "**错误信息**\n\nInvalid event parameter name. Possible causes: 1. Contain invalid characters; 2. Length i"
+      },
+      {
+        "section_id": "section-7",
+        "title": "11101006 非法的事件参数数组长度",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 164,
+        "summary": "**错误信息**\n\nInvalid array length of the event parameter.\n\n**错误描述**\n\n在调用write接口进行应用事件打点时，由于事件参数值传入了超出长"
+      },
+      {
+        "section_id": "section-8",
+        "title": "11101007 非法的事件自定义参数数量",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 182,
+        "summary": "**错误信息**\n\nThe number of parameter keys exceeds the limit.\n\n**错误描述**\n\n在调用setEventParam接口设置事件自定义参数时，由"
+      },
+      {
+        "section_id": "section-9",
+        "title": "11102001 非法的观察者名称",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 204,
+        "summary": "**错误信息**\n\nInvalid watcher name. Possible causes: 1. Contain invalid characters; 2. Length is invali"
+      },
+      {
+        "section_id": "section-10",
+        "title": "11102002 非法的过滤事件领域",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 226,
+        "summary": "**错误信息**\n\nInvalid filtering event domain. Possible causes: 1. Contain invalid characters; 2. Length"
+      },
+      {
+        "section_id": "section-11",
+        "title": "11102003 非法的条数值",
+        "level": 2,
+        "line_start": 227,
+        "line_end": 244,
+        "summary": "**错误信息**\n\nInvalid row value. Possible caused by the row value is less than zero.\n\n**错误描述**\n\n在调用addW"
+      },
+      {
+        "section_id": "section-12",
+        "title": "11102004 非法的大小值",
+        "level": 2,
+        "line_start": 245,
+        "line_end": 262,
+        "summary": "**错误信息**\n\nInvalid size value. Possible caused by the size value is less than zero.\n\n**错误描述**\n\n在调用ad"
+      },
+      {
+        "section_id": "section-13",
+        "title": "11102005 非法的超时值",
+        "level": 2,
+        "line_start": 263,
+        "line_end": 280,
+        "summary": "**错误信息**\n\nInvalid timeout value. Possible caused by the timeout value is less than zero.\n\n**错误描述**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "11103001 非法的最大存储配额值",
+        "level": 2,
+        "line_start": 281,
+        "line_end": 301,
+        "summary": "**错误信息**\n\nInvalid max storage quota value. Possible caused by incorrectly formatted.\n\n**错误描述**\n\n在调用"
+      },
+      {
+        "section_id": "section-15",
+        "title": "11104001 非法的事件包大小值",
+        "level": 2,
+        "line_start": 302,
+        "line_end": 319,
+        "summary": "**错误信息**\n\nInvalid size value. Possible caused by the size value is less than or equal to zero.\n\n**错"
+      },
+      {
+        "section_id": "section-16",
+        "title": "11105001 非法的参数值",
+        "level": 2,
+        "line_start": 320,
+        "line_end": 337,
+        "summary": "**错误信息**\n\nInvalid parameter value. Possible causes: 1. Incorrect parameter length; 2. Incorrect par"
+      }
+    ]
+  }
+}

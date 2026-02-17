@@ -1,0 +1,156 @@
+{
+  "doc_id": "arkts-apis-photoAccessHelper-MediaAssetChangeRequest",
+  "title": "Class (MediaAssetChangeRequest)",
+  "path": "zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-MediaAssetChangeRequest.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-MediaAssetChangeRequest.md",
+  "metadata": {
+    "kit": "Media Library Kit",
+    "subsystem": "Multimedia",
+    "owner": "@yixiaoff",
+    "designer": "@liweilu1",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Library Kit Multimedia 模块的 Class (MediaAssetChangeRequest)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (MediaAssetChangeRequest)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { photoAccessHelper } from '@kit.MediaLibraryKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 35,
+        "summary": "**模型约束**：此接口仅可在Stage模型下使用。\n\n**原子化服务API**：从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapabili"
+      },
+      {
+        "section_id": "section-3",
+        "title": "constructor<sup>11+</sup>",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 80,
+        "summary": "constructor(asset: PhotoAsset)\n\n构造函数，用于初始化资产变更请求。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "createImageAssetRequest<sup>11+</sup>",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 134,
+        "summary": "static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest\n\n创建图片资产变"
+      },
+      {
+        "section_id": "section-5",
+        "title": "createVideoAssetRequest<sup>11+</sup>",
+        "level": 2,
+        "line_start": 135,
+        "line_end": 186,
+        "summary": "static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest\n\n创建视频资产变"
+      },
+      {
+        "section_id": "section-6",
+        "title": "createAssetRequest<sup>11+</sup>",
+        "level": 2,
+        "line_start": 187,
+        "line_end": 245,
+        "summary": "static createAssetRequest(context: Context, photoType: PhotoType, extension: string, options?: Crea"
+      },
+      {
+        "section_id": "section-7",
+        "title": "deleteAssets<sup>11+</sup>",
+        "level": 2,
+        "line_start": 246,
+        "line_end": 303,
+        "summary": "static deleteAssets(context: Context, assets: Array&lt;PhotoAsset&gt;): Promise&lt;void&gt;\n\n删除媒体文件"
+      },
+      {
+        "section_id": "section-8",
+        "title": "deleteAssets<sup>11+</sup>",
+        "level": 2,
+        "line_start": 304,
+        "line_end": 362,
+        "summary": "static deleteAssets(context: Context, uriList: Array&lt;string&gt;): Promise&lt;void&gt;\n\n删除媒体文件（删除"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getAsset<sup>11+</sup>",
+        "level": 2,
+        "line_start": 363,
+        "line_end": 411,
+        "summary": "getAsset(): PhotoAsset\n\n获取当前资产变更请求中的资产。\n\n> **注意：**\n>\n> 对于创建资产的变更请求，在调用接口[applyChanges](arkts-apis-p"
+      },
+      {
+        "section_id": "section-10",
+        "title": "setTitle<sup>11+</sup>",
+        "level": 2,
+        "line_start": 412,
+        "line_end": 469,
+        "summary": "setTitle(title: string): void\n\n修改媒体资产的标题。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力*"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getWriteCacheHandler<sup>11+</sup>",
+        "level": 2,
+        "line_start": 470,
+        "line_end": 524,
+        "summary": "getWriteCacheHandler(): Promise&lt;number&gt;\n\n获取临时文件写句柄。使用Promise异步回调。\n\n> **注意：**\n>\n> 对于同一个资产变更请求，"
+      },
+      {
+        "section_id": "section-12",
+        "title": "addResource<sup>11+</sup>",
+        "level": 2,
+        "line_start": 525,
+        "line_end": 578,
+        "summary": "addResource(type: ResourceType, fileUri: string): void\n\n通过文件URI从应用沙箱添加资源，待添加资源的数据来源可参考[@ohos.file.f"
+      },
+      {
+        "section_id": "section-13",
+        "title": "addResource<sup>11+</sup>",
+        "level": 2,
+        "line_start": 579,
+        "line_end": 630,
+        "summary": "addResource(type: ResourceType, data: ArrayBuffer): void\n\n通过ArrayBuffer数据添加资源。\n\n> **注意：**\n>\n> 对于同一个"
+      },
+      {
+        "section_id": "section-14",
+        "title": "saveCameraPhoto<sup>12+</sup>",
+        "level": 2,
+        "line_start": 631,
+        "line_end": 665,
+        "summary": "saveCameraPhoto(): void\n\n保存相机拍摄的照片。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Cor"
+      },
+      {
+        "section_id": "section-15",
+        "title": "saveCameraPhoto<sup>13+</sup>",
+        "level": 2,
+        "line_start": 666,
+        "line_end": 710,
+        "summary": "saveCameraPhoto(imageFileType: ImageFileType): void\n\n保存相机拍摄的照片。\n\n**系统能力**：SystemCapability.FileMana"
+      },
+      {
+        "section_id": "section-16",
+        "title": "discardCameraPhoto<sup>12+</sup>",
+        "level": 2,
+        "line_start": 711,
+        "line_end": 745,
+        "summary": "discardCameraPhoto(): void\n\n删除相机拍摄的照片。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper."
+      },
+      {
+        "section_id": "section-17",
+        "title": "setOrientation<sup>15+</sup>",
+        "level": 2,
+        "line_start": 746,
+        "line_end": 795,
+        "summary": "setOrientation(orientation: number): void\n\n修改图片的旋转角度。\n\n**系统能力**：SystemCapability.FileManagement.Pho"
+      }
+    ]
+  }
+}

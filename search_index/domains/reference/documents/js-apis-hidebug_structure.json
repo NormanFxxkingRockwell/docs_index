@@ -1,0 +1,428 @@
+{
+  "doc_id": "js-apis-hidebug",
+  "title": "@ohos.hidebug (Debug调试)",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hidebug.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hidebug.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@hello_harmony; @leiguangyu",
+    "designer": "@kutcherzhou1",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.hidebug (Debug调试)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.hidebug (Debug调试)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { hidebug } from '@kit.PerformanceAnalysisKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "hidebug.getNativeHeapSize",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 43,
+        "summary": "getNativeHeapSize(): bigint\n\n获取内存分配器统计的进程持有的普通块所占用的总字节数。\n\n**系统能力**：SystemCapability.HiviewDFX.HiPro"
+      },
+      {
+        "section_id": "section-3",
+        "title": "hidebug.getNativeHeapAllocatedSize",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 65,
+        "summary": "getNativeHeapAllocatedSize(): bigint\n\n获取内存分配器统计的进程持有的已使用的普通块所占用的总字节数。\n\n**系统能力**：SystemCapability.Hi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "hidebug.getNativeHeapFreeSize",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 86,
+        "summary": "getNativeHeapFreeSize(): bigint\n\n获取内存分配器统计的进程持有的空闲的普通块所占用的总字节数。\n\n**系统能力**：SystemCapability.HiviewDF"
+      },
+      {
+        "section_id": "section-5",
+        "title": "hidebug.getPss",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 111,
+        "summary": "getPss(): bigint\n\n获取应用进程实际使用的物理内存大小。接口实现方式：读取/proc/{pid}/smaps_rollup节点中的Pss与SwapPss值并求和。\n\n> **注意**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "hidebug.getVss<sup>11+</sup>",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 133,
+        "summary": "getVss(): bigint\n\n获取应用进程占用的虚拟内存大小。接口实现方式：读取/proc/{pid}/statm节点中的size值（内存页数），vss = size * 页大小（4KB/页）"
+      },
+      {
+        "section_id": "section-7",
+        "title": "hidebug.getSharedDirty",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 159,
+        "summary": "getSharedDirty(): bigint\n\n获取进程的共享脏内存大小。接口实现方式：读取/proc/{pid}/smaps_rollup节点中的Shared_Dirty值。\n\n> **注意*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "hidebug.getPrivateDirty<sup>9+</sup>",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 184,
+        "summary": "getPrivateDirty(): bigint\n\n获取进程的私有脏内存大小。读取/proc/{pid}/smaps_rollup中的Private_Dirty值。\n\n> **注意**：\n>\n>"
+      },
+      {
+        "section_id": "section-9",
+        "title": "hidebug.getCpuUsage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 210,
+        "summary": "getCpuUsage(): number\n\n获取进程的CPU使用率。\n\n> **注意**：\n>\n> 由于该接口涉及跨进程通信，耗时较长，为了避免引入性能问题，建议不要在主线程中直接调用该接口。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "hidebug.getServiceDump<sup>9+</sup>",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 263,
+        "summary": "getServiceDump(serviceid: number, fd: number, args: Array\\<string>): void\n\n获取系统服务信息。\n\n**需要权限**：ohos"
+      },
+      {
+        "section_id": "section-11",
+        "title": "hidebug.startJsCpuProfiling<sup>9+</sup>",
+        "level": 2,
+        "line_start": 264,
+        "line_end": 300,
+        "summary": "startJsCpuProfiling(filename: string): void\n\n启动虚拟机Profiling方法跟踪，`startJsCpuProfiling(filename: stri"
+      },
+      {
+        "section_id": "section-12",
+        "title": "hidebug.stopJsCpuProfiling<sup>9+</sup>",
+        "level": 2,
+        "line_start": 301,
+        "line_end": 323,
+        "summary": "stopJsCpuProfiling(): void\n\n停止虚拟机Profiling方法跟踪，`stopJsCpuProfiling()`方法的调用需要与`startJsCpuProfiling(f"
+      },
+      {
+        "section_id": "section-13",
+        "title": "hidebug.dumpJsHeapData<sup>9+</sup>",
+        "level": 2,
+        "line_start": 324,
+        "line_end": 362,
+        "summary": "dumpJsHeapData(filename: string): void\n\n虚拟机堆数据转储。\n\n> **注意**：\n>\n> 由于虚拟机堆导出极其耗时，且该接口为同步接口，建议不要在上架版本中调"
+      },
+      {
+        "section_id": "section-14",
+        "title": "hidebug.startProfiling<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 363,
+        "line_end": 392,
+        "summary": "startProfiling(filename: string): void\n\n> **说明**：\n> \n> 从API version 8支持，从API version 9开始废弃，建议使用[hid"
+      },
+      {
+        "section_id": "section-15",
+        "title": "hidebug.stopProfiling<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 393,
+        "line_end": 416,
+        "summary": "stopProfiling(): void\n\n> **说明**：\n> \n> 从API version 8支持，从API version 9开始废弃，建议使用[hidebug.stopJsCpuPro"
+      },
+      {
+        "section_id": "section-16",
+        "title": "hidebug.dumpHeapData<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 442,
+        "summary": "dumpHeapData(filename: string): void\n\n> **说明**：\n> \n> 从API version 8支持，从API version 9开始废弃，建议使用[hideb"
+      },
+      {
+        "section_id": "section-17",
+        "title": "hidebug.getAppVMMemoryInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 443,
+        "line_end": 466,
+        "summary": "getAppVMMemoryInfo(): VMMemoryInfo\n\n获取VM内存相关信息。\n\n**系统能力**：SystemCapability.HiviewDFX.HiProfiler.HiD"
+      },
+      {
+        "section_id": "section-18",
+        "title": "hidebug.getAppVMObjectUsedSize<sup>21+</sup>",
+        "level": 2,
+        "line_start": 467,
+        "line_end": 488,
+        "summary": "getAppVMObjectUsedSize(): bigint\n\n获取当前虚拟机中ArkTS对象所占用的内存大小。\n\n**系统能力**：SystemCapability.HiviewDFX.HiP"
+      },
+      {
+        "section_id": "section-19",
+        "title": "hidebug.getAppThreadCpuUsage<sup>12+</sup>",
+        "level": 2,
+        "line_start": 489,
+        "line_end": 517,
+        "summary": "getAppThreadCpuUsage(): ThreadCpuUsage[]\n\n获取应用线程CPU使用情况。\n\n> **注意**：\n>\n> 由于该接口涉及跨进程通信，耗时较长，为了避免引入性能问"
+      },
+      {
+        "section_id": "section-20",
+        "title": "hidebug.startAppTraceCapture<sup>12+</sup>",
+        "level": 2,
+        "line_start": 518,
+        "line_end": 583,
+        "summary": "startAppTraceCapture(tags: number[], flag: TraceFlag, limitSize: number): string\n\n该接口补充了[hitrace](."
+      },
+      {
+        "section_id": "section-21",
+        "title": "hidebug.stopAppTraceCapture<sup>12+</sup>",
+        "level": 2,
+        "line_start": 584,
+        "line_end": 622,
+        "summary": "stopAppTraceCapture(): void\n\n停止应用trace采集。调用前，需先调用'[startAppTraceCapture()](#hidebugstartapptracecap"
+      },
+      {
+        "section_id": "section-22",
+        "title": "hidebug.getAppMemoryLimit<sup>12+</sup>",
+        "level": 2,
+        "line_start": 623,
+        "line_end": 644,
+        "summary": "getAppMemoryLimit(): MemoryLimit\n\n获取应用程序进程的内存限制。\n\n**系统能力**：SystemCapability.HiviewDFX.HiProfiler.Hi"
+      },
+      {
+        "section_id": "section-23",
+        "title": "hidebug.getSystemCpuUsage<sup>12+</sup>",
+        "level": 2,
+        "line_start": 645,
+        "line_end": 682,
+        "summary": "getSystemCpuUsage(): number\n\n获取系统的CPU资源占用情况。\n\n> **注意**：\n>\n> 由于该接口涉及跨进程通信，耗时较长，为了避免引入性能问题，建议不要在主线程中直"
+      },
+      {
+        "section_id": "section-24",
+        "title": "hidebug.setAppResourceLimit<sup>12+</sup>",
+        "level": 2,
+        "line_start": 683,
+        "line_end": 731,
+        "summary": "setAppResourceLimit(type: string, value: number, enableDebugLog: boolean): void\n\n设置应用的文件描述符数量、线程数量、"
+      },
+      {
+        "section_id": "section-25",
+        "title": "hidebug.getAppNativeMemInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 732,
+        "line_end": 760,
+        "summary": "getAppNativeMemInfo(): NativeMemInfo\n\n获取应用进程内存信息。读取/proc/{pid}/smaps_rollup和/proc/{pid}/statm节点的数据。"
+      },
+      {
+        "section_id": "section-26",
+        "title": "hidebug.getAppNativeMemInfoAsync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 761,
+        "line_end": 784,
+        "summary": "getAppNativeMemInfoAsync(): Promise&lt;NativeMemInfo&gt;\n\n读取/proc/{pid}/smaps_rollup和/proc/{pid}/st"
+      },
+      {
+        "section_id": "section-27",
+        "title": "hidebug.getAppNativeMemInfoWithCache<sup>20+</sup>",
+        "level": 2,
+        "line_start": 785,
+        "line_end": 817,
+        "summary": "getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo\n\n获取应用进程内存信息。与`getAppNativeMemIn"
+      },
+      {
+        "section_id": "section-28",
+        "title": "hidebug.getSystemMemInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 818,
+        "line_end": 842,
+        "summary": "getSystemMemInfo(): SystemMemInfo\n\n获取系统内存信息。读取/proc/meminfo节点的数据。\n\n**系统能力**：SystemCapability.Hiview"
+      },
+      {
+        "section_id": "section-29",
+        "title": "hidebug.getVMRuntimeStats<sup>12+</sup>",
+        "level": 2,
+        "line_start": 843,
+        "line_end": 869,
+        "summary": "getVMRuntimeStats(): GcStats\n\n获取系统[GC](../../arkts-utils/gc-introduction.md)统计信息。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-30",
+        "title": "hidebug.getVMRuntimeStat<sup>12+</sup>",
+        "level": 2,
+        "line_start": 870,
+        "line_end": 914,
+        "summary": "getVMRuntimeStat(item: string): number\n\n根据参数获取指定的系统[GC](../../arkts-utils/gc-introduction.md)统计信息。"
+      },
+      {
+        "section_id": "section-31",
+        "title": "MemoryLimit<sup>12+</sup>",
+        "level": 2,
+        "line_start": 915,
+        "line_end": 927,
+        "summary": "应用进程内存限制。\n\n**系统能力**：SystemCapability.HiviewDFX.HiProfiler.HiDebug\n\n| 名称      | 类型   | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-32",
+        "title": "VMMemoryInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 928,
+        "line_end": 939,
+        "summary": "VM内存信息。\n\n**系统能力**：SystemCapability.HiviewDFX.HiProfiler.HiDebug\n\n| 名称               | 类型    | 只读 |"
+      },
+      {
+        "section_id": "section-33",
+        "title": "ThreadCpuUsage<sup>12+</sup>",
+        "level": 2,
+        "line_start": 940,
+        "line_end": 950,
+        "summary": "线程的CPU使用情况。\n\n**系统能力**：SystemCapability.HiviewDFX.HiProfiler.HiDebug\n\n| 名称               | 类型    | 只"
+      },
+      {
+        "section_id": "section-34",
+        "title": "hidebug.tags<sup>12+</sup>",
+        "level": 2,
+        "line_start": 951,
+        "line_end": 995,
+        "summary": "支持trace使用场景的标签，用户可通过[hitrace](../../dfx/hitrace.md)抓取指定标签的trace内容。\n\n> **注意**：\n>\n> 以下标签实际值由系统定义，可能随版"
+      },
+      {
+        "section_id": "section-35",
+        "title": "NativeMemInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 996,
+        "line_end": 1011,
+        "summary": "描述应用进程的内存信息。\n\n**系统能力**：SystemCapability.HiviewDFX.HiProfiler.HiDebug\n\n| 名称      | 类型   | 只读  | 可选 |"
+      },
+      {
+        "section_id": "section-36",
+        "title": "SystemMemInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1012,
+        "line_end": 1023,
+        "summary": "描述系统内存信息，包括总内存、空闲内存和可用内存。\n\n**系统能力**：SystemCapability.HiviewDFX.HiProfiler.HiDebug\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-37",
+        "title": "TraceFlag<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1024,
+        "line_end": 1034,
+        "summary": "描述采集trace线程的类型，包括主线程和所有线程。\n\n**系统能力**：SystemCapability.HiviewDFX.HiProfiler.HiDebug\n\n| 名称"
+      },
+      {
+        "section_id": "section-38",
+        "title": "GcStats<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1035,
+        "line_end": 1046,
+        "summary": "type GcStats = Record&lt;string, number&gt;\n\n描述用于存储GC统计信息的键值对。该类型不支持多线程操作，如果应用中存在多线程同时访问，需加锁保护。\n\n**"
+      },
+      {
+        "section_id": "section-39",
+        "title": "JsRawHeapTrimLevel<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1047,
+        "line_end": 1061,
+        "summary": "转储堆快照的裁剪级别的枚举。\n\nTRIM_LEVEL_2相比TRIM_LEVEL_1，裁剪时间更长。冻屏的阈值为6秒。使用TRIM_LEVEL_1时，不会达到该阈值；切换至TRIM_LEVEL_2时"
+      },
+      {
+        "section_id": "section-40",
+        "title": "hidebug.isDebugState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1062,
+        "line_end": 1083,
+        "summary": "isDebugState(): boolean\n\n获取应用进程的调试状态。\n\n**系统能力**：SystemCapability.HiviewDFX.HiProfiler.HiDebug\n\n**返回"
+      },
+      {
+        "section_id": "section-41",
+        "title": "hidebug.getGraphicsMemory<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1084,
+        "line_end": 1120,
+        "summary": "getGraphicsMemory(): Promise&lt;number&gt;\n\n获取应用显存总大小（gl + graph），使用Promise异步回调。\n\n**原子化服务API**：从API"
+      },
+      {
+        "section_id": "section-42",
+        "title": "hidebug.getGraphicsMemorySync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1121,
+        "line_end": 1161,
+        "summary": "getGraphicsMemorySync(): number\n\n使用同步方式获取应用显存总大小（gl + graph）。\n\n> **注意**：\n>\n> 由于该接口涉及多次跨进程通信，其耗时可能达到"
+      },
+      {
+        "section_id": "section-43",
+        "title": "hidebug.getGraphicsMemorySummary<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1162,
+        "line_end": 1204,
+        "summary": "getGraphicsMemorySummary(interval?: number): Promise&lt;GraphicsMemorySummary&gt;\n\n获取应用显存数据，使用Promi"
+      },
+      {
+        "section_id": "section-44",
+        "title": "hidebug.dumpJsRawHeapData<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1205,
+        "line_end": 1258,
+        "summary": "dumpJsRawHeapData(needGC?: boolean): Promise&lt;string&gt;\n\n为当前线程转储虚拟机的原始堆快照，并生成的rawheap文件，该文件可通过[r"
+      },
+      {
+        "section_id": "section-45",
+        "title": "hidebug.enableGwpAsanGrayscale<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1259,
+        "line_end": 1311,
+        "summary": "enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): void\n\n使能GWP-ASan，用于检测堆内存使用中的非法"
+      },
+      {
+        "section_id": "section-46",
+        "title": "GwpAsanOptions<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1312,
+        "line_end": 1322,
+        "summary": "GWP-ASan配置项。可用于配置是否使能、采样频率，以及最大分配的插槽数。\n\n**系统能力**：SystemCapability.HiviewDFX.HiProfiler.HiDebug\n\n| 名称"
+      },
+      {
+        "section_id": "section-47",
+        "title": "hidebug.disableGwpAsanGrayscale<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1323,
+        "line_end": 1337,
+        "summary": "disableGwpAsanGrayscale(): void\n\n停止使能GWP-ASan。调用该接口将取消自定义配置，恢复默认参数[GwpAsanOptions](#gwpasanoptions20"
+      },
+      {
+        "section_id": "section-48",
+        "title": "hidebug.getGwpAsanGrayscaleState<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1338,
+        "line_end": 1359,
+        "summary": "getGwpAsanGrayscaleState(): number\n\n获取当前GWP-ASan剩余使能天数。\n\n**系统能力**：SystemCapability.HiviewDFX.HiProfi"
+      },
+      {
+        "section_id": "section-49",
+        "title": "hidebug.setJsRawHeapTrimLevel<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1360,
+        "line_end": 1387,
+        "summary": "setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void\n\n设置当前进程转储虚拟机原始堆快照的裁剪级别。使用该接口并传入参数TRIM_LEVEL_"
+      },
+      {
+        "section_id": "section-50",
+        "title": "GraphicsMemorySummary<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1388,
+        "line_end": 1400,
+        "summary": "描述应用显存数据，包括gl和graph部分。\n\n**原子化服务API**：从API version 21开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.H"
+      },
+      {
+        "section_id": "section-51",
+        "title": "hidebug.setProcDumpInSharedOOM<sup>24+</sup>",
+        "level": 2,
+        "line_start": 1401,
+        "line_end": 1434,
+        "summary": "setProcDumpInSharedOOM(enable: boolean): void\n\n将转储的堆快照由线程级改为进程级。\n\n> **注意**：\n>\n> 要想转储进程级的堆快照，调用该接口并传"
+      }
+    ]
+  }
+}

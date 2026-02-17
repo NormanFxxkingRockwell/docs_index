@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-cooperate-sys",
+  "title": "@ohos.multimodalInput.inputDeviceCooperate (键鼠穿越)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-input-kit/js-apis-cooperate-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-input-kit/js-apis-cooperate-sys.md",
+  "metadata": {
+    "kit": "Input Kit",
+    "subsystem": "MultimodalInput",
+    "owner": "@zhaoxueyuan",
+    "designer": "@hanruofei",
+    "tester": "@Lyuxin",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Input Kit MultimodalInput 模块的 @ohos.multimodalInput.inputDeviceCooperate (键鼠穿越)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalInput.inputDeviceCooperate (键鼠穿越)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { inputDeviceCooperate } from '@kit.InputKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "inputDeviceCooperate.enable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 83,
+        "summary": "enable(enable: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n开启、关闭键鼠穿越，使用AsyncCallback异步方式返回"
+      },
+      {
+        "section_id": "section-3",
+        "title": "inputDeviceCooperate.enable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 143,
+        "summary": "enable(enable: boolean): Promise&lt;void&gt;\n\n开启、关闭键鼠穿越，使用Promise异步回调。\n\n> **说明：**\n>\n>从 API version"
+      },
+      {
+        "section_id": "section-4",
+        "title": "inputDeviceCooperate.start<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 205,
+        "summary": "start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback\\<void>): void"
+      },
+      {
+        "section_id": "section-5",
+        "title": "inputDeviceCooperate.start<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 206,
+        "line_end": 272,
+        "summary": "start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise\\<void>\n\n启动键鼠穿越，使用Promise异步回调"
+      },
+      {
+        "section_id": "section-6",
+        "title": "inputDeviceCooperate.stop<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 273,
+        "line_end": 328,
+        "summary": "stop(callback: AsyncCallback\\<void>): void\n\n停止键鼠穿越，使用AsyncCallback异步方式返回结果。\n\n> **说明：**\n>\n>从 API ver"
+      },
+      {
+        "section_id": "section-7",
+        "title": "inputDeviceCooperate.stop<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 374,
+        "summary": "stop(): Promise\\<void>\n\n停止键鼠穿越，使用Promise异步回调。\n\n> **说明：**\n>\n>从 API version 9开始支持，从API version 23开始废弃"
+      },
+      {
+        "section_id": "section-8",
+        "title": "inputDeviceCooperate.getState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 375,
+        "line_end": 433,
+        "summary": "getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void\n\n获取键鼠穿越开关的状态，"
+      },
+      {
+        "section_id": "section-9",
+        "title": "inputDeviceCooperate.getState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 434,
+        "line_end": 495,
+        "summary": "getState(deviceDescriptor: string): Promise<{ state: boolean }>\n\n获取键鼠穿越开关的状态，使用Promise异步回调。\n\n> **说明"
+      },
+      {
+        "section_id": "section-10",
+        "title": "inputDeviceCooperate.on('cooperation')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 496,
+        "line_end": 550,
+        "summary": "on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: string, eventMsg: EventMsg }>):"
+      },
+      {
+        "section_id": "section-11",
+        "title": "inputDeviceCooperate.off('cooperation')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 551,
+        "line_end": 633,
+        "summary": "off(type: 'cooperation', callback?: AsyncCallback\\<void>): void\n\n关闭监听键鼠穿越状态。\n\n> **说明：**\n>\n>从 API ve"
+      },
+      {
+        "section_id": "section-12",
+        "title": "EventMsg<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 634,
+        "line_end": 651,
+        "summary": "键鼠穿越事件。\n\n> **说明：**\n>\n>从 API version 9开始支持，从API version 23开始废弃。建议使用[CooperateMessage](../apis-distri"
+      }
+    ]
+  }
+}

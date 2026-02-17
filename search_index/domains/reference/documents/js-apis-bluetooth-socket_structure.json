@@ -1,0 +1,164 @@
+{
+  "doc_id": "js-apis-bluetooth-socket",
+  "title": "@ohos.bluetooth.socket (蓝牙socket模块)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-socket.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-socket.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.bluetooth.socket (蓝牙socket模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bluetooth.socket (蓝牙socket模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 32,
+        "summary": "```js\nimport { socket } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "socket.sppListen",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 92,
+        "summary": "sppListen(name: string, options: SppOptions, callback: AsyncCallback&lt;number&gt;): void\n\n服务端使用，创建"
+      },
+      {
+        "section_id": "section-3",
+        "title": "socket.getL2capPsm<sup>20+</sup>",
+        "level": 2,
+        "line_start": 93,
+        "line_end": 128,
+        "summary": "getL2capPsm(serverSocket: number): number\n\n获取服务端L2CAP链路类型套接字的协议/服务多路复用器值（Protocol/Service Multiplexe"
+      },
+      {
+        "section_id": "section-4",
+        "title": "socket.sppAccept",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 183,
+        "summary": "sppAccept(serverSocket: number, callback: AsyncCallback&lt;number&gt;): void\n\n服务端使用，接受客户端的套接字连接请求。使"
+      },
+      {
+        "section_id": "section-5",
+        "title": "socket.sppConnect",
+        "level": 2,
+        "line_start": 184,
+        "line_end": 244,
+        "summary": "sppConnect(deviceId: string, options: SppOptions, callback: AsyncCallback&lt;number&gt;): void\n\n客户端"
+      },
+      {
+        "section_id": "section-6",
+        "title": "socket.getDeviceId<sup>17+</sup>",
+        "level": 2,
+        "line_start": 245,
+        "line_end": 295,
+        "summary": "getDeviceId(clientSocket: number): string\n\n客户端和服务端均可使用，获取套接字连接中的对端设备蓝牙地址。\n\n**系统能力**：SystemCapabilit"
+      },
+      {
+        "section_id": "section-7",
+        "title": "socket.sppCloseServerSocket",
+        "level": 2,
+        "line_start": 296,
+        "line_end": 337,
+        "summary": "sppCloseServerSocket(socket: number): void\n\n服务端使用，删除指定的服务端套接字。\n- 需先调用[socket.sppListen](#socketsppl"
+      },
+      {
+        "section_id": "section-8",
+        "title": "socket.sppCloseClientSocket",
+        "level": 2,
+        "line_start": 338,
+        "line_end": 379,
+        "summary": "sppCloseClientSocket(socket: number): void\n\n客户端和服务端均可使用，关闭指定的客户端套接字，并断开客户端和服务端之间的连接。\n- 若客户端使用，需在调用["
+      },
+      {
+        "section_id": "section-9",
+        "title": "socket.sppWrite",
+        "level": 2,
+        "line_start": 380,
+        "line_end": 429,
+        "summary": "sppWrite(clientSocket: number, data: ArrayBuffer): void\n\n客户端和服务端均可使用，向对端设备发送数据。\n- 仅在双方成功建立连接后，调用本接口"
+      },
+      {
+        "section_id": "section-10",
+        "title": "socket.on('sppRead')",
+        "level": 2,
+        "line_start": 430,
+        "line_end": 480,
+        "summary": "on(type: 'sppRead', clientSocket: number, callback: Callback&lt;ArrayBuffer&gt;): void\n\n客户端和服务端均可使用"
+      },
+      {
+        "section_id": "section-11",
+        "title": "socket.off('sppRead')",
+        "level": 2,
+        "line_start": 481,
+        "line_end": 519,
+        "summary": "off(type: 'sppRead', clientSocket: number, callback?: Callback&lt;ArrayBuffer&gt;): void\n\n取消订阅套接字读请"
+      },
+      {
+        "section_id": "section-12",
+        "title": "socket.sppWriteAsync<sup>18+</sup>",
+        "level": 2,
+        "line_start": 520,
+        "line_end": 574,
+        "summary": "sppWriteAsync(clientSocket: number, data: ArrayBuffer): Promise&lt;void&gt;\n\n客户端和服务端均可使用，向对端设备发送数据。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "socket.sppReadAsync<sup>18+</sup>",
+        "level": 2,
+        "line_start": 575,
+        "line_end": 635,
+        "summary": "sppReadAsync(clientSocket: number): Promise&lt;ArrayBuffer&gt;\n\n客户端和服务端均可使用，读取对端发送数据的异步接口。使用Promise"
+      },
+      {
+        "section_id": "section-14",
+        "title": "socket.getMaxReceiveDataSize<sup>22+</sup>",
+        "level": 2,
+        "line_start": 636,
+        "line_end": 674,
+        "summary": "getMaxReceiveDataSize(clientSocket: number): number\n\n客户端和服务端均可使用，获取当前套接字链路类型下最大接收数据的大小。\n\n- 若客户端使用，需"
+      },
+      {
+        "section_id": "section-15",
+        "title": "socket.getMaxTransmitDataSize<sup>22+</sup>",
+        "level": 2,
+        "line_start": 675,
+        "line_end": 712,
+        "summary": "getMaxTransmitDataSize(clientSocket: number): number\n\n客户端和服务端均可使用，获取套接字当前链路类型下最大发送数据的大小。\n\n- 若客户端使用，"
+      },
+      {
+        "section_id": "section-16",
+        "title": "socket.isConnected<sup>22+</sup>",
+        "level": 2,
+        "line_start": 713,
+        "line_end": 746,
+        "summary": "isConnected(clientSocket: number): boolean\n\n客户端和服务端均可使用，检查当前链路是否已连接。\n\n**系统能力**：SystemCapability.Com"
+      },
+      {
+        "section_id": "section-17",
+        "title": "SppOptions",
+        "level": 2,
+        "line_start": 747,
+        "line_end": 762,
+        "summary": "描述套接字的配置参数。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称     | 类型                |"
+      },
+      {
+        "section_id": "section-18",
+        "title": "SppType",
+        "level": 2,
+        "line_start": 763,
+        "line_end": 777,
+        "summary": "枚举，蓝牙套接字链路类型。\n\n- 不同类型的蓝牙设备需要选取不同的链路类型。\n- 针对低功耗蓝牙（BLE）设备，必须使用L2CAP链路类型。\n- 针对传统蓝牙（BR/EDR）设备，建议优先采用RFC"
+      }
+    ]
+  }
+}

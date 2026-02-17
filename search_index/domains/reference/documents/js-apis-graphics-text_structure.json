@@ -1,0 +1,476 @@
+{
+  "doc_id": "js-apis-graphics-text",
+  "title": "@ohos.graphics.text (文本模块)",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-graphics-text.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-graphics-text.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@oh_wangxk; @gmiao522; @Lem0nC",
+    "designer": "@liumingxiang",
+    "tester": "@yhl0101",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphics 模块的 @ohos.graphics.text (文本模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.graphics.text (文本模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 31,
+        "summary": "```ts\nimport { text } from '@kit.ArkGraphics2D'\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "text.setTextHighContrast<sup>20+</sup>",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 59,
+        "summary": "setTextHighContrast(action: TextHighContrast): void\n\n用于设置文字渲染高对比度模式。\n\n该接口设置后整个进程都会生效，进程内所有页面共用相同模式。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "text.setTextUndefinedGlyphDisplay<sup>20+</sup>",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 88,
+        "summary": "setTextUndefinedGlyphDisplay(noGlyphShow: TextUndefinedGlyphDisplay): void\n\n设置字符映射到.notdef（未定义）字形时要"
+      },
+      {
+        "section_id": "section-4",
+        "title": "text.matchFontDescriptors<sup>18+</sup>",
+        "level": 2,
+        "line_start": 89,
+        "line_end": 155,
+        "summary": "matchFontDescriptors(desc: FontDescriptor): Promise&lt;Array&lt;FontDescriptor&gt;&gt;\n\n根据指定的字体描述符返"
+      },
+      {
+        "section_id": "section-5",
+        "title": "text.getSystemFontFullNamesByType<sup>14+</sup>",
+        "level": 2,
+        "line_start": 156,
+        "line_end": 222,
+        "summary": "getSystemFontFullNamesByType(fontType: SystemFontType): Promise&lt;Array&lt;string&gt;&gt;\n\n根据字体类型返"
+      },
+      {
+        "section_id": "section-6",
+        "title": "text.getFontDescriptorByFullName<sup>14+</sup>",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 289,
+        "summary": "getFontDescriptorByFullName(fullName: string, fontType: SystemFontType): Promise&lt;FontDescriptor&"
+      },
+      {
+        "section_id": "section-7",
+        "title": "text.getFontDescriptorsFromPath<sup>22+</sup>",
+        "level": 2,
+        "line_start": 290,
+        "line_end": 352,
+        "summary": "getFontDescriptorsFromPath(path: string | Resource): Promise&lt;Array&lt;FontDescriptor&gt;&gt;"
+      },
+      {
+        "section_id": "section-8",
+        "title": "text.getFontUnicodeSet<sup>23+</sup>",
+        "level": 2,
+        "line_start": 353,
+        "line_end": 402,
+        "summary": "getFontUnicodeSet(path: string | Resource, index: number): Promise&lt;Array&lt;number&gt;&gt;\n\n根据字体文"
+      },
+      {
+        "section_id": "section-9",
+        "title": "text.getFontCount<sup>23+</sup>",
+        "level": 2,
+        "line_start": 403,
+        "line_end": 449,
+        "summary": "getFontCount(path: string | Resource): number\n\n根据字体文件路径获取包含的字体文件数。\n\n如果字体文件未找到、字体文件路径无效、字体文件无权限或者文件非字"
+      },
+      {
+        "section_id": "section-10",
+        "title": "text.getFontPathsByType<sup>23+</sup>",
+        "level": 2,
+        "line_start": 450,
+        "line_end": 496,
+        "summary": "getFontPathsByType(fontType: SystemFontType): Array\\<string\\>\n\n获取指定字体类型的所有字体文件路径。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-11",
+        "title": "text.isFontSupported<sup>23+</sup>",
+        "level": 2,
+        "line_start": 497,
+        "line_end": 542,
+        "summary": "isFontSupported(fontURL: string | Resource): boolean\n\n检查系统是否支持指定的字体文件。\n\n**系统能力**：SystemCapability.G"
+      },
+      {
+        "section_id": "section-12",
+        "title": "TextHighContrast<sup>20+</sup>",
+        "level": 2,
+        "line_start": 543,
+        "line_end": 556,
+        "summary": "文字渲染高对比度配置类型枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在"
+      },
+      {
+        "section_id": "section-13",
+        "title": "TextUndefinedGlyphDisplay<sup>20+</sup>",
+        "level": 2,
+        "line_start": 557,
+        "line_end": 569,
+        "summary": "文本未定义字形时的显示方式枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持"
+      },
+      {
+        "section_id": "section-14",
+        "title": "TextAlign",
+        "level": 2,
+        "line_start": 570,
+        "line_end": 586,
+        "summary": "文本对齐方式枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-15",
+        "title": "TextVerticalAlign<sup>20+</sup>",
+        "level": 2,
+        "line_start": 587,
+        "line_end": 601,
+        "summary": "文本垂直对齐方式枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服"
+      },
+      {
+        "section_id": "section-16",
+        "title": "TextDirection",
+        "level": 2,
+        "line_start": 602,
+        "line_end": 614,
+        "summary": "文本排版方向枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-17",
+        "title": "BreakStrategy",
+        "level": 2,
+        "line_start": 615,
+        "line_end": 628,
+        "summary": "断行策略枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-18",
+        "title": "WordBreak",
+        "level": 2,
+        "line_start": 629,
+        "line_end": 643,
+        "summary": "断词策略枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-19",
+        "title": "Decoration",
+        "level": 2,
+        "line_start": 644,
+        "line_end": 658,
+        "summary": "文本装饰线。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "TextDecorationType",
+        "level": 2,
+        "line_start": 659,
+        "line_end": 673,
+        "summary": "装饰线类型枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-21",
+        "title": "TextDecorationStyle",
+        "level": 2,
+        "line_start": 674,
+        "line_end": 689,
+        "summary": "装饰线样式枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-22",
+        "title": "FontWeight",
+        "level": 2,
+        "line_start": 690,
+        "line_end": 709,
+        "summary": "字重枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-23",
+        "title": "FontWidth",
+        "level": 2,
+        "line_start": 710,
+        "line_end": 729,
+        "summary": "字体宽度的枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-24",
+        "title": "FontStyle",
+        "level": 2,
+        "line_start": 730,
+        "line_end": 743,
+        "summary": "字体样式枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-25",
+        "title": "TextHeightBehavior",
+        "level": 2,
+        "line_start": 744,
+        "line_end": 758,
+        "summary": "文本高度修饰符模式枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化"
+      },
+      {
+        "section_id": "section-26",
+        "title": "TextBaseline",
+        "level": 2,
+        "line_start": 759,
+        "line_end": 771,
+        "summary": "文本基线类型枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-27",
+        "title": "EllipsisMode",
+        "level": 2,
+        "line_start": 772,
+        "line_end": 787,
+        "summary": "省略号类型枚举。\n\nEllipsisMode.START和EllipsisMode.MIDDLE仅在单行超长文本生效。\n\n**系统能力：** SystemCapability.Graphics.Dr"
+      },
+      {
+        "section_id": "section-28",
+        "title": "TextShadow",
+        "level": 2,
+        "line_start": 788,
+        "line_end": 801,
+        "summary": "字体阴影。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-29",
+        "title": "RectStyle",
+        "level": 2,
+        "line_start": 802,
+        "line_end": 817,
+        "summary": "矩形框样式。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-30",
+        "title": "FontFeature",
+        "level": 2,
+        "line_start": 818,
+        "line_end": 830,
+        "summary": "文本字体特征。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-31",
+        "title": "FontVariation",
+        "level": 2,
+        "line_start": 831,
+        "line_end": 843,
+        "summary": "可变字体属性。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-32",
+        "title": "TextBadgeType<sup>20+</sup>",
+        "level": 2,
+        "line_start": 844,
+        "line_end": 857,
+        "summary": "文本上下标枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-33",
+        "title": "LineHeightStyle<sup>21+</sup>",
+        "level": 2,
+        "line_start": 858,
+        "line_end": 870,
+        "summary": "行高缩放基数枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-34",
+        "title": "TextStyle",
+        "level": 2,
+        "line_start": 871,
+        "line_end": 906,
+        "summary": "文本样式。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-35",
+        "title": "StrutStyle",
+        "level": 2,
+        "line_start": 907,
+        "line_end": 928,
+        "summary": "支柱样式，用于控制绘制文本的行间距、基线对齐方式以及其他与行高相关的属性，默认不开启。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-36",
+        "title": "FontDescriptor<sup>14+</sup>",
+        "level": 2,
+        "line_start": 929,
+        "line_end": 957,
+        "summary": "字体描述符信息。\n\n**系统能力**：SystemCapability.Graphics.Drawing\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| - | - | -  | - |"
+      },
+      {
+        "section_id": "section-37",
+        "title": "FontCollection",
+        "level": 2,
+        "line_start": 958,
+        "line_end": 1446,
+        "summary": "字体集。\n\n### getGlobalInstance\n\nstatic getGlobalInstance(): FontCollection\n\n获取应用全局FontCollection实例。\n\n*"
+      },
+      {
+        "section_id": "section-38",
+        "title": "ParagraphStyle",
+        "level": 2,
+        "line_start": 1447,
+        "line_end": 1488,
+        "summary": "段落样式。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n| 名称                 | 类型"
+      },
+      {
+        "section_id": "section-39",
+        "title": "PlaceholderAlignment",
+        "level": 2,
+        "line_start": 1489,
+        "line_end": 1514,
+        "summary": "占位符相对于周围文本的纵向对齐方式。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口"
+      },
+      {
+        "section_id": "section-40",
+        "title": "PlaceholderSpan",
+        "level": 2,
+        "line_start": 1515,
+        "line_end": 1530,
+        "summary": "描述占位符样式。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-41",
+        "title": "Range",
+        "level": 2,
+        "line_start": 1531,
+        "line_end": 1543,
+        "summary": "描述左闭右开区间。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-42",
+        "title": "Paragraph",
+        "level": 2,
+        "line_start": 1544,
+        "line_end": 2275,
+        "summary": "保存文本内容及样式的载体，支持排版与绘制操作。\n\n下列API示例中都需先使用[ParagraphBuilder](#paragraphbuilder)类的[build()](#build)接口获取到"
+      },
+      {
+        "section_id": "section-43",
+        "title": "LineTypeset<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2276,
+        "line_end": 2360,
+        "summary": "保存着文本内容以及样式的载体，可以用于计算单行排版信息。\n\n下列API示例中都需先使用[ParagraphBuilder](#paragraphbuilder)类的[buildLineTypeset"
+      },
+      {
+        "section_id": "section-44",
+        "title": "RunMetrics",
+        "level": 2,
+        "line_start": 2361,
+        "line_end": 2373,
+        "summary": "描述文本行中连续文本块的布局信息和度量数据。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始"
+      },
+      {
+        "section_id": "section-45",
+        "title": "LineMetrics",
+        "level": 2,
+        "line_start": 2374,
+        "line_end": 2395,
+        "summary": "描述文本布局中单行文字的度量信息。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支"
+      },
+      {
+        "section_id": "section-46",
+        "title": "TextBox",
+        "level": 2,
+        "line_start": 2396,
+        "line_end": 2408,
+        "summary": "文本矩形区域。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-47",
+        "title": "PositionWithAffinity",
+        "level": 2,
+        "line_start": 2409,
+        "line_end": 2421,
+        "summary": "位置和亲和度。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-48",
+        "title": "RectWidthStyle",
+        "level": 2,
+        "line_start": 2422,
+        "line_end": 2434,
+        "summary": "矩形区域宽度规格枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服"
+      },
+      {
+        "section_id": "section-49",
+        "title": "RectHeightStyle",
+        "level": 2,
+        "line_start": 2435,
+        "line_end": 2451,
+        "summary": "矩形区域高度规格枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服"
+      },
+      {
+        "section_id": "section-50",
+        "title": "Affinity",
+        "level": 2,
+        "line_start": 2452,
+        "line_end": 2464,
+        "summary": "位置亲和度枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-51",
+        "title": "ParagraphBuilder",
+        "level": 2,
+        "line_start": 2465,
+        "line_end": 2872,
+        "summary": "段落生成器。\n\n### constructor\n\nconstructor(paragraphStyle: ParagraphStyle, fontCollection: FontCollection"
+      },
+      {
+        "section_id": "section-52",
+        "title": "TypographicBounds<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2873,
+        "line_end": 2901,
+        "summary": "文本行的排版边界。文本行排版边界与排版字体、排版字号有关，与字符本身无关，例如字符串为\" a b \"，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。例如字符"
+      },
+      {
+        "section_id": "section-53",
+        "title": "CaretOffsetsCallback<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2902,
+        "line_end": 2924,
+        "summary": "type CaretOffsetsCallback = (offset: number, index: number, leadingEdge: boolean) => boolean\n\n将文本行中"
+      },
+      {
+        "section_id": "section-54",
+        "title": "TextLine",
+        "level": 2,
+        "line_start": 2925,
+        "line_end": 3306,
+        "summary": "描述段落基础文本行结构的载体。\n\n下列API示例中都需先使用[Paragraph](#paragraph)类的[getTextLines()](#gettextlines)接口或者[LineType"
+      },
+      {
+        "section_id": "section-55",
+        "title": "Run",
+        "level": 2,
+        "line_start": 3307,
+        "line_end": 3769,
+        "summary": "文本排版单元。\n\n下列API示例中都需先使用[TextLine](#textline)类的[getGlyphRuns()](#getglyphruns)接口获取Run对象实例，再通过此实例调用对应方"
+      },
+      {
+        "section_id": "section-56",
+        "title": "TextTab<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3770,
+        "line_end": 3796,
+        "summary": "段落风格的文本制表符，储存了对齐方式和位置。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始"
+      },
+      {
+        "section_id": "section-57",
+        "title": "SystemFontType<sup>14+</sup>",
+        "level": 2,
+        "line_start": 3797,
+        "line_end": 3812,
+        "summary": "字体类型枚举，通过位或运算可实现组合类型。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**原子化服务API**：从API version 22开始，"
+      }
+    ]
+  }
+}

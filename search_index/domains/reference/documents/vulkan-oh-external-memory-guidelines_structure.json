@@ -1,0 +1,52 @@
+{
+  "doc_id": "vulkan-oh-external-memory-guidelines",
+  "title": "Vulkan External Memory开发指导",
+  "path": "zh-cn/application-dev/reference/native-lib/vulkan-oh-external-memory-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/native-lib/vulkan-oh-external-memory-guidelines.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphic",
+    "owner": "@andrew1993",
+    "designer": "@ext4FAT1",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphic 模块的 Vulkan External Memory开发指导，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Vulkan External Memory开发指导",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 21,
+        "summary": "`VK_OHOS_external_memory` 扩展用于在GPU Vulkan环境下与OpenHarmony的本机缓冲区（OHNativeBuffer）之间做零拷贝的内存共享。\n\n该扩展允许：把"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 41,
+        "summary": "### 结构体\n\n| 名称 | 描述 |\n| -------- | -------- |\n| [VkNativeBufferPropertiesOHOS](capi-vulkan-vknative"
+      },
+      {
+        "section_id": "section-3",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 605,
+        "summary": "以下步骤说明了如何将视频解码器输出的本机缓冲区（OHNativeBuffer）导入为Vulkan内存，并绑定到VkImage/VkBuffer。\n\n1. 启动渲染子线程，初始化Vulkan环境，动态"
+      },
+      {
+        "section_id": "section-4",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 606,
+        "line_end": 611,
+        "summary": "针对Vulkan External Memory的使用，具体可见以下相关实例：\n\n- [NdkVulkanExternalMemory(API12）](https://gitcode.com/ope"
+      }
+    ]
+  }
+}

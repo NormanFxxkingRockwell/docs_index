@@ -1,0 +1,724 @@
+{
+  "doc_id": "js-apis-huks",
+  "title": "@ohos.security.huks (通用密钥库系统)",
+  "path": "zh-cn/application-dev/reference/apis-universal-keystore-kit/js-apis-huks.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-universal-keystore-kit/js-apis-huks.md",
+  "metadata": {
+    "kit": "Universal Keystore Kit",
+    "subsystem": "Security",
+    "owner": "@wutiantian-gitee",
+    "designer": "@HighLowWorld",
+    "tester": "@wxy1234564846",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Universal Keystore Kit Security 模块的 @ohos.security.huks (通用密钥库系统)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.security.huks (通用密钥库系统)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { huks } from '@kit.UniversalKeystoreKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "HuksParam",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 34,
+        "summary": "调用接口使用的options中的properties数组中的param。\n\n**系统能力：** SystemCapability.Security.Huks.Core\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-3",
+        "title": "HuksOptions",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 45,
+        "summary": "调用接口使用的options。\n\n**系统能力：** SystemCapability.Security.Huks.Core\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-4",
+        "title": "HuksSessionHandle<sup>9+</sup>",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 56,
+        "summary": "huks Handle结构体。\n\n**系统能力：** SystemCapability.Security.Huks.Core\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-5",
+        "title": "HuksReturnResult<sup>9+</sup>",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 68,
+        "summary": "调用接口返回的result。\n\n**系统能力：** SystemCapability.Security.Huks.Core\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-6",
+        "title": "HuksListAliasesReturnResult<sup>12+</sup>",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 78,
+        "summary": "调用接口返回的result。\n\n**系统能力**：SystemCapability.Security.Huks.Extension\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-7",
+        "title": "huks.generateKeyItem<sup>9+</sup>",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 156,
+        "summary": "generateKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<void>) : void\n\n生成密"
+      },
+      {
+        "section_id": "section-8",
+        "title": "huks.generateKeyItem<sup>9+</sup>",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 236,
+        "summary": "generateKeyItem(keyAlias: string, options: HuksOptions) : Promise\\<void>\n\n生成密钥。使用Promise异步回调。\n\n基于密钥"
+      },
+      {
+        "section_id": "section-9",
+        "title": "huks.deleteKeyItem<sup>9+</sup>",
+        "level": 2,
+        "line_start": 237,
+        "line_end": 288,
+        "summary": "deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<void>) : void\n\n删除密钥。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "huks.deleteKeyItem<sup>9+</sup>",
+        "level": 2,
+        "line_start": 289,
+        "line_end": 342,
+        "summary": "deleteKeyItem(keyAlias: string, options: HuksOptions) : Promise\\<void>\n\n删除密钥。使用Promise异步回调。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-11",
+        "title": "huks.importKeyItem<sup>9+</sup>",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 435,
+        "summary": "importKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<void>) : void\n\n导入明文密"
+      },
+      {
+        "section_id": "section-12",
+        "title": "huks.importKeyItem<sup>9+</sup>",
+        "level": 2,
+        "line_start": 436,
+        "line_end": 529,
+        "summary": "importKeyItem(keyAlias: string, options: HuksOptions) : Promise\\<void>\n\n导入明文密钥。使用Promise异步回调。\n\n**原子"
+      },
+      {
+        "section_id": "section-13",
+        "title": "huks.attestKeyItem<sup>9+</sup>",
+        "level": 2,
+        "line_start": 530,
+        "line_end": 664,
+        "summary": "attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<HuksReturnResult>) :"
+      },
+      {
+        "section_id": "section-14",
+        "title": "huks.attestKeyItem<sup>9+</sup>",
+        "level": 2,
+        "line_start": 665,
+        "line_end": 802,
+        "summary": "attestKeyItem(keyAlias: string, options: HuksOptions) : Promise\\<HuksReturnResult>\n\n获取密钥证书。使用Promis"
+      },
+      {
+        "section_id": "section-15",
+        "title": "huks.anonAttestKeyItem<sup>11+</sup>",
+        "level": 2,
+        "line_start": 803,
+        "line_end": 934,
+        "summary": "anonAttestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<HuksReturnResult"
+      },
+      {
+        "section_id": "section-16",
+        "title": "huks.anonAttestKeyItem<sup>11+</sup>",
+        "level": 2,
+        "line_start": 935,
+        "line_end": 1065,
+        "summary": "anonAttestKeyItem(keyAlias: string, options: HuksOptions) : Promise\\<HuksReturnResult>\n\n获取匿名化密钥证书。使"
+      },
+      {
+        "section_id": "section-17",
+        "title": "huks.importWrappedKeyItem<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1066,
+        "line_end": 1275,
+        "summary": "importWrappedKeyItem(keyAlias: string, wrappingKeyAlias: string, options: HuksOptions, callback: As"
+      },
+      {
+        "section_id": "section-18",
+        "title": "huks.importWrappedKeyItem<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1276,
+        "line_end": 1336,
+        "summary": "importWrappedKeyItem(keyAlias: string, wrappingKeyAlias: string, options: HuksOptions) : Promise\\<v"
+      },
+      {
+        "section_id": "section-19",
+        "title": "huks.exportKeyItem<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1337,
+        "line_end": 1393,
+        "summary": "exportKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<HuksReturnResult>) :"
+      },
+      {
+        "section_id": "section-20",
+        "title": "huks.exportKeyItem<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1394,
+        "line_end": 1450,
+        "summary": "exportKeyItem(keyAlias: string, options: HuksOptions) : Promise\\<HuksReturnResult>\n\n导出密钥。使用Promise异"
+      },
+      {
+        "section_id": "section-21",
+        "title": "huks.wrapKeyItem<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1451,
+        "line_end": 1489,
+        "summary": "wrapKeyItem(keyAlias: string, params: HuksOptions): Promise\\<HuksReturnResult>\n\n加密导出密钥。使用Promise异步回"
+      },
+      {
+        "section_id": "section-22",
+        "title": "huks.unwrapKeyItem<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1490,
+        "line_end": 1529,
+        "summary": "unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise\\<HuksReturnRe"
+      },
+      {
+        "section_id": "section-23",
+        "title": "huks.getKeyItemProperties<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1530,
+        "line_end": 1586,
+        "summary": "getKeyItemProperties(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<HuksReturnRes"
+      },
+      {
+        "section_id": "section-24",
+        "title": "huks.getKeyItemProperties<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1587,
+        "line_end": 1643,
+        "summary": "getKeyItemProperties(keyAlias: string, options: HuksOptions) : Promise\\<HuksReturnResult>\n\n获取密钥属性。使"
+      },
+      {
+        "section_id": "section-25",
+        "title": "huks.isKeyItemExist<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1644,
+        "line_end": 1701,
+        "summary": "isKeyItemExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<boolean>) : void\n\n判"
+      },
+      {
+        "section_id": "section-26",
+        "title": "huks.isKeyItemExist<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1702,
+        "line_end": 1756,
+        "summary": "isKeyItemExist(keyAlias: string, options: HuksOptions) : Promise\\<boolean>\n\n判断密钥是否存在。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-27",
+        "title": "huks.hasKeyItem<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1757,
+        "line_end": 1815,
+        "summary": "hasKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<boolean>) : void\n\n判断密钥是"
+      },
+      {
+        "section_id": "section-28",
+        "title": "huks.hasKeyItem<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1816,
+        "line_end": 1875,
+        "summary": "hasKeyItem(keyAlias: string, options: HuksOptions) : Promise\\<boolean>\n\n判断密钥是否存在。使用Promise异步回调。\n\n若密"
+      },
+      {
+        "section_id": "section-29",
+        "title": "huks.initSession<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1876,
+        "line_end": 1919,
+        "summary": "initSession(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<HuksSessionHandle>) :"
+      },
+      {
+        "section_id": "section-30",
+        "title": "huks.initSession<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1920,
+        "line_end": 1968,
+        "summary": "initSession(keyAlias: string, options: HuksOptions) : Promise\\<HuksSessionHandle>\n\ninitSession操作密钥接"
+      },
+      {
+        "section_id": "section-31",
+        "title": "huks.updateSession<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1969,
+        "line_end": 2014,
+        "summary": "updateSession(handle: number, options: HuksOptions, callback: AsyncCallback\\<HuksReturnResult>) : v"
+      },
+      {
+        "section_id": "section-32",
+        "title": "huks.updateSession<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2015,
+        "line_end": 2057,
+        "summary": "updateSession(handle: number, options: HuksOptions, token: Uint8Array, callback: AsyncCallback\\<Huk"
+      },
+      {
+        "section_id": "section-33",
+        "title": "huks.updateSession<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2058,
+        "line_end": 2109,
+        "summary": "updateSession(handle: number, options: HuksOptions, token?: Uint8Array) : Promise\\<HuksReturnResult"
+      },
+      {
+        "section_id": "section-34",
+        "title": "huks.finishSession<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2110,
+        "line_end": 2156,
+        "summary": "finishSession(handle: number, options: HuksOptions, callback: AsyncCallback\\<HuksReturnResult>) : v"
+      },
+      {
+        "section_id": "section-35",
+        "title": "huks.finishSession<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2157,
+        "line_end": 2200,
+        "summary": "finishSession(handle: number, options: HuksOptions, token: Uint8Array, callback: AsyncCallback\\<Huk"
+      },
+      {
+        "section_id": "section-36",
+        "title": "huks.finishSession<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2201,
+        "line_end": 2253,
+        "summary": "finishSession(handle: number, options: HuksOptions, token?: Uint8Array) : Promise\\<HuksReturnResult"
+      },
+      {
+        "section_id": "section-37",
+        "title": "huks.abortSession<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2254,
+        "line_end": 2353,
+        "summary": "abortSession(handle: number, options: HuksOptions, callback: AsyncCallback\\<void>) : void\n\nabortSes"
+      },
+      {
+        "section_id": "section-38",
+        "title": "huks.abortSession<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2354,
+        "line_end": 2490,
+        "summary": "abortSession(handle: number, options: HuksOptions) : Promise\\<void>\n\nabortSession终止密钥操作。使用Promise异步"
+      },
+      {
+        "section_id": "section-39",
+        "title": "huks.listAliases<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2491,
+        "line_end": 2547,
+        "summary": "listAliases(options: HuksOptions): Promise\\<HuksListAliasesReturnResult>\n\n查询密钥别名集接口。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-40",
+        "title": "HuksExceptionErrCode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2548,
+        "line_end": 2587,
+        "summary": "表示错误码的枚举以及对应的错误信息，错误码表示错误类型，错误信息展示错误详情。\n\n关于错误码的具体信息，可在[通用错误码](../errorcode-universal.md)和[HUKS错误码]("
+      },
+      {
+        "section_id": "section-41",
+        "title": "HuksKeyPurpose",
+        "level": 2,
+        "line_start": 2588,
+        "line_end": 2607,
+        "summary": "表示密钥用途。\n\n一个密钥仅能用于单类用途，不能既用于加解密又用于签名验签。\n\n**系统能力：** SystemCapability.Security.Huks.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-42",
+        "title": "HuksKeyDigest",
+        "level": 2,
+        "line_start": 2608,
+        "line_end": 2628,
+        "summary": "表示摘要算法。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security.Huks."
+      },
+      {
+        "section_id": "section-43",
+        "title": "HuksKeyPadding",
+        "level": 2,
+        "line_start": 2629,
+        "line_end": 2645,
+        "summary": "表示补齐算法。\n\n**系统能力：** SystemCapability.Security.Huks.Core\n\n| 名称                   | 值   | 说明"
+      },
+      {
+        "section_id": "section-44",
+        "title": "HuksCipherMode",
+        "level": 2,
+        "line_start": 2646,
+        "line_end": 2661,
+        "summary": "表示加密模式。\n\n**系统能力：** SystemCapability.Security.Huks.Core\n\n| 名称          | 值   | 说明                  |"
+      },
+      {
+        "section_id": "section-45",
+        "title": "HuksKeySize",
+        "level": 2,
+        "line_start": 2662,
+        "line_end": 2693,
+        "summary": "表示密钥长度。\n\n**系统能力：** SystemCapability.Security.Huks.Core\n\n| 名称                               | 值   |"
+      },
+      {
+        "section_id": "section-46",
+        "title": "HuksKeyAlg",
+        "level": 2,
+        "line_start": 2694,
+        "line_end": 2719,
+        "summary": "表示密钥使用的算法。\n\n**系统能力：** SystemCapability.Security.Huks.Core\n\n| 名称                      | 值   | 说明"
+      },
+      {
+        "section_id": "section-47",
+        "title": "HuksKeyGenerateType",
+        "level": 2,
+        "line_start": 2720,
+        "line_end": 2735,
+        "summary": "表示生成密钥的类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security.Hu"
+      },
+      {
+        "section_id": "section-48",
+        "title": "HuksKeyFlag",
+        "level": 2,
+        "line_start": 2736,
+        "line_end": 2750,
+        "summary": "表示密钥的产生方式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security.Hu"
+      },
+      {
+        "section_id": "section-49",
+        "title": "HuksKeyStorageType",
+        "level": 2,
+        "line_start": 2751,
+        "line_end": 2763,
+        "summary": "表示密钥存储方式。\n\n**系统能力：** SystemCapability.Security.Huks.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-50",
+        "title": "HuksSendType",
+        "level": 2,
+        "line_start": 2764,
+        "line_end": 2778,
+        "summary": "表示发送TAG的方式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security.H"
+      },
+      {
+        "section_id": "section-51",
+        "title": "HuksKeyClassType<sup>22+</sup>",
+        "level": 2,
+        "line_start": 2779,
+        "line_end": 2789,
+        "summary": "表示密钥的来源。\n\n**系统能力：** SystemCapability.Security.Huks.Extension\n\n| 名称                 | 值   | 说明"
+      },
+      {
+        "section_id": "section-52",
+        "title": "HuksUnwrapSuite<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2790,
+        "line_end": 2803,
+        "summary": "表示导入加密密钥的算法套件。\n\n**系统能力：** SystemCapability.Security.Huks.Core\n\nAPI version 9-11系统能力为SystemCapabilit"
+      },
+      {
+        "section_id": "section-53",
+        "title": "HuksImportKeyType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2804,
+        "line_end": 2819,
+        "summary": "表示导入密钥的密钥类型，默认为导入公钥，导入对称密钥时不需要该字段。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-54",
+        "title": "HuksRsaPssSaltLenType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2820,
+        "line_end": 2834,
+        "summary": "表示Rsa在签名验签、padding为pss时需指定的salt_len类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-55",
+        "title": "HuksUserAuthType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2835,
+        "line_end": 2847,
+        "summary": "表示用户认证类型。\n\n**系统能力：** SystemCapability.Security.Huks.Extension\n\n| 名称                            | 值"
+      },
+      {
+        "section_id": "section-56",
+        "title": "HuksUserAuthMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2848,
+        "line_end": 2860,
+        "summary": "表示用户认证模式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security.Huk"
+      },
+      {
+        "section_id": "section-57",
+        "title": "HuksAuthAccessType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2861,
+        "line_end": 2874,
+        "summary": "表示安全访问控制类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security.H"
+      },
+      {
+        "section_id": "section-58",
+        "title": "HuksChallengeType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2875,
+        "line_end": 2888,
+        "summary": "表示密钥使用时生成challenge的类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-59",
+        "title": "HuksChallengePosition<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2889,
+        "line_end": 2903,
+        "summary": "表示challenge类型为用户自定义类型时，生成的challenge有效长度仅为8字节连续的数据，且仅支持4种位置。\n\n**原子化服务API：** 从API version 12开始，该接口支持在"
+      },
+      {
+        "section_id": "section-60",
+        "title": "HuksSecureSignType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2904,
+        "line_end": 2915,
+        "summary": "表示生成或导入密钥时，指定该密钥的签名类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-61",
+        "title": "HuksAuthStorageLevel<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2916,
+        "line_end": 2933,
+        "summary": "表示生成或导入密钥时，指定该密钥的存储安全等级。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-62",
+        "title": "HuksKeyWrapType<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2934,
+        "line_end": 2945,
+        "summary": "表示密钥加密类型（加密导出或导入密钥）的枚举。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-63",
+        "title": "HuksTagType",
+        "level": 2,
+        "line_start": 2946,
+        "line_end": 2962,
+        "summary": "表示Tag的数据类型。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security.H"
+      },
+      {
+        "section_id": "section-64",
+        "title": "HuksTag",
+        "level": 2,
+        "line_start": 2963,
+        "line_end": 3063,
+        "summary": "表示调用参数的Tag。\n\n**系统能力：** SystemCapability.Security.Huks.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-65",
+        "title": "huks.getSdkVersion<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3064,
+        "line_end": 3099,
+        "summary": "getSdkVersion(options: HuksOptions) : string\n\n获取当前系统sdk版本。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API v"
+      },
+      {
+        "section_id": "section-66",
+        "title": "huks.generateKey<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3100,
+        "line_end": 3156,
+        "summary": "generateKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<HuksResult>) : void\n\n生"
+      },
+      {
+        "section_id": "section-67",
+        "title": "huks.generateKey<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3157,
+        "line_end": 3213,
+        "summary": "generateKey(keyAlias: string, options: HuksOptions) : Promise\\<HuksResult>\n\n生成密钥。使用Promise异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-68",
+        "title": "huks.deleteKey<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3214,
+        "line_end": 3247,
+        "summary": "deleteKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<HuksResult>) : void\n\n删除密"
+      },
+      {
+        "section_id": "section-69",
+        "title": "huks.deleteKey<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3248,
+        "line_end": 3290,
+        "summary": "deleteKey(keyAlias: string, options: HuksOptions) : Promise\\<HuksResult>\n\n删除密钥。使用Promise异步回调。\n\n> **"
+      },
+      {
+        "section_id": "section-70",
+        "title": "huks.importKey<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3291,
+        "line_end": 3358,
+        "summary": "importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<HuksResult>) : void\n\n导入明"
+      },
+      {
+        "section_id": "section-71",
+        "title": "huks.importKey<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3359,
+        "line_end": 3431,
+        "summary": "importKey(keyAlias: string, options: HuksOptions) : Promise\\<HuksResult>\n\n导入明文密钥。使用Promise异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-72",
+        "title": "huks.exportKey<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3432,
+        "line_end": 3465,
+        "summary": "exportKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<HuksResult>) : void\n\n导出密"
+      },
+      {
+        "section_id": "section-73",
+        "title": "huks.exportKey<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3466,
+        "line_end": 3503,
+        "summary": "exportKey(keyAlias: string, options: HuksOptions) : Promise\\<HuksResult>\n\n导出密钥。使用Promise异步回调。\n\n> **"
+      },
+      {
+        "section_id": "section-74",
+        "title": "huks.getKeyProperties<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3504,
+        "line_end": 3537,
+        "summary": "getKeyProperties(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<HuksResult>) : vo"
+      },
+      {
+        "section_id": "section-75",
+        "title": "huks.getKeyProperties<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3538,
+        "line_end": 3575,
+        "summary": "getKeyProperties(keyAlias: string, options: HuksOptions) : Promise\\<HuksResult>\n\n获取密钥属性。使用Promise异步"
+      },
+      {
+        "section_id": "section-76",
+        "title": "huks.isKeyExist<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3576,
+        "line_end": 3609,
+        "summary": "isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<boolean>) : void\n\n判断密钥是"
+      },
+      {
+        "section_id": "section-77",
+        "title": "huks.isKeyExist<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3610,
+        "line_end": 3647,
+        "summary": "isKeyExist(keyAlias: string, options: HuksOptions) : Promise\\<boolean>\n\n判断密钥是否存在。使用Promise异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-78",
+        "title": "huks.init<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3648,
+        "line_end": 3669,
+        "summary": "init(keyAlias: string, options: HuksOptions, callback: AsyncCallback\\<HuksHandle>) : void\n\ninit操作密钥"
+      },
+      {
+        "section_id": "section-79",
+        "title": "huks.init<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3670,
+        "line_end": 3696,
+        "summary": "init(keyAlias: string, options: HuksOptions) : Promise\\<HuksHandle>\n\ninit操作密钥接口。使用Promise异步回调。\n\nhuk"
+      },
+      {
+        "section_id": "section-80",
+        "title": "huks.update<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3697,
+        "line_end": 3719,
+        "summary": "update(handle: number, token?: Uint8Array, options: HuksOptions, callback: AsyncCallback\\<HuksResul"
+      },
+      {
+        "section_id": "section-81",
+        "title": "huks.update<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3720,
+        "line_end": 3747,
+        "summary": "update(handle: number, token?: Uint8Array, options: HuksOptions) : Promise\\<HuksResult>\n\nupdate操作密钥"
+      },
+      {
+        "section_id": "section-82",
+        "title": "huks.finish<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3748,
+        "line_end": 3769,
+        "summary": "finish(handle: number, options: HuksOptions, callback: AsyncCallback\\<HuksResult>) : void\n\nfinish操作"
+      },
+      {
+        "section_id": "section-83",
+        "title": "huks.finish<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3770,
+        "line_end": 3796,
+        "summary": "finish(handle: number, options: HuksOptions) : Promise\\<HuksResult>\n\nfinish操作密钥接口。使用Promise异步回调。\n\nh"
+      },
+      {
+        "section_id": "section-84",
+        "title": "huks.abort<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3797,
+        "line_end": 3907,
+        "summary": "abort(handle: number, options: HuksOptions, callback: AsyncCallback\\<HuksResult>) : void\n\nabort终止密钥"
+      },
+      {
+        "section_id": "section-85",
+        "title": "huks.abort<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3908,
+        "line_end": 4038,
+        "summary": "abort(handle: number, options: HuksOptions) : Promise\\<HuksResult>\n\nabort终止密钥操作。使用Promise异步回调。\n\n> *"
+      },
+      {
+        "section_id": "section-86",
+        "title": "HuksHandle<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4039,
+        "line_end": 4054,
+        "summary": "huks Handle结构体。\n\n**系统能力：** SystemCapability.Security.Huks.Extension\n\n> **说明：**\n>\n> 从API version 9开始"
+      },
+      {
+        "section_id": "section-87",
+        "title": "HuksResult<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4055,
+        "line_end": 4072,
+        "summary": "调用接口返回的result。\n\n**系统能力：** SystemCapability.Security.Huks.Extension\n\n> **说明：**\n>\n> - 从API version 8开"
+      },
+      {
+        "section_id": "section-88",
+        "title": "HuksErrorCode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4073,
+        "line_end": 4151,
+        "summary": "表示错误码的枚举。\n\n**系统能力：** SystemCapability.Security.Huks.Extension\n\n> **说明：**\n>\n> 从API version 9开始废弃，建议使"
+      }
+    ]
+  }
+}

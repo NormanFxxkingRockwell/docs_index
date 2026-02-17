@@ -1,0 +1,140 @@
+{
+  "doc_id": "errorcode-telephony",
+  "title": "电话子系统错误码",
+  "path": "zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md",
+  "metadata": {
+    "kit": "Telephony Kit",
+    "subsystem": "Telephony",
+    "owner": "@shao-yikai",
+    "designer": "@wnazgul",
+    "tester": "@jiang_99",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Telephony Kit Telephony 模块的 电话子系统错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "电话子系统错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "8300001 输入参数不在处理范围内",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 32,
+        "summary": "**错误信息**\n\nThe input parameter value is out of range.\n\n**错误描述**\n\n输入参数不在处理范围内，如slotId无效等，将无法进行相应的操作。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "8300002 服务连接失败",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 52,
+        "summary": "**错误信息**\n\nService connection failed.\n\n**错误描述**\n\n操作失败。无法连接到服务。\n\n**可能原因**\n\n服务启动失败，IPC连接失败等。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-3",
+        "title": "8300003 系统内部错误",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 71,
+        "summary": "**错误信息**\n\nSystem internal error.\n\n**错误描述**\n\n系统内部错误。\n\n**可能原因**\n\n网络异常，数据读写失败等。\n\n**处理步骤**\n\n本次操作异常，请稍后重"
+      },
+      {
+        "section_id": "section-4",
+        "title": "8300004 未识别SIM卡",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 90,
+        "summary": "**错误信息**\n\nNo SIM card found.\n\n**错误描述**\n\n没有识别到sim卡。\n\n**可能原因**\n\n未插入SIM卡或未正常插入SIM卡。\n\n**处理步骤**\n\n请插卡或重新拔"
+      },
+      {
+        "section_id": "section-5",
+        "title": "8300999 内部错误",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 109,
+        "summary": "**错误信息**\n\nInternal error.\n\n**错误描述**\n\n内部错误。\n\n**可能原因**\n\n内存不足、内存操作失误、空指针。\n\n**处理步骤**\n\n操作异常，请稍后再试。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "8301001 SIM卡未激活",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 128,
+        "summary": "**错误信息**\n\nSIM card is not activated.\n\n**错误描述**\n\nSIM卡未激活。\n\n**可能原因**\n\n没有激活SIM卡。\n\n**处理步骤**\n\n请激活SIM卡。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "8301002 SIM卡读取数据或者更新数据失败",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 147,
+        "summary": "**错误信息**\n\nThe SIM card failed to read or update data.\n\n**错误描述**\n\nSIM卡读取数据或者更新数据失败。\n\n**可能原因**\n\nSIM不支"
+      },
+      {
+        "section_id": "section-8",
+        "title": "8301003 随卡配置错误",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 165,
+        "summary": "**错误信息**\n\nOperator config error.\n\n**错误描述**\n\n随卡配置错误。\n\n**可能原因**\n\n未预置对应SIM卡的随卡配置文件。\n\n**处理步骤**\n\n请检查是否插入"
+      },
+      {
+        "section_id": "section-9",
+        "title": "8401001 UT连接失败",
+        "level": 2,
+        "line_start": 166,
+        "line_end": 184,
+        "summary": "**错误信息**\n\nUT is not connected.\n\n**错误描述**\n\nUT未连接。\n\n**可能原因**\n\n当前运营商不支持从WIFI下发UT请求，但是当前设备WIFI已连上。\n\n**处"
+      },
+      {
+        "section_id": "section-10",
+        "title": "3120001 服务连接失败",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 204,
+        "summary": "**错误信息**\n\nService connection failed.\n\n**错误描述**\n\n操作失败。无法连接到服务。\n\n**可能原因**\n\n服务启动失败，IPC连接失败等。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-11",
+        "title": "3120002 系统内部错误",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 222,
+        "summary": "**错误信息**\n\nSystem internal error.\n\n**错误描述**\n\n系统内部错误。\n\n**可能原因**\n\n网络异常，数据读写失败等。\n\n**处理步骤**\n\n本次操作异常，请稍后重"
+      },
+      {
+        "section_id": "section-12",
+        "title": "8800001 输入参数不在处理范围内",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 242,
+        "summary": "**错误信息**\n\nThe input parameter value is out of range.\n\n**错误描述**\n\n输入参数不在处理范围内，如slotId无效等，将无法进行相应的操作。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "8800002 服务连接失败",
+        "level": 2,
+        "line_start": 243,
+        "line_end": 262,
+        "summary": "**错误信息**\n\nService connection failed.\n\n**错误描述**\n\n操作失败。无法连接到服务。\n\n**可能原因**\n\n服务启动失败，IPC连接失败等。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "8800003 系统内部错误",
+        "level": 2,
+        "line_start": 263,
+        "line_end": 281,
+        "summary": "**错误信息**\n\nSystem internal error.\n\n**错误描述**\n\n系统内部错误。\n\n**可能原因**\n\n网络异常，数据读写失败等。\n\n**处理步骤**\n\n本次操作异常，请稍后重"
+      },
+      {
+        "section_id": "section-15",
+        "title": "8800999 内部错误",
+        "level": 2,
+        "line_start": 282,
+        "line_end": 299,
+        "summary": "**错误信息**\n\nInternal error.\n\n**错误描述**\n\n内部错误。\n\n**可能原因**\n\n内存不足、内存操作失误、空指针。\n\n**处理步骤**\n\n操作异常，请稍后再试。"
+      }
+    ]
+  }
+}

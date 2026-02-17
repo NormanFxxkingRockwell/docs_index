@@ -1,0 +1,332 @@
+{
+  "doc_id": "js-apis-resourceschedule-backgroundTaskManager",
+  "title": "@ohos.resourceschedule.backgroundTaskManager (后台任务管理)",
+  "path": "zh-cn/application-dev/reference/apis-backgroundtasks-kit/js-apis-resourceschedule-backgroundTaskManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-backgroundtasks-kit/js-apis-resourceschedule-backgroundTaskManager.md",
+  "metadata": {
+    "kit": "Background Tasks Kit",
+    "subsystem": "ResourceSchedule",
+    "owner": "@cheng-shichang",
+    "designer": "@zhouben25",
+    "tester": "@leetestnady",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Background Tasks Kit ResourceSchedule 模块的 @ohos.resourceschedule.backgroundTaskManager (后台任务管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.resourceschedule.backgroundTaskManager (后台任务管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { backgroundTaskManager } from '@kit.BackgroundTasksKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "backgroundTaskManager.requestSuspendDelay",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 84,
+        "summary": "requestSuspendDelay(reason: string, callback: Callback&lt;void&gt;): DelaySuspendInfo\n\n申请短时任务。\n\n>"
+      },
+      {
+        "section_id": "section-3",
+        "title": "backgroundTaskManager.getRemainingDelayTime",
+        "level": 2,
+        "line_start": 85,
+        "line_end": 131,
+        "summary": "getRemainingDelayTime(requestId: number, callback: AsyncCallback&lt;number&gt;): void\n\n获取本次短时任务的剩余时"
+      },
+      {
+        "section_id": "section-4",
+        "title": "backgroundTaskManager.getRemainingDelayTime",
+        "level": 2,
+        "line_start": 132,
+        "line_end": 180,
+        "summary": "getRemainingDelayTime(requestId: number): Promise&lt;number&gt;\n\n获取本次短时任务的剩余时间，使用Promise异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-5",
+        "title": "backgroundTaskManager.cancelSuspendDelay",
+        "level": 2,
+        "line_start": 181,
+        "line_end": 222,
+        "summary": "cancelSuspendDelay(requestId: number): void\n\n取消短时任务。\n\n**系统能力:** SystemCapability.ResourceSchedule.B"
+      },
+      {
+        "section_id": "section-6",
+        "title": "backgroundTaskManager.getTransientTaskInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 263,
+        "summary": "getTransientTaskInfo(): Promise&lt;TransientTaskInfo&gt;\n\n获取所有短时任务信息，如当日剩余总配额等，使用Promise异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-7",
+        "title": "backgroundTaskManager.startBackgroundRunning",
+        "level": 2,
+        "line_start": 264,
+        "line_end": 354,
+        "summary": "startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent, callback: As"
+      },
+      {
+        "section_id": "section-8",
+        "title": "backgroundTaskManager.startBackgroundRunning",
+        "level": 2,
+        "line_start": 355,
+        "line_end": 446,
+        "summary": "startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent): Promise&lt;"
+      },
+      {
+        "section_id": "section-9",
+        "title": "backgroundTaskManager.stopBackgroundRunning",
+        "level": 2,
+        "line_start": 447,
+        "line_end": 504,
+        "summary": "stopBackgroundRunning(context: Context, callback: AsyncCallback&lt;void&gt;): void\n\n取消当前UIAbility（F"
+      },
+      {
+        "section_id": "section-10",
+        "title": "backgroundTaskManager.stopBackgroundRunning",
+        "level": 2,
+        "line_start": 505,
+        "line_end": 563,
+        "summary": "stopBackgroundRunning(context: Context): Promise&lt;void&gt;\n\n取消当前UIAbility（FA模型则为ServiceAbility）下所"
+      },
+      {
+        "section_id": "section-11",
+        "title": "backgroundTaskManager.startBackgroundRunning<sup>12+</sup>",
+        "level": 2,
+        "line_start": 564,
+        "line_end": 697,
+        "summary": "startBackgroundRunning(context: Context, bgModes: string[], wantAgent: WantAgent): Promise&lt;Conti"
+      },
+      {
+        "section_id": "section-12",
+        "title": "backgroundTaskManager.updateBackgroundRunning<sup>12+</sup>",
+        "level": 2,
+        "line_start": 698,
+        "line_end": 762,
+        "summary": "updateBackgroundRunning(context: Context, bgModes: string[]): Promise&lt;ContinuousTaskNotification"
+      },
+      {
+        "section_id": "section-13",
+        "title": "backgroundTaskManager.getAllContinuousTasks<sup>20+</sup>",
+        "level": 2,
+        "line_start": 763,
+        "line_end": 818,
+        "summary": "getAllContinuousTasks(context: Context): Promise&lt;ContinuousTaskInfo[]&gt;\n\n获取所有长时任务信息，如长时任务ID、长时"
+      },
+      {
+        "section_id": "section-14",
+        "title": "backgroundTaskManager.getAllContinuousTasks<sup>20+</sup>",
+        "level": 2,
+        "line_start": 819,
+        "line_end": 875,
+        "summary": "getAllContinuousTasks(context: Context, includeSuspended: boolean): Promise&lt;ContinuousTaskInfo[]"
+      },
+      {
+        "section_id": "section-15",
+        "title": "backgroundTaskManager.on('continuousTaskCancel')<sup>15+</sup>",
+        "level": 2,
+        "line_start": 876,
+        "line_end": 923,
+        "summary": "on(type: 'continuousTaskCancel', callback: Callback&lt;ContinuousTaskCancelInfo&gt;): void\n\n注册长时任务取"
+      },
+      {
+        "section_id": "section-16",
+        "title": "backgroundTaskManager.off('continuousTaskCancel')<sup>15+</sup>",
+        "level": 2,
+        "line_start": 924,
+        "line_end": 971,
+        "summary": "off(type: 'continuousTaskCancel', callback?: Callback&lt;ContinuousTaskCancelInfo&gt;): void\n\n解除长时任"
+      },
+      {
+        "section_id": "section-17",
+        "title": "backgroundTaskManager.on('continuousTaskSuspend')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 972,
+        "line_end": 1021,
+        "summary": "on(type: 'continuousTaskSuspend', callback: Callback&lt;ContinuousTaskSuspendInfo&gt;): void\n\n注册长时任"
+      },
+      {
+        "section_id": "section-18",
+        "title": "backgroundTaskManager.off('continuousTaskSuspend')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1022,
+        "line_end": 1070,
+        "summary": "off(type: 'continuousTaskSuspend', callback?: Callback&lt;ContinuousTaskSuspendInfo&gt;): void\n\n取消长"
+      },
+      {
+        "section_id": "section-19",
+        "title": "backgroundTaskManager.on('continuousTaskActive')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1071,
+        "line_end": 1117,
+        "summary": "on(type: 'continuousTaskActive', callback: Callback&lt;ContinuousTaskActiveInfo&gt;): void\n\n注册长时任务激"
+      },
+      {
+        "section_id": "section-20",
+        "title": "backgroundTaskManager.off('continuousTaskActive')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1118,
+        "line_end": 1165,
+        "summary": "off(type: 'continuousTaskActive', callback?: Callback&lt;ContinuousTaskActiveInfo&gt;): void\n\n取消长时任"
+      },
+      {
+        "section_id": "section-21",
+        "title": "backgroundTaskManager.startBackgroundRunning<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1166,
+        "line_end": 1261,
+        "summary": "startBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise&lt;ContinuousTask"
+      },
+      {
+        "section_id": "section-22",
+        "title": "backgroundTaskManager.updateBackgroundRunning<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1262,
+        "line_end": 1360,
+        "summary": "updateBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise&lt;ContinuousTas"
+      },
+      {
+        "section_id": "section-23",
+        "title": "backgroundTaskManager.stopBackgroundRunning<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1361,
+        "line_end": 1416,
+        "summary": "stopBackgroundRunning(context: Context, continuousTaskId: number): Promise&lt;void&gt;\n\n取消指定Id的长时任务"
+      },
+      {
+        "section_id": "section-24",
+        "title": "DelaySuspendInfo",
+        "level": 2,
+        "line_start": 1417,
+        "line_end": 1427,
+        "summary": "短时任务信息。\n\n**系统能力:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask\n\n| 名称"
+      },
+      {
+        "section_id": "section-25",
+        "title": "TransientTaskInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1428,
+        "line_end": 1438,
+        "summary": "所有短时任务信息。\n\n**系统能力**: SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask\n\n| 名称"
+      },
+      {
+        "section_id": "section-26",
+        "title": "BackgroundMode",
+        "level": 2,
+        "line_start": 1439,
+        "line_end": 1455,
+        "summary": "长时任务类型。\n\n**系统能力:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask\n\n| 名称"
+      },
+      {
+        "section_id": "section-27",
+        "title": "ContinuousTaskNotification<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1456,
+        "line_end": 1468,
+        "summary": "长时任务通知信息。\n\n**系统能力:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask\n\n| 名称"
+      },
+      {
+        "section_id": "section-28",
+        "title": "ContinuousTaskCancelInfo<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1469,
+        "line_end": 1479,
+        "summary": "长时任务取消信息。\n\n**系统能力:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask\n\n| 名称"
+      },
+      {
+        "section_id": "section-29",
+        "title": "ContinuousTaskCancelReason<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1480,
+        "line_end": 1499,
+        "summary": "长时任务取消原因。\n\n**系统能力:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask\n\n| 名称"
+      },
+      {
+        "section_id": "section-30",
+        "title": "BackgroundSubMode<sup>16+</sup>",
+        "level": 2,
+        "line_start": 1500,
+        "line_end": 1509,
+        "summary": "长时任务子类型。\n\n**系统能力:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask\n\n| 名称"
+      },
+      {
+        "section_id": "section-31",
+        "title": "BackgroundModeType<sup>16+</sup>",
+        "level": 2,
+        "line_start": 1510,
+        "line_end": 1519,
+        "summary": "长时任务类型类别。\n\n**系统能力:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask\n\n| 名称"
+      },
+      {
+        "section_id": "section-32",
+        "title": "ContinuousTaskSuspendInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1520,
+        "line_end": 1531,
+        "summary": "长时任务暂停信息。\n\n**系统能力:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask\n\n| 名称"
+      },
+      {
+        "section_id": "section-33",
+        "title": "ContinuousTaskSuspendReason<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1532,
+        "line_end": 1549,
+        "summary": "长时任务暂停原因。\n\n**系统能力:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask\n\n| 名称"
+      },
+      {
+        "section_id": "section-34",
+        "title": "ContinuousTaskActiveInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1550,
+        "line_end": 1559,
+        "summary": "长时任务激活信息。\n\n**系统能力:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask\n\n| 名称"
+      },
+      {
+        "section_id": "section-35",
+        "title": "ContinuousTaskInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1560,
+        "line_end": 1582,
+        "summary": "长时任务信息。\n\n**系统能力**: SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask\n\n| 名称"
+      },
+      {
+        "section_id": "section-36",
+        "title": "ContinuousTaskRequest<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1583,
+        "line_end": 1768,
+        "summary": "通常作为[startBackgroundRunning()](#backgroundtaskmanagerstartbackgroundrunning21)和[updateBackgroundRun"
+      },
+      {
+        "section_id": "section-37",
+        "title": "BackgroundTaskMode<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1769,
+        "line_end": 1787,
+        "summary": "长时任务主类型。通常与长时任务子类型[BackgroundTaskSubmode](#backgroundtasksubmode21)配合使用，对照关系请参考长时任务主类型与子类型对照表，两者共同作"
+      },
+      {
+        "section_id": "section-38",
+        "title": "BackgroundTaskSubmode<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1788,
+        "line_end": 1822,
+        "summary": "长时任务子类型。通常与长时任务主类型[BackgroundTaskMode](#backgroundtaskmode21)配合使用，对照关系请参考长时任务主类型与子类型对照表，两者共同作为API v"
+      },
+      {
+        "section_id": "section-39",
+        "title": "UserAuthResult<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1823,
+        "line_end": 1835,
+        "summary": "用户授权结果。\n\n**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask\n\n| 名称"
+      }
+    ]
+  }
+}

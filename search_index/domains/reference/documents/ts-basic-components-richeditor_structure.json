@@ -1,0 +1,484 @@
+{
+  "doc_id": "ts-basic-components-richeditor",
+  "title": "RichEditor",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-basic-components-richeditor.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-basic-components-richeditor.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@carnivore233",
+    "designer": "@pssea",
+    "tester": "@mateng_Holtens",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 RichEditor，提供相关接口和功能说明。",
+  "structure": {
+    "title": "RichEditor",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 20,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 50,
+        "summary": "### RichEditor\n\nRichEditor(value: RichEditorOptions)\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-3",
+        "title": "属性",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 610,
+        "summary": "除支持[通用属性](ts-component-general-attributes.md)外，还支持以下属性：\n\n> **说明：**\n>\n> - align属性只支持上方、中间和下方位置的对齐方式。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "事件",
+        "level": 2,
+        "line_start": 611,
+        "line_end": 911,
+        "summary": "除支持[通用事件](ts-component-general-events.md)外，还支持[OnDidChangeCallback](ts-text-common.md#ondidchangeca"
+      },
+      {
+        "section_id": "section-5",
+        "title": "RichEditorInsertValue",
+        "level": 2,
+        "line_start": 912,
+        "line_end": 924,
+        "summary": "插入文本的信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称           | 类型      | 只读 | 可选   | 说明"
+      },
+      {
+        "section_id": "section-6",
+        "title": "RichEditorDeleteValue",
+        "level": 2,
+        "line_start": 925,
+        "line_end": 940,
+        "summary": "删除操作和被删除内容的信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.A"
+      },
+      {
+        "section_id": "section-7",
+        "title": "RichEditorDeleteDirection",
+        "level": 2,
+        "line_start": 941,
+        "line_end": 954,
+        "summary": "删除方向。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-8",
+        "title": "RichEditorTextSpanResult",
+        "level": 2,
+        "line_start": 955,
+        "line_end": 973,
+        "summary": "文本Span信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称                            | 类型"
+      },
+      {
+        "section_id": "section-9",
+        "title": "RichEditorSpanPosition",
+        "level": 2,
+        "line_start": 974,
+        "line_end": 986,
+        "summary": "Span位置信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-10",
+        "title": "RichEditorSpanType",
+        "level": 2,
+        "line_start": 987,
+        "line_end": 1000,
+        "summary": "Span类型信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称    | 值     | 说明         |\n| ----- | --"
+      },
+      {
+        "section_id": "section-11",
+        "title": "RichEditorResponseType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1001,
+        "line_end": 1013,
+        "summary": "菜单的响应类型。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称    | 值     | 说明         |\n| ----- | ---"
+      },
+      {
+        "section_id": "section-12",
+        "title": "UndoStyle<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1014,
+        "line_end": 1026,
+        "summary": "撤销还原是否保留原样式选项。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.A"
+      },
+      {
+        "section_id": "section-13",
+        "title": "RichEditorTextStyleResult",
+        "level": 2,
+        "line_start": 1027,
+        "line_end": 1075,
+        "summary": "后端返回的文本样式信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-14",
+        "title": "RichEditorSymbolSpanStyleResult<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1076,
+        "line_end": 1091,
+        "summary": "后端返回的SymbolSpan样式信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.A"
+      },
+      {
+        "section_id": "section-15",
+        "title": "RichEditorImageSpanResult",
+        "level": 2,
+        "line_start": 1092,
+        "line_end": 1107,
+        "summary": "后端返回的图片信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-16",
+        "title": "RichEditorImageSpanStyleResult",
+        "level": 2,
+        "line_start": 1108,
+        "line_end": 1120,
+        "summary": "后端返回的图片样式信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称            | 类型"
+      },
+      {
+        "section_id": "section-17",
+        "title": "RichEditorLayoutStyle<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1121,
+        "line_end": 1133,
+        "summary": "图片布局信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-18",
+        "title": "RichEditorOptions",
+        "level": 2,
+        "line_start": 1134,
+        "line_end": 1145,
+        "summary": "RichEditor初始化参数。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-19",
+        "title": "RichEditorStyledStringOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1146,
+        "line_end": 1157,
+        "summary": "RichEditor初始化参数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-20",
+        "title": "RichEditorChangeValue<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1158,
+        "line_end": 1172,
+        "summary": "图文变化信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-21",
+        "title": "RichEditorBaseController<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1173,
+        "line_end": 1392,
+        "summary": "RichEditor组件控制器基类。\n\n### getCaretOffset<sup>10+</sup>\n\ngetCaretOffset(): number\n\n返回当前光标所在位置。\n\n当无法获取光"
+      },
+      {
+        "section_id": "section-22",
+        "title": "RichEditorController",
+        "level": 2,
+        "line_start": 1393,
+        "line_end": 1693,
+        "summary": "RichEditor组件的控制器，继承自[RichEditorBaseController](#richeditorbasecontroller12)。\n\n\n> **说明：**\n>\n> 当内容的长度"
+      },
+      {
+        "section_id": "section-23",
+        "title": "RichEditorStyledStringController<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1694,
+        "line_end": 1772,
+        "summary": "使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](#richeditorbasecontroller12)。\n\n### 导入对象\n\n`"
+      },
+      {
+        "section_id": "section-24",
+        "title": "RichEditorSelection",
+        "level": 2,
+        "line_start": 1773,
+        "line_end": 1785,
+        "summary": "选中内容信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-25",
+        "title": "RichEditorRange",
+        "level": 2,
+        "line_start": 1786,
+        "line_end": 1799,
+        "summary": "定义RichEditor的范围。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-26",
+        "title": "RichEditorSpanStyleOptions",
+        "level": 2,
+        "line_start": 1800,
+        "line_end": 1809,
+        "summary": "文本样式选项。\n\n继承自[RichEditorRange](#richeditorrange)。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-27",
+        "title": "RichEditorUpdateTextSpanStyleOptions",
+        "level": 2,
+        "line_start": 1810,
+        "line_end": 1822,
+        "summary": "文本样式选项。\n\n继承自[RichEditorSpanStyleOptions](#richeditorspanstyleoptions)。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-28",
+        "title": "RichEditorUpdateImageSpanStyleOptions",
+        "level": 2,
+        "line_start": 1823,
+        "line_end": 1836,
+        "summary": "图片的样式选项。\n\n继承自[RichEditorSpanStyleOptions](#richeditorspanstyleoptions)。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-29",
+        "title": "RichEditorUpdateSymbolSpanStyleOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1837,
+        "line_end": 1850,
+        "summary": "SymbolSpan样式选项。\n\n继承自[RichEditorSpanStyleOptions](#richeditorspanstyleoptions)。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-30",
+        "title": "RichEditorParagraphStyleOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1851,
+        "line_end": 1869,
+        "summary": "段落样式选项。\n\n继承自[RichEditorRange](#richeditorrange)。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-31",
+        "title": "RichEditorParagraphStyle<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1870,
+        "line_end": 1885,
+        "summary": "段落样式。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称            | 类型"
+      },
+      {
+        "section_id": "section-32",
+        "title": "LeadingMarginPlaceholder<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1886,
+        "line_end": 1896,
+        "summary": "前导边距占位符，用于表示文本段落左侧与组件边缘之间的距离。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称       | 类型"
+      },
+      {
+        "section_id": "section-33",
+        "title": "RichEditorParagraphResult<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1897,
+        "line_end": 1909,
+        "summary": "后端返回的段落信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-34",
+        "title": "RichEditorTextSpanOptions",
+        "level": 2,
+        "line_start": 1910,
+        "line_end": 1923,
+        "summary": "添加文本的偏移位置和文本样式信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称                           | 类型"
+      },
+      {
+        "section_id": "section-35",
+        "title": "RichEditorTextStyle",
+        "level": 2,
+        "line_start": 1924,
+        "line_end": 1946,
+        "summary": "文本样式信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称                       | 类型"
+      },
+      {
+        "section_id": "section-36",
+        "title": "PlaceholderStyle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1947,
+        "line_end": 1959,
+        "summary": "设置提示文本的字体样式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-37",
+        "title": "RichEditorImageSpanOptions",
+        "level": 2,
+        "line_start": 1960,
+        "line_end": 1972,
+        "summary": "设置图片的偏移位置和图片样式信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称                    | 类型"
+      },
+      {
+        "section_id": "section-38",
+        "title": "RichEditorImageSpanStyle",
+        "level": 2,
+        "line_start": 1973,
+        "line_end": 1985,
+        "summary": "图片样式。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称                        | 类型"
+      },
+      {
+        "section_id": "section-39",
+        "title": "RichEditorSymbolSpanOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1986,
+        "line_end": 1998,
+        "summary": "设置SymbolSpan组件的偏移位置和样式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-40",
+        "title": "RichEditorSymbolSpanStyle<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1999,
+        "line_end": 2014,
+        "summary": "组件SymbolSpan样式信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkU"
+      },
+      {
+        "section_id": "section-41",
+        "title": "RichEditorBuilderSpanOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2015,
+        "line_end": 2025,
+        "summary": "设置builder的偏移位置和样式。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称     | 类型      | 只读 | 可选   | 说"
+      },
+      {
+        "section_id": "section-42",
+        "title": "RichEditorSpan<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2026,
+        "line_end": 2040,
+        "summary": "type RichEditorSpan = RichEditorImageSpanResult | RichEditorTextSpanResult\n\nRichEditor span信息。\n\n**原"
+      },
+      {
+        "section_id": "section-43",
+        "title": "SelectionMenuOptions",
+        "level": 2,
+        "line_start": 2041,
+        "line_end": 2055,
+        "summary": "菜单的选项。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称          | 类型          | 只读 | 可选   | 说明"
+      },
+      {
+        "section_id": "section-44",
+        "title": "PreviewMenuOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2056,
+        "line_end": 2067,
+        "summary": "预览菜单的选项。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-45",
+        "title": "PasteEvent<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2068,
+        "line_end": 2079,
+        "summary": "定义用户粘贴事件。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-46",
+        "title": "CutEvent<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2080,
+        "line_end": 2091,
+        "summary": "定义用户剪切事件。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-47",
+        "title": "CopyEvent<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2092,
+        "line_end": 2103,
+        "summary": "定义用户复制事件。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-48",
+        "title": "RichEditorGesture<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2104,
+        "line_end": 2116,
+        "summary": "用户手势事件。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-49",
+        "title": "KeyboardOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2117,
+        "line_end": 2128,
+        "summary": "设置自定义键盘是否支持避让功能。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-50",
+        "title": "SubmitCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2129,
+        "line_end": 2145,
+        "summary": "type SubmitCallback = (enterKey: EnterKeyType, event: SubmitEvent) => void\n\n软键盘按下回车键时的回调事件。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-51",
+        "title": "MenuOnAppearCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2146,
+        "line_end": 2162,
+        "summary": "type MenuOnAppearCallback = (start: number, end: number) => void\n\n自定义选择菜单弹出时触发的回调事件。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-52",
+        "title": "MenuCallback<sup>15+</sup>",
+        "level": 2,
+        "line_start": 2163,
+        "line_end": 2179,
+        "summary": "type MenuCallback = (start: number, end: number) => void\n\n自定义选择菜单显示或隐藏时触发的回调事件。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-53",
+        "title": "PasteEventCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2180,
+        "line_end": 2195,
+        "summary": "type PasteEventCallback = (event?: PasteEvent) => void\n\n粘贴完成前，触发回调。\n\n**原子化服务API：** 从API version 12开"
+      },
+      {
+        "section_id": "section-54",
+        "title": "OnHoverCallback<sup>14+</sup>",
+        "level": 2,
+        "line_start": 2196,
+        "line_end": 2212,
+        "summary": "type OnHoverCallback = (status: boolean, event: HoverEvent) => void\n\n鼠标悬浮触发回调。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-55",
+        "title": "RichEditorTextSpan",
+        "level": 2,
+        "line_start": 2213,
+        "line_end": 2226,
+        "summary": "文本Span信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-56",
+        "title": "RichEditorImageSpan",
+        "level": 2,
+        "line_start": 2227,
+        "line_end": 2240,
+        "summary": "图片Span信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-57",
+        "title": "RichEditorUrlStyle<sup>19+</sup>",
+        "level": 2,
+        "line_start": 2241,
+        "line_end": 2252,
+        "summary": "Url信息。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Ful"
+      },
+      {
+        "section_id": "section-58",
+        "title": "示例",
+        "level": 2,
+        "line_start": 2253,
+        "line_end": 6509,
+        "summary": "### 示例1（更新文本样式）\n通过[updateSpanStyle](#updatespanstyle)接口更新已有文本样式，更改样式后，使用[getSpans](#getspans)获取文本新的"
+      }
+    ]
+  }
+}

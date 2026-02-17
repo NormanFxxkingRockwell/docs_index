@@ -1,0 +1,388 @@
+{
+  "doc_id": "arkts-apis-audio-AudioCapturer",
+  "title": "Interface (AudioCapturer)",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioCapturer.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioCapturer.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@songshenke",
+    "designer": "@caixuejiang; @hao-liangfei; @zhanganxiang",
+    "tester": "@Filger",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 Interface (AudioCapturer)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AudioCapturer)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { audio } from '@kit.AudioKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 39,
+        "summary": "**系统能力：** SystemCapability.Multimedia.Audio.Capturer\n\n| 名称  | 类型                     | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getCapturerInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 70,
+        "summary": "getCapturerInfo(callback: AsyncCallback<AudioCapturerInfo\\>): void\n\n获取音频采集器信息。使用callback异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getCapturerInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 103,
+        "summary": "getCapturerInfo(): Promise<AudioCapturerInfo\\>\n\n获取音频采集器信息。使用Promise异步回调。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getCapturerInfoSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 132,
+        "summary": "getCapturerInfoSync(): AudioCapturerInfo\n\n获取音频采集器信息。同步返回结果。\n\n**系统能力：** SystemCapability.Multimedia."
+      },
+      {
+        "section_id": "section-6",
+        "title": "getStreamInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 164,
+        "summary": "getStreamInfo(callback: AsyncCallback<AudioStreamInfo\\>): void\n\n获取音频采集器流信息。使用callback异步回调。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-7",
+        "title": "getStreamInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 194,
+        "summary": "getStreamInfo(): Promise<AudioStreamInfo\\>\n\n获取音频采集器流信息。使用Promise异步回调。\n\n**系统能力：** SystemCapability.M"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getStreamInfoSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 225,
+        "summary": "getStreamInfoSync(): AudioStreamInfo\n\n获取音频采集器流信息。同步返回结果。\n\n**系统能力：** SystemCapability.Multimedia.Aud"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getAudioStreamId<sup>9+</sup>",
+        "level": 2,
+        "line_start": 226,
+        "line_end": 249,
+        "summary": "getAudioStreamId(callback: AsyncCallback<number\\>): void\n\n获取音频流id。使用callback异步回调。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getAudioStreamId<sup>9+</sup>",
+        "level": 2,
+        "line_start": 250,
+        "line_end": 275,
+        "summary": "getAudioStreamId(): Promise<number\\>\n\n获取音频流id。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getAudioStreamIdSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 276,
+        "line_end": 303,
+        "summary": "getAudioStreamIdSync(): number\n\n获取音频流id。同步返回结果。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Captur"
+      },
+      {
+        "section_id": "section-12",
+        "title": "start<sup>8+</sup>",
+        "level": 2,
+        "line_start": 304,
+        "line_end": 332,
+        "summary": "start(callback: AsyncCallback<void\\>): void\n\n启动音频采集器，开始获取音频数据。使用callback异步回调。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-13",
+        "title": "start<sup>8+</sup>",
+        "level": 2,
+        "line_start": 333,
+        "line_end": 361,
+        "summary": "start(): Promise<void\\>\n\n启动音频采集器，开始获取音频数据。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia.Aud"
+      },
+      {
+        "section_id": "section-14",
+        "title": "stop<sup>8+</sup>",
+        "level": 2,
+        "line_start": 362,
+        "line_end": 390,
+        "summary": "stop(callback: AsyncCallback<void\\>): void\n\n停止音频采集器，停止输入音频流。使用callback异步回调。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-15",
+        "title": "stop<sup>8+</sup>",
+        "level": 2,
+        "line_start": 391,
+        "line_end": 419,
+        "summary": "stop(): Promise<void\\>\n\n停止音频采集器，停止输入音频流。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia.Audio"
+      },
+      {
+        "section_id": "section-16",
+        "title": "release<sup>8+</sup>",
+        "level": 2,
+        "line_start": 420,
+        "line_end": 448,
+        "summary": "release(callback: AsyncCallback<void\\>): void\n\n释放音频采集器。使用callback异步回调。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-17",
+        "title": "release<sup>8+</sup>",
+        "level": 2,
+        "line_start": 449,
+        "line_end": 477,
+        "summary": "release(): Promise<void\\>\n\n释放音频采集器。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Capt"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getAudioTime<sup>8+</sup>",
+        "level": 2,
+        "line_start": 478,
+        "line_end": 501,
+        "summary": "getAudioTime(callback: AsyncCallback<number\\>): void\n\n获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。使用callback异步"
+      },
+      {
+        "section_id": "section-19",
+        "title": "getAudioTime<sup>8+</sup>",
+        "level": 2,
+        "line_start": 502,
+        "line_end": 527,
+        "summary": "getAudioTime(): Promise<number\\>\n\n获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。使用Promise异步回调。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-20",
+        "title": "getAudioTimeSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 528,
+        "line_end": 555,
+        "summary": "getAudioTimeSync(): number\n\n获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。同步返回结果。\n\n**系统能力：** SystemCapability.Mu"
+      },
+      {
+        "section_id": "section-21",
+        "title": "getAudioTimestampInfo<sup>19+</sup>",
+        "level": 2,
+        "line_start": 556,
+        "line_end": 591,
+        "summary": "getAudioTimestampInfo(): Promise\\<AudioTimestampInfo>\n\n获取输入音频流时间戳和当前数据帧位置信息。\n\n该接口可以获取到音频通道实际录制位置（fr"
+      },
+      {
+        "section_id": "section-22",
+        "title": "getAudioTimestampInfoSync<sup>19+</sup>",
+        "level": 2,
+        "line_start": 592,
+        "line_end": 627,
+        "summary": "getAudioTimestampInfoSync(): AudioTimestampInfo\n\n获取音频流时间戳和当前数据帧位置信息。同步返回结果。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-23",
+        "title": "getBufferSize<sup>8+</sup>",
+        "level": 2,
+        "line_start": 628,
+        "line_end": 655,
+        "summary": "getBufferSize(callback: AsyncCallback<number\\>): void\n\n获取采集器合理的最小缓冲区大小。使用callback异步回调。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-24",
+        "title": "getBufferSize<sup>8+</sup>",
+        "level": 2,
+        "line_start": 656,
+        "line_end": 681,
+        "summary": "getBufferSize(): Promise<number\\>\n\n获取采集器合理的最小缓冲区大小。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multi"
+      },
+      {
+        "section_id": "section-25",
+        "title": "getBufferSizeSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 682,
+        "line_end": 709,
+        "summary": "getBufferSizeSync(): number\n\n获取采集器合理的最小缓冲区大小。同步返回结果。\n\n**系统能力：** SystemCapability.Multimedia.Audio.C"
+      },
+      {
+        "section_id": "section-26",
+        "title": "getCurrentInputDevices<sup>11+</sup>",
+        "level": 2,
+        "line_start": 710,
+        "line_end": 740,
+        "summary": "getCurrentInputDevices(): AudioDeviceDescriptors\n\n获取录音流输入设备信息。同步返回结果。\n\n**系统能力：** SystemCapability.M"
+      },
+      {
+        "section_id": "section-27",
+        "title": "getCurrentAudioCapturerChangeInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 741,
+        "line_end": 774,
+        "summary": "getCurrentAudioCapturerChangeInfo(): AudioCapturerChangeInfo\n\n获取录音流配置。同步返回结果。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-28",
+        "title": "on('audioInterrupt')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 775,
+        "line_end": 848,
+        "summary": "on(type: 'audioInterrupt', callback: Callback\\<InterruptEvent>): void\n\n监听音频中断事件（当音频焦点发生变化时触发）。使用cal"
+      },
+      {
+        "section_id": "section-29",
+        "title": "off('audioInterrupt')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 849,
+        "line_end": 877,
+        "summary": "off(type: 'audioInterrupt'): void\n\n取消监听音频中断事件。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Interru"
+      },
+      {
+        "section_id": "section-30",
+        "title": "on('inputDeviceChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 878,
+        "line_end": 910,
+        "summary": "on(type: 'inputDeviceChange', callback: Callback\\<AudioDeviceDescriptors>): void\n\n监听音频输入设备变化事件（当音频输"
+      },
+      {
+        "section_id": "section-31",
+        "title": "off('inputDeviceChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 911,
+        "line_end": 952,
+        "summary": "off(type: 'inputDeviceChange', callback?: Callback\\<AudioDeviceDescriptors>): void\n\n取消监听音频输入设备更改事件。"
+      },
+      {
+        "section_id": "section-32",
+        "title": "on('audioCapturerChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 953,
+        "line_end": 984,
+        "summary": "on(type: 'audioCapturerChange', callback: Callback\\<AudioCapturerChangeInfo>): void\n\n监听录音流配置变化事件（当音"
+      },
+      {
+        "section_id": "section-33",
+        "title": "off('audioCapturerChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 985,
+        "line_end": 1024,
+        "summary": "off(type: 'audioCapturerChange', callback?: Callback\\<AudioCapturerChangeInfo>): void\n\n取消监听录音流配置变化事"
+      },
+      {
+        "section_id": "section-34",
+        "title": "on('markReach')<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1025,
+        "line_end": 1052,
+        "summary": "on(type: 'markReach', frame: number, callback: Callback&lt;number&gt;): void\n\n监听标记到达事件（当采集的帧数达到fram"
+      },
+      {
+        "section_id": "section-35",
+        "title": "off('markReach')<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1053,
+        "line_end": 1085,
+        "summary": "off(type: 'markReach', callback?: Callback&lt;number&gt;): void\n\n取消监听标记到达事件。使用callback异步回调。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-36",
+        "title": "on('periodReach')<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1086,
+        "line_end": 1113,
+        "summary": "on(type: 'periodReach', frame: number, callback: Callback&lt;number&gt;): void\n\n监听标记到达事件（当采集的帧数达到fr"
+      },
+      {
+        "section_id": "section-37",
+        "title": "off('periodReach')<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1114,
+        "line_end": 1146,
+        "summary": "off(type: 'periodReach', callback?: Callback&lt;number&gt;): void\n\n取消监听标记到达事件。使用callback异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-38",
+        "title": "on('stateChange')<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1147,
+        "line_end": 1174,
+        "summary": "on(type: 'stateChange', callback: Callback<AudioState\\>): void\n\n监听状态变化事件（当AudioCapturer状态发生变化时触发）。使"
+      },
+      {
+        "section_id": "section-39",
+        "title": "off('stateChange')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1175,
+        "line_end": 1218,
+        "summary": "off(type: 'stateChange', callback?: Callback&lt;AudioState&gt;): void\n\n取消监听状态变化事件。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-40",
+        "title": "on('readData')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1219,
+        "line_end": 1282,
+        "summary": "on(type: 'readData', callback: Callback\\<ArrayBuffer>): void\n\n监听音频数据读取回调事件（当需要读取音频流数据时触发）。使用callbac"
+      },
+      {
+        "section_id": "section-41",
+        "title": "off('readData')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1283,
+        "line_end": 1322,
+        "summary": "off(type: 'readData', callback?: Callback\\<ArrayBuffer>): void\n\n取消监听音频数据读取回调事件。使用callback异步回调。\n\n**系"
+      },
+      {
+        "section_id": "section-42",
+        "title": "getOverflowCount<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1323,
+        "line_end": 1348,
+        "summary": "getOverflowCount(): Promise&lt;number&gt;\n\n获取当前录制音频流的过载音频帧数量。使用Promise异步回调。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-43",
+        "title": "getOverflowCountSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1349,
+        "line_end": 1376,
+        "summary": "getOverflowCountSync(): number\n\n获取当前录制音频流的过载音频帧数量。同步返回数据。\n\n**系统能力：** SystemCapability.Multimedia.Au"
+      },
+      {
+        "section_id": "section-44",
+        "title": "setWillMuteWhenInterrupted<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1377,
+        "line_end": 1416,
+        "summary": "setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise&lt;void&gt;\n\n设置当前录制音频流是否启用[静音打断模式"
+      },
+      {
+        "section_id": "section-45",
+        "title": "read<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1417,
+        "line_end": 1454,
+        "summary": "read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer\\>): void\n\n读入缓冲区。使用c"
+      },
+      {
+        "section_id": "section-46",
+        "title": "read<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1455,
+        "line_end": 1495,
+        "summary": "read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer\\>\n\n读入缓冲区。使用Promise异步回调。\n\n> **说明：**"
+      }
+    ]
+  }
+}

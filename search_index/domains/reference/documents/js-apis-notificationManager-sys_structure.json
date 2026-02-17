@@ -1,0 +1,1108 @@
+{
+  "doc_id": "js-apis-notificationManager-sys",
+  "title": "@ohos.notificationManager (NotificationManager模块)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-notification-kit/js-apis-notificationManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-notification-kit/js-apis-notificationManager-sys.md",
+  "metadata": {
+    "kit": "Notification Kit",
+    "subsystem": "Notification",
+    "owner": "@michael_woo888",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Notification Kit Notification 模块的 @ohos.notificationManager (NotificationManager模块)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.notificationManager (NotificationManager模块)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { notificationManager } from '@kit.NotificationKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "notificationManager.publish",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 100,
+        "summary": "publish(request: NotificationRequest, userId: number, callback: AsyncCallback\\<void\\>): void\n\n发布通知给"
+      },
+      {
+        "section_id": "section-3",
+        "title": "notificationManager.publish",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 180,
+        "summary": "publish(request: NotificationRequest, userId: number): Promise\\<void\\>\n\n发布通知给指定的用户。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "notificationManager.addSlot",
+        "level": 2,
+        "line_start": 181,
+        "line_end": 233,
+        "summary": "addSlot(slot: NotificationSlot, callback: AsyncCallback\\<void\\>): void\n\n创建通知渠道。使用callback异步回调。\n\n**系"
+      },
+      {
+        "section_id": "section-5",
+        "title": "notificationManager.addSlot",
+        "level": 2,
+        "line_start": 234,
+        "line_end": 287,
+        "summary": "addSlot(slot: NotificationSlot): Promise\\<void\\>\n\n创建通知渠道。使用Promise异步回调。\n\n**系统能力**：SystemCapability."
+      },
+      {
+        "section_id": "section-6",
+        "title": "notificationManager.addSlots",
+        "level": 2,
+        "line_start": 288,
+        "line_end": 344,
+        "summary": "addSlots(slots: Array\\<NotificationSlot\\>, callback: AsyncCallback\\<void\\>): void\n\n创建多个通知渠道。使用callb"
+      },
+      {
+        "section_id": "section-7",
+        "title": "notificationManager.addSlots",
+        "level": 2,
+        "line_start": 345,
+        "line_end": 403,
+        "summary": "addSlots(slots: Array\\<NotificationSlot\\>): Promise\\<void\\>\n\n创建多个通知渠道。使用Promise异步回调。\n\n**系统能力**：Syst"
+      },
+      {
+        "section_id": "section-8",
+        "title": "notificationManager.setNotificationEnable",
+        "level": 2,
+        "line_start": 404,
+        "line_end": 455,
+        "summary": "setNotificationEnable(bundle: BundleOption, enable: boolean, callback: AsyncCallback\\<void\\>): void"
+      },
+      {
+        "section_id": "section-9",
+        "title": "notificationManager.setNotificationEnable",
+        "level": 2,
+        "line_start": 456,
+        "line_end": 509,
+        "summary": "setNotificationEnable(bundle: BundleOption, enable: boolean): Promise\\<void\\>\n\n设定指定应用的通知使能状态。使用Prom"
+      },
+      {
+        "section_id": "section-10",
+        "title": "notificationManager.getAllNotificationEnabledBundles<sup>12+</sup>",
+        "level": 2,
+        "line_start": 510,
+        "line_end": 555,
+        "summary": "getAllNotificationEnabledBundles(): Promise<Array<BundleOption\\>>\n\n获取允许通知的应用程序列表。使用Promise异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-11",
+        "title": "notificationManager.getAllNotificationEnabledBundles<sup>23+</sup>",
+        "level": 2,
+        "line_start": 556,
+        "line_end": 610,
+        "summary": "getAllNotificationEnabledBundles(userId: number): Promise<Array<BundleOption\\>>\n\n获取指定用户下允许通知的应用程序列表"
+      },
+      {
+        "section_id": "section-12",
+        "title": "notificationManager.isNotificationEnabled",
+        "level": 2,
+        "line_start": 611,
+        "line_end": 663,
+        "summary": "isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback\\<boolean\\>): void\n\n获取指定应用的通知使能状"
+      },
+      {
+        "section_id": "section-13",
+        "title": "notificationManager.isNotificationEnabled",
+        "level": 2,
+        "line_start": 664,
+        "line_end": 716,
+        "summary": "isNotificationEnabled(bundle: BundleOption): Promise\\<boolean\\>\n\n获取指定应用的通知使能状态。使用Promise异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-14",
+        "title": "notificationManager.isNotificationEnabled",
+        "level": 2,
+        "line_start": 717,
+        "line_end": 768,
+        "summary": "isNotificationEnabled(userId: number, callback: AsyncCallback\\<boolean\\>): void\n\n获取指定用户ID下的通知使能状态。使"
+      },
+      {
+        "section_id": "section-15",
+        "title": "notificationManager.isNotificationEnabled",
+        "level": 2,
+        "line_start": 769,
+        "line_end": 821,
+        "summary": "isNotificationEnabled(userId: number): Promise\\<boolean\\>\n\n获取指定用户下的通知使能状态。使用Promise异步回调。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-16",
+        "title": "notificationManager.displayBadge",
+        "level": 2,
+        "line_start": 822,
+        "line_end": 876,
+        "summary": "displayBadge(bundle: BundleOption, enable: boolean, callback: AsyncCallback\\<void\\>): void\n\n设定指定应用的"
+      },
+      {
+        "section_id": "section-17",
+        "title": "notificationManager.displayBadge",
+        "level": 2,
+        "line_start": 877,
+        "line_end": 933,
+        "summary": "displayBadge(bundle: BundleOption, enable: boolean): Promise\\<void\\>\n\n设定指定应用的角标使能状态。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-18",
+        "title": "notificationManager.isBadgeDisplayed",
+        "level": 2,
+        "line_start": 934,
+        "line_end": 987,
+        "summary": "isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback\\<boolean\\>): void\n\n获取指定应用的角标使能状态。使用c"
+      },
+      {
+        "section_id": "section-19",
+        "title": "notificationManager.isBadgeDisplayed",
+        "level": 2,
+        "line_start": 988,
+        "line_end": 1044,
+        "summary": "isBadgeDisplayed(bundle: BundleOption): Promise\\<boolean\\>\n\n获取指定应用的角标使能状态。使用Promise异步回调。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-20",
+        "title": "notificationManager.setSlotFlagsByBundle<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1045,
+        "line_end": 1104,
+        "summary": "setSlotFlagsByBundle(bundle: BundleOption, slotFlags: number): Promise\\<void\\>\n\n设定指定应用的通知提醒方式开关。使用P"
+      },
+      {
+        "section_id": "section-21",
+        "title": "notificationManager.setSlotByBundle",
+        "level": 2,
+        "line_start": 1105,
+        "line_end": 1164,
+        "summary": "setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback: AsyncCallback\\<void\\>): voi"
+      },
+      {
+        "section_id": "section-22",
+        "title": "notificationManager.setSlotByBundle",
+        "level": 2,
+        "line_start": 1165,
+        "line_end": 1228,
+        "summary": "setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise\\<void\\>\n\n设置指定应用的通知渠道。使用Promi"
+      },
+      {
+        "section_id": "section-23",
+        "title": "notificationManager.getSlotFlagsByBundle<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1229,
+        "line_end": 1284,
+        "summary": "getSlotFlagsByBundle(bundle: BundleOption): Promise\\<number\\>\n\n获取指定应用的通知渠道标识位。使用Promise异步回调。\n\n**系统能"
+      },
+      {
+        "section_id": "section-24",
+        "title": "notificationManager.getSlotsByBundle",
+        "level": 2,
+        "line_start": 1285,
+        "line_end": 1338,
+        "summary": "getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback\\<Array\\<NotificationSlot>>): void\n\n获"
+      },
+      {
+        "section_id": "section-25",
+        "title": "notificationManager.getSlotsByBundle",
+        "level": 2,
+        "line_start": 1339,
+        "line_end": 1395,
+        "summary": "getSlotsByBundle(bundle: BundleOption): Promise\\<Array\\<NotificationSlot>>\n\n获取指定应用的所有通知渠道。使用Promise"
+      },
+      {
+        "section_id": "section-26",
+        "title": "notificationManager.getSlotNumByBundle",
+        "level": 2,
+        "line_start": 1396,
+        "line_end": 1451,
+        "summary": "getSlotNumByBundle(bundle: BundleOption, callback: AsyncCallback\\<number\\>): void\n\n获取指定应用的通知渠道数量。使用"
+      },
+      {
+        "section_id": "section-27",
+        "title": "notificationManager.getSlotNumByBundle",
+        "level": 2,
+        "line_start": 1452,
+        "line_end": 1509,
+        "summary": "getSlotNumByBundle(bundle: BundleOption): Promise\\<number\\>\n\n获取指定应用的通知渠道数量。使用Promise异步回调。\n\n**系统能力**"
+      },
+      {
+        "section_id": "section-28",
+        "title": "notificationManager.getAllActiveNotifications",
+        "level": 2,
+        "line_start": 1510,
+        "line_end": 1556,
+        "summary": "getAllActiveNotifications(callback: AsyncCallback\\<Array\\<NotificationRequest>>): void\n\n获取当前未删除的所有通"
+      },
+      {
+        "section_id": "section-29",
+        "title": "notificationManager.getAllActiveNotifications",
+        "level": 2,
+        "line_start": 1557,
+        "line_end": 1598,
+        "summary": "getAllActiveNotifications(): Promise\\<Array\\<NotificationRequest\\>\\>\n\n获取当前未删除的所有通知。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-30",
+        "title": "notificationManager.getActiveNotificationByFilter<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1599,
+        "line_end": 1656,
+        "summary": "getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback\\<NotificationRequ"
+      },
+      {
+        "section_id": "section-31",
+        "title": "notificationManager.getActiveNotificationByFilter<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1657,
+        "line_end": 1716,
+        "summary": "getActiveNotificationByFilter(filter: NotificationFilter): Promise\\<NotificationRequest\\>\n\n获取满足条件的普"
+      },
+      {
+        "section_id": "section-32",
+        "title": "notificationManager.removeGroupByBundle",
+        "level": 2,
+        "line_start": 1717,
+        "line_end": 1769,
+        "summary": "removeGroupByBundle(bundle: BundleOption, groupName: string, callback: AsyncCallback\\<void\\>): void"
+      },
+      {
+        "section_id": "section-33",
+        "title": "notificationManager.removeGroupByBundle",
+        "level": 2,
+        "line_start": 1770,
+        "line_end": 1823,
+        "summary": "removeGroupByBundle(bundle: BundleOption, groupName: string): Promise\\<void\\>\n\n删除指定应用的指定组下的通知。使用Pro"
+      },
+      {
+        "section_id": "section-34",
+        "title": "notificationManager.setDoNotDisturbDate",
+        "level": 2,
+        "line_start": 1824,
+        "line_end": 1881,
+        "summary": "setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback\\<void\\>): void\n\n设置免打扰时间。使用callb"
+      },
+      {
+        "section_id": "section-35",
+        "title": "notificationManager.setDoNotDisturbDate",
+        "level": 2,
+        "line_start": 1882,
+        "line_end": 1941,
+        "summary": "setDoNotDisturbDate(date: DoNotDisturbDate): Promise\\<void\\>\n\n设置免打扰时间。使用Promise异步回调。\n\n**系统能力**：Syst"
+      },
+      {
+        "section_id": "section-36",
+        "title": "notificationManager.setDoNotDisturbDate",
+        "level": 2,
+        "line_start": 1942,
+        "line_end": 2004,
+        "summary": "setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: AsyncCallback\\<void\\>): void"
+      },
+      {
+        "section_id": "section-37",
+        "title": "notificationManager.setDoNotDisturbDate",
+        "level": 2,
+        "line_start": 2005,
+        "line_end": 2069,
+        "summary": "setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise\\<void\\>\n\n指定用户设置免打扰时间。使用Promise"
+      },
+      {
+        "section_id": "section-38",
+        "title": "notificationManager.getDoNotDisturbDate",
+        "level": 2,
+        "line_start": 2070,
+        "line_end": 2120,
+        "summary": "getDoNotDisturbDate(callback: AsyncCallback\\<DoNotDisturbDate\\>): void\n\n查询免打扰时间。使用callback异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-39",
+        "title": "notificationManager.getDoNotDisturbDate",
+        "level": 2,
+        "line_start": 2121,
+        "line_end": 2167,
+        "summary": "getDoNotDisturbDate(): Promise\\<DoNotDisturbDate\\>\n\n查询免打扰时间。使用Promise异步回调。\n\n**系统能力**：SystemCapabili"
+      },
+      {
+        "section_id": "section-40",
+        "title": "notificationManager.getDoNotDisturbDate",
+        "level": 2,
+        "line_start": 2168,
+        "line_end": 2223,
+        "summary": "getDoNotDisturbDate(userId: number, callback: AsyncCallback\\<DoNotDisturbDate\\>): void\n\n查询指定用户的免打扰时"
+      },
+      {
+        "section_id": "section-41",
+        "title": "notificationManager.getDoNotDisturbDate",
+        "level": 2,
+        "line_start": 2224,
+        "line_end": 2281,
+        "summary": "getDoNotDisturbDate(userId: number): Promise\\<DoNotDisturbDate\\>\n\n查询指定用户的免打扰时间。使用Promise异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-42",
+        "title": "notificationManager.isSupportDoNotDisturbMode",
+        "level": 2,
+        "line_start": 2282,
+        "line_end": 2331,
+        "summary": "isSupportDoNotDisturbMode(callback: AsyncCallback\\<boolean\\>): void\n\n查询是否支持免打扰功能。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-43",
+        "title": "notificationManager.isSupportDoNotDisturbMode",
+        "level": 2,
+        "line_start": 2332,
+        "line_end": 2376,
+        "summary": "isSupportDoNotDisturbMode(): Promise\\<boolean\\>\n\n查询是否支持免打扰功能。使用Promise异步回调。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-44",
+        "title": "notificationManager.setDistributedEnable",
+        "level": 2,
+        "line_start": 2377,
+        "line_end": 2428,
+        "summary": "setDistributedEnable(enable: boolean, callback: AsyncCallback\\<void\\>): void\n\n设置设备是否支持分布式通知。使用callb"
+      },
+      {
+        "section_id": "section-45",
+        "title": "notificationManager.setDistributedEnable",
+        "level": 2,
+        "line_start": 2429,
+        "line_end": 2482,
+        "summary": "setDistributedEnable(enable: boolean): Promise\\<void>\n\n设置设备是否支持分布式通知。使用Promise异步回调。\n\n**系统能力**：Syste"
+      },
+      {
+        "section_id": "section-46",
+        "title": "notificationManager.setDistributedEnableByBundle",
+        "level": 2,
+        "line_start": 2483,
+        "line_end": 2541,
+        "summary": "setDistributedEnableByBundle(bundle: BundleOption, enable: boolean, callback: AsyncCallback\\<void>)"
+      },
+      {
+        "section_id": "section-47",
+        "title": "notificationManager.setDistributedEnableByBundle",
+        "level": 2,
+        "line_start": 2542,
+        "line_end": 2600,
+        "summary": "setDistributedEnableByBundle(bundle: BundleOption, enable: boolean): Promise\\<void>\n\n设置指定应用是否支持分布式通"
+      },
+      {
+        "section_id": "section-48",
+        "title": "notificationManager.isDistributedEnabledByBundle",
+        "level": 2,
+        "line_start": 2601,
+        "line_end": 2655,
+        "summary": "isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallback\\<boolean>): void\n\n根据应用的包"
+      },
+      {
+        "section_id": "section-49",
+        "title": "notificationManager.isDistributedEnabledByBundle",
+        "level": 2,
+        "line_start": 2656,
+        "line_end": 2713,
+        "summary": "isDistributedEnabledByBundle(bundle: BundleOption): Promise\\<boolean>\n\n查询指定应用是否支持分布式通知。使用Promise异步回"
+      },
+      {
+        "section_id": "section-50",
+        "title": "notificationManager.getDeviceRemindType",
+        "level": 2,
+        "line_start": 2714,
+        "line_end": 2762,
+        "summary": "getDeviceRemindType(callback: AsyncCallback\\<DeviceRemindType\\>): void\n\n获取通知的提醒方式。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-51",
+        "title": "notificationManager.getDeviceRemindType",
+        "level": 2,
+        "line_start": 2763,
+        "line_end": 2808,
+        "summary": "getDeviceRemindType(): Promise\\<DeviceRemindType\\>\n\n获取通知的提醒方式。使用Promise异步回调。\n\n**系统能力**：SystemCapabi"
+      },
+      {
+        "section_id": "section-52",
+        "title": "notificationManager.publishAsBundle",
+        "level": 2,
+        "line_start": 2809,
+        "line_end": 2888,
+        "summary": "publishAsBundle(request: NotificationRequest, representativeBundle: string, userId: number, callbac"
+      },
+      {
+        "section_id": "section-53",
+        "title": "notificationManager.publishAsBundle",
+        "level": 2,
+        "line_start": 2889,
+        "line_end": 2970,
+        "summary": "publishAsBundle(request: NotificationRequest, representativeBundle: string, userId: number): Promis"
+      },
+      {
+        "section_id": "section-54",
+        "title": "notificationManager.publishAsBundle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2971,
+        "line_end": 3051,
+        "summary": "publishAsBundle(representativeBundle: BundleOption, request: NotificationRequest): Promise\\<void\\>"
+      },
+      {
+        "section_id": "section-55",
+        "title": "notificationManager.cancelAsBundle",
+        "level": 2,
+        "line_start": 3052,
+        "line_end": 3108,
+        "summary": "cancelAsBundle(id: number, representativeBundle: string, userId: number, callback: AsyncCallback\\<v"
+      },
+      {
+        "section_id": "section-56",
+        "title": "notificationManager.cancelAsBundle",
+        "level": 2,
+        "line_start": 3109,
+        "line_end": 3167,
+        "summary": "cancelAsBundle(id: number, representativeBundle: string, userId: number): Promise\\<void\\>\n\n取消代理通知。使"
+      },
+      {
+        "section_id": "section-57",
+        "title": "notificationManager.cancelAsBundle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3168,
+        "line_end": 3225,
+        "summary": "cancelAsBundle(representativeBundle: BundleOption, id: number): Promise\\<void\\>\n\n取消代理通知。使用Promise异步"
+      },
+      {
+        "section_id": "section-58",
+        "title": "notificationManager.cancel<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3226,
+        "line_end": 3281,
+        "summary": "cancel(representativeBundle: BundleOption, id: number): Promise\\<void\\>\n\n代理取消当前用户其他应用的通知。使用Promise异"
+      },
+      {
+        "section_id": "section-59",
+        "title": "notificationManager.setNotificationEnableSlot",
+        "level": 2,
+        "line_start": 3282,
+        "line_end": 3340,
+        "summary": "setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable: boolean, callback: AsyncCal"
+      },
+      {
+        "section_id": "section-60",
+        "title": "notificationManager.setNotificationEnableSlot<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3341,
+        "line_end": 3401,
+        "summary": "setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable: boolean, isForceControl: bo"
+      },
+      {
+        "section_id": "section-61",
+        "title": "notificationManager.setNotificationEnableSlot",
+        "level": 2,
+        "line_start": 3402,
+        "line_end": 3462,
+        "summary": "setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable: boolean, isForceControl?: b"
+      },
+      {
+        "section_id": "section-62",
+        "title": "notificationManager.isNotificationSlotEnabled",
+        "level": 2,
+        "line_start": 3463,
+        "line_end": 3519,
+        "summary": "isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callback: AsyncCallback\\<boolean\\>)"
+      },
+      {
+        "section_id": "section-63",
+        "title": "notificationManager.isNotificationSlotEnabled",
+        "level": 2,
+        "line_start": 3520,
+        "line_end": 3576,
+        "summary": "isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promise\\<boolean\\>  \n\n获取指定应用的指定渠道类"
+      },
+      {
+        "section_id": "section-64",
+        "title": "notificationManager.setSyncNotificationEnabledWithoutApp",
+        "level": 2,
+        "line_start": 3577,
+        "line_end": 3632,
+        "summary": "setSyncNotificationEnabledWithoutApp(userId: number, enable: boolean, callback: AsyncCallback\\<void"
+      },
+      {
+        "section_id": "section-65",
+        "title": "notificationManager.setSyncNotificationEnabledWithoutApp",
+        "level": 2,
+        "line_start": 3633,
+        "line_end": 3690,
+        "summary": "setSyncNotificationEnabledWithoutApp(userId: number, enable: boolean): Promise\\<void>\n\n设置是否将通知同步到未安"
+      },
+      {
+        "section_id": "section-66",
+        "title": "notificationManager.getSyncNotificationEnabledWithoutApp",
+        "level": 2,
+        "line_start": 3691,
+        "line_end": 3741,
+        "summary": "getSyncNotificationEnabledWithoutApp(userId: number, callback: AsyncCallback\\<boolean>): void\n\n获取同步"
+      },
+      {
+        "section_id": "section-67",
+        "title": "notificationManager.getSyncNotificationEnabledWithoutApp",
+        "level": 2,
+        "line_start": 3742,
+        "line_end": 3793,
+        "summary": "getSyncNotificationEnabledWithoutApp(userId: number): Promise\\<boolean>\n\n获取同步通知到未安装应用程序设备的开关是否开启(Pr"
+      },
+      {
+        "section_id": "section-68",
+        "title": "notificationManager.on<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3794,
+        "line_end": 3848,
+        "summary": "on(type: 'checkNotification', callback: (checkInfo: NotificationCheckInfo) => NotificationCheckResu"
+      },
+      {
+        "section_id": "section-69",
+        "title": "notificationManager.on<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3849,
+        "line_end": 3904,
+        "summary": "on(type: 'checkNotification', checkRequest: NotificationCheckRequest, callback: (checkInfo: Notific"
+      },
+      {
+        "section_id": "section-70",
+        "title": "notificationManager.off<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3905,
+        "line_end": 3947,
+        "summary": "off(type: 'checkNotification', callback?: (checkInfo: NotificationCheckInfo) => NotificationCheckRe"
+      },
+      {
+        "section_id": "section-71",
+        "title": "notificationManager.triggerSystemLiveView<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3948,
+        "line_end": 4014,
+        "summary": "triggerSystemLiveView(bundle: BundleOption, notificationId: number, buttonOptions: ButtonOptions):"
+      },
+      {
+        "section_id": "section-72",
+        "title": "notificationManager.subscribeSystemLiveView<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4015,
+        "line_end": 4070,
+        "summary": "subscribeSystemLiveView(subscriber: SystemLiveViewSubscriber): Promise\\<void>\n\n订阅系统实况窗。使用Promise异步回"
+      },
+      {
+        "section_id": "section-73",
+        "title": "notificationManager.setDistributedEnabledByBundle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4071,
+        "line_end": 4133,
+        "summary": "setDistributedEnabledByBundle(bundle: BundleOption, deviceType: string, enable: boolean): Promise<v"
+      },
+      {
+        "section_id": "section-74",
+        "title": "notificationManager.setDistributedEnableByBundles<sup>20+</sup>",
+        "level": 2,
+        "line_start": 4134,
+        "line_end": 4203,
+        "summary": "setDistributedEnableByBundles(bundleEnableInfos: Array\\<DistributedBundleEnableInfo\\>, deviceType:"
+      },
+      {
+        "section_id": "section-75",
+        "title": "notificationManager.isDistributedEnabledByBundle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4204,
+        "line_end": 4264,
+        "summary": "isDistributedEnabledByBundle(bundle: BundleOption, deviceType: string): Promise<boolean\\>\n\n获取指定应用是否"
+      },
+      {
+        "section_id": "section-76",
+        "title": "notificationManager.setSmartReminderEnabled<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4265,
+        "line_end": 4322,
+        "summary": "setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<void\\>\n\n设置设备是否与其他设备协同智能提醒。使用P"
+      },
+      {
+        "section_id": "section-77",
+        "title": "notificationManager.isSmartReminderEnabled<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4323,
+        "line_end": 4378,
+        "summary": "isSmartReminderEnabled(deviceType: string): Promise<boolean\\>\n\n获取设备是否与其他设备协同智能提醒。使用Promise异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-78",
+        "title": "notificationManager.setBadgeNumberByBundle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4379,
+        "line_end": 4436,
+        "summary": "setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: number): Promise\\<void\\>\n\n代理其他应用设定角标个数。使用"
+      },
+      {
+        "section_id": "section-79",
+        "title": "notificationManager.getSlotByBundle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4437,
+        "line_end": 4499,
+        "summary": "getSlotByBundle(bundle: BundleOption, slotType: SlotType): Promise\\<NotificationSlot>\n\n获取指定应用指定类型的通"
+      },
+      {
+        "section_id": "section-80",
+        "title": "notificationManager.addDoNotDisturbProfile<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4500,
+        "line_end": 4570,
+        "summary": "addDoNotDisturbProfile(templates: Array\\<DoNotDisturbProfile>): Promise\\<void\\>\n\n添加勿扰模式配置信息。使用Promi"
+      },
+      {
+        "section_id": "section-81",
+        "title": "notificationManager.addDoNotDisturbProfile<sup>23+</sup>",
+        "level": 2,
+        "line_start": 4571,
+        "line_end": 4647,
+        "summary": "addDoNotDisturbProfile(templates: Array\\<DoNotDisturbProfile>, userId: number): Promise\\<void\\>\n\n向指"
+      },
+      {
+        "section_id": "section-82",
+        "title": "notificationManager.removeDoNotDisturbProfile<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4648,
+        "line_end": 4705,
+        "summary": "removeDoNotDisturbProfile(templates: Array\\<DoNotDisturbProfile>): Promise\\<void\\>\n\n删除勿扰模式配置。使用Prom"
+      },
+      {
+        "section_id": "section-83",
+        "title": "notificationManager.removeDoNotDisturbProfile<sup>23+</sup>",
+        "level": 2,
+        "line_start": 4706,
+        "line_end": 4768,
+        "summary": "removeDoNotDisturbProfile(templates: Array\\<DoNotDisturbProfile>, userId: number): Promise\\<void\\>"
+      },
+      {
+        "section_id": "section-84",
+        "title": "notificationManager.setAdditionalConfig<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4769,
+        "line_end": 4821,
+        "summary": "setAdditionalConfig(key: string, value: string): Promise\\<number\\>\n\n设置通知的系统附加配置信息。使用Promise异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-85",
+        "title": "notificationManager.getDoNotDisturbProfile<sup>13+</sup>",
+        "level": 2,
+        "line_start": 4822,
+        "line_end": 4874,
+        "summary": "getDoNotDisturbProfile(id: number): Promise\\<DoNotDisturbProfile\\>\n\n查询勿扰模式配置信息。使用Promise异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-86",
+        "title": "notificationManager.getDoNotDisturbProfile<sup>23+</sup>",
+        "level": 2,
+        "line_start": 4875,
+        "line_end": 4934,
+        "summary": "getDoNotDisturbProfile(id: number, userId: number): Promise\\<DoNotDisturbProfile\\>\n\n查询指定用户的勿扰模式配置信息"
+      },
+      {
+        "section_id": "section-87",
+        "title": "notificationManager.disableNotificationFeature<sup>18+</sup>",
+        "level": 2,
+        "line_start": 4935,
+        "line_end": 4993,
+        "summary": "disableNotificationFeature(disabled: boolean, bundleList: Array\\<string\\>): Promise\\<void\\>\n\n将应用包名添"
+      },
+      {
+        "section_id": "section-88",
+        "title": "notificationManager.disableNotificationFeature<sup>20+</sup>",
+        "level": 2,
+        "line_start": 4994,
+        "line_end": 5052,
+        "summary": "disableNotificationFeature(disabled: boolean, bundleList: Array\\<string\\>, userId: number): Promise"
+      },
+      {
+        "section_id": "section-89",
+        "title": "notificationManager.setTargetDeviceStatus<sup>18+</sup>",
+        "level": 2,
+        "line_start": 5053,
+        "line_end": 5099,
+        "summary": "setTargetDeviceStatus(deviceType: string, status: number): Promise\\<void\\>\n\n设置设备配对成功后的状态。当发布通知时，会根据"
+      },
+      {
+        "section_id": "section-90",
+        "title": "notificationManager.setDistributedEnabledBySlot<sup>18+</sup>",
+        "level": 2,
+        "line_start": 5100,
+        "line_end": 5152,
+        "summary": "setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled: boolean): Promise\\<void\\>"
+      },
+      {
+        "section_id": "section-91",
+        "title": "notificationManager.isDistributedEnabledBySlot<sup>18+</sup>",
+        "level": 2,
+        "line_start": 5153,
+        "line_end": 5203,
+        "summary": "isDistributedEnabledBySlot(slot: SlotType, deviceType: string): Promise\\<boolean\\>\n\n查询指定渠道的通知是否支持通知"
+      },
+      {
+        "section_id": "section-92",
+        "title": "notificationManager.setSilentReminderEnabled<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5204,
+        "line_end": 5258,
+        "summary": "setSilentReminderEnabled(bundle: BundleOption, enabled: boolean): Promise\\<void\\>\n\n设置静默提醒的开关状态。使用Pr"
+      },
+      {
+        "section_id": "section-93",
+        "title": "notificationManager.isSilentReminderEnabled<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5259,
+        "line_end": 5312,
+        "summary": "isSilentReminderEnabled(bundle: BundleOption): Promise\\<SwitchState\\>\n\n查询静默提醒的开关状态。使用Promise进行异步回调。"
+      },
+      {
+        "section_id": "section-94",
+        "title": "notificationManager.isDistributedEnabled<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5313,
+        "line_end": 5370,
+        "summary": "isDistributedEnabled(deviceType: string): Promise\\<boolean\\>\n\n查询设备是否支持跨设备协同通知。使用Promise异步回调。\n\n**系统能"
+      },
+      {
+        "section_id": "section-95",
+        "title": "notificationManager.setDistributedEnabled<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5371,
+        "line_end": 5430,
+        "summary": "setDistributedEnabled(enable: boolean, deviceType: string): Promise\\<void\\>\n\n设置设备是否支持跨设备协同通知。使用Prom"
+      },
+      {
+        "section_id": "section-96",
+        "title": "notificationManager.getDistributedDeviceList<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5431,
+        "line_end": 5481,
+        "summary": "getDistributedDeviceList(): Promise\\<Array\\<string\\>\\>\n\n查询支持跨设备协同通知的设备类型。使用Promise异步回调。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-97",
+        "title": "notificationManager.setRingtoneInfoByBundle<sup>21+</sup>",
+        "level": 2,
+        "line_start": 5482,
+        "line_end": 5551,
+        "summary": "setRingtoneInfoByBundle(bundle: BundleOption, ringtoneInfo: RingtoneInfo): Promise\\<void\\>\n\n设置应用自定义"
+      },
+      {
+        "section_id": "section-98",
+        "title": "notificationManager.getRingtoneInfoByBundle<sup>21+</sup>",
+        "level": 2,
+        "line_start": 5552,
+        "line_end": 5616,
+        "summary": "getRingtoneInfoByBundle(bundle: BundleOption): Promise\\<RingtoneInfo\\>\n\n获取应用自定义铃声信息。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-99",
+        "title": "notificationManager.setBadgeDisplayStatusByBundles<sup>21+</sup>",
+        "level": 2,
+        "line_start": 5617,
+        "line_end": 5671,
+        "summary": "setBadgeDisplayStatusByBundles(badges: Map<BundleOption, boolean>): Promise\\<void\\>\n\n批量设置指定应用是否显示角标"
+      },
+      {
+        "section_id": "section-100",
+        "title": "notificationManager.getBadgeDisplayStatusByBundles<sup>21+</sup>",
+        "level": 2,
+        "line_start": 5672,
+        "line_end": 5730,
+        "summary": "getBadgeDisplayStatusByBundles(bundles:Array\\<BundleOption\\>): Promise\\<Map\\<BundleOption, boolean>"
+      },
+      {
+        "section_id": "section-101",
+        "title": "notificationManager.setReminderInfoByBundles<sup>21+</sup>",
+        "level": 2,
+        "line_start": 5731,
+        "line_end": 5789,
+        "summary": "setReminderInfoByBundles(reminderInfos: Array\\<NotificationReminderInfo\\>): Promise\\<void\\>\n\n批量设置指定"
+      },
+      {
+        "section_id": "section-102",
+        "title": "notificationManager.getReminderInfoByBundles<sup>21+</sup>",
+        "level": 2,
+        "line_start": 5790,
+        "line_end": 5846,
+        "summary": "getReminderInfoByBundles(bundles: Array\\<BundleOption\\>):  Promise\\<Array\\<NotificationReminderInfo"
+      },
+      {
+        "section_id": "section-103",
+        "title": "notificationManager.isPriorityEnabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 5847,
+        "line_end": 5888,
+        "summary": "isPriorityEnabled(): Promise\\<boolean\\>\n\n获取通知优先级总开关状态。\n\n**系统能力**：SystemCapability.Notification.Noti"
+      },
+      {
+        "section_id": "section-104",
+        "title": "notificationManager.setPriorityEnabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 5889,
+        "line_end": 5937,
+        "summary": "setPriorityEnabled(enable: boolean): Promise\\<void\\>\n\n设置通知优先级总开关。\n\n**系统能力**：SystemCapability.Notifi"
+      },
+      {
+        "section_id": "section-105",
+        "title": "notificationManager.isPriorityEnabledByBundle<sup>23+</sup>",
+        "level": 2,
+        "line_start": 5938,
+        "line_end": 5988,
+        "summary": "isPriorityEnabledByBundle(bundle: BundleOption): Promise\\<PriorityEnableStatus\\>\n\n获取应用通知优先级开关状态。\n\n*"
+      },
+      {
+        "section_id": "section-106",
+        "title": "notificationManager.setPriorityEnabledByBundle<sup>23+</sup>",
+        "level": 2,
+        "line_start": 5989,
+        "line_end": 6040,
+        "summary": "setPriorityEnabledByBundle(bundle: BundleOption, enableStatus: PriorityEnableStatus): Promise\\<void"
+      },
+      {
+        "section_id": "section-107",
+        "title": "notificationManager.getBundlePriorityConfig<sup>23+</sup>",
+        "level": 2,
+        "line_start": 6041,
+        "line_end": 6091,
+        "summary": "getBundlePriorityConfig(bundle: BundleOption): Promise\\<string\\>\n\n获取应用的优先功能配置。\n\n**系统能力**：SystemCapa"
+      },
+      {
+        "section_id": "section-108",
+        "title": "notificationManager.setBundlePriorityConfig<sup>23+</sup>",
+        "level": 2,
+        "line_start": 6092,
+        "line_end": 6143,
+        "summary": "setBundlePriorityConfig(bundle: BundleOption, value: string): Promise\\<void\\>\n\n设置应用的优先功能配置。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-109",
+        "title": "notificationManager.onBadgeNumberQuery<sup>22+</sup>",
+        "level": 2,
+        "line_start": 6144,
+        "line_end": 6187,
+        "summary": "onBadgeNumberQuery(callback: (bundle: BundleOption) => Promise\\<number\\>): void\n\n注册应用角标数量查询回调。\n\n**系"
+      },
+      {
+        "section_id": "section-110",
+        "title": "notificationManager.offBadgeNumberQuery<sup>22+</sup>",
+        "level": 2,
+        "line_start": 6188,
+        "line_end": 6221,
+        "summary": "offBadgeNumberQuery(): void\n\n取消应用角标数量查询回调。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n**"
+      },
+      {
+        "section_id": "section-111",
+        "title": "notificationManager.setGeofenceEnabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 6222,
+        "line_end": 6271,
+        "summary": "setGeofenceEnabled(enabled: boolean):  Promise\\<void\\>\n\n设置地理围栏的启用状态。使用Promise异步回调。\n\n**系统能力**：System"
+      },
+      {
+        "section_id": "section-112",
+        "title": "DoNotDisturbDate",
+        "level": 2,
+        "line_start": 6272,
+        "line_end": 6283,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称  | 类型"
+      },
+      {
+        "section_id": "section-113",
+        "title": "DoNotDisturbType",
+        "level": 2,
+        "line_start": 6284,
+        "line_end": 6297,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称         | 值"
+      },
+      {
+        "section_id": "section-114",
+        "title": "DeviceRemindType",
+        "level": 2,
+        "line_start": 6298,
+        "line_end": 6311,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称                 | 值"
+      },
+      {
+        "section_id": "section-115",
+        "title": "SourceType",
+        "level": 2,
+        "line_start": 6312,
+        "line_end": 6323,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称                 | 值"
+      },
+      {
+        "section_id": "section-116",
+        "title": "NotificationCheckInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6324,
+        "line_end": 6341,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**需要权限**：ohos.permission.NOTIFICATION_CONTROLL"
+      },
+      {
+        "section_id": "section-117",
+        "title": "NotificationCheckResult<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6342,
+        "line_end": 6355,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**需要权限**：ohos.permission.NOTIFICATION_CONTROLL"
+      },
+      {
+        "section_id": "section-118",
+        "title": "ButtonOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6356,
+        "line_end": 6370,
+        "summary": "描述触发按钮信息。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n**需要权限**：ohos.permission.NOTIFICATI"
+      },
+      {
+        "section_id": "section-119",
+        "title": "SystemLiveViewSubscriber<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6371,
+        "line_end": 6383,
+        "summary": "系统实况窗订阅者。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称         |"
+      },
+      {
+        "section_id": "section-120",
+        "title": "SlotType",
+        "level": 2,
+        "line_start": 6384,
+        "line_end": 6392,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n| 名称                                | 值     |"
+      },
+      {
+        "section_id": "section-121",
+        "title": "NotificationControlFlagStatus<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6393,
+        "line_end": 6408,
+        "summary": "每个bit位都可以控制通知的提示方式。当notificationControlFlags和下表中枚举值进行按位或操作，则表示关闭其提示方式。\n\n**系统能力**：SystemCapability.No"
+      },
+      {
+        "section_id": "section-122",
+        "title": "DoNotDisturbProfile<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6409,
+        "line_end": 6420,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称      | 类型    | 只读 | 可"
+      },
+      {
+        "section_id": "section-123",
+        "title": "NotificationLiveViewContent<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6421,
+        "line_end": 6434,
+        "summary": "type NotificationLiveViewContent = _NotificationLiveViewContent\n\n描述普通实况通知。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-124",
+        "title": "SwitchState<sup>20+</sup>",
+        "level": 2,
+        "line_start": 6435,
+        "line_end": 6449,
+        "summary": "描述通知相关开关的设置状态。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称"
+      },
+      {
+        "section_id": "section-125",
+        "title": "DistributedBundleEnableInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 6450,
+        "line_end": 6463,
+        "summary": "描述多设备协同的包信息。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称"
+      },
+      {
+        "section_id": "section-126",
+        "title": "RingtoneType<sup>21+</sup>",
+        "level": 2,
+        "line_start": 6464,
+        "line_end": 6478,
+        "summary": "描述自定义铃声类型。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称"
+      },
+      {
+        "section_id": "section-127",
+        "title": "RingtoneInfo<sup>21+</sup>",
+        "level": 2,
+        "line_start": 6479,
+        "line_end": 6493,
+        "summary": "描述自定义铃声信息。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称    | 类型"
+      },
+      {
+        "section_id": "section-128",
+        "title": "NotificationReminderInfo<sup>21+</sup>",
+        "level": 2,
+        "line_start": 6494,
+        "line_end": 6507,
+        "summary": "描述指定应用提醒方式信息。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称      |"
+      },
+      {
+        "section_id": "section-129",
+        "title": "PriorityNotificationType<sup>23+</sup>",
+        "level": 2,
+        "line_start": 6508,
+        "line_end": 6530,
+        "summary": "描述通知的优先级类型。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称"
+      },
+      {
+        "section_id": "section-130",
+        "title": "PriorityEnableStatus<sup>23+</sup>",
+        "level": 2,
+        "line_start": 6531,
+        "line_end": 6544,
+        "summary": "描述应用通知的优先级开关状态。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称"
+      },
+      {
+        "section_id": "section-131",
+        "title": "NotificationIconButton<sup>23+</sup>",
+        "level": 2,
+        "line_start": 6545,
+        "line_end": 6558,
+        "summary": "type NotificationIconButton = _NotificationIconButton\n\n系统通知按钮。\n\n**系统能力：** SystemCapability.Notifica"
+      },
+      {
+        "section_id": "section-132",
+        "title": "TriggerType <sup>23+</sup>",
+        "level": 2,
+        "line_start": 6559,
+        "line_end": 6574,
+        "summary": "type TriggerType = _TriggerType\n\n触发条件的事件类型的枚举。\n\n**系统能力：** SystemCapability.Notification.Notificatio"
+      },
+      {
+        "section_id": "section-133",
+        "title": "Trigger <sup>23+</sup>",
+        "level": 2,
+        "line_start": 6575,
+        "line_end": 6590,
+        "summary": "type Trigger = _Trigger\n\n触发条件的具体信息。\n\n**系统能力：** SystemCapability.Notification.Notification\n\n**模型约束：*"
+      },
+      {
+        "section_id": "section-134",
+        "title": "Geofence <sup>23+</sup>",
+        "level": 2,
+        "line_start": 6591,
+        "line_end": 6606,
+        "summary": "type Geofence = _Geofence\n\n地理围栏的配置信息。\n\n**系统能力：** SystemCapability.Notification.Notification\n\n**模型约束"
+      },
+      {
+        "section_id": "section-135",
+        "title": "CoordinateSystemType <sup>23+</sup>",
+        "level": 2,
+        "line_start": 6607,
+        "line_end": 6622,
+        "summary": "type CoordinateSystemType = _CoordinateSystemType\n\n表示地理围栏坐标系类型的枚举。\n\n**系统能力：** SystemCapability.Noti"
+      },
+      {
+        "section_id": "section-136",
+        "title": "MonitorEvent <sup>23+</sup>",
+        "level": 2,
+        "line_start": 6623,
+        "line_end": 6638,
+        "summary": "type MonitorEvent = _MonitorEvent\n\n表示地理围栏的监控事件类型的枚举。\n\n**系统能力：** SystemCapability.Notification.Notif"
+      }
+    ]
+  }
+}

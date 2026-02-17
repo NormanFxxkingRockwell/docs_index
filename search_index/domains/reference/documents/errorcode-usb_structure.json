@@ -1,0 +1,204 @@
+{
+  "doc_id": "errorcode-usb",
+  "title": "USB服务错误码",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "USB",
+    "owner": "@hwymlgitcode",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Basic Services Kit USB 模块的 USB服务错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "USB服务错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "14400001 连接USB设备被拒绝",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 31,
+        "summary": "**错误信息**\n\nAccess right denied. Call requestRight to get the USBDevicePipe access right first.\n\n**错误"
+      },
+      {
+        "section_id": "section-2",
+        "title": "14400002 HDC功能被禁用",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 49,
+        "summary": "**错误信息**\n\nPermission denied. The HDC is disabled by the system.\n\n**错误描述**\n\nHDC被系统禁用。\n\n**可能原因**\n\n没有申"
+      },
+      {
+        "section_id": "section-3",
+        "title": "14400003 不支持的端口角色切换",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 67,
+        "summary": "**错误信息**\n\nUnsupported operation. The current device does not support port role switching.\n\n**错误描述**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "14400004 服务异常",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 85,
+        "summary": "**错误信息**\n\nService exception. Possible causes: No accessory is plugged in.\n\n**错误描述**\n\n服务异常。\n\n**可能原因："
+      },
+      {
+        "section_id": "section-5",
+        "title": "14400005 数据库操作异常",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 99,
+        "summary": "**错误信息**\n\nDatabase operation exception.\n\n**错误描述**\n\n数据库操作异常。\n\n**处理步骤**\n\n尝试重新调用接口。\n<!--Del-->"
+      },
+      {
+        "section_id": "section-6",
+        "title": "14400006 不支持的USB设备侧功能",
+        "level": 2,
+        "line_start": 100,
+        "line_end": 117,
+        "summary": "**错误信息**\n\nUnsupported operation. The function is not supported.\n\n**错误描述**\n\n不支持的操作。当前设备不支持该USB设备侧功能切"
+      },
+      {
+        "section_id": "section-7",
+        "title": "14401001 目标USB配件未匹配",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 131,
+        "summary": "**错误信息**\n\nThe target USBAccessory not matched.\n\n**错误描述**\n\n目标USB配件未匹配。\n\n**处理步骤**\n\n通过getAccessoryList"
+      },
+      {
+        "section_id": "section-8",
+        "title": "14401002 打开配件节点失败",
+        "level": 2,
+        "line_start": 132,
+        "line_end": 145,
+        "summary": "**错误信息**\n\nFailed to open the native accessory node.\n\n**错误描述**\n\n打开配件节点失败。\n\n**处理步骤**\n\n尝试重新调用接口。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "14401003 不能重复打开配件",
+        "level": 2,
+        "line_start": 146,
+        "line_end": 159,
+        "summary": "**错误信息**\n\nCannot reopen the accessory.\n\n**错误描述**\n\n不能重复打开配件。\n\n**处理步骤**\n\n配件已被打开，继续执行后续开发操作。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "14400007 资源繁忙",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 179,
+        "summary": "**错误信息**\n\nResource busy. Possible causes: 1. The transfer has already been submitted. 2. The interf"
+      },
+      {
+        "section_id": "section-11",
+        "title": "14400008 没有设备(连接已断开)",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 193,
+        "summary": "**错误信息**\n\nNo such device (it may have been disconnected).\n\n**错误描述**\n\n未识别到正确设备信息。\n\n**处理步骤**\n\n检查设备类型是"
+      },
+      {
+        "section_id": "section-12",
+        "title": "14400009 内存不足",
+        "level": 2,
+        "line_start": 194,
+        "line_end": 211,
+        "summary": "**错误信息**\n\nInsufficient memory. Possible causes: 1. Memory allocation failed.\n\n**错误描述**\n\n内存申请时无内存可用，"
+      },
+      {
+        "section_id": "section-13",
+        "title": "14400010 无法识别的错误",
+        "level": 2,
+        "line_start": 212,
+        "line_end": 225,
+        "summary": "**错误信息**\n\nOther USB error. Possible causes:Unrecognized discard error code.\n\n**错误描述**\n\n系统无法识别的错误。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "14400011 未找到正在进行的传输",
+        "level": 2,
+        "line_start": 226,
+        "line_end": 239,
+        "summary": "**错误信息**\n\nThe transfer is not in progress, or is already complete or cancelled.\n\n**错误描述**\n\n此次传输已被取消"
+      },
+      {
+        "section_id": "section-15",
+        "title": "14400012 I/O错误",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 253,
+        "summary": "**错误信息**\n\nTransmission I/O error.\n\n**错误描述**\n\nI/O通道异常，实际读/写操作失败。\n\n**处理步骤**\n\n尝试重新操作。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "14400013 参数合法性检查失败",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 274,
+        "summary": "**错误信息**\n\nThe USBDevicePipe validity check failed. Possible causes: 1. The input parameters fail th"
+      },
+      {
+        "section_id": "section-17",
+        "title": "31400001 串口服务异常",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 292,
+        "summary": "**错误信息**\n\nSerial port management exception.\n\n**错误描述**\n\n串口服务异常。\n\n**可能原因**\n\n程序出现异常导致进程退出。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-18",
+        "title": "31400002 没有串口设备访问权限",
+        "level": 2,
+        "line_start": 293,
+        "line_end": 310,
+        "summary": "**错误信息**\n\nAccess denied. Call requestSerialRight to request user authorization first.\n\n**错误描述**\n\n没有"
+      },
+      {
+        "section_id": "section-19",
+        "title": "31400003 端口号不存在",
+        "level": 2,
+        "line_start": 311,
+        "line_end": 328,
+        "summary": "**错误信息**\n\nPortId does not exist.\n\n**错误描述**\n\n端口号不存在。\n\n**可能原因**\n\n设备连接异常导致原有端口号失效。\n\n**处理步骤**\n\n插拔设备，再次尝"
+      },
+      {
+        "section_id": "section-20",
+        "title": "31400004 端口正在被其他应用程序使用",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 346,
+        "summary": "**错误信息**\n\nThe serial port device is occupied.\n\n**错误描述**\n\n串口设备已被占用。\n\n**可能原因**\n\n重复打开串口设备。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-21",
+        "title": "31400005 设备未打开",
+        "level": 2,
+        "line_start": 347,
+        "line_end": 364,
+        "summary": "**错误信息**\n\nThe serial port device is not opened. Call the open API first.\n\n**错误描述**\n\n串口设备未打开，请先调用Ope"
+      },
+      {
+        "section_id": "section-22",
+        "title": "31400006 传输超时",
+        "level": 2,
+        "line_start": 365,
+        "line_end": 382,
+        "summary": "**错误信息**\n\nData transfer timed out.\n\n**错误描述**\n\n数据传输超时。\n\n**可能原因**\n\n对端未发送数据。\n\n**处理步骤**\n\n请检查对端设备是否发起数据传"
+      },
+      {
+        "section_id": "section-23",
+        "title": "31400007 IO异常",
+        "level": 2,
+        "line_start": 383,
+        "line_end": 401,
+        "summary": "**错误信息**\n\nIO exception. Possible causes: 1. The transfer was canceled. 2. The device offered more d"
+      }
+    ]
+  }
+}

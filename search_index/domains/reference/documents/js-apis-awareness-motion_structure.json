@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-awareness-motion",
+  "title": "@ohos.multimodalAwareness.motion (动作感知能力)",
+  "path": "zh-cn/application-dev/reference/apis-multimodalawareness-kit/js-apis-awareness-motion.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-multimodalawareness-kit/js-apis-awareness-motion.md",
+  "metadata": {
+    "kit": "Multimodal Awareness Kit",
+    "subsystem": "MultimodalAwareness",
+    "owner": "@dilligencer",
+    "designer": "@zou_ye",
+    "tester": "@judan",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Multimodal Awareness Kit MultimodalAwareness 模块的 @ohos.multimodalAwareness.motion (动作感知能力)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalAwareness.motion (动作感知能力)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { motion } from '@kit.MultimodalAwarenessKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "OperatingHandStatus",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 33,
+        "summary": "触控操作手状态信息。\n\n**系统能力**：SystemCapability.MultimodalAwareness.Motion\n\n| 名称                | 值   | 说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "HoldingHandStatus<sup>20+</sup>",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 47,
+        "summary": "手机握持手状态信息，表示握持手状态变化感知事件的结果。订阅握持手状态变化感知事件后，返回当前握持手状态信息。\n\n**系统能力**：SystemCapability.MultimodalAwarene"
+      },
+      {
+        "section_id": "section-4",
+        "title": "motion.on('operatingHandChanged')",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 96,
+        "summary": "on(type: 'operatingHandChanged', callback: Callback&lt;OperatingHandStatus&gt;): void\n\n订阅触控操作手感知事件。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "motion.off('operatingHandChanged')",
+        "level": 2,
+        "line_start": 97,
+        "line_end": 139,
+        "summary": "off(type: 'operatingHandChanged', callback?: Callback&lt;OperatingHandStatus&gt;): void\n\n取消订阅触控操作手感"
+      },
+      {
+        "section_id": "section-6",
+        "title": "motion.getRecentOperatingHandStatus()",
+        "level": 2,
+        "line_start": 140,
+        "line_end": 179,
+        "summary": "getRecentOperatingHandStatus(): OperatingHandStatus\n\n获取最新触控操作手状态。\n\n**需要权限**：ohos.permission.ACTIVIT"
+      },
+      {
+        "section_id": "section-7",
+        "title": "motion.on('holdingHandChanged') <sup>20+</sup>",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 225,
+        "summary": "on(type: 'holdingHandChanged', callback: Callback&lt;HoldingHandStatus&gt;): void\n\n订阅握持手状态变化感知事件。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "motion.off('holdingHandChanged') <sup>20+</sup>",
+        "level": 2,
+        "line_start": 226,
+        "line_end": 267,
+        "summary": "off(type: 'holdingHandChanged', callback?: Callback&lt;HoldingHandStatus&gt;): void\n\n取消订阅握持手状态变化感知事"
+      }
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "doc_id": "js-apis-rpc",
+  "title": "@ohos.rpc (RPC通信)",
+  "path": "zh-cn/application-dev/reference/apis-ipc-kit/js-apis-rpc.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ipc-kit/js-apis-rpc.md",
+  "metadata": {
+    "kit": "IPC Kit",
+    "subsystem": "Communication",
+    "owner": "@xdx19211@luodonghui0157",
+    "designer": "@zhaopeng_gitee",
+    "tester": "@maxiaorong",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "IPC Kit Communication 模块的 @ohos.rpc (RPC通信)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.rpc (RPC通信)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { rpc } from '@kit.IPCKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ErrorCode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 45,
+        "summary": "从API version 9起，IPC支持异常返回功能。错误码对应数值及含义如下。\n\n**系统能力：** SystemCapability.Communication.IPC.Core\n\n  | 名"
+      },
+      {
+        "section_id": "section-3",
+        "title": "TypeCode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 64,
+        "summary": "从API version 12起，IPC新增[writeArrayBuffer](#writearraybuffer12)和[readArrayBuffer](#readarraybuffer12)"
+      },
+      {
+        "section_id": "section-4",
+        "title": "MessageSequence<sup>9+</sup>",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 3758,
+        "summary": "在RPC或IPC过程中，发送方可以使用MessageSequence提供的写方法，将待发送的数据以特定格式写入该对象。接收方可以使用MessageSequence提供的读方法从该对象中读取特定格式的"
+      },
+      {
+        "section_id": "section-5",
+        "title": "MessageParcel<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3759,
+        "line_end": 7002,
+        "summary": "在RPC过程中，发送方可以使用MessageParcel提供的写方法，将待发送的数据以特定格式写入该对象。接收方可以使用MessageParcel提供的读方法从该对象中读取特定格式的数据。数据格式包"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Parcelable<sup>9+</sup>",
+        "level": 2,
+        "line_start": 7003,
+        "line_end": 7122,
+        "summary": "在进程间通信（IPC）期间，将类的对象写入MessageSequence并从MessageSequence中恢复它们。\n\n**系统能力：** SystemCapability.Communicati"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Sequenceable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 7123,
+        "line_end": 7258,
+        "summary": "在进程间通信（IPC）期间，将类的对象写入MessageParcel并从MessageParcel中恢复它们。\n\n> **说明：**\n>\n> 从API version 7 开始支持，API vers"
+      },
+      {
+        "section_id": "section-8",
+        "title": "IRemoteBroker",
+        "level": 2,
+        "line_start": 7259,
+        "line_end": 7351,
+        "summary": "远端对象的代理持有者。用于获取代理对象。\n\n**系统能力：** SystemCapability.Communication.IPC.Core\n\n### asObject\n\nasObject():"
+      },
+      {
+        "section_id": "section-9",
+        "title": "DeathRecipient",
+        "level": 2,
+        "line_start": 7352,
+        "line_end": 7378,
+        "summary": "用于订阅远端对象的死亡通知。当被订阅该通知的远端对象死亡时，本端可收到消息，调用[onRemoteDied](#onremotedied)接口。远端对象死亡可以为远端对象所在进程死亡，远端对象所在设"
+      },
+      {
+        "section_id": "section-10",
+        "title": "RequestResult<sup>9+</sup>",
+        "level": 2,
+        "line_start": 7379,
+        "line_end": 7391,
+        "summary": "发送请求的响应结果。\n\n**系统能力：** 以下各项对应的系统能力均为SystemCapability.Communication.IPC.Core。\n\n| 名称    | 类型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "SendRequestResult<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 7392,
+        "line_end": 7408,
+        "summary": "发送请求的响应结果。\n\n> **说明：**\n>\n> 从API version 8 开始支持，API version 9 开始废弃，建议使用[RequestResult](#requestresult"
+      },
+      {
+        "section_id": "section-12",
+        "title": "CallingInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 7409,
+        "line_end": 7423,
+        "summary": "IPC上下文信息，包括PID和UID、本端和对端设备ID、检查接口调用是否在同一设备上。\n\n**系统能力：** 以下各项对应的系统能力均为SystemCapability.Communication"
+      },
+      {
+        "section_id": "section-13",
+        "title": "IRemoteObject",
+        "level": 2,
+        "line_start": 7424,
+        "line_end": 7768,
+        "summary": "该接口可用于查询或获取接口描述符、添加或删除死亡通知、转储对象状态到特定文件、发送消息。\n\n**系统能力：** SystemCapability.Communication.IPC.Core\n\n##"
+      },
+      {
+        "section_id": "section-14",
+        "title": "RemoteProxy",
+        "level": 2,
+        "line_start": 7769,
+        "line_end": 8887,
+        "summary": "实现IRemoteObject代理对象。\n\n**系统能力：** SystemCapability.Communication.IPC.Core\n\n### 属性\n\n**系统能力：** 以下各项对应的系"
+      },
+      {
+        "section_id": "section-15",
+        "title": "MessageOption",
+        "level": 2,
+        "line_start": 8888,
+        "line_end": 9140,
+        "summary": "公共消息选项，使用指定的标志类型，构造指定的MessageOption对象。\n\n**系统能力：** SystemCapability.Communication.IPC.Core\n\n### 属性"
+      },
+      {
+        "section_id": "section-16",
+        "title": "IPCSkeleton",
+        "level": 2,
+        "line_start": 9141,
+        "line_end": 9603,
+        "summary": "用于获取IPC上下文信息，包括获取UID和PID、获取本端和对端设备ID、检查接口调用是否在同一设备上。\n\n**系统能力：** SystemCapability.Communication.IPC."
+      },
+      {
+        "section_id": "section-17",
+        "title": "RemoteObject",
+        "level": 2,
+        "line_start": 9604,
+        "line_end": 10556,
+        "summary": "实现远程对象。服务提供者必须继承此类。\n\n**系统能力：** SystemCapability.Communication.IPC.Core\n\n### constructor\n\nconstructo"
+      },
+      {
+        "section_id": "section-18",
+        "title": "Ashmem<sup>8+</sup>",
+        "level": 2,
+        "line_start": 10557,
+        "line_end": 11443,
+        "summary": "提供与匿名共享内存对象相关的方法，包括创建、关闭、映射和取消映射Ashmem、从Ashmem读取数据和写入数据、获取Ashmem大小、设置Ashmem保护。\n\n共享内存只适用与本设备内跨进程通信。"
+      }
+    ]
+  }
+}

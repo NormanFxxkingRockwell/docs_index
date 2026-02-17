@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-scan-sys",
+  "title": "@ohos.scan (扫描)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-scan-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-scan-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Print",
+    "owner": "@guoshengbang",
+    "designer": "@Q-haosu",
+    "tester": "@Q-haosu",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit Print 模块的 @ohos.scan (扫描)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.scan (扫描)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 20,
+        "summary": "```ts\nimport { scan } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "scan.addScanner",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 65,
+        "summary": "addScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Promise&lt;void&gt;\n\n添加扫描仪（系统API"
+      },
+      {
+        "section_id": "section-3",
+        "title": "scan.deleteScanner",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 110,
+        "summary": "deleteScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Promise&lt;void&gt;\n\n删除扫描仪（系统"
+      },
+      {
+        "section_id": "section-4",
+        "title": "scan.getAddedScanners",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 147,
+        "summary": "getAddedScanners(): Promise&lt;ScannerDevice[]&gt;\n\n获取已添加的扫描仪（系统API）。使用Promise异步回调。\n\n**需要权限：** ohos"
+      },
+      {
+        "section_id": "section-5",
+        "title": "scan.on",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 182,
+        "summary": "on(type: 'scanDeviceAdd', callback: Callback&lt;ScannerDevice&gt;): void\n\n注册扫描仪设备添加事件回调（系统API）。使用ca"
+      },
+      {
+        "section_id": "section-6",
+        "title": "scan.off",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 220,
+        "summary": "off(type: 'scanDeviceAdd', callback?: Callback&lt;ScannerDevice&gt;): void\n\n取消注册扫描仪设备添加事件回调（系统API）。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "scan.on",
+        "level": 2,
+        "line_start": 221,
+        "line_end": 254,
+        "summary": "on(type: 'scanDeviceDel', callback: Callback&lt;ScannerDevice&gt;): void\n\n注册扫描仪设备删除事件回调（系统API）。使用ca"
+      },
+      {
+        "section_id": "section-8",
+        "title": "scan.off",
+        "level": 2,
+        "line_start": 255,
+        "line_end": 291,
+        "summary": "off(type: 'scanDeviceDel', callback?: Callback&lt;ScannerDevice&gt;): void\n\n取消注册扫描仪设备删除事件回调（系统API）。"
+      }
+    ]
+  }
+}

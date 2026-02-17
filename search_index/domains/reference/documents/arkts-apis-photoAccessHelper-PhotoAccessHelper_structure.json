@@ -1,0 +1,316 @@
+{
+  "doc_id": "arkts-apis-photoAccessHelper-PhotoAccessHelper",
+  "title": "Interface (PhotoAccessHelper)",
+  "path": "zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-PhotoAccessHelper.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-PhotoAccessHelper.md",
+  "metadata": {
+    "kit": "Media Library Kit",
+    "subsystem": "Multimedia",
+    "owner": "@xuchangda; @yixiaoff",
+    "designer": "@guxinggang; @liweilu1",
+    "tester": "@wangbeibei; @xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Library Kit Multimedia 模块的 Interface (PhotoAccessHelper)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (PhotoAccessHelper)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 19,
+        "summary": "```ts\nimport { photoAccessHelper } from '@kit.MediaLibraryKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getAssets",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 80,
+        "summary": "getAssets(options: FetchOptions, callback: AsyncCallback&lt;FetchResult&lt;PhotoAsset&gt;&gt;): voi"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getAssets",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 147,
+        "summary": "getAssets(options: FetchOptions): Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt;\n\n获取图片和视频资源，使用Promise"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getBurstAssets<sup>12+</sup>",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 213,
+        "summary": "getBurstAssets(burstKey: string, options: FetchOptions): Promise&lt;FetchResult&lt;PhotoAsset&gt;&g"
+      },
+      {
+        "section_id": "section-5",
+        "title": "createAsset",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 272,
+        "summary": "createAsset(photoType: PhotoType, extension: string, options: CreateOptions, callback: AsyncCallbac"
+      },
+      {
+        "section_id": "section-6",
+        "title": "createAsset",
+        "level": 2,
+        "line_start": 273,
+        "line_end": 327,
+        "summary": "createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback&lt;string&gt;): void"
+      },
+      {
+        "section_id": "section-7",
+        "title": "createAsset",
+        "level": 2,
+        "line_start": 328,
+        "line_end": 390,
+        "summary": "createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): Promise&lt;string&gt"
+      },
+      {
+        "section_id": "section-8",
+        "title": "createPhotoAsset<sup>23+</sup>",
+        "level": 2,
+        "line_start": 391,
+        "line_end": 450,
+        "summary": "createPhotoAsset(photoType: PhotoType, extension: string, title?: string): Promise\\<string\\>\n\n指定文件类"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getAlbums",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 516,
+        "summary": "getAlbums(type: AlbumType, subtype: AlbumSubtype, options: FetchOptions, callback: AsyncCallback&lt"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getAlbums",
+        "level": 2,
+        "line_start": 517,
+        "line_end": 573,
+        "summary": "getAlbums(type: AlbumType, subtype: AlbumSubtype, callback: AsyncCallback&lt;FetchResult&lt;Album&g"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getAlbums",
+        "level": 2,
+        "line_start": 574,
+        "line_end": 643,
+        "summary": "getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: FetchOptions): Promise&lt;FetchResult&l"
+      },
+      {
+        "section_id": "section-12",
+        "title": "registerChange",
+        "level": 2,
+        "line_start": 644,
+        "line_end": 707,
+        "summary": "registerChange(uri: string, forChildUris: boolean, callback: Callback&lt;ChangeData&gt;) : void\n\n注册"
+      },
+      {
+        "section_id": "section-13",
+        "title": "unRegisterChange",
+        "level": 2,
+        "line_start": 708,
+        "line_end": 769,
+        "summary": "unRegisterChange(uri: string, callback?: Callback&lt;ChangeData&gt;): void\n\n取消指定uri的监听，一个uri可以注册多个监"
+      },
+      {
+        "section_id": "section-14",
+        "title": "applyChanges<sup>11+</sup>",
+        "level": 2,
+        "line_start": 770,
+        "line_end": 809,
+        "summary": "applyChanges(mediaChangeRequest: MediaChangeRequest): Promise&lt;void&gt;\n\n提交媒体变更请求，使用Promise方式返回结果"
+      },
+      {
+        "section_id": "section-15",
+        "title": "release",
+        "level": 2,
+        "line_start": 810,
+        "line_end": 852,
+        "summary": "release(callback: AsyncCallback&lt;void&gt;): void\n\n释放PhotoAccessHelper实例。使用callback异步回调。\n\n当后续不需要使用"
+      },
+      {
+        "section_id": "section-16",
+        "title": "release",
+        "level": 2,
+        "line_start": 853,
+        "line_end": 894,
+        "summary": "release(): Promise&lt;void&gt;\n\n释放PhotoAccessHelper实例。使用Promise异步回调。\n\n当后续不需要使用PhotoAccessHelper实例中的"
+      },
+      {
+        "section_id": "section-17",
+        "title": "showAssetsCreationDialog<sup>12+</sup>",
+        "level": 2,
+        "line_start": 895,
+        "line_end": 963,
+        "summary": "showAssetsCreationDialog(srcFileUris: Array&lt;string&gt;, photoCreationConfigs: Array&lt;PhotoCrea"
+      },
+      {
+        "section_id": "section-18",
+        "title": "showAssetsCreationDialogEx<sup>23+</sup>",
+        "level": 2,
+        "line_start": 964,
+        "line_end": 1031,
+        "summary": "showAssetsCreationDialogEx(srcFileUris: Array&lt;string&gt;, creationSettings: Array&lt;CreationSet"
+      },
+      {
+        "section_id": "section-19",
+        "title": "showSingleAssetCreationDialogEx<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1032,
+        "line_end": 1100,
+        "summary": "showSingleAssetCreationDialogEx(srcFileUri: string, creationSetting: CreationSetting, isImageFullyD"
+      },
+      {
+        "section_id": "section-20",
+        "title": "createAssetWithShortTermPermission<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1101,
+        "line_end": 1176,
+        "summary": "createAssetWithShortTermPermission(photoCreationConfig: PhotoCreationConfig): Promise&lt;string&gt;"
+      },
+      {
+        "section_id": "section-21",
+        "title": "createAssetWithShortTermPermissionEx<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1177,
+        "line_end": 1214,
+        "summary": "createAssetWithShortTermPermissionEx(creationSetting: CreationSetting): Promise&lt;string&gt;\n\n应用调用"
+      },
+      {
+        "section_id": "section-22",
+        "title": "requestPhotoUrisReadPermission<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1215,
+        "line_end": 1268,
+        "summary": "requestPhotoUrisReadPermission(srcFileUris: Array&lt;string&gt;): Promise&lt;Array&lt;string&gt;&gt"
+      },
+      {
+        "section_id": "section-23",
+        "title": "requestPhotoUrisReadPermissionEx<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1269,
+        "line_end": 1326,
+        "summary": "requestPhotoUrisReadPermissionEx(srcFileUris: Array&lt;string&gt;): Promise&lt;RequestReadPermis"
+      },
+      {
+        "section_id": "section-24",
+        "title": "getSupportedPhotoFormats<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1327,
+        "line_end": 1386,
+        "summary": "getSupportedPhotoFormats(photoType: PhotoType): Promise&lt;Array&lt;string&gt;&gt;\n\n接口提供给应用调用，获取媒体库"
+      },
+      {
+        "section_id": "section-25",
+        "title": "on('photoChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1387,
+        "line_end": 1443,
+        "summary": "on(type: 'photoChange', callback: Callback&lt;PhotoAssetChangeInfos&gt;): void\n\n注册'photoChange'监听媒体"
+      },
+      {
+        "section_id": "section-26",
+        "title": "off('photoChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1444,
+        "line_end": 1503,
+        "summary": "off(type: 'photoChange', callback?: Callback&lt;PhotoAssetChangeInfos&gt;): void\n\n取消对'photoChange'媒"
+      },
+      {
+        "section_id": "section-27",
+        "title": "on('photoAlbumChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1504,
+        "line_end": 1560,
+        "summary": "on(type: 'photoAlbumChange', callback: Callback&lt;AlbumChangeInfos&gt;): void\n\n注册'photoAlbumChange"
+      },
+      {
+        "section_id": "section-28",
+        "title": "off('photoAlbumChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1561,
+        "line_end": 1620,
+        "summary": "off(type: 'photoAlbumChange', callback?: Callback&lt;AlbumChangeInfos&gt;): void\n\n取消对'photoAlbumCha"
+      },
+      {
+        "section_id": "section-29",
+        "title": "getPhotoPickerComponentDefaultAlbumName<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1621,
+        "line_end": 1662,
+        "summary": "getPhotoPickerComponentDefaultAlbumName(): Promise&lt;string&gt;\n\n应用使用PhotoPickerComponent组件选择照片时，支"
+      },
+      {
+        "section_id": "section-30",
+        "title": "createDeleteRequest<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1663,
+        "line_end": 1730,
+        "summary": "createDeleteRequest(uriList: Array&lt;string&gt;, callback: AsyncCallback&lt;void&gt;): void\n\n创建一个弹"
+      },
+      {
+        "section_id": "section-31",
+        "title": "createDeleteRequest<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1731,
+        "line_end": 1798,
+        "summary": "createDeleteRequest(uriList: Array&lt;string&gt;): Promise&lt;void&gt;\n\n创建一个弹出框来删除照片，删除的文件进入到回收站，使用"
+      },
+      {
+        "section_id": "section-32",
+        "title": "getRecentPhotoInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1799,
+        "line_end": 1843,
+        "summary": "getRecentPhotoInfo(options?: RecentPhotoOptions): Promise\\<RecentPhotoInfo>\n\n应用使用RecentPhotoCompone"
+      },
+      {
+        "section_id": "section-33",
+        "title": "getAlbumIdByLpath<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1844,
+        "line_end": 1896,
+        "summary": "getAlbumIdByLpath(lpath: string): Promise&lt;number&gt;\n\n根据相册的虚拟路径获取媒体库相册的ID。使用Promise异步回调。\n\n该接口仅支持"
+      },
+      {
+        "section_id": "section-34",
+        "title": "onSinglePhotoChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1897,
+        "line_end": 1966,
+        "summary": "onSinglePhotoChange(asset: PhotoAsset, callback: Callback&lt;PhotoAssetChangeInfos&gt;): void\n\n注册对普"
+      },
+      {
+        "section_id": "section-35",
+        "title": "offSinglePhotoChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1967,
+        "line_end": 2049,
+        "summary": "offSinglePhotoChange(asset?: PhotoAsset, callback?: Callback&lt;PhotoAssetChangeInfos&gt;): void;"
+      },
+      {
+        "section_id": "section-36",
+        "title": "onSinglePhotoAlbumChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2050,
+        "line_end": 2117,
+        "summary": "onSinglePhotoAlbumChange(album: Album, callback: Callback&lt;AlbumChangeInfos&gt;): void;\n\n注册对普通单个相"
+      },
+      {
+        "section_id": "section-37",
+        "title": "offSinglePhotoAlbumChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2118,
+        "line_end": 2197,
+        "summary": "offSinglePhotoAlbumChange(album?: Album, callback?: Callback&lt;AlbumChangeInfos&gt;): void\n\n取消对单个相"
+      }
+    ]
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "doc_id": "errorcode-utils",
+  "title": "语言基础类库错误码",
+  "path": "zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@xliu-huanwei; @shilei123; @huanghello",
+    "designer": "@yuanyao14",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 语言基础类库错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "语言基础类库错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "10200001 参数范围越界错误",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 30,
+        "summary": "**错误信息**\n\nThe value of ${param} is out of range.\n\n**错误描述**\n\n调用接口时某个参数超出了其正常范围的取值。\n\n**可能原因**\n\n某个参数索引"
+      },
+      {
+        "section_id": "section-2",
+        "title": "10200002 参数解析错误",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 48,
+        "summary": "**错误信息**\n\nInvalid ${param} string.\n\n**错误描述**\n\n规范字符串解析失败。\n\n**可能原因**\n\n调用接口时，某个字符串类型的参数为非规范的字符串，导致解析该字"
+      },
+      {
+        "section_id": "section-3",
+        "title": "10200003 Worker初始化失败",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 68,
+        "summary": "**错误信息**\n\nWorker initialization failed.\n\n**错误描述**\n\n调用接口时Worker未能正常初始化。\n\n**可能原因**\n\n1. 创建Worker的数量超出限"
+      },
+      {
+        "section_id": "section-4",
+        "title": "10200004 Worker处于非运行状态",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 86,
+        "summary": "**错误信息**\n\nThe Worker instance is not running.\n\n**错误描述**\n\n调用接口时Worker对象处于非运行状态。\n\n**可能原因**\n\n当调用接口时，Wo"
+      },
+      {
+        "section_id": "section-5",
+        "title": "10200005 Worker不支持某API",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 104,
+        "summary": "**错误信息**\n\nThe called API is not supported in the worker thread.\n\n**错误描述**\n\nWorker不支持某API。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "10200006 Worker传输信息序列化异常",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 122,
+        "summary": "**错误信息**\n\nAn exception occurred during serialization.\n\n**错误描述**\n\nWorker传输信息序列化异常。\n\n**可能原因**\n\n传输数据包含"
+      },
+      {
+        "section_id": "section-7",
+        "title": "10200007 Worker文件路径异常",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 140,
+        "summary": "**错误信息**\n\nThe worker file path is invalid.\n\n**错误描述**\n\n文件路径异常，无法正确加载Worker。\n\n**可能原因**\n\nWorker文件路径异常。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "10200009 Buffer的长度错误",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 160,
+        "summary": "**错误信息**\n\nThe buffer size must be a multiple of ${size}.\n\n**错误描述**\n\nBuffer的长度错误，不符合要求。\n\n**可能原因**\n\nB"
+      },
+      {
+        "section_id": "section-9",
+        "title": "10200010 容器为空",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 178,
+        "summary": "**错误信息**\n\nContainer is empty.\n\n**错误描述**\n\n操作的容器为空。\n\n**可能原因**\n\n操作的容器为空，未添加相关元素。\n\n**处理步骤**\n\n确保操作的容器不为空"
+      },
+      {
+        "section_id": "section-10",
+        "title": "10200011 传入的this.object不是容器类的实例",
+        "level": 2,
+        "line_start": 179,
+        "line_end": 197,
+        "summary": "**错误信息**\n\nThe {methodName} method cannot be bound.\n\n**错误描述**\n\n调用语言容器类的方法时，传入的this.object不是容器类的实例，容器"
+      },
+      {
+        "section_id": "section-11",
+        "title": "10200012 构造函数调用异常",
+        "level": 2,
+        "line_start": 198,
+        "line_end": 215,
+        "summary": "**错误信息**\n\nThe {className}'s constructor cannot be directly invoked.\n\n**错误描述**\n\n构造语言容器类的构造方法不支持直接调用。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "10200013 只读属性设置错误",
+        "level": 2,
+        "line_start": 216,
+        "line_end": 233,
+        "summary": "**错误信息**\n\n${propertyName} cannot be set for the buffer that has only a getter.\n\n**错误描述**\n\nBuffer的属性"
+      },
+      {
+        "section_id": "section-13",
+        "title": "10200014 非Concurrent函数错误",
+        "level": 2,
+        "line_start": 234,
+        "line_end": 251,
+        "summary": "**错误信息**\n\nThe function is not marked as concurrent.\n\n**错误描述**\n\nFunction未被标记为concurrent。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "10200015 取消不存在的任务错误",
+        "level": 2,
+        "line_start": 252,
+        "line_end": 269,
+        "summary": "**错误信息**\n\nThe task to cancel does not exist.\n\n**错误描述**\n\n取消一个不存在的任务。\n\n**可能原因**\n\n取消任务时，该任务并不存在于任务池中。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "10200016 取消正在执行的任务错误",
+        "level": 2,
+        "line_start": 270,
+        "line_end": 287,
+        "summary": "**错误信息**\n\nThe task to cancel is being executed.\n\n**错误描述**\n\n取消正在执行的任务。\n\n**可能原因**\n\n取消任务时，该任务已经处于执行状态。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "10200017 删除不存在的元素错误",
+        "level": 2,
+        "line_start": 288,
+        "line_end": 305,
+        "summary": "**错误信息**\n\nThe element does not exist in this container.\n\n**错误描述**\n\n删除的元素不存在此容器中。\n\n**可能原因**\n\n删除元素时，此"
+      },
+      {
+        "section_id": "section-17",
+        "title": "10200018 取消不存在的任务组错误",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 323,
+        "summary": "**错误信息**\n\nThe task group to cancel does not exist.\n\n**错误描述**\n\n取消一个不存在的任务组。\n\n**可能原因**\n\n取消任务组时，该任务组并不"
+      },
+      {
+        "section_id": "section-18",
+        "title": "10200019 调用未注册对象的方法错误",
+        "level": 2,
+        "line_start": 324,
+        "line_end": 341,
+        "summary": "**错误信息**\n\nThe globalCallObject is not registered.\n\n**错误描述**\n\n查询的对象未被注册。\n\n**可能原因**\n\n宿主线程Worker实例上没有注"
+      },
+      {
+        "section_id": "section-19",
+        "title": "10200020 调用注册对象上的方法类型错误",
+        "level": 2,
+        "line_start": 342,
+        "line_end": 359,
+        "summary": "**错误信息**\n\nThe method to be called is not callable or is an async method or a generator.\n\n**错误描述**"
+      },
+      {
+        "section_id": "section-20",
+        "title": "10200021 全局调用等待超时错误",
+        "level": 2,
+        "line_start": 360,
+        "line_end": 377,
+        "summary": "**错误信息**\n\nWaiting for a global call timed out.\n\n**错误描述**\n\n等待超时错误。\n\n**可能原因**\n\n全局调用等待结果返回的时间超过了用户设置的时"
+      },
+      {
+        "section_id": "section-21",
+        "title": "10200022 未在任务池中调用的函数",
+        "level": 2,
+        "line_start": 378,
+        "line_end": 395,
+        "summary": "**错误信息**\n\nThe function is not called in the TaskPool thread.\n\n**错误描述**\n\n该函数未在任务池的线程中调用。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-22",
+        "title": "10200023 未在并发函数中调用的函数",
+        "level": 2,
+        "line_start": 396,
+        "line_end": 413,
+        "summary": "**错误信息**\n\nThe function is not called in the concurrent function.\n\n**错误描述**\n\n该函数未在并发函数中调用。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-23",
+        "title": "10200024 未在宿主线程中注册的函数",
+        "level": 2,
+        "line_start": 414,
+        "line_end": 431,
+        "summary": "**错误信息**\n\nThe callback is not registered on the host side.\n\n**错误描述**\n\n该函数使用时未在宿主线程注册回调函数。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-24",
+        "title": "10200025 串行队列中添加了存在依赖的任务",
+        "level": 2,
+        "line_start": 432,
+        "line_end": 449,
+        "summary": "**错误信息**\n\ndependent task not allowed.\n\n**错误描述**\n\n当前串行队列中添加了存在依赖的任务。\n\n**可能原因**\n\n当前串行队列中添加了存在依赖的任务。"
+      },
+      {
+        "section_id": "section-25",
+        "title": "10200026 当前任务存在循环依赖",
+        "level": 2,
+        "line_start": 450,
+        "line_end": 467,
+        "summary": "**错误信息**\n\nThere is a circular dependency.\n\n**错误描述**\n\n当前任务存在循环依赖关系。\n\n**可能原因**\n\n当前任务存在循环依赖关系。\n\n**处理步骤"
+      },
+      {
+        "section_id": "section-26",
+        "title": "10200027 依赖关系不存在",
+        "level": 2,
+        "line_start": 468,
+        "line_end": 485,
+        "summary": "**错误信息**\n\nThe dependency does not exist.\n\n**错误描述**\n\n依赖关系不存在。\n\n**可能原因**\n\n使用[removeDependency()](js-a"
+      },
+      {
+        "section_id": "section-27",
+        "title": "10200028 延时时间小于零",
+        "level": 2,
+        "line_start": 486,
+        "line_end": 503,
+        "summary": "**错误信息**\n\nThe delayTime is less than zero.\n\n**错误描述**\n\n延时时间小于零。\n\n**可能原因**\n\n给定参数[delayTime](js-apis-t"
+      },
+      {
+        "section_id": "section-28",
+        "title": "10200029 无法将ArrayBuffer同时设置为transferList和cloneList",
+        "level": 2,
+        "line_start": 504,
+        "line_end": 521,
+        "summary": "**错误信息**\n\nAn ArrayBuffer cannot be set as both a transfer list and a clone list.\n\n**错误描述**\n\n不能将同一个A"
+      },
+      {
+        "section_id": "section-29",
+        "title": "10200030 锁不存在",
+        "level": 2,
+        "line_start": 522,
+        "line_end": 539,
+        "summary": "**错误信息**\n\nThe lock does not exist.\n\n**错误描述**\n\n请求的锁不存在。\n\n**可能原因**\n\n某个异步锁函数使用了一个不正确的锁名称作为参数。\n\n**处理步骤*"
+      },
+      {
+        "section_id": "section-30",
+        "title": "10200031 lockAsync超时",
+        "level": 2,
+        "line_start": 540,
+        "line_end": 557,
+        "summary": "**错误信息**\n\nTimeout exceeded.\n\n**错误描述**\n\n[lockAsync](arkts-apis-arkts-utils-locks.md#lockasync)函数在指定时"
+      },
+      {
+        "section_id": "section-31",
+        "title": "10200201 Concurrent修改错误",
+        "level": 2,
+        "line_start": 558,
+        "line_end": 575,
+        "summary": "**错误信息**\n\nConcurrent modification error.\n\n**错误描述**\n\n并发修改错误。\n\n**可能原因**\n\n使用collections提供的非并发安全的容器时，多个"
+      },
+      {
+        "section_id": "section-32",
+        "title": "10200034 监听任务未注册回调函数",
+        "level": 2,
+        "line_start": 576,
+        "line_end": 593,
+        "summary": "**错误信息**\n\nThe executed task does not support the registration of listeners.\n\n**错误描述**\n\n执行的任务不支持注册监听"
+      },
+      {
+        "section_id": "section-33",
+        "title": "10200035 doWrite接口未实现",
+        "level": 2,
+        "line_start": 594,
+        "line_end": 611,
+        "summary": "**错误信息**\n\nThe doWrite method has not been implemented.\n\n**错误描述**\n\ndoWrite接口未实现。\n\n**可能原因**\n\n继承Writab"
+      },
+      {
+        "section_id": "section-34",
+        "title": "10200036 流已经结束仍进行写操作",
+        "level": 2,
+        "line_start": 612,
+        "line_end": 629,
+        "summary": "**错误信息**\n\nThe stream has been ended.\n\n**错误描述**\n\n流已经结束仍然进行写操作。\n\n**可能原因**\n\n调用[end](js-apis-stream.md#"
+      },
+      {
+        "section_id": "section-35",
+        "title": "10200037 多次调用callback",
+        "level": 2,
+        "line_start": 630,
+        "line_end": 647,
+        "summary": "**错误信息**\n\nThe callback is invoked multiple times consecutively.\n\n**错误描述**\n\n多次调用callback回调函数。\n\n**可能原"
+      },
+      {
+        "section_id": "section-36",
+        "title": "10200038 doRead接口未实现",
+        "level": 2,
+        "line_start": 648,
+        "line_end": 665,
+        "summary": "**错误信息**\n\nThe doRead method has not been implemented.\n\n**错误描述**\n\ndoRead接口未实现。\n\n**可能原因**\n\n继承Readable"
+      },
+      {
+        "section_id": "section-37",
+        "title": "10200039 doTransform接口未实现",
+        "level": 2,
+        "line_start": 666,
+        "line_end": 683,
+        "summary": "**错误信息**\n\nThe doTransform method has not been implemented for a class that inherits from Transform."
+      },
+      {
+        "section_id": "section-38",
+        "title": "10200050 并发任务已执行，无法周期执行",
+        "level": 2,
+        "line_start": 684,
+        "line_end": 701,
+        "summary": "**错误信息**\n\nThe concurrent task has been executed and cannot be executed periodically.\n\n**错误描述**\n\n并发任"
+      },
+      {
+        "section_id": "section-39",
+        "title": "10200051 无法再次执行周期任务",
+        "level": 2,
+        "line_start": 702,
+        "line_end": 719,
+        "summary": "**错误信息**\n\nThe periodic task cannot be executed again.\n\n**错误描述**\n\n无法再次执行周期任务。\n\n**可能原因**\n\n周期任务再次调用[ex"
+      },
+      {
+        "section_id": "section-40",
+        "title": "10200052 周期性任务不能具有依赖项",
+        "level": 2,
+        "line_start": 720,
+        "line_end": 737,
+        "summary": "**错误信息**\n\nThe periodic task cannot have a dependency.\n\n**错误描述**\n\n周期性任务不能具有依赖项。\n\n**可能原因**\n\n调用了[remov"
+      },
+      {
+        "section_id": "section-41",
+        "title": "10200054 异步队列任务被丢弃",
+        "level": 2,
+        "line_start": 738,
+        "line_end": 756,
+        "summary": "**错误信息**\n\nThe asyncRunner task discarded.\n\n**错误描述**\n\n异步队列里的等待任务列表中的任务被丢弃。\n\n**可能原因**\n\n调用[asyncRunner"
+      },
+      {
+        "section_id": "section-42",
+        "title": "10200055 异步任务被取消",
+        "level": 2,
+        "line_start": 757,
+        "line_end": 774,
+        "summary": "**错误信息**\n\nThe asyncRunner task has been canceled.\n\n**错误描述**\n\n异步队列任务被取消。\n\n**可能原因**\n\n取消异步任务时，该任务在任务池中"
+      },
+      {
+        "section_id": "section-43",
+        "title": "10200056 异步队列任务不能具有依赖项",
+        "level": 2,
+        "line_start": 775,
+        "line_end": 792,
+        "summary": "**错误信息**\n\nThe task has been executed by AsyncRunner.\n\n**错误描述**\n\n异步队列任务不能具有依赖项。\n\n**可能原因**\n\n异步队列任务调用了"
+      },
+      {
+        "section_id": "section-44",
+        "title": "10200057 任务无法被两种API执行",
+        "level": 2,
+        "line_start": 793,
+        "line_end": 812,
+        "summary": "**错误信息**\n\nThe task cannot be executed by two APIs.\n\n**错误描述**\n\n异步队列任务只能被[asyncRunner.execute](../api"
+      },
+      {
+        "section_id": "section-45",
+        "title": "10200060 超出精度限制",
+        "level": 2,
+        "line_start": 813,
+        "line_end": 832,
+        "summary": "**错误信息**\n\nPrecision limit exceeded.\n\n**错误描述**\n\nDecimal函数使用错误。\n\n**可能原因**\n\n使用Decimal提供的函数超出精度限制。有以下函数"
+      },
+      {
+        "section_id": "section-46",
+        "title": "10200061 加密方法不可用",
+        "level": 2,
+        "line_start": 833,
+        "line_end": 852,
+        "summary": "**错误信息**\n\ncrypto unavailable.\n\n**错误描述**\n\nDecimal函数使用错误。\n\n**可能原因**\n\n在Decimal中设置[crypto](js-apis-arkt"
+      },
+      {
+        "section_id": "section-47",
+        "title": "10200062 xml的累积长度已超过上限",
+        "level": 2,
+        "line_start": 853,
+        "line_end": 870,
+        "summary": "**错误信息**\n\nThe cumulative length of xml has exceeded the upper limit 100000.\n\n**错误描述**\n\nxml的累积字符已超过上"
+      },
+      {
+        "section_id": "section-48",
+        "title": "10200063 xml文件声明或属性位置设置错误",
+        "level": 2,
+        "line_start": 871,
+        "line_end": 888,
+        "summary": "**错误信息**\n\nIllegal position for xml.\n\n**错误描述**\n\nxml文件声明或属性位置设置错误。\n\n**可能原因**\n\n未按照xml标准格式设置元素位置。\n\n**处理"
+      },
+      {
+        "section_id": "section-49",
+        "title": "10200064 入参字符串不能为空",
+        "level": 2,
+        "line_start": 889,
+        "line_end": 906,
+        "summary": "**错误信息**\n\nCannot be an empty string.\n\n**错误描述**\n\n入参字符串不能为空。\n\n**可能原因**\n\n入参字符串为空。\n\n**处理步骤**\n\n传入正确的不为空的"
+      },
+      {
+        "section_id": "section-50",
+        "title": "10200065 元素开始标记与元素结束标记未匹配使用",
+        "level": 2,
+        "line_start": 907,
+        "line_end": 924,
+        "summary": "**错误信息**\n\nThere is no match between the startElement and the endElement.\n\n**错误描述**\n\n元素开始标记与元素结束标记未匹"
+      },
+      {
+        "section_id": "section-51",
+        "title": "10200066 编码格式错误",
+        "level": 2,
+        "line_start": 925,
+        "line_end": 942,
+        "summary": "**错误信息**\n\nIncorrect encoding format, only support utf-8.\n\n**错误描述**\n\n编码格式错误，只支持utf-8。\n\n**可能原因**\n\n编码格"
+      },
+      {
+        "section_id": "section-52",
+        "title": "10200068 引用已释放或分离的ArrayBuffer",
+        "level": 2,
+        "line_start": 943,
+        "line_end": 960,
+        "summary": "**错误信息**\n\nThe underlying ArrayBuffer is null or detach.\n\n**错误描述**\n\n使用了已释放或分离的ArrayBuffer。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-53",
+        "title": "10200301 加载native模块失败",
+        "level": 2,
+        "line_start": 961,
+        "line_end": 979,
+        "summary": "**错误信息**\n\nLoading native module failed.\n\n**错误描述**\n\n当加载native模块失败时，返回该错误码。\n\n**可能原因**\n\n1. 对应路径下不存在该na"
+      }
+    ]
+  }
+}

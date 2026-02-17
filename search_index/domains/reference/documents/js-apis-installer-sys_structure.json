@@ -1,0 +1,308 @@
+{
+  "doc_id": "js-apis-installer-sys",
+  "title": "@ohos.bundle.installer (installer模块)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-installer-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-installer-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Ability Kit BundleManager 模块的 @ohos.bundle.installer (installer模块)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bundle.installer (installer模块)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```js\nimport { installer } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "BundleInstaller.getBundleInstaller",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 67,
+        "summary": "getBundleInstaller(callback: AsyncCallback\\<BundleInstaller>): void\n\n获取BundleInstaller对象。使用callback"
+      },
+      {
+        "section_id": "section-3",
+        "title": "BundleInstaller.getBundleInstaller",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 108,
+        "summary": "getBundleInstaller(): Promise\\<BundleInstaller>\n\n获取BundleInstaller对象。使用Promise异步回调。\n\n**系统接口：** 此接口为"
+      },
+      {
+        "section_id": "section-4",
+        "title": "BundleInstaller.getBundleInstallerSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 109,
+        "line_end": 146,
+        "summary": "getBundleInstallerSync(): BundleInstaller\n\n获取并返回BundleInstaller对象。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "BundleInstaller.install",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 238,
+        "summary": "install(hapFilePaths: Array&lt;string&gt;, installParam: InstallParam, callback: AsyncCallback&lt;vo"
+      },
+      {
+        "section_id": "section-6",
+        "title": "BundleInstaller.install",
+        "level": 2,
+        "line_start": 239,
+        "line_end": 324,
+        "summary": "install(hapFilePaths: Array&lt;string&gt;, callback: AsyncCallback&lt;void&gt;): void\n\n安装指定应用。使用call"
+      },
+      {
+        "section_id": "section-7",
+        "title": "BundleInstaller.install",
+        "level": 2,
+        "line_start": 325,
+        "line_end": 422,
+        "summary": "install(hapFilePaths: Array\\<string\\>, installParam?: InstallParam) : Promise\\<void\\>\n\n安装指定应用。使用Pro"
+      },
+      {
+        "section_id": "section-8",
+        "title": "BundleInstaller.uninstall",
+        "level": 2,
+        "line_start": 423,
+        "line_end": 491,
+        "summary": "uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallback&lt;void&gt;): voi"
+      },
+      {
+        "section_id": "section-9",
+        "title": "BundleInstaller.uninstall",
+        "level": 2,
+        "line_start": 492,
+        "line_end": 551,
+        "summary": "uninstall(bundleName: string, callback: AsyncCallback&lt;void&gt;): void\n\n卸载应用。使用callback异步回调。\n\n**系"
+      },
+      {
+        "section_id": "section-10",
+        "title": "BundleInstaller.uninstall",
+        "level": 2,
+        "line_start": 552,
+        "line_end": 624,
+        "summary": "uninstall(bundleName: string, installParam?: InstallParam) : Promise\\<void\\>\n\n卸载应用。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "BundleInstaller.recover",
+        "level": 2,
+        "line_start": 625,
+        "line_end": 690,
+        "summary": "recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback&lt;void&gt;): void"
+      },
+      {
+        "section_id": "section-12",
+        "title": "BundleInstaller.recover",
+        "level": 2,
+        "line_start": 691,
+        "line_end": 748,
+        "summary": "recover(bundleName: string, callback: AsyncCallback&lt;void&gt;): void\n\n回滚应用到初次安装时的状态。使用callback异步回"
+      },
+      {
+        "section_id": "section-13",
+        "title": "BundleInstaller.recover",
+        "level": 2,
+        "line_start": 749,
+        "line_end": 816,
+        "summary": "recover(bundleName: string, installParam?: InstallParam) : Promise\\<void\\>\n\n回滚应用到初次安装时的状态。使用Promise"
+      },
+      {
+        "section_id": "section-14",
+        "title": "BundleInstaller.uninstall<sup>10+</sup>",
+        "level": 2,
+        "line_start": 817,
+        "line_end": 876,
+        "summary": "uninstall(uninstallParam: UninstallParam, callback : AsyncCallback\\<void\\>) : void\n\n卸载一个共享包。使用callb"
+      },
+      {
+        "section_id": "section-15",
+        "title": "BundleInstaller.uninstall<sup>10+</sup>",
+        "level": 2,
+        "line_start": 877,
+        "line_end": 941,
+        "summary": "uninstall(uninstallParam: UninstallParam) : Promise\\<void>\n\n卸载一个共享包。使用Promise异步回调。\n\n**系统接口：** 此接口为系"
+      },
+      {
+        "section_id": "section-16",
+        "title": "BundleInstaller.addExtResource<sup>12+</sup>",
+        "level": 2,
+        "line_start": 942,
+        "line_end": 1003,
+        "summary": "addExtResource(bundleName: string, filePaths: Array\\<string>): Promise\\<void>;\n\n根据给定的bundleName和hsp"
+      },
+      {
+        "section_id": "section-17",
+        "title": "BundleInstaller.removeExtResource<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1004,
+        "line_end": 1065,
+        "summary": "removeExtResource(bundleName: string, moduleNames: Array\\<string>): Promise\\<void>;\n\n根据给定的bundleNam"
+      },
+      {
+        "section_id": "section-18",
+        "title": "BundleInstaller.updateBundleForSelf<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1066,
+        "line_end": 1144,
+        "summary": "updateBundleForSelf(hapFilePaths: Array\\<string\\>, installParam: InstallParam, callback: AsyncCallb"
+      },
+      {
+        "section_id": "section-19",
+        "title": "BundleInstaller.updateBundleForSelf<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1145,
+        "line_end": 1216,
+        "summary": "updateBundleForSelf(hapFilePaths: Array\\<string\\>, callback: AsyncCallback\\<void\\>): void\n\n更新当前应用，仅"
+      },
+      {
+        "section_id": "section-20",
+        "title": "BundleInstaller.updateBundleForSelf<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1217,
+        "line_end": 1299,
+        "summary": "updateBundleForSelf(hapFilePaths: Array\\<string\\>, installParam?: InstallParam): Promise\\<void\\>\n\n更"
+      },
+      {
+        "section_id": "section-21",
+        "title": "BundleInstaller.uninstallUpdates<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1300,
+        "line_end": 1369,
+        "summary": "uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise\\<void\\>;\n\n对预置应用进行卸载更新，恢复"
+      },
+      {
+        "section_id": "section-22",
+        "title": "BundleInstaller.createAppClone<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1370,
+        "line_end": 1436,
+        "summary": "createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): Promise\\<number\\>;"
+      },
+      {
+        "section_id": "section-23",
+        "title": "BundleInstaller.destroyAppClone<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1437,
+        "line_end": 1501,
+        "summary": "destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise\\<void\\>;\n\n删除应用分身。使用"
+      },
+      {
+        "section_id": "section-24",
+        "title": "BundleInstaller.destroyAppClone<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1502,
+        "line_end": 1575,
+        "summary": "destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: DestroyAppCloneParam):"
+      },
+      {
+        "section_id": "section-25",
+        "title": "BundleInstaller.installPreexistingApp<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1576,
+        "line_end": 1642,
+        "summary": "installPreexistingApp(bundleName: string, userId?: number): Promise\\<void\\>;\n\n在指定用户下安装指定bundleName的"
+      },
+      {
+        "section_id": "section-26",
+        "title": "BundleInstaller.installPlugin<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1643,
+        "line_end": 1721,
+        "summary": "installPlugin(hostBundleName: string, pluginFilePaths: Array\\<string\\>, pluginParam?: PluginParam):"
+      },
+      {
+        "section_id": "section-27",
+        "title": "BundleInstaller.uninstallPlugin<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1722,
+        "line_end": 1787,
+        "summary": "uninstallPlugin(hostBundleName: string, pluginBundleName: string, pluginParam?: PluginParam): Promi"
+      },
+      {
+        "section_id": "section-28",
+        "title": "HashParam",
+        "level": 2,
+        "line_start": 1788,
+        "line_end": 1800,
+        "summary": "应用程序安装卸载哈希参数信息。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-29",
+        "title": "InstallParam",
+        "level": 2,
+        "line_start": 1801,
+        "line_end": 1821,
+        "summary": "应用程序安装、卸载或恢复需指定的参数信息。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n**系统接口：** 此接口"
+      },
+      {
+        "section_id": "section-30",
+        "title": "UninstallParam<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1822,
+        "line_end": 1834,
+        "summary": "共享包卸载需指定的参数信息。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-31",
+        "title": "VerifyCodeParam<sup>(deprecated)<sup>",
+        "level": 2,
+        "line_start": 1835,
+        "line_end": 1849,
+        "summary": "> 从API version 11开始不再维护，应用的代码签名文件将集成到安装包中，不再需要该接口来指定安装包的代码签名文件。\n\n应用程序代码签名文件信息。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-32",
+        "title": "PGOParam<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1850,
+        "line_end": 1862,
+        "summary": "PGO（Profile-guided Optimization）配置文件参数信息。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework"
+      },
+      {
+        "section_id": "section-33",
+        "title": "Parameters<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1863,
+        "line_end": 1875,
+        "summary": "扩展参数信息。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n**系统接口：** 此接口为系统接口。\n\n| 名称"
+      },
+      {
+        "section_id": "section-34",
+        "title": "CreateAppCloneParam<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1876,
+        "line_end": 1888,
+        "summary": "创建分身应用可指定的参数信息。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-35",
+        "title": "DestroyAppCloneParam<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1889,
+        "line_end": 1901,
+        "summary": "删除分身应用可指定的参数信息。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-36",
+        "title": "PluginParam<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1902,
+        "line_end": 1913,
+        "summary": "插件应用安装、卸载的参数信息。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n**系统接口：** 此接口为系统接口。"
+      }
+    ]
+  }
+}

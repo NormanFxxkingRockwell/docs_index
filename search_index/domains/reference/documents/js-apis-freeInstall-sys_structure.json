@@ -1,0 +1,212 @@
+{
+  "doc_id": "js-apis-freeInstall-sys",
+  "title": "@ohos.bundle.freeInstall (freeInstall模块)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-freeInstall-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-freeInstall-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Ability Kit BundleManager 模块的 @ohos.bundle.freeInstall (freeInstall模块)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bundle.freeInstall (freeInstall模块)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```js\nimport { freeInstall } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "权限列表",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 30,
+        "summary": "| 权限                                       | 权限等级     | 描述               |\n| ----------------------"
+      },
+      {
+        "section_id": "section-3",
+        "title": "UpgradeFlag",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 42,
+        "summary": "**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall\n\n| 名称"
+      },
+      {
+        "section_id": "section-4",
+        "title": "BundlePackFlag",
+        "level": 2,
+        "line_start": 43,
+        "line_end": 55,
+        "summary": "**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall\n\n| 名称"
+      },
+      {
+        "section_id": "section-5",
+        "title": "setHapModuleUpgradeFlag",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 110,
+        "summary": "setHapModuleUpgradeFlag(bundleName: string, moduleName: string, upgradeFlag: UpgradeFlag, callback:"
+      },
+      {
+        "section_id": "section-6",
+        "title": "setHapModuleUpgradeFlag",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 169,
+        "summary": "setHapModuleUpgradeFlag(bundleName: string, moduleName: string, upgradeFlag: UpgradeFlag): Promise\\"
+      },
+      {
+        "section_id": "section-7",
+        "title": "isHapModuleRemovable",
+        "level": 2,
+        "line_start": 170,
+        "line_end": 222,
+        "summary": "isHapModuleRemovable(bundleName: string, moduleName: string, callback: AsyncCallback\\<boolean>): vo"
+      },
+      {
+        "section_id": "section-8",
+        "title": "isHapModuleRemovable",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 279,
+        "summary": "isHapModuleRemovable(bundleName: string, moduleName: string): Promise\\<boolean>\n\n查询指定模块是否可以被移除。使用Pr"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getBundlePackInfo",
+        "level": 2,
+        "line_start": 280,
+        "line_end": 330,
+        "summary": "getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag, callback: AsyncCallback\\<Bun"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getBundlePackInfo",
+        "level": 2,
+        "line_start": 331,
+        "line_end": 386,
+        "summary": "getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag): Promise\\<BundlePackInfo>\n\n基"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getDispatchInfo",
+        "level": 2,
+        "line_start": 387,
+        "line_end": 432,
+        "summary": "getDispatchInfo(callback: AsyncCallback\\<DispatchInfo>): void\n\n获取有关dispatch版本的信息。使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-12",
+        "title": "getDispatchInfo",
+        "level": 2,
+        "line_start": 433,
+        "line_end": 477,
+        "summary": "getDispatchInfo(): Promise\\<DispatchInfo>\n\n获取有关dispatch版本的信息。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。\n\n*"
+      },
+      {
+        "section_id": "section-13",
+        "title": "DispatchInfo",
+        "level": 2,
+        "line_start": 478,
+        "line_end": 491,
+        "summary": "type DispatchInfo = _DispatchInfo\n\n免安装结构体和接口版本信息类。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-14",
+        "title": "BundlePackInfo",
+        "level": 2,
+        "line_start": 492,
+        "line_end": 505,
+        "summary": "type BundlePackInfo = _PackInfo.BundlePackInfo\n\n应用包信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-15",
+        "title": "PackageConfig",
+        "level": 2,
+        "line_start": 506,
+        "line_end": 519,
+        "summary": "type PackageConfig = _PackInfo.PackageConfig\n\npack.info的包信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-16",
+        "title": "PackageSummary",
+        "level": 2,
+        "line_start": 520,
+        "line_end": 533,
+        "summary": "type PackageSummary = _PackInfo.PackageSummary\n\npack.info中的包摘要信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-17",
+        "title": "BundleConfigInfo",
+        "level": 2,
+        "line_start": 534,
+        "line_end": 547,
+        "summary": "type BundleConfigInfo = _PackInfo.BundleConfigInfo\n\n包的配置信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-18",
+        "title": "ExtensionAbility",
+        "level": 2,
+        "line_start": 548,
+        "line_end": 561,
+        "summary": "type ExtensionAbility = _PackInfo.ExtensionAbility\n\nextensionAbilities的配置信息。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "ModuleConfigInfo",
+        "level": 2,
+        "line_start": 562,
+        "line_end": 575,
+        "summary": "type ModuleConfigInfo = _PackInfo.ModuleConfigInfo\n\n包的module配置信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-20",
+        "title": "ModuleDistroInfo",
+        "level": 2,
+        "line_start": 576,
+        "line_end": 589,
+        "summary": "type ModuleDistroInfo = _PackInfo.ModuleDistroInfo\n\nmodule发行版信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-21",
+        "title": "ModuleAbilityInfo",
+        "level": 2,
+        "line_start": 590,
+        "line_end": 603,
+        "summary": "type ModuleAbilityInfo = _PackInfo.ModuleAbilityInfo\n\nmodule包含的ability组件信息。\n\n**系统接口：** 此接口为系统接口。\n\n*"
+      },
+      {
+        "section_id": "section-22",
+        "title": "AbilityFormInfo",
+        "level": 2,
+        "line_start": 604,
+        "line_end": 617,
+        "summary": "type AbilityFormInfo = _PackInfo.AbilityFormInfo\n\n卡片信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-23",
+        "title": "Version",
+        "level": 2,
+        "line_start": 618,
+        "line_end": 631,
+        "summary": "type Version = _PackInfo.Version\n\n包的版本。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.BundleMana"
+      },
+      {
+        "section_id": "section-24",
+        "title": "ApiVersion",
+        "level": 2,
+        "line_start": 632,
+        "line_end": 645,
+        "summary": "type ApiVersion = _PackInfo.ApiVersion\n\nmodule的api版本。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapabil"
+      }
+    ]
+  }
+}

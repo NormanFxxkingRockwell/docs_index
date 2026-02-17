@@ -1,0 +1,196 @@
+{
+  "doc_id": "js-apis-telephony-data",
+  "title": "@ohos.telephony.data (蜂窝数据)",
+  "path": "zh-cn/application-dev/reference/apis-telephony-kit/js-apis-telephony-data.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-telephony-kit/js-apis-telephony-data.md",
+  "metadata": {
+    "kit": "Telephony Kit",
+    "subsystem": "Telephony",
+    "owner": "@k_lee9575",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Telephony Kit Telephony 模块的 @ohos.telephony.data (蜂窝数据)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.telephony.data (蜂窝数据)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { data } from '@kit.TelephonyKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "data.getDefaultCellularDataSlotId",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 50,
+        "summary": "getDefaultCellularDataSlotId(callback: AsyncCallback\\<number\\>): void \n\n获取默认移动数据的SIM卡，使用callback方式作"
+      },
+      {
+        "section_id": "section-3",
+        "title": "data.getDefaultCellularDataSlotId",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 77,
+        "summary": "getDefaultCellularDataSlotId(): Promise\\<number\\> \n\n获取默认移动数据的SIM卡，使用Promise方式作为异步方法。 \n\n**系统能力**：Sys"
+      },
+      {
+        "section_id": "section-4",
+        "title": "data.getDefaultCellularDataSlotIdSync<sup>9+</sup>",
+        "level": 2,
+        "line_start": 78,
+        "line_end": 100,
+        "summary": "getDefaultCellularDataSlotIdSync(): number\n\n获取默认移动数据的SIM卡。\n\n**系统能力**：SystemCapability.Telephony.Cel"
+      },
+      {
+        "section_id": "section-5",
+        "title": "data.getCellularDataFlowType",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 139,
+        "summary": "getCellularDataFlowType(callback: AsyncCallback\\<DataFlowType\\>): void\n\n获取蜂窝数据业务的上下行状态，使用callback方式"
+      },
+      {
+        "section_id": "section-6",
+        "title": "data.getCellularDataFlowType",
+        "level": 2,
+        "line_start": 140,
+        "line_end": 176,
+        "summary": "getCellularDataFlowType(): Promise\\<DataFlowType\\>\n\n获取蜂窝数据业务的上下行状态，使用Promise方式作为异步方法。\n\n**需要权限**：oho"
+      },
+      {
+        "section_id": "section-7",
+        "title": "data.getCellularDataState",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 215,
+        "summary": "getCellularDataState(callback: AsyncCallback\\<DataConnectState\\>): void\n\n获取蜂窝数据业务的连接状态，使用callback方式"
+      },
+      {
+        "section_id": "section-8",
+        "title": "data.getCellularDataState",
+        "level": 2,
+        "line_start": 216,
+        "line_end": 252,
+        "summary": "getCellularDataState(): Promise\\<DataConnectState\\>\n\n获取蜂窝数据业务的连接状态，使用Promise方式作为异步方法。\n\n**需要权限**：oho"
+      },
+      {
+        "section_id": "section-9",
+        "title": "data.isCellularDataEnabled",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 296,
+        "summary": "isCellularDataEnabled(callback: AsyncCallback\\<boolean\\>): void\n\n检查蜂窝数据业务是否启用，使用callback方式作为异步方法。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "data.isCellularDataEnabled",
+        "level": 2,
+        "line_start": 297,
+        "line_end": 336,
+        "summary": "isCellularDataEnabled(): Promise\\<boolean\\>\n\n检查蜂窝数据业务是否启用，使用Promise方式作为异步方法。\n\n**需要权限**：ohos.permiss"
+      },
+      {
+        "section_id": "section-11",
+        "title": "data.isCellularDataEnabledSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 337,
+        "line_end": 378,
+        "summary": "isCellularDataEnabledSync(): boolean\n\n检查蜂窝数据业务是否启用，调用此API返回结果。\n\n**需要权限**：ohos.permission.GET_NETWOR"
+      },
+      {
+        "section_id": "section-12",
+        "title": "data.isCellularDataRoamingEnabled",
+        "level": 2,
+        "line_start": 379,
+        "line_end": 423,
+        "summary": "isCellularDataRoamingEnabled(slotId: number, callback: AsyncCallback\\<boolean\\>): void\n\n检查蜂窝数据业务是否启"
+      },
+      {
+        "section_id": "section-13",
+        "title": "data.isCellularDataRoamingEnabled",
+        "level": 2,
+        "line_start": 424,
+        "line_end": 471,
+        "summary": "isCellularDataRoamingEnabled(slotId: number): Promise\\<boolean\\>\n\n检查蜂窝数据业务是否启用漫游，使用Promise方式作为异步方法。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "data.isCellularDataRoamingEnabledSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 472,
+        "line_end": 521,
+        "summary": "isCellularDataRoamingEnabledSync(slotId: number): boolean\n\n检查蜂窝数据业务是否启用漫游，调用此API返回结果。\n\n**需要权限**：oho"
+      },
+      {
+        "section_id": "section-15",
+        "title": "data.getDefaultCellularDataSimId<sup>10+</sup>",
+        "level": 2,
+        "line_start": 522,
+        "line_end": 543,
+        "summary": "getDefaultCellularDataSimId(): number\n\n获取默认移动数据的SIM卡ID。\n\n**系统能力**：SystemCapability.Telephony.Cellul"
+      },
+      {
+        "section_id": "section-16",
+        "title": "data.queryAllApns<sup>16+</sup>",
+        "level": 2,
+        "line_start": 544,
+        "line_end": 580,
+        "summary": "queryAllApns(): Promise\\<Array\\<ApnInfo\\>\\>\n\n异步获取默认移动数据的SIM卡的APN（access point name，接入点名称）信息。\n\n**需要权"
+      },
+      {
+        "section_id": "section-17",
+        "title": "data.queryApnIds<sup>16+</sup>",
+        "level": 2,
+        "line_start": 581,
+        "line_end": 632,
+        "summary": "queryApnIds(apnInfo: ApnInfo): Promise\\<Array\\<number\\>\\>\n\n异步获取传入的ApnInfo对应的ApnId信息。\n\n**需要权限**：ohos"
+      },
+      {
+        "section_id": "section-18",
+        "title": "data.setPreferredApn<sup>16+</sup>",
+        "level": 2,
+        "line_start": 633,
+        "line_end": 680,
+        "summary": "setPreferredApn(apnId: number): Promise\\<boolean\\>\n\n异步设置apnId对应的APN为首选APN。\n\n> 注意:\n>\n> 如果传入的apnId为无效"
+      },
+      {
+        "section_id": "section-19",
+        "title": "data.getActiveApnName<sup>20+</sup>",
+        "level": 2,
+        "line_start": 681,
+        "line_end": 717,
+        "summary": "getActiveApnName(): Promise\\<string\\>\n\n异步获取默认移动数据SIM卡对应的处于激活状态的数据业务APN（access point name，接入点名称）name"
+      },
+      {
+        "section_id": "section-20",
+        "title": "DataFlowType",
+        "level": 2,
+        "line_start": 718,
+        "line_end": 731,
+        "summary": "描述蜂窝数据流类型。 \n\n**系统能力**：SystemCapability.Telephony.CellularData\n\n| 名称                   | 值   | 说明"
+      },
+      {
+        "section_id": "section-21",
+        "title": "DataConnectState",
+        "level": 2,
+        "line_start": 732,
+        "line_end": 745,
+        "summary": "描述蜂窝数据链路连接状态。 \n\n**系统能力**：SystemCapability.Telephony.CellularData\n\n| 名称                    | 值   | 说"
+      },
+      {
+        "section_id": "section-22",
+        "title": "ApnInfo<sup>16+</sup>",
+        "level": 2,
+        "line_start": 746,
+        "line_end": 762,
+        "summary": "APN信息。\n\n**系统能力**：SystemCapability.Telephony.CellularData\n\n| 名称       | 类型      | 只读    |  可选      |"
+      }
+    ]
+  }
+}

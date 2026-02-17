@@ -1,0 +1,116 @@
+{
+  "doc_id": "errorcode-device-manager",
+  "title": "设备管理错误码",
+  "path": "zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md",
+  "metadata": {
+    "kit": "Distributed Service Kit",
+    "subsystem": "DistributedHardware",
+    "owner": "@hwzhangchuang",
+    "designer": "@hwzhangchuang",
+    "tester": "@zhaodengqi",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Distributed Service Kit DistributedHardware 模块的 设备管理错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "设备管理错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "11600101 服务调用异常",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 30,
+        "summary": "**错误信息**\n\nFailed to execute the function.\n\n**错误描述**\n\n业务调用时，服务内部异常导致调用失败。\n\n**可能原因**\n\n服务内部调用异常。\n\n**处理"
+      },
+      {
+        "section_id": "section-2",
+        "title": "11600102 获取服务失败",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 48,
+        "summary": "**错误信息**\n\nFailed to obtain the service.\n\n**错误描述**\n\n服务启动异常, 业务访问服务失败。\n\n**可能原因**\n\n服务未启动或者服务启动失败。\n\n**处"
+      },
+      {
+        "section_id": "section-3",
+        "title": "11600103 认证业务不可用",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 66,
+        "summary": "**错误信息**\n\nAuthentication unavailable.\n\n**错误描述**\n\n业务调用时，上一次认证业务未结束，导致本次调用不可用。\n\n**可能原因**\n\n上一次认证业务未结束。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "11600104 发现业务不可用",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 84,
+        "summary": "**错误信息**\n\nDiscovery unavailable.\n\n**错误描述**\n\n业务调用时，上一次发现业务未结束，导致本次调用不可用。\n\n**可能原因**\n\n上一次发现业务未结束。\n\n**处"
+      },
+      {
+        "section_id": "section-5",
+        "title": "11600105 发布业务不可用",
+        "level": 2,
+        "line_start": 85,
+        "line_end": 102,
+        "summary": "**错误信息**\n\nPublish unavailable.\n\n**错误描述**\n\n业务调用时，上一次发布业务未结束，导致本次调用不可用。\n\n**可能原因**\n\n上一次发布业务未结束。\n\n**处理步"
+      },
+      {
+        "section_id": "section-6",
+        "title": "11600106 从云端获取数据失败",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 120,
+        "summary": "**错误信息**\n\nFailed to get data from the cloud.\n\n**错误描述**\n\n网络异常，从云端获取数据失败。\n\n**可能原因**\n\n网络链路异常，或网络请求返回异常"
+      },
+      {
+        "section_id": "section-7",
+        "title": "11600107 需要登录账号",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 138,
+        "summary": "**错误信息**\n\nA login account is required.\n\n**错误描述**\n\n业务调用需要登录账号。\n\n**可能原因**\n\n设备没有登录账号。\n\n**处理步骤**\n\n使用正确账"
+      },
+      {
+        "section_id": "section-8",
+        "title": "11600108 设备名称含非法信息",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 156,
+        "summary": "**错误信息**\n\nThe device name contains non-compliant content.\n\n**错误描述**\n\n设备名称含有非法信息，无法使用。\n\n**可能原因**\n\n修改"
+      },
+      {
+        "section_id": "section-9",
+        "title": "32300001 重复创建传输流",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 174,
+        "summary": "**错误信息**\n\nOnly one stream can be created for the current session.\n\n**错误描述**\n\n每个会话只能创建一个传输流。\n\n**可能原因"
+      },
+      {
+        "section_id": "section-10",
+        "title": "32300002 流接收端未启动",
+        "level": 2,
+        "line_start": 175,
+        "line_end": 192,
+        "summary": "**错误信息**\n\nThe stream at the receive end is not started.\n\n**错误描述**\n\n接收端的传输流未启动。\n\n**可能原因**\n\n接收端未启动。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "32300003 比特率不支持",
+        "level": 2,
+        "line_start": 193,
+        "line_end": 210,
+        "summary": "**错误信息**\n\nBitrate not supported.\n\n**错误描述**\n\n比特率未支持。\n\n**可能原因**\n\n配置的比特率与设备支持的比特率不匹配。\n\n**处理步骤**\n\n根据网络条"
+      },
+      {
+        "section_id": "section-12",
+        "title": "32300004 色彩空间不支持",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 228,
+        "summary": "**错误信息**\n\nColor space not supported.\n\n**错误描述**\n\n色彩空间未支持。\n\n**可能原因**\n\n色彩空间输出类型指定为OH_COLORSPACE_BT2020"
+      }
+    ]
+  }
+}

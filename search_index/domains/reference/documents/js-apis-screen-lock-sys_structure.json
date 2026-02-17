@@ -1,0 +1,108 @@
+{
+  "doc_id": "js-apis-screen-lock-sys",
+  "title": "@ohos.screenLock (锁屏管理)（系统接口）",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-screen-lock-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-screen-lock-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "MiscServices",
+    "owner": "@jiayunpeng2",
+    "designer": "@starrylight; @jiayunpeng2",
+    "tester": "@yaoruijiang",
+    "adviser": "@zhangaof"
+  },
+  "summary": "Basic Services Kit MiscServices 模块的 @ohos.screenLock (锁屏管理)（系统接口），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.screenLock (锁屏管理)（系统接口）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { screenLock } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "EventType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 53,
+        "summary": "type EventType = beginWakeUp | endWakeUp | beginScreenOn | endScreenOn | beginScreenOff | endScreen"
+      },
+      {
+        "section_id": "section-3",
+        "title": "SystemEvent<sup>9+</sup>",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 66,
+        "summary": "定义系统事件回调参数结构。\n\n**系统能力：** SystemCapability.MiscServices.ScreenLock\n\n**系统接口**：此接口为系统接口。\n\n| 名称    | 类型"
+      },
+      {
+        "section_id": "section-4",
+        "title": "screenLock.isLocked<sup>9+</sup>",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 96,
+        "summary": "isLocked(): boolean\n\n判断屏幕是否锁屏。\n\n**系统能力：** SystemCapability.MiscServices.ScreenLock\n\n**系统接口**：此接口为系统"
+      },
+      {
+        "section_id": "section-5",
+        "title": "screenLock.unlock<sup>9+</sup>",
+        "level": 2,
+        "line_start": 97,
+        "line_end": 141,
+        "summary": "unlock(callback: AsyncCallback&lt;boolean&gt;): void\n\n解锁屏幕。使用callback异步回调。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-6",
+        "title": "screenLock.unlock<sup>9+</sup>",
+        "level": 2,
+        "line_start": 142,
+        "line_end": 183,
+        "summary": "unlock(): Promise&lt;boolean&gt;\n\n解锁屏幕。使用Promise异步回调。\n\n**系统能力：** SystemCapability.MiscServices.Scre"
+      },
+      {
+        "section_id": "section-7",
+        "title": "screenLock.lock<sup>9+</sup>",
+        "level": 2,
+        "line_start": 184,
+        "line_end": 226,
+        "summary": "lock(callback: AsyncCallback&lt;boolean&gt;): void\n\n锁定屏幕。使用callback异步回调。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-8",
+        "title": "screenLock.lock<sup>9+</sup>",
+        "level": 2,
+        "line_start": 227,
+        "line_end": 266,
+        "summary": "lock(): Promise&lt;boolean&gt;\n\n锁定屏幕。使用Promise异步回调。\n\n**系统能力：** SystemCapability.MiscServices.Screen"
+      },
+      {
+        "section_id": "section-9",
+        "title": "screenLock.onSystemEvent<sup>9+</sup>",
+        "level": 2,
+        "line_start": 267,
+        "line_end": 316,
+        "summary": "onSystemEvent(callback: Callback&lt;SystemEvent&gt;): boolean\n\n注册锁屏相关的系统事件，仅支持锁屏应用使用。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-10",
+        "title": "screenLock.sendScreenLockEvent<sup>9+</sup>",
+        "level": 2,
+        "line_start": 317,
+        "line_end": 361,
+        "summary": "sendScreenLockEvent(event: String, parameter: number, callback: AsyncCallback&lt;boolean&gt;): void"
+      },
+      {
+        "section_id": "section-11",
+        "title": "screenLock.sendScreenLockEvent<sup>9+</sup>",
+        "level": 2,
+        "line_start": 362,
+        "line_end": 410,
+        "summary": "sendScreenLockEvent(event: String, parameter: number): Promise&lt;boolean&gt;\n\n应用发送事件到锁屏服务，仅支持锁屏应用使"
+      }
+    ]
+  }
+}

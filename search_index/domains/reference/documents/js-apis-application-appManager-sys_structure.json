@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-application-appManager-sys",
+  "title": "@ohos.application.appManager (appManager)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-application-appManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-application-appManager-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@SKY2001",
+    "designer": "@yzkp",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.application.appManager (appManager)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.application.appManager (appManager)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport appManager from '@ohos.application.appManager';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "appManager.registerApplicationStateObserver",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 78,
+        "summary": "registerApplicationStateObserver(observer: ApplicationStateObserver): number\n\n注册全部应用程序状态观测器。\n\n**需要权"
+      },
+      {
+        "section_id": "section-3",
+        "title": "appManager.unregisterApplicationStateObserver",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 115,
+        "summary": "unregisterApplicationStateObserver(observerId: number,  callback: AsyncCallback\\<void>): void\n\n取消注册"
+      },
+      {
+        "section_id": "section-4",
+        "title": "appManager.unregisterApplicationStateObserver",
+        "level": 2,
+        "line_start": 116,
+        "line_end": 156,
+        "summary": "unregisterApplicationStateObserver(observerId: number): Promise\\<void>\n\n取消注册应用程序状态观测器。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-5",
+        "title": "appManager.getForegroundApplications",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 188,
+        "summary": "getForegroundApplications(callback: AsyncCallback\\<Array\\<AppStateData>>): void\n\n获取所有当前处于前台的应用信息。该应"
+      },
+      {
+        "section_id": "section-6",
+        "title": "appManager.getForegroundApplications",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 221,
+        "summary": "getForegroundApplications(): Promise\\<Array\\<AppStateData>>\n\n获取所有当前处于前台的应用信息。该应用信息由[AppStateData](j"
+      },
+      {
+        "section_id": "section-7",
+        "title": "appManager.killProcessWithAccount",
+        "level": 2,
+        "line_start": 222,
+        "line_end": 268,
+        "summary": "killProcessWithAccount(bundleName: string, accountId: number): Promise\\<void\\>\n\n切断account进程。使用Promi"
+      },
+      {
+        "section_id": "section-8",
+        "title": "appManager.killProcessWithAccount",
+        "level": 2,
+        "line_start": 269,
+        "line_end": 312,
+        "summary": "killProcessWithAccount(bundleName: string, accountId: number, callback: AsyncCallback\\<void\\>): voi"
+      },
+      {
+        "section_id": "section-9",
+        "title": "appManager.killProcessesByBundleName",
+        "level": 2,
+        "line_start": 313,
+        "line_end": 350,
+        "summary": "killProcessesByBundleName(bundleName: string, callback: AsyncCallback\\<void>)\n\n通过Bundle名称终止进程。使用cal"
+      },
+      {
+        "section_id": "section-10",
+        "title": "appManager.killProcessesByBundleName",
+        "level": 2,
+        "line_start": 351,
+        "line_end": 390,
+        "summary": "killProcessesByBundleName(bundleName: string): Promise\\<void>\n\n通过Bundle名称终止进程。使用Promise异步回调。\n\n**需要权"
+      },
+      {
+        "section_id": "section-11",
+        "title": "appManager.clearUpApplicationData",
+        "level": 2,
+        "line_start": 391,
+        "line_end": 428,
+        "summary": "clearUpApplicationData(bundleName: string, callback: AsyncCallback\\<void>)\n\n通过Bundle名称清除应用数据。使用call"
+      },
+      {
+        "section_id": "section-12",
+        "title": "appManager.clearUpApplicationData",
+        "level": 2,
+        "line_start": 429,
+        "line_end": 467,
+        "summary": "clearUpApplicationData(bundleName: string): Promise\\<void>\n\n通过Bundle名称清除应用数据。使用Promise异步回调。\n\n**需要权限"
+      }
+    ]
+  }
+}

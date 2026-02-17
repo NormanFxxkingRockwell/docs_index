@@ -1,0 +1,60 @@
+{
+  "doc_id": "js-apis-bundleMonitor-sys",
+  "title": "@ohos.bundle.bundleMonitor (bundleMonitor模块)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-bundleMonitor-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-bundleMonitor-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Ability Kit BundleManager 模块的 @ohos.bundle.bundleMonitor (bundleMonitor模块)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bundle.bundleMonitor (bundleMonitor模块)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { bundleMonitor } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "BundleChangedInfo",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 34,
+        "summary": "**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n**系统接口：**  此接口为系统接口。\n\n| 名称       | 类"
+      },
+      {
+        "section_id": "section-3",
+        "title": "BundleChangedEvent",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 52,
+        "summary": "type BundleChangedEvent = 'add' | 'update' | 'remove'\n\n监听的事件类型。\n\n取值类型为下表类型中的一个。\n\n**系统能力：** SystemCa"
+      },
+      {
+        "section_id": "section-4",
+        "title": "bundleMonitor.on",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 102,
+        "summary": "on(type: BundleChangedEvent, callback: Callback\\<BundleChangedInfo>): void\n\n注册监听应用的安装、卸载、更新。使用callb"
+      },
+      {
+        "section_id": "section-5",
+        "title": "bundleMonitor.off",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 150,
+        "summary": "off(type: BundleChangedEvent, callback?: Callback\\<BundleChangedInfo>): void\n\n注销监听应用的安装，卸载，更新。使用cal"
+      }
+    ]
+  }
+}

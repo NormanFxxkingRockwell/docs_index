@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-notificationExtensionSubscription",
+  "title": "@ohos.notificationExtensionSubscription (notificationExtensionSubscription模块)",
+  "path": "zh-cn/application-dev/reference/apis-notification-kit/js-apis-notificationExtensionSubscription.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-notification-kit/js-apis-notificationExtensionSubscription.md",
+  "metadata": {
+    "kit": "Notification Kit",
+    "subsystem": "Notification",
+    "owner": "@cheerful_ricky",
+    "designer": "@dongqingran",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Notification Kit Notification 模块的 @ohos.notificationExtensionSubscription (notificationExtensionSubscription模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.notificationExtensionSubscription (notificationExtensionSubscription模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 20,
+        "summary": "```ts\nimport { notificationExtensionSubscription } from '@kit.NotificationKit';\nimport { BusinessEr"
+      },
+      {
+        "section_id": "section-2",
+        "title": "notificationExtensionSubscription.openSubscriptionSettings",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 72,
+        "summary": "openSubscriptionSettings(context: UIAbilityContext): Promise\\<void\\>\n\n打开应用的通知扩展订阅授权页面，以半模态弹窗形式显示。用户"
+      },
+      {
+        "section_id": "section-3",
+        "title": "notificationExtensionSubscription.subscribe",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 123,
+        "summary": "subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise\\<void\\>\n\n订阅通知扩展。使用[蓝牙模块](../../co"
+      },
+      {
+        "section_id": "section-4",
+        "title": "notificationExtensionSubscription.unsubscribe",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 160,
+        "summary": "unsubscribe(): Promise\\<void\\>\n\n取消通知扩展的订阅。使用Promise异步回调。\n\n**系统能力**：SystemCapability.Notification.No"
+      },
+      {
+        "section_id": "section-5",
+        "title": "notificationExtensionSubscription.getSubscribeInfo",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 197,
+        "summary": "getSubscribeInfo(): Promise\\<NotificationExtensionSubscriptionInfo[]\\>\n\n获取当前应用的通知扩展订阅信息。使用Promise异步"
+      },
+      {
+        "section_id": "section-6",
+        "title": "notificationExtensionSubscription.isUserGranted",
+        "level": 2,
+        "line_start": 198,
+        "line_end": 238,
+        "summary": "isUserGranted(): Promise\\<boolean\\>\n\n查询\"允许获取本机通知\"的开关状态。使用Promise异步回调。\n\n**系统能力**：SystemCapability.No"
+      },
+      {
+        "section_id": "section-7",
+        "title": "notificationExtensionSubscription.getUserGrantedEnabledBundles",
+        "level": 2,
+        "line_start": 239,
+        "line_end": 275,
+        "summary": "getUserGrantedEnabledBundles(): Promise\\<GrantedBundleInfo[]\\>\n\n获取指定应用中\"已获取的本机通知\"通知开关开启的应用列表。使用Prom"
+      },
+      {
+        "section_id": "section-8",
+        "title": "NotificationExtensionSubscriptionInfo",
+        "level": 2,
+        "line_start": 276,
+        "line_end": 287,
+        "summary": "type NotificationExtensionSubscriptionInfo = _NotificationExtensionSubscriptionInfo\n\n用于描述通知扩展订阅的信息。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "NotificationInfo",
+        "level": 2,
+        "line_start": 288,
+        "line_end": 299,
+        "summary": "type NotificationInfo = _NotificationInfo\n\n通知订阅扩展能力中[onReceiveMessage](js-apis-notificationSubscrib"
+      },
+      {
+        "section_id": "section-10",
+        "title": "SubscribeType",
+        "level": 2,
+        "line_start": 300,
+        "line_end": 309,
+        "summary": "表示通知扩展订阅的类型。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n| 名称                 | 值       |"
+      },
+      {
+        "section_id": "section-11",
+        "title": "BundleOption",
+        "level": 2,
+        "line_start": 310,
+        "line_end": 321,
+        "summary": "type BundleOption = _BundleOption\n\n指定应用的包信息。\n\n**系统能力**： SystemCapability.Notification.Notification"
+      },
+      {
+        "section_id": "section-12",
+        "title": "GrantedBundleInfo",
+        "level": 2,
+        "line_start": 322,
+        "line_end": 333,
+        "summary": "type GrantedBundleInfo = _GrantedBundleInfo\n\n授权应用的包信息。\n\n**系统能力**： SystemCapability.Notification.Not"
+      }
+    ]
+  }
+}

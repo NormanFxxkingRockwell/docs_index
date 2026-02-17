@@ -1,0 +1,420 @@
+{
+  "doc_id": "js-apis-geolocation",
+  "title": "@ohos.geolocation (位置服务)",
+  "path": "zh-cn/application-dev/reference/apis-location-kit/js-apis-geolocation.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-location-kit/js-apis-geolocation.md",
+  "metadata": {
+    "kit": "Location Kit",
+    "subsystem": "Location",
+    "owner": "@liu-binjun",
+    "designer": "@liu-binjun",
+    "tester": "@mhy123456789",
+    "adviser": "@RayShih"
+  },
+  "summary": "Location Kit Location 模块的 @ohos.geolocation (位置服务)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.geolocation (位置服务)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "申请权限",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 46,
+        "summary": "应用在使用系统能力前，需要检查是否已经获取用户授权访问设备位置信息。如未获得授权，可以向用户申请需要的位置权限，申请方式请参考下文。\n\n系统提供的定位权限有：\n- ohos.permission.L"
+      },
+      {
+        "section_id": "section-2",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 52,
+        "summary": "```ts\nimport geolocation from '@ohos.geolocation';\n```"
+      },
+      {
+        "section_id": "section-3",
+        "title": "geolocation.on('locationChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 87,
+        "summary": "on(type: 'locationChange', request: LocationRequest, callback: Callback&lt;Location&gt;): void\n\n开启位"
+      },
+      {
+        "section_id": "section-4",
+        "title": "geolocation.off('locationChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 121,
+        "summary": "off(type: 'locationChange', callback?: Callback&lt;Location&gt;): void\n\n关闭位置变化订阅，并删除对应的定位请求。\n\n> **说"
+      },
+      {
+        "section_id": "section-5",
+        "title": "geolocation.on('locationServiceState')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 153,
+        "summary": "on(type: 'locationServiceState', callback: Callback&lt;boolean&gt;): void\n\n订阅位置服务状态变化。使用callback异步回"
+      },
+      {
+        "section_id": "section-6",
+        "title": "geolocation.off('locationServiceState')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 154,
+        "line_end": 186,
+        "summary": "off(type: 'locationServiceState', callback?: Callback&lt;boolean&gt;): void\n\n取消订阅位置服务状态变化。\n\n> **说明："
+      },
+      {
+        "section_id": "section-7",
+        "title": "geolocation.on('cachedGnssLocationsReporting')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 187,
+        "line_end": 221,
+        "summary": "on(type: 'cachedGnssLocationsReporting', request: CachedGnssLocationsRequest, callback: Callback&lt"
+      },
+      {
+        "section_id": "section-8",
+        "title": "geolocation.off('cachedGnssLocationsReporting')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 222,
+        "line_end": 256,
+        "summary": "off(type: 'cachedGnssLocationsReporting', callback?: Callback&lt;Array&lt;Location&gt;&gt;): void"
+      },
+      {
+        "section_id": "section-9",
+        "title": "geolocation.on('gnssStatusChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 289,
+        "summary": "on(type: 'gnssStatusChange', callback: Callback&lt;SatelliteStatusInfo&gt;): void\n\n订阅GNSS卫星状态信息上报事件"
+      },
+      {
+        "section_id": "section-10",
+        "title": "geolocation.off('gnssStatusChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 290,
+        "line_end": 322,
+        "summary": "off(type: 'gnssStatusChange', callback?: Callback&lt;SatelliteStatusInfo&gt;): void\n\n取消订阅GNSS卫星状态信息"
+      },
+      {
+        "section_id": "section-11",
+        "title": "geolocation.on('nmeaMessageChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 323,
+        "line_end": 355,
+        "summary": "on(type: 'nmeaMessageChange', callback: Callback&lt;string&gt;): void\n\n订阅GNSS NMEA信息上报事件。使用callback"
+      },
+      {
+        "section_id": "section-12",
+        "title": "geolocation.off('nmeaMessageChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 356,
+        "line_end": 389,
+        "summary": "off(type: 'nmeaMessageChange', callback?: Callback&lt;string&gt;): void\n\n取消订阅GNSS NMEA信息上报事件。\n\n> **"
+      },
+      {
+        "section_id": "section-13",
+        "title": "geolocation.on('fenceStatusChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 390,
+        "line_end": 437,
+        "summary": "on(type: 'fenceStatusChange', request: GeofenceRequest, want: WantAgent): void\n\n添加一个围栏，并订阅地理围栏事件。使用"
+      },
+      {
+        "section_id": "section-14",
+        "title": "geolocation.off('fenceStatusChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 438,
+        "line_end": 486,
+        "summary": "off(type: 'fenceStatusChange', request: GeofenceRequest, want: WantAgent): void\n\n删除一个围栏，并取消订阅该围栏事件。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "geolocation.getCurrentLocation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 487,
+        "line_end": 524,
+        "summary": "getCurrentLocation(request: CurrentLocationRequest, callback: AsyncCallback&lt;Location&gt;): void"
+      },
+      {
+        "section_id": "section-16",
+        "title": "geolocation.getCurrentLocation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 525,
+        "line_end": 561,
+        "summary": "getCurrentLocation(callback: AsyncCallback&lt;Location&gt;): void\n\n\n获取当前位置，使用callback异步回调。\n\n> **说明："
+      },
+      {
+        "section_id": "section-17",
+        "title": "geolocation.getCurrentLocation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 562,
+        "line_end": 598,
+        "summary": "getCurrentLocation(request?: CurrentLocationRequest): Promise&lt;Location&gt;\n\n获取当前位置，使用Promise异步回调"
+      },
+      {
+        "section_id": "section-18",
+        "title": "geolocation.getLastLocation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 599,
+        "line_end": 633,
+        "summary": "getLastLocation(callback: AsyncCallback&lt;Location&gt;): void\n\n获取上一次位置，使用callback异步回调。\n\n> **说明：**<"
+      },
+      {
+        "section_id": "section-19",
+        "title": "geolocation.getLastLocation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 634,
+        "line_end": 663,
+        "summary": "getLastLocation(): Promise&lt;Location&gt;\n\n获取上一次位置，使用Promise异步回调。\n\n> **说明：**<br/>\n> 从API version 7"
+      },
+      {
+        "section_id": "section-20",
+        "title": "geolocation.isLocationEnabled<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 664,
+        "line_end": 697,
+        "summary": "isLocationEnabled(callback: AsyncCallback&lt;boolean&gt;): void\n\n判断位置服务是否已经打开，使用callback异步回调。\n\n> **"
+      },
+      {
+        "section_id": "section-21",
+        "title": "geolocation.isLocationEnabled<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 698,
+        "line_end": 726,
+        "summary": "isLocationEnabled(): Promise&lt;boolean&gt;\n\n判断位置服务是否已经开启，使用Promise异步回调。\n\n> **说明：**<br/>\n> 从API ver"
+      },
+      {
+        "section_id": "section-22",
+        "title": "geolocation.requestEnableLocation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 727,
+        "line_end": 760,
+        "summary": "requestEnableLocation(callback: AsyncCallback&lt;boolean&gt;): void\n\n请求打开位置服务，使用callback异步回调。\n\n> **"
+      },
+      {
+        "section_id": "section-23",
+        "title": "geolocation.requestEnableLocation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 761,
+        "line_end": 789,
+        "summary": "requestEnableLocation(): Promise&lt;boolean&gt;\n\n请求打开位置服务，使用Promise异步回调。\n\n> **说明：**<br/>\n> 从API ver"
+      },
+      {
+        "section_id": "section-24",
+        "title": "geolocation.isGeoServiceAvailable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 790,
+        "line_end": 823,
+        "summary": "isGeoServiceAvailable(callback: AsyncCallback&lt;boolean&gt;): void\n\n判断（逆）地理编码服务状态，使用callback异步回调。"
+      },
+      {
+        "section_id": "section-25",
+        "title": "geolocation.isGeoServiceAvailable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 824,
+        "line_end": 852,
+        "summary": "isGeoServiceAvailable(): Promise&lt;boolean&gt;\n\n判断（逆）地理编码服务状态，使用Promise异步回调。\n\n> **说明：**<br/>\n> 从AP"
+      },
+      {
+        "section_id": "section-26",
+        "title": "geolocation.getAddressesFromLocation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 853,
+        "line_end": 888,
+        "summary": "getAddressesFromLocation(request: ReverseGeoCodeRequest, callback: AsyncCallback&lt;Array&lt;GeoAdd"
+      },
+      {
+        "section_id": "section-27",
+        "title": "geolocation.getAddressesFromLocation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 889,
+        "line_end": 924,
+        "summary": "getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise&lt;Array&lt;GeoAddress&gt;&gt;\n\n调"
+      },
+      {
+        "section_id": "section-28",
+        "title": "geolocation.getAddressesFromLocationName<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 925,
+        "line_end": 960,
+        "summary": "getAddressesFromLocationName(request: GeoCodeRequest, callback: AsyncCallback&lt;Array&lt;GeoAddres"
+      },
+      {
+        "section_id": "section-29",
+        "title": "geolocation.getAddressesFromLocationName<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 961,
+        "line_end": 996,
+        "summary": "getAddressesFromLocationName(request: GeoCodeRequest): Promise&lt;Array&lt;GeoAddress&gt;&gt;\n\n调用地理"
+      },
+      {
+        "section_id": "section-30",
+        "title": "geolocation.getCachedGnssLocationsSize<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 997,
+        "line_end": 1031,
+        "summary": "getCachedGnssLocationsSize(callback: AsyncCallback&lt;number&gt;): void\n\n获取GNSS芯片缓存位置的个数。使用callback"
+      },
+      {
+        "section_id": "section-31",
+        "title": "geolocation.getCachedGnssLocationsSize<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1032,
+        "line_end": 1061,
+        "summary": "getCachedGnssLocationsSize(): Promise&lt;number&gt;;\n\n获取GNSS芯片缓存位置的个数。使用Promise异步回调。\n\n> **说明：**<br/"
+      },
+      {
+        "section_id": "section-32",
+        "title": "geolocation.flushCachedGnssLocations<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1062,
+        "line_end": 1096,
+        "summary": "flushCachedGnssLocations(callback: AsyncCallback&lt;boolean&gt;): void\n\n读取并清空GNSS芯片所有缓存位置。使用callbac"
+      },
+      {
+        "section_id": "section-33",
+        "title": "geolocation.flushCachedGnssLocations<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1097,
+        "line_end": 1126,
+        "summary": "flushCachedGnssLocations(): Promise&lt;boolean&gt;\n\n读取并清空GNSS芯片所有缓存位置。使用Promise异步回调。\n\n> **说明：**<br/"
+      },
+      {
+        "section_id": "section-34",
+        "title": "geolocation.sendCommand<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1127,
+        "line_end": 1163,
+        "summary": "sendCommand(command: LocationCommand, callback: AsyncCallback&lt;boolean&gt;): void\n\n给位置服务子系统的各个部件发"
+      },
+      {
+        "section_id": "section-35",
+        "title": "geolocation.sendCommand<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1164,
+        "line_end": 1200,
+        "summary": "sendCommand(command: LocationCommand): Promise&lt;boolean&gt;\n\n给位置服务子系统的各个部件发送扩展命令。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-36",
+        "title": "ReverseGeoCodeRequest<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1201,
+        "line_end": 1219,
+        "summary": "逆地理编码请求参数。\n\n> **说明：**<br/>\n> 从API version 9开始废弃，建议使用[geoLocationManager.ReverseGeoCodeRequest](js-a"
+      },
+      {
+        "section_id": "section-37",
+        "title": "GeoCodeRequest<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1220,
+        "line_end": 1241,
+        "summary": "地理编码请求参数。\n\n> **说明：**<br/>\n> 从API version 9开始废弃，建议使用[geoLocationManager.GeoCodeRequest](js-apis-geoL"
+      },
+      {
+        "section_id": "section-38",
+        "title": "GeoAddress<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1242,
+        "line_end": 1274,
+        "summary": "地理编码地址信息。\n\n> **说明：**<br/>\n> 从API version 9开始废弃，建议使用[geoLocationManager.GeoAddress](js-apis-geoLocat"
+      },
+      {
+        "section_id": "section-39",
+        "title": "LocationRequest<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1275,
+        "line_end": 1294,
+        "summary": "位置信息请求参数。\n\n> **说明：**<br/>\n> 从API version 9开始废弃，建议使用[geoLocationManager.LocationRequest](js-apis-geo"
+      },
+      {
+        "section_id": "section-40",
+        "title": "CurrentLocationRequest<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1295,
+        "line_end": 1313,
+        "summary": "当前位置信息请求参数。\n\n> **说明：**<br/>\n> 从API version 9开始废弃，建议使用[geoLocationManager.CurrentLocationRequest](js"
+      },
+      {
+        "section_id": "section-41",
+        "title": "SatelliteStatusInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1314,
+        "line_end": 1335,
+        "summary": "卫星状态信息。\n\n> **说明：**<br/>\n> 从API version 8开始支持。\n> 从API version 9开始废弃，建议使用[geoLocationManager.Satellit"
+      },
+      {
+        "section_id": "section-42",
+        "title": "CachedGnssLocationsRequest<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1336,
+        "line_end": 1353,
+        "summary": "请求订阅GNSS缓存位置上报功能接口的配置参数。\n\n> **说明：**<br/>\n> 从API version 8开始支持。\n> 从API version 9开始废弃，建议使用[geoLocatio"
+      },
+      {
+        "section_id": "section-43",
+        "title": "Geofence<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1354,
+        "line_end": 1373,
+        "summary": "GNSS围栏的配置参数。目前只支持圆形围栏。\n\n> **说明：**<br/>\n> 从API version 8开始支持。\n> 从API version 9开始废弃，建议使用[geoLocationM"
+      },
+      {
+        "section_id": "section-44",
+        "title": "GeofenceRequest<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1374,
+        "line_end": 1392,
+        "summary": "请求添加GNSS围栏消息中携带的参数，包括定位场景和围栏信息。\n\n> **说明：**<br/>\n> 从API version 8开始支持。\n> 从API version 9开始废弃，建议使用[geo"
+      },
+      {
+        "section_id": "section-45",
+        "title": "LocationCommand<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1393,
+        "line_end": 1410,
+        "summary": "扩展命令参数。\n\n> **说明：**<br/>\n> 从API version 8开始支持。\n> 从API version 9开始废弃，建议使用[geoLocationManager.Location"
+      },
+      {
+        "section_id": "section-46",
+        "title": "Location<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1411,
+        "line_end": 1435,
+        "summary": "位置信息。\n\n> **说明：**<br/>\n> 从API version 9开始废弃，建议使用[geoLocationManager.Location](js-apis-geoLocationMan"
+      },
+      {
+        "section_id": "section-47",
+        "title": "LocationPrivacyType<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1436,
+        "line_end": 1454,
+        "summary": "定位服务隐私协议类型。\n\n> **说明：**<br/>\n> 从API version 8开始支持。\n> 从API version 9开始废弃，替代接口geoLocationManager.Locat"
+      },
+      {
+        "section_id": "section-48",
+        "title": "LocationRequestPriority<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1455,
+        "line_end": 1473,
+        "summary": "位置请求中位置信息优先级类型。\n\n> **说明：**<br/>\n> 从API version 9开始废弃，建议使用[geoLocationManager.LocationRequestPriorit"
+      },
+      {
+        "section_id": "section-49",
+        "title": "LocationRequestScenario<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1474,
+        "line_end": 1494,
+        "summary": "位置请求中定位场景类型。\n\n> **说明：**<br/>\n> 从API version 9开始废弃，建议使用[geoLocationManager.LocationRequestScenario"
+      },
+      {
+        "section_id": "section-50",
+        "title": "GeoLocationErrorCode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1495,
+        "line_end": 1514,
+        "summary": "位置服务中的错误码信息。\n\n> **说明：**<br/>\n> 从API version 9开始废弃，建议使用[位置服务子系统错误码](errorcode-geoLocationManager.md)"
+      }
+    ]
+  }
+}

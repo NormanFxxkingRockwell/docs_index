@@ -1,0 +1,68 @@
+{
+  "doc_id": "arkts-apis-camera-Focus",
+  "title": "Interface (Focus)",
+  "path": "zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-Focus.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-Focus.md",
+  "metadata": {
+    "kit": "Camera Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qano",
+    "designer": "@leo_ysl",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Camera Kit Multimedia 模块的 Interface (Focus)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (Focus)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { camera } from '@kit.CameraKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "setFocusMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 65,
+        "summary": "setFocusMode(afMode: FocusMode): void\n\n设置对焦模式。\n\n进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupporte"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getFocusMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 107,
+        "summary": "getFocusMode(): FocusMode\n\n获取当前的对焦模式。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-4",
+        "title": "setFocusPoint<sup>11+</sup>",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 150,
+        "summary": "setFocusPoint(point: Point): void\n\n设置焦点，焦点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。\n\n此坐标系是以设备充电口在右侧时的横向设备方"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getFocusPoint<sup>11+</sup>",
+        "level": 2,
+        "line_start": 151,
+        "line_end": 192,
+        "summary": "getFocusPoint(): Point\n\n查询当前的焦点。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getFocalLength<sup>11+</sup>",
+        "level": 2,
+        "line_start": 193,
+        "line_end": 235,
+        "summary": "getFocalLength(): number\n\n查询当前的焦距值。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Sys"
+      }
+    ]
+  }
+}

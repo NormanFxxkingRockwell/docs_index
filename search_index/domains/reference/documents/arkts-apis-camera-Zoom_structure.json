@@ -1,0 +1,52 @@
+{
+  "doc_id": "arkts-apis-camera-Zoom",
+  "title": "Interface (Zoom)",
+  "path": "zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-Zoom.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-Zoom.md",
+  "metadata": {
+    "kit": "Camera Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qano",
+    "designer": "@leo_ysl",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Camera Kit Multimedia 模块的 Interface (Zoom)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (Zoom)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { camera } from '@kit.CameraKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "setZoomRatio<sup>11+</sup>",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 67,
+        "summary": "setZoomRatio(zoomRatio: number): void\n\n设置变焦比，变焦精度最高为小数点后两位，如果设置超过支持的精度范围，则只保留精度范围内数值。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getZoomRatio<sup>11+</sup>",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 111,
+        "summary": "getZoomRatio(): number\n\n获取当前的变焦比。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-4",
+        "title": "setSmoothZoom<sup>11+</sup>",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 136,
+        "summary": "setSmoothZoom(targetRatio: number, mode?: SmoothZoomMode): void\n\n触发平滑变焦。\n\n**原子化服务API：** 从API versio"
+      }
+    ]
+  }
+}

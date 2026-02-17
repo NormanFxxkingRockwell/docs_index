@@ -1,0 +1,108 @@
+{
+  "doc_id": "js-apis-nfcController",
+  "title": "@ohos.nfc.controller (标准NFC)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-nfcController.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-nfcController.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@amunra03",
+    "designer": "@wenxiaolin",
+    "tester": "@zs_111",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.nfc.controller (标准NFC)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.nfc.controller (标准NFC)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "**导入模块**",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```js\nimport { nfcController } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "NfcState",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 36,
+        "summary": "定义不同的NFC状态值。\n\n**系统能力：** SystemCapability.Communication.NFC.Core\n\n**原子化服务API：** 从API version 12开始，该接"
+      },
+      {
+        "section_id": "section-3",
+        "title": "nfcController.isNfcAvailable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 54,
+        "summary": "isNfcAvailable(): boolean\n\n查询设备是否有NFC能力。\n\n> **说明：**\n> 从 API version 7 开始支持，从 API version 9 开始废弃，建议使"
+      },
+      {
+        "section_id": "section-4",
+        "title": "nfcController.openNfc<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 73,
+        "summary": "openNfc(): boolean\n\n打开NFC开关。\n\n> **说明：**\n> 从 API version 7 开始支持，从 API version 9 开始废弃，建议使用[enableNfc]"
+      },
+      {
+        "section_id": "section-5",
+        "title": "nfcController.enableNfc<sup>9+</sup>",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 93,
+        "summary": "enableNfc(): void\n\n打开NFC开关，该接口只能被系统应用调用。\n\n**需要权限：** ohos.permission.MANAGE_SECURE_SETTINGS（该权限仅系统应用"
+      },
+      {
+        "section_id": "section-6",
+        "title": "nfcController.closeNfc<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 112,
+        "summary": "closeNfc(): boolean\n\n关闭NFC开关。\n\n> **说明：**\n> 从 API version 7 开始支持，从 API version 9 开始废弃，建议使用[disableNf"
+      },
+      {
+        "section_id": "section-7",
+        "title": "nfcController.disableNfc<sup>9+</sup>",
+        "level": 2,
+        "line_start": 113,
+        "line_end": 132,
+        "summary": "disableNfc(): void\n\n关闭NFC开关，该接口只能被系统应用调用。\n\n**需要权限：** ohos.permission.MANAGE_SECURE_SETTINGS（该权限仅系统应"
+      },
+      {
+        "section_id": "section-8",
+        "title": "nfcController.isNfcOpen",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 148,
+        "summary": "isNfcOpen(): boolean\n\n查询NFC是否打开。\n\n**系统能力：** SystemCapability.Communication.NFC.Core\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "nfcController.getNfcState",
+        "level": 2,
+        "line_start": 149,
+        "line_end": 164,
+        "summary": "getNfcState(): [NfcState](#nfcstate)\n\n查询NFC状态。\n\n**系统能力：** SystemCapability.Communication.NFC.Core"
+      },
+      {
+        "section_id": "section-10",
+        "title": "nfcController.on('nfcStateChange')",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 181,
+        "summary": "on(type: 'nfcStateChange', callback: Callback&lt;[NfcState](#nfcstate)&gt;): void\n\n注册NFC开关状态事件，获取NF"
+      },
+      {
+        "section_id": "section-11",
+        "title": "nfcController.off('nfcStateChange')",
+        "level": 2,
+        "line_start": 182,
+        "line_end": 238,
+        "summary": "off(type: 'nfcStateChange', callback?: Callback&lt;[NfcState](#nfcstate)&gt;): void\n\n取消NFC开关状态事件的注册"
+      }
+    ]
+  }
+}

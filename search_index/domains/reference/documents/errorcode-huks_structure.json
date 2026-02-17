@@ -1,0 +1,212 @@
+{
+  "doc_id": "errorcode-huks",
+  "title": "HUKS错误码",
+  "path": "zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md",
+  "metadata": {
+    "kit": "Universal Keystore Kit",
+    "subsystem": "Security",
+    "owner": "@wutiantian-gitee",
+    "designer": "@HighLowWorld",
+    "tester": "@wxy1234564846",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Universal Keystore Kit Security 模块的 HUKS错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "HUKS错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "12000001 该子功能不支持（特性）",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 31,
+        "summary": "**错误信息**\n\nThe ``${messageInfo}`` is not supported.\n\n**错误描述**\n\n不支持``${messageInfo}``中给出的特性（功能）。\n\n**可"
+      },
+      {
+        "section_id": "section-2",
+        "title": "12000002 缺少密钥算法参数",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 50,
+        "summary": "**错误信息**\n\nFailed to obtain the ``${messageInfo}``. It is not set in ParamSet.\n\n**错误描述**\n\n未设置相关参数，无法"
+      },
+      {
+        "section_id": "section-3",
+        "title": "12000003 无效的密钥算法参数",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 69,
+        "summary": "**错误信息**\n\nInvalid ``${messageInfo}``.\n\n**错误描述**\n\n使用了无效的参数，具体可见``${messageInfo}``。\n\n**可能原因**\n\n使用密钥时相"
+      },
+      {
+        "section_id": "section-4",
+        "title": "12000004 文件错误",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 96,
+        "summary": "**错误信息**\n\n可能为以下的其中一种：\n\n- Insufficient storage space.\n- Invalid file size.\n- Failed to ``${messageIn"
+      },
+      {
+        "section_id": "section-5",
+        "title": "12000005 进程通信错误",
+        "level": 2,
+        "line_start": 97,
+        "line_end": 120,
+        "summary": "**错误信息**\n\n可能为以下的其中一种：\n\n- Failed to get messages from IPC.\n- IPC ``${messageInfo}``.\n\n**错误描述**\n\n可能为以"
+      },
+      {
+        "section_id": "section-6",
+        "title": "12000006 算法库操作失败",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 142,
+        "summary": "**错误信息**\n\nCrypto engine error or Ukey driver error.\n\n**错误描述**\n\n算法库操作失败或者Ukey驱动失败。\n\n**可能原因**\n\n该错误码表示"
+      },
+      {
+        "section_id": "section-7",
+        "title": "12000007 密钥访问失败 - 密钥已失效",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 164,
+        "summary": "**错误信息**\n\nThis credential is invalidated permanently.\n\n**错误描述**\n\n当前凭据已永久失效。\n\n**可能原因**\n\n该错误码表示密钥访问失败"
+      },
+      {
+        "section_id": "section-8",
+        "title": "12000008 密钥访问失败 - 密钥认证失败",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 183,
+        "summary": "**错误信息**\n\nThe authentication token verification failed.\n\n**错误描述**\n\n用户令牌无法通过认证。\n\n**可能原因**\n\n该密钥设置了用户认"
+      },
+      {
+        "section_id": "section-9",
+        "title": "12000009 密钥访问失败 - 密钥访问超时",
+        "level": 2,
+        "line_start": 184,
+        "line_end": 201,
+        "summary": "**错误信息**\n\nThis authentication token timed out.\n\n**错误描述**\n\n当前用户令牌已超时。\n\n**可能原因**\n\n该密钥设置了用户认证访问控制属性，由于"
+      },
+      {
+        "section_id": "section-10",
+        "title": "12000010 密钥操作会话数已达上限",
+        "level": 2,
+        "line_start": 202,
+        "line_end": 220,
+        "summary": "**错误信息**\n\nThe number of key operation sessions has reached the limit.\n\n**错误描述**\n\n密钥操作会话数已达上限。\n\n**可能"
+      },
+      {
+        "section_id": "section-11",
+        "title": "12000011 目标对象不存在",
+        "level": 2,
+        "line_start": 221,
+        "line_end": 239,
+        "summary": "**错误信息**\n\nQueried entity does not exist.\n\n**错误描述**\n\n目标对象不存在。\n\n**可能原因**\n\n该别名对应的密钥不存在。\n\n**处理步骤**\n\n1."
+      },
+      {
+        "section_id": "section-12",
+        "title": "12000012 外部错误",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 257,
+        "summary": "**错误信息**\n\nDevice environment or input parameter abnormal.\n\n**错误描述**\n\n设备环境或输入参数异常。\n\n**可能原因**\n\n外部的硬件出"
+      },
+      {
+        "section_id": "section-13",
+        "title": "12000013 密钥设置生物访问控制时，待绑定的凭据不存在",
+        "level": 2,
+        "line_start": 258,
+        "line_end": 275,
+        "summary": "**错误信息**\n\nThe credential does not exist.\n\n**错误描述**\n\n当前凭据不存在。\n\n**可能原因**\n\n密钥绑定PIN、指纹、人脸时，未录入相关凭据。\n\n**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "12000014 内存不足",
+        "level": 2,
+        "line_start": 276,
+        "line_end": 300,
+        "summary": "**错误信息**\n\n可能为以下的其中一种：\n\n- Insufficient memory.\n- Malloc failed.\n\n**错误描述**\n\n可能为以下的其中一种：\n\n- 内存不足。\n- 内存"
+      },
+      {
+        "section_id": "section-15",
+        "title": "12000015 调用其他系统服务失败",
+        "level": 2,
+        "line_start": 301,
+        "line_end": 318,
+        "summary": "**错误信息**\n\nFailed to obtain the ``${messageInfo}`` information via UserIAM.\n\n**错误描述**\n\n无法通过UserIAM获取"
+      },
+      {
+        "section_id": "section-16",
+        "title": "12000017 同名密钥已存在",
+        "level": 2,
+        "line_start": 319,
+        "line_end": 336,
+        "summary": "**错误信息**\n\nThe key with same alias is already exist.\n\n**错误描述**\n\n同名密钥已存在。\n\n**可能原因**\n\n指定了不覆写同名密钥，但同名密钥"
+      },
+      {
+        "section_id": "section-17",
+        "title": "12000018 输入参数非法",
+        "level": 2,
+        "line_start": 337,
+        "line_end": 360,
+        "summary": "**错误信息**\n\nThe input parameter is invalid.\n\n**错误描述**\n\n当前输入的参数无效。\n\n**可能原因**\n\n1. 必选参数没有传入。\n\n2. 参数类型错误（"
+      },
+      {
+        "section_id": "section-18",
+        "title": "12000019 同名provider已注册",
+        "level": 2,
+        "line_start": 361,
+        "line_end": 378,
+        "summary": "**错误信息**\n\nThe provider is already registered.\n\n**错误描述**\n\n注册的provider已存在。\n\n**可能原因**\n\n注册的provider已存在。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "12000020 依赖的模块报错",
+        "level": 2,
+        "line_start": 379,
+        "line_end": 396,
+        "summary": "**错误信息**\n\nThe provider operation failed.\n\n**错误描述**\n\n下游依赖的模块报错。\n\n**可能原因**\n\n下游依赖的模块报错。\n\n**处理步骤**\n\n根据下"
+      },
+      {
+        "section_id": "section-20",
+        "title": "12000021 Ukey PIN码被锁",
+        "level": 2,
+        "line_start": 397,
+        "line_end": 414,
+        "summary": "**错误信息**\n\nThe Ukey PIN is locked.\n\n**错误描述**\n\nUkey PIN码被锁。\n\n**可能原因**\n\nPIN码输入错误次数过多导致被锁。\n\n**处理步骤**\n\n咨"
+      },
+      {
+        "section_id": "section-21",
+        "title": "12000022 Ukey PIN码错误",
+        "level": 2,
+        "line_start": 415,
+        "line_end": 432,
+        "summary": "**错误信息**\n\nThe Ukey PIN is incorrect.\n\n**错误描述**\n\nUkey PIN码错误。\n\n**可能原因**\n\nPIN码输入错误。\n\n**处理步骤**\n\n输入正确PI"
+      },
+      {
+        "section_id": "section-22",
+        "title": "12000023 Ukey PIN码未认证",
+        "level": 2,
+        "line_start": 433,
+        "line_end": 450,
+        "summary": "**错误信息**\n\nThe Ukey PIN is not authenticated.\n\n**错误描述**\n\nUkey PIN码未认证。\n\n**可能原因**\n\n执行操作需要进行PIN码认证，但实际"
+      },
+      {
+        "section_id": "section-23",
+        "title": "12000024 设备或资源繁忙",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 468,
+        "summary": "**错误信息**\n\nThe provider or Ukey is busy.\n\n**错误描述**\n\n设备或资源繁忙。\n\n**可能原因**\n\n设备或资源繁忙。\n\n**处理步骤**\n\n再次重试或者插拔"
+      },
+      {
+        "section_id": "section-24",
+        "title": "12000025 资源超过限制",
+        "level": 2,
+        "line_start": 469,
+        "line_end": 486,
+        "summary": "**错误信息**\n\nThe resource exceeds the limit.\n\n**错误描述**\n\n资源超过限制。\n\n**可能原因**\n\n资源超过限制。\n\n**处理步骤**\n\n检查是否有未释放"
+      }
+    ]
+  }
+}

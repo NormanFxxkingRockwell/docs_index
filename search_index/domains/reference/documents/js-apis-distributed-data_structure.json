@@ -1,0 +1,212 @@
+{
+  "doc_id": "js-apis-distributed-data",
+  "title": "@ohos.data.distributedData (分布式数据管理)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/js-apis-distributed-data.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/js-apis-distributed-data.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@ding_dong_dong",
+    "designer": "@ding_dong_dong",
+    "tester": "@logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 @ohos.data.distributedData (分布式数据管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.data.distributedData (分布式数据管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 35,
+        "summary": "```js\nimport distributedData from '@ohos.data.distributedData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "distributedData.createKVManager",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 75,
+        "summary": "createKVManager(config: KVManagerConfig, callback: AsyncCallback&lt;KVManager&gt;): void\n\n创建一个KVMan"
+      },
+      {
+        "section_id": "section-3",
+        "title": "distributedData.createKVManager",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 117,
+        "summary": "createKVManager(config: KVManagerConfig): Promise&lt;KVManager&gt;\n\n创建一个KVManager对象实例，用于管理数据库对象，使用P"
+      },
+      {
+        "section_id": "section-4",
+        "title": "KVManagerConfig",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 128,
+        "summary": "提供KVManager实例的配置信息，包括调用方的Bundle名称和用户信息。\n\n**系统能力：**  SystemCapability.DistributedDataManager.KVStore"
+      },
+      {
+        "section_id": "section-5",
+        "title": "UserInfo",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 140,
+        "summary": "用户信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称 | 类型 | 必填 | 说明 |\n| ----"
+      },
+      {
+        "section_id": "section-6",
+        "title": "UserType",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 151,
+        "summary": "用户类型枚举。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称 | 值 | 说明 |\n| ----- |"
+      },
+      {
+        "section_id": "section-7",
+        "title": "KVManager",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 575,
+        "summary": "数据管理实例，用于获取KVStore的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](#distributeddatacreatekvmanager)构建一"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Options",
+        "level": 2,
+        "line_start": 576,
+        "line_end": 591,
+        "summary": "用于提供创建数据库的配置信息。\n\n\n| 名称  | 类型 | 必填   | 说明                    |\n| -----  | ------  | ------  | ------"
+      },
+      {
+        "section_id": "section-9",
+        "title": "KVStoreType",
+        "level": 2,
+        "line_start": 592,
+        "line_end": 603,
+        "summary": "KVStore数据库类型枚举。\n\n\n| 名称  | 值 | 说明                    |\n| ---   | ----  | ----------------------- |\n|"
+      },
+      {
+        "section_id": "section-10",
+        "title": "SecurityLevel",
+        "level": 2,
+        "line_start": 604,
+        "line_end": 617,
+        "summary": "数据库的安全级别枚举。\n\n| 名称  | 值 | 说明                    |\n| ---   | ----  | ----------------------- |\n| NO_L"
+      },
+      {
+        "section_id": "section-11",
+        "title": "Constants",
+        "level": 2,
+        "line_start": 618,
+        "line_end": 632,
+        "summary": "KVStore常量。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称  | 值 | 说明"
+      },
+      {
+        "section_id": "section-12",
+        "title": "Schema<sup>8+</sup>",
+        "level": 2,
+        "line_start": 633,
+        "line_end": 653,
+        "summary": "表示数据库模式，可以在创建或打开数据库时创建Schema对象并将它们放入[Options](#options)中。\n\n**系统能力：** SystemCapability.DistributedDa"
+      },
+      {
+        "section_id": "section-13",
+        "title": "FieldNode<sup>8+</sup>",
+        "level": 2,
+        "line_start": 654,
+        "line_end": 722,
+        "summary": "表示 Schema 实例的节点，提供定义存储在数据库中的值的方法。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Distri"
+      },
+      {
+        "section_id": "section-14",
+        "title": "KvStoreResultSet<sup>8+</sup>",
+        "level": 2,
+        "line_start": 723,
+        "line_end": 1181,
+        "summary": "提供获取KVStore数据库结果集的相关方法，包括查询和移动数据读取位置等。\n\n在调用KvStoreResultSet的方法前，需要先通过[getKVStore](#getkvstore)构建一个K"
+      },
+      {
+        "section_id": "section-15",
+        "title": "Query<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1182,
+        "line_end": 2079,
+        "summary": "使用谓词表示数据库查询，提供创建Query实例、查询数据库中的数据和添加谓词的方法。\n\n**系统能力：**  SystemCapability.DistributedDataManager.KVSt"
+      },
+      {
+        "section_id": "section-16",
+        "title": "KVStore",
+        "level": 2,
+        "line_start": 2080,
+        "line_end": 2920,
+        "summary": "KVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据同步完成的方法。\n\n在调用KVStore的方法前，需要先通过[getKVStore](#getkvstore)构建一个KVSt"
+      },
+      {
+        "section_id": "section-17",
+        "title": "SubscribeType",
+        "level": 2,
+        "line_start": 2921,
+        "line_end": 2932,
+        "summary": "订阅类型枚举。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称  | 值   | 说明"
+      },
+      {
+        "section_id": "section-18",
+        "title": "ChangeNotification",
+        "level": 2,
+        "line_start": 2933,
+        "line_end": 2945,
+        "summary": "数据变更时通知的对象，包括数据插入的数据、更新的数据、删除的数据和设备ID。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.C"
+      },
+      {
+        "section_id": "section-19",
+        "title": "Entry",
+        "level": 2,
+        "line_start": 2946,
+        "line_end": 2957,
+        "summary": "存储在数据库中的键值对。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称  | 类型   |必填   |"
+      },
+      {
+        "section_id": "section-20",
+        "title": "Value",
+        "level": 2,
+        "line_start": 2958,
+        "line_end": 2968,
+        "summary": "存储在数据库中的值对象。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称  | 类型   |必填   |"
+      },
+      {
+        "section_id": "section-21",
+        "title": "ValueType",
+        "level": 2,
+        "line_start": 2969,
+        "line_end": 2983,
+        "summary": "数据类型枚举。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称  | 值   | 说明"
+      },
+      {
+        "section_id": "section-22",
+        "title": "SingleKVStore",
+        "level": 2,
+        "line_start": 2984,
+        "line_end": 4088,
+        "summary": "单版本数据库，继承自[KVStore](#kvstore)数据库，提供查询数据和同步数据的方法。\n\n单版本数据库，不对数据所属设备进行区分，不同设备使用相同键写入数据会互相覆盖。比如，可以使用单版本"
+      },
+      {
+        "section_id": "section-23",
+        "title": "DeviceKVStore<sup>8+</sup>",
+        "level": 2,
+        "line_start": 4089,
+        "line_end": 5440,
+        "summary": "设备协同数据库，继承自KVStore，提供查询数据和同步数据的方法。\n\n设备协同数据库，以设备维度对数据进行区分，每台设备仅能写入和修改本设备的数据，其它设备的数据对其是只读的，无法修改其它设备的数"
+      },
+      {
+        "section_id": "section-24",
+        "title": "SyncMode",
+        "level": 2,
+        "line_start": 5441,
+        "line_end": 5452,
+        "summary": "同步模式枚举。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称       | 值     | 说明"
+      }
+    ]
+  }
+}

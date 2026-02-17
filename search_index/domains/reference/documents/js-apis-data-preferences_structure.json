@@ -1,0 +1,196 @@
+{
+  "doc_id": "js-apis-data-preferences",
+  "title": "@ohos.data.preferences (用户首选项)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/js-apis-data-preferences.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/js-apis-data-preferences.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@ding_dong_dong",
+    "designer": "@ding_dong_dong",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 @ohos.data.preferences (用户首选项)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.data.preferences (用户首选项)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { preferences } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "常量",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 38,
+        "summary": "**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.DistributedDataManager."
+      },
+      {
+        "section_id": "section-3",
+        "title": "preferences.getPreferences",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 110,
+        "summary": "getPreferences(context: Context, name: string, callback: AsyncCallback&lt;Preferences&gt;): void\n\n获"
+      },
+      {
+        "section_id": "section-4",
+        "title": "preferences.getPreferences",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 186,
+        "summary": "getPreferences(context: Context, name: string): Promise&lt;Preferences&gt;\n\n获取Preferences实例，使用Promi"
+      },
+      {
+        "section_id": "section-5",
+        "title": "preferences.getPreferences<sup>10+</sup>",
+        "level": 2,
+        "line_start": 187,
+        "line_end": 265,
+        "summary": "getPreferences(context: Context, options: Options, callback: AsyncCallback&lt;Preferences&gt;): voi"
+      },
+      {
+        "section_id": "section-6",
+        "title": "preferences.getPreferences<sup>10+</sup>",
+        "level": 2,
+        "line_start": 266,
+        "line_end": 346,
+        "summary": "getPreferences(context: Context, options: Options): Promise&lt;Preferences&gt;\n\n获取Preferences实例，使用P"
+      },
+      {
+        "section_id": "section-7",
+        "title": "preferences.getPreferencesSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 347,
+        "line_end": 413,
+        "summary": "getPreferencesSync(context: Context, options: Options): Preferences\n\n获取Preferences实例，此为同步接口。\n\n**原子化"
+      },
+      {
+        "section_id": "section-8",
+        "title": "preferences.deletePreferences",
+        "level": 2,
+        "line_start": 414,
+        "line_end": 486,
+        "summary": "deletePreferences(context: Context, name: string, callback: AsyncCallback&lt;void&gt;): void\n\n从缓存中删"
+      },
+      {
+        "section_id": "section-9",
+        "title": "preferences.deletePreferences",
+        "level": 2,
+        "line_start": 487,
+        "line_end": 562,
+        "summary": "deletePreferences(context: Context, name: string): Promise&lt;void&gt;\n\n从缓存中删除指定的Preferences实例，若Pre"
+      },
+      {
+        "section_id": "section-10",
+        "title": "preferences.deletePreferences<sup>10+</sup>",
+        "level": 2,
+        "line_start": 563,
+        "line_end": 641,
+        "summary": "deletePreferences(context: Context, options: Options, callback: AsyncCallback&lt;void&gt;): void\n\n从"
+      },
+      {
+        "section_id": "section-11",
+        "title": "preferences.deletePreferences<sup>10+</sup>",
+        "level": 2,
+        "line_start": 642,
+        "line_end": 723,
+        "summary": "deletePreferences(context: Context, options: Options): Promise&lt;void&gt;\n\n从缓存中删除指定的Preferences实例，"
+      },
+      {
+        "section_id": "section-12",
+        "title": "preferences.removePreferencesFromCache",
+        "level": 2,
+        "line_start": 724,
+        "line_end": 796,
+        "summary": "removePreferencesFromCache(context: Context, name: string, callback: AsyncCallback&lt;void&gt;): vo"
+      },
+      {
+        "section_id": "section-13",
+        "title": "preferences.removePreferencesFromCache",
+        "level": 2,
+        "line_start": 797,
+        "line_end": 872,
+        "summary": "removePreferencesFromCache(context: Context, name: string): Promise&lt;void&gt;\n\n从缓存中移除指定的Preferenc"
+      },
+      {
+        "section_id": "section-14",
+        "title": "preferences.removePreferencesFromCacheSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 873,
+        "line_end": 929,
+        "summary": "removePreferencesFromCacheSync(context: Context, name: string): void\n\n从缓存中移除指定的Preferences实例，此为同步接口"
+      },
+      {
+        "section_id": "section-15",
+        "title": "preferences.removePreferencesFromCache<sup>10+</sup>",
+        "level": 2,
+        "line_start": 930,
+        "line_end": 1007,
+        "summary": "removePreferencesFromCache(context: Context, options: Options, callback: AsyncCallback&lt;void&gt;)"
+      },
+      {
+        "section_id": "section-16",
+        "title": "preferences.removePreferencesFromCache<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1008,
+        "line_end": 1088,
+        "summary": "removePreferencesFromCache(context: Context, options: Options): Promise&lt;void&gt;\n\n从缓存中移除指定的Prefe"
+      },
+      {
+        "section_id": "section-17",
+        "title": "preferences.removePreferencesFromCacheSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1089,
+        "line_end": 1150,
+        "summary": "removePreferencesFromCacheSync(context: Context, options: Options):void\n\n从缓存中移除指定的Preferences实例，此为同"
+      },
+      {
+        "section_id": "section-18",
+        "title": "StorageType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1151,
+        "line_end": 1169,
+        "summary": "Preferences的存储模式枚举。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Dis"
+      },
+      {
+        "section_id": "section-19",
+        "title": "preferences.isStorageTypeSupported<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1170,
+        "line_end": 1210,
+        "summary": "isStorageTypeSupported(type: StorageType): boolean\n\n判断当前平台是否支持传入的存储模式，此为同步接口。如果当前平台支持传入的存储模式时，该接口返回t"
+      },
+      {
+        "section_id": "section-20",
+        "title": "Options<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1211,
+        "line_end": 1223,
+        "summary": "Preferences实例配置选项。\n\n**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-21",
+        "title": "Preferences",
+        "level": 2,
+        "line_start": 1224,
+        "line_end": 2398,
+        "summary": "首选项实例，提供获取和修改存储数据的接口。\n\n下列接口都需先使用[preferences.getPreferences](#preferencesgetpreferences)获取到Preferen"
+      },
+      {
+        "section_id": "section-22",
+        "title": "ValueType",
+        "level": 2,
+        "line_start": 2399,
+        "line_end": 2420,
+        "summary": "type ValueType = number | string | boolean | Array\\<number> | Array\\<string> | Array\\<boolean> | Ui"
+      }
+    ]
+  }
+}

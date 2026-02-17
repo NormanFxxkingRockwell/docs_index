@@ -1,0 +1,100 @@
+{
+  "doc_id": "js-apis-effectKit",
+  "title": "@ohos.effectKit (图像效果)",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-effectKit.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-effectKit.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Multimedia",
+    "owner": "@hanamaru",
+    "designer": "@gaoweihua",
+    "tester": "@zhaoxiaoguang2",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Multimedia 模块的 @ohos.effectKit (图像效果)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.effectKit (图像效果)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { effectKit } from \"@kit.ArkGraphics2D\";\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "effectKit.createEffect",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 70,
+        "summary": "createEffect(source: image.PixelMap): Filter\n\n通过传入的PixelMap创建Filter实例。\n\n**卡片能力：** 从API version 12开始，"
+      },
+      {
+        "section_id": "section-3",
+        "title": "effectKit.createColorPicker",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 128,
+        "summary": "createColorPicker(source: image.PixelMap): Promise\\<ColorPicker>\n\n通过传入的PixelMap创建ColorPicker实例，使用Pr"
+      },
+      {
+        "section_id": "section-4",
+        "title": "effectKit.createColorPicker<sup>10+</sup>",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 187,
+        "summary": "createColorPicker(source: image.PixelMap, region: Array\\<number>): Promise\\<ColorPicker>\n\n通过传入的Pixe"
+      },
+      {
+        "section_id": "section-5",
+        "title": "effectKit.createColorPicker",
+        "level": 2,
+        "line_start": 188,
+        "line_end": 240,
+        "summary": "createColorPicker(source: image.PixelMap, callback: AsyncCallback\\<ColorPicker>): void\n\n通过传入的PixelM"
+      },
+      {
+        "section_id": "section-6",
+        "title": "effectKit.createColorPicker<sup>10+</sup>",
+        "level": 2,
+        "line_start": 241,
+        "line_end": 294,
+        "summary": "createColorPicker(source: image.PixelMap, region:Array\\<number>, callback: AsyncCallback\\<ColorPick"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Color",
+        "level": 2,
+        "line_start": 295,
+        "line_end": 311,
+        "summary": "颜色类，用于保存取色的结果。\n\n**卡片能力：** 从API version 12开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 12开始，该接口支"
+      },
+      {
+        "section_id": "section-8",
+        "title": "TileMode<sup>14+</sup>",
+        "level": 2,
+        "line_start": 312,
+        "line_end": 324,
+        "summary": "着色器效果平铺模式的枚举。\n\n**系统能力：** SystemCapability.Multimedia.Image.Core\n\n| 名称                   | 值   | 说明"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ColorPicker",
+        "level": 2,
+        "line_start": 325,
+        "line_end": 672,
+        "summary": "取色类，用于从一张图像数据中获取它的主要颜色。在调用ColorPicker的方法前，需要先通过[createColorPicker](#effectkitcreatecolorpicker)创建一个"
+      },
+      {
+        "section_id": "section-10",
+        "title": "Filter",
+        "level": 2,
+        "line_start": 673,
+        "line_end": 1326,
+        "summary": "图像效果类，用于将指定的效果添加到输入图像中。在调用Filter的方法前，需要先通过[createEffect](#effectkitcreateeffect)创建一个Filter实例。\n\n###"
+      }
+    ]
+  }
+}

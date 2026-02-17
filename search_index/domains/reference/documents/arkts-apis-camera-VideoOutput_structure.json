@@ -1,0 +1,164 @@
+{
+  "doc_id": "arkts-apis-camera-VideoOutput",
+  "title": "Interface (VideoOutput)",
+  "path": "zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-VideoOutput.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-VideoOutput.md",
+  "metadata": {
+    "kit": "Camera Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qano",
+    "designer": "@leo_ysl",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Camera Kit Multimedia 模块的 Interface (VideoOutput)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (VideoOutput)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { camera } from '@kit.CameraKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "start",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 61,
+        "summary": "start(callback: AsyncCallback\\<void\\>): void\n\n启动录制，通过注册回调函数获取结果。使用callback异步回调。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-3",
+        "title": "start",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 100,
+        "summary": "start(): Promise\\<void\\>\n\n启动录制。使用Promise异步回调。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系"
+      },
+      {
+        "section_id": "section-4",
+        "title": "stop",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 126,
+        "summary": "stop(callback: AsyncCallback\\<void\\>): void\n\n结束录制，通过注册回调函数获取结果。使用callback异步回调。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-5",
+        "title": "stop",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 156,
+        "summary": "stop(): Promise\\<void\\>\n\n结束录制。使用Promise异步回调。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-6",
+        "title": "on('frameStart')",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 195,
+        "summary": "on(type: 'frameStart', callback: AsyncCallback\\<void\\>): void\n\n监听录像开始，通过注册回调函数获取结果。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "off('frameStart')",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 225,
+        "summary": "off(type: 'frameStart', callback?: AsyncCallback\\<void\\>): void\n\n注销监听录像开始。\n\n> **说明：**\n>\n> 当前注册监听接口，"
+      },
+      {
+        "section_id": "section-8",
+        "title": "on('frameEnd')",
+        "level": 2,
+        "line_start": 226,
+        "line_end": 260,
+        "summary": "on(type: 'frameEnd', callback: AsyncCallback\\<void\\>): void\n\n监听录像结束，通过注册回调函数获取结果。使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-9",
+        "title": "off('frameEnd')",
+        "level": 2,
+        "line_start": 261,
+        "line_end": 285,
+        "summary": "off(type: 'frameEnd', callback?: AsyncCallback\\<void\\>): void\n\n注销监听录像结束。\n\n**原子化服务API：** 从API versio"
+      },
+      {
+        "section_id": "section-10",
+        "title": "on('error')",
+        "level": 2,
+        "line_start": 286,
+        "line_end": 320,
+        "summary": "on(type: 'error', callback: ErrorCallback): void\n\n监听录像输出发生错误，通过注册回调函数获取结果。使用callback异步回调。\n\n> **说明：*"
+      },
+      {
+        "section_id": "section-11",
+        "title": "off('error')",
+        "level": 2,
+        "line_start": 321,
+        "line_end": 345,
+        "summary": "off(type: 'error', callback?: ErrorCallback): void\n\n注销监听录像输出发生错误。\n\n**原子化服务API：** 从API version 19开始，"
+      },
+      {
+        "section_id": "section-12",
+        "title": "getSupportedFrameRates<sup>12+</sup>",
+        "level": 2,
+        "line_start": 346,
+        "line_end": 370,
+        "summary": "getSupportedFrameRates(): Array\\<FrameRateRange\\>\n\n查询支持的帧率范围。\n\n**原子化服务API：** 从API version 19开始，该接口支"
+      },
+      {
+        "section_id": "section-13",
+        "title": "setFrameRate<sup>12+</sup>",
+        "level": 2,
+        "line_start": 371,
+        "line_end": 412,
+        "summary": "setFrameRate(minFps: number, maxFps: number): void\n\n设置录像流帧率范围，设置的范围必须在支持的帧率范围内。\n\n进行设置前，可通过[getSuppo"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getActiveFrameRate<sup>12+</sup>",
+        "level": 2,
+        "line_start": 413,
+        "line_end": 439,
+        "summary": "getActiveFrameRate(): FrameRateRange\n\n获取已设置的帧率范围。\n\n使用[setFrameRate](#setframerate12)对录像流设置过帧率后可查询。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "getActiveProfile<sup>12+</sup>",
+        "level": 2,
+        "line_start": 440,
+        "line_end": 481,
+        "summary": "getActiveProfile(): VideoProfile\n\n获取当前生效的配置信息。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**"
+      },
+      {
+        "section_id": "section-16",
+        "title": "isMirrorSupported<sup>15+</sup>",
+        "level": 2,
+        "line_start": 482,
+        "line_end": 506,
+        "summary": "isMirrorSupported(): boolean\n\n查询是否支持镜像录像。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-17",
+        "title": "enableMirror<sup>15+</sup>",
+        "level": 2,
+        "line_start": 507,
+        "line_end": 553,
+        "summary": "enableMirror(enabled: boolean): void\n\n启用/关闭镜像录像。\n\n- 调用该接口前，需要通过[isMirrorSupported](#ismirrorsupport"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getVideoRotation<sup>12+</sup>",
+        "level": 2,
+        "line_start": 554,
+        "line_end": 653,
+        "summary": "getVideoRotation(deviceDegree?: number): ImageRotation\n\n获取录像旋转角度。\n\n- 设备自然方向：设备默认使用方向。例如，直板机默认使用方向为竖"
+      }
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "doc_id": "arkts-apis-media-f",
+  "title": "Functions",
+  "path": "zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-f.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-f.md",
+  "metadata": {
+    "kit": "Media Kit",
+    "subsystem": "Multimedia",
+    "owner": "@wang-haizhou6",
+    "designer": "@HmQQQ",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Kit Multimedia 模块的 Functions，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Functions",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 18,
+        "summary": "```ts\nimport { media } from '@kit.MediaKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "media.createAVPlayer<sup>9+</sup>",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 64,
+        "summary": "createAVPlayer(callback: AsyncCallback\\<AVPlayer>): void\n\n创建音视频播放实例。使用callback异步回调。\n\n> **说明：**\n>\n>"
+      },
+      {
+        "section_id": "section-3",
+        "title": "media.createAVPlayer<sup>9+</sup>",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 112,
+        "summary": "createAVPlayer(): Promise\\<AVPlayer>\n\n异步方式创建音视频播放实例。使用Promise异步回调。\n\n> **说明：**\n>\n> - 推荐单个应用创建的音视频播放实"
+      },
+      {
+        "section_id": "section-4",
+        "title": "media.createAVRecorder<sup>9+</sup>",
+        "level": 2,
+        "line_start": 113,
+        "line_end": 154,
+        "summary": "createAVRecorder(callback: AsyncCallback\\<AVRecorder>): void\n\n创建音视频录制实例。使用callback异步回调。\n\n> **说明：**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "media.createAVRecorder<sup>9+</sup>",
+        "level": 2,
+        "line_start": 155,
+        "line_end": 199,
+        "summary": "createAVRecorder(): Promise\\<AVRecorder>\n\n创建音视频录制实例。使用Promise异步回调。\n\n> **说明：**\n>\n> 应用可创建多个音视频录制实例，但由"
+      },
+      {
+        "section_id": "section-6",
+        "title": "media.createAVTranscoder<sup>12+</sup>",
+        "level": 2,
+        "line_start": 200,
+        "line_end": 245,
+        "summary": "createAVTranscoder(): Promise\\<AVTranscoder>\n\n创建视频转码实例。使用Promise异步回调。\n\n> **说明：**\n>\n> 可创建的视频转码实例不能超过"
+      },
+      {
+        "section_id": "section-7",
+        "title": "media.createAVMetadataExtractor<sup>11+</sup>",
+        "level": 2,
+        "line_start": 246,
+        "line_end": 283,
+        "summary": "createAVMetadataExtractor(callback: AsyncCallback\\<AVMetadataExtractor>): void\n\n创建AVMetadataExtract"
+      },
+      {
+        "section_id": "section-8",
+        "title": "media.createAVMetadataExtractor<sup>11+</sup>",
+        "level": 2,
+        "line_start": 284,
+        "line_end": 323,
+        "summary": "createAVMetadataExtractor(): Promise\\<AVMetadataExtractor>\n\n创建AVMetadataExtractor实例。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "media.createSoundPool<sup>10+</sup>",
+        "level": 2,
+        "line_start": 324,
+        "line_end": 374,
+        "summary": "createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo, callback: AsyncCallba"
+      },
+      {
+        "section_id": "section-10",
+        "title": "media.createSoundPool<sup>10+</sup>",
+        "level": 2,
+        "line_start": 375,
+        "line_end": 432,
+        "summary": "createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo): Promise\\<SoundPool>"
+      },
+      {
+        "section_id": "section-11",
+        "title": "media.createAVScreenCaptureRecorder<sup>12+</sup>",
+        "level": 2,
+        "line_start": 433,
+        "line_end": 470,
+        "summary": "createAVScreenCaptureRecorder(): Promise\\<AVScreenCaptureRecorder>\n\n创建屏幕录制实例，使用Promise异步回调。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-12",
+        "title": "media.createAVImageGenerator<sup>12+</sup>",
+        "level": 2,
+        "line_start": 471,
+        "line_end": 508,
+        "summary": "createAVImageGenerator(callback: AsyncCallback\\<AVImageGenerator>): void\n\n创建AVImageGenerator实例。使用ca"
+      },
+      {
+        "section_id": "section-13",
+        "title": "media.createAVImageGenerator<sup>12+</sup>",
+        "level": 2,
+        "line_start": 509,
+        "line_end": 548,
+        "summary": "createAVImageGenerator(): Promise\\<AVImageGenerator>\n\n创建AVImageGenerator对象。使用Promise异步回调。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-14",
+        "title": "media.createMediaSourceWithUrl<sup>12+</sup>",
+        "level": 2,
+        "line_start": 549,
+        "line_end": 611,
+        "summary": "createMediaSourceWithUrl(url: string, headers?: Record\\<string, string>): MediaSource\n\n创建流媒体预下载媒体来源"
+      },
+      {
+        "section_id": "section-15",
+        "title": "media.createMediaSourceWithStreamData<sup>19+</sup>",
+        "level": 2,
+        "line_start": 612,
+        "line_end": 643,
+        "summary": "createMediaSourceWithStreamData(streams: Array\\<MediaStream>): MediaSource\n\n创建流媒体多码率媒体来源实例方法，当前仅支持H"
+      },
+      {
+        "section_id": "section-16",
+        "title": "media.createAudioPlayer<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 644,
+        "line_end": 666,
+        "summary": "createAudioPlayer(): AudioPlayer\n\n同步方式创建音频播放实例。\n\n> **说明：**\n> 从API version 6开始支持，从API version 9开始废弃，"
+      },
+      {
+        "section_id": "section-17",
+        "title": "media.createVideoPlayer<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 667,
+        "line_end": 699,
+        "summary": "createVideoPlayer(callback: AsyncCallback\\<VideoPlayer>): void\n\n异步方式创建视频播放实例，使用callback异步回调。\n\n> **说"
+      },
+      {
+        "section_id": "section-18",
+        "title": "media.createVideoPlayer<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 700,
+        "line_end": 734,
+        "summary": "createVideoPlayer(): Promise\\<VideoPlayer>\n\n异步方式创建视频播放实例，通过Promise获取返回值。\n\n> **说明：**\n> 从API version"
+      },
+      {
+        "section_id": "section-19",
+        "title": "media.createAudioRecorder<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 735,
+        "line_end": 758,
+        "summary": "createAudioRecorder(): AudioRecorder\n\n创建音频录制的实例来控制音频的录制。一台设备只允许创建一个录制实例。\n\n> **说明：**\n> 从API version"
+      }
+    ]
+  }
+}

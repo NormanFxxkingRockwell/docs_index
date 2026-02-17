@@ -1,0 +1,276 @@
+{
+  "doc_id": "js-apis-app-form-formObserver-sys",
+  "title": "@ohos.app.form.formObserver (formObserver)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-form-kit/js-apis-app-form-formObserver-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-form-kit/js-apis-app-form-formObserver-sys.md",
+  "metadata": {
+    "kit": "Form Kit",
+    "subsystem": "Ability",
+    "owner": "@cx983299475",
+    "designer": "@xueyulong",
+    "tester": "@yangyuecheng",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "Form Kit Ability 模块的 @ohos.app.form.formObserver (formObserver)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.form.formObserver (formObserver)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { formObserver } from '@kit.FormKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "on('formAdd')",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 59,
+        "summary": "on(type: 'formAdd', observerCallback: Callback&lt;formInfo.RunningFormInfo&gt;): void\n\n订阅卡片新增事件。使用"
+      },
+      {
+        "section_id": "section-3",
+        "title": "on('formAdd')",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 100,
+        "summary": "on(type: 'formAdd', hostBundleName: string, observerCallback: Callback&lt;formInfo.RunningFormInfo"
+      },
+      {
+        "section_id": "section-4",
+        "title": "off('formAdd')",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 146,
+        "summary": "off(type: 'formAdd', hostBundleName?: string, observerCallback?: Callback<formInfo.RunningFormInfo>"
+      },
+      {
+        "section_id": "section-5",
+        "title": "on('formRemove')",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 184,
+        "summary": "on(type: 'formRemove', observerCallback: Callback&lt;formInfo.RunningFormInfo&gt;): void\n\n订阅卡片删除事件"
+      },
+      {
+        "section_id": "section-6",
+        "title": "on('formRemove')",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 225,
+        "summary": "on(type: 'formRemove', hostBundleName: string, observerCallback: Callback&lt;formInfo.RunningFormI"
+      },
+      {
+        "section_id": "section-7",
+        "title": "off('formRemove')",
+        "level": 2,
+        "line_start": 226,
+        "line_end": 271,
+        "summary": "off(type: 'formRemove', hostBundleName?: string, observerCallback?: Callback&lt;formInfo.RunningFor"
+      },
+      {
+        "section_id": "section-8",
+        "title": "on('notifyVisible')",
+        "level": 2,
+        "line_start": 272,
+        "line_end": 313,
+        "summary": "on(type: 'notifyVisible', observerCallback: Callback&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt;)"
+      },
+      {
+        "section_id": "section-9",
+        "title": "on('notifyVisible')",
+        "level": 2,
+        "line_start": 314,
+        "line_end": 359,
+        "summary": "on(type: 'notifyVisible', hostBundleName: string, observerCallback: Callback&lt;Array&lt;formInfo."
+      },
+      {
+        "section_id": "section-10",
+        "title": "off('notifyVisible')",
+        "level": 2,
+        "line_start": 360,
+        "line_end": 408,
+        "summary": "off(type: 'notifyVisible', hostBundleName?: string, observerCallback?: Callback&lt;Array&lt;formIn"
+      },
+      {
+        "section_id": "section-11",
+        "title": "on('notifyInvisible')",
+        "level": 2,
+        "line_start": 409,
+        "line_end": 451,
+        "summary": "on(type: 'notifyInvisible', observerCallback: Callback&lt;Array&lt;formInfo.RunningFormInfo&gt;>):"
+      },
+      {
+        "section_id": "section-12",
+        "title": "on('notifyInvisible')",
+        "level": 2,
+        "line_start": 452,
+        "line_end": 496,
+        "summary": "on(type: 'notifyInvisible', hostBundleName: string, observerCallback: Callback&lt;Array&lt;formInf"
+      },
+      {
+        "section_id": "section-13",
+        "title": "off('notifyInvisible')",
+        "level": 2,
+        "line_start": 497,
+        "line_end": 546,
+        "summary": "off(type: 'notifyInvisible', hostBundleName?: string, observerCallback?: Callback&lt;Array&lt;form"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getRunningFormInfos",
+        "level": 2,
+        "line_start": 547,
+        "line_end": 596,
+        "summary": "getRunningFormInfos(callback: AsyncCallback&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt;, hostBundl"
+      },
+      {
+        "section_id": "section-15",
+        "title": "getRunningFormInfos<sup>11+</sup>",
+        "level": 2,
+        "line_start": 597,
+        "line_end": 647,
+        "summary": "getRunningFormInfos(callback: AsyncCallback&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt;, isUnusedI"
+      },
+      {
+        "section_id": "section-16",
+        "title": "getRunningFormInfos",
+        "level": 2,
+        "line_start": 648,
+        "line_end": 698,
+        "summary": "getRunningFormInfos(hostBundleName?: string):  Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt;"
+      },
+      {
+        "section_id": "section-17",
+        "title": "getRunningFormInfos<sup>11+</sup>",
+        "level": 2,
+        "line_start": 699,
+        "line_end": 750,
+        "summary": "getRunningFormInfos(isUnusedIncluded: boolean, hostBundleName?: string):  Promise&lt;Array&lt;formI"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getRunningFormInfosByFilter",
+        "level": 2,
+        "line_start": 751,
+        "line_end": 811,
+        "summary": "getRunningFormInfosByFilter(formProviderFilter: formInfo.FormProviderFilter): Promise&lt;Array&lt;f"
+      },
+      {
+        "section_id": "section-19",
+        "title": "getRunningFormInfosByFilter",
+        "level": 2,
+        "line_start": 812,
+        "line_end": 871,
+        "summary": "getRunningFormInfosByFilter(formProviderFilter: formInfo.FormProviderFilter, callback: AsyncCallbac"
+      },
+      {
+        "section_id": "section-20",
+        "title": "getRunningFormInfoById",
+        "level": 2,
+        "line_start": 872,
+        "line_end": 926,
+        "summary": "getRunningFormInfoById(formId: string): Promise&lt;formInfo.RunningFormInfo&gt;\n\n根据formId查询已添加的卡片信息"
+      },
+      {
+        "section_id": "section-21",
+        "title": "getRunningFormInfoById<sup>11+</sup>",
+        "level": 2,
+        "line_start": 927,
+        "line_end": 982,
+        "summary": "getRunningFormInfoById(formId: string, isUnusedIncluded: boolean): Promise&lt;formInfo.RunningFormI"
+      },
+      {
+        "section_id": "section-22",
+        "title": "getRunningFormInfoById",
+        "level": 2,
+        "line_start": 983,
+        "line_end": 1034,
+        "summary": "getRunningFormInfoById(formId: string, callback: AsyncCallback&lt;formInfo.RunningFormInfo&gt;): vo"
+      },
+      {
+        "section_id": "section-23",
+        "title": "getRunningFormInfoById<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1035,
+        "line_end": 1087,
+        "summary": "getRunningFormInfoById(formId: string, isUnusedIncluded: boolean, callback: AsyncCallback&lt;formIn"
+      },
+      {
+        "section_id": "section-24",
+        "title": "on('router')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1088,
+        "line_end": 1124,
+        "summary": "on(type: 'router', observerCallback: Callback&lt;formInfo.RunningFormInfo&gt;): void\n\n订阅卡片router事件"
+      },
+      {
+        "section_id": "section-25",
+        "title": "on('router')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1125,
+        "line_end": 1163,
+        "summary": "on(type: 'router', hostBundleName: string, observerCallback: Callback&lt;formInfo.RunningFormInfo&"
+      },
+      {
+        "section_id": "section-26",
+        "title": "off('router')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1164,
+        "line_end": 1202,
+        "summary": "off(type: 'router', hostBundleName?: string, observerCallback?: Callback&lt;formInfo.RunningFormIn"
+      },
+      {
+        "section_id": "section-27",
+        "title": "on('message')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1203,
+        "line_end": 1239,
+        "summary": "on(type: 'message', observerCallback: Callback&lt;formInfo.RunningFormInfo&gt;): void\n\n订阅卡片message"
+      },
+      {
+        "section_id": "section-28",
+        "title": "on('message')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1240,
+        "line_end": 1278,
+        "summary": "on(type: 'message', hostBundleName: string, observerCallback: Callback&lt;formInfo.RunningFormInfo"
+      },
+      {
+        "section_id": "section-29",
+        "title": "off('message')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1279,
+        "line_end": 1317,
+        "summary": "off(type: 'message', hostBundleName?: string, observerCallback?: Callback&lt;formInfo.RunningFormI"
+      },
+      {
+        "section_id": "section-30",
+        "title": "on('call')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1318,
+        "line_end": 1354,
+        "summary": "on(type: 'call', observerCallback: Callback&lt;formInfo.RunningFormInfo&gt;): void\n\n订阅卡片call事件。使用c"
+      },
+      {
+        "section_id": "section-31",
+        "title": "on('call')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1355,
+        "line_end": 1393,
+        "summary": "on(type: 'call', hostBundleName: string, observerCallback: Callback&lt;formInfo.RunningFormInfo&gt"
+      },
+      {
+        "section_id": "section-32",
+        "title": "off('call')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1394,
+        "line_end": 1431,
+        "summary": "off(type: 'call', hostBundleName?: string, observerCallback?: Callback&lt;formInfo.RunningFormInfo"
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-app-ability-wantAgent-sys",
+  "title": "@ohos.app.ability.wantAgent (WantAgent模块)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-wantAgent-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-wantAgent-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@linjunjie6",
+    "designer": "@li-weifeng2024",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.wantAgent (WantAgent模块)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.wantAgent (WantAgent模块)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { WantAgent } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "WantAgent.getWant",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 122,
+        "summary": "getWant(agent: WantAgent, callback: AsyncCallback\\<Want\\>): void\n\n获取WantAgent对象的want。使用callback异步回调"
+      },
+      {
+        "section_id": "section-3",
+        "title": "WantAgent.getWant",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 222,
+        "summary": "getWant(agent: WantAgent): Promise\\<Want\\>\n\n获取WantAgent对象的want。使用Promise异步回调。\n\n**系统能力**：SystemCapab"
+      },
+      {
+        "section_id": "section-4",
+        "title": "WantAgent.setWantAgentMultithreading<sup>18+</sup>",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 305,
+        "summary": "setWantAgentMultithreading(isMultithreadingSupported: boolean) : void\n\n开启或者关闭WantAgent多线程传递功能。\n\n**系"
+      },
+      {
+        "section_id": "section-5",
+        "title": "wantAgent.triggerAsync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 418,
+        "summary": "triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Context): Promise\\<CompleteData\\>"
+      },
+      {
+        "section_id": "section-6",
+        "title": "wantAgent.createLocalWantAgent<sup>20+</sup>",
+        "level": 2,
+        "line_start": 419,
+        "line_end": 498,
+        "summary": "createLocalWantAgent(info: LocalWantAgentInfo): WantAgent\n\n创建本地WantAgent实例。\n\n> **说明：**\n> \n> - 本接口创建"
+      },
+      {
+        "section_id": "section-7",
+        "title": "wantAgent.isLocalWantAgent<sup>20+</sup>",
+        "level": 2,
+        "line_start": 499,
+        "line_end": 574,
+        "summary": "isLocalWantAgent(agent: WantAgent): boolean\n\n判断WantAgent实例是否为本地实例。\n\n**系统能力**：SystemCapability.Abili"
+      },
+      {
+        "section_id": "section-8",
+        "title": "OperationType",
+        "level": 2,
+        "line_start": 575,
+        "line_end": 583,
+        "summary": "表示WantAgent支持的操作类型。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Core\n\n| 名称"
+      }
+    ]
+  }
+}

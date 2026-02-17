@@ -1,0 +1,108 @@
+{
+  "doc_id": "errorcode-cert",
+  "title": "证书错误码",
+  "path": "zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md",
+  "metadata": {
+    "kit": "Device Certificate Kit",
+    "subsystem": "Security",
+    "owner": "@zxz--3",
+    "designer": "@lanming",
+    "tester": "@PAFT",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Device Certificate Kit Security 模块的 证书错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "证书错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "19020001 内存错误",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 32,
+        "summary": "**错误信息**\n\nMemory malloc failed.\n\n**错误描述**\n\n内存错误。\n\n**可能原因**\n\n当前系统内存分配失败。\n\n**处理步骤**\n\n1. 检查当前系统功能是否正常。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "19020002 运行时错误",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 50,
+        "summary": "**错误信息**\n\nRuntime error.\n\n**错误描述**\n\n运行时外部错误。\n\n**可能原因**\n\n系统出现的不可预料的错误。\n\n**处理步骤**\n\n检查当前系统功能是否正常。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "19020003 参数检查失败",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 68,
+        "summary": "**错误信息**\n\nIndicates that parameter check failed.\n\n**错误描述**\n\n参数检查失败。\n\n**可能原因**\n\n输入枚举值不在范围内。\n\n**处理步骤*"
+      },
+      {
+        "section_id": "section-4",
+        "title": "19030001 算法相关的操作错误，调用三方算法库API出错",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 87,
+        "summary": "**错误信息**\n\nCrypto operation error.\n\n**错误描述**\n\n调用三方算法库API出错。\n\n**可能原因**\n\n加解密算法框架与三方算法库交互时，出现错误。\n\n**处理步"
+      },
+      {
+        "section_id": "section-5",
+        "title": "19030002 证书签名验证错误",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 105,
+        "summary": "**错误信息**\n\nThe certificate signature verification failed.\n\n**错误描述**\n\n证书签名验证错误。\n\n**可能原因**\n\n证书校验过程中，证书"
+      },
+      {
+        "section_id": "section-6",
+        "title": "19030003 证书尚未生效",
+        "level": 2,
+        "line_start": 106,
+        "line_end": 125,
+        "summary": "**错误信息**\n\nThe certificate has not taken effect.\n\n**错误描述**\n\n证书尚未生效。\n\n**可能原因**\n\n证书尚未生效。证书的生效时间晚于当前系统时"
+      },
+      {
+        "section_id": "section-7",
+        "title": "19030004 证书过期",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 145,
+        "summary": "**错误信息**\n\nThe certificate has expired.\n\n**错误描述**\n\n证书过期。\n\n**可能原因**\n\n证书失效。基于当前系统时间或者业务指定的时间点，证书已经失效。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "19030005 无法获取证书的颁发者",
+        "level": 2,
+        "line_start": 146,
+        "line_end": 163,
+        "summary": "**错误信息**\n\nFailed to obtain the certificate issuer.\n\n**错误描述**\n\n无法获取证书的颁发者。\n\n**可能原因**\n\n证书校验过程中，无法获取当前"
+      },
+      {
+        "section_id": "section-9",
+        "title": "19030006 证书的密钥用途不包括证书签名",
+        "level": 2,
+        "line_start": 164,
+        "line_end": 181,
+        "summary": "**错误信息**\n\nThe key cannot be used for signing a certificate.\n\n**错误描述**\n\n证书的密钥用途不含证书签名。\n\n**可能原因**\n\n证书"
+      },
+      {
+        "section_id": "section-10",
+        "title": "19030007 证书的密钥用途不包括数字签名",
+        "level": 2,
+        "line_start": 182,
+        "line_end": 199,
+        "summary": "**错误信息**\n\nThe key cannot be used for digital signature.\n\n**错误描述**\n\n证书的密钥用途不含数字签名。\n\n**可能原因**\n\n证书的密钥用"
+      },
+      {
+        "section_id": "section-11",
+        "title": "19030008 私钥密码错误",
+        "level": 2,
+        "line_start": 200,
+        "line_end": 216,
+        "summary": "**错误信息**\n\nThe password may be wrong.\n\n**错误描述**\n\n私钥密码错误。\n\n**可能原因**\n\n私钥密码错误。\n\n**处理步骤**\n\n检查私钥的密码是否正确。"
+      }
+    ]
+  }
+}

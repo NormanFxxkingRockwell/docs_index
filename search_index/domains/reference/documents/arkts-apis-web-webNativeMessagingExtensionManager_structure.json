@@ -1,0 +1,68 @@
+{
+  "doc_id": "arkts-apis-web-webNativeMessagingExtensionManager",
+  "title": "@ohos.web.webNativeMessagingExtensionManager (Web Native Messaging Extension Manager)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-apis-web-webNativeMessagingExtensionManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-apis-web-webNativeMessagingExtensionManager.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@weixin_41848015",
+    "designer": "@libing23232323",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 @ohos.web.webNativeMessagingExtensionManager (Web Native Messaging Extension Manager)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.web.webNativeMessagingExtensionManager (Web Native Messaging Extension Manager)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { webNativeMessagingExtensionManager } from '@kit.ArkWeb';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ConnectionNativeInfo",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 36,
+        "summary": "表示Web原生消息连接的连接信息。\n\n**系统能力:** SystemCapability.Web.Webview.Core\n\n**模型约束:** 此接口仅可在Stage模型下使用。\n\n| 名称 |"
+      },
+      {
+        "section_id": "section-3",
+        "title": "NmErrorCode",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 48,
+        "summary": "Native Messaging的错误列表。\n\n**系统能力**：SystemCapability.Web.Webview.Core\n\n| 名称          | 值 | 说明"
+      },
+      {
+        "section_id": "section-4",
+        "title": "WebExtensionConnectionCallback",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 228,
+        "summary": "### onConnect\nonConnect(connection: ConnectionNativeInfo): void\n\n建立连接时的回调函数。\n\n**系统能力:** SystemCapab"
+      },
+      {
+        "section_id": "section-5",
+        "title": "webNativeMessagingExtensionManager.connectNative",
+        "level": 2,
+        "line_start": 229,
+        "line_end": 305,
+        "summary": "connectNative(context: UIAbilityContext, want: Want, callback: WebExtensionConnectionCallback): numb"
+      },
+      {
+        "section_id": "section-6",
+        "title": "webNativeMessagingExtensionManager.disconnectNative",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 366,
+        "summary": "disconnectNative(connectionId: number): Promise&lt;void&gt;\n\n断开指定Web原生消息扩展连接。\n\n**需要权限**：ohos.permiss"
+      }
+    ]
+  }
+}

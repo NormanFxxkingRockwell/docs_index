@@ -1,0 +1,548 @@
+{
+  "doc_id": "arkts-apis-uicontext-uiobserver",
+  "title": "Class (UIObserver)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkts-apis-uicontext-uiobserver.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkts-apis-uicontext-uiobserver.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@piggyguy; @xiang-shouxing; @yangfan229",
+    "designer": "@piggyguy; @xiang-shouxing; @yangfan229",
+    "tester": "@fredyuan912",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 Class (UIObserver)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (UIObserver)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "on('navDestinationUpdate')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 94,
+        "summary": "on(type: 'navDestinationUpdate', callback: Callback\\<observer.NavDestinationInfo\\>): void\n\n监听[NavDe"
+      },
+      {
+        "section_id": "section-2",
+        "title": "off('navDestinationUpdate')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 115,
+        "summary": "off(type: 'navDestinationUpdate', callback?: Callback\\<observer.NavDestinationInfo\\>): void\n\n取消监听[N"
+      },
+      {
+        "section_id": "section-3",
+        "title": "on('navDestinationUpdate')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 116,
+        "line_end": 190,
+        "summary": "on(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback: Callback\\<observ"
+      },
+      {
+        "section_id": "section-4",
+        "title": "off('navDestinationUpdate')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 191,
+        "line_end": 212,
+        "summary": "off(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback?: Callback\\<obse"
+      },
+      {
+        "section_id": "section-5",
+        "title": "on('navDestinationUpdateByUniqueId')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 213,
+        "line_end": 299,
+        "summary": "on(type: 'navDestinationUpdateByUniqueId', navigationUniqueId: number, callback: Callback\\<observer"
+      },
+      {
+        "section_id": "section-6",
+        "title": "off('navDestinationUpdateByUniqueId')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 300,
+        "line_end": 321,
+        "summary": "off(type: 'navDestinationUpdateByUniqueId', navigationUniqueId: number, callback?: Callback\\<observ"
+      },
+      {
+        "section_id": "section-7",
+        "title": "on('scrollEvent')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 322,
+        "line_end": 413,
+        "summary": "on(type: 'scrollEvent', callback: Callback\\<observer.ScrollEventInfo\\>): void\n\n监听所有滚动组件滚动事件的开始和结束。滚"
+      },
+      {
+        "section_id": "section-8",
+        "title": "off('scrollEvent')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 414,
+        "line_end": 434,
+        "summary": "off(type: 'scrollEvent', callback?: Callback\\<observer.ScrollEventInfo\\>): void\n\n取消监听所有滚动组件滚动事件的开始和"
+      },
+      {
+        "section_id": "section-9",
+        "title": "on('scrollEvent')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 435,
+        "line_end": 456,
+        "summary": "on(type: 'scrollEvent', options: observer.ObserverOptions, callback: Callback\\<observer.ScrollEvent"
+      },
+      {
+        "section_id": "section-10",
+        "title": "off('scrollEvent')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 457,
+        "line_end": 478,
+        "summary": "off(type: 'scrollEvent', options: observer.ObserverOptions, callback?: Callback\\<observer.ScrollEve"
+      },
+      {
+        "section_id": "section-11",
+        "title": "on('routerPageUpdate')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 479,
+        "line_end": 546,
+        "summary": "on(type: 'routerPageUpdate', callback: Callback\\<observer.RouterPageInfo\\>): void\n\n监听[Router](arkts"
+      },
+      {
+        "section_id": "section-12",
+        "title": "off('routerPageUpdate')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 547,
+        "line_end": 567,
+        "summary": "off(type: 'routerPageUpdate', callback?: Callback\\<observer.RouterPageInfo\\>): void\n\n取消监听[Router](a"
+      },
+      {
+        "section_id": "section-13",
+        "title": "on('densityUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 568,
+        "line_end": 628,
+        "summary": "on(type: 'densityUpdate', callback: Callback\\<observer.DensityInfo\\>): void\n\n监听屏幕像素密度变化。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-14",
+        "title": "off('densityUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 629,
+        "line_end": 649,
+        "summary": "off(type: 'densityUpdate', callback?: Callback\\<observer.DensityInfo\\>): void\n\n取消监听屏幕像素密度的变化。\n\n**原子"
+      },
+      {
+        "section_id": "section-15",
+        "title": "on('willDraw')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 650,
+        "line_end": 699,
+        "summary": "on(type: 'willDraw', callback: Callback\\<void\\>): void\n\n监听每一帧绘制指令下发情况。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-16",
+        "title": "off('willDraw')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 700,
+        "line_end": 720,
+        "summary": "off(type: 'willDraw', callback?: Callback\\<void\\>): void\n\n取消监听每一帧绘制指令下发情况。\n\n**原子化服务API：** 从API vers"
+      },
+      {
+        "section_id": "section-17",
+        "title": "on('didLayout')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 721,
+        "line_end": 770,
+        "summary": "on(type: 'didLayout', callback: Callback\\<void\\>): void\n\n监听每一帧布局完成情况。\n\n**原子化服务API：** 从API version 1"
+      },
+      {
+        "section_id": "section-18",
+        "title": "off('didLayout')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 771,
+        "line_end": 792,
+        "summary": "off(type: 'didLayout', callback?: Callback\\<void\\>): void\n\n取消监听每一帧布局完成情况。\n\n**原子化服务API：** 从API versi"
+      },
+      {
+        "section_id": "section-19",
+        "title": "on('navDestinationSwitch')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 793,
+        "line_end": 871,
+        "summary": "on(type: 'navDestinationSwitch', callback: Callback\\<observer.NavDestinationSwitchInfo\\>): void\n\n监听"
+      },
+      {
+        "section_id": "section-20",
+        "title": "off('navDestinationSwitch')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 872,
+        "line_end": 892,
+        "summary": "off(type: 'navDestinationSwitch', callback?: Callback\\<observer.NavDestinationSwitchInfo\\>): void"
+      },
+      {
+        "section_id": "section-21",
+        "title": "on('navDestinationSwitch')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 893,
+        "line_end": 973,
+        "summary": "on(type: 'navDestinationSwitch', observerOptions: observer.NavDestinationSwitchObserverOptions, cal"
+      },
+      {
+        "section_id": "section-22",
+        "title": "off('navDestinationSwitch')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 974,
+        "line_end": 995,
+        "summary": "off(type: 'navDestinationSwitch', observerOptions: observer.NavDestinationSwitchObserverOptions, ca"
+      },
+      {
+        "section_id": "section-23",
+        "title": "on('willClick')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 996,
+        "line_end": 1100,
+        "summary": "on(type: 'willClick', callback: GestureEventListenerCallback): void\n\n监听点击事件指令下发情况，所注册回调将于点击事件触发前触发。"
+      },
+      {
+        "section_id": "section-24",
+        "title": "off('willClick')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1101,
+        "line_end": 1121,
+        "summary": "off(type: 'willClick', callback?: GestureEventListenerCallback): void\n\n取消监听[on('willClick')](#onwil"
+      },
+      {
+        "section_id": "section-25",
+        "title": "on('didClick')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1122,
+        "line_end": 1142,
+        "summary": "on(type: 'didClick', callback: GestureEventListenerCallback): void\n\n监听点击事件指令下发情况，所注册回调将于点击事件触发后触发。回"
+      },
+      {
+        "section_id": "section-26",
+        "title": "off('didClick')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1143,
+        "line_end": 1163,
+        "summary": "off(type: 'didClick', callback?: GestureEventListenerCallback): void\n\n取消监听[on('didClick')](#ondidcl"
+      },
+      {
+        "section_id": "section-27",
+        "title": "on('willClick')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1164,
+        "line_end": 1184,
+        "summary": "on(type: 'willClick', callback: ClickEventListenerCallback): void\n\n监听点击事件指令下发情况，所注册回调将于点击事件触发前触发。回调"
+      },
+      {
+        "section_id": "section-28",
+        "title": "off('willClick')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1185,
+        "line_end": 1205,
+        "summary": "off(type: 'willClick', callback?: ClickEventListenerCallback): void\n\n取消监听[on('willClick')](#onwillc"
+      },
+      {
+        "section_id": "section-29",
+        "title": "on('didClick')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1206,
+        "line_end": 1226,
+        "summary": "on(type: 'didClick', callback: ClickEventListenerCallback): void\n\n监听点击事件指令下发情况，所注册回调将于点击事件触发后触发。回调类"
+      },
+      {
+        "section_id": "section-30",
+        "title": "off('didClick')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1227,
+        "line_end": 1247,
+        "summary": "off(type: 'didClick', callback?: ClickEventListenerCallback): void\n\n取消监听[on('didClick')](#ondidclic"
+      },
+      {
+        "section_id": "section-31",
+        "title": "on('tabContentUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1248,
+        "line_end": 1322,
+        "summary": "on(type: 'tabContentUpdate', callback: Callback\\<observer.TabContentInfo\\>): void\n\n监听[TabContent](a"
+      },
+      {
+        "section_id": "section-32",
+        "title": "off('tabContentUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1323,
+        "line_end": 1343,
+        "summary": "off(type: 'tabContentUpdate', callback?: Callback\\<observer.TabContentInfo\\>): void\n\n取消监听[TabConten"
+      },
+      {
+        "section_id": "section-33",
+        "title": "on('tabContentUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1344,
+        "line_end": 1419,
+        "summary": "on(type: 'tabContentUpdate', options: observer.ObserverOptions, callback: Callback\\<observer.TabCon"
+      },
+      {
+        "section_id": "section-34",
+        "title": "off('tabContentUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1420,
+        "line_end": 1441,
+        "summary": "off(type: 'tabContentUpdate', options: observer.ObserverOptions, callback?: Callback\\<observer.TabC"
+      },
+      {
+        "section_id": "section-35",
+        "title": "on('tabChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1442,
+        "line_end": 1539,
+        "summary": "on(type: 'tabChange', callback: Callback\\<observer.TabContentInfo\\>): void\n\n监听[Tabs](arkui-ts/ts-co"
+      },
+      {
+        "section_id": "section-36",
+        "title": "off('tabChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1540,
+        "line_end": 1560,
+        "summary": "off(type: 'tabChange', callback?: Callback\\<observer.TabContentInfo\\>): void\n\n取消监听所有的[Tabs](arkui-t"
+      },
+      {
+        "section_id": "section-37",
+        "title": "on('tabChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1561,
+        "line_end": 1656,
+        "summary": "on(type: 'tabChange', config: observer.ObserverOptions, callback: Callback\\<observer.TabContentInfo"
+      },
+      {
+        "section_id": "section-38",
+        "title": "off('tabChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1657,
+        "line_end": 1678,
+        "summary": "off(type: 'tabChange', config: observer.ObserverOptions, callback?: Callback\\<observer.TabContentIn"
+      },
+      {
+        "section_id": "section-39",
+        "title": "on('textChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1679,
+        "line_end": 1781,
+        "summary": "on(type: 'textChange', callback: Callback\\<observer.TextChangeEventInfo\\>): void\n\n全局监听输入框文本变化。\n\n**原"
+      },
+      {
+        "section_id": "section-40",
+        "title": "off('textChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1782,
+        "line_end": 1802,
+        "summary": "off(type: 'textChange', callback?: Callback\\<observer.TextChangeEventInfo\\>): void\n\n取消输入框文本变化的全局监听。"
+      },
+      {
+        "section_id": "section-41",
+        "title": "on('textChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1803,
+        "line_end": 1824,
+        "summary": "on(type: 'textChange', identity: observer.ObserverOptions, callback:Callback\\<observer.TextChangeEv"
+      },
+      {
+        "section_id": "section-42",
+        "title": "off('textChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1825,
+        "line_end": 1846,
+        "summary": "off(type: 'textChange', identity: observer.ObserverOptions, callback?: Callback\\<observer.TextChang"
+      },
+      {
+        "section_id": "section-43",
+        "title": "on('beforePanStart')<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1847,
+        "line_end": 1974,
+        "summary": "on(type: 'beforePanStart', callback: PanListenerCallback): void\n\n监听Pan手势[onActionStart](arkui-ts/ts"
+      },
+      {
+        "section_id": "section-44",
+        "title": "off('beforePanStart')<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1975,
+        "line_end": 1995,
+        "summary": "off(type: 'beforePanStart', callback?: PanListenerCallback): void\n\n取消[on('beforePanStart')](#onbefo"
+      },
+      {
+        "section_id": "section-45",
+        "title": "on('afterPanStart')<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1996,
+        "line_end": 2016,
+        "summary": "on(type: 'afterPanStart', callback: PanListenerCallback): void\n\n监听Pan手势[onActionStart](arkui-ts/ts-"
+      },
+      {
+        "section_id": "section-46",
+        "title": "off('afterPanStart')<sup>19+</sup>",
+        "level": 2,
+        "line_start": 2017,
+        "line_end": 2037,
+        "summary": "off(type: 'afterPanStart', callback?: PanListenerCallback): void\n\n取消[on('afterPanStart')](#onafterp"
+      },
+      {
+        "section_id": "section-47",
+        "title": "on('beforePanEnd')<sup>19+</sup>",
+        "level": 2,
+        "line_start": 2038,
+        "line_end": 2058,
+        "summary": "on(type: 'beforePanEnd', callback: PanListenerCallback): void\n\n监听Pan手势[onActionEnd](arkui-ts/ts-bas"
+      },
+      {
+        "section_id": "section-48",
+        "title": "off('beforePanEnd')<sup>19+</sup>",
+        "level": 2,
+        "line_start": 2059,
+        "line_end": 2079,
+        "summary": "off(type: 'beforePanEnd', callback?: PanListenerCallback): void\n\n取消[on('beforePanEnd')](#onbeforepa"
+      },
+      {
+        "section_id": "section-49",
+        "title": "on('afterPanEnd')<sup>19+</sup>",
+        "level": 2,
+        "line_start": 2080,
+        "line_end": 2100,
+        "summary": "on(type: 'afterPanEnd', callback: PanListenerCallback): void\n\n监听Pan手势[onActionEnd](arkui-ts/ts-basi"
+      },
+      {
+        "section_id": "section-50",
+        "title": "off('afterPanEnd')<sup>19+</sup>",
+        "level": 2,
+        "line_start": 2101,
+        "line_end": 2121,
+        "summary": "off(type: 'afterPanEnd', callback?: PanListenerCallback): void\n\n取消[on('afterPanEnd')](#onafterpanen"
+      },
+      {
+        "section_id": "section-51",
+        "title": "on('nodeRenderState')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2122,
+        "line_end": 2266,
+        "summary": "on(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback: NodeRenderStateChangeCallback): v"
+      },
+      {
+        "section_id": "section-52",
+        "title": "off('nodeRenderState')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2267,
+        "line_end": 2288,
+        "summary": "off(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback?: NodeRenderStateChangeCallback):"
+      },
+      {
+        "section_id": "section-53",
+        "title": "addGlobalGestureListener<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2289,
+        "line_end": 2486,
+        "summary": "addGlobalGestureListener(type: GestureListenerType, option: GestureObserverConfigs, callback: Gestu"
+      },
+      {
+        "section_id": "section-54",
+        "title": "removeGlobalGestureListener<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2487,
+        "line_end": 2507,
+        "summary": "removeGlobalGestureListener(type: GestureListenerType, callback?: GestureListenerCallback): void\n\n移"
+      },
+      {
+        "section_id": "section-55",
+        "title": "on('windowSizeLayoutBreakpointChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 2508,
+        "line_end": 2577,
+        "summary": "on(type: 'windowSizeLayoutBreakpointChange', callback: Callback<observer.WindowSizeLayoutBreakpoint"
+      },
+      {
+        "section_id": "section-56",
+        "title": "off('windowSizeLayoutBreakpointChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 2578,
+        "line_end": 2598,
+        "summary": "off(type: 'windowSizeLayoutBreakpointChange', callback?: Callback\\<observer.WindowSizeLayoutBreakpo"
+      },
+      {
+        "section_id": "section-57",
+        "title": "onSwiperContentUpdate<sup>22+</sup>",
+        "level": 2,
+        "line_start": 2599,
+        "line_end": 2666,
+        "summary": "onSwiperContentUpdate(callback: Callback\\<SwiperContentInfo\\>): void\n\n监听Swiper内容的切换事件。使用callback异步回"
+      },
+      {
+        "section_id": "section-58",
+        "title": "offSwiperContentUpdate<sup>22+</sup>",
+        "level": 2,
+        "line_start": 2667,
+        "line_end": 2686,
+        "summary": "offSwiperContentUpdate(callback?: Callback\\<SwiperContentInfo\\>): void\n\n取消监听Swiper内容的切换事件。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-59",
+        "title": "onSwiperContentUpdate<sup>22+</sup>",
+        "level": 2,
+        "line_start": 2687,
+        "line_end": 2756,
+        "summary": "onSwiperContentUpdate(config: observer.ObserverOptions, callback: Callback\\<SwiperContentInfo\\>): v"
+      },
+      {
+        "section_id": "section-60",
+        "title": "offSwiperContentUpdate<sup>22+</sup>",
+        "level": 2,
+        "line_start": 2757,
+        "line_end": 2777,
+        "summary": "offSwiperContentUpdate(config: observer.ObserverOptions, callback?: Callback\\<SwiperContentInfo\\>):"
+      },
+      {
+        "section_id": "section-61",
+        "title": "onRouterPageSizeChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2778,
+        "line_end": 2828,
+        "summary": "onRouterPageSizeChange(callback: Callback\\<observer.RouterPageInfo\\>): void\n\n注册监听回调函数，当可见的Router页面大"
+      },
+      {
+        "section_id": "section-62",
+        "title": "offRouterPageSizeChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2829,
+        "line_end": 2848,
+        "summary": "offRouterPageSizeChange(callback?: Callback\\<observer.RouterPageInfo\\>): void\n\n移除使用onRouterPageSize"
+      },
+      {
+        "section_id": "section-63",
+        "title": "onNavDestinationSizeChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2849,
+        "line_end": 2932,
+        "summary": "onNavDestinationSizeChange(callback: Callback\\<observer.NavDestinationInfo\\>): void\n\n注册监听回调函数，当可见的N"
+      },
+      {
+        "section_id": "section-64",
+        "title": "offNavDestinationSizeChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2933,
+        "line_end": 2952,
+        "summary": "offNavDestinationSizeChange(callback?: Callback\\<observer.NavDestinationInfo\\>): void\n\n移除使用onNavDes"
+      },
+      {
+        "section_id": "section-65",
+        "title": "onNavDestinationSizeChangeByUniqueId<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2953,
+        "line_end": 3043,
+        "summary": "onNavDestinationSizeChangeByUniqueId(navigationUniqueId: number, callback: Callback\\<observer.NavDe"
+      },
+      {
+        "section_id": "section-66",
+        "title": "offNavDestinationSizeChangeByUniqueId<sup>23+</sup>",
+        "level": 2,
+        "line_start": 3044,
+        "line_end": 3064,
+        "summary": "offNavDestinationSizeChangeByUniqueId(navigationUniqueId: number, callback?: Callback\\<observer.Nav"
+      }
+    ]
+  }
+}

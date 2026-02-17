@@ -1,0 +1,372 @@
+{
+  "doc_id": "errorcode-account",
+  "title": "账号管理错误码",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Account",
+    "owner": "@steven-q",
+    "designer": "@JiDong-CS1",
+    "tester": "@zhaimengchao",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Basic Services Kit Account 模块的 账号管理错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "账号管理错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "12300001 系统服务异常",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 38,
+        "summary": "**错误信息**\n\nThe system service works abnormally.\n\n**可能原因**\n\n该错误码表示系统服务异常，可能原因如下：\n1. 账号管理服务无法正常启动。\n2."
+      },
+      {
+        "section_id": "section-2",
+        "title": "12300002 无效参数",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 76,
+        "summary": "**错误信息**\n\nInvalid parameter.\n\n**可能原因**\n\n该错误码表示传入无效的参数，可能原因如下：\n1. 用户名为空。\n2. 系统账号用户名长度大于1024。\n3. 分布式账"
+      },
+      {
+        "section_id": "section-3",
+        "title": "12300003 账号不存在",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 101,
+        "summary": "**错误信息**\n\nThe account does not exist.\n\n**可能原因**\n\n该错误码表示操作的账号不存在，可能原因如下：\n1. 查询/激活/删除未创建的账号。\n2. 查询/激活"
+      },
+      {
+        "section_id": "section-4",
+        "title": "12300004 账号已存在",
+        "level": 2,
+        "line_start": 102,
+        "line_end": 117,
+        "summary": "**错误信息**\n\nThe account already exists.\n\n**可能原因**\n\n该错误码表示账号已存在，可能原因如下：\n\n创建已存在的账号。\n\n**处理步骤**\n\n请取消创建，或使"
+      },
+      {
+        "section_id": "section-5",
+        "title": "12300005 不支持多用户",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 133,
+        "summary": "**错误信息**\n\nMulti-user is not supported.\n\n**可能原因**\n\n该错误码表示不支持多用户，可能原因如下：\n\n当前设备不支持多用户，无法创建账号。\n\n**处理步骤*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "12300006 不支持的账号类型",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 147,
+        "summary": "**错误信息**\n\nThe account type is not supported.\n\n**可能原因**\n\n该错误码表示提供了不支持的账号类型，可能原因如下：当前设备不支持创建指定类型的账号。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "12300007 账号数量已达上限",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 161,
+        "summary": "**错误信息**\n\nThe number of accounts has reached the upper limit.\n\n**可能原因**\n\n该错误码表示账号数量已达上限，可能原因如下：创建系统"
+      },
+      {
+        "section_id": "section-8",
+        "title": "12300008 受限的账号",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 178,
+        "summary": "**错误信息**\n\nThe specified account is restricted.\n\n**可能原因**\n\n该错误码表示操作的是受限账号，可能原因如下：\n1. 删除系统保留用户。\n2. 查询"
+      },
+      {
+        "section_id": "section-9",
+        "title": "12300009 账号已激活",
+        "level": 2,
+        "line_start": 179,
+        "line_end": 194,
+        "summary": "**错误信息**\n\nThe account has been activated.\n\n**可能原因**\n\n该错误码表示账号已激活，可能原因如下：\n\n激活已激活的账号。\n\n**处理步骤**\n\n当前账号"
+      },
+      {
+        "section_id": "section-10",
+        "title": "12300010 账号服务忙碌",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 210,
+        "summary": "**错误信息**\n\nThe account service is busy.\n\n**可能原因**\n\n该错误码表示账号服务忙，可能原因如下：\n1. 短时间内提交重复请求，如重复激活、重复设置等。\n2."
+      },
+      {
+        "section_id": "section-11",
+        "title": "12300011 事件监听器已注册",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 226,
+        "summary": "**错误信息**\n\nThe event listener has been registered.\n\n**可能原因**\n\n该错误码表示监听器已注册，可能原因如下：\n\n当前应用向系统注册一个已经注册过"
+      },
+      {
+        "section_id": "section-12",
+        "title": "12300012 事件监听器未注册",
+        "level": 2,
+        "line_start": 227,
+        "line_end": 242,
+        "summary": "**错误信息**\n\nThe event listener has not been registered.\n\n**可能原因**\n\n该错误码表示监听器未注册，可能原因如下：\n\n解注册一个未注册过的监听"
+      },
+      {
+        "section_id": "section-13",
+        "title": "12300013 网络异常",
+        "level": 2,
+        "line_start": 243,
+        "line_end": 263,
+        "summary": "**错误信息**\n\nNetwork exception.\n\n**可能原因**\n\n该错误码表示网络异常，可能原因如下：\n1. 未连接网络。\n2. 联网异常。\n3. 应用无联网权限。\n4. 未知的网络错"
+      },
+      {
+        "section_id": "section-14",
+        "title": "12300014 域账号未认证",
+        "level": 2,
+        "line_start": 264,
+        "line_end": 277,
+        "summary": "**错误信息**\n\nThe domain account is not authenticated.\n\n**可能原因**\n\n域账号未登录。\n\n**处理步骤**\n\n先登录域账号。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "12300015 短名称已存在",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 291,
+        "summary": "**错误信息**\n\nThe short name already exists.\n\n**可能原因**\n\n创建账号使用的短名称已经存在。\n\n**处理步骤**\n\n更换别的不存在的短名称。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "12300016 账号登录数已达上限",
+        "level": 2,
+        "line_start": 292,
+        "line_end": 307,
+        "summary": "**错误信息**\n\nThe number of logged in accounts reaches the upper limit.\n\n**可能原因**\n\n登录的账号数已经达到上限，不能再登录新账"
+      },
+      {
+        "section_id": "section-17",
+        "title": "12300017 前台系统账号未找到",
+        "level": 2,
+        "line_start": 308,
+        "line_end": 324,
+        "summary": "**错误信息**\n\nThe foreground OS account is not found.\n\n**可能原因**\n\n该错误码表示在指定的逻辑屏（displayId）上未找到前台运行的系统账号，"
+      },
+      {
+        "section_id": "section-18",
+        "title": "12300018 逻辑屏未找到",
+        "level": 2,
+        "line_start": 325,
+        "line_end": 340,
+        "summary": "**错误信息**\n\nDisplay not found.\n\n**可能原因**\n\n该错误码表示指定的逻辑屏ID无法被识别或不存在，可能原因如下。\n1. 指定的displayId无效或对应的逻辑屏不存在"
+      },
+      {
+        "section_id": "section-19",
+        "title": "12300019 不支持跨逻辑屏激活",
+        "level": 2,
+        "line_start": 341,
+        "line_end": 356,
+        "summary": "**错误信息**\n\nCross-display activation not supported.\n\n**可能原因**\n\n该错误码表示目标设备或当前系统配置不支持在不同逻辑屏之间激活账号，可能原因如"
+      },
+      {
+        "section_id": "section-20",
+        "title": "12300021 系统账号已绑定域账号",
+        "level": 2,
+        "line_start": 357,
+        "line_end": 374,
+        "summary": "**错误信息**\n\nThe OS account is already bound.\n\n**错误描述**\n\n输入的系统账号已绑定域账号。\n\n**可能原因**\n\n输入的系统账号已绑定域账号。\n\n**处"
+      },
+      {
+        "section_id": "section-21",
+        "title": "12300022 域账号已被绑定",
+        "level": 2,
+        "line_start": 375,
+        "line_end": 394,
+        "summary": "**错误信息**\n\nThe domain account is already bound.\n\n**错误描述**\n\n输入的域账号已绑定系统账号。\n\n**可能原因**\n\n输入的域账号已绑定系统账号。"
+      },
+      {
+        "section_id": "section-22",
+        "title": "12300101 凭据不正确",
+        "level": 2,
+        "line_start": 395,
+        "line_end": 411,
+        "summary": "**错误信息**\n\nThe credential is incorrect.\n\n**可能原因**\n\n该错误码表示凭据不正确，可能原因如下：\n1. 密码输入错误；\n2. 生物特征不匹配；\n3. 令牌失"
+      },
+      {
+        "section_id": "section-23",
+        "title": "12300102 凭据不存在",
+        "level": 2,
+        "line_start": 412,
+        "line_end": 428,
+        "summary": "**错误信息**\n\nThe credential does not exist.\n\n**可能原因**\n\n该错误码表示凭据不存在，可能原因如下：\n1. 认证未录入的凭据类型。\n2. 查询未录入的凭据类"
+      },
+      {
+        "section_id": "section-24",
+        "title": "12300103 凭据输入器已注册",
+        "level": 2,
+        "line_start": 429,
+        "line_end": 444,
+        "summary": "**错误信息**\n\nThe credential inputer already exists.\n\n**可能原因**\n\n该错误码表示凭据输入器已注册，可能原因如下：\n\nPIN码输入器已注册，解注册之"
+      },
+      {
+        "section_id": "section-25",
+        "title": "12300104 凭据输入器不存在",
+        "level": 2,
+        "line_start": 445,
+        "line_end": 460,
+        "summary": "**错误信息**\n\nThe credential inputer is not found.\n\n**可能原因**\n\n该错误码表示凭据输入器不存在，可能原因如下：\n\n认证、添加、修改凭据时，未注册凭据"
+      },
+      {
+        "section_id": "section-26",
+        "title": "12300105 可信等级不支持",
+        "level": 2,
+        "line_start": 461,
+        "line_end": 476,
+        "summary": "**错误信息**\n\nThe trust level is not supported.\n\n**可能原因**\n\n该错误码表示可信等级不支持，可能原因如下：\n\n传入系统不支持的可信等级。\n\n**处理步骤"
+      },
+      {
+        "section_id": "section-27",
+        "title": "12300106 认证类型不支持",
+        "level": 2,
+        "line_start": 477,
+        "line_end": 492,
+        "summary": "**错误信息**\n\nThe authentication type is not supported.\n\n**可能原因**\n\n该错误码表示认证类型不支持，可能原因如下：\n\n传入系统不支持的认证类型。"
+      },
+      {
+        "section_id": "section-28",
+        "title": "12300107 认证类型不存在",
+        "level": 2,
+        "line_start": 493,
+        "line_end": 508,
+        "summary": "**错误信息**\n\nThe authentication type does not exist.\n\n**可能原因**\n\n该错误码表示认证类型不存在，可能原因如下：\n\n查询/删除令牌时，指定的鉴权类"
+      },
+      {
+        "section_id": "section-29",
+        "title": "12300108 认证会话不存在",
+        "level": 2,
+        "line_start": 509,
+        "line_end": 524,
+        "summary": "**错误信息**\n\nThe authentication session does not exist.\n\n**可能原因**\n\n该错误码表示会话不存在，可能原因如下：\n\n查询不存在的会话回调。\n\n*"
+      },
+      {
+        "section_id": "section-30",
+        "title": "12300109 认证、凭据录入、更新等操作被取消",
+        "level": 2,
+        "line_start": 525,
+        "line_end": 542,
+        "summary": "**错误信息**\n\nThe authentication, enrollment, or update operation is canceled.\n\n**可能原因**\n\n该错误码表示认证、凭据录入"
+      },
+      {
+        "section_id": "section-31",
+        "title": "12300110 认证被锁定",
+        "level": 2,
+        "line_start": 543,
+        "line_end": 558,
+        "summary": "**错误信息**\n\nThe authentication is locked.\n\n**可能原因**\n\n该错误码表示认证被锁定，可能原因如下：\n\n认证类型错误次数超过上限。\n\n**处理步骤**\n\n认证"
+      },
+      {
+        "section_id": "section-32",
+        "title": "12300111 认证超时",
+        "level": 2,
+        "line_start": 559,
+        "line_end": 575,
+        "summary": "**错误信息**\n\nThe authentication time out.\n\n**可能原因**\n\n该错误码表示认证超时，可能原因如下：\n1. 对于系统账号，认证、录入超过三分钟。\n2. 认证服务因"
+      },
+      {
+        "section_id": "section-33",
+        "title": "12300112 认证服务忙",
+        "level": 2,
+        "line_start": 576,
+        "line_end": 592,
+        "summary": "**错误信息**\n\nThe authentication service is busy.\n\n**可能原因**\n\n该错误码表示认证服务忙，可能原因如下：\n\n1. 系统账号认证时，认证总数超过5个。"
+      },
+      {
+        "section_id": "section-34",
+        "title": "12300113 认证服务不存在",
+        "level": 2,
+        "line_start": 593,
+        "line_end": 613,
+        "summary": "**错误信息**\n\nThe account authentication service does not exist.\n\n**可能原因**\n\n该错误码表示认证服务不存在，可能原因如下：\n\n对于应用"
+      },
+      {
+        "section_id": "section-35",
+        "title": "12300114 认证服务异常",
+        "level": 2,
+        "line_start": 614,
+        "line_end": 630,
+        "summary": "**错误信息**\n\nThe account authentication service works abnormally.\n\n**可能原因**\n\n该错误码表示账号认证服务异常，可能原因如下：\n1."
+      },
+      {
+        "section_id": "section-36",
+        "title": "12300115 用户认证密码个数达到上限",
+        "level": 2,
+        "line_start": 631,
+        "line_end": 646,
+        "summary": "**错误信息**\n\nThe number of credentials reaches the upper limit.\n\n**可能原因**\n\n1. 身份认证服务出现未知错误。\n2. 用户已有对应类"
+      },
+      {
+        "section_id": "section-37",
+        "title": "12300116 凭证复杂度验证失败",
+        "level": 2,
+        "line_start": 647,
+        "line_end": 660,
+        "summary": "**错误信息**\n\nCredential complexity verification failed.\n\n**可能原因**\n\n设置的凭证太过简单。\n\n**处理步骤**\n\n按照要求录入包含特定字符的"
+      },
+      {
+        "section_id": "section-38",
+        "title": "12300117 PIN码过期",
+        "level": 2,
+        "line_start": 661,
+        "line_end": 675,
+        "summary": "**错误信息**\n\nPIN is expired.\n\n**可能原因**\n\n用户认证的PIN码过期。\n\n**处理步骤**\n\n重新设置PIN码。\n\n<!--Del-->"
+      },
+      {
+        "section_id": "section-39",
+        "title": "12300120 凭据已失效",
+        "level": 2,
+        "line_start": 676,
+        "line_end": 690,
+        "summary": "**错误信息**\n\nThe credentials are no longer valid.\n\n**可能原因**\n\n伴随设备认证场景，伴随设备已失效。\n\n**处理步骤**\n\n伴随设备认证场景，删除伴"
+      },
+      {
+        "section_id": "section-40",
+        "title": "12400001 应用不存在",
+        "level": 2,
+        "line_start": 691,
+        "line_end": 706,
+        "summary": "**错误信息**\n\nThe application does not exist.\n\n**可能原因**\n\n该错误码表示应用不存在，可能原因如下：\n1. 设置访问权限时，目标应用不存在。\n2. 设置开"
+      },
+      {
+        "section_id": "section-41",
+        "title": "12400002 自定义数据不存在",
+        "level": 2,
+        "line_start": 707,
+        "line_end": 720,
+        "summary": "**错误信息**\n\nThe custom data does not exist.\n\n**可能原因**\n\n该错误码表示自定义数据不存在，可能原因如下：查询账号的自定义数据时，输入的键名不存在。\n\n*"
+      },
+      {
+        "section_id": "section-42",
+        "title": "12400003 自定义数据的数量已达上限",
+        "level": 2,
+        "line_start": 721,
+        "line_end": 734,
+        "summary": "**错误信息**\n\nThe number of custom data records reaches the upper limit.\n\n**可能原因**\n\n该错误码表示自定义数据的数量已达上限，"
+      },
+      {
+        "section_id": "section-43",
+        "title": "12400004 令牌数量已达上限",
+        "level": 2,
+        "line_start": 735,
+        "line_end": 748,
+        "summary": "**错误信息**\n\nThe number of tokens reaches the upper limit.\n\n**可能原因**\n\n该错误码表示令牌数量已达上限，可能原因如下：添加令牌时，目标账号"
+      },
+      {
+        "section_id": "section-44",
+        "title": "12400005 授权列表已达上限",
+        "level": 2,
+        "line_start": 749,
+        "line_end": 761,
+        "summary": "**错误信息**\n\nThe size of the authorization list reaches the upper limit.\n\n**可能原因**\n\n该错误码表示授权列表已达上限，可能原"
+      }
+    ]
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "doc_id": "arkts-apis-audio-AudioManager",
+  "title": "Interface (AudioManager)",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioManager.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@songshenke",
+    "designer": "@caixuejiang; @hao-liangfei; @zhanganxiang",
+    "tester": "@Filger",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 Interface (AudioManager)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AudioManager)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { audio } from '@kit.AudioKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getAudioScene<sup>8+</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 50,
+        "summary": "getAudioScene\\(callback: AsyncCallback<AudioScene\\>\\): void\n\n获取音频场景模式。使用callback异步回调。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getAudioScene<sup>8+</sup>",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 76,
+        "summary": "getAudioScene\\(\\): Promise<AudioScene\\>\n\n获取音频场景模式。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multim"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getAudioSceneSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 104,
+        "summary": "getAudioSceneSync\\(\\): AudioScene\n\n获取音频场景模式。同步返回结果。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Co"
+      },
+      {
+        "section_id": "section-5",
+        "title": "on('audioSceneChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 127,
+        "summary": "on(type: 'audioSceneChange', callback: Callback\\<AudioScene\\>): void\n\n监听音频场景变化事件。使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "off('audioSceneChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 128,
+        "line_end": 158,
+        "summary": "off(type: 'audioSceneChange', callback?: Callback\\<AudioScene\\>): void\n\n取消监听音频场景变化事件。使用callback异步回调"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getVolumeManager<sup>9+</sup>",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 182,
+        "summary": "getVolumeManager(): AudioVolumeManager\n\n获取音频音量管理器。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getStreamManager<sup>9+</sup>",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 204,
+        "summary": "getStreamManager(): AudioStreamManager\n\n获取音频流管理器。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Core"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getRoutingManager<sup>9+</sup>",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 226,
+        "summary": "getRoutingManager(): AudioRoutingManager\n\n获取音频路由管理器。\n\n**系统能力：** SystemCapability.Multimedia.Audio.D"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getSessionManager<sup>12+</sup>",
+        "level": 2,
+        "line_start": 227,
+        "line_end": 248,
+        "summary": "getSessionManager(): AudioSessionManager\n\n获取音频会话管理器。\n\n**系统能力：** SystemCapability.Multimedia.Audio.C"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getSpatializationManager<sup>18+</sup>",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 269,
+        "summary": "getSpatializationManager(): AudioSpatializationManager\n\n获取空间音频管理器。\n\n**系统能力：** SystemCapability.Mult"
+      },
+      {
+        "section_id": "section-12",
+        "title": "setAudioParameter<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 270,
+        "line_end": 306,
+        "summary": "setAudioParameter(key: string, value: string, callback: AsyncCallback&lt;void&gt;): void\n\n音频参数设置。使用"
+      },
+      {
+        "section_id": "section-13",
+        "title": "setAudioParameter<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 307,
+        "line_end": 342,
+        "summary": "setAudioParameter(key: string, value: string): Promise&lt;void&gt;\n\n音频参数设置。使用Promise异步回调。\n\n接口根据硬件设备"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getAudioParameter<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 376,
+        "summary": "getAudioParameter(key: string, callback: AsyncCallback&lt;string&gt;): void\n\n获取指定音频参数值。使用callback异步"
+      },
+      {
+        "section_id": "section-15",
+        "title": "getAudioParameter<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 377,
+        "line_end": 409,
+        "summary": "getAudioParameter(key: string): Promise&lt;string&gt;\n\n获取指定音频参数值。使用Promise异步回调。\n\n本接口的使用场景为：根据硬件设备的支"
+      },
+      {
+        "section_id": "section-16",
+        "title": "setVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 410,
+        "line_end": 449,
+        "summary": "setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback&lt;void&gt;): void"
+      },
+      {
+        "section_id": "section-17",
+        "title": "setVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 450,
+        "line_end": 488,
+        "summary": "setVolume(volumeType: AudioVolumeType, volume: number): Promise&lt;void&gt;\n\n设置指定流的音量。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 489,
+        "line_end": 520,
+        "summary": "getVolume(volumeType: AudioVolumeType, callback: AsyncCallback&lt;number&gt;): void\n\n获取指定流的音量。使用cal"
+      },
+      {
+        "section_id": "section-19",
+        "title": "getVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 521,
+        "line_end": 551,
+        "summary": "getVolume(volumeType: AudioVolumeType): Promise&lt;number&gt;\n\n获取指定流的音量。使用Promise异步回调。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-20",
+        "title": "getMinVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 552,
+        "line_end": 583,
+        "summary": "getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback&lt;number&gt;): void\n\n获取指定流的最小音量。"
+      },
+      {
+        "section_id": "section-21",
+        "title": "getMinVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 584,
+        "line_end": 614,
+        "summary": "getMinVolume(volumeType: AudioVolumeType): Promise&lt;number&gt;\n\n获取指定流的最小音量。使用Promise异步回调。\n\n> **说明"
+      },
+      {
+        "section_id": "section-22",
+        "title": "getMaxVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 615,
+        "line_end": 646,
+        "summary": "getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback&lt;number&gt;): void\n\n获取指定流的最大音量。"
+      },
+      {
+        "section_id": "section-23",
+        "title": "getMaxVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 647,
+        "line_end": 677,
+        "summary": "getMaxVolume(volumeType: AudioVolumeType): Promise&lt;number&gt;\n\n获取指定流的最大音量。使用Promise异步回调。\n\n> **说明"
+      },
+      {
+        "section_id": "section-24",
+        "title": "mute<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 678,
+        "line_end": 712,
+        "summary": "mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置指定音量"
+      },
+      {
+        "section_id": "section-25",
+        "title": "mute<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 713,
+        "line_end": 747,
+        "summary": "mute(volumeType: AudioVolumeType, mute: boolean): Promise&lt;void&gt;\n\n设置指定音量流静音。使用Promise异步回调。\n\n当该"
+      },
+      {
+        "section_id": "section-26",
+        "title": "isMute<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 748,
+        "line_end": 779,
+        "summary": "isMute(volumeType: AudioVolumeType, callback: AsyncCallback&lt;boolean&gt;): void\n\n获取指定音量流的静音状态。使用c"
+      },
+      {
+        "section_id": "section-27",
+        "title": "isMute<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 780,
+        "line_end": 810,
+        "summary": "isMute(volumeType: AudioVolumeType): Promise&lt;boolean&gt;\n\n获取指定音量流的静音状态。使用Promise异步回调。\n\n> **说明：**"
+      },
+      {
+        "section_id": "section-28",
+        "title": "isActive<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 811,
+        "line_end": 842,
+        "summary": "isActive(volumeType: AudioVolumeType, callback: AsyncCallback&lt;boolean&gt;): void\n\n获取指定音量流的活跃状态。使"
+      },
+      {
+        "section_id": "section-29",
+        "title": "isActive<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 843,
+        "line_end": 873,
+        "summary": "isActive(volumeType: AudioVolumeType): Promise&lt;boolean&gt;\n\n获取指定音量流的活跃状态。使用Promise异步回调。\n\n> **说明："
+      },
+      {
+        "section_id": "section-30",
+        "title": "setRingerMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 874,
+        "line_end": 909,
+        "summary": "setRingerMode(mode: AudioRingMode, callback: AsyncCallback&lt;void&gt;): void\n\n设置铃声模式。使用callback异步回"
+      },
+      {
+        "section_id": "section-31",
+        "title": "setRingerMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 910,
+        "line_end": 945,
+        "summary": "setRingerMode(mode: AudioRingMode): Promise&lt;void&gt;\n\n设置铃声模式。使用Promise异步回调。\n\n> **说明：**\n> 从API ve"
+      },
+      {
+        "section_id": "section-32",
+        "title": "getRingerMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 946,
+        "line_end": 976,
+        "summary": "getRingerMode(callback: AsyncCallback&lt;AudioRingMode&gt;): void\n\n获取铃声模式。使用callback异步回调。\n\n> **说明：*"
+      },
+      {
+        "section_id": "section-33",
+        "title": "getRingerMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 977,
+        "line_end": 1001,
+        "summary": "getRingerMode(): Promise&lt;AudioRingMode&gt;\n\n获取铃声模式。使用Promise异步回调。\n\n> **说明：**\n> 从API version 7开始支"
+      },
+      {
+        "section_id": "section-34",
+        "title": "getDevices<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1002,
+        "line_end": 1032,
+        "summary": "getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback&lt;AudioDeviceDescriptors&gt;): void\n\n获取"
+      },
+      {
+        "section_id": "section-35",
+        "title": "getDevices<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1033,
+        "line_end": 1063,
+        "summary": "getDevices(deviceFlag: DeviceFlag): Promise&lt;AudioDeviceDescriptors&gt;\n\n获取音频设备列表。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-36",
+        "title": "setDeviceActive<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1064,
+        "line_end": 1096,
+        "summary": "setDeviceActive(deviceType: ActiveDeviceType, active: boolean, callback: AsyncCallback&lt;void&gt;)"
+      },
+      {
+        "section_id": "section-37",
+        "title": "setDeviceActive<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1097,
+        "line_end": 1129,
+        "summary": "setDeviceActive(deviceType: ActiveDeviceType, active: boolean): Promise&lt;void&gt;\n\n设置设备激活状态。使用Pro"
+      },
+      {
+        "section_id": "section-38",
+        "title": "isDeviceActive<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1130,
+        "line_end": 1161,
+        "summary": "isDeviceActive(deviceType: ActiveDeviceType, callback: AsyncCallback&lt;boolean&gt;): void\n\n获取指定设备的"
+      },
+      {
+        "section_id": "section-39",
+        "title": "isDeviceActive<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1162,
+        "line_end": 1192,
+        "summary": "isDeviceActive(deviceType: ActiveDeviceType): Promise&lt;boolean&gt;\n\n获取指定设备的激活状态。使用Promise异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-40",
+        "title": "setMicrophoneMute<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1193,
+        "line_end": 1226,
+        "summary": "setMicrophoneMute(mute: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置麦克风静音状态。使用callback异步"
+      },
+      {
+        "section_id": "section-41",
+        "title": "setMicrophoneMute<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1227,
+        "line_end": 1259,
+        "summary": "setMicrophoneMute(mute: boolean): Promise&lt;void&gt;\n\n设置麦克风静音状态。使用Promise异步回调。\n\n> **说明：**\n> 从API v"
+      },
+      {
+        "section_id": "section-42",
+        "title": "isMicrophoneMute<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1260,
+        "line_end": 1292,
+        "summary": "isMicrophoneMute(callback: AsyncCallback&lt;boolean&gt;): void\n\n获取麦克风静音状态。使用callback异步回调。\n\n> **说明：*"
+      },
+      {
+        "section_id": "section-43",
+        "title": "isMicrophoneMute<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1293,
+        "line_end": 1319,
+        "summary": "isMicrophoneMute(): Promise&lt;boolean&gt;\n\n获取麦克风静音状态。使用Promise异步回调。\n\n> **说明：**\n> 从API version 7开始支"
+      },
+      {
+        "section_id": "section-44",
+        "title": "on('deviceChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1320,
+        "line_end": 1348,
+        "summary": "on(type: 'deviceChange', callback: Callback<DeviceChangeAction\\>): void\n\n监听音频设备连接变化事件（当音频设备连接状态发生变化"
+      },
+      {
+        "section_id": "section-45",
+        "title": "off('deviceChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1349,
+        "line_end": 1385,
+        "summary": "off(type: 'deviceChange', callback?: Callback<DeviceChangeAction\\>): void\n\n取消监听音频设备连接变化事件。使用callbac"
+      },
+      {
+        "section_id": "section-46",
+        "title": "on('interrupt')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1386,
+        "line_end": 1429,
+        "summary": "on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback\\<InterruptAction>): void\n\n监听音频打"
+      },
+      {
+        "section_id": "section-47",
+        "title": "off('interrupt')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1430,
+        "line_end": 1479,
+        "summary": "off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback\\<InterruptAction>): void\n\n取消监"
+      }
+    ]
+  }
+}

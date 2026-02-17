@@ -1,0 +1,340 @@
+{
+  "doc_id": "js-apis-wifi-sys",
+  "title": "@ohos.wifi (WLAN)（系统接口）",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-wifi-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-wifi-sys.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@qq_43802146",
+    "designer": "@qq_43802146",
+    "tester": "@furryfurry123",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.wifi (WLAN)（系统接口），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.wifi (WLAN)（系统接口）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport wifi from '@ohos.wifi';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "wifi.enableWifi",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 53,
+        "summary": "enableWifi(): boolean\n\n使能WLAN。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SET_WIFI_INFO 和 ohos"
+      },
+      {
+        "section_id": "section-3",
+        "title": "wifi.disableWifi",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 85,
+        "summary": "disableWifi(): boolean\n\n去使能WLAN。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SET_WIFI_INFO 和 oh"
+      },
+      {
+        "section_id": "section-4",
+        "title": "wifi.addDeviceConfig",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 142,
+        "summary": "addDeviceConfig(config: WifiDeviceConfig): Promise&lt;number&gt;\n\n添加网络配置。使用Promise异步回调。\n\n**系统接口：**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "WifiDeviceConfig",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 162,
+        "summary": "WLAN配置信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n\n| **名称** | **类型** | **可读** | **可写**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "IpType<sup>7+</sup>",
+        "level": 2,
+        "line_start": 163,
+        "line_end": 178,
+        "summary": "表示IP类型的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n\n| 名称 | 值 | 说明"
+      },
+      {
+        "section_id": "section-7",
+        "title": "IpConfig<sup>7+</sup>",
+        "level": 2,
+        "line_start": 179,
+        "line_end": 195,
+        "summary": "IPv4配置信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| **名称** | **类型*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Ipv6Config<sup>20+</sup>",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 213,
+        "summary": "IPv6配置信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| **名称** | **类型*"
+      },
+      {
+        "section_id": "section-9",
+        "title": "wifi.addDeviceConfig",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 266,
+        "summary": "addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback&lt;number&gt;): void\n\n添加网络配置。使用ca"
+      },
+      {
+        "section_id": "section-10",
+        "title": "wifi.connectToNetwork",
+        "level": 2,
+        "line_start": 267,
+        "line_end": 303,
+        "summary": "connectToNetwork(networkId: number): boolean\n\n应用使用该接口连接到热点。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.pe"
+      },
+      {
+        "section_id": "section-11",
+        "title": "wifi.connectToDevice",
+        "level": 2,
+        "line_start": 304,
+        "line_end": 359,
+        "summary": "connectToDevice(config: WifiDeviceConfig): boolean\n\n连接到指定网络。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.p"
+      },
+      {
+        "section_id": "section-12",
+        "title": "wifi.disconnect",
+        "level": 2,
+        "line_start": 360,
+        "line_end": 390,
+        "summary": "disconnect(): boolean\n\n断开连接的网络。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SET_WIFI_INFO 和 oho"
+      },
+      {
+        "section_id": "section-13",
+        "title": "WifiLinkedInfo",
+        "level": 2,
+        "line_start": 391,
+        "line_end": 404,
+        "summary": "提供WLAN连接的相关信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 类型 | 可读 | 可写 | 说明 |\n| ---"
+      },
+      {
+        "section_id": "section-14",
+        "title": "SuppState",
+        "level": 2,
+        "line_start": 405,
+        "line_end": 429,
+        "summary": "表示请求状态的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 值 | 说明 |"
+      },
+      {
+        "section_id": "section-15",
+        "title": "wifi.getSupportedFeatures<sup>7+</sup>",
+        "level": 2,
+        "line_start": 430,
+        "line_end": 465,
+        "summary": "getSupportedFeatures(): number\n\n查询设备支持的特性。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.GET_WIFI"
+      },
+      {
+        "section_id": "section-16",
+        "title": "wifi.getDeviceMacAddress<sup>7+</sup>",
+        "level": 2,
+        "line_start": 466,
+        "line_end": 497,
+        "summary": "getDeviceMacAddress(): string[]\n\n获取设备的MAC地址。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.GET_WI"
+      },
+      {
+        "section_id": "section-17",
+        "title": "wifi.reassociate<sup>7+</sup>",
+        "level": 2,
+        "line_start": 498,
+        "line_end": 526,
+        "summary": "reassociate(): boolean\n\n重新关联网络。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SET_WIFI_INFO 和 oho"
+      },
+      {
+        "section_id": "section-18",
+        "title": "wifi.reconnect<sup>7+</sup>",
+        "level": 2,
+        "line_start": 527,
+        "line_end": 555,
+        "summary": "reconnect(): boolean\n\n重新连接网络。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SET_WIFI_INFO 和 ohos."
+      },
+      {
+        "section_id": "section-19",
+        "title": "wifi.getDeviceConfigs<sup>7+</sup>",
+        "level": 2,
+        "line_start": 556,
+        "line_end": 585,
+        "summary": "getDeviceConfigs(): &nbsp;Array&lt;WifiDeviceConfig&gt;\n\n获取网络配置。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** oh"
+      },
+      {
+        "section_id": "section-20",
+        "title": "wifi.updateNetwork<sup>7+</sup>",
+        "level": 2,
+        "line_start": 586,
+        "line_end": 640,
+        "summary": "updateNetwork(config: WifiDeviceConfig): number\n\n更新网络配置。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permi"
+      },
+      {
+        "section_id": "section-21",
+        "title": "wifi.disableNetwork<sup>7+</sup>",
+        "level": 2,
+        "line_start": 641,
+        "line_end": 676,
+        "summary": "disableNetwork(netId: number): boolean\n\n去使能网络配置。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SE"
+      },
+      {
+        "section_id": "section-22",
+        "title": "wifi.removeAllNetwork<sup>7+</sup>",
+        "level": 2,
+        "line_start": 677,
+        "line_end": 705,
+        "summary": "removeAllNetwork(): boolean\n\n移除所有网络配置。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SET_WIFI_INF"
+      },
+      {
+        "section_id": "section-23",
+        "title": "wifi.removeDevice<sup>7+</sup>",
+        "level": 2,
+        "line_start": 706,
+        "line_end": 741,
+        "summary": "removeDevice(id: number): boolean\n\n移除指定的网络配置。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SET_W"
+      },
+      {
+        "section_id": "section-24",
+        "title": "wifi.enableHotspot<sup>7+</sup>",
+        "level": 2,
+        "line_start": 742,
+        "line_end": 770,
+        "summary": "enableHotspot(): boolean\n\n使能热点。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT"
+      },
+      {
+        "section_id": "section-25",
+        "title": "wifi.disableHotspot<sup>7+</sup>",
+        "level": 2,
+        "line_start": 771,
+        "line_end": 799,
+        "summary": "disableHotspot(): boolean\n\n去使能热点。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.MANAGE_WIFI_HOTSP"
+      },
+      {
+        "section_id": "section-26",
+        "title": "wifi.isHotspotDualBandSupported<sup>7+</sup>",
+        "level": 2,
+        "line_start": 800,
+        "line_end": 829,
+        "summary": "isHotspotDualBandSupported(): boolean\n\n热点是否支持双频。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.GE"
+      },
+      {
+        "section_id": "section-27",
+        "title": "wifi.isHotspotActive<sup>7+</sup>",
+        "level": 2,
+        "line_start": 830,
+        "line_end": 859,
+        "summary": "isHotspotActive(): boolean\n\n热点是否已使能。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.GET_WIFI_INFO"
+      },
+      {
+        "section_id": "section-28",
+        "title": "wifi.setHotspotConfig<sup>7+</sup>",
+        "level": 2,
+        "line_start": 860,
+        "line_end": 902,
+        "summary": "setHotspotConfig(config: HotspotConfig): boolean\n\n设置热点配置信息。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.pe"
+      },
+      {
+        "section_id": "section-29",
+        "title": "HotspotConfig<sup>7+</sup>",
+        "level": 2,
+        "line_start": 903,
+        "line_end": 919,
+        "summary": "热点配置信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.AP.Core\n\n| **名称** | **类"
+      },
+      {
+        "section_id": "section-30",
+        "title": "wifi.getHotspotConfig<sup>7+</sup>",
+        "level": 2,
+        "line_start": 920,
+        "line_end": 949,
+        "summary": "getHotspotConfig(): HotspotConfig\n\n获取热点配置信息。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.GET_WI"
+      },
+      {
+        "section_id": "section-31",
+        "title": "wifi.getStations<sup>7+</sup>",
+        "level": 2,
+        "line_start": 950,
+        "line_end": 979,
+        "summary": "getStations(): &nbsp;Array&lt;StationInfo&gt;\n\n获取连接的设备。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permis"
+      },
+      {
+        "section_id": "section-32",
+        "title": "StationInfo<sup>7+</sup>",
+        "level": 2,
+        "line_start": 980,
+        "line_end": 994,
+        "summary": "接入的设备信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.AP.Core\n\n| **名称** | **"
+      },
+      {
+        "section_id": "section-33",
+        "title": "wifi.deletePersistentGroup<sup>8+</sup>",
+        "level": 2,
+        "line_start": 995,
+        "line_end": 1032,
+        "summary": "deletePersistentGroup(netId: number): boolean\n\n删除永久组。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permissi"
+      },
+      {
+        "section_id": "section-34",
+        "title": "wifi.setDeviceName<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1033,
+        "line_end": 1068,
+        "summary": "setDeviceName(devName: string): boolean\n\n设置设备名称。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SE"
+      },
+      {
+        "section_id": "section-35",
+        "title": "wifi.on('streamChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1069,
+        "line_end": 1087,
+        "summary": "on(type: \"streamChange\", callback: Callback&lt;number&gt;): void\n\n注册WIFI流更改事件。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-36",
+        "title": "wifi.off('streamChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1088,
+        "line_end": 1123,
+        "summary": "off(type: \"streamChange\", callback?: Callback&lt;number&gt;): void\n\n取消注册WIFI流更改事件。\n\n**系统接口：** 此接口为系"
+      },
+      {
+        "section_id": "section-37",
+        "title": "wifi.on('hotspotStaJoin')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1124,
+        "line_end": 1142,
+        "summary": "on(type: \"hotspotStaJoin\", callback: Callback&lt;StationInfo&gt;): void\n\n注册wifi热点sta加入事件。\n\n**需要权限：*"
+      },
+      {
+        "section_id": "section-38",
+        "title": "wifi.off('hotspotStaJoin')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1143,
+        "line_end": 1177,
+        "summary": "off(type: \"hotspotStaJoin\", callback?: Callback&lt;StationInfo&gt;): void\n\n取消注册wifi热点sta加入事件。\n\n**需要"
+      },
+      {
+        "section_id": "section-39",
+        "title": "wifi.on('hotspotStaLeave')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1178,
+        "line_end": 1196,
+        "summary": "on(type: \"hotspotStaLeave\", callback: Callback&lt;StationInfo&gt;): void\n\n注册wifi热点sta离开事件。\n\n**需要权限："
+      },
+      {
+        "section_id": "section-40",
+        "title": "wifi.off('hotspotStaLeave')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1197,
+        "line_end": 1232,
+        "summary": "off(type: \"hotspotStaLeave\", callback?: Callback&lt;StationInfo&gt;): void\n\n取消注册wifi热点sta离开事件。\n\n**需"
+      }
+    ]
+  }
+}

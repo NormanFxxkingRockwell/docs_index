@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-app-ability-appRecovery",
+  "title": "@ohos.app.ability.appRecovery (应用故障恢复)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-appRecovery.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-appRecovery.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@rr_cn",
+    "designer": "@peterhuangyu",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.app.ability.appRecovery (应用故障恢复)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.appRecovery (应用故障恢复)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 20,
+        "summary": "```ts\nimport { appRecovery } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "RestartFlag",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 35,
+        "summary": "应用重启标志，[enableAppRecovery](#apprecoveryenableapprecovery)接口重启选项参数，该类型为枚举。\n\n**原子化服务API**：从API versio"
+      },
+      {
+        "section_id": "section-3",
+        "title": "SaveOccasionFlag",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 48,
+        "summary": "保存条件标志，[enableAppRecovery](#apprecoveryenableapprecovery)接口状态保存时的选项参数，该类型为枚举。\n\n**原子化服务API**：从API ve"
+      },
+      {
+        "section_id": "section-4",
+        "title": "SaveModeFlag",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 61,
+        "summary": "状态保存标志，[enableAppRecovery](#apprecoveryenableapprecovery)接口状态保存方式的参数，该类型为枚举。\n\n**原子化服务API**：从API ver"
+      },
+      {
+        "section_id": "section-5",
+        "title": "appRecovery.enableAppRecovery",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 97,
+        "summary": "enableAppRecovery(restart?: [RestartFlag](#restartflag), saveOccasion?: [SaveOccasionFlag](#saveocc"
+      },
+      {
+        "section_id": "section-6",
+        "title": "appRecovery.restartApp",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 140,
+        "summary": "restartApp(): void\n\n重启当前进程，并拉起应用启动时第一个Ability，如果该Ability存在已经保存的状态，这些状态数据会在Ability的onCreate生命周期回调的wa"
+      },
+      {
+        "section_id": "section-7",
+        "title": "appRecovery.saveAppState",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 178,
+        "summary": "saveAppState(): boolean\n\n保存当前App状态，可以配合[errorManager](js-apis-app-ability-errorManager.md)相关接口使用。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "appRecovery.saveAppState<sup>10+</sup>",
+        "level": 2,
+        "line_start": 179,
+        "line_end": 222,
+        "summary": "saveAppState(context?: UIAbilityContext): boolean\n\n主动保存Ability的状态，这个状态将在下次恢复启动时使用。可以配合[errorManager"
+      },
+      {
+        "section_id": "section-9",
+        "title": "appRecovery.setRestartWant<sup>10+</sup>",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 264,
+        "summary": "setRestartWant(want: Want): void\n\n设置下次恢复主动拉起场景下的Ability。该Ability必须为当前包下的UIAbility。\n\n**模型约束**：此接口仅可在"
+      }
+    ]
+  }
+}

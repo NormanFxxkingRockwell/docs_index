@@ -1,0 +1,84 @@
+{
+  "doc_id": "arkts-apis-arkts-utils-ASON",
+  "title": "ArkTSUtils.ASON",
+  "path": "zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-utils-ASON.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-utils-ASON.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@lijiamin2025",
+    "designer": "@weng-changcheng",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 ArkTSUtils.ASON，提供相关接口和功能说明。",
+  "structure": {
+    "title": "ArkTSUtils.ASON",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { ArkTSUtils } from '@kit.ArkTS'\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ISendable",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 36,
+        "summary": "type ISendable = lang.ISendable\n\nISendable是所有Sendable类型（除`null`和`undefined`）的父类型。自身没有任何必要的方法和属性。\n\n*"
+      },
+      {
+        "section_id": "section-3",
+        "title": "Transformer",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 60,
+        "summary": "type Transformer = (this: ISendable, key: string, value: ISendable | undefined | null) => ISendable"
+      },
+      {
+        "section_id": "section-4",
+        "title": "BigIntMode",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 74,
+        "summary": "定义处理BigInt的模式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Utils.L"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ParseReturnType",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 87,
+        "summary": "定义解析结果的返回类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Utils.Lan"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ParseOptions",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 100,
+        "summary": "解析的选项，可定义处理BigInt的模式和解析结果的返回类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-7",
+        "title": "parse",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 169,
+        "summary": "parse(text: string, reviver?: Transformer, options?: ParseOptions): ISendable | null\n\n用于解析JSON字符串生成"
+      },
+      {
+        "section_id": "section-8",
+        "title": "stringify",
+        "level": 2,
+        "line_start": 170,
+        "line_end": 251,
+        "summary": "stringify(value: Object | null | undefined): string\n\n该方法将ArkTS对象数据转换为JSON字符串，额外支持Map和Set相关类型。\n\n> **"
+      }
+    ]
+  }
+}

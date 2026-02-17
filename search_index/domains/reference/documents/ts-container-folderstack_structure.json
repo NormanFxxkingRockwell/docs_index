@@ -1,0 +1,108 @@
+{
+  "doc_id": "ts-container-folderstack",
+  "title": "FolderStack",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-folderstack.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-folderstack.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@fenglinbailu",
+    "designer": "@lanshouren",
+    "tester": "@liuli0427",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 FolderStack，提供相关接口和功能说明。",
+  "structure": {
+    "title": "FolderStack",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 22,
+        "summary": "可以包含多个子组件。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 38,
+        "summary": "FolderStack(options?: FolderStackOptions)\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-3",
+        "title": "FolderStackOptions<sup>18+</sup>对象说明",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 54,
+        "summary": "> **说明：**\n>\n> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接"
+      },
+      {
+        "section_id": "section-4",
+        "title": "属性",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 128,
+        "summary": ">  **说明：**\n>\n>  设置offset和margin属性，可能会导致上下半屏遮挡折痕区，不建议开发者使用。\n\n除支持[通用属性](ts-component-general-attribut"
+      },
+      {
+        "section_id": "section-5",
+        "title": "事件",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 176,
+        "summary": "除支持[通用事件](ts-component-general-events.md)外，还支持以下事件：\n\n### onFolderStateChange\n\nonFolderStateChange(c"
+      },
+      {
+        "section_id": "section-6",
+        "title": "OnHoverStatusChangeCallback<sup>18+</sup>",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 194,
+        "summary": "type OnHoverStatusChangeCallback = (param: HoverEventParam) => void\n\n当前设备的悬停状态改变时触发的回调。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-7",
+        "title": "OnFoldStatusChangeCallback<sup>18+</sup>",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 213,
+        "summary": "type OnFoldStatusChangeCallback = (event: OnFoldStatusChangeInfo) => void\n\n当前设备的折叠状态。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "OnFoldStatusChangeInfo<sup>18+</sup>",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 231,
+        "summary": "当折叠状态改变的时候回调，仅在横屏状态下生效。\n\n> **说明：**\n>\n> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@si"
+      },
+      {
+        "section_id": "section-9",
+        "title": "HoverEventParam<sup>12+</sup>对象说明",
+        "level": 2,
+        "line_start": 232,
+        "line_end": 246,
+        "summary": "**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**设备行"
+      },
+      {
+        "section_id": "section-10",
+        "title": "WindowStatusType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 247,
+        "line_end": 262,
+        "summary": "type WindowStatusType = WindowStatusType\n\n窗口模式枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "示例",
+        "level": 2,
+        "line_start": 263,
+        "line_end": 444,
+        "summary": "### 示例1（FolderStack折叠屏悬停能力）\n\n该示例实现了折叠屏悬停能力。\n\n```ts\n@Entry\n@Component\nstruct Index {\n  build() {"
+      }
+    ]
+  }
+}

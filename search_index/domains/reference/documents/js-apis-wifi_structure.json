@@ -1,0 +1,524 @@
+{
+  "doc_id": "js-apis-wifi",
+  "title": "@ohos.wifi (WLAN)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-wifi.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-wifi.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@qq_43802146",
+    "designer": "@qq_43802146",
+    "tester": "@furryfurry123",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.wifi (WLAN)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.wifi (WLAN)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 23,
+        "summary": "```ts\nimport wifi from '@ohos.wifi';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "wifi.isWifiActive<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 56,
+        "summary": "isWifiActive(): boolean\n\n查询WLAN是否已使能。\n\n> **说明：**\n>\n> 从API version 6开始支持，从API version 9开始废弃。建议使用[wif"
+      },
+      {
+        "section_id": "section-3",
+        "title": "wifi.scan<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 88,
+        "summary": "scan(): boolean\n\n启动WLAN扫描。\n\n> **说明：**\n>\n> 从API version 6开始支持，从API version 9开始废弃。建议使用[wifiManager.sc"
+      },
+      {
+        "section_id": "section-4",
+        "title": "wifi.getScanInfos<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 89,
+        "line_end": 110,
+        "summary": "getScanInfos(): Promise&lt;Array&lt;WifiScanInfo&gt;&gt;\n\n获取扫描结果，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API"
+      },
+      {
+        "section_id": "section-5",
+        "title": "wifi.getScanInfos<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 154,
+        "summary": "getScanInfos(callback: AsyncCallback&lt;Array&lt;WifiScanInfo&gt;&gt;): void\n\n获取扫描结果，使用callback异步回调"
+      },
+      {
+        "section_id": "section-6",
+        "title": "WifiScanInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 155,
+        "line_end": 178,
+        "summary": "WLAN热点信息。\n\n> **说明：**\n>\n> 从API version 6开始支持，从API version 9开始废弃。建议使用[WifiScanInfo](js-apis-wifiManag"
+      },
+      {
+        "section_id": "section-7",
+        "title": "WifiSecurityType<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 179,
+        "line_end": 197,
+        "summary": "表示加密类型的枚举。\n\n> **说明：**\n>\n> 从API version 6开始支持，从API version 9开始废弃。建议使用[WifiSecurityType](js-apis-wifi"
+      },
+      {
+        "section_id": "section-8",
+        "title": "WifiDeviceConfig<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 198,
+        "line_end": 217,
+        "summary": "WLAN配置信息。\n\n> **说明：**\n>\n> 从API version 6开始支持，从API version 9开始废弃。建议使用[WifiDeviceConfig](js-apis-wifiM"
+      },
+      {
+        "section_id": "section-9",
+        "title": "wifi.addUntrustedConfig<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 218,
+        "line_end": 275,
+        "summary": "addUntrustedConfig(config: WifiDeviceConfig): Promise&lt;boolean&gt;\n\n添加不可信网络配置，使用Promise异步回调。\n\n> *"
+      },
+      {
+        "section_id": "section-10",
+        "title": "wifi.addUntrustedConfig<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 276,
+        "line_end": 328,
+        "summary": "addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback&lt;boolean&gt;): void\n\n添加不可信网络"
+      },
+      {
+        "section_id": "section-11",
+        "title": "wifi.removeUntrustedConfig<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 388,
+        "summary": "removeUntrustedConfig(config: WifiDeviceConfig): Promise&lt;boolean&gt;\n\n移除不可信网络配置，使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "wifi.removeUntrustedConfig<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 389,
+        "line_end": 441,
+        "summary": "removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback&lt;boolean&gt;): void\n\n移除不可"
+      },
+      {
+        "section_id": "section-13",
+        "title": "wifi.getSignalLevel<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 442,
+        "line_end": 483,
+        "summary": "getSignalLevel(rssi: number, band: number): number\n\n查询WLAN信号强度。\n\n> **说明：**\n>\n> 从API version 6开始支持，从"
+      },
+      {
+        "section_id": "section-14",
+        "title": "wifi.getLinkedInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 484,
+        "line_end": 504,
+        "summary": "getLinkedInfo(): Promise&lt;WifiLinkedInfo&gt;\n\n获取WLAN连接信息。使用Promise异步回调。\n\n> **说明：**\n>\n> 从API versi"
+      },
+      {
+        "section_id": "section-15",
+        "title": "wifi.getLinkedInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 505,
+        "line_end": 544,
+        "summary": "getLinkedInfo(callback: AsyncCallback&lt;WifiLinkedInfo&gt;): void\n\n获取WLAN连接信息。使用callback异步回调。\n\n> *"
+      },
+      {
+        "section_id": "section-16",
+        "title": "WifiLinkedInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 545,
+        "line_end": 569,
+        "summary": "提供WLAN连接的相关信息。\n\n> **说明：**\n>\n> 从API version 6开始支持，从API version 9开始废弃。建议使用[WifiLinkedInfo](js-apis-wi"
+      },
+      {
+        "section_id": "section-17",
+        "title": "ConnState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 570,
+        "line_end": 591,
+        "summary": "表示WLAN连接状态的枚举。\n\n> **说明：**\n>\n> 从API version 6开始支持，从API version 9开始废弃。建议使用[WifiLinkedInfo](js-apis-wi"
+      },
+      {
+        "section_id": "section-18",
+        "title": "wifi.isConnected<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 592,
+        "line_end": 612,
+        "summary": "isConnected(): boolean\n\n查询WLAN是否已连接。\n\n> **说明：**\n>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[wifi"
+      },
+      {
+        "section_id": "section-19",
+        "title": "wifi.isFeatureSupported<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 613,
+        "line_end": 654,
+        "summary": "isFeatureSupported(featureId: number): boolean\n\n判断设备是否支持相关WLAN特性。\n\n> **说明：**\n>\n> 从API version 7开始支持"
+      },
+      {
+        "section_id": "section-20",
+        "title": "wifi.getIpInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 655,
+        "line_end": 686,
+        "summary": "getIpInfo(): IpInfo\n\n获取IP信息。\n\n> **说明：**\n>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[wifiManager."
+      },
+      {
+        "section_id": "section-21",
+        "title": "IpInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 687,
+        "line_end": 707,
+        "summary": "IP信息。\n\n> **说明：**\n>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[wifiManager.getIpInfo](js-apis-wifi"
+      },
+      {
+        "section_id": "section-22",
+        "title": "wifi.getCountryCode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 708,
+        "line_end": 740,
+        "summary": "getCountryCode(): string\n\n获取国家码信息。\n\n> **说明：**\n>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[wifiMa"
+      },
+      {
+        "section_id": "section-23",
+        "title": "wifi.getP2pLinkedInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 741,
+        "line_end": 762,
+        "summary": "getP2pLinkedInfo(): Promise&lt;WifiP2pLinkedInfo&gt;\n\n获取P2P连接信息。使用Promise异步回调。\n\n> **说明：**\n>\n> 从API"
+      },
+      {
+        "section_id": "section-24",
+        "title": "WifiP2pLinkedInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 763,
+        "line_end": 779,
+        "summary": "提供WLAN连接的相关信息。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[WifiP2pLinkedInfo](js-apis"
+      },
+      {
+        "section_id": "section-25",
+        "title": "P2pConnectState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 780,
+        "line_end": 795,
+        "summary": "表示P2P连接状态的枚举。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[P2pConnectState](js-apis-wi"
+      },
+      {
+        "section_id": "section-26",
+        "title": "wifi.getP2pLinkedInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 796,
+        "line_end": 832,
+        "summary": "getP2pLinkedInfo(callback: AsyncCallback&lt;WifiP2pLinkedInfo&gt;): void\n\n获取P2P连接信息。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-27",
+        "title": "wifi.getCurrentGroup<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 833,
+        "line_end": 853,
+        "summary": "getCurrentGroup(): Promise&lt;WifiP2pGroupInfo&gt;\n\n获取P2P当前组信息。使用Promise异步回调。\n\n> **说明：**\n>\n> 从API v"
+      },
+      {
+        "section_id": "section-28",
+        "title": "wifi.getCurrentGroup<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 854,
+        "line_end": 890,
+        "summary": "getCurrentGroup(callback: AsyncCallback&lt;WifiP2pGroupInfo&gt;): void\n\n获取P2P当前组信息。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-29",
+        "title": "wifi.getP2pPeerDevices<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 891,
+        "line_end": 911,
+        "summary": "getP2pPeerDevices(): Promise&lt;WifiP2pDevice[]&gt;\n\n获取P2P对端设备列表信息。使用Promise异步回调。\n\n> **说明：**\n>\n> 从A"
+      },
+      {
+        "section_id": "section-30",
+        "title": "wifi.getP2pPeerDevices<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 912,
+        "line_end": 948,
+        "summary": "getP2pPeerDevices(callback: AsyncCallback&lt;WifiP2pDevice[]&gt;): void\n\n获取P2P对端设备列表信息。使用callback异步"
+      },
+      {
+        "section_id": "section-31",
+        "title": "WifiP2pDevice<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 949,
+        "line_end": 967,
+        "summary": "表示P2P设备信息。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[WifiP2pDevice](js-apis-wifiMan"
+      },
+      {
+        "section_id": "section-32",
+        "title": "P2pDeviceStatus<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 968,
+        "line_end": 986,
+        "summary": "表示设备状态的枚举。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[P2pDeviceStatus](js-apis-wifiM"
+      },
+      {
+        "section_id": "section-33",
+        "title": "wifi.createGroup<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 987,
+        "line_end": 1031,
+        "summary": "createGroup(config: WifiP2PConfig): boolean\n\n创建群组。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9"
+      },
+      {
+        "section_id": "section-34",
+        "title": "WifiP2PConfig<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1032,
+        "line_end": 1050,
+        "summary": "表示P2P配置信息。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[WifiP2PConfig](js-apis-wifiMan"
+      },
+      {
+        "section_id": "section-35",
+        "title": "GroupOwnerBand<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1051,
+        "line_end": 1067,
+        "summary": "表示群组带宽的枚举。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[GroupOwnerBand](js-apis-wifiMa"
+      },
+      {
+        "section_id": "section-36",
+        "title": "wifi.removeGroup<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1068,
+        "line_end": 1098,
+        "summary": "removeGroup(): boolean\n\n移除群组。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[wifiManager"
+      },
+      {
+        "section_id": "section-37",
+        "title": "wifi.p2pConnect<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1099,
+        "line_end": 1193,
+        "summary": "p2pConnect(config: WifiP2PConfig): boolean\n\n执行P2P连接。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version"
+      },
+      {
+        "section_id": "section-38",
+        "title": "wifi.p2pCancelConnect<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1194,
+        "line_end": 1224,
+        "summary": "p2pCancelConnect(): boolean\n\n取消P2P连接。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[wif"
+      },
+      {
+        "section_id": "section-39",
+        "title": "wifi.startDiscoverDevices<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1225,
+        "line_end": 1255,
+        "summary": "startDiscoverDevices(): boolean\n\n开始发现设备。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用["
+      },
+      {
+        "section_id": "section-40",
+        "title": "wifi.stopDiscoverDevices<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1256,
+        "line_end": 1286,
+        "summary": "stopDiscoverDevices(): boolean\n\n停止发现设备。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[w"
+      },
+      {
+        "section_id": "section-41",
+        "title": "WifiP2pGroupInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1287,
+        "line_end": 1310,
+        "summary": "表示P2P群组相关信息。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[WifiP2pGroupInfo](js-apis-wi"
+      },
+      {
+        "section_id": "section-42",
+        "title": "wifi.on('wifiStateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1311,
+        "line_end": 1341,
+        "summary": "on(type: 'wifiStateChange', callback: Callback&lt;number&gt;): void\n\n注册WLAN状态改变事件。\n\n> **说明：**\n>\n> 从"
+      },
+      {
+        "section_id": "section-43",
+        "title": "wifi.off('wifiStateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1342,
+        "line_end": 1378,
+        "summary": "off(type: 'wifiStateChange', callback?: Callback&lt;number&gt;): void\n\n取消注册WLAN状态改变事件。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-44",
+        "title": "wifi.on('wifiConnectionChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1379,
+        "line_end": 1407,
+        "summary": "on(type: 'wifiConnectionChange', callback: Callback&lt;number&gt;): void\n\n注册WLAN连接状态改变事件。\n\n> **说明：*"
+      },
+      {
+        "section_id": "section-45",
+        "title": "wifi.off('wifiConnectionChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1408,
+        "line_end": 1443,
+        "summary": "off(type: 'wifiConnectionChange', callback?: Callback&lt;number&gt;): void\n\n取消注册WLAN连接状态改变事件。\n\n> **"
+      },
+      {
+        "section_id": "section-46",
+        "title": "wifi.on('wifiScanStateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1444,
+        "line_end": 1472,
+        "summary": "on(type: 'wifiScanStateChange', callback: Callback&lt;number&gt;): void\n\n注册扫描状态改变事件。\n\n> **说明：**\n>\n>"
+      },
+      {
+        "section_id": "section-47",
+        "title": "wifi.off('wifiScanStateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1473,
+        "line_end": 1508,
+        "summary": "off(type: 'wifiScanStateChange', callback?: Callback&lt;number&gt;): void\n\n取消注册扫描状态改变事件。\n\n> **说明：**"
+      },
+      {
+        "section_id": "section-48",
+        "title": "wifi.on('wifiRssiChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1509,
+        "line_end": 1530,
+        "summary": "on(type: 'wifiRssiChange', callback: Callback&lt;number&gt;): void\n\n注册RSSI状态改变事件。\n\n> **说明：**\n>\n> 从A"
+      },
+      {
+        "section_id": "section-49",
+        "title": "wifi.off('wifiRssiChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1531,
+        "line_end": 1568,
+        "summary": "off(type: 'wifiRssiChange', callback?: Callback&lt;number&gt;): void\n\n取消注册RSSI状态改变事件。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-50",
+        "title": "wifi.on('hotspotStateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1569,
+        "line_end": 1613,
+        "summary": "on(type: 'hotspotStateChange', callback: Callback&lt;number&gt;): void\n\n注册热点状态改变事件。\n\n> **说明：**\n>\n>"
+      },
+      {
+        "section_id": "section-51",
+        "title": "wifi.off('hotspotStateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1614,
+        "line_end": 1636,
+        "summary": "off(type: 'hotspotStateChange', callback?: Callback&lt;number&gt;): void\n\n取消注册热点状态改变事件。\n\n> **说明：**"
+      },
+      {
+        "section_id": "section-52",
+        "title": "wifi.on('p2pStateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1637,
+        "line_end": 1667,
+        "summary": "on(type: 'p2pStateChange', callback: Callback&lt;number&gt;): void\n\n注册P2P开关状态改变事件。\n\n> **说明：**\n>\n> 从"
+      },
+      {
+        "section_id": "section-53",
+        "title": "wifi.off('p2pStateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1668,
+        "line_end": 1703,
+        "summary": "off(type: 'p2pStateChange', callback?: Callback&lt;number&gt;): void\n\n取消注册P2P开关状态改变事件。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-54",
+        "title": "wifi.on('p2pConnectionChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1704,
+        "line_end": 1725,
+        "summary": "on(type: 'p2pConnectionChange', callback: Callback&lt;WifiP2pLinkedInfo&gt;): void\n\n注册P2P连接状态改变事件。"
+      },
+      {
+        "section_id": "section-55",
+        "title": "wifi.off('p2pConnectionChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1726,
+        "line_end": 1761,
+        "summary": "off(type: 'p2pConnectionChange', callback?: Callback&lt;WifiP2pLinkedInfo&gt;): void\n\n取消注册P2P连接状态改变"
+      },
+      {
+        "section_id": "section-56",
+        "title": "wifi.on('p2pDeviceChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1762,
+        "line_end": 1783,
+        "summary": "on(type: 'p2pDeviceChange', callback: Callback&lt;WifiP2pDevice&gt;): void\n\n注册P2P设备状态改变事件。\n\n> **说明："
+      },
+      {
+        "section_id": "section-57",
+        "title": "wifi.off('p2pDeviceChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1784,
+        "line_end": 1819,
+        "summary": "off(type: 'p2pDeviceChange', callback?: Callback&lt;WifiP2pDevice&gt;): void\n\n取消注册P2P设备状态改变事件。\n\n> *"
+      },
+      {
+        "section_id": "section-58",
+        "title": "wifi.on('p2pPeerDeviceChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1820,
+        "line_end": 1841,
+        "summary": "on(type: 'p2pPeerDeviceChange', callback: Callback&lt;WifiP2pDevice[]&gt;): void\n\n注册P2P对端设备状态改变事件。"
+      },
+      {
+        "section_id": "section-59",
+        "title": "wifi.off('p2pPeerDeviceChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1842,
+        "line_end": 1877,
+        "summary": "off(type: 'p2pPeerDeviceChange', callback?: Callback&lt;WifiP2pDevice[]&gt;): void\n\n取消注册P2P对端设备状态改变"
+      },
+      {
+        "section_id": "section-60",
+        "title": "wifi.on('p2pPersistentGroupChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1878,
+        "line_end": 1899,
+        "summary": "on(type: 'p2pPersistentGroupChange', callback: Callback&lt;void&gt;): void\n\n注册P2P永久组状态改变事件。\n\n> **说明"
+      },
+      {
+        "section_id": "section-61",
+        "title": "wifi.off('p2pPersistentGroupChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1900,
+        "line_end": 1936,
+        "summary": "off(type: 'p2pPersistentGroupChange', callback?: Callback&lt;void&gt;): void\n\n取消注册P2P永久组状态改变事件。\n\n>"
+      },
+      {
+        "section_id": "section-62",
+        "title": "wifi.on('p2pDiscoveryChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1937,
+        "line_end": 1965,
+        "summary": "on(type: 'p2pDiscoveryChange', callback: Callback&lt;number&gt;): void\n\n注册发现设备状态改变事件。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-63",
+        "title": "wifi.off('p2pDiscoveryChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1966,
+        "line_end": 2000,
+        "summary": "off(type: 'p2pDiscoveryChange', callback?: Callback&lt;number&gt;): void\n\n取消注册发现设备状态改变事件。\n\n> **说明：*"
+      }
+    ]
+  }
+}

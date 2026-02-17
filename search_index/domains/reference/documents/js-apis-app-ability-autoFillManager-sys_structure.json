@@ -1,0 +1,124 @@
+{
+  "doc_id": "js-apis-app-ability-autoFillManager-sys",
+  "title": "@ohos.app.ability.autoFillManager (autoFillManager)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-autoFillManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-autoFillManager-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@hanchen45",
+    "designer": "@ccllee1",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.autoFillManager (autoFillManager)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.autoFillManager (autoFillManager)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { autoFillManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ViewData",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 43,
+        "summary": "type ViewData = _ViewData.default\n\n自动填充的视图数据信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Abil"
+      },
+      {
+        "section_id": "section-3",
+        "title": "PageNodeInfo",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 59,
+        "summary": "type PageNodeInfo = _PageNodeInfo.default\n\n自动填充的页面节点信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-4",
+        "title": "FillRequest",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 75,
+        "summary": "type FillRequest = _AutoFillRequest.FillRequest\n\n自动填充的请求信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCap"
+      },
+      {
+        "section_id": "section-5",
+        "title": "SaveRequest",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 91,
+        "summary": "type SaveRequest = _AutoFillRequest.SaveRequest\n\n自动保存的请求信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCap"
+      },
+      {
+        "section_id": "section-6",
+        "title": "UpdateRequest<sup>12+</sup>",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 107,
+        "summary": "type UpdateRequest = _AutoFillRequest.UpdateRequest\n\n自动填充的更新信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：Syste"
+      },
+      {
+        "section_id": "section-7",
+        "title": "FillResponse",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 123,
+        "summary": "type FillResponse = _AutoFillRequest.FillResponse\n\n自动填充的响应信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-8",
+        "title": "FillRequestCallback",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 139,
+        "summary": "type FillRequestCallback = _AutoFillRequest.FillRequestCallback\n\n自动填充或者生成密码时的回调对象，可以通过此回调通知客户端成功或者失"
+      },
+      {
+        "section_id": "section-9",
+        "title": "SaveRequestCallback",
+        "level": 2,
+        "line_start": 140,
+        "line_end": 155,
+        "summary": "type SaveRequestCallback = _AutoFillRequest.SaveRequestCallback\n\n自动保存或者手动保存请求的回调对象。\n\n**系统接口**：此接口为系"
+      },
+      {
+        "section_id": "section-10",
+        "title": "CustomData<sup>13+</sup>",
+        "level": 2,
+        "line_start": 156,
+        "line_end": 171,
+        "summary": "type CustomData = _CustomData.default\n\n自定义数据。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Abilit"
+      },
+      {
+        "section_id": "section-11",
+        "title": "AutoFillRect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 172,
+        "line_end": 187,
+        "summary": "type AutoFillRect = _AutoFillRect.default\n\n用于自动填充的矩形区域。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-12",
+        "title": "AutoFillPopupConfig<sup>12+</sup>",
+        "level": 2,
+        "line_start": 188,
+        "line_end": 203,
+        "summary": "type AutoFillPopupConfig = _AutoFillPopupConfig.default\n\n自动填充气泡弹窗的尺寸和位置信息。\n\n**系统接口**：此接口为系统接口。\n\n**系"
+      },
+      {
+        "section_id": "section-13",
+        "title": "PopupSize<sup>12+</sup>",
+        "level": 2,
+        "line_start": 204,
+        "line_end": 219,
+        "summary": "type PopupSize = _AutoFillPopupConfig.PopupSize\n\n气泡弹窗的宽和高。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapa"
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "doc_id": "js-apis-faultLogger",
+  "title": "@ohos.faultLogger (故障日志获取)",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-faultLogger.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-faultLogger.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@chenshi51",
+    "designer": "@Maplestory91",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.faultLogger (故障日志获取)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.faultLogger (故障日志获取)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 28,
+        "summary": "```ts\nimport { FaultLogger } from '@kit.PerformanceAnalysisKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "FaultType",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 41,
+        "summary": "故障类型枚举。\n\n**系统能力**：SystemCapability.HiviewDFX.Hiview.FaultLogger\n\n| 名称 | 值 | 说明 |\n| -------- | -----"
+      },
+      {
+        "section_id": "section-3",
+        "title": "FaultLogInfo",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 58,
+        "summary": "故障信息数据结构，获取到的故障信息的数据结构。\n\n**系统能力**：SystemCapability.HiviewDFX.Hiview.FaultLogger\n\n| 名称 | 类型 | 只读 | 可"
+      },
+      {
+        "section_id": "section-4",
+        "title": "FaultLogger.query<sup>9+</sup>",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 115,
+        "summary": "query(faultType: FaultType, callback: AsyncCallback&lt;Array&lt;FaultLogInfo&gt;&gt;) : void\n\n获取当前应"
+      },
+      {
+        "section_id": "section-5",
+        "title": "FaultLogger.query<sup>9+</sup>",
+        "level": 2,
+        "line_start": 116,
+        "line_end": 175,
+        "summary": "query(faultType: FaultType) : Promise&lt;Array&lt;FaultLogInfo&gt;&gt;\n\n获取当前应用故障信息，该方法通过Promise方式返回"
+      },
+      {
+        "section_id": "section-6",
+        "title": "FaultLogger.querySelfFaultLog<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 222,
+        "summary": "querySelfFaultLog(faultType: FaultType, callback: AsyncCallback&lt;Array&lt;FaultLogInfo&gt;&gt;) :"
+      },
+      {
+        "section_id": "section-7",
+        "title": "FaultLogger.querySelfFaultLog<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 271,
+        "summary": "querySelfFaultLog(faultType: FaultType) : Promise&lt;Array&lt;FaultLogInfo&gt;&gt;\n\n> **说明：**\n>\n> 从"
+      }
+    ]
+  }
+}

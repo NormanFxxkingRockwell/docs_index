@@ -1,0 +1,284 @@
+{
+  "doc_id": "errorcode-data-rdb",
+  "title": "关系型数据库错误码",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 关系型数据库错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "关系型数据库错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "14800000 内部错误",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 37,
+        "summary": "**错误信息**\n\nInner error.\n\n**错误描述**\n\n内部错误。\n\n**可能原因**\n\n优先查看错误日志，通过日志可以详细了解错误原因，主要有以下几种：\n1. sql执行异常。\n2."
+      },
+      {
+        "section_id": "section-2",
+        "title": "14800001 无效的参数",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 55,
+        "summary": "**错误信息**\n\nInvalid arguments. Possible causes: 1. Parameter is out of valid range; 2. Missing GROUP"
+      },
+      {
+        "section_id": "section-3",
+        "title": "14800010 数据库路径不合法",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 73,
+        "summary": "**错误信息**\n\nFailed to open or delete the database by an invalid database path.\n\n**错误描述**\n\n数据库路径不合法，打开"
+      },
+      {
+        "section_id": "section-4",
+        "title": "14800011 数据库文件异常",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 91,
+        "summary": "**错误信息**\n\nThe current operation failed because the database is corrupted.\n\n**错误描述**\n\n数据库异常，当前操作失败。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "14800012 结果集为空或指定位置不合法",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 109,
+        "summary": "**错误信息**\n\nResultSet is empty or pointer index is out of bounds.\n\n**错误描述**\n\n结果集为空或指定位置不合法。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "14800013 列值为空或列类型与当前调用接口不兼容",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 129,
+        "summary": "**错误信息**\n\nColumn index is out of bounds.\n\n**错误描述**\n\n列值为空或列类型与当前调用接口不兼容。\n\n**可能原因**\n\n1. 当前列号超出范围[0, n"
+      },
+      {
+        "section_id": "section-7",
+        "title": "14800014 目标实例已关闭",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 147,
+        "summary": "**错误信息**\n\nThe target instance is already closed.\n\n**错误描述**\n\n目标实例已关闭。\n\n**可能原因**\n\n实例未成功打开，或者所属实例已关闭（如"
+      },
+      {
+        "section_id": "section-8",
+        "title": "14800015 数据库没有响应",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 166,
+        "summary": "**错误信息**\n\nThe database does not respond.\n\n**错误描述**\n\n数据库没有响应。\n\n**可能原因**\n\n有读、写、attach、detach等操作正在执行，无"
+      },
+      {
+        "section_id": "section-9",
+        "title": "14800016 数据库别名已被使用",
+        "level": 2,
+        "line_start": 167,
+        "line_end": 184,
+        "summary": "**错误信息**\n\nThe database alias already exists.\n\n**错误描述**\n\n附加后的数据库别名已被使用。\n\n**可能原因**\n\n附加后的数据库的别名已被使用。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "14800017 关键配置已被更改",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 204,
+        "summary": "**错误信息**\n\nStoreConfig is changed.\n\n**错误描述**\n\n数据库关键配置已被更改。\n\n**可能原因**\n\n数据库的area（区域），securityLevel（安全级"
+      },
+      {
+        "section_id": "section-11",
+        "title": "14800018 查询结果没有数据符合条件",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 222,
+        "summary": "**错误信息**\n\nNo data meets the condition.\n\n**错误描述**\n\nSQL语句有误，未查询到符合条件的数据。\n\n**可能原因**\n\n没有编写查询正确结果集的SQL语句"
+      },
+      {
+        "section_id": "section-12",
+        "title": "14800019 SQL必须是查询语句",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 240,
+        "summary": "**错误信息**\n\nThe SQL must be a query statement.\n\n**错误描述**\n\nSQL必须是查询语句。\n\n**可能原因**\n\nSQL语句不符合规定，导致查询失败。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "14800020 密钥损坏或丢失",
+        "level": 2,
+        "line_start": 241,
+        "line_end": 259,
+        "summary": "**错误信息**\n\nThe secret key is corrupted or lost.\n\n**错误描述**\n\n获取密钥失败。\n\n**可能原因**\n\n根密钥丢失、无权限读取密钥文件、密钥文件损坏"
+      },
+      {
+        "section_id": "section-14",
+        "title": "14800021 SQLite：通用错误",
+        "level": 2,
+        "line_start": 260,
+        "line_end": 280,
+        "summary": "**错误信息**\n\nSQLite: Generic error. Possible causes: Insert failed or the updated data does not exist."
+      },
+      {
+        "section_id": "section-15",
+        "title": "14800022 SQLite：异步回调请求被中止",
+        "level": 2,
+        "line_start": 281,
+        "line_end": 299,
+        "summary": "**错误信息**\n\nSQLite: Callback routine requested an abort.\n\n**错误描述**\n\nSQLite：异步回调请求被中止。\n\n**可能原因**\n\n1. 通"
+      },
+      {
+        "section_id": "section-16",
+        "title": "14800023 SQLite：访问权限被拒绝",
+        "level": 2,
+        "line_start": 300,
+        "line_end": 322,
+        "summary": "**错误信息**\n\nSQLite: Access permission denied.\n\n**错误描述**\n\nSQLite访问权限被拒绝。\n\n**可能原因**\n\n1. 操作系统级别的权限问题，意味着"
+      },
+      {
+        "section_id": "section-17",
+        "title": "14800024 SQLite：数据库文件已锁定",
+        "level": 2,
+        "line_start": 323,
+        "line_end": 342,
+        "summary": "**错误信息**\n\nSQLite: The database file is locked.\n\n**错误描述**\n\nSQLite数据库文件已锁定。\n\n**可能原因**\n\n1. 同一应用两个进程，例如"
+      },
+      {
+        "section_id": "section-18",
+        "title": "14800025 SQLite：数据库中的表被锁定",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 365,
+        "summary": "**错误信息**\n\nSQLite: A table in the database is locked.\n\n**错误描述**\n\nSQLite：数据库中的表被锁定。\n\n**可能原因**\n\n1. 在尝试"
+      },
+      {
+        "section_id": "section-19",
+        "title": "14800026 SQLite：数据库内存不足",
+        "level": 2,
+        "line_start": 366,
+        "line_end": 383,
+        "summary": "**错误信息**\n\nSQLite: The database is out of memory.\n\n**错误描述**\n\nSQLite：数据库内存不足。\n\n**可能原因**\n\n数据库内存不足，可能是由"
+      },
+      {
+        "section_id": "section-20",
+        "title": "14800027 SQLite：尝试写入只读数据库",
+        "level": 2,
+        "line_start": 384,
+        "line_end": 404,
+        "summary": "**错误信息**\n\nSQLite: Attempt to write a readonly database.\n\n**错误描述**\n\nSQLite：尝试写入只读数据库。\n\n**可能原因**\n\n1."
+      },
+      {
+        "section_id": "section-21",
+        "title": "14800028 SQLite：发生了某种磁盘I/O错误",
+        "level": 2,
+        "line_start": 405,
+        "line_end": 430,
+        "summary": "**错误信息**\n\nSQLite: Some kind of disk I/O error occurred.\n\n**错误描述**\n\nSQLite发生了某种磁盘I/O错误。\n\n**可能原因**\n\n可"
+      },
+      {
+        "section_id": "section-22",
+        "title": "14800029 SQLite：数据库已满",
+        "level": 2,
+        "line_start": 431,
+        "line_end": 448,
+        "summary": "**错误信息**\n\nSQLite: The database is full.\n\n**错误描述**\n\nSQLite数据库已满。\n\n**可能原因**\n\n数据库已满，可能是由于数据量过大或磁盘空间不足导"
+      },
+      {
+        "section_id": "section-23",
+        "title": "14800030 SQLite：无法打开数据库文件",
+        "level": 2,
+        "line_start": 449,
+        "line_end": 471,
+        "summary": "**错误信息**\n\nSQLite: Unable to open the database file.\n\n**错误描述**\n\nSQLite：无法打开数据库文件。\n\n**可能原因**\n\n1. 文件不存"
+      },
+      {
+        "section_id": "section-24",
+        "title": "14800031 SQLite：TEXT或BLOB超出大小限制",
+        "level": 2,
+        "line_start": 472,
+        "line_end": 490,
+        "summary": "**错误信息**\n\nSQLite: TEXT or BLOB exceeds size limit.\n\n**错误描述**\n\nSQLite：TEXT或BLOB超出大小限制。\n\n**可能原因**\n\n1."
+      },
+      {
+        "section_id": "section-25",
+        "title": "14800032 SQLite：由于违反约束而中止",
+        "level": 2,
+        "line_start": 491,
+        "line_end": 509,
+        "summary": "**错误信息**\n\nSQLite: Abort due to constraint violation.\n\n**错误描述**\n\nSQLite：由于违反约束而中止。\n\n**可能原因**\n\n1. 尝试写"
+      },
+      {
+        "section_id": "section-26",
+        "title": "14800033 SQLite：数据类型不匹配",
+        "level": 2,
+        "line_start": 510,
+        "line_end": 528,
+        "summary": "**错误信息**\n\nSQLite: Data type mismatch.\n\n**错误描述**\n\nSQLite：数据类型不匹配。\n\n**可能原因**\n\n1. 执行一个SQL语句时，其中涉及的数据类型"
+      },
+      {
+        "section_id": "section-27",
+        "title": "14800034 SQLite：库使用不正确",
+        "level": 2,
+        "line_start": 529,
+        "line_end": 552,
+        "summary": "**错误信息**\n\nSQLite: Library used incorrectly.\n\n**错误描述**\n\nSQLite：库使用不正确。\n\n**可能原因**\n\n1. 表示数据库操作或者使用上下文不"
+      },
+      {
+        "section_id": "section-28",
+        "title": "14800041 类型转换失败",
+        "level": 2,
+        "line_start": 553,
+        "line_end": 570,
+        "summary": "**错误信息**\n\nType conversion failed.\n\n**错误描述**\n\n类型转换失败。\n\n**可能原因**\n\n通过resultSet的获取数据时，传入字段的数据类型不匹配。\n\n**"
+      },
+      {
+        "section_id": "section-29",
+        "title": "14800047 WAL文件大小超过默认上限",
+        "level": 2,
+        "line_start": 571,
+        "line_end": 590,
+        "summary": "**错误信息**\n\nThe WAL file size exceeds the default limit.\n\n**错误描述**\n\nWAL文件大小超过默认上限（512MB）。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-30",
+        "title": "14800050 获取订阅服务失败",
+        "level": 2,
+        "line_start": 591,
+        "line_end": 608,
+        "summary": "**错误信息**\n\nFailed to obtain the subscription service.\n\n**错误描述**\n\n获取订阅服务失败。\n\n**可能原因**\n\n当前平台不支持订阅服务。"
+      },
+      {
+        "section_id": "section-31",
+        "title": "14801001 上下文环境非Stage模型",
+        "level": 2,
+        "line_start": 609,
+        "line_end": 626,
+        "summary": "**错误信息**\n\nThe operation is supported in the stage model only.\n\n**错误描述**\n\n该操作仅支持Stage模型。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-32",
+        "title": "14801002 storeConfig中传入的dataGroupId参数非法",
+        "level": 2,
+        "line_start": 627,
+        "line_end": 644,
+        "summary": "**错误信息**\n\nInvalid data group ID.\n\n**错误描述**\n\n使用非法dataGroupId参数。\n\n**可能原因**\n\n使用的dataGroupId不是从应用市场正常申请"
+      },
+      {
+        "section_id": "section-33",
+        "title": "14800051 分布式表类型不匹配",
+        "level": 2,
+        "line_start": 645,
+        "line_end": 661,
+        "summary": "**错误信息**\n\nThe type of the distributed table does not match.\n\n**错误描述**\n\n对同一数据库表设置的分布式表类型前后不一致。\n\n**可能"
+      }
+    ]
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "doc_id": "js-apis-media-sys",
+  "title": "@ohos.multimedia.media (媒体服务)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-media-kit/js-apis-media-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-kit/js-apis-media-sys.md",
+  "metadata": {
+    "kit": "Media Kit",
+    "subsystem": "Multimedia",
+    "owner": "@zzs_911",
+    "designer": "@stupig001",
+    "tester": "@xdlinc",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Kit Multimedia 模块的 @ohos.multimedia.media (媒体服务)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimedia.media (媒体服务)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { media } from '@kit.MediaKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "AVErrorCode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 33,
+        "summary": "[媒体错误码](errorcode-media.md)类型枚举。\n\n**系统能力：** SystemCapability.Multimedia.Media.Core\n\n**系统接口：** 该接口为系"
+      },
+      {
+        "section_id": "section-3",
+        "title": "media.createVideoRecorder<sup>9+</sup>",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 75,
+        "summary": "createVideoRecorder(callback: AsyncCallback\\<VideoRecorder>): void\n\n创建视频录制实例（一台设备只允许创建一个录制实例）。使用cal"
+      },
+      {
+        "section_id": "section-4",
+        "title": "media.createVideoRecorder<sup>9+</sup>",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 118,
+        "summary": "createVideoRecorder(): Promise\\<VideoRecorder>\n\n创建视频录制实例（一台设备只允许创建一个录制实例）。使用Promise异步回调。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "media.reportAVScreenCaptureUserChoice<sup>12+</sup>",
+        "level": 2,
+        "line_start": 119,
+        "line_end": 179,
+        "summary": "reportAVScreenCaptureUserChoice(sessionId: number, choice: string): Promise\\<void>\n\n上报录屏隐私弹窗的选择结果到S"
+      },
+      {
+        "section_id": "section-6",
+        "title": "media.getAVScreenCaptureConfigurableParameters<sup>20+</sup>",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 228,
+        "summary": "getAVScreenCaptureConfigurableParameters(sessionId: number): Promise\\<string>\n\n从服务器获取用户可更改的系统隐私保护和应"
+      },
+      {
+        "section_id": "section-7",
+        "title": "media.getScreenCaptureMonitor<sup>18+</sup>",
+        "level": 2,
+        "line_start": 229,
+        "line_end": 264,
+        "summary": "getScreenCaptureMonitor(): Promise\\<ScreenCaptureMonitor>\n\n获取录屏监控模块实例。使用Promise异步回调。\n\n**系统能力：** Sys"
+      },
+      {
+        "section_id": "section-8",
+        "title": "media.createParallelSoundPool<sup>20+</sup>",
+        "level": 2,
+        "line_start": 265,
+        "line_end": 320,
+        "summary": "createParallelSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo): Promise\\<Sou"
+      },
+      {
+        "section_id": "section-9",
+        "title": "PixelMapParams<sup>11+</sup>",
+        "level": 2,
+        "line_start": 321,
+        "line_end": 330,
+        "summary": "获取视频缩略图时，输出缩略图的格式参数。\n\n**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator\n\n| 名称     | 类型"
+      },
+      {
+        "section_id": "section-10",
+        "title": "PixelFormat<sup>11+</sup>",
+        "level": 2,
+        "line_start": 331,
+        "line_end": 344,
+        "summary": "获取视频缩略图时，输出的缩略图采用的颜色格式枚举。\n\n**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator\n\n**系统接口：**"
+      },
+      {
+        "section_id": "section-11",
+        "title": "AVMetadataExtractor<sup>11+</sup>",
+        "level": 2,
+        "line_start": 345,
+        "line_end": 439,
+        "summary": "> **说明：**\n> 元数据获取类，用于从媒体资源中获取元数据。在调用AVMetadataExtractor的方法前，需要先通过[createAVMetadataExtractor()](arkt"
+      },
+      {
+        "section_id": "section-12",
+        "title": "AVRecorder<sup>9+</sup>",
+        "level": 2,
+        "line_start": 440,
+        "line_end": 571,
+        "summary": "音视频录制管理类，用于音视频媒体录制。在调用AVRecorder的方法前，需要先通过[createAVRecorder()](arkts-apis-media-f.md#mediacreateavr"
+      },
+      {
+        "section_id": "section-13",
+        "title": "AVRecorderProfile<sup>9+</sup>",
+        "level": 2,
+        "line_start": 572,
+        "line_end": 581,
+        "summary": "音视频录制的配置文件。\n\n**系统能力：** SystemCapability.Multimedia.Media.AVRecorder\n\n| 名称             | 类型"
+      },
+      {
+        "section_id": "section-14",
+        "title": "VideoRecorder<sup>9+</sup>",
+        "level": 2,
+        "line_start": 582,
+        "line_end": 1378,
+        "summary": "> **说明：**\n> AVRecorder<sup>9+</sup>发布后，VideoRecorder停止维护，建议使用[AVRecorder](arkts-apis-media-AVRecord"
+      },
+      {
+        "section_id": "section-15",
+        "title": "VideoRecordState<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1379,
+        "line_end": 1395,
+        "summary": "视频录制的状态机。可通过state属性获取当前状态。\n\n**系统能力：** SystemCapability.Multimedia.Media.VideoRecorder\n\n**系统接口：** 该接"
+      },
+      {
+        "section_id": "section-16",
+        "title": "VideoRecorderConfig<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1396,
+        "line_end": 1414,
+        "summary": "表示视频录制的参数设置。\n\n通过audioSourceType和videoSourceType区分纯视频录制和音视频录制（纯音频录制请使用[AVRecorder](arkts-apis-media-"
+      },
+      {
+        "section_id": "section-17",
+        "title": "VideoRecorderProfile<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1415,
+        "line_end": 1435,
+        "summary": "视频录制的配置文件。\n\n**系统能力：** SystemCapability.Multimedia.Media.VideoRecorder\n\n**系统接口：** 该接口为系统接口。\n\n| 名称"
+      },
+      {
+        "section_id": "section-18",
+        "title": "WatermarkConfig<sup>13+</sup>",
+        "level": 2,
+        "line_start": 1436,
+        "line_end": 1448,
+        "summary": "设置给AVRecorder的水印相关配置，该位置以画面的左上角为开始点。\n\n**系统能力：** SystemCapability.Multimedia.Media.Core\n\n**系统接口：** 该"
+      },
+      {
+        "section_id": "section-19",
+        "title": "ScreenCaptureMonitor<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1449,
+        "line_end": 1529,
+        "summary": "录屏状态监控类，用于查询和监听系统录屏的录屏状态。在调用ScreenCaptureMonitor方法前，需要先通过[getScreenCaptureMonitor()](#mediagetscree"
+      },
+      {
+        "section_id": "section-20",
+        "title": "ScreenCaptureEvent<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1530,
+        "line_end": 1542,
+        "summary": "系统录屏应用录屏状态的枚举值。\n\n**系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture\n\n**系统接口：** 该接口为系统接口。"
+      },
+      {
+        "section_id": "section-21",
+        "title": "enableDeviceLevelCapture<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1543,
+        "line_end": 1556,
+        "summary": "用于指定折叠屏PC在折叠状态下录制半块屏幕还是整块屏幕。\n\n**系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture\n\n**系统接口：*"
+      }
+    ]
+  }
+}

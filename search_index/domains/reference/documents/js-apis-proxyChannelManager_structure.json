@@ -1,0 +1,132 @@
+{
+  "doc_id": "js-apis-proxyChannelManager",
+  "title": "@ohos.distributedsched.proxyChannelManager (代理通道管理)",
+  "path": "zh-cn/application-dev/reference/apis-distributedservice-kit/js-apis-proxyChannelManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-distributedservice-kit/js-apis-proxyChannelManager.md",
+  "metadata": {
+    "kit": "Distributed Service Kit",
+    "subsystem": "DistributedSched",
+    "owner": "@huangkai71",
+    "designer": "@lee_jet520",
+    "tester": "@Ytt-test",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Distributed Service Kit DistributedSched 模块的 @ohos.distributedsched.proxyChannelManager (代理通道管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.distributedsched.proxyChannelManager (代理通道管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 30,
+        "summary": "```js\nimport { proxyChannelManager } from '@kit.DistributedServiceKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 38,
+        "summary": "调用模块接口前，需要完成如下配置。\n\n1. 需要申请ohos.permission.ACCESS_BLUETOOTH权限。如何配置和申请权限，具体操作请参考[声明权限](../../security"
+      },
+      {
+        "section_id": "section-3",
+        "title": "proxyChannelManager.openProxyChannel",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 116,
+        "summary": "openProxyChannel(channelInfo:&nbsp;ChannelInfo):&nbsp;Promise&lt;number&gt;\n\n打开代理通道，使用Promise异步回调返回"
+      },
+      {
+        "section_id": "section-4",
+        "title": "proxyChannelManager.closeProxyChannel",
+        "level": 2,
+        "line_start": 117,
+        "line_end": 175,
+        "summary": "closeProxyChannel(channelId:&nbsp;number):&nbsp;void\n\n关闭已打开的代理通道。\n\n**需要权限**：ohos.permission.ACCESS_"
+      },
+      {
+        "section_id": "section-5",
+        "title": "proxyChannelManager.sendData",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 247,
+        "summary": "sendData(channelId:number, data:ArrayBuffer):Promise&lt;void&gt;\n\n向对端发送数据，使用Promise异步回调。\n\n**需要权限**："
+      },
+      {
+        "section_id": "section-6",
+        "title": "proxyChannelManager.on('receiveData')",
+        "level": 2,
+        "line_start": 248,
+        "line_end": 308,
+        "summary": "on(type:&nbsp;'receiveData', channelId:&nbsp;number, callback:&nbsp;Callback&lt;DataInfo&gt;):&nbsp"
+      },
+      {
+        "section_id": "section-7",
+        "title": "proxyChannelManager.off('receiveData')",
+        "level": 2,
+        "line_start": 309,
+        "line_end": 367,
+        "summary": "off(type:&nbsp;'receiveData', channelId:&nbsp;number, callback?:&nbsp;Callback&lt;DataInfo&gt;):&nb"
+      },
+      {
+        "section_id": "section-8",
+        "title": "proxyChannelManager.on('channelStateChange')",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 428,
+        "summary": "on(type:&nbsp;'channelStateChange', channelId:&nbsp;number, callback:&nbsp;Callback&lt;ChannelState"
+      },
+      {
+        "section_id": "section-9",
+        "title": "proxyChannelManager.off('channelStateChange')",
+        "level": 2,
+        "line_start": 429,
+        "line_end": 487,
+        "summary": "off(type:&nbsp;'channelStateChange', channelId:&nbsp;number, callback?:&nbsp;Callback&lt;ChannelSta"
+      },
+      {
+        "section_id": "section-10",
+        "title": "DataInfo",
+        "level": 2,
+        "line_start": 488,
+        "line_end": 498,
+        "summary": "存放接收的数据信息，包括通道Id和数据。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称       | 类型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ChannelInfo",
+        "level": 2,
+        "line_start": 499,
+        "line_end": 510,
+        "summary": "打开代理通道函数的入参，包括对端设备的MAC地址和监听服务的UUID。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n|"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ChannelStateInfo",
+        "level": 2,
+        "line_start": 511,
+        "line_end": 521,
+        "summary": "当代理通道状态变化时，用于表示代理通道的连接状态。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称"
+      },
+      {
+        "section_id": "section-13",
+        "title": "ChannelState",
+        "level": 2,
+        "line_start": 522,
+        "line_end": 534,
+        "summary": "通道状态发生变化时，代理通道上报的通道连接状态。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称       |"
+      },
+      {
+        "section_id": "section-14",
+        "title": "LinkType",
+        "level": 2,
+        "line_start": 535,
+        "line_end": 543,
+        "summary": "链路类型。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称       | 值"
+      }
+    ]
+  }
+}

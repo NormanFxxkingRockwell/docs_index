@@ -1,0 +1,180 @@
+{
+  "doc_id": "errorcode-form",
+  "title": "卡片错误码",
+  "path": "zh-cn/application-dev/reference/apis-form-kit/errorcode-form.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-form-kit/errorcode-form.md",
+  "metadata": {
+    "kit": "Form Kit",
+    "subsystem": "Ability",
+    "owner": "@cx983299475",
+    "designer": "@xueyulong",
+    "tester": "@yangyuecheng",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "Form Kit Ability 模块的 卡片错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "卡片错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "16500050 进程间通信失败",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 30,
+        "summary": "**错误信息**\n\nIPC connection error.\n\n**错误描述**\n\n系统内为执行当前请求进行必要进程间通信时出错，系统会报此错误码。\n\n**可能原因**\n\n当调用接口传入的入参过大"
+      },
+      {
+        "section_id": "section-2",
+        "title": "16500060 连接服务失败",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 50,
+        "summary": "**错误信息**\n\nService connection error.\n\n**错误描述**\n\n系统内为执行当前请求连接必要服务完成请求时出错，系统会报此错误码。\n\n**可能原因**\n\n1. 当前卡片"
+      },
+      {
+        "section_id": "section-3",
+        "title": "16500100 获取卡片配置信息失败",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 68,
+        "summary": "**错误信息**\n\nFailed to obtain configuration information.\n\n**错误描述**\n\n系统内为执行当前请求获取卡片相关配置信息时出错，系统会报此错误码。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "16501000 内部功能错误",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 86,
+        "summary": "**错误信息**\n\nAn internal functional error occurred.\n\n**错误描述**\n\n系统内为执行当前请求时发生内部错误，系统会报此错误码。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "16501001 卡片ID不存在",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 104,
+        "summary": "**错误信息**\n\nThe ID of the form to be operated does not exist.\n\n**错误描述**\n\n当请求所指定的卡片ID未找到或不存在时，系统会报此错误码"
+      },
+      {
+        "section_id": "section-6",
+        "title": "16501002 卡片数量达到上限",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 122,
+        "summary": "**错误信息**\n\nThe number of forms exceeds the maximum allowed.\n\n**错误描述**\n\n当卡片数量已达到上限时继续请求添加卡片，系统会报此错误码。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "16501003 无法操作指定卡片",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 142,
+        "summary": "**错误信息**\n\nThe form cannot be operated by the current application.\n\n**错误描述**\n\n当前应用无法对指定卡片进行操作时，系统会报此"
+      },
+      {
+        "section_id": "section-8",
+        "title": "16501006 卡片渲染服务连接失败",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 160,
+        "summary": "**错误信息**\n\nFormRenderService is stopped. Connect to the service again.\n\n**错误描述**\n\n无法连接卡片渲染服务时，系统会报此错"
+      },
+      {
+        "section_id": "section-9",
+        "title": "16501007 卡片不可信",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 179,
+        "summary": "**错误信息**\n\nForm is not trust.\n\n**错误描述**\n\n卡片不受信任。\n\n**可能原因**\n\n卡片代码存在死循环、内存泄漏等问题导致系统异常。\n\n**处理步骤**\n\n检查卡片"
+      },
+      {
+        "section_id": "section-10",
+        "title": "16501008 等待卡片加桌超时",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 198,
+        "summary": "**错误信息**\n\nWaiting for the form addition to the desktop timed out.\n\n**错误描述**\n\n发送卡片加桌请求后，等待卡片加桌超时，系统会"
+      },
+      {
+        "section_id": "section-11",
+        "title": "16501010 设置互动卡片背景图失败",
+        "level": 2,
+        "line_start": 199,
+        "line_end": 216,
+        "summary": "**错误信息**\n\nFailed to set the live form background image.\n\n**错误描述**\n\n设置互动卡片背景图时，传入背景图资源无效，系统会报此错误码。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "16501011 卡片不支持调用当前接口",
+        "level": 2,
+        "line_start": 217,
+        "line_end": 234,
+        "summary": "**错误信息**\n\nThe form can not support this operation.\n\n**错误描述**\n\n卡片不支持调用当前接口，系统会报此错误码。\n\n**可能原因**\n\n普通卡片"
+      },
+      {
+        "section_id": "section-13",
+        "title": "16501012 卡片尺寸错误",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 252,
+        "summary": "**错误信息**\n\nThe form host uses an incorrect dimension.\n\n**错误描述**\n\n卡片尺寸错误。\n\n**可能原因**\n\n指定卡片尺寸未配置，或传入无效卡"
+      },
+      {
+        "section_id": "section-14",
+        "title": "16501013 系统不支持当前操作",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 270,
+        "summary": "**错误信息**\n\nThe system does not support the current operation.\n\n**错误描述**\n\n系统不支持当前操作。\n\n**可能原因**\n\n注册监听模"
+      },
+      {
+        "section_id": "section-15",
+        "title": "2293761 内部服务错误",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 290,
+        "summary": "**错误信息**\n\nSome internal server error occurs.\n\n**错误描述**\n\n系统执行当前请求时发生内部错误。\n\n**可能原因**\n\n1. 当前系统繁忙。\n2. 当"
+      },
+      {
+        "section_id": "section-16",
+        "title": "2293766 包管理获取请求的应用包名不存在",
+        "level": 2,
+        "line_start": 291,
+        "line_end": 309,
+        "summary": "**错误信息**\n\nThe requested bundle name does not exist.\n\n**错误描述**\n\n系统执行获取请求的应用包名不存在，该错误属于内部错误。\n\n**可能原因*"
+      },
+      {
+        "section_id": "section-17",
+        "title": "2293767 无效参数",
+        "level": 2,
+        "line_start": 310,
+        "line_end": 332,
+        "summary": "**错误信息**\n\nInvalid params received on operating form.\n\n**错误描述**\n\n接口调用时存在无效入参。\n\n**可能原因**\n\n1. 未传入必选参数。"
+      },
+      {
+        "section_id": "section-18",
+        "title": "2293795 获取包管理服务失败",
+        "level": 2,
+        "line_start": 333,
+        "line_end": 351,
+        "summary": "**错误信息**\n\nGet bms rpc failed.\n\n**错误描述**\n\n获取包管理服务失败。\n\n**可能原因**\n\n系统业务内部执行异常。\n\n**处理步骤**\n\n1. 重启系统后重试。\n2"
+      },
+      {
+        "section_id": "section-19",
+        "title": "2293798 获取卡片管理服务失败",
+        "level": 2,
+        "line_start": 352,
+        "line_end": 370,
+        "summary": "**错误信息**\n\nGet fms rpc failed.\n\n**错误描述**\n\n获取卡片管理服务失败。\n\n**可能原因**\n\n系统业务内部执行异常。\n\n**处理步骤**\n\n1. 重启系统后重试。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "2293802 获取系统能力管理服务失败",
+        "level": 2,
+        "line_start": 371,
+        "line_end": 389,
+        "summary": "**错误信息**\n\nGet system manager service failed.\n\n**错误描述**\n\n获取系统能力管理服务失败。\n\n**可能原因**\n\n系统业务内部执行异常。\n\n**处理步"
+      }
+    ]
+  }
+}

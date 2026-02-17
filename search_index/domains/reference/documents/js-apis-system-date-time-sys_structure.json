@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-system-date-time-sys",
+  "title": "@ohos.systemDateTime (系统时间、时区)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-system-date-time-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-system-date-time-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Time",
+    "owner": "@huaxin05",
+    "designer": "@hu-kai45",
+    "tester": "@liuhaonan2",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit Time 模块的 @ohos.systemDateTime (系统时间、时区)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.systemDateTime (系统时间、时区)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { systemDateTime } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "TimeType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 31,
+        "summary": "定义获取时间的枚举类型。\n\n**系统能力**: SystemCapability.MiscServices.Time\n\n| 名称    | 值   | 说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "systemDateTime.setTime",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 81,
+        "summary": "setTime(time : number, callback : AsyncCallback&lt;void&gt;) : void\n\n设置系统时间，使用callback异步回调。\n\n**系统接口"
+      },
+      {
+        "section_id": "section-4",
+        "title": "systemDateTime.setTime",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 134,
+        "summary": "setTime(time : number) : Promise&lt;void&gt;\n\n设置系统时间，使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "systemDateTime.setDate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 135,
+        "line_end": 187,
+        "summary": "setDate(date: Date, callback: AsyncCallback&lt;void&gt;): void\n\n设置系统日期，使用callback异步回调。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-6",
+        "title": "systemDateTime.setDate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 188,
+        "line_end": 243,
+        "summary": "setDate(date: Date): Promise&lt;void&gt;\n\n设置系统日期，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API version 9开始支持，从"
+      },
+      {
+        "section_id": "section-7",
+        "title": "systemDateTime.setTimezone",
+        "level": 2,
+        "line_start": 244,
+        "line_end": 291,
+        "summary": "setTimezone(timezone: string, callback: AsyncCallback&lt;void&gt;): void\n\n设置系统时区，使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "systemDateTime.setTimezone",
+        "level": 2,
+        "line_start": 292,
+        "line_end": 342,
+        "summary": "setTimezone(timezone: string): Promise&lt;void&gt;\n\n设置系统时区，使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。\n\n**系"
+      },
+      {
+        "section_id": "section-9",
+        "title": "systemDateTime.updateNtpTime<sup>14+</sup>",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 384,
+        "summary": "updateNtpTime(): Promise&lt;void&gt;\n\n使用异步方式从NTP服务器更新NTP时间。该方法一小时内只会从NTP服务器更新一次NTP时间。\n\n**系统接口：** 此接"
+      },
+      {
+        "section_id": "section-10",
+        "title": "systemDateTime.getNtpTime<sup>14+</sup>",
+        "level": 2,
+        "line_start": 385,
+        "line_end": 422,
+        "summary": "getNtpTime(): number\n\n使用同步方式获取基于上次更新的NTP时间所计算出的真实时间。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-11",
+        "title": "支持的系统时区",
+        "level": 2,
+        "line_start": 423,
+        "line_end": 427,
+        "summary": "支持的系统时区参考接口[I18n.SystemLocaleManager.getTimeZoneCityItemArray()](../apis-localization-kit/js-apis-i"
+      },
+      {
+        "section_id": "section-12",
+        "title": "systemDateTime.setAutoTimeStatus<sup>21+</sup>",
+        "level": 2,
+        "line_start": 428,
+        "line_end": 478,
+        "summary": "setAutoTimeStatus(status: boolean): Promise&lt;void&gt;\n\n设置自动设置时间开关状态，使用Promise异步回调。\n\n**系统接口：** 此接口"
+      }
+    ]
+  }
+}

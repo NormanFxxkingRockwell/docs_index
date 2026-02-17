@@ -1,0 +1,540 @@
+{
+  "doc_id": "arkts-apis-image-PixelMap",
+  "title": "Interface (PixelMap)",
+  "path": "zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-PixelMap.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-PixelMap.md",
+  "metadata": {
+    "kit": "Image Kit",
+    "subsystem": "Multimedia",
+    "owner": "@yaozhupeng",
+    "designer": "@yaozhupeng",
+    "tester": "@zhaoxiaoguang2",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Image Kit Multimedia 模块的 Interface (PixelMap)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (PixelMap)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 29,
+        "summary": "```ts\nimport { image } from '@kit.ImageKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 38,
+        "summary": "**系统能力：** SystemCapability.Multimedia.Image.Core\n\n| 名称              | 类型    | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "readPixelsToBuffer<sup>7+</sup>",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 79,
+        "summary": "readPixelsToBuffer(dst: ArrayBuffer): Promise\\<void>\n\n按照PixelMap的像素格式，读取PixelMap的图像像素数据，并写入缓冲区中。使用P"
+      },
+      {
+        "section_id": "section-4",
+        "title": "readPixelsToBuffer<sup>7+</sup>",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 118,
+        "summary": "readPixelsToBuffer(dst: ArrayBuffer, callback: AsyncCallback\\<void>): void\n\n按照PixelMap的像素格式，读取Pixel"
+      },
+      {
+        "section_id": "section-5",
+        "title": "readPixelsToBufferSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 119,
+        "line_end": 157,
+        "summary": "readPixelsToBufferSync(dst: ArrayBuffer): void\n\n按照PixelMap的像素格式，读取PixelMap的图像像素数据，并写入缓冲区中，同步返回结果。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "readPixels<sup>7+</sup>",
+        "level": 2,
+        "line_start": 158,
+        "line_end": 227,
+        "summary": "readPixels(area: PositionArea): Promise\\<void>\n\n固定按照BGRA_8888格式，读取PixelMap指定区域内的图像像素数据，并写入[Position"
+      },
+      {
+        "section_id": "section-7",
+        "title": "readPixels<sup>7+</sup>",
+        "level": 2,
+        "line_start": 228,
+        "line_end": 298,
+        "summary": "readPixels(area: PositionArea, callback: AsyncCallback\\<void>): void\n\n固定按照BGRA_8888格式，读取PixelMap指定区"
+      },
+      {
+        "section_id": "section-8",
+        "title": "readPixelsSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 299,
+        "line_end": 339,
+        "summary": "readPixelsSync(area: PositionArea): void\n\n固定按照BGRA_8888格式，读取PixelMap指定区域内的图像像素数据，并写入[PositionArea]("
+      },
+      {
+        "section_id": "section-9",
+        "title": "writePixels<sup>7+</sup>",
+        "level": 2,
+        "line_start": 340,
+        "line_end": 415,
+        "summary": "writePixels(area: PositionArea): Promise\\<void>\n\n固定按照BGRA_8888格式，读取[PositionArea](arkts-apis-image-"
+      },
+      {
+        "section_id": "section-10",
+        "title": "writePixels<sup>7+</sup>",
+        "level": 2,
+        "line_start": 416,
+        "line_end": 490,
+        "summary": "writePixels(area: PositionArea, callback: AsyncCallback\\<void>): void\n\n固定按照BGRA_8888格式，读取[PositionA"
+      },
+      {
+        "section_id": "section-11",
+        "title": "writePixelsSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 491,
+        "line_end": 537,
+        "summary": "writePixelsSync(area: PositionArea): void\n\n固定按照BGRA_8888格式，读取[PositionArea](arkts-apis-image-i.md#p"
+      },
+      {
+        "section_id": "section-12",
+        "title": "writeBufferToPixels<sup>7+</sup>",
+        "level": 2,
+        "line_start": 538,
+        "line_end": 582,
+        "summary": "writeBufferToPixels(src: ArrayBuffer): Promise\\<void>\n\n按照PixelMap的像素格式，读取缓冲区中的图像像素数据，并写入PixelMap。使用"
+      },
+      {
+        "section_id": "section-13",
+        "title": "writeBufferToPixels<sup>7+</sup>",
+        "level": 2,
+        "line_start": 583,
+        "line_end": 625,
+        "summary": "writeBufferToPixels(src: ArrayBuffer, callback: AsyncCallback\\<void>): void\n\n按照PixelMap的像素格式，读取缓冲区中"
+      },
+      {
+        "section_id": "section-14",
+        "title": "writeBufferToPixelsSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 626,
+        "line_end": 666,
+        "summary": "writeBufferToPixelsSync(src: ArrayBuffer): void\n\n按照PixelMap的像素格式，读取缓冲区中的图像像素数据，并写入PixelMap，同步返回结果。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "getImageInfo<sup>7+</sup>",
+        "level": 2,
+        "line_start": 667,
+        "line_end": 702,
+        "summary": "getImageInfo(): Promise\\<ImageInfo>\n\n获取图像像素信息。使用Promise异步回调。\n\n**卡片能力：** 从API version 12开始，该接口支持在Ark"
+      },
+      {
+        "section_id": "section-16",
+        "title": "getImageInfo<sup>7+</sup>",
+        "level": 2,
+        "line_start": 703,
+        "line_end": 739,
+        "summary": "getImageInfo(callback: AsyncCallback\\<ImageInfo>): void\n\n获取图像像素信息，使用callback形式返回获取的图像像素信息。\n\n**卡片能力："
+      },
+      {
+        "section_id": "section-17",
+        "title": "getImageInfoSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 740,
+        "line_end": 777,
+        "summary": "getImageInfoSync(): ImageInfo\n\n以同步方法获取图像像素信息。\n\n**卡片能力：** 从API version 12开始，该接口支持在ArkTS卡片中使用。\n\n**原子化"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getBytesNumberPerRow<sup>7+</sup>",
+        "level": 2,
+        "line_start": 778,
+        "line_end": 803,
+        "summary": "getBytesNumberPerRow(): number\n\n获取图像像素每行字节数。\n\n**卡片能力：** 从API version 12开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-19",
+        "title": "getPixelBytesNumber<sup>7+</sup>",
+        "level": 2,
+        "line_start": 804,
+        "line_end": 829,
+        "summary": "getPixelBytesNumber(): number\n\n获取图像像素的总字节数。\n\n**卡片能力：** 从API version 12开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-20",
+        "title": "getDensity<sup>9+</sup>",
+        "level": 2,
+        "line_start": 830,
+        "line_end": 855,
+        "summary": "getDensity():number\n\n获取当前图像像素的密度。\n\n**卡片能力：** 从API version 12开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从AP"
+      },
+      {
+        "section_id": "section-21",
+        "title": "opacity<sup>9+</sup>",
+        "level": 2,
+        "line_start": 856,
+        "line_end": 894,
+        "summary": "opacity(rate: number, callback: AsyncCallback\\<void>): void\n\n通过设置透明比率来让PixelMap达到对应的透明效果，yuv图片不支持设置"
+      },
+      {
+        "section_id": "section-22",
+        "title": "opacity<sup>9+</sup>",
+        "level": 2,
+        "line_start": 895,
+        "line_end": 935,
+        "summary": "opacity(rate: number): Promise\\<void>\n\n通过设置透明比率来让PixelMap达到对应的透明效果，yuv图片不支持设置透明度。使用Promise异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-23",
+        "title": "opacitySync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 936,
+        "line_end": 971,
+        "summary": "opacitySync(rate: number): void\n\n设置PixelMap的透明比率，yuv图片不支持设置透明度，初始化PixelMap并同步返回结果。\n\n**原子化服务API：** 从"
+      },
+      {
+        "section_id": "section-24",
+        "title": "createAlphaPixelmap<sup>9+</sup>",
+        "level": 2,
+        "line_start": 972,
+        "line_end": 1005,
+        "summary": "createAlphaPixelmap(): Promise\\<PixelMap>\n\n根据Alpha通道的信息，来生成一个仅包含Alpha通道信息的pixelmap，可用于阴影效果，yuv格式不支持"
+      },
+      {
+        "section_id": "section-25",
+        "title": "createAlphaPixelmap<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1006,
+        "line_end": 1042,
+        "summary": "createAlphaPixelmap(callback: AsyncCallback\\<PixelMap>): void\n\n根据Alpha通道的信息，来生成一个仅包含Alpha通道信息的pixel"
+      },
+      {
+        "section_id": "section-26",
+        "title": "createAlphaPixelmapSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1043,
+        "line_end": 1079,
+        "summary": "createAlphaPixelmapSync(): PixelMap\n\n根据Alpha通道的信息，生成一个仅包含Alpha通道信息的PixelMap，可用于阴影效果，yuv格式不支持此接口，同步返"
+      },
+      {
+        "section_id": "section-27",
+        "title": "scale<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1080,
+        "line_end": 1125,
+        "summary": "scale(x: number, y: number, callback: AsyncCallback\\<void>): void\n\n根据输入的宽高的缩放倍数对图片进行缩放，使用callback形式"
+      },
+      {
+        "section_id": "section-28",
+        "title": "scale<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1126,
+        "line_end": 1173,
+        "summary": "scale(x: number, y: number): Promise\\<void>\n\n根据输入的宽高的缩放倍数对图片进行缩放。使用Promise异步回调。\n\n> **说明：**\n>\n> 1. 建"
+      },
+      {
+        "section_id": "section-29",
+        "title": "scaleSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1174,
+        "line_end": 1216,
+        "summary": "scaleSync(x: number, y: number): void\n\n根据输入的宽高的缩放倍数对图片进行缩放，同步返回结果。\n\n> **说明：**\n>\n> 1. 建议宽高的缩放倍数取非负数，"
+      },
+      {
+        "section_id": "section-30",
+        "title": "scale<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1217,
+        "line_end": 1274,
+        "summary": "scale(x: number, y: number, level: AntiAliasingLevel): Promise\\<void>\n\n根据指定的缩放算法和输入的宽高的缩放倍数对图片进行缩放。"
+      },
+      {
+        "section_id": "section-31",
+        "title": "scaleSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1275,
+        "line_end": 1318,
+        "summary": "scaleSync(x: number, y: number, level: AntiAliasingLevel): void\n\n根据指定的缩放算法和输入的宽高的缩放倍数对图片进行缩放，同步返回结果"
+      },
+      {
+        "section_id": "section-32",
+        "title": "createScaledPixelMap<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1319,
+        "line_end": 1367,
+        "summary": "createScaledPixelMap(x: number, y: number, level?: AntiAliasingLevel): Promise\\<PixelMap>\n\n根据指定的缩放算"
+      },
+      {
+        "section_id": "section-33",
+        "title": "createScaledPixelMapSync<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1368,
+        "line_end": 1410,
+        "summary": "createScaledPixelMapSync(x: number, y: number, level?: AntiAliasingLevel): PixelMap\n\n根据指定的缩放算法和输入的宽"
+      },
+      {
+        "section_id": "section-34",
+        "title": "createCroppedAndScaledPixelMap<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1411,
+        "line_end": 1468,
+        "summary": "createCroppedAndScaledPixelMap(region: Region, x: number, y: number, level?: AntiAliasingLevel): Pr"
+      },
+      {
+        "section_id": "section-35",
+        "title": "createCroppedAndScaledPixelMapSync<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1469,
+        "line_end": 1525,
+        "summary": "createCroppedAndScaledPixelMapSync(region: Region, x: number, y: number, level?: AntiAliasingLevel)"
+      },
+      {
+        "section_id": "section-36",
+        "title": "clone<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1526,
+        "line_end": 1567,
+        "summary": "clone(): Promise\\<PixelMap>\n\n拷贝一份当前Pixelmap对象。使用Promise异步回调。\n\n**系统能力：**: SystemCapability.Multimedi"
+      },
+      {
+        "section_id": "section-37",
+        "title": "cloneSync<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1568,
+        "line_end": 1610,
+        "summary": "cloneSync(): PixelMap\n\n拷贝一份当前Pixelmap对象, 同步返回结果。\n\n**系统能力：**: SystemCapability.Multimedia.Image.Core"
+      },
+      {
+        "section_id": "section-38",
+        "title": "translate<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1611,
+        "line_end": 1653,
+        "summary": "translate(x: number, y: number, callback: AsyncCallback\\<void>): void\n\n根据输入的坐标对图片进行位置变换，使用callback形"
+      },
+      {
+        "section_id": "section-39",
+        "title": "translate<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1654,
+        "line_end": 1698,
+        "summary": "translate(x: number, y: number): Promise\\<void>\n\n根据输入的坐标对图片进行位置变换。使用Promise异步回调。\n\ntranslate后的图片尺寸改变"
+      },
+      {
+        "section_id": "section-40",
+        "title": "translateSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1699,
+        "line_end": 1738,
+        "summary": "translateSync(x: number, y: number): void\n\n根据输入的坐标对图片进行位置变换，同步返回结果。\n\ntranslate后的图片尺寸改变为：width+X ，he"
+      },
+      {
+        "section_id": "section-41",
+        "title": "rotate<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1739,
+        "line_end": 1782,
+        "summary": "rotate(angle: number, callback: AsyncCallback\\<void>): void\n\n根据输入的角度对图片进行旋转，使用callback形式返回。\n\n> **说明"
+      },
+      {
+        "section_id": "section-42",
+        "title": "rotate<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1783,
+        "line_end": 1828,
+        "summary": "rotate(angle: number): Promise\\<void>\n\n根据输入的角度对图片进行旋转。使用Promise异步回调。\n\n> **说明：**\n>\n> 1. 图片旋转的角度取值范围："
+      },
+      {
+        "section_id": "section-43",
+        "title": "rotateSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1829,
+        "line_end": 1869,
+        "summary": "rotateSync(angle: number): void\n\n根据输入的角度对图片进行旋转，同步返回结果。\n\n> **说明：**\n>\n> 1. 图片旋转的角度取值范围：0-360。超出取值范围时"
+      },
+      {
+        "section_id": "section-44",
+        "title": "flip<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1870,
+        "line_end": 1910,
+        "summary": "flip(horizontal: boolean, vertical: boolean, callback: AsyncCallback\\<void>): void\n\n根据输入的条件对图片进行翻转，"
+      },
+      {
+        "section_id": "section-45",
+        "title": "flip<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1911,
+        "line_end": 1953,
+        "summary": "flip(horizontal: boolean, vertical: boolean): Promise\\<void>\n\n根据输入的条件对图片进行翻转。使用Promise异步回调。\n\n**卡片能力"
+      },
+      {
+        "section_id": "section-46",
+        "title": "flipSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1954,
+        "line_end": 1993,
+        "summary": "flipSync(horizontal: boolean, vertical: boolean): void\n\n根据输入的条件对图片进行翻转并同步返回结果。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-47",
+        "title": "crop<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1994,
+        "line_end": 2032,
+        "summary": "crop(region: Region, callback: AsyncCallback\\<void>): void\n\n根据输入的尺寸对图片进行裁剪，使用callback形式返回。\n\n**卡片能力："
+      },
+      {
+        "section_id": "section-48",
+        "title": "crop<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2033,
+        "line_end": 2074,
+        "summary": "crop(region: Region): Promise\\<void>\n\n根据输入的尺寸对图片进行裁剪。使用Promise异步回调。\n\n**卡片能力：** 从API version 12开始，该接"
+      },
+      {
+        "section_id": "section-49",
+        "title": "cropSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2075,
+        "line_end": 2112,
+        "summary": "cropSync(region: Region): void\n\n根据输入的尺寸裁剪图片。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-50",
+        "title": "getColorSpace<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2113,
+        "line_end": 2148,
+        "summary": "getColorSpace(): colorSpaceManager.ColorSpaceManager\n\n获取图像广色域信息。\n\n**系统能力：** SystemCapability.Multim"
+      },
+      {
+        "section_id": "section-51",
+        "title": "setColorSpace<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2149,
+        "line_end": 2185,
+        "summary": "setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void\n\n设置图像广色域信息。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-52",
+        "title": "applyColorSpace<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2186,
+        "line_end": 2239,
+        "summary": "applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager, callback: AsyncCallback\\<voi"
+      },
+      {
+        "section_id": "section-53",
+        "title": "applyColorSpace<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2240,
+        "line_end": 2290,
+        "summary": "applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise\\<void>\n\n根据输入的目标色彩空间"
+      },
+      {
+        "section_id": "section-54",
+        "title": "toSdr<sup>12+<sup>",
+        "level": 2,
+        "line_start": 2291,
+        "line_end": 2339,
+        "summary": "toSdr(): Promise\\<void>\n\n将HDR的图像内容转换为SDR的图像内容。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia"
+      },
+      {
+        "section_id": "section-55",
+        "title": "getMetadata<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2340,
+        "line_end": 2396,
+        "summary": "getMetadata(key: HdrMetadataKey): HdrMetadataValue\n\n从PixelMap中获取元数据。\n\n**系统能力：** SystemCapability.Mu"
+      },
+      {
+        "section_id": "section-56",
+        "title": "setMetadata<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2397,
+        "line_end": 2454,
+        "summary": "setMetadata(key: HdrMetadataKey, value: HdrMetadataValue): Promise\\<void>\n\n设置PixelMap元数据。使用Promise异"
+      },
+      {
+        "section_id": "section-57",
+        "title": "setTransferDetached<sup>12+<sup>",
+        "level": 2,
+        "line_start": 2455,
+        "line_end": 2525,
+        "summary": "setTransferDetached(detached: boolean): void\n\npixelmap在跨线程传输时，断开原线程的引用。适用于需立即释放pixelmap的场景。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-58",
+        "title": "marshalling<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2526,
+        "line_end": 2604,
+        "summary": "marshalling(sequence: rpc.MessageSequence): void\n\n将PixelMap序列化后写入MessageSequence。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-59",
+        "title": "unmarshalling<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2605,
+        "line_end": 2690,
+        "summary": "unmarshalling(sequence: rpc.MessageSequence): Promise\\<PixelMap>\n\n从MessageSequence中获取PixelMap，如需使用同"
+      },
+      {
+        "section_id": "section-60",
+        "title": "release<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2691,
+        "line_end": 2732,
+        "summary": "release(): Promise\\<void\\>\n\n释放PixelMap对象（释放后，任何访问该对象内部数据的方法调用都会失败）。使用Promise异步回调。\n\n图片使用的内存往往较大，在Pix"
+      },
+      {
+        "section_id": "section-61",
+        "title": "release<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2733,
+        "line_end": 2777,
+        "summary": "release(callback: AsyncCallback\\<void\\>): void\n\n释放PixelMap对象（释放后，任何访问该对象内部数据的方法调用都会失败）。使用callback形式"
+      },
+      {
+        "section_id": "section-62",
+        "title": "convertPixelFormat<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2778,
+        "line_end": 2836,
+        "summary": "convertPixelFormat(targetPixelFormat: PixelMapFormat): Promise\\<void>\n\nYUV和RGB类型互转。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-63",
+        "title": "setMemoryNameSync<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2837,
+        "line_end": 2877,
+        "summary": "setMemoryNameSync(name: string): void\n\n设置PixelMap内存标识符。\n\n**系统能力：** SystemCapability.Multimedia.Imag"
+      },
+      {
+        "section_id": "section-64",
+        "title": "getUniqueId<sup>22+</sup>",
+        "level": 2,
+        "line_start": 2878,
+        "line_end": 2907,
+        "summary": "getUniqueId(): number\n\n获取PixelMap的唯一ID。\n\n**系统能力：** SystemCapability.Multimedia.Image.Core\n\n**返回值：**"
+      },
+      {
+        "section_id": "section-65",
+        "title": "isReleased<sup>22+</sup>",
+        "level": 2,
+        "line_start": 2908,
+        "line_end": 2935,
+        "summary": "isReleased(): boolean\n\n检查PixelMap对象是否已被释放。如果已被释放，则任何访问该对象内部数据的方法调用将会失败。\n\n> **注意：**\n>\n> 释放指的是ArkTS对象"
+      }
+    ]
+  }
+}

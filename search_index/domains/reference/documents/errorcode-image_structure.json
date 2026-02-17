@@ -1,0 +1,612 @@
+{
+  "doc_id": "errorcode-image",
+  "title": "Image错误码",
+  "path": "zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md",
+  "metadata": {
+    "kit": "Image Kit",
+    "subsystem": "Multimedia",
+    "owner": "@aulight02",
+    "designer": "@liyang_bryan",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Image Kit Multimedia 模块的 Image错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Image错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "501 无法调用接口",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 31,
+        "summary": "**错误信息**\n\nResource unavailable.\n\n**错误描述**\n\n无法调用接口。\n\n**可能原因**\n\n图片被跨线程传递，原对象无法调用接口。\n\n**处理步骤**\n\n请检查图片并"
+      },
+      {
+        "section_id": "section-2",
+        "title": "62980096 操作失败",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 53,
+        "summary": "**错误信息**\n\nThe operation failed. Possible cause: 1.Image upload exception. 2. Decoding process excep"
+      },
+      {
+        "section_id": "section-3",
+        "title": "62980097 pixelmap序列化传输失败",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 74,
+        "summary": "**错误信息**\n\nIPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Deco"
+      },
+      {
+        "section_id": "section-4",
+        "title": "62980098 共享内存空间错误",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 94,
+        "summary": "**错误信息**\n\nShared memory does not exist.\n\n**错误描述**\n\n共享内存空间错误。\n\n**可能原因**\n\n1. 内存大小不够。\n2. 越界访问共享内存。\n3."
+      },
+      {
+        "section_id": "section-5",
+        "title": "62980099 共享内存数据异常",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 114,
+        "summary": "**错误信息**\n\nThe shared memory data is abnormal.\n\n**错误描述**\n\n共享内存数据异常。\n\n**可能原因**\n\n1. 读写共享内存时没有正确地进行同步操作"
+      },
+      {
+        "section_id": "section-6",
+        "title": "62980100 图片解码错误",
+        "level": 2,
+        "line_start": 115,
+        "line_end": 135,
+        "summary": "**错误信息**\n\nImage decoding abnormal.\n\n**错误描述**\n\n图片解码错误。\n\n**可能原因**\n\n1. 上传图片过程中出现异常。\n2. 解码过程中有其他操作。\n3."
+      },
+      {
+        "section_id": "section-7",
+        "title": "62980101 图片输入数据错误",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 155,
+        "summary": "**错误信息**\n\nThe image data is abnormal.\n\n**错误描述**\n\n图片输入数据错误。\n\n**可能原因**\n\n1. 输入图片数据不对。\n2. 输入的图片格式不对。\n3."
+      },
+      {
+        "section_id": "section-8",
+        "title": "62980102 图片分配内存错误",
+        "level": 2,
+        "line_start": 156,
+        "line_end": 173,
+        "summary": "**错误信息**\n\nImage malloc abnormal. This status code is thrown when an error occurs during the process"
+      },
+      {
+        "section_id": "section-9",
+        "title": "62980103 图片类型不支持",
+        "level": 2,
+        "line_start": 174,
+        "line_end": 191,
+        "summary": "**错误信息**\n\nThe image data is not supported.\n\n**错误描述**\n\n图片类型不支持。\n\n**可能原因**\n\n当前不支持所传入的图片的类型。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-10",
+        "title": "62980104 图片初始化错误",
+        "level": 2,
+        "line_start": 192,
+        "line_end": 211,
+        "summary": "**错误信息**\n\nImage initialization abnormal. This status code is thrown when an error occurs during the"
+      },
+      {
+        "section_id": "section-11",
+        "title": "62980105 图片获取数据错误",
+        "level": 2,
+        "line_start": 212,
+        "line_end": 230,
+        "summary": "**错误信息**\n\nFailed to get the data.\n\n**错误描述**\n\n图片获取数据错误。\n\n**可能原因**\n\n1. 设备不支持该图片类型。\n2. 图片数据丢失。\n\n**处理步骤"
+      },
+      {
+        "section_id": "section-12",
+        "title": "62980106 图片数据太大",
+        "level": 2,
+        "line_start": 231,
+        "line_end": 248,
+        "summary": "**错误信息**\n\nThe image data is too large. This status code is thrown when an error occurs during the p"
+      },
+      {
+        "section_id": "section-13",
+        "title": "62980107 图片转换错误",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 267,
+        "summary": "**错误信息**\n\nImage conversion abnormal.\n\n**错误描述**\n\n图片转换错误。\n\n**可能原因**\n\n1. 图片转换过程中异常停止。\n2. 编码参数设置错误。\n\n**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "62980108 图片颜色转换错误",
+        "level": 2,
+        "line_start": 268,
+        "line_end": 286,
+        "summary": "**错误信息**\n\nFailed to convert the color space.\n\n**错误描述**\n\n图片颜色转换错误。\n\n**可能原因**\n\n1. 不支持该图片类型的颜色转换。\n2. 设"
+      },
+      {
+        "section_id": "section-15",
+        "title": "62980109 裁剪错误",
+        "level": 2,
+        "line_start": 287,
+        "line_end": 305,
+        "summary": "**错误信息**\n\nFailed to crop the image.\n\n**错误描述**\n\n裁剪错误。\n\n**可能原因**\n\n1. 裁剪参数设置错误。\n2. 图片数据错误。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-16",
+        "title": "62980110 图片源数据错误",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 323,
+        "summary": "**错误信息**\n\nThe image source data is incorrect.\n\n**错误描述**\n\n图片源数据错误。\n\n**可能原因**\n\n图片数据源缺失或错乱。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-17",
+        "title": "62980111 图片源数据不完整",
+        "level": 2,
+        "line_start": 324,
+        "line_end": 341,
+        "summary": "**错误信息**\n\nThe image source data is incomplete.\n\n**错误描述**\n\n图片源数据不完整。\n\n**可能原因**\n\n图片源数据缺失。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-18",
+        "title": "62980112 图片格式不匹配",
+        "level": 2,
+        "line_start": 342,
+        "line_end": 359,
+        "summary": "**错误信息**\n\nThe image format does not match.\n\n**错误描述**\n\n图片格式不匹配。\n\n**可能原因**\n\n该图片的格式不匹配。\n\n**处理步骤**\n\n更换匹"
+      },
+      {
+        "section_id": "section-19",
+        "title": "62980113 图片未知格式",
+        "level": 2,
+        "line_start": 360,
+        "line_end": 377,
+        "summary": "**错误信息**\n\nUnknown image format.The image data provided is not in a recognized or supported format,"
+      },
+      {
+        "section_id": "section-20",
+        "title": "62980114 图片源未解析",
+        "level": 2,
+        "line_start": 378,
+        "line_end": 395,
+        "summary": "**错误信息**\n\nImage source not parsed.\n\n**错误描述**\n\n图片源未解析。\n\n**可能原因**\n\n图片源数据错误。\n\n**处理步骤**\n\n检查图片源数据。"
+      },
+      {
+        "section_id": "section-21",
+        "title": "62980115 图片无效参数",
+        "level": 2,
+        "line_start": 396,
+        "line_end": 413,
+        "summary": "**错误信息**\n\nInvalid image parameter.\n\n**错误描述**\n\n图片无效参数。\n\n**可能原因**\n\n输入的参数无效。\n\n**处理步骤**\n\n重新输入正确的参数。"
+      },
+      {
+        "section_id": "section-22",
+        "title": "62980116 解码失败",
+        "level": 2,
+        "line_start": 414,
+        "line_end": 433,
+        "summary": "**错误信息**\n\nFailed to decode the image.\n\n**错误描述**\n\n解码失败。\n\n**可能原因**\n\n1. 解码过程中异常退出。\n2. 图片格式不支持。\n3. 未读取到"
+      },
+      {
+        "section_id": "section-23",
+        "title": "62980117 注册插件失败",
+        "level": 2,
+        "line_start": 434,
+        "line_end": 452,
+        "summary": "**错误信息**\n\nFailed to register the plugin.\n\n**错误描述**\n\n注册插件失败。\n\n**可能原因**\n\n1. 未匹配到对应格式的解码或编码插件。\n2. 传入数据"
+      },
+      {
+        "section_id": "section-24",
+        "title": "62980118 创建插件失败",
+        "level": 2,
+        "line_start": 453,
+        "line_end": 471,
+        "summary": "**错误信息**\n\nFailed to create the image plugin.\n\n**错误描述**\n\n创建插件失败。\n\n**可能原因**\n\n1. 未匹配到对应格式的解码或编码插件。\n2."
+      },
+      {
+        "section_id": "section-25",
+        "title": "62980119 图片编码失败",
+        "level": 2,
+        "line_start": 472,
+        "line_end": 490,
+        "summary": "**错误信息**\n\nFailed to encode the image.\n\n**错误描述**\n\n图片编码失败。\n\n**可能原因**\n\n1. 设置的编码格式不支持。\n2. 传入数据不正确。\n\n**处"
+      },
+      {
+        "section_id": "section-26",
+        "title": "62980120 图片添加像素映射失败",
+        "level": 2,
+        "line_start": 491,
+        "line_end": 509,
+        "summary": "**错误信息**\n\nAdd pixelmap out of range.\n\n**错误描述**\n\n图片添加像素映射失败。\n\n**可能原因**\n\n1. 可能不支持添加像素映射。\n2. 添加像素映射过程中"
+      },
+      {
+        "section_id": "section-27",
+        "title": "62980121 不支持图片硬解码",
+        "level": 2,
+        "line_start": 510,
+        "line_end": 527,
+        "summary": "**错误信息**\n\nImage hardware decoding is not supported.\n\n**错误描述**\n\n不支持图片硬解码。\n\n**可能原因**\n\n使用了图片硬解码。\n\n**处理"
+      },
+      {
+        "section_id": "section-28",
+        "title": "62980122 解码图片头异常",
+        "level": 2,
+        "line_start": 528,
+        "line_end": 546,
+        "summary": "**错误信息**\n\nFailed to decode the image header.\n\n**错误描述**\n\n解码图片头异常。\n\n**可能原因**\n\n1. 解码头过程中出现异常退出。\n2. 图片解"
+      },
+      {
+        "section_id": "section-29",
+        "title": "62980123 图片不支持exif解码",
+        "level": 2,
+        "line_start": 547,
+        "line_end": 564,
+        "summary": "**错误信息**\n\nThe image does not support EXIF decoding.\n\n**错误描述**\n\n图片不支持exif解码。\n\n**可能原因**\n\n图片不支持exif解码。"
+      },
+      {
+        "section_id": "section-30",
+        "title": "62980124 图片属性不存在",
+        "level": 2,
+        "line_start": 565,
+        "line_end": 583,
+        "summary": "**错误信息**\n\nThe image property does not exist.\n\n**错误描述**\n\n图片属性不存在。\n\n**可能原因**\n\n1. 图片属性缺失。\n2. 对图片进行了不合理"
+      },
+      {
+        "section_id": "section-31",
+        "title": "62980133 图片属性赋值超出范围",
+        "level": 2,
+        "line_start": 584,
+        "line_end": 601,
+        "summary": "**错误信息**\n\nThe EXIF data is out of range.\n\n**错误描述**\n\n图片属性赋值超出范围。\n\n**可能原因**\n\n图片属性赋值超出范围。\n\n**处理步骤**\n\n更"
+      },
+      {
+        "section_id": "section-32",
+        "title": "62980135 图片属性值无效",
+        "level": 2,
+        "line_start": 602,
+        "line_end": 619,
+        "summary": "**错误信息**\n\nThe EXIF value is invalid.\n\n**错误描述**\n\n图片属性值无效。\n\n**可能原因**\n\n图片属性缺失。\n\n**处理步骤**\n\n更换图片或检查图片数据。"
+      },
+      {
+        "section_id": "section-33",
+        "title": "62980137 图片操作无效",
+        "level": 2,
+        "line_start": 620,
+        "line_end": 637,
+        "summary": "**错误信息**\n\nInvalid media operation.\n\n**错误描述**\n\n图片操作无效。\n\n**可能原因**\n\n当前图片格式不支持该操作。\n\n**处理步骤**\n\n更换图片。"
+      },
+      {
+        "section_id": "section-34",
+        "title": "62980146 图片属性值写入文件失败",
+        "level": 2,
+        "line_start": 638,
+        "line_end": 655,
+        "summary": "**错误信息**\n\nThe EXIF data failed to be written to the file.\n\n**错误描述**\n\n图片属性值写入文件失败。\n\n**可能原因**\n\n图片属性值有"
+      },
+      {
+        "section_id": "section-35",
+        "title": "62980149 图片参数无效",
+        "level": 2,
+        "line_start": 656,
+        "line_end": 673,
+        "summary": "**错误信息**\n\nInvalid MIME type for the image source.\n\n**错误描述**\n\n图片参数无效。\n\n**可能原因**\n\n当前图片格式不支持该操作。\n\n**处理"
+      },
+      {
+        "section_id": "section-36",
+        "title": "62980172 编码ICC失败",
+        "level": 2,
+        "line_start": 674,
+        "line_end": 691,
+        "summary": "**错误信息**\n\nFailed to encode icc.\n\n**错误描述**\n\n编码ICC失败。\n\n**可能原因**\n\n图片ICC信息存在问题。\n\n**处理步骤**\n\n检查图片数据或更换图片。"
+      },
+      {
+        "section_id": "section-37",
+        "title": "62980173 DMA内存空间错误",
+        "level": 2,
+        "line_start": 692,
+        "line_end": 711,
+        "summary": "**错误信息**\n\nThe DMA memory does not exist.\n\n**错误描述**\n\nDMA内存空间错误。\n\n**可能原因**\n\n1. 内存大小不够。\n2. 越界访问内存。\n3."
+      },
+      {
+        "section_id": "section-38",
+        "title": "62980174 DMA内存数据异常",
+        "level": 2,
+        "line_start": 712,
+        "line_end": 731,
+        "summary": "**错误信息**\n\nThe DMA memory data is abnormal.\n\n**错误描述**\n\nDMA内存数据异常。\n\n**可能原因**\n\n1. 读写共享内存时没有正确地进行同步操作。"
+      },
+      {
+        "section_id": "section-39",
+        "title": "62980177 API环境异常",
+        "level": 2,
+        "line_start": 732,
+        "line_end": 749,
+        "summary": "**错误信息**\n\nAbnormal API environment.\n\n**错误描述**\n\nAPI环境异常。\n\n**可能原因**\n\nAPI使用环境存在问题。\n\n**处理步骤**\n\n检查SDK版本。"
+      },
+      {
+        "section_id": "section-40",
+        "title": "62980178 PixelMap创建失败",
+        "level": 2,
+        "line_start": 750,
+        "line_end": 768,
+        "summary": "**错误信息**\n\nFailed to create the PixelMap.\n\n**错误描述**\n\nPixelMap创建失败。\n\n**可能原因**\n\n1. 参数错误（如区域大小超出、入参值非法等"
+      },
+      {
+        "section_id": "section-41",
+        "title": "62980179 缓冲区大小异常",
+        "level": 2,
+        "line_start": 769,
+        "line_end": 786,
+        "summary": "**错误信息**\n\nAbnormal buffer size.\n\n**错误描述**\n\n缓冲区大小异常。\n\n**可能原因**\n\n参数错误（如区域大小超出、入参值非法等）导致的创建失败。\n\n**处理步骤"
+      },
+      {
+        "section_id": "section-42",
+        "title": "62980180 文件描述符映射失败",
+        "level": 2,
+        "line_start": 787,
+        "line_end": 804,
+        "summary": "**错误信息**\n\nFD mapping failed.\n\n**错误描述**\n\n文件描述符映射失败。\n\n**可能原因**\n\n传入的文件描述符存在问题。\n\n**处理步骤**\n\n检查是否传入了正确的文件"
+      },
+      {
+        "section_id": "section-43",
+        "title": "62980246 读取PixelMap失败",
+        "level": 2,
+        "line_start": 805,
+        "line_end": 823,
+        "summary": "**错误信息**\n\nFailed to read the pixel map.\n\n**错误描述**\n\n读取PixelMap失败。\n\n**可能原因**\n\n1. PixelMap数据错误。\n2. 没有读"
+      },
+      {
+        "section_id": "section-44",
+        "title": "62980247 写入像素映射失败",
+        "level": 2,
+        "line_start": 824,
+        "line_end": 842,
+        "summary": "**错误信息**\n\nFailed to write the pixel map.\n\n**错误描述**\n\n写入像素映射失败。\n\n**可能原因**\n\n1. PixelMap数据错误。\n2. 没有写入Pi"
+      },
+      {
+        "section_id": "section-45",
+        "title": "62980248 PixelMap不允许修改",
+        "level": 2,
+        "line_start": 843,
+        "line_end": 860,
+        "summary": "**错误信息**\n\nPixelMap does not allow modification.\n\n**错误描述**\n\nPixelMap不允许修改。\n\n**可能原因**\n\n对PixelMap进行了修改"
+      },
+      {
+        "section_id": "section-46",
+        "title": "62980252 创建surface失败",
+        "level": 2,
+        "line_start": 861,
+        "line_end": 878,
+        "summary": "**错误信息**\n\nFailed to create surface.\n\n**错误描述**\n\n创建surface失败。\n\n**可能原因**\n\n图片编码申请内存出错。\n\n**处理步骤**\n\n重试或者更"
+      },
+      {
+        "section_id": "section-47",
+        "title": "62980259 配置错误",
+        "level": 2,
+        "line_start": 879,
+        "line_end": 896,
+        "summary": "**错误信息**\n\nConfiguration error.\n\n**错误描述**\n\n配置错误。\n\n**可能原因**\n\n配置出现错误。\n\n**处理步骤**\n\n重新进行正确配置。"
+      },
+      {
+        "section_id": "section-48",
+        "title": "62980274 图片转换失败",
+        "level": 2,
+        "line_start": 897,
+        "line_end": 915,
+        "summary": "**错误信息**\n\nThe conversion failed.\n\n**错误描述**\n\n图片转换失败。\n\n**可能原因**\n\n1. 图片转换过程中异常停止。\n2. 编码参数设置错误。\n\n**处理步骤"
+      },
+      {
+        "section_id": "section-49",
+        "title": "62980276 不支持图片转换目标类型",
+        "level": 2,
+        "line_start": 916,
+        "line_end": 933,
+        "summary": "**错误信息**\n\nThe type to be converted is an unsupported target pixel format.\n\n**错误描述**\n\n不支持图片转换目标类型。"
+      },
+      {
+        "section_id": "section-50",
+        "title": "62980286 PixelMap设置内存标识符失败",
+        "level": 2,
+        "line_start": 934,
+        "line_end": 953,
+        "summary": "**错误信息**\n\nMemory format not supported.\n\n**错误描述**\n\nPixelMap设置内存标识符失败。\n\n**可能原因**\n\n1. PixelMap内存类型不匹配。"
+      },
+      {
+        "section_id": "section-51",
+        "title": "62980302 内存拷贝失败",
+        "level": 2,
+        "line_start": 954,
+        "line_end": 973,
+        "summary": "**错误信息**\n\nMemory copy failed.\n\n**错误描述**\n\n内存拷贝失败。\n\n**可能原因**\n\n1. 内存类型不匹配。\n2. fd失效。\n3. 未知的内核错误。\n\n**处理步"
+      },
+      {
+        "section_id": "section-52",
+        "title": "7600104 获取图像数据失败",
+        "level": 2,
+        "line_start": 974,
+        "line_end": 988,
+        "summary": "**错误信息**\n\nFailed to get the data from Surface.\n\n**可能原因**\n\n1. 设备不支持该图像类型。\n2. 图像数据损坏或丢失。\n\n**处理步骤**\n\n检"
+      },
+      {
+        "section_id": "section-53",
+        "title": "7600201 不支持的操作",
+        "level": 2,
+        "line_start": 989,
+        "line_end": 1006,
+        "summary": "**错误信息**\n\nUnsupported operation, e.g. on cross-platform.\n\n**错误描述**\n\n不支持的操作。如：修改一个Editable属性为false的P"
+      },
+      {
+        "section_id": "section-54",
+        "title": "7600202 不支持的元数据读写",
+        "level": 2,
+        "line_start": 1007,
+        "line_end": 1024,
+        "summary": "**错误信息**\n\nUnsupported metadata. Possible causes: Unsupported metadata type.\n\n**错误描述**\n\n不支持的元数据读写。"
+      },
+      {
+        "section_id": "section-55",
+        "title": "7600204 无效的区域",
+        "level": 2,
+        "line_start": 1025,
+        "line_end": 1042,
+        "summary": "**错误信息**\n\nInvalid region.\n\n**错误描述**\n\n无效的区域。\n\n**可能原因**\n\nRegion中设置的顶点位置、宽度或高度超出图片尺寸范围。\n\n**处理步骤**\n\n检查R"
+      },
+      {
+        "section_id": "section-56",
+        "title": "7600205 不支持的内存格式或像素格式",
+        "level": 2,
+        "line_start": 1043,
+        "line_end": 1060,
+        "summary": "**错误信息**\n\nUnsupported memory format or pixel format.\n\n**错误描述**\n\n不支持的内存格式或像素格式。\n\n**可能原因**\n\n接口不支持当前Pi"
+      },
+      {
+        "section_id": "section-57",
+        "title": "7600206 无效参数",
+        "level": 2,
+        "line_start": 1061,
+        "line_end": 1074,
+        "summary": "**错误信息**\n\nInvalid parameter.\n\n**可能原因**\n\n输入的参数无效。\n\n**处理步骤**\n\n检查并重新输入正确的参数。"
+      },
+      {
+        "section_id": "section-58",
+        "title": "7600301 申请内存失败",
+        "level": 2,
+        "line_start": 1075,
+        "line_end": 1092,
+        "summary": "**错误信息**\n\nMemory alloc failed.\n\n**错误描述**\n\n申请内存失败。\n\n**可能原因**\n\n设备内存不足或内存被占用。\n\n**处理步骤**\n\n清理内存后重试。"
+      },
+      {
+        "section_id": "section-59",
+        "title": "7600302 内存拷贝失败",
+        "level": 2,
+        "line_start": 1093,
+        "line_end": 1110,
+        "summary": "**错误信息**\n\nMemory copy failed.\n\n**错误描述**\n\n内存拷贝失败。\n\n**可能原因**\n\n拷贝的内存不存在，设备内存不足。\n\n**处理步骤**\n\n检查要拷贝的内存是否存"
+      },
+      {
+        "section_id": "section-60",
+        "title": "7600305 创建PixelMap失败",
+        "level": 2,
+        "line_start": 1111,
+        "line_end": 1125,
+        "summary": "**错误信息**\n\nFailed to create the PixelMap.\n\n**可能原因**\n\n1. 参数错误（如区域范围超出、入参值非法等）导致的创建失败。\n2. 错误地提前释放实例，导致"
+      },
+      {
+        "section_id": "section-61",
+        "title": "7600901 未知错误",
+        "level": 2,
+        "line_start": 1126,
+        "line_end": 1143,
+        "summary": "**错误信息**\n\nUnknown error.\n\n**错误描述**\n\n未知错误。\n\n**可能原因**\n\n未知原因引起的错误。\n\n**处理步骤**\n\n通过日志查找原因。"
+      },
+      {
+        "section_id": "section-62",
+        "title": "7700101 图片源存在问题",
+        "level": 2,
+        "line_start": 1144,
+        "line_end": 1163,
+        "summary": "**错误信息**\n\nBad source.\n\n**错误描述**\n\n图片源存在问题。\n\n**可能原因**\n\n1. 设备不支持该图片类型。\n2. 没有按指示操作进行图片解码。\n3. 图源数据不完整。从A"
+      },
+      {
+        "section_id": "section-63",
+        "title": "7700102 不支持的MIME类型",
+        "level": 2,
+        "line_start": 1164,
+        "line_end": 1181,
+        "summary": "**错误信息**\n\nUnsupported MIME type.\n\n**错误描述**\n\n不支持的MIME类型。\n\n**可能原因**\n\n设备不支持该图片类型。\n\n**处理步骤**\n\n检查图片数据或更换"
+      },
+      {
+        "section_id": "section-64",
+        "title": "7700103 图片太大",
+        "level": 2,
+        "line_start": 1182,
+        "line_end": 1199,
+        "summary": "**错误信息**\n\nImage too large.\n\n**错误描述**\n\n图片太大。\n\n**可能原因**\n\n图片大小超出限制。\n\n**处理步骤**\n\n检查图片数据或更换图片。"
+      },
+      {
+        "section_id": "section-65",
+        "title": "7700201 不支持的内存分配类型",
+        "level": 2,
+        "line_start": 1200,
+        "line_end": 1217,
+        "summary": "**错误信息**\n\nUnsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supp"
+      },
+      {
+        "section_id": "section-66",
+        "title": "7700202 不支持的元数据",
+        "level": 2,
+        "line_start": 1218,
+        "line_end": 1236,
+        "summary": "**错误信息**\n\nUnsupported metadata.\n\n**错误描述**\n\n不支持的元数据。\n\n**可能原因**\n\n1. 输入了不支持的元数据字段。\n2. 元数据字段对应的值非法。\n\n**"
+      },
+      {
+        "section_id": "section-67",
+        "title": "7700203 不支持的选项",
+        "level": 2,
+        "line_start": 1237,
+        "line_end": 1254,
+        "summary": "**错误信息**\n\nUnsupported options, e.g, cannot convert image into desired pixel format.\n\n**错误描述**\n\n不支持的"
+      },
+      {
+        "section_id": "section-68",
+        "title": "7700204 无效参数",
+        "level": 2,
+        "line_start": 1255,
+        "line_end": 1268,
+        "summary": "**错误信息**\n\nInvalid parameter. Possible causes: 1. The index is negative. 2. The index is greater tha"
+      },
+      {
+        "section_id": "section-69",
+        "title": "7700301 解码失败",
+        "level": 2,
+        "line_start": 1269,
+        "line_end": 1288,
+        "summary": "**错误信息**\n\nDecode failed.\n\n**错误描述**\n\n解码失败。\n\n**可能原因**\n\n1. 设备的内存不足。\n2. 设备不支持该图片类型。\n3. 没有按指示操作进行图片解码。"
+      },
+      {
+        "section_id": "section-70",
+        "title": "7700302 内存分配失败",
+        "level": 2,
+        "line_start": 1289,
+        "line_end": 1307,
+        "summary": "**错误信息**\n\nMemory allocation failed.\n\n**错误描述**\n\n内存分配失败。\n\n**可能原因**\n\n1. 设备的内存不足。\n2. 没有按指示操作进行图片解码。\n\n**"
+      },
+      {
+        "section_id": "section-71",
+        "title": "7700304 图片信息写入文件失败",
+        "level": 2,
+        "line_start": 1308,
+        "line_end": 1326,
+        "summary": "**错误信息**\n\nFailed to write image properties to the file.\n\n**错误描述**\n\n图片信息写入文件失败。\n\n**可能原因**\n\n1. 图片数据错误"
+      },
+      {
+        "section_id": "section-72",
+        "title": "7800201 不支持的选项",
+        "level": 2,
+        "line_start": 1327,
+        "line_end": 1344,
+        "summary": "**错误信息**\n\nUnsupported options.\n\n**错误描述**\n\n不支持的选项。\n\n**可能原因**\n\n部分选项参数配置存在错误，不支持该选项要求的操作。\n\n**处理步骤**\n\n检"
+      },
+      {
+        "section_id": "section-73",
+        "title": "7800301 编码失败",
+        "level": 2,
+        "line_start": 1345,
+        "line_end": 1363,
+        "summary": "**错误信息**\n\nEncode failed.\n\n**错误描述**\n\n编码失败。\n\n**可能原因**\n\n1. 设置的编码格式不支持。\n2. 传入数据不正确。\n\n**处理步骤**\n\n更换图片或检查传"
+      },
+      {
+        "section_id": "section-74",
+        "title": "7900201 无效参数",
+        "level": 2,
+        "line_start": 1364,
+        "line_end": 1377,
+        "summary": "**错误信息**\n\nInvalid parameter.\n\n**可能原因**\n\n1. 传入的参数数量、类型不正确。\n2. 设置的图像格式不支持。\n\n**处理步骤**\n\n检查参数配置。"
+      }
+    ]
+  }
+}

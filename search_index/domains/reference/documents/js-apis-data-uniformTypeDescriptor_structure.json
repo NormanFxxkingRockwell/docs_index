@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-data-uniformTypeDescriptor",
+  "title": "@ohos.data.uniformTypeDescriptor (标准化数据定义与描述)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/js-apis-data-uniformTypeDescriptor.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/js-apis-data-uniformTypeDescriptor.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@jcwen",
+    "designer": "@junathuawei1; @zph000",
+    "tester": "@lj_liujing; @yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 @ohos.data.uniformTypeDescriptor (标准化数据定义与描述)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.data.uniformTypeDescriptor (标准化数据定义与描述)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```js\nimport { uniformTypeDescriptor } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "UniformDataType",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 209,
+        "summary": "标准化数据类型之间存在归属关系，例如JPEG图片类型归属于IMAGE类型。更多预置数据类型参考[UTD预置列表](../../database/uniform-data-type-list.md)。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "TypeDescriptor<sup>11+</sup>",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 411,
+        "summary": "标准化数据类型的描述类，它包含了一些属性和方法用于描述标准化数据类型自身以及和其他标准化数据类型之间的归属与层级关系。\n\n### 属性\n\n**系统能力：** SystemCapability.Dis"
+      },
+      {
+        "section_id": "section-4",
+        "title": "uniformTypeDescriptor.getTypeDescriptor<sup>11+</sup>",
+        "level": 2,
+        "line_start": 412,
+        "line_end": 465,
+        "summary": "getTypeDescriptor(typeId: string): TypeDescriptor\n\n按给定的标准化数据类型ID查询并返回对应的标准化数据类型描述类对象。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-5",
+        "title": "uniformTypeDescriptor.getUniformDataTypeByFilenameExtension<sup>11+</sup>",
+        "level": 2,
+        "line_start": 466,
+        "line_end": 522,
+        "summary": "getUniformDataTypeByFilenameExtension(filenameExtension: string, belongsTo?: string): string\n\n根据给定的"
+      },
+      {
+        "section_id": "section-6",
+        "title": "uniformTypeDescriptor.getUniformDataTypeByMIMEType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 523,
+        "line_end": 579,
+        "summary": "getUniformDataTypeByMIMEType(mimeType: string, belongsTo?: string): string\n\n根据给定的MIME类型和所归属的标准化数据类型"
+      },
+      {
+        "section_id": "section-7",
+        "title": "uniformTypeDescriptor.getUniformDataTypesByFilenameExtension<sup>13+</sup>",
+        "level": 2,
+        "line_start": 580,
+        "line_end": 636,
+        "summary": "getUniformDataTypesByFilenameExtension(filenameExtension: string, belongsTo?: string): Array\\<strin"
+      },
+      {
+        "section_id": "section-8",
+        "title": "uniformTypeDescriptor.getUniformDataTypesByMIMEType<sup>13+</sup>",
+        "level": 2,
+        "line_start": 637,
+        "line_end": 692,
+        "summary": "getUniformDataTypesByMIMEType(mimeType: string, belongsTo?: string): Array\\<string>\n\n根据给定的MIME类型和所归"
+      }
+    ]
+  }
+}

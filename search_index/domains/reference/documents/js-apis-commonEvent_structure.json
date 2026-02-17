@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-commonEvent",
+  "title": "@ohos.commonEvent (公共事件模块)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-commonEvent.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-commonEvent.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Notification",
+    "owner": "@peixu",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit Notification 模块的 @ohos.commonEvent (公共事件模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.commonEvent (公共事件模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport commonEvent from '@ohos.commonEvent';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Support",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 28,
+        "summary": "系统公共事件是指由系统服务或系统应用发布的事件，订阅这些系统公共事件需要特定的权限。发布或订阅这些事件需要使用如下链接中的枚举定义。\n\n全部系统公共事件枚举定义请参见[系统公共事件定义](./com"
+      },
+      {
+        "section_id": "section-3",
+        "title": "commonEvent.publish<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 64,
+        "summary": "publish(event: string, callback: AsyncCallback\\<void>): void\n\n发布公共事件（回调形式）。\n\n> **说明：**\n> 从 API vers"
+      },
+      {
+        "section_id": "section-4",
+        "title": "commonEvent.publish<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 110,
+        "summary": "publish(event: string, options: CommonEventPublishData, callback: AsyncCallback\\<void>): void\n\n以回调的"
+      },
+      {
+        "section_id": "section-5",
+        "title": "commonEvent.createSubscriber<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 156,
+        "summary": "createSubscriber(subscribeInfo: CommonEventSubscribeInfo, callback: AsyncCallback\\<CommonEventSubsc"
+      },
+      {
+        "section_id": "section-6",
+        "title": "commonEvent.createSubscriber<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 200,
+        "summary": "createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise\\<CommonEventSubscriber>\n\n以Promis"
+      },
+      {
+        "section_id": "section-7",
+        "title": "commonEvent.subscribe<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 201,
+        "line_end": 256,
+        "summary": "subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback\\<CommonEventData>): void\n\n以回调形"
+      },
+      {
+        "section_id": "section-8",
+        "title": "commonEvent.unsubscribe<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 323,
+        "summary": "unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback\\<void>): void\n\n以回调形式取消订阅公共事"
+      }
+    ]
+  }
+}

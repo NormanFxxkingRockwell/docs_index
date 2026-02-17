@@ -1,0 +1,156 @@
+{
+  "doc_id": "js-apis-hisysevent-sys",
+  "title": "@ohos.hiSysEvent (系统事件打点)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hisysevent-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hisysevent-sys.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@lyj_love_code",
+    "designer": "@tangyyan",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.hiSysEvent (系统事件打点)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.hiSysEvent (系统事件打点)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { hiSysEvent } from '@kit.PerformanceAnalysisKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "EventType",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 35,
+        "summary": "系统事件类型枚举。\n\n**系统能力：** SystemCapability.HiviewDFX.HiSysEvent\n\n| 名称 | 值 | 说明 |\n| -------- | -------- |"
+      },
+      {
+        "section_id": "section-3",
+        "title": "SysEventInfo",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 49,
+        "summary": "系统事件信息对象接口。\n\n**系统能力：** SystemCapability.HiviewDFX.HiSysEvent\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| --------"
+      },
+      {
+        "section_id": "section-4",
+        "title": "hiSysEvent.write",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 109,
+        "summary": "write(info: SysEventInfo, callback: AsyncCallback&lt;void&gt;): void\n\n系统事件打点方法，接收[SysEventInfo](#sy"
+      },
+      {
+        "section_id": "section-5",
+        "title": "hiSysEvent.write",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 179,
+        "summary": "write(info: SysEventInfo): Promise&lt;void&gt;\n\n系统事件打点方法，接收[SysEventInfo](#syseventinfo)类型的对象作为事件参数"
+      },
+      {
+        "section_id": "section-6",
+        "title": "RuleType",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 191,
+        "summary": "匹配规则类型枚举。\n\n**系统能力：** SystemCapability.HiviewDFX.HiSysEvent\n\n| 名称 | 值 | 说明 |\n| -------- | -------- |"
+      },
+      {
+        "section_id": "section-7",
+        "title": "WatchRule",
+        "level": 2,
+        "line_start": 192,
+        "line_end": 204,
+        "summary": "系统事件订阅规则对象接口。\n\n**系统能力：** SystemCapability.HiviewDFX.HiSysEvent\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ------"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Watcher",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 216,
+        "summary": "系统事件订阅者对象接口。\n\n**系统能力：** SystemCapability.HiviewDFX.HiSysEvent\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------"
+      },
+      {
+        "section_id": "section-9",
+        "title": "hiSysEvent.addWatcher",
+        "level": 2,
+        "line_start": 217,
+        "line_end": 272,
+        "summary": "addWatcher(watcher: Watcher): void\n\n订阅系统事件，接收[Watcher](#watcher)类型的对象作为事件参数。\n\n**需要权限：** ohos.permis"
+      },
+      {
+        "section_id": "section-10",
+        "title": "hiSysEvent.removeWatcher",
+        "level": 2,
+        "line_start": 273,
+        "line_end": 328,
+        "summary": "removeWatcher(watcher: Watcher): void\n\n取消订阅系统事件，接收[Watcher](#watcher)类型的对象作为事件参数。\n\n**需要权限：** ohos.p"
+      },
+      {
+        "section_id": "section-11",
+        "title": "QueryArg",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 342,
+        "summary": "系统事件查询参数对象接口。\n\n**系统能力：** SystemCapability.HiviewDFX.HiSysEvent\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ------"
+      },
+      {
+        "section_id": "section-12",
+        "title": "QueryRule",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 354,
+        "summary": "系统事件查询规则对象接口。\n\n**系统能力：** SystemCapability.HiviewDFX.HiSysEvent\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ------"
+      },
+      {
+        "section_id": "section-13",
+        "title": "Querier",
+        "level": 2,
+        "line_start": 355,
+        "line_end": 365,
+        "summary": "系统事件查询者对象接口。\n\n**系统能力：** SystemCapability.HiviewDFX.HiSysEvent\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------"
+      },
+      {
+        "section_id": "section-14",
+        "title": "hiSysEvent.query",
+        "level": 2,
+        "line_start": 366,
+        "line_end": 445,
+        "summary": "query(queryArg: QueryArg, rules: QueryRule[], querier: Querier): void\n\n查询系统事件。\n\n**需要权限：** ohos.perm"
+      },
+      {
+        "section_id": "section-15",
+        "title": "hiSysEvent.exportSysEvents<sup>10+</sup>",
+        "level": 2,
+        "line_start": 446,
+        "line_end": 535,
+        "summary": "exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): number\n\n批量导出系统事件，以文件格式写入应用沙箱固定目录(/data/sto"
+      },
+      {
+        "section_id": "section-16",
+        "title": "hiSysEvent.subscribe<sup>10+</sup>",
+        "level": 2,
+        "line_start": 536,
+        "line_end": 619,
+        "summary": "subscribe(rules: QueryRule[]): number\n\n订阅实时系统事件(事件需满足低频率或偶发性的约束条件)，事件发生时立即以文件格式写入应用沙箱固定目录(/data/sto"
+      },
+      {
+        "section_id": "section-17",
+        "title": "hiSysEvent.unsubscribe<sup>10+</sup>",
+        "level": 2,
+        "line_start": 620,
+        "line_end": 663,
+        "summary": "unsubscribe(): void\n\n取消订阅系统事件。\n\n**需要权限：** ohos.permission.READ_DFX_SYSEVENT\n\n**系统能力：** SystemCapabi"
+      }
+    ]
+  }
+}

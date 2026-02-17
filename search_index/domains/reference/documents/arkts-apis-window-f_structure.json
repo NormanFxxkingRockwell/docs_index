@@ -1,0 +1,236 @@
+{
+  "doc_id": "arkts-apis-window-f",
+  "title": "Functions",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkts-apis-window-f.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkts-apis-window-f.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "Window",
+    "owner": "@waterwin",
+    "designer": "@nyankomiya",
+    "tester": "@qinliwen0417",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkUI Window 模块的 Functions，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Functions",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { window } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "window.createWindow<sup>9+</sup>",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 91,
+        "summary": "createWindow(config: Configuration, callback: AsyncCallback&lt;Window&gt;): void\n\n创建子窗口或者系统窗口，使用cal"
+      },
+      {
+        "section_id": "section-3",
+        "title": "window.createWindow<sup>9+</sup>",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 162,
+        "summary": "createWindow(config: Configuration): Promise&lt;Window&gt;\n\n创建子窗口或者系统窗口，使用Promise异步回调。\n\n非[自由窗口](../"
+      },
+      {
+        "section_id": "section-4",
+        "title": "window.findWindow<sup>9+</sup>",
+        "level": 2,
+        "line_start": 163,
+        "line_end": 204,
+        "summary": "findWindow(name: string): Window\n\n查找指定名称对应的窗口。\n\n**系统能力：** SystemCapability.WindowManager.WindowMana"
+      },
+      {
+        "section_id": "section-5",
+        "title": "window.getLastWindow<sup>9+</sup>",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 278,
+        "summary": "getLastWindow(ctx: BaseContext, callback: AsyncCallback&lt;Window&gt;): void\n\n获取当前应用内层级最高的子窗口，使用cal"
+      },
+      {
+        "section_id": "section-6",
+        "title": "window.getLastWindow<sup>9+</sup>",
+        "level": 2,
+        "line_start": 279,
+        "line_end": 355,
+        "summary": "getLastWindow(ctx: BaseContext): Promise&lt;Window&gt;\n\n获取当前应用内层级最高的子窗口，使用Promise异步回调。\n\n若无应用子窗口或子窗口"
+      },
+      {
+        "section_id": "section-7",
+        "title": "window.shiftAppWindowFocus<sup>11+</sup>",
+        "level": 2,
+        "line_start": 356,
+        "line_end": 463,
+        "summary": "shiftAppWindowFocus(sourceWindowId: number, targetWindowId: number): Promise&lt;void&gt;\n\n在同应用内将窗口焦点"
+      },
+      {
+        "section_id": "section-8",
+        "title": "window.shiftAppWindowPointerEvent<sup>15+</sup>",
+        "level": 2,
+        "line_start": 464,
+        "line_end": 537,
+        "summary": "shiftAppWindowPointerEvent(sourceWindowId: number, targetWindowId: number): Promise&lt;void&gt;\n\n主窗口"
+      },
+      {
+        "section_id": "section-9",
+        "title": "window.shiftAppWindowTouchEvent<sup>20+</sup>",
+        "level": 2,
+        "line_start": 538,
+        "line_end": 611,
+        "summary": "shiftAppWindowTouchEvent(sourceWindowId: number, targetWindowId: number, fingerId: number): Promise&"
+      },
+      {
+        "section_id": "section-10",
+        "title": "window.getWindowsByCoordinate<sup>14+</sup>",
+        "level": 2,
+        "line_start": 612,
+        "line_end": 673,
+        "summary": "getWindowsByCoordinate(displayId: number, windowNumber?: number, x?: number, y?: number): Promise&l"
+      },
+      {
+        "section_id": "section-11",
+        "title": "window.getAllWindowLayoutInfo<sup>15+</sup>",
+        "level": 2,
+        "line_start": 674,
+        "line_end": 722,
+        "summary": "getAllWindowLayoutInfo(displayId: number): Promise&lt;Array&lt;WindowLayoutInfo&gt;&gt;\n\n获取指定屏幕上可见的"
+      },
+      {
+        "section_id": "section-12",
+        "title": "window.getVisibleWindowInfo<sup>18+</sup>",
+        "level": 2,
+        "line_start": 723,
+        "line_end": 776,
+        "summary": "getVisibleWindowInfo(): Promise&lt;Array&lt;WindowInfo&gt;&gt;\n\n获取当前屏幕的可见主窗口（未退至后台的主窗口）信息。使用Promise"
+      },
+      {
+        "section_id": "section-13",
+        "title": "window.getGlobalWindowMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 777,
+        "line_end": 826,
+        "summary": "getGlobalWindowMode(displayId?: number): Promise&lt;number&gt;\n\n获取指定屏幕上生命周期位于前台的窗口对应的窗口模式，使用Promise"
+      },
+      {
+        "section_id": "section-14",
+        "title": "window.setWatermarkImageForAppWindows<sup>21+</sup>",
+        "level": 2,
+        "line_start": 827,
+        "line_end": 888,
+        "summary": "setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise&lt;void&gt;\n\n设置或取消本应用"
+      },
+      {
+        "section_id": "section-15",
+        "title": "window.setStartWindowBackgroundColor<sup>20+</sup>",
+        "level": 2,
+        "line_start": 889,
+        "line_end": 942,
+        "summary": "setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promis"
+      },
+      {
+        "section_id": "section-16",
+        "title": "window.getAllMainWindowInfo<sup>21+</sup>",
+        "level": 2,
+        "line_start": 943,
+        "line_end": 1020,
+        "summary": "getAllMainWindowInfo(): Promise&lt;Array&lt;MainWindowInfo&gt;&gt;\n\n获取全部主窗口信息，使用Promise异步回调。\n\n**需要权"
+      },
+      {
+        "section_id": "section-17",
+        "title": "window.getMainWindowSnapshot<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1021,
+        "line_end": 1120,
+        "summary": "getMainWindowSnapshot(windowId: Array&lt;number&gt;, config: WindowSnapshotConfiguration): Promise&"
+      },
+      {
+        "section_id": "section-18",
+        "title": "window.create<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1121,
+        "line_end": 1162,
+        "summary": "create(id: string, type: WindowType, callback: AsyncCallback&lt;Window&gt;): void\n\n创建子窗口，使用callback"
+      },
+      {
+        "section_id": "section-19",
+        "title": "window.create<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1163,
+        "line_end": 1207,
+        "summary": "create(id: string, type: WindowType): Promise&lt;Window&gt;\n\n创建子窗口，使用Promise异步回调。\n\n子窗口创建后默认是[沉浸式布局]"
+      },
+      {
+        "section_id": "section-20",
+        "title": "window.create<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1208,
+        "line_end": 1247,
+        "summary": "create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback&lt;Window&gt;): void"
+      },
+      {
+        "section_id": "section-21",
+        "title": "window.create<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1248,
+        "line_end": 1289,
+        "summary": "create(ctx: BaseContext, id: string, type: WindowType): Promise&lt;Window&gt;\n\n创建系统窗口，使用Promise异步回调"
+      },
+      {
+        "section_id": "section-22",
+        "title": "window.find<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1290,
+        "line_end": 1325,
+        "summary": "find(id: string, callback: AsyncCallback&lt;Window&gt;): void\n\n查找id所对应的窗口，使用callback异步回调。\n\n> **说明：*"
+      },
+      {
+        "section_id": "section-23",
+        "title": "window.find<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1326,
+        "line_end": 1364,
+        "summary": "find(id: string): Promise&lt;Window&gt;\n\n查找id所对应的窗口，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API version 7开始支"
+      },
+      {
+        "section_id": "section-24",
+        "title": "window.getTopWindow<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1365,
+        "line_end": 1401,
+        "summary": "getTopWindow(callback: AsyncCallback&lt;Window&gt;): void\n\n获取当前应用内最后显示的窗口，使用callback异步回调。\n\n> **说明：*"
+      },
+      {
+        "section_id": "section-25",
+        "title": "window.getTopWindow<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1402,
+        "line_end": 1436,
+        "summary": "getTopWindow(): Promise&lt;Window&gt;\n\n获取当前应用内最后显示的窗口，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API version 6开"
+      },
+      {
+        "section_id": "section-26",
+        "title": "window.getTopWindow<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1437,
+        "line_end": 1483,
+        "summary": "getTopWindow(ctx: BaseContext, callback: AsyncCallback&lt;Window&gt;): void\n\n获取当前应用内最后显示的窗口，使用callb"
+      },
+      {
+        "section_id": "section-27",
+        "title": "window.getTopWindow<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1484,
+        "line_end": 1528,
+        "summary": "getTopWindow(ctx: BaseContext): Promise&lt;Window&gt;\n\n获取当前应用内最后显示的窗口，使用Promise异步回调。\n\n> **说明：**\n>\n>"
+      }
+    ]
+  }
+}

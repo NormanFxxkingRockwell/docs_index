@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-commonEventManager-sys",
+  "title": "@ohos.commonEventManager (公共事件模块)(系统应用)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-commonEventManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-commonEventManager-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Notification",
+    "owner": "@peixu",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit Notification 模块的 @ohos.commonEventManager (公共事件模块)(系统应用)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.commonEventManager (公共事件模块)(系统应用)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { commonEventManager } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Support",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 29,
+        "summary": "系统公共事件是指由系统服务或系统应用发布的事件，订阅这些系统公共事件需要特定的权限。发布或订阅这些事件需要使用如下链接中的枚举定义。\n\n全部系统公共事件枚举定义请参见[系统公共事件定义](./com"
+      },
+      {
+        "section_id": "section-3",
+        "title": "commonEventManager.publishAsUser<sup>",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 83,
+        "summary": "publishAsUser(event: string, userId: number, callback: AsyncCallback\\<void>): void\n\n向指定用户发布公共事件。使用c"
+      },
+      {
+        "section_id": "section-4",
+        "title": "commonEventManager.publishAsUser",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 143,
+        "summary": "publishAsUser(event: string, userId: number, options: CommonEventPublishData, callback: AsyncCallba"
+      },
+      {
+        "section_id": "section-5",
+        "title": "commonEventManager.removeStickyCommonEvent<sup>10+</sup>",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 189,
+        "summary": "removeStickyCommonEvent(event: string, callback: AsyncCallback\\<void>): void\n\n移除粘性公共事件。使用callback异步"
+      },
+      {
+        "section_id": "section-6",
+        "title": "commonEventManager.removeStickyCommonEvent<sup>10+</sup>",
+        "level": 2,
+        "line_start": 190,
+        "line_end": 238,
+        "summary": "removeStickyCommonEvent(event: string): Promise\\<void>\n\n移除粘性公共事件。使用Promise异步回调。\n\n**系统能力：** SystemCa"
+      },
+      {
+        "section_id": "section-7",
+        "title": "commonEventManager.setStaticSubscriberState<sup>10+</sup>",
+        "level": 2,
+        "line_start": 239,
+        "line_end": 282,
+        "summary": "setStaticSubscriberState(enable: boolean, callback: AsyncCallback\\<void>): void\n\n为当前应用设置静态订阅事件使能或去使"
+      },
+      {
+        "section_id": "section-8",
+        "title": "commonEventManager.setStaticSubscriberState<sup>10+</sup>",
+        "level": 2,
+        "line_start": 283,
+        "line_end": 330,
+        "summary": "setStaticSubscriberState(enable: boolean): Promise\\<void>\n\n为当前应用设置静态订阅事件使能或去使能状态。使用Promise异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "commonEventManager.setStaticSubscriberState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 331,
+        "line_end": 379,
+        "summary": "setStaticSubscriberState(enable: boolean, events?: Array\\<string>): Promise\\<void>\n\n为当前应用设置静态订阅事件的使"
+      }
+    ]
+  }
+}

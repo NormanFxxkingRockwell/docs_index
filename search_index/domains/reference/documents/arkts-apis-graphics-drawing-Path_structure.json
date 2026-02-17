@@ -1,0 +1,396 @@
+{
+  "doc_id": "arkts-apis-graphics-drawing-Path",
+  "title": "Class (Path)",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Path.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Path.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphics 模块的 Class (Path)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (Path)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { drawing } from '@kit.ArkGraphics2D';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "constructor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 43,
+        "summary": "constructor()\n\n构造一个路径。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-3",
+        "title": "constructor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 72,
+        "summary": "constructor(path: Path)\n\n构造一个已有路径的副本。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-4",
+        "title": "set<sup>20+</sup>",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 101,
+        "summary": "set(src: Path): void\n\n使用另一个路径对当前路径进行更新。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "moveTo",
+        "level": 2,
+        "line_start": 102,
+        "line_end": 135,
+        "summary": "moveTo(x: number, y: number) : void\n\n设置自定义路径的起始点位置。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-6",
+        "title": "lineTo",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 170,
+        "summary": "lineTo(x: number, y: number) : void\n\n添加一条从路径的最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。\n\n**原子化服务API：** 从AP"
+      },
+      {
+        "section_id": "section-7",
+        "title": "arcTo",
+        "level": 2,
+        "line_start": 171,
+        "line_end": 209,
+        "summary": "arcTo(x1: number, y1: number, x2: number, y2: number, startDeg: number, sweepDeg: number): void\n\n给路"
+      },
+      {
+        "section_id": "section-8",
+        "title": "quadTo",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 246,
+        "summary": "quadTo(ctrlX: number, ctrlY: number, endX: number, endY: number): void\n\n添加从路径最后点位置（若路径没有内容则为 (0, 0)"
+      },
+      {
+        "section_id": "section-9",
+        "title": "conicTo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 247,
+        "line_end": 283,
+        "summary": "conicTo(ctrlX: number, ctrlY: number, endX: number, endY: number, weight: number): void\n\n在当前路径上添加一条"
+      },
+      {
+        "section_id": "section-10",
+        "title": "cubicTo",
+        "level": 2,
+        "line_start": 284,
+        "line_end": 322,
+        "summary": "cubicTo(ctrlX1: number, ctrlY1: number, ctrlX2: number, ctrlY2: number, endX: number, endY: number)"
+      },
+      {
+        "section_id": "section-11",
+        "title": "rMoveTo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 323,
+        "line_end": 356,
+        "summary": "rMoveTo(dx: number, dy: number): void\n\n设置一个相对于当前路径终点（若路径没有内容则默认为 (0, 0)）的路径起始点位置。\n\n**原子化服务API：** 从A"
+      },
+      {
+        "section_id": "section-12",
+        "title": "rLineTo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 357,
+        "line_end": 390,
+        "summary": "rLineTo(dx: number, dy: number): void\n\n使用相对位置在当前路径上添加一条当前路径终点（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-13",
+        "title": "rQuadTo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 391,
+        "line_end": 426,
+        "summary": "rQuadTo(dx1: number, dy1: number, dx2: number, dy2: number): void\n\n使用相对位置在当前路径上添加一条当前路径终点（若路径没有内容则默"
+      },
+      {
+        "section_id": "section-14",
+        "title": "rConicTo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 427,
+        "line_end": 463,
+        "summary": "rConicTo(ctrlX: number, ctrlY: number, endX: number, endY: number, weight: number): void\n\n使用相对位置在当前"
+      },
+      {
+        "section_id": "section-15",
+        "title": "rCubicTo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 464,
+        "line_end": 501,
+        "summary": "rCubicTo(ctrlX1: number, ctrlY1: number, ctrlX2: number, ctrlY2: number, endX: number, endY: number"
+      },
+      {
+        "section_id": "section-16",
+        "title": "addArc<sup>12+</sup>",
+        "level": 2,
+        "line_start": 502,
+        "line_end": 543,
+        "summary": "addArc(rect: common2D.Rect, startAngle: number, sweepAngle: number): void\n\n向路径添加一段圆弧。\n\n当startAngle和"
+      },
+      {
+        "section_id": "section-17",
+        "title": "addCircle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 544,
+        "line_end": 578,
+        "summary": "addCircle(x: number, y: number, radius: number, pathDirection?: PathDirection): void\n\n按指定方向，向路径添加圆形"
+      },
+      {
+        "section_id": "section-18",
+        "title": "addOval<sup>12+</sup>",
+        "level": 2,
+        "line_start": 579,
+        "line_end": 612,
+        "summary": "addOval(rect: common2D.Rect, start: number, pathDirection?: PathDirection): void\n\n按指定方向，将矩形的内切椭圆添加到"
+      },
+      {
+        "section_id": "section-19",
+        "title": "addRect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 613,
+        "line_end": 645,
+        "summary": "addRect(rect: common2D.Rect, pathDirection?: PathDirection): void\n\n按指定方向，将矩形添加到路径中，添加的路径的起始点为矩形左上角。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "addRoundRect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 646,
+        "line_end": 679,
+        "summary": "addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void\n\n按指定方向，向路径添加圆角矩形轮廓。路径添加方向为顺"
+      },
+      {
+        "section_id": "section-21",
+        "title": "addPath<sup>12+</sup>",
+        "level": 2,
+        "line_start": 680,
+        "line_end": 716,
+        "summary": "addPath(path: Path, matrix?: Matrix | null): void\n\n对源路径进行矩阵变换后，将其添加到当前路径中。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-22",
+        "title": "transform<sup>12+</sup>",
+        "level": 2,
+        "line_start": 717,
+        "line_end": 752,
+        "summary": "transform(matrix: Matrix): void\n\n对路径进行矩阵变换。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数：**"
+      },
+      {
+        "section_id": "section-23",
+        "title": "contains<sup>12+</sup>",
+        "level": 2,
+        "line_start": 753,
+        "line_end": 793,
+        "summary": "contains(x: number, y: number): boolean\n\n判断指定坐标点是否被路径包含，判定是否被路径包含的规则参考[PathFillType](arkts-apis-gra"
+      },
+      {
+        "section_id": "section-24",
+        "title": "setLastPoint<sup>20+</sup>",
+        "level": 2,
+        "line_start": 794,
+        "line_end": 825,
+        "summary": "setLastPoint(x: number, y: number): void\n\n修改路径的最后一个点。\n\n**系统能力：** SystemCapability.Graphics.Drawing"
+      },
+      {
+        "section_id": "section-25",
+        "title": "setFillType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 826,
+        "line_end": 856,
+        "summary": "setFillType(pathFillType: PathFillType): void\n\n设置路径的填充类型，决定路径内部区域的定义方式。例如，使用Winding填充类型时，路径内部区域由路径环"
+      },
+      {
+        "section_id": "section-26",
+        "title": "getFillType<sup>20+</sup>",
+        "level": 2,
+        "line_start": 857,
+        "line_end": 880,
+        "summary": "getFillType(): PathFillType\n\n获取路径的填充类型。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类"
+      },
+      {
+        "section_id": "section-27",
+        "title": "getBounds<sup>12+</sup>",
+        "level": 2,
+        "line_start": 881,
+        "line_end": 909,
+        "summary": "getBounds(): common2D.Rect\n\n获取包含路径的最小矩形边界。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**"
+      },
+      {
+        "section_id": "section-28",
+        "title": "addPolygon<sup>12+</sup>",
+        "level": 2,
+        "line_start": 910,
+        "line_end": 950,
+        "summary": "addPolygon(points: Array\\<common2D.Point>, close: boolean): void\n\n通过坐标点列表添加多条连续的线段。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-29",
+        "title": "offset<sup>12+</sup>",
+        "level": 2,
+        "line_start": 951,
+        "line_end": 990,
+        "summary": "offset(dx: number, dy: number): Path\n\n将路径沿着x轴和y轴方向偏移一定距离并保存在返回的路径对象中。\n\n**系统能力：** SystemCapability.G"
+      },
+      {
+        "section_id": "section-30",
+        "title": "op<sup>12+</sup>",
+        "level": 2,
+        "line_start": 991,
+        "line_end": 1030,
+        "summary": "op(path: Path, pathOp: PathOp): boolean\n\n将当前路径置为和path按照指定的路径操作类型合并后的结果。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-31",
+        "title": "close",
+        "level": 2,
+        "line_start": 1031,
+        "line_end": 1049,
+        "summary": "close(): void\n\n闭合路径，会添加一条从路径起点位置到最后点位置的线段。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**示例：**\n\n`"
+      },
+      {
+        "section_id": "section-32",
+        "title": "reset",
+        "level": 2,
+        "line_start": 1050,
+        "line_end": 1068,
+        "summary": "reset(): void\n\n重置自定义路径数据。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**示例：**\n\n```ts\nimport { dra"
+      },
+      {
+        "section_id": "section-33",
+        "title": "rewind<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1069,
+        "line_end": 1088,
+        "summary": "rewind(): void\n\n将路径内添加的各类点/线清空，但是保留内存空间。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**示例：**\n\n```"
+      },
+      {
+        "section_id": "section-34",
+        "title": "isEmpty<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1089,
+        "line_end": 1113,
+        "summary": "isEmpty(): boolean\n\n判断路径是否为空。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型  | 说明 |"
+      },
+      {
+        "section_id": "section-35",
+        "title": "isRect<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1114,
+        "line_end": 1151,
+        "summary": "isRect(rect: common2D.Rect | null): boolean\n\n判断路径是否构成矩形。\n\n**系统能力：** SystemCapability.Graphics.Drawi"
+      },
+      {
+        "section_id": "section-36",
+        "title": "getLength<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1152,
+        "line_end": 1182,
+        "summary": "getLength(forceClosed: boolean): number\n\n获取路径长度。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数"
+      },
+      {
+        "section_id": "section-37",
+        "title": "getPositionAndTangent<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1183,
+        "line_end": 1232,
+        "summary": "getPositionAndTangent(forceClosed: boolean, distance: number, position: common2D.Point, tangent: co"
+      },
+      {
+        "section_id": "section-38",
+        "title": "getSegment<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1233,
+        "line_end": 1269,
+        "summary": "getSegment(forceClosed: boolean, start: number, stop: number, startWithMoveTo: boolean, dst: Path):"
+      },
+      {
+        "section_id": "section-39",
+        "title": "isClosed<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1270,
+        "line_end": 1298,
+        "summary": "isClosed(): boolean\n\n获取路径是否闭合。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-40",
+        "title": "getMatrix<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1299,
+        "line_end": 1343,
+        "summary": "getMatrix(forceClosed: boolean, distance: number, matrix: Matrix, flags: PathMeasureMatrixFlags): b"
+      },
+      {
+        "section_id": "section-41",
+        "title": "buildFromSvgString<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1344,
+        "line_end": 1385,
+        "summary": "buildFromSvgString(str: string): boolean\n\n解析SVG字符串表示的路径。\n\n**系统能力：** SystemCapability.Graphics.Drawi"
+      },
+      {
+        "section_id": "section-42",
+        "title": "getPathIterator<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1386,
+        "line_end": 1408,
+        "summary": "getPathIterator(): PathIterator\n\n返回该路径的操作迭代器。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：*"
+      },
+      {
+        "section_id": "section-43",
+        "title": "approximate<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1409,
+        "line_end": 1456,
+        "summary": "approximate(acceptableError: number): Array\\<number>\n\n将当前路径转化为由连续直线段构成的近似路径。\n\n> **说明：**\n>\n> - 当acce"
+      },
+      {
+        "section_id": "section-44",
+        "title": "interpolate<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1457,
+        "line_end": 1506,
+        "summary": "interpolate(other: Path, weight: number, interpolatedPath: Path): boolean\n\n根据给定的权重，在当前路径和另一条路径之间进行插"
+      },
+      {
+        "section_id": "section-45",
+        "title": "isInterpolate<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1507,
+        "line_end": 1544,
+        "summary": "isInterpolate(other: Path): boolean\n\n判断当前路径与另一条路径在结构和操作顺序上是否完全一致，以确定两条路径是否兼容插值。若路径中包含圆锥曲线（Conic）操作，"
+      },
+      {
+        "section_id": "section-46",
+        "title": "isInverseFillType<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1545,
+        "line_end": 1572,
+        "summary": "isInverseFillType(): boolean\n\n检查当前路径填充类型是否是反向填充类型。例如填充类型Winding、EvenOdd不是反向类型，InverseWinding、Invers"
+      },
+      {
+        "section_id": "section-47",
+        "title": "toggleInverseFillType<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1573,
+        "line_end": 1590,
+        "summary": "toggleInverseFillType(): void\n\n切换路径的填充类型为反向类型。例如，使用Winding填充类型时，经过取反后填充类型为InverseWinding，而使用EvenOdd"
+      }
+    ]
+  }
+}

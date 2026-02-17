@@ -1,0 +1,292 @@
+{
+  "doc_id": "js-apis-arkui-graphics",
+  "title": "Graphics",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-graphics.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-graphics.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xiang-shouxing",
+    "designer": "@xiang-shouxing",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 Graphics，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Graphics",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { DrawContext, Size, Offset, Position, Pivot, Scale, Translation, Matrix4, Rotation, F"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Size",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 33,
+        "summary": "用于返回组件布局大小的宽和高。默认单位为vp，不同的接口使用Size类型时会再定义单位，以接口定义的单位为准。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服"
+      },
+      {
+        "section_id": "section-3",
+        "title": "Position",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 47,
+        "summary": "type Position = Vector2\n\n用于设置或返回组件的位置。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "PositionT<sup>12+</sup>",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 61,
+        "summary": "type PositionT\\<T> = Vector2T\\<T>\n\n用于设置或返回组件的位置。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Frame",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 76,
+        "summary": "用于设置或返回组件的布局大小和位置。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Ark"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Pivot",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 90,
+        "summary": "type Pivot = Vector2\n\n用于设置组件的轴心坐标，轴心会作为组件的旋转/缩放中心点，影响旋转和缩放效果。\n\n**原子化服务API：** 从API version 12开始，该接口支"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Scale",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 104,
+        "summary": "type Scale = Vector2\n\n用于设置组件的缩放比例。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Translation",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 118,
+        "summary": "type Translation = Vector2\n\n用于设置组件的平移量。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "Rotation",
+        "level": 2,
+        "line_start": 119,
+        "line_end": 132,
+        "summary": "type Rotation = Vector3\n\n用于设置组件的旋转角度。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-10",
+        "title": "Offset",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 146,
+        "summary": "type Offset = Vector2\n\n用于设置组件或效果的偏移。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-11",
+        "title": "Matrix4",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 170,
+        "summary": "type Matrix4 = [number,number,number,number,number,number,number,number,number,number,number,number"
+      },
+      {
+        "section_id": "section-12",
+        "title": "Vector2",
+        "level": 2,
+        "line_start": 171,
+        "line_end": 183,
+        "summary": "用于表示包含x和y两个值的向量。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-13",
+        "title": "Vector3",
+        "level": 2,
+        "line_start": 184,
+        "line_end": 197,
+        "summary": "用于表示包含x、y、z三个值的向量。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Ark"
+      },
+      {
+        "section_id": "section-14",
+        "title": "Vector2T\\<T><sup>12+</sup>",
+        "level": 2,
+        "line_start": 198,
+        "line_end": 210,
+        "summary": "用于表示T类型的包含x和y两个值的向量。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.A"
+      },
+      {
+        "section_id": "section-15",
+        "title": "DrawContext",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 309,
+        "summary": "图形绘制上下文，提供绘制所需的画布宽度和高度。\n\n### size\n\nget size(): Size\n\n获取画布的宽度和高度。\n\n**原子化服务API：** 从API version 12开始，该"
+      },
+      {
+        "section_id": "section-16",
+        "title": "Edges\\<T><sup>12+</sup>",
+        "level": 2,
+        "line_start": 310,
+        "line_end": 324,
+        "summary": "用于设置边框的属性。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-17",
+        "title": "LengthUnit<sup>12+</sup>",
+        "level": 2,
+        "line_start": 325,
+        "line_end": 340,
+        "summary": "长度属性单位枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-18",
+        "title": "SizeT\\<T><sup>12+</sup>",
+        "level": 2,
+        "line_start": 341,
+        "line_end": 353,
+        "summary": "用于设置宽高的属性。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-19",
+        "title": "LengthMetricsUnit<sup>12+</sup>",
+        "level": 2,
+        "line_start": 354,
+        "line_end": 366,
+        "summary": "长度属性单位枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-20",
+        "title": "LengthMetrics<sup>12+</sup>",
+        "level": 2,
+        "line_start": 367,
+        "line_end": 577,
+        "summary": "用于设置长度属性，当长度单位为PERCENT时，值为1表示100%。\n\n### 属性\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-21",
+        "title": "ColorMetrics<sup>12+</sup>",
+        "level": 2,
+        "line_start": 578,
+        "line_end": 862,
+        "summary": "用于混合颜色。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n### numeric<sup>12+</sup>\n\nstatic numeric(val"
+      },
+      {
+        "section_id": "section-22",
+        "title": "Corners\\<T><sup>12+</sup>",
+        "level": 2,
+        "line_start": 863,
+        "line_end": 877,
+        "summary": "用于设置四个角的圆角属性。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ar"
+      },
+      {
+        "section_id": "section-23",
+        "title": "CornerRadius<sup>12+</sup>",
+        "level": 2,
+        "line_start": 878,
+        "line_end": 891,
+        "summary": "type CornerRadius = Corners\\<Vector2>\n\n设置四个角的圆角x轴与y轴的半轴长。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子"
+      },
+      {
+        "section_id": "section-24",
+        "title": "BorderRadiuses<sup>12+</sup>",
+        "level": 2,
+        "line_start": 892,
+        "line_end": 905,
+        "summary": "type BorderRadiuses = Corners\\<number>\n\n设置四个角的圆角半径。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-25",
+        "title": "Rect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 906,
+        "line_end": 919,
+        "summary": "type Rect = common2D.Rect\n\n用于设置矩形的形状。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-26",
+        "title": "RoundRect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 920,
+        "line_end": 932,
+        "summary": "用于设置带有圆角的矩形。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-27",
+        "title": "Circle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 933,
+        "line_end": 946,
+        "summary": "用于设置圆形的属性。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-28",
+        "title": "CommandPath<sup>12+</sup>",
+        "level": 2,
+        "line_start": 947,
+        "line_end": 958,
+        "summary": "用于设置路径绘制的指令。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-29",
+        "title": "ShapeMask<sup>12+</sup>",
+        "level": 2,
+        "line_start": 959,
+        "line_end": 1284,
+        "summary": "用于设置图形遮罩。\n\n### 属性\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkU"
+      },
+      {
+        "section_id": "section-30",
+        "title": "ShapeClip<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1285,
+        "line_end": 1653,
+        "summary": "用于设置图形裁剪。\n\n### constructor<sup>12+</sup>\n\nconstructor()\n\nShapeClip的构造函数。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-31",
+        "title": "edgeColors<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1654,
+        "line_end": 1715,
+        "summary": "edgeColors(all: number): Edges\\<number>\n\n用于生成边框颜色均设置为传入值的边框颜色对象。\n\n**原子化服务API：** 从API version 12开始，该"
+      },
+      {
+        "section_id": "section-32",
+        "title": "edgeWidths<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1716,
+        "line_end": 1777,
+        "summary": "edgeWidths(all: number): Edges\\<number>\n\n用于生成边框宽度均设置为传入值的边框宽度对象。\n\n**原子化服务API：** 从API version 12开始，该"
+      },
+      {
+        "section_id": "section-33",
+        "title": "borderStyles<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1778,
+        "line_end": 1840,
+        "summary": "borderStyles(all: BorderStyle): Edges\\<BorderStyle>\n\n用于生成边框样式均设置为传入值的边框样式对象。\n\n**原子化服务API：** 从API ve"
+      },
+      {
+        "section_id": "section-34",
+        "title": "borderRadiuses<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1841,
+        "line_end": 1901,
+        "summary": "borderRadiuses(all: number): BorderRadiuses\n\n用于生成边框圆角均设置为传入值的边框圆角对象。\n\n**原子化服务API：** 从API version 12"
+      }
+    ]
+  }
+}

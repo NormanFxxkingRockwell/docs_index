@@ -1,0 +1,604 @@
+{
+  "doc_id": "js-apis-bluetooth",
+  "title": "@ohos.bluetooth (蓝牙)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.bluetooth (蓝牙)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bluetooth (蓝牙)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 24,
+        "summary": "```js\nimport bluetooth from '@ohos.bluetooth';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "bluetooth.enableBluetooth<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 50,
+        "summary": "enableBluetooth(): boolean\n\n开启蓝牙。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[blue"
+      },
+      {
+        "section_id": "section-3",
+        "title": "bluetooth.disableBluetooth<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 76,
+        "summary": "disableBluetooth(): boolean\n\n关闭蓝牙。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[blu"
+      },
+      {
+        "section_id": "section-4",
+        "title": "bluetooth.getLocalName<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 102,
+        "summary": "getLocalName(): string\n\n获取蓝牙本地设备名称。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[bl"
+      },
+      {
+        "section_id": "section-5",
+        "title": "bluetooth.getState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 128,
+        "summary": "getState(): BluetoothState\n\n获取蓝牙开关状态。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用["
+      },
+      {
+        "section_id": "section-6",
+        "title": "bluetooth.getBtConnectionState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 154,
+        "summary": "getBtConnectionState(): ProfileConnectionState\n\n获取蓝牙本端的Profile连接状态，例如：任意一个支持的Profile连接状态为已连接，则此接口返回"
+      },
+      {
+        "section_id": "section-7",
+        "title": "bluetooth.setLocalName<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 155,
+        "line_end": 186,
+        "summary": "setLocalName(name: string): boolean\n\n设置蓝牙本地设备名称。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version"
+      },
+      {
+        "section_id": "section-8",
+        "title": "bluetooth.pairDevice<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 187,
+        "line_end": 219,
+        "summary": "pairDevice(deviceId: string): boolean\n\n发起蓝牙配对。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开"
+      },
+      {
+        "section_id": "section-9",
+        "title": "bluetooth.getProfileConnState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 220,
+        "line_end": 251,
+        "summary": "getProfileConnState(profileId: ProfileId): ProfileConnectionState\n\n依据ProfileId获取指定profile的连接状态。\n\n>"
+      },
+      {
+        "section_id": "section-10",
+        "title": "bluetooth.getRemoteDeviceName<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 252,
+        "line_end": 283,
+        "summary": "getRemoteDeviceName(deviceId: string): string\n\n获取对端蓝牙设备的名称。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从A"
+      },
+      {
+        "section_id": "section-11",
+        "title": "bluetooth.getRemoteDeviceClass<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 284,
+        "line_end": 315,
+        "summary": "getRemoteDeviceClass(deviceId: string): DeviceClass\n\n获取对端蓝牙设备的类别。\n\n> **说明：**<br/>\n> 从API version 8开"
+      },
+      {
+        "section_id": "section-12",
+        "title": "bluetooth.getPairedDevices<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 316,
+        "line_end": 341,
+        "summary": "getPairedDevices(): Array&lt;string&gt;\n\n获取蓝牙配对列表。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API versio"
+      },
+      {
+        "section_id": "section-13",
+        "title": "bluetooth.setBluetoothScanMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 342,
+        "line_end": 376,
+        "summary": "setBluetoothScanMode(mode: ScanMode, duration: number): boolean\n\n设置蓝牙扫描模式，可以被远端设备发现。\n\n> **说明：**<br/"
+      },
+      {
+        "section_id": "section-14",
+        "title": "bluetooth.getBluetoothScanMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 377,
+        "line_end": 402,
+        "summary": "getBluetoothScanMode(): ScanMode\n\n获取蓝牙扫描模式。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃"
+      },
+      {
+        "section_id": "section-15",
+        "title": "bluetooth.startBluetoothDiscovery<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 403,
+        "line_end": 433,
+        "summary": "startBluetoothDiscovery(): boolean\n\n开启蓝牙扫描，可以发现远端设备。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API vers"
+      },
+      {
+        "section_id": "section-16",
+        "title": "bluetooth.stopBluetoothDiscovery<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 434,
+        "line_end": 459,
+        "summary": "stopBluetoothDiscovery(): boolean\n\n关闭蓝牙扫描。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "bluetooth.setDevicePairingConfirmation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 460,
+        "line_end": 497,
+        "summary": "setDevicePairingConfirmation(device: string, accept: boolean): boolean\n\n设置设备配对请求确认。\n\n> **说明：**<br/>"
+      },
+      {
+        "section_id": "section-18",
+        "title": "bluetooth.on('bluetoothDeviceFind')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 498,
+        "line_end": 531,
+        "summary": "on(type: 'bluetoothDeviceFind', callback: Callback&lt;Array&lt;string&gt;&gt;): void\n\n订阅蓝牙设备发现上报事件。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "bluetooth.off('bluetoothDeviceFind')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 532,
+        "line_end": 566,
+        "summary": "off(type: 'bluetoothDeviceFind', callback?: Callback&lt;Array&lt;string&gt;&gt;): void\n\n取消订阅蓝牙设备发现上"
+      },
+      {
+        "section_id": "section-20",
+        "title": "bluetooth.on('pinRequired')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 567,
+        "line_end": 600,
+        "summary": "on(type: 'pinRequired', callback: Callback&lt;PinRequiredParam&gt;): void\n\n订阅远端蓝牙设备的配对请求事件。\n\n> **说明"
+      },
+      {
+        "section_id": "section-21",
+        "title": "bluetooth.off('pinRequired')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 601,
+        "line_end": 635,
+        "summary": "off(type: 'pinRequired', callback?: Callback&lt;PinRequiredParam&gt;): void\n\n取消订阅远端蓝牙设备的配对请求事件。\n\n>"
+      },
+      {
+        "section_id": "section-22",
+        "title": "bluetooth.on('bondStateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 636,
+        "line_end": 669,
+        "summary": "on(type: 'bondStateChange', callback: Callback&lt;BondStateParam&gt;): void\n\n订阅蓝牙配对状态改变事件。\n\n> **说明："
+      },
+      {
+        "section_id": "section-23",
+        "title": "bluetooth.off('bondStateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 670,
+        "line_end": 704,
+        "summary": "off(type: 'bondStateChange', callback?: Callback&lt;BondStateParam&gt;): void\n\n取消订阅蓝牙配对状态改变事件。\n\n> *"
+      },
+      {
+        "section_id": "section-24",
+        "title": "bluetooth.on('stateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 705,
+        "line_end": 738,
+        "summary": "on(type: 'stateChange', callback: Callback&lt;BluetoothState&gt;): void\n\n订阅蓝牙连接状态改变事件。\n\n> **说明：**<b"
+      },
+      {
+        "section_id": "section-25",
+        "title": "bluetooth.off('stateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 739,
+        "line_end": 773,
+        "summary": "off(type: 'stateChange', callback?: Callback&lt;BluetoothState&gt;): void\n\n取消订阅蓝牙连接状态改变事件。\n\n> **说明："
+      },
+      {
+        "section_id": "section-26",
+        "title": "bluetooth.sppListen<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 774,
+        "line_end": 812,
+        "summary": "sppListen(name: string, option: SppOption, callback: AsyncCallback&lt;number&gt;): void\n\n创建一个服务端监听S"
+      },
+      {
+        "section_id": "section-27",
+        "title": "bluetooth.sppAccept<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 813,
+        "line_end": 855,
+        "summary": "sppAccept(serverSocket: number, callback: AsyncCallback&lt;number&gt;): void\n\n服务端监听socket等待客户端连接。"
+      },
+      {
+        "section_id": "section-28",
+        "title": "bluetooth.sppConnect<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 856,
+        "line_end": 894,
+        "summary": "sppConnect(device: string, option: SppOption, callback: AsyncCallback&lt;number&gt;): void\n\n客户端向远端设"
+      },
+      {
+        "section_id": "section-29",
+        "title": "bluetooth.sppCloseServerSocket<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 895,
+        "line_end": 927,
+        "summary": "sppCloseServerSocket(socket: number): void\n\n关闭服务端监听Socket，入参socket由sppListen接口返回。\n\n> **说明：**<br/>\n>"
+      },
+      {
+        "section_id": "section-30",
+        "title": "bluetooth.sppCloseClientSocket<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 928,
+        "line_end": 961,
+        "summary": "sppCloseClientSocket(socket: number): void\n\n关闭客户端socket，入参socket由sppAccept或sppConnect接口获取。\n\n> **说明："
+      },
+      {
+        "section_id": "section-31",
+        "title": "bluetooth.sppWrite<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 962,
+        "line_end": 1010,
+        "summary": "sppWrite(clientSocket: number, data: ArrayBuffer): boolean\n\n通过socket向远端发送数据，入参clientSocket由sppAccep"
+      },
+      {
+        "section_id": "section-32",
+        "title": "bluetooth.on('sppRead')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1011,
+        "line_end": 1053,
+        "summary": "on(type: 'sppRead', clientSocket: number, callback: Callback&lt;ArrayBuffer&gt;): void\n\n> **说明：**<b"
+      },
+      {
+        "section_id": "section-33",
+        "title": "bluetooth.off('sppRead')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1054,
+        "line_end": 1093,
+        "summary": "off(type: 'sppRead', clientSocket: number, callback?: Callback&lt;ArrayBuffer&gt;): void\n\n取消订阅spp读请"
+      },
+      {
+        "section_id": "section-34",
+        "title": "bluetooth.getProfile<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1094,
+        "line_end": 1123,
+        "summary": "getProfile(profileId: ProfileId): A2dpSourceProfile | HandsFreeAudioGatewayProfile\n\n通过ProfileId，获取p"
+      },
+      {
+        "section_id": "section-35",
+        "title": "BLE",
+        "level": 2,
+        "line_start": 1124,
+        "line_end": 1346,
+        "summary": "### createGattServer<sup>(deprecated)</sup>\n\ncreateGattServer(): GattServer\n\n创建一个可使用的GattServer实例。"
+      },
+      {
+        "section_id": "section-36",
+        "title": "BaseProfile",
+        "level": 2,
+        "line_start": 1347,
+        "line_end": 1409,
+        "summary": "profile基类。\n\n\n### getConnectionDevices<sup>(deprecated)</sup>\n\ngetConnectionDevices(): Array&lt;stri"
+      },
+      {
+        "section_id": "section-37",
+        "title": "A2dpSourceProfile",
+        "level": 2,
+        "line_start": 1410,
+        "line_end": 1578,
+        "summary": "使用A2dpSourceProfile方法之前需要创建该类的实例进行操作，通过getProfile()方法构造此实例。\n\n\n### connect<sup>(deprecated)</sup>\n\nc"
+      },
+      {
+        "section_id": "section-38",
+        "title": "HandsFreeAudioGatewayProfile",
+        "level": 2,
+        "line_start": 1579,
+        "line_end": 1720,
+        "summary": "使用HandsFreeAudioGatewayProfile方法之前需要创建该类的实例进行操作，通过getProfile()方法构造此实例。\n\n\n### connect<sup>(deprecate"
+      },
+      {
+        "section_id": "section-39",
+        "title": "GattServer",
+        "level": 2,
+        "line_start": 1721,
+        "line_end": 2447,
+        "summary": "server端类，使用server端方法之前需要创建该类的实例进行操作，通过createGattServer()方法构造此实例。\n\n\n### startAdvertising<sup>(deprec"
+      },
+      {
+        "section_id": "section-40",
+        "title": "GattClientDevice",
+        "level": 2,
+        "line_start": 2448,
+        "line_end": 3248,
+        "summary": "client端类，使用client端方法之前需要创建该类的实例进行操作，通过createGattClientDevice(deviceId: string)方法构造此实例。\n\n\n### connec"
+      },
+      {
+        "section_id": "section-41",
+        "title": "ScanMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3249,
+        "line_end": 3266,
+        "summary": "枚举，扫描模式。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[bluetoothManager.ScanMode](js"
+      },
+      {
+        "section_id": "section-42",
+        "title": "BondState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3267,
+        "line_end": 3282,
+        "summary": "枚举，配对状态。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[bluetoothManager.BondState](j"
+      },
+      {
+        "section_id": "section-43",
+        "title": "SppOption<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3283,
+        "line_end": 3298,
+        "summary": "描述spp的配置参数。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[bluetoothManager.SppOption"
+      },
+      {
+        "section_id": "section-44",
+        "title": "SppType<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3299,
+        "line_end": 3312,
+        "summary": "枚举，Spp链路类型。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[bluetoothManager.SppType]("
+      },
+      {
+        "section_id": "section-45",
+        "title": "GattService<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3313,
+        "line_end": 3329,
+        "summary": "描述service的接口参数定义。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager.Gat"
+      },
+      {
+        "section_id": "section-46",
+        "title": "BLECharacteristic<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3330,
+        "line_end": 3346,
+        "summary": "描述characteristic的接口参数定义 。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothMan"
+      },
+      {
+        "section_id": "section-47",
+        "title": "BLEDescriptor<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3347,
+        "line_end": 3363,
+        "summary": "描述descriptor的接口参数定义 。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager"
+      },
+      {
+        "section_id": "section-48",
+        "title": "NotifyCharacteristic<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3364,
+        "line_end": 3380,
+        "summary": "描述server端特征值变化时发送的特征通知参数定义。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothM"
+      },
+      {
+        "section_id": "section-49",
+        "title": "CharacteristicReadReq<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3381,
+        "line_end": 3398,
+        "summary": "描述server端订阅后收到的特征值读请求事件参数结构。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetooth"
+      },
+      {
+        "section_id": "section-50",
+        "title": "CharacteristicWriteReq<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3399,
+        "line_end": 3419,
+        "summary": "描述server端订阅后收到的特征值写请求事件参数结构。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetooth"
+      },
+      {
+        "section_id": "section-51",
+        "title": "DescriptorReadReq<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3420,
+        "line_end": 3438,
+        "summary": "描述server端订阅后收到的描述符读请求事件参数结构。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetooth"
+      },
+      {
+        "section_id": "section-52",
+        "title": "DescriptorWriteReq<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3439,
+        "line_end": 3460,
+        "summary": "描述server端订阅后收到的描述符写请求事件参数结构。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetooth"
+      },
+      {
+        "section_id": "section-53",
+        "title": "ServerResponse<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3461,
+        "line_end": 3478,
+        "summary": "描述server端回复client端读/写请求的响应参数结构。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[blueto"
+      },
+      {
+        "section_id": "section-54",
+        "title": "BLEConnectChangedState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3479,
+        "line_end": 3493,
+        "summary": "描述Gatt profile连接状态 。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager."
+      },
+      {
+        "section_id": "section-55",
+        "title": "ProfileConnectionState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3494,
+        "line_end": 3510,
+        "summary": "枚举，蓝牙设备的profile连接状态。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager."
+      },
+      {
+        "section_id": "section-56",
+        "title": "ScanFilter<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3511,
+        "line_end": 3526,
+        "summary": "扫描过滤参数。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager.ScanFilter](j"
+      },
+      {
+        "section_id": "section-57",
+        "title": "ScanOptions<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3527,
+        "line_end": 3542,
+        "summary": "扫描的配置参数。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager.ScanOptions]"
+      },
+      {
+        "section_id": "section-58",
+        "title": "ScanDuty<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3543,
+        "line_end": 3558,
+        "summary": "枚举，扫描模式。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager.ScanDuty](js"
+      },
+      {
+        "section_id": "section-59",
+        "title": "MatchMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3559,
+        "line_end": 3573,
+        "summary": "枚举，硬件过滤匹配模式。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager.MatchMod"
+      },
+      {
+        "section_id": "section-60",
+        "title": "ScanResult<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3574,
+        "line_end": 3589,
+        "summary": "扫描结果上报数据。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager.ScanResult]"
+      },
+      {
+        "section_id": "section-61",
+        "title": "BluetoothState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3590,
+        "line_end": 3609,
+        "summary": "枚举，蓝牙开关状态。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager.BluetoothS"
+      },
+      {
+        "section_id": "section-62",
+        "title": "AdvertiseSetting<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3610,
+        "line_end": 3625,
+        "summary": "描述蓝牙低功耗设备发送广播的参数。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager.Adv"
+      },
+      {
+        "section_id": "section-63",
+        "title": "AdvertiseData<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3626,
+        "line_end": 3641,
+        "summary": "描述BLE广播数据包的内容。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager.Advert"
+      },
+      {
+        "section_id": "section-64",
+        "title": "ManufactureData<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3642,
+        "line_end": 3656,
+        "summary": "描述BLE广播数据包的内容。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager.Manufa"
+      },
+      {
+        "section_id": "section-65",
+        "title": "ServiceData<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3657,
+        "line_end": 3671,
+        "summary": "描述广播包中服务数据内容。\n\n> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃。建议使用[bluetoothManager.Service"
+      },
+      {
+        "section_id": "section-66",
+        "title": "PinRequiredParam<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3672,
+        "line_end": 3686,
+        "summary": "描述配对请求参数。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[bluetoothManager.PinRequired"
+      },
+      {
+        "section_id": "section-67",
+        "title": "BondStateParam<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3687,
+        "line_end": 3701,
+        "summary": "描述配对状态参数。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[bluetoothManager.BondStatePa"
+      },
+      {
+        "section_id": "section-68",
+        "title": "StateChangeParam<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3702,
+        "line_end": 3716,
+        "summary": "描述profile状态改变参数。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[bluetoothManager.Stat"
+      },
+      {
+        "section_id": "section-69",
+        "title": "DeviceClass<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3717,
+        "line_end": 3733,
+        "summary": "描述蓝牙设备的类别。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[bluetoothManager.DeviceClas"
+      },
+      {
+        "section_id": "section-70",
+        "title": "MajorClass<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3734,
+        "line_end": 3757,
+        "summary": "枚举，蓝牙设备主要类别。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[bluetoothManager.MajorCla"
+      },
+      {
+        "section_id": "section-71",
+        "title": "MajorMinorClass<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3758,
+        "line_end": 3856,
+        "summary": "枚举，主要次要蓝牙设备类别。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[bluetoothManager.MajorM"
+      },
+      {
+        "section_id": "section-72",
+        "title": "PlayingState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3857,
+        "line_end": 3871,
+        "summary": "枚举，蓝牙A2DP 播放状态。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[bluetoothManager.Playi"
+      },
+      {
+        "section_id": "section-73",
+        "title": "ProfileId<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3872,
+        "line_end": 3885,
+        "summary": "蓝牙profile枚举，API9新增PROFILE_HID_HOST，PROFILE_PAN_NETWORK。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API v"
+      }
+    ]
+  }
+}

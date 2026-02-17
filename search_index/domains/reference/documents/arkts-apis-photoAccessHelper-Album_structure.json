@@ -1,0 +1,84 @@
+{
+  "doc_id": "arkts-apis-photoAccessHelper-Album",
+  "title": "Interface (Album)",
+  "path": "zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-Album.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-Album.md",
+  "metadata": {
+    "kit": "Media Library Kit",
+    "subsystem": "Multimedia",
+    "owner": "@yixiaoff",
+    "designer": "@liweilu1",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Library Kit Multimedia 模块的 Interface (Album)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (Album)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { photoAccessHelper } from '@kit.MediaLibraryKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 31,
+        "summary": "**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称           | 类型    | 只读   | 可选"
+      },
+      {
+        "section_id": "section-3",
+        "title": "commitModify",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 94,
+        "summary": "commitModify(callback: AsyncCallback&lt;void&gt;): void\n\n更新相册属性修改到数据库中。使用callback异步回调。\n\n**需要权限**：oh"
+      },
+      {
+        "section_id": "section-4",
+        "title": "commitModify",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 156,
+        "summary": "commitModify(): Promise&lt;void&gt;\n\n更新相册属性修改到数据库中。使用Promise异步回调。\n\n**需要权限**：ohos.permission.WRITE_I"
+      },
+      {
+        "section_id": "section-5",
+        "title": "addAssets<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 225,
+        "summary": "addAssets(assets: Array&lt;PhotoAsset&gt;, callback: AsyncCallback&lt;void&gt;): void\n\n向用户相册中添加图片或视"
+      },
+      {
+        "section_id": "section-6",
+        "title": "addAssets<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 226,
+        "line_end": 298,
+        "summary": "addAssets(assets: Array&lt;PhotoAsset&gt;): Promise&lt;void&gt;\n\n向用户相册添加图片或视频，需预置相册和文件资源。使用Promise异"
+      },
+      {
+        "section_id": "section-7",
+        "title": "removeAssets<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 299,
+        "line_end": 367,
+        "summary": "removeAssets(assets: Array&lt;PhotoAsset&gt;, callback: AsyncCallback&lt;void&gt;): void\n\n从用户相册移除图片"
+      },
+      {
+        "section_id": "section-8",
+        "title": "removeAssets<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 444,
+        "summary": "removeAssets(assets: Array&lt;PhotoAsset&gt;): Promise&lt;void&gt;\n\n从用户相册中移除图片或视频，需预置相册和文件资源。使用Prom"
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "doc_id": "errorcode-net-statistics",
+  "title": "流量管理错误码",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/errorcode-net-statistics.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/errorcode-net-statistics.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 流量管理错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "流量管理错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "2100001 无效的参数",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 33,
+        "summary": "**错误信息**\n\nInvalid parameter value.\n\n**错误描述**\n\n参数输入有误。\n\n**可能原因**\n\n输入的结束时间小于开始时间。\n\n**处理步骤**\n\n检查输入的时间参"
+      },
+      {
+        "section_id": "section-2",
+        "title": "2100002 连接服务失败",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 51,
+        "summary": "**错误信息**\n\nFailed to connect to the service.\n\n**错误描述**\n\n操作失败，连接系统服务发生异常。\n\n**可能原因**\n\n服务发生异常。\n\n**处理步骤*"
+      },
+      {
+        "section_id": "section-3",
+        "title": "2100003 系统内部错误",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 73,
+        "summary": "**错误信息**\n\nSystem internal error.\n\n**错误描述**\n\n系统内部错误。\n\n**可能原因**\n\n1.内存异常。\n\n2.空指针。\n\n**处理步骤**\n\n1.检查内存空间是"
+      },
+      {
+        "section_id": "section-4",
+        "title": "2103005 读取系统map失败",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 91,
+        "summary": "**错误信息**\n\nFailed to read the system map.\n\n**错误描述**\n\n读取系统map失败。\n\n**可能原因**\n\n在内核map对象上读取流量数据失败。\n\n**处理步"
+      },
+      {
+        "section_id": "section-5",
+        "title": "2103011 系统map创建失败",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 109,
+        "summary": "**错误信息**\n\nFailed to create a system map.\n\n**错误描述**\n\n内核对象创建失败。\n\n**可能原因**\n\n网卡没有流量产生，内核流量对象还未创建。\n\n**处理"
+      },
+      {
+        "section_id": "section-6",
+        "title": "2103012 获取网卡名失败",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 127,
+        "summary": "**错误信息**\n\nFailed to obtain the NIC name.\n\n**错误描述**\n\n获取网卡名失败。\n\n**可能原因**\n\n本机没有此网卡名。\n\n**处理步骤**\n\n检查传入的网"
+      },
+      {
+        "section_id": "section-7",
+        "title": "2103017 读取数据库失败",
+        "level": 2,
+        "line_start": 128,
+        "line_end": 145,
+        "summary": "**错误信息**\n\nFailed to read the database.\n\n**错误描述**\n\n读取数据库失败。\n\n**可能原因**\n\n数据库被损坏。\n\n**处理步骤**\n\n检查本机数据库文件是"
+      },
+      {
+        "section_id": "section-8",
+        "title": "2103019 时间戳无效",
+        "level": 2,
+        "line_start": 146,
+        "line_end": 163,
+        "summary": "**错误信息**\n\nThe timestamp in param is invalid.\n\n**错误描述**\n\n参数中的时间戳无效。\n\n**可能原因**\n\n参数中传入的起始时间戳或结束时间戳早于当前"
+      }
+    ]
+  }
+}

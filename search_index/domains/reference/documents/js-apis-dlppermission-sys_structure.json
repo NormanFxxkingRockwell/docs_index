@@ -1,0 +1,156 @@
+{
+  "doc_id": "js-apis-dlppermission-sys",
+  "title": "@ohos.dlpPermission (数据防泄漏)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-data-protection-kit/js-apis-dlppermission-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-data-protection-kit/js-apis-dlppermission-sys.md",
+  "metadata": {
+    "kit": "Data Protection Kit",
+    "subsystem": "Security",
+    "owner": "@winnieHuYu",
+    "designer": "@lucky-jinduo",
+    "tester": "@nacyli",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Data Protection Kit Security 模块的 @ohos.dlpPermission (数据防泄漏)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.dlpPermission (数据防泄漏)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { dlpPermission } from '@kit.DataProtectionKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "dlpPermission.getDLPGatheringPolicy",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 66,
+        "summary": "getDLPGatheringPolicy(): Promise&lt;GatheringPolicyType&gt;\n\n查询DLP沙箱聚合策略。使用Promise方式异步返回结果。\n\n**系统接口"
+      },
+      {
+        "section_id": "section-3",
+        "title": "dlpPermission.getDLPGatheringPolicy",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 115,
+        "summary": "getDLPGatheringPolicy(callback: AsyncCallback&lt;GatheringPolicyType&gt;): void\n\n查询DLP沙箱聚合策略。使用call"
+      },
+      {
+        "section_id": "section-4",
+        "title": "dlpPermission.installDLPSandbox",
+        "level": 2,
+        "line_start": 116,
+        "line_end": 173,
+        "summary": "installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: number, uri: string): Promise&"
+      },
+      {
+        "section_id": "section-5",
+        "title": "dlpPermission.installDLPSandbox",
+        "level": 2,
+        "line_start": 174,
+        "line_end": 227,
+        "summary": "installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: number, uri:string, callback:"
+      },
+      {
+        "section_id": "section-6",
+        "title": "dlpPermission.uninstallDLPSandbox",
+        "level": 2,
+        "line_start": 228,
+        "line_end": 283,
+        "summary": "uninstallDLPSandbox(bundleName: string, userId: number, appIndex: number): Promise&lt;void&gt;\n\n卸载一"
+      },
+      {
+        "section_id": "section-7",
+        "title": "dlpPermission.uninstallDLPSandbox",
+        "level": 2,
+        "line_start": 284,
+        "line_end": 341,
+        "summary": "uninstallDLPSandbox(bundleName: string, userId: number, appIndex: number, callback: AsyncCallback&l"
+      },
+      {
+        "section_id": "section-8",
+        "title": "dlpPermission.on('uninstallDLPSandbox')",
+        "level": 2,
+        "line_start": 342,
+        "line_end": 386,
+        "summary": "on(type: 'uninstallDLPSandbox', listener: Callback&lt;DLPSandboxState&gt;): void\n\n注册监听DLP沙箱卸载事件。\n\n*"
+      },
+      {
+        "section_id": "section-9",
+        "title": "dlpPermission.off('uninstallDLPSandbox')",
+        "level": 2,
+        "line_start": 387,
+        "line_end": 431,
+        "summary": "off(type: 'uninstallDLPSandbox', listener?: Callback&lt;DLPSandboxState&gt;): void\n\n取消监听DLP沙箱卸载事件。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "DLPFile",
+        "level": 2,
+        "line_start": 432,
+        "line_end": 1542,
+        "summary": "管理DLPFile的实例，表示一个DLP文件对象，需要通过[generateDLPFile](#dlppermissiongeneratedlpfile)/[openDLPFile](#dlpper"
+      },
+      {
+        "section_id": "section-11",
+        "title": "dlpPermission.generateDLPFile",
+        "level": 2,
+        "line_start": 1543,
+        "line_end": 1626,
+        "summary": "generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DLPProperty): Promise&lt;DLPFi"
+      },
+      {
+        "section_id": "section-12",
+        "title": "dlpPermission.generateDLPFile",
+        "level": 2,
+        "line_start": 1627,
+        "line_end": 1708,
+        "summary": "generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DLPProperty, callback: AsyncCa"
+      },
+      {
+        "section_id": "section-13",
+        "title": "dlpPermission.openDLPFile<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1709,
+        "line_end": 1792,
+        "summary": "openDLPFile(ciphertextFd: number, appId: string): Promise&lt;DLPFile&gt;\n\n打开DLP文件。获取DLPFile管理对象，使用P"
+      },
+      {
+        "section_id": "section-14",
+        "title": "dlpPermission.openDLPFile<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1793,
+        "line_end": 1875,
+        "summary": "openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback&lt;DLPFile&gt;): void\n\nDLP"
+      },
+      {
+        "section_id": "section-15",
+        "title": "DLPSandboxInfo",
+        "level": 2,
+        "line_start": 1876,
+        "line_end": 1888,
+        "summary": "表示DLP沙箱的信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Security.DataLossPrevention\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-16",
+        "title": "DLPSandboxState",
+        "level": 2,
+        "line_start": 1889,
+        "line_end": 1901,
+        "summary": "DLP沙箱身份。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Security.DataLossPrevention\n\n| 名称 | 类型 |"
+      },
+      {
+        "section_id": "section-17",
+        "title": "GatheringPolicyType",
+        "level": 2,
+        "line_start": 1902,
+        "line_end": 1915,
+        "summary": "DLP沙箱聚合策略类型的枚举。沙箱聚合表示同一权限类型的DLP文件，在同一个沙箱内打开，例如在同一个沙箱内使用不同tab页打开；沙箱非聚合表示不同DLP文件在不同沙箱打开。\n\n**系统能力：** S"
+      }
+    ]
+  }
+}

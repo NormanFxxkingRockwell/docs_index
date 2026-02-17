@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-distributedDeviceManager",
+  "title": "@ohos.distributedDeviceManager (设备管理)",
+  "path": "zh-cn/application-dev/reference/apis-distributedservice-kit/js-apis-distributedDeviceManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-distributedservice-kit/js-apis-distributedDeviceManager.md",
+  "metadata": {
+    "kit": "Distributed Service Kit",
+    "subsystem": "DistributedHardware",
+    "owner": "@hwzhangchuang",
+    "designer": "@hwzhangchuang",
+    "tester": "@zhaodengqi",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Distributed Service Kit DistributedHardware 模块的 @ohos.distributedDeviceManager (设备管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.distributedDeviceManager (设备管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 28,
+        "summary": "```ts\nimport { distributedDeviceManager } from '@kit.DistributedServiceKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "distributedDeviceManager.createDeviceManager",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 70,
+        "summary": "createDeviceManager(bundleName: string): DeviceManager\n\n创建一个设备管理实例。设备管理实例是分布式设备管理方法的调用入口。用于获取可信设备和本"
+      },
+      {
+        "section_id": "section-3",
+        "title": "distributedDeviceManager.releaseDeviceManager",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 108,
+        "summary": "releaseDeviceManager(deviceManager: DeviceManager): void\n\n设备管理实例不再使用后，通过该方法释放DeviceManager实例。\n\n**系统"
+      },
+      {
+        "section_id": "section-4",
+        "title": "DeviceBasicInfo",
+        "level": 2,
+        "line_start": 109,
+        "line_end": 121,
+        "summary": "分布式设备基本信息。\n\n**系统能力**：以下各项对应的系统能力均为SystemCapability.DistributedHardware.DeviceManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-5",
+        "title": "DeviceStateChange",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 133,
+        "summary": "表示设备状态。\n\n**系统能力**：以下各项对应的系统能力均为SystemCapability.DistributedHardware.DeviceManager\n\n| 名称         | 值"
+      },
+      {
+        "section_id": "section-6",
+        "title": "DeviceManager",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 1210,
+        "summary": "设备管理实例，用于获取可信设备和本地设备的相关信息。在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstanc"
+      }
+    ]
+  }
+}

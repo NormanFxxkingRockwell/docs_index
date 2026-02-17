@@ -1,0 +1,284 @@
+{
+  "doc_id": "js-apis-promptAction",
+  "title": "@ohos.promptAction (弹窗)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-promptAction.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-promptAction.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@houguobiao",
+    "designer": "@houguobiao",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 @ohos.promptAction (弹窗)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.promptAction (弹窗)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { promptAction } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "promptAction.openToast<sup>18+</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 110,
+        "summary": "openToast(options: ShowToastOptions): Promise&lt;number&gt;\n\n显示即时反馈并通过Promise返回其id。\n\n> **说明：**\n> \n>"
+      },
+      {
+        "section_id": "section-3",
+        "title": "promptAction.closeToast<sup>18+</sup>",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 144,
+        "summary": "closeToast(toastId: number): void\n\n关闭即时反馈。\n\n> **说明：**\n> \n> 直接使用closeToast可能导致[UI上下文不明确](../../ui/ar"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ShowToastOptions",
+        "level": 2,
+        "line_start": 145,
+        "line_end": 165,
+        "summary": "Toast的选项。\n\n**系统能力：**  SystemCapability.ArkUI.ArkUI.Full\n\n| 名称                    | 类型"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ToastShowMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 166,
+        "line_end": 178,
+        "summary": "设置Toast的显示模式，默认显示在应用内，支持显示在子窗。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：**  SystemC"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ShowDialogOptions",
+        "level": 2,
+        "line_start": 179,
+        "line_end": 210,
+        "summary": "对话框的选项。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称                              | 类型"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ShowDialogSuccessResponse",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 222,
+        "summary": "对话框的响应结果。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：**  SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ActionMenuOptions",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 242,
+        "summary": "操作菜单的选项。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称                          | 类型"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ActionMenuSuccessResponse",
+        "level": 2,
+        "line_start": 243,
+        "line_end": 254,
+        "summary": "操作菜单的响应结果。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-10",
+        "title": "CommonState<sup>20+</sup>枚举说明",
+        "level": 2,
+        "line_start": 255,
+        "line_end": 271,
+        "summary": "自定义弹窗的状态。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-11",
+        "title": "DialogController<sup>18+</sup>",
+        "level": 2,
+        "line_start": 272,
+        "line_end": 281,
+        "summary": "自定义弹窗控制器，继承自[CommonController](#commoncontroller18)。\n\nDialogController可作为UIContext弹出自定义弹窗的成员变量，具体用法"
+      },
+      {
+        "section_id": "section-12",
+        "title": "CommonController<sup>18+</sup>",
+        "level": 2,
+        "line_start": 282,
+        "line_end": 323,
+        "summary": "公共控制器，可以控制promptAction相关组件。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-13",
+        "title": "LevelOrder<sup>18+</sup>",
+        "level": 2,
+        "line_start": 324,
+        "line_end": 367,
+        "summary": "弹窗层级，可以控制弹窗显示的顺序。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkU"
+      },
+      {
+        "section_id": "section-14",
+        "title": "DialogOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 387,
+        "summary": "自定义弹窗的内容，继承自[BaseDialogOptions](#basedialogoptions11)。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-15",
+        "title": "DialogOptionsCornerRadius<sup>18+</sup>",
+        "level": 2,
+        "line_start": 388,
+        "line_end": 402,
+        "summary": "type DialogOptionsCornerRadius = Dimension&nbsp;\\|&nbsp;BorderRadiuses\n\n表示弹窗背板的圆角半径允许的数据字段类型。\n\n**原子"
+      },
+      {
+        "section_id": "section-16",
+        "title": "DialogOptionsBorderWidth<sup>18+</sup>",
+        "level": 2,
+        "line_start": 403,
+        "line_end": 417,
+        "summary": "type DialogOptionsBorderWidth = Dimension&nbsp;\\|&nbsp;EdgeWidths\n\n表示弹窗背板的边框宽度允许的数据字段类型。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-17",
+        "title": "DialogOptionsBorderColor<sup>18+</sup>",
+        "level": 2,
+        "line_start": 418,
+        "line_end": 432,
+        "summary": "type DialogOptionsBorderColor = ResourceColor&nbsp;\\|&nbsp;EdgeColors\n\n表示弹窗背板的边框颜色允许的数据字段类型。\n\n**原子化"
+      },
+      {
+        "section_id": "section-18",
+        "title": "DialogOptionsBorderStyle<sup>18+</sup>",
+        "level": 2,
+        "line_start": 433,
+        "line_end": 447,
+        "summary": "type DialogOptionsBorderStyle = BorderStyle&nbsp;\\|&nbsp;EdgeStyles\n\n表示弹窗背板的边框样式允许的数据字段类型。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-19",
+        "title": "DialogOptionsShadow<sup>18+</sup>",
+        "level": 2,
+        "line_start": 448,
+        "line_end": 462,
+        "summary": "type DialogOptionsShadow = ShadowOptions&nbsp;\\|&nbsp;ShadowStyle\n\n表示弹窗背板的阴影允许的数据字段类型。\n\n**原子化服务API："
+      },
+      {
+        "section_id": "section-20",
+        "title": "CustomDialogOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 463,
+        "line_end": 483,
+        "summary": "自定义弹窗的内容，继承自[BaseDialogOptions](#basedialogoptions11)。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-21",
+        "title": "BaseDialogOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 484,
+        "line_end": 518,
+        "summary": "弹窗的选项。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称            | 类型"
+      },
+      {
+        "section_id": "section-22",
+        "title": "DismissDialogAction<sup>12+</sup>",
+        "level": 2,
+        "line_start": 519,
+        "line_end": 533,
+        "summary": "Dialog关闭的信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-23",
+        "title": "LevelMode<sup>15+</sup>枚举说明",
+        "level": 2,
+        "line_start": 534,
+        "line_end": 546,
+        "summary": "弹窗显示层级模式。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-24",
+        "title": "ImmersiveMode<sup>15+</sup>枚举说明",
+        "level": 2,
+        "line_start": 547,
+        "line_end": 559,
+        "summary": "页面内弹窗蒙层显示区域模式。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.A"
+      },
+      {
+        "section_id": "section-25",
+        "title": "Button",
+        "level": 2,
+        "line_start": 560,
+        "line_end": 571,
+        "summary": "菜单中的菜单项按钮。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称    | 类型"
+      },
+      {
+        "section_id": "section-26",
+        "title": "示例",
+        "level": 2,
+        "line_start": 572,
+        "line_end": 676,
+        "summary": "从API version 20开始，该示例实现了在promptAction.DialogController中调用getState获取弹窗当前状态。\n\n```ts\n// xxx.ets\nimport"
+      },
+      {
+        "section_id": "section-27",
+        "title": "promptAction.showToast<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 677,
+        "line_end": 750,
+        "summary": "showToast(options: ShowToastOptions): void\n\n创建并显示即时反馈。\n\n> **说明：**\n>\n> - 从API version 9开始支持，从API ver"
+      },
+      {
+        "section_id": "section-28",
+        "title": "promptAction.showDialog<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 751,
+        "line_end": 816,
+        "summary": "showDialog(options: ShowDialogOptions): Promise&lt;ShowDialogSuccessResponse&gt;\n\n创建并显示对话框，对话框通过Pro"
+      },
+      {
+        "section_id": "section-29",
+        "title": "promptAction.showDialog<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 817,
+        "line_end": 987,
+        "summary": "showDialog(options: ShowDialogOptions, callback: AsyncCallback&lt;ShowDialogSuccessResponse&gt;):vo"
+      },
+      {
+        "section_id": "section-30",
+        "title": "promptAction.showActionMenu<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 988,
+        "line_end": 1129,
+        "summary": "showActionMenu(options: ActionMenuOptions, callback: AsyncCallback&lt;ActionMenuSuccessResponse&gt;"
+      },
+      {
+        "section_id": "section-31",
+        "title": "promptAction.showActionMenu<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1130,
+        "line_end": 1194,
+        "summary": "showActionMenu(options: ActionMenuOptions): Promise&lt;ActionMenuSuccessResponse&gt;\n\n创建并显示操作菜单，菜单响"
+      },
+      {
+        "section_id": "section-32",
+        "title": "promptAction.openCustomDialog<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1195,
+        "line_end": 1483,
+        "summary": "openCustomDialog(options: CustomDialogOptions): Promise&lt;number&gt;\n\n打开自定义弹窗。通过Promise返回结果。\n\n<!--"
+      },
+      {
+        "section_id": "section-33",
+        "title": "promptAction.closeCustomDialog<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1484,
+        "line_end": 1517,
+        "summary": "closeCustomDialog(dialogId: number): void\n\n关闭自定义弹窗。\n\n> **说明：**\n>\n> - 从API version 11开始支持，从API versi"
+      }
+    ]
+  }
+}

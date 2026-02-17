@@ -1,0 +1,468 @@
+{
+  "doc_id": "js-apis-audio-sys",
+  "title": "@ohos.multimedia.audio (音频管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/js-apis-audio-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/js-apis-audio-sys.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@songshenke",
+    "designer": "@caixuejiang; @hao-liangfei; @zhanganxiang",
+    "tester": "@Filger",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 @ohos.multimedia.audio (音频管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimedia.audio (音频管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { audio } from '@kit.AudioKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "常量",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 36,
+        "summary": "**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Device\n\n| 名称"
+      },
+      {
+        "section_id": "section-3",
+        "title": "audio.createTonePlayer<sup>9+</sup>",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 75,
+        "summary": "createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback&lt;TonePlayer&gt;): void\n\n创建DT"
+      },
+      {
+        "section_id": "section-4",
+        "title": "audio.createTonePlayer<sup>9+</sup>",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 112,
+        "summary": "createTonePlayer(options: AudioRendererInfo): Promise&lt;TonePlayer&gt;\n\n创建DTMF播放器。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "audio.createAsrProcessingController<sup>12+</sup>",
+        "level": 2,
+        "line_start": 113,
+        "line_end": 179,
+        "summary": "createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController\n\n获取自动语音识别（ASR）"
+      },
+      {
+        "section_id": "section-6",
+        "title": "AudioVolumeType",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 195,
+        "summary": "枚举，音频流类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Volume\n\n| 名称"
+      },
+      {
+        "section_id": "section-7",
+        "title": "InterruptRequestResultType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 208,
+        "summary": "枚举，音频中断请求结果类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Interrupt\n\n| 名称"
+      },
+      {
+        "section_id": "section-8",
+        "title": "DeviceFlag",
+        "level": 2,
+        "line_start": 209,
+        "line_end": 223,
+        "summary": "枚举，可获取的设备种类。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Device\n\n| 名称"
+      },
+      {
+        "section_id": "section-9",
+        "title": "EffectFlag<sup>18+</sup>",
+        "level": 2,
+        "line_start": 224,
+        "line_end": 236,
+        "summary": "枚举，音效分类。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-10",
+        "title": "AudioEffectProperty<sup>18+</sup>",
+        "level": 2,
+        "line_start": 237,
+        "line_end": 250,
+        "summary": "音效属性。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Core\n\n| 名称               |"
+      },
+      {
+        "section_id": "section-11",
+        "title": "StreamUsage",
+        "level": 2,
+        "line_start": 251,
+        "line_end": 266,
+        "summary": "枚举，音频流使用类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-12",
+        "title": "InterruptRequestType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 267,
+        "line_end": 278,
+        "summary": "枚举，音频中断请求类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Interrupt\n\n| 名称"
+      },
+      {
+        "section_id": "section-13",
+        "title": "VolumeFlag<sup>12+</sup>",
+        "level": 2,
+        "line_start": 279,
+        "line_end": 290,
+        "summary": "枚举，音量相关操作。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Volume\n\n| 名称"
+      },
+      {
+        "section_id": "section-14",
+        "title": "AsrNoiseSuppressionMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 291,
+        "line_end": 305,
+        "summary": "枚举，自动语音识别（ASR）的噪音抑制模式。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Capturer"
+      },
+      {
+        "section_id": "section-15",
+        "title": "AsrAecMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 318,
+        "summary": "枚举，自动语音识别（ASR）的声学回声消除（AEC）模式。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Cap"
+      },
+      {
+        "section_id": "section-16",
+        "title": "AsrWhisperDetectionMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 319,
+        "line_end": 331,
+        "summary": "枚举，自动语音识别（ASR）的耳语检测模式。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Capturer"
+      },
+      {
+        "section_id": "section-17",
+        "title": "AsrVoiceControlMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 332,
+        "line_end": 346,
+        "summary": "枚举，自动语音识别（ASR）的音频通路模式。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Capturer"
+      },
+      {
+        "section_id": "section-18",
+        "title": "AsrVoiceMuteMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 347,
+        "line_end": 362,
+        "summary": "枚举，自动语音识别（ASR）的静音模式。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Capturer\n\n|"
+      },
+      {
+        "section_id": "section-19",
+        "title": "InterruptResult<sup>9+</sup>",
+        "level": 2,
+        "line_start": 363,
+        "line_end": 375,
+        "summary": "音频中断结果。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Interrupt\n\n| 名称"
+      },
+      {
+        "section_id": "section-20",
+        "title": "VolumeEvent<sup>9+</sup>",
+        "level": 2,
+        "line_start": 376,
+        "line_end": 389,
+        "summary": "音量改变时，应用接收的事件。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Volume\n\n| 名称"
+      },
+      {
+        "section_id": "section-21",
+        "title": "ConnectType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 390,
+        "line_end": 402,
+        "summary": "枚举，设备连接类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Volume\n\n| 名称"
+      },
+      {
+        "section_id": "section-22",
+        "title": "VolumeGroupInfos<sup>9+</sup>",
+        "level": 2,
+        "line_start": 403,
+        "line_end": 410,
+        "summary": "音量组信息，数组类型，为[VolumeGroupInfo](#volumegroupinfo9)的数组，只读。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-23",
+        "title": "VolumeGroupInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 411,
+        "line_end": 426,
+        "summary": "音量组信息。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Volume\n\n| 名称"
+      },
+      {
+        "section_id": "section-24",
+        "title": "SourceType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 427,
+        "line_end": 441,
+        "summary": "枚举，音源类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-25",
+        "title": "AudioCapturerMicInConfig<sup>23+</sup>",
+        "level": 2,
+        "line_start": 442,
+        "line_end": 457,
+        "summary": "音频采集器选项信息，可采集未经任何处理的麦克风输入（mic-in）音频数据。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-26",
+        "title": "VolumeAdjustType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 458,
+        "line_end": 470,
+        "summary": "枚举，音量调节类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Volume\n\n| 名称"
+      },
+      {
+        "section_id": "section-27",
+        "title": "DeviceType",
+        "level": 2,
+        "line_start": 471,
+        "line_end": 484,
+        "summary": "表示设备类型的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Device\n\n| 名称"
+      },
+      {
+        "section_id": "section-28",
+        "title": "AudioDevcieSelectStrategy<sup>21+</sup>",
+        "level": 2,
+        "line_start": 485,
+        "line_end": 497,
+        "summary": "表示设备选择策略的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Device\n\n| 名称"
+      },
+      {
+        "section_id": "section-29",
+        "title": "PolicyType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 498,
+        "line_end": 510,
+        "summary": "表示静音策略类型的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Volume\n\n| 名称"
+      },
+      {
+        "section_id": "section-30",
+        "title": "AudioCapturerOptions<sup>8+</sup>",
+        "level": 2,
+        "line_start": 511,
+        "line_end": 524,
+        "summary": "音频采集器选项信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Capturer\n\n| 名称"
+      },
+      {
+        "section_id": "section-31",
+        "title": "AudioManager",
+        "level": 2,
+        "line_start": 525,
+        "line_end": 825,
+        "summary": "管理音频音量和音频设备。在调用AudioManager的接口前，需要先通过[getAudioManager](arkts-apis-audio-f.md#audiogetaudiomanager)创"
+      },
+      {
+        "section_id": "section-32",
+        "title": "forceVolumeKeyControlType<sup>20+</sup>",
+        "level": 2,
+        "line_start": 826,
+        "line_end": 873,
+        "summary": "forceVolumeKeyControlType(volumeType: AudioVolumeType, duration: number): void\n\n设置音量键调节类型。\n\n**需要权限："
+      },
+      {
+        "section_id": "section-33",
+        "title": "AudioVolumeManager<sup>9+</sup>",
+        "level": 2,
+        "line_start": 874,
+        "line_end": 1070,
+        "summary": "音量管理。在使用AudioVolumeManager的接口前，需要使用[getVolumeManager](arkts-apis-audio-AudioManager.md#getvolumeman"
+      },
+      {
+        "section_id": "section-34",
+        "title": "setSystemVolumePercentage<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1071,
+        "line_end": 1122,
+        "summary": "setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: number): Promise&lt;void&gt;\n\n设置"
+      },
+      {
+        "section_id": "section-35",
+        "title": "getSystemVolumePercentage<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1123,
+        "line_end": 1165,
+        "summary": "getSystemVolumePercentage(volumeType: AudioVolumeType): number\n\n获取指定流的音量百分比。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-36",
+        "title": "getMinSystemVolumePercentage<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1166,
+        "line_end": 1616,
+        "summary": "getMinSystemVolumePercentage(volumeType: AudioVolumeType): number\n\n获取指定流的最小音量百分比。\n\n**系统接口：** 此接口为系统"
+      },
+      {
+        "section_id": "section-37",
+        "title": "AudioVolumeGroupManager<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1617,
+        "line_end": 2226,
+        "summary": "管理音频组音量。在调用AudioVolumeGroupManager的接口前，需要先通过 [getVolumeGroupManager](arkts-apis-audio-AudioVolumeMa"
+      },
+      {
+        "section_id": "section-38",
+        "title": "AudioEffectManager<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2227,
+        "line_end": 2360,
+        "summary": "音频效果管理。在使用AudioEffectManager的接口前，需要使用[getEffectManager](#geteffectmanager18)获取AudioEffectManager实例。"
+      },
+      {
+        "section_id": "section-39",
+        "title": "AudioRoutingManager<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2361,
+        "line_end": 3264,
+        "summary": "音频路由管理。在使用AudioRoutingManager的接口前，需要使用[getRoutingManager](arkts-apis-audio-AudioManager.md#getrouti"
+      },
+      {
+        "section_id": "section-40",
+        "title": "AudioRendererChangeInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 3265,
+        "line_end": 3277,
+        "summary": "描述音频渲染器更改信息。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Renderer\n\n| 名称"
+      },
+      {
+        "section_id": "section-41",
+        "title": "AudioCapturerChangeInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 3278,
+        "line_end": 3290,
+        "summary": "描述音频采集器更改信息。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Capturer\n\n| 名称"
+      },
+      {
+        "section_id": "section-42",
+        "title": "AudioDeviceDescriptor",
+        "level": 2,
+        "line_start": 3291,
+        "line_end": 3305,
+        "summary": "描述音频设备。\n\n**系统接口：** 该接口为系统接口。\n\n| 名称                          | 类型                       | 只读 | 可选 |"
+      },
+      {
+        "section_id": "section-43",
+        "title": "AudioRendererFilter<sup>9+</sup>",
+        "level": 2,
+        "line_start": 3306,
+        "line_end": 3332,
+        "summary": "音频渲染器过滤条件。\n\n**系统接口：** 此接口为系统接口。\n\n| 名称          | 类型                                     | 只读 | 可选 |"
+      },
+      {
+        "section_id": "section-44",
+        "title": "AudioCapturerFilter<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3333,
+        "line_end": 3357,
+        "summary": "过滤条件类。在调用selectOutputDeviceByFilter接口前，需要先创建AudioCapturerFilter实例。\n\n**系统接口：** 该接口为系统接口。\n\n| 名称"
+      },
+      {
+        "section_id": "section-45",
+        "title": "AudioSpatialEnabledStateForDevice<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3358,
+        "line_end": 3370,
+        "summary": "监听设备空间音频开关状态。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Spatialization\n\n| 参数"
+      },
+      {
+        "section_id": "section-46",
+        "title": "AudioSpatializationManager<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3371,
+        "line_end": 4591,
+        "summary": "空间音频管理。在使用AudioSpatializationManager的接口前，需要使用[getSpatializationManager](arkts-apis-audio-AudioManag"
+      },
+      {
+        "section_id": "section-47",
+        "title": "AudioSpatialDeviceState<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4592,
+        "line_end": 4619,
+        "summary": "空间化设备状态。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Spatialization\n\n| 名称"
+      },
+      {
+        "section_id": "section-48",
+        "title": "AudioSpatialDeviceType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4620,
+        "line_end": 4636,
+        "summary": "枚举，空间化设备类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Spatialization\n\n| 名称"
+      },
+      {
+        "section_id": "section-49",
+        "title": "AudioSpatializationSceneType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4637,
+        "line_end": 4651,
+        "summary": "枚举，空间音频渲染场景类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Spatialization\n\n|"
+      },
+      {
+        "section_id": "section-50",
+        "title": "AudioCollaborativeManager<sup>20+</sup>",
+        "level": 2,
+        "line_start": 4652,
+        "line_end": 4854,
+        "summary": "移动全景声管理器。\n\n在使用AudioCollaborativeManager的接口前，需要先使用[getCollaborativeManager](#getcollaborativemanager"
+      },
+      {
+        "section_id": "section-51",
+        "title": "ToneType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 4855,
+        "line_end": 4893,
+        "summary": "枚举，播放器的音调类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Tone\n\n| 名称"
+      },
+      {
+        "section_id": "section-52",
+        "title": "RenderTarget<sup>22+</sup>",
+        "level": 2,
+        "line_start": 4894,
+        "line_end": 4906,
+        "summary": "枚举，音频渲染器的渲染目标。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-53",
+        "title": "TonePlayer<sup>9+</sup>",
+        "level": 2,
+        "line_start": 4907,
+        "line_end": 5149,
+        "summary": "提供播放和管理DTMF（Dual Tone Multi Frequency，双音多频）音调的方法，包括各种系统监听音调、专有音调，如拨号音、通话回铃音等。\n\n在调用TonePlayer的接口前，需要"
+      },
+      {
+        "section_id": "section-54",
+        "title": "AsrProcessingController<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5150,
+        "line_end": 5483,
+        "summary": "自动语音识别（ASR）处理控制器。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Capturer\n\n**设备行"
+      },
+      {
+        "section_id": "section-55",
+        "title": "AudioRenderer<sup>8+</sup>",
+        "level": 2,
+        "line_start": 5484,
+        "line_end": 5592,
+        "summary": "音频渲染。在使用AudioRenderer的接口之前，需先通过[audio.createAudioRenderer](arkts-apis-audio-f.md#audiocreateaudiore"
+      },
+      {
+        "section_id": "section-56",
+        "title": "audio.createMicInAudioCapturer<sup>23+</sup>",
+        "level": 2,
+        "line_start": 5593,
+        "line_end": 5676,
+        "summary": "function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise\\<AudioCapturer | null>"
+      }
+    ]
+  }
+}

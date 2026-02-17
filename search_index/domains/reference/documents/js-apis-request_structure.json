@@ -1,0 +1,444 @@
+{
+  "doc_id": "js-apis-request",
+  "title": "@ohos.request (上传下载)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-request.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-request.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Request",
+    "owner": "@huaxin05",
+    "designer": "@hu-kai45",
+    "tester": "@liuhaonan2",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit Request 模块的 @ohos.request (上传下载)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.request (上传下载)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 24,
+        "summary": "```js\nimport { request } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "常量",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 72,
+        "summary": "**系统能力**：SystemCapability.MiscServices.Download\n\n> **说明：**\n>\n> **网络类型**：下载支持自定义网络类型，可以在[DownloadCon"
+      },
+      {
+        "section_id": "section-3",
+        "title": "request.uploadFile<sup>9+</sup>",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 138,
+        "summary": "uploadFile(context: BaseContext, config: UploadConfig): Promise&lt;UploadTask&gt;\n\n创建并启动一个上传任务，使用Pr"
+      },
+      {
+        "section_id": "section-4",
+        "title": "request.uploadFile<sup>9+</sup>",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 199,
+        "summary": "uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncCallback&lt;UploadTask&gt;):"
+      },
+      {
+        "section_id": "section-5",
+        "title": "request.upload<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 200,
+        "line_end": 254,
+        "summary": "upload(config: UploadConfig): Promise&lt;UploadTask&gt;\n\n创建并启动一个上传任务，使用Promise异步回调。\n\n**模型约束**：此接口仅可"
+      },
+      {
+        "section_id": "section-6",
+        "title": "request.upload<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 255,
+        "line_end": 305,
+        "summary": "upload(config: UploadConfig, callback: AsyncCallback&lt;UploadTask&gt;): void\n\n创建并启动一个上传任务，使用callba"
+      },
+      {
+        "section_id": "section-7",
+        "title": "UploadTask",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 764,
+        "summary": "上传任务，使用下列方法前，需要先获取UploadTask对象，promise形式通过[request.uploadFile](#requestuploadfile9)获取，callback形式通过["
+      },
+      {
+        "section_id": "section-8",
+        "title": "UploadConfig",
+        "level": 2,
+        "line_start": 765,
+        "line_end": 780,
+        "summary": "上传任务的配置信息。\n\n**系统能力**：SystemCapability.MiscServices.Upload\n\n| 名称   | 类型     | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-9",
+        "title": "TaskState<sup>9+</sup>",
+        "level": 2,
+        "line_start": 781,
+        "line_end": 809,
+        "summary": "上传任务的任务信息，是[on('complete' | 'fail')](#oncomplete--fail9)和[off('complete' | 'fail')](#offcomplete--fa"
+      },
+      {
+        "section_id": "section-10",
+        "title": "File",
+        "level": 2,
+        "line_start": 810,
+        "line_end": 822,
+        "summary": "[UploadConfig](#uploadconfig)中的文件列表。\n\n**系统能力**：SystemCapability.MiscServices.Download\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "RequestData",
+        "level": 2,
+        "line_start": 823,
+        "line_end": 832,
+        "summary": "[UploadConfig](#uploadconfig)中的表单数据。\n\n**系统能力**：SystemCapability.MiscServices.Download\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-12",
+        "title": "request.downloadFile<sup>9+</sup>",
+        "level": 2,
+        "line_start": 833,
+        "line_end": 892,
+        "summary": "downloadFile(context: BaseContext, config: DownloadConfig): Promise&lt;DownloadTask&gt;\n\n创建并启动一个下载任"
+      },
+      {
+        "section_id": "section-13",
+        "title": "request.downloadFile<sup>9+</sup>",
+        "level": 2,
+        "line_start": 893,
+        "line_end": 950,
+        "summary": "downloadFile(context: BaseContext, config: DownloadConfig, callback: AsyncCallback&lt;DownloadTask&"
+      },
+      {
+        "section_id": "section-14",
+        "title": "request.download<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 951,
+        "line_end": 999,
+        "summary": "download(config: DownloadConfig): Promise&lt;DownloadTask&gt;\n\n创建并启动一个下载任务，使用Promise异步回调。\n\n**模型约束**"
+      },
+      {
+        "section_id": "section-15",
+        "title": "request.download<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1000,
+        "line_end": 1045,
+        "summary": "download(config: DownloadConfig, callback: AsyncCallback&lt;DownloadTask&gt;): void\n\n创建并启动一个下载任务，使用"
+      },
+      {
+        "section_id": "section-16",
+        "title": "DownloadTask",
+        "level": 2,
+        "line_start": 1046,
+        "line_end": 2369,
+        "summary": "下载任务，使用下列方法前，需要先获取DownloadTask对象，promise形式通过[request.downloadFile](#requestdownloadfile9)获取，callbac"
+      },
+      {
+        "section_id": "section-17",
+        "title": "DownloadConfig",
+        "level": 2,
+        "line_start": 2370,
+        "line_end": 2387,
+        "summary": "下载任务的配置信息。\n\n**系统能力**：SystemCapability.MiscServices.Download\n\n| 名称   | 类型     | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-18",
+        "title": "DownloadInfo<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2388,
+        "line_end": 2406,
+        "summary": "下载任务信息，[getTaskInfo](#gettaskinfo9)接口的回调参数。\n\n**系统能力**：SystemCapability.MiscServices.Download\n\n| 名称"
+      },
+      {
+        "section_id": "section-19",
+        "title": "request.agent<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2407,
+        "line_end": 2418,
+        "summary": "### 常量\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n\n| 名称 | 类型 | 值 | 说明 |\n| -------- | ---"
+      },
+      {
+        "section_id": "section-20",
+        "title": "request.agent.Action<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2419,
+        "line_end": 2432,
+        "summary": "定义操作选项。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Request.FileTra"
+      },
+      {
+        "section_id": "section-21",
+        "title": "request.agent.Mode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2433,
+        "line_end": 2445,
+        "summary": "定义模式选项。<br>\n当应用的前台任务切换到后台一段时间后会显示运行失败或暂停，而后台任务不受此操作影响。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-22",
+        "title": "request.agent.Network<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2446,
+        "line_end": 2460,
+        "summary": "定义网络选项。<br>\n网络不满足设置条件时，未执行的任务会等待执行，执行中的任务将失败或暂停。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-23",
+        "title": "request.agent.BroadcastEvent<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2461,
+        "line_end": 2477,
+        "summary": "定义自定义系统事件。用户可以使用公共事件接口获取该事件。\n\n上传下载SA具有'ohos.permission.SEND_TASK_COMPLETE_EVENT'权限，用户可以配置事件的metadat"
+      },
+      {
+        "section_id": "section-24",
+        "title": "request.agent.FileSpec<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2478,
+        "line_end": 2491,
+        "summary": "表单项的文件信息。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称   | 类型     | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-25",
+        "title": "request.agent.FormItem<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2492,
+        "line_end": 2504,
+        "summary": "任务的表单项信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Request.FileTr"
+      },
+      {
+        "section_id": "section-26",
+        "title": "request.agent.Config<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2505,
+        "line_end": 2540,
+        "summary": "上传/下载任务的配置信息。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称   | 类型     | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-27",
+        "title": "request.agent.State<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2541,
+        "line_end": 2561,
+        "summary": "定义任务当前的状态。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Request.File"
+      },
+      {
+        "section_id": "section-28",
+        "title": "request.agent.Progress<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2562,
+        "line_end": 2577,
+        "summary": "任务进度的数据结构。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Request.FileT"
+      },
+      {
+        "section_id": "section-29",
+        "title": "request.agent.Faults<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2578,
+        "line_end": 2601,
+        "summary": "定义任务失败的原因。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n> **说明：**\n>\n> API version 12及以下版本，"
+      },
+      {
+        "section_id": "section-30",
+        "title": "request.agent.Filter<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2602,
+        "line_end": 2614,
+        "summary": "过滤条件。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称   | 类型     | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-31",
+        "title": "request.agent.TaskInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2615,
+        "line_end": 2641,
+        "summary": "查询结果的任务信息数据结构，提供普通查询和系统查询，两种字段的可见范围不同。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称"
+      },
+      {
+        "section_id": "section-32",
+        "title": "request.agent.HttpResponse<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2642,
+        "line_end": 2655,
+        "summary": "任务响应头的数据结构。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Request.File"
+      },
+      {
+        "section_id": "section-33",
+        "title": "request.agent.Notification<sup>15+</sup>",
+        "level": 2,
+        "line_start": 2656,
+        "line_end": 2721,
+        "summary": "通知栏自定义信息。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称   | 类型     | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-34",
+        "title": "request.agent.GroupConfig<sup>15+</sup>",
+        "level": 2,
+        "line_start": 2722,
+        "line_end": 2732,
+        "summary": "下载任务分组配置选项。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称   | 类型     | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-35",
+        "title": "request.agent.WaitingReason<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2733,
+        "line_end": 2745,
+        "summary": "枚举，定义任务等待的原因。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称 | 值    | 说明"
+      },
+      {
+        "section_id": "section-36",
+        "title": "request.agent.MinSpeed<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2746,
+        "line_end": 2756,
+        "summary": "任务的最低限速配置。若任务速度持续低于设定值并达到指定时长，则任务失败，失败原因为[LOW_SPEED](#requestagentfaults10)。\n\n**系统能力**：SystemCapabi"
+      },
+      {
+        "section_id": "section-37",
+        "title": "request.agent.Timeout<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2757,
+        "line_end": 2768,
+        "summary": "任务的超时配置。任务处于等待状态的时间不参与计算，上传下载任务会存在以下任务等待的原因:[WaitingReason<sup>20+</sup>](#requestagentwaitingreaso"
+      },
+      {
+        "section_id": "section-38",
+        "title": "request.agent.Task<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2769,
+        "line_end": 4998,
+        "summary": "上传或下载任务。使用该方法前需要先获取Task对象，promise形式通过[request.agent.create](#requestagentcreate10-1)获取，callback形式通过["
+      },
+      {
+        "section_id": "section-39",
+        "title": "request.agent.create<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4999,
+        "line_end": 5085,
+        "summary": "create(context: BaseContext, config: Config, callback: AsyncCallback&lt;Task&gt;): void\n\n创建需要上传或下载的"
+      },
+      {
+        "section_id": "section-40",
+        "title": "request.agent.create<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5086,
+        "line_end": 5175,
+        "summary": "create(context: BaseContext, config: Config): Promise&lt;Task&gt;\n\n创建需要上传或下载的任务，并将其排入队列。支持HTTP/HTTP"
+      },
+      {
+        "section_id": "section-41",
+        "title": "request.agent.getTask<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5176,
+        "line_end": 5222,
+        "summary": "getTask(context: BaseContext, id: string, token?: string): Promise&lt;Task&gt;\n\n根据任务id查询任务。使用Promis"
+      },
+      {
+        "section_id": "section-42",
+        "title": "request.agent.remove<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5223,
+        "line_end": 5264,
+        "summary": "remove(id: string, callback: AsyncCallback&lt;void&gt;): void\n\n移除属于调用方的指定任务，如果正在处理中，该任务将被迫停止。使用call"
+      },
+      {
+        "section_id": "section-43",
+        "title": "request.agent.remove<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5265,
+        "line_end": 5309,
+        "summary": "remove(id: string): Promise&lt;void&gt;\n\n移除属于调用方的指定任务，如果正在处理中，该任务将被迫停止。使用Promise异步回调。在调用后任务对象和其回调函数"
+      },
+      {
+        "section_id": "section-44",
+        "title": "request.agent.show<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5310,
+        "line_end": 5349,
+        "summary": "show(id: string, callback: AsyncCallback&lt;TaskInfo&gt;): void\n\n根据任务id查询任务的详细信息。使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-45",
+        "title": "request.agent.show<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5350,
+        "line_end": 5392,
+        "summary": "show(id: string): Promise&lt;TaskInfo&gt;\n\n根据任务id查询任务的详细信息。使用Promise异步回调。\n\n**系统能力**：SystemCapabilit"
+      },
+      {
+        "section_id": "section-46",
+        "title": "request.agent.touch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5393,
+        "line_end": 5433,
+        "summary": "touch(id: string, token: string, callback: AsyncCallback&lt;TaskInfo&gt;): void\n\n根据任务id和token查询任务的详"
+      },
+      {
+        "section_id": "section-47",
+        "title": "request.agent.touch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5434,
+        "line_end": 5476,
+        "summary": "touch(id: string, token: string): Promise&lt;TaskInfo&gt;\n\n根据任务id和token查询任务的详细信息。使用Promise异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-48",
+        "title": "request.agent.search<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5477,
+        "line_end": 5513,
+        "summary": "search(callback: AsyncCallback&lt;Array&lt;string&gt;&gt;): void\n\n根据默认[Filter](#requestagentfilter1"
+      },
+      {
+        "section_id": "section-49",
+        "title": "request.agent.search<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5514,
+        "line_end": 5556,
+        "summary": "search(filter: Filter, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;): void\n\n根据[Filter](#reque"
+      },
+      {
+        "section_id": "section-50",
+        "title": "request.agent.search<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5557,
+        "line_end": 5601,
+        "summary": "search(filter?: Filter): Promise&lt;Array&lt;string&gt;&gt;\n\n根据[Filter](#requestagentfilter10)过滤条件查"
+      },
+      {
+        "section_id": "section-51",
+        "title": "request.agent.createGroup<sup>15+</sup>",
+        "level": 2,
+        "line_start": 5602,
+        "line_end": 5647,
+        "summary": "createGroup(config: GroupConfig): Promise\\<string\\>\n\n根据[GroupConfig](#requestagentgroupconfig15)分组条"
+      },
+      {
+        "section_id": "section-52",
+        "title": "request.agent.attachGroup<sup>15+</sup>",
+        "level": 2,
+        "line_start": 5648,
+        "line_end": 5699,
+        "summary": "attachGroup(gid: string, tids: string[]): Promise\\<void\\>\n\n向指定分组id中绑定多个下载任务id。使用Promise异步回调。\n\n如果任意一"
+      },
+      {
+        "section_id": "section-53",
+        "title": "request.agent.deleteGroup<sup>15+</sup>",
+        "level": 2,
+        "line_start": 5700,
+        "line_end": 5746,
+        "summary": "deleteGroup(gid: string): Promise\\<void\\>\n\n移除指定分组，后续不能再往该分组中添加任务id。使用Promise异步回调。\n\n当分组中的所有任务处于完成、失败"
+      }
+    ]
+  }
+}

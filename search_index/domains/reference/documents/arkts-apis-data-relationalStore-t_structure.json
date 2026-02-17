@@ -1,0 +1,84 @@
+{
+  "doc_id": "arkts-apis-data-relationalStore-t",
+  "title": "Types",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-t.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-t.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 Types，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Types",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "Assets<sup>10+</sup>",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 24,
+        "summary": "type Assets = Asset[]\n\n表示[Asset](arkts-apis-data-relationalStore-i.md#asset10)类型的数组。\n\n**系统能力：** Sys"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ValueType",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 44,
+        "summary": "type ValueType = null | number | string | boolean | Uint8Array | Asset | Assets | Float32Array | bi"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ValuesBucket",
+        "level": 2,
+        "line_start": 45,
+        "line_end": 56,
+        "summary": "type ValuesBucket = Record<string, ValueType>\n\n用于存储键值对的类型。不支持Sendable跨线程传递。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "PRIKeyType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 69,
+        "summary": "type PRIKeyType = number | string\n\n用于表示数据库表某一行主键的数据类型。\n\n**系统能力：** SystemCapability.DistributedDataM"
+      },
+      {
+        "section_id": "section-5",
+        "title": "UTCTime<sup>10+</sup>",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 81,
+        "summary": "type UTCTime = Date\n\n用于表示UTC类型时间的数据类型。\n\n**系统能力：** SystemCapability.DistributedDataManager.Relationa"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ModifyTime<sup>10+</sup>",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 93,
+        "summary": "type ModifyTime = Map<PRIKeyType, UTCTime>\n\n用于存储数据库表的主键和修改时间的数据类型。\n\n**系统能力：** SystemCapability.Dist"
+      },
+      {
+        "section_id": "section-7",
+        "title": "RowData<sup>23+</sup>",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 107,
+        "summary": "type RowData = Array\\<ValueType>\n\n用于表示数据库表中的某一行数据。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCa"
+      },
+      {
+        "section_id": "section-8",
+        "title": "RowsData<sup>23+</sup>",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 120,
+        "summary": "type RowsData = Array\\<RowData>\n\n用于表示数据库表中的多行数据。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapa"
+      }
+    ]
+  }
+}

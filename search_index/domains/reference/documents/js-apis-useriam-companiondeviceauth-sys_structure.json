@@ -1,0 +1,164 @@
+{
+  "doc_id": "js-apis-useriam-companiondeviceauth-sys",
+  "title": "@ohos.userIAM.companionDeviceAuth (伴随设备认证)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-user-authentication-kit/js-apis-useriam-companiondeviceauth-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-user-authentication-kit/js-apis-useriam-companiondeviceauth-sys.md",
+  "metadata": {
+    "kit": "User Authentication Kit",
+    "subsystem": "UserIAM",
+    "owner": "@WALL_EYE",
+    "designer": "@lichangting518",
+    "tester": "@jane_lz",
+    "adviser": "@zengyawen"
+  },
+  "summary": "User Authentication Kit UserIAM 模块的 @ohos.userIAM.companionDeviceAuth (伴随设备认证)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.userIAM.companionDeviceAuth (伴随设备认证)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { companionDeviceAuth } from '@kit.UserAuthenticationKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "BusinessId",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 43,
+        "summary": "业务ID是伴随设备支持的某个业务场景的唯一标识。不同的伴随设备由于认证安全性差异，支持的业务场景范围也不同，例如智能手表作为伴随设备可以解锁锁屏、解锁应用锁、支持语音指令在锁屏上执行，而耳机作为伴随"
+      },
+      {
+        "section_id": "section-3",
+        "title": "DeviceIdType",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 58,
+        "summary": "设备ID类型。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAu"
+      },
+      {
+        "section_id": "section-4",
+        "title": "SelectPurpose",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 74,
+        "summary": "选择伴随设备的目的。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDevic"
+      },
+      {
+        "section_id": "section-5",
+        "title": "DeviceKey",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 90,
+        "summary": "设备标识。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth"
+      },
+      {
+        "section_id": "section-6",
+        "title": "DeviceStatus",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 109,
+        "summary": "设备状态信息。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAu"
+      },
+      {
+        "section_id": "section-7",
+        "title": "TemplateStatus",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 129,
+        "summary": "伴随认证模块维护的模板状态。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.CompanionD"
+      },
+      {
+        "section_id": "section-8",
+        "title": "TemplateStatusCallback",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 147,
+        "summary": "type TemplateStatusCallback = (templateStatusList: TemplateStatus[]) => void\n\n回调函数，用于接收模板状态。\n\n**模型约"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ContinuousAuthStatusCallback",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 166,
+        "summary": "type ContinuousAuthStatusCallback = (isAuthPassed: boolean, authTrustLevel?: UserAuth.AuthTrustLeve"
+      },
+      {
+        "section_id": "section-10",
+        "title": "AvailableDeviceStatusCallback",
+        "level": 2,
+        "line_start": 167,
+        "line_end": 184,
+        "summary": "type AvailableDeviceStatusCallback = (deviceStatusList: DeviceStatus[]) => void\n\n回调函数，用于接收可添加的设备列表变"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ContinuousAuthParam",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 198,
+        "summary": "持续认证相关参数。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDevice"
+      },
+      {
+        "section_id": "section-12",
+        "title": "StatusMonitor",
+        "level": 2,
+        "line_start": 199,
+        "line_end": 543,
+        "summary": "用于监听或获取模板或持续认证状态等的对象。\n\n### getTemplateStatus\n\ngetTemplateStatus(): Promise&lt;TemplateStatus[]&gt;"
+      },
+      {
+        "section_id": "section-13",
+        "title": "companionDeviceAuth.getStatusMonitor",
+        "level": 2,
+        "line_start": 544,
+        "line_end": 607,
+        "summary": "getStatusMonitor(localUserId: number): StatusMonitor\n\n获取状态监听器，用于后续查询和订阅伴随模板信息等。\n\n**需要权限：** ohos.per"
+      },
+      {
+        "section_id": "section-14",
+        "title": "DeviceSelectResult",
+        "level": 2,
+        "line_start": 608,
+        "line_end": 622,
+        "summary": "伴随设备选择回调的返回结果。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.CompanionD"
+      },
+      {
+        "section_id": "section-15",
+        "title": "DeviceSelectCallback",
+        "level": 2,
+        "line_start": 623,
+        "line_end": 646,
+        "summary": "type DeviceSelectCallback = (selectPurpose: number) => DeviceSelectResult\n\n伴随设备选择回调。\n\n**模型约束：** 此接口"
+      },
+      {
+        "section_id": "section-16",
+        "title": "companionDeviceAuth.registerDeviceSelectCallback",
+        "level": 2,
+        "line_start": 647,
+        "line_end": 710,
+        "summary": "registerDeviceSelectCallback(callback: DeviceSelectCallback): void\n\n用于注册订阅伴随设备选择的回调。\n\n**需要权限：** oho"
+      },
+      {
+        "section_id": "section-17",
+        "title": "companionDeviceAuth.unregisterDeviceSelectCallback",
+        "level": 2,
+        "line_start": 711,
+        "line_end": 748,
+        "summary": "unregisterDeviceSelectCallback(): void\n\n用于取消注册订阅伴随设备选择的回调。\n\n**需要权限：** ohos.permission.USE_USER_IDM"
+      },
+      {
+        "section_id": "section-18",
+        "title": "companionDeviceAuth.updateEnabledBusinessIds",
+        "level": 2,
+        "line_start": 749,
+        "line_end": 802,
+        "summary": "updateEnabledBusinessIds(templateId: Uint8Array, enabledBusinessIds: number[]): Promise&lt;void&gt;"
+      }
+    ]
+  }
+}

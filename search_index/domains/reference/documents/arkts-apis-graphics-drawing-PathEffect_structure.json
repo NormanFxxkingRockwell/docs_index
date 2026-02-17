@@ -1,0 +1,76 @@
+{
+  "doc_id": "arkts-apis-graphics-drawing-PathEffect",
+  "title": "Class (PathEffect)",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-PathEffect.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-PathEffect.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphics 模块的 Class (PathEffect)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (PathEffect)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { drawing } from '@kit.ArkGraphics2D';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "createDashPathEffect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 71,
+        "summary": "static createDashPathEffect(intervals:  Array\\<number>, phase: number): PathEffect\n\n创建将路径变为虚线的路径效果对"
+      },
+      {
+        "section_id": "section-3",
+        "title": "createPathDashEffect<sup>18+</sup>",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 140,
+        "summary": "static createPathDashEffect(path: Path, advance: number, phase: number, style: PathDashStyle): Path"
+      },
+      {
+        "section_id": "section-4",
+        "title": "createSumPathEffect<sup>18+</sup>",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 178,
+        "summary": "static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEffect): PathEffect"
+      },
+      {
+        "section_id": "section-5",
+        "title": "createCornerPathEffect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 179,
+        "line_end": 220,
+        "summary": "static createCornerPathEffect(radius: number): PathEffect\n\n创建将路径的夹角变成指定半径的圆角的路径效果对象。\n\n**系统能力：** Sys"
+      },
+      {
+        "section_id": "section-6",
+        "title": "createDiscretePathEffect<sup>18+</sup>",
+        "level": 2,
+        "line_start": 221,
+        "line_end": 256,
+        "summary": "static createDiscretePathEffect(segLength: number, dev: number, seedAssist?: number): PathEffect\n\n创"
+      },
+      {
+        "section_id": "section-7",
+        "title": "createComposePathEffect<sup>18+</sup>",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 292,
+        "summary": "static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect\n\n创建路径组合的路径效果对象，首先应"
+      }
+    ]
+  }
+}

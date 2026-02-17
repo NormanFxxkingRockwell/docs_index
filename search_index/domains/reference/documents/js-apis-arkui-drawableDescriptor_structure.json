@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-arkui-drawableDescriptor",
+  "title": "@ohos.arkui.drawableDescriptor (DrawableDescriptor)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-drawableDescriptor.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-drawableDescriptor.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@liyujie43",
+    "designer": "@weixin_52725220",
+    "tester": "@xiong0104",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 @ohos.arkui.drawableDescriptor (DrawableDescriptor)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.arkui.drawableDescriptor (DrawableDescriptor)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 27,
+        "summary": "```ts\nimport {\n  DrawableDescriptor,\n  LayeredDrawableDescriptor,\n  AnimatedDrawableDescriptor,\n  A"
+      },
+      {
+        "section_id": "section-2",
+        "title": "DrawableDescriptorLoadedResult<sup>21+</sup>",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 55,
+        "summary": "传入的图片资源或地址的加载结果。\n\n**原子化服务API：** 从API version 21开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-3",
+        "title": "DrawableDescriptor",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 167,
+        "summary": "父类对象提供可重写的方法，包含：获取[PixelMap](../apis-image-kit/arkts-apis-image-PixelMap.md)实例，图片资源加载能力。\n\n### getPi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "PixelMapDrawableDescriptor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 168,
+        "line_end": 187,
+        "summary": "支持通过传入PixelMap创建PixelMapDrawableDescriptor对象。继承自[DrawableDescriptor](#drawabledescriptor)。\n\n### con"
+      },
+      {
+        "section_id": "section-5",
+        "title": "LayeredDrawableDescriptor",
+        "level": 2,
+        "line_start": 188,
+        "line_end": 570,
+        "summary": "当传入资源id或name为包含前景和背景资源的json文件时，生成LayeredDrawableDescriptor对象。继承自[DrawableDescriptor](#drawabledescr"
+      },
+      {
+        "section_id": "section-6",
+        "title": "AnimationOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 571,
+        "line_end": 636,
+        "summary": "动画播放参数。包括播放时延，迭代次数，单帧播放时间，是否自动播放。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称      | 类型    |"
+      },
+      {
+        "section_id": "section-7",
+        "title": "AnimatedDrawableDescriptor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 637,
+        "line_end": 804,
+        "summary": "使用[Image](./arkui-ts/ts-basic-components-image.md)组件播放PixelMap数组或动图资源时传入AnimatedDrawableDescriptor对"
+      },
+      {
+        "section_id": "section-8",
+        "title": "AnimationController<sup>21+</sup>",
+        "level": 2,
+        "line_start": 805,
+        "line_end": 1015,
+        "summary": "动画控制器对象。包含控制动画播放、停止、恢复、暂停和状态查询等方法。\n\n### start<sup>21+</sup>\n\nstart(): void\n\n从首帧开始播放。\n\n**原子化服务API：**"
+      }
+    ]
+  }
+}

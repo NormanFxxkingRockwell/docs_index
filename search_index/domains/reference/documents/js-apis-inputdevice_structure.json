@@ -1,0 +1,252 @@
+{
+  "doc_id": "js-apis-inputdevice",
+  "title": "@ohos.multimodalInput.inputDevice (输入设备)",
+  "path": "zh-cn/application-dev/reference/apis-input-kit/js-apis-inputdevice.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-input-kit/js-apis-inputdevice.md",
+  "metadata": {
+    "kit": "Input Kit",
+    "subsystem": "MultimodalInput",
+    "owner": "@zhaoxueyuan",
+    "designer": "@hanruofei",
+    "tester": "@Lyuxin",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Input Kit MultimodalInput 模块的 @ohos.multimodalInput.inputDevice (输入设备)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalInput.inputDevice (输入设备)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 24,
+        "summary": "```js\nimport { inputDevice } from '@kit.InputKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "inputDevice.getDeviceList<sup>9+</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 76,
+        "summary": "getDeviceList(callback: AsyncCallback&lt;Array&lt;number&gt;&gt;): void\n\n获取所有输入设备的ID列表，使用callback异步"
+      },
+      {
+        "section_id": "section-3",
+        "title": "inputDevice.getDeviceList<sup>9+</sup>",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 118,
+        "summary": "getDeviceList(): Promise&lt;Array&lt;number&gt;&gt;\n\n获取所有输入设备的ID列表，使用Promise异步回调。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-4",
+        "title": "inputDevice.getDeviceInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 119,
+        "line_end": 172,
+        "summary": "getDeviceInfo(deviceId: number, callback: AsyncCallback&lt;InputDeviceData&gt;): void\n\n获取指定输入设备的信息，"
+      },
+      {
+        "section_id": "section-5",
+        "title": "inputDevice.getDeviceInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 173,
+        "line_end": 229,
+        "summary": "getDeviceInfo(deviceId: number): Promise&lt;InputDeviceData&gt;\n\n获取指定id的输入设备信息，使用Promise异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-6",
+        "title": "inputDevice.getDeviceInfoSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 230,
+        "line_end": 282,
+        "summary": "getDeviceInfoSync(deviceId: number): InputDeviceData\n\n获取指定输入设备的信息。\n\n**系统能力**：SystemCapability.Multi"
+      },
+      {
+        "section_id": "section-7",
+        "title": "inputDevice.on('change')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 283,
+        "line_end": 370,
+        "summary": "on(type: \"change\", listener: Callback&lt;DeviceListener&gt;): void\n\n注册监听输入设备的热插拔事件，使用时需连接鼠标、键盘、触摸屏等"
+      },
+      {
+        "section_id": "section-8",
+        "title": "inputDevice.off('change')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 371,
+        "line_end": 434,
+        "summary": "off(type: \"change\", listener?: Callback&lt;DeviceListener&gt;): void\n\n取消监听输入设备的热插拔事件。在应用退出前调用，取消监听。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "inputDevice.getDeviceIds<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 435,
+        "line_end": 478,
+        "summary": "getDeviceIds(callback: AsyncCallback&lt;Array&lt;number&gt;&gt;): void\n\n获取所有输入设备的ID列表，使用callback异步回"
+      },
+      {
+        "section_id": "section-10",
+        "title": "inputDevice.getDeviceIds<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 479,
+        "line_end": 520,
+        "summary": "getDeviceIds(): Promise&lt;Array&lt;number&gt;&gt;\n\n获取所有输入设备的ID列表，使用Promise异步回调。\n\n> **说明**：\n>\n> 从AP"
+      },
+      {
+        "section_id": "section-11",
+        "title": "inputDevice.getDevice<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 521,
+        "line_end": 566,
+        "summary": "getDevice(deviceId: number, callback: AsyncCallback&lt;InputDeviceData&gt;): void\n\n获取指定id的输入设备信息，使用"
+      },
+      {
+        "section_id": "section-12",
+        "title": "inputDevice.getDevice<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 567,
+        "line_end": 615,
+        "summary": "getDevice(deviceId: number): Promise&lt;InputDeviceData&gt;\n\n获取指定id的输入设备信息，使用Promise异步回调。\n\n> **说明**"
+      },
+      {
+        "section_id": "section-13",
+        "title": "inputDevice.supportKeys<sup>9+</sup>",
+        "level": 2,
+        "line_start": 616,
+        "line_end": 666,
+        "summary": "supportKeys(deviceId: number, keys: Array&lt;KeyCode&gt;, callback: AsyncCallback &lt;Array&lt;bool"
+      },
+      {
+        "section_id": "section-14",
+        "title": "inputDevice.supportKeys<sup>9+</sup>",
+        "level": 2,
+        "line_start": 667,
+        "line_end": 724,
+        "summary": "supportKeys(deviceId: number, keys: Array&lt;KeyCode&gt;): Promise&lt;Array&lt;boolean&gt;&gt;\n\n查询指"
+      },
+      {
+        "section_id": "section-15",
+        "title": "inputDevice.supportKeysSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 725,
+        "line_end": 778,
+        "summary": "supportKeysSync(deviceId: number, keys: Array&lt;KeyCode&gt;): Array&lt;boolean&gt;\n\n查询指定id的输入设备对指定"
+      },
+      {
+        "section_id": "section-16",
+        "title": "inputDevice.getKeyboardType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 779,
+        "line_end": 832,
+        "summary": "getKeyboardType(deviceId: number, callback: AsyncCallback&lt;KeyboardType&gt;): void\n\n获取输入设备的键盘类型，如"
+      },
+      {
+        "section_id": "section-17",
+        "title": "inputDevice.getKeyboardType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 833,
+        "line_end": 889,
+        "summary": "getKeyboardType(deviceId: number): Promise&lt;KeyboardType&gt;\n\n获取输入设备的键盘类型，使用Promise异步回调。\n\n**系统能力*"
+      },
+      {
+        "section_id": "section-18",
+        "title": "inputDevice.getKeyboardTypeSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 890,
+        "line_end": 942,
+        "summary": "getKeyboardTypeSync(deviceId: number): KeyboardType\n\n获取输入设备的键盘类型。\n\n**系统能力**：SystemCapability.Multim"
+      },
+      {
+        "section_id": "section-19",
+        "title": "inputDevice.isFunctionKeyEnabled<sup>15+</sup>",
+        "level": 2,
+        "line_start": 943,
+        "line_end": 999,
+        "summary": "isFunctionKeyEnabled(functionKey: FunctionKey): Promise&lt;boolean&gt;\n\n检查功能键（如：CapsLock键）是否使能。使用Pr"
+      },
+      {
+        "section_id": "section-20",
+        "title": "inputDevice.setFunctionKeyEnabled<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1000,
+        "line_end": 1062,
+        "summary": "setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise&lt;void&gt;\n\n设置功能键（如：Cap"
+      },
+      {
+        "section_id": "section-21",
+        "title": "inputDevice.getIntervalSinceLastInput<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1063,
+        "line_end": 1100,
+        "summary": "getIntervalSinceLastInput(): Promise&lt;number&gt;\n\n获取距离上次系统输入事件的时间间隔（包含设备休眠时间），使用Promise异步回调。\n\n**系"
+      },
+      {
+        "section_id": "section-22",
+        "title": "DeviceListener<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1101,
+        "line_end": 1111,
+        "summary": "描述输入设备热插拔的信息。\n\n**系统能力**：SystemCapability.MultimodalInput.Input.InputDevice\n\n| 名称        | 类型   | 只读"
+      },
+      {
+        "section_id": "section-23",
+        "title": "InputDeviceData",
+        "level": 2,
+        "line_start": 1112,
+        "line_end": 1132,
+        "summary": "描述输入设备的信息。\n\n**系统能力**：SystemCapability.MultimodalInput.Input.InputDevice\n\n| 名称        | 类型   | 只读"
+      },
+      {
+        "section_id": "section-24",
+        "title": "AxisType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1133,
+        "line_end": 1152,
+        "summary": "type AxisType = 'touchmajor' | 'touchminor' | 'orientation' | 'x' | 'y' | 'pressure' | 'toolminor'"
+      },
+      {
+        "section_id": "section-25",
+        "title": "AxisRange",
+        "level": 2,
+        "line_start": 1153,
+        "line_end": 1168,
+        "summary": "输入设备的轴信息。\n\n**系统能力**： SystemCapability.MultimodalInput.Input.InputDevice\n\n| 名称        | 类型   | 只读"
+      },
+      {
+        "section_id": "section-26",
+        "title": "SourceType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1169,
+        "line_end": 1185,
+        "summary": "type SourceType = 'keyboard' | 'mouse' | 'touchpad' | 'touchscreen' | 'joystick' | 'trackball'\n\n输入设"
+      },
+      {
+        "section_id": "section-27",
+        "title": "ChangedType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1186,
+        "line_end": 1198,
+        "summary": "type ChangedType = 'add' | 'remove'\n\n监听设备热插拔事件类型。\n\n**系统能力**：SystemCapability.MultimodalInput.Input."
+      },
+      {
+        "section_id": "section-28",
+        "title": "KeyboardType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1199,
+        "line_end": 1213,
+        "summary": "键盘输入设备的类型。\n\n**系统能力**：SystemCapability.MultimodalInput.Input.InputDevice\n\n| 名称                  | 值"
+      },
+      {
+        "section_id": "section-29",
+        "title": "FunctionKey<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1214,
+        "line_end": 1222,
+        "summary": "功能键的类型。\n\n**系统能力**：SystemCapability.MultimodalInput.Input.InputDevice\n\n| 名称                  | 值"
+      }
+    ]
+  }
+}

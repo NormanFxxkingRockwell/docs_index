@@ -1,0 +1,84 @@
+{
+  "doc_id": "errorcode-nfc",
+  "title": "NFC错误码",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@amunra03",
+    "designer": "@wenxiaolin",
+    "tester": "@zs_111",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 NFC错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "NFC错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "3100101 开关NFC异常",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 32,
+        "summary": "**错误信息**\n\nThe NFC state is abnormal in the service.\n\n**错误描述**\n\nNFC服务内部执行NFC打开或关闭异常。\n\n**可能原因**\n\n1. 和"
+      },
+      {
+        "section_id": "section-2",
+        "title": "3100201 NFC服务读写Tag错误",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 56,
+        "summary": "**错误信息**\n\nThe tag running state is abnormal in the service.\n\n**错误描述**\n\nNFC服务执行Tag业务逻辑遇到错误。\n\n**可能原因*"
+      },
+      {
+        "section_id": "section-3",
+        "title": "3100202 应用状态错误",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 72,
+        "summary": "**错误信息**\n\nThe element state is invalid.\n\n**错误描述**\n\n接口调用时，所属应用读卡的页面状态错误，页面不在前台。\n\n**可能原因**\n所属应用读卡的页面状"
+      },
+      {
+        "section_id": "section-4",
+        "title": "3100203 接口调用顺序错误",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 88,
+        "summary": "**错误信息**\n\nThe off() API can be called only when the on() has been called.\n\n**错误描述**\n\n必须在接口on()已经被调用"
+      },
+      {
+        "section_id": "section-5",
+        "title": "3100204 NFC芯片I/O异常",
+        "level": 2,
+        "line_start": 89,
+        "line_end": 104,
+        "summary": "**错误信息**\n\nThe tag I/O operation failed.\n\n**错误描述**\n\nNFC Tag I/O操作失败。\n\n**可能原因**\nNFC Tag不支持所执行的读写操作。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "3100205 NFC标签状态异常",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 120,
+        "summary": "**错误信息**\n\nThe tag leaves the field.\n\n**错误描述**\n\nNFC标签已经离场。\n\n**可能原因**\nNFC标签已离开nfc设备感应范围。\n\n**处理步骤**\n重新"
+      },
+      {
+        "section_id": "section-7",
+        "title": "3100301 NFC卡模拟状态异常",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 138,
+        "summary": "**错误信息**\n\nCard emulation running state is abnormal in service.\n\n**错误描述**\n\nNFC服务执行卡模拟业务逻辑遇到错误。\n\n**可能"
+      },
+      {
+        "section_id": "section-8",
+        "title": "3200101 有源NFC标签状态异常",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 156,
+        "summary": "**错误信息**\n\nConnected NFC tag running state is abnormal in service.\n\n**错误描述**\n\n执行有源NFC Tag业务逻辑遇到错误。"
+      }
+    ]
+  }
+}

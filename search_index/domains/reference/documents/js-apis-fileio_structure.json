@@ -1,0 +1,780 @@
+{
+  "doc_id": "js-apis-fileio",
+  "title": "@ohos.fileio (文件管理)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-fileio.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-fileio.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@wangke25; @gsl_1234; @wuchengjun5",
+    "designer": "@gsl_1234; @wangke25",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.fileio (文件管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.fileio (文件管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 22,
+        "summary": "```ts\nimport fileio from '@ohos.fileio';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 41,
+        "summary": "使用该功能模块对文件/目录进行操作前，需要先获取其应用沙箱路径，获取方式及其接口用法请参考：\n\n ```ts\n  import UIAbility from '@ohos.app.ability.U"
+      },
+      {
+        "section_id": "section-3",
+        "title": "fileio.stat",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 78,
+        "summary": "stat(path: string): Promise&lt;Stat&gt;\n\n获取文件信息，使用Promise异步回调。\n\n> **说明**：\n>\n> 从API version 9开始废弃，请使"
+      },
+      {
+        "section_id": "section-4",
+        "title": "fileio.stat",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 107,
+        "summary": "stat(path: string, callback: AsyncCallback&lt;Stat&gt;): void\n\n获取文件信息，使用callback异步回调。\n\n> **说明**： \n>"
+      },
+      {
+        "section_id": "section-5",
+        "title": "fileio.statSync",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 140,
+        "summary": "statSync(path: string): Stat\n\n以同步方法获取文件的信息。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用[fs.statSync](js-"
+      },
+      {
+        "section_id": "section-6",
+        "title": "fileio.opendir",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 177,
+        "summary": "opendir(path: string): Promise&lt;Dir&gt;\n\n打开文件目录，使用Promise异步回调。\n\n> **说明**： \n>\n> 从API version 9开始废弃"
+      },
+      {
+        "section_id": "section-7",
+        "title": "fileio.opendir",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 207,
+        "summary": "opendir(path: string, callback: AsyncCallback&lt;Dir&gt;): void\n\n打开文件目录，使用callback异步回调。\n\n> **说明**："
+      },
+      {
+        "section_id": "section-8",
+        "title": "fileio.opendirSync",
+        "level": 2,
+        "line_start": 208,
+        "line_end": 240,
+        "summary": "opendirSync(path: string): Dir\n\n以同步方法打开文件目录。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用[fs.listFileSync"
+      },
+      {
+        "section_id": "section-9",
+        "title": "fileio.access",
+        "level": 2,
+        "line_start": 241,
+        "line_end": 278,
+        "summary": "access(path: string, mode?: number): Promise&lt;void&gt;\n\n检查当前进程是否可访问某文件，使用Promise异步回调。\n\n> **说明**："
+      },
+      {
+        "section_id": "section-10",
+        "title": "fileio.access",
+        "level": 2,
+        "line_start": 279,
+        "line_end": 309,
+        "summary": "access(path: string, mode?: number, callback: AsyncCallback&lt;void&gt;): void\n\n检查当前进程是否可访问某文件，使用ca"
+      },
+      {
+        "section_id": "section-11",
+        "title": "fileio.accessSync",
+        "level": 2,
+        "line_start": 310,
+        "line_end": 342,
+        "summary": "accessSync(path: string, mode?: number): void\n\n以同步方法检查当前进程是否可访问某文件。\n\n> **说明**： \n>\n> 从API version 9开"
+      },
+      {
+        "section_id": "section-12",
+        "title": "fileio.close<sup>7+</sup>",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 380,
+        "summary": "close(fd: number): Promise&lt;void&gt;\n\n关闭文件，使用Promise异步回调。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用["
+      },
+      {
+        "section_id": "section-13",
+        "title": "fileio.close<sup>7+</sup>",
+        "level": 2,
+        "line_start": 381,
+        "line_end": 411,
+        "summary": "close(fd: number, callback: AsyncCallback&lt;void&gt;): void\n\n关闭文件，使用callback异步回调。\n\n> **说明**： \n>\n>"
+      },
+      {
+        "section_id": "section-14",
+        "title": "fileio.closeSync",
+        "level": 2,
+        "line_start": 412,
+        "line_end": 438,
+        "summary": "closeSync(fd: number): void\n\n以同步方法关闭文件。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用[fs.closeSync](js-api"
+      },
+      {
+        "section_id": "section-15",
+        "title": "fileio.copyFile",
+        "level": 2,
+        "line_start": 439,
+        "line_end": 478,
+        "summary": "copyFile(src: string|number, dest: string|number, mode?: number): Promise&lt;void&gt;\n\n复制文件，使用Promi"
+      },
+      {
+        "section_id": "section-16",
+        "title": "fileio.copyFile",
+        "level": 2,
+        "line_start": 479,
+        "line_end": 511,
+        "summary": "copyFile(src: string|number, dest: string|number, mode: number, callback: AsyncCallback&lt;void&gt;"
+      },
+      {
+        "section_id": "section-17",
+        "title": "fileio.copyFileSync",
+        "level": 2,
+        "line_start": 512,
+        "line_end": 540,
+        "summary": "copyFileSync(src: string|number, dest: string|number, mode?: number): void\n\n以同步方法复制文件。\n\n> **说明**："
+      },
+      {
+        "section_id": "section-18",
+        "title": "fileio.mkdir",
+        "level": 2,
+        "line_start": 541,
+        "line_end": 578,
+        "summary": "mkdir(path: string, mode?: number): Promise&lt;void&gt;\n\n创建目录，使用Promise异步回调。\n\n> **说明**： \n>\n> 从API v"
+      },
+      {
+        "section_id": "section-19",
+        "title": "fileio.mkdir",
+        "level": 2,
+        "line_start": 579,
+        "line_end": 609,
+        "summary": "mkdir(path: string, mode: number, callback: AsyncCallback&lt;void&gt;): void\n\n创建目录，使用callback异步回调。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "fileio.mkdirSync",
+        "level": 2,
+        "line_start": 610,
+        "line_end": 636,
+        "summary": "mkdirSync(path: string, mode?: number): void\n\n以同步方法创建目录。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用[fs."
+      },
+      {
+        "section_id": "section-21",
+        "title": "fileio.open<sup>7+</sup>",
+        "level": 2,
+        "line_start": 637,
+        "line_end": 675,
+        "summary": "open(path: string, flags?: number, mode?: number): Promise&lt;number&gt;\n\n打开文件，使用Promise异步回调。\n\n> **"
+      },
+      {
+        "section_id": "section-22",
+        "title": "fileio.open<sup>7+</sup>",
+        "level": 2,
+        "line_start": 676,
+        "line_end": 707,
+        "summary": "open(path: string, flags: number, mode: number, callback: AsyncCallback&lt;number&gt;): void\n\n打开文件，"
+      },
+      {
+        "section_id": "section-23",
+        "title": "fileio.openSync",
+        "level": 2,
+        "line_start": 708,
+        "line_end": 734,
+        "summary": "openSync(path: string, flags?: number, mode?: number): number\n\n以同步方法打开文件。\n\n> **说明**： \n>\n> 从API vers"
+      },
+      {
+        "section_id": "section-24",
+        "title": "fileio.read",
+        "level": 2,
+        "line_start": 735,
+        "line_end": 761,
+        "summary": "read(fd: number, buffer: ArrayBuffer, options?: { offset?: number; length?: number; position?: numb"
+      },
+      {
+        "section_id": "section-25",
+        "title": "fileio.read",
+        "level": 2,
+        "line_start": 762,
+        "line_end": 783,
+        "summary": "read(fd: number, buffer: ArrayBuffer, options: { offset?: number; length?: number; position?: numbe"
+      },
+      {
+        "section_id": "section-26",
+        "title": "fileio.readSync",
+        "level": 2,
+        "line_start": 784,
+        "line_end": 819,
+        "summary": "readSync(fd: number, buffer: ArrayBuffer, options?: { offset?: number; length?: number; position?:"
+      },
+      {
+        "section_id": "section-27",
+        "title": "fileio.rmdir<sup>7+</sup>",
+        "level": 2,
+        "line_start": 820,
+        "line_end": 856,
+        "summary": "rmdir(path: string): Promise&lt;void&gt;\n\n删除目录，使用Promise异步回调。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使"
+      },
+      {
+        "section_id": "section-28",
+        "title": "fileio.rmdir<sup>7+</sup>",
+        "level": 2,
+        "line_start": 857,
+        "line_end": 887,
+        "summary": "rmdir(path: string, callback: AsyncCallback&lt;void&gt;): void\n\n删除目录，使用callback异步回调。\n\n> **说明**： \n>"
+      },
+      {
+        "section_id": "section-29",
+        "title": "fileio.rmdirSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 888,
+        "line_end": 913,
+        "summary": "rmdirSync(path: string): void\n\n以同步方法删除目录。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用[fs.rmdirSync](js-a"
+      },
+      {
+        "section_id": "section-30",
+        "title": "fileio.unlink",
+        "level": 2,
+        "line_start": 914,
+        "line_end": 950,
+        "summary": "unlink(path: string): Promise&lt;void&gt;\n\n删除文件，使用Promise异步回调。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请"
+      },
+      {
+        "section_id": "section-31",
+        "title": "fileio.unlink",
+        "level": 2,
+        "line_start": 951,
+        "line_end": 980,
+        "summary": "unlink(path: string, callback: AsyncCallback&lt;void&gt;): void\n\n删除文件，使用callback异步回调。\n\n> **说明**： \n>"
+      },
+      {
+        "section_id": "section-32",
+        "title": "fileio.unlinkSync",
+        "level": 2,
+        "line_start": 981,
+        "line_end": 1006,
+        "summary": "unlinkSync(path: string): void\n\n以同步方法删除文件。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用[fs.unlinkSync](js"
+      },
+      {
+        "section_id": "section-33",
+        "title": "fileio.write",
+        "level": 2,
+        "line_start": 1007,
+        "line_end": 1046,
+        "summary": "write(fd: number, buffer: ArrayBuffer|string, options?: { offset?: number; length?: number; positio"
+      },
+      {
+        "section_id": "section-34",
+        "title": "fileio.write",
+        "level": 2,
+        "line_start": 1047,
+        "line_end": 1081,
+        "summary": "write(fd: number, buffer: ArrayBuffer|string, options: { offset?: number; length?: number; position"
+      },
+      {
+        "section_id": "section-35",
+        "title": "fileio.writeSync",
+        "level": 2,
+        "line_start": 1082,
+        "line_end": 1116,
+        "summary": "writeSync(fd: number, buffer: ArrayBuffer|string, options?: { offset?: number; length?: number; pos"
+      },
+      {
+        "section_id": "section-36",
+        "title": "fileio.hash",
+        "level": 2,
+        "line_start": 1117,
+        "line_end": 1154,
+        "summary": "hash(path: string, algorithm: string): Promise&lt;string&gt;\n\n计算文件的哈希值，使用Promise异步回调。\n\n> **说明**： \n>"
+      },
+      {
+        "section_id": "section-37",
+        "title": "fileio.hash",
+        "level": 2,
+        "line_start": 1155,
+        "line_end": 1187,
+        "summary": "hash(path: string, algorithm: string, callback: AsyncCallback&lt;string&gt;): void\n\n计算文件的哈希值，使用call"
+      },
+      {
+        "section_id": "section-38",
+        "title": "fileio.chmod<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1188,
+        "line_end": 1225,
+        "summary": "chmod(path: string, mode: number): Promise&lt;void&gt;\n\n改变文件权限，使用Promise异步回调。\n\n> **说明**： \n>\n> 从API"
+      },
+      {
+        "section_id": "section-39",
+        "title": "fileio.chmod<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1226,
+        "line_end": 1256,
+        "summary": "chmod(path: string, mode: number, callback: AsyncCallback&lt;void&gt;): void\n\n改变文件权限，使用callback异步回调"
+      },
+      {
+        "section_id": "section-40",
+        "title": "fileio.chmodSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1257,
+        "line_end": 1283,
+        "summary": "chmodSync(path: string, mode: number): void\n\n以同步方法改变文件权限。\n\n> **说明**： \n>\n> 从API version 9开始废弃。\n\n**系统"
+      },
+      {
+        "section_id": "section-41",
+        "title": "fileio.fstat<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1284,
+        "line_end": 1321,
+        "summary": "fstat(fd: number): Promise&lt;Stat&gt;\n\n基于文件描述符获取文件状态信息，使用Promise异步回调。\n\n> **说明**： \n>\n> 从API version"
+      },
+      {
+        "section_id": "section-42",
+        "title": "fileio.fstat<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1322,
+        "line_end": 1352,
+        "summary": "fstat(fd: number, callback: AsyncCallback&lt;Stat&gt;): void\n\n基于文件描述符获取文件状态信息，使用callback异步回调。\n\n> **"
+      },
+      {
+        "section_id": "section-43",
+        "title": "fileio.fstatSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1353,
+        "line_end": 1385,
+        "summary": "fstatSync(fd: number): Stat\n\n以同步方法基于文件描述符获取文件状态信息。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用[fs.statSy"
+      },
+      {
+        "section_id": "section-44",
+        "title": "fileio.ftruncate<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1386,
+        "line_end": 1424,
+        "summary": "ftruncate(fd: number, len?: number): Promise&lt;void&gt;\n\n基于文件描述符截断文件，使用Promise异步回调。\n\n> **说明**： \n>"
+      },
+      {
+        "section_id": "section-45",
+        "title": "fileio.ftruncate<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1425,
+        "line_end": 1457,
+        "summary": "ftruncate(fd: number, len?: number, callback: AsyncCallback&lt;void&gt;): void\n\n基于文件描述符截断文件，使用callb"
+      },
+      {
+        "section_id": "section-46",
+        "title": "fileio.ftruncateSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1458,
+        "line_end": 1486,
+        "summary": "ftruncateSync(fd: number, len?: number): void\n\n以同步方法基于文件描述符截断文件。\n\n> **说明**： \n>\n> 从API version 9开始废弃"
+      },
+      {
+        "section_id": "section-47",
+        "title": "fileio.truncate<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1487,
+        "line_end": 1525,
+        "summary": "truncate(path: string, len?: number): Promise&lt;void&gt;\n\n基于文件路径截断文件，使用Promise异步回调。\n\n> **说明**： \n>"
+      },
+      {
+        "section_id": "section-48",
+        "title": "fileio.truncate<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1526,
+        "line_end": 1557,
+        "summary": "truncate(path: string, len?: number, callback: AsyncCallback&lt;void&gt;): void\n\n基于文件路径截断文件，使用callb"
+      },
+      {
+        "section_id": "section-49",
+        "title": "fileio.truncateSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1558,
+        "line_end": 1585,
+        "summary": "truncateSync(path: string, len?: number): void\n\n以同步方法基于文件路径截断文件。\n\n> **说明**： \n>\n> 从API version 9开始废弃"
+      },
+      {
+        "section_id": "section-50",
+        "title": "fileio.readText<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1586,
+        "line_end": 1623,
+        "summary": "readText(filePath: string, options?: { position?: number; length?: number; encoding?: string; }): P"
+      },
+      {
+        "section_id": "section-51",
+        "title": "fileio.readText<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1624,
+        "line_end": 1662,
+        "summary": "readText(filePath: string, options: { position?: number; length?: number; encoding?: string; }, cal"
+      },
+      {
+        "section_id": "section-52",
+        "title": "fileio.readTextSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1663,
+        "line_end": 1703,
+        "summary": "readTextSync(filePath: string, options?: { position?: number; length?: number; encoding?: string; }"
+      },
+      {
+        "section_id": "section-53",
+        "title": "fileio.lstat<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1704,
+        "line_end": 1740,
+        "summary": "lstat(path: string): Promise&lt;Stat&gt;\n\n获取链接信息，使用Promise异步回调。\n\n> **说明**： \n>\n> 从API version 9开始废弃，"
+      },
+      {
+        "section_id": "section-54",
+        "title": "fileio.lstat<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1741,
+        "line_end": 1770,
+        "summary": "lstat(path: string, callback: AsyncCallback&lt;Stat&gt;): void\n\n获取链接信息，使用callback异步回调。\n\n> **说明**："
+      },
+      {
+        "section_id": "section-55",
+        "title": "fileio.lstatSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1771,
+        "line_end": 1802,
+        "summary": "lstatSync(path: string): Stat\n\n以同步方法获取链接信息。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用[fs.lstatSync](js"
+      },
+      {
+        "section_id": "section-56",
+        "title": "fileio.rename<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1803,
+        "line_end": 1841,
+        "summary": "rename(oldPath: string, newPath: string): Promise&lt;void&gt;\n\n重命名文件，使用Promise异步回调。\n\n> **说明**： \n>\n>"
+      },
+      {
+        "section_id": "section-57",
+        "title": "fileio.rename<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1842,
+        "line_end": 1871,
+        "summary": "rename(oldPath: string, newPath: string, callback: AsyncCallback&lt;void&gt;): void\n\n重命名文件，使用callba"
+      },
+      {
+        "section_id": "section-58",
+        "title": "fileio.renameSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1872,
+        "line_end": 1899,
+        "summary": "renameSync(oldPath: string, newPath: string): void\n\n以同步方法重命名文件。\n\n> **说明**： \n>\n> 从API version 9开始废弃，"
+      },
+      {
+        "section_id": "section-59",
+        "title": "fileio.fsync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1900,
+        "line_end": 1937,
+        "summary": "fsync(fd: number): Promise&lt;void&gt;\n\n同步文件数据，使用Promise异步回调。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使"
+      },
+      {
+        "section_id": "section-60",
+        "title": "fileio.fsync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1938,
+        "line_end": 1968,
+        "summary": "fsync(fd: number, callback: AsyncCallback&lt;void&gt;): void\n\n同步文件数据，使用callback异步回调。\n\n> **说明**： \n>"
+      },
+      {
+        "section_id": "section-61",
+        "title": "fileio.fsyncSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1969,
+        "line_end": 1995,
+        "summary": "fsyncSync(fd: number): void\n\n以同步方法同步文件数据。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用[fs.fsyncSync](js-a"
+      },
+      {
+        "section_id": "section-62",
+        "title": "fileio.fdatasync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1996,
+        "line_end": 2033,
+        "summary": "fdatasync(fd: number): Promise&lt;void&gt;\n\n实现文件内容数据同步，使用Promise异步回调。\n\n> **说明**： \n>\n> 从API version"
+      },
+      {
+        "section_id": "section-63",
+        "title": "fileio.fdatasync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2034,
+        "line_end": 2064,
+        "summary": "fdatasync(fd: number, callback: AsyncCallback&lt;void&gt;): void\n\n实现文件内容数据同步，使用callback异步回调。\n\n> **说"
+      },
+      {
+        "section_id": "section-64",
+        "title": "fileio.fdatasyncSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2065,
+        "line_end": 2091,
+        "summary": "fdatasyncSync(fd: number): void\n\n以同步方法实现文件内容数据同步。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用[fs.fdatasy"
+      },
+      {
+        "section_id": "section-65",
+        "title": "fileio.symlink<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2092,
+        "line_end": 2130,
+        "summary": "symlink(target: string, srcPath: string): Promise&lt;void&gt;\n\n基于文件路径创建符号链接，使用Promise异步回调。\n\n> **说明*"
+      },
+      {
+        "section_id": "section-66",
+        "title": "fileio.symlink<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2131,
+        "line_end": 2162,
+        "summary": "symlink(target: string, srcPath: string, callback: AsyncCallback&lt;void&gt;): void\n\n基于文件路径创建符号链接，使"
+      },
+      {
+        "section_id": "section-67",
+        "title": "fileio.symlinkSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2163,
+        "line_end": 2190,
+        "summary": "symlinkSync(target: string, srcPath: string): void\n\n以同步的方法基于文件路径创建符号链接。\n\n> **说明**： \n>\n> 从API versio"
+      },
+      {
+        "section_id": "section-68",
+        "title": "fileio.chown<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2191,
+        "line_end": 2230,
+        "summary": "chown(path: string, uid: number, gid: number): Promise&lt;void&gt;\n\n基于文件路径改变文件所有者，使用Promise异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-69",
+        "title": "fileio.chown<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2231,
+        "line_end": 2262,
+        "summary": "chown(path: string, uid: number, gid: number, callback: AsyncCallback&lt;void&gt;): void\n\n基于文件路径改变文"
+      },
+      {
+        "section_id": "section-70",
+        "title": "fileio.chownSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2263,
+        "line_end": 2291,
+        "summary": "chownSync(path: string, uid: number, gid: number): void\n\n以同步的方法基于文件路径改变文件所有者。\n\n> **说明**： \n>\n> 从API"
+      },
+      {
+        "section_id": "section-71",
+        "title": "fileio.mkdtemp<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2292,
+        "line_end": 2327,
+        "summary": "mkdtemp(prefix: string): Promise&lt;string&gt;\n\n创建临时目录，使用Promise异步回调。\n\n> **说明**： \n>\n> 从API version"
+      },
+      {
+        "section_id": "section-72",
+        "title": "fileio.mkdtemp<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2328,
+        "line_end": 2356,
+        "summary": "mkdtemp(prefix: string, callback: AsyncCallback&lt;string&gt;): void\n\n创建临时目录，使用callback异步回调。\n\n> **说"
+      },
+      {
+        "section_id": "section-73",
+        "title": "fileio.mkdtempSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2357,
+        "line_end": 2387,
+        "summary": "mkdtempSync(prefix: string): string\n\n以同步的方法创建临时目录。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用[fs.mkdtem"
+      },
+      {
+        "section_id": "section-74",
+        "title": "fileio.fchmod<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2388,
+        "line_end": 2427,
+        "summary": "fchmod(fd: number, mode: number): Promise&lt;void&gt;\n\n基于文件描述符改变文件权限，使用Promise异步回调。\n\n> **说明**： \n>\n>"
+      },
+      {
+        "section_id": "section-75",
+        "title": "fileio.fchmod<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2428,
+        "line_end": 2460,
+        "summary": "fchmod(fd: number, mode: number, callback: AsyncCallback&lt;void&gt;): void\n\n基于文件描述符改变文件权限，使用callba"
+      },
+      {
+        "section_id": "section-76",
+        "title": "fileio.fchmodSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2461,
+        "line_end": 2489,
+        "summary": "fchmodSync(fd: number, mode: number): void\n\n以同步方法基于文件描述符改变文件权限。\n\n> **说明**： \n>\n> 从API version 9开始废弃。"
+      },
+      {
+        "section_id": "section-77",
+        "title": "fileio.createStream<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2490,
+        "line_end": 2527,
+        "summary": "createStream(path: string, mode: string): Promise&lt;Stream&gt;\n\n基于文件路径打开文件流，使用Promise异步回调。\n\n> **说明"
+      },
+      {
+        "section_id": "section-78",
+        "title": "fileio.createStream<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2528,
+        "line_end": 2558,
+        "summary": "createStream(path: string, mode: string, callback: AsyncCallback&lt;Stream&gt;): void\n\n基于文件路径打开文件流，"
+      },
+      {
+        "section_id": "section-79",
+        "title": "fileio.createStreamSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2559,
+        "line_end": 2591,
+        "summary": "createStreamSync(path: string, mode: string): Stream\n\n以同步方法基于文件路径打开文件流。\n\n> **说明**： \n>\n> 从API versio"
+      },
+      {
+        "section_id": "section-80",
+        "title": "fileio.fdopenStream<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2592,
+        "line_end": 2630,
+        "summary": "fdopenStream(fd: number, mode: string): Promise&lt;Stream&gt;\n\n基于文件描述符打开文件流，使用Promise异步回调。\n\n> **说明*"
+      },
+      {
+        "section_id": "section-81",
+        "title": "fileio.fdopenStream<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2631,
+        "line_end": 2662,
+        "summary": "fdopenStream(fd: number, mode: string, callback: AsyncCallback&lt;Stream&gt;): void\n\n基于文件描述符打开文件流，使"
+      },
+      {
+        "section_id": "section-82",
+        "title": "fileio.fdopenStreamSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2663,
+        "line_end": 2696,
+        "summary": "fdopenStreamSync(fd: number, mode: string): Stream\n\n以同步方法基于文件描述符打开文件流。\n\n> **说明**： \n>\n> 从API version"
+      },
+      {
+        "section_id": "section-83",
+        "title": "fileio.fchown<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2697,
+        "line_end": 2737,
+        "summary": "fchown(fd: number, uid: number, gid: number): Promise&lt;void&gt;\n\n基于文件描述符改变文件所有者，使用Promise异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-84",
+        "title": "fileio.fchown<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2738,
+        "line_end": 2771,
+        "summary": "fchown(fd: number, uid: number, gid: number, callback: AsyncCallback&lt;void&gt;): void\n\n基于文件描述符改变文"
+      },
+      {
+        "section_id": "section-85",
+        "title": "fileio.fchownSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2772,
+        "line_end": 2801,
+        "summary": "fchownSync(fd: number, uid: number, gid: number): void\n\n以同步方法基于文件描述符改变文件所有者。\n\n> **说明**： \n>\n> 从API v"
+      },
+      {
+        "section_id": "section-86",
+        "title": "fileio.lchown<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2802,
+        "line_end": 2841,
+        "summary": "lchown(path: string, uid: number, gid: number): Promise&lt;void&gt;\n\n基于文件路径改变文件所有者，更改符号链接本身的所有者，而不是"
+      },
+      {
+        "section_id": "section-87",
+        "title": "fileio.lchown<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2842,
+        "line_end": 2874,
+        "summary": "lchown(path: string, uid: number, gid: number, callback: AsyncCallback&lt;void&gt;): void\n\n基于文件路径改变"
+      },
+      {
+        "section_id": "section-88",
+        "title": "fileio.lchownSync<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2875,
+        "line_end": 2903,
+        "summary": "lchownSync(path: string, uid: number, gid: number): void\n\n以同步方法基于文件路径改变文件所有者，更改符号链接本身的所有者，而不是更改符号链接"
+      },
+      {
+        "section_id": "section-89",
+        "title": "fileio.createWatcher<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2904,
+        "line_end": 2939,
+        "summary": "createWatcher(filename: string, events: number, callback: AsyncCallback&lt;number&gt;): Watcher\n\n监听"
+      },
+      {
+        "section_id": "section-90",
+        "title": "Readout",
+        "level": 2,
+        "line_start": 2940,
+        "line_end": 2956,
+        "summary": "仅用于read方法，获取文件的读取结果。\n\n> **说明**： \n>\n> 从API version 9开始废弃。\n\n**系统能力**：以下各项对应的系统能力均为SystemCapability.Fi"
+      },
+      {
+        "section_id": "section-91",
+        "title": "Stat",
+        "level": 2,
+        "line_start": 2957,
+        "line_end": 3166,
+        "summary": "文件具体信息，在调用Stat的方法前，需要先通过[stat()](#fileiostat)方法（同步或异步）来构建一个Stat实例。\n\n> **说明**： \n>\n> 从API version 9开始"
+      },
+      {
+        "section_id": "section-92",
+        "title": "Watcher<sup>7+</sup>",
+        "level": 2,
+        "line_start": 3167,
+        "line_end": 3230,
+        "summary": "Watcher是文件变化监听的实例，调用Watcher.stop()方法（同步或异步）来停止文件监听。\n\n> **说明**：\n>\n> 从API version 10开始废弃。\n\n### stop<s"
+      },
+      {
+        "section_id": "section-93",
+        "title": "Stream",
+        "level": 2,
+        "line_start": 3231,
+        "line_end": 3685,
+        "summary": "文件流，在调用Stream的方法前，需要先通过createStream()方法（同步或异步）来构建一个Stream实例。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用"
+      },
+      {
+        "section_id": "section-94",
+        "title": "Dir",
+        "level": 2,
+        "line_start": 3686,
+        "line_end": 3842,
+        "summary": "管理目录，在调用Dir的方法前，需要先通过opendir方法（同步或异步）来构建一个Dir实例。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使用[fs.listFile"
+      },
+      {
+        "section_id": "section-95",
+        "title": "Dirent",
+        "level": 2,
+        "line_start": 3843,
+        "line_end": 4041,
+        "summary": "在调用Dirent的方法前，需要先通过[dir.read()](#read)方法（同步或异步）来构建一个Dirent实例。\n\n> **说明**： \n>\n> 从API version 9开始废弃，请使"
+      }
+    ]
+  }
+}

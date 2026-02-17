@@ -1,0 +1,132 @@
+{
+  "doc_id": "arkts-apis-photoAccessHelper-PhotoAsset",
+  "title": "Interface (PhotoAsset)",
+  "path": "zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-PhotoAsset.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-PhotoAsset.md",
+  "metadata": {
+    "kit": "Media Library Kit",
+    "subsystem": "Multimedia",
+    "owner": "@yixiaoff",
+    "designer": "@liweilu1",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Library Kit Multimedia 模块的 Interface (PhotoAsset)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (PhotoAsset)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { photoAccessHelper } from '@kit.MediaLibraryKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 30,
+        "summary": "**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称                      | 类型"
+      },
+      {
+        "section_id": "section-3",
+        "title": "get",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 87,
+        "summary": "get(member: string): MemberType\n\n获取PhotoAsset成员参数的值。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-4",
+        "title": "set",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 137,
+        "summary": "set(member: string, value: string): void\n\n设置PhotoAsset成员参数。\n\n**系统能力**：SystemCapability.FileManageme"
+      },
+      {
+        "section_id": "section-5",
+        "title": "commitModify",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 202,
+        "summary": "commitModify(callback: AsyncCallback&lt;void&gt;): void\n\n修改文件的元数据。使用callback异步回调。\n\n**需要权限**：ohos.pe"
+      },
+      {
+        "section_id": "section-6",
+        "title": "commitModify",
+        "level": 2,
+        "line_start": 203,
+        "line_end": 270,
+        "summary": "commitModify(): Promise&lt;void&gt;\n\n修改文件的元数据。使用Promise异步回调。\n\n**需要权限**：ohos.permission.WRITE_IMAGEV"
+      },
+      {
+        "section_id": "section-7",
+        "title": "close<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 331,
+        "summary": "close(fd: number, callback: AsyncCallback&lt;void&gt;): void\n\n关闭当前文件。使用callback异步回调。\n\n> **说明：**\n>\n>"
+      },
+      {
+        "section_id": "section-8",
+        "title": "close<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 332,
+        "line_end": 392,
+        "summary": "close(fd: number): Promise&lt;void&gt;\n\n关闭当前文件。使用Promise异步回调。\n\n> **说明：**\n>\n> 从API version 10开始支持，从A"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getThumbnail",
+        "level": 2,
+        "line_start": 393,
+        "line_end": 450,
+        "summary": "getThumbnail(callback: AsyncCallback&lt;image.PixelMap&gt;): void\n\n获取文件的缩略图。使用callback异步回调。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getThumbnail",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 515,
+        "summary": "getThumbnail(size: image.Size, callback: AsyncCallback&lt;image.PixelMap&gt;): void\n\n获取文件的缩略图，传入缩略图"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getThumbnail",
+        "level": 2,
+        "line_start": 516,
+        "line_end": 580,
+        "summary": "getThumbnail(size?: image.Size): Promise&lt;image.PixelMap&gt;\n\n获取文件的缩略图，传入缩略图尺寸。使用Promise异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-12",
+        "title": "clone<sup>14+</sup>",
+        "level": 2,
+        "line_start": 581,
+        "line_end": 638,
+        "summary": "clone(title: string): Promise&lt;PhotoAsset&gt;\n\n克隆资产，可设置文件名，但不支持修改文件类型。使用promise异步回调。\n\n**需要权限**：oh"
+      },
+      {
+        "section_id": "section-13",
+        "title": "getReadOnlyFd<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 639,
+        "line_end": 701,
+        "summary": "getReadOnlyFd(callback: AsyncCallback&lt;number&gt;): void\n\n以只读方式打开当前文件。使用callback异步回调。\n\n使用完毕后调用clo"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getReadOnlyFd<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 702,
+        "line_end": 772,
+        "summary": "getReadOnlyFd(): Promise&lt;number&gt;\n\n以只读方式打开当前文件。使用promise异步回调。\n\n返回的文件描述符在使用完毕后需要调用close进行释放。\n\n>"
+      }
+    ]
+  }
+}

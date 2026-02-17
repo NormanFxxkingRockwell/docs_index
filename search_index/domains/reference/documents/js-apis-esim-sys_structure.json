@@ -1,0 +1,308 @@
+{
+  "doc_id": "js-apis-esim-sys",
+  "title": "@ohos.telephony.esim (eSIM卡管理) (系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-telephony-kit/js-apis-esim-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-telephony-kit/js-apis-esim-sys.md",
+  "metadata": {
+    "kit": "Telephony Kit",
+    "subsystem": "Telephony",
+    "owner": "@yangyannanyangyannan",
+    "designer": "@ghxbob",
+    "tester": "@weitiantian",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Telephony Kit Telephony 模块的 @ohos.telephony.esim (eSIM卡管理) (系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.telephony.esim (eSIM卡管理) (系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { eSIM } from '@kit.TelephonyKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "eSIM.getEid",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 70,
+        "summary": "getEid\\(slotId: number\\): Promise\\<string\\>\n\n获取指定卡槽标识eUICC硬件的EID(Equipment Identifier，Embedded SIM识"
+      },
+      {
+        "section_id": "section-3",
+        "title": "eSIM.getOsuStatus",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 120,
+        "summary": "getOsuStatus\\(slotId: number\\): Promise\\<OsuStatus\\>\n\n获取指定卡槽操作系统升级的状态。使用Promise异步回调。\n\n**系统接口：** 此接口"
+      },
+      {
+        "section_id": "section-4",
+        "title": "eSIM.startOsu",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 170,
+        "summary": "startOsu\\(slotId: number\\): Promise\\<OsuStatus\\>\n\n如果指定卡槽的操作系统不是最新的，则执行操作系统升级。使用Promise异步回调。\n\n**系统接口"
+      },
+      {
+        "section_id": "section-5",
+        "title": "eSIM.getDownloadableProfileMetadata",
+        "level": 2,
+        "line_start": 171,
+        "line_end": 234,
+        "summary": "getDownloadableProfileMetadata\\(slotId: number, portIndex: number, profile: DownloadableProfile, fo"
+      },
+      {
+        "section_id": "section-6",
+        "title": "eSIM.getDownloadableProfiles",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 286,
+        "summary": "getDownloadableProfiles\\(slotId: number, portIndex: number, forceDisableProfile: boolean\\): Promise"
+      },
+      {
+        "section_id": "section-7",
+        "title": "eSIM.downloadProfile",
+        "level": 2,
+        "line_start": 287,
+        "line_end": 356,
+        "summary": "downloadProfile\\(slotId: number, portIndex: number, profile: DownloadableProfile, configuration: Do"
+      },
+      {
+        "section_id": "section-8",
+        "title": "eSIM.getEuiccProfileInfoList",
+        "level": 2,
+        "line_start": 357,
+        "line_end": 406,
+        "summary": "getEuiccProfileInfoList\\(slotId: number\\): Promise\\<GetEuiccProfileInfoListResult\\>\n\n获取配置文件信息列表。使用P"
+      },
+      {
+        "section_id": "section-9",
+        "title": "eSIM.getEuiccInfo",
+        "level": 2,
+        "line_start": 407,
+        "line_end": 456,
+        "summary": "getEuiccInfo\\(slotId: number\\): Promise\\<EuiccInfo\\>\n\n获取eUICC信息。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "eSIM.deleteProfile",
+        "level": 2,
+        "line_start": 457,
+        "line_end": 507,
+        "summary": "deleteProfile\\(slotId: number, iccid: string\\): Promise\\<ResultCode\\>\n\n删除配置文件。使用Promise异步回调。\n\n**系统接"
+      },
+      {
+        "section_id": "section-11",
+        "title": "eSIM.switchToProfile",
+        "level": 2,
+        "line_start": 508,
+        "line_end": 560,
+        "summary": "switchToProfile\\(slotId: number, portIndex: number, iccid: string, forceDisableProfile: boolean\\):"
+      },
+      {
+        "section_id": "section-12",
+        "title": "eSIM.setProfileNickname",
+        "level": 2,
+        "line_start": 561,
+        "line_end": 612,
+        "summary": "setProfileNickname\\(slotId: number, iccid: string, nickname: string\\): Promise\\<ResultCode\\>\n\n设置给定配"
+      },
+      {
+        "section_id": "section-13",
+        "title": "eSIM.resetMemory",
+        "level": 2,
+        "line_start": 613,
+        "line_end": 663,
+        "summary": "resetMemory\\(slotId: number, options?: ResetOption\\): Promise\\<ResultCode\\>\n\n清除所有特定配置文件并重置eUICC。使用P"
+      },
+      {
+        "section_id": "section-14",
+        "title": "eSIM.reserveProfilesForFactoryRestore",
+        "level": 2,
+        "line_start": 664,
+        "line_end": 713,
+        "summary": "reserveProfilesForFactoryRestore\\(slotId: number\\): Promise\\<ResultCode\\>\n\n恢复出厂设置，并保留profiles。使用Pro"
+      },
+      {
+        "section_id": "section-15",
+        "title": "eSIM.setDefaultSmdpAddress",
+        "level": 2,
+        "line_start": 714,
+        "line_end": 764,
+        "summary": "setDefaultSmdpAddress\\(slotId: number, address: string\\): Promise\\<ResultCode\\>\n\n设置或更新eUICC中存储的默认SM"
+      },
+      {
+        "section_id": "section-16",
+        "title": "eSIM.getDefaultSmdpAddress",
+        "level": 2,
+        "line_start": 765,
+        "line_end": 814,
+        "summary": "getDefaultSmdpAddress\\(slotId: number\\): Promise\\<string\\>\n\n获取存储在eUICC中的默认SM-DP+地址。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "eSIM.cancelSession",
+        "level": 2,
+        "line_start": 815,
+        "line_end": 869,
+        "summary": "cancelSession\\(slotId: number, transactionId: string, cancelReason: CancelReason\\): Promise\\<Result"
+      },
+      {
+        "section_id": "section-18",
+        "title": "eSIM.getSupportedPkids<sup>20+</sup>",
+        "level": 2,
+        "line_start": 870,
+        "line_end": 918,
+        "summary": "getSupportedPkids\\(slotId: number\\): Promise\\<string\\>\n\n获取手机支持的公钥ID信息。\n\n**系统接口：** 此接口为系统接口。\n\n**需"
+      },
+      {
+        "section_id": "section-19",
+        "title": "eSIM.getContractInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 919,
+        "line_end": 972,
+        "summary": "getContractInfo\\(slotId: number, requestData: ContractRequestData\\): Promise\\<string\\>\n\n获取开通eSIM需要的"
+      },
+      {
+        "section_id": "section-20",
+        "title": "GetDownloadableProfileMetadataResult",
+        "level": 2,
+        "line_start": 973,
+        "line_end": 992,
+        "summary": "获取可下载配置文件的元数据。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 类"
+      },
+      {
+        "section_id": "section-21",
+        "title": "GetDownloadableProfilesResult",
+        "level": 2,
+        "line_start": 993,
+        "line_end": 1005,
+        "summary": "获取默认可下载配置文件的列表。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 |"
+      },
+      {
+        "section_id": "section-22",
+        "title": "DownloadProfileResult",
+        "level": 2,
+        "line_start": 1006,
+        "line_end": 1019,
+        "summary": "下载配置文件的结果。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-23",
+        "title": "GetEuiccProfileInfoListResult",
+        "level": 2,
+        "line_start": 1020,
+        "line_end": 1033,
+        "summary": "获取配置文件信息列表。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-24",
+        "title": "OperatorId",
+        "level": 2,
+        "line_start": 1034,
+        "line_end": 1048,
+        "summary": "获取eUICC芯片/设备的相关信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称"
+      },
+      {
+        "section_id": "section-25",
+        "title": "EuiccProfile",
+        "level": 2,
+        "line_start": 1049,
+        "line_end": 1068,
+        "summary": "配置文件信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-26",
+        "title": "EuiccInfo",
+        "level": 2,
+        "line_start": 1069,
+        "line_end": 1080,
+        "summary": "euicc信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 类型 | 只读"
+      },
+      {
+        "section_id": "section-27",
+        "title": "ResetOption",
+        "level": 2,
+        "line_start": 1081,
+        "line_end": 1094,
+        "summary": "重置状态。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 值 | 说明 |\n|"
+      },
+      {
+        "section_id": "section-28",
+        "title": "OsuStatus",
+        "level": 2,
+        "line_start": 1095,
+        "line_end": 1110,
+        "summary": "操作系统升级状态。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 值 | 说明"
+      },
+      {
+        "section_id": "section-29",
+        "title": "ResultCode",
+        "level": 2,
+        "line_start": 1111,
+        "line_end": 1158,
+        "summary": "结果码。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 值 | 说明 |\n|"
+      },
+      {
+        "section_id": "section-30",
+        "title": "CancelReason",
+        "level": 2,
+        "line_start": 1159,
+        "line_end": 1173,
+        "summary": "取消会话的原因。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 值 | 说明"
+      },
+      {
+        "section_id": "section-31",
+        "title": "ProfileState",
+        "level": 2,
+        "line_start": 1174,
+        "line_end": 1187,
+        "summary": "配置文件状态。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 值 | 说明 |"
+      },
+      {
+        "section_id": "section-32",
+        "title": "ProfileClass",
+        "level": 2,
+        "line_start": 1188,
+        "line_end": 1202,
+        "summary": "配置文件类。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 值 | 说明 |"
+      },
+      {
+        "section_id": "section-33",
+        "title": "PolicyRules",
+        "level": 2,
+        "line_start": 1203,
+        "line_end": 1216,
+        "summary": "配置文件的策略规则。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 值 | 说"
+      },
+      {
+        "section_id": "section-34",
+        "title": "SolvableErrors",
+        "level": 2,
+        "line_start": 1217,
+        "line_end": 1229,
+        "summary": "可解决错误码。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 值 | 说明 |"
+      },
+      {
+        "section_id": "section-35",
+        "title": "DownloadConfiguration",
+        "level": 2,
+        "line_start": 1230,
+        "line_end": 1243,
+        "summary": "下载过程中的属性配置。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 类型 |"
+      },
+      {
+        "section_id": "section-36",
+        "title": "ContractRequestData<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1244,
+        "line_end": 1256,
+        "summary": "加密需要的信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 类型"
+      }
+    ]
+  }
+}

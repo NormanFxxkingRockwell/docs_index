@@ -1,0 +1,124 @@
+{
+  "doc_id": "js-apis-power-sys",
+  "title": "@ohos.power (系统电源管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-power-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-power-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "PowerManager",
+    "owner": "@zhang-yinglie; @volcano_wang",
+    "designer": "@wangyantian0",
+    "tester": "@alien0208",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Basic Services Kit PowerManager 模块的 @ohos.power (系统电源管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.power (系统电源管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```js\nimport {power} from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "power.shutdown",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 63,
+        "summary": "shutdown(reason: string): void\n\n系统关机。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.REBOOT\n\n**系统能"
+      },
+      {
+        "section_id": "section-3",
+        "title": "power.reboot<sup>9+</sup>",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 102,
+        "summary": "reboot(reason: string): void\n\n重启设备。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.REBOOT\n\n**系统能力："
+      },
+      {
+        "section_id": "section-4",
+        "title": "power.wakeup<sup>9+</sup>",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 143,
+        "summary": "wakeup(detail: string): void\n\n唤醒设备。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.POWER_MANAGER"
+      },
+      {
+        "section_id": "section-5",
+        "title": "power.suspend<sup>9+</sup>",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 185,
+        "summary": "suspend(isImmediate?: boolean): void\n\n使设备进入睡眠状态。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.PO"
+      },
+      {
+        "section_id": "section-6",
+        "title": "power.setPowerMode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 186,
+        "line_end": 227,
+        "summary": "setPowerMode(mode: DevicePowerMode, callback: AsyncCallback&lt;void&gt;): void\n\n设置当前设备的电源模式。使用callb"
+      },
+      {
+        "section_id": "section-7",
+        "title": "power.setPowerMode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 228,
+        "line_end": 274,
+        "summary": "setPowerMode(mode: DevicePowerMode): Promise&lt;void&gt;\n\n设置当前设备的电源模式。使用Promise异步回调。\n\n**系统接口：** 此接口"
+      },
+      {
+        "section_id": "section-8",
+        "title": "power.setScreenOffTime<sup>12+</sup>",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 315,
+        "summary": "setScreenOffTime(timeout: number): void\n\n设置熄屏超时时间。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission."
+      },
+      {
+        "section_id": "section-9",
+        "title": "power.hibernate<sup>12+</sup>",
+        "level": 2,
+        "line_start": 316,
+        "line_end": 356,
+        "summary": "hibernate(clearMemory: boolean): void\n\n休眠设备。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.POWER_"
+      },
+      {
+        "section_id": "section-10",
+        "title": "power.refreshActivity<sup>20+</sup>",
+        "level": 2,
+        "line_start": 357,
+        "line_end": 397,
+        "summary": "refreshActivity(reason: string): void\n\n刷新设备活动状态（如：重设屏幕超时息屏时间等）。\n\n只有设备在活动状态下生效，设备活动状态见[power.isActiv"
+      },
+      {
+        "section_id": "section-11",
+        "title": "power.setPowerKeyFilteringStrategy<sup>21+</sup>",
+        "level": 2,
+        "line_start": 398,
+        "line_end": 437,
+        "summary": "setPowerKeyFilteringStrategy(strategy: PowerKeyFilteringStrategy): void\n\n设置电源键过滤策略，在电源服务订阅电源键事件后，用于"
+      },
+      {
+        "section_id": "section-12",
+        "title": "power.registerShutdownCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 438,
+        "line_end": 478,
+        "summary": "registerShutdownCallback(callback: Callback&lt;boolean&gt;): void\n\n订阅电源关机或重启的回调提醒。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "power.unregisterShutdownCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 479,
+        "line_end": 518,
+        "summary": "unregisterShutdownCallback(callback?: Callback\\<void>): void\n\n取消订阅电源关机或重启的回调提醒。使用callback同步回调。\n\n**系"
+      }
+    ]
+  }
+}

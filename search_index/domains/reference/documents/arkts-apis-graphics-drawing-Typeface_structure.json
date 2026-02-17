@@ -1,0 +1,92 @@
+{
+  "doc_id": "arkts-apis-graphics-drawing-Typeface",
+  "title": "Class (Typeface)",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Typeface.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Typeface.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphics 模块的 Class (Typeface)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (Typeface)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { drawing } from '@kit.ArkGraphics2D';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getFamilyName",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 49,
+        "summary": "getFamilyName(): string\n\n获取字体的族名，即一套字体设计的名称。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**"
+      },
+      {
+        "section_id": "section-3",
+        "title": "makeFromCurrent<sup>20+</sup>",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 89,
+        "summary": "makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface\n\n基于当前字体结合字体属性构造新的字体对象。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-4",
+        "title": "makeFromFile<sup>12+</sup>",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 138,
+        "summary": "static makeFromFile(filePath: string): Typeface\n\n从指定字体文件构造字体。\n\n**原子化服务API：** 从API version 22开始，该接口支"
+      },
+      {
+        "section_id": "section-5",
+        "title": "makeFromRawFile<sup>18+</sup>",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 178,
+        "summary": "static makeFromRawFile(rawfile: Resource): Typeface\n\n使用指定的字体文件构造字体，其中要求指定的字体文件需保存在应用资源文件夹的rawfile路径"
+      },
+      {
+        "section_id": "section-6",
+        "title": "makeFromFileWithArguments<sup>20+</sup>",
+        "level": 2,
+        "line_start": 179,
+        "line_end": 221,
+        "summary": "static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceArguments): Typeface"
+      },
+      {
+        "section_id": "section-7",
+        "title": "makeFromRawFileWithArguments<sup>20+</sup>",
+        "level": 2,
+        "line_start": 222,
+        "line_end": 263,
+        "summary": "static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typef"
+      },
+      {
+        "section_id": "section-8",
+        "title": "isBold<sup>23+</sup>",
+        "level": 2,
+        "line_start": 264,
+        "line_end": 287,
+        "summary": "isBold(): boolean\n\n检查字体是否加粗。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型   | 说明"
+      },
+      {
+        "section_id": "section-9",
+        "title": "isItalic<sup>23+</sup>",
+        "level": 2,
+        "line_start": 288,
+        "line_end": 310,
+        "summary": "isItalic(): boolean\n\n检查字体是否是斜体。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型   | 说明"
+      }
+    ]
+  }
+}

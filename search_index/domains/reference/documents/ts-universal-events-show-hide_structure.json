@@ -1,0 +1,60 @@
+{
+  "doc_id": "ts-universal-events-show-hide",
+  "title": "挂载卸载事件",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-events-show-hide.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-events-show-hide.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yihao-lin",
+    "designer": "@piggyguy",
+    "tester": "@songyanhong",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 挂载卸载事件，提供相关接口和功能说明。",
+  "structure": {
+    "title": "挂载卸载事件",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "onAttach<sup>12+</sup>",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 43,
+        "summary": "onAttach(callback: Callback\\<void>): T\n\n组件挂载到组件树时触发此回调。由于以下说明中的限制，建议使用[onAppear](#onappear)替代此接口。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "onDetach<sup>12+</sup>",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 65,
+        "summary": "onDetach(callback: Callback\\<void>): T\n\n组件从组件树卸载时触发此回调。建议使用[onDisAppear](#ondisappear)替代此接口。\n\n**原子化"
+      },
+      {
+        "section_id": "section-3",
+        "title": "onAppear",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 94,
+        "summary": "onAppear(event: () => void): T\n\n组件挂载后触发此回调。\n\n> **说明：**\n>\n> 回调的调用时机有可能发生在组件布局渲染后。\n\n**卡片能力：** 从API ve"
+      },
+      {
+        "section_id": "section-4",
+        "title": "onDisAppear",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 119,
+        "summary": "onDisAppear(event: () => void): T\n\n组件从组件树卸载时触发此回调。\n\n**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中使用。\n\n*"
+      },
+      {
+        "section_id": "section-5",
+        "title": "示例",
+        "level": 2,
+        "line_start": 120,
+        "line_end": 164,
+        "summary": "该示例通过按钮控制组件的挂载和卸载，触发onAttach和onDetach事件。\n\n```ts\n// xxx.ets\nimport { promptAction } from '@kit.ArkUI"
+      }
+    ]
+  }
+}

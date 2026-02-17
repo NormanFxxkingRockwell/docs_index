@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-stationary",
+  "title": "@ohos.stationary (设备状态感知框架)",
+  "path": "zh-cn/application-dev/reference/apis-multimodalawareness-kit/js-apis-stationary.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-multimodalawareness-kit/js-apis-stationary.md",
+  "metadata": {
+    "kit": "Multimodal Awareness Kit",
+    "subsystem": "MultimodalAwareness",
+    "owner": "@dilligencer",
+    "designer": "@zou_ye",
+    "tester": "@judan",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Multimodal Awareness Kit MultimodalAwareness 模块的 @ohos.stationary (设备状态感知框架)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.stationary (设备状态感知框架)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { stationary } from '@kit.MultimodalAwarenessKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ActivityResponse",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 32,
+        "summary": "服务响应抽象接口。\n\n**系统能力**：SystemCapability.Msdp.DeviceStatus.Stationary\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ---"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ActivityType",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 45,
+        "summary": "type ActivityType = 'still' | 'relativeStill'\n\n设备状态类型。\n\n**系统能力**：SystemCapability.Msdp.DeviceStatus"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ActivityEvent",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 57,
+        "summary": "设备状态事件。\n\n**系统能力**：SystemCapability.Msdp.DeviceStatus.Stationary\n\n| 名称                             |"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ActivityState",
+        "level": 2,
+        "line_start": 58,
+        "line_end": 68,
+        "summary": "设备状态返回值。\n\n**系统能力**：SystemCapability.Msdp.DeviceStatus.Stationary\n\n| 名称"
+      },
+      {
+        "section_id": "section-6",
+        "title": "stationary.on('still' | 'relativeStill')",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 94,
+        "summary": "on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: number, callback: Callback&lt;Act"
+      },
+      {
+        "section_id": "section-7",
+        "title": "stationary.once('still' | 'relativeStill')",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 117,
+        "summary": "once(activity: ActivityType, callback: Callback&lt;ActivityResponse&gt;): void\n\n设备状态管理，查询设备状态。\n\n**系"
+      },
+      {
+        "section_id": "section-8",
+        "title": "stationary.off('still' | 'relativeStill')",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 139,
+        "summary": "off(activity: ActivityType, event: ActivityEvent, callback?: Callback&lt;ActivityResponse&gt;): voi"
+      }
+    ]
+  }
+}

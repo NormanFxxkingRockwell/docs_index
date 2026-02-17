@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-data-distributedobject",
+  "title": "@ohos.data.distributedDataObject (分布式数据对象)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/js-apis-data-distributedobject.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/js-apis-data-distributedobject.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@lvcong_oh",
+    "designer": "@hollokin; @yuchaozhng",
+    "tester": "@lj_liujing; @yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 @ohos.data.distributedDataObject (分布式数据对象)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.data.distributedDataObject (分布式数据对象)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { distributedDataObject } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "distributedDataObject.create<sup>9+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 105,
+        "summary": "create(context: Context, source: object): DataObject\n\n创建一个分布式数据对象。对象属性支持基本类型（数字类型、布尔类型和字符串类型）以及复杂类型"
+      },
+      {
+        "section_id": "section-3",
+        "title": "distributedDataObject.genSessionId",
+        "level": 2,
+        "line_start": 106,
+        "line_end": 125,
+        "summary": "genSessionId(): string\n\n随机创建一个sessionId。\n\n**系统能力：** SystemCapability.DistributedDataManager.DataObj"
+      },
+      {
+        "section_id": "section-4",
+        "title": "SaveSuccessResponse<sup>9+</sup>",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 137,
+        "summary": "[save](#save9)接口回调信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObje"
+      },
+      {
+        "section_id": "section-5",
+        "title": "RevokeSaveSuccessResponse<sup>9+</sup>",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 147,
+        "summary": "[revokeSave](#revokesave9)接口回调信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.DataObject.Dis"
+      },
+      {
+        "section_id": "section-6",
+        "title": "BindInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 161,
+        "summary": "数据库的绑定信息。当前版本只支持关系型数据库的绑定。\n\n**系统能力：** SystemCapability.DistributedDataManager.DataObject.Distribute"
+      },
+      {
+        "section_id": "section-7",
+        "title": "DataObserver<sup>20+</sup>",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 176,
+        "summary": "type DataObserver = (sessionId: string, fields: Array&lt;string&gt;) => void\n\n定义获取分布式对象数据变更的监听回调函数。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "StatusObserver<sup>20+</sup>",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 192,
+        "summary": "type StatusObserver = (sessionId: string, networkId: string, status: string) => void\n\n定义获取分布式对象状态变更"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ProgressObserver<sup>20+</sup>",
+        "level": 2,
+        "line_start": 193,
+        "line_end": 207,
+        "summary": "type ProgressObserver = (sessionId: string, progress: number) => void\n\n定义传输进度的监听回调函数。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-10",
+        "title": "DataObject",
+        "level": 2,
+        "line_start": 208,
+        "line_end": 1250,
+        "summary": "表示一个分布式数据对象。在使用以下接口前，需调用[create()](#distributeddataobjectcreate9)获取DataObject对象。\n\n### setSessionId<"
+      },
+      {
+        "section_id": "section-11",
+        "title": "distributedDataObject.createDistributedObject<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1251,
+        "line_end": 1294,
+        "summary": "createDistributedObject(source: object): DistributedObject\n\n\n创建一个分布式数据对象。\n\n> **说明：**\n>\n> 从API versi"
+      },
+      {
+        "section_id": "section-12",
+        "title": "DistributedObject<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1295,
+        "line_end": 1528,
+        "summary": "表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](#distributeddataobjectcreatedistributedobjectde"
+      }
+    ]
+  }
+}

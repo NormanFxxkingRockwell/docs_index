@@ -1,0 +1,60 @@
+{
+  "doc_id": "js-apis-enterprise-securityManager-sys",
+  "title": "@ohos.enterprise.securityManager（安全管理）(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-securityManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-securityManager-sys.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.securityManager（安全管理）(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.securityManager（安全管理）(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { securityManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "securityManager.getSecurityPatchTag",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 83,
+        "summary": "getSecurityPatchTag(admin: Want): string\n\n查询设备安全补丁Tag。\n\n**需要权限：** ohos.permission.ENTERPRISE_MANAGE"
+      },
+      {
+        "section_id": "section-3",
+        "title": "securityManager.getDeviceEncryptionStatus",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 141,
+        "summary": "getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus\n\n查询设备文件系统加密状态。\n\n**需要权限：** ohos.permi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "securityManager.getPasswordPolicy<sup>12+</sup>",
+        "level": 2,
+        "line_start": 142,
+        "line_end": 180,
+        "summary": "getPasswordPolicy(): PasswordPolicy\n\n获取设备口令策略。\n\n**系统能力：** SystemCapability.Customization.Enterprise"
+      },
+      {
+        "section_id": "section-5",
+        "title": "DeviceEncryptionStatus",
+        "level": 2,
+        "line_start": 181,
+        "line_end": 194,
+        "summary": "设备管理应用的文件系统加密状态。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**模型约束：** 此接口仅可"
+      }
+    ]
+  }
+}

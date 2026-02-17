@@ -1,0 +1,284 @@
+{
+  "doc_id": "js-apis-devicestatus-cooperate-sys",
+  "title": "@ohos.cooperate (键鼠穿越)（系统接口）",
+  "path": "zh-cn/application-dev/reference/apis-distributedservice-kit/js-apis-devicestatus-cooperate-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-distributedservice-kit/js-apis-devicestatus-cooperate-sys.md",
+  "metadata": {
+    "kit": "Distributed Service Kit",
+    "subsystem": "Msdp",
+    "owner": "@wuliangdong",
+    "designer": "@butterls",
+    "tester": "@zhaodengqi",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Distributed Service Kit Msdp 模块的 @ohos.cooperate (键鼠穿越)（系统接口），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.cooperate (键鼠穿越)（系统接口）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { cooperate } from '@kit.DistributedServiceKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "cooperate.prepareCooperate<sup>11+</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 68,
+        "summary": "prepareCooperate(callback: AsyncCallback&lt;void&gt;): void;\n\n准备键鼠穿越，使用Callback异步回调。\n\n**需要权限**：ohos"
+      },
+      {
+        "section_id": "section-3",
+        "title": "cooperate.prepareCooperate<sup>11+</sup>",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 114,
+        "summary": "prepareCooperate(): Promise&lt;void&gt;;\n\n准备键鼠穿越，使用Promise异步方式返回结果。\n\n**需要权限**：ohos.permission.COOPE"
+      },
+      {
+        "section_id": "section-4",
+        "title": "cooperate.unprepareCooperate<sup>11+</sup>",
+        "level": 2,
+        "line_start": 115,
+        "line_end": 158,
+        "summary": "unprepareCooperate(callback: AsyncCallback&lt;void&gt;): void;\n\n取消键鼠穿越准备，使用Callback异步回调。\n\n**需要权限**："
+      },
+      {
+        "section_id": "section-5",
+        "title": "cooperate.unprepareCooperate<sup>11+</sup>",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 203,
+        "summary": "unprepareCooperate(): Promise&lt;void&gt;;\n\n取消键鼠穿越准备，使用Promise异步回调。\n\n**需要权限**：ohos.permission.COOPE"
+      },
+      {
+        "section_id": "section-6",
+        "title": "cooperate.activateCooperate<sup>11+</sup>",
+        "level": 2,
+        "line_start": 204,
+        "line_end": 252,
+        "summary": "activateCooperate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback&lt;void&g"
+      },
+      {
+        "section_id": "section-7",
+        "title": "cooperate.activateCooperate<sup>11+</sup>",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 306,
+        "summary": "activateCooperate(targetNetworkId: string, inputDeviceId: number): Promise&lt;void&gt;;\n\n启动键鼠穿越，使用P"
+      },
+      {
+        "section_id": "section-8",
+        "title": "cooperate.deactivateCooperate<sup>11+</sup>",
+        "level": 2,
+        "line_start": 307,
+        "line_end": 351,
+        "summary": "deactivateCooperate(isUnchained: boolean, callback: AsyncCallback&lt;void&gt;): void;\n\n停止键鼠穿越，使用Cal"
+      },
+      {
+        "section_id": "section-9",
+        "title": "cooperate.deactivateCooperate<sup>11+</sup>",
+        "level": 2,
+        "line_start": 352,
+        "line_end": 400,
+        "summary": "deactivateCooperate(isUnchained: boolean): Promise&lt;void&gt;;\n\n停止键鼠穿越，使用Promise异步回调。\n\n**需要权限**：oh"
+      },
+      {
+        "section_id": "section-10",
+        "title": "cooperate.getCooperateSwitchState<sup>11+</sup>",
+        "level": 2,
+        "line_start": 401,
+        "line_end": 446,
+        "summary": "getCooperateSwitchState(networkId: string, callback: AsyncCallback&lt;boolean&gt;): void;\n\n获取目标设备键鼠"
+      },
+      {
+        "section_id": "section-11",
+        "title": "cooperate.getCooperateSwitchState<sup>11+</sup>",
+        "level": 2,
+        "line_start": 447,
+        "line_end": 497,
+        "summary": "getCooperateSwitchState(networkId: string): Promise&lt;boolean&gt;;\n\n获取目标设备键鼠穿越开关的状态，使用Promise异步方式返"
+      },
+      {
+        "section_id": "section-12",
+        "title": "on('cooperateMessage')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 498,
+        "line_end": 541,
+        "summary": "on(type: 'cooperateMessage', callback: Callback&lt;CooperateMessage&gt;): void;\n\n注册监听键鼠穿越状态。\n\n**需要权"
+      },
+      {
+        "section_id": "section-13",
+        "title": "off('cooperateMessage')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 542,
+        "line_end": 607,
+        "summary": "off(type: 'cooperateMessage', callback?: Callback&lt;CooperateMessage&gt;): void;\n\n取消监听键鼠穿越状态。\n\n**需"
+      },
+      {
+        "section_id": "section-14",
+        "title": "on('cooperateMouse')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 608,
+        "line_end": 653,
+        "summary": "on(type: 'cooperateMouse', networkId: string, callback: Callback&lt;MouseLocation&gt;): void;\n\n注册监听"
+      },
+      {
+        "section_id": "section-15",
+        "title": "off('cooperateMouse')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 654,
+        "line_end": 719,
+        "summary": "off(type: 'cooperateMouse', networkId: string, callback?: Callback&lt;MouseLocation&gt;): void;\n\n取消"
+      },
+      {
+        "section_id": "section-16",
+        "title": "cooperate.activateCooperateWithOptions<sup>20+</sup>",
+        "level": 2,
+        "line_start": 720,
+        "line_end": 772,
+        "summary": "activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: number, cooperateOptions?: Coo"
+      },
+      {
+        "section_id": "section-17",
+        "title": "CooperateMessage<sup>11+</sup>",
+        "level": 2,
+        "line_start": 773,
+        "line_end": 784,
+        "summary": "键鼠穿越的消息。\n\n**系统能力**：SystemCapability.Msdp.DeviceStatus.Cooperate\n\n| 名称      | 类型           |只读 | 可选"
+      },
+      {
+        "section_id": "section-18",
+        "title": "MouseLocation<sup>12+</sup>",
+        "level": 2,
+        "line_start": 785,
+        "line_end": 797,
+        "summary": "键鼠穿越的位置。\n\n**系统能力**：SystemCapability.Msdp.DeviceStatus.Cooperate\n\n| 名称           | 类型            | 只"
+      },
+      {
+        "section_id": "section-19",
+        "title": "CooperateState<sup>11+</sup>",
+        "level": 2,
+        "line_start": 798,
+        "line_end": 814,
+        "summary": "键鼠穿越状态的枚举。\n\n**系统能力**：SystemCapability.Msdp.DeviceStatus.Cooperate\n\n| 名称                           |"
+      },
+      {
+        "section_id": "section-20",
+        "title": "CooperateOptions<sup>20+</sup>",
+        "level": 2,
+        "line_start": 815,
+        "line_end": 826,
+        "summary": "键鼠穿越可选控制参数，控制穿出点位置。\n\n**系统能力**：SystemCapability.Msdp.DeviceStatus.Cooperate\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-21",
+        "title": "cooperate.prepare<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 827,
+        "line_end": 871,
+        "summary": "prepare(callback: AsyncCallback&lt;void&gt;): void;\n\n准备键鼠穿越，使用Callback异步回调。\n\n> **说明：**\n>\n> 从API ver"
+      },
+      {
+        "section_id": "section-22",
+        "title": "cooperate.prepare<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 872,
+        "line_end": 916,
+        "summary": "prepare(): Promise&lt;void&gt;;\n\n准备键鼠穿越，使用Promise异步方式返回结果。\n\n> **说明：**\n>\n> 从API version 10开始不再维护。建议使"
+      },
+      {
+        "section_id": "section-23",
+        "title": "cooperate.unprepare<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 917,
+        "line_end": 959,
+        "summary": "unprepare(callback: AsyncCallback&lt;void&gt;): void;\n\n取消键鼠穿越准备，使用Callback异步回调。\n\n> **说明：**\n>\n> 从API"
+      },
+      {
+        "section_id": "section-24",
+        "title": "cooperate.unprepare<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 960,
+        "line_end": 1004,
+        "summary": "unprepare(): Promise&lt;void&gt;;\n\n取消键鼠穿越准备，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API version 10开始不再维护。建议使"
+      },
+      {
+        "section_id": "section-25",
+        "title": "cooperate.activate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1005,
+        "line_end": 1054,
+        "summary": "activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback&lt;void&gt;): void"
+      },
+      {
+        "section_id": "section-26",
+        "title": "cooperate.activate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1055,
+        "line_end": 1111,
+        "summary": "activate(targetNetworkId: string, inputDeviceId: number): Promise&lt;void&gt;;\n\n启动键鼠穿越，使用Promise异步回"
+      },
+      {
+        "section_id": "section-27",
+        "title": "cooperate.deactivate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1112,
+        "line_end": 1157,
+        "summary": "deactivate(isUnchained: boolean, callback: AsyncCallback&lt;void&gt;): void;\n\n停止键鼠穿越，使用Callback异步回调"
+      },
+      {
+        "section_id": "section-28",
+        "title": "cooperate.deactivate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1158,
+        "line_end": 1209,
+        "summary": "deactivate(isUnchained: boolean): Promise&lt;void&gt;;\n\n停止键鼠穿越，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API v"
+      },
+      {
+        "section_id": "section-29",
+        "title": "cooperate.getCrossingSwitchState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1210,
+        "line_end": 1256,
+        "summary": "getCrossingSwitchState(networkId: string, callback: AsyncCallback&lt;boolean&gt;): void;\n\n获取目标设备键鼠穿"
+      },
+      {
+        "section_id": "section-30",
+        "title": "cooperate.getCrossingSwitchState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1257,
+        "line_end": 1310,
+        "summary": "getCrossingSwitchState(networkId: string): Promise&lt;boolean&gt;;\n\n获取目标设备键鼠穿越开关的状态，使用Promise异步方式返回"
+      },
+      {
+        "section_id": "section-31",
+        "title": "on('cooperate')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1311,
+        "line_end": 1358,
+        "summary": "on(type: 'cooperate', callback: Callback&lt;{ networkId: string, msg: CooperateMsg }&gt;): void;\n\n注"
+      },
+      {
+        "section_id": "section-32",
+        "title": "off('cooperate')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1359,
+        "line_end": 1428,
+        "summary": "off(type: 'cooperate', callback?: Callback&lt;void&gt;): void;\n\n取消监听键鼠穿越状态。\n\n> **说明：**\n>\n> 从API ver"
+      },
+      {
+        "section_id": "section-33",
+        "title": "CooperateMsg<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1429,
+        "line_end": 1448,
+        "summary": "键鼠穿越的消息通知。 \n\n> **说明：**\n>\n> 从API version 10开始不再维护。建议使用[CooperateState](#cooperatestate11)替代\n\n**系统能力*"
+      }
+    ]
+  }
+}

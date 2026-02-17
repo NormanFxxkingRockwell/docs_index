@@ -1,0 +1,164 @@
+{
+  "doc_id": "js-apis-appAccount",
+  "title": "@ohos.account.appAccount (应用账号管理)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-appAccount.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-appAccount.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Account",
+    "owner": "@steven-q",
+    "designer": "@JiDong-CS1",
+    "tester": "@zhaimengchao",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Basic Services Kit Account 模块的 @ohos.account.appAccount (应用账号管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.account.appAccount (应用账号管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { appAccount } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "appAccount.createAppAccountManager",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 41,
+        "summary": "createAppAccountManager(): AppAccountManager\n\n创建应用账号管理器对象。\n\n**系统能力：** SystemCapability.Account.AppA"
+      },
+      {
+        "section_id": "section-3",
+        "title": "AppAccountManager",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 5033,
+        "summary": "应用账号管理器，可用于管理应用自身的账号信息。\n\n### createAccount<sup>9+</sup>\n\ncreateAccount(name: string, callback: Asyn"
+      },
+      {
+        "section_id": "section-4",
+        "title": "AppAccountInfo",
+        "level": 2,
+        "line_start": 5034,
+        "line_end": 5044,
+        "summary": "表示应用账号信息。\n\n**系统能力：** SystemCapability.Account.AppAccount\n\n| 名称   | 类型     | 只读  | 可选   | 说明"
+      },
+      {
+        "section_id": "section-5",
+        "title": "AuthTokenInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5045,
+        "line_end": 5056,
+        "summary": "表示Auth令牌信息。\n\n**系统能力：** SystemCapability.Account.AppAccount\n\n| 名称               | 类型            | 只读"
+      },
+      {
+        "section_id": "section-6",
+        "title": "OAuthTokenInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 5057,
+        "line_end": 5071,
+        "summary": "表示OAuth令牌信息。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[AuthTokenInfo](#authtokeninf"
+      },
+      {
+        "section_id": "section-7",
+        "title": "AuthenticatorInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 5072,
+        "line_end": 5083,
+        "summary": "表示OAuth认证器信息。\n\n**系统能力：** SystemCapability.Account.AppAccount\n\n| 名称     | 类型     | 只读  | 可选   | 说明"
+      },
+      {
+        "section_id": "section-8",
+        "title": "AuthResult<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5084,
+        "line_end": 5094,
+        "summary": "表示认证结果信息。\n\n**系统能力：** SystemCapability.Account.AppAccount\n\n| 名称     | 类型     | 只读  | 可选   | 说明"
+      },
+      {
+        "section_id": "section-9",
+        "title": "CreateAccountOptions<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5095,
+        "line_end": 5104,
+        "summary": "表示创建账号的选项。\n\n**系统能力：** SystemCapability.Account.AppAccount\n\n| 名称     | 类型     | 只读  | 可选   | 说明"
+      },
+      {
+        "section_id": "section-10",
+        "title": "CreateAccountImplicitlyOptions<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5105,
+        "line_end": 5116,
+        "summary": "表示隐式创建账号的选项。\n\n**系统能力：** SystemCapability.Account.AppAccount\n\n| 名称     | 类型     | 只读  | 可选   | 说明"
+      },
+      {
+        "section_id": "section-11",
+        "title": "SelectAccountsOptions<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5117,
+        "line_end": 5128,
+        "summary": "表示用于选择账号的选项。\n\n**系统能力：** SystemCapability.Account.AppAccount\n\n| 名称          | 类型"
+      },
+      {
+        "section_id": "section-12",
+        "title": "VerifyCredentialOptions<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5129,
+        "line_end": 5140,
+        "summary": "表示用于验证凭据的选项。\n\n**系统能力：** SystemCapability.Account.AppAccount\n\n| 名称          | 类型                   |"
+      },
+      {
+        "section_id": "section-13",
+        "title": "SetPropertiesOptions<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5141,
+        "line_end": 5151,
+        "summary": "表示用于设置属性的选项。\n\n**系统能力：** SystemCapability.Account.AppAccount\n\n| 名称     | 类型                    | 只读"
+      },
+      {
+        "section_id": "section-14",
+        "title": "Constants<sup>8+</sup>",
+        "level": 2,
+        "line_start": 5152,
+        "line_end": 5177,
+        "summary": "表示常量的枚举。\n\n**系统能力：** SystemCapability.Account.AppAccount\n\n| 名称                            | 值"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ResultCode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 5178,
+        "line_end": 5208,
+        "summary": "表示返回码的枚举。\n\n> **说明：**<br/>\n> 从API version 8开始支持，从API version 9开始废弃。相关信息建议查看[错误码文档](errorcode-account"
+      },
+      {
+        "section_id": "section-16",
+        "title": "AuthCallback<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5209,
+        "line_end": 5321,
+        "summary": "认证器回调类。\n\n### onResult<sup>9+</sup>\n\nonResult: (code: number, result?: AuthResult) =&gt; void\n\n通知请求结"
+      },
+      {
+        "section_id": "section-17",
+        "title": "AuthenticatorCallback<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 5322,
+        "line_end": 5411,
+        "summary": "OAuth认证器回调接口。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[AuthCallback](#authcallback"
+      },
+      {
+        "section_id": "section-18",
+        "title": "Authenticator<sup>8+</sup>",
+        "level": 2,
+        "line_start": 5412,
+        "line_end": 5634,
+        "summary": "认证器基类。\n\n### createAccountImplicitly<sup>9+</sup>\n\ncreateAccountImplicitly(options: CreateAccountImp"
+      }
+    ]
+  }
+}

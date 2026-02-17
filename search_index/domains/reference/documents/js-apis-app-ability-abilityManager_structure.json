@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-app-ability-abilityManager",
+  "title": "@ohos.app.ability.abilityManager (Ability信息管理)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-abilityManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-abilityManager.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@dsz2025",
+    "designer": "@ccllee1",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.abilityManager (Ability信息管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.abilityManager (Ability信息管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { abilityManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "AbilityState<sup>14+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 37,
+        "summary": "Ability的状态，该类型为枚举，可配合[AbilityRunningInfo](js-apis-inner-application-abilityRunningInfo.md)返回Ability"
+      },
+      {
+        "section_id": "section-3",
+        "title": "abilityManager.getAbilityRunningInfos<sup>14+</sup>",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 86,
+        "summary": "getAbilityRunningInfos(): Promise\\<Array\\<AbilityRunningInfo>>\n\n获取UIAbility运行时的相关信息。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "abilityManager.restartSelfAtomicService<sup>20+</sup>",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 140,
+        "summary": "restartSelfAtomicService(context: Context): void\n\n重启当前原子化服务。\n\n> **说明：**\n>\n> - 当前仅支持以独立窗口方式拉起原子化服务。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "AbilityRunningInfo<sup>14+</sup>",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 152,
+        "summary": "type AbilityRunningInfo = _AbilityRunningInfo\n\nAbilityRunningInfo二级模块。\n\n**系统能力**：SystemCapability.A"
+      },
+      {
+        "section_id": "section-6",
+        "title": "AbilityStateData<sup>14+</sup>",
+        "level": 2,
+        "line_start": 153,
+        "line_end": 164,
+        "summary": "type AbilityStateData = _AbilityStateData.default\n\nAbilityStateData二级模块。\n\n**系统能力**：SystemCapability"
+      }
+    ]
+  }
+}

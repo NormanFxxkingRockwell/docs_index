@@ -1,0 +1,92 @@
+{
+  "doc_id": "arkts-apis-webview-WebStorage",
+  "title": "Class (WebStorage)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebStorage.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebStorage.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@yuzhouhang1",
+    "designer": "@handyohos",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Class (WebStorage)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (WebStorage)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 28,
+        "summary": "```ts\nimport { webview } from '@kit.ArkWeb';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "deleteOrigin",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 171,
+        "summary": "static deleteOrigin(origin: string): void\n\n清除指定源所使用的存储。\n\n**系统能力：** SystemCapability.Web.Webview.Cor"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getOrigins",
+        "level": 2,
+        "line_start": 172,
+        "line_end": 235,
+        "summary": "static getOrigins(callback: AsyncCallback\\<Array\\<WebStorageOrigin>>): void\n\n以回调方式异步获取当前使用Web SQL数据"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getOrigins",
+        "level": 2,
+        "line_start": 236,
+        "line_end": 299,
+        "summary": "static getOrigins(): Promise\\<Array\\<WebStorageOrigin>>\n\n以Promise方式异步获取当前使用Web SQL数据库和HTML5支持的Web存储"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getOriginQuota",
+        "level": 2,
+        "line_start": 300,
+        "line_end": 361,
+        "summary": "static getOriginQuota(origin: string, callback: AsyncCallback\\<number>): void\n\n使用callback回调异步获取指定源的"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getOriginQuota",
+        "level": 2,
+        "line_start": 362,
+        "line_end": 428,
+        "summary": "static getOriginQuota(origin: string): Promise\\<number>\n\n以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getOriginUsage",
+        "level": 2,
+        "line_start": 429,
+        "line_end": 490,
+        "summary": "static getOriginUsage(origin: string, callback: AsyncCallback\\<number>): void\n\n以回调方式异步获取指定源的Web SQL"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getOriginUsage",
+        "level": 2,
+        "line_start": 491,
+        "line_end": 555,
+        "summary": "static getOriginUsage(origin: string): Promise\\<number>\n\n以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储"
+      },
+      {
+        "section_id": "section-9",
+        "title": "deleteAllData",
+        "level": 2,
+        "line_start": 556,
+        "line_end": 598,
+        "summary": "static deleteAllData(incognito?: boolean): void\n\n清除被JavaScript存储API使用的所有存储数据，这包括Web SQL数据库和HTML5支持的"
+      }
+    ]
+  }
+}

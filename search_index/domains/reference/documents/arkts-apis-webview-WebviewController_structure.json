@@ -1,0 +1,1372 @@
+{
+  "doc_id": "arkts-apis-webview-WebviewController",
+  "title": "Class (WebviewController)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebviewController.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebviewController.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@yp99ustc; @aohui; @zourongchun",
+    "designer": "@LongLie; @yaomingliu; @zhufenghao",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Class (WebviewController)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (WebviewController)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { webview } from '@kit.ArkWeb';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "constructor<sup>11+</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 128,
+        "summary": "constructor(webTag?: string)\n\n用于创建 WebviewController 对象的构造函数。\n\n> **说明：**\n>\n> 不传参：new webview.Webvie"
+      },
+      {
+        "section_id": "section-3",
+        "title": "initializeWebEngine",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 159,
+        "summary": "static initializeWebEngine(): void\n\n在 Web 组件初始化之前，通过此接口加载 Web 引擎的动态库文件，以提高启动性能。自动预连接历史访问过的高频网站。\n\n>"
+      },
+      {
+        "section_id": "section-4",
+        "title": "setHttpDns<sup>10+</sup>",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 205,
+        "summary": "static setHttpDns(secureDnsMode:SecureDnsMode, secureDnsConfig:string): void\n\n设置Web组件是否使用HTTPDNS解析D"
+      },
+      {
+        "section_id": "section-5",
+        "title": "setWebDebuggingAccess",
+        "level": 2,
+        "line_start": 206,
+        "line_end": 257,
+        "summary": "static setWebDebuggingAccess(webDebuggingAccess: boolean): void\n\n设置是否启用网页调试功能。详情请参考[DevTools工具](../"
+      },
+      {
+        "section_id": "section-6",
+        "title": "loadUrl",
+        "level": 2,
+        "line_start": 258,
+        "line_end": 442,
+        "summary": "loadUrl(url: string | Resource, headers?: Array\\<WebHeader>): void\n\n加载指定的URL。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-7",
+        "title": "loadData",
+        "level": 2,
+        "line_start": 443,
+        "line_end": 647,
+        "summary": "loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string):"
+      },
+      {
+        "section_id": "section-8",
+        "title": "accessForward",
+        "level": 2,
+        "line_start": 648,
+        "line_end": 700,
+        "summary": "accessForward(): boolean\n\n当前页面是否可前进，即当前页面是否有前进历史记录。\n\n可以结合使用[getBackForwardEntries](#getbackforwarde"
+      },
+      {
+        "section_id": "section-9",
+        "title": "forward",
+        "level": 2,
+        "line_start": 701,
+        "line_end": 744,
+        "summary": "forward(): void\n\n按照历史栈，前进一个页面。一般结合accessForward一起使用。\n\n**系统能力：** SystemCapability.Web.Webview.Core"
+      },
+      {
+        "section_id": "section-10",
+        "title": "accessBackward",
+        "level": 2,
+        "line_start": 745,
+        "line_end": 803,
+        "summary": "accessBackward(): boolean\n\n当前页面是否可后退，即当前页面是否有返回历史记录。\n\n可以结合使用[getBackForwardEntries](#getbackforward"
+      },
+      {
+        "section_id": "section-11",
+        "title": "backward",
+        "level": 2,
+        "line_start": 804,
+        "line_end": 847,
+        "summary": "backward(): void\n\n按照历史栈，后退一个页面。一般结合[accessBackward](#accessbackward)一起使用。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-12",
+        "title": "onActive",
+        "level": 2,
+        "line_start": 848,
+        "line_end": 893,
+        "summary": "onActive(): void\n\n调用此接口通知Web组件进入前台激活状态。\n\n激活状态是应用与用户互动的状态。应用会保持这种状态，直到发生某些事件（例如收到来电或设备屏幕关闭）时将焦点从应用移开"
+      },
+      {
+        "section_id": "section-13",
+        "title": "onInactive",
+        "level": 2,
+        "line_start": 894,
+        "line_end": 939,
+        "summary": "onInactive(): void\n\n调用此接口通知Web组件进入未激活状态。开发者可以在此回调中实现应用失去焦点时应表现的恰当行为。\n\n此状态下会尽可能的暂停任何可以安全暂停的内容，例如动画和地"
+      },
+      {
+        "section_id": "section-14",
+        "title": "refresh",
+        "level": 2,
+        "line_start": 940,
+        "line_end": 983,
+        "summary": "refresh(): void\n\n调用此接口通知Web组件刷新网页。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**错误码：**\n\n以下错误码的详细"
+      },
+      {
+        "section_id": "section-15",
+        "title": "refresh<sup>24+</sup>",
+        "level": 2,
+        "line_start": 984,
+        "line_end": 1033,
+        "summary": "refresh(ignoreCache: boolean): void\n\n通知Web组件刷新网页，可以选择是否忽略缓存刷新。\n\n**系统能力：** SystemCapability.Web.Webv"
+      },
+      {
+        "section_id": "section-16",
+        "title": "accessStep",
+        "level": 2,
+        "line_start": 1034,
+        "line_end": 1092,
+        "summary": "accessStep(step: number): boolean\n\n当前页面是否可前进或者后退给定的step步。\n\n**系统能力：** SystemCapability.Web.Webview.C"
+      },
+      {
+        "section_id": "section-17",
+        "title": "clearHistory",
+        "level": 2,
+        "line_start": 1093,
+        "line_end": 1136,
+        "summary": "clearHistory(): void\n\n删除所有前进后退记录，不建议在onErrorReceive与onPageBegin中调用clearHistory，会造成异常退出。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-18",
+        "title": "registerJavaScriptProxy",
+        "level": 2,
+        "line_start": 1137,
+        "line_end": 1316,
+        "summary": "registerJavaScriptProxy(jsObject: object, name: string, methodList: Array\\<string>, asyncMethodList"
+      },
+      {
+        "section_id": "section-19",
+        "title": "runJavaScript",
+        "level": 2,
+        "line_start": 1317,
+        "line_end": 1411,
+        "summary": "runJavaScript(script: string, callback : AsyncCallback\\<string>): void\n\n在当前显示页面的上下文中异步执行JavaScript脚"
+      },
+      {
+        "section_id": "section-20",
+        "title": "runJavaScript",
+        "level": 2,
+        "line_start": 1412,
+        "line_end": 1505,
+        "summary": "runJavaScript(script: string): Promise\\<string>\n\n在当前显示页面的上下文中异步执行JavaScript脚本，脚本执行的结果将通过Promise方式返回"
+      },
+      {
+        "section_id": "section-21",
+        "title": "runJavaScriptExt<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1506,
+        "line_end": 1730,
+        "summary": "runJavaScriptExt(script: string | ArrayBuffer, callback : AsyncCallback\\<JsMessageExt>): void\n\n异步执行"
+      },
+      {
+        "section_id": "section-22",
+        "title": "runJavaScriptExt<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1731,
+        "line_end": 1947,
+        "summary": "runJavaScriptExt(script: string | ArrayBuffer): Promise\\<JsMessageExt>\n\n异步执行JavaScript脚本，并通过Promise"
+      },
+      {
+        "section_id": "section-23",
+        "title": "deleteJavaScriptRegister",
+        "level": 2,
+        "line_start": 1948,
+        "line_end": 2052,
+        "summary": "deleteJavaScriptRegister(name: string): void\n\n删除通过[registerJavaScriptProxy](#registerjavascriptprox"
+      },
+      {
+        "section_id": "section-24",
+        "title": "zoom",
+        "level": 2,
+        "line_start": 2053,
+        "line_end": 2106,
+        "summary": "zoom(factor: number): void\n\n调整当前网页的缩放比例，[zoomAccess](arkts-basic-components-web-attributes.md#zooma"
+      },
+      {
+        "section_id": "section-25",
+        "title": "searchAllAsync",
+        "level": 2,
+        "line_start": 2107,
+        "line_end": 2175,
+        "summary": "searchAllAsync(searchString: string): void\n\n异步查找网页中所有匹配关键字'searchString'的内容并高亮，结果通过[onSearchResultR"
+      },
+      {
+        "section_id": "section-26",
+        "title": "clearMatches",
+        "level": 2,
+        "line_start": 2176,
+        "line_end": 2221,
+        "summary": "clearMatches(): void\n\n清除所有通过[searchAllAsync](#searchallasync)匹配到的高亮字符查找结果。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-27",
+        "title": "searchNext",
+        "level": 2,
+        "line_start": 2222,
+        "line_end": 2274,
+        "summary": "searchNext(forward: boolean): void\n\n滚动到下一个匹配的查找结果并高亮。\n\n**系统能力：** SystemCapability.Web.Webview.Core"
+      },
+      {
+        "section_id": "section-28",
+        "title": "clearSslCache",
+        "level": 2,
+        "line_start": 2275,
+        "line_end": 2318,
+        "summary": "clearSslCache(): void\n\n清除Web组件记录的SSL证书错误事件对应的用户操作行为。\n\n**系统能力：** SystemCapability.Web.Webview.Core"
+      },
+      {
+        "section_id": "section-29",
+        "title": "clearClientAuthenticationCache",
+        "level": 2,
+        "line_start": 2319,
+        "line_end": 2362,
+        "summary": "clearClientAuthenticationCache(): void\n\n清除Web组件记录的客户端证书请求事件对应的用户操作行为。\n\n**系统能力：** SystemCapability.W"
+      },
+      {
+        "section_id": "section-30",
+        "title": "createWebMessagePorts",
+        "level": 2,
+        "line_start": 2363,
+        "line_end": 2395,
+        "summary": "createWebMessagePorts(isExtentionType?: boolean): Array\\<WebMessagePort>\n\n创建Web消息端口。\n\n**系统能力：** Sys"
+      },
+      {
+        "section_id": "section-31",
+        "title": "postMessage",
+        "level": 2,
+        "line_start": 2396,
+        "line_end": 2558,
+        "summary": "postMessage(name: string, ports: Array\\<WebMessagePort>, uri: string): void\n\n发送Web消息端口到HTML。\n\n**系统能"
+      },
+      {
+        "section_id": "section-32",
+        "title": "requestFocus",
+        "level": 2,
+        "line_start": 2559,
+        "line_end": 2602,
+        "summary": "requestFocus(): void\n\n使当前web页面获取焦点。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**错误码：**\n\n以下错误码的详"
+      },
+      {
+        "section_id": "section-33",
+        "title": "zoomIn",
+        "level": 2,
+        "line_start": 2603,
+        "line_end": 2647,
+        "summary": "zoomIn(): void\n\n调用此接口将当前网页进行放大，比例为25%。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**错误码：**\n\n以下错误"
+      },
+      {
+        "section_id": "section-34",
+        "title": "zoomOut",
+        "level": 2,
+        "line_start": 2648,
+        "line_end": 2692,
+        "summary": "zoomOut(): void\n\n调用此接口将当前网页进行缩小，比例为20%。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**错误码：**\n\n以下错"
+      },
+      {
+        "section_id": "section-35",
+        "title": "getWebId",
+        "level": 2,
+        "line_start": 2693,
+        "line_end": 2743,
+        "summary": "getWebId(): number\n\n获取当前Web组件的索引值，用于多个Web组件的管理。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值"
+      },
+      {
+        "section_id": "section-36",
+        "title": "getUserAgent",
+        "level": 2,
+        "line_start": 2744,
+        "line_end": 2828,
+        "summary": "getUserAgent(): string\n\n获取当前默认用户代理。\n\n默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../web/web-default-u"
+      },
+      {
+        "section_id": "section-37",
+        "title": "getTitle",
+        "level": 2,
+        "line_start": 2829,
+        "line_end": 2879,
+        "summary": "getTitle(): string\n\n获取当前网页的标题。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值：**\n\n| 类型   | 说明"
+      },
+      {
+        "section_id": "section-38",
+        "title": "getPageHeight",
+        "level": 2,
+        "line_start": 2880,
+        "line_end": 2930,
+        "summary": "getPageHeight(): number\n\n获取当前网页的页面高度。具体使用详情请参考[获取网页内容高度](../../web/web-getpage-height.md)。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-39",
+        "title": "storeWebArchive",
+        "level": 2,
+        "line_start": 2931,
+        "line_end": 2992,
+        "summary": "storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback\\<string>): void\n\n以回调方式"
+      },
+      {
+        "section_id": "section-40",
+        "title": "storeWebArchive",
+        "level": 2,
+        "line_start": 2993,
+        "line_end": 3059,
+        "summary": "storeWebArchive(baseName: string, autoName: boolean): Promise\\<string>\n\n以Promise方式异步保存当前页面。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-41",
+        "title": "getUrl",
+        "level": 2,
+        "line_start": 3060,
+        "line_end": 3110,
+        "summary": "getUrl(): string\n\n获取当前页面的url地址。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值：**\n\n| 类型   | 说明"
+      },
+      {
+        "section_id": "section-42",
+        "title": "stop",
+        "level": 2,
+        "line_start": 3111,
+        "line_end": 3154,
+        "summary": "stop(): void\n\n停止页面加载。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**错误码：**\n\n以下错误码的详细介绍请参见[Webview"
+      },
+      {
+        "section_id": "section-43",
+        "title": "backOrForward",
+        "level": 2,
+        "line_start": 3155,
+        "line_end": 3208,
+        "summary": "backOrForward(step: number): void\n\n按照历史栈，前进或者后退指定步长的页面，当历史栈中不存在对应步长的页面时，不会进行页面跳转。\n\n前进或者后退页面时，直接使用已加"
+      },
+      {
+        "section_id": "section-44",
+        "title": "scrollTo",
+        "level": 2,
+        "line_start": 3209,
+        "line_end": 3292,
+        "summary": "scrollTo(x:number, y:number, duration?:number): void\n\n在指定时间内，将页面滚动到指定的绝对位置。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-45",
+        "title": "scrollBy",
+        "level": 2,
+        "line_start": 3293,
+        "line_end": 3379,
+        "summary": "scrollBy(deltaX:number, deltaY:number,duration?:number): void\n\n在指定时间内将页面滚动指定的偏移量。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-46",
+        "title": "scrollByWithResult<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3380,
+        "line_end": 3467,
+        "summary": "scrollByWithResult(deltaX: number, deltaY: number): boolean\n\n将页面滚动指定的偏移量，返回值表示此次滚动是否执行成功。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-47",
+        "title": "slideScroll",
+        "level": 2,
+        "line_start": 3468,
+        "line_end": 3542,
+        "summary": "slideScroll(vx:number, vy:number): void\n\n按照指定速度模拟对页面的轻扫滚动动作。\n\n**系统能力：** SystemCapability.Web.Webvie"
+      },
+      {
+        "section_id": "section-48",
+        "title": "getOriginalUrl",
+        "level": 2,
+        "line_start": 3543,
+        "line_end": 3595,
+        "summary": "getOriginalUrl(): string\n\n获取当前页面的原始url地址。\n\n风险提示：如果想获取url来做JavascriptProxy通信接口认证，请使用[getLastJavascri"
+      },
+      {
+        "section_id": "section-49",
+        "title": "getFavicon",
+        "level": 2,
+        "line_start": 3596,
+        "line_end": 3647,
+        "summary": "getFavicon(): image.PixelMap\n\n获取页面的favicon图标。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值：*"
+      },
+      {
+        "section_id": "section-50",
+        "title": "setNetworkAvailable",
+        "level": 2,
+        "line_start": 3648,
+        "line_end": 3721,
+        "summary": "setNetworkAvailable(enable: boolean): void\n\n设置JavaScript中的`window.navigator.onLine`属性。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-51",
+        "title": "hasImage",
+        "level": 2,
+        "line_start": 3722,
+        "line_end": 3778,
+        "summary": "hasImage(callback: AsyncCallback\\<boolean>): void\n\n通过Callback方式异步查找当前页面是否存在图像。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-52",
+        "title": "hasImage",
+        "level": 2,
+        "line_start": 3779,
+        "line_end": 3833,
+        "summary": "hasImage(): Promise\\<boolean>\n\n通过Promise方式异步查找当前页面是否存在图像。\n\n**系统能力：** SystemCapability.Web.Webview.C"
+      },
+      {
+        "section_id": "section-53",
+        "title": "removeCache",
+        "level": 2,
+        "line_start": 3834,
+        "line_end": 3888,
+        "summary": "removeCache(clearRom: boolean): void\n\n清除应用中的资源缓存文件，此方法将会清除同一应用中所有Webview的缓存文件。\n\n> **说明：**\n>\n> 可以通过在"
+      },
+      {
+        "section_id": "section-54",
+        "title": "removeAllCache<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3889,
+        "line_end": 3942,
+        "summary": "static removeAllCache(clearRom: boolean): void\n\n清除应用中的资源缓存文件，此方法将会清除同一应用中所有Webview的缓存文件。\n\n> **说明：**"
+      },
+      {
+        "section_id": "section-55",
+        "title": "pageUp",
+        "level": 2,
+        "line_start": 3943,
+        "line_end": 4025,
+        "summary": "pageUp(top: boolean): void\n\n将Webview的内容向上滚动半个视框大小或者跳转到页面最顶部，通过top入参控制。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-56",
+        "title": "pageDown",
+        "level": 2,
+        "line_start": 4026,
+        "line_end": 4111,
+        "summary": "pageDown(bottom: boolean): void\n\n将Webview的内容向下滚动半个视框大小或者跳转到页面最底部，通过bottom入参控制。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-57",
+        "title": "getBackForwardEntries",
+        "level": 2,
+        "line_start": 4112,
+        "line_end": 4165,
+        "summary": "getBackForwardEntries(): BackForwardList\n\n获取当前Webview的历史信息列表。\n\n> **说明：**\n>\n> [onLoadIntercept](./ar"
+      },
+      {
+        "section_id": "section-58",
+        "title": "serializeWebState",
+        "level": 2,
+        "line_start": 4166,
+        "line_end": 4240,
+        "summary": "serializeWebState(): Uint8Array\n\n将当前Webview的页面状态历史记录信息序列化。\n\n**系统能力：** SystemCapability.Web.Webview."
+      },
+      {
+        "section_id": "section-59",
+        "title": "restoreWebState",
+        "level": 2,
+        "line_start": 4241,
+        "line_end": 4327,
+        "summary": "restoreWebState(state: Uint8Array): void\n\n当前Webview从序列化数据中恢复页面状态历史记录。\n\n如果state过大，可能会导致异常。建议state大于5"
+      },
+      {
+        "section_id": "section-60",
+        "title": "customizeSchemes",
+        "level": 2,
+        "line_start": 4328,
+        "line_end": 4388,
+        "summary": "static customizeSchemes(schemes: Array\\<WebCustomScheme\\>): void\n\n对Web内核赋予自定义协议url的跨域请求与fetch请求的权限。"
+      },
+      {
+        "section_id": "section-61",
+        "title": "customizeSchemes<sup>21+</sup>",
+        "level": 2,
+        "line_start": 4389,
+        "line_end": 4444,
+        "summary": "static customizeSchemes(schemes: Array\\<WebCustomScheme\\>, lazyInitWebEngine: boolean): void\n\n对Web内"
+      },
+      {
+        "section_id": "section-62",
+        "title": "getCertificate<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4445,
+        "line_end": 4605,
+        "summary": "getCertificate(): Promise<Array<cert.X509Cert>>\n\n获取当前网站的证书信息。使用Web组件加载https网站，会进行SSL证书校验，该接口会通过Prom"
+      },
+      {
+        "section_id": "section-63",
+        "title": "getCertificate<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4606,
+        "line_end": 4767,
+        "summary": "getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void\n\n获取当前网站的证书信息。使用Web组件加载https网站，会"
+      },
+      {
+        "section_id": "section-64",
+        "title": "setAudioMuted<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4768,
+        "line_end": 4817,
+        "summary": "setAudioMuted(mute: boolean): void\n\n设置网页静音。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**参数：**"
+      },
+      {
+        "section_id": "section-65",
+        "title": "prefetchPage<sup>21+</sup>",
+        "level": 2,
+        "line_start": 4818,
+        "line_end": 4881,
+        "summary": "prefetchPage(url: string, additionalHeaders?: Array\\<WebHeader>, prefetchOptions?: PrefetchOptions)"
+      },
+      {
+        "section_id": "section-66",
+        "title": "prefetchPage<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4882,
+        "line_end": 4947,
+        "summary": "prefetchPage(url: string, additionalHeaders?: Array\\<WebHeader>): void\n\n在预测到将要加载的页面之前调用，可提前下载页面所需的资"
+      },
+      {
+        "section_id": "section-67",
+        "title": "prefetchResource<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4948,
+        "line_end": 5001,
+        "summary": "static prefetchResource(request: RequestInfo, additionalHeaders?: Array\\<WebHeader>, cacheKey?: str"
+      },
+      {
+        "section_id": "section-68",
+        "title": "clearPrefetchedResource<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5002,
+        "line_end": 5052,
+        "summary": "static clearPrefetchedResource(cacheKeyList: Array\\<string>): void\n\n根据指定的缓存key列表清除对应的预获取资源缓存。入参中的缓存"
+      },
+      {
+        "section_id": "section-69",
+        "title": "prepareForPageLoad<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5053,
+        "line_end": 5096,
+        "summary": "static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: number): void\n\n预连接url，在"
+      },
+      {
+        "section_id": "section-70",
+        "title": "setCustomUserAgent<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5097,
+        "line_end": 5159,
+        "summary": "setCustomUserAgent(userAgent: string): void\n\n设置自定义用户代理，会覆盖系统的用户代理。\n\n当Web组件src设置了url时，建议在onControlle"
+      },
+      {
+        "section_id": "section-71",
+        "title": "setDownloadDelegate<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5160,
+        "line_end": 5210,
+        "summary": "setDownloadDelegate(delegate: WebDownloadDelegate): void\n\n为当前的Web组件设置一个WebDownloadDelegate，该delegat"
+      },
+      {
+        "section_id": "section-72",
+        "title": "startDownload<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5211,
+        "line_end": 5270,
+        "summary": "startDownload(url: string): void\n\n使用Web组件的下载能力来下载指定的url, 比如下载网页中指定的图片。\n\n**系统能力：**  SystemCapability"
+      },
+      {
+        "section_id": "section-73",
+        "title": "getCustomUserAgent<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5271,
+        "line_end": 5324,
+        "summary": "getCustomUserAgent(): string\n\n获取自定义用户代理。\n\n默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../web/web-defa"
+      },
+      {
+        "section_id": "section-74",
+        "title": "setAppCustomUserAgent<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5325,
+        "line_end": 5373,
+        "summary": "static setAppCustomUserAgent(userAgent: string): void\n\n设置应用级自定义用户代理，会覆盖系统的用户代理，应用内所有Web组件生效。\n\n当需要设置"
+      },
+      {
+        "section_id": "section-75",
+        "title": "setUserAgentForHosts<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5374,
+        "line_end": 5430,
+        "summary": "static setUserAgentForHosts(userAgent: string, hosts: Array\\<string>): void\n\n针对特定网站设置自定义用户代理，会覆盖系统的"
+      },
+      {
+        "section_id": "section-76",
+        "title": "setConnectionTimeout<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5431,
+        "line_end": 5487,
+        "summary": "static setConnectionTimeout(timeout: number): void\n\n设置网络连接超时时间，使用者可通过Web组件中的onErrorReceive方法获取超时错误码"
+      },
+      {
+        "section_id": "section-77",
+        "title": "warmupServiceWorker<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5488,
+        "line_end": 5528,
+        "summary": "static warmupServiceWorker(url: string): void\n\n预热ServiceWorker，以提升首屏页面的加载速度（仅限于会使用ServiceWorker的页面）"
+      },
+      {
+        "section_id": "section-78",
+        "title": "enableSafeBrowsing<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5529,
+        "line_end": 5585,
+        "summary": "enableSafeBrowsing(enable: boolean): void\n\n启用检查网站安全风险的功能，非法和欺诈网站是强制启用的，不能通过此功能禁用。\n\n本功能默认不生效，OpenHar"
+      },
+      {
+        "section_id": "section-79",
+        "title": "isSafeBrowsingEnabled<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5586,
+        "line_end": 5623,
+        "summary": "isSafeBrowsingEnabled(): boolean\n\n获取当前网页是否启用了检查网站安全风险。\n\n**系统能力：** SystemCapability.Web.Webview.Core"
+      },
+      {
+        "section_id": "section-80",
+        "title": "enableIntelligentTrackingPrevention<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5624,
+        "line_end": 5678,
+        "summary": "enableIntelligentTrackingPrevention(enable: boolean): void\n\n启用智能防跟踪功能。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-81",
+        "title": "isIntelligentTrackingPreventionEnabled<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5679,
+        "line_end": 5732,
+        "summary": "isIntelligentTrackingPreventionEnabled(): boolean\n\n获取当前Web是否启用了智能防跟踪功能。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-82",
+        "title": "addIntelligentTrackingPreventionBypassingList<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5733,
+        "line_end": 5786,
+        "summary": "static addIntelligentTrackingPreventionBypassingList(hostList: Array\\<string>): void\n\n添加智能防跟踪功能绕过的域"
+      },
+      {
+        "section_id": "section-83",
+        "title": "removeIntelligentTrackingPreventionBypassingList<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5787,
+        "line_end": 5840,
+        "summary": "static removeIntelligentTrackingPreventionBypassingList(hostList: Array\\<string>): void\n\n删除通过addInt"
+      },
+      {
+        "section_id": "section-84",
+        "title": "clearIntelligentTrackingPreventionBypassingList<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5841,
+        "line_end": 5881,
+        "summary": "static clearIntelligentTrackingPreventionBypassingList(): void\n\n删除通过addIntelligentTrackingPreventio"
+      },
+      {
+        "section_id": "section-85",
+        "title": "getDefaultUserAgent<sup>14+</sup>",
+        "level": 2,
+        "line_start": 5882,
+        "line_end": 5916,
+        "summary": "static getDefaultUserAgent(): string\n\n获取默认用户代理。\n\n此接口只允许在UI线程调用。\n\n默认User-Agent定义与使用场景请参考[User-Agent开"
+      },
+      {
+        "section_id": "section-86",
+        "title": "enableAdsBlock<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5917,
+        "line_end": 5977,
+        "summary": "enableAdsBlock(enable: boolean): void\n\n启用广告过滤功能。\n\n> **说明：**\n>\n> - 广告过滤功能需要release包，使用debug包不生效。\n\n**"
+      },
+      {
+        "section_id": "section-87",
+        "title": "isAdsBlockEnabled<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5978,
+        "line_end": 6032,
+        "summary": "isAdsBlockEnabled() : boolean\n\n查询广告过滤功能是否开启。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值：**"
+      },
+      {
+        "section_id": "section-88",
+        "title": "isAdsBlockEnabledForCurPage<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6033,
+        "line_end": 6089,
+        "summary": "isAdsBlockEnabledForCurPage() : boolean\n\n查询当前网页是否开启广告过滤功能。\n\n当Web组件使能广告过滤功能后，默认所有页面都是开启广告过滤的，支持通过[ad"
+      },
+      {
+        "section_id": "section-89",
+        "title": "setRenderProcessMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6090,
+        "line_end": 6138,
+        "summary": "static setRenderProcessMode(mode: RenderProcessMode): void\n\n设置ArkWeb渲染子进程模式。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-90",
+        "title": "getRenderProcessMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6139,
+        "line_end": 6177,
+        "summary": "static getRenderProcessMode(): RenderProcessMode\n\n查询ArkWeb的渲染子进程模式。\n\n**系统能力：** SystemCapability.Web"
+      },
+      {
+        "section_id": "section-91",
+        "title": "terminateRenderProcess<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6178,
+        "line_end": 6225,
+        "summary": "terminateRenderProcess(): boolean\n\n销毁渲染进程。\n\n调用该接口将会主动销毁相关联的渲染进程。如果渲染进程尚未启动，或者已销毁则没有任何影响。此外销毁渲染进程会同时"
+      },
+      {
+        "section_id": "section-92",
+        "title": "postUrl<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6226,
+        "line_end": 6296,
+        "summary": "postUrl(url: string, postData: ArrayBuffer): void\n\n使用\"POST\"方法加载带有postData的url。如果url不是网络url，则会使用[loa"
+      },
+      {
+        "section_id": "section-93",
+        "title": "createWebPrintDocumentAdapter<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6297,
+        "line_end": 6353,
+        "summary": "createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter\n\n创建web相关打印功能。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-94",
+        "title": "isIncognitoMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6354,
+        "line_end": 6404,
+        "summary": "isIncognitoMode(): boolean\n\n查询当前是否是隐私模式的Webview。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回"
+      },
+      {
+        "section_id": "section-95",
+        "title": "getSecurityLevel<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6405,
+        "line_end": 6450,
+        "summary": "getSecurityLevel(): SecurityLevel\n\n获取当前网页的安全级别。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值"
+      },
+      {
+        "section_id": "section-96",
+        "title": "setScrollable<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6451,
+        "line_end": 6502,
+        "summary": "setScrollable(enable: boolean, type?: ScrollType): void\n\n设置网页是否允许滚动。\n\n**系统能力：** SystemCapability.We"
+      },
+      {
+        "section_id": "section-97",
+        "title": "getScrollable<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6503,
+        "line_end": 6553,
+        "summary": "getScrollable(): boolean\n\n获取当前网页是否允许滚动。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值：**\n\n| 类"
+      },
+      {
+        "section_id": "section-98",
+        "title": "setPrintBackground<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6554,
+        "line_end": 6603,
+        "summary": "setPrintBackground(enable: boolean): void\n\n设置是否打印网页背景，该接口与[PrintAttributes](../apis-basic-services-"
+      },
+      {
+        "section_id": "section-99",
+        "title": "getPrintBackground<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6604,
+        "line_end": 6653,
+        "summary": "getPrintBackground(): boolean\n\n查询webview是否打印网页背景。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返"
+      },
+      {
+        "section_id": "section-100",
+        "title": "getLastJavascriptProxyCallingFrameUrl<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6654,
+        "line_end": 6799,
+        "summary": "getLastJavascriptProxyCallingFrameUrl(): string\n\n通过[registerJavaScriptProxy](#registerjavascriptpro"
+      },
+      {
+        "section_id": "section-101",
+        "title": "pauseAllTimers<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6800,
+        "line_end": 6867,
+        "summary": "static pauseAllTimers(): void\n\n暂停所有WebView的定时器。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**错误码"
+      },
+      {
+        "section_id": "section-102",
+        "title": "resumeAllTimers<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6868,
+        "line_end": 6939,
+        "summary": "static resumeAllTimers(): void\n\n恢复从pauseAllTimers()接口中被暂停的所有的定时器。\n\n**系统能力：** SystemCapability.Web.W"
+      },
+      {
+        "section_id": "section-103",
+        "title": "stopAllMedia<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6940,
+        "line_end": 6983,
+        "summary": "stopAllMedia(): void\n\n控制网页所有音视频停止。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**错误码：**\n\n以下错误码的详细"
+      },
+      {
+        "section_id": "section-104",
+        "title": "pauseAllMedia<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6984,
+        "line_end": 7027,
+        "summary": "pauseAllMedia(): void\n\n控制网页所有音视频暂停。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**错误码：**\n\n以下错误码的详"
+      },
+      {
+        "section_id": "section-105",
+        "title": "resumeAllMedia<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7028,
+        "line_end": 7071,
+        "summary": "resumeAllMedia(): void\n\n控制网页被pauseAllMedia接口暂停的音视频继续播放。\n\n**系统能力：** SystemCapability.Web.Webview.Cor"
+      },
+      {
+        "section_id": "section-106",
+        "title": "closeAllMediaPresentations<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7072,
+        "line_end": 7115,
+        "summary": "closeAllMediaPresentations(): void\n\n控制网页所有全屏视频关闭。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**错"
+      },
+      {
+        "section_id": "section-107",
+        "title": "getMediaPlaybackState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7116,
+        "line_end": 7165,
+        "summary": "getMediaPlaybackState(): MediaPlaybackState\n\n查询当前网页音视频播放状态。\n\n**系统能力：** SystemCapability.Web.Webview"
+      },
+      {
+        "section_id": "section-108",
+        "title": "setWebSchemeHandler<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7166,
+        "line_end": 7218,
+        "summary": "setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void\n\n为当前Web组件设置[WebSchemeHandler]("
+      },
+      {
+        "section_id": "section-109",
+        "title": "clearWebSchemeHandler<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7219,
+        "line_end": 7262,
+        "summary": "clearWebSchemeHandler(): void\n\n清除当前Web组件设置的所有WebSchemeHandler。\n\n**系统能力：** SystemCapability.Web.Webv"
+      },
+      {
+        "section_id": "section-110",
+        "title": "setServiceWorkerWebSchemeHandler<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7263,
+        "line_end": 7314,
+        "summary": "setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void\n\n为当前应用的所有Web组件设置用"
+      },
+      {
+        "section_id": "section-111",
+        "title": "clearServiceWorkerWebSchemeHandler<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7315,
+        "line_end": 7345,
+        "summary": "clearServiceWorkerWebSchemeHandler(): void\n\n清除应用中设置的所有用于拦截ServiceWorker的WebSchemeHandler。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-112",
+        "title": "startCamera<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7346,
+        "line_end": 7471,
+        "summary": "startCamera(): void\n\n开启当前网页摄像头捕获。使用摄像头功能前请在module.json5中添加权限: ohos.permission.CAMERA，具体权限的添加方法请参考[在"
+      },
+      {
+        "section_id": "section-113",
+        "title": "stopCamera<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7472,
+        "line_end": 7491,
+        "summary": "stopCamera(): void\n\n停止当前网页摄像头捕获。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**错误码：**\n\n以下错误码的详细介绍"
+      },
+      {
+        "section_id": "section-114",
+        "title": "closeCamera<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7492,
+        "line_end": 7511,
+        "summary": "closeCamera(): void\n\n关闭当前网页摄像头捕获。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**错误码：**\n\n以下错误码的详细介"
+      },
+      {
+        "section_id": "section-115",
+        "title": "precompileJavaScript<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7512,
+        "line_end": 7760,
+        "summary": "precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise"
+      },
+      {
+        "section_id": "section-116",
+        "title": "onCreateNativeMediaPlayer<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7761,
+        "line_end": 7984,
+        "summary": "onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void\n\n注册回调函数，开启[应用接管网页媒体播放功能]"
+      },
+      {
+        "section_id": "section-117",
+        "title": "enableWholeWebPageDrawing<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7985,
+        "line_end": 8020,
+        "summary": "static enableWholeWebPageDrawing(): void\n\n设置开启网页全量绘制能力。仅在web初始化时设置。\n\n**系统能力：** SystemCapability.Web"
+      },
+      {
+        "section_id": "section-118",
+        "title": "webPageSnapshot<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8021,
+        "line_end": 8078,
+        "summary": "webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback\\<SnapshotResult>): void\n\n获取网页全量绘制结果。\n\n>"
+      },
+      {
+        "section_id": "section-119",
+        "title": "injectOfflineResources<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8079,
+        "line_end": 8359,
+        "summary": "injectOfflineResources(resourceMaps: Array\\<[OfflineResourceMap](./arkts-apis-webview-i.md#offliner"
+      },
+      {
+        "section_id": "section-120",
+        "title": "setHostIP<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8360,
+        "line_end": 8387,
+        "summary": "static setHostIP(hostName: string, address: string, aliveTime: number): void\n\n设置主机域名解析后的IP地址。\n\n**系统"
+      },
+      {
+        "section_id": "section-121",
+        "title": "clearHostIP<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8388,
+        "line_end": 8446,
+        "summary": "static clearHostIP(hostName: string): void\n\n清除指定主机域名解析后的IP地址。\n\n**系统能力：** SystemCapability.Web.Webvi"
+      },
+      {
+        "section_id": "section-122",
+        "title": "getSurfaceId<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8447,
+        "line_end": 8502,
+        "summary": "getSurfaceId(): string\n\n获取ArkWeb对应Surface的ID，此ID可用于网页截图。\n\n> **说明：**\n>\n> 仅Web组件渲染模式是ASYNC_RENDER时有效。"
+      },
+      {
+        "section_id": "section-123",
+        "title": "setUrlTrustList<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8503,
+        "line_end": 8596,
+        "summary": "setUrlTrustList(urlTrustList: string): void\n\n设置当前web的url白名单，只有白名单内的url才能允许加载/跳转，否则将拦截并弹出告警页。\n\n**系统能"
+      },
+      {
+        "section_id": "section-124",
+        "title": "setPathAllowingUniversalAccess<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8597,
+        "line_end": 8734,
+        "summary": "setPathAllowingUniversalAccess(pathList: Array\\<string\\>): void\n\n设置一个路径列表，当file协议访问该路径列表中的资源时，允许跨域访"
+      },
+      {
+        "section_id": "section-125",
+        "title": "enableBackForwardCache<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8735,
+        "line_end": 8773,
+        "summary": "static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void\n\n开启Web组件前进后退缓存功能，通"
+      },
+      {
+        "section_id": "section-126",
+        "title": "setBackForwardCacheOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8774,
+        "line_end": 8830,
+        "summary": "setBackForwardCacheOptions(options: BackForwardCacheOptions): void\n\n可以设置Web组件中前进后退缓存的相关选项。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-127",
+        "title": "trimMemoryByPressureLevel<sup>14+</sup>",
+        "level": 2,
+        "line_start": 8831,
+        "line_end": 8882,
+        "summary": "trimMemoryByPressureLevel(level: PressureLevel): void\n\n根据指定的内存压力等级，主动清理Web组件占用的缓存。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-128",
+        "title": "createPdf<sup>14+</sup>",
+        "level": 2,
+        "line_start": 8883,
+        "line_end": 8960,
+        "summary": "createPdf(configuration: PdfConfiguration, callback: AsyncCallback\\<PdfData\\>): void\n\n异步callback方式获"
+      },
+      {
+        "section_id": "section-129",
+        "title": "createPdf<sup>14+</sup>",
+        "level": 2,
+        "line_start": 8961,
+        "line_end": 9042,
+        "summary": "createPdf(configuration: PdfConfiguration): Promise\\<PdfData\\>\n\n以Promise方式异步获取指定网页的数据流。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-130",
+        "title": "getScrollOffset<sup>13+</sup>",
+        "level": 2,
+        "line_start": 9043,
+        "line_end": 9134,
+        "summary": "getScrollOffset(): ScrollOffset\n\n获取网页当前的滚动偏移量（包含过滚动偏移量）。\n\n**系统能力：** SystemCapability.Web.Webview.Co"
+      },
+      {
+        "section_id": "section-131",
+        "title": "getPageOffset<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9135,
+        "line_end": 9216,
+        "summary": "getPageOffset(): ScrollOffset\n\n获取网页当前的滚动偏移量（不包含过滚动偏移量）。\n\n**系统能力：** SystemCapability.Web.Webview.Cor"
+      },
+      {
+        "section_id": "section-132",
+        "title": "getLastHitTest<sup>18+</sup>",
+        "level": 2,
+        "line_start": 9217,
+        "line_end": 9268,
+        "summary": "getLastHitTest(): HitTestValue\n\n获取上一次被点击区域的元素信息。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回"
+      },
+      {
+        "section_id": "section-133",
+        "title": "getAttachState<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9269,
+        "line_end": 9314,
+        "summary": "getAttachState(): ControllerAttachState\n\n查询当前WebViewController是否绑定一个Web组件。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-134",
+        "title": "on('controllerAttachStateChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9315,
+        "line_end": 9333,
+        "summary": "on(type: 'controllerAttachStateChange', callback: Callback&lt;ControllerAttachState&gt;): void\n\n注册W"
+      },
+      {
+        "section_id": "section-135",
+        "title": "off('controllerAttachStateChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9334,
+        "line_end": 9402,
+        "summary": "off(type: 'controllerAttachStateChange', callback?: Callback&lt;ControllerAttachState&gt;): void\n\n取"
+      },
+      {
+        "section_id": "section-136",
+        "title": "waitForAttached<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9403,
+        "line_end": 9462,
+        "summary": "waitForAttached(timeout: number):Promise&lt;ControllerAttachState&gt;\n\n异步等待WebViewController与Web组件绑"
+      },
+      {
+        "section_id": "section-137",
+        "title": "setWebDebuggingAccess<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9463,
+        "line_end": 9521,
+        "summary": "static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void\n\n设置是否启用无线网页调试功能，默认不开启"
+      },
+      {
+        "section_id": "section-138",
+        "title": "getProgress<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9522,
+        "line_end": 9565,
+        "summary": "getProgress(): number\n\n获取当前网页加载进度。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值**\n\n| 类型"
+      },
+      {
+        "section_id": "section-139",
+        "title": "getHitTest<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 9566,
+        "line_end": 9620,
+        "summary": "getHitTest(): WebHitTestType\n\n获取当前被点击区域的元素类型。\n\n> **说明：**\n>\n> 从API version11开始支持，从API version 18开始废弃"
+      },
+      {
+        "section_id": "section-140",
+        "title": "getHitTestValue<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 9621,
+        "line_end": 9676,
+        "summary": "getHitTestValue(): HitTestValue\n\n获取当前被点击区域的元素信息。\n\n> **说明：**\n>\n> 从API version11开始支持，从API version 18开"
+      },
+      {
+        "section_id": "section-141",
+        "title": "avoidVisibleViewportBottom<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9677,
+        "line_end": 9742,
+        "summary": "avoidVisibleViewportBottom(avoidHeight: number): void\n\n设置Web网页可视视口底部避让高度。\n\n> **说明：**\n>\n> - avoidHei"
+      },
+      {
+        "section_id": "section-142",
+        "title": "setErrorPageEnabled<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9743,
+        "line_end": 9789,
+        "summary": "setErrorPageEnabled(enable: boolean): void\n\n设置是否启用默认错误页。\n\n在当前接口设置为true时如果页面加载发生错误将触发[onOverrideErro"
+      },
+      {
+        "section_id": "section-143",
+        "title": "getErrorPageEnabled<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9790,
+        "line_end": 9834,
+        "summary": "getErrorPageEnabled(): boolean\n\n查询是否启用了默认错误页功能。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值"
+      },
+      {
+        "section_id": "section-144",
+        "title": "enablePrivateNetworkAccess<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9835,
+        "line_end": 9872,
+        "summary": "static enablePrivateNetworkAccess(enable: boolean): void\n\n设置私有网络访问检查功能（Private Network Access）的启用状态"
+      },
+      {
+        "section_id": "section-145",
+        "title": "isPrivateNetworkAccessEnabled<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9873,
+        "line_end": 9918,
+        "summary": "static isPrivateNetworkAccessEnabled(): boolean\n\n获取Web组件是否启用了私有网络访问检查功能。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-146",
+        "title": "getBlanklessInfoWithKey<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9919,
+        "line_end": 9993,
+        "summary": "getBlanklessInfoWithKey(key: string): BlanklessInfo\n\n获取页面首屏加载预测信息（详细说明见[BlanklessInfo](./arkts-apis"
+      },
+      {
+        "section_id": "section-147",
+        "title": "setBlanklessLoadingWithKey<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9994,
+        "line_end": 10066,
+        "summary": "setBlanklessLoadingWithKey(key: string, is_start: boolean): WebBlanklessErrorCode\n\n设置无白屏加载是否启用，本接口必"
+      },
+      {
+        "section_id": "section-148",
+        "title": "setBlanklessLoadingWithParams<sup>23+</sup>",
+        "level": 2,
+        "line_start": 10067,
+        "line_end": 10146,
+        "summary": "setBlanklessLoadingWithParams(key: string, param: BlanklessLoadingParam): WebBlanklessErrorCode\n\n设置"
+      },
+      {
+        "section_id": "section-149",
+        "title": "clearBlanklessLoadingCache<sup>20+</sup>",
+        "level": 2,
+        "line_start": 10147,
+        "line_end": 10203,
+        "summary": "static clearBlanklessLoadingCache(keys?: Array\\<string\\>): void\n\n清除指定key值页面无白屏优化缓存，本接口只清除缓存。\n\n在小程序或"
+      },
+      {
+        "section_id": "section-150",
+        "title": "setBlanklessLoadingCacheCapacity<sup>20+</sup>",
+        "level": 2,
+        "line_start": 10204,
+        "line_end": 10254,
+        "summary": "static setBlanklessLoadingCacheCapacity(capacity: number): number\n\n设置无白屏加载方案的持久化缓存容量，返回实际生效值。当接口没有显"
+      },
+      {
+        "section_id": "section-151",
+        "title": "setWebDestroyMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 10255,
+        "line_end": 10290,
+        "summary": "setWebDestroyMode(mode: WebDestroyMode): void\n\n设置Web组件的销毁模式。当Web组件销毁时，销毁模式会影响Web内核资源释放的时机，例如JavaScr"
+      },
+      {
+        "section_id": "section-152",
+        "title": "setScrollbarMode<sup>23+</sup>",
+        "level": 2,
+        "line_start": 10291,
+        "line_end": 10356,
+        "summary": "static setScrollbarMode(scrollbarMode: ScrollbarMode): void\n\n在Web页面场景，设置全局滚动条模式。不显式调用时，默认为[Scrollba"
+      },
+      {
+        "section_id": "section-153",
+        "title": "setActiveWebEngineVersion<sup>20+</sup>",
+        "level": 2,
+        "line_start": 10357,
+        "line_end": 10400,
+        "summary": "static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void\n\n设置ArkWeb内核版本。若系统不支持指定版本"
+      },
+      {
+        "section_id": "section-154",
+        "title": "getActiveWebEngineVersion<sup>20+</sup>",
+        "level": 2,
+        "line_start": 10401,
+        "line_end": 10418,
+        "summary": "static getActiveWebEngineVersion(): ArkWebEngineVersion\n\n获取当前ArkWeb内核版本。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-155",
+        "title": "isActiveWebEngineEvergreen<sup>23+</sup>",
+        "level": 2,
+        "line_start": 10419,
+        "line_end": 10452,
+        "summary": "static isActiveWebEngineEvergreen(): boolean\n\n判断当前系统是否正在使用常青内核，即系统的最新内核。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-156",
+        "title": "setAutoPreconnect<sup>21+</sup>",
+        "level": 2,
+        "line_start": 10453,
+        "line_end": 10484,
+        "summary": "static setAutoPreconnect(enabled: boolean): void\n\n设置Web内核的自动预连接状态。若未设置，默认启用自动预连接。\n\n需要在[initializeWe"
+      },
+      {
+        "section_id": "section-157",
+        "title": "isAutoPreconnectEnabled<sup>21+</sup>",
+        "level": 2,
+        "line_start": 10485,
+        "line_end": 10524,
+        "summary": "static isAutoPreconnectEnabled(): boolean\n\n查询Web内核的自动预连接状态。\n\n如果没有使用[setAutoPreconnect](#setautoprec"
+      },
+      {
+        "section_id": "section-158",
+        "title": "getSiteIsolationMode<sup>21+</sup>",
+        "level": 2,
+        "line_start": 10525,
+        "line_end": 10562,
+        "summary": "static getSiteIsolationMode(): SiteIsolationMode\n\n查询当前生效的站点隔离模式。\n\n**系统能力：** SystemCapability.Web.We"
+      },
+      {
+        "section_id": "section-159",
+        "title": "setSiteIsolationMode<sup>21+</sup>",
+        "level": 2,
+        "line_start": 10563,
+        "line_end": 10622,
+        "summary": "setSiteIsolationMode(mode: SiteIsolationMode): void\n\n设置站点隔离模式。站点隔离机制将不同源的网站隔离在不同的Render进程中，减少跨域攻击面。"
+      },
+      {
+        "section_id": "section-160",
+        "title": "setSocketIdleTimeout<sup>21+</sup>",
+        "level": 2,
+        "line_start": 10623,
+        "line_end": 10652,
+        "summary": "static setSocketIdleTimeout(timeout: number): void\n\n设置ArkWeb中已使用过的空闲socket的超时时间，即已使用过的socket可以处于空闲状"
+      },
+      {
+        "section_id": "section-161",
+        "title": "setSoftKeyboardBehaviorMode<sup>22+</sup>",
+        "level": 2,
+        "line_start": 10653,
+        "line_end": 10697,
+        "summary": "setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void\n\n设置软键盘自动控制模式，当接口没有显式调用时，Web组件失"
+      },
+      {
+        "section_id": "section-162",
+        "title": "resumeMicrophone<sup>23+</sup>",
+        "level": 2,
+        "line_start": 10698,
+        "line_end": 10826,
+        "summary": "resumeMicrophone(): void\n\n恢复当前网页麦克风捕获。使用麦克风功能前请在module.json5中添加权限: ohos.permission.MICROPHONE，具体权限的"
+      },
+      {
+        "section_id": "section-163",
+        "title": "pauseMicrophone<sup>23+</sup>",
+        "level": 2,
+        "line_start": 10827,
+        "line_end": 10846,
+        "summary": "pauseMicrophone(): void\n\n暂停当前网页麦克风捕获。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**错误码：**\n\n以下错误码"
+      },
+      {
+        "section_id": "section-164",
+        "title": "stopMicrophone<sup>23+</sup>",
+        "level": 2,
+        "line_start": 10847,
+        "line_end": 10866,
+        "summary": "stopMicrophone(): void\n\n停止当前网页麦克风捕获。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**错误码：**\n\n以下错误码的"
+      },
+      {
+        "section_id": "section-165",
+        "title": "setUserAgentClientHintsEnabled<sup>24+</sup>",
+        "level": 2,
+        "line_start": 10867,
+        "line_end": 10971,
+        "summary": "static setUserAgentClientHintsEnabled(enabled: boolean): void\n\n设置是否开启UserAgent Client Hints功能。\n\n> *"
+      },
+      {
+        "section_id": "section-166",
+        "title": "getUserAgentClientHintsEnabled<sup>24+</sup>",
+        "level": 2,
+        "line_start": 10972,
+        "line_end": 10989,
+        "summary": "static getUserAgentClientHintsEnabled(): boolean\n\n查询UserAgent Client Hints功能当前是否开启。\n\n**系统能力：**  Sys"
+      },
+      {
+        "section_id": "section-167",
+        "title": "setUserAgentMetadata<sup>24+</sup>",
+        "level": 2,
+        "line_start": 10990,
+        "line_end": 11018,
+        "summary": "setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void\n\n设置与User-Agent相对应的UserAg"
+      },
+      {
+        "section_id": "section-168",
+        "title": "getUserAgentMetadata<sup>24+</sup>",
+        "level": 2,
+        "line_start": 11019,
+        "line_end": 11042,
+        "summary": "getUserAgentMetadata(userAgent: string): UserAgentMetadata\n\n查询userAgent对应的UserAgent Metadata信息。\n\n**"
+      },
+      {
+        "section_id": "section-169",
+        "title": "setUrlTrustList<sup>24+</sup>",
+        "level": 2,
+        "line_start": 11043,
+        "line_end": 11148,
+        "summary": "setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcard: boolean): void"
+      }
+    ]
+  }
+}

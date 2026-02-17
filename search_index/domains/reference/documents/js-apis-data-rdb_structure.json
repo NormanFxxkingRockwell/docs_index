@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-data-rdb",
+  "title": "@ohos.data.rdb (关系型数据库)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/js-apis-data-rdb.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/js-apis-data-rdb.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 @ohos.data.rdb (关系型数据库)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.data.rdb (关系型数据库)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 27,
+        "summary": "```ts\nimport data_rdb from '@ohos.data.rdb';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "data_rdb.getRdbStore",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 85,
+        "summary": "getRdbStore(context: Context, config: StoreConfig, version: number, callback: AsyncCallback&lt;RdbS"
+      },
+      {
+        "section_id": "section-3",
+        "title": "data_rdb.getRdbStore",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 146,
+        "summary": "getRdbStore(context: Context, config: StoreConfig, version: number): Promise&lt;RdbStore&gt;\n\n获得一个相"
+      },
+      {
+        "section_id": "section-4",
+        "title": "data_rdb.deleteRdbStore",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 200,
+        "summary": "deleteRdbStore(context: Context, name: string, callback: AsyncCallback&lt;void&gt;): void\n\n删除数据库，使用"
+      },
+      {
+        "section_id": "section-5",
+        "title": "data_rdb.deleteRdbStore",
+        "level": 2,
+        "line_start": 201,
+        "line_end": 258,
+        "summary": "deleteRdbStore(context: Context, name: string): Promise&lt;void&gt;\n\n使用指定的数据库文件配置删除数据库，使用Promise异步回"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ValueType",
+        "level": 2,
+        "line_start": 259,
+        "line_end": 273,
+        "summary": "type ValueType = number | string | boolean\n\n用于表示允许的数据字段类型。\n\n**系统能力：** SystemCapability.DistributedD"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ValuesBucket",
+        "level": 2,
+        "line_start": 274,
+        "line_end": 285,
+        "summary": "type ValuesBucket = { [key: string]: ValueType | Uint8Array | null }\n\n用于存储键值对的类型。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-8",
+        "title": "SyncMode<sup>8+</sup>",
+        "level": 2,
+        "line_start": 286,
+        "line_end": 296,
+        "summary": "指数据库同步模式。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core\n\n| 名称           |"
+      },
+      {
+        "section_id": "section-9",
+        "title": "SubscribeType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 297,
+        "line_end": 308,
+        "summary": "描述订阅类型。\n\n**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC\n\n**系统能力：** SystemCapability.DistributedData"
+      },
+      {
+        "section_id": "section-10",
+        "title": "StoreConfig",
+        "level": 2,
+        "line_start": 309,
+        "line_end": 318,
+        "summary": "管理关系数据库配置。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core\n\n| 名称 | 类型 | 必填"
+      },
+      {
+        "section_id": "section-11",
+        "title": "RdbPredicates",
+        "level": 2,
+        "line_start": 319,
+        "line_end": 1182,
+        "summary": "表示关系型数据库（RDB）的谓词。该类确定RDB中条件表达式的值是true还是false。\n\n### constructor\n\nconstructor(name: string)\n\n构造函数。\n\n*"
+      },
+      {
+        "section_id": "section-12",
+        "title": "RdbStore",
+        "level": 2,
+        "line_start": 1183,
+        "line_end": 2216,
+        "summary": "提供管理关系数据库（RDB）方法的接口。\n\n在使用以下相关接口前，请使用[executeSql](#executesql8)接口初始化数据库表结构和相关数据。\n\n### insert\n\ninsert"
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "doc_id": "js-apis-esim",
+  "title": "@ohos.telephony.esim (eSIM卡管理)",
+  "path": "zh-cn/application-dev/reference/apis-telephony-kit/js-apis-esim.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-telephony-kit/js-apis-esim.md",
+  "metadata": {
+    "kit": "Telephony Kit",
+    "subsystem": "Telephony",
+    "owner": "@yangyannanyangyannan",
+    "designer": "@ghxbob",
+    "tester": "@weitiantian",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Telephony Kit Telephony 模块的 @ohos.telephony.esim (eSIM卡管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.telephony.esim (eSIM卡管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { eSIM } from '@kit.TelephonyKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "eSIM.isSupported",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 60,
+        "summary": "isSupported\\(slotId: number\\): boolean\n\n获取指定卡槽是否支持eSIM功能。\n\n**系统能力**：SystemCapability.Telephony.Core"
+      },
+      {
+        "section_id": "section-3",
+        "title": "eSIM.addProfile",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 118,
+        "summary": "addProfile\\(profile: DownloadableProfile\\): Promise\\<boolean\\>\n\n通过该接口拉起下载界面，允许用户添加单个配置文件。使用Promise异"
+      },
+      {
+        "section_id": "section-4",
+        "title": "DownloadableProfile",
+        "level": 2,
+        "line_start": 119,
+        "line_end": 131,
+        "summary": "可下载的配置文件。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-5",
+        "title": "AccessRule<sup>20+</sup>",
+        "level": 2,
+        "line_start": 132,
+        "line_end": 143,
+        "summary": "访问规则。\n\n**系统能力**：SystemCapability.Telephony.CoreService.Esim\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ----- | -"
+      }
+    ]
+  }
+}

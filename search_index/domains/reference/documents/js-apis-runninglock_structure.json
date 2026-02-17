@@ -1,0 +1,100 @@
+{
+  "doc_id": "js-apis-runninglock",
+  "title": "@ohos.runningLock (RunningLock锁)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-runninglock.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-runninglock.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "PowerManager",
+    "owner": "@zhang-yinglie; @volcano_wang",
+    "designer": "@wangyantian0",
+    "tester": "@alien0208",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Basic Services Kit PowerManager 模块的 @ohos.runningLock (RunningLock锁)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.runningLock (RunningLock锁)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```js\nimport {runningLock} from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "runningLock.isSupported<sup>9+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 60,
+        "summary": "isSupported(type: RunningLockType): boolean\n\n**方法介绍：** 查询系统是否支持该类型的锁。\n\n**系统能力：** SystemCapability.P"
+      },
+      {
+        "section_id": "section-3",
+        "title": "runningLock.create<sup>9+</sup>",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 100,
+        "summary": "create(name: string, type: RunningLockType, callback: AsyncCallback&lt;RunningLock&gt;): void\n\n**方法"
+      },
+      {
+        "section_id": "section-4",
+        "title": "runningLock.create<sup>9+</sup>",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 145,
+        "summary": "create(name: string, type: RunningLockType): Promise&lt;RunningLock&gt;\n\n**方法介绍：** 创建RunningLock锁。使"
+      },
+      {
+        "section_id": "section-5",
+        "title": "runningLock.isRunningLockTypeSupported<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 146,
+        "line_end": 174,
+        "summary": "isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback&lt;boolean&gt;): void\n\n>"
+      },
+      {
+        "section_id": "section-6",
+        "title": "runningLock.isRunningLockTypeSupported<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 175,
+        "line_end": 208,
+        "summary": "isRunningLockTypeSupported(type: RunningLockType): Promise&lt;boolean>\n\n> **说明：**<br>从API version 7"
+      },
+      {
+        "section_id": "section-7",
+        "title": "runningLock.createRunningLock<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 209,
+        "line_end": 240,
+        "summary": "createRunningLock(name: string, type: RunningLockType, callback: AsyncCallback&lt;RunningLock&gt;):"
+      },
+      {
+        "section_id": "section-8",
+        "title": "runningLock.createRunningLock<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 241,
+        "line_end": 277,
+        "summary": "createRunningLock(name: string, type: RunningLockType): Promise&lt;RunningLock&gt;\n\n> **说明：**<br>从A"
+      },
+      {
+        "section_id": "section-9",
+        "title": "RunningLock",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 512,
+        "summary": "阻止系统睡眠的锁。\n\n### hold<sup>9+</sup>\n\nhold(timeout: number): void\n\n**方法介绍：** 锁定和持有RunningLock。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-10",
+        "title": "RunningLockType",
+        "level": 2,
+        "line_start": 513,
+        "line_end": 524,
+        "summary": "RunningLock锁的类型。\n\n**系统能力：** SystemCapability.PowerManager.PowerManager.Core\n\n| 名称"
+      }
+    ]
+  }
+}

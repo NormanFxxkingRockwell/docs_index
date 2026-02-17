@@ -1,0 +1,124 @@
+{
+  "doc_id": "js-apis-enterprise-usbManager",
+  "title": "@ohos.enterprise.usbManager（USB管理）",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-usbManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-usbManager.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.usbManager（USB管理），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.usbManager（USB管理）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { usbManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "usbManager.addAllowedUsbDevices",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 88,
+        "summary": "addAllowedUsbDevices(admin: Want, usbDeviceIds: Array\\<UsbDeviceId>): void\n\n添加USB设备可用名单。\n\n以下情况下，调用本"
+      },
+      {
+        "section_id": "section-3",
+        "title": "usbManager.removeAllowedUsbDevices",
+        "level": 2,
+        "line_start": 89,
+        "line_end": 143,
+        "summary": "removeAllowedUsbDevices(admin: Want, usbDeviceIds: Array\\<UsbDeviceId>): void\n\n移除USB设备可用名单。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-4",
+        "title": "usbManager.getAllowedUsbDevices",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 198,
+        "summary": "getAllowedUsbDevices(admin: Want): Array\\<UsbDeviceId>\n\n获取USB设备可用名单。\n\n**需要权限：** ohos.permission.ENT"
+      },
+      {
+        "section_id": "section-5",
+        "title": "usbManager.setUsbStorageDeviceAccessPolicy",
+        "level": 2,
+        "line_start": 199,
+        "line_end": 268,
+        "summary": "setUsbStorageDeviceAccessPolicy(admin: Want, usbPolicy: UsbPolicy): void\n\n设置USB存储设备访问策略。\n\n> **说明**："
+      },
+      {
+        "section_id": "section-6",
+        "title": "usbManager.getUsbStorageDeviceAccessPolicy",
+        "level": 2,
+        "line_start": 269,
+        "line_end": 323,
+        "summary": "getUsbStorageDeviceAccessPolicy(admin: Want): UsbPolicy\n\n获取USB存储设备访问策略。\n\n**需要权限：** ohos.permission."
+      },
+      {
+        "section_id": "section-7",
+        "title": "usbManager.addDisallowedUsbDevices<sup>14+</sup>",
+        "level": 2,
+        "line_start": 324,
+        "line_end": 387,
+        "summary": "addDisallowedUsbDevices(admin: Want, usbDevices: Array\\<UsbDeviceType>): void\n\n添加禁止使用的USB设备类型。\n\n以下情"
+      },
+      {
+        "section_id": "section-8",
+        "title": "usbManager.removeDisallowedUsbDevices<sup>14+</sup>",
+        "level": 2,
+        "line_start": 388,
+        "line_end": 444,
+        "summary": "removeDisallowedUsbDevices(admin: Want, usbDevices: Array\\<UsbDeviceType>): void\n\n移除禁止使用的USB设备类型。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "usbManager.getDisallowedUsbDevices<sup>14+</sup>",
+        "level": 2,
+        "line_start": 445,
+        "line_end": 499,
+        "summary": "getDisallowedUsbDevices(admin: Want): Array\\<UsbDeviceType>\n\n获取禁止使用的USB设备类型。\n\n**需要权限：** ohos.permis"
+      },
+      {
+        "section_id": "section-10",
+        "title": "UsbDeviceId",
+        "level": 2,
+        "line_start": 500,
+        "line_end": 510,
+        "summary": "USB设备ID信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称      | 类型   | 只读"
+      },
+      {
+        "section_id": "section-11",
+        "title": "UsbDeviceType<sup>14+</sup>",
+        "level": 2,
+        "line_start": 511,
+        "line_end": 523,
+        "summary": "USB设备类型信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称       | 类型"
+      },
+      {
+        "section_id": "section-12",
+        "title": "UsbPolicy",
+        "level": 2,
+        "line_start": 524,
+        "line_end": 535,
+        "summary": "USB读写策略的枚举。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称       | 值   | 说"
+      },
+      {
+        "section_id": "section-13",
+        "title": "Descriptor<sup>14+</sup>",
+        "level": 2,
+        "line_start": 536,
+        "line_end": 546,
+        "summary": "USB描述符的枚举。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称      | 值   | 说明"
+      }
+    ]
+  }
+}

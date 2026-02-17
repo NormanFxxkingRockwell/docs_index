@@ -1,0 +1,140 @@
+{
+  "doc_id": "js-apis-enterprise-adminManager",
+  "title": "@ohos.enterprise.adminManager（admin权限管理）",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-adminManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-adminManager.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.adminManager（admin权限管理），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.adminManager（admin权限管理）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { adminManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "adminManager.disableAdmin",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 75,
+        "summary": "disableAdmin(admin: Want, userId?: number): Promise\\<void>\n\n解除激活指定用户的设备管理应用。使用Promise异步回调。\n\n**需要权限："
+      },
+      {
+        "section_id": "section-3",
+        "title": "adminManager.isByodAdmin<sup>20+</sup>",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 130,
+        "summary": "isByodAdmin(admin: Want): boolean\n\n根据企业设备管理扩展组件查询当前应用是否被激活为BYOD设备管理应用。\n\n**需要权限：** ohos.permission.S"
+      },
+      {
+        "section_id": "section-4",
+        "title": "adminManager.subscribeManagedEventSync",
+        "level": 2,
+        "line_start": 131,
+        "line_end": 181,
+        "summary": "subscribeManagedEventSync(admin: Want, managedEvents: Array\\<ManagedEvent>): void\n\n订阅系统管理事件。\n\n**需要权"
+      },
+      {
+        "section_id": "section-5",
+        "title": "adminManager.unsubscribeManagedEventSync",
+        "level": 2,
+        "line_start": 182,
+        "line_end": 232,
+        "summary": "unsubscribeManagedEventSync(admin: Want, managedEvents: Array\\<ManagedEvent>): void\n\n取消订阅系统管理事件。\n\n*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "adminManager.setDelegatedPolicies<sup>14+</sup>",
+        "level": 2,
+        "line_start": 233,
+        "line_end": 287,
+        "summary": "setDelegatedPolicies(admin: Want, bundleName: string, policies: Array&lt;string&gt;): void\n\n委托其他应用来"
+      },
+      {
+        "section_id": "section-7",
+        "title": "adminManager.getDelegatedPolicies<sup>14+</sup>",
+        "level": 2,
+        "line_start": 288,
+        "line_end": 345,
+        "summary": "getDelegatedPolicies(admin: Want, bundleName: string): Array&lt;string&gt;\n\n查询被委托应用可访问的策略列表。\n\n**需要权"
+      },
+      {
+        "section_id": "section-8",
+        "title": "adminManager.getDelegatedBundleNames<sup>14+</sup>",
+        "level": 2,
+        "line_start": 346,
+        "line_end": 403,
+        "summary": "getDelegatedBundleNames(admin: Want, policy: string): Array&lt;string&gt;\n\n查询可以访问某个委托策略的被委托应用，输出被委托"
+      },
+      {
+        "section_id": "section-9",
+        "title": "adminManager.startAdminProvision<sup>15+</sup>",
+        "level": 2,
+        "line_start": 404,
+        "line_end": 461,
+        "summary": "startAdminProvision(admin: Want, type: AdminType, context: common.Context, parameters: Record\\<stri"
+      },
+      {
+        "section_id": "section-10",
+        "title": "adminManager.enableDeviceAdmin<sup>23+</sup>",
+        "level": 2,
+        "line_start": 462,
+        "line_end": 518,
+        "summary": "enableDeviceAdmin(admin: Want): Promise&lt;void&gt;\n\n[超级设备管理应用](../../mdm/mdm-kit-term.md#sda)通过该接口"
+      },
+      {
+        "section_id": "section-11",
+        "title": "adminManager.disableDeviceAdmin<sup>23+</sup>",
+        "level": 2,
+        "line_start": 519,
+        "line_end": 574,
+        "summary": "disableDeviceAdmin(admin: Want): Promise&lt;void&gt;\n\n[超级设备管理应用](../../mdm/mdm-kit-term.md#sda)通过该接"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ManagedEvent",
+        "level": 2,
+        "line_start": 575,
+        "line_end": 595,
+        "summary": "可订阅的系统管理事件。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n\n| 名称"
+      },
+      {
+        "section_id": "section-13",
+        "title": "AdminType<sup>15+</sup>",
+        "level": 2,
+        "line_start": 596,
+        "line_end": 605,
+        "summary": "设备管理应用的类型。 \n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-14",
+        "title": "Policy<sup>20+</sup>",
+        "level": 2,
+        "line_start": 606,
+        "line_end": 618,
+        "summary": "允许或禁用名单的策略类型。 \n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**模型约束**：此接口仅可在St"
+      },
+      {
+        "section_id": "section-15",
+        "title": "附录",
+        "level": 2,
+        "line_start": 619,
+        "line_end": 663,
+        "summary": "### 可委托策略列表\n| 策略名称 | 对应接口                                                     | 说明 |\n| --- | --- | -"
+      }
+    ]
+  }
+}

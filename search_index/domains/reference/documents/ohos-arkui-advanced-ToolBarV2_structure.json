@@ -1,0 +1,148 @@
+{
+  "doc_id": "ohos-arkui-advanced-ToolBarV2",
+  "title": "ToolBarV2",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ToolBarV2.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ToolBarV2.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@fengluochenai",
+    "designer": "@YanSanzo",
+    "tester": "@ybhou1993",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 ToolBarV2，提供相关接口和功能说明。",
+  "structure": {
+    "title": "ToolBarV2",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { ToolBarV2 } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 32,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ToolBarV2",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 53,
+        "summary": "ToolbarV2({toolBarList: ToolBarV2Item\\[], activatedIndex?: number, dividerModifier: DividerModifier"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ToolBarV2Item",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 97,
+        "summary": "ToolbarV2({content?: ToolBarV2ItemText, action?: ToolBarV2ItemAction, icon?: \tToolBarV2ItemIconType"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ToolBarV2ItemOptions",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 119,
+        "summary": "ToolBarV2ItemOptions({content?: ToolBarV2ItemText, action?: ToolBarV2ItemAction, icon?: ToolBarV2It"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ToolBarV2ItemAction",
+        "level": 2,
+        "line_start": 120,
+        "line_end": 137,
+        "summary": "type ToolBarV2ItemAction = (index: number) => void\n\n工具栏子项点击事件回调类型。\n\n**原子化服务API：** 从API version 18开始"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ToolBarV2ItemText",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 177,
+        "summary": "ToolBarV2ItemText({text?: ResourceStr, color?: ColorMetrics, activatedColor?: ColorMetrics})\n\n定义工具栏"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ToolBarV2ItemTextOptions",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 195,
+        "summary": "ToolBarV2ItemTextOptions({text?: ResourceStr, color?: ColorMetrics, activatedColor?: ColorMetrics})"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ToolBarV2ItemImage",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 235,
+        "summary": "ToolBarV2ItemImage({src?: ResourceStr, color?: ColorMetrics, activatedColor?: ColorMetrics})\n\n定义工具栏"
+      },
+      {
+        "section_id": "section-10",
+        "title": "ToolBarV2ItemImageOptions",
+        "level": 2,
+        "line_start": 236,
+        "line_end": 253,
+        "summary": "ToolBarV2ItemImageOptions({src?: ResourceStr, color?: ColorMetrics, activatedColor?: ColorMetrics})"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ToolBarV2ItemIconType",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 270,
+        "summary": "type ToolBarV2ItemIconType = ToolBarV2ItemImage | ToolBarV2SymbolGlyph\n\n工具栏子项图标内容的联合类型。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ToolBarV2Modifier",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 376,
+        "summary": "ToolBarV2Modifier提供设置工具栏高度(height)、背景色(backgroundColor)、左右内边距（padding，仅在item小于5个时生效）、是否显示按压态（stateE"
+      },
+      {
+        "section_id": "section-13",
+        "title": "ToolBarV2ItemState",
+        "level": 2,
+        "line_start": 377,
+        "line_end": 392,
+        "summary": "工具栏子项状态枚举。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ToolBarV2SymbolGlyph",
+        "level": 2,
+        "line_start": 393,
+        "line_end": 431,
+        "summary": "ToolBarV2SymbolGlyph({normal?: SymbolGlyphModifier, activated?: SymbolGlyphModifier})\n\nToolBarV2Sym"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ToolBarV2SymbolGlyphOptions",
+        "level": 2,
+        "line_start": 432,
+        "line_end": 448,
+        "summary": "ToolBarV2SymbolGlyphOptions({normal?: SymbolGlyphModifier, activated?: SymbolGlyphModifier})\n\nToolB"
+      },
+      {
+        "section_id": "section-16",
+        "title": "示例",
+        "level": 2,
+        "line_start": 449,
+        "line_end": 825,
+        "summary": "### 示例1（工具栏不同状态的默认效果）\n\n该示例展示了工具栏子项state属性分别设置ENABLE、DISABLE、ACTIVATE状态的不同显示效果。\n\n```ts\nimport { Tool"
+      }
+    ]
+  }
+}

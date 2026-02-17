@@ -1,0 +1,236 @@
+{
+  "doc_id": "js-apis-privacyManager-sys",
+  "title": "@ohos.privacyManager (隐私管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-privacyManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-privacyManager-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Security",
+    "owner": "@xia-bubai",
+    "designer": "@linshuqing; @hehehe-li",
+    "tester": "@leiyuqian",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Ability Kit Security 模块的 @ohos.privacyManager (隐私管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.privacyManager (隐私管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 23,
+        "summary": "```ts\nimport { privacyManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "privacyManager.addPermissionUsedRecord",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 90,
+        "summary": "addPermissionUsedRecord(tokenID: number, permissionName: Permissions, successCount: number, failCou"
+      },
+      {
+        "section_id": "section-3",
+        "title": "privacyManager.addPermissionUsedRecord",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 144,
+        "summary": "addPermissionUsedRecord(tokenID: number, permissionName: Permissions, successCount: number, failCou"
+      },
+      {
+        "section_id": "section-4",
+        "title": "privacyManager.getPermissionUsedRecord",
+        "level": 2,
+        "line_start": 145,
+        "line_end": 202,
+        "summary": "getPermissionUsedRecord(request: PermissionUsedRequest): Promise&lt;PermissionUsedResponse&gt;\n\n获取历"
+      },
+      {
+        "section_id": "section-5",
+        "title": "privacyManager.getPermissionUsedRecord",
+        "level": 2,
+        "line_start": 203,
+        "line_end": 257,
+        "summary": "getPermissionUsedRecord(request: PermissionUsedRequest, callback: AsyncCallback&lt;PermissionUsedRe"
+      },
+      {
+        "section_id": "section-6",
+        "title": "privacyManager.setPermissionUsedRecordToggleStatus<sup>18+</sup>",
+        "level": 2,
+        "line_start": 258,
+        "line_end": 306,
+        "summary": "setPermissionUsedRecordToggleStatus(status: boolean): Promise&lt;void&gt;\n\n设置是否记录当前用户的权限使用情况。系统应用调用"
+      },
+      {
+        "section_id": "section-7",
+        "title": "privacyManager.getPermissionUsedRecordToggleStatus<sup>18+</sup>",
+        "level": 2,
+        "line_start": 307,
+        "line_end": 350,
+        "summary": "getPermissionUsedRecordToggleStatus(): Promise&lt;boolean&gt;\n\n系统应用调用此接口，可以获取当前用户的权限使用记录开关状态。使用Prom"
+      },
+      {
+        "section_id": "section-8",
+        "title": "privacyManager.startUsingPermission",
+        "level": 2,
+        "line_start": 351,
+        "line_end": 405,
+        "summary": "startUsingPermission(tokenID: number, permissionName: Permissions): Promise&lt;void&gt;\n\n系统应用调用此接口，"
+      },
+      {
+        "section_id": "section-9",
+        "title": "privacyManager.startUsingPermission<sup>18+</sup>",
+        "level": 2,
+        "line_start": 406,
+        "line_end": 488,
+        "summary": "startUsingPermission(tokenID: number, permissionName: Permissions, pid?: number, usedType?: Permiss"
+      },
+      {
+        "section_id": "section-10",
+        "title": "privacyManager.startUsingPermission",
+        "level": 2,
+        "line_start": 489,
+        "line_end": 540,
+        "summary": "startUsingPermission(tokenID: number, permissionName: Permissions, callback: AsyncCallback&lt;void&"
+      },
+      {
+        "section_id": "section-11",
+        "title": "privacyManager.stopUsingPermission",
+        "level": 2,
+        "line_start": 541,
+        "line_end": 592,
+        "summary": "stopUsingPermission(tokenID: number, permissionName: Permissions): Promise&lt;void&gt;\n\n应用停止使用某项权限，"
+      },
+      {
+        "section_id": "section-12",
+        "title": "privacyManager.stopUsingPermission<sup>18+</sup>",
+        "level": 2,
+        "line_start": 593,
+        "line_end": 658,
+        "summary": "stopUsingPermission(tokenID: number, permissionName: Permissions, pid?: number): Promise&lt;void&gt"
+      },
+      {
+        "section_id": "section-13",
+        "title": "privacyManager.stopUsingPermission",
+        "level": 2,
+        "line_start": 659,
+        "line_end": 707,
+        "summary": "stopUsingPermission(tokenID: number, permissionName: Permissions, callback: AsyncCallback&lt;void&g"
+      },
+      {
+        "section_id": "section-14",
+        "title": "privacyManager.on",
+        "level": 2,
+        "line_start": 708,
+        "line_end": 760,
+        "summary": "on(type: 'activeStateChange', permissionList: Array&lt;Permissions&gt;, callback: Callback&lt;Activ"
+      },
+      {
+        "section_id": "section-15",
+        "title": "privacyManager.off",
+        "level": 2,
+        "line_start": 761,
+        "line_end": 807,
+        "summary": "off(type: 'activeStateChange', permissionList: Array&lt;Permissions&gt;, callback?: Callback&lt;Act"
+      },
+      {
+        "section_id": "section-16",
+        "title": "privacyManager.getPermissionUsedTypeInfos<sup>12+</sup>",
+        "level": 2,
+        "line_start": 808,
+        "line_end": 877,
+        "summary": "getPermissionUsedTypeInfos(tokenId?: number | null, permissionName?: Permissions): Promise&lt;Array"
+      },
+      {
+        "section_id": "section-17",
+        "title": "PermissionUsageFlag",
+        "level": 2,
+        "line_start": 878,
+        "line_end": 888,
+        "summary": "表示使用记录的查询方式的枚举。\n\n**系统能力：** SystemCapability.Security.AccessToken\n\n| 名称                    | 值 | 说明"
+      },
+      {
+        "section_id": "section-18",
+        "title": "PermissionUsedRequest",
+        "level": 2,
+        "line_start": 889,
+        "line_end": 905,
+        "summary": "表示使用记录的查询请求。\n\n**系统能力：** SystemCapability.Security.AccessToken\n\n| 名称       | 类型             | 只读 | 可"
+      },
+      {
+        "section_id": "section-19",
+        "title": "PermissionUsedResponse",
+        "level": 2,
+        "line_start": 906,
+        "line_end": 917,
+        "summary": "表示所有应用的访问记录。\n\n**系统能力：** SystemCapability.Security.AccessToken\n\n| 名称       | 类型             | 只读 | 可"
+      },
+      {
+        "section_id": "section-20",
+        "title": "BundleUsedRecord",
+        "level": 2,
+        "line_start": 918,
+        "line_end": 931,
+        "summary": "某个应用的访问记录。\n\n**系统能力：** SystemCapability.Security.AccessToken\n\n| 名称       | 类型             | 只读 | 可选"
+      },
+      {
+        "section_id": "section-21",
+        "title": "PermissionUsedRecord",
+        "level": 2,
+        "line_start": 932,
+        "line_end": 948,
+        "summary": "某个权限的访问记录。\n\n**系统能力：** SystemCapability.Security.AccessToken\n\n| 名称       | 类型             | 只读 | 可选"
+      },
+      {
+        "section_id": "section-22",
+        "title": "UsedRecordDetail",
+        "level": 2,
+        "line_start": 949,
+        "line_end": 963,
+        "summary": "单次访问记录详情。\n\n**系统能力：** SystemCapability.Security.AccessToken\n\n| 名称       | 类型             | 只读 | 可选 |"
+      },
+      {
+        "section_id": "section-23",
+        "title": "PermissionActiveStatus",
+        "level": 2,
+        "line_start": 964,
+        "line_end": 975,
+        "summary": "表示权限使用状态变化类型的枚举。\n\n**系统能力：** SystemCapability.Security.AccessToken\n\n| 名称                      | 值"
+      },
+      {
+        "section_id": "section-24",
+        "title": "ActiveChangeResponse",
+        "level": 2,
+        "line_start": 976,
+        "line_end": 990,
+        "summary": "表示某次权限使用状态变化的详情。\n\n **系统能力:** SystemCapability.Security.AccessToken\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-25",
+        "title": "PermissionUsedType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 991,
+        "line_end": 1002,
+        "summary": "表示通过何种方式使用敏感权限的枚举。\n\n**系统能力：** SystemCapability.Security.AccessToken\n\n| 名称                    | 值 |"
+      },
+      {
+        "section_id": "section-26",
+        "title": "PermissionUsedTypeInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1003,
+        "line_end": 1014,
+        "summary": "表示某次权限使用类型的详情。\n\n **系统能力:** SystemCapability.Security.AccessToken\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-27",
+        "title": "AddPermissionUsedRecordOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1015,
+        "line_end": 1024,
+        "summary": "添加权限使用记录可选参数集。\n\n **系统能力:** SystemCapability.Security.AccessToken\n\n| 名称           | 类型"
+      }
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-awareness-spatialAwareness-sys",
+  "title": "@ohos.multimodalAwareness.spatialAwareness (空间感知)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-multimodalawareness-kit/js-apis-awareness-spatialAwareness-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-multimodalawareness-kit/js-apis-awareness-spatialAwareness-sys.md",
+  "metadata": {
+    "kit": "Multimodal Awareness Kit",
+    "subsystem": "MultimodalAwareness",
+    "owner": "@dilligencer",
+    "designer": "@zou_ye",
+    "tester": "@judan",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Multimodal Awareness Kit MultimodalAwareness 模块的 @ohos.multimodalAwareness.spatialAwareness (空间感知)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalAwareness.spatialAwareness (空间感知)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { spatialAwareness } from '@kit.MultimodalAwarenessKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "spatialAwareness.TechnologyType",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 34,
+        "summary": "提供输入信号的类型。接口根据输入信号类型，执行对应算法。\n\n**系统能力**：SystemCapability.MultimodalAwareness.DistanceMeasurement\n\n|"
+      },
+      {
+        "section_id": "section-3",
+        "title": "spatialAwareness.ReportingMode",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 45,
+        "summary": "测距接口执行完成后结果的上报模式。\n\n**系统能力**：SystemCapability.MultimodalAwareness.DistanceMeasurement\n\n| 名称"
+      },
+      {
+        "section_id": "section-4",
+        "title": "spatialAwareness.DistanceRank",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 58,
+        "summary": "测距结果的距离挡位，不同的挡位对应不同的距离范围。\n\n**系统能力**：SystemCapability.MultimodalAwareness.DistanceMeasurement\n\n| 名称"
+      },
+      {
+        "section_id": "section-5",
+        "title": "spatialAwareness.DistanceMeasurementResponse",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 71,
+        "summary": "测距接口执行完成后的回调结果。\n\n**系统能力**：SystemCapability.MultimodalAwareness.DistanceMeasurement\n\n| 名称"
+      },
+      {
+        "section_id": "section-6",
+        "title": "spatialAwareness.PositionRelativeToDoor",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 82,
+        "summary": "门内外识接口返回结果中表示门内或门外位置的枚举。\n\n**系统能力**：SystemCapability.MultimodalAwareness.DistanceMeasurement\n\n| 名称"
+      },
+      {
+        "section_id": "section-7",
+        "title": "spatialAwareness.DoorPositionResponse",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 94,
+        "summary": "门内外识别接口执行完成后的回调结果。\n\n**系统能力**：SystemCapability.MultimodalAwareness.DistanceMeasurement\n\n| 名称"
+      },
+      {
+        "section_id": "section-8",
+        "title": "spatialAwareness.DistanceMeasurementConfigParams",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 107,
+        "summary": "测距接口的输入参数配置。根据不同的参数配置，执行对应的算法。\n\n**系统能力**：SystemCapability.MultimodalAwareness.DistanceMeasurement"
+      },
+      {
+        "section_id": "section-9",
+        "title": "spatialAwareness.onDistanceMeasure<sup>23+</sup>",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 157,
+        "summary": "onDistanceMeasure(configParams: DistanceMeasurementConfigParams, callback: Callback&lt;DistanceMeas"
+      },
+      {
+        "section_id": "section-10",
+        "title": "spatialAwareness.offDistanceMeasure<sup>23+</sup>",
+        "level": 2,
+        "line_start": 158,
+        "line_end": 207,
+        "summary": "offDistanceMeasure(configParams: DistanceMeasurementConfigParams, callback?: Callback&lt;DistanceMe"
+      },
+      {
+        "section_id": "section-11",
+        "title": "spatialAwareness.onIndoorOrOutdoorIdentify<sup>23+</sup>",
+        "level": 2,
+        "line_start": 208,
+        "line_end": 257,
+        "summary": "onIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams, callback: Callback&lt;Door"
+      },
+      {
+        "section_id": "section-12",
+        "title": "spatialAwareness.offIndoorOrOutdoorIdentify<sup>23+</sup>",
+        "level": 2,
+        "line_start": 258,
+        "line_end": 307,
+        "summary": "offIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams, callback?: Callback&lt;Do"
+      }
+    ]
+  }
+}

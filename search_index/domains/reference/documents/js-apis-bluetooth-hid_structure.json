@@ -1,0 +1,156 @@
+{
+  "doc_id": "js-apis-bluetooth-hid",
+  "title": "@ohos.bluetooth.hid (蓝牙hid模块)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-hid.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-hid.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.bluetooth.hid (蓝牙hid模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bluetooth.hid (蓝牙hid模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```js\nimport { hid } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "BaseProfile",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 34,
+        "summary": "type BaseProfile = baseProfile.BaseProfile\n\n基础Profile接口定义，提供订阅连接状态和获取连接状态等公共能力。\n\n**系统能力**：SystemCap"
+      },
+      {
+        "section_id": "section-3",
+        "title": "BluetoothAddress<sup>23+</sup>",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 48,
+        "summary": "type BluetoothAddress = common.BluetoothAddress\n\n描述蓝牙设备地址信息的参数结构，包括地址与地址类型。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-4",
+        "title": "hid.createHidHostProfile",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 82,
+        "summary": "createHidHostProfile(): HidHostProfile\n\n创建蓝牙[HID Host](../../connectivity/terminology.md#hid-host)实"
+      },
+      {
+        "section_id": "section-5",
+        "title": "hid.createHidDeviceProfile<sup>23+</sup>",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 117,
+        "summary": "createHidDeviceProfile(): HidDeviceProfile\n\n创建蓝牙[HID Device](../../connectivity/terminology.md#hid-"
+      },
+      {
+        "section_id": "section-6",
+        "title": "HidDeviceProfile<sup>23+</sup>",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 891,
+        "summary": "该实例表示蓝牙HID通信中的[HID Device](../../connectivity/terminology.md#hid-device)角色。\n- 该类继承于[BaseProfile](#b"
+      },
+      {
+        "section_id": "section-7",
+        "title": "HidDeviceSdp<sup>23+</sup>",
+        "level": 2,
+        "line_start": 892,
+        "line_end": 907,
+        "summary": "描述HID设备在服务发现协议([SDP](../../connectivity/terminology.md#sdp))中的服务注册配置。该结构定义了HID设备的身份标识、能力描述和协议特征，是HI"
+      },
+      {
+        "section_id": "section-8",
+        "title": "HidDeviceQos<sup>23+</sup>",
+        "level": 2,
+        "line_start": 908,
+        "line_end": 924,
+        "summary": "描述HID设备服务质量(Qos)参数。该结构定义了HID数据传输通道的流量控制、延迟保证和可靠性策略，用于优化蓝牙传输性能，确保设备的实时响应性。\n\n**系统能力**：SystemCapabilit"
+      },
+      {
+        "section_id": "section-9",
+        "title": "GetReportData<sup>23+</sup>",
+        "level": 2,
+        "line_start": 925,
+        "line_end": 938,
+        "summary": "描述HID主机向HID设备发送的[GET_REPORT](../../connectivity/terminology.md#hid)传输请求事件的信息。\n\n**系统能力**：SystemCapab"
+      },
+      {
+        "section_id": "section-10",
+        "title": "SetReportData<sup>23+</sup>",
+        "level": 2,
+        "line_start": 939,
+        "line_end": 952,
+        "summary": "描述HID主机向HID设备发送的[SET_REPORT](../../connectivity/terminology.md#hid)传输请求事件的信息。\n\n**系统能力**：SystemCapab"
+      },
+      {
+        "section_id": "section-11",
+        "title": "InterruptData<sup>23+</sup>",
+        "level": 2,
+        "line_start": 953,
+        "line_end": 965,
+        "summary": "描述从主机收到的中断数据。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n**模型约束**：此接口仅可在Stage模型下使用。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ProtocolData<sup>23+</sup>",
+        "level": 2,
+        "line_start": 966,
+        "line_end": 977,
+        "summary": "描述从HID主机接收的通信协议数据。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n**模型约束**：此接口仅可在Stage模型下"
+      },
+      {
+        "section_id": "section-13",
+        "title": "Subclass<sup>23+</sup>",
+        "level": 2,
+        "line_start": 978,
+        "line_end": 998,
+        "summary": "枚举，HID设备的具体类型。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n**模型约束**：此接口仅可在Stage模型下使用。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ReportType<sup>23+</sup>",
+        "level": 2,
+        "line_start": 999,
+        "line_end": 1012,
+        "summary": "枚举，报告类型。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n| 名称"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ServiceType<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1013,
+        "line_end": 1027,
+        "summary": "枚举，描述HID设备与主机之间连接的服务类型。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n**模型约束**：此接口仅可在Sta"
+      },
+      {
+        "section_id": "section-16",
+        "title": "ErrorReason<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1028,
+        "line_end": 1044,
+        "summary": "枚举，描述错误原因。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n| 名"
+      },
+      {
+        "section_id": "section-17",
+        "title": "ProtocolType<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1045,
+        "line_end": 1056,
+        "summary": "枚举，HID设备与主机的通信协议类型。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n**模型约束**：此接口仅可在Stage模型"
+      }
+    ]
+  }
+}

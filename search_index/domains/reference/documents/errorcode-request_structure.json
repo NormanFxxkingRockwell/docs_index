@@ -1,0 +1,92 @@
+{
+  "doc_id": "errorcode-request",
+  "title": "上传下载错误码",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Request",
+    "owner": "@huaxin05",
+    "designer": "@hu-kai45",
+    "tester": "@liuhaonan2",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit Request 模块的 上传下载错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "上传下载错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "13400001 文件操作异常",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 30,
+        "summary": "**错误信息**\n\nInvalid file or file system error.\n\n**错误描述**\n\n在调用create、uploadFile或downloadFile接口时，传入了无效文"
+      },
+      {
+        "section_id": "section-2",
+        "title": "13400002 文件路径异常",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 48,
+        "summary": "**错误信息**\n\nFile path not supported or invalid.\n\n**错误描述**\n\n在调用uploadFile或downloadFile接口时，文件路径不合法或文件路径"
+      },
+      {
+        "section_id": "section-3",
+        "title": "13400003 服务异常",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 66,
+        "summary": "**错误信息**\n\nTask service ability error.\n\n**错误描述**\n\n在调用downloadFile接口时，下载任务后台服务失败。\n\n**可能原因**\n\n该错误码表示服务"
+      },
+      {
+        "section_id": "section-4",
+        "title": "13499999 其他错误",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 85,
+        "summary": "**错误信息**\n\nOther error.\n\n**错误描述**\n\n在调用uploadFile或downloadFile接口时，出现其他错误。\n\n**可能原因**\n\n该错误码表示服务异常，可能原因是"
+      },
+      {
+        "section_id": "section-5",
+        "title": "21900004 应用任务队列已满",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 107,
+        "summary": "**错误信息**\n\nThe application task queue is full.\n\n**错误描述**\n\n应用任务队列已满。\n\n**可能原因**\n\n应用创建后台任务失败（前端任务直接抢占、不"
+      },
+      {
+        "section_id": "section-6",
+        "title": "21900005 任务模式错误",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 127,
+        "summary": "**错误信息**\n\nOperation with wrong task mode.\n\n**错误描述**\n\n任务模式错误。\n\n**可能原因**\n\n非前台应用创建前端任务。\n\n**处理步骤**\n\n1."
+      },
+      {
+        "section_id": "section-7",
+        "title": "21900006 操作不存在的任务错误",
+        "level": 2,
+        "line_start": 128,
+        "line_end": 149,
+        "summary": "**错误信息**\n\nTask removed or not found.\n\n**错误描述**\n\n操作不存在的任务。\n\n**可能原因**\n\n删除、查询不存在的任务。\n\n**处理步骤**\n\n1. 通过检"
+      },
+      {
+        "section_id": "section-8",
+        "title": "21900007 在不支持的状态上的操作",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 177,
+        "summary": "**错误信息**\n\nOperation with wrong task state.\n\n**错误描述**\n\n在不支持的状态上的操作任务。\n\n**可能原因**\n\n1. 启动一个已删除的任务。\n\n2."
+      },
+      {
+        "section_id": "section-9",
+        "title": "21900008 任务分组不存在或已移除",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 196,
+        "summary": "**错误信息**\n\nGroup deleted or not found.\n\n**错误描述**\n\n任务分组不存在或已移除。\n\n**可能原因**\n\n1. 删除一个已移除或不存在的分组。\n\n2. 向一个"
+      }
+    ]
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "doc_id": "arkts-apis-data-relationalStore-i",
+  "title": "Interfaces (其他)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-i.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-i.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 Interfaces (其他)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interfaces (其他)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "StoreConfig",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 34,
+        "summary": "管理关系数据库配置。\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ---- | ---- | ---- | ---- | ---- |\n| name | string | 否 | 否"
+      },
+      {
+        "section_id": "section-2",
+        "title": "CryptoParam<sup>14+</sup>",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 49,
+        "summary": "数据库加密参数配置。此配置只有在StoreConfig的encrypt选项设置为true或密钥非空时有效。\n\n**系统能力：** SystemCapability.DistributedDataMa"
+      },
+      {
+        "section_id": "section-3",
+        "title": "Asset<sup>10+</sup>",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 65,
+        "summary": "记录资产附件（文件、图片、视频等类型文件）的相关信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ChangeInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 79,
+        "summary": "记录端云同步过程详情。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core\n\n| 名称     | 类型"
+      },
+      {
+        "section_id": "section-5",
+        "title": "DistributedConfig<sup>10+</sup>",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 92,
+        "summary": "记录表的分布式配置信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core\n\n| 名称 | 类型 | 只"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Statistic<sup>10+</sup>",
+        "level": 2,
+        "line_start": 93,
+        "line_end": 105,
+        "summary": "描述数据库表的端云同步过程的统计信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-7",
+        "title": "TableDetails<sup>10+</sup>",
+        "level": 2,
+        "line_start": 106,
+        "line_end": 116,
+        "summary": "描述数据库表执行端云同步任务上传和下载的统计信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ProgressDetails<sup>10+</sup>",
+        "level": 2,
+        "line_start": 117,
+        "line_end": 128,
+        "summary": "描述数据库整体执行端云同步任务上传和下载的统计信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core"
+      },
+      {
+        "section_id": "section-9",
+        "title": "SqlExecutionInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 142,
+        "summary": "描述数据库执行的SQL语句的统计信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-10",
+        "title": "SqlInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 153,
+        "summary": "描述数据库执行的SQL语句的详细信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core\n\n| 名称 |"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ExceptionMessage<sup>20+</sup>",
+        "level": 2,
+        "line_start": 154,
+        "line_end": 165,
+        "summary": "描述数据库执行的SQL语句的错误信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core\n\n| 名称 |"
+      },
+      {
+        "section_id": "section-12",
+        "title": "TransactionOptions<sup>14+</sup>",
+        "level": 2,
+        "line_start": 166,
+        "line_end": 175,
+        "summary": "事务对象的配置信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core\n\n| 名称 | 类型 | 只读"
+      },
+      {
+        "section_id": "section-13",
+        "title": "pluginLibs的使用约束和示例",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 226,
+        "summary": "**使用约束：** <br/>1. 动态库名的数量限制最多为16个，如果超过该数量会开库失败，返回错误码14800000。<br/>2. 动态库名需为本应用沙箱路径下或系统路径下的动态库，如果动态库"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ReturningConfig<sup>23+</sup>",
+        "level": 2,
+        "line_start": 227,
+        "line_end": 239,
+        "summary": "指定returning相关接口操作后需要返回的字段名列表和结果集中允许包含的最大记录数。\n\n**系统能力：** SystemCapability.DistributedDataManager.Rel"
+      },
+      {
+        "section_id": "section-15",
+        "title": "Result<sup>23+</sup>",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 252,
+        "summary": "记录受影响的数据行数量和结果集。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core\n\n**模型约束：**"
+      }
+    ]
+  }
+}

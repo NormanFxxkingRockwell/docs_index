@@ -1,0 +1,148 @@
+{
+  "doc_id": "ts-custom-component-lifecycle",
+  "title": "自定义组件的生命周期",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@seaside_wu1; @huyisuo",
+    "designer": "@zhangboren",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "ArkUI ArkUI 模块的 自定义组件的生命周期，提供相关接口和功能说明。",
+  "structure": {
+    "title": "自定义组件的生命周期",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "build",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 27,
+        "summary": "build(): void\n\nbuild()函数用于定义自定义组件的声明式UI描述，自定义组件必须定义build()函数。\n\n**卡片能力：** 从API version 9开始，该接口支持在Ark"
+      },
+      {
+        "section_id": "section-2",
+        "title": "aboutToAppear",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 44,
+        "summary": "aboutToAppear?(): void\n\naboutToAppear函数在创建自定义组件的新实例后，在其build()函数执行前调用。允许在aboutToAppear函数中改变[状态变量](."
+      },
+      {
+        "section_id": "section-3",
+        "title": "onDidBuild<sup>12+</sup>",
+        "level": 2,
+        "line_start": 45,
+        "line_end": 54,
+        "summary": "onDidBuild?(): void\n\nonDidBuild函数在自定义组件的build()函数执行后调用，开发者可以在这个阶段实现埋点数据上报等不影响实际UI的功能。具体使用说明，详见[自定义组"
+      },
+      {
+        "section_id": "section-4",
+        "title": "aboutToDisappear",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 70,
+        "summary": "aboutToDisappear?(): void\n\naboutToDisappear函数在自定义组件析构销毁时执行。不允许在aboutToDisappear函数中改变状态变量，特别是\\@Link变"
+      },
+      {
+        "section_id": "section-5",
+        "title": "onPageShow",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 80,
+        "summary": "onPageShow?(): void\n\nrouter路由页面（即[\\@Entry](../../../../application-dev/ui/state-management/arkts-cr"
+      },
+      {
+        "section_id": "section-6",
+        "title": "onPageHide",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 94,
+        "summary": "onPageHide?(): void\n\nrouter路由页面（即[\\@Entry](../../../../application-dev/ui/state-management/arkts-cr"
+      },
+      {
+        "section_id": "section-7",
+        "title": "onBackPress",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 144,
+        "summary": "onBackPress?(): void | boolean\n\n在router路由页面（即[\\@Entry](../../../../application-dev/ui/state-managem"
+      },
+      {
+        "section_id": "section-8",
+        "title": "onNewParam<sup>19+</sup>",
+        "level": 2,
+        "line_start": 145,
+        "line_end": 249,
+        "summary": "onNewParam?(param: ESObject): void\n\n该回调仅生效于由[\\@Entry](../../../../application-dev/ui/state-manageme"
+      },
+      {
+        "section_id": "section-9",
+        "title": "aboutToReuse<sup>10+</sup>",
+        "level": 2,
+        "line_start": 250,
+        "line_end": 323,
+        "summary": "aboutToReuse?(params: Record\\<string, Object | undefined | null>): void\n\n当一个可复用的自定义组件从复用缓存中重新加入到节点树"
+      },
+      {
+        "section_id": "section-10",
+        "title": "aboutToReuse<sup>18+</sup>",
+        "level": 2,
+        "line_start": 324,
+        "line_end": 365,
+        "summary": "aboutToReuse?(): void\n\n当一个状态管理V2的可复用自定义组件从复用池被取出重新加入到节点树时，触发aboutToReuse生命周期回调。\n\n详细内容请参考[\\@Reusable"
+      },
+      {
+        "section_id": "section-11",
+        "title": "aboutToRecycle<sup>10+</sup>",
+        "level": 2,
+        "line_start": 366,
+        "line_end": 433,
+        "summary": "aboutToRecycle?(): void\n\n组件的生命周期回调，在可复用组件从组件树上被加入到复用缓存之前调用。\n\n**原子化服务API：** 从API version 11开始，该接口支持在"
+      },
+      {
+        "section_id": "section-12",
+        "title": "onWillApplyTheme<sup>12+</sup>",
+        "level": 2,
+        "line_start": 434,
+        "line_end": 453,
+        "summary": "onWillApplyTheme?(theme: Theme): void\n\nonWillApplyTheme函数用于获取当前组件上下文的Theme对象，在创建自定义组件的新实例后，在执行其buil"
+      },
+      {
+        "section_id": "section-13",
+        "title": "Theme<sup>12+</sup>",
+        "level": 2,
+        "line_start": 454,
+        "line_end": 610,
+        "summary": "type Theme = Theme\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Ark"
+      },
+      {
+        "section_id": "section-14",
+        "title": "pageTransition<sup>9+</sup>",
+        "level": 2,
+        "line_start": 611,
+        "line_end": 620,
+        "summary": "pageTransition?(): void\n\n进入此页面或移动到其他页面时实现动画。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-15",
+        "title": "onFormRecycle<sup>11+</sup>",
+        "level": 2,
+        "line_start": 621,
+        "line_end": 685,
+        "summary": "onFormRecycle?(): string\n\nonFormRecycle回调函数在卡片回收时执行，卡片提供方可以返回需要卡片管理服务代保存的数据，在卡片恢复时通过[onFormRecover]"
+      },
+      {
+        "section_id": "section-16",
+        "title": "onFormRecover<sup>11+</sup>",
+        "level": 2,
+        "line_start": 686,
+        "line_end": 749,
+        "summary": "onFormRecover?(statusData: string): void\n\nonFormRecover回调函数在卡片恢复时执行，卡片提供方可以拿到卡片回收时卡片管理服务代保存的数据，该数据可"
+      }
+    ]
+  }
+}

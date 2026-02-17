@@ -1,0 +1,76 @@
+{
+  "doc_id": "musl",
+  "title": "libc标准库",
+  "path": "zh-cn/application-dev/reference/native-lib/musl.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/native-lib/musl.md",
+  "metadata": {
+    "kit": "",
+    "subsystem": "",
+    "owner": "",
+    "designer": "",
+    "tester": "",
+    "adviser": ""
+  },
+  "summary": "libc标准库，提供相关接口和功能说明。",
+  "structure": {
+    "title": "libc标准库",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "简介",
+        "level": 2,
+        "line_start": 3,
+        "line_end": 9,
+        "summary": "C标准函数库在C语言程序设计中，提供符合标准的头文件，以及常用的库函数实现（如I/O输入输出和字符串控制）。\n\nOpenHarmony采用musl作为C标准库，musl库是一个轻量，快速，简单，免费的"
+      },
+      {
+        "section_id": "section-2",
+        "title": "标准C库组件介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 19,
+        "summary": "[libc、libm、libdl](https://zh.cppreference.com/w/c/header)组合实现C11标准C库。\n\nlibc：包含线程相关接口，以及大部分标准接口。\n\nli"
+      },
+      {
+        "section_id": "section-3",
+        "title": "musl版本号",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 27,
+        "summary": "1.2.0\n\n从OpenHarmony4.0开始，版本升级到1.2.3\n\n从OpenHarmony5.0开始，版本升级到1.2.5"
+      },
+      {
+        "section_id": "section-4",
+        "title": "支持的能力",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 65,
+        "summary": "提供兼容C99、C11、POSIX标准的头文件，以及库函数接口，但不是完全兼容；支持armv7a、arm64、x86_64三种架构的支持；\n\n为了更好的适配OpenHarmony设备的高性能、低内存、"
+      },
+      {
+        "section_id": "section-5",
+        "title": "musl 差异规格接口说明",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 71,
+        "summary": "| 接口名称          | 说明"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ICONV支持的字符集编码格式",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 132,
+        "summary": "musl支持的字符集编码格式，以及受支持的别名。\n> **注意**\n>\n> 在进行字符集编码格式转换时，请使用正确的源字符集编码格式，且目标字符集编码格式必须支持这些受转换的字符，否则转换失败。\n>"
+      },
+      {
+        "section_id": "section-7",
+        "title": "musl不支持接口列表。",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 141,
+        "summary": "[native api中没有导出的符号列表](musl-peculiar-symbol.md)\n\n[NDK musl-libc接口受权限影响的说明](guidance-on-ndk-libc-int"
+      }
+    ]
+  }
+}

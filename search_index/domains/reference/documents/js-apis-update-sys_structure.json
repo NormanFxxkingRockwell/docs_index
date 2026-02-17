@@ -1,0 +1,372 @@
+{
+  "doc_id": "js-apis-update-sys",
+  "title": "@ohos.update (升级)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-update-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-update-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Update",
+    "owner": "@RainyDay_005; @huangsiping3",
+    "designer": "@zhangzhengxue; @jackd320",
+    "tester": "@mamba-ting",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Basic Services Kit Update 模块的 @ohos.update (升级)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.update (升级)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 28,
+        "summary": "```js\nimport { update } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "update.getOnlineUpdater",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 73,
+        "summary": "getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater\n\n获取在线升级对象。\n\n**系统能力**：SystemCapability.Update.Up"
+      },
+      {
+        "section_id": "section-3",
+        "title": "update.getRestorer",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 105,
+        "summary": "getRestorer(): Restorer\n\n获取恢复出厂设置对象。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n**返回值：**\n\n| 类"
+      },
+      {
+        "section_id": "section-4",
+        "title": "update.getLocalUpdater",
+        "level": 2,
+        "line_start": 106,
+        "line_end": 137,
+        "summary": "getLocalUpdater(): LocalUpdater\n\n获取本地升级对象。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n**返回值：*"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Updater",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 1474,
+        "summary": "### checkNewVersion\n\ncheckNewVersion(callback: AsyncCallback\\<CheckResult>): void\n\n检查新版本信息。使用callba"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Restorer",
+        "level": 2,
+        "line_start": 1475,
+        "line_end": 1586,
+        "summary": "### factoryReset\n\nfactoryReset(callback: AsyncCallback\\<void>): void\n\n恢复出厂设置。使用callback异步回调。\n\n**系统能"
+      },
+      {
+        "section_id": "section-7",
+        "title": "LocalUpdater",
+        "level": 2,
+        "line_start": 1587,
+        "line_end": 1837,
+        "summary": "### verifyUpgradePackage\n\nverifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callbac"
+      },
+      {
+        "section_id": "section-8",
+        "title": "UpgradeInfo",
+        "level": 2,
+        "line_start": 1838,
+        "line_end": 1848,
+        "summary": "升级信息。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-9",
+        "title": "BusinessType",
+        "level": 2,
+        "line_start": 1849,
+        "line_end": 1859,
+        "summary": "升级业务类型。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-10",
+        "title": "CheckResult",
+        "level": 2,
+        "line_start": 1860,
+        "line_end": 1870,
+        "summary": "搜包结果。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称                | 类型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "NewVersionInfo",
+        "level": 2,
+        "line_start": 1871,
+        "line_end": 1881,
+        "summary": "新版本数据。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称                | 类型"
+      },
+      {
+        "section_id": "section-12",
+        "title": "VersionDigestInfo",
+        "level": 2,
+        "line_start": 1882,
+        "line_end": 1891,
+        "summary": "版本摘要。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称            | 类型   | 只读 | 可选 | 说明   |\n|"
+      },
+      {
+        "section_id": "section-13",
+        "title": "VersionComponent",
+        "level": 2,
+        "line_start": 1892,
+        "line_end": 1909,
+        "summary": "版本组件。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称              | 类型"
+      },
+      {
+        "section_id": "section-14",
+        "title": "DescriptionOptions",
+        "level": 2,
+        "line_start": 1910,
+        "line_end": 1920,
+        "summary": "描述文件选项。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称       | 类型"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ComponentDescription",
+        "level": 2,
+        "line_start": 1921,
+        "line_end": 1931,
+        "summary": "组件描述文件。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称              | 类型"
+      },
+      {
+        "section_id": "section-16",
+        "title": "DescriptionInfo",
+        "level": 2,
+        "line_start": 1932,
+        "line_end": 1942,
+        "summary": "版本描述文件信息。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称              | 类型"
+      },
+      {
+        "section_id": "section-17",
+        "title": "CurrentVersionInfo",
+        "level": 2,
+        "line_start": 1943,
+        "line_end": 1954,
+        "summary": "当前版本信息。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称                | 类型"
+      },
+      {
+        "section_id": "section-18",
+        "title": "DownloadOptions",
+        "level": 2,
+        "line_start": 1955,
+        "line_end": 1965,
+        "summary": "下载选项。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称           | 类型                | 只读 | 可选"
+      },
+      {
+        "section_id": "section-19",
+        "title": "ResumeDownloadOptions",
+        "level": 2,
+        "line_start": 1966,
+        "line_end": 1975,
+        "summary": "恢复下载选项。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称           | 类型                | 只读 |"
+      },
+      {
+        "section_id": "section-20",
+        "title": "PauseDownloadOptions",
+        "level": 2,
+        "line_start": 1976,
+        "line_end": 1985,
+        "summary": "暂停下载选项。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称                | 类型 | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-21",
+        "title": "UpgradeOptions",
+        "level": 2,
+        "line_start": 1986,
+        "line_end": 1995,
+        "summary": "升级选项。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称    | 类型            | 只读 | 可选 | 说明   |\n|"
+      },
+      {
+        "section_id": "section-22",
+        "title": "ClearOptions",
+        "level": 2,
+        "line_start": 1996,
+        "line_end": 2005,
+        "summary": "清除异常选项。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称     | 类型                            |"
+      },
+      {
+        "section_id": "section-23",
+        "title": "UpgradePolicy",
+        "level": 2,
+        "line_start": 2006,
+        "line_end": 2017,
+        "summary": "升级策略。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称                  | 类型"
+      },
+      {
+        "section_id": "section-24",
+        "title": "UpgradePeriod",
+        "level": 2,
+        "line_start": 2018,
+        "line_end": 2028,
+        "summary": "升级时间段。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称    | 类型   | 只读 | 可选 | 说明 |\n| ----- | -"
+      },
+      {
+        "section_id": "section-25",
+        "title": "TaskInfo",
+        "level": 2,
+        "line_start": 2029,
+        "line_end": 2039,
+        "summary": "任务信息。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称        | 类型                  | 只读 | 可选"
+      },
+      {
+        "section_id": "section-26",
+        "title": "EventInfo",
+        "level": 2,
+        "line_start": 2040,
+        "line_end": 2050,
+        "summary": "事件信息。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称       | 类型                  | 只读 | 可选 |"
+      },
+      {
+        "section_id": "section-27",
+        "title": "TaskBody",
+        "level": 2,
+        "line_start": 2051,
+        "line_end": 2066,
+        "summary": "任务数据。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称                | 类型"
+      },
+      {
+        "section_id": "section-28",
+        "title": "ErrorMessage",
+        "level": 2,
+        "line_start": 2067,
+        "line_end": 2077,
+        "summary": "错误信息。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称           | 类型   | 只读 | 可选  | 说明   |\n|"
+      },
+      {
+        "section_id": "section-29",
+        "title": "EventClassifyInfo",
+        "level": 2,
+        "line_start": 2078,
+        "line_end": 2088,
+        "summary": "事件信息。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称            | 类型"
+      },
+      {
+        "section_id": "section-30",
+        "title": "UpgradeFile",
+        "level": 2,
+        "line_start": 2089,
+        "line_end": 2099,
+        "summary": "升级文件。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称       | 类型                            |"
+      },
+      {
+        "section_id": "section-31",
+        "title": "UpgradeTaskCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2100,
+        "line_end": 2111,
+        "summary": "type UpgradeTaskCallback = (eventInfo: EventInfo) => void\n\n事件回调。\n\n**系统能力**：SystemCapability.Update."
+      },
+      {
+        "section_id": "section-32",
+        "title": "BusinessVendor",
+        "level": 2,
+        "line_start": 2112,
+        "line_end": 2121,
+        "summary": "设备厂家。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称    | 值      | 说明   |\n| ------ | -------"
+      },
+      {
+        "section_id": "section-33",
+        "title": "BusinessSubType",
+        "level": 2,
+        "line_start": 2122,
+        "line_end": 2131,
+        "summary": "升级类型。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称      | 值  | 说明   |\n| -------- | ---- |"
+      },
+      {
+        "section_id": "section-34",
+        "title": "ComponentType",
+        "level": 2,
+        "line_start": 2132,
+        "line_end": 2141,
+        "summary": "组件类型。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称  | 值  | 说明   |\n| ---- | ---- | ---- |\n|"
+      },
+      {
+        "section_id": "section-35",
+        "title": "UpgradeAction",
+        "level": 2,
+        "line_start": 2142,
+        "line_end": 2152,
+        "summary": "升级方式。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称      | 值        | 说明   |\n| -------- | -"
+      },
+      {
+        "section_id": "section-36",
+        "title": "EffectiveMode",
+        "level": 2,
+        "line_start": 2153,
+        "line_end": 2164,
+        "summary": "生效模式。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称           | 值  | 说明   |\n| -------------"
+      },
+      {
+        "section_id": "section-37",
+        "title": "OtaMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2165,
+        "line_end": 2177,
+        "summary": "升级模式。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称           | 值  | 说明   |\n| -------------"
+      },
+      {
+        "section_id": "section-38",
+        "title": "DescriptionType",
+        "level": 2,
+        "line_start": 2178,
+        "line_end": 2188,
+        "summary": "描述文件类型。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称     | 值  | 说明   |\n| ------- | ---- |"
+      },
+      {
+        "section_id": "section-39",
+        "title": "DescriptionFormat",
+        "level": 2,
+        "line_start": 2189,
+        "line_end": 2199,
+        "summary": "描述文件格式。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称        | 值  | 说明   |\n| ---------- | -"
+      },
+      {
+        "section_id": "section-40",
+        "title": "NetType",
+        "level": 2,
+        "line_start": 2200,
+        "line_end": 2213,
+        "summary": "网络类型。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称               | 值  | 说明        |\n| ----"
+      },
+      {
+        "section_id": "section-41",
+        "title": "Order",
+        "level": 2,
+        "line_start": 2214,
+        "line_end": 2227,
+        "summary": "升级指令。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称                  | 值  | 说明    |\n| -----"
+      },
+      {
+        "section_id": "section-42",
+        "title": "UpgradeStatus",
+        "level": 2,
+        "line_start": 2228,
+        "line_end": 2246,
+        "summary": "升级状态。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称              | 值  | 说明   |\n| ----------"
+      },
+      {
+        "section_id": "section-43",
+        "title": "EventClassify",
+        "level": 2,
+        "line_start": 2247,
+        "line_end": 2256,
+        "summary": "事件类型。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称   | 值        | 说明   |\n| ---- | --------"
+      },
+      {
+        "section_id": "section-44",
+        "title": "EventId",
+        "level": 2,
+        "line_start": 2257,
+        "line_end": 2282,
+        "summary": "事件ID。\n\n**系统能力**：SystemCapability.Update.UpdateService\n\n| 名称                     | 值        | 说明"
+      }
+    ]
+  }
+}

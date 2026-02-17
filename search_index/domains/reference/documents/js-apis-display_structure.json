@@ -1,0 +1,460 @@
+{
+  "doc_id": "js-apis-display",
+  "title": "@ohos.display (屏幕属性)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-display.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-display.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "Window",
+    "owner": "@oh_wangxk; @logn",
+    "designer": "@hejunfei1991",
+    "tester": "@qinliwen0417",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkUI Window 模块的 @ohos.display (屏幕属性)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.display (屏幕属性)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { display } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "DisplayState",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 38,
+        "summary": "显示设备的状态枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.WindowManag"
+      },
+      {
+        "section_id": "section-3",
+        "title": "Orientation<sup>10+</sup>",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 53,
+        "summary": "显示设备当前显示的方向枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.WindowM"
+      },
+      {
+        "section_id": "section-4",
+        "title": "DisplaySourceMode<sup>19+</sup>",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 69,
+        "summary": "屏幕显示内容的显示模式枚举。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Window."
+      },
+      {
+        "section_id": "section-5",
+        "title": "FoldStatus<sup>10+</sup>",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 93,
+        "summary": "当前可折叠设备的折叠状态枚举。如果是双折轴设备，则在充电口朝下的状态下，从右到左分别是折轴一和折轴二。\n\n**系统能力：** SystemCapability.Window.SessionManag"
+      },
+      {
+        "section_id": "section-6",
+        "title": "FoldDisplayMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 113,
+        "summary": "可折叠设备的显示模式枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Window.S"
+      },
+      {
+        "section_id": "section-7",
+        "title": "CornerType<sup>23+</sup>",
+        "level": 2,
+        "line_start": 114,
+        "line_end": 128,
+        "summary": "屏幕圆角类型枚举。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Window.Sessi"
+      },
+      {
+        "section_id": "section-8",
+        "title": "RoundedCorner<sup>23+</sup>",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 144,
+        "summary": "屏幕圆角定义。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-9",
+        "title": "FoldCreaseRegion<sup>10+</sup>",
+        "level": 2,
+        "line_start": 145,
+        "line_end": 157,
+        "summary": "折叠折痕区域。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Window.Session"
+      },
+      {
+        "section_id": "section-10",
+        "title": "Rect<sup>9+</sup>",
+        "level": 2,
+        "line_start": 158,
+        "line_end": 172,
+        "summary": "矩形区域。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.WindowManager.Wi"
+      },
+      {
+        "section_id": "section-11",
+        "title": "WaterfallDisplayAreaRects<sup>9+</sup>",
+        "level": 2,
+        "line_start": 173,
+        "line_end": 187,
+        "summary": "瀑布屏曲面部分显示区域。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.WindowMan"
+      },
+      {
+        "section_id": "section-12",
+        "title": "CutoutInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 188,
+        "line_end": 200,
+        "summary": "挖孔屏、刘海屏、瀑布屏等不可用屏幕区域信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-13",
+        "title": "DisplayPhysicalResolution<sup>12+</sup>",
+        "level": 2,
+        "line_start": 201,
+        "line_end": 213,
+        "summary": "设备的显示模式以及对应的物理屏幕分辨率信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-14",
+        "title": "BrightnessInfo<sup>22+</sup>",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 226,
+        "summary": "屏幕亮度信息。此类型中的信息均来自底层屏幕信息数据。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-15",
+        "title": "BrightnessCallback<sup>22+</sup>",
+        "level": 2,
+        "line_start": 227,
+        "line_end": 240,
+        "summary": "type BrightnessCallback<T1, T2> = (data1: T1, data2: T2) => void\n\n监听屏幕亮度信息时使用的回调函数类型。\n\n**系统能力：** Sys"
+      },
+      {
+        "section_id": "section-16",
+        "title": "ScreenShape<sup>18+</sup>",
+        "level": 2,
+        "line_start": 241,
+        "line_end": 251,
+        "summary": "显示设备的屏幕形状枚举。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名称 | 值 | 说明 |\n| ------"
+      },
+      {
+        "section_id": "section-17",
+        "title": "VirtualScreenConfig<sup>16+</sup>",
+        "level": 2,
+        "line_start": 252,
+        "line_end": 266,
+        "summary": "创建虚拟屏幕的参数。\n\n**系统能力：** SystemCapability.Window.SessionManager\n\n| 名称      | 类型 | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-18",
+        "title": "Position<sup>20+</sup>",
+        "level": 2,
+        "line_start": 267,
+        "line_end": 277,
+        "summary": "坐标位置：在全局坐标系中，以主屏左上角为原点。在相对坐标系中，以指定屏幕左上角为原点。\n\n**系统能力：** SystemCapability.Window.SessionManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-19",
+        "title": "RelativePosition<sup>20+</sup>",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 288,
+        "summary": "相对坐标系下的坐标位置，以displayId对应的屏幕左上角为原点。\n\n**系统能力：** SystemCapability.Window.SessionManager\n\n| 名称      | 类"
+      },
+      {
+        "section_id": "section-20",
+        "title": "display.getDisplayByIdSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 289,
+        "line_end": 335,
+        "summary": "getDisplayByIdSync(displayId: number): Display\n\n根据displayId获取对应的Display对象。\n\n**原子化服务API：** 从API vers"
+      },
+      {
+        "section_id": "section-21",
+        "title": "display.getBrightnessInfo<sup>22+</sup>",
+        "level": 2,
+        "line_start": 336,
+        "line_end": 380,
+        "summary": "getBrightnessInfo(displayId: number): [BrightnessInfo](#brightnessinfo22)\n\n获取指定displayId对应屏幕的亮度信息。如"
+      },
+      {
+        "section_id": "section-22",
+        "title": "display.getAllDisplayPhysicalResolution<sup>12+</sup>",
+        "level": 2,
+        "line_start": 381,
+        "line_end": 423,
+        "summary": "getAllDisplayPhysicalResolution(): Promise&lt;Array&lt;DisplayPhysicalResolution&gt;&gt;\n\n获取当前设备支持的"
+      },
+      {
+        "section_id": "section-23",
+        "title": "display.getDefaultDisplaySync<sup>9+</sup>",
+        "level": 2,
+        "line_start": 424,
+        "line_end": 460,
+        "summary": "getDefaultDisplaySync(): Display\n\n返回应用所在屏幕的Display对象。若应用内多个Ability在不同屏幕，返回主屏的Display对象，若应用内多个Abilit"
+      },
+      {
+        "section_id": "section-24",
+        "title": "display.getPrimaryDisplaySync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 461,
+        "line_end": 494,
+        "summary": "getPrimaryDisplaySync(): Display\n\n获取主屏信息。除2in1之外的设备获取的是设备自带屏幕的Display对象；2in1设备外接屏幕时获取的是当前主屏幕的Displa"
+      },
+      {
+        "section_id": "section-25",
+        "title": "display.getAllDisplays<sup>9+</sup>",
+        "level": 2,
+        "line_start": 495,
+        "line_end": 536,
+        "summary": "getAllDisplays(callback: AsyncCallback&lt;Array&lt;Display&gt;&gt;): void\n\n获取当前所有的Display对象，使用callb"
+      },
+      {
+        "section_id": "section-26",
+        "title": "display.getAllDisplays<sup>9+</sup>",
+        "level": 2,
+        "line_start": 537,
+        "line_end": 576,
+        "summary": "getAllDisplays(): Promise&lt;Array&lt;Display&gt;&gt;\n\n获取当前所有的Display对象，使用Promise异步回调。\n\n**原子化服务API："
+      },
+      {
+        "section_id": "section-27",
+        "title": "display.on('add'|'remove'|'change')",
+        "level": 2,
+        "line_start": 577,
+        "line_end": 613,
+        "summary": "on(type: 'add'|'remove'|'change', callback: Callback&lt;number&gt;): void\n\n开启显示设备变化的监听。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-28",
+        "title": "display.off('add'|'remove'|'change')",
+        "level": 2,
+        "line_start": 614,
+        "line_end": 652,
+        "summary": "off(type: 'add'|'remove'|'change', callback?: Callback&lt;number&gt;): void\n\n关闭显示设备变化的监听。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-29",
+        "title": "display.onChangeWithAttribute<sup>23+</sup>",
+        "level": 2,
+        "line_start": 653,
+        "line_end": 690,
+        "summary": "onChangeWithAttribute(displayAttributeOption: Array&lt;string&gt;, callback: Callback&lt;number&gt;"
+      },
+      {
+        "section_id": "section-30",
+        "title": "display.isFoldable<sup>10+</sup>",
+        "level": 2,
+        "line_start": 691,
+        "line_end": 722,
+        "summary": "isFoldable(): boolean\n\n判断设备是否可折叠。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-31",
+        "title": "display.getFoldStatus<sup>10+</sup>",
+        "level": 2,
+        "line_start": 723,
+        "line_end": 754,
+        "summary": "getFoldStatus(): FoldStatus\n\n获取可折叠设备当前的折叠状态。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能"
+      },
+      {
+        "section_id": "section-32",
+        "title": "display.getFoldDisplayMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 755,
+        "line_end": 788,
+        "summary": "getFoldDisplayMode(): FoldDisplayMode\n\n获取可折叠设备当前的显示模式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-33",
+        "title": "display.getCurrentFoldCreaseRegion<sup>10+</sup>",
+        "level": 2,
+        "line_start": 789,
+        "line_end": 822,
+        "summary": "getCurrentFoldCreaseRegion(): FoldCreaseRegion\n\n在当前显示模式下获取折叠折痕区域。\n\n**原子化服务API：** 从API version 12开始，该"
+      },
+      {
+        "section_id": "section-34",
+        "title": "display.on('foldStatusChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 823,
+        "line_end": 869,
+        "summary": "on(type: 'foldStatusChange', callback: Callback&lt;FoldStatus&gt;): void\n\n开启折叠设备折叠状态变化的监听。\n\n本接口监听设备"
+      },
+      {
+        "section_id": "section-35",
+        "title": "display.off('foldStatusChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 870,
+        "line_end": 909,
+        "summary": "off(type: 'foldStatusChange', callback?: Callback&lt;FoldStatus&gt;): void\n\n关闭折叠设备折叠状态变化的监听。\n\n**原子化"
+      },
+      {
+        "section_id": "section-36",
+        "title": "display.on('brightnessInfoChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 910,
+        "line_end": 949,
+        "summary": "on(type: 'brightnessInfoChange', callback: BrightnessCallback&lt;number, BrightnessInfo>): void\n\n开启"
+      },
+      {
+        "section_id": "section-37",
+        "title": "display.off('brightnessInfoChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 950,
+        "line_end": 989,
+        "summary": "off(type: 'brightnessInfoChange', callback?: BrightnessCallback&lt;number, BrightnessInfo>): void"
+      },
+      {
+        "section_id": "section-38",
+        "title": "display.on('foldAngleChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 990,
+        "line_end": 1026,
+        "summary": "on(type: 'foldAngleChange', callback: Callback&lt;Array&lt;number&gt;&gt;): void\n\n开启折叠设备折叠角度变化的监听。如"
+      },
+      {
+        "section_id": "section-39",
+        "title": "display.off('foldAngleChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1027,
+        "line_end": 1066,
+        "summary": "off(type: 'foldAngleChange', callback?: Callback&lt;Array&lt;number&gt;&gt;): void\n\n关闭折叠设备折叠角度变化的监听"
+      },
+      {
+        "section_id": "section-40",
+        "title": "display.on('captureStatusChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1067,
+        "line_end": 1103,
+        "summary": "on(type: 'captureStatusChange', callback: Callback&lt;boolean&gt;): void\n\n开启设备的屏幕显示信息是否被获取的监听。\n\n**原"
+      },
+      {
+        "section_id": "section-41",
+        "title": "display.off('captureStatusChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1104,
+        "line_end": 1143,
+        "summary": "off(type: 'captureStatusChange', callback?: Callback&lt;boolean&gt;): void\n\n关闭设备的屏幕显示信息是否被获取的监听。\n\n*"
+      },
+      {
+        "section_id": "section-42",
+        "title": "display.isCaptured<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1144,
+        "line_end": 1175,
+        "summary": "isCaptured(): boolean\n\n检查设备的屏幕显示信息是否被获取。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-43",
+        "title": "display.on('foldDisplayModeChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1176,
+        "line_end": 1222,
+        "summary": "on(type: 'foldDisplayModeChange', callback: Callback&lt;FoldDisplayMode&gt;): void\n\n开启折叠设备屏幕显示模式变化的"
+      },
+      {
+        "section_id": "section-44",
+        "title": "display.off('foldDisplayModeChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1223,
+        "line_end": 1264,
+        "summary": "off(type: 'foldDisplayModeChange', callback?: Callback&lt;FoldDisplayMode&gt;): void\n\n关闭折叠设备屏幕显示模式变"
+      },
+      {
+        "section_id": "section-45",
+        "title": "display.createVirtualScreen<sup>16+</sup>",
+        "level": 2,
+        "line_start": 1265,
+        "line_end": 1327,
+        "summary": "createVirtualScreen(config:VirtualScreenConfig): Promise&lt;number&gt;\n\n创建虚拟屏幕，使用Promise异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-46",
+        "title": "display.destroyVirtualScreen<sup>16+</sup>",
+        "level": 2,
+        "line_start": 1328,
+        "line_end": 1374,
+        "summary": "destroyVirtualScreen(screenId:number): Promise&lt;void&gt;\n\n销毁虚拟屏幕，使用Promise异步回调。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-47",
+        "title": "display.setVirtualScreenSurface<sup>16+</sup>",
+        "level": 2,
+        "line_start": 1375,
+        "line_end": 1447,
+        "summary": "setVirtualScreenSurface(screenId:number, surfaceId: string): Promise&lt;void&gt;\n\n设置虚拟屏幕的surfaceId，"
+      },
+      {
+        "section_id": "section-48",
+        "title": "display.makeUnique<sup>16+</sup>",
+        "level": 2,
+        "line_start": 1448,
+        "line_end": 1494,
+        "summary": "makeUnique(screenId:number): Promise&lt;void&gt;\n\n将屏幕设置为异源模式，使用Promise异步回调。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-49",
+        "title": "display.convertRelativeToGlobalCoordinate<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1495,
+        "line_end": 1546,
+        "summary": "convertRelativeToGlobalCoordinate(relativePosition: RelativePosition): Position\n\n将指定屏幕左上角为原点的相对坐标转换"
+      },
+      {
+        "section_id": "section-50",
+        "title": "display.convertGlobalToRelativeCoordinate<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1547,
+        "line_end": 1596,
+        "summary": "convertGlobalToRelativeCoordinate(position: Position, displayId?: number): RelativePosition\n\n将主屏左上角"
+      },
+      {
+        "section_id": "section-51",
+        "title": "display.getDefaultDisplay<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1597,
+        "line_end": 1631,
+        "summary": "getDefaultDisplay(callback: AsyncCallback&lt;Display&gt;): void\n\n获取当前默认的Display对象，使用callback异步回调。"
+      },
+      {
+        "section_id": "section-52",
+        "title": "display.getDefaultDisplay<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1632,
+        "line_end": 1664,
+        "summary": "getDefaultDisplay(): Promise&lt;Display&gt;\n\n获取当前默认的Display对象，使用Promise异步回调。\n\n> **说明：**\n> \n> 从API v"
+      },
+      {
+        "section_id": "section-53",
+        "title": "display.getAllDisplay<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1665,
+        "line_end": 1697,
+        "summary": "getAllDisplay(callback: AsyncCallback&lt;Array&lt;Display&gt;&gt;): void\n\n获取当前所有的Display对象，使用callba"
+      },
+      {
+        "section_id": "section-54",
+        "title": "display.getAllDisplay<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1698,
+        "line_end": 1728,
+        "summary": "getAllDisplay(): Promise&lt;Array&lt;Display&gt;&gt;\n\n获取当前所有的Display对象，使用Promise异步回调。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-55",
+        "title": "Display",
+        "level": 2,
+        "line_start": 1729,
+        "line_end": 2056,
+        "summary": "屏幕实例。描述Display对象的属性和方法。\n\n下列API示例中都需先使用[getAllDisplays()](#displaygetalldisplays9)、[getDefaultDisplay"
+      }
+    ]
+  }
+}

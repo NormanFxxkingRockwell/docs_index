@@ -1,0 +1,124 @@
+{
+  "doc_id": "js-apis-bluetooth-a2dp",
+  "title": "@ohos.bluetooth.a2dp (蓝牙a2dp模块)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-a2dp.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-a2dp.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.bluetooth.a2dp (蓝牙a2dp模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bluetooth.a2dp (蓝牙a2dp模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```js\nimport { a2dp } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "BaseProfile",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 35,
+        "summary": "type BaseProfile = baseProfile.BaseProfile\n\n基础Profile接口定义，提供监听和获取连接状态等公共能力。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-3",
+        "title": "a2dp.createA2dpSrcProfile",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 72,
+        "summary": "createA2dpSrcProfile(): A2dpSourceProfile\n\n创建蓝牙媒体[A2DP Source](../../connectivity/terminology.md#a2"
+      },
+      {
+        "section_id": "section-4",
+        "title": "A2dpSourceProfile",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 130,
+        "summary": "该实例表示蓝牙媒体音频中的[A2DP Source](../../connectivity/terminology.md#a2dp-source)角色。\n- 该类继承于[BaseProfile](#"
+      },
+      {
+        "section_id": "section-5",
+        "title": "PlayingState",
+        "level": 2,
+        "line_start": 131,
+        "line_end": 142,
+        "summary": "枚举，蓝牙媒体音频播放状态。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称                | 值"
+      },
+      {
+        "section_id": "section-6",
+        "title": "CodecInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 157,
+        "summary": "蓝牙媒体音频使用的编解码器。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称        | 类型"
+      },
+      {
+        "section_id": "section-7",
+        "title": "CodecInfoList<sup>19+</sup>",
+        "level": 2,
+        "line_start": 158,
+        "line_end": 172,
+        "summary": "蓝牙媒体音频编解码器支持的能力集合。不同编解码器支持的位深、声道模式、采样率、码率和帧长类型与音频接收器设备端能力有关。\n\n**系统能力**：SystemCapability.Communicati"
+      },
+      {
+        "section_id": "section-8",
+        "title": "CodecType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 173,
+        "line_end": 188,
+        "summary": "枚举，蓝牙媒体音频编解码器类型。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称                | 值"
+      },
+      {
+        "section_id": "section-9",
+        "title": "CodecChannelMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 201,
+        "summary": "枚举，蓝牙媒体音频编解码器的声道模式，表示音频播放时独立的空间信号路径数量。声道模式影响声音的立体感和空间定位‌。\n\n**系统能力**：SystemCapability.Communication."
+      },
+      {
+        "section_id": "section-10",
+        "title": "CodecBitsPerSample<sup>11+</sup>",
+        "level": 2,
+        "line_start": 202,
+        "line_end": 215,
+        "summary": "枚举，蓝牙媒体音频编解码器的位深，表示蓝牙音频信号在数字表示中使用的位数，单位为bit。位深决定每个采样点可以表示的动态范围和精度。\n\n**系统能力**：SystemCapability.Commu"
+      },
+      {
+        "section_id": "section-11",
+        "title": "CodecSampleRate<sup>11+</sup>",
+        "level": 2,
+        "line_start": 216,
+        "line_end": 231,
+        "summary": "枚举，蓝牙媒体音频编解码器的采样率，表示每秒对蓝牙音频采样的次数，单位为Hz。采样率的选择会影响音质和传输效率。\n\n**系统能力**：SystemCapability.Communication.B"
+      },
+      {
+        "section_id": "section-12",
+        "title": "CodecBitRate<sup>19+</sup>",
+        "level": 2,
+        "line_start": 232,
+        "line_end": 251,
+        "summary": "枚举，蓝牙媒体音频编解码器的码率，表示单位时间内音频数据的传输量，单位为kbps。码率影响音频音质和文件大小。\n\n**系统能力**：SystemCapability.Communication.Bl"
+      },
+      {
+        "section_id": "section-13",
+        "title": "CodecFrameLength<sup>19+</sup>",
+        "level": 2,
+        "line_start": 252,
+        "line_end": 261,
+        "summary": "枚举，蓝牙媒体音频编解码器的帧长，表示一帧音频数据播放的时长。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称"
+      }
+    ]
+  }
+}

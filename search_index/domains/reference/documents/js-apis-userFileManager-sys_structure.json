@@ -1,0 +1,220 @@
+{
+  "doc_id": "js-apis-userFileManager-sys",
+  "title": "@ohos.filemanagement.userFileManager (用户数据管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-userFileManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-userFileManager-sys.md",
+  "metadata": {
+    "kit": "Media Library Kit",
+    "subsystem": "Multimedia",
+    "owner": "@yixiaoff",
+    "designer": "@liweilu1",
+    "tester": "@xchaosioda",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Media Library Kit Multimedia 模块的 @ohos.filemanagement.userFileManager (用户数据管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.filemanagement.userFileManager (用户数据管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport userFileManager from '@ohos.filemanagement.userFileManager';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "userFileManager.getUserFileMgr",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 65,
+        "summary": "getUserFileMgr(context: Context): UserFileManager\n\n获取用户数据管理模块的实例，用于访问和修改用户公共媒体数据信息（如音频、视频、图片、文档等）。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "UserFileManager",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 1923,
+        "summary": "### getPhotoAssets\n\ngetPhotoAssets(options: FetchOptions, callback: AsyncCallback&lt;FetchResult&lt"
+      },
+      {
+        "section_id": "section-4",
+        "title": "FileAsset",
+        "level": 2,
+        "line_start": 1924,
+        "line_end": 2987,
+        "summary": "提供封装文件属性的方法。\n\n### 属性\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-5",
+        "title": "FetchResult",
+        "level": 2,
+        "line_start": 2988,
+        "line_end": 3498,
+        "summary": "文件检索结果集。\n\n### getCount\n\ngetCount(): number\n\n获取文件检索结果中的文件总数。\n\n**系统能力**：SystemCapability.FileManageme"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Album",
+        "level": 2,
+        "line_start": 3499,
+        "line_end": 4197,
+        "summary": "实体相册。\n\n### 属性\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-7",
+        "title": "PrivateAlbum",
+        "level": 2,
+        "line_start": 4198,
+        "line_end": 4536,
+        "summary": "系统相册。\n\n此接口即将废弃，请使用[Album](#album)接口替代。\n\n### 属性\n\n**系统能力**：SystemCapability.FileManagement.UserFileMa"
+      },
+      {
+        "section_id": "section-8",
+        "title": "MemberType",
+        "level": 2,
+        "line_start": 4537,
+        "line_end": 4552,
+        "summary": "type MemberType = number | string | boolean\n\n文件资产成员的类型。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ChangeEvent",
+        "level": 2,
+        "line_start": 4553,
+        "line_end": 4571,
+        "summary": "type ChangeEvent = 'deviceChange' | 'albumChange' | 'imageChange' | 'audioChange' | 'videoChange' |"
+      },
+      {
+        "section_id": "section-10",
+        "title": "PeerInfo",
+        "level": 2,
+        "line_start": 4572,
+        "line_end": 4583,
+        "summary": "注册设备的信息。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.DistributedCore\n\n| 名称       | 类型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "FileType",
+        "level": 2,
+        "line_start": 4584,
+        "line_end": 4595,
+        "summary": "枚举，媒体文件类型。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称  |  值 |  说明 |\n| ---"
+      },
+      {
+        "section_id": "section-12",
+        "title": "PhotoSubType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4596,
+        "line_end": 4607,
+        "summary": "枚举，不同[FileAsset](#fileasset)的类型。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n|"
+      },
+      {
+        "section_id": "section-13",
+        "title": "PositionType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4608,
+        "line_end": 4619,
+        "summary": "枚举，文件位置，表示文件在本地或云端。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称  |  值 |  说"
+      },
+      {
+        "section_id": "section-14",
+        "title": "AlbumType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4620,
+        "line_end": 4630,
+        "summary": "枚举，相册类型，表示是用户相册还是系统预置相册。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称  |  值"
+      },
+      {
+        "section_id": "section-15",
+        "title": "AlbumSubType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4631,
+        "line_end": 4647,
+        "summary": "枚举，相册子类型，表示具体的相册类型。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称  |  值 |  说"
+      },
+      {
+        "section_id": "section-16",
+        "title": "PrivateAlbumType",
+        "level": 2,
+        "line_start": 4648,
+        "line_end": 4660,
+        "summary": "枚举，系统相册类型。\n\n此接口即将废弃，请使用[AlbumType](#albumtype10)和[AlbumSubType](#albumsubtype10)和接口替代。\n\n**系统能力**：Sy"
+      },
+      {
+        "section_id": "section-17",
+        "title": "AudioKey",
+        "level": 2,
+        "line_start": 4661,
+        "line_end": 4678,
+        "summary": "枚举，音频文件关键信息。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称          |   值"
+      },
+      {
+        "section_id": "section-18",
+        "title": "ImageVideoKey",
+        "level": 2,
+        "line_start": 4679,
+        "line_end": 4704,
+        "summary": "枚举，图片和视频文件关键信息。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称          | 值"
+      },
+      {
+        "section_id": "section-19",
+        "title": "AlbumKey",
+        "level": 2,
+        "line_start": 4705,
+        "line_end": 4718,
+        "summary": "枚举，相册关键信息。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称          | 值"
+      },
+      {
+        "section_id": "section-20",
+        "title": "PhotoCreateOptions<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4719,
+        "line_end": 4731,
+        "summary": "图片或视频的创建选项。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名"
+      },
+      {
+        "section_id": "section-21",
+        "title": "FetchOptions",
+        "level": 2,
+        "line_start": 4732,
+        "line_end": 4742,
+        "summary": "检索条件。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称                   | 类型"
+      },
+      {
+        "section_id": "section-22",
+        "title": "AlbumFetchOptions",
+        "level": 2,
+        "line_start": 4743,
+        "line_end": 4752,
+        "summary": "相册检索条件。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称                   | 类型"
+      },
+      {
+        "section_id": "section-23",
+        "title": "ChangeData<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4753,
+        "line_end": 4764,
+        "summary": "监听器回调函数的值。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称    | 类型"
+      },
+      {
+        "section_id": "section-24",
+        "title": "NotifyType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4765,
+        "line_end": 4778,
+        "summary": "枚举，通知事件的类型。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-25",
+        "title": "DefaultChangeUri<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4779,
+        "line_end": 4791,
+        "summary": "枚举，DefaultChangeUri子类型。\n\n**系统能力**：SystemCapability.FileManagement.UserFileManager.Core\n\n| 名称"
+      }
+    ]
+  }
+}

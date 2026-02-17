@@ -1,0 +1,220 @@
+{
+  "doc_id": "arkts-basic-components-web-t",
+  "title": "Types",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-basic-components-web-t.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-basic-components-web-t.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@yp99ustc; @aohui; @zourongchun",
+    "designer": "@LongLie; @yaomingliu; @zhufenghao",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Types，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Types",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "WebviewController<sup>9+</sup>",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 26,
+        "summary": "type WebviewController = WebviewController\n\n提供Web控制器的方法。\n\n**系统能力：** SystemCapability.Web.Webview.Co"
+      },
+      {
+        "section_id": "section-2",
+        "title": "OnAdsBlockedCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 40,
+        "summary": "type OnAdsBlockedCallback = (details: AdsBlockedDetails) => void\n\n当页面发生广告过滤时触发此回调。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-3",
+        "title": "OnSslErrorEventCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 41,
+        "line_end": 54,
+        "summary": "type OnSslErrorEventCallback = (sslErrorEvent: SslErrorEvent) => void\n\n用户加载资源时发生SSL错误时触发的回调。\n\n**系统能"
+      },
+      {
+        "section_id": "section-4",
+        "title": "OnVerifyPinCallback<sup>22+</sup>",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 68,
+        "summary": "type OnVerifyPinCallback = (verifyPinEvent: VerifyPinEvent) => void\n\n需要用户进行PIN码认证时触发的回调。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "OnContextMenuHideCallback<sup>11+</sup>",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 76,
+        "summary": "type OnContextMenuHideCallback = () => void\n\n上下文菜单自定义隐藏的回调。\n\n**系统能力：** SystemCapability.Web.Webview"
+      },
+      {
+        "section_id": "section-6",
+        "title": "OnRenderProcessNotRespondingCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 90,
+        "summary": "type OnRenderProcessNotRespondingCallback = (data : RenderProcessNotRespondingData) => void\n\n渲染进程无响"
+      },
+      {
+        "section_id": "section-7",
+        "title": "OnRenderProcessRespondingCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 98,
+        "summary": "type OnRenderProcessRespondingCallback = () => void\n\n渲染进程由无响应状态变回正常运行状态时触发该回调。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-8",
+        "title": "OnViewportFitChangedCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 99,
+        "line_end": 112,
+        "summary": "type OnViewportFitChangedCallback = (viewportFit: ViewportFit) => void\n\n网页meta中viewport-fit配置项更改时触发"
+      },
+      {
+        "section_id": "section-9",
+        "title": "OnNativeEmbedVisibilityChangeCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 113,
+        "line_end": 126,
+        "summary": "type OnNativeEmbedVisibilityChangeCallback = (nativeEmbedVisibilityInfo: NativeEmbedVisibilityInfo)"
+      },
+      {
+        "section_id": "section-10",
+        "title": "OnFullScreenEnterCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 140,
+        "summary": "type OnFullScreenEnterCallback = (event: FullScreenEnterEvent) => void\n\nWeb组件进入全屏时触发的回调。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-11",
+        "title": "OnFirstMeaningfulPaintCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 154,
+        "summary": "type OnFirstMeaningfulPaintCallback = (firstMeaningfulPaint: [FirstMeaningfulPaint](./arkts-basic-c"
+      },
+      {
+        "section_id": "section-12",
+        "title": "OnLargestContentfulPaintCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 155,
+        "line_end": 168,
+        "summary": "type OnLargestContentfulPaintCallback = (largestContentfulPaint: [LargestContentfulPaint](./arkts-b"
+      },
+      {
+        "section_id": "section-13",
+        "title": "OnNavigationEntryCommittedCallback<sup>11+</sup>",
+        "level": 2,
+        "line_start": 169,
+        "line_end": 182,
+        "summary": "type OnNavigationEntryCommittedCallback = (loadCommittedDetails: [LoadCommittedDetails](./arkts-bas"
+      },
+      {
+        "section_id": "section-14",
+        "title": "OnSafeBrowsingCheckResultCallback<sup>11+</sup>",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 196,
+        "summary": "type OnSafeBrowsingCheckResultCallback = (threatType: ThreatType) => void\n\n网站安全风险检查触发的回调。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-15",
+        "title": "OnIntelligentTrackingPreventionCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 210,
+        "summary": "type OnIntelligentTrackingPreventionCallback = (details: IntelligentTrackingPreventionDetails) => v"
+      },
+      {
+        "section_id": "section-16",
+        "title": "OnOverrideUrlLoadingCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 230,
+        "summary": "type OnOverrideUrlLoadingCallback = (webResourceRequest: WebResourceRequest) => boolean\n\nonOverride"
+      },
+      {
+        "section_id": "section-17",
+        "title": "WebKeyboardCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 231,
+        "line_end": 250,
+        "summary": "type WebKeyboardCallback = (keyboardCallbackInfo: WebKeyboardCallbackInfo) => WebKeyboardOptions\n\n拦"
+      },
+      {
+        "section_id": "section-18",
+        "title": "OnOverrideErrorPageCallback<sup>20+</sup>",
+        "level": 2,
+        "line_start": 251,
+        "line_end": 270,
+        "summary": "type OnOverrideErrorPageCallback = (errorPageEvent: OnErrorReceiveEvent) => string\n\nonOverrideError"
+      },
+      {
+        "section_id": "section-19",
+        "title": "MouseInfoCallback<sup>20+<sup>",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 288,
+        "summary": "type MouseInfoCallback = (event: NativeEmbedMouseInfo) => void\n\n当鼠标/触摸板点击到同层标签时触发该回调。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-20",
+        "title": "OnNativeEmbedObjectParamChangeCallback<sup>21+<sup>",
+        "level": 2,
+        "line_start": 289,
+        "line_end": 306,
+        "summary": "type OnNativeEmbedObjectParamChangeCallback = (event: NativeEmbedParamDataInfo) => void\n\n增加、修改或删除同层"
+      },
+      {
+        "section_id": "section-21",
+        "title": "OnDetectBlankScreenCallback<sup>22+<sup>",
+        "level": 2,
+        "line_start": 307,
+        "line_end": 324,
+        "summary": "type OnDetectBlankScreenCallback = (event: BlankScreenDetectionEventInfo) => void\n\n检测到白屏时触发此回调。\n\n**"
+      },
+      {
+        "section_id": "section-22",
+        "title": "OnCameraCaptureStateChangeCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 325,
+        "line_end": 338,
+        "summary": "type OnCameraCaptureStateChangeCallback = (event: CameraCaptureStateChangeInfo) => void;\n\n当页面摄像头状态发"
+      },
+      {
+        "section_id": "section-23",
+        "title": "OnMicrophoneCaptureStateChangeCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 339,
+        "line_end": 352,
+        "summary": "type OnMicrophoneCaptureStateChangeCallback = (event: MicrophoneCaptureStateChangeInfo) => void;\n\n当"
+      },
+      {
+        "section_id": "section-24",
+        "title": "TextSelectionChangeCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 353,
+        "line_end": 370,
+        "summary": "type TextSelectionChangeCallback = (selectionText: string) => void\n\nonTextSelectionChange的回调函数，选区内容"
+      },
+      {
+        "section_id": "section-25",
+        "title": "OnFirstScreenPaintCallback<sup>23+<sup>",
+        "level": 2,
+        "line_start": 371,
+        "line_end": 387,
+        "summary": "type OnFirstScreenPaintCallback = (firstScreenPaint: FirstScreenPaint) => void\n\n检测到首屏渲染结束时会触发此回调。"
+      }
+    ]
+  }
+}

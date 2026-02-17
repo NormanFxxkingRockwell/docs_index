@@ -1,0 +1,132 @@
+{
+  "doc_id": "arkts-apis-media-AVScreenCaptureRecorder",
+  "title": "Interface (AVScreenCaptureRecorder)",
+  "path": "zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-AVScreenCaptureRecorder.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-AVScreenCaptureRecorder.md",
+  "metadata": {
+    "kit": "Media Kit",
+    "subsystem": "Multimedia",
+    "owner": "@zzs_911",
+    "designer": "@stupig001",
+    "tester": "@xdlinc",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Kit Multimedia 模块的 Interface (AVScreenCaptureRecorder)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AVScreenCaptureRecorder)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { media } from '@kit.MediaKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "init<sup>12+</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 93,
+        "summary": "init(config: AVScreenCaptureRecordConfig): Promise\\<void>\n\n进行录屏初始化，设置录屏参数。使用Promise异步回调。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-3",
+        "title": "startRecording<sup>12+</sup>",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 128,
+        "summary": "startRecording(): Promise\\<void>\n\n开始录屏，在使用前需要先调用[init](arkts-apis-media-AVScreenCaptureRecorder.md#"
+      },
+      {
+        "section_id": "section-4",
+        "title": "stopRecording<sup>12+</sup>",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 163,
+        "summary": "stopRecording(): Promise\\<void>\n\n结束录屏。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia.Media.A"
+      },
+      {
+        "section_id": "section-5",
+        "title": "skipPrivacyMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 164,
+        "line_end": 207,
+        "summary": "skipPrivacyMode(windowIDs: Array\\<number>): Promise\\<void>\n\n录屏时，应用可对本应用的隐私窗口做安全豁免。使用Promise异步回调。\n\n如"
+      },
+      {
+        "section_id": "section-6",
+        "title": "setMicEnabled<sup>12+</sup>",
+        "level": 2,
+        "line_start": 208,
+        "line_end": 248,
+        "summary": "setMicEnabled(enable: boolean): Promise\\<void>\n\n设置麦克风开关。使用Promise异步回调。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-7",
+        "title": "setPickerMode<sup>22+</sup>",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 290,
+        "summary": "setPickerMode(pickerMode: PickerMode): Promise\\<void>\n\n设置Picker显示模式，在下一次显示Picker时生效。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "excludePickerWindows<sup>22+</sup>",
+        "level": 2,
+        "line_start": 291,
+        "line_end": 334,
+        "summary": "excludePickerWindows(excludedWindows: Array\\<number>): Promise\\<void>\n\n设置在Picker中隐藏的窗口列表，在下一次显示Pick"
+      },
+      {
+        "section_id": "section-9",
+        "title": "presentPicker<sup>22+</sup>",
+        "level": 2,
+        "line_start": 335,
+        "line_end": 374,
+        "summary": "presentPicker(): Promise\\<void>\n\n录屏开始后，调用该接口再次弹出Picker，可动态更新录制源（窗口、屏幕）。使用Promise异步回调。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-10",
+        "title": "release<sup>12+</sup>",
+        "level": 2,
+        "line_start": 375,
+        "line_end": 409,
+        "summary": "release(): Promise\\<void>\n\n释放录屏。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia.Media.AVScree"
+      },
+      {
+        "section_id": "section-11",
+        "title": "on('stateChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 410,
+        "line_end": 432,
+        "summary": "on(type: 'stateChange', callback: Callback\\<AVScreenCaptureStateCode>): void\n\n订阅录屏状态切换的事件，当状态发生的时候，"
+      },
+      {
+        "section_id": "section-12",
+        "title": "on('error')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 433,
+        "line_end": 465,
+        "summary": "on(type: 'error', callback: ErrorCallback): void\n\n订阅AVScreenCaptureRecorder的错误事件，用户可以根据应用自身逻辑对错误事件进"
+      },
+      {
+        "section_id": "section-13",
+        "title": "off('stateChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 466,
+        "line_end": 486,
+        "summary": "off(type: 'stateChange', callback?: Callback\\<AVScreenCaptureStateCode>): void\n\n取消订阅状态切换回调事件。用户可以指"
+      },
+      {
+        "section_id": "section-14",
+        "title": "off('error')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 487,
+        "line_end": 506,
+        "summary": "off(type: 'error', callback?: ErrorCallback): void\n\n取消订阅错误回调事件。用户可以指定填入错误回调方法来取消订阅。\n\n**系统能力：** Syst"
+      }
+    ]
+  }
+}

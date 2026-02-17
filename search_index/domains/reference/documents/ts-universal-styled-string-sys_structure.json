@@ -1,0 +1,60 @@
+{
+  "doc_id": "ts-universal-styled-string-sys",
+  "title": "属性字符串 (系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-styled-string-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-styled-string-sys.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@hddgzw",
+    "designer": "@xiangyuan6",
+    "tester": "@jiaoaozihao",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 属性字符串 (系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "属性字符串 (系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "StyledString",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 126,
+        "summary": "### marshalling\n\nstatic marshalling(styledString: StyledString): ArrayBuffer\n\n序列化属性字符串。\n\n**系统接口：**"
+      },
+      {
+        "section_id": "section-2",
+        "title": "StyledStringMarshallingValue<sup>19+</sup>",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 140,
+        "summary": "type StyledStringMarshallingValue = UserDataSpan\n\n属性字符串自定义序列化对象类型，需要开发者定义序列化和反序列化的方式。\n\n**系统接口：** 此接"
+      },
+      {
+        "section_id": "section-3",
+        "title": "StyledStringMarshallCallback<sup>19+</sup>",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 162,
+        "summary": "type StyledStringMarshallCallback = (marshallableVal: StyledStringMarshallingValue) => ArrayBuffer"
+      },
+      {
+        "section_id": "section-4",
+        "title": "StyledStringUnmarshallCallback<sup>19+</sup>",
+        "level": 2,
+        "line_start": 163,
+        "line_end": 184,
+        "summary": "type StyledStringUnmarshallCallback = (buf: ArrayBuffer) => StyledStringMarshallingValue\n\n属性字符串反序列化"
+      },
+      {
+        "section_id": "section-5",
+        "title": "示例",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 403,
+        "summary": "### 示例1 (属性字符串序列化和反序列化)\n\n该示例通过marshalling、unmarshalling属性实现了属性字符串序列化和反序列化的功能。\n\n```ts\n// xxx.ets\nimp"
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-power",
+  "title": "@ohos.power (系统电源管理)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-power.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-power.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "PowerManager",
+    "owner": "@zhang-yinglie; @volcano_wang",
+    "designer": "@wangyantian0",
+    "tester": "@alien0208",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Basic Services Kit PowerManager 模块的 @ohos.power (系统电源管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.power (系统电源管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```js\nimport {power} from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "power.isActive<sup>9+</sup>",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 43,
+        "summary": "isActive(): boolean\n\n检测当前设备是否处于活动状态。\n- 有屏的设备亮屏时为活动状态，熄屏时为非活动状态。\n- 无屏的设备非休眠时为活动状态，休眠时为非活动状态。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-3",
+        "title": "power.rebootDevice<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 67,
+        "summary": "rebootDevice(reason: string): void\n\n> **说明：**<br>从API version 7开始支持，从API version 9开始不再维护<!--Del-->。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "power.getPowerMode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 88,
+        "summary": "getPowerMode(): DevicePowerMode\n\n获取当前设备的电源模式。\n\n**系统能力：** SystemCapability.PowerManager.PowerManager"
+      },
+      {
+        "section_id": "section-5",
+        "title": "power.isStandby<sup>10+</sup>",
+        "level": 2,
+        "line_start": 89,
+        "line_end": 121,
+        "summary": "isStandby(): boolean\n\n检测当前设备是否进入待机低功耗续航模式。\n\n**系统能力：** SystemCapability.PowerManager.PowerManager.Co"
+      },
+      {
+        "section_id": "section-6",
+        "title": "power.isScreenOn<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 149,
+        "summary": "isScreenOn(callback: AsyncCallback&lt;boolean&gt;): void\n\n> **说明：**<br>从API version 7开始支持，从API vers"
+      },
+      {
+        "section_id": "section-7",
+        "title": "power.isScreenOn<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 176,
+        "summary": "isScreenOn(): Promise&lt;boolean&gt;\n\n> **说明：**<br>从API version 7开始支持，从API version 9开始不再维护，建议使用[pow"
+      },
+      {
+        "section_id": "section-8",
+        "title": "DevicePowerMode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 190,
+        "summary": "表示电源模式的枚举值。\n\n**系统能力：** SystemCapability.PowerManager.PowerManager.Core\n\n| 名称                    | 值"
+      },
+      {
+        "section_id": "section-9",
+        "title": "PowerKeyFilteringStrategy<sup>21+</sup>",
+        "level": 2,
+        "line_start": 191,
+        "line_end": 200,
+        "summary": "表示电源键过滤策略。\n\n**系统能力：** SystemCapability.PowerManager.PowerManager.Core\n\n| 名称                    | 值"
+      }
+    ]
+  }
+}

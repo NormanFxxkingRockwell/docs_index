@@ -1,0 +1,76 @@
+{
+  "doc_id": "errorcode-perftest",
+  "title": "perftest错误码",
+  "path": "zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md",
+  "metadata": {
+    "kit": "Test Kit",
+    "subsystem": "Test",
+    "owner": "@inter515",
+    "designer": "@inter515",
+    "tester": "@laonie666",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Test Kit Test 模块的 perftest错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "perftest错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "32400001 初始化失败",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 31,
+        "summary": "**错误信息**\n\nInitialization failed.\n\n**错误描述**\n\n框架初始化失败。\n\n**可能原因**\n\n无法获取测试应用包名。\n\n**处理步骤**\n\n使用ps等shell命令"
+      },
+      {
+        "section_id": "section-2",
+        "title": "32400002 内部错误",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 50,
+        "summary": "**错误信息**\n\nInternal error.\n\n**错误描述**\n\n框架内部运行出现错误。\n\n**可能原因**\n\n1. IPC传输失败。\n2. PerfTest对象不存在。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-3",
+        "title": "32400003 参数校验失败",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 67,
+        "summary": "**错误信息**\n\nParameter verification failed.\n\n**错误描述**\n\n参数校验失败。\n\n**可能原因**\n\n参数类型错误/参数取值超出规定范围。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "32400004 执行回调函数失败",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 85,
+        "summary": "**错误信息**\n\nFailed to execute the callback.\n\n**错误描述**\n\n执行回调代码段失败。\n\n**可能原因**\n\n1. 回调函数内部抛出异常。\n2. 回调函数执行超"
+      },
+      {
+        "section_id": "section-5",
+        "title": "32400005 采集性能数据失败",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 102,
+        "summary": "**错误信息**\n\nFailed to collect metric data.\n\n**错误描述**\n\n采集性能数据失败。\n\n**可能原因**\n\n采集性能数据时，被测应用进程不存在。\n\n**处理步骤*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "32400006 无法获取性能数据",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 119,
+        "summary": "**错误信息**\n\nFailed to obtain the measurement result.\n\n**错误描述**\n\n无法获取指定性能指标对应的测试数据。\n\n**可能原因**\n\n测试数据未采集完"
+      },
+      {
+        "section_id": "section-7",
+        "title": "32400007 接口不支持并行调用",
+        "level": 2,
+        "line_start": 120,
+        "line_end": 136,
+        "summary": "**错误信息**\n\nThe API does not support concurrent calls.\n\n**错误描述**\n\n接口不支持并行调用。\n\n**可能原因**\n\n异步API没有使用await"
+      }
+    ]
+  }
+}

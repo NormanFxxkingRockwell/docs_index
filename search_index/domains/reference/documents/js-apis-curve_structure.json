@@ -1,0 +1,148 @@
+{
+  "doc_id": "js-apis-curve",
+  "title": "@ohos.curves (插值计算)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-curve.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-curve.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@CCFFWW",
+    "designer": "@CCFFWW",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 @ohos.curves (插值计算)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.curves (插值计算)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 22,
+        "summary": "```ts\nimport { curves } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "curves.initCurve<sup>9+</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 44,
+        "summary": "initCurve(curve?: Curve): ICurve\n\n插值曲线的初始化函数，可以根据入参创建一个插值曲线对象。\n\n**原子化服务API：** 从API version 11开始，该接口"
+      },
+      {
+        "section_id": "section-3",
+        "title": "Curve",
+        "level": 2,
+        "line_start": 45,
+        "line_end": 76,
+        "summary": "插值曲线和动效请参考<!--RP1-->[贝塞尔曲线](../../../design/ux-design/animation-attributes.md)<!--RP1End-->。\n\n**原子化"
+      },
+      {
+        "section_id": "section-4",
+        "title": "curves.stepsCurve<sup>9+</sup>",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 107,
+        "summary": "stepsCurve(count: number, end: boolean): ICurve\n\n构造阶梯曲线对象。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原"
+      },
+      {
+        "section_id": "section-5",
+        "title": "curves.cubicBezierCurve<sup>9+</sup>",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 141,
+        "summary": "cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurve\n\n构造三阶贝塞尔曲线对象，确保曲线的值在0到1之间。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "curves.springCurve<sup>9+</sup>",
+        "level": 2,
+        "line_start": 142,
+        "line_end": 175,
+        "summary": "springCurve(velocity: number, mass: number, stiffness: number, damping: number): ICurve\n\n构造弹簧曲线对象，曲"
+      },
+      {
+        "section_id": "section-7",
+        "title": "curves.springMotion<sup>9+</sup>",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 211,
+        "summary": "springMotion(response?: number, dampingFraction?: number, overlapDuration?: number): ICurve\n\n构造弹性动画"
+      },
+      {
+        "section_id": "section-8",
+        "title": "curves.responsiveSpringMotion<sup>9+</sup>",
+        "level": 2,
+        "line_start": 212,
+        "line_end": 243,
+        "summary": "responsiveSpringMotion(response?: number, dampingFraction?: number, overlapDuration?: number): ICur"
+      },
+      {
+        "section_id": "section-9",
+        "title": "curves.interpolatingSpring<sup>10+</sup>",
+        "level": 2,
+        "line_start": 244,
+        "line_end": 274,
+        "summary": "interpolatingSpring(velocity: number, mass: number, stiffness: number, damping: number): ICurve\n\n构造"
+      },
+      {
+        "section_id": "section-10",
+        "title": "curves.customCurve<sup>10+</sup>",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 306,
+        "summary": "customCurve(interpolate: (fraction: number) => number): ICurve\n\n构造自定义曲线对象。\n\n**原子化服务API：** 从API vers"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ICurve<sup>9+</sup>",
+        "level": 2,
+        "line_start": 307,
+        "line_end": 341,
+        "summary": "曲线对象，支持通过本模块中的[curves.cubicBezierCurve](#curvescubicbeziercurve9)、[curves.interpolatingSpring](#cur"
+      },
+      {
+        "section_id": "section-12",
+        "title": "curves.init<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 342,
+        "line_end": 367,
+        "summary": "init(curve?: Curve): string\n\n\n插值曲线的初始化函数，可以根据入参创建一个插值曲线对象。\n\n> **说明：**  \n>\n> 从API version 7开始支持，从API"
+      },
+      {
+        "section_id": "section-13",
+        "title": "curves.steps<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 394,
+        "summary": "steps(count: number, end: boolean): string\n\n\n构造阶梯曲线对象。\n\n> **说明：**  \n>\n> 从API version 7开始支持，从API ver"
+      },
+      {
+        "section_id": "section-14",
+        "title": "curves.cubicBezier<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 395,
+        "line_end": 422,
+        "summary": "cubicBezier(x1: number, y1: number, x2: number, y2: number): string\n\n\n构造三阶贝塞尔曲线对象，曲线的值必须处于0-1之间。\n\n>"
+      },
+      {
+        "section_id": "section-15",
+        "title": "curves.spring<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 423,
+        "line_end": 449,
+        "summary": "spring(velocity: number, mass: number, stiffness: number, damping: number): string\n\n构造弹簧曲线对象。\n\n> **"
+      },
+      {
+        "section_id": "section-16",
+        "title": "整体示例",
+        "level": 2,
+        "line_start": 450,
+        "line_end": 481,
+        "summary": "```ts\n// xxx.ets\nimport { curves } from '@kit.ArkUI';\n\n@Entry\n@Component\nstruct ImageComponent {"
+      }
+    ]
+  }
+}

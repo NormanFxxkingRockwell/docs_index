@@ -1,0 +1,204 @@
+{
+  "doc_id": "arkts-apis-uicontext-promptaction",
+  "title": "Class (PromptAction)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkts-apis-uicontext-promptaction.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkts-apis-uicontext-promptaction.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@houguobiao",
+    "designer": "@houguobiao",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 Class (PromptAction)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (PromptAction)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "getTopOrder<sup>18+</sup>",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 98,
+        "summary": "getTopOrder(): LevelOrder\n\n返回最顶层显示的弹窗的顺序。\n\n获取最顶层显示的弹窗的顺序，可以在下一个弹窗时指定期望的顺序。\n\n**原子化服务API：** 从API vers"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getBottomOrder<sup>18+</sup>",
+        "level": 2,
+        "line_start": 99,
+        "line_end": 176,
+        "summary": "getBottomOrder(): LevelOrder\n\n获取最底层显示的弹窗的顺序，可以在下一个弹窗时指定期望的顺序。\n\n**原子化服务API：** 从API version 18开始，该接口支"
+      },
+      {
+        "section_id": "section-3",
+        "title": "openToast<sup>18+</sup>",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 253,
+        "summary": "openToast(options: promptAction.ShowToastOptions): Promise&lt;number&gt;\n\n显示即时反馈。使用Promise异步回调返回即时反"
+      },
+      {
+        "section_id": "section-4",
+        "title": "closeToast<sup>18+</sup>",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 283,
+        "summary": "closeToast(toastId: number): void\n\n关闭即时反馈。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-5",
+        "title": "showToast",
+        "level": 2,
+        "line_start": 284,
+        "line_end": 341,
+        "summary": "showToast(options: promptAction.ShowToastOptions): void\n\n创建并显示即时反馈。\n\n**原子化服务API：** 从API version 11开"
+      },
+      {
+        "section_id": "section-6",
+        "title": "showDialog",
+        "level": 2,
+        "line_start": 342,
+        "line_end": 416,
+        "summary": "showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback&lt;promptAction.ShowDia"
+      },
+      {
+        "section_id": "section-7",
+        "title": "showDialog",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 489,
+        "summary": "showDialog(options: promptAction.ShowDialogOptions): Promise&lt;promptAction.ShowDialogSuccessRespo"
+      },
+      {
+        "section_id": "section-8",
+        "title": "showActionMenu<sup>11+</sup>",
+        "level": 2,
+        "line_start": 490,
+        "line_end": 561,
+        "summary": "showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback&lt;[promptAction.Ac"
+      },
+      {
+        "section_id": "section-9",
+        "title": "showActionMenu",
+        "level": 2,
+        "line_start": 562,
+        "line_end": 632,
+        "summary": "showActionMenu(options: promptAction.ActionMenuOptions): Promise&lt;promptAction.ActionMenuSuccessR"
+      },
+      {
+        "section_id": "section-10",
+        "title": "openCustomDialog<sup>12+</sup>",
+        "level": 2,
+        "line_start": 633,
+        "line_end": 762,
+        "summary": "openCustomDialog\\<T extends Object>(dialogContent: ComponentContent\\<T>, options?: promptAction.Bas"
+      },
+      {
+        "section_id": "section-11",
+        "title": "openCustomDialog<sup>12+</sup>",
+        "level": 2,
+        "line_start": 763,
+        "line_end": 868,
+        "summary": "openCustomDialog(options: promptAction.CustomDialogOptions): Promise\\<number>\n\n创建并弹出自定义弹窗。使用Promise"
+      },
+      {
+        "section_id": "section-12",
+        "title": "openCustomDialogWithController<sup>18+</sup>",
+        "level": 2,
+        "line_start": 869,
+        "line_end": 970,
+        "summary": "openCustomDialogWithController\\<T extends Object>(dialogContent: ComponentContent\\<T>, controller:"
+      },
+      {
+        "section_id": "section-13",
+        "title": "updateCustomDialog<sup>12+</sup>",
+        "level": 2,
+        "line_start": 971,
+        "line_end": 1069,
+        "summary": "updateCustomDialog\\<T extends Object>(dialogContent: ComponentContent\\<T>, options: promptAction.Ba"
+      },
+      {
+        "section_id": "section-14",
+        "title": "closeCustomDialog<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1070,
+        "line_end": 1168,
+        "summary": "closeCustomDialog\\<T extends Object>(dialogContent: ComponentContent\\<T>): Promise&lt;void&gt;\n\n关闭已"
+      },
+      {
+        "section_id": "section-15",
+        "title": "closeCustomDialog<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1169,
+        "line_end": 1251,
+        "summary": "closeCustomDialog(dialogId: number): void\n\n关闭自定义弹窗。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-16",
+        "title": "presentCustomDialog<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1252,
+        "line_end": 1364,
+        "summary": "presentCustomDialog(builder: CustomBuilder \\| CustomBuilderWithId, controller?: promptAction.Dialog"
+      },
+      {
+        "section_id": "section-17",
+        "title": "openPopup<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1365,
+        "line_end": 1494,
+        "summary": "openPopup\\<T extends Object>(content: ComponentContent\\<T>, target: TargetInfo, options?: PopupComm"
+      },
+      {
+        "section_id": "section-18",
+        "title": "updatePopup<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1495,
+        "line_end": 1536,
+        "summary": "updatePopup\\<T extends Object>(content: ComponentContent\\<T>, options: PopupCommonOptions, partialU"
+      },
+      {
+        "section_id": "section-19",
+        "title": "closePopup<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1537,
+        "line_end": 1572,
+        "summary": "closePopup\\<T extends Object>(content: ComponentContent\\<T>): Promise&lt;void&gt;\n\n关闭content对应的Popu"
+      },
+      {
+        "section_id": "section-20",
+        "title": "openMenu<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1573,
+        "line_end": 1671,
+        "summary": "openMenu\\<T extends Object>(content: ComponentContent\\<T>, target: TargetInfo, options?: MenuOption"
+      },
+      {
+        "section_id": "section-21",
+        "title": "updateMenu<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1672,
+        "line_end": 1769,
+        "summary": "updateMenu\\<T extends Object>(content: ComponentContent\\<T>, options: MenuOptions, partialUpdate?:"
+      },
+      {
+        "section_id": "section-22",
+        "title": "closeMenu<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1770,
+        "line_end": 1858,
+        "summary": "closeMenu\\<T extends Object>(content: ComponentContent\\<T>): Promise&lt;void&gt;\n\n关闭content对应的Menu弹"
+      },
+      {
+        "section_id": "section-23",
+        "title": "showActionMenu<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1859,
+        "line_end": 1928,
+        "summary": "showActionMenu(options: promptAction.ActionMenuOptions, callback: [promptAction.ActionMenuSuccessRe"
+      }
+    ]
+  }
+}

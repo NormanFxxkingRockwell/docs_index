@@ -1,0 +1,476 @@
+{
+  "doc_id": "js-apis-bundleManager",
+  "title": "@ohos.bundle.bundleManager (应用程序包管理模块)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-bundleManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-bundleManager.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Ability Kit BundleManager 模块的 @ohos.bundle.bundleManager (应用程序包管理模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bundle.bundleManager (应用程序包管理模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 19,
+        "summary": "```ts\nimport { bundleManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "BundleFlag",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 41,
+        "summary": "包信息标志，指示需要获取的包信息的内容。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ExtensionAbilityType",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 86,
+        "summary": "扩展组件的类型。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n| 名称 | 值 | 说明 |\n|:--------"
+      },
+      {
+        "section_id": "section-4",
+        "title": "PermissionGrantState",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 99,
+        "summary": "权限授予状态。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.BundleManager."
+      },
+      {
+        "section_id": "section-5",
+        "title": "SupportWindowMode",
+        "level": 2,
+        "line_start": 100,
+        "line_end": 113,
+        "summary": "标识该组件所支持的窗口模式。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.BundleM"
+      },
+      {
+        "section_id": "section-6",
+        "title": "LaunchType",
+        "level": 2,
+        "line_start": 114,
+        "line_end": 127,
+        "summary": "标识组件的[启动模式](../../application-models/uiability-launch-type.md)。\n\n**原子化服务API：** 从API version 11开始，该接"
+      },
+      {
+        "section_id": "section-7",
+        "title": "AbilityType",
+        "level": 2,
+        "line_start": 128,
+        "line_end": 141,
+        "summary": "标识Ability组件的类型。\n\n**模型约束：** 仅可在FA模型下使用。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Co"
+      },
+      {
+        "section_id": "section-8",
+        "title": "DisplayOrientation",
+        "level": 2,
+        "line_start": 142,
+        "line_end": 167,
+        "summary": "标识该Ability的显示模式。仅适用于FA模型的[PageAbility](../../application-models/pageability-overview.md)。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-9",
+        "title": "CompatiblePolicy<sup>10+</sup>",
+        "level": 2,
+        "line_start": 168,
+        "line_end": 179,
+        "summary": "标识动态共享库的版本兼容类型。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Bundle"
+      },
+      {
+        "section_id": "section-10",
+        "title": "ModuleType",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 193,
+        "summary": "标识模块类型。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.BundleManager."
+      },
+      {
+        "section_id": "section-11",
+        "title": "BundleType",
+        "level": 2,
+        "line_start": 194,
+        "line_end": 206,
+        "summary": "标识应用的类型。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.BundleManager"
+      },
+      {
+        "section_id": "section-12",
+        "title": "MultiAppModeType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 207,
+        "line_end": 217,
+        "summary": "标识应用多开的模式类型。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n| 名称 | 值 | 说明 |\n|:-----"
+      },
+      {
+        "section_id": "section-13",
+        "title": "AbilityFlag<sup>20+</sup>",
+        "level": 2,
+        "line_start": 218,
+        "line_end": 236,
+        "summary": "Ability组件信息标志，指示需要获取的Ability组件信息的内容。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-14",
+        "title": "bundleManager.getBundleInfoForSelf",
+        "level": 2,
+        "line_start": 237,
+        "line_end": 289,
+        "summary": "getBundleInfoForSelf(bundleFlags: number): Promise\\<BundleInfo>\n\n根据给定的bundleFlags获取当前应用的BundleInfo。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "bundleManager.getBundleInfoForSelf",
+        "level": 2,
+        "line_start": 290,
+        "line_end": 340,
+        "summary": "getBundleInfoForSelf(bundleFlags: number, callback: AsyncCallback\\<BundleInfo>): void\n\n根据给定的bundleF"
+      },
+      {
+        "section_id": "section-16",
+        "title": "bundleManager.getProfileByAbility",
+        "level": 2,
+        "line_start": 341,
+        "line_end": 399,
+        "summary": "getProfileByAbility(moduleName: string, abilityName: string, metadataName: string, callback: AsyncC"
+      },
+      {
+        "section_id": "section-17",
+        "title": "bundleManager.getProfileByAbility",
+        "level": 2,
+        "line_start": 400,
+        "line_end": 483,
+        "summary": "getProfileByAbility(moduleName: string, abilityName: string, metadataName?: string): Promise\\<Array"
+      },
+      {
+        "section_id": "section-18",
+        "title": "bundleManager.getProfileByAbilitySync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 484,
+        "line_end": 560,
+        "summary": "getProfileByAbilitySync(moduleName: string, abilityName: string, metadataName?: string): Array\\<str"
+      },
+      {
+        "section_id": "section-19",
+        "title": "bundleManager.getProfileByExtensionAbility",
+        "level": 2,
+        "line_start": 561,
+        "line_end": 617,
+        "summary": "getProfileByExtensionAbility(moduleName: string, extensionAbilityName: string, metadataName: string"
+      },
+      {
+        "section_id": "section-20",
+        "title": "bundleManager.getProfileByExtensionAbility",
+        "level": 2,
+        "line_start": 618,
+        "line_end": 688,
+        "summary": "getProfileByExtensionAbility(moduleName: string, extensionAbilityName: string, metadataName?: strin"
+      },
+      {
+        "section_id": "section-21",
+        "title": "bundleManager.getProfileByExtensionAbilitySync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 689,
+        "line_end": 755,
+        "summary": "getProfileByExtensionAbilitySync(moduleName: string, extensionAbilityName: string, metadataName?: s"
+      },
+      {
+        "section_id": "section-22",
+        "title": "bundleManager.getBundleInfoForSelfSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 756,
+        "line_end": 803,
+        "summary": "getBundleInfoForSelfSync(bundleFlags: number): BundleInfo\n\n以同步方法根据给定的bundleFlags获取当前应用的BundleInfo。"
+      },
+      {
+        "section_id": "section-23",
+        "title": "bundleManager.canOpenLink<sup>12+</sup>",
+        "level": 2,
+        "line_start": 804,
+        "line_end": 852,
+        "summary": "canOpenLink(link: string): boolean\n\n根据给定的链接判断目标应用是否可访问，链接中的scheme需要在[module.json5文件](../../quick-st"
+      },
+      {
+        "section_id": "section-24",
+        "title": "bundleManager.getLaunchWant<sup>13+</sup>",
+        "level": 2,
+        "line_start": 853,
+        "line_end": 893,
+        "summary": "getLaunchWant(): Want\n\n获取本应用[入口UIAbility](../../quick-start/application-package-glossary.md#uiabili"
+      },
+      {
+        "section_id": "section-25",
+        "title": "bundleManager.getBundleInfo<sup>14+</sup>",
+        "level": 2,
+        "line_start": 894,
+        "line_end": 978,
+        "summary": "getBundleInfo(bundleName: string, bundleFlags: number, userId: number, callback: AsyncCallback\\<Bun"
+      },
+      {
+        "section_id": "section-26",
+        "title": "bundleManager.getBundleInfo<sup>14+</sup>",
+        "level": 2,
+        "line_start": 979,
+        "line_end": 1035,
+        "summary": "getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback\\<BundleInfo>): void"
+      },
+      {
+        "section_id": "section-27",
+        "title": "bundleManager.getBundleInfo<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1036,
+        "line_end": 1118,
+        "summary": "getBundleInfo(bundleName: string, bundleFlags: number, userId?: number): Promise\\<BundleInfo>\n\n根据给定"
+      },
+      {
+        "section_id": "section-28",
+        "title": "bundleManager.getBundleInfoSync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1119,
+        "line_end": 1176,
+        "summary": "getBundleInfoSync(bundleName: string, bundleFlags: number, userId: number): BundleInfo\n\n以同步方法根据给定的b"
+      },
+      {
+        "section_id": "section-29",
+        "title": "bundleManager.getBundleInfoSync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1177,
+        "line_end": 1230,
+        "summary": "getBundleInfoSync(bundleName: string, bundleFlags: number): BundleInfo\n\n以同步方法根据给定的bundleName、bundle"
+      },
+      {
+        "section_id": "section-30",
+        "title": "bundleManager.getBundleNameByUid<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1231,
+        "line_end": 1279,
+        "summary": "getBundleNameByUid(uid: number, callback: AsyncCallback\\<string>): void\n\n根据给定的uid获取对应应用的bundleName。"
+      },
+      {
+        "section_id": "section-31",
+        "title": "bundleManager.getBundleNameByUid<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1280,
+        "line_end": 1331,
+        "summary": "getBundleNameByUid(uid: number): Promise\\<string>\n\n根据给定的uid获取对应应用的bundleName。使用Promise异步回调。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-32",
+        "title": "bundleManager.getBundleNameByUidSync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1332,
+        "line_end": 1380,
+        "summary": "getBundleNameByUidSync(uid: number): string\n\n以同步方法根据给定的uid获取对应应用的bundleName。\n\n**需要权限：** ohos.permis"
+      },
+      {
+        "section_id": "section-33",
+        "title": "bundleManager.getAppCloneIdentity<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1381,
+        "line_end": 1433,
+        "summary": "getAppCloneIdentity(uid: number): Promise\\<AppCloneIdentity>;\n\n根据uid查询分身应用的包名和分身索引。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-34",
+        "title": "bundleManager.getSignatureInfo<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1434,
+        "line_end": 1482,
+        "summary": "getSignatureInfo(uid: number): SignatureInfo\n\n根据给定的uid获取对应应用的[签名信息](./js-apis-bundleManager-bundleI"
+      },
+      {
+        "section_id": "section-35",
+        "title": "bundleManager.getAbilityInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1483,
+        "line_end": 1540,
+        "summary": "getAbilityInfo(uri: string, abilityFlags: number): Promise\\<Array\\<AbilityInfo>>\n\n获取指定资源标识符和组件信息标志对"
+      },
+      {
+        "section_id": "section-36",
+        "title": "bundleManager.cleanBundleCacheFilesForSelf<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1541,
+        "line_end": 1566,
+        "summary": "cleanBundleCacheFilesForSelf(): Promise\\<void>\n\n清理应用自身的缓存。使用Promise异步回调。\n\n**原子化服务API：** 从API versio"
+      },
+      {
+        "section_id": "section-37",
+        "title": "bundleManager.getPluginBundlePathForSelf<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1567,
+        "line_end": 1612,
+        "summary": "getPluginBundlePathForSelf(pluginBundleName: string): string\n\n获取指定插件在当前[应用沙箱](../../file-management"
+      },
+      {
+        "section_id": "section-38",
+        "title": "bundleManager.getLaunchWantForBundleSync<sup>24+</sup>",
+        "level": 2,
+        "line_start": 1613,
+        "line_end": 1690,
+        "summary": "getLaunchWantForBundleSync(bundleName: string, userId?: number): Want\n\n根据给定的包名和用户ID，获取用于启动应用程序的Want"
+      },
+      {
+        "section_id": "section-39",
+        "title": "ApplicationInfo",
+        "level": 2,
+        "line_start": 1691,
+        "line_end": 1704,
+        "summary": "type ApplicationInfo = _ApplicationInfo\n\n应用程序信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-40",
+        "title": "ModuleMetadata<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1705,
+        "line_end": 1718,
+        "summary": "type ModuleMetadata = _ModuleMetadata\n\n模块的元数据信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-41",
+        "title": "Metadata",
+        "level": 2,
+        "line_start": 1719,
+        "line_end": 1732,
+        "summary": "type Metadata = _Metadata\n\n元数据信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**: Syste"
+      },
+      {
+        "section_id": "section-42",
+        "title": "BundleInfo",
+        "level": 2,
+        "line_start": 1733,
+        "line_end": 1747,
+        "summary": "type BundleInfo = _BundleInfo.BundleInfo\n\n应用包信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-43",
+        "title": "UsedScene",
+        "level": 2,
+        "line_start": 1748,
+        "line_end": 1761,
+        "summary": "type UsedScene = _BundleInfo.UsedScene\n\n权限使用的场景和时机。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-44",
+        "title": "ReqPermissionDetail",
+        "level": 2,
+        "line_start": 1762,
+        "line_end": 1775,
+        "summary": "type ReqPermissionDetail = _BundleInfo.ReqPermissionDetail\n\n应用运行时需向系统申请的权限集合的详细信息。\n\n**原子化服务API：** 从"
+      },
+      {
+        "section_id": "section-45",
+        "title": "SignatureInfo",
+        "level": 2,
+        "line_start": 1776,
+        "line_end": 1789,
+        "summary": "type SignatureInfo = _BundleInfo.SignatureInfo\n\n应用包的签名信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子"
+      },
+      {
+        "section_id": "section-46",
+        "title": "HapModuleInfo",
+        "level": 2,
+        "line_start": 1790,
+        "line_end": 1803,
+        "summary": "type HapModuleInfo = _HapModuleInfo.HapModuleInfo\n\n模块信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化"
+      },
+      {
+        "section_id": "section-47",
+        "title": "PreloadItem",
+        "level": 2,
+        "line_start": 1804,
+        "line_end": 1817,
+        "summary": "type PreloadItem = _HapModuleInfo.PreloadItem\n\n原子化服务中模块的预加载模块信息。\n\n**原子化服务API：** 从API version 11开始，该"
+      },
+      {
+        "section_id": "section-48",
+        "title": "Dependency",
+        "level": 2,
+        "line_start": 1818,
+        "line_end": 1831,
+        "summary": "type Dependency = _HapModuleInfo.Dependency\n\n模块所依赖的动态共享库信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在"
+      },
+      {
+        "section_id": "section-49",
+        "title": "RouterItem<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1832,
+        "line_end": 1845,
+        "summary": "type RouterItem = _HapModuleInfo.RouterItem\n\n模块配置的路由表信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化"
+      },
+      {
+        "section_id": "section-50",
+        "title": "DataItem<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1846,
+        "line_end": 1859,
+        "summary": "type DataItem = _HapModuleInfo.DataItem\n\n模块配置的路由表中的自定义数据。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子"
+      },
+      {
+        "section_id": "section-51",
+        "title": "AbilityInfo",
+        "level": 2,
+        "line_start": 1860,
+        "line_end": 1873,
+        "summary": "type AbilityInfo = _AbilityInfo.AbilityInfo\n\nAbility信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服"
+      },
+      {
+        "section_id": "section-52",
+        "title": "WindowSize",
+        "level": 2,
+        "line_start": 1874,
+        "line_end": 1888,
+        "summary": "type WindowSize = _AbilityInfo.WindowSize\n\n窗口尺寸。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-53",
+        "title": "ExtensionAbilityInfo",
+        "level": 2,
+        "line_start": 1889,
+        "line_end": 1902,
+        "summary": "type ExtensionAbilityInfo = _ExtensionAbilityInfo.ExtensionAbilityInfo\n\nExtensionAbility信息。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-54",
+        "title": "ElementName",
+        "level": 2,
+        "line_start": 1903,
+        "line_end": 1916,
+        "summary": "type ElementName = _ElementName\n\nElementName信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n*"
+      },
+      {
+        "section_id": "section-55",
+        "title": "Skill<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1917,
+        "line_end": 1930,
+        "summary": "type Skill = _Skill.Skill\n\nskill信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Sys"
+      },
+      {
+        "section_id": "section-56",
+        "title": "SkillUrl<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1931,
+        "line_end": 1944,
+        "summary": "type SkillUrl = _Skill.SkillUri\n\nSkillUri信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-57",
+        "title": "AppCloneIdentity<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1945,
+        "line_end": 1956,
+        "summary": "type AppCloneIdentity = _BundleInfo.AppCloneIdentity\n\n描述应用包的身份信息。\n\n**系统能力：** SystemCapability.Bundl"
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "doc_id": "js-apis-screenLockFileManager-sys",
+  "title": "@ohos.ability.screenLockFileManager (锁屏敏感数据管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-screenLockFileManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-screenLockFileManager-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Security",
+    "owner": "@steven-q",
+    "designer": "@JiDong-CS1",
+    "tester": "@leiyuqian",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Ability Kit Security 模块的 @ohos.ability.screenLockFileManager (锁屏敏感数据管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.ability.screenLockFileManager (锁屏敏感数据管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 21,
+        "summary": "```ts\nimport { screenLockFileManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "screenLockFileManager.acquireAccess",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 79,
+        "summary": "acquireAccess(dataType: DataType): AccessStatus\n\n以同步方法申请锁屏下指定类型的敏感数据访问权限。 锁屏后，敏感数据无法被访问，但可通过调用该方法，访"
+      },
+      {
+        "section_id": "section-3",
+        "title": "screenLockFileManager.releaseAccess",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 137,
+        "summary": "releaseAccess(dataType: DataType): ReleaseStatus\n\n以同步方法取消锁屏下指定类型敏感数据访问权限。\n\n**系统接口：** 此接口为系统接口。\n\n**需"
+      },
+      {
+        "section_id": "section-4",
+        "title": "screenLockFileManager.queryAppKeyState<sup>18+</sup>",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 196,
+        "summary": "queryAppKeyState(dataType: DataType): KeyStatus\n\n以同步方法查询锁屏下应用指定类型敏感数据访问权限。\n\n**系统接口：** 此接口为系统接口。\n\n**"
+      }
+    ]
+  }
+}

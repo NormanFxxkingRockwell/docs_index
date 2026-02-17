@@ -1,0 +1,308 @@
+{
+  "doc_id": "js-apis-radio",
+  "title": "@ohos.telephony.radio (网络搜索)",
+  "path": "zh-cn/application-dev/reference/apis-telephony-kit/js-apis-radio.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-telephony-kit/js-apis-radio.md",
+  "metadata": {
+    "kit": "Telephony Kit",
+    "subsystem": "Telephony",
+    "owner": "@Terence_Super",
+    "designer": "@Terence_Super",
+    "tester": "@jiang_99",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Telephony Kit Telephony 模块的 @ohos.telephony.radio (网络搜索)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.telephony.radio (网络搜索)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { radio } from '@kit.TelephonyKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "radio.getRadioTech",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 67,
+        "summary": "getRadioTech\\(slotId: number, callback: AsyncCallback<[NetworkRadioTech](#networkradiotech11)\\>\\):"
+      },
+      {
+        "section_id": "section-3",
+        "title": "radio.getRadioTech",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 116,
+        "summary": "getRadioTech\\(slotId: number\\): Promise\\<[NetworkRadioTech](#networkradiotech11)\\>\n\n获取当前接入的CS域和PS域无"
+      },
+      {
+        "section_id": "section-4",
+        "title": "radio.getRadioTechSync<sup>18+</sup>",
+        "level": 2,
+        "line_start": 117,
+        "line_end": 160,
+        "summary": "getRadioTechSync\\(slotId: number\\): [NetworkRadioTech](#networkradiotech11)\n\n获取当前接入的CS域和PS域无线接入技术。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "radio.getNetworkState",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 204,
+        "summary": "getNetworkState\\(callback: AsyncCallback\\<NetworkState\\>\\): void\n\n获取网络状态。使用callback异步回调。\n\n**需要权限**："
+      },
+      {
+        "section_id": "section-6",
+        "title": "radio.getNetworkState",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 250,
+        "summary": "getNetworkState\\(slotId: number, callback: AsyncCallback\\<NetworkState\\>\\): void\n\n获取网络状态。使用callback"
+      },
+      {
+        "section_id": "section-7",
+        "title": "radio.getNetworkState",
+        "level": 2,
+        "line_start": 251,
+        "line_end": 299,
+        "summary": "getNetworkState\\(slotId?: number\\): Promise\\<NetworkState\\>\n\n获取网络状态。使用Promise异步回调。\n\n**需要权限**：ohos.p"
+      },
+      {
+        "section_id": "section-8",
+        "title": "radio.getNetworkSelectionMode",
+        "level": 2,
+        "line_start": 300,
+        "line_end": 342,
+        "summary": "getNetworkSelectionMode\\(slotId: number, callback: AsyncCallback\\<NetworkSelectionMode\\>\\): void\n\n获"
+      },
+      {
+        "section_id": "section-9",
+        "title": "radio.getNetworkSelectionMode",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 388,
+        "summary": "getNetworkSelectionMode\\(slotId: number\\): Promise\\<NetworkSelectionMode\\>\n\n获取当前选网模式。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "radio.getISOCountryCodeForNetwork<sup>7+</sup>",
+        "level": 2,
+        "line_start": 389,
+        "line_end": 431,
+        "summary": "getISOCountryCodeForNetwork\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取注册网络所在国家的"
+      },
+      {
+        "section_id": "section-11",
+        "title": "radio.getISOCountryCodeForNetwork<sup>7+</sup>",
+        "level": 2,
+        "line_start": 432,
+        "line_end": 476,
+        "summary": "getISOCountryCodeForNetwork\\(slotId: number\\): Promise\\<string\\>\n\n获取注册网络所在国家的ISO国家码。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "radio.getISOCountryCodeForNetworkSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 477,
+        "line_end": 506,
+        "summary": "getISOCountryCodeForNetworkSync\\(slotId: number\\): string\n\n获取注册网络所在国家的ISO国家码。\n\n**系统能力**：SystemCapab"
+      },
+      {
+        "section_id": "section-13",
+        "title": "radio.getPrimarySlotId<sup>7+</sup>",
+        "level": 2,
+        "line_start": 507,
+        "line_end": 547,
+        "summary": "getPrimarySlotId\\(callback: AsyncCallback\\<number\\>\\): void\n\n获取主卡所在卡槽的索引号。使用callback异步回调。\n\n**系统能力**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "radio.getPrimarySlotId<sup>7+</sup>",
+        "level": 2,
+        "line_start": 548,
+        "line_end": 584,
+        "summary": "getPrimarySlotId\\(\\): Promise\\<number\\>\n\n获取主卡所在卡槽的索引号。使用Promise异步回调。\n\n**系统能力**：SystemCapability.Tel"
+      },
+      {
+        "section_id": "section-15",
+        "title": "radio.getSignalInformation<sup>7+</sup>",
+        "level": 2,
+        "line_start": 585,
+        "line_end": 627,
+        "summary": "getSignalInformation\\(slotId: number, callback: AsyncCallback\\<Array\\<SignalInformation\\>\\>\\): void"
+      },
+      {
+        "section_id": "section-16",
+        "title": "radio.getSignalInformation<sup>7+</sup>",
+        "level": 2,
+        "line_start": 628,
+        "line_end": 672,
+        "summary": "getSignalInformation\\(slotId: number\\): Promise\\<Array\\<SignalInformation\\>\\>\n\n获取指定SIM卡槽对应的注册网络信号强度"
+      },
+      {
+        "section_id": "section-17",
+        "title": "radio.getSignalInformationSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 673,
+        "line_end": 701,
+        "summary": "getSignalInformationSync\\(slotId: number\\): Array\\<SignalInformation\\>\n\n获取指定SIM卡槽对应的注册网络信号强度信息列表。"
+      },
+      {
+        "section_id": "section-18",
+        "title": "radio.isNrSupported<sup>8+(deprecated)</sup>",
+        "level": 2,
+        "line_start": 702,
+        "line_end": 726,
+        "summary": "isNrSupported\\(\\): boolean\n\n判断当前设备是否支持NR(New Radio)。\n\n> **说明：**\n>\n> 从 API version 7开始支持，从API versio"
+      },
+      {
+        "section_id": "section-19",
+        "title": "radio.isNrSupported<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 727,
+        "line_end": 759,
+        "summary": "isNrSupported\\(slotId: number\\): boolean\n\n判断当前设备是否支持NR(New Radio)。\n\n> **说明：**\n>\n> 从 API version 8开始"
+      },
+      {
+        "section_id": "section-20",
+        "title": "radio.isNRSupported<sup>9+</sup>",
+        "level": 2,
+        "line_start": 760,
+        "line_end": 781,
+        "summary": "isNRSupported\\(\\): boolean\n\n判断当前设备是否支持NR(New Radio)。\n\n**系统能力**：SystemCapability.Telephony.CoreServi"
+      },
+      {
+        "section_id": "section-21",
+        "title": "radio.isNRSupported<sup>9+</sup>",
+        "level": 2,
+        "line_start": 782,
+        "line_end": 810,
+        "summary": "isNRSupported\\(slotId: number\\): boolean\n\n判断当前设备是否支持NR(New Radio)。\n\n**系统能力**：SystemCapability.Telep"
+      },
+      {
+        "section_id": "section-22",
+        "title": "radio.isRadioOn<sup>7+</sup>",
+        "level": 2,
+        "line_start": 811,
+        "line_end": 854,
+        "summary": "isRadioOn\\(callback: AsyncCallback\\<boolean\\>\\): void\n\n判断主卡的Radio是否打开。使用callback异步回调。\n\n**需要权限**：oho"
+      },
+      {
+        "section_id": "section-23",
+        "title": "radio.isRadioOn<sup>7+</sup>",
+        "level": 2,
+        "line_start": 855,
+        "line_end": 900,
+        "summary": "isRadioOn\\(slotId: number, callback: AsyncCallback\\<boolean\\>\\): void\n\n判断指定卡槽位的Radio是否打开。使用callback"
+      },
+      {
+        "section_id": "section-24",
+        "title": "radio.isRadioOn<sup>7+</sup>",
+        "level": 2,
+        "line_start": 901,
+        "line_end": 949,
+        "summary": "isRadioOn\\(slotId?: number\\): Promise\\<boolean\\>\n\n判断Radio是否打开。使用Promise异步回调。\n\n**需要权限**：ohos.permiss"
+      },
+      {
+        "section_id": "section-25",
+        "title": "radio.getOperatorName<sup>7+</sup>",
+        "level": 2,
+        "line_start": 950,
+        "line_end": 992,
+        "summary": "getOperatorName\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取运营商名称。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-26",
+        "title": "radio.getOperatorName<sup>7+</sup>",
+        "level": 2,
+        "line_start": 993,
+        "line_end": 1037,
+        "summary": "getOperatorName\\(slotId: number\\): Promise\\<string\\>\n\n获取运营商名称。使用Promise异步回调。\n\n**系统能力**：SystemCapabi"
+      },
+      {
+        "section_id": "section-27",
+        "title": "radio.getOperatorNameSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1038,
+        "line_end": 1067,
+        "summary": "getOperatorNameSync\\(slotId: number\\): string\n\n获取运营商名称。\n\n**系统能力**：SystemCapability.Telephony.CoreSe"
+      },
+      {
+        "section_id": "section-28",
+        "title": "NetworkRadioTech<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1068,
+        "line_end": 1078,
+        "summary": "网络中packet service (PS) 和 circuit service (CS) 无线接入技术。\n\n**系统能力**：SystemCapability.Telephony.CoreServ"
+      },
+      {
+        "section_id": "section-29",
+        "title": "RadioTechnology",
+        "level": 2,
+        "line_start": 1079,
+        "line_end": 1101,
+        "summary": "无线接入技术。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称                      | 值   | 说明"
+      },
+      {
+        "section_id": "section-30",
+        "title": "SignalInformation",
+        "level": 2,
+        "line_start": 1102,
+        "line_end": 1113,
+        "summary": "网络信号强度信息对象。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n|      名称       |           类型"
+      },
+      {
+        "section_id": "section-31",
+        "title": "NetworkType",
+        "level": 2,
+        "line_start": 1114,
+        "line_end": 1129,
+        "summary": "网络类型。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称                 | 值   | 说明"
+      },
+      {
+        "section_id": "section-32",
+        "title": "NetworkState",
+        "level": 2,
+        "line_start": 1130,
+        "line_end": 1148,
+        "summary": "网络注册状态。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n|       名称           |                 类型"
+      },
+      {
+        "section_id": "section-33",
+        "title": "RegState",
+        "level": 2,
+        "line_start": 1149,
+        "line_end": 1162,
+        "summary": "网络注册状态。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称                          | 值   | 说明"
+      },
+      {
+        "section_id": "section-34",
+        "title": "NsaState",
+        "level": 2,
+        "line_start": 1163,
+        "line_end": 1178,
+        "summary": "非独立组网状态。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称                       | 值   | 说明"
+      },
+      {
+        "section_id": "section-35",
+        "title": "NetworkSelectionMode",
+        "level": 2,
+        "line_start": 1179,
+        "line_end": 1191,
+        "summary": "选网模式。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称                        | 值   | 说明"
+      },
+      {
+        "section_id": "section-36",
+        "title": "CellInformation<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1192,
+        "line_end": 1203,
+        "summary": "小区信息。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称              |                  类型"
+      }
+    ]
+  }
+}

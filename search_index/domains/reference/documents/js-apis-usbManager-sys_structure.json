@@ -1,0 +1,212 @@
+{
+  "doc_id": "js-apis-usbManager-sys",
+  "title": "@ohos.usbManager (USB管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-usbManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-usbManager-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "USB",
+    "owner": "@hwymlgitcode",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Basic Services Kit USB 模块的 @ohos.usbManager (USB管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.usbManager (USB管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { usbManager } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "addRight <sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 70,
+        "summary": "addRight(bundleName: string, deviceName: string): boolean\n\n添加软件包访问设备的权限。系统应用默认拥有访问设备权限，调用此接口不会产生影响。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "usbFunctionsFromString<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 112,
+        "summary": "usbFunctionsFromString(funcs: string): number\n\n在设备模式下，将字符串形式的USB功能列表转化为数字掩码。\n\n> **说明：**\n>\n> 从 API v"
+      },
+      {
+        "section_id": "section-4",
+        "title": "usbFunctionsToString<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 113,
+        "line_end": 154,
+        "summary": "usbFunctionsToString(funcs: FunctionType): string\n\n在设备模式下，将数字掩码形式的USB功能列表转化为字符串。\n\n> **说明：**\n>\n> 从 A"
+      },
+      {
+        "section_id": "section-5",
+        "title": "setCurrentFunctions<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 155,
+        "line_end": 201,
+        "summary": "setCurrentFunctions(funcs: FunctionType): Promise\\<void\\>\n\n在设备模式下，设置当前的USB功能列表。使用Promise异步回调。\n\n> **"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getCurrentFunctions<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 202,
+        "line_end": 236,
+        "summary": "getCurrentFunctions(): FunctionType\n\n在设备模式下，获取当前的USB功能列表的数字组合掩码。开发者模式关闭时，如果没有设备接入，接口可能返回`undefined`"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getPorts<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 237,
+        "line_end": 271,
+        "summary": "getPorts(): Array\\<USBPort\\>\n\n获取所有物理USB端口描述信息。开发者模式关闭时，如果没有设备接入，接口可能返回`undefined`，注意需要对接口返回值做判空处理。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getSupportedModes(deprecated)",
+        "level": 2,
+        "line_start": 272,
+        "line_end": 312,
+        "summary": "getSupportedModes(portId: number): PortModeType\n\n获取指定的端口支持的模式列表的组合掩码。\n\n> **说明：**\n>\n> 从 API version"
+      },
+      {
+        "section_id": "section-9",
+        "title": "setPortRoles<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 313,
+        "line_end": 360,
+        "summary": "setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise\\<void\\>\n\n设置"
+      },
+      {
+        "section_id": "section-10",
+        "title": "addDeviceAccessRight<sup>12+</sup>",
+        "level": 2,
+        "line_start": 361,
+        "line_end": 427,
+        "summary": "addDeviceAccessRight(tokenId: string, deviceName: string): boolean\n\n添加软件包访问设备的权限。系统应用默认拥有访问设备权限，调用此"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getFunctionsFromString<sup>12+</sup>",
+        "level": 2,
+        "line_start": 428,
+        "line_end": 473,
+        "summary": "getFunctionsFromString(funcs: string): number\n\n在设备模式下，将字符串形式的USB功能列表转化为数字掩码。\n\n> **说明：**\n>\n> 从 API v"
+      },
+      {
+        "section_id": "section-12",
+        "title": "getStringFromFunctions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 474,
+        "line_end": 519,
+        "summary": "getStringFromFunctions(funcs: FunctionType): string\n\n在设备模式下，将数字掩码形式的USB功能列表转化为字符串。\n\n> **说明：**\n>\n> 从"
+      },
+      {
+        "section_id": "section-13",
+        "title": "setDeviceFunctions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 520,
+        "line_end": 572,
+        "summary": "setDeviceFunctions(funcs: FunctionType): Promise\\<void\\>\n\n在设备模式下，设置当前的USB功能列表。使用Promise异步回调。\n\n> **说"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getDeviceFunctions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 573,
+        "line_end": 610,
+        "summary": "getDeviceFunctions(): FunctionType\n\n在设备模式下，获取当前的USB功能列表的数字组合掩码。开发者模式关闭时，如果没有设备接入，接口可能返回`undefined`，"
+      },
+      {
+        "section_id": "section-15",
+        "title": "getPortList<sup>12+</sup>",
+        "level": 2,
+        "line_start": 611,
+        "line_end": 648,
+        "summary": "getPortList(): Array\\<USBPort\\>\n\n获取所有物理USB端口描述信息。开发者模式关闭时，如果没有设备接入，接口可能返回`undefined`，注意需要对接口返回值做判空处"
+      },
+      {
+        "section_id": "section-16",
+        "title": "getPortSupportModes<sup>12+</sup>",
+        "level": 2,
+        "line_start": 649,
+        "line_end": 689,
+        "summary": "getPortSupportModes(portId: number): PortModeType\n\n获取指定的端口支持的模式列表的组合掩码。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权"
+      },
+      {
+        "section_id": "section-17",
+        "title": "setPortRoleTypes<sup>12+</sup>",
+        "level": 2,
+        "line_start": 690,
+        "line_end": 744,
+        "summary": "setPortRoleTypes(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise\\<void\\>"
+      },
+      {
+        "section_id": "section-18",
+        "title": "addAccessoryRight<sup>14+<sup>",
+        "level": 2,
+        "line_start": 745,
+        "line_end": 797,
+        "summary": "addAccessoryRight(tokenId: number, accessory: USBAccessory): void\n\n为应用程序添加访问USB配件权限。\n\nusbManager.re"
+      },
+      {
+        "section_id": "section-19",
+        "title": "USBPort",
+        "level": 2,
+        "line_start": 798,
+        "line_end": 811,
+        "summary": "USB设备端口。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-20",
+        "title": "USBPortStatus",
+        "level": 2,
+        "line_start": 812,
+        "line_end": 825,
+        "summary": "USB设备端口角色信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称             | 类型"
+      },
+      {
+        "section_id": "section-21",
+        "title": "FunctionType",
+        "level": 2,
+        "line_start": 826,
+        "line_end": 846,
+        "summary": "USB设备侧功能。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称         | 值  | 说明"
+      },
+      {
+        "section_id": "section-22",
+        "title": "PortModeType",
+        "level": 2,
+        "line_start": 847,
+        "line_end": 862,
+        "summary": "USB端口模式类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称      | 值 | 说明"
+      },
+      {
+        "section_id": "section-23",
+        "title": "PowerRoleType",
+        "level": 2,
+        "line_start": 863,
+        "line_end": 876,
+        "summary": "电源角色类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称   | 值 | 说明       |\n|"
+      },
+      {
+        "section_id": "section-24",
+        "title": "DataRoleType",
+        "level": 2,
+        "line_start": 877,
+        "line_end": 891,
+        "summary": "数据角色类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称   | 值 | 说明         |"
+      }
+    ]
+  }
+}

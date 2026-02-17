@@ -1,0 +1,188 @@
+{
+  "doc_id": "js-apis-file-cloudsync",
+  "title": "@ohos.file.cloudSync (端云同步能力)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-cloudsync.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-cloudsync.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@Hermits; @reminder2352",
+    "designer": "@oh_create_jiawei",
+    "tester": "@liuhonggang123",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.file.cloudSync (端云同步能力)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.cloudSync (端云同步能力)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 19,
+        "summary": "```ts\nimport { cloudSync } from '@kit.CoreFileKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "SyncState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 38,
+        "summary": "端云同步状态，为枚举类型。\n\n> **说明：**\n>\n> 以下同步状态发生变更时，如果应用注册了同步过程事件监听，则通过回调通知应用。\n\n**系统能力**：SystemCapability.File"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ErrorType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 61,
+        "summary": "端云同步失败类型，为枚举类型。\n\n- 当前阶段，同步过程中，当开启无限量使用移动数据网络，移动数据网络和WIFI均不可用时，才会返回NETWORK_UNAVAILABLE；开启无限量使用移动数据网络"
+      },
+      {
+        "section_id": "section-4",
+        "title": "SyncProgress<sup>12+</sup>",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 74,
+        "summary": "端云同步过程。\n\n### 属性\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync.Core\n\n|"
+      },
+      {
+        "section_id": "section-5",
+        "title": "State<sup>11+</sup>",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 87,
+        "summary": "云文件下载状态，为枚举类型。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync.Core\n\n| 名"
+      },
+      {
+        "section_id": "section-6",
+        "title": "DownloadProgress<sup>11+</sup>",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 103,
+        "summary": "云文件下载过程。\n\n### 属性\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync.Core\n\n|"
+      },
+      {
+        "section_id": "section-7",
+        "title": "FileSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 451,
+        "summary": "云盘同步对象，用于支撑文件管理器应用完成云盘文件的端云同步流程。在使用前，需要先创建FileSync实例。\n\n**系统能力**：SystemCapability.FileManagement.Dis"
+      },
+      {
+        "section_id": "section-8",
+        "title": "CloudFileCache<sup>11+</sup>",
+        "level": 2,
+        "line_start": 452,
+        "line_end": 1020,
+        "summary": "云盘文件缓存对象，用来支撑文件管理应用原文件下载流程。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudS"
+      },
+      {
+        "section_id": "section-9",
+        "title": "DownloadErrorType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1021,
+        "line_end": 1035,
+        "summary": "端云下载错误类型，为枚举类型。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync.Core\n\n|"
+      },
+      {
+        "section_id": "section-10",
+        "title": "DownloadFileType<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1036,
+        "line_end": 1047,
+        "summary": "云盘缓存文件类型的枚举。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-11",
+        "title": "FailedFileInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1048,
+        "line_end": 1059,
+        "summary": "云文件批量缓存失败列表及失败原因。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync.Core"
+      },
+      {
+        "section_id": "section-12",
+        "title": "MultiDownloadProgress<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1060,
+        "line_end": 1184,
+        "summary": "云文件批量缓存的进度信息。\n\n### 属性\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync.Co"
+      },
+      {
+        "section_id": "section-13",
+        "title": "cloudSync.registerChange<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1185,
+        "line_end": 1231,
+        "summary": "registerChange(uri: string, recursion: boolean, callback: Callback&lt;ChangeData&gt;): void\n\n订阅监听指定"
+      },
+      {
+        "section_id": "section-14",
+        "title": "cloudSync.unregisterChange<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1232,
+        "line_end": 1276,
+        "summary": "unregisterChange(uri: string): void\n\n取消订阅监听指定文件的变化通知。\n\n**系统能力**：SystemCapability.FileManagement.Dis"
+      },
+      {
+        "section_id": "section-15",
+        "title": "NotifyType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1277,
+        "line_end": 1289,
+        "summary": "数据变更通知类型。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync.Core\n\n| 名称 |"
+      },
+      {
+        "section_id": "section-16",
+        "title": "ChangeData<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1290,
+        "line_end": 1302,
+        "summary": "定义变更数据。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync.Core\n\n| 名称     |"
+      },
+      {
+        "section_id": "section-17",
+        "title": "HistoryVersion<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1303,
+        "line_end": 1333,
+        "summary": "端云文件历史版本信息，调用端云文件版本管理类[FileVersion](#fileversion20)的[gethistoryversionlist](#gethistoryversionlist2"
+      },
+      {
+        "section_id": "section-18",
+        "title": "VersionDownloadProgress<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1334,
+        "line_end": 1347,
+        "summary": "历史版本文件下载状态和进度信息，调用端云文件版本管理类[FileVersion](#fileversion20)的[downloadHistoryVersion](#downloadhistoryv"
+      },
+      {
+        "section_id": "section-19",
+        "title": "FileVersion<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1348,
+        "line_end": 1687,
+        "summary": "端云文件版本管理类。支持对端云文件的历史版本进行管理，提供获取文件历史版本信息列表的能力，通过历史版本信息，可将历史版本下载到本地；并提供历史版本文件替换当前本地文件的能力，针对版本冲突，提供查询冲"
+      },
+      {
+        "section_id": "section-20",
+        "title": "cloudSync.getCoreFileSyncState<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1688,
+        "line_end": 1739,
+        "summary": "getCoreFileSyncState(uri: string): FileState\n\n同步方法获取云盘文件同步上行状态。\n\n**系统能力**：SystemCapability.FileMana"
+      },
+      {
+        "section_id": "section-21",
+        "title": "FileState<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1740,
+        "line_end": 1753,
+        "summary": "端云文件同步状态，为枚举类型。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync.Core\n\n|"
+      }
+    ]
+  }
+}

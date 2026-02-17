@@ -1,0 +1,148 @@
+{
+  "doc_id": "errorcode-hisysevent-sys",
+  "title": "系统事件错误码",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@lyj_love_code",
+    "designer": "@tangyyan",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 系统事件错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "系统事件错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "1120001 非法的事件领域",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 35,
+        "summary": "**错误信息**\n\nInvalid event domain.\n\n**错误描述**\n\n在调用write接口进行系统事件打点时，由于传入了非法的事件领域名称，系统将忽略此次系统事件打点。\n\n**可能原"
+      },
+      {
+        "section_id": "section-2",
+        "title": "1120002 非法的事件名称",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 57,
+        "summary": "**错误信息**\n\nInvalid event name.\n\n**错误描述**\n\n在调用write接口进行系统事件打点时，由于传入了非法的事件名称，系统将忽略此次系统事件打点。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-3",
+        "title": "11200003 环境异常",
+        "level": 2,
+        "line_start": 58,
+        "line_end": 77,
+        "summary": "**错误信息**\n\nAbnormal environment.\n\n**错误描述**\n\n在调用write接口进行系统事件打点时，由于环境异常，系统将忽略此次系统事件打点。\n\n**可能原因**\n\n1."
+      },
+      {
+        "section_id": "section-4",
+        "title": "11200004 事件长度超过限制",
+        "level": 2,
+        "line_start": 78,
+        "line_end": 95,
+        "summary": "**错误信息**\n\nThe event length exceeds the limit.\n\n**错误描述**\n\n在调用write接口进行系统事件打点时，由于传入的事件总长度超过限制，系统将忽略此次"
+      },
+      {
+        "section_id": "section-5",
+        "title": "11200051 非法的事件参数",
+        "level": 2,
+        "line_start": 96,
+        "line_end": 117,
+        "summary": "**错误信息**\n\nInvalid event parameter.\n\n**错误描述**\n\n在调用write接口进行系统事件打点时，由于传入了非法的参数名称，系统以抛出错误的形式提示，但会完成此次系"
+      },
+      {
+        "section_id": "section-6",
+        "title": "11200052 字符串类型的事件参数值的长度超过限制",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 135,
+        "summary": "**错误信息**\n\nThe size of the event parameter of the string type exceeds the limit.\n\n**错误描述**\n\n在调用write"
+      },
+      {
+        "section_id": "section-7",
+        "title": "11200053 事件参数的数量超过限制",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 153,
+        "summary": "**错误信息**\n\nThe number of event parameters exceeds the limit.\n\n**错误描述**\n\n在调用write接口进行系统事件打点时，由于传入的事件参"
+      },
+      {
+        "section_id": "section-8",
+        "title": "11200054 数组类型的事件参数值的长度超过限制",
+        "level": 2,
+        "line_start": 154,
+        "line_end": 171,
+        "summary": "**错误信息**\n\nThe number of event parameters of the array type exceeds the limit.\n\n**错误描述**\n\n在调用write接口"
+      },
+      {
+        "section_id": "section-9",
+        "title": "11200101 事件监听者的数量超过限制",
+        "level": 2,
+        "line_start": 172,
+        "line_end": 189,
+        "summary": "**错误信息**\n\nThe number of watchers exceeds the limit.\n\n**错误描述**\n\n在调用addWatcher接口添加系统事件监听者时，由于添加的监听者数量"
+      },
+      {
+        "section_id": "section-10",
+        "title": "11200102 事件监听者包含的监听规则数量超过限制",
+        "level": 2,
+        "line_start": 190,
+        "line_end": 207,
+        "summary": "**错误信息**\n\nThe number of watch rules exceeds the limit.\n\n**错误描述**\n\n在调用addWatcher接口添加系统事件监听者时，由于该系统事件"
+      },
+      {
+        "section_id": "section-11",
+        "title": "11200201 事件监听者不存在",
+        "level": 2,
+        "line_start": 208,
+        "line_end": 227,
+        "summary": "**错误信息**\n\nThe watcher does not exist.\n\n**错误描述**\n\n在调用removeWatcher移除系统事件监听者时，由于该系统事件监听者不在监听队列，系统将拒绝此"
+      },
+      {
+        "section_id": "section-12",
+        "title": "11200301 查询规则的数量超过限制",
+        "level": 2,
+        "line_start": 228,
+        "line_end": 246,
+        "summary": "**错误信息**\n\nThe number of query rules exceeds the limit.\n\n**错误描述**\n\n在调用query接口查询系统事件时，由于传入的查询规则数量超限，系"
+      },
+      {
+        "section_id": "section-13",
+        "title": "11200302 非法的查询规则",
+        "level": 2,
+        "line_start": 247,
+        "line_end": 269,
+        "summary": "**错误信息**\n\nInvalid query rule.\n\n\n**错误描述**\n\n在调用query接口查询系统事件时，由于传入了非法的查询规则，系统将忽略此次系统事件的查询。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "11200303 并发查询的数量超过限制",
+        "level": 2,
+        "line_start": 270,
+        "line_end": 287,
+        "summary": "**错误信息**\n\nThe number of concurrent queriers exceeds the limit.\n\n**错误描述**\n\n在调用query接口查询系统事件时，由于在同一时间"
+      },
+      {
+        "section_id": "section-15",
+        "title": "11200304 查询频率超过限制",
+        "level": 2,
+        "line_start": 288,
+        "line_end": 305,
+        "summary": "**错误信息**\n\nThe query frequency exceeds the limit.\n\n**错误描述**\n\n在调用query接口查询系统事件时，由于查询频率超过限制，系统将忽略此次系统事"
+      },
+      {
+        "section_id": "section-16",
+        "title": "11200305 取消订阅失败",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 323,
+        "summary": "**错误信息**\n\nUnsubscription failed.\n\n**错误描述**\n\n在调用unsubscribe接口失败的时候，返回此错误码。\n\n**可能原因**\n\nhiview服务异常。\n\n*"
+      }
+    ]
+  }
+}

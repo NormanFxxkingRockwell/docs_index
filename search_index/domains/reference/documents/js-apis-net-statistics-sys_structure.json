@@ -1,0 +1,148 @@
+{
+  "doc_id": "js-apis-net-statistics-sys",
+  "title": "@ohos.net.statistics (流量管理)（系统接口）",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-net-statistics-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-net-statistics-sys.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.statistics (流量管理)（系统接口），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.statistics (流量管理)（系统接口）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 23,
+        "summary": "```js\nimport { statistics } from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "statistics.on('netStatsChange')",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 68,
+        "summary": "on(type: 'netStatsChange', callback: Callback\\<NetStatsChangeInfo\\>): void\n\n订阅流量改变事件通知。使用callback异步"
+      },
+      {
+        "section_id": "section-3",
+        "title": "statistics.off('netStatsChange')",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 117,
+        "summary": "off(type: 'netStatsChange', callback?: Callback\\<NetStatsChangeInfo>): void\n\n取消订阅流量改变事件通知。使用callbac"
+      },
+      {
+        "section_id": "section-4",
+        "title": "statistics.getTrafficStatsByIface",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 180,
+        "summary": "getTrafficStatsByIface(ifaceInfo: IfaceInfo, callback: AsyncCallback\\<NetStatsInfo>): void\n\n获取指定网卡历"
+      },
+      {
+        "section_id": "section-5",
+        "title": "statistics.getTrafficStatsByIface",
+        "level": 2,
+        "line_start": 181,
+        "line_end": 243,
+        "summary": "getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise\\<NetStatsInfo>\n\n获取指定网卡历史流量信息，使用 Promise 异步回调。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "statistics.getTrafficStatsByUid",
+        "level": 2,
+        "line_start": 244,
+        "line_end": 315,
+        "summary": "getTrafficStatsByUid(uidInfo: UidInfo, callback: AsyncCallback\\<NetStatsInfo>): void\n\n获取指定应用历史流量信息，"
+      },
+      {
+        "section_id": "section-7",
+        "title": "statistics.getTrafficStatsByUid",
+        "level": 2,
+        "line_start": 316,
+        "line_end": 375,
+        "summary": "getTrafficStatsByUid(uidInfo: UidInfo): Promise\\<NetStatsInfo>\n\n获取指定应用历史流量信息，使用 Promise 异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-8",
+        "title": "statistics.getTrafficStatsByNetwork<sup>12+</sup>",
+        "level": 2,
+        "line_start": 376,
+        "line_end": 433,
+        "summary": "getTrafficStatsByNetwork(networkInfo: NetworkInfo): Promise\\<UidNetStatsInfo>\n\n获取指定时间段内所有应用在指定网络中的流"
+      },
+      {
+        "section_id": "section-9",
+        "title": "statistics.getTrafficStatsByUidNetwork<sup>12+</sup>",
+        "level": 2,
+        "line_start": 434,
+        "line_end": 492,
+        "summary": "getTrafficStatsByUidNetwork(uid: number, networkInfo: NetworkInfo): Promise\\<NetStatsInfoSequence>"
+      },
+      {
+        "section_id": "section-10",
+        "title": "IfaceInfo",
+        "level": 2,
+        "line_start": 493,
+        "line_end": 506,
+        "summary": "查询网卡历史流量参数信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-11",
+        "title": "UidInfo",
+        "level": 2,
+        "line_start": 507,
+        "line_end": 519,
+        "summary": "查询应用历史流量参数信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-12",
+        "title": "NetStatsInfo",
+        "level": 2,
+        "line_start": 520,
+        "line_end": 534,
+        "summary": "获取的历史流量信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-13",
+        "title": "NetStatsChangeInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 535,
+        "line_end": 547,
+        "summary": "监听和管理网络接口的状态和使用情况。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n|"
+      },
+      {
+        "section_id": "section-14",
+        "title": "NetworkInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 548,
+        "line_end": 562,
+        "summary": "网络信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称        | 类"
+      },
+      {
+        "section_id": "section-15",
+        "title": "UidNetStatsInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 563,
+        "line_end": 574,
+        "summary": "获取的所有应用历史流量信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-16",
+        "title": "NetStatsInfoSequence<sup>12+</sup>",
+        "level": 2,
+        "line_start": 575,
+        "line_end": 587,
+        "summary": "获取的应用历史流量信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      }
+    ]
+  }
+}

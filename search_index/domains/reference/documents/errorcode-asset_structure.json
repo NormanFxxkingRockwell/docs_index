@@ -1,0 +1,164 @@
+{
+  "doc_id": "errorcode-asset",
+  "title": "关键资产存储服务错误码",
+  "path": "zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md",
+  "metadata": {
+    "kit": "Asset Store Kit",
+    "subsystem": "Security",
+    "owner": "@JeremyXu",
+    "designer": "@skye_you",
+    "tester": "@nacyli",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Asset Store Kit Security 模块的 关键资产存储服务错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "关键资产存储服务错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "24000001 关键资产服务不可用",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 27,
+        "summary": "**错误信息**\n\nThe ASSET service is unavailable.\n\n**可能原因**\n\n系统异常导致关键资产服务不可用。\n\n**处理步骤**\n\n重新发起关键资产处理请求。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "24000002 未找到关键资产",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 43,
+        "summary": "**错误信息**\n\nThe asset is not found.\n\n**可能原因**\n\n1. 关键资产从未写入过。\n2. 关键资产已经删除。\n\n**处理步骤**\n\n1. 根据别名确认该关键资产是否"
+      },
+      {
+        "section_id": "section-3",
+        "title": "24000003 关键资产已存在",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 60,
+        "summary": "**错误信息**\n\nThe asset already exists.\n\n**可能原因**\n\n已存在同别名（asset.Tag.ALIAS相同）的关键资产。\n\n**处理步骤**\n\n请先确认写入同别名"
+      },
+      {
+        "section_id": "section-4",
+        "title": "24000004 访问被拒绝",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 78,
+        "summary": "**错误信息**\n\nAccess denied.\n\n**可能原因**\n\n1. 在访问需要用户认证的关键资产前，用户认证失败。\n\n2. 挑战值与授权令牌不匹配。\n\n**处理步骤**\n\n1. 用户在访问"
+      },
+      {
+        "section_id": "section-5",
+        "title": "24000005 锁屏状态不匹配",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 94,
+        "summary": "**错误信息**\n\nThe screen lock status does not match.\n\n**可能原因**\n\n1. 在设备处于未设置锁屏密码的状态下，访问仅设置密码才允许访问的关键资产。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "24000006 系统内存不足",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 108,
+        "summary": "**错误信息**\n\nInsufficient memory.\n\n**可能原因**\n\n系统内存不足。\n\n**处理步骤**\n\n关闭已打开的其他应用，重新发起处理请求。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "24000007 关键资产损坏",
+        "level": 2,
+        "line_start": 109,
+        "line_end": 122,
+        "summary": "**错误信息**\n\nThe asset is corrupted.\n\n**可能原因**\n\n因设备掉电或存储系统异常导致的关键资产文件损坏。\n\n**处理步骤**\n\n恢复出厂设置。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "24000008 数据库操作失败",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 138,
+        "summary": "**错误信息**\n\nThe database operation failed.\n\n**可能原因**\n\n1. 用户尚未调用过add接口，进行asset数据库的创建，此时数据库还没创建出来，直接查询，"
+      },
+      {
+        "section_id": "section-9",
+        "title": "24000009 算法库操作失败",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 152,
+        "summary": "**错误信息**\n\nThe cryptography operation failed.\n\n**可能原因**\n\n密码算法操作失败。\n\n**处理步骤**\n\n查看错误信息，排查算法库异常原因。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "24000010 进程通信错误",
+        "level": 2,
+        "line_start": 153,
+        "line_end": 166,
+        "summary": "**错误信息**\n\nIPC failed.\n\n**可能原因**\n\n进程通信错误。\n\n**处理步骤**\n\n查看错误信息，排查IPC通信异常原因。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "24000011 包管理服务异常",
+        "level": 2,
+        "line_start": 167,
+        "line_end": 180,
+        "summary": "**错误信息**\n\nCalling the Bundle Manager service failed.\n\n**可能原因**\n\n包管理服务异常。\n\n**处理步骤**\n\n查看错误信息，排查包管理服务异"
+      },
+      {
+        "section_id": "section-12",
+        "title": "24000012 账号系统服务异常",
+        "level": 2,
+        "line_start": 181,
+        "line_end": 194,
+        "summary": "**错误信息**\n\nCalling the OS Account service failed.\n\n**可能原因**\n\n账号系统异常。\n\n**处理步骤**\n\n查看错误信息，排查账号系统异常原因。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "24000013 访问控制服务异常",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 208,
+        "summary": "**错误信息**\n\nCalling the Access Token service failed.\n\n**可能原因**\n\n访问控制服务异常。\n\n**处理步骤**\n\n查看错误信息，排查访问控制服务异"
+      },
+      {
+        "section_id": "section-14",
+        "title": "24000014 文件操作失败",
+        "level": 2,
+        "line_start": 209,
+        "line_end": 223,
+        "summary": "**错误信息**\n\nThe file operation failed.\n\n**可能原因**\n\n1. 业务手动删除了设备中data/service/el1/public/asset_service某"
+      },
+      {
+        "section_id": "section-15",
+        "title": "24000015 获取系统时间失败",
+        "level": 2,
+        "line_start": 224,
+        "line_end": 237,
+        "summary": "**错误信息**\n\nGetting the system time failed.\n\n**可能原因**\n\n系统时间被篡改。\n\n**处理步骤**\n\n调整成正确的系统时间。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "24000016 缓存数量超限",
+        "level": 2,
+        "line_start": 238,
+        "line_end": 251,
+        "summary": "**错误信息**\n\nThe cache exceeds the limit.\n\n**可能原因**\n\n业务调用[asset.preQuery](js-apis-asset.md#assetpreque"
+      },
+      {
+        "section_id": "section-17",
+        "title": "24000017 该子功能不支持",
+        "level": 2,
+        "line_start": 252,
+        "line_end": 265,
+        "summary": "**错误信息**\n\nThe capability is not supported.\n\n**可能原因**\n\n支持API，但是不支持API内部某些子特性（功能），如批量查询关键资产明文。\n\n**处理步"
+      },
+      {
+        "section_id": "section-18",
+        "title": "24000018 参数校验失败",
+        "level": 2,
+        "line_start": 266,
+        "line_end": 278,
+        "summary": "**错误信息**\n\nParameter verify failed.\n\n**可能原因**\n\n传入的参数不合法。\n\n**处理步骤**\n\n根据错误信息，调整API参数，并重新调用接口。"
+      }
+    ]
+  }
+}

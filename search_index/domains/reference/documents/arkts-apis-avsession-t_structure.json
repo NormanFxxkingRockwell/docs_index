@@ -1,0 +1,84 @@
+{
+  "doc_id": "arkts-apis-avsession-t",
+  "title": "Types",
+  "path": "zh-cn/application-dev/reference/apis-avsession-kit/arkts-apis-avsession-t.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-avsession-kit/arkts-apis-avsession-t.md",
+  "metadata": {
+    "kit": "AVSession Kit",
+    "subsystem": "Multimedia",
+    "owner": "@ccfriend; @liao_qian",
+    "designer": "@ccfriend",
+    "tester": "@chenmingxi1_huawei",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "AVSession Kit Multimedia 模块的 Types，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Types",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 18,
+        "summary": "```ts\nimport { avSession } from '@kit.AVSessionKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "AVSessionType<sup>10+<sup>",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 38,
+        "summary": "type AVSessionType = 'audio' | 'video' | 'voice_call' | 'video_call' | 'photo'\n\n当前会话支持的会话类型。\n\n该类型可取"
+      },
+      {
+        "section_id": "section-3",
+        "title": "AVCastControlCommandType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 65,
+        "summary": "type AVCastControlCommandType = 'play' | 'pause' | 'stop' | 'playNext' | 'playPrevious' | 'fastForw"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ExtraInfo<sup>18+</sup>",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 77,
+        "summary": "type ExtraInfo = {[key: string]: Object;} \n\n媒体提供方设置的自定义媒体数据包对象。\n\n**系统能力：** SystemCapability.Multime"
+      },
+      {
+        "section_id": "section-5",
+        "title": "KeyRequestCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 78,
+        "line_end": 102,
+        "summary": "type KeyRequestCallback = (assetId: string, requestData: Uint8Array) => void\n\n许可证请求事件的回调函数。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-6",
+        "title": "AVControlCommandType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 133,
+        "summary": "type AVControlCommandType = 'play' | 'pause' | 'stop' | 'playNext' | 'playPrevious' | 'fastForward'"
+      },
+      {
+        "section_id": "section-7",
+        "title": "NoParamCallback<sup>22+</sup>",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 141,
+        "summary": "type NoParamCallback = () => void\n\n定义无参数的回调函数类型。\n\n**系统能力：** SystemCapability.Multimedia.AVSession.C"
+      },
+      {
+        "section_id": "section-8",
+        "title": "TwoParamCallback<sup>22+</sup>",
+        "level": 2,
+        "line_start": 142,
+        "line_end": 155,
+        "summary": "type TwoParamCallback\\<T, G> = (data1: T, data2: G) => void\n\n定义包含两个参数的回调类型。\n\n**系统能力：** SystemCapabi"
+      }
+    ]
+  }
+}

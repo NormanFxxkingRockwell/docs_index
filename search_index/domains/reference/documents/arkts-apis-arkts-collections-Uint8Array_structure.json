@@ -1,0 +1,356 @@
+{
+  "doc_id": "arkts-apis-arkts-collections-Uint8Array",
+  "title": "Class (Uint8Array)",
+  "path": "zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-collections-Uint8Array.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-collections-Uint8Array.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@lijiamin2025",
+    "designer": "@weng-changcheng",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 Class (Uint8Array)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (Uint8Array)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { collections } from '@kit.ArkTS';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 37,
+        "summary": "**系统能力：** SystemCapability.Utils.Lang\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-3",
+        "title": "constructor",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 60,
+        "summary": "constructor()\n\n构造函数，用于创建一个空ArkTS Uint8Array对象。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "constructor",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 92,
+        "summary": "constructor(length: number)\n\n构造函数，用于创建一个指定长度的ArkTS Uint8Array对象。\n\n**原子化服务API：** 从API version 12开始，该接"
+      },
+      {
+        "section_id": "section-5",
+        "title": "constructor",
+        "level": 2,
+        "line_start": 93,
+        "line_end": 125,
+        "summary": "constructor(elements: Iterable\\<number>)\n\n构造函数，以Iterable创建一个ArkTS Uint8Array对象。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-6",
+        "title": "constructor",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 172,
+        "summary": "constructor(array: ArrayLike\\<number> | ArrayBuffer)\n\n构造函数，以ArrayLike或ArkTS ArrayBuffer创建一个ArkTS Uin"
+      },
+      {
+        "section_id": "section-7",
+        "title": "constructor",
+        "level": 2,
+        "line_start": 173,
+        "line_end": 208,
+        "summary": "constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)\n\n构造函数，以ArrayBuffer创建一个ArkTS U"
+      },
+      {
+        "section_id": "section-8",
+        "title": "from",
+        "level": 2,
+        "line_start": 209,
+        "line_end": 243,
+        "summary": "static from(arrayLike: ArrayLike\\<number>): Uint8Array\n\n从一个ArrayLike或者可迭代对象中创建一个ArkTS Uint8Array对象。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "from",
+        "level": 2,
+        "line_start": 244,
+        "line_end": 295,
+        "summary": "static from\\<T>(arrayLike: ArrayLike\\<T>, mapFn: TypedArrayFromMapFn\\<T, number>): Uint8Array\n\n从一个Ar"
+      },
+      {
+        "section_id": "section-10",
+        "title": "from",
+        "level": 2,
+        "line_start": 296,
+        "line_end": 341,
+        "summary": "static from(arrayLike: Iterable\\<number>, mapFn?: TypedArrayFromMapFn\\<number, number>): Uint8Array"
+      },
+      {
+        "section_id": "section-11",
+        "title": "of<sup>18+</sup>",
+        "level": 2,
+        "line_start": 342,
+        "line_end": 378,
+        "summary": "static of(...items: number[]): Uint8Array\n\n通过可变数量的参数创建一个新的ArkTS Uint8Array对象，参数个数可以是0个、1个或者多个。\n\n**原"
+      },
+      {
+        "section_id": "section-12",
+        "title": "toString<sup>18+</sup>",
+        "level": 2,
+        "line_start": 379,
+        "line_end": 411,
+        "summary": "toString(): string\n\nArkTS Uint8Array转换为字符串。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能"
+      },
+      {
+        "section_id": "section-13",
+        "title": "toLocaleString<sup>18+</sup>",
+        "level": 2,
+        "line_start": 412,
+        "line_end": 445,
+        "summary": "toLocaleString(): string\n\n根据当前应用的系统地区获取符合当前文化习惯的数字表示形式，让每个元素调用自己的toLocaleString方法把数字转换为字符串，然后使用逗号将每"
+      },
+      {
+        "section_id": "section-14",
+        "title": "copyWithin",
+        "level": 2,
+        "line_start": 446,
+        "line_end": 486,
+        "summary": "copyWithin(target: number, start: number, end?: number): Uint8Array\n\n从ArkTS Uint8Array指定范围内的元素依次拷贝到目"
+      },
+      {
+        "section_id": "section-15",
+        "title": "some",
+        "level": 2,
+        "line_start": 487,
+        "line_end": 525,
+        "summary": "some(predicate: TypedArrayPredicateFn\\<number, Uint8Array>): boolean\n\n测试ArkTS Uint8Array中的是否存在元素满足指定"
+      },
+      {
+        "section_id": "section-16",
+        "title": "every",
+        "level": 2,
+        "line_start": 526,
+        "line_end": 564,
+        "summary": "every(predicate: TypedArrayPredicateFn\\<number, Uint8Array>): boolean\n\n测试ArkTS Uint8Array中的所有元素是否满足指"
+      },
+      {
+        "section_id": "section-17",
+        "title": "fill",
+        "level": 2,
+        "line_start": 565,
+        "line_end": 606,
+        "summary": "fill(value: number, start?: number, end?: number): Uint8Array\n\n使用特定值填充ArkTS Uint8Array指定范围的全部元素。\n\n**"
+      },
+      {
+        "section_id": "section-18",
+        "title": "filter",
+        "level": 2,
+        "line_start": 607,
+        "line_end": 645,
+        "summary": "filter(predicate: TypedArrayPredicateFn\\<number, Uint8Array>): Uint8Array\n\n返回一个新ArkTS Uint8Array，其包含"
+      },
+      {
+        "section_id": "section-19",
+        "title": "find",
+        "level": 2,
+        "line_start": 646,
+        "line_end": 684,
+        "summary": "find(predicate: TypedArrayPredicateFn\\<number, Uint8Array>): number | undefined\n\n返回ArkTS Uint8Array中"
+      },
+      {
+        "section_id": "section-20",
+        "title": "findIndex",
+        "level": 2,
+        "line_start": 685,
+        "line_end": 722,
+        "summary": "findIndex(predicate: TypedArrayPredicateFn\\<number, Uint8Array>): number\n\n返回ArkTS Uint8Array中第一个满足指定"
+      },
+      {
+        "section_id": "section-21",
+        "title": "forEach",
+        "level": 2,
+        "line_start": 723,
+        "line_end": 757,
+        "summary": "forEach(callbackFn: TypedArrayForEachCallback\\<number, Uint8Array>): void\n\n对ArkTS Uint8Array中的每个元素执行"
+      },
+      {
+        "section_id": "section-22",
+        "title": "indexOf",
+        "level": 2,
+        "line_start": 758,
+        "line_end": 799,
+        "summary": "indexOf(searchElement: number, fromIndex?: number): number\n\n返回在ArkTS Uint8Array中给定元素的第一个索引，如果不存在，则返回"
+      },
+      {
+        "section_id": "section-23",
+        "title": "lastIndexOf<sup>18+</sup>",
+        "level": 2,
+        "line_start": 800,
+        "line_end": 841,
+        "summary": "lastIndexOf(searchElement: number, fromIndex?: number): number\n\n返回ArkTS Uint8Array实例中最后一次出现searchEl"
+      },
+      {
+        "section_id": "section-24",
+        "title": "join",
+        "level": 2,
+        "line_start": 842,
+        "line_end": 879,
+        "summary": "join(separator?: string): string\n\n将ArkTS Uint8Array的所有元素拼接成一个字符串，元素之间使用指定的分隔符分隔。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-25",
+        "title": "map",
+        "level": 2,
+        "line_start": 880,
+        "line_end": 917,
+        "summary": "map(callbackFn: TypedArrayMapCallback\\<number, Uint8Array>): Uint8Array\n\n对ArkTS Uint8Array中的每个元素应用指定"
+      },
+      {
+        "section_id": "section-26",
+        "title": "reduce",
+        "level": 2,
+        "line_start": 918,
+        "line_end": 955,
+        "summary": "reduce(callbackFn: TypedArrayReduceCallback\\<number, number, Uint8Array>): number\n\n对ArkTS Uint8Array"
+      },
+      {
+        "section_id": "section-27",
+        "title": "reduceRight<sup>18+</sup>",
+        "level": 2,
+        "line_start": 956,
+        "line_end": 994,
+        "summary": "reduceRight(callbackFn: TypedArrayReduceCallback\\<number, number, Uint8Array>): number\n\n反向遍历ArkTS U"
+      },
+      {
+        "section_id": "section-28",
+        "title": "reduce",
+        "level": 2,
+        "line_start": 995,
+        "line_end": 1034,
+        "summary": "reduce(callbackFn: TypedArrayReduceCallback\\<number, number, Uint8Array>, initialValue: number): num"
+      },
+      {
+        "section_id": "section-29",
+        "title": "reduceRight<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1035,
+        "line_end": 1074,
+        "summary": "reduceRight\\<U = number>(callbackFn: TypedArrayReduceCallback\\<U, number, Uint8Array>, initialValue"
+      },
+      {
+        "section_id": "section-30",
+        "title": "reduce",
+        "level": 2,
+        "line_start": 1075,
+        "line_end": 1114,
+        "summary": "reduce\\<U>(callbackFn: TypedArrayReduceCallback\\<U, number, Uint8Array>, initialValue: U): U\n\n对ArkTS"
+      },
+      {
+        "section_id": "section-31",
+        "title": "reverse",
+        "level": 2,
+        "line_start": 1115,
+        "line_end": 1145,
+        "summary": "reverse(): Uint8Array\n\n反转ArkTS Uint8Array。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-32",
+        "title": "set",
+        "level": 2,
+        "line_start": 1146,
+        "line_end": 1178,
+        "summary": "set(array: ArrayLike\\<number>, offset?: number): void\n\n将传入的ArrayLike元素依次写入到指定的起始位置。\n\n**原子化服务API：** 从"
+      },
+      {
+        "section_id": "section-33",
+        "title": "slice",
+        "level": 2,
+        "line_start": 1179,
+        "line_end": 1219,
+        "summary": "slice(start?: number, end?: number): Uint8Array\n\n返回一个新的ArkTS Uint8Array对象，其包含原ArkTS Uint8Array指定范围的内"
+      },
+      {
+        "section_id": "section-34",
+        "title": "sort",
+        "level": 2,
+        "line_start": 1220,
+        "line_end": 1259,
+        "summary": "sort(compareFn?: TypedArrayCompareFn\\<number>): Uint8Array\n\n对ArkTS Uint8Array进行排序，并返回排序后的ArkTS Uint8"
+      },
+      {
+        "section_id": "section-35",
+        "title": "subarray",
+        "level": 2,
+        "line_start": 1260,
+        "line_end": 1299,
+        "summary": "subarray(begin?: number, end?: number): Uint8Array\n\n从指定的位置截取数组，返回一个新的、基于相同ArkTS ArrayBuffer的ArkTS Ui"
+      },
+      {
+        "section_id": "section-36",
+        "title": "at",
+        "level": 2,
+        "line_start": 1300,
+        "line_end": 1338,
+        "summary": "at(index: number): number | undefined\n\n返回指定下标的元素，如果不存在，则返回undefined。\n\n**原子化服务API：** 从API version 12开"
+      },
+      {
+        "section_id": "section-37",
+        "title": "includes",
+        "level": 2,
+        "line_start": 1339,
+        "line_end": 1379,
+        "summary": "includes(searchElement: number, fromIndex?: number): boolean\n\n判断ArkTS Uint8Array是否包含特定元素。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-38",
+        "title": "entries",
+        "level": 2,
+        "line_start": 1380,
+        "line_end": 1413,
+        "summary": "entries(): IterableIterator\\<[number, number]>\n\n返回一个新的迭代器对象，该对象包含ArkTS Uint8Array中每个元素的键值对。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-39",
+        "title": "keys",
+        "level": 2,
+        "line_start": 1414,
+        "line_end": 1447,
+        "summary": "keys(): IterableIterator\\<number>\n\n返回一个新的迭代器对象，该对象包含ArkTS Uint8Array中每个元素的键（下标）。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-40",
+        "title": "values",
+        "level": 2,
+        "line_start": 1448,
+        "line_end": 1481,
+        "summary": "values(): IterableIterator\\<number>\n\n返回一个新的迭代器对象，该对象包含ArkTS Uint8Array中每个元素的值。\n\n**原子化服务API：** 从API v"
+      },
+      {
+        "section_id": "section-41",
+        "title": "[Symbol.iterator]",
+        "level": 2,
+        "line_start": 1482,
+        "line_end": 1519,
+        "summary": "[Symbol.iterator]\\(): IterableIterator&lt;number&gt;\n\n返回一个迭代器，迭代器的每一项都是一个 JavaScript 对象，并返回该对象。\n\n>"
+      },
+      {
+        "section_id": "section-42",
+        "title": "[index: number]",
+        "level": 2,
+        "line_start": 1520,
+        "line_end": 1546,
+        "summary": "&#91;index: number&#93;: number\n\n返回Uint8Array指定索引位置的元素。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服"
+      }
+    ]
+  }
+}

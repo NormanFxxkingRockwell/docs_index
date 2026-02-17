@@ -1,0 +1,124 @@
+{
+  "doc_id": "ts-custom-component-layout",
+  "title": "自定义组件的自定义布局",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-custom-component-layout.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-custom-component-layout.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@song-song-song",
+    "designer": "@lanshouren",
+    "tester": "@liuli0427",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 自定义组件的自定义布局，提供相关接口和功能说明。",
+  "structure": {
+    "title": "自定义组件的自定义布局",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "onMeasureSize<sup>10+</sup>",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 44,
+        "summary": "onMeasureSize?(selfLayoutInfo: GeometryInfo, children: Array&lt;Measurable&gt;, constraint: Constra"
+      },
+      {
+        "section_id": "section-2",
+        "title": "onPlaceChildren<sup>10+</sup>",
+        "level": 2,
+        "line_start": 45,
+        "line_end": 66,
+        "summary": "onPlaceChildren?(selfLayoutInfo: GeometryInfo, children: Array&lt;Layoutable&gt;, constraint: Const"
+      },
+      {
+        "section_id": "section-3",
+        "title": "GeometryInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 80,
+        "summary": "父组件（自定义组件）布局信息，继承自[SizeResult](#sizeresult10)。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Layoutable<sup>10+</sup>",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 157,
+        "summary": "子组件布局信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n### 属性\n\n| 名称         | 类型       | 只读|可选|  说明"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Measurable<sup>10+</sup>",
+        "level": 2,
+        "line_start": 158,
+        "line_end": 247,
+        "summary": "子组件位置信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-6",
+        "title": "MeasureResult<sup>10+</sup>",
+        "level": 2,
+        "line_start": 248,
+        "line_end": 255,
+        "summary": "测量后的组件布局信息。继承自[SizeResult](#sizeresult10)。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-7",
+        "title": "SizeResult<sup>10+</sup>",
+        "level": 2,
+        "line_start": 256,
+        "line_end": 276,
+        "summary": "组件尺寸信息。\n\n> **说明：**\n>\n>- 自定义布局暂不支持LazyForEach写法。\n>- 使用builder形式的自定义布局创建，自定义组件的build()方法内只允许存在this.bu"
+      },
+      {
+        "section_id": "section-8",
+        "title": "onLayout<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 277,
+        "line_end": 297,
+        "summary": "onLayout?(children: Array&lt;LayoutChild&gt;, constraint: ConstraintSizeOptions): void\n\nArkUI框架会在自定"
+      },
+      {
+        "section_id": "section-9",
+        "title": "onMeasure<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 298,
+        "line_end": 318,
+        "summary": "onMeasure?(children: Array&lt;LayoutChild&gt;, constraint: ConstraintSizeOptions): void\n\nArkUI框架会在自"
+      },
+      {
+        "section_id": "section-10",
+        "title": "LayoutChild<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 319,
+        "line_end": 380,
+        "summary": "子组件布局信息。\n\n> **说明：**\n>\n> 从API version 9开始支持，从API version 10开始废弃。建议使用[Measurable](#measurable10)或者[La"
+      },
+      {
+        "section_id": "section-11",
+        "title": "LayoutBorderInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 381,
+        "line_end": 398,
+        "summary": "子组件border信息。\n\n> **说明：**\n>\n> 从API version 9开始支持，从API version 10开始废弃。建议使用[getBorderWidth](#getborderw"
+      },
+      {
+        "section_id": "section-12",
+        "title": "LayoutInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 399,
+        "line_end": 416,
+        "summary": "子组件layout信息。\n\n> **说明：**\n>\n> 从API version 9开始支持，从API version 10开始废弃。\n\n**卡片能力：** 从API version 9开始，该接口"
+      },
+      {
+        "section_id": "section-13",
+        "title": "示例",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 733,
+        "summary": "### 示例1（自定义布局代码示例）\n自定义布局代码示例。\n```ts\n// xxx.ets\n@Entry\n@Component\nstruct Index {\n  build() {\n    Col"
+      }
+    ]
+  }
+}

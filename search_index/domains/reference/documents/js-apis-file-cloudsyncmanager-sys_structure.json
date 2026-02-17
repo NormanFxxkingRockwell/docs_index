@@ -1,0 +1,148 @@
+{
+  "doc_id": "js-apis-file-cloudsyncmanager-sys",
+  "title": "@ohos.file.cloudSyncManager (端云同步管理能力)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-cloudsyncmanager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-cloudsyncmanager-sys.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@Hermits; @reminder2352",
+    "designer": "@oh_create_jiawei",
+    "tester": "@liuhonggang123",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.file.cloudSyncManager (端云同步管理能力)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.cloudSyncManager (端云同步管理能力)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { cloudSyncManager } from '@kit.CoreFileKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "cloudSyncManager.changeAppCloudSwitch",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 69,
+        "summary": "changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean): Promise&lt;void&gt;"
+      },
+      {
+        "section_id": "section-3",
+        "title": "cloudSyncManager.changeAppCloudSwitch",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 114,
+        "summary": "changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean, callback: AsyncCallbac"
+      },
+      {
+        "section_id": "section-4",
+        "title": "cloudSyncManager.notifyDataChange",
+        "level": 2,
+        "line_start": 115,
+        "line_end": 161,
+        "summary": "notifyDataChange(accountId: string, bundleName: string): Promise&lt;void&gt;\n\n通知端云服务指定账号下的特定应用云数据已发"
+      },
+      {
+        "section_id": "section-5",
+        "title": "cloudSyncManager.notifyDataChange",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 205,
+        "summary": "notifyDataChange(accountId: string, bundleName: string, callback: AsyncCallback&lt;void&gt;): void"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ExtraData<sup>11+</sup>",
+        "level": 2,
+        "line_start": 206,
+        "line_end": 218,
+        "summary": "云端数据变更信息。\n\n**系统接口**：该接口为系统接口。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.Clou"
+      },
+      {
+        "section_id": "section-7",
+        "title": "cloudSyncManager.notifyDataChange<sup>11+</sup>",
+        "level": 2,
+        "line_start": 219,
+        "line_end": 268,
+        "summary": "notifyDataChange(userId: number, extraData: ExtraData): Promise&lt;void&gt;\n\n通知端云服务应用指定用户的云数据变更信息。使"
+      },
+      {
+        "section_id": "section-8",
+        "title": "cloudSyncManager.notifyDataChange<sup>11+</sup>",
+        "level": 2,
+        "line_start": 269,
+        "line_end": 315,
+        "summary": "notifyDataChange(userId: number, extraData: ExtraData, callback: AsyncCallback&lt;void&gt;): void"
+      },
+      {
+        "section_id": "section-9",
+        "title": "cloudSyncManager.enableCloud",
+        "level": 2,
+        "line_start": 316,
+        "line_end": 367,
+        "summary": "enableCloud(accountId: string, switches: Record<string, boolean>): Promise&lt;void&gt;\n\n异步方法使能端云协同能"
+      },
+      {
+        "section_id": "section-10",
+        "title": "cloudSyncManager.enableCloud",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 416,
+        "summary": "enableCloud(accountId: string, switches: Record<string, boolean>, callback: AsyncCallback&lt;void&g"
+      },
+      {
+        "section_id": "section-11",
+        "title": "cloudSyncManager.disableCloud",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 463,
+        "summary": "disableCloud(accountId: string): Promise&lt;void&gt;\n\n异步方法去使能端云协同能力。使用Promise异步回调。\n\n**系统接口**：该接口为系统"
+      },
+      {
+        "section_id": "section-12",
+        "title": "cloudSyncManager.disableCloud",
+        "level": 2,
+        "line_start": 464,
+        "line_end": 507,
+        "summary": "disableCloud(accountId: string, callback: AsyncCallback&lt;void&gt;): void\n\n异步方法去使能端云协同能力。使用callbac"
+      },
+      {
+        "section_id": "section-13",
+        "title": "Action",
+        "level": 2,
+        "line_start": 508,
+        "line_end": 520,
+        "summary": "清理本地云相关数据时的Action，为枚举类型。\n\n**需要权限**：ohos.permission.CLOUDFILE_SYNC_MANAGER\n\n**系统能力**: SystemCapabili"
+      },
+      {
+        "section_id": "section-14",
+        "title": "cloudSyncManager.clean",
+        "level": 2,
+        "line_start": 521,
+        "line_end": 572,
+        "summary": "clean(accountId: string, appActions: Record<string, Action>): Promise&lt;void&gt;\n\n异步方法清理本地云相关数据。使用"
+      },
+      {
+        "section_id": "section-15",
+        "title": "cloudSyncManager.clean",
+        "level": 2,
+        "line_start": 573,
+        "line_end": 621,
+        "summary": "clean(accountId: string, appActions: Record<string, Action>, callback: AsyncCallback&lt;void&gt;):"
+      },
+      {
+        "section_id": "section-16",
+        "title": "DowngradeDownload<sup>20+</sup>",
+        "level": 2,
+        "line_start": 622,
+        "line_end": 900,
+        "summary": "降级下载：云空间会员服务到期，为避免用户云上数据丢失，提供的集中下载云端数据的能力。\n\n云盘降级下载对象，用于支撑云空间应用完成云盘文件的降级下载流程。\n\n**系统接口**：该接口为系统接口。\n\n*"
+      }
+    ]
+  }
+}

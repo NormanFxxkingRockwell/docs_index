@@ -1,0 +1,284 @@
+{
+  "doc_id": "js-apis-continuation-continuationManager",
+  "title": "@ohos.continuation.continuationManager (流转/协同管理)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-continuation-continuationManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-continuation-continuationManager.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "DistributedAbilityManager",
+    "owner": "@hobbycao",
+    "designer": "@gsxiaowen",
+    "tester": "@hanjiawei",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit DistributedAbilityManager 模块的 @ohos.continuation.continuationManager (流转/协同管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.continuation.continuationManager (流转/协同管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { continuationManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "continuationManager.register<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 58,
+        "summary": "register(callback: AsyncCallback\\<number>): void\n\n注册流转管理服务，并获取对应的注册token，无过滤条件，使用AsyncCallback方式作为异"
+      },
+      {
+        "section_id": "section-3",
+        "title": "continuationManager.register<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 99,
+        "summary": "register(options: ContinuationExtraParams, callback: AsyncCallback\\<number>): void\n\n连接流转管理服务，并获取对应的"
+      },
+      {
+        "section_id": "section-4",
+        "title": "continuationManager.register<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 100,
+        "line_end": 141,
+        "summary": "register(options?: ContinuationExtraParams): Promise\\<number>\n\n连接流转管理服务，并获取对应的注册token，使用Promise方式作为"
+      },
+      {
+        "section_id": "section-5",
+        "title": "continuationManager.registerContinuation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 142,
+        "line_end": 196,
+        "summary": "registerContinuation(callback: AsyncCallback\\<number>): void\n\n注册流转管理服务，并获取对应的注册token，无过滤条件，使用AsyncC"
+      },
+      {
+        "section_id": "section-6",
+        "title": "continuationManager.registerContinuation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 256,
+        "summary": "registerContinuation(options: ContinuationExtraParams, callback: AsyncCallback\\<number>): void\n\n连接流"
+      },
+      {
+        "section_id": "section-7",
+        "title": "continuationManager.registerContinuation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 320,
+        "summary": "registerContinuation(options?: ContinuationExtraParams): Promise\\<number>\n\n连接流转管理服务，并获取对应的注册token，使"
+      },
+      {
+        "section_id": "section-8",
+        "title": "continuationManager.on('deviceConnect')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 321,
+        "line_end": 353,
+        "summary": "on(type: 'deviceConnect', callback: Callback\\<ContinuationResult>): void\n\n异步方法，监听设备连接状态，使用Callback形"
+      },
+      {
+        "section_id": "section-9",
+        "title": "continuationManager.on('deviceDisconnect')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 354,
+        "line_end": 384,
+        "summary": "on(type: 'deviceDisconnect', callback: Callback\\<string>): void\n\n异步方法，监听设备断开状态，使用Callback形式返回断开的设备信"
+      },
+      {
+        "section_id": "section-10",
+        "title": "continuationManager.off('deviceConnect')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 385,
+        "line_end": 417,
+        "summary": "off(type: 'deviceConnect', callback?: Callback\\<ContinuationResult>): void\n\n异步方法，取消监听设备连接状态，使用Callb"
+      },
+      {
+        "section_id": "section-11",
+        "title": "continuationManager.off('deviceDisconnect')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 418,
+        "line_end": 448,
+        "summary": "off(type: 'deviceDisconnect', callback?: Callback\\<string>): void\n\n异步方法，取消监听设备断开状态，使用Callback形式返回连接"
+      },
+      {
+        "section_id": "section-12",
+        "title": "continuationManager.on('deviceSelected')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 449,
+        "line_end": 506,
+        "summary": "on(type: 'deviceSelected', token: number, callback: Callback\\<Array\\<ContinuationResult>>): void\n\n异"
+      },
+      {
+        "section_id": "section-13",
+        "title": "continuationManager.on('deviceUnselected')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 507,
+        "line_end": 565,
+        "summary": "on(type: 'deviceUnselected', token: number, callback: Callback\\<Array\\<ContinuationResult>>): void"
+      },
+      {
+        "section_id": "section-14",
+        "title": "continuationManager.off('deviceSelected')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 566,
+        "line_end": 615,
+        "summary": "off(type: 'deviceSelected', token: number): void\n\n取消监听设备连接状态。\n\n> **说明：**\n> \n> 从API version 9开始支持，从A"
+      },
+      {
+        "section_id": "section-15",
+        "title": "continuationManager.off('deviceUnselected')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 616,
+        "line_end": 665,
+        "summary": "off(type: 'deviceUnselected', token: number): void\n\n取消监听设备断开状态。\n\n> **说明：**\n> \n> 从API version 9开始支持，"
+      },
+      {
+        "section_id": "section-16",
+        "title": "continuationManager.startDeviceManager<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 666,
+        "line_end": 701,
+        "summary": "startDeviceManager(token: number, callback: AsyncCallback\\<void>): void\n\n拉起设备选择模块，可显示组网内可选择设备列表信息，无"
+      },
+      {
+        "section_id": "section-17",
+        "title": "continuationManager.startDeviceManager<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 702,
+        "line_end": 743,
+        "summary": "startDeviceManager(token: number, options: ContinuationExtraParams, callback: AsyncCallback\\<void>)"
+      },
+      {
+        "section_id": "section-18",
+        "title": "continuationManager.startDeviceManager<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 744,
+        "line_end": 788,
+        "summary": "startDeviceManager(token: number, options?: ContinuationExtraParams): Promise\\<void>\n\n拉起设备选择模块，可显示组"
+      },
+      {
+        "section_id": "section-19",
+        "title": "continuationManager.startContinuationDeviceManager<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 789,
+        "line_end": 843,
+        "summary": "startContinuationDeviceManager(token: number, callback: AsyncCallback\\<void>): void\n\n拉起设备选择模块，可显示组网"
+      },
+      {
+        "section_id": "section-20",
+        "title": "continuationManager.startContinuationDeviceManager<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 844,
+        "line_end": 904,
+        "summary": "startContinuationDeviceManager(token: number, options: ContinuationExtraParams, callback: AsyncCall"
+      },
+      {
+        "section_id": "section-21",
+        "title": "continuationManager.startContinuationDeviceManager<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 905,
+        "line_end": 968,
+        "summary": "startContinuationDeviceManager(token: number, options?: ContinuationExtraParams): Promise\\<void>\n\n拉"
+      },
+      {
+        "section_id": "section-22",
+        "title": "continuationManager.updateConnectStatus<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 969,
+        "line_end": 1007,
+        "summary": "updateConnectStatus(token: number, deviceId: string, status: DeviceConnectState, callback: AsyncCal"
+      },
+      {
+        "section_id": "section-23",
+        "title": "continuationManager.updateConnectStatus<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1008,
+        "line_end": 1052,
+        "summary": "updateConnectStatus(token: number, deviceId: string, status: DeviceConnectState): Promise\\<void>\n\n通"
+      },
+      {
+        "section_id": "section-24",
+        "title": "continuationManager.updateContinuationState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1053,
+        "line_end": 1110,
+        "summary": "updateContinuationState(token: number, deviceId: string, status: DeviceConnectState, callback: Asyn"
+      },
+      {
+        "section_id": "section-25",
+        "title": "continuationManager.updateContinuationState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1111,
+        "line_end": 1175,
+        "summary": "updateContinuationState(token: number, deviceId: string, status: DeviceConnectState): Promise\\<void"
+      },
+      {
+        "section_id": "section-26",
+        "title": "continuationManager.unregister<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1176,
+        "line_end": 1211,
+        "summary": "unregister(token: number, callback: AsyncCallback\\<void>): void\n\n解注册流转管理服务，传入注册时获取的token进行解注册，使用Asy"
+      },
+      {
+        "section_id": "section-27",
+        "title": "continuationManager.unregister<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1212,
+        "line_end": 1252,
+        "summary": "unregister(token: number): Promise\\<void>\n\n解注册流转管理服务，传入注册时获取的token进行解注册，使用Promise方式作为异步方法。\n\n> **说明："
+      },
+      {
+        "section_id": "section-28",
+        "title": "continuationManager.unregisterContinuation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1253,
+        "line_end": 1307,
+        "summary": "unregisterContinuation(token: number, callback: AsyncCallback\\<void>): void\n\n解注册流转管理服务，传入注册时获取的toke"
+      },
+      {
+        "section_id": "section-29",
+        "title": "continuationManager.unregisterContinuation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1308,
+        "line_end": 1367,
+        "summary": "unregisterContinuation(token: number): Promise\\<void>\n\n解注册流转管理服务，传入注册时获取的token进行解注册，使用Promise方式作为异步"
+      },
+      {
+        "section_id": "section-30",
+        "title": "DeviceConnectState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1368,
+        "line_end": 1388,
+        "summary": "设备连接状态。\n\n> **说明：**\n> \n> 从API version 22开始废弃，建议使用[DeviceStateChange](../apis-distributedservice-kit/"
+      },
+      {
+        "section_id": "section-31",
+        "title": "ContinuationMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1389,
+        "line_end": 1407,
+        "summary": "设备选择模块连接模式。\n\n> **说明：**\n> \n> 从API version 22开始废弃，建议使用[DeviceStateChange](../apis-distributedservice-"
+      },
+      {
+        "section_id": "section-32",
+        "title": "ContinuationResult<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1408,
+        "line_end": 1427,
+        "summary": "type ContinuationResult = _ContinuationResult\n\n流转管理入口返回的设备信息。\n\n> **说明：**\n> \n> 从API version 10开始支持，从"
+      },
+      {
+        "section_id": "section-33",
+        "title": "ContinuationExtraParams<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1428,
+        "line_end": 1447,
+        "summary": "type ContinuationExtraParams = _ContinuationExtraParams\n\n流转管理入口中设备选择模块所需的过滤参数。\n\n> **说明：**\n> \n> 从API"
+      }
+    ]
+  }
+}

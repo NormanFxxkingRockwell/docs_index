@@ -1,0 +1,132 @@
+{
+  "doc_id": "js-apis-commonEventManager",
+  "title": "@ohos.commonEventManager (公共事件模块)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-commonEventManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-commonEventManager.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Notification",
+    "owner": "@peixu",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit Notification 模块的 @ohos.commonEventManager (公共事件模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.commonEventManager (公共事件模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { commonEventManager } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Support",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 25,
+        "summary": "系统公共事件是指由系统服务或系统应用发布的事件，订阅这些公共事件需要特定的权限、使用相应的值，详见[系统定义的公共事件](./common_event/commonEventManager-defi"
+      },
+      {
+        "section_id": "section-3",
+        "title": "commonEventManager.publish",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 73,
+        "summary": "publish(event: string, callback: AsyncCallback\\<void>): void\n\n发布公共事件。使用callback异步回调。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "commonEventManager.publish",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 129,
+        "summary": "publish(event: string, options: CommonEventPublishData, callback: AsyncCallback\\<void>): void\n\n发布公共"
+      },
+      {
+        "section_id": "section-5",
+        "title": "commonEventManager.createSubscriber",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 183,
+        "summary": "createSubscriber(subscribeInfo: CommonEventSubscribeInfo, callback: AsyncCallback\\<CommonEventSubsc"
+      },
+      {
+        "section_id": "section-6",
+        "title": "commonEventManager.createSubscriber",
+        "level": 2,
+        "line_start": 184,
+        "line_end": 232,
+        "summary": "createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise\\<CommonEventSubscriber>\n\n创建订阅者。使"
+      },
+      {
+        "section_id": "section-7",
+        "title": "commonEventManager.createSubscriberSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 233,
+        "line_end": 281,
+        "summary": "createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEventSubscriber\n\ncreateSubscri"
+      },
+      {
+        "section_id": "section-8",
+        "title": "commonEventManager.subscribe",
+        "level": 2,
+        "line_start": 282,
+        "line_end": 351,
+        "summary": "subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback\\<CommonEventData>): void\n\n订阅公共"
+      },
+      {
+        "section_id": "section-9",
+        "title": "commonEventManager.unsubscribe",
+        "level": 2,
+        "line_start": 352,
+        "line_end": 440,
+        "summary": "unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback\\<void>): void\n\n取消订阅公共事件。使用c"
+      },
+      {
+        "section_id": "section-10",
+        "title": "commonEventManager.subscribeToEvent<sup>20+</sup>",
+        "level": 2,
+        "line_start": 441,
+        "line_end": 515,
+        "summary": "subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback\\<CommonEventData>): Promise\\"
+      },
+      {
+        "section_id": "section-11",
+        "title": "CommonEventData<sup>10+</sup>",
+        "level": 2,
+        "line_start": 516,
+        "line_end": 529,
+        "summary": "type CommonEventData = _CommonEventData\n\n表示公共事件的数据。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-12",
+        "title": "CommonEventSubscriber<sup>10+</sup>",
+        "level": 2,
+        "line_start": 530,
+        "line_end": 543,
+        "summary": "type CommonEventSubscriber = _CommonEventSubscriber\n\n描述公共事件的订阅者。\n\n**原子化服务API：** 从API version 11开始，该"
+      },
+      {
+        "section_id": "section-13",
+        "title": "CommonEventSubscribeInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 544,
+        "line_end": 557,
+        "summary": "type CommonEventSubscribeInfo = _CommonEventSubscribeInfo\n\n用于表示订阅者的信息。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-14",
+        "title": "CommonEventPublishData<sup>10+</sup>",
+        "level": 2,
+        "line_start": 558,
+        "line_end": 572,
+        "summary": "type CommonEventPublishData = _CommonEventPublishData\n\n描述公共事件内容和属性。\n\n**原子化服务API：** 从API version 11开"
+      }
+    ]
+  }
+}

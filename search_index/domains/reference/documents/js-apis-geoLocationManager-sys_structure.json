@@ -1,0 +1,316 @@
+{
+  "doc_id": "js-apis-geoLocationManager-sys",
+  "title": "@ohos.geoLocationManager (位置服务)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-location-kit/js-apis-geoLocationManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-location-kit/js-apis-geoLocationManager-sys.md",
+  "metadata": {
+    "kit": "Location Kit",
+    "subsystem": "Location",
+    "owner": "@liu-binjun",
+    "designer": "@liu-binjun",
+    "tester": "@mhy123456789",
+    "adviser": "@RayShih"
+  },
+  "summary": "Location Kit Location 模块的 @ohos.geoLocationManager (位置服务)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.geoLocationManager (位置服务)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "申请权限",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 47,
+        "summary": "应用在使用系统能力前，需要检查是否已经获取用户授权访问设备位置信息。如未获得授权，可以向用户申请需要的位置权限，申请方式请参考下文。\n\n系统提供的定位权限有：\n- ohos.permission.L"
+      },
+      {
+        "section_id": "section-2",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 53,
+        "summary": "```ts\nimport { geoLocationManager } from '@kit.LocationKit';\n```"
+      },
+      {
+        "section_id": "section-3",
+        "title": "GeoAddress",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 64,
+        "summary": "地理编码地址信息。\n\n**系统能力**：SystemCapability.Location.Location.Geocoder\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -----"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Location",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 75,
+        "summary": "位置信息。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------- | --"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ReverseGeocodingMockInfo",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 89,
+        "summary": "逆地理编码模拟功能的配置信息，包含一个位置信息和一个地名信息。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n**系统接口**：此接口为系统接"
+      },
+      {
+        "section_id": "section-6",
+        "title": "LocationMockConfig",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 102,
+        "summary": "位置模拟功能的配置参数，包含了模拟位置上报的时间间隔和模拟位置数组。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n**系统接口**：此接口为"
+      },
+      {
+        "section_id": "section-7",
+        "title": "LocatingRequiredDataConfig<sup>10+</sup>",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 121,
+        "summary": "获取定位所需数据时的配置参数。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n**系统接口**：此接口为系统接口。\n\n| 名称 | 类型 |"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ContinuousLocationRequest<sup>12+</sup>",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 134,
+        "summary": "持续定位的请求参数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location.Loc"
+      },
+      {
+        "section_id": "section-9",
+        "title": "LocatingRequiredData<sup>10+</sup>",
+        "level": 2,
+        "line_start": 135,
+        "line_end": 151,
+        "summary": "表示定位业务所需的数据，包含WiFi或蓝牙扫描结果，APP拿到这些数据之后可以用于网络定位等业务。\n\n**系统能力**：SystemCapability.Location.Location.Core"
+      },
+      {
+        "section_id": "section-10",
+        "title": "WifiScanInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 168,
+        "summary": "WiFi扫描信息，包含扫描到的WiFi热点的ssid、bssid和rssi等信息。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n**系统接口"
+      },
+      {
+        "section_id": "section-11",
+        "title": "BluetoothScanInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 169,
+        "line_end": 184,
+        "summary": "蓝牙扫描信息。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n**系统接口**：此接口为系统接口。\n\n| 名称 | 类型 | 只读 | 可选"
+      },
+      {
+        "section_id": "section-12",
+        "title": "CellInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 206,
+        "summary": "蜂窝小区信息。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n**系统接口**：此接口为系统接口。\n\n| 名称 | 类型 | 只读 | 可选"
+      },
+      {
+        "section_id": "section-13",
+        "title": "LocationPrivacyType",
+        "level": 2,
+        "line_start": 207,
+        "line_end": 220,
+        "summary": "定位服务隐私协议类型。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n**系统接口**：此接口为系统接口。\n\n| 名称 | 值 | 说明 |"
+      },
+      {
+        "section_id": "section-14",
+        "title": "LocatingRequiredDataType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 221,
+        "line_end": 235,
+        "summary": "定位业务所需数据的类型。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n**系统接口**：此接口为系统接口。\n\n| 名称 | 值 | 说明 |"
+      },
+      {
+        "section_id": "section-15",
+        "title": "LocationIconStatus<sup>12+</sup>",
+        "level": 2,
+        "line_start": 236,
+        "line_end": 250,
+        "summary": "定位图标状态。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n**系统接口**：此接口为系统接口。\n\n| 名称 | 值 | 说明 |\n| --"
+      },
+      {
+        "section_id": "section-16",
+        "title": "SportsType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 251,
+        "line_end": 265,
+        "summary": "运动类型。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location.Location"
+      },
+      {
+        "section_id": "section-17",
+        "title": "geoLocationManager.on('locatingRequiredDataChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 266,
+        "line_end": 314,
+        "summary": "on(type: 'locatingRequiredDataChange', config: LocatingRequiredDataConfig, callback: Callback&lt;Ar"
+      },
+      {
+        "section_id": "section-18",
+        "title": "geoLocationManager.off('locatingRequiredDataChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 315,
+        "line_end": 361,
+        "summary": "off(type: 'locatingRequiredDataChange', callback?: Callback&lt;Array&lt;LocatingRequiredData&gt;&gt"
+      },
+      {
+        "section_id": "section-19",
+        "title": "geoLocationManager.enableLocation",
+        "level": 2,
+        "line_start": 362,
+        "line_end": 408,
+        "summary": "enableLocation(callback: AsyncCallback&lt;void&gt;): void\n\n打开位置服务，使用callback异步回调。\n\n**系统接口**：此接口为系统接"
+      },
+      {
+        "section_id": "section-20",
+        "title": "geoLocationManager.enableLocation",
+        "level": 2,
+        "line_start": 409,
+        "line_end": 455,
+        "summary": "enableLocation(): Promise&lt;void&gt;\n\n打开位置服务，使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：ohos.per"
+      },
+      {
+        "section_id": "section-21",
+        "title": "geoLocationManager.disableLocation",
+        "level": 2,
+        "line_start": 456,
+        "line_end": 490,
+        "summary": "disableLocation(): void\n\n关闭位置服务。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：ohos.permission.MANAGE_SECURE_SETTIN"
+      },
+      {
+        "section_id": "section-22",
+        "title": "geoLocationManager.enableLocationMock",
+        "level": 2,
+        "line_start": 491,
+        "line_end": 527,
+        "summary": "enableLocationMock(): void\n\n使能位置模拟功能。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n**系统接口**：此"
+      },
+      {
+        "section_id": "section-23",
+        "title": "geoLocationManager.disableLocationMock",
+        "level": 2,
+        "line_start": 528,
+        "line_end": 564,
+        "summary": "disableLocationMock(): void\n\n去使能位置模拟功能。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n**系统接口**"
+      },
+      {
+        "section_id": "section-24",
+        "title": "geoLocationManager.setMockedLocations",
+        "level": 2,
+        "line_start": 565,
+        "line_end": 674,
+        "summary": "setMockedLocations(config: LocationMockConfig): void\n\n设置模拟的位置信息，后面会以该接口中携带的时间间隔上报模拟位置。\n\n该接口需要在调用[ge"
+      },
+      {
+        "section_id": "section-25",
+        "title": "geoLocationManager.enableReverseGeocodingMock",
+        "level": 2,
+        "line_start": 675,
+        "line_end": 710,
+        "summary": "enableReverseGeocodingMock(): void\n\n使能逆地理编码模拟功能。\n\n**系统能力**：SystemCapability.Location.Location.Core"
+      },
+      {
+        "section_id": "section-26",
+        "title": "geoLocationManager.disableReverseGeocodingMock",
+        "level": 2,
+        "line_start": 711,
+        "line_end": 746,
+        "summary": "disableReverseGeocodingMock(): void\n\n去使能逆地理编码模拟功能。\n\n**系统能力**：SystemCapability.Location.Location.Cor"
+      },
+      {
+        "section_id": "section-27",
+        "title": "geoLocationManager.setReverseGeocodingMockInfo",
+        "level": 2,
+        "line_start": 747,
+        "line_end": 864,
+        "summary": "setReverseGeocodingMockInfo(mockInfos: Array&lt;ReverseGeocodingMockInfo&gt;): void\n\n设置逆地理编码模拟功能的配置"
+      },
+      {
+        "section_id": "section-28",
+        "title": "geoLocationManager.isLocationPrivacyConfirmed",
+        "level": 2,
+        "line_start": 865,
+        "line_end": 910,
+        "summary": "isLocationPrivacyConfirmed(type: LocationPrivacyType): boolean\n\n查询用户是否同意定位服务隐私申明，是否同意启用定位服务。只有系统应用才"
+      },
+      {
+        "section_id": "section-29",
+        "title": "geoLocationManager.setLocationPrivacyConfirmStatus",
+        "level": 2,
+        "line_start": 911,
+        "line_end": 954,
+        "summary": "setLocationPrivacyConfirmStatus(type: LocationPrivacyType, isConfirmed: boolean): void\n\n设置用户勾选定位服务隐"
+      },
+      {
+        "section_id": "section-30",
+        "title": "geoLocationManager.getLocatingRequiredData<sup>10+</sup>",
+        "level": 2,
+        "line_start": 955,
+        "line_end": 1010,
+        "summary": "getLocatingRequiredData(config: LocatingRequiredDataConfig): Promise&lt;Array&lt;LocatingRequiredDa"
+      },
+      {
+        "section_id": "section-31",
+        "title": "geoLocationManager.on('locationIconStatusChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1011,
+        "line_end": 1054,
+        "summary": "on(type: 'locationIconStatusChange', callback: Callback&lt;LocationIconStatus&gt;): void\n\n订阅定位图标状态变"
+      },
+      {
+        "section_id": "section-32",
+        "title": "geoLocationManager.off('locationIconStatusChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1055,
+        "line_end": 1099,
+        "summary": "off(type: 'locationIconStatusChange', callback?: Callback&lt;LocationIconStatus&gt;): void\n\n取消订阅定位图"
+      },
+      {
+        "section_id": "section-33",
+        "title": "geoLocationManager.getLocationIconStatus<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1100,
+        "line_end": 1138,
+        "summary": "getLocationIconStatus(): LocationIconStatus\n\n获取当前的定位图标状态。\n\n**系统能力**：SystemCapability.Location.Locat"
+      },
+      {
+        "section_id": "section-34",
+        "title": "geoLocationManager.enableLocationByUserId<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1139,
+        "line_end": 1194,
+        "summary": "enableLocationByUserId(userId: number): Promise&lt;void&gt;\n\n打开指定系统账号的定位开关，使用Promise异步回调。\n\n**系统接口**"
+      },
+      {
+        "section_id": "section-35",
+        "title": "geoLocationManager.disableLocationByUserId<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1195,
+        "line_end": 1238,
+        "summary": "disableLocationByUserId(userId: number): void\n\n关闭指定系统账号的定位开关。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：ohos.pe"
+      },
+      {
+        "section_id": "section-36",
+        "title": "geoLocationManager.isLocationEnabledByUserId<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1239,
+        "line_end": 1285,
+        "summary": "isLocationEnabledByUserId(userId: number): boolean\n\n判断指定系统账号的位置开关是否开启。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力*"
+      },
+      {
+        "section_id": "section-37",
+        "title": "geoLocationManager.setLocationSwitchIgnored<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1286,
+        "line_end": 1328,
+        "summary": "setLocationSwitchIgnored(isIgnored: boolean): void\n\n设置应用获取位置信息是否受位置开关控制。\n\n设置为true后，允许应用在位置开关关闭的场景获取"
+      }
+    ]
+  }
+}

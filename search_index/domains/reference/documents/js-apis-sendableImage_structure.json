@@ -1,0 +1,164 @@
+{
+  "doc_id": "js-apis-sendableImage",
+  "title": "@ohos.multimedia.sendableImage (基于Sendable对象的图片处理)",
+  "path": "zh-cn/application-dev/reference/apis-image-kit/js-apis-sendableImage.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-image-kit/js-apis-sendableImage.md",
+  "metadata": {
+    "kit": "Image Kit",
+    "subsystem": "Multimedia",
+    "owner": "@aulight02",
+    "designer": "@liyang_bryan",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Image Kit Multimedia 模块的 @ohos.multimedia.sendableImage (基于Sendable对象的图片处理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimedia.sendableImage (基于Sendable对象的图片处理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { sendableImage } from '@kit.ImageKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "sendableImage.createPixelMap",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 61,
+        "summary": "createPixelMap(colors: ArrayBuffer, options: image.InitializationOptions): Promise\\<PixelMap>\n\n通过属性"
+      },
+      {
+        "section_id": "section-3",
+        "title": "sendableImage.createPixelMapFromParcel",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 159,
+        "summary": "createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap\n\n从MessageSequence中获取PixelMap。\n\n由于"
+      },
+      {
+        "section_id": "section-4",
+        "title": "sendableImage.createPixelMapFromSurface",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 208,
+        "summary": "createPixelMapFromSurface(surfaceId: string, region: image.Region): Promise\\<PixelMap>\n\n根据Surface I"
+      },
+      {
+        "section_id": "section-5",
+        "title": "sendableImage.createPixelMapSync",
+        "level": 2,
+        "line_start": 209,
+        "line_end": 253,
+        "summary": "createPixelMapSync(colors: ArrayBuffer, options: image.InitializationOptions): PixelMap\n\n通过属性创建Pixe"
+      },
+      {
+        "section_id": "section-6",
+        "title": "sendableImage.convertFromPixelMap",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 298,
+        "summary": "convertFromPixelMap(pixelmap: image.PixelMap): PixelMap\n\n通过image下的PixelMap创建出一个sendableImage下的Pixel"
+      },
+      {
+        "section_id": "section-7",
+        "title": "sendableImage.convertToPixelMap",
+        "level": 2,
+        "line_start": 299,
+        "line_end": 343,
+        "summary": "convertToPixelMap(pixelmap: PixelMap): image.PixelMap\n\n通过sendableImage下的PixelMap创建出一个image下的PixelMa"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ISendable",
+        "level": 2,
+        "line_start": 344,
+        "line_end": 354,
+        "summary": "type ISendable = lang.ISendable\n\nISendable是所有Sendable类型（除null和undefined）的父类型。自身没有任何必须的方法和属性。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-9",
+        "title": "PixelMap",
+        "level": 2,
+        "line_start": 355,
+        "line_end": 1785,
+        "summary": "图像像素类，用于读取或写入图像数据以及获取图像信息。在调用PixelMap的方法前，需要先通过[createPixelMap](#sendableimagecreatepixelmap)创建一个Pi"
+      },
+      {
+        "section_id": "section-10",
+        "title": "Size",
+        "level": 2,
+        "line_start": 1786,
+        "line_end": 1802,
+        "summary": "表示图片尺寸。\n\n继承自[lang.ISendable](../../arkts-utils/arkts-sendable.md#isendable)。\n\n**卡片能力：** 从API versio"
+      },
+      {
+        "section_id": "section-11",
+        "title": "Region",
+        "level": 2,
+        "line_start": 1803,
+        "line_end": 1820,
+        "summary": "表示区域信息。\n\n继承自[lang.ISendable](../../arkts-utils/arkts-sendable.md#isendable)。\n\n**卡片能力：** 从API versio"
+      },
+      {
+        "section_id": "section-12",
+        "title": "sendableImage.createImageSource",
+        "level": 2,
+        "line_start": 1821,
+        "line_end": 1855,
+        "summary": "createImageSource(uri: string): ImageSource\n\n通过传入的uri创建ImageSource实例。\n\n由于图片占用内存较大，所以当ImageSource实例使"
+      },
+      {
+        "section_id": "section-13",
+        "title": "sendableImage.createImageSource",
+        "level": 2,
+        "line_start": 1856,
+        "line_end": 1892,
+        "summary": "createImageSource(fd: number): ImageSource\n\n通过传入文件描述符来创建ImageSource实例。\n\n由于图片占用内存较大，所以当ImageSource实例"
+      },
+      {
+        "section_id": "section-14",
+        "title": "sendableImage.createImageSource",
+        "level": 2,
+        "line_start": 1893,
+        "line_end": 1929,
+        "summary": "createImageSource(buf: ArrayBuffer): ImageSource\n\n通过缓冲区创建ImageSource实例。buf数据是未解码的数据，不可以传入类似于RBGA，YU"
+      },
+      {
+        "section_id": "section-15",
+        "title": "sendableImage.createImageReceiver",
+        "level": 2,
+        "line_start": 1930,
+        "line_end": 1976,
+        "summary": "createImageReceiver(size: image.Size, format: image.ImageFormat, capacity: number): ImageReceiver"
+      },
+      {
+        "section_id": "section-16",
+        "title": "ImageSource",
+        "level": 2,
+        "line_start": 1977,
+        "line_end": 2060,
+        "summary": "ImageSource类，用于获取图片相关信息。在调用ImageSource的方法前，需要先通过[sendableImage.createImageSource](#sendableimagecre"
+      },
+      {
+        "section_id": "section-17",
+        "title": "Image",
+        "level": 2,
+        "line_start": 2061,
+        "line_end": 2161,
+        "summary": "提供基本的图像操作，包括获取图像信息、读写图像数据。调用[readNextImage](#readnextimage)和[readLatestImage](#readlatestimage)接口时会"
+      },
+      {
+        "section_id": "section-18",
+        "title": "ImageReceiver",
+        "level": 2,
+        "line_start": 2162,
+        "line_end": 2360,
+        "summary": "图像接收类，用于获取组件surface id，接收最新的图片和读取下一张图片，以及释放ImageReceiver实例。\n\n在调用以下方法前需要先创建ImageReceiver实例。\n\n### 属性"
+      }
+    ]
+  }
+}

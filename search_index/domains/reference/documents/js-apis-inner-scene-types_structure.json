@@ -1,0 +1,188 @@
+{
+  "doc_id": "js-apis-inner-scene-types",
+  "title": "SceneType",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics3d/js-apis-inner-scene-types.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics3d/js-apis-inner-scene-types.md",
+  "metadata": {
+    "kit": "ArkGraphics 3D",
+    "subsystem": "Graphics",
+    "owner": "@zzhao0",
+    "designer": "@zdustc",
+    "tester": "@zhangyue283",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 3D Graphics 模块的 SceneType，提供相关接口和功能说明。",
+  "structure": {
+    "title": "SceneType",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 18,
+        "summary": "```ts\nimport { Vec2, Vec3, Vec4, Quaternion, Aabb, Color, Rect, GeometryType, PrimitiveTopology, Cus"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Vec2",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 28,
+        "summary": "二维向量，通常用于表示2D空间中的点或方向，由x和y两个分量组成。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 | 只读 | 可选"
+      },
+      {
+        "section_id": "section-3",
+        "title": "Vec3",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 38,
+        "summary": "三维向量，通常用于表示3D空间中的点、方向或向量变换，由x、y和z三个分量组成。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n| 名称 | 类型 | 只读"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Vec4",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 49,
+        "summary": "四维向量，通常用于表示4D空间中的点、方向或向量变换，由x、y、z和w四个分量组成，增加第四个分量为各种计算和变换增加了规整性和便捷性。\n\n**系统能力：** SystemCapability.Ark"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Quaternion",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 60,
+        "summary": "用于表示3D空间中旋转的数学结构。与传统的欧拉角相比，四元数在数值稳定性和避免万向节锁方面具有优势。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n| 名称"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Aabb",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 69,
+        "summary": "轴对齐边界盒，主要用于判断空间中的物体是否重叠。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Color",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 80,
+        "summary": "用于表示RGBA格式的颜色，包含四个分量，依次为红色、绿色、蓝色和透明度。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n| 名称 | 类型 | 只读 |"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Rect",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 90,
+        "summary": "用于表示平面中的矩形。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ---- | ---- |"
+      },
+      {
+        "section_id": "section-9",
+        "title": "RenderingPipelineType<sup>21+</sup>",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 101,
+        "summary": "渲染管线类型枚举。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 值 | 说明 |\n| ---- | ---- | ---- |\n| FO"
+      },
+      {
+        "section_id": "section-10",
+        "title": "GeometryType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 102,
+        "line_end": 115,
+        "summary": "几何类型枚举，用于指定不同的几何类型。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 值 | 说明 |\n| ---- | ---- | -"
+      },
+      {
+        "section_id": "section-11",
+        "title": "GeometryDefinition<sup>18+</sup>",
+        "level": 2,
+        "line_start": 116,
+        "line_end": 123,
+        "summary": "几何类型定义抽象类，用于解释特定几何类型的属性。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -"
+      },
+      {
+        "section_id": "section-12",
+        "title": "PrimitiveTopology<sup>18+</sup>",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 133,
+        "summary": "图元拓扑枚举，在顶点处理过程中，指定顶点的不同处理方式。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 值 | 说明 |\n| ---- |"
+      },
+      {
+        "section_id": "section-13",
+        "title": "CustomGeometry<sup>18+</sup>",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 147,
+        "summary": "自定义几何类型，继承自[GeometryDefinition](#geometrydefinition18)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D"
+      },
+      {
+        "section_id": "section-14",
+        "title": "CubeGeometry<sup>18+</sup>",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 156,
+        "summary": "立方体几何类型，继承自[GeometryDefinition](#geometrydefinition18)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D"
+      },
+      {
+        "section_id": "section-15",
+        "title": "PlaneGeometry<sup>18+</sup>",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 165,
+        "summary": "平面几何类型，继承自[GeometryDefinition](#geometrydefinition18)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D"
+      },
+      {
+        "section_id": "section-16",
+        "title": "SphereGeometry<sup>18+</sup>",
+        "level": 2,
+        "line_start": 166,
+        "line_end": 175,
+        "summary": "球体几何类型，继承自[GeometryDefinition](#geometrydefinition18)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D"
+      },
+      {
+        "section_id": "section-17",
+        "title": "CylinderGeometry<sup>23+</sup>",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 195,
+        "summary": "圆柱体几何类型，继承自[GeometryDefinition](#geometrydefinition18)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3"
+      },
+      {
+        "section_id": "section-18",
+        "title": "Mat4x4<sup>23+</sup>",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 206,
+        "summary": "相机矩阵，它是一个将三维世界坐标映射到二维图像坐标的数学工具。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n| 名称 | 类型 | 只读 | 可选 | 说"
+      },
+      {
+        "section_id": "section-19",
+        "title": "Position3",
+        "level": 2,
+        "line_start": 207,
+        "line_end": 217,
+        "summary": "type Position3 = Vec3\n\n用于表示3维空间中物体的位置，是[Vec3](#vec3)类型。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D"
+      },
+      {
+        "section_id": "section-20",
+        "title": "Rotation3",
+        "level": 2,
+        "line_start": 218,
+        "line_end": 228,
+        "summary": "type Rotation3 = Vec3\n\n用于表示3维空间中物体的旋转，是[Vec3](#vec3)类型。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D"
+      },
+      {
+        "section_id": "section-21",
+        "title": "Scale3",
+        "level": 2,
+        "line_start": 229,
+        "line_end": 239,
+        "summary": "type Scale3 = Vec3\n\n用于表示3维空间中物体的缩放，是[Vec3](#vec3)类型。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n|"
+      }
+    ]
+  }
+}

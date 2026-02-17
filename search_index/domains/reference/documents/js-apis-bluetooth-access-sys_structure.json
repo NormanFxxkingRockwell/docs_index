@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-bluetooth-access-sys",
+  "title": "@ohos.bluetooth.access (蓝牙access模块)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-access-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-access-sys.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.bluetooth.access (蓝牙access模块)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bluetooth.access (蓝牙access模块)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 24,
+        "summary": "```js\nimport { access } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "access.factoryReset<sup>11+</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 71,
+        "summary": "factoryReset(callback: AsyncCallback&lt;void&gt;): void\n\n恢复蓝牙出厂设置。使用Callback异步回调。\n\n**系统接口**：此接口为系统接"
+      },
+      {
+        "section_id": "section-3",
+        "title": "access.factoryReset<sup>11+</sup>",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 115,
+        "summary": "factoryReset(): Promise&lt;void&gt;\n\n恢复蓝牙出厂设置。使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：ohos.per"
+      },
+      {
+        "section_id": "section-4",
+        "title": "access.getLocalAddress<sup>11+</sup><a name=\"getLocalAddress\"></a>",
+        "level": 2,
+        "line_start": 116,
+        "line_end": 157,
+        "summary": "getLocalAddress(): string\n\n获取本端设备的蓝牙地址。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：ohos.permission.ACCESS_BLUETO"
+      },
+      {
+        "section_id": "section-5",
+        "title": "access.restrictBluetooth<sup>12+</sup><a name=\"restrictBluetooth\"></a>",
+        "level": 2,
+        "line_start": 158,
+        "line_end": 201,
+        "summary": "restrictBluetooth(): Promise&lt;void&gt;\n\n约束当前蓝牙设备的BR/EDR能力。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：ohos.per"
+      },
+      {
+        "section_id": "section-6",
+        "title": "access.notifyDialogResult<sup>20+</sup>",
+        "level": 2,
+        "line_start": 202,
+        "line_end": 255,
+        "summary": "notifyDialogResult(notifyDialogResultParams: NotifyDialogResultParams): Promise&lt;void&gt;\n\n通知用户操作"
+      },
+      {
+        "section_id": "section-7",
+        "title": "NotifyDialogResultParams<sup>20+</sup>",
+        "level": 2,
+        "line_start": 256,
+        "line_end": 269,
+        "summary": "用户操作对话框的行为。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-8",
+        "title": "DialogType<sup>20+</sup>",
+        "level": 2,
+        "line_start": 270,
+        "line_end": 280,
+        "summary": "枚举，对话框类型。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称"
+      }
+    ]
+  }
+}

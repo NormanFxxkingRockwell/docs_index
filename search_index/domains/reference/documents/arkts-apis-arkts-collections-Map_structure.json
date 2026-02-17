@@ -1,0 +1,132 @@
+{
+  "doc_id": "arkts-apis-arkts-collections-Map",
+  "title": "Class (Map)",
+  "path": "zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-collections-Map.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-collections-Map.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@lijiamin2025",
+    "designer": "@weng-changcheng",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 Class (Map)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (Map)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 30,
+        "summary": "```ts\nimport { collections } from '@kit.ArkTS';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 41,
+        "summary": "**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-3",
+        "title": "constructor",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 96,
+        "summary": "constructor(entries?: readonly (readonly [K, V])[] | null)\n\n构造函数，用于创建ArkTS Map对象。\n\n**原子化服务API**：从API"
+      },
+      {
+        "section_id": "section-4",
+        "title": "constructor",
+        "level": 2,
+        "line_start": 97,
+        "line_end": 134,
+        "summary": "constructor(iterable: Iterable\\<readonly \\[K, V]>)\n\n创建ArkTS Map对象的构造函数。\n\n**原子化服务API**：从API version"
+      },
+      {
+        "section_id": "section-5",
+        "title": "entries",
+        "level": 2,
+        "line_start": 135,
+        "line_end": 192,
+        "summary": "entries(): IterableIterator<[K, V]>\n\n返回一个Map迭代器对象，该对象包含了此Map中的每个元素的[key, value]对。\n\n**原子化服务API**：从API"
+      },
+      {
+        "section_id": "section-6",
+        "title": "keys",
+        "level": 2,
+        "line_start": 193,
+        "line_end": 231,
+        "summary": "keys(): IterableIterator\\<K>\n\n返回一个Map迭代器对象，该对象包含了此Map中每个元素的键。\n\n**原子化服务API**：从API version 12 开始，该接口支持"
+      },
+      {
+        "section_id": "section-7",
+        "title": "values",
+        "level": 2,
+        "line_start": 232,
+        "line_end": 270,
+        "summary": "values(): IterableIterator\\<V>\n\n返回一个Map迭代器对象，该对象包含此Map中每个元素的值。\n\n**原子化服务API**：从API version 12 开始，该接口支"
+      },
+      {
+        "section_id": "section-8",
+        "title": "clear",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 302,
+        "summary": "clear(): void\n\n删除该Map中的所有元素。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-9",
+        "title": "delete",
+        "level": 2,
+        "line_start": 303,
+        "line_end": 348,
+        "summary": "delete(key: K): boolean\n\n删除该Map中指定元素。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-10",
+        "title": "forEach",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 406,
+        "summary": "forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void\n\n按插入顺序对该Map中的每个键/值对执行一次回调函数。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "get",
+        "level": 2,
+        "line_start": 407,
+        "line_end": 449,
+        "summary": "get(key: K): V | undefined\n\n返回该Map中的指定元素。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-12",
+        "title": "has",
+        "level": 2,
+        "line_start": 450,
+        "line_end": 492,
+        "summary": "has(key: K): boolean\n\n判断该Map中是否存在指定元素。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-13",
+        "title": "set",
+        "level": 2,
+        "line_start": 493,
+        "line_end": 541,
+        "summary": "set(key: K, value: V): Map<K, V>\n\n向该Map添加或更新一个指定的键值对。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-14",
+        "title": "[Symbol.iterator]",
+        "level": 2,
+        "line_start": 542,
+        "line_end": 585,
+        "summary": "[Symbol.iterator]\\(): IterableIterator&lt;[K, V]&gt;\n\n返回一个迭代器，迭代器的每一项都是一个JavaScript对象，并返回该对象。\n\n> **"
+      }
+    ]
+  }
+}

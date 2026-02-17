@@ -1,0 +1,140 @@
+{
+  "doc_id": "arkts-apis-camera-PhotoSession",
+  "title": "Interface (PhotoSession)",
+  "path": "zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-PhotoSession.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-PhotoSession.md",
+  "metadata": {
+    "kit": "Camera Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qano",
+    "designer": "@leo_ysl",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Camera Kit Multimedia 模块的 Interface (PhotoSession)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (PhotoSession)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { camera } from '@kit.CameraKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "canPreconfig<sup>12+</sup>",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 73,
+        "summary": "canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boolean\n\n查询当前Session是否"
+      },
+      {
+        "section_id": "section-3",
+        "title": "preconfig<sup>12+</sup>",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 115,
+        "summary": "preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void\n\n对当前Session进行预配置。\n\n*"
+      },
+      {
+        "section_id": "section-4",
+        "title": "on('error')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 116,
+        "line_end": 150,
+        "summary": "on(type: 'error', callback: ErrorCallback): void\n\n监听普通拍照会话的错误事件，通过注册回调函数获取结果。使用callback异步回调。\n\n> **说"
+      },
+      {
+        "section_id": "section-5",
+        "title": "off('error')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 151,
+        "line_end": 175,
+        "summary": "off(type: 'error', callback?: ErrorCallback): void\n\n注销监听普通拍照会话的错误事件，通过注册回调函数获取结果。\n\n**原子化服务API：** 从A"
+      },
+      {
+        "section_id": "section-6",
+        "title": "on('focusStateChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 214,
+        "summary": "on(type: 'focusStateChange', callback: AsyncCallback\\<FocusState\\>): void\n\n监听相机聚焦的状态变化，通过注册回调函数获取结果"
+      },
+      {
+        "section_id": "section-7",
+        "title": "off('focusStateChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 215,
+        "line_end": 239,
+        "summary": "off(type: 'focusStateChange', callback?: AsyncCallback\\<FocusState\\>): void\n\n注销监听相机聚焦的状态变化。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-8",
+        "title": "on('smoothZoomInfoAvailable')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 278,
+        "summary": "on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback\\<SmoothZoomInfo\\>): void\n\n监听相机平滑变焦的状态变化"
+      },
+      {
+        "section_id": "section-9",
+        "title": "off('smoothZoomInfoAvailable')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 279,
+        "line_end": 303,
+        "summary": "off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback\\<SmoothZoomInfo\\>): void\n\n注销监听相机平滑变焦的"
+      },
+      {
+        "section_id": "section-10",
+        "title": "on('autoDeviceSwitchStatusChange')<sup>13+</sup>",
+        "level": 2,
+        "line_start": 304,
+        "line_end": 342,
+        "summary": "on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback\\<AutoDeviceSwitchStatus\\>): void"
+      },
+      {
+        "section_id": "section-11",
+        "title": "off('autoDeviceSwitchStatusChange')<sup>13+</sup>",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 367,
+        "summary": "off(type: 'autoDeviceSwitchStatusChange', callback?: AsyncCallback\\<AutoDeviceSwitchStatus\\>): void"
+      },
+      {
+        "section_id": "section-12",
+        "title": "on('systemPressureLevelChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 406,
+        "summary": "on(type: 'systemPressureLevelChange', callback: AsyncCallback\\<SystemPressureLevel\\>): void\n\n监听系统压力"
+      },
+      {
+        "section_id": "section-13",
+        "title": "off('systemPressureLevelChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 407,
+        "line_end": 431,
+        "summary": "off(type: 'systemPressureLevelChange', callback?: AsyncCallback\\<SystemPressureLevel\\>): void\n\n注销监听"
+      },
+      {
+        "section_id": "section-14",
+        "title": "on('macroStatusChanged')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 432,
+        "line_end": 466,
+        "summary": "on(type: 'macroStatusChanged', callback: AsyncCallback\\<boolean\\>): void\n\n监听相机微距状态变化，通过注册回调函数获取结果。使"
+      },
+      {
+        "section_id": "section-15",
+        "title": "off('macroStatusChanged')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 467,
+        "line_end": 491,
+        "summary": "off(type: 'macroStatusChanged', callback?: AsyncCallback\\<boolean\\>): void\n\n注销相机微距状态变化的监听。\n\n**原子化服务"
+      }
+    ]
+  }
+}

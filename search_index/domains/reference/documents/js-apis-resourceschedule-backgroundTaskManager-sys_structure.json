@@ -1,0 +1,156 @@
+{
+  "doc_id": "js-apis-resourceschedule-backgroundTaskManager-sys",
+  "title": "@ohos.resourceschedule.backgroundTaskManager (后台任务管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-backgroundtasks-kit/js-apis-resourceschedule-backgroundTaskManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-backgroundtasks-kit/js-apis-resourceschedule-backgroundTaskManager-sys.md",
+  "metadata": {
+    "kit": "Background Tasks Kit",
+    "subsystem": "ResourceSchedule",
+    "owner": "@cheng-shichang",
+    "designer": "@zhouben25",
+    "tester": "@leetestnady",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Background Tasks Kit ResourceSchedule 模块的 @ohos.resourceschedule.backgroundTaskManager (后台任务管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.resourceschedule.backgroundTaskManager (后台任务管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { backgroundTaskManager } from '@kit.BackgroundTasksKit';  \n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "backgroundTaskManager.applyEfficiencyResources",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 77,
+        "summary": "applyEfficiencyResources(request: EfficiencyResourcesRequest): void\n\n申请能效资源。\n\n**系统能力**: SystemCapab"
+      },
+      {
+        "section_id": "section-3",
+        "title": "backgroundTaskManager.resetAllEfficiencyResources",
+        "level": 2,
+        "line_start": 78,
+        "line_end": 114,
+        "summary": "resetAllEfficiencyResources(): void\n\n释放已申请的全部能效资源。\n\n**系统能力:** SystemCapability.ResourceSchedule.Bac"
+      },
+      {
+        "section_id": "section-4",
+        "title": "backgroundTaskManager.getAllEfficiencyResources<sup>20+</sup>",
+        "level": 2,
+        "line_start": 115,
+        "line_end": 158,
+        "summary": "getAllEfficiencyResources(): Promise&lt;EfficiencyResourcesInfo[]&gt;\n\n获取已申请的所有能效资源信息，如能效资源类型等，使用Pr"
+      },
+      {
+        "section_id": "section-5",
+        "title": "backgroundTaskManager.setBackgroundTaskState<sup>22+</sup>",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 210,
+        "summary": "setBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): void\n\n设置长时任务授权信息。\n\n**模型约束：** 此接口仅可在Stag"
+      },
+      {
+        "section_id": "section-6",
+        "title": "backgroundTaskManager.getBackgroundTaskState<sup>22+</sup>",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 267,
+        "summary": "getBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): UserAuthResult\n\n获取长时任务授权信息。\n\n**模型约束：**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "backgroundTaskManager.obtainAllContinuousTasks<sup>23+</sup>",
+        "level": 2,
+        "line_start": 268,
+        "line_end": 315,
+        "summary": "obtainAllContinuousTasks(): Promise&lt;ContinuousTaskInfo[]&gt;\n\n获取所有长时任务信息，如长时任务ID、长时任务类型等。使用Promi"
+      },
+      {
+        "section_id": "section-8",
+        "title": "backgroundTaskManager.subscribeContinuousTaskState<sup>23+</sup>",
+        "level": 2,
+        "line_start": 316,
+        "line_end": 372,
+        "summary": "subscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): void\n\n注册长时任务变化回调。\n\n**模型约束：** 此接"
+      },
+      {
+        "section_id": "section-9",
+        "title": "backgroundTaskManager.unsubscribeContinuousTaskState<sup>23+</sup>",
+        "level": 2,
+        "line_start": 373,
+        "line_end": 429,
+        "summary": "unsubscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): void\n\n解注册长时任务变化回调。\n\n**模型约束：**"
+      },
+      {
+        "section_id": "section-10",
+        "title": "BackgroundMode",
+        "level": 2,
+        "line_start": 430,
+        "line_end": 439,
+        "summary": "长时任务模式。\n\n**系统能力:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask\n\n| 名称"
+      },
+      {
+        "section_id": "section-11",
+        "title": "EfficiencyResourcesRequest",
+        "level": 2,
+        "line_start": 440,
+        "line_end": 457,
+        "summary": "能效资源申请参数。\n\n**系统能力:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApp"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ResourceType",
+        "level": 2,
+        "line_start": 458,
+        "line_end": 477,
+        "summary": "能效资源类型。\n\n**系统能力:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply"
+      },
+      {
+        "section_id": "section-13",
+        "title": "EfficiencyResourcesInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 478,
+        "line_end": 496,
+        "summary": "能效资源信息。\n\n**系统能力**: SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply"
+      },
+      {
+        "section_id": "section-14",
+        "title": "EfficiencyResourcesCpuLevel<sup>23+</sup>",
+        "level": 2,
+        "line_start": 497,
+        "line_end": 510,
+        "summary": "能效资源CPU级别。\n\n**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesAp"
+      },
+      {
+        "section_id": "section-15",
+        "title": "BackgroundTaskMode<sup>21+</sup>",
+        "level": 2,
+        "line_start": 511,
+        "line_end": 522,
+        "summary": "长时任务主类型。\n\n**系统能力**: SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask\n\n**系统API"
+      },
+      {
+        "section_id": "section-16",
+        "title": "BackgroundTaskStateInfo<sup>22+</sup>",
+        "level": 2,
+        "line_start": 523,
+        "line_end": 539,
+        "summary": "长时任务授权信息。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力**: SystemCapability.ResourceSchedule.BackgroundTaskM"
+      },
+      {
+        "section_id": "section-17",
+        "title": "BackgroundTaskSubscriber<sup>23+</sup>",
+        "level": 2,
+        "line_start": 540,
+        "line_end": 656,
+        "summary": "后台任务监听。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力**: SystemCapability.ResourceSchedule.BackgroundTaskMan"
+      }
+    ]
+  }
+}

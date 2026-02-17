@@ -1,0 +1,164 @@
+{
+  "doc_id": "js-apis-app-ability-InsightIntentDecorator",
+  "title": "@ohos.app.ability.InsightIntentDecorator (意图装饰器定义)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@linjunjie6",
+    "designer": "@li-weifeng2024",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.InsightIntentDecorator (意图装饰器定义)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.InsightIntentDecorator (意图装饰器定义)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 33,
+        "summary": "意图可以分为标准意图和自定义意图。\n\n系统会根据[IntentDecoratorInfo](#intentdecoratorinfo)中的schema与intentVersion字段，在标准意图列表"
+      },
+      {
+        "section_id": "section-2",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 39,
+        "summary": "```ts\nimport { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunc"
+      },
+      {
+        "section_id": "section-3",
+        "title": "@InsightIntentLink",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 130,
+        "summary": "使用该装饰器装饰当前应用的uri链接，可以将该uri链接定义为意图，便于AI入口通过定义的意图快速跳转到当前应用。该装饰器支持的参数参见[LinkIntentDecoratorInfo](#link"
+      },
+      {
+        "section_id": "section-4",
+        "title": "IntentDecoratorInfo",
+        "level": 2,
+        "line_start": 131,
+        "line_end": 158,
+        "summary": "意图装饰器的通用属性，用于定义意图的基本信息（包括意图名称、意图版本号）。适用于本模块的所有装饰器。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntim"
+      },
+      {
+        "section_id": "section-5",
+        "title": "LinkIntentDecoratorInfo",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 173,
+        "summary": "LinkIntentDecoratorInfo继承自[IntentDecoratorInfo](#intentdecoratorinfo)，用于描述[@InsightIntentLink](#ins"
+      },
+      {
+        "section_id": "section-6",
+        "title": "LinkIntentParamMapping",
+        "level": 2,
+        "line_start": 174,
+        "line_end": 189,
+        "summary": "LinkIntentParamMapping是[@InsightIntentLink](#insightintentlink)装饰器的意图参数和uri信息的映射。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-7",
+        "title": "LinkParamCategory",
+        "level": 2,
+        "line_start": 190,
+        "line_end": 202,
+        "summary": "[@InsightIntentLink](#insightintentlink)装饰器的意图参数类别，用于定义意图参数的传递形式。\n\n**系统能力**：SystemCapability.Abilit"
+      },
+      {
+        "section_id": "section-8",
+        "title": "@InsightIntentPage",
+        "level": 2,
+        "line_start": 203,
+        "line_end": 253,
+        "summary": "使用该装饰器装饰当前应用的页面，可以将页面定义为意图，便于AI入口通过意图快速跳转到指定页面。该装饰器支持的参数参见[PageIntentDecoratorInfo](#pageintentdeco"
+      },
+      {
+        "section_id": "section-9",
+        "title": "PageIntentDecoratorInfo",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 270,
+        "summary": "PageIntentDecoratorInfo继承自[IntentDecoratorInfo](#intentdecoratorinfo)，用于描述[@InsightIntentPage](#ins"
+      },
+      {
+        "section_id": "section-10",
+        "title": "@InsightIntentFunction",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 280,
+        "summary": "该装饰器与[@InsightIntentFunctionMethod](#insightintentfunctionmethod)装饰器必须组合使用。\n\n使用该装饰器来装饰类，同时使用[@Insig"
+      },
+      {
+        "section_id": "section-11",
+        "title": "@InsightIntentFunctionMethod",
+        "level": 2,
+        "line_start": 281,
+        "line_end": 334,
+        "summary": "该装饰器与[@InsightIntentFunction](#insightintentfunction)装饰器必须组合使用。\n\n使用该装饰器来装饰类中的静态函数，同时使用[@InsightInte"
+      },
+      {
+        "section_id": "section-12",
+        "title": "FunctionIntentDecoratorInfo",
+        "level": 2,
+        "line_start": 335,
+        "line_end": 342,
+        "summary": "[@InsightIntentFunctionMethod](#insightintentfunctionmethod)装饰器的参数类型，当前全部属性均继承自[IntentDecoratorInfo"
+      },
+      {
+        "section_id": "section-13",
+        "title": "@InsightIntentEntry",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 417,
+        "summary": "使用该装饰器装饰一个继承自[InsightIntentEntryExecutor](./js-apis-app-ability-InsightIntentEntryExecutor.md)的类，实现"
+      },
+      {
+        "section_id": "section-14",
+        "title": "EntryIntentDecoratorInfo",
+        "level": 2,
+        "line_start": 418,
+        "line_end": 432,
+        "summary": "EntryIntentDecoratorInfo继承自[IntentDecoratorInfo](#intentdecoratorinfo)，用于描述[@InsightIntentEntry](#i"
+      },
+      {
+        "section_id": "section-15",
+        "title": "@InsightIntentForm",
+        "level": 2,
+        "line_start": 433,
+        "line_end": 508,
+        "summary": "使用该装饰器装饰[FormExtensionAbility](../apis-form-kit/js-apis-app-form-formExtensionAbility.md)并配置FormExt"
+      },
+      {
+        "section_id": "section-16",
+        "title": "FormIntentDecoratorInfo",
+        "level": 2,
+        "line_start": 509,
+        "line_end": 522,
+        "summary": "FormIntentDecoratorInfo继承自[IntentDecoratorInfo](#intentdecoratorinfo)，用于描述[@InsightIntentForm](#ins"
+      },
+      {
+        "section_id": "section-17",
+        "title": "@InsightIntentEntity",
+        "level": 2,
+        "line_start": 523,
+        "line_end": 566,
+        "summary": "使用该装饰器装饰一个继承自[IntentEntity](./js-apis-app-ability-insightIntent.md#intententity20)的类，可将该类定义为意图实体，用于"
+      },
+      {
+        "section_id": "section-18",
+        "title": "IntentEntityDecoratorInfo",
+        "level": 2,
+        "line_start": 567,
+        "line_end": 581,
+        "summary": "用于描述[@InsightIntentEntity](#insightintententity)装饰器支持的参数。\n\n**系统能力**：SystemCapability.Ability.Abilit"
+      }
+    ]
+  }
+}

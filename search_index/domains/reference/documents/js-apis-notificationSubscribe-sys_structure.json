@@ -1,0 +1,196 @@
+{
+  "doc_id": "js-apis-notificationSubscribe-sys",
+  "title": "@ohos.notificationSubscribe (NotificationSubscribe模块)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-notification-kit/js-apis-notificationSubscribe-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-notification-kit/js-apis-notificationSubscribe-sys.md",
+  "metadata": {
+    "kit": "Notification Kit",
+    "subsystem": "Notification",
+    "owner": "@peixu",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Notification Kit Notification 模块的 @ohos.notificationSubscribe (NotificationSubscribe模块)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.notificationSubscribe (NotificationSubscribe模块)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { notificationSubscribe } from '@kit.NotificationKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "notificationSubscribe.subscribe",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 82,
+        "summary": "subscribe(subscriber: NotificationSubscriber, info: NotificationSubscribeInfo, callback: AsyncCallb"
+      },
+      {
+        "section_id": "section-3",
+        "title": "notificationSubscribe.subscribe",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 138,
+        "summary": "subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback\\<void\\>): void\n\n订阅当前用户下所有应用的通"
+      },
+      {
+        "section_id": "section-4",
+        "title": "notificationSubscribe.subscribe",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 196,
+        "summary": "subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscribeInfo): Promise\\<void\\>\n\n订"
+      },
+      {
+        "section_id": "section-5",
+        "title": "notificationSubscribe.subscribeSelf<sup>11+</sup>",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 251,
+        "summary": "subscribeSelf(subscriber: NotificationSubscriber): Promise\\<void\\>\n\n订阅本应用的通知并指定订阅信息。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "notificationSubscribe.unsubscribe",
+        "level": 2,
+        "line_start": 252,
+        "line_end": 301,
+        "summary": "unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback\\<void\\>): void\n\n取消订阅。使用call"
+      },
+      {
+        "section_id": "section-7",
+        "title": "notificationSubscribe.unsubscribe",
+        "level": 2,
+        "line_start": 302,
+        "line_end": 353,
+        "summary": "unsubscribe(subscriber: NotificationSubscriber): Promise\\<void\\>\n\n取消订阅。使用Promise异步回调。\n\n**系统能力**：Sys"
+      },
+      {
+        "section_id": "section-8",
+        "title": "notificationSubscribe.remove",
+        "level": 2,
+        "line_start": 354,
+        "line_end": 415,
+        "summary": "remove(bundle: BundleOption, notificationKey: NotificationKey, reason: RemoveReason, callback: Asyn"
+      },
+      {
+        "section_id": "section-9",
+        "title": "notificationSubscribe.remove",
+        "level": 2,
+        "line_start": 416,
+        "line_end": 477,
+        "summary": "remove(bundle: BundleOption, notificationKey: NotificationKey, reason: RemoveReason): Promise\\<void"
+      },
+      {
+        "section_id": "section-10",
+        "title": "notificationSubscribe.remove",
+        "level": 2,
+        "line_start": 478,
+        "line_end": 528,
+        "summary": "remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback\\<void\\>): void\n\n通过通知的唯一ID，删除"
+      },
+      {
+        "section_id": "section-11",
+        "title": "notificationSubscribe.remove",
+        "level": 2,
+        "line_start": 529,
+        "line_end": 581,
+        "summary": "remove(hashCode: string, reason: RemoveReason): Promise\\<void\\>\n\n通过通知的唯一ID，删除指定通知。使用Promise异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-12",
+        "title": "notificationSubscribe.remove<sup>10+</sup>",
+        "level": 2,
+        "line_start": 582,
+        "line_end": 631,
+        "summary": "remove(hashCodes: Array\\<String\\>, reason: RemoveReason, callback: AsyncCallback\\<void\\>): void\n\n批量"
+      },
+      {
+        "section_id": "section-13",
+        "title": "notificationSubscribe.remove<sup>10+</sup>",
+        "level": 2,
+        "line_start": 632,
+        "line_end": 683,
+        "summary": "remove(hashCodes: Array\\<String\\>, reason: RemoveReason): Promise\\<void\\>\n\n批量删除指定通知。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "notificationSubscribe.removeAll",
+        "level": 2,
+        "line_start": 684,
+        "line_end": 734,
+        "summary": "removeAll(bundle: BundleOption, callback: AsyncCallback\\<void\\>): void\n\n删除指定应用的所有通知。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "notificationSubscribe.removeAll",
+        "level": 2,
+        "line_start": 735,
+        "line_end": 780,
+        "summary": "removeAll(callback: AsyncCallback\\<void\\>): void\n\n删除所有通知。使用callback异步回调。\n\n**系统能力**：SystemCapability"
+      },
+      {
+        "section_id": "section-16",
+        "title": "notificationSubscribe.removeAll",
+        "level": 2,
+        "line_start": 781,
+        "line_end": 831,
+        "summary": "removeAll(bundle?: BundleOption): Promise\\<void\\>\n\n删除指定应用的所有通知。使用Promise异步回调。\n\n**系统能力**：SystemCapab"
+      },
+      {
+        "section_id": "section-17",
+        "title": "notificationSubscribe.removeAll",
+        "level": 2,
+        "line_start": 832,
+        "line_end": 881,
+        "summary": "removeAll(userId: number, callback: AsyncCallback\\<void>): void\n\n删除指定用户下的所有通知。使用callback异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-18",
+        "title": "notificationSubscribe.removeAll",
+        "level": 2,
+        "line_start": 882,
+        "line_end": 932,
+        "summary": "removeAll(userId: number): Promise\\<void>\n\n删除指定用户下的所有通知。使用Promise异步回调。\n\n**系统能力**：SystemCapability.N"
+      },
+      {
+        "section_id": "section-19",
+        "title": "notificationSubscribe.distributeOperation<sup>18+</sup>",
+        "level": 2,
+        "line_start": 933,
+        "line_end": 988,
+        "summary": "distributeOperation(hashcode: string, operationInfo?: OperationInfo): Promise\\<void>\n\n触发指定通知的跨设备协同操"
+      },
+      {
+        "section_id": "section-20",
+        "title": "NotificationKey",
+        "level": 2,
+        "line_start": 989,
+        "line_end": 999,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称  | 类型   | 只读 | 可选 | 说"
+      },
+      {
+        "section_id": "section-21",
+        "title": "RemoveReason",
+        "level": 2,
+        "line_start": 1000,
+        "line_end": 1010,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称                 | 值"
+      },
+      {
+        "section_id": "section-22",
+        "title": "OperationInfo<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1011,
+        "line_end": 1022,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n**系统接口**：此接口为系统接口。\n\n| 名称  | 类型   | 只读 | 可选 | 说"
+      }
+    ]
+  }
+}

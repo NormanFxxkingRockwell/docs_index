@@ -1,0 +1,108 @@
+{
+  "doc_id": "js-apis-net-eap",
+  "title": "@ohos.net.eap (扩展认证)",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-net-eap.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-net-eap.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@foredward",
+    "designer": "@h00918518",
+    "tester": "@WIFIroam-test",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.eap (扩展认证)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.eap (扩展认证)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```js\nimport {eap} from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "eap.regCustomEapHandler",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 74,
+        "summary": "regCustomEapHandler(netType: number, eapCode: number, eapType: number, callback: Callback\\<EapData\\"
+      },
+      {
+        "section_id": "section-3",
+        "title": "eap.unregCustomEapHandler",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 125,
+        "summary": "unregCustomEapHandler(netType:number, eapCode: number, eapType: number, callback: Callback\\<EapData"
+      },
+      {
+        "section_id": "section-4",
+        "title": "eap.replyCustomEapData",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 176,
+        "summary": "replyCustomEapData(result: CustomResult, data: EapData): void\n\n该接口用于通知系统已完成该步定制化处理。\n\n > **说明**:\n >"
+      },
+      {
+        "section_id": "section-5",
+        "title": "eap.startEthEap",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 237,
+        "summary": "startEthEap(netId: number, profile: EthEapProfile): void\n\n该接口用于指定一个以太网卡发起EAP认证。\n\n**需要权限**：ohos.perm"
+      },
+      {
+        "section_id": "section-6",
+        "title": "eap.logOffEthEap",
+        "level": 2,
+        "line_start": 238,
+        "line_end": 279,
+        "summary": "logOffEthEap(netId: number): void\n\n该接口用于指定一个以太网卡从EAP已认证状态退出。\n\n**需要权限**：ohos.permission.MANAGE_ENTER"
+      },
+      {
+        "section_id": "section-7",
+        "title": "EapData",
+        "level": 2,
+        "line_start": 280,
+        "line_end": 291,
+        "summary": "EAP信息。\n\n​**系统能力**​：SystemCapability.Communication.NetManager.Eap\n\n| **名称** | **类型** | **只读** | **可选"
+      },
+      {
+        "section_id": "section-8",
+        "title": "CustomResult",
+        "level": 2,
+        "line_start": 292,
+        "line_end": 303,
+        "summary": "表示EAP认证处理结果的枚举。\n\n​**系统能力**​：SystemCapability.Communication.NetManager.Eap\n\n| **名称** | **值** | **说明*"
+      },
+      {
+        "section_id": "section-9",
+        "title": "EapMethod",
+        "level": 2,
+        "line_start": 304,
+        "line_end": 321,
+        "summary": "表示EAP认证方式的枚举。\n\n**系统能力：** SystemCapability.Communication.NetManager.Eap\n\n| 名称 | 值 | 说明 |\n| --------"
+      },
+      {
+        "section_id": "section-10",
+        "title": "Phase2Method",
+        "level": 2,
+        "line_start": 322,
+        "line_end": 338,
+        "summary": "表示第二阶段认证方式的枚举。\n\n**系统能力：** SystemCapability.Communication.NetManager.Eap\n\n| 名称 | 值 | 说明 |\n| --------"
+      },
+      {
+        "section_id": "section-11",
+        "title": "EthEapProfile",
+        "level": 2,
+        "line_start": 339,
+        "line_end": 362,
+        "summary": "可扩展身份验证协议配置信息。\n\n**系统能力：** SystemCapability.Communication.NetManager.Eap\n\n| 名称              | 类型"
+      }
+    ]
+  }
+}

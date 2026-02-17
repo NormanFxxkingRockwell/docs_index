@@ -1,0 +1,76 @@
+{
+  "doc_id": "js-apis-enterprise-dateTimeManager-sys",
+  "title": "@ohos.enterprise.dateTimeManager （系统时间管理）(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-dateTimeManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-dateTimeManager-sys.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.dateTimeManager （系统时间管理）(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.dateTimeManager （系统时间管理）(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { dateTimeManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "dateTimeManager.setDateTime",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 80,
+        "summary": "setDateTime(admin: Want, time: number, callback: AsyncCallback\\<void>): void\n\n设置系统时间。使用callback异步回调"
+      },
+      {
+        "section_id": "section-3",
+        "title": "dateTimeManager.setDateTime",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 140,
+        "summary": "setDateTime(admin: Want, time: number): Promise\\<void>\n\n设置系统时间。使用Promise异步回调。\n\n**需要权限：** ohos.permi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "dateTimeManager.disallowModifyDateTime<sup>10+</sup>",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 195,
+        "summary": "disallowModifyDateTime(admin: Want, disallow: boolean, callback: AsyncCallback\\<void>): void\n\n禁止设备修"
+      },
+      {
+        "section_id": "section-5",
+        "title": "dateTimeManager.disallowModifyDateTime<sup>10+</sup>",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 254,
+        "summary": "disallowModifyDateTime(admin: Want, disallow: boolean): Promise\\<void>\n\n禁止设备修改系统时间。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "dateTimeManager.isModifyDateTimeDisallowed<sup>10+</sup>",
+        "level": 2,
+        "line_start": 255,
+        "line_end": 308,
+        "summary": "isModifyDateTimeDisallowed(admin: Want, callback: AsyncCallback\\<boolean>): void\n\n查询设备是否允许修改系统时间。使用"
+      },
+      {
+        "section_id": "section-7",
+        "title": "dateTimeManager.isModifyDateTimeDisallowed<sup>10+</sup>",
+        "level": 2,
+        "line_start": 309,
+        "line_end": 365,
+        "summary": "isModifyDateTimeDisallowed(admin: Want): Promise\\<boolean>\n\n查询设备是否允许修改系统时间。使用Promise异步回调。\n\n**需要权限：*"
+      }
+    ]
+  }
+}

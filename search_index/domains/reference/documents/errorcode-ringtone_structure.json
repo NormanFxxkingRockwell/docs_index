@@ -1,0 +1,76 @@
+{
+  "doc_id": "errorcode-ringtone",
+  "title": "Ringtone错误码",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/errorcode-ringtone.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/errorcode-ringtone.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@songshenke",
+    "designer": "@caixuejiang; @hao-liangfei; @zhanganxiang",
+    "tester": "@Filger",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 Ringtone错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Ringtone错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "20700001",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 30,
+        "summary": "**错误信息**\n\nTone type mismatch.\n\n**错误描述**\n\n调用接口时，传入的铃声类型不匹配。\n\n**可能原因**\n\n入参错误，比如传入的铃声路径需要是通知铃声的，而不是闹钟的"
+      },
+      {
+        "section_id": "section-2",
+        "title": "20700002 参数检查失败",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 48,
+        "summary": "**错误信息**\n\nParameter check error.\n\n**错误描述**\n\n调用接口时，传入的参数无效。\n\n**可能原因**\n\n参数无效，比如值不在边界范围内，没有使用指定的枚举范围等。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "20700003 操作不支持",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 66,
+        "summary": "**错误信息**\n\nUnsupported operation.\n\n**错误描述**\n\n调用接口时，不支持当前操作。\n\n**可能原因**\n\n能力不支持，比如当前设备不支持振动。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "20700004 数据大小超过限制",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 84,
+        "summary": "**错误信息**\n\nData size exceeds the limit.\n\n**错误描述**\n\n数据大小超过限制。\n\n**可能原因**\n\n添加自定义视频铃音文件时，自定义铃音文件超大。\n\n**处"
+      },
+      {
+        "section_id": "section-5",
+        "title": "20700005 文件个数超过限制",
+        "level": 2,
+        "line_start": 85,
+        "line_end": 102,
+        "summary": "**错误信息**\n\nThe number of files exceeds the limit.\n\n**错误描述**\n\n文件数量超限。\n\n**可能原因**\n\n添加了过多的自定义视频铃音。\n\n**处理"
+      },
+      {
+        "section_id": "section-6",
+        "title": "20700006 ROM空间不足",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 120,
+        "summary": "**错误信息**\n\nInsufficient ROM space.\n\n**错误描述**\n\nROM存储空间不足。\n\n**可能原因**\n\n用户本地ROM空间不足。\n\n**处理步骤**\n\n开发者提示用户，"
+      },
+      {
+        "section_id": "section-7",
+        "title": "20700007 参数无效",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 137,
+        "summary": "**错误信息**\n\nInvalid parameter.\n\n**错误描述**\n\n参数无效。\n\n**可能原因**\n\n函数入参无效，如超长等。\n\n**处理步骤**\n\n开发者校验入参后再调用。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "doc_id": "ts-basic-components-image",
+  "title": "Image",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-basic-components-image.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-basic-components-image.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@liyujie43",
+    "designer": "@weixin_52725220",
+    "tester": "@xiong0104",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 Image，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Image",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "需要权限",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 29,
+        "summary": "使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permis"
+      },
+      {
+        "section_id": "section-2",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 34,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 111,
+        "summary": "### Image\n\nImage(src: PixelMap | ResourceStr | DrawableDescriptor)\n\n通过图片数据源获取图片，用于后续渲染展示。\n\nImage组件加"
+      },
+      {
+        "section_id": "section-4",
+        "title": "属性",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 683,
+        "summary": "属性的详细使用指导请参考[添加属性](../../../ui/arkts-graphics-display.md#添加属性)。除支持[通用属性](ts-component-general-attri"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ImageContent<sup>12+</sup>",
+        "level": 2,
+        "line_start": 684,
+        "line_end": 697,
+        "summary": "指定图像内容。\n\n**卡片能力：** 从API version 12开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ImageInterpolation",
+        "level": 2,
+        "line_start": 698,
+        "line_end": 714,
+        "summary": "图片的插值效果。\n\n**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ImageRenderMode",
+        "level": 2,
+        "line_start": 715,
+        "line_end": 729,
+        "summary": "图片的渲染模式。\n\n**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ResizableOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 730,
+        "line_end": 745,
+        "summary": "图像拉伸时可调整大小的图像选项。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ImageAlt<sup>22+</sup>",
+        "level": 2,
+        "line_start": 746,
+        "line_end": 760,
+        "summary": "设置图片占位图。\n\n**卡片能力：** 从API version 22开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服"
+      },
+      {
+        "section_id": "section-10",
+        "title": "DynamicRangeMode<sup>12+</sup>枚举说明",
+        "level": 2,
+        "line_start": 761,
+        "line_end": 774,
+        "summary": "期望展示的图像动态范围。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ImageRotateOrientation<sup>14+</sup>",
+        "level": 2,
+        "line_start": 775,
+        "line_end": 794,
+        "summary": "期望的图像内容显示方向。\n\n**卡片能力：** 从API version 23开始，该接口支持在ArkTS卡片中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ImageSourceSize<sup>18+</sup>对象说明",
+        "level": 2,
+        "line_start": 795,
+        "line_end": 813,
+        "summary": "图片解码尺寸。\n\n> **说明：**\n>\n> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的"
+      },
+      {
+        "section_id": "section-13",
+        "title": "DrawableDescriptor<sup>10+</sup>",
+        "level": 2,
+        "line_start": 814,
+        "line_end": 827,
+        "summary": "type DrawableDescriptor = DrawableDescriptor\n\n作为Image组件的入参对象。\n\n**原子化服务API：** 从API version 11开始，该接口支"
+      },
+      {
+        "section_id": "section-14",
+        "title": "DrawingColorFilter<sup>12+</sup>",
+        "level": 2,
+        "line_start": 828,
+        "line_end": 841,
+        "summary": "type DrawingColorFilter = ColorFilter\n\n颜色滤波器对象。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n*"
+      },
+      {
+        "section_id": "section-15",
+        "title": "DrawingLattice<sup>12+<sup>",
+        "level": 2,
+        "line_start": 842,
+        "line_end": 855,
+        "summary": "type DrawingLattice = Lattice\n\n将图片按照矩形网格进行划分。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系"
+      },
+      {
+        "section_id": "section-16",
+        "title": "ImageMatrix<sup>15+</sup>对象说明",
+        "level": 2,
+        "line_start": 856,
+        "line_end": 869,
+        "summary": "type ImageMatrix = Matrix4Transit\n\n当前的矩阵对象。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能"
+      },
+      {
+        "section_id": "section-17",
+        "title": "ColorContent<sup>15+</sup>",
+        "level": 2,
+        "line_start": 870,
+        "line_end": 881,
+        "summary": "指定颜色填充内容。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-18",
+        "title": "事件",
+        "level": 2,
+        "line_start": 882,
+        "line_end": 953,
+        "summary": "除支持[通用事件](ts-component-general-events.md)外，还支持以下事件：\n\n### onComplete\n\nonComplete(callback: (event?:"
+      },
+      {
+        "section_id": "section-19",
+        "title": "ImageErrorCallback<sup>9+</sup>",
+        "level": 2,
+        "line_start": 954,
+        "line_end": 973,
+        "summary": "type ImageErrorCallback = (error: ImageError) => void\n\n图片加载异常时触发此回调。\n\n当组件的参数类型为[AnimatedDrawableDes"
+      },
+      {
+        "section_id": "section-20",
+        "title": "ImageError<sup>9+</sup>",
+        "level": 2,
+        "line_start": 974,
+        "line_end": 989,
+        "summary": "图片加载异常时触发回调的返回对象。\n\n当组件的参数类型为[AnimatedDrawableDescriptor](../js-apis-arkui-drawableDescriptor.md#ani"
+      },
+      {
+        "section_id": "section-21",
+        "title": "BusinessError<sup>20+</sup>",
+        "level": 2,
+        "line_start": 990,
+        "line_end": 1033,
+        "summary": "type BusinessError\\<T = void> = BusinessError\\<T>\n\n图片加载异常返回的错误信息。\n\n**卡片能力：** 从API version 20开始，该接口支"
+      },
+      {
+        "section_id": "section-22",
+        "title": "RequestDownloadInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1034,
+        "line_end": 1049,
+        "summary": "type RequestDownloadInfo = DownloadInfo\n\n用于描述网络图片加载失败或异常时的下载信息。该对象包含本次下载任务的资源信息、网络信息以及性能统计信息，可用于定位加"
+      },
+      {
+        "section_id": "section-23",
+        "title": "示例",
+        "level": 2,
+        "line_start": 1050,
+        "line_end": 2556,
+        "summary": "### 示例1（加载基本类型图片）\n\n该示例通过传入[Resource](ts-types.md#resource)资源，加载png、gif、svg和jpg等基本类型的图片。\n\n```ts\n@Ent"
+      }
+    ]
+  }
+}

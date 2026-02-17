@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-data-commonType",
+  "title": "@ohos.data.commonType (数据通用类型)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/js-apis-data-commonType.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/js-apis-data-commonType.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@lvcong_oh",
+    "designer": "@hollokin; @yuchaozhng",
+    "tester": "@lj_liujing; @yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 @ohos.data.commonType (数据通用类型)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.data.commonType (数据通用类型)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { commonType } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "AssetStatus",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 35,
+        "summary": "描述资产附件的状态枚举。请使用枚举名称而非枚举值。\n\n**系统能力：** SystemCapability.DistributedDataManager.CommonType\n\n| 名称"
+      },
+      {
+        "section_id": "section-3",
+        "title": "Asset",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 51,
+        "summary": "记录资产附件（文件、图片、视频等类型文件）的相关信息，相关示例见[在跨端迁移中使用分布式数据对象迁移数据](../../database/data-sync-of-distributed-data-"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Assets",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 63,
+        "summary": "type Assets = Array\\<Asset>\n\n表示[Asset](#asset)类型的数组。\n\n**系统能力：** SystemCapability.DistributedDataMan"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ValueType",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 81,
+        "summary": "type ValueType = null | number | string | boolean | Uint8Array | Asset | Assets\n\n用于表示允许的数据字段类型，接口参数"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ValuesBucket",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 93,
+        "summary": "type ValuesBucket = Record<string, ValueType>\n\n用于存储键值对的类型。该类型不是多线程安全的，如果应用中存在多线程同时操作该类派生出的实例，注意加锁保护"
+      }
+    ]
+  }
+}

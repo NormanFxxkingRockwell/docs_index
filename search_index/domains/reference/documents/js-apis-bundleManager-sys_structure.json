@@ -1,0 +1,1020 @@
+{
+  "doc_id": "js-apis-bundleManager-sys",
+  "title": "@ohos.bundle.bundleManager (应用程序包管理模块)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-bundleManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-bundleManager-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Ability Kit BundleManager 模块的 @ohos.bundle.bundleManager (应用程序包管理模块)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bundle.bundleManager (应用程序包管理模块)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { bundleManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "BundleFlag",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 35,
+        "summary": "包信息标志，指示需要获取的包信息的内容，当前页面仅包含本模块的系统接口，其他公开类型参见[BundleFlag](./js-apis-bundleManager.md#bundleflag)。\n\n*"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ApplicationFlag",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 50,
+        "summary": "应用信息标志，指示需要获取的应用信息的内容。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n**系统接口：** 此接"
+      },
+      {
+        "section_id": "section-4",
+        "title": "AbilityFlag",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 69,
+        "summary": "Ability组件信息标志，指示需要获取的Ability组件信息的内容。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ExtensionAbilityFlag",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 85,
+        "summary": "扩展组件信息标志，指示需要获取的扩展组件信息的内容。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n**系统接口：*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ProfileType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 97,
+        "summary": "标识配置文件类型。\n\n **系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n **系统接口：** 此接口为系统接口。\n\n|"
+      },
+      {
+        "section_id": "section-7",
+        "title": "AppDistributionType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 115,
+        "summary": "标识应用[分发类型](../../security/app-provision-structure.md)。\n\n **系统能力：** SystemCapability.BundleManager.B"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ApplicationInfoFlag<sup>12+</sup>",
+        "level": 2,
+        "line_start": 116,
+        "line_end": 129,
+        "summary": "标识应用和用户之间的各种状态类型。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n**系统接口：** 此接口为系统接口"
+      },
+      {
+        "section_id": "section-9",
+        "title": "BundleInstallStatus<sup>23+</sup>",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 143,
+        "summary": "标识应用的安装状态。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.Core\n\n| 名"
+      },
+      {
+        "section_id": "section-10",
+        "title": "bundleManager.getBundleInfo<sup>14+</sup>",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 228,
+        "summary": "getBundleInfo(bundleName: string, bundleFlags: number, userId: number, callback: AsyncCallback\\<Bun"
+      },
+      {
+        "section_id": "section-11",
+        "title": "bundleManager.getBundleInfo<sup>14+</sup>",
+        "level": 2,
+        "line_start": 229,
+        "line_end": 285,
+        "summary": "getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback\\<BundleInfo>): void"
+      },
+      {
+        "section_id": "section-12",
+        "title": "bundleManager.getBundleInfo<sup>14+</sup>",
+        "level": 2,
+        "line_start": 286,
+        "line_end": 368,
+        "summary": "getBundleInfo(bundleName: string, bundleFlags: number, userId?: number): Promise\\<BundleInfo>\n\n根据给定"
+      },
+      {
+        "section_id": "section-13",
+        "title": "bundleManager.getApplicationInfo",
+        "level": 2,
+        "line_start": 369,
+        "line_end": 429,
+        "summary": "getApplicationInfo(bundleName: string, appFlags: number, userId: number, callback: AsyncCallback\\<A"
+      },
+      {
+        "section_id": "section-14",
+        "title": "bundleManager.getApplicationInfo",
+        "level": 2,
+        "line_start": 430,
+        "line_end": 487,
+        "summary": "getApplicationInfo(bundleName: string, appFlags: number, callback: AsyncCallback\\<ApplicationInfo>)"
+      },
+      {
+        "section_id": "section-15",
+        "title": "bundleManager.getApplicationInfo",
+        "level": 2,
+        "line_start": 488,
+        "line_end": 551,
+        "summary": "getApplicationInfo(bundleName: string, appFlags: number, userId?: number): Promise\\<ApplicationInfo"
+      },
+      {
+        "section_id": "section-16",
+        "title": "bundleManager.getAllBundleInfo",
+        "level": 2,
+        "line_start": 552,
+        "line_end": 606,
+        "summary": "getAllBundleInfo(bundleFlags: number, userId: number, callback: AsyncCallback<Array\\<BundleInfo>>):"
+      },
+      {
+        "section_id": "section-17",
+        "title": "bundleManager.getAllBundleInfo",
+        "level": 2,
+        "line_start": 607,
+        "line_end": 658,
+        "summary": "getAllBundleInfo(bundleFlags: number, callback: AsyncCallback<Array\\<BundleInfo>>): void\n\n根据给定的bund"
+      },
+      {
+        "section_id": "section-18",
+        "title": "bundleManager.getAllBundleInfo",
+        "level": 2,
+        "line_start": 659,
+        "line_end": 715,
+        "summary": "getAllBundleInfo(bundleFlags: number, userId?: number): Promise<Array\\<BundleInfo>>\n\n根据给定的bundleFla"
+      },
+      {
+        "section_id": "section-19",
+        "title": "bundleManager.getAllApplicationInfo",
+        "level": 2,
+        "line_start": 716,
+        "line_end": 770,
+        "summary": "getAllApplicationInfo(appFlags: number, userId: number, callback: AsyncCallback<Array\\<ApplicationI"
+      },
+      {
+        "section_id": "section-20",
+        "title": "bundleManager.getAllApplicationInfo",
+        "level": 2,
+        "line_start": 771,
+        "line_end": 822,
+        "summary": "getAllApplicationInfo(appFlags: number, callback: AsyncCallback<Array\\<ApplicationInfo>>): void\n\n根据"
+      },
+      {
+        "section_id": "section-21",
+        "title": "bundleManager.getAllApplicationInfo",
+        "level": 2,
+        "line_start": 823,
+        "line_end": 879,
+        "summary": "getAllApplicationInfo(appFlags: number, userId?: number): Promise<Array\\<ApplicationInfo>>\n\n根据给定的ap"
+      },
+      {
+        "section_id": "section-22",
+        "title": "bundleManager.queryAbilityInfo",
+        "level": 2,
+        "line_start": 880,
+        "line_end": 946,
+        "summary": "queryAbilityInfo(want: Want, abilityFlags: number, userId: number, callback: AsyncCallback<Array\\<A"
+      },
+      {
+        "section_id": "section-23",
+        "title": "bundleManager.queryAbilityInfo",
+        "level": 2,
+        "line_start": 947,
+        "line_end": 1010,
+        "summary": "queryAbilityInfo(want: Want, abilityFlags: number, callback: AsyncCallback<Array\\<AbilityInfo>>): v"
+      },
+      {
+        "section_id": "section-24",
+        "title": "bundleManager.queryAbilityInfo",
+        "level": 2,
+        "line_start": 1011,
+        "line_end": 1104,
+        "summary": "queryAbilityInfo(want: Want, abilityFlags: number, userId?: number): Promise<Array\\<AbilityInfo>>"
+      },
+      {
+        "section_id": "section-25",
+        "title": "bundleManager.queryAbilityInfoSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1105,
+        "line_end": 1193,
+        "summary": "queryAbilityInfoSync(want: Want, abilityFlags: number, userId?: number): Array\\<AbilityInfo>\n\n以同步方法"
+      },
+      {
+        "section_id": "section-26",
+        "title": "bundleManager.queryAbilityInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1194,
+        "line_end": 1267,
+        "summary": "queryAbilityInfo(wants: Array\\<Want>, abilityFlags: number, userId?: number): Promise<Array\\<Abilit"
+      },
+      {
+        "section_id": "section-27",
+        "title": "bundleManager.queryExtensionAbilityInfo",
+        "level": 2,
+        "line_start": 1268,
+        "line_end": 1335,
+        "summary": "queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAbilityType, extensionAbilityF"
+      },
+      {
+        "section_id": "section-28",
+        "title": "bundleManager.queryExtensionAbilityInfo",
+        "level": 2,
+        "line_start": 1336,
+        "line_end": 1400,
+        "summary": "queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAbilityType, extensionAbilityF"
+      },
+      {
+        "section_id": "section-29",
+        "title": "bundleManager.queryExtensionAbilityInfo",
+        "level": 2,
+        "line_start": 1401,
+        "line_end": 1496,
+        "summary": "queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAbilityType, extensionAbilityF"
+      },
+      {
+        "section_id": "section-30",
+        "title": "bundleManager.queryExtensionAbilityInfoSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1497,
+        "line_end": 1588,
+        "summary": "queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: ExtensionAbilityType, extensionAbil"
+      },
+      {
+        "section_id": "section-31",
+        "title": "bundleManager.getBundleNameByUid<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1589,
+        "line_end": 1637,
+        "summary": "getBundleNameByUid(uid: number, callback: AsyncCallback\\<string>): void\n\n根据给定的uid获取对应的bundleName。使用"
+      },
+      {
+        "section_id": "section-32",
+        "title": "bundleManager.getBundleNameByUid<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1638,
+        "line_end": 1689,
+        "summary": "getBundleNameByUid(uid: number): Promise\\<string>\n\n根据给定的uid获取对应的bundleName。使用Promise异步回调。\n\n**需要权限：*"
+      },
+      {
+        "section_id": "section-33",
+        "title": "bundleManager.getBundleNameByUidSync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1690,
+        "line_end": 1738,
+        "summary": "getBundleNameByUidSync(uid: number): string\n\n以同步方法根据给定的uid获取对应的bundleName。\n\n**需要权限：** ohos.permissi"
+      },
+      {
+        "section_id": "section-34",
+        "title": "bundleManager.getBundleArchiveInfo",
+        "level": 2,
+        "line_start": 1739,
+        "line_end": 1793,
+        "summary": "getBundleArchiveInfo(hapFilePath: string, bundleFlags: number, callback: AsyncCallback\\<BundleInfo>"
+      },
+      {
+        "section_id": "section-35",
+        "title": "bundleManager.getBundleArchiveInfo",
+        "level": 2,
+        "line_start": 1794,
+        "line_end": 1851,
+        "summary": "getBundleArchiveInfo(hapFilePath: string,  bundleFlags: number): Promise\\<BundleInfo>\n\n根据给定的hapFile"
+      },
+      {
+        "section_id": "section-36",
+        "title": "bundleManager.getBundleArchiveInfoSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1852,
+        "line_end": 1906,
+        "summary": "getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: number): BundleInfo\n\n以同步方法根据给定的hapFilePa"
+      },
+      {
+        "section_id": "section-37",
+        "title": "bundleManager.getAllBundleCacheSize<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1907,
+        "line_end": 1954,
+        "summary": "getAllBundleCacheSize(): Promise\\<number>\n\n获取全局缓存大小。使用Promise异步回调。\n\n有程序运行时的应用的缓存、或者在[应用配置指南](../../"
+      },
+      {
+        "section_id": "section-38",
+        "title": "bundleManager.cleanAllBundleCache<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1955,
+        "line_end": 2000,
+        "summary": "cleanAllBundleCache(): Promise\\<void>\n\n清理全局缓存。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.p"
+      },
+      {
+        "section_id": "section-39",
+        "title": "bundleManager.cleanBundleCacheFiles",
+        "level": 2,
+        "line_start": 2001,
+        "line_end": 2056,
+        "summary": "cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback\\<void>): void\n\n根据给定的bundleName清理B"
+      },
+      {
+        "section_id": "section-40",
+        "title": "bundleManager.cleanBundleCacheFiles",
+        "level": 2,
+        "line_start": 2057,
+        "line_end": 2115,
+        "summary": "cleanBundleCacheFiles(bundleName: string): Promise\\<void>\n\n根据给定的bundleName清理BundleCache。使用Promise异步"
+      },
+      {
+        "section_id": "section-41",
+        "title": "bundleManager.cleanBundleCacheFiles<sup>15+</sup>",
+        "level": 2,
+        "line_start": 2116,
+        "line_end": 2177,
+        "summary": "cleanBundleCacheFiles(bundleName: string, appIndex: number): Promise\\<void>\n\n根据给定的bundleName和appInd"
+      },
+      {
+        "section_id": "section-42",
+        "title": "bundleManager.setApplicationEnabled",
+        "level": 2,
+        "line_start": 2178,
+        "line_end": 2231,
+        "summary": "setApplicationEnabled(bundleName: string, isEnabled: boolean, callback: AsyncCallback\\<void>): void"
+      },
+      {
+        "section_id": "section-43",
+        "title": "bundleManager.setApplicationEnabled",
+        "level": 2,
+        "line_start": 2232,
+        "line_end": 2288,
+        "summary": "setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise\\<void>\n\n设置指定应用的禁用或使能状态。使用Pro"
+      },
+      {
+        "section_id": "section-44",
+        "title": "bundleManager.setApplicationEnabled<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2289,
+        "line_end": 2347,
+        "summary": "setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: boolean): Promise\\<void>\n\n设置"
+      },
+      {
+        "section_id": "section-45",
+        "title": "bundleManager.setApplicationEnabledSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2348,
+        "line_end": 2395,
+        "summary": "setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void\n\n以同步方法设置指定应用的禁用或使能状态。\n\n**系统"
+      },
+      {
+        "section_id": "section-46",
+        "title": "bundleManager.setAbilityEnabled",
+        "level": 2,
+        "line_start": 2396,
+        "line_end": 2463,
+        "summary": "setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: AsyncCallback\\<void>): void\n\n设置指"
+      },
+      {
+        "section_id": "section-47",
+        "title": "bundleManager.setAbilityEnabled",
+        "level": 2,
+        "line_start": 2464,
+        "line_end": 2534,
+        "summary": "setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise\\<void>\n\n设置指定组件的禁用或使能状态。使用Promise异"
+      },
+      {
+        "section_id": "section-48",
+        "title": "bundleManager.setAbilityEnabled<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2535,
+        "line_end": 2607,
+        "summary": "setAbilityEnabled(info: AbilityInfo, appIndex: number, isEnabled: boolean): Promise\\<void>\n\n设置指定应用或"
+      },
+      {
+        "section_id": "section-49",
+        "title": "bundleManager.setAbilityEnabledSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2608,
+        "line_end": 2674,
+        "summary": "setAbilityEnabledSync(info: AbilityInfo, isEnabled: boolean): void\n\n以同步方法设置指定组件的禁用或使能状态。\n\n**系统接口：**"
+      },
+      {
+        "section_id": "section-50",
+        "title": "bundleManager.isApplicationEnabled",
+        "level": 2,
+        "line_start": 2675,
+        "line_end": 2724,
+        "summary": "isApplicationEnabled(bundleName: string, callback: AsyncCallback\\<boolean>): void\n\n获取指定应用的禁用或使能状态。使"
+      },
+      {
+        "section_id": "section-51",
+        "title": "bundleManager.isApplicationEnabled",
+        "level": 2,
+        "line_start": 2725,
+        "line_end": 2777,
+        "summary": "isApplicationEnabled(bundleName: string): Promise\\<boolean>\n\n获取指定应用的禁用或使能状态。使用Promise异步回调。\n\n**系统接口："
+      },
+      {
+        "section_id": "section-52",
+        "title": "bundleManager.isApplicationEnabled<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2778,
+        "line_end": 2832,
+        "summary": "isApplicationEnabled(bundleName: string, appIndex: number): Promise\\<boolean>\n\n获取指定应用或分身应用的禁用或使能状态。"
+      },
+      {
+        "section_id": "section-53",
+        "title": "bundleManager.isApplicationEnabledSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2833,
+        "line_end": 2882,
+        "summary": "isApplicationEnabledSync(bundleName: string): boolean\n\n以同步方法获取指定应用的禁用或使能状态。\n\n**系统接口：** 此接口为系统接口。\n\n*"
+      },
+      {
+        "section_id": "section-54",
+        "title": "bundleManager.isAbilityEnabled",
+        "level": 2,
+        "line_start": 2883,
+        "line_end": 2946,
+        "summary": "isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback\\<boolean>): void\n\n获取指定组件的禁用或使能状态。使用call"
+      },
+      {
+        "section_id": "section-55",
+        "title": "bundleManager.isAbilityEnabled",
+        "level": 2,
+        "line_start": 2947,
+        "line_end": 3013,
+        "summary": "isAbilityEnabled(info: AbilityInfo): Promise\\<boolean>\n\n获取指定组件的禁用或使能状态。使用Promise异步回调。\n\n**系统接口：** 此接"
+      },
+      {
+        "section_id": "section-56",
+        "title": "bundleManager.isAbilityEnabled<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3014,
+        "line_end": 3082,
+        "summary": "isAbilityEnabled(info: AbilityInfo, appIndex: number): Promise\\<boolean>\n\n获取应用或指定分身应用组件的禁用或使能状态。使用P"
+      },
+      {
+        "section_id": "section-57",
+        "title": "bundleManager.isAbilityEnabledSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3083,
+        "line_end": 3151,
+        "summary": "isAbilityEnabledSync(info: AbilityInfo): boolean\n\n以同步方法获取指定组件的禁用或使能状态。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-58",
+        "title": "bundleManager.getLaunchWantForBundle",
+        "level": 2,
+        "line_start": 3152,
+        "line_end": 3208,
+        "summary": "getLaunchWantForBundle(bundleName: string, userId: number, callback: AsyncCallback\\<Want>): void\n\n根"
+      },
+      {
+        "section_id": "section-59",
+        "title": "bundleManager.getLaunchWantForBundle",
+        "level": 2,
+        "line_start": 3209,
+        "line_end": 3262,
+        "summary": "getLaunchWantForBundle(bundleName: string, callback: AsyncCallback\\<Want>): void\n\n根据给定的bundleName获取"
+      },
+      {
+        "section_id": "section-60",
+        "title": "bundleManager.getLaunchWantForBundle",
+        "level": 2,
+        "line_start": 3263,
+        "line_end": 3322,
+        "summary": "getLaunchWantForBundle(bundleName: string, userId?: number): Promise\\<Want>\n\n根据给定的bundleName和userId"
+      },
+      {
+        "section_id": "section-61",
+        "title": "bundleManager.getPermissionDef",
+        "level": 2,
+        "line_start": 3323,
+        "line_end": 3374,
+        "summary": "getPermissionDef(permissionName: string, callback: AsyncCallback\\<PermissionDef>): void\n\n根据给定的permi"
+      },
+      {
+        "section_id": "section-62",
+        "title": "bundleManager.getPermissionDef",
+        "level": 2,
+        "line_start": 3375,
+        "line_end": 3429,
+        "summary": "getPermissionDef(permissionName: string): Promise\\<PermissionDef>\n\n根据给定的permissionName获取权限定义结构体Perm"
+      },
+      {
+        "section_id": "section-63",
+        "title": "bundleManager.getPermissionDefSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3430,
+        "line_end": 3481,
+        "summary": "getPermissionDefSync(permissionName: string): PermissionDef;\n\n以同步方法根据给定的permissionName获取权限定义结构体Perm"
+      },
+      {
+        "section_id": "section-64",
+        "title": "bundleManager.getAbilityLabel",
+        "level": 2,
+        "line_start": 3482,
+        "line_end": 3545,
+        "summary": "getAbilityLabel(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallbac"
+      },
+      {
+        "section_id": "section-65",
+        "title": "bundleManager.getAbilityLabel",
+        "level": 2,
+        "line_start": 3546,
+        "line_end": 3612,
+        "summary": "getAbilityLabel(bundleName: string, moduleName: string, abilityName: string): Promise\\<string>\n\n获取指"
+      },
+      {
+        "section_id": "section-66",
+        "title": "bundleManager.getAbilityLabelSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3613,
+        "line_end": 3676,
+        "summary": "getAbilityLabelSync(bundleName: string, moduleName: string, abilityName: string): string\n\n以同步的方法获取指"
+      },
+      {
+        "section_id": "section-67",
+        "title": "bundleManager.getApplicationInfoSync",
+        "level": 2,
+        "line_start": 3677,
+        "line_end": 3737,
+        "summary": "getApplicationInfoSync(bundleName: string, applicationFlags: number, userId: number) : ApplicationI"
+      },
+      {
+        "section_id": "section-68",
+        "title": "bundleManager.getApplicationInfoSync",
+        "level": 2,
+        "line_start": 3738,
+        "line_end": 3795,
+        "summary": "getApplicationInfoSync(bundleName: string, applicationFlags: number) : ApplicationInfo\n\n以同步方法根据给定的b"
+      },
+      {
+        "section_id": "section-69",
+        "title": "bundleManager.getBundleInfoSync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 3796,
+        "line_end": 3853,
+        "summary": "getBundleInfoSync(bundleName: string, bundleFlags: number, userId: number): BundleInfo\n\n以同步方法根据给定的b"
+      },
+      {
+        "section_id": "section-70",
+        "title": "bundleManager.getBundleInfoSync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 3854,
+        "line_end": 3907,
+        "summary": "getBundleInfoSync(bundleName: string, bundleFlags: number): BundleInfo\n\n以同步方法根据给定的bundleName、bundle"
+      },
+      {
+        "section_id": "section-71",
+        "title": "bundleManager.getSharedBundleInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3908,
+        "line_end": 3965,
+        "summary": "getSharedBundleInfo(bundleName: string,  moduleName: string, callback: AsyncCallback\\<Array\\<Shared"
+      },
+      {
+        "section_id": "section-72",
+        "title": "bundleManager.getSharedBundleInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3966,
+        "line_end": 4026,
+        "summary": "getSharedBundleInfo(bundleName: string, moduleName: string): Promise\\<Array\\<SharedBundleInfo\\>\\>"
+      },
+      {
+        "section_id": "section-73",
+        "title": "bundleManager.getAllSharedBundleInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4027,
+        "line_end": 4074,
+        "summary": "getAllSharedBundleInfo(callback: AsyncCallback\\<Array\\<SharedBundleInfo\\>\\>): void\n\n获取所有的共享包信息。使用ca"
+      },
+      {
+        "section_id": "section-74",
+        "title": "bundleManager.getAllSharedBundleInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4075,
+        "line_end": 4120,
+        "summary": "getAllSharedBundleInfo(): Promise\\<Array\\<SharedBundleInfo\\>\\>\n\n获取所有的共享包信息。使用Promise异步回调。\n\n**系统接口：*"
+      },
+      {
+        "section_id": "section-75",
+        "title": "bundleManager.getAppProvisionInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4121,
+        "line_end": 4175,
+        "summary": "getAppProvisionInfo(bundleName: string, callback: AsyncCallback\\<AppProvisionInfo\\>): void\n\n获取指定bun"
+      },
+      {
+        "section_id": "section-76",
+        "title": "bundleManager.getAppProvisionInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4176,
+        "line_end": 4234,
+        "summary": "getAppProvisionInfo(bundleName: string, userId: number, callback: AsyncCallback\\<AppProvisionInfo\\>"
+      },
+      {
+        "section_id": "section-77",
+        "title": "bundleManager.getAppProvisionInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4235,
+        "line_end": 4307,
+        "summary": "getAppProvisionInfo(bundleName: string, userId?: number): Promise\\<AppProvisionInfo\\>\n\n根据bundleName"
+      },
+      {
+        "section_id": "section-78",
+        "title": "bundleManager.getAppProvisionInfoSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4308,
+        "line_end": 4374,
+        "summary": "getAppProvisionInfoSync(bundleName: string, userId?: number): AppProvisionInfo\n\n以同步方法根据bundleName和u"
+      },
+      {
+        "section_id": "section-79",
+        "title": "bundleManager.getAllAppProvisionInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 4375,
+        "line_end": 4445,
+        "summary": "getAllAppProvisionInfo(userId?: number): Promise\\<Array\\<AppProvisionInfo\\>\\>\n\n根据userId获取指定用户下所有应用的"
+      },
+      {
+        "section_id": "section-80",
+        "title": "bundleManager.getAllBundleInstallInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 4446,
+        "line_end": 4508,
+        "summary": "getAllBundleInstallInfo(): Promise\\<Array\\<Record\\<string, Object\\>\\>\\>\n\n获取系统内所有应用的扩展安装信息。使用Promise"
+      },
+      {
+        "section_id": "section-81",
+        "title": "bundleManager.getSpecifiedDistributionType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4509,
+        "line_end": 4561,
+        "summary": "getSpecifiedDistributionType(bundleName: string): string\n\n以同步的方法查询指定bundleName的[分发类型](../../security"
+      },
+      {
+        "section_id": "section-82",
+        "title": "bundleManager.getAdditionalInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4562,
+        "line_end": 4613,
+        "summary": "getAdditionalInfo(bundleName: string): string\n\n以同步接口查询指定bundleName的额外信息。该返回值是在调用install接口时传入的[Insta"
+      },
+      {
+        "section_id": "section-83",
+        "title": "bundleManager.queryExtensionAbilityInfoSync<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4614,
+        "line_end": 4705,
+        "summary": "queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string, extensionAbilityFlags: numb"
+      },
+      {
+        "section_id": "section-84",
+        "title": "bundleManager.getJsonProfile<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4706,
+        "line_end": 4769,
+        "summary": "getJsonProfile(profileType: ProfileType, bundleName: string, moduleName?: string, userId?: number):"
+      },
+      {
+        "section_id": "section-85",
+        "title": "bundleManager.getRecoverableApplicationInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4770,
+        "line_end": 4817,
+        "summary": "getRecoverableApplicationInfo(callback: AsyncCallback\\<Array\\<RecoverableApplicationInfo\\>\\>): void"
+      },
+      {
+        "section_id": "section-86",
+        "title": "bundleManager.getRecoverableApplicationInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4818,
+        "line_end": 4863,
+        "summary": "getRecoverableApplicationInfo(): Promise\\<Array\\<RecoverableApplicationInfo\\>\\>\n\n获取所有可恢复的预置应用信息。使用P"
+      },
+      {
+        "section_id": "section-87",
+        "title": "bundleManager.setAdditionalInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4864,
+        "line_end": 4913,
+        "summary": "setAdditionalInfo(bundleName: string, additionalInfo: string): void\n\n设置指定应用的额外信息。此接口仅供应用市场调用。\n\n**系统"
+      },
+      {
+        "section_id": "section-88",
+        "title": "bundleManager.getAllPreinstalledApplicationInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4914,
+        "line_end": 4959,
+        "summary": "getAllPreinstalledApplicationInfo(): Promise\\<Array\\<PreinstalledApplicationInfo\\>\\>\n\n获取所有预置应用信息。使用"
+      },
+      {
+        "section_id": "section-89",
+        "title": "bundleManager.queryExtensionAbilityInfoSync<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4960,
+        "line_end": 5038,
+        "summary": "queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAbilityFlags: number, userId?:"
+      },
+      {
+        "section_id": "section-90",
+        "title": "bundleManager.getAllBundleInfoByDeveloperId<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5039,
+        "line_end": 5091,
+        "summary": "getAllBundleInfoByDeveloperId(developerId: string): Array\\<BundleInfo>\n\n根据给定的developerId获取当前用户下的包信息"
+      },
+      {
+        "section_id": "section-91",
+        "title": "bundleManager.getDeveloperIds<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5092,
+        "line_end": 5143,
+        "summary": "getDeveloperIds(appDistributionType?: number): Array\\<string>\n\n根据给定的应用[分发类型](#appdistributiontype12"
+      },
+      {
+        "section_id": "section-92",
+        "title": "bundleManager.switchUninstallState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5144,
+        "line_end": 5189,
+        "summary": "switchUninstallState(bundleName: string, state: boolean): void\n\n切换指定应用的可卸载状态，此接口与EDM应用拦截管控机制不互相影响。"
+      },
+      {
+        "section_id": "section-93",
+        "title": "bundleManager.getAllPluginInfo<sup>19+</sup>",
+        "level": 2,
+        "line_start": 5190,
+        "line_end": 5266,
+        "summary": "getAllPluginInfo(hostBundleName: string, userId?: number): Promise<Array\\<PluginBundleInfo>>\n\n根据给定的"
+      },
+      {
+        "section_id": "section-94",
+        "title": "bundleManager.getExtResource<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5267,
+        "line_end": 5325,
+        "summary": "getExtResource(bundleName: string): Promise\\<Array\\<string>>;\n\n根据给定的bundleName获得扩展资源对应的moduleNames。"
+      },
+      {
+        "section_id": "section-95",
+        "title": "bundleManager.enableDynamicIcon<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5326,
+        "line_end": 5386,
+        "summary": "enableDynamicIcon(bundleName: string, moduleName: string): Promise\\<void>;\n\n根据给定的bundleName、moduleN"
+      },
+      {
+        "section_id": "section-96",
+        "title": "bundleManager.enableDynamicIcon<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5387,
+        "line_end": 5455,
+        "summary": "enableDynamicIcon(bundleName: string, moduleName: string, option?: BundleOptions): Promise\\<void>"
+      },
+      {
+        "section_id": "section-97",
+        "title": "bundleManager.disableDynamicIcon<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5456,
+        "line_end": 5512,
+        "summary": "disableDynamicIcon(bundleName: string): Promise\\<void>;\n\n根据给定的bundleName禁用动态图标。使用Promise异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-98",
+        "title": "bundleManager.disableDynamicIcon<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5513,
+        "line_end": 5577,
+        "summary": "disableDynamicIcon(bundleName: string, option?: BundleOptions): Promise\\<void>\n\n根据给定的bundleName和opt"
+      },
+      {
+        "section_id": "section-99",
+        "title": "bundleManager.getDynamicIcon<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5578,
+        "line_end": 5634,
+        "summary": "getDynamicIcon(bundleName: string): Promise\\<string>;\n\n根据给定的bundleName获得动态图标对应的moduleName。使用Promise"
+      },
+      {
+        "section_id": "section-100",
+        "title": "bundleManager.getAppCloneIdentity<sup>14+</sup>",
+        "level": 2,
+        "line_start": 5635,
+        "line_end": 5687,
+        "summary": "getAppCloneIdentity(uid: number): Promise\\<AppCloneIdentity>;\n\n根据uid查询分身应用的bundleName和appIndex。使用Pr"
+      },
+      {
+        "section_id": "section-101",
+        "title": "bundleManager.getAppCloneIdentityBySandboxDataDir<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5688,
+        "line_end": 5748,
+        "summary": "getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity\n\n根据应用的沙箱目录名称获取应用的身份信息"
+      },
+      {
+        "section_id": "section-102",
+        "title": "bundleManager.getSandboxDataDir<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5749,
+        "line_end": 5802,
+        "summary": "getSandboxDataDir(bundleName: string, appIndex: number): string\n\n根据应用包名和分身索引获取对应的沙箱目录。\n\n**系统接口：** 此"
+      },
+      {
+        "section_id": "section-103",
+        "title": "bundleManager.getAppCloneBundleInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5803,
+        "line_end": 5869,
+        "summary": "getAppCloneBundleInfo(bundleName: string, appIndex: number, bundleFlags: number, userId?: number):"
+      },
+      {
+        "section_id": "section-104",
+        "title": "bundleManager.getAllAppCloneBundleInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5870,
+        "line_end": 5936,
+        "summary": "getAllAppCloneBundleInfo(bundleName: string, bundleFlags: number, userId?: number): Promise\\<Array\\"
+      },
+      {
+        "section_id": "section-105",
+        "title": "bundleManager.verifyAbc<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5937,
+        "line_end": 5990,
+        "summary": "verifyAbc(abcPaths: Array\\<string>, deleteOriginalFiles: boolean, callback: AsyncCallback\\<void>):"
+      },
+      {
+        "section_id": "section-106",
+        "title": "bundleManager.migrateData<sup>18+</sup>",
+        "level": 2,
+        "line_start": 5991,
+        "line_end": 6056,
+        "summary": "migrateData(sourcePaths: Array&lt;string&gt;, destinationPath: string): Promise&lt;void&gt;\n\n拷贝文件，将"
+      },
+      {
+        "section_id": "section-107",
+        "title": "bundleManager.verifyAbc<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6057,
+        "line_end": 6113,
+        "summary": "verifyAbc(abcPaths: Array\\<string>, deleteOriginalFiles: boolean): Promise\\<void>\n\n根据给定的abcPaths和de"
+      },
+      {
+        "section_id": "section-108",
+        "title": "bundleManager.deleteAbc<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6114,
+        "line_end": 6169,
+        "summary": "deleteAbc(abcPath: string): Promise\\<void>\n\n根据给定的abcPath删除.abc文件。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口"
+      },
+      {
+        "section_id": "section-109",
+        "title": "bundleManager.getDynamicIconInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 6170,
+        "line_end": 6225,
+        "summary": "getDynamicIconInfo(bundleName: string): Promise\\<Array\\<DynamicIconInfo>>\n\n根据指定的bundleName获取所有用户和所有"
+      },
+      {
+        "section_id": "section-110",
+        "title": "bundleManager.getAllDynamicIconInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 6226,
+        "line_end": 6285,
+        "summary": "getAllDynamicIconInfo(userId?: number): Promise\\<Array\\<DynamicIconInfo>>\n\n查询指定用户下所有应用和所有分身的动态图标信息。"
+      },
+      {
+        "section_id": "section-111",
+        "title": "bundleManager.setAbilityFileTypesForSelf<sup>22+</sup>",
+        "level": 2,
+        "line_start": 6286,
+        "line_end": 6339,
+        "summary": "setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fileTypes: Array\\<string>): voi"
+      },
+      {
+        "section_id": "section-112",
+        "title": "bundleManager.recoverBackupBundleData<sup>21+</sup>",
+        "level": 2,
+        "line_start": 6340,
+        "line_end": 6401,
+        "summary": "recoverBackupBundleData(bundleName: string, userId: number, appIndex: number): Promise\\<void>\n\n恢复指定"
+      },
+      {
+        "section_id": "section-113",
+        "title": "bundleManager.removeBackupBundleData<sup>21+</sup>",
+        "level": 2,
+        "line_start": 6402,
+        "line_end": 6463,
+        "summary": "removeBackupBundleData(bundleName: string, userId: number, appIndex: number): Promise\\<void>\n\n删除指定用"
+      },
+      {
+        "section_id": "section-114",
+        "title": "bundleManager.getBundleInstallStatus<sup>23+</sup>",
+        "level": 2,
+        "line_start": 6464,
+        "line_end": 6516,
+        "summary": "getBundleInstallStatus(bundleName: string): BundleInstallStatus\n\n查询当前用户下指定应用的安装状态。\n\n**系统接口：** 此接口为系"
+      },
+      {
+        "section_id": "section-115",
+        "title": "bundleManager.isApplicationDisableForbidden<sup>24+</sup>",
+        "level": 2,
+        "line_start": 6517,
+        "line_end": 6583,
+        "summary": "isApplicationDisableForbidden(bundleName: string, userId: number, appIndex: number): boolean\n\n以同步方法"
+      },
+      {
+        "section_id": "section-116",
+        "title": "PermissionDef",
+        "level": 2,
+        "line_start": 6584,
+        "line_end": 6597,
+        "summary": "type PermissionDef = _PermissionDef\n\n[module.json5配置文件](../../quick-start/module-configuration-file"
+      },
+      {
+        "section_id": "section-117",
+        "title": "SharedBundleInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6598,
+        "line_end": 6611,
+        "summary": "type SharedBundleInfo = _SharedBundleInfo\n\n共享包信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-118",
+        "title": "AppProvisionInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6612,
+        "line_end": 6626,
+        "summary": "type AppProvisionInfo = _AppProvisionInfo.AppProvisionInfo\n\n应用[HarmonyAppProvision配置文件](../../secur"
+      },
+      {
+        "section_id": "section-119",
+        "title": "Validity<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6627,
+        "line_end": 6640,
+        "summary": "type Validity = _AppProvisionInfo.Validity\n\n配置文件中的有效期。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-120",
+        "title": "RecoverableApplicationInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6641,
+        "line_end": 6654,
+        "summary": "type RecoverableApplicationInfo = _RecoverableApplicationInfo\n\n预置应用被卸载后可以恢复的预置应用信息。\n\n**系统接口：** 此接口为"
+      },
+      {
+        "section_id": "section-121",
+        "title": "PreinstalledApplicationInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6655,
+        "line_end": 6668,
+        "summary": "type PreinstalledApplicationInfo = _PreinstalledApplicationInfo\n\n预置应用信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统"
+      },
+      {
+        "section_id": "section-122",
+        "title": "PluginBundleInfo<sup>19+</sup>",
+        "level": 2,
+        "line_start": 6669,
+        "line_end": 6682,
+        "summary": "type PluginBundleInfo = _PluginBundleInfo\n\n插件信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.B"
+      },
+      {
+        "section_id": "section-123",
+        "title": "PluginModuleInfo<sup>19+</sup>",
+        "level": 2,
+        "line_start": 6683,
+        "line_end": 6696,
+        "summary": "type PluginModuleInfo = _PluginModuleInfo\n\n插件的模块信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-124",
+        "title": "DynamicIconInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 6697,
+        "line_end": 6710,
+        "summary": "type DynamicIconInfo = _BundleInfo.DynamicIconInfo\n\n应用的动态图标信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-125",
+        "title": "BundleOptions<sup>20+</sup>",
+        "level": 2,
+        "line_start": 6711,
+        "line_end": 6724,
+        "summary": "type BundleOptions = _BundleInfo.BundleOptions\n\n应用包选项，用于设置或查询应用相关信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：*"
+      }
+    ]
+  }
+}

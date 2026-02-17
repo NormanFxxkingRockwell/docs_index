@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-app-ability-autoStartupManager-sys",
+  "title": "@ohos.app.ability.autoStartupManager (开机自启管理能力)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-autoStartupManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-autoStartupManager-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@zhu-feimo; @Luobniz21",
+    "designer": "@ccllee1",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.autoStartupManager (开机自启管理能力)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.autoStartupManager (开机自启管理能力)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { autoStartupManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "on",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 80,
+        "summary": "on(type: 'systemAutoStartup', callback: AutoStartupCallback): void\n\n注册监听应用组件开机自启动状态变化的回调函数。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-3",
+        "title": "off",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 135,
+        "summary": "off(type: 'systemAutoStartup', callback?: AutoStartupCallback): void\n\n注销监听应用组件开机自启动状态变化的回调函数。\n\n**需要"
+      },
+      {
+        "section_id": "section-4",
+        "title": "setApplicationAutoStartup",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 194,
+        "summary": "setApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCallback\\<void\\>): void\n\n设置应用组件开机自启"
+      },
+      {
+        "section_id": "section-5",
+        "title": "setApplicationAutoStartup",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 256,
+        "summary": "setApplicationAutoStartup(info: AutoStartupInfo): Promise\\<void\\>\n\n设置应用组件开机自启动。使用Promise异步回调。\n\n**需要"
+      },
+      {
+        "section_id": "section-6",
+        "title": "cancelApplicationAutoStartup",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 315,
+        "summary": "cancelApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCallback\\<void\\>): void\n\n取消应用组件开"
+      },
+      {
+        "section_id": "section-7",
+        "title": "cancelApplicationAutoStartup",
+        "level": 2,
+        "line_start": 316,
+        "line_end": 377,
+        "summary": "cancelApplicationAutoStartup(info: AutoStartupInfo): Promise\\<void\\>\n\n取消应用组件开机自启动。使用Promise异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "queryAllAutoStartupApplications",
+        "level": 2,
+        "line_start": 378,
+        "line_end": 430,
+        "summary": "queryAllAutoStartupApplications(callback: AsyncCallback\\<Array\\<AutoStartupInfo\\>\\>): void\n\n查询自启动应用"
+      },
+      {
+        "section_id": "section-9",
+        "title": "queryAllAutoStartupApplications",
+        "level": 2,
+        "line_start": 431,
+        "line_end": 481,
+        "summary": "queryAllAutoStartupApplications(): Promise\\<Array\\<AutoStartupInfo\\>\\>\n\n查询自启动应用组件信息。使用Promise异步回调。"
+      }
+    ]
+  }
+}

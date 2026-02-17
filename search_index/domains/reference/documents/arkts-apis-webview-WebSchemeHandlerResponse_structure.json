@@ -1,0 +1,148 @@
+{
+  "doc_id": "arkts-apis-webview-WebSchemeHandlerResponse",
+  "title": "Class (WebSchemeHandlerResponse)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebSchemeHandlerResponse.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebSchemeHandlerResponse.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Class (WebSchemeHandlerResponse)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (WebSchemeHandlerResponse)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { webview } from '@kit.ArkWeb';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "constructor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 76,
+        "summary": "constructor()\n\nResponse的构造函数。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**示例：**\n\n```ts\n// xxx.e"
+      },
+      {
+        "section_id": "section-3",
+        "title": "setUrl<sup>12+</sup>",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 102,
+        "summary": "setUrl(url: string): void\n\n给当前的Response设置重定向或因HSTS而更改后的URL，设置了url后会触发请求的跳转。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "setNetErrorCode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 128,
+        "summary": "setNetErrorCode(code: WebNetErrorList): void\n\n给当前的Response设置网络错误码。\n\n**系统能力：** SystemCapability.Web."
+      },
+      {
+        "section_id": "section-5",
+        "title": "setStatus<sup>12+</sup>",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 154,
+        "summary": "setStatus(code: number): void\n\n给当前的Response设置HTTP状态码。\n\n**系统能力：** SystemCapability.Web.Webview.Core"
+      },
+      {
+        "section_id": "section-6",
+        "title": "setStatusText<sup>12+</sup>",
+        "level": 2,
+        "line_start": 155,
+        "line_end": 180,
+        "summary": "setStatusText(text: string): void\n\n给当前的Response设置状态文本。\n\n**系统能力：** SystemCapability.Web.Webview.Core"
+      },
+      {
+        "section_id": "section-7",
+        "title": "setMimeType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 181,
+        "line_end": 206,
+        "summary": "setMimeType(type: string): void\n\n给当前的Response设置媒体类型。\n\n**系统能力：** SystemCapability.Web.Webview.Core"
+      },
+      {
+        "section_id": "section-8",
+        "title": "setEncoding<sup>12+</sup>",
+        "level": 2,
+        "line_start": 207,
+        "line_end": 232,
+        "summary": "setEncoding(encoding: string): void\n\n给当前的Response设置字符集。\n\n**系统能力：** SystemCapability.Web.Webview.Cor"
+      },
+      {
+        "section_id": "section-9",
+        "title": "setHeaderByName<sup>12+</sup>",
+        "level": 2,
+        "line_start": 233,
+        "line_end": 260,
+        "summary": "setHeaderByName(name: string, value: string, overwrite: boolean): void\n\n给当前的Response设置头信息。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-10",
+        "title": "getUrl<sup>12+</sup>",
+        "level": 2,
+        "line_start": 261,
+        "line_end": 280,
+        "summary": "getUrl(): string\n\n获取重定向或由于HSTS而更改后的URL。\n\n风险提示：如果想获取url来做JavascriptProxy通信接口认证，请使用[getLastJavascript"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getNetErrorCode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 281,
+        "line_end": 298,
+        "summary": "getNetErrorCode(): WebNetErrorList\n\n获取Response的网络错误码。\n\n**系统能力：** SystemCapability.Web.Webview.Core"
+      },
+      {
+        "section_id": "section-12",
+        "title": "getStatus<sup>12+</sup>",
+        "level": 2,
+        "line_start": 299,
+        "line_end": 316,
+        "summary": "getStatus(): number\n\n获取Response的Http状态码。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值：**\n\n|"
+      },
+      {
+        "section_id": "section-13",
+        "title": "getStatusText<sup>12+</sup>",
+        "level": 2,
+        "line_start": 317,
+        "line_end": 334,
+        "summary": "getStatusText(): string\n\n获取Response的状态文本。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值：**\n\n|"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getMimeType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 335,
+        "line_end": 352,
+        "summary": "getMimeType(): string\n\n获取Response的媒体类型。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值：**\n\n| 类"
+      },
+      {
+        "section_id": "section-15",
+        "title": "getEncoding<sup>12+</sup>",
+        "level": 2,
+        "line_start": 353,
+        "line_end": 370,
+        "summary": "getEncoding(): string\n\n获取Response的字符集。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-16",
+        "title": "getHeaderByName<sup>12+</sup>",
+        "level": 2,
+        "line_start": 371,
+        "line_end": 394,
+        "summary": "getHeaderByName(name: string): string\n\n按名称获取Response头部字段值。\n\n**系统能力：** SystemCapability.Web.Webview."
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-arkui-performancemonitor-sys",
+  "title": "@ohos.arkui.performanceMonitor (性能监测)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-performancemonitor-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-performancemonitor-sys.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@lushi871202",
+    "designer": "@lushi871202",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 @ohos.arkui.performanceMonitor (性能监测)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.arkui.performanceMonitor (性能监测)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 24,
+        "summary": "```ts\nimport { performanceMonitor } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ActionType",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 39,
+        "summary": "用户场景（通常为具有动效的场景）触发模式枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称 | 值"
+      },
+      {
+        "section_id": "section-3",
+        "title": "SourceType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 56,
+        "summary": "用户场景触发源类型枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称 | 值 | 说明 |\n| -"
+      },
+      {
+        "section_id": "section-4",
+        "title": "performanceMonitor.begin",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 82,
+        "summary": "begin(scene: string, startInputType: ActionType, note?: string): void\n\n用于标记用户场景开始，用户场景开始时调用此接口。\n\n**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "performanceMonitor.end",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 102,
+        "summary": "end(scene: string): void\n\n用于标记用户场景结束，用户场景结束时调用此接口。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "performanceMonitor.recordInputEventTime<sup>12+</sup>",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 136,
+        "summary": "recordInputEventTime(type: ActionType, sourceType: SourceType, time: number): void\n\n记录动效场景开始前，用户输入触"
+      }
+    ]
+  }
+}

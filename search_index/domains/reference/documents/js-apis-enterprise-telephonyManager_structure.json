@@ -1,0 +1,108 @@
+{
+  "doc_id": "js-apis-enterprise-telephonyManager",
+  "title": "@ohos.enterprise.telephonyManager（通话管理）",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-telephonyManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-telephonyManager.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.telephonyManager（通话管理），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.telephonyManager（通话管理）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { telephonyManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "telephonyManager.setSimDisabled",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 76,
+        "summary": "setSimDisabled(admin: Want, slotId: number): void\n\n禁用指定卡槽的SIM卡。\n\n**需要权限：** ohos.permission.ENTERPRIS"
+      },
+      {
+        "section_id": "section-3",
+        "title": "telephonyManager.setSimEnabled",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 127,
+        "summary": "setSimEnabled(admin: Want, slotId: number): void\n\n解除指定卡槽的SIM卡禁用。使用setSimDisabled禁用SIM卡后，再用setSimEna"
+      },
+      {
+        "section_id": "section-4",
+        "title": "telephonyManager.isSimDisabled",
+        "level": 2,
+        "line_start": 128,
+        "line_end": 182,
+        "summary": "isSimDisabled(admin: Want, slotId: number): boolean\n\n查询指定卡槽是否禁用。\n\n**需要权限：** ohos.permission.ENTERPR"
+      },
+      {
+        "section_id": "section-5",
+        "title": "telephonyManager.addOutgoingCallPolicyNumbers",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 252,
+        "summary": "addOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array\\<string>): vo"
+      },
+      {
+        "section_id": "section-6",
+        "title": "telephonyManager.removeOutgoingCallPolicyNumbers",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 320,
+        "summary": "removeOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array\\<string>):"
+      },
+      {
+        "section_id": "section-7",
+        "title": "telephonyManager.getOutgoingCallPolicyNumbers",
+        "level": 2,
+        "line_start": 321,
+        "line_end": 381,
+        "summary": "getOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Policy): Array\\<string>\n\n获取通话呼出的允许或禁"
+      },
+      {
+        "section_id": "section-8",
+        "title": "telephonyManager.addIncomingCallPolicyNumbers",
+        "level": 2,
+        "line_start": 382,
+        "line_end": 450,
+        "summary": "addIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array\\<string>): vo"
+      },
+      {
+        "section_id": "section-9",
+        "title": "telephonyManager.removeIncomingCallPolicyNumbers",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 518,
+        "summary": "removeIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array\\<string>):"
+      },
+      {
+        "section_id": "section-10",
+        "title": "telephonyManager.getIncomingCallPolicyNumbers",
+        "level": 2,
+        "line_start": 519,
+        "line_end": 579,
+        "summary": "getIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy): Array\\<string>\n\n获取通话呼入的允许或禁"
+      },
+      {
+        "section_id": "section-11",
+        "title": "telephonyManager.hangupCalling<sup>23+</sup>",
+        "level": 2,
+        "line_start": 580,
+        "line_end": 626,
+        "summary": "hangupCalling(admin: Want): void\n\n挂断当前通话。仅支持运营商通话，不包括畅联等。\n\n**需要权限：** ohos.permission.ENTERPRISE_MANA"
+      }
+    ]
+  }
+}

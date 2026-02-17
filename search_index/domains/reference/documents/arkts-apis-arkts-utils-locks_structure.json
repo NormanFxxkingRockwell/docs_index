@@ -1,0 +1,92 @@
+{
+  "doc_id": "arkts-apis-arkts-utils-locks",
+  "title": "ArkTSUtils.locks",
+  "path": "zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-utils-locks.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-utils-locks.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@lijiamin2025",
+    "designer": "@weng-changcheng",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 ArkTSUtils.locks，提供相关接口和功能说明。",
+  "structure": {
+    "title": "ArkTSUtils.locks",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { ArkTSUtils } from '@kit.ArkTS'\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "AsyncLockCallback",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 36,
+        "summary": "type AsyncLockCallback\\<T> = () => T | Promise\\<T>\n\n这是一个补充类型别名，表示[lockAsync](#lockasync)函数所有重载中的回调。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "AsyncLock",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 338,
+        "summary": "实现异步锁功能的类，允许在锁下执行异步操作。该类使用[@Sendable装饰器](../../arkts-utils/arkts-sendable.md)装饰。\n\n### 属性\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-4",
+        "title": "AsyncLockMode",
+        "level": 2,
+        "line_start": 339,
+        "line_end": 382,
+        "summary": "锁操作对应的模式枚举。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Utils.Lang"
+      },
+      {
+        "section_id": "section-5",
+        "title": "AsyncLockOptions",
+        "level": 2,
+        "line_start": 383,
+        "line_end": 427,
+        "summary": "class AsyncLockOptions\\<T>\n\n表示锁操作选项的类。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "AsyncLockState",
+        "level": 2,
+        "line_start": 428,
+        "line_end": 442,
+        "summary": "用于存储异步锁实例上当前执行的所有锁操作的信息的类。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-7",
+        "title": "AsyncLockInfo",
+        "level": 2,
+        "line_start": 443,
+        "line_end": 458,
+        "summary": "关于锁的信息。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n##"
+      },
+      {
+        "section_id": "section-8",
+        "title": "AbortSignal",
+        "level": 2,
+        "line_start": 459,
+        "line_end": 473,
+        "summary": "用于终止异步操作的对象。该类的实例必须在其创建的同一线程中访问。从其他线程访问此类的字段会导致未定义的行为。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ConditionVariable<sup>18+</sup>",
+        "level": 2,
+        "line_start": 474,
+        "line_end": 622,
+        "summary": "实现异步等待功能的类，支持异步等待通知操作。该类使用[@Sendable装饰器](../../arkts-utils/arkts-sendable.md)装饰。\n\n**原子化服务API**：从API"
+      }
+    ]
+  }
+}

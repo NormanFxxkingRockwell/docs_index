@@ -1,0 +1,76 @@
+{
+  "doc_id": "errorcode-intelligentVoice",
+  "title": "智能语音错误码",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-intelligentVoice.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-intelligentVoice.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "AI",
+    "owner": "@y00416036",
+    "designer": "@jinjunwen",
+    "tester": "@gx1016",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit AI 模块的 智能语音错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "智能语音错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "22700101 内存不足",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 33,
+        "summary": "**错误信息**\n\nNo memory.\n\n**错误描述**\n\n调用接口时，分配内存失败或者出现空指针。\n\n**可能原因**\n\n1. 系统内存压力大，没有足够的内存用来映射。\n2. 对于失效的实例，"
+      },
+      {
+        "section_id": "section-2",
+        "title": "22700102 无效入参",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 51,
+        "summary": "**错误信息**\n\nInvalid parameter.\n\n**错误描述**\n\n调用接口时，传入的参数无效。\n\n**可能原因**\n\n参数无效，比如值不在边界范围内，没有使用指定的枚举范围等。\n\n**"
+      },
+      {
+        "section_id": "section-3",
+        "title": "22700103 初始化失败",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 71,
+        "summary": "**错误信息**\n\nInit failed.\n\n**错误描述**\n\n调用引擎的初始化接口时，返回初始化失败。\n\n**可能原因**\n\n1. 重复初始化。\n2. 没有注册初始化所需要的资源。\n\n**处理"
+      },
+      {
+        "section_id": "section-4",
+        "title": "22700104 确认注册结果失败",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 89,
+        "summary": "**错误信息**\n\nFailed to commit the enrollment.\n\n**错误描述**\n\n调用注册引擎的确认注册结果接口[commit()](js-apis-intelligent"
+      },
+      {
+        "section_id": "section-5",
+        "title": "22700105 启动捕获器失败",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 107,
+        "summary": "**错误信息**\n\nStart capturer failed.\n\n**错误描述**\n\n启动捕获器[startCapturer()](js-apis-intelligentVoice-sys.md#"
+      },
+      {
+        "section_id": "section-6",
+        "title": "22700106 读取数据失败",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 126,
+        "summary": "**错误信息**\n\nRead failed.\n\n**错误描述**\n\n启动捕获器，读取数据[read()](js-apis-intelligentVoice-sys.md#read12)时，返回失败。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "22700107 系统错误",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 144,
+        "summary": "**错误信息**\n\nSystem error.\n\n**错误描述**\n\n系统异常，返回失败。\n\n**可能原因**\n\n系统处理异常，比如系统服务重启、跨进程调用异常等。\n\n**处理步骤**\n\n系统内部通"
+      }
+    ]
+  }
+}

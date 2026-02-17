@@ -1,0 +1,236 @@
+{
+  "doc_id": "errorcode-notification",
+  "title": "通知错误码",
+  "path": "zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md",
+  "metadata": {
+    "kit": "Notification Kit",
+    "subsystem": "Notification",
+    "owner": "@michael_woo888",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Notification Kit Notification 模块的 通知错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "通知错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "1600001 内部错误",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 30,
+        "summary": "**错误信息**\n\nInternal error.\n\n**错误描述**\n\n多线程处理异常、内部指针校验错误等内部处理错误时，方法将返回该错误码。\n\n**可能原因**\n\n多线程处理、内部处理异常等内核"
+      },
+      {
+        "section_id": "section-2",
+        "title": "1600002 序列化或反序列化错误",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 48,
+        "summary": "**错误信息**\n\nMarshalling or unmarshalling error.\n\n**错误描述**\n\n数据传输前，进行序列化或反序列化错误，方法将返回该错误码。\n\n**可能原因**\n\n应"
+      },
+      {
+        "section_id": "section-3",
+        "title": "1600003 连接通知服务失败",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 66,
+        "summary": "**错误信息**\n\nFailed to connect to the service.\n\n**错误描述**\n\n应用连接通知服务失败，方法将返回该错误码。\n\n**可能原因**\n\n通知服务繁忙或异常。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "1600004 通知开关关闭",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 84,
+        "summary": "**错误信息**\n\nNotification disabled.\n\n**错误描述**\n\n当通知开关为关闭状态时，方法将返回该错误码。\n\n**可能原因**\n\n应用的通知开关为关闭状态。\n\n**处理步骤"
+      },
+      {
+        "section_id": "section-5",
+        "title": "1600005 通知渠道关闭",
+        "level": 2,
+        "line_start": 85,
+        "line_end": 105,
+        "summary": "**错误信息**\n\nNotification slot disabled.\n\n**错误描述**\n\n当通知渠道关闭时，方法将返回该错误码。\n\n**可能原因**\n\n通知渠道关闭状态，或未添加该类型渠道。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "1600006 通知删除失败",
+        "level": 2,
+        "line_start": 106,
+        "line_end": 124,
+        "summary": "**错误信息**\n\nNotification deletion disabled.\n\n**错误描述**\n\n通知设置了禁止删除属性，方法将返回该错误码。\n\n**可能原因**\n\n通知设置了禁止删除属性。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "1600007 通知不存在",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 142,
+        "summary": "**错误信息**\n\nThe notification does not exist.\n\n**错误描述**\n\n通知服务未找到该通知，方法将返回该错误码。\n\n**可能原因**\n\n通知已被取消或删除。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "1600008 用户不存在",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 160,
+        "summary": "**错误信息**\n\nThe user does not exist.\n\n**错误描述**\n\n传入的用户信息系统里未查询到，方法将返回该错误码。\n\n**可能原因**\n\n传入用户信息有误。\n\n**处理步"
+      },
+      {
+        "section_id": "section-9",
+        "title": "1600009 通知发布频度超过限制",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 178,
+        "summary": "**错误信息**\n\nThe notification sending frequency reaches the upper limit.\n\n**错误描述**\n\n通知发送频率超过限制，方法将返回该错"
+      },
+      {
+        "section_id": "section-10",
+        "title": "1600010 分布式操作失败",
+        "level": 2,
+        "line_start": 179,
+        "line_end": 197,
+        "summary": "**错误信息**\n\nDistributed operation failed.\n\n**错误描述**\n\n分布式数据库操作异常或分布式接口调用异常，方法将返回该错误码。\n\n**可能原因**\n\n分布式数据"
+      },
+      {
+        "section_id": "section-11",
+        "title": "1600011 读模板配置文件错误",
+        "level": 2,
+        "line_start": 198,
+        "line_end": 216,
+        "summary": "**错误信息**\n\nFailed to read the template configuration.\n\n**错误描述**\n\n模板配置文件读取异常，方法将返回该错误码。\n\n**可能原因**\n\n系统"
+      },
+      {
+        "section_id": "section-12",
+        "title": "1600012 内存空间不够",
+        "level": 2,
+        "line_start": 217,
+        "line_end": 234,
+        "summary": "**错误信息**\n\nNo memory space.\n\n**错误描述**\n\n内存申请出现错误，方法将返回该错误码。\n\n**可能原因**\n\n内存申请出现错误。\n\n**处理步骤**\n\n确认系统内存是否足"
+      },
+      {
+        "section_id": "section-13",
+        "title": "1600013 通知弹窗已弹出",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 253,
+        "summary": "**错误信息**\n\nA notification dialog box is already displayed.\n\n**错误描述**\n\n通知弹窗已经弹出，方法将返回该错误码。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "1600014 没有相关权限",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 271,
+        "summary": "**错误信息**\n\nNo permission.\n\n**错误描述**\n\n没有相关权限，方法将返回该错误码。\n\n**可能原因**\n\n没有相关权限。\n\n**处理步骤**\n\n确认是否具有相关权限。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "1600015 当前通知状态不支持重复配置",
+        "level": 2,
+        "line_start": 272,
+        "line_end": 289,
+        "summary": "**错误信息**\n\nThe current notification status does not support duplicate configurations.\n\n**错误描述**\n\n当前通"
+      },
+      {
+        "section_id": "section-16",
+        "title": "1600016 本次更新的通知版本太低",
+        "level": 2,
+        "line_start": 290,
+        "line_end": 308,
+        "summary": "**错误信息**\n\nThe notification version for this update is too low.\n\n**错误描述**\n\n本次更新的通知版本太低，方法将返回该错误码。\n\n*"
+      },
+      {
+        "section_id": "section-17",
+        "title": "1600017 没有对应的代理关系配置",
+        "level": 2,
+        "line_start": 309,
+        "line_end": 327,
+        "summary": "**错误信息**\n\nThere is no corresponding agent relationship configuration.\n\n**错误描述**\n\n没有对应的代理关系配置，方法将返回该"
+      },
+      {
+        "section_id": "section-18",
+        "title": "1600018 通知设置页面已经拉起",
+        "level": 2,
+        "line_start": 328,
+        "line_end": 346,
+        "summary": "**错误信息**\n\nThe notification settings window is already displayed.\n\n**错误描述**\n\n通知设置页面已经拉起，方法将返回该错误码。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "1600019 没有对应勿扰模式编号的配置信息",
+        "level": 2,
+        "line_start": 347,
+        "line_end": 365,
+        "summary": "**错误信息**\n\nThe do-not-disturb profile does not exist.\n\n**错误描述**\n\n勿扰模式编号对应的配置信息不存在时，将返回该错误码。\n\n**可能原因*"
+      },
+      {
+        "section_id": "section-20",
+        "title": "1600020 不允许权限管控名单中的应用发布通知",
+        "level": 2,
+        "line_start": 366,
+        "line_end": 384,
+        "summary": "**错误信息**\n\nThe application is not allowed to send notifications due to permission settings.\n\n**错误描述*"
+      },
+      {
+        "section_id": "section-21",
+        "title": "1600021 跨设备通信超时",
+        "level": 2,
+        "line_start": 385,
+        "line_end": 404,
+        "summary": "**错误信息**\n\nDistributed operation timed out.\n\n**错误描述**\n\n调用通知的跨设备协同接口（例如通知跨设备点击跳转、通知跨设备快捷回复等），跨设备通信超时，"
+      },
+      {
+        "section_id": "section-22",
+        "title": "1600022 无效的包信息",
+        "level": 2,
+        "line_start": 405,
+        "line_end": 423,
+        "summary": "**错误信息**\n\nThe specified bundle is invalid.\n\n**错误描述**\n\n无效的包信息，将返回该错误码。\n\n**可能原因**\n\n指定的应用包名不存在。\n\n**处理步"
+      },
+      {
+        "section_id": "section-23",
+        "title": "1600023 app NotificationSubscriberExtensionAbility未实现",
+        "level": 2,
+        "line_start": 424,
+        "line_end": 442,
+        "summary": "**错误信息**\n\nThe application does not implement the NotificationSubscriberExtensionAbility.\n\n**错误描述**"
+      },
+      {
+        "section_id": "section-24",
+        "title": "1600024 未配置自定义铃声",
+        "level": 2,
+        "line_start": 443,
+        "line_end": 462,
+        "summary": "**错误信息**\n\nThe specified bundle has no custom ringtone information.\n\n**错误描述**\n\n指定的应用未配置自定义铃声信息，将返回该错"
+      },
+      {
+        "section_id": "section-25",
+        "title": "1600025 地理围栏开关关闭",
+        "level": 2,
+        "line_start": 463,
+        "line_end": 482,
+        "summary": "**错误信息**\n\nGeofencing disabled.\n\n**错误描述**\n\n当地理围栏开关为关闭状态时，方法将返回该错误码。\n\n**可能原因**\n\n地理围栏开关为关闭状态。\n\n**处理步骤*"
+      },
+      {
+        "section_id": "section-26",
+        "title": "1600026 位置功能开关关闭",
+        "level": 2,
+        "line_start": 483,
+        "line_end": 502,
+        "summary": "**错误信息**\n\nThe location switch is off.\n\n**错误描述**\n\n位置功能的开关未开启导致注册地理围栏失败。\n\n**可能原因**\n\n位置功能的开关未开启，导致持续定位"
+      },
+      {
+        "section_id": "section-27",
+        "title": "1600027 位置系统服务的“感知与提醒”开关关闭",
+        "level": 2,
+        "line_start": 503,
+        "line_end": 520,
+        "summary": "**错误信息**\n\nThe \"Awareness & suggestions\" switch of the location-based service is off.\n\n**错误描述**\n\n位置系"
+      }
+    ]
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "doc_id": "ts-basic-components-navigation",
+  "title": "Navigation",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@mayaolll",
+    "designer": "@jiangdayuan",
+    "tester": "@Giacinta",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 Navigation，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Navigation",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 32,
+        "summary": "可以包含子组件。\n\n从API version 9开始，推荐与[NavRouter](ts-basic-components-navrouter.md)组件搭配使用。\n\n从API version 10"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 85,
+        "summary": "### Navigation\n\nNavigation()\n\n创建路由导航的根视图容器，适用于使用[NavRouter](ts-basic-components-navrouter.md)组件进行页面"
+      },
+      {
+        "section_id": "section-3",
+        "title": "属性",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 663,
+        "summary": "除支持[通用属性](ts-component-general-attributes.md)外，还支持以下属性：\n\n### title\n\ntitle(value: ResourceStr | Cust"
+      },
+      {
+        "section_id": "section-4",
+        "title": "事件",
+        "level": 2,
+        "line_start": 664,
+        "line_end": 741,
+        "summary": "### onTitleModeChange\n\nonTitleModeChange(callback: (titleMode: NavigationTitleMode) =&gt; void)\n\n当["
+      },
+      {
+        "section_id": "section-5",
+        "title": "NavPathStack<sup>10+</sup>",
+        "level": 2,
+        "line_start": 742,
+        "line_end": 1540,
+        "summary": "Navigation导航控制器，以栈的数据结构管理Navigation中所有的子页面，并提供栈操作的方法用于控制Navigation中子页面的切换。\n\n从API version 12开始，NavPa"
+      },
+      {
+        "section_id": "section-6",
+        "title": "NavPathInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1541,
+        "line_end": 1577,
+        "summary": "路由页面信息。\n\n### constructor\n\nconstructor(name: string, param: unknown, onPop?: Callback\\<PopInfo>, isE"
+      },
+      {
+        "section_id": "section-7",
+        "title": "PopInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1578,
+        "line_end": 1590,
+        "summary": "下一个页面返回的回调信息载体。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI."
+      },
+      {
+        "section_id": "section-8",
+        "title": "NavContentInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1591,
+        "line_end": 1606,
+        "summary": "跳转Destination信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-9",
+        "title": "NavigationAnimatedTransition<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1607,
+        "line_end": 1621,
+        "summary": "自定义转场动画协议，开发者需实现该协议来定义Navigation路由跳转的跳转动画。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-10",
+        "title": "NavigationTransitionProxy <sup>11+</sup>",
+        "level": 2,
+        "line_start": 1622,
+        "line_end": 1681,
+        "summary": "自定义转场动画代理对象。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n### 属性\n\nNavigationTransitionProxy参数信息。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "NavigationInterception<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1682,
+        "line_end": 1749,
+        "summary": "Navigation跳转拦截对象。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称    | 类型     | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-12",
+        "title": "NavBar<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1750,
+        "line_end": 1763,
+        "summary": "type NavBar = 'navBar'\n\nNavigation首页名字。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-13",
+        "title": "NavigationMenuItem",
+        "level": 2,
+        "line_start": 1764,
+        "line_end": 1777,
+        "summary": "导航菜单项，包括菜单图标和菜单信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称     | 类型            | 只读 | 可选"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ToolbarItem<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1778,
+        "line_end": 1793,
+        "summary": "工具栏可配置参数。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ToolbarItemStatus<sup>10+</sup>枚举说明",
+        "level": 2,
+        "line_start": 1794,
+        "line_end": 1807,
+        "summary": "工具栏单个选项的状态。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkU"
+      },
+      {
+        "section_id": "section-16",
+        "title": "NavigationTitleMode枚举说明",
+        "level": 2,
+        "line_start": 1808,
+        "line_end": 1821,
+        "summary": "标题栏显示模式。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-17",
+        "title": "NavigationCommonTitle<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1822,
+        "line_end": 1834,
+        "summary": "Navigation通用标题。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI."
+      },
+      {
+        "section_id": "section-18",
+        "title": "NavigationCustomTitle<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1835,
+        "line_end": 1847,
+        "summary": "Navigation自定义标题。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-19",
+        "title": "NavigationDividerStyle<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1848,
+        "line_end": 1861,
+        "summary": "Navigation分割线颜色及上下边距。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-20",
+        "title": "NavBarPosition<sup>9+</sup>枚举说明",
+        "level": 2,
+        "line_start": 1862,
+        "line_end": 1874,
+        "summary": "导航页位置。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Ful"
+      },
+      {
+        "section_id": "section-21",
+        "title": "NavigationMode<sup>9+</sup>枚举说明",
+        "level": 2,
+        "line_start": 1875,
+        "line_end": 1904,
+        "summary": "导航页显示模式。Navigation处于分栏显示状态时，导航页和内容区之间会显示分割线。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-22",
+        "title": "NavigationOperation<sup>11+</sup>枚举说明",
+        "level": 2,
+        "line_start": 1905,
+        "line_end": 1918,
+        "summary": "页面跳转类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-23",
+        "title": "BarStyle<sup>12+</sup>枚举说明",
+        "level": 2,
+        "line_start": 1919,
+        "line_end": 1930,
+        "summary": "标题栏或工具栏的布局样式。NavDestination的工具栏不支持设置该属性。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称    | 值"
+      },
+      {
+        "section_id": "section-24",
+        "title": "NavigationTitleOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1931,
+        "line_end": 1949,
+        "summary": "标题栏选项。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称     | 类型            | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-25",
+        "title": "NavigationToolbarOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1950,
+        "line_end": 1965,
+        "summary": "工具栏选项。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称     | 类型            | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-26",
+        "title": "NavigationMenuOptions<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1966,
+        "line_end": 1977,
+        "summary": "页面右上角菜单选项。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-27",
+        "title": "LaunchMode<sup>12+</sup>枚举说明",
+        "level": 2,
+        "line_start": 1978,
+        "line_end": 1992,
+        "summary": "路由栈操作模式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-28",
+        "title": "NavigationOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1993,
+        "line_end": 2005,
+        "summary": "路由栈操作选项。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-29",
+        "title": "MoreButtonOptions<sup>19+</sup>",
+        "level": 2,
+        "line_start": 2006,
+        "line_end": 2019,
+        "summary": "更多图标的菜单选项。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-30",
+        "title": "SystemBarStyle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2020,
+        "line_end": 2033,
+        "summary": "type SystemBarStyle = SystemBarStyle\n\n状态栏的属性。在设置页面级状态栏属性时使用。\n\n**原子化服务API：** 从API version 12开始，该接口支持"
+      },
+      {
+        "section_id": "section-31",
+        "title": "HomePathInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2034,
+        "line_end": 2046,
+        "summary": "主页NavDestination的信息。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.A"
+      },
+      {
+        "section_id": "section-32",
+        "title": "示例",
+        "level": 2,
+        "line_start": 2047,
+        "line_end": 5367,
+        "summary": "示例效果请以真机为准，系统路由表不支持预览器以及模拟器。\n\n### 示例1（Navigation页面布局）\n\n该示例主要演示Navigation页面的布局包括标题栏[title](#title)，菜"
+      }
+    ]
+  }
+}

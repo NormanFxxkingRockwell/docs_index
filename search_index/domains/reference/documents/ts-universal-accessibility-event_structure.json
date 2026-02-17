@@ -1,0 +1,76 @@
+{
+  "doc_id": "ts-universal-accessibility-event",
+  "title": "无障碍控制操作",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-accessibility-event.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-accessibility-event.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zhanghangkai10241",
+    "designer": "@dutie123",
+    "tester": "@fredyuan0912",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 无障碍控制操作，提供相关接口和功能说明。",
+  "structure": {
+    "title": "无障碍控制操作",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "onAccessibilityFocus",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 39,
+        "summary": "onAccessibilityFocus(callback: AccessibilityFocusCallback): T\n\n设置无障碍节点获焦、失焦状态的回调函数。当状态发生变化时，触发回调函数。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "AccessibilityFocusCallback",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 57,
+        "summary": "type AccessibilityFocusCallback = (isFocus: boolean) => void\n\n定义onAccessibilityFocus中使用的回调类型。\n\n**卡片"
+      },
+      {
+        "section_id": "section-3",
+        "title": "onAccessibilityActionIntercept<sup>20+</sup>",
+        "level": 2,
+        "line_start": 58,
+        "line_end": 81,
+        "summary": "onAccessibilityActionIntercept(callback: AccessibilityActionInterceptCallback): T\n\n该接口在无障碍模式下，可在无障碍"
+      },
+      {
+        "section_id": "section-4",
+        "title": "AccessibilityActionInterceptCallback<sup>20+</sup>",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 105,
+        "summary": "type AccessibilityActionInterceptCallback = (action: AccessibilityAction) => AccessibilityActionInt"
+      },
+      {
+        "section_id": "section-5",
+        "title": "AccessibilityAction<sup>20+</sup>枚举说明",
+        "level": 2,
+        "line_start": 106,
+        "line_end": 120,
+        "summary": "定义组件当前触发的无障碍控制操作类型。\n\n**卡片能力：** 从API version 20开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 20开始"
+      },
+      {
+        "section_id": "section-6",
+        "title": "AccessibilityActionInterceptResult<sup>20+</sup>枚举说明",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 136,
+        "summary": "定义AccessibilityActionInterceptCallback的无障碍控制操作拦截结果。\n\n**卡片能力：** 从API version 20开始，该接口支持在ArkTS卡片中使用。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "示例",
+        "level": 2,
+        "line_start": 137,
+        "line_end": 213,
+        "summary": "### 示例1（设置onAccessibilityActionIntercept拦截点击事件）\n\n该示例主要演示通过使用onAccessibilityActionIntercept事件实现Toggl"
+      }
+    ]
+  }
+}

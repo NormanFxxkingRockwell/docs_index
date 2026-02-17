@@ -1,0 +1,204 @@
+{
+  "doc_id": "js-apis-app-ability-errorManager",
+  "title": "@ohos.app.ability.errorManager (错误管理模块)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-errorManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-errorManager.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@rr_cn",
+    "designer": "@peterhuangyu",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.app.ability.errorManager (错误管理模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.errorManager (错误管理模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 20,
+        "summary": "```ts\nimport { errorManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "errorManager.on('error')",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 83,
+        "summary": "on(type: 'error', observer: ErrorObserver): number\n\n注册错误观测器。注册后可以捕获到应用产生的js crash，属于应用崩溃的一种。观测器捕获到该"
+      },
+      {
+        "section_id": "section-3",
+        "title": "errorManager.on('globalErrorOccurred')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 132,
+        "summary": "on(type: 'globalErrorOccurred', observer: GlobalObserver): void\n\n在进程中的任意线程中注册 `errormanager.on` 接口，"
+      },
+      {
+        "section_id": "section-4",
+        "title": "errorManager.off('globalErrorOccurred')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 184,
+        "summary": "off(type: 'globalErrorOccurred', observer?: GlobalObserver): void\n\n注销错误观测器，注销之前注册在同一线程的callback全局监听"
+      },
+      {
+        "section_id": "section-5",
+        "title": "errorManager.off('error')",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 236,
+        "summary": "off(type: 'error', observerId: number,  callback: AsyncCallback\\<void>): void\n\n注销错误观测器。使用callback异步"
+      },
+      {
+        "section_id": "section-6",
+        "title": "errorManager.off('error')",
+        "level": 2,
+        "line_start": 237,
+        "line_end": 293,
+        "summary": "off(type: 'error', observerId: number): Promise\\<void>\n\n注销错误观测器。使用Promise异步返回。\n\n仅在主线程中使用。使用线程出错时，将抛"
+      },
+      {
+        "section_id": "section-7",
+        "title": "errorManager.on('loopObserver')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 294,
+        "line_end": 335,
+        "summary": "on(type: 'loopObserver', timeout: number, observer: LoopObserver): void\n\n注册主线程消息处理耗时监听器。注册后可以捕获到应用主"
+      },
+      {
+        "section_id": "section-8",
+        "title": "errorManager.on('globalUnhandledRejectionDetected')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 336,
+        "line_end": 385,
+        "summary": "on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver): void\n\n在进程中任意线程注册被拒绝promise监"
+      },
+      {
+        "section_id": "section-9",
+        "title": "errorManager.on('unhandledRejection')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 386,
+        "line_end": 435,
+        "summary": "on(type: 'unhandledRejection', observer: UnhandledRejectionObserver): void\n\n注册被拒绝promise监听器。注册后可以捕获"
+      },
+      {
+        "section_id": "section-10",
+        "title": "errorManager.on('freeze')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 436,
+        "line_end": 478,
+        "summary": "on(type: 'freeze', observer: FreezeObserver): void\n\n注册应用主线程freeze监听。多次注册情况下，取最后一次注册的结果。\n\n仅在主线程中使用。使"
+      },
+      {
+        "section_id": "section-11",
+        "title": "errorManager.off('loopObserver')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 479,
+        "line_end": 513,
+        "summary": "off(type: 'loopObserver', observer?: LoopObserver): void\n\n注销主线程消息处理监听器。\n\n仅在主线程中使用。使用线程出错时，将抛出错误码，因此"
+      },
+      {
+        "section_id": "section-12",
+        "title": "errorManager.off('globalUnhandledRejectionDetected')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 514,
+        "line_end": 568,
+        "summary": "off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void\n\n注销被拒绝promise监听器，注销后"
+      },
+      {
+        "section_id": "section-13",
+        "title": "errorManager.off('unhandledRejection')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 569,
+        "line_end": 645,
+        "summary": "off(type: 'unhandledRejection', observer?: UnhandledRejectionObserver): void\n\n注销被拒绝promise监听器。\n\n仅在主"
+      },
+      {
+        "section_id": "section-14",
+        "title": "errorManager.off('freeze')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 646,
+        "line_end": 687,
+        "summary": "off(type: 'freeze', observer?: FreezeObserver): void\n\n取消之前注册的应用主线程freeze监听。\n\n仅在主线程中使用。使用线程出错时，将抛出错误"
+      },
+      {
+        "section_id": "section-15",
+        "title": "errorManager.setDefaultErrorHandler<sup>21+</sup>",
+        "level": 2,
+        "line_start": 688,
+        "line_end": 742,
+        "summary": "setDefaultErrorHandler(defaultHandler?: ErrorHandler): ErrorHandler\n\n发生JS_CRASH异常时，支持链式回调，返回上一次注册的处"
+      },
+      {
+        "section_id": "section-16",
+        "title": "ErrorObserver",
+        "level": 2,
+        "line_start": 743,
+        "line_end": 756,
+        "summary": "type ErrorObserver = _ErrorObserver.default\n\nErrorObserver模块。\n\n**原子化服务API**：从API version 11开始，该接口支持"
+      },
+      {
+        "section_id": "section-17",
+        "title": "LoopObserver<sup>12+</sup>",
+        "level": 2,
+        "line_start": 757,
+        "line_end": 770,
+        "summary": "type LoopObserver = _LoopObserver\n\nLoopObserver模块。定义异常监听，可作为 `errormanager.on` 函数的参数，监听并处理当前应用主线程超时"
+      },
+      {
+        "section_id": "section-18",
+        "title": "UnhandledRejectionObserver<sup>12+</sup>",
+        "level": 2,
+        "line_start": 771,
+        "line_end": 787,
+        "summary": "type UnhandledRejectionObserver = (reason: Error | any, promise: Promise\\<any>) => void\n\n定义异常监听，用于捕"
+      },
+      {
+        "section_id": "section-19",
+        "title": "FreezeObserver<sup>18+</sup>",
+        "level": 2,
+        "line_start": 788,
+        "line_end": 797,
+        "summary": "type FreezeObserver = () => void\n\n定义应用主线程freeze回调，用于应用自定义添加freeze信息。\n\n**原子化服务API**：从API version 18开"
+      },
+      {
+        "section_id": "section-20",
+        "title": "GlobalObserver<sup>18+</sup>",
+        "level": 2,
+        "line_start": 798,
+        "line_end": 814,
+        "summary": "type GlobalObserver = (reason: GlobalError) => void\n\n定义异常监听，可以作为[errorManager.on('globalErrorOccurr"
+      },
+      {
+        "section_id": "section-21",
+        "title": "GlobalError<sup>18+</sup>",
+        "level": 2,
+        "line_start": 815,
+        "line_end": 827,
+        "summary": "有关异常事件名字、消息、错误堆栈信息、异常线程名称和类型的对象。\n\n**原子化服务API**：从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCa"
+      },
+      {
+        "section_id": "section-22",
+        "title": "InstanceType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 828,
+        "line_end": 843,
+        "summary": "虚拟机的实例类型。\n\n**原子化服务API**：从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Ability.Abilit"
+      },
+      {
+        "section_id": "section-23",
+        "title": "ErrorHandler<sup>21+</sup>",
+        "level": 2,
+        "line_start": 844,
+        "line_end": 860,
+        "summary": "type ErrorHandler = (errObject: Error) => void\n\n**原子化服务API**：从API version 21开始，该接口支持在原子化服务中使用。\n\n**系"
+      }
+    ]
+  }
+}

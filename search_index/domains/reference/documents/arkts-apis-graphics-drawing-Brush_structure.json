@@ -1,0 +1,196 @@
+{
+  "doc_id": "arkts-apis-graphics-drawing-Brush",
+  "title": "Class (Brush)",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Brush.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Brush.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphics 模块的 Class (Brush)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (Brush)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { drawing } from '@kit.ArkGraphics2D';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "constructor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 41,
+        "summary": "constructor()\n\n构造一个新的画刷对象。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**示例：**\n\n```ts\nimport { dr"
+      },
+      {
+        "section_id": "section-3",
+        "title": "constructor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 74,
+        "summary": "constructor(brush: Brush)\n\n复制构造一个新的画刷对象。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数：**\n\n| 参"
+      },
+      {
+        "section_id": "section-4",
+        "title": "setColor",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 106,
+        "summary": "setColor(color: common2D.Color) : void\n\n设置画刷的颜色。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数"
+      },
+      {
+        "section_id": "section-5",
+        "title": "setColor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 107,
+        "line_end": 140,
+        "summary": "setColor(alpha: number, red: number, green: number, blue: number): void\n\n设置画刷的颜色。性能优于[setColor](#se"
+      },
+      {
+        "section_id": "section-6",
+        "title": "setColor<sup>18+</sup>",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 171,
+        "summary": "setColor(color: number) : void\n\n设置画刷的颜色。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数：**\n\n| 参"
+      },
+      {
+        "section_id": "section-7",
+        "title": "setColor4f<sup>20+</sup>",
+        "level": 2,
+        "line_start": 172,
+        "line_end": 197,
+        "summary": "setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getColor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 198,
+        "line_end": 222,
+        "summary": "getColor(): common2D.Color\n\n获取画刷的颜色。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getColor4f<sup>20+</sup>",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 248,
+        "summary": "getColor4f(): common2D.Color4f\n\n获取画刷的颜色，与[getColor](#getcolor12)的区别是返回值类型为浮点数，适用于需要浮点数类型的场景。\n\n**系统能"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getHexColor<sup>18+</sup>",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 274,
+        "summary": "getHexColor(): number\n\n获取画刷的颜色。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "setAntiAlias",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 305,
+        "summary": "setAntiAlias(aa: boolean) : void\n\n设置画刷是否开启抗锯齿。开启后，可以使得图形的边缘在显示时更平滑。未调用此接口设置时，系统默认关闭抗锯齿。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-12",
+        "title": "isAntiAlias<sup>12+</sup>",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 328,
+        "summary": "isAntiAlias(): boolean\n\n获取画刷是否开启抗锯齿属性。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-13",
+        "title": "setAlpha",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 359,
+        "summary": "setAlpha(alpha: number) : void\n\n设置画刷的透明度。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数：**\n\n|"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getAlpha<sup>12+</sup>",
+        "level": 2,
+        "line_start": 360,
+        "line_end": 382,
+        "summary": "getAlpha(): number\n\n获取画刷的透明度。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型   | 说明"
+      },
+      {
+        "section_id": "section-15",
+        "title": "setColorFilter",
+        "level": 2,
+        "line_start": 383,
+        "line_end": 414,
+        "summary": "setColorFilter(filter: ColorFilter | null) : void\n\n给画刷添加额外的颜色滤波器。\n\n**系统能力：** SystemCapability.Graph"
+      },
+      {
+        "section_id": "section-16",
+        "title": "setMaskFilter<sup>12+</sup>",
+        "level": 2,
+        "line_start": 415,
+        "line_end": 452,
+        "summary": "setMaskFilter(filter: MaskFilter | null): void\n\n给画刷添加额外的蒙版滤镜。\n\n**系统能力：** SystemCapability.Graphics."
+      },
+      {
+        "section_id": "section-17",
+        "title": "setShaderEffect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 453,
+        "line_end": 484,
+        "summary": "setShaderEffect(shaderEffect: ShaderEffect | null): void\n\n设置画刷着色器效果。\n\n**系统能力：** SystemCapability.Gr"
+      },
+      {
+        "section_id": "section-18",
+        "title": "setShadowLayer<sup>12+</sup>",
+        "level": 2,
+        "line_start": 485,
+        "line_end": 550,
+        "summary": "setShadowLayer(shadowLayer: ShadowLayer | null): void\n\n设置画刷阴影层效果。当前仅在绘制文字时生效。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-19",
+        "title": "setBlendMode",
+        "level": 2,
+        "line_start": 551,
+        "line_end": 581,
+        "summary": "setBlendMode(mode: BlendMode) : void\n\n设置画刷的混合模式。未调用此接口设置时，系统默认的混合模式为SRC_OVER。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-20",
+        "title": "setImageFilter<sup>12+</sup>",
+        "level": 2,
+        "line_start": 582,
+        "line_end": 614,
+        "summary": "setImageFilter(filter: ImageFilter | null): void\n\n为画刷设置图像滤波器。\n\n**系统能力：** SystemCapability.Graphics."
+      },
+      {
+        "section_id": "section-21",
+        "title": "getColorFilter<sup>12+</sup>",
+        "level": 2,
+        "line_start": 615,
+        "line_end": 639,
+        "summary": "getColorFilter(): ColorFilter\n\n获取画刷的颜色滤波器。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**"
+      },
+      {
+        "section_id": "section-22",
+        "title": "reset<sup>12+</sup>",
+        "level": 2,
+        "line_start": 640,
+        "line_end": 655,
+        "summary": "reset(): void\n\n重置当前画刷为初始状态。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**示例：**\n\n```ts\nimport { d"
+      }
+    ]
+  }
+}

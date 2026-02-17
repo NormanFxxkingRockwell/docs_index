@@ -1,0 +1,52 @@
+{
+  "doc_id": "js-apis-awareness-metadataBinding-sys",
+  "title": "@ohos.multimodalAwareness.metadataBinding (记忆链接)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-multimodalawareness-kit/js-apis-awareness-metadataBinding-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-multimodalawareness-kit/js-apis-awareness-metadataBinding-sys.md",
+  "metadata": {
+    "kit": "Multimodal Awareness Kit",
+    "subsystem": "Msdp",
+    "owner": "@codexu62",
+    "designer": "@yuxiaoyang",
+    "tester": "@zhaodengqi",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Multimodal Awareness Kit Msdp 模块的 @ohos.multimodalAwareness.metadataBinding (记忆链接)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalAwareness.metadataBinding (记忆链接)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 22,
+        "summary": "```ts\nimport { metadataBinding } from '@kit.MultimodalAwarenessKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "metadataBinding.encodeImage",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 71,
+        "summary": "encodeImage(srcImage: image.PixelMap, metadata: string): Promise&lt;image.PixelMap&gt;\n\n在图片中加入信息。使用p"
+      },
+      {
+        "section_id": "section-3",
+        "title": "metadataBinding.decodeImage",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 117,
+        "summary": "function decodeImage(encodedImage: image.PixelMap): Promise&lt;string&gt;\n\n解析图片中携带的信息。使用promise异步回调。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "metadataBinding.notifyMetadataBindingEvent",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 160,
+        "summary": "notifyMetadataBindingEvent(bundleName: string): Promise&lt;string&gt;\n\n推送待嵌入的信息给调用编码接口的应用或服务。使用promi"
+      }
+    ]
+  }
+}

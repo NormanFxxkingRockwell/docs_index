@@ -1,0 +1,220 @@
+{
+  "doc_id": "arkts-apis-audio-AudioSessionManager",
+  "title": "Interface (AudioSessionManager)",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioSessionManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioSessionManager.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@songshenke",
+    "designer": "@caixuejiang; @hao-liangfei; @zhanganxiang",
+    "tester": "@Filger",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 Interface (AudioSessionManager)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AudioSessionManager)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { audio } from '@kit.AudioKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "activateAudioSession<sup>12+</sup>",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 69,
+        "summary": "activateAudioSession(strategy: AudioSessionStrategy): Promise\\<void>\n\n激活音频会话。使用Promise异步回调。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-3",
+        "title": "deactivateAudioSession<sup>12+</sup>",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 103,
+        "summary": "deactivateAudioSession(): Promise\\<void>\n\n停用音频会话。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multime"
+      },
+      {
+        "section_id": "section-4",
+        "title": "isAudioSessionActivated<sup>12+</sup>",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 123,
+        "summary": "isAudioSessionActivated(): boolean\n\n检查音频会话是否已激活。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Core"
+      },
+      {
+        "section_id": "section-5",
+        "title": "on('audioSessionDeactivated')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 156,
+        "summary": "on(type: 'audioSessionDeactivated', callback: Callback\\<AudioSessionDeactivatedEvent>): void\n\n监听音频会"
+      },
+      {
+        "section_id": "section-6",
+        "title": "off('audioSessionDeactivated')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 196,
+        "summary": "off(type: 'audioSessionDeactivated', callback?: Callback\\<AudioSessionDeactivatedEvent>): void\n\n取消监"
+      },
+      {
+        "section_id": "section-7",
+        "title": "setAudioSessionScene<sup>20+</sup>",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 226,
+        "summary": "setAudioSessionScene(scene: AudioSessionScene): void\n\n设置音频会话场景参数。\n\n**系统能力：** SystemCapability.Multi"
+      },
+      {
+        "section_id": "section-8",
+        "title": "on('audioSessionStateChanged')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 227,
+        "line_end": 259,
+        "summary": "on(type: 'audioSessionStateChanged', callback: Callback\\<AudioSessionStateChangedEvent>): void\n\n监听音"
+      },
+      {
+        "section_id": "section-9",
+        "title": "off('audioSessionStateChanged')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 260,
+        "line_end": 299,
+        "summary": "off(type: 'audioSessionStateChanged', callback?: Callback\\<AudioSessionStateChangedEvent>): void\n\n取"
+      },
+      {
+        "section_id": "section-10",
+        "title": "setDefaultOutputDevice<sup>20+</sup>",
+        "level": 2,
+        "line_start": 300,
+        "line_end": 348,
+        "summary": "setDefaultOutputDevice(deviceType: DeviceType): Promise&lt;void&gt;\n\n设置默认发声设备。使用Promise方式进行异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getDefaultOutputDevice<sup>20+</sup>",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 377,
+        "summary": "getDefaultOutputDevice(): DeviceType\n\n获取通过[setDefaultOutputDevice](#setdefaultoutputdevice20)设置的默认发"
+      },
+      {
+        "section_id": "section-12",
+        "title": "on('currentOutputDeviceChanged')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 378,
+        "line_end": 414,
+        "summary": "on(type: 'currentOutputDeviceChanged', callback: Callback\\<CurrentOutputDeviceChangedEvent>): void"
+      },
+      {
+        "section_id": "section-13",
+        "title": "off('currentOutputDeviceChanged')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 415,
+        "line_end": 454,
+        "summary": "off(type: 'currentOutputDeviceChanged', callback?: Callback\\<CurrentOutputDeviceChangedEvent>): voi"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getAvailableDevices<sup>21+</sup>",
+        "level": 2,
+        "line_start": 455,
+        "line_end": 497,
+        "summary": "getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors\n\n获取音频可选设备列表。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-15",
+        "title": "on('availableDeviceChange')<sup>21+</sup>",
+        "level": 2,
+        "line_start": 498,
+        "line_end": 533,
+        "summary": "on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback\\<DeviceChangeAction>"
+      },
+      {
+        "section_id": "section-16",
+        "title": "off('availableDeviceChange')<sup>21+</sup>",
+        "level": 2,
+        "line_start": 534,
+        "line_end": 575,
+        "summary": "off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction\\>): void\n\n取消监听音频可选设备连接状态变"
+      },
+      {
+        "section_id": "section-17",
+        "title": "selectMediaInputDevice<sup>21+</sup>",
+        "level": 2,
+        "line_start": 576,
+        "line_end": 633,
+        "summary": "selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void\\>\n\n设置媒体输入设备。使用Promise"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getSelectedMediaInputDevice<sup>21+</sup>",
+        "level": 2,
+        "line_start": 634,
+        "line_end": 669,
+        "summary": "getSelectedMediaInputDevice(): AudioDeviceDescriptor\n\n获得通过[selectMediaInputDevice](#selectmediainpu"
+      },
+      {
+        "section_id": "section-19",
+        "title": "clearSelectedMediaInputDevice<sup>21+</sup>",
+        "level": 2,
+        "line_start": 670,
+        "line_end": 703,
+        "summary": "clearSelectedMediaInputDevice(): Promise<void\\>\n\n清空通过[selectMediaInputDevice](#selectmediainputdevi"
+      },
+      {
+        "section_id": "section-20",
+        "title": "setBluetoothAndNearlinkPreferredRecordCategory<sup>21+</sup>",
+        "level": 2,
+        "line_start": 704,
+        "line_end": 749,
+        "summary": "setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategor"
+      },
+      {
+        "section_id": "section-21",
+        "title": "getBluetoothAndNearlinkPreferredRecordCategory<sup>21+</sup>",
+        "level": 2,
+        "line_start": 750,
+        "line_end": 783,
+        "summary": "getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory\n\n获取通过"
+      },
+      {
+        "section_id": "section-22",
+        "title": "on('currentInputDeviceChanged')<sup>21+</sup>",
+        "level": 2,
+        "line_start": 784,
+        "line_end": 819,
+        "summary": "on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent\\>): void\n\n监"
+      },
+      {
+        "section_id": "section-23",
+        "title": "off('currentInputDeviceChanged')<sup>21+</sup>",
+        "level": 2,
+        "line_start": 820,
+        "line_end": 858,
+        "summary": "off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent\\>): void"
+      },
+      {
+        "section_id": "section-24",
+        "title": "enableMuteSuggestionWhenMixWithOthers<sup>23+</sup>",
+        "level": 2,
+        "line_start": 859,
+        "line_end": 897,
+        "summary": "enableMuteSuggestionWhenMixWithOthers(enable: boolean): void\n\n启用混音播放下接收静音播放建议通知功能。\n\n通常，当使用混音模式时，如果其"
+      },
+      {
+        "section_id": "section-25",
+        "title": "isOtherMediaPlaying<sup>23+</sup>",
+        "level": 2,
+        "line_start": 898,
+        "line_end": 918,
+        "summary": "isOtherMediaPlaying(): boolean\n\n检查是否有其他应用正在播放MUSIC、MOVIE、AUDIOBOOK、GAME四种媒体类型的音频，已激活媒体类型的音频会话也将会被检查"
+      }
+    ]
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "doc_id": "js-apis-hitracechain",
+  "title": "@ohos.hiTraceChain (分布式跟踪)",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hitracechain.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hitracechain.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@qq_437963121",
+    "designer": "@kutcherzhou1; @MontSaintMichel",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.hiTraceChain (分布式跟踪)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.hiTraceChain (分布式跟踪)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { hiTraceChain } from '@kit.PerformanceAnalysisKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "HiTraceFlag",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 38,
+        "summary": "跟踪标志组合类型枚举。\n\n**系统能力**：SystemCapability.HiviewDFX.HiTrace\n\n| 名称 | 值 | 说明 |\n| -------- | -------- | -"
+      },
+      {
+        "section_id": "section-3",
+        "title": "HiTraceTracepointType",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 52,
+        "summary": "跟踪埋点类型枚举。\n\n**系统能力**：SystemCapability.HiviewDFX.HiTrace\n\n| 名称 | 值 | 说明 |\n| -------- | -------- | ---"
+      },
+      {
+        "section_id": "section-4",
+        "title": "HiTraceCommunicationMode",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 65,
+        "summary": "跟踪通信类型枚举。\n\n**系统能力**：SystemCapability.HiviewDFX.HiTrace\n\n| 名称 | 值 | 说明 |\n| -------- | -------- | ---"
+      },
+      {
+        "section_id": "section-5",
+        "title": "HiTraceId",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 78,
+        "summary": "此接口为HiTraceId对象接口。\n\n**系统能力**：SystemCapability.HiviewDFX.HiTrace\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -----"
+      },
+      {
+        "section_id": "section-6",
+        "title": "hiTraceChain.begin",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 112,
+        "summary": "begin(name: string, flags?: number): HiTraceId\n\n开始跟踪，同步接口。\n\n当前线程TLS（Thread Local Storage，线程本地存储）中不存"
+      },
+      {
+        "section_id": "section-7",
+        "title": "hiTraceChain.end",
+        "level": 2,
+        "line_start": 113,
+        "line_end": 139,
+        "summary": "end(id: HiTraceId): void\n\n结束跟踪，同步接口。\n\n若给定的HiTraceId有效，且等于当前线程TLS中的HiTraceId，结束跟踪并将当前线程TLS中的HiTraceI"
+      },
+      {
+        "section_id": "section-8",
+        "title": "hiTraceChain.getId",
+        "level": 2,
+        "line_start": 140,
+        "line_end": 170,
+        "summary": "getId(): HiTraceId\n\n获取跟踪标识，同步接口。\n\n获取当前线程TLS中的HiTraceId。\n\n**系统能力**：SystemCapability.HiviewDFX.HiTrac"
+      },
+      {
+        "section_id": "section-9",
+        "title": "hiTraceChain.setId",
+        "level": 2,
+        "line_start": 171,
+        "line_end": 195,
+        "summary": "setId(id: HiTraceId): void\n\n设置跟踪标识，同步接口。\n\n将给定的HiTraceId设置到当前线程TLS中。若给定的HiTraceId无效，则不执行任何操作。\n\n**系统能"
+      },
+      {
+        "section_id": "section-10",
+        "title": "hiTraceChain.clearId",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 216,
+        "summary": "clearId(): void\n\n清除跟踪标识，同步接口。\n\n将当前线程TLS中的HiTraceId设置为无效。\n\n**系统能力**：SystemCapability.HiviewDFX.HiTra"
+      },
+      {
+        "section_id": "section-11",
+        "title": "hiTraceChain.createSpan",
+        "level": 2,
+        "line_start": 217,
+        "line_end": 247,
+        "summary": "createSpan(): HiTraceId\n\n创建跟踪分支，同步接口。\n\n创建一个HiTraceId，使用当前线程TLS中的chainId、spanId初始化HiTraceId的chainId、"
+      },
+      {
+        "section_id": "section-12",
+        "title": "hiTraceChain.tracepoint",
+        "level": 2,
+        "line_start": 248,
+        "line_end": 279,
+        "summary": "tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType, id: HiTraceId, msg?: string"
+      },
+      {
+        "section_id": "section-13",
+        "title": "hiTraceChain.isValid",
+        "level": 2,
+        "line_start": 280,
+        "line_end": 313,
+        "summary": "isValid(id: HiTraceId): boolean\n\n判断HiTraceId是否有效，同步接口。\n\n**系统能力**：SystemCapability.HiviewDFX.HiTrace"
+      },
+      {
+        "section_id": "section-14",
+        "title": "hiTraceChain.isFlagEnabled",
+        "level": 2,
+        "line_start": 314,
+        "line_end": 348,
+        "summary": "isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean\n\n判断HiTraceId是否启用了跟踪标志flag，同步接口。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-15",
+        "title": "hiTraceChain.enableFlag",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 381,
+        "summary": "enableFlag(id: HiTraceId, flag: HiTraceFlag): void\n\n启用HiTraceId中指定的跟踪标志，同步接口。\n\n**系统能力**：SystemCapab"
+      }
+    ]
+  }
+}

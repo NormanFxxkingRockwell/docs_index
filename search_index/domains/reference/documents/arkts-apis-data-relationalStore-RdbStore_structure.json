@@ -1,0 +1,828 @@
+{
+  "doc_id": "arkts-apis-data-relationalStore-RdbStore",
+  "title": "Interface (RdbStore)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-RdbStore.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-RdbStore.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 Interface (RdbStore)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (RdbStore)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { relationalStore } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 93,
+        "summary": "**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-3",
+        "title": "insert",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 177,
+        "summary": "insert(table: string, values: ValuesBucket, callback: AsyncCallback&lt;number&gt;):void\n\n向目标表中插入一行数"
+      },
+      {
+        "section_id": "section-4",
+        "title": "insert<sup>10+</sup>",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 263,
+        "summary": "insert(table: string, values: ValuesBucket,  conflict: ConflictResolution, callback: AsyncCallback&"
+      },
+      {
+        "section_id": "section-5",
+        "title": "insert",
+        "level": 2,
+        "line_start": 264,
+        "line_end": 352,
+        "summary": "insert(table: string, values: ValuesBucket):Promise&lt;number&gt;\n\n向目标表中插入一行数据，使用Promise异步回调。由于共享内存"
+      },
+      {
+        "section_id": "section-6",
+        "title": "insert<sup>10+</sup>",
+        "level": 2,
+        "line_start": 353,
+        "line_end": 442,
+        "summary": "insert(table: string, values: ValuesBucket,  conflict: ConflictResolution):Promise&lt;number&gt;\n\n向"
+      },
+      {
+        "section_id": "section-7",
+        "title": "insertSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 443,
+        "line_end": 531,
+        "summary": "insertSync(table: string, values: ValuesBucket,  conflict?: ConflictResolution):number\n\n向目标表中插入一行数据"
+      },
+      {
+        "section_id": "section-8",
+        "title": "insertSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 532,
+        "line_end": 605,
+        "summary": "insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict?: ConflictResoluti"
+      },
+      {
+        "section_id": "section-9",
+        "title": "batchInsert",
+        "level": 2,
+        "line_start": 606,
+        "line_end": 703,
+        "summary": "batchInsert(table: string, values: Array&lt;ValuesBucket&gt;, callback: AsyncCallback&lt;number&gt;"
+      },
+      {
+        "section_id": "section-10",
+        "title": "batchInsert",
+        "level": 2,
+        "line_start": 704,
+        "line_end": 829,
+        "summary": "batchInsert(table: string, values: Array&lt;ValuesBucket&gt;):Promise&lt;number&gt;\n\n向目标表中插入一组数据，使用"
+      },
+      {
+        "section_id": "section-11",
+        "title": "batchInsertSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 830,
+        "line_end": 933,
+        "summary": "batchInsertSync(table: string, values: Array&lt;ValuesBucket&gt;):number\n\n向目标表中插入一组数据。\n\n接口报错，表示插入数据"
+      },
+      {
+        "section_id": "section-12",
+        "title": "batchInsertWithConflictResolution<sup>18+</sup>",
+        "level": 2,
+        "line_start": 934,
+        "line_end": 1037,
+        "summary": "batchInsertWithConflictResolution(table: string, values: Array&lt;ValuesBucket&gt;, conflict: Confl"
+      },
+      {
+        "section_id": "section-13",
+        "title": "batchInsertWithConflictResolutionSync<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1038,
+        "line_end": 1140,
+        "summary": "batchInsertWithConflictResolutionSync(table: string, values: Array&lt;ValuesBucket&gt;, conflict: C"
+      },
+      {
+        "section_id": "section-14",
+        "title": "batchInsertWithReturning<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1141,
+        "line_end": 1216,
+        "summary": "batchInsertWithReturning(table: string, values: Array\\<ValuesBucket\\>, config: ReturningConfig, con"
+      },
+      {
+        "section_id": "section-15",
+        "title": "batchInsertWithReturningSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1217,
+        "line_end": 1292,
+        "summary": "batchInsertWithReturningSync(table: string, values: Array\\<ValuesBucket\\>, config: ReturningConfig,"
+      },
+      {
+        "section_id": "section-16",
+        "title": "update",
+        "level": 2,
+        "line_start": 1293,
+        "line_end": 1376,
+        "summary": "update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback&lt;number&gt;):void"
+      },
+      {
+        "section_id": "section-17",
+        "title": "update<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1377,
+        "line_end": 1461,
+        "summary": "update(values: ValuesBucket, predicates: RdbPredicates, conflict: ConflictResolution, callback: Asy"
+      },
+      {
+        "section_id": "section-18",
+        "title": "update",
+        "level": 2,
+        "line_start": 1462,
+        "line_end": 1550,
+        "summary": "update(values: ValuesBucket, predicates: RdbPredicates):Promise&lt;number&gt;\n\n根据RdbPredicates的指定实例"
+      },
+      {
+        "section_id": "section-19",
+        "title": "update<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1551,
+        "line_end": 1640,
+        "summary": "update(values: ValuesBucket, predicates: RdbPredicates, conflict: ConflictResolution):Promise&lt;nu"
+      },
+      {
+        "section_id": "section-20",
+        "title": "updateSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1641,
+        "line_end": 1729,
+        "summary": "updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution):number"
+      },
+      {
+        "section_id": "section-21",
+        "title": "updateWithReturning<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1730,
+        "line_end": 1801,
+        "summary": "updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig, confl"
+      },
+      {
+        "section_id": "section-22",
+        "title": "updateWithReturningSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1802,
+        "line_end": 1873,
+        "summary": "updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig, c"
+      },
+      {
+        "section_id": "section-23",
+        "title": "delete",
+        "level": 2,
+        "line_start": 1874,
+        "line_end": 1931,
+        "summary": "delete(predicates: RdbPredicates, callback: AsyncCallback&lt;number&gt;):void\n\n根据RdbPredicates的指定实例"
+      },
+      {
+        "section_id": "section-24",
+        "title": "delete",
+        "level": 2,
+        "line_start": 1932,
+        "line_end": 1994,
+        "summary": "delete(predicates: RdbPredicates):Promise&lt;number&gt;\n\n根据RdbPredicates的指定实例对象从数据库中删除数据，使用Promise异"
+      },
+      {
+        "section_id": "section-25",
+        "title": "deleteSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1995,
+        "line_end": 2056,
+        "summary": "deleteSync(predicates: RdbPredicates):number\n\n根据RdbPredicates的指定实例对象从数据库中删除数据。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-26",
+        "title": "deleteWithReturning<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2057,
+        "line_end": 2121,
+        "summary": "deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise\\<Result\\>\n\n根据RdbPr"
+      },
+      {
+        "section_id": "section-27",
+        "title": "deleteWithReturningSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2122,
+        "line_end": 2186,
+        "summary": "deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Result\n\n根据RdbPredicate"
+      },
+      {
+        "section_id": "section-28",
+        "title": "query<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2187,
+        "line_end": 2243,
+        "summary": "query(predicates: RdbPredicates, callback: AsyncCallback&lt;ResultSet&gt;):void\n\n根据指定条件查询数据库中的数据，使用"
+      },
+      {
+        "section_id": "section-29",
+        "title": "query",
+        "level": 2,
+        "line_start": 2244,
+        "line_end": 2301,
+        "summary": "query(predicates: RdbPredicates, columns: Array&lt;string&gt;, callback: AsyncCallback&lt;ResultSet"
+      },
+      {
+        "section_id": "section-30",
+        "title": "query",
+        "level": 2,
+        "line_start": 2302,
+        "line_end": 2364,
+        "summary": "query(predicates: RdbPredicates, columns?: Array&lt;string&gt;):Promise&lt;ResultSet&gt;\n\n根据指定条件查询数"
+      },
+      {
+        "section_id": "section-31",
+        "title": "querySync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2365,
+        "line_end": 2425,
+        "summary": "querySync(predicates: RdbPredicates, columns?: Array&lt;string&gt;):ResultSet\n\n根据指定条件查询数据库中的数据。对que"
+      },
+      {
+        "section_id": "section-32",
+        "title": "queryWithoutRowCount<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2426,
+        "line_end": 2488,
+        "summary": "queryWithoutRowCount(predicates: RdbPredicates, columns?: Array&lt;string&gt;): Promise&lt;LiteResu"
+      },
+      {
+        "section_id": "section-33",
+        "title": "queryWithoutRowCountSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2489,
+        "line_end": 2549,
+        "summary": "queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array&lt;string&gt;): LiteResultSet"
+      },
+      {
+        "section_id": "section-34",
+        "title": "querySqlWithoutRowCount<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2550,
+        "line_end": 2611,
+        "summary": "querySqlWithoutRowCount(sql: string, bindArgs?: Array&lt;ValueType&gt;): Promise&lt;LiteResultSet&g"
+      },
+      {
+        "section_id": "section-35",
+        "title": "querySqlWithoutRowCountSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2612,
+        "line_end": 2671,
+        "summary": "querySqlWithoutRowCountSync(sql: string, bindArgs?: Array&lt;ValueType&gt;):LiteResultSet\n\n根据指定SQL语"
+      },
+      {
+        "section_id": "section-36",
+        "title": "remoteQuery",
+        "level": 2,
+        "line_start": 2672,
+        "line_end": 2753,
+        "summary": "remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: Array&lt;string&gt;"
+      },
+      {
+        "section_id": "section-37",
+        "title": "remoteQuery",
+        "level": 2,
+        "line_start": 2754,
+        "line_end": 2840,
+        "summary": "remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: Array&lt;string&gt;)"
+      },
+      {
+        "section_id": "section-38",
+        "title": "querySql<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2841,
+        "line_end": 2917,
+        "summary": "querySql(sql: string, callback: AsyncCallback&lt;ResultSet&gt;):void\n\n根据指定SQL语句查询数据库中的数据，SQL语句中的各种表"
+      },
+      {
+        "section_id": "section-39",
+        "title": "querySql",
+        "level": 2,
+        "line_start": 2918,
+        "line_end": 2977,
+        "summary": "querySql(sql: string, bindArgs: Array&lt;ValueType&gt;, callback: AsyncCallback&lt;ResultSet&gt;):v"
+      },
+      {
+        "section_id": "section-40",
+        "title": "querySql",
+        "level": 2,
+        "line_start": 2978,
+        "line_end": 3053,
+        "summary": "querySql(sql: string, bindArgs?: Array&lt;ValueType&gt;):Promise&lt;ResultSet&gt;\n\n根据指定SQL语句查询数据库中的"
+      },
+      {
+        "section_id": "section-41",
+        "title": "querySqlSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3054,
+        "line_end": 3112,
+        "summary": "querySqlSync(sql: string, bindArgs?: Array&lt;ValueType&gt;):ResultSet\n\n根据指定SQL语句查询数据库中的数据，SQL语句中的各"
+      },
+      {
+        "section_id": "section-42",
+        "title": "executeSql<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3113,
+        "line_end": 3174,
+        "summary": "executeSql(sql: string, callback: AsyncCallback&lt;void&gt;):void\n\n执行指定的SQL语句，语句中的各种表达式和操作符之间的关系操作符"
+      },
+      {
+        "section_id": "section-43",
+        "title": "executeSql",
+        "level": 2,
+        "line_start": 3175,
+        "line_end": 3237,
+        "summary": "executeSql(sql: string, bindArgs: Array&lt;ValueType&gt;, callback: AsyncCallback&lt;void&gt;):void"
+      },
+      {
+        "section_id": "section-44",
+        "title": "executeSql",
+        "level": 2,
+        "line_start": 3238,
+        "line_end": 3305,
+        "summary": "executeSql(sql: string, bindArgs?: Array&lt;ValueType&gt;):Promise&lt;void&gt;\n\n执行指定的SQL语句，语句中的各种表达"
+      },
+      {
+        "section_id": "section-45",
+        "title": "execute<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3306,
+        "line_end": 3417,
+        "summary": "execute(sql: string, args?: Array&lt;ValueType&gt;):Promise&lt;ValueType&gt;\n\n执行包含指定参数的SQL语句，语句中的各种"
+      },
+      {
+        "section_id": "section-46",
+        "title": "execute<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3418,
+        "line_end": 3499,
+        "summary": "execute(sql: string, txId: number, args?: Array&lt;ValueType&gt;): Promise&lt;ValueType&gt;\n\n执行包含指定"
+      },
+      {
+        "section_id": "section-47",
+        "title": "executeSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3500,
+        "line_end": 3592,
+        "summary": "executeSync(sql: string, args?: Array&lt;ValueType&gt;): ValueType\n\n执行包含指定参数的SQL语句，语句中的各种表达式和操作符之间的"
+      },
+      {
+        "section_id": "section-48",
+        "title": "getModifyTime<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3593,
+        "line_end": 3651,
+        "summary": "getModifyTime(table: string, columnName: string, primaryKeys: PRIKeyType[], callback: AsyncCallback"
+      },
+      {
+        "section_id": "section-49",
+        "title": "getModifyTime<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3652,
+        "line_end": 3717,
+        "summary": "getModifyTime(table: string, columnName: string, primaryKeys: PRIKeyType[]): Promise&lt;ModifyTime&"
+      },
+      {
+        "section_id": "section-50",
+        "title": "beginTransaction",
+        "level": 2,
+        "line_start": 3718,
+        "line_end": 3775,
+        "summary": "beginTransaction():void\n\n在开始执行SQL语句之前，开始事务。\n\n此接口不允许嵌套事务，且不支持在多进程或多线程中使用。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-51",
+        "title": "beginTrans<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3776,
+        "line_end": 3845,
+        "summary": "beginTrans(): Promise&lt;number&gt;\n\n在开始执行SQL语句之前，开始事务，使用Promise异步回调。\n\n与[beginTransaction](#begintr"
+      },
+      {
+        "section_id": "section-52",
+        "title": "createTransaction<sup>14+</sup>",
+        "level": 2,
+        "line_start": 3846,
+        "line_end": 3907,
+        "summary": "createTransaction(options?: TransactionOptions): Promise&lt;Transaction&gt;\n\n创建一个事务对象并开始事务，使用Promis"
+      },
+      {
+        "section_id": "section-53",
+        "title": "commit",
+        "level": 2,
+        "line_start": 3908,
+        "line_end": 3964,
+        "summary": "commit():void\n\n提交已执行的SQL语句，跟[beginTransaction](#begintransaction)配合使用。\n\n此接口不允许嵌套事务，且不支持在多进程或多线程中使用。"
+      },
+      {
+        "section_id": "section-54",
+        "title": "commit<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3965,
+        "line_end": 4036,
+        "summary": "commit(txId : number):Promise&lt;void&gt;\n\n提交已执行的SQL语句，跟[beginTrans](#begintrans12)配合使用，使用Promise异步"
+      },
+      {
+        "section_id": "section-55",
+        "title": "rollBack",
+        "level": 2,
+        "line_start": 4037,
+        "line_end": 4102,
+        "summary": "rollBack():void\n\n回滚已经执行的SQL语句。\n\n此接口不允许嵌套事务，且不支持在多进程或多线程中使用。\n\n**系统能力：** SystemCapability.Distributed"
+      },
+      {
+        "section_id": "section-56",
+        "title": "rollback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4103,
+        "line_end": 4174,
+        "summary": "rollback(txId : number):Promise&lt;void&gt;\n\n回滚已经执行的SQL语句，跟[beginTrans](#begintrans12)配合使用，使用Promis"
+      },
+      {
+        "section_id": "section-57",
+        "title": "backup",
+        "level": 2,
+        "line_start": 4175,
+        "line_end": 4232,
+        "summary": "backup(destName:string, callback: AsyncCallback&lt;void&gt;):void\n\n以指定名称备份数据库，使用callback异步回调。\n\n该接口支"
+      },
+      {
+        "section_id": "section-58",
+        "title": "backup",
+        "level": 2,
+        "line_start": 4233,
+        "line_end": 4295,
+        "summary": "backup(destName:string): Promise&lt;void&gt;\n\n以指定名称备份数据库，使用Promise异步回调。\n\n该接口支持[向量数据库](arkts-apis-da"
+      },
+      {
+        "section_id": "section-59",
+        "title": "restore",
+        "level": 2,
+        "line_start": 4296,
+        "line_end": 4352,
+        "summary": "restore(srcName:string, callback: AsyncCallback&lt;void&gt;):void\n\n从指定的数据库备份文件恢复数据库，使用callback异步回调。"
+      },
+      {
+        "section_id": "section-60",
+        "title": "restore",
+        "level": 2,
+        "line_start": 4353,
+        "line_end": 4415,
+        "summary": "restore(srcName:string): Promise&lt;void&gt;\n\n从指定的数据库备份文件恢复数据库，使用Promise异步回调。\n\n该接口支持[向量数据库](arkts-a"
+      },
+      {
+        "section_id": "section-61",
+        "title": "setDistributedTables",
+        "level": 2,
+        "line_start": 4416,
+        "line_end": 4457,
+        "summary": "setDistributedTables(tables: Array&lt;string&gt;, callback: AsyncCallback&lt;void&gt;): void\n\n设置分布式"
+      },
+      {
+        "section_id": "section-62",
+        "title": "setDistributedTables",
+        "level": 2,
+        "line_start": 4458,
+        "line_end": 4504,
+        "summary": "setDistributedTables(tables: Array&lt;string&gt;): Promise&lt;void&gt;\n\n设置分布式数据库表，使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-63",
+        "title": "setDistributedTables<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4505,
+        "line_end": 4548,
+        "summary": "setDistributedTables(tables: Array&lt;string&gt;, type: DistributedType, callback: AsyncCallback&lt"
+      },
+      {
+        "section_id": "section-64",
+        "title": "setDistributedTables<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4549,
+        "line_end": 4595,
+        "summary": "setDistributedTables(tables: Array&lt;string&gt;, type: DistributedType, config: DistributedConfig,"
+      },
+      {
+        "section_id": "section-65",
+        "title": "setDistributedTables<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4596,
+        "line_end": 4647,
+        "summary": "setDistributedTables(tables: Array&lt;string>, type?: DistributedType, config?: DistributedConfig)"
+      },
+      {
+        "section_id": "section-66",
+        "title": "obtainDistributedTableName",
+        "level": 2,
+        "line_start": 4648,
+        "line_end": 4714,
+        "summary": "obtainDistributedTableName(device: string, table: string, callback: AsyncCallback&lt;string&gt;): v"
+      },
+      {
+        "section_id": "section-67",
+        "title": "obtainDistributedTableName",
+        "level": 2,
+        "line_start": 4715,
+        "line_end": 4784,
+        "summary": "obtainDistributedTableName(device: string, table: string): Promise&lt;string&gt;\n\n根据远程设备的本地表名获取指定远"
+      },
+      {
+        "section_id": "section-68",
+        "title": "sync",
+        "level": 2,
+        "line_start": 4785,
+        "line_end": 4850,
+        "summary": "sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback&lt;Array&lt;[string, number"
+      },
+      {
+        "section_id": "section-69",
+        "title": "sync",
+        "level": 2,
+        "line_start": 4851,
+        "line_end": 4919,
+        "summary": "sync(mode: SyncMode, predicates: RdbPredicates): Promise&lt;Array&lt;[string, number]&gt;&gt;\n\n在设备"
+      },
+      {
+        "section_id": "section-70",
+        "title": "cloudSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4920,
+        "line_end": 4961,
+        "summary": "cloudSync(mode: SyncMode, progress: Callback&lt;ProgressDetails&gt;, callback: AsyncCallback&lt;voi"
+      },
+      {
+        "section_id": "section-71",
+        "title": "cloudSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4962,
+        "line_end": 5008,
+        "summary": "cloudSync(mode: SyncMode, progress: Callback&lt;ProgressDetails&gt;): Promise&lt;void&gt;\n\n手动执行对所有分"
+      },
+      {
+        "section_id": "section-72",
+        "title": "cloudSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5009,
+        "line_end": 5053,
+        "summary": "cloudSync(mode: SyncMode, tables: string[], progress: Callback&lt;ProgressDetails&gt;, callback: As"
+      },
+      {
+        "section_id": "section-73",
+        "title": "cloudSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5054,
+        "line_end": 5103,
+        "summary": "cloudSync(mode: SyncMode, tables: string[], progress: Callback&lt;ProgressDetails&gt;): Promise&lt;"
+      },
+      {
+        "section_id": "section-74",
+        "title": "on('dataChange')",
+        "level": 2,
+        "line_start": 5104,
+        "line_end": 5153,
+        "summary": "on(event: 'dataChange', type: SubscribeType, observer: Callback&lt;Array&lt;string&gt;&gt;): void"
+      },
+      {
+        "section_id": "section-75",
+        "title": "on('dataChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5154,
+        "line_end": 5248,
+        "summary": "on(event: 'dataChange', type: SubscribeType, observer: Callback&lt;Array&lt;string&gt;&gt;\\| Callba"
+      },
+      {
+        "section_id": "section-76",
+        "title": "on<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5249,
+        "line_end": 5296,
+        "summary": "on(event: string, interProcess: boolean, observer: Callback\\<void>): void\n\n注册数据库的进程内或者进程间事件监听。当调用[e"
+      },
+      {
+        "section_id": "section-77",
+        "title": "on('autoSyncProgress')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5297,
+        "line_end": 5341,
+        "summary": "on(event: 'autoSyncProgress', progress: Callback&lt;ProgressDetails&gt;): void\n\n在已打开端云同步，并且网络状态正常的条"
+      },
+      {
+        "section_id": "section-78",
+        "title": "on('statistics')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5342,
+        "line_end": 5412,
+        "summary": "on(event: 'statistics', observer: Callback&lt;SqlExecutionInfo&gt;): void\n\n订阅SQL统计信息。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-79",
+        "title": "on('sqliteErrorOccurred')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5413,
+        "line_end": 5475,
+        "summary": "on(event: 'sqliteErrorOccurred', observer: Callback&lt;ExceptionMessage&gt;): void\n\n记录执行SQL语句时的异常日志"
+      },
+      {
+        "section_id": "section-80",
+        "title": "on('perfStat')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5476,
+        "line_end": 5545,
+        "summary": "on(event: 'perfStat', observer: Callback&lt;SqlExecutionInfo&gt;): void\n\n订阅SQL统计信息。使用[createTransac"
+      },
+      {
+        "section_id": "section-81",
+        "title": "off('dataChange')",
+        "level": 2,
+        "line_start": 5546,
+        "line_end": 5606,
+        "summary": "off(event:'dataChange', type: SubscribeType, observer: Callback&lt;Array&lt;string&gt;&gt;): void"
+      },
+      {
+        "section_id": "section-82",
+        "title": "off('dataChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5607,
+        "line_end": 5667,
+        "summary": "off(event:'dataChange', type: SubscribeType, observer?: Callback&lt;Array&lt;string&gt;&gt;\\| Callb"
+      },
+      {
+        "section_id": "section-83",
+        "title": "off<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5668,
+        "line_end": 5725,
+        "summary": "off(event: string, interProcess: boolean, observer?: Callback\\<void>): void\n\n取消数据库的进程内或者进程间事件监听。\n\n*"
+      },
+      {
+        "section_id": "section-84",
+        "title": "off('autoSyncProgress')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5726,
+        "line_end": 5780,
+        "summary": "off(event: 'autoSyncProgress', progress?: Callback&lt;ProgressDetails&gt;): void\n\n取消订阅自动同步进度的通知。\n\n*"
+      },
+      {
+        "section_id": "section-85",
+        "title": "off('statistics')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5781,
+        "line_end": 5821,
+        "summary": "off(event: 'statistics', observer?: Callback&lt;SqlExecutionInfo&gt;): void\n\n取消订阅SQL统计信息。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-86",
+        "title": "off('sqliteErrorOccurred')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5822,
+        "line_end": 5861,
+        "summary": "off(event: 'sqliteErrorOccurred', observer?: Callback&lt;ExceptionMessage&gt;): void\n\n停止记录SQL执行过程中的"
+      },
+      {
+        "section_id": "section-87",
+        "title": "off('perfStat')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5862,
+        "line_end": 5900,
+        "summary": "off(event: 'perfStat', observer?: Callback&lt;SqlExecutionInfo&gt;): void\n\n取消订阅SQL统计信息。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-88",
+        "title": "emit<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5901,
+        "line_end": 5935,
+        "summary": "emit(event: string): void\n\n通知通过[on](#on10)注册的进程间或者进程内监听事件。\n\n**系统能力：** SystemCapability.DistributedD"
+      },
+      {
+        "section_id": "section-89",
+        "title": "cleanDirtyData<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5936,
+        "line_end": 5992,
+        "summary": "cleanDirtyData(table: string, cursor: number, callback: AsyncCallback&lt;void&gt;): void\n\n清理云端删除的数据"
+      },
+      {
+        "section_id": "section-90",
+        "title": "cleanDirtyData<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5993,
+        "line_end": 6048,
+        "summary": "cleanDirtyData(table: string, callback: AsyncCallback&lt;void&gt;): void\n\n清理云端删除的数据同步到本地后，未自动清理的所有数"
+      },
+      {
+        "section_id": "section-91",
+        "title": "cleanDirtyData<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6049,
+        "line_end": 6110,
+        "summary": "cleanDirtyData(table: string, cursor?: number): Promise&lt;void&gt;\n\n清理云端删除的数据同步到本地后，未自动清理的，且数据的游标（"
+      },
+      {
+        "section_id": "section-92",
+        "title": "attach<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6111,
+        "line_end": 6182,
+        "summary": "attach(fullPath: string, attachName: string, waitTime?: number) : Promise&lt;number&gt;\n\n将一个数据库文件附加"
+      },
+      {
+        "section_id": "section-93",
+        "title": "attach<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6183,
+        "line_end": 6297,
+        "summary": "attach(context: Context, config: StoreConfig, attachName: string, waitTime?: number) : Promise&lt;n"
+      },
+      {
+        "section_id": "section-94",
+        "title": "detach<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6298,
+        "line_end": 6362,
+        "summary": "detach(attachName: string, waitTime?: number) : Promise&lt;number&gt;\n\n将附加的数据库从当前数据库中分离，使用Promise异步"
+      },
+      {
+        "section_id": "section-95",
+        "title": "lockRow<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6363,
+        "line_end": 6431,
+        "summary": "lockRow(predicates: RdbPredicates):Promise&lt;void&gt;\n\n根据RdbPredicates的指定实例对象从数据库中锁定数据，锁定数据不执行端云同步"
+      },
+      {
+        "section_id": "section-96",
+        "title": "unlockRow<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6432,
+        "line_end": 6500,
+        "summary": "unlockRow(predicates: RdbPredicates):Promise&lt;void&gt;\n\n根据RdbPredicates的指定实例对象从数据库中解锁数据，使用Promise"
+      },
+      {
+        "section_id": "section-97",
+        "title": "queryLockedRow<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6501,
+        "line_end": 6577,
+        "summary": "queryLockedRow(predicates: RdbPredicates, columns?: Array&lt;string&gt;):Promise&lt;ResultSet&gt;"
+      },
+      {
+        "section_id": "section-98",
+        "title": "close<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6578,
+        "line_end": 6614,
+        "summary": "close(): Promise&lt;void&gt;\n\n关闭数据库，使用Promise异步回调。\n\n**系统能力：** SystemCapability.DistributedDataManag"
+      },
+      {
+        "section_id": "section-99",
+        "title": "rekey<sup>20+</sup>",
+        "level": 2,
+        "line_start": 6615,
+        "line_end": 6751,
+        "summary": "rekey(cryptoParam?: CryptoParam): Promise\\<void>\n\n手动更新加密数据库的密钥。使用Promise异步回调。\n\n不支持对非WAL模式的数据库进行密钥更新"
+      },
+      {
+        "section_id": "section-100",
+        "title": "setLocale<sup>20+</sup>",
+        "level": 2,
+        "line_start": 6752,
+        "line_end": 6805,
+        "summary": "setLocale(locale: string) : Promise\\<void>\n\n设置自定义排序的语言。使用Promise异步回调。\n\n该值符合ISO 639标准，但是仅支持ICU中的部分语言"
+      },
+      {
+        "section_id": "section-101",
+        "title": "rekeyEx<sup>22+</sup>",
+        "level": 2,
+        "line_start": 6806,
+        "line_end": 7156,
+        "summary": "rekeyEx(cryptoParam: CryptoParam): Promise\\<void>\n\n手动更新数据库的密钥或加密参数，使用Promise异步回调。\n\n不支持对非WAL模式的数据库进行"
+      }
+    ]
+  }
+}

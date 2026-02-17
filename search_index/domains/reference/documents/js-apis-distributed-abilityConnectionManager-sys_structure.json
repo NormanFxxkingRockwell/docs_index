@@ -1,0 +1,204 @@
+{
+  "doc_id": "js-apis-distributed-abilityConnectionManager-sys",
+  "title": "@ohos.distributedsched.abilityConnectionManager (应用多端协同管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-distributedservice-kit/js-apis-distributed-abilityConnectionManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-distributedservice-kit/js-apis-distributed-abilityConnectionManager-sys.md",
+  "metadata": {
+    "kit": "Distributed Service Kit",
+    "subsystem": "DistributedSched",
+    "owner": "@hobbycao",
+    "designer": "@gsxiaowen",
+    "tester": "@hanjiawei",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Distributed Service Kit DistributedSched 模块的 @ohos.distributedsched.abilityConnectionManager (应用多端协同管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.distributedsched.abilityConnectionManager (应用多端协同管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```js\nimport { abilityConnectionManager } from '@kit.DistributedServiceKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "abilityConnectionManager.on('collaborateEvent')",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 61,
+        "summary": "on(type:&nbsp;'collaborateEvent',&nbsp;sessionId:&nbsp;number,&nbsp;callback:&nbsp;Callback&lt;Coll"
+      },
+      {
+        "section_id": "section-3",
+        "title": "abilityConnectionManager.on('receiveImage')",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 99,
+        "summary": "on(type:&nbsp;'receiveImage',&nbsp;sessionId:&nbsp;number,&nbsp;callback:&nbsp;Callback&lt;EventCal"
+      },
+      {
+        "section_id": "section-4",
+        "title": "abilityConnectionManager.off('collaborateEvent')",
+        "level": 2,
+        "line_start": 100,
+        "line_end": 135,
+        "summary": "off(type:&nbsp;'collaborateEvent',&nbsp;sessionId:&nbsp;number,&nbsp;callback?:&nbsp;Callback&lt;Co"
+      },
+      {
+        "section_id": "section-5",
+        "title": "abilityConnectionManager.off('receiveImage')",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 171,
+        "summary": "off(type:&nbsp;'receiveImage',&nbsp;sessionId:&nbsp;number,&nbsp;callback?:&nbsp;Callback&lt;EventC"
+      },
+      {
+        "section_id": "section-6",
+        "title": "abilityConnectionManager.sendImage",
+        "level": 2,
+        "line_start": 172,
+        "line_end": 242,
+        "summary": "sendImage(sessionId:&nbsp;number,&nbsp;image:&nbsp;image.PixelMap,&nbsp;quality?:&nbsp;number):&nbs"
+      },
+      {
+        "section_id": "section-7",
+        "title": "abilityConnectionManager.createStream",
+        "level": 2,
+        "line_start": 243,
+        "line_end": 299,
+        "summary": "createStream(sessionId:&nbsp;number,&nbsp;param:&nbsp;StreamParam):&nbsp;Promise&lt;number&gt;\n\n应用连"
+      },
+      {
+        "section_id": "section-8",
+        "title": "abilityConnectionManager.setSurfaceId",
+        "level": 2,
+        "line_start": 300,
+        "line_end": 345,
+        "summary": "setSurfaceId(streamId:&nbsp;number,&nbsp;surfaceId:&nbsp;string,&nbsp;param:&nbsp;SurfaceParam):&nb"
+      },
+      {
+        "section_id": "section-9",
+        "title": "abilityConnectionManager.getSurfaceId",
+        "level": 2,
+        "line_start": 346,
+        "line_end": 395,
+        "summary": "getSurfaceId(sessionId:&nbsp;number,&nbsp;param:&nbsp;SurfaceParam):&nbsp;string\n\n获取指定传输流绑定的Surface"
+      },
+      {
+        "section_id": "section-10",
+        "title": "abilityConnectionManager.updateSurfaceParam",
+        "level": 2,
+        "line_start": 396,
+        "line_end": 439,
+        "summary": "updateSurfaceParam(sessionId:&nbsp;number,&nbsp;param:&nbsp;SurfaceParam):&nbsp;void\n\n更新与传输流绑定的Surf"
+      },
+      {
+        "section_id": "section-11",
+        "title": "abilityConnectionManager.destroyStream",
+        "level": 2,
+        "line_start": 440,
+        "line_end": 476,
+        "summary": "destroyStream(sessionId:&nbsp;number):&nbsp;void\n\n发送图片和视频流等业务结束后，创建传输流的应用应及时销毁传输流，否则会增加系统功耗。\n\n**系统能"
+      },
+      {
+        "section_id": "section-12",
+        "title": "abilityConnectionManager.startStream",
+        "level": 2,
+        "line_start": 477,
+        "line_end": 513,
+        "summary": "startStream(sessionId:&nbsp;number):&nbsp;void\n\n启动指定传输流。\n\n**系统能力**：SystemCapability.DistributedSche"
+      },
+      {
+        "section_id": "section-13",
+        "title": "abilityConnectionManager.stopStream",
+        "level": 2,
+        "line_start": 514,
+        "line_end": 549,
+        "summary": "stopStream(sessionId:&nbsp;number):&nbsp;void\n\n停止指定传输流。\n\n**系统能力**：SystemCapability.DistributedSched"
+      },
+      {
+        "section_id": "section-14",
+        "title": "CollaborateEventInfo",
+        "level": 2,
+        "line_start": 550,
+        "line_end": 560,
+        "summary": "协作事件信息。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称       | 类型   | 只读 | 可选 |"
+      },
+      {
+        "section_id": "section-15",
+        "title": "StreamParam",
+        "level": 2,
+        "line_start": 561,
+        "line_end": 573,
+        "summary": "流传输配置的参数。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称       | 类型    | 只读 | 可"
+      },
+      {
+        "section_id": "section-16",
+        "title": "SurfaceParam",
+        "level": 2,
+        "line_start": 574,
+        "line_end": 587,
+        "summary": "Surface配置参数。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称       | 类型   | 只读 |"
+      },
+      {
+        "section_id": "section-17",
+        "title": "CollaborateEventType",
+        "level": 2,
+        "line_start": 588,
+        "line_end": 598,
+        "summary": "协作事件的类型的枚举。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称|  值 | 说明 |\n|-------|"
+      },
+      {
+        "section_id": "section-18",
+        "title": "FlipOptions",
+        "level": 2,
+        "line_start": 599,
+        "line_end": 609,
+        "summary": "翻转选项的枚举。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称|  值 | 说明 |\n|-------|---"
+      },
+      {
+        "section_id": "section-19",
+        "title": "StreamRole",
+        "level": 2,
+        "line_start": 610,
+        "line_end": 620,
+        "summary": "流传输的方式。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称|  值 | 说明 |\n|-------|----"
+      },
+      {
+        "section_id": "section-20",
+        "title": "VideoPixelFormat",
+        "level": 2,
+        "line_start": 621,
+        "line_end": 632,
+        "summary": "视频像素格式的枚举。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称|  值 | 说明 |\n|-------|-"
+      },
+      {
+        "section_id": "section-21",
+        "title": "ConnectOptions",
+        "level": 2,
+        "line_start": 633,
+        "line_end": 643,
+        "summary": "应用连接时所需的连接选项。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称          | 类型    |"
+      },
+      {
+        "section_id": "section-22",
+        "title": "EventCallbackInfo",
+        "level": 2,
+        "line_start": 644,
+        "line_end": 653,
+        "summary": "回调方法的接收信息。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称       | 类型    | 只读  |"
+      },
+      {
+        "section_id": "section-23",
+        "title": "StartOptionParams",
+        "level": 2,
+        "line_start": 654,
+        "line_end": 663,
+        "summary": "启动选项参数的枚举。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n| 名称|  值 | 说明 |\n|-------|-"
+      }
+    ]
+  }
+}

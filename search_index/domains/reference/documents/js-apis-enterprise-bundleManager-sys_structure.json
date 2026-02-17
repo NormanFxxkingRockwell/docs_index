@@ -1,0 +1,292 @@
+{
+  "doc_id": "js-apis-enterprise-bundleManager-sys",
+  "title": "@ohos.enterprise.bundleManager（包管理）(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-bundleManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-bundleManager-sys.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.bundleManager（包管理）(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.bundleManager（包管理）(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { bundleManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "bundleManager.addAllowedInstallBundles",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 83,
+        "summary": "addAllowedInstallBundles(admin: Want, appIds: Array\\<string>, callback: AsyncCallback&lt;void&gt;):"
+      },
+      {
+        "section_id": "section-3",
+        "title": "bundleManager.addAllowedInstallBundles",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 141,
+        "summary": "addAllowedInstallBundles(admin: Want, appIds: Array\\<string>, userId: number, callback: AsyncCallba"
+      },
+      {
+        "section_id": "section-4",
+        "title": "bundleManager.addAllowedInstallBundles",
+        "level": 2,
+        "line_start": 142,
+        "line_end": 203,
+        "summary": "addAllowedInstallBundles(admin: Want, appIds: Array\\<string>, userId?: number): Promise&lt;void&gt;"
+      },
+      {
+        "section_id": "section-5",
+        "title": "bundleManager.removeAllowedInstallBundles",
+        "level": 2,
+        "line_start": 204,
+        "line_end": 260,
+        "summary": "removeAllowedInstallBundles(admin: Want, appIds: Array\\<string>, callback: AsyncCallback&lt;void&gt"
+      },
+      {
+        "section_id": "section-6",
+        "title": "bundleManager.removeAllowedInstallBundles",
+        "level": 2,
+        "line_start": 261,
+        "line_end": 318,
+        "summary": "removeAllowedInstallBundles(admin: Want, appIds: Array\\<string>, userId: number, callback: AsyncCal"
+      },
+      {
+        "section_id": "section-7",
+        "title": "bundleManager.removeAllowedInstallBundles",
+        "level": 2,
+        "line_start": 319,
+        "line_end": 380,
+        "summary": "removeAllowedInstallBundles(admin: Want, appIds: Array\\<string>, userId?: number): Promise&lt;void&"
+      },
+      {
+        "section_id": "section-8",
+        "title": "bundleManager.getAllowedInstallBundles",
+        "level": 2,
+        "line_start": 381,
+        "line_end": 434,
+        "summary": "getAllowedInstallBundles(admin: Want, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;): void\n\n获取"
+      },
+      {
+        "section_id": "section-9",
+        "title": "bundleManager.getAllowedInstallBundles",
+        "level": 2,
+        "line_start": 435,
+        "line_end": 489,
+        "summary": "getAllowedInstallBundles(admin: Want, userId: number, callback: AsyncCallback&lt;Array&lt;string&gt"
+      },
+      {
+        "section_id": "section-10",
+        "title": "bundleManager.getAllowedInstallBundles",
+        "level": 2,
+        "line_start": 490,
+        "line_end": 548,
+        "summary": "getAllowedInstallBundles(admin: Want, userId?: number): Promise&lt;Array&lt;string&gt;&gt;\n\n获取当前/指定"
+      },
+      {
+        "section_id": "section-11",
+        "title": "bundleManager.addDisallowedInstallBundles",
+        "level": 2,
+        "line_start": 549,
+        "line_end": 605,
+        "summary": "addDisallowedInstallBundles(admin: Want, appIds: Array\\<string>, callback: AsyncCallback&lt;void&gt"
+      },
+      {
+        "section_id": "section-12",
+        "title": "bundleManager.addDisallowedInstallBundles",
+        "level": 2,
+        "line_start": 606,
+        "line_end": 663,
+        "summary": "addDisallowedInstallBundles(admin: Want, appIds: Array\\<string>, userId: number, callback: AsyncCal"
+      },
+      {
+        "section_id": "section-13",
+        "title": "bundleManager.addDisallowedInstallBundles",
+        "level": 2,
+        "line_start": 664,
+        "line_end": 725,
+        "summary": "addDisallowedInstallBundles(admin: Want, appIds: Array\\<string>, userId?: number): Promise&lt;void&"
+      },
+      {
+        "section_id": "section-14",
+        "title": "bundleManager.removeDisallowedInstallBundles",
+        "level": 2,
+        "line_start": 726,
+        "line_end": 782,
+        "summary": "removeDisallowedInstallBundles(admin: Want, appIds: Array\\<string>, callback: AsyncCallback&lt;void"
+      },
+      {
+        "section_id": "section-15",
+        "title": "bundleManager.removeDisallowedInstallBundles",
+        "level": 2,
+        "line_start": 783,
+        "line_end": 840,
+        "summary": "removeDisallowedInstallBundles(admin: Want, appIds: Array\\<string>, userId: number, callback: Async"
+      },
+      {
+        "section_id": "section-16",
+        "title": "bundleManager.removeDisallowedInstallBundles",
+        "level": 2,
+        "line_start": 841,
+        "line_end": 902,
+        "summary": "removeDisallowedInstallBundles(admin: Want, appIds: Array\\<string>, userId?: number): Promise&lt;vo"
+      },
+      {
+        "section_id": "section-17",
+        "title": "bundleManager.getDisallowedInstallBundles",
+        "level": 2,
+        "line_start": 903,
+        "line_end": 956,
+        "summary": "getDisallowedInstallBundles(admin: Want, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;): void"
+      },
+      {
+        "section_id": "section-18",
+        "title": "bundleManager.getDisallowedInstallBundles",
+        "level": 2,
+        "line_start": 957,
+        "line_end": 1011,
+        "summary": "getDisallowedInstallBundles(admin: Want, userId: number, callback: AsyncCallback&lt;Array&lt;string"
+      },
+      {
+        "section_id": "section-19",
+        "title": "bundleManager.getDisallowedInstallBundles",
+        "level": 2,
+        "line_start": 1012,
+        "line_end": 1070,
+        "summary": "getDisallowedInstallBundles(admin: Want, userId?: number): Promise&lt;Array&lt;string&gt;&gt;\n\n获取当前"
+      },
+      {
+        "section_id": "section-20",
+        "title": "bundleManager.addDisallowedUninstallBundles",
+        "level": 2,
+        "line_start": 1071,
+        "line_end": 1127,
+        "summary": "addDisallowedUninstallBundles(admin: Want, appIds: Array\\<string>, callback: AsyncCallback&lt;void&"
+      },
+      {
+        "section_id": "section-21",
+        "title": "bundleManager.addDisallowedUninstallBundles",
+        "level": 2,
+        "line_start": 1128,
+        "line_end": 1185,
+        "summary": "addDisallowedUninstallBundles(admin: Want, appIds: Array\\<string>, userId: number, callback: AsyncC"
+      },
+      {
+        "section_id": "section-22",
+        "title": "bundleManager.addDisallowedUninstallBundles",
+        "level": 2,
+        "line_start": 1186,
+        "line_end": 1247,
+        "summary": "addDisallowedUninstallBundles(admin: Want, appIds: Array\\<string>, userId?: number): Promise&lt;voi"
+      },
+      {
+        "section_id": "section-23",
+        "title": "bundleManager.removeDisallowedUninstallBundles",
+        "level": 2,
+        "line_start": 1248,
+        "line_end": 1304,
+        "summary": "removeDisallowedUninstallBundles(admin: Want, appIds: Array\\<string>, callback: AsyncCallback&lt;vo"
+      },
+      {
+        "section_id": "section-24",
+        "title": "bundleManager.removeDisallowedUninstallBundles",
+        "level": 2,
+        "line_start": 1305,
+        "line_end": 1362,
+        "summary": "removeDisallowedUninstallBundles(admin: Want, appIds: Array\\<string>, userId: number, callback: Asy"
+      },
+      {
+        "section_id": "section-25",
+        "title": "bundleManager.removeDisallowedUninstallBundles",
+        "level": 2,
+        "line_start": 1363,
+        "line_end": 1424,
+        "summary": "removeDisallowedUninstallBundles(admin: Want, appIds: Array\\<string>, userId?: number): Promise&lt;"
+      },
+      {
+        "section_id": "section-26",
+        "title": "bundleManager.getDisallowedUninstallBundles",
+        "level": 2,
+        "line_start": 1425,
+        "line_end": 1478,
+        "summary": "getDisallowedUninstallBundles(admin: Want, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;): voi"
+      },
+      {
+        "section_id": "section-27",
+        "title": "bundleManager.getDisallowedUninstallBundles",
+        "level": 2,
+        "line_start": 1479,
+        "line_end": 1533,
+        "summary": "getDisallowedUninstallBundles(admin: Want, userId: number, callback: AsyncCallback&lt;Array&lt;stri"
+      },
+      {
+        "section_id": "section-28",
+        "title": "bundleManager.getDisallowedUninstallBundles",
+        "level": 2,
+        "line_start": 1534,
+        "line_end": 1592,
+        "summary": "getDisallowedUninstallBundles(admin: Want, userId?: number): Promise&lt;Array&lt;string&gt;&gt;\n\n获取"
+      },
+      {
+        "section_id": "section-29",
+        "title": "bundleManager.uninstall",
+        "level": 2,
+        "line_start": 1593,
+        "line_end": 1647,
+        "summary": "uninstall(admin: Want, bundleName: string, callback: AsyncCallback&lt;void&gt;): void\n\n卸载当前用户下的指定应用"
+      },
+      {
+        "section_id": "section-30",
+        "title": "bundleManager.uninstall",
+        "level": 2,
+        "line_start": 1648,
+        "line_end": 1703,
+        "summary": "uninstall(admin: Want, bundleName: string, userId: number, callback: AsyncCallback&lt;void&gt;): vo"
+      },
+      {
+        "section_id": "section-31",
+        "title": "bundleManager.uninstall",
+        "level": 2,
+        "line_start": 1704,
+        "line_end": 1759,
+        "summary": "uninstall(admin: Want, bundleName: string, isKeepData: boolean, callback: AsyncCallback&lt;void&gt;"
+      },
+      {
+        "section_id": "section-32",
+        "title": "bundleManager.uninstall",
+        "level": 2,
+        "line_start": 1760,
+        "line_end": 1816,
+        "summary": "uninstall(admin: Want, bundleName: string, userId: number, isKeepData: boolean, callback: AsyncCall"
+      },
+      {
+        "section_id": "section-33",
+        "title": "bundleManager.install",
+        "level": 2,
+        "line_start": 1817,
+        "line_end": 1874,
+        "summary": "install(admin: Want, hapFilePaths: Array\\<string>, callback: AsyncCallback\\<void>): void\n\n安装指定路径下的应"
+      },
+      {
+        "section_id": "section-34",
+        "title": "bundleManager.install",
+        "level": 2,
+        "line_start": 1875,
+        "line_end": 1937,
+        "summary": "install(admin: Want, hapFilePaths: Array\\<string>, installParam: InstallParam, callback: AsyncCallb"
+      }
+    ]
+  }
+}

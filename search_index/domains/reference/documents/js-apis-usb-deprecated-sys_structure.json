@@ -1,0 +1,132 @@
+{
+  "doc_id": "js-apis-usb-deprecated-sys",
+  "title": "@ohos.usb (USB管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-usb-deprecated-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-usb-deprecated-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "USB",
+    "owner": "@hwymlgitcode",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Basic Services Kit USB 模块的 @ohos.usb (USB管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.usb (USB管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 26,
+        "summary": "```js\nimport usb from \"@ohos.usb\";\nimport { BusinessError } from '@ohos.base';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "usb.usbFunctionsFromString<sup>9+</sup>",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 55,
+        "summary": "usbFunctionsFromString(funcs: string): number\n\n在设备模式下，将字符串形式的USB功能列表转化为数字掩码。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "usb.usbFunctionsToString<sup>9+</sup>",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 84,
+        "summary": "usbFunctionsToString(funcs: FunctionType): string\n\n在设备模式下，将数字掩码形式的USB功能列表转化为字符串。\n\n**系统接口：** 此接口为系统接"
+      },
+      {
+        "section_id": "section-4",
+        "title": "usb.setCurrentFunctions<sup>9+</sup>",
+        "level": 2,
+        "line_start": 85,
+        "line_end": 117,
+        "summary": "setCurrentFunctions(funcs: FunctionType): Promise\\<boolean\\>\n\n在设备模式下，设置当前的USB功能列表。\n\n**系统接口：** 此接口为系"
+      },
+      {
+        "section_id": "section-5",
+        "title": "usb.getCurrentFunctions<sup>9+</sup>",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 139,
+        "summary": "getCurrentFunctions(): FunctionType\n\n在设备模式下，获取当前的USB功能列表的数字组合掩码。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：**  S"
+      },
+      {
+        "section_id": "section-6",
+        "title": "usb.getPorts<sup>9+</sup>",
+        "level": 2,
+        "line_start": 140,
+        "line_end": 161,
+        "summary": "getPorts(): Array\\<USBPort\\>\n\n获取所有物理USB端口描述信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：**  SystemCapability.US"
+      },
+      {
+        "section_id": "section-7",
+        "title": "usb.getSupportedModes<sup>9+</sup>",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 189,
+        "summary": "getSupportedModes(portId: number): PortModeType\n\n获取指定的端口支持的模式列表的组合掩码。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-8",
+        "title": "usb.setPortRoles<sup>9+</sup>",
+        "level": 2,
+        "line_start": 190,
+        "line_end": 224,
+        "summary": "setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise\\<boolean\\>"
+      },
+      {
+        "section_id": "section-9",
+        "title": "USBPort<sup>9+</sup>",
+        "level": 2,
+        "line_start": 225,
+        "line_end": 238,
+        "summary": "USB设备端口。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-10",
+        "title": "USBPortStatus<sup>9+</sup>",
+        "level": 2,
+        "line_start": 239,
+        "line_end": 252,
+        "summary": "USB设备端口角色信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称             | 类型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "FunctionType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 273,
+        "summary": "USB设备侧功能。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称         | 值   | 说明"
+      },
+      {
+        "section_id": "section-12",
+        "title": "PortModeType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 274,
+        "line_end": 289,
+        "summary": "USB端口模式类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称      | 值   | 说明"
+      },
+      {
+        "section_id": "section-13",
+        "title": "PowerRoleType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 290,
+        "line_end": 303,
+        "summary": "电源角色类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称   | 值   | 说明       |"
+      },
+      {
+        "section_id": "section-14",
+        "title": "DataRoleType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 304,
+        "line_end": 318,
+        "summary": "数据角色类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称   | 值   | 说明"
+      }
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "doc_id": "arkts-apis-media-AudioPlayer",
+  "title": "废弃的Interface (AudioPlayer, deprecated)",
+  "path": "zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-AudioPlayer.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-AudioPlayer.md",
+  "metadata": {
+    "kit": "Media Kit",
+    "subsystem": "Multimedia",
+    "owner": "@xushubo; @chennotfound",
+    "designer": "@dongyu_dy",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Kit Multimedia 模块的 废弃的Interface (AudioPlayer, deprecated)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "废弃的Interface (AudioPlayer, deprecated)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { media } from '@kit.MediaKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 34,
+        "summary": "**系统能力：** SystemCapability.Multimedia.Media.AudioPlayer\n\n| 名称                            | 类型"
+      },
+      {
+        "section_id": "section-3",
+        "title": "play<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 54,
+        "summary": "play(): void\n\n开始播放音频资源，需在'dataLoad'事件成功触发后，才能调用。\n\n> **说明：**\n> 从API version 6开始支持，从API version 9开始废弃"
+      },
+      {
+        "section_id": "section-4",
+        "title": "pause<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 74,
+        "summary": "pause(): void\n\n暂停播放音频资源。\n\n> **说明：**\n> 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer.pause](ar"
+      },
+      {
+        "section_id": "section-5",
+        "title": "stop<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 94,
+        "summary": "stop(): void\n\n停止播放音频资源。\n\n> **说明：**\n> 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer.stop](arkt"
+      },
+      {
+        "section_id": "section-6",
+        "title": "reset<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 114,
+        "summary": "reset(): void\n\n重置播放音频资源。\n\n> **说明：**\n> 从API version 7开始支持，从API version 9开始废弃，建议使用[AVPlayer.reset](ar"
+      },
+      {
+        "section_id": "section-7",
+        "title": "seek<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 115,
+        "line_end": 144,
+        "summary": "seek(timeMs: number): void\n\n跳转到指定播放位置。\n\n> **说明：**\n> 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPl"
+      },
+      {
+        "section_id": "section-8",
+        "title": "setVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 145,
+        "line_end": 170,
+        "summary": "setVolume(vol: number): void\n\n设置音量。\n\n> **说明：**\n> 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlaye"
+      },
+      {
+        "section_id": "section-9",
+        "title": "release<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 171,
+        "line_end": 188,
+        "summary": "release(): void\n\n释放音频资源。\n\n> **说明：**\n> 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer.release]("
+      },
+      {
+        "section_id": "section-10",
+        "title": "getTrackDescription<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 219,
+        "summary": "getTrackDescription(callback: AsyncCallback\\<Array\\<MediaDescription>>): void\n\n获取音频轨道信息。需在'dataLoad"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getTrackDescription<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 220,
+        "line_end": 248,
+        "summary": "getTrackDescription(): Promise\\<Array\\<MediaDescription>>\n\n获取音频轨道信息。需在'dataLoad'事件成功触发后，才能调用。通过Prom"
+      },
+      {
+        "section_id": "section-12",
+        "title": "on('bufferingUpdate')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 275,
+        "summary": "on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void"
+      },
+      {
+        "section_id": "section-13",
+        "title": "on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 276,
+        "line_end": 352,
+        "summary": "on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: ()"
+      },
+      {
+        "section_id": "section-14",
+        "title": "on('timeUpdate')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 353,
+        "line_end": 383,
+        "summary": "on(type: 'timeUpdate', callback: Callback\\<number>): void\n\n开始订阅音频播放时间更新事件。处于播放状态时，每隔1s上报一次该事件。\n\n> *"
+      },
+      {
+        "section_id": "section-15",
+        "title": "on('audioInterrupt')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 384,
+        "line_end": 411,
+        "summary": "on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void\n\n监听音频焦点变化事件，参考[aud"
+      },
+      {
+        "section_id": "section-16",
+        "title": "on('error')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 412,
+        "line_end": 439,
+        "summary": "on(type: 'error', callback: ErrorCallback): void\n\n开始订阅音频播放错误事件，当上报error错误事件后，用户需处理error事件，退出播放操作。"
+      }
+    ]
+  }
+}

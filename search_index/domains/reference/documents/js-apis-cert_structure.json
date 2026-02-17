@@ -1,0 +1,700 @@
+{
+  "doc_id": "js-apis-cert",
+  "title": "@ohos.security.cert (证书模块)",
+  "path": "zh-cn/application-dev/reference/apis-device-certificate-kit/js-apis-cert.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-device-certificate-kit/js-apis-cert.md",
+  "metadata": {
+    "kit": "Device Certificate Kit",
+    "subsystem": "Security",
+    "owner": "@zxz--3",
+    "designer": "@lanming",
+    "tester": "@PAFT",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Device Certificate Kit Security 模块的 @ohos.security.cert (证书模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.security.cert (证书模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 22,
+        "summary": "```ts\nimport { cert } from '@kit.DeviceCertificateKit';\nimport { cryptoFramework } from '@kit.Crypt"
+      },
+      {
+        "section_id": "section-2",
+        "title": "CertResult",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 44,
+        "summary": "表示执行结果的枚举。\n\n **系统能力：** SystemCapability.Security.Cert\n\n| 名称                                  | 值"
+      },
+      {
+        "section_id": "section-3",
+        "title": "DataBlob",
+        "level": 2,
+        "line_start": 45,
+        "line_end": 55,
+        "summary": "二进制数据的封装接口，核心字段data为Uint8Array类型。\n\n **原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n **系统能力：** Sys"
+      },
+      {
+        "section_id": "section-4",
+        "title": "DataArray",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 66,
+        "summary": "buffer数组的列表。\n\n **原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n **系统能力：** SystemCapability.Securit"
+      },
+      {
+        "section_id": "section-5",
+        "title": "EncodingFormat",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 80,
+        "summary": "表示证书编码格式的枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n **系统能力：** SystemCapability.Securit"
+      },
+      {
+        "section_id": "section-6",
+        "title": "EncodingBaseFormat<sup>18+</sup>",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 93,
+        "summary": "表示生成CSR的编码格式的枚举。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n **系统能力：** SystemCapability.Sec"
+      },
+      {
+        "section_id": "section-7",
+        "title": "CsrAttribute<sup>18+</sup>",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 107,
+        "summary": "表示生成CSR的编码格式配置参数中的扩展。\n\nopenssl中规定了扩展类型，例如challengePassword、keyUsage等。\n\n**原子化服务API：** 从API version 1"
+      },
+      {
+        "section_id": "section-8",
+        "title": "CsrGenerationConfig<sup>18+</sup>",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 131,
+        "summary": "RSA私钥生成CSR时的配置参数，包含主体、扩展、摘要算法、输出格式等。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Sys"
+      },
+      {
+        "section_id": "section-9",
+        "title": "CertItemType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 132,
+        "line_end": 147,
+        "summary": "表示获取证书字段的枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n **系统能力：** SystemCapability.Securit"
+      },
+      {
+        "section_id": "section-10",
+        "title": "ExtensionOidType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 161,
+        "summary": "表示获取扩展域中对象标识符类型的枚举。\n\n **原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n **系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ExtensionEntryType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 175,
+        "summary": "表示获取扩展域中对象类型的枚举。\n\n **原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n **系统能力：** SystemCapability.Se"
+      },
+      {
+        "section_id": "section-12",
+        "title": "EncodingType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 187,
+        "summary": "表示获取编码格式的枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n **系统能力：** SystemCapability.Securit"
+      },
+      {
+        "section_id": "section-13",
+        "title": "EncodingBlob",
+        "level": 2,
+        "line_start": 188,
+        "line_end": 203,
+        "summary": "带编码格式的证书二进制数组。\n\n### 属性\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-14",
+        "title": "CertChainData",
+        "level": 2,
+        "line_start": 204,
+        "line_end": 219,
+        "summary": "证书链数据，在证书链校验时，作为入参传入。\n\n### 属性\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-15",
+        "title": "GeneralNameType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 220,
+        "line_end": 239,
+        "summary": "表示证书主体用途的枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security."
+      },
+      {
+        "section_id": "section-16",
+        "title": "GeneralName<sup>12+</sup>",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 252,
+        "summary": "用于表示证书主体信息对象。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security"
+      },
+      {
+        "section_id": "section-17",
+        "title": "X509CertMatchParameters<sup>11+</sup>",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 280,
+        "summary": "用于匹配证书的过滤参数。如果参数中任一项都未指定，则匹配所有证书。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-18",
+        "title": "X509CRLMatchParameters<sup>11+</sup>",
+        "level": 2,
+        "line_start": 281,
+        "line_end": 296,
+        "summary": "用于匹配证书吊销列表的过滤参数。如果参数中任一项都未指定，则匹配所有证书吊销列表。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-19",
+        "title": "CertChainBuildParameters<sup>12+</sup>",
+        "level": 2,
+        "line_start": 297,
+        "line_end": 310,
+        "summary": "用于指定证书链创建参数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security."
+      },
+      {
+        "section_id": "section-20",
+        "title": "CertChainBuildResult<sup>12+</sup>",
+        "level": 2,
+        "line_start": 311,
+        "line_end": 323,
+        "summary": "用于指定证书链创建结果。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security."
+      },
+      {
+        "section_id": "section-21",
+        "title": "X509TrustAnchor<sup>11+</sup>",
+        "level": 2,
+        "line_start": 324,
+        "line_end": 338,
+        "summary": "表示X509信任锚，用于校验证书链。使用信任锚中的证书或者公钥作为可信根，对证书链进行校验。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**"
+      },
+      {
+        "section_id": "section-22",
+        "title": "RevocationCheckOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 339,
+        "line_end": 354,
+        "summary": "表示证书链在线校验证书吊销状态选项的枚举。\n\n **系统能力：** SystemCapability.Security.Cert\n\n| 名称"
+      },
+      {
+        "section_id": "section-23",
+        "title": "ValidationPolicyType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 355,
+        "line_end": 367,
+        "summary": "表示证书链在线校验策略的枚举。\n\n **原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n **系统能力：** SystemCapability.Sec"
+      },
+      {
+        "section_id": "section-24",
+        "title": "KeyUsageType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 387,
+        "summary": "表示证书中密钥用途的枚举。\n \n **原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n **系统能力：** SystemCapability.Secu"
+      },
+      {
+        "section_id": "section-25",
+        "title": "RevocationCheckParameter<sup>12+</sup>",
+        "level": 2,
+        "line_start": 388,
+        "line_end": 405,
+        "summary": "表示证书链校验证书吊销状态的参数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Secu"
+      },
+      {
+        "section_id": "section-26",
+        "title": "CertChainValidationParameters<sup>11+</sup>",
+        "level": 2,
+        "line_start": 406,
+        "line_end": 424,
+        "summary": "表示证书链校验的参数。\n\n**系统能力：** SystemCapability.Security.Cert\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-27",
+        "title": "CertChainValidationResult<sup>11+</sup>",
+        "level": 2,
+        "line_start": 425,
+        "line_end": 437,
+        "summary": "表示证书链校验的返回值。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security."
+      },
+      {
+        "section_id": "section-28",
+        "title": "EncodingBaseFormat<sup>18+</sup>",
+        "level": 2,
+        "line_start": 438,
+        "line_end": 450,
+        "summary": "编码基础格式。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security.Cert"
+      },
+      {
+        "section_id": "section-29",
+        "title": "Pkcs12Data<sup>18+</sup>",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 464,
+        "summary": "表示返回P12文件的解析后的证书、私钥及其他证书合集。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-30",
+        "title": "Pkcs12ParsingConfig<sup>18+</sup>",
+        "level": 2,
+        "line_start": 465,
+        "line_end": 480,
+        "summary": "表示解析P12文件的配置。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security"
+      },
+      {
+        "section_id": "section-31",
+        "title": "PbesEncryptionAlgorithm<sup>21+</sup>",
+        "level": 2,
+        "line_start": 481,
+        "line_end": 494,
+        "summary": "表示基于密码的加密算法枚举。\n\n**原子化服务API：** 从API version 21开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Securit"
+      },
+      {
+        "section_id": "section-32",
+        "title": "PbesParams<sup>21+</sup>",
+        "level": 2,
+        "line_start": 495,
+        "line_end": 508,
+        "summary": "表示基于密码的加密算法参数，当前仅支持PBES2。\n\n**原子化服务API：** 从API version 21开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-33",
+        "title": "Pkcs12MacDigestAlgorithm<sup>21+</sup>",
+        "level": 2,
+        "line_start": 509,
+        "line_end": 522,
+        "summary": "表示PKCS12 MAC摘要算法枚举。\n\n**原子化服务API：** 从API version 21开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Se"
+      },
+      {
+        "section_id": "section-34",
+        "title": "Pkcs12CreationConfig<sup>21+</sup>",
+        "level": 2,
+        "line_start": 523,
+        "line_end": 540,
+        "summary": "表示创建P12文件的配置。\n\n**原子化服务API：** 从API version 21开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security"
+      },
+      {
+        "section_id": "section-35",
+        "title": "CmsContentType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 541,
+        "line_end": 551,
+        "summary": "表示Cms内容类型的枚举。\n\n**系统能力：** SystemCapability.Security.Cert\n\n| 名称                                  | 值"
+      },
+      {
+        "section_id": "section-36",
+        "title": "CmsContentDataFormat<sup>18+</sup>",
+        "level": 2,
+        "line_start": 552,
+        "line_end": 564,
+        "summary": "表示Cms内容数据格式的枚举。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Securi"
+      },
+      {
+        "section_id": "section-37",
+        "title": "CmsFormat<sup>18+</sup>",
+        "level": 2,
+        "line_start": 565,
+        "line_end": 577,
+        "summary": "表示Cms签名格式的枚举。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security"
+      },
+      {
+        "section_id": "section-38",
+        "title": "CmsRsaSignaturePadding<sup>22+</sup>",
+        "level": 2,
+        "line_start": 578,
+        "line_end": 590,
+        "summary": "表示RSA类型CMS签名填充方式的枚举。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.S"
+      },
+      {
+        "section_id": "section-39",
+        "title": "CmsKeyAgreeRecipientDigestAlgorithm<sup>22+</sup>",
+        "level": 2,
+        "line_start": 591,
+        "line_end": 604,
+        "summary": "CMS KeyAgree类型接收者摘要算法的枚举。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-40",
+        "title": "CmsRecipientEncryptionAlgorithm<sup>22+</sup>",
+        "level": 2,
+        "line_start": 605,
+        "line_end": 621,
+        "summary": "CMS接收者对称算法的枚举。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Securit"
+      },
+      {
+        "section_id": "section-41",
+        "title": "CmsCertType<sup>22+</sup>",
+        "level": 2,
+        "line_start": 622,
+        "line_end": 634,
+        "summary": "从CMS中获取证书不同类型的枚举。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Secu"
+      },
+      {
+        "section_id": "section-42",
+        "title": "PrivateKeyInfo<sup>18+</sup>",
+        "level": 2,
+        "line_start": 635,
+        "line_end": 647,
+        "summary": "表示私钥信息。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security.Cert"
+      },
+      {
+        "section_id": "section-43",
+        "title": "CmsSignerConfig<sup>18+</sup>",
+        "level": 2,
+        "line_start": 648,
+        "line_end": 661,
+        "summary": "表示Cms签名者的配置选项。\n\n**系统能力：** SystemCapability.Security.Cert\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-44",
+        "title": "CmsKeyTransRecipientInfo<sup>22+</sup>",
+        "level": 2,
+        "line_start": 662,
+        "line_end": 673,
+        "summary": "CMS封装数据的KeyTrans接收方信息。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-45",
+        "title": "CmsKeyAgreeRecipientInfo<sup>22+</sup>",
+        "level": 2,
+        "line_start": 674,
+        "line_end": 686,
+        "summary": "CMS封装数据的KeyAgree接收方信息。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-46",
+        "title": "CmsRecipientInfo<sup>22+</sup>",
+        "level": 2,
+        "line_start": 687,
+        "line_end": 703,
+        "summary": "CMS封装数据的接收者信息。\n\n> **说明：**\n>\n> 至少需要设置一个接收者。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-47",
+        "title": "CmsGeneratorOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 704,
+        "line_end": 717,
+        "summary": "表示生成Cms签名结果的配置选项。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Secu"
+      },
+      {
+        "section_id": "section-48",
+        "title": "CmsVerificationConfig<sup>22+</sup>",
+        "level": 2,
+        "line_start": 718,
+        "line_end": 732,
+        "summary": "CMS验证的配置。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security.Cer"
+      },
+      {
+        "section_id": "section-49",
+        "title": "CmsEnvelopedDecryptionConfig<sup>22+</sup>",
+        "level": 2,
+        "line_start": 733,
+        "line_end": 747,
+        "summary": "CMS解封装的配置。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security.Ce"
+      },
+      {
+        "section_id": "section-50",
+        "title": "cert.createX509Cert",
+        "level": 2,
+        "line_start": 748,
+        "line_end": 815,
+        "summary": "createX509Cert(inStream : EncodingBlob, callback : AsyncCallback\\<X509Cert>) : void\n\n表示创建X509证书对象。使"
+      },
+      {
+        "section_id": "section-51",
+        "title": "cert.createX509Cert",
+        "level": 2,
+        "line_start": 816,
+        "line_end": 887,
+        "summary": "createX509Cert(inStream : EncodingBlob) : Promise\\<X509Cert>\n\n表示创建X509证书对象。使用Promise异步回调。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-52",
+        "title": "X509Cert",
+        "level": 2,
+        "line_start": 888,
+        "line_end": 3426,
+        "summary": "X509证书类。\n\n### verify\n\nverify(key : cryptoFramework.PubKey, callback : AsyncCallback\\<void>) : void"
+      },
+      {
+        "section_id": "section-53",
+        "title": "cert.createCertExtension<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3427,
+        "line_end": 3487,
+        "summary": "createCertExtension(inStream : EncodingBlob, callback : AsyncCallback\\<CertExtension>) : void\n\n表示创建"
+      },
+      {
+        "section_id": "section-54",
+        "title": "cert.createCertExtension<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3488,
+        "line_end": 3552,
+        "summary": "createCertExtension(inStream : EncodingBlob) : Promise\\<CertExtension>\n\n表示创建证书扩展域段的对象。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-55",
+        "title": "CertExtension<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3553,
+        "line_end": 3896,
+        "summary": "证书扩展域段类。\n\n### getEncoded<sup>10+</sup>\n\ngetEncoded() : EncodingBlob\n\n表示获取证书扩展域段序列化数据。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-56",
+        "title": "cert.createX509Crl<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3897,
+        "line_end": 3964,
+        "summary": "createX509Crl(inStream : EncodingBlob, callback : AsyncCallback\\<X509Crl>) : void\n\n表示创建X509证书吊销列表的对"
+      },
+      {
+        "section_id": "section-57",
+        "title": "cert.createX509Crl<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3965,
+        "line_end": 4036,
+        "summary": "createX509Crl(inStream : EncodingBlob) : Promise\\<X509Crl>\n\n表示创建X509证书吊销列表的对象。使用Promise异步回调。\n\n> **说"
+      },
+      {
+        "section_id": "section-58",
+        "title": "cert.createX509CRL<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4037,
+        "line_end": 4102,
+        "summary": "createX509CRL(inStream : EncodingBlob, callback : AsyncCallback\\<X509CRL>) : void\n\n表示创建X509证书吊销列表的对"
+      },
+      {
+        "section_id": "section-59",
+        "title": "cert.createX509CRL<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4103,
+        "line_end": 4172,
+        "summary": "createX509CRL(inStream : EncodingBlob) : Promise\\<X509CRL>\n\n表示创建X509证书吊销列表的对象。使用Promise异步回调。\n\n**原子化"
+      },
+      {
+        "section_id": "section-60",
+        "title": "X509Crl<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4173,
+        "line_end": 5787,
+        "summary": "X509证书吊销列表对象。\n\n> **说明：**\n>\n> 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRL](#x509crl11)替代。\n\n#"
+      },
+      {
+        "section_id": "section-61",
+        "title": "X509CRL<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5788,
+        "line_end": 8009,
+        "summary": "被吊销证书列表对象。\n\n### isRevoked<sup>11+</sup>\n\nisRevoked(cert : X509Cert) : boolean\n\n表示检查证书是否吊销。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-62",
+        "title": "cert.createCertChainValidator",
+        "level": 2,
+        "line_start": 8010,
+        "line_end": 8057,
+        "summary": "createCertChainValidator(algorithm :string) : CertChainValidator\n\n表示创建证书链校验器对象。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-63",
+        "title": "CertChainValidator",
+        "level": 2,
+        "line_start": 8058,
+        "line_end": 8331,
+        "summary": "证书链校验器对象。\n\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Security.Ce"
+      },
+      {
+        "section_id": "section-64",
+        "title": "X509CrlEntry<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 8332,
+        "line_end": 8721,
+        "summary": "被吊销证书对象。\n\n> **说明：**\n>\n> 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CrlEntry](#x509crlentry11)替"
+      },
+      {
+        "section_id": "section-65",
+        "title": "X509CRLEntry<sup>11+</sup>",
+        "level": 2,
+        "line_start": 8722,
+        "line_end": 9690,
+        "summary": "被吊销证书对象。\n\n### getEncoded<sup>11+</sup>\n\ngetEncoded(callback : AsyncCallback\\<EncodingBlob>) : void"
+      },
+      {
+        "section_id": "section-66",
+        "title": "cert.createCertCRLCollection<sup>11+</sup>",
+        "level": 2,
+        "line_start": 9691,
+        "line_end": 9803,
+        "summary": "createCertCRLCollection(certs: Array\\<X509Cert>, crls?: Array\\<X509CRL>): CertCRLCollection\n\n表示创建证书"
+      },
+      {
+        "section_id": "section-67",
+        "title": "CertCRLCollection<sup>11+</sup>",
+        "level": 2,
+        "line_start": 9804,
+        "line_end": 10249,
+        "summary": "证书和证书吊销列表集合对象。\n\n### selectCerts<sup>11+</sup>\n\nselectCerts(param: X509CertMatchParameters): Promise"
+      },
+      {
+        "section_id": "section-68",
+        "title": "cert.createX509CertChain<sup>11+</sup>",
+        "level": 2,
+        "line_start": 10250,
+        "line_end": 10371,
+        "summary": "createX509CertChain(inStream: EncodingBlob): Promise\\<X509CertChain>\n\n表示创建X509证书链对象。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-69",
+        "title": "cert.createX509CertChain<sup>11+</sup>",
+        "level": 2,
+        "line_start": 10372,
+        "line_end": 10483,
+        "summary": "createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback\\<X509CertChain>): void\n\n表示创建X50"
+      },
+      {
+        "section_id": "section-70",
+        "title": "cert.createX509CertChain<sup>11+</sup>",
+        "level": 2,
+        "line_start": 10484,
+        "line_end": 10573,
+        "summary": "createX509CertChain(certs: Array\\<X509Cert>): X509CertChain\n\n表示使用X509Cert数组方式创建X509证书链对象，并同步返回结果。"
+      },
+      {
+        "section_id": "section-71",
+        "title": "cert.buildX509CertChain<sup>12+</sup>",
+        "level": 2,
+        "line_start": 10574,
+        "line_end": 10713,
+        "summary": "buildX509CertChain(param: [CertChainBuildParameters](#certchainbuildparameters12)): Promise\\<CertCh"
+      },
+      {
+        "section_id": "section-72",
+        "title": "cert.parsePkcs12<sup>18+</sup>",
+        "level": 2,
+        "line_start": 10714,
+        "line_end": 10925,
+        "summary": "parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data\n\n表示从P12文件中解析证书、私钥及其他证书合集，并返回"
+      },
+      {
+        "section_id": "section-73",
+        "title": "cert.parsePkcs12<sup>21+</sup>",
+        "level": 2,
+        "line_start": 10926,
+        "line_end": 11141,
+        "summary": "parsePkcs12(data: Uint8Array, password: string): Promise\\<Pkcs12Data>\n\n表示从Pkcs12文件中解析证书、私钥及其他证书合集。使"
+      },
+      {
+        "section_id": "section-74",
+        "title": "cert.createPkcs12<sup>21+</sup>",
+        "level": 2,
+        "line_start": 11142,
+        "line_end": 11319,
+        "summary": "createPkcs12(data: Pkcs12Data, config: Pkcs12CreationConfig): Promise\\<Uint8Array>\n\n表示创建Pkcs12数据。使用"
+      },
+      {
+        "section_id": "section-75",
+        "title": "cert.createPkcs12<sup>21+</sup>",
+        "level": 2,
+        "line_start": 11320,
+        "line_end": 11497,
+        "summary": "createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8Array\n\n表示创建Pkcs12数据，同步返回结果。"
+      },
+      {
+        "section_id": "section-76",
+        "title": "cert.createTrustAnchorsWithKeyStore<sup>12+</sup>",
+        "level": 2,
+        "line_start": 11498,
+        "line_end": 11656,
+        "summary": "createTrustAnchorsWithKeyStore(keystore: Uint8Array, pwd: string): Promise<Array\\<[X509TrustAnchor]"
+      },
+      {
+        "section_id": "section-77",
+        "title": "X509CertChain<sup>11+</sup>",
+        "level": 2,
+        "line_start": 11657,
+        "line_end": 12330,
+        "summary": "X509证书链对象。\n\n### getCertList<sup>11+</sup>\n\ngetCertList(): Array\\<X509Cert>\n\n获取X509证书列表。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-78",
+        "title": "cert.generateCsr<sup>18+</sup>",
+        "level": 2,
+        "line_start": 12331,
+        "line_end": 12430,
+        "summary": "generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): string | Uint8Array\n\n表示使用指定的RSA私"
+      },
+      {
+        "section_id": "section-79",
+        "title": "cert.createX500DistinguishedName<sup>12+</sup>",
+        "level": 2,
+        "line_start": 12431,
+        "line_end": 12501,
+        "summary": "createX500DistinguishedName(nameStr: string): Promise\\<X500DistinguishedName>\n\n表示使用字符串格式的名称创建X500Di"
+      },
+      {
+        "section_id": "section-80",
+        "title": "cert.createX500DistinguishedName<sup>12+</sup>",
+        "level": 2,
+        "line_start": 12502,
+        "line_end": 12565,
+        "summary": "createX500DistinguishedName(nameDer: Uint8Array): Promise\\<X500DistinguishedName>\n\n表示使用DER格式的名称创建X5"
+      },
+      {
+        "section_id": "section-81",
+        "title": "X500DistinguishedName<sup>12+</sup>",
+        "level": 2,
+        "line_start": 12566,
+        "line_end": 12786,
+        "summary": "X509定义的Name类型的对象。\n\n### getName<sup>12+</sup>\n\ngetName(): string\n\n获取可分辨名的字符串。\n\n**原子化服务API：** 从API ve"
+      },
+      {
+        "section_id": "section-82",
+        "title": "cert.createCmsGenerator<sup>18+</sup>",
+        "level": 2,
+        "line_start": 12787,
+        "line_end": 12873,
+        "summary": "createCmsGenerator(contentType: CmsContentType): CmsGenerator\n\n表示创建CmsGenerator对象。\n\n**原子化服务API：** 从"
+      },
+      {
+        "section_id": "section-83",
+        "title": "CmsGenerator<sup>18+</sup>",
+        "level": 2,
+        "line_start": 12874,
+        "line_end": 13642,
+        "summary": "CmsGenerator对象用于生成CMS（Cryptographic Message Syntax）格式的消息。\n\n> **说明：**\n>\n> PKCS#7是用于存储签名或加密数据的标准语法。注意"
+      },
+      {
+        "section_id": "section-84",
+        "title": "cert.createCmsParser<sup>22+</sup>",
+        "level": 2,
+        "line_start": 13643,
+        "line_end": 13779,
+        "summary": "createCmsParser(): CmsParser\n\n表示创建CmsParser对象。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**"
+      },
+      {
+        "section_id": "section-85",
+        "title": "CmsParser<sup>22+</sup>",
+        "level": 2,
+        "line_start": 13780,
+        "line_end": 14637,
+        "summary": "CmsParser对象用于对已签名跟封装的CMS（Cryptographic Message Syntax）格式的消息进行验签和解封装。\n\n> **说明：**\n>\n> PKCS#7是用于存储签名或加密"
+      }
+    ]
+  }
+}

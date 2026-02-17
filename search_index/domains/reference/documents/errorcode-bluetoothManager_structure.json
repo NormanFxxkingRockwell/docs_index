@@ -1,0 +1,260 @@
+{
+  "doc_id": "errorcode-bluetoothManager",
+  "title": "蓝牙服务子系统错误码",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 蓝牙服务子系统错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "蓝牙服务子系统错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "2900001",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 31,
+        "summary": "**错误信息**\n\nService stopped.\n\n**错误描述**\n\n蓝牙服务已停止，蓝牙服务相关的接口无法调用。\n\n**可能原因**\n\n蓝牙服务启动异常。\n\n**处理步骤**\n\n重新执行打开"
+      },
+      {
+        "section_id": "section-2",
+        "title": "2900003",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 49,
+        "summary": "**错误信息**\n\nBluetooth disabled.\n\n**错误描述**\n\n蓝牙开关已关闭。\n\n**可能原因**\n\n蓝牙开关已关闭。\n\n**处理步骤**\n\n重新执行打开蓝牙开关。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "2900004",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 67,
+        "summary": "**错误信息**\n\nProfile not supported.\n\n**错误描述**\n\n配置文件是不支持的。\n\n**可能原因**\n\n该配置文件在当前设备环境不支持。\n\n**处理步骤**\n\n检查设备是"
+      },
+      {
+        "section_id": "section-4",
+        "title": "2900005",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 85,
+        "summary": "**错误信息**\n\nDevice not connected.\n\n**错误描述**\n\n该设备蓝牙未连接。\n\n**可能原因**\n\n设备配对异常。\n\n**处理步骤**\n\n重新打开蓝牙开关，执行配对流程。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "2900006",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 103,
+        "summary": "**错误信息**\n\nThe maximum number of connections has been reached.\n\n**错误描述**\n\n超过最大连接数量。\n\n**可能原因**\n\n超出设备最"
+      },
+      {
+        "section_id": "section-6",
+        "title": "2900007",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 121,
+        "summary": "**错误信息**\n\nAsynchronous interface invoking timeout.\n\n**错误描述**\n\n异步接口调用超时。\n\n**可能原因**\n\n远端设备无响应。\n\n**处理步骤"
+      },
+      {
+        "section_id": "section-7",
+        "title": "2900008",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 139,
+        "summary": "**错误信息**\n\nThe value of proxy is a null pointer.\n\n**错误描述**\n\npimpl或proxy为空。\n\n**可能原因**\n\n设备配对异常。\n\n**处理步"
+      },
+      {
+        "section_id": "section-8",
+        "title": "2900009",
+        "level": 2,
+        "line_start": 140,
+        "line_end": 159,
+        "summary": "**错误信息**\n\nFails to start scan as it is out of hardware resources.\n\n**错误描述**\n\n由于硬件资源不足，无法启动本次扫描。\n\n**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "2900010",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 177,
+        "summary": "**错误信息**\n\nResources have reached the upper limit.\n\n**错误描述**\n\n资源达到上限。\n\n**可能原因**\n\n应用申请资源过多，需要释放资源。\n\n*"
+      },
+      {
+        "section_id": "section-10",
+        "title": "2900011",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 197,
+        "summary": "**错误信息**\n\nThe operation is busy. The last operation is not complete.\n\n**错误描述**\n\n操作忙碌，上一个执行的操作还未完成。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "2900013",
+        "level": 2,
+        "line_start": 198,
+        "line_end": 215,
+        "summary": "**错误信息**\n\nThe user does not respond.\n\n**错误描述**\n\n用户未回复前置操作。\n\n**可能原因**\n\n用户在一定时间内未执行规定操作，导致前置操作超时。\n\n**"
+      },
+      {
+        "section_id": "section-12",
+        "title": "2900014",
+        "level": 2,
+        "line_start": 216,
+        "line_end": 233,
+        "summary": "**错误信息**\n\nUser refuse the action.\n\n**错误描述**\n\n用户执行拒绝操作。\n\n**可能原因**\n\n用户拒绝前置操作的请求。\n\n**处理步骤**\n\n重新执行前置操作。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "2900099",
+        "level": 2,
+        "line_start": 234,
+        "line_end": 251,
+        "summary": "**错误信息**\n\nOperation failed.\n\n**错误描述**\n\n操作失败。\n\n**可能原因**\n\n该配置文件在当前设备环境不支持。\n\n**处理步骤**\n\n请重试该操作。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "2900100",
+        "level": 2,
+        "line_start": 252,
+        "line_end": 269,
+        "summary": "**错误信息**\n\nIPC failed.\n\n**错误描述**\n\nIPC 数据传输失败。\n\n**可能原因**\n\n数据传入异常。\n\n**处理步骤**\n\n请检查传入数据。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "2901000",
+        "level": 2,
+        "line_start": 270,
+        "line_end": 287,
+        "summary": "**错误信息**\n\nRead forbidden.\n\n**错误描述**\n\n禁止读操作。\n\n**可能原因**\n\n无读操作权限。\n\n**处理步骤**\n\n检查是否有读操作权限。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "2901001",
+        "level": 2,
+        "line_start": 288,
+        "line_end": 305,
+        "summary": "**错误信息**\n\nWrite forbidden.\n\n**错误描述**\n\n禁止写操作。\n\n**可能原因**\n\n无写操作权限。\n\n**处理步骤**\n\n检查是否有写操作权限。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "2901003",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 323,
+        "summary": "**错误信息**\n\nThe connection is not established.\n\n**错误描述**\n\nGATT未连接。\n\n**可能原因**\n\nGATT处于未连接的状态下执行操作，例如调用["
+      },
+      {
+        "section_id": "section-18",
+        "title": "2901004",
+        "level": 2,
+        "line_start": 324,
+        "line_end": 341,
+        "summary": "**错误信息**\n\nThe connection is congested.\n\n**错误描述**\n\nGATT处于拥塞状态。\n\n**可能原因**\n\n读写特征值或描述符过于频繁，导致底层数据传输拥塞，例"
+      },
+      {
+        "section_id": "section-19",
+        "title": "2901005",
+        "level": 2,
+        "line_start": 342,
+        "line_end": 359,
+        "summary": "**错误信息**\n\nThe connection is not encrypted.\n\n**错误描述**\n\nGATT处于未加密的状态下，执行需要加密权限的特征值或描述符读写操作。此操作是否需要加密由"
+      },
+      {
+        "section_id": "section-20",
+        "title": "2901006",
+        "level": 2,
+        "line_start": 360,
+        "line_end": 377,
+        "summary": "**错误信息**\n\nThe connection is not authenticated.\n\n**错误描述**\n\nGATT处于未认证的状态下，执行需要认证权限的特征值或描述符读写操作。此操作是否需"
+      },
+      {
+        "section_id": "section-21",
+        "title": "2901007",
+        "level": 2,
+        "line_start": 378,
+        "line_end": 395,
+        "summary": "**错误信息**\n\nThe connection is not authorized.\n\n**错误描述**\n\nGATT处于未授权的状态下，执行需要授权的特征值或描述符读写操作。此操作是否需要授权由s"
+      },
+      {
+        "section_id": "section-22",
+        "title": "2901008",
+        "level": 2,
+        "line_start": 396,
+        "line_end": 413,
+        "summary": "**错误信息**\n\nGATT service is not found.\n\n**错误描述**\n\nGATT服务不存在。在获取指定的GATT服务之前，该服务应当已经被添加。\n\n**可能原因**\n\nGAT"
+      },
+      {
+        "section_id": "section-23",
+        "title": "2901054",
+        "level": 2,
+        "line_start": 414,
+        "line_end": 431,
+        "summary": "**错误信息**\n\nIO error.\n\n**错误描述**\n\nIO传输失败。\n\n**可能原因**\n\nIO传输异常，造成失败。\n\n**处理步骤**\n\n请重试该操作。"
+      },
+      {
+        "section_id": "section-24",
+        "title": "2902050",
+        "level": 2,
+        "line_start": 432,
+        "line_end": 449,
+        "summary": "**错误信息**\n\nFailed to start scan as Ble scan is already started by the app.\n\n**错误描述**\n\n开启扫描失败。\n\n**可能原"
+      },
+      {
+        "section_id": "section-25",
+        "title": "2902054",
+        "level": 2,
+        "line_start": 450,
+        "line_end": 467,
+        "summary": "**错误信息**\n\nThe length of the advertising data exceeds the upper limit.\n\n**错误描述**\n\n广播报文超过最大长度。\n\n**可能原"
+      },
+      {
+        "section_id": "section-26",
+        "title": "2902055",
+        "level": 2,
+        "line_start": 468,
+        "line_end": 485,
+        "summary": "**错误信息**\n\nInvalid advertising id.\n\n**错误描述**\n\n广播标识符无效。\n\n**可能原因**\n\n传入的广播标识符应为[startAdvertising](js-ap"
+      },
+      {
+        "section_id": "section-27",
+        "title": "2903050 HID不在前台",
+        "level": 2,
+        "line_start": 486,
+        "line_end": 503,
+        "summary": "**错误信息**\n\nHID application is not int the foreground.\n\n**错误描述**\n\n注册HID设备能力的应用不在前台。\n\n**可能原因**\n\n当前注册HI"
+      },
+      {
+        "section_id": "section-28",
+        "title": "2903051 HID已注册",
+        "level": 2,
+        "line_start": 504,
+        "line_end": 521,
+        "summary": "**错误信息**\n\nAny HID application has been registered.\n\n**错误描述**\n\n其他应用已经注册过HID设备能力。\n\n**可能原因**\n\n只允许一个应用注"
+      },
+      {
+        "section_id": "section-29",
+        "title": "2903052 HID未注册",
+        "level": 2,
+        "line_start": 522,
+        "line_end": 539,
+        "summary": "**错误信息**\n\nHID application does not register.\n\n**错误描述**\n\n当前应用还没有注册HID设备能力。\n\n**可能原因**\n\n应用只有在注册HID设备能力"
+      },
+      {
+        "section_id": "section-30",
+        "title": "2903053 HID未连接",
+        "level": 2,
+        "line_start": 540,
+        "line_end": 558,
+        "summary": "**错误信息**\n\nHID device is not connected.\n\n**错误描述**\n\n当前HID设备还没有连接HID主机。\n\n**可能原因**\n\n只有在连接完成之后HID设备才能和HI"
+      }
+    ]
+  }
+}

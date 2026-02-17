@@ -1,0 +1,92 @@
+{
+  "doc_id": "arkts-apis-webview-ProxyConfig",
+  "title": "Class (ProxyConfig)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-ProxyConfig.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-ProxyConfig.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Class (ProxyConfig)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (ProxyConfig)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "insertProxyRule<sup>15+</sup>",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 45,
+        "summary": "insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void\n\n插入一条代理规则，与schemeFilter匹"
+      },
+      {
+        "section_id": "section-2",
+        "title": "insertDirectRule<sup>15+</sup>",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 71,
+        "summary": "insertDirectRule(schemeFilter?: ProxySchemeFilter): void\n\n插入一条代理规则，指明符合schemeFilter条件的URL将直接连接到服务器。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "insertBypassRule<sup>15+</sup>",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 97,
+        "summary": "insertBypassRule(bypassRule: string): void\n\n插入一条bypass规则，指明哪些URL应该绕过代理并直接连接到服务器。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-4",
+        "title": "bypassHostnamesWithoutPeriod<sup>15+</sup>",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 109,
+        "summary": "bypassHostnamesWithoutPeriod(): void\n\n没有点字符的域名将跳过代理并直接连接到服务器。\n\n**系统能力：** SystemCapability.Web.Webvi"
+      },
+      {
+        "section_id": "section-5",
+        "title": "clearImplicitRules<sup>15+</sup>",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 121,
+        "summary": "clearImplicitRules(): void\n\n默认情况下，如果某些主机名是本地IP地址或localhost地址，它们会绕过代理。调用此函数以覆盖默认行为，并强制将localhost或本地I"
+      },
+      {
+        "section_id": "section-6",
+        "title": "enableReverseBypass<sup>15+</sup>",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 147,
+        "summary": "enableReverseBypass(reverse: boolean): void\n\n反转bypass规则。\n\n**系统能力：** SystemCapability.Web.Webview.Co"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getBypassRules<sup>15+</sup>",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 165,
+        "summary": "getBypassRules(): Array\\<string\\>\n\n获取不使用代理的URL列表。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getProxyRules<sup>15+</sup>",
+        "level": 2,
+        "line_start": 166,
+        "line_end": 183,
+        "summary": "getProxyRules(): Array\\<ProxyRule\\>\n\n获取代理规则。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回值：**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "isReverseBypassEnabled<sup>15+</sup>",
+        "level": 2,
+        "line_start": 184,
+        "line_end": 200,
+        "summary": "isReverseBypassEnabled(): boolean\n\n获取[enableReverseBypass](#enablereversebypass15)的参数值，详见[enableRev"
+      }
+    ]
+  }
+}

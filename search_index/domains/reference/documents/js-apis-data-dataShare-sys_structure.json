@@ -1,0 +1,156 @@
+{
+  "doc_id": "js-apis-data-dataShare-sys",
+  "title": "@ohos.data.dataShare (数据共享)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/js-apis-data-dataShare-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/js-apis-data-dataShare-sys.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@woodenarow",
+    "designer": "@woodenarow; @xuelei3",
+    "tester": "@chenwan188; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 @ohos.data.dataShare (数据共享)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.data.dataShare (数据共享)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 31,
+        "summary": "```ts\nimport { dataShare } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "dataShare.createDataShareHelper",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 90,
+        "summary": "createDataShareHelper(context: Context, uri: string, callback: AsyncCallback&lt;DataShareHelper&gt;"
+      },
+      {
+        "section_id": "section-3",
+        "title": "dataShare.createDataShareHelper<sup>10+</sup>",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 147,
+        "summary": "createDataShareHelper(context: Context, uri: string, options: DataShareHelperOptions, callback: Asyn"
+      },
+      {
+        "section_id": "section-4",
+        "title": "dataShare.createDataShareHelper",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 210,
+        "summary": "createDataShareHelper(context: Context, uri: string, options?: DataShareHelperOptions): Promise&lt;"
+      },
+      {
+        "section_id": "section-5",
+        "title": "dataShare.enableSilentProxy<sup>11+</sup>",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 265,
+        "summary": "enableSilentProxy(context: Context, uri?: string): Promise&lt;void&gt;\n\n开启静默访问。使用Promise异步回调。\n\n使用规则"
+      },
+      {
+        "section_id": "section-6",
+        "title": "dataShare.disableSilentProxy<sup>11+</sup>",
+        "level": 2,
+        "line_start": 266,
+        "line_end": 321,
+        "summary": "disableSilentProxy(context: Context, uri?: string): Promise&lt;void&gt;\n\n关闭静默访问。使用Promise异步回调。\n\n使用规"
+      },
+      {
+        "section_id": "section-7",
+        "title": "DataShareHelperOptions<sup>10+</sup>",
+        "level": 2,
+        "line_start": 322,
+        "line_end": 332,
+        "summary": "指定[DataShareHelper](#datasharehelper)的可选参数，包含是否在代理模式下，以及非静默访问的拉起等待时间。\n\n**系统能力：**  SystemCapability."
+      },
+      {
+        "section_id": "section-8",
+        "title": "TemplateId<sup>10+</sup>",
+        "level": 2,
+        "line_start": 333,
+        "line_end": 343,
+        "summary": "标记模板的数据结构，TemplateId是在[addTemplate](#addtemplate10)中自动生成的，在[addTemplate](#addtemplate10)后，可以使用模板id来"
+      },
+      {
+        "section_id": "section-9",
+        "title": "PublishedItem<sup>10+</sup>",
+        "level": 2,
+        "line_start": 344,
+        "line_end": 355,
+        "summary": "指定发布的数据类型。\n\n**系统能力：**  SystemCapability.DistributedDataManager.DataShare.Consumer\n\n| 名称 | 类型 | 只读 |"
+      },
+      {
+        "section_id": "section-10",
+        "title": "RdbDataChangeNode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 356,
+        "line_end": 367,
+        "summary": "订阅/取消订阅RDB数据变更的结果，回调支持传输不大于10M的数据。\n\n**系统能力：**  SystemCapability.DistributedDataManager.DataShare.Co"
+      },
+      {
+        "section_id": "section-11",
+        "title": "PublishedDataChangeNode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 378,
+        "summary": "订阅/取消订阅已发布数据变更的结果。\n\n**系统能力：**  SystemCapability.DistributedDataManager.DataShare.Consumer\n\n| 名称 | 类"
+      },
+      {
+        "section_id": "section-12",
+        "title": "Template<sup>10+</sup>",
+        "level": 2,
+        "line_start": 379,
+        "line_end": 390,
+        "summary": "指定订阅中的模板结构。\n\n**系统能力：**  SystemCapability.DistributedDataManager.DataShare.Consumer\n\n| 名称 | 类型 | 只读"
+      },
+      {
+        "section_id": "section-13",
+        "title": "OperationResult<sup>10+</sup>",
+        "level": 2,
+        "line_start": 391,
+        "line_end": 400,
+        "summary": "订阅/取消订阅数据变更和发布数据的操作结果。\n\n**系统能力：**  SystemCapability.DistributedDataManager.DataShare.Consumer\n\n| 名称"
+      },
+      {
+        "section_id": "section-14",
+        "title": "UpdateOperation<sup>12+</sup>",
+        "level": 2,
+        "line_start": 401,
+        "line_end": 411,
+        "summary": "批量更新操作的参数结构。\n\n**系统能力：**  SystemCapability.DistributedDataManager.DataShare.Consumer\n\n| 名称       | 类"
+      },
+      {
+        "section_id": "section-15",
+        "title": "SubscriptionType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 412,
+        "line_end": 421,
+        "summary": "数据订阅类型枚举。\n\n**系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer\n\n| 名称"
+      },
+      {
+        "section_id": "section-16",
+        "title": "ChangeInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 422,
+        "line_end": 433,
+        "summary": "数据变更时通知用户具体变更的内容，包括数据变更类型、变化的uri、变更的数据内容。\n\n**系统能力：**  SystemCapability.DistributedDataManager.DataS"
+      },
+      {
+        "section_id": "section-17",
+        "title": "DataShareHelper",
+        "level": 2,
+        "line_start": 434,
+        "line_end": 2187,
+        "summary": "DataShare管理工具实例，可使用此实例访问或管理服务端的数据。在调用DataShareHelper提供的方法前，需要先通过[createDataShareHelper](#datasharec"
+      }
+    ]
+  }
+}

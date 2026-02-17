@@ -1,0 +1,148 @@
+{
+  "doc_id": "arkts-apis-photoAccessHelper-i",
+  "title": "Interfaces (其他)",
+  "path": "zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-i.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-i.md",
+  "metadata": {
+    "kit": "Media Library Kit",
+    "subsystem": "Multimedia",
+    "owner": "@yixiaoff",
+    "designer": "@liweilu1",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Library Kit Multimedia 模块的 Interfaces (其他)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interfaces (其他)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 18,
+        "summary": "```ts\nimport { photoAccessHelper } from '@kit.MediaLibraryKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "MediaChangeRequest<sup>11+</sup>",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 38,
+        "summary": "媒体变更请求，资产变更请求和相册变更请求的父类型。\n\n> **注意**：\n>\n> 媒体变更请求必须在调用[applyChanges](arkts-apis-photoAccessHelper-Pho"
+      },
+      {
+        "section_id": "section-3",
+        "title": "CreateOptions",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 54,
+        "summary": "图片或视频的创建选项。\n\ntitle参数的规格如下：\n\n- 不应包含扩展名。\n- 文件名字符串长度为1~255。\n\n**系统能力**：SystemCapability.FileManagement."
+      },
+      {
+        "section_id": "section-4",
+        "title": "FetchOptions",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 65,
+        "summary": "检索条件。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称                   | 类型"
+      },
+      {
+        "section_id": "section-5",
+        "title": "RequestOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 77,
+        "summary": "请求策略。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称                   | 类型"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ChangeData",
+        "level": 2,
+        "line_start": 78,
+        "line_end": 89,
+        "summary": "监听器回调函数的返回值。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称    | 类型"
+      },
+      {
+        "section_id": "section-7",
+        "title": "TextContextInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 132,
+        "summary": "文本信息，用于推荐图片的文本信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileM"
+      },
+      {
+        "section_id": "section-8",
+        "title": "PhotoCreationConfig<sup>12+</sup>",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 147,
+        "summary": "保存图片/视频到媒体库的配置，包括保存的文件名等。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapabili"
+      },
+      {
+        "section_id": "section-9",
+        "title": "CreationSetting<sup>23+</sup>",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 163,
+        "summary": "保存图片或视频到媒体库时的配置项，包括保存的文件名、文件类型和其他相关参数。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**原子化服务API：** 从API version 23开始"
+      },
+      {
+        "section_id": "section-10",
+        "title": "PhotoAssetChangeInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 164,
+        "line_end": 175,
+        "summary": "媒体资产（图片/视频）信息。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称 |   类型   | 只读"
+      },
+      {
+        "section_id": "section-11",
+        "title": "PhotoAssetChangeData<sup>20+</sup>",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 188,
+        "summary": "媒体资产（图片/视频）的具体变更数据。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称     | 类型"
+      },
+      {
+        "section_id": "section-12",
+        "title": "PhotoAssetChangeInfos<sup>20+</sup>",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 200,
+        "summary": "媒体资产（图片/视频）的变更通知信息。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-13",
+        "title": "AlbumChangeInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 201,
+        "line_end": 217,
+        "summary": "相册信息。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称  | 类型                |"
+      },
+      {
+        "section_id": "section-14",
+        "title": "AlbumChangeData<sup>20+</sup>",
+        "level": 2,
+        "line_start": 218,
+        "line_end": 228,
+        "summary": "相册的具体变更数据。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-15",
+        "title": "AlbumChangeInfos<sup>20+</sup>",
+        "level": 2,
+        "line_start": 229,
+        "line_end": 240,
+        "summary": "相册的变更通知信息。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-16",
+        "title": "GridPinchMode<sup>23+</sup>",
+        "level": 2,
+        "line_start": 241,
+        "line_end": 252,
+        "summary": "picker内宫格的捏合模式。\n\n**模型约束**： 此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.FileManagement.PhotoA"
+      }
+    ]
+  }
+}

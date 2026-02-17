@@ -1,0 +1,812 @@
+{
+  "doc_id": "js-apis-wifiManager",
+  "title": "@ohos.wifiManager (WLAN)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-wifiManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-wifiManager.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@qq_43802146",
+    "designer": "@qq_43802146",
+    "tester": "@furryfurry123",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.wifiManager (WLAN)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.wifiManager (WLAN)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 21,
+        "summary": "```ts\nimport { wifiManager } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "wifiManager.isWifiActive",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 59,
+        "summary": "isWifiActive(): boolean\n\n查询WLAN开关是否已使能。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-3",
+        "title": "wifiManager.enableWifi<sup>15+</sup>",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 92,
+        "summary": "enableWifi(): void\n\n启动WLAN。\n\n**需要权限：** ohos.permission.SET_WIFI_INFO 和 (ohos.permission.MANAGE_WIFI"
+      },
+      {
+        "section_id": "section-4",
+        "title": "wifiManager.disableWifi<sup>20+</sup>",
+        "level": 2,
+        "line_start": 93,
+        "line_end": 125,
+        "summary": "disableWifi(): void\n\n关闭WLAN。\n\n**需要权限：** ohos.permission.SET_WIFI_INFO 和 (ohos.permission.MANAGE_WIF"
+      },
+      {
+        "section_id": "section-5",
+        "title": "wifiManager.scan<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 160,
+        "summary": "scan(): void\n\n启动WLAN扫描，使用前先使能WLAN。\n\n> **说明：**\n> 从 API version 9开始支持，从API version 10开始废弃。建议使用[wifiMa"
+      },
+      {
+        "section_id": "section-6",
+        "title": "wifiManager.startScan<sup>21+</sup>",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 196,
+        "summary": "startScan(): void\n\n启动WLAN扫描。\n\n- 应用程序在前台运行时，两分钟内最多可扫描四次。\n- 在后台运行时，三十分钟内最多可扫描一次。\n- 通过[on('wifiScanSta"
+      },
+      {
+        "section_id": "section-7",
+        "title": "wifiManager.getScanResults<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 227,
+        "summary": "getScanResults(): Promise&lt;Array&lt;WifiScanInfo&gt;&gt;\n\n获取扫描结果，使用Promise异步回调。\n\n- 返回一个Promise对象，"
+      },
+      {
+        "section_id": "section-8",
+        "title": "wifiManager.getScanResults<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 228,
+        "line_end": 301,
+        "summary": "getScanResults(callback: AsyncCallback&lt;Array&lt;WifiScanInfo&gt;&gt;): void\n\n获取扫描结果，使用callback异步"
+      },
+      {
+        "section_id": "section-9",
+        "title": "wifiManager.getScanResultsSync<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 302,
+        "line_end": 359,
+        "summary": "getScanResultsSync(): &nbsp;Array&lt;[WifiScanInfo](#wifiscaninfo)&gt;\n\n获取扫描结果，使用同步方式返回一个包含多个WifiSc"
+      },
+      {
+        "section_id": "section-10",
+        "title": "wifiManager.getScanInfoList<sup>10+</sup>",
+        "level": 2,
+        "line_start": 360,
+        "line_end": 418,
+        "summary": "getScanInfoList(): Array&lt;WifiScanInfo&gt;\n\n获取包含当前时间点前30s内的缓存扫描结果。\n\n**需要权限：** ohos.permission.GET"
+      },
+      {
+        "section_id": "section-11",
+        "title": "WifiScanInfo",
+        "level": 2,
+        "line_start": 419,
+        "line_end": 443,
+        "summary": "WLAN热点信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------"
+      },
+      {
+        "section_id": "section-12",
+        "title": "DeviceAddressType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 444,
+        "line_end": 458,
+        "summary": "WLAN设备地址（MAC/BSSID）类型。是标识WLAN设备或接入点的唯一地址。\n\n在WLAN相关操作中，如连接指定的WLAN网络、获取设备信息等，需要使用DeviceAddressType类型的"
+      },
+      {
+        "section_id": "section-13",
+        "title": "WifiSecurityType",
+        "level": 2,
+        "line_start": 459,
+        "line_end": 478,
+        "summary": "表示加密类型的枚举。\n\n**系统能力：** SystemCapability.Communication.WiFi.Core\n\n| 名称 | 值 | 说明 |\n| -------- | ------"
+      },
+      {
+        "section_id": "section-14",
+        "title": "WifiBandType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 479,
+        "line_end": 492,
+        "summary": "表示WIFI频段类型的枚举。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 值 | 说明 |\n| -------- | ---"
+      },
+      {
+        "section_id": "section-15",
+        "title": "WifiStandard<sup>10+</sup>",
+        "level": 2,
+        "line_start": 493,
+        "line_end": 509,
+        "summary": "表示WIFI标准的枚举。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 值 | 说明 |\n| -------- | -----"
+      },
+      {
+        "section_id": "section-16",
+        "title": "WifiInfoElem",
+        "level": 2,
+        "line_start": 510,
+        "line_end": 522,
+        "summary": "WLAN热点信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------"
+      },
+      {
+        "section_id": "section-17",
+        "title": "WifiChannelWidth",
+        "level": 2,
+        "line_start": 523,
+        "line_end": 539,
+        "summary": "表示带宽类型的枚举。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n\n| 名称 | 值 | 说明 |\n| -------- | ------"
+      },
+      {
+        "section_id": "section-18",
+        "title": "WifiDeviceConfig",
+        "level": 2,
+        "line_start": 540,
+        "line_end": 558,
+        "summary": "WLAN配置信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------"
+      },
+      {
+        "section_id": "section-19",
+        "title": "WifiEapConfig<sup>10+</sup>",
+        "level": 2,
+        "line_start": 559,
+        "line_end": 586,
+        "summary": "可扩展身份验证协议配置信息。\n\n- WifiEapConfig是一个用于配置WLAN网络EAP认证的类型。\n- 包含EAP认证方式、第二阶段认证方式、身份信息、密码、证书等配置项。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-20",
+        "title": "WifiWapiConfig<sup>12+</sup>",
+        "level": 2,
+        "line_start": 587,
+        "line_end": 609,
+        "summary": "WAPI(Wireless LAN Authentication and Privacy Infrastructure) 身份验证协议配置。\n\n当用户通过WAPI身份验证协议连接无线网时，可通过以下"
+      },
+      {
+        "section_id": "section-21",
+        "title": "WapiPskType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 610,
+        "line_end": 620,
+        "summary": "WAPI认证方式的枚举。\n\n**系统能力：** SystemCapability.Communication.WiFi.Core\n\n| 名称 | 值 | 说明 |\n| -------- | ----"
+      },
+      {
+        "section_id": "section-22",
+        "title": "EapMethod<sup>10+</sup>",
+        "level": 2,
+        "line_start": 621,
+        "line_end": 638,
+        "summary": "表示EAP认证方式的枚举。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 值 | 说明 |\n| -------- | ----"
+      },
+      {
+        "section_id": "section-23",
+        "title": "Phase2Method<sup>10+</sup>",
+        "level": 2,
+        "line_start": 639,
+        "line_end": 655,
+        "summary": "表示第二阶段认证方式的枚举。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 值 | 说明 |\n| -------- | ---"
+      },
+      {
+        "section_id": "section-24",
+        "title": "WifiCategory<sup>12+</sup>",
+        "level": 2,
+        "line_start": 656,
+        "line_end": 669,
+        "summary": "表示热点支持的最高WLAN类别。可以用于识别和区分不同WLAN技术标准的热点。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 |"
+      },
+      {
+        "section_id": "section-25",
+        "title": "wifiManager.addCandidateConfig",
+        "level": 2,
+        "line_start": 670,
+        "line_end": 727,
+        "summary": "addCandidateConfig(config: WifiDeviceConfig): Promise&lt;number&gt;\n\n添加候选网络配置，使用Promise异步回调，使用前先使能W"
+      },
+      {
+        "section_id": "section-26",
+        "title": "wifiManager.addCandidateConfig",
+        "level": 2,
+        "line_start": 728,
+        "line_end": 778,
+        "summary": "addCandidateConfig(config: WifiDeviceConfig, callback: AsyncCallback&lt;number&gt;): void\n\n添加候选网络配置"
+      },
+      {
+        "section_id": "section-27",
+        "title": "wifiManager.removeCandidateConfig",
+        "level": 2,
+        "line_start": 779,
+        "line_end": 834,
+        "summary": "removeCandidateConfig(networkId: number): Promise&lt;void&gt;\n\n移除候选网络配置，使用Promise异步回调。\n\n- 从系统中删除指定网"
+      },
+      {
+        "section_id": "section-28",
+        "title": "wifiManager.removeCandidateConfig",
+        "level": 2,
+        "line_start": 835,
+        "line_end": 882,
+        "summary": "removeCandidateConfig(networkId: number, callback: AsyncCallback&lt;void&gt;): void\n\n移除指定的候选网络配置，使用"
+      },
+      {
+        "section_id": "section-29",
+        "title": "wifiManager.removeDevice<sup>15+</sup>",
+        "level": 2,
+        "line_start": 883,
+        "line_end": 925,
+        "summary": "removeDevice(id: number): void\n\n移除网络配置。\n\n- 通过网络配置ID删除已保存的WLAN网络配置信息。\n- 移除后对应的网络配置将不再可用，设备也不会再自动连接该网"
+      },
+      {
+        "section_id": "section-30",
+        "title": "wifiManager.getCandidateConfigs",
+        "level": 2,
+        "line_start": 926,
+        "line_end": 981,
+        "summary": "getCandidateConfigs(): &nbsp;Array&lt;WifiDeviceConfig&gt;\n\n获取候选网络配置。\n\n- 候选网络是指曾经连接过或者手动添加的网络配置。\n-"
+      },
+      {
+        "section_id": "section-31",
+        "title": "wifiManager.connectToCandidateConfig",
+        "level": 2,
+        "line_start": 982,
+        "line_end": 1024,
+        "summary": "connectToCandidateConfig(networkId: number): void\n\n应用使用该接口连接到自己添加的候选网络。\n\n**需要权限：** ohos.permission."
+      },
+      {
+        "section_id": "section-32",
+        "title": "wifiManager.connectToCandidateConfigWithUserAction<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1025,
+        "line_end": 1085,
+        "summary": "connectToCandidateConfigWithUserAction(networkId: number): Promise&lt;void&gt;\n\n该接口用于应用连接到用户添加的候选网络"
+      },
+      {
+        "section_id": "section-33",
+        "title": "wifiManager.addDeviceConfig<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1086,
+        "line_end": 1139,
+        "summary": "addDeviceConfig(config: WifiDeviceConfig): Promise&lt;number&gt;\n\n添加网络配置。使用Promise异步回调。\n\n**需要权限：**"
+      },
+      {
+        "section_id": "section-34",
+        "title": "wifiManager.addDeviceConfig<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1140,
+        "line_end": 1187,
+        "summary": "addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback&lt;number&gt;): void\n\n添加网络配置。使用ca"
+      },
+      {
+        "section_id": "section-35",
+        "title": "wifiManager.getDeviceConfigs<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1188,
+        "line_end": 1227,
+        "summary": "getDeviceConfigs(): &nbsp;Array&lt;WifiDeviceConfig&gt;\n\n获取网络配置。\n\n**需要权限：** ohos.permission.GET_WIF"
+      },
+      {
+        "section_id": "section-36",
+        "title": "wifiManager.connectToNetwork<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1228,
+        "line_end": 1268,
+        "summary": "connectToNetwork(networkId: number): void\n\n应用使用该接口连接到热点。\n\n**需要权限：** ohos.permission.MANAGE_WIFI_CON"
+      },
+      {
+        "section_id": "section-37",
+        "title": "wifiManager.getSignalLevel",
+        "level": 2,
+        "line_start": 1269,
+        "line_end": 1317,
+        "summary": "getSignalLevel(rssi: number, band: number): number\n\n查询WLAN信号强度。\n\n**需要权限：** ohos.permission.GET_WIFI"
+      },
+      {
+        "section_id": "section-38",
+        "title": "wifiManager.getLinkedInfo",
+        "level": 2,
+        "line_start": 1318,
+        "line_end": 1348,
+        "summary": "getLinkedInfo(): Promise&lt;WifiLinkedInfo&gt;\n\n获取WLAN连接信息。使用Promise异步回调。\n\n**需要权限：** ohos.permissio"
+      },
+      {
+        "section_id": "section-39",
+        "title": "wifiManager.getLinkedInfo",
+        "level": 2,
+        "line_start": 1349,
+        "line_end": 1392,
+        "summary": "getLinkedInfo(callback: AsyncCallback&lt;WifiLinkedInfo&gt;): void\n\n获取WLAN连接信息。使用callback异步回调。\n\n**需"
+      },
+      {
+        "section_id": "section-40",
+        "title": "wifiManager.getLinkedInfoSync<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1393,
+        "line_end": 1434,
+        "summary": "getLinkedInfoSync(): WifiLinkedInfo;\n\n获取WLAN连接信息，使用同步方式返回结果。\n\n**需要权限：** ohos.permission.GET_WIFI_IN"
+      },
+      {
+        "section_id": "section-41",
+        "title": "WifiLinkedInfo",
+        "level": 2,
+        "line_start": 1435,
+        "line_end": 1464,
+        "summary": "提供WLAN连接的相关信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ---"
+      },
+      {
+        "section_id": "section-42",
+        "title": "WifiLinkType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1465,
+        "line_end": 1478,
+        "summary": "枚举，Wi-Fi7连接类型。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 值 | 说明 |\n| -------- | ---"
+      },
+      {
+        "section_id": "section-43",
+        "title": "ConnState",
+        "level": 2,
+        "line_start": 1479,
+        "line_end": 1496,
+        "summary": "表示WLAN连接状态的枚举。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 值 | 说明 |\n| -------- | ---"
+      },
+      {
+        "section_id": "section-44",
+        "title": "wifiManager.isConnected",
+        "level": 2,
+        "line_start": 1497,
+        "line_end": 1538,
+        "summary": "isConnected(): boolean\n\n查询WLAN是否已连接。\n\n**需要权限：** ohos.permission.GET_WIFI_INFO\n\n**原子化服务API：** 从API v"
+      },
+      {
+        "section_id": "section-45",
+        "title": "wifiManager.disconnect<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1539,
+        "line_end": 1573,
+        "summary": "disconnect(): void\n\n断开WLAN连接。\n\n**需要权限：** ohos.permission.SET_WIFI_INFO 和 (ohos.permission.MANAGE_WI"
+      },
+      {
+        "section_id": "section-46",
+        "title": "wifiManager.isFeatureSupported",
+        "level": 2,
+        "line_start": 1574,
+        "line_end": 1636,
+        "summary": "isFeatureSupported(featureId: number): boolean\n\n判断设备是否支持相关WLAN特性。\n\n**需要权限：** ohos.permission.GET_WI"
+      },
+      {
+        "section_id": "section-47",
+        "title": "wifiManager.getDeviceMacAddress<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1637,
+        "line_end": 1679,
+        "summary": "getDeviceMacAddress(): string[]\n\n获取设备的MAC地址。\n\n**需要权限：** ohos.permission.GET_WIFI_LOCAL_MAC 和 ohos.p"
+      },
+      {
+        "section_id": "section-48",
+        "title": "wifiManager.getIpInfo",
+        "level": 2,
+        "line_start": 1680,
+        "line_end": 1717,
+        "summary": "getIpInfo(): IpInfo\n\n获取IPV4信息。\n\n**需要权限：** ohos.permission.GET_WIFI_INFO\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-49",
+        "title": "IpInfo",
+        "level": 2,
+        "line_start": 1718,
+        "line_end": 1734,
+        "summary": "IPV4信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------- |"
+      },
+      {
+        "section_id": "section-50",
+        "title": "wifiManager.getIpv6Info<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1735,
+        "line_end": 1771,
+        "summary": "getIpv6Info(): Ipv6Info\n\n获取IPV6信息。\n\n**需要权限：** ohos.permission.GET_WIFI_INFO\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-51",
+        "title": "Ipv6Info<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1772,
+        "line_end": 1789,
+        "summary": "Ipv6信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------- |"
+      },
+      {
+        "section_id": "section-52",
+        "title": "wifiManager.getCountryCode",
+        "level": 2,
+        "line_start": 1790,
+        "line_end": 1830,
+        "summary": "getCountryCode(): string\n\n获取国家码信息。\n\n**需要权限：** ohos.permission.GET_WIFI_INFO\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-53",
+        "title": "wifiManager.isBandTypeSupported<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1831,
+        "line_end": 1876,
+        "summary": "isBandTypeSupported(bandType: WifiBandType): boolean\n\n判断当前频段是否支持。\n\n**需要权限：** ohos.permission.GET_WI"
+      },
+      {
+        "section_id": "section-54",
+        "title": "wifiManager.isMeteredHotspot<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1877,
+        "line_end": 1917,
+        "summary": "isMeteredHotspot(): boolean\n\n查询设备当前连接的wifi是否是手机热点。\n\n**需要权限：** ohos.permission.GET_WIFI_INFO\n\n**系统能力"
+      },
+      {
+        "section_id": "section-55",
+        "title": "wifiManager.isHotspotActive<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1918,
+        "line_end": 1956,
+        "summary": "isHotspotActive(): boolean\n\n热点是否已使能。\n\n**需要权限：** ohos.permission.GET_WIFI_INFO\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-56",
+        "title": "wifiManager.getP2pLinkedInfo",
+        "level": 2,
+        "line_start": 1957,
+        "line_end": 1985,
+        "summary": "getP2pLinkedInfo(): Promise&lt;WifiP2pLinkedInfo&gt;\n\n获取P2P连接信息。使用Promise异步回调。\n\n**需要权限：** ohos.perm"
+      },
+      {
+        "section_id": "section-57",
+        "title": "wifiManager.getP2pLinkedInfo",
+        "level": 2,
+        "line_start": 1986,
+        "line_end": 2032,
+        "summary": "getP2pLinkedInfo(callback: AsyncCallback&lt;WifiP2pLinkedInfo&gt;): void\n\n获取P2P连接信息。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-58",
+        "title": "WifiP2pLinkedInfo",
+        "level": 2,
+        "line_start": 2033,
+        "line_end": 2045,
+        "summary": "提供WLAN连接的相关信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.P2P\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ---"
+      },
+      {
+        "section_id": "section-59",
+        "title": "P2pConnectState",
+        "level": 2,
+        "line_start": 2046,
+        "line_end": 2056,
+        "summary": "表示P2P连接状态的枚举。\n\n**系统能力：** SystemCapability.Communication.WiFi.P2P\n\n| 名称 | 值 | 说明 |\n| -------- | ----"
+      },
+      {
+        "section_id": "section-60",
+        "title": "wifiManager.getCurrentGroup",
+        "level": 2,
+        "line_start": 2057,
+        "line_end": 2084,
+        "summary": "getCurrentGroup(): Promise&lt;WifiP2pGroupInfo&gt;\n\n获取P2P当前组信息。使用Promise异步回调。\n\n**需要权限：**\n\nAPI 10起：o"
+      },
+      {
+        "section_id": "section-61",
+        "title": "wifiManager.getCurrentGroup",
+        "level": 2,
+        "line_start": 2085,
+        "line_end": 2129,
+        "summary": "getCurrentGroup(callback: AsyncCallback&lt;WifiP2pGroupInfo&gt;): void\n\n获取P2P当前组信息。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-62",
+        "title": "wifiManager.getP2pPeerDevices",
+        "level": 2,
+        "line_start": 2130,
+        "line_end": 2157,
+        "summary": "getP2pPeerDevices(): Promise&lt;WifiP2pDevice[]&gt;\n\n获取P2P对端设备列表信息。使用Promise异步回调。\n\n**需要权限：**\n\nAPI 1"
+      },
+      {
+        "section_id": "section-63",
+        "title": "wifiManager.getP2pPeerDevices",
+        "level": 2,
+        "line_start": 2158,
+        "line_end": 2203,
+        "summary": "getP2pPeerDevices(callback: AsyncCallback&lt;WifiP2pDevice[]&gt;): void\n\n获取P2P对端设备列表信息。使用callback异步"
+      },
+      {
+        "section_id": "section-64",
+        "title": "WifiP2pDevice",
+        "level": 2,
+        "line_start": 2204,
+        "line_end": 2219,
+        "summary": "表示P2P设备信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.P2P\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------"
+      },
+      {
+        "section_id": "section-65",
+        "title": "P2pDeviceStatus",
+        "level": 2,
+        "line_start": 2220,
+        "line_end": 2234,
+        "summary": "表示设备状态的枚举。\n\n**系统能力：** SystemCapability.Communication.WiFi.P2P\n\n| 名称 | 值 | 说明 |\n| -------- | -------"
+      },
+      {
+        "section_id": "section-66",
+        "title": "wifiManager.getP2pLocalDevice",
+        "level": 2,
+        "line_start": 2235,
+        "line_end": 2262,
+        "summary": "getP2pLocalDevice(): Promise&lt;WifiP2pDevice&gt;\n\n获取P2P本端设备信息，使用Promise异步回调。\n\n**需要权限：** \n\nAPI 11起："
+      },
+      {
+        "section_id": "section-67",
+        "title": "wifiManager.getP2pLocalDevice",
+        "level": 2,
+        "line_start": 2263,
+        "line_end": 2306,
+        "summary": "getP2pLocalDevice(callback: AsyncCallback&lt;WifiP2pDevice&gt;): void\n\n获取P2P本端设备信息，使用callback异步回调。"
+      },
+      {
+        "section_id": "section-68",
+        "title": "wifiManager.createGroup",
+        "level": 2,
+        "line_start": 2307,
+        "line_end": 2353,
+        "summary": "createGroup(config: WifiP2PConfig): void\n\n创建群组。\n\n**需要权限：** ohos.permission.GET_WIFI_INFO\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-69",
+        "title": "WifiP2PConfig",
+        "level": 2,
+        "line_start": 2354,
+        "line_end": 2370,
+        "summary": "表示P2P配置信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.P2P\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------"
+      },
+      {
+        "section_id": "section-70",
+        "title": "GroupOwnerBand",
+        "level": 2,
+        "line_start": 2371,
+        "line_end": 2383,
+        "summary": "表示群组带宽的枚举。\n\n**系统能力：** SystemCapability.Communication.WiFi.P2P\n\n| 名称 | 值 | 说明 |\n| -------- | -------"
+      },
+      {
+        "section_id": "section-71",
+        "title": "wifiManager.removeGroup",
+        "level": 2,
+        "line_start": 2384,
+        "line_end": 2415,
+        "summary": "removeGroup(): void\n\n移除群组。\n\n**需要权限：** ohos.permission.GET_WIFI_INFO\n\n**系统能力：** SystemCapability.Com"
+      },
+      {
+        "section_id": "section-72",
+        "title": "wifiManager.p2pConnect",
+        "level": 2,
+        "line_start": 2416,
+        "line_end": 2512,
+        "summary": "p2pConnect(config: WifiP2PConfig): void\n\n执行P2P连接。\n\n**需要权限：**\n\nAPI 10起：ohos.permission.GET_WIFI_INFO"
+      },
+      {
+        "section_id": "section-73",
+        "title": "wifiManager.p2pCancelConnect",
+        "level": 2,
+        "line_start": 2513,
+        "line_end": 2544,
+        "summary": "p2pCancelConnect(): void\n\n在P2P连接过程中，取消P2P连接。\n\n**需要权限：** ohos.permission.GET_WIFI_INFO \n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-74",
+        "title": "wifiManager.startDiscoverDevices",
+        "level": 2,
+        "line_start": 2545,
+        "line_end": 2578,
+        "summary": "startDiscoverDevices(): void\n\n开始发现设备。\n\n**需要权限：**\n\nAPI 10起：ohos.permission.GET_WIFI_INFO\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-75",
+        "title": "wifiManager.stopDiscoverDevices",
+        "level": 2,
+        "line_start": 2579,
+        "line_end": 2610,
+        "summary": "stopDiscoverDevices(): void\n\n停止发现设备。\n\n**需要权限：** ohos.permission.GET_WIFI_INFO\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-76",
+        "title": "wifiManager.getMultiLinkedInfo<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2611,
+        "line_end": 2653,
+        "summary": "getMultiLinkedInfo(): &nbsp;Array&lt;WifiLinkedInfo&gt;\n\n获取MLO(Multi-Link Operation，多链路操作)WLAN连接信息。"
+      },
+      {
+        "section_id": "section-77",
+        "title": "WifiP2pGroupInfo",
+        "level": 2,
+        "line_start": 2654,
+        "line_end": 2672,
+        "summary": "表示P2P群组相关信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.P2P\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -----"
+      },
+      {
+        "section_id": "section-78",
+        "title": "wifiManager.on('wifiStateChange')",
+        "level": 2,
+        "line_start": 2673,
+        "line_end": 2712,
+        "summary": "on(type: 'wifiStateChange', callback: Callback&lt;number&gt;): void\n\n注册WLAN状态改变事件，在业务退出时，要调用off(typ"
+      },
+      {
+        "section_id": "section-79",
+        "title": "wifiManager.off('wifiStateChange')",
+        "level": 2,
+        "line_start": 2713,
+        "line_end": 2758,
+        "summary": "off(type: 'wifiStateChange', callback?: Callback&lt;number&gt;): void\n\n取消注册WLAN状态改变事件。使用callback异步回"
+      },
+      {
+        "section_id": "section-80",
+        "title": "wifiManager.on('wifiConnectionChange')",
+        "level": 2,
+        "line_start": 2759,
+        "line_end": 2795,
+        "summary": "on(type: 'wifiConnectionChange', callback: Callback&lt;number&gt;): void\n\n注册WLAN连接状态改变事件，在业务退出时，要调用"
+      },
+      {
+        "section_id": "section-81",
+        "title": "wifiManager.off('wifiConnectionChange')",
+        "level": 2,
+        "line_start": 2796,
+        "line_end": 2840,
+        "summary": "off(type: 'wifiConnectionChange', callback?: Callback&lt;number&gt;): void\n\n取消注册WLAN连接状态改变事件。使用call"
+      },
+      {
+        "section_id": "section-82",
+        "title": "wifiManager.on('wifiScanStateChange')",
+        "level": 2,
+        "line_start": 2841,
+        "line_end": 2877,
+        "summary": "on(type: 'wifiScanStateChange', callback: Callback&lt;number&gt;): void\n\n注册扫描状态改变事件，在业务退出时，要调用off(t"
+      },
+      {
+        "section_id": "section-83",
+        "title": "wifiManager.off('wifiScanStateChange')",
+        "level": 2,
+        "line_start": 2878,
+        "line_end": 2922,
+        "summary": "off(type: 'wifiScanStateChange', callback?: Callback&lt;number&gt;): void\n\n取消注册扫描状态改变事件。使用callback异"
+      },
+      {
+        "section_id": "section-84",
+        "title": "wifiManager.on('wifiRssiChange')",
+        "level": 2,
+        "line_start": 2923,
+        "line_end": 2950,
+        "summary": "on(type: 'wifiRssiChange', callback: Callback&lt;number&gt;): void\n\n注册WLAN接收信号强度(RSSI)变化事件，在业务退出时，要"
+      },
+      {
+        "section_id": "section-85",
+        "title": "wifiManager.off('wifiRssiChange')",
+        "level": 2,
+        "line_start": 2951,
+        "line_end": 2993,
+        "summary": "off(type: 'wifiRssiChange', callback?: Callback&lt;number&gt;): void\n\n取消注册WLAN接收信号强度(RSSI)变化事件。使用ca"
+      },
+      {
+        "section_id": "section-86",
+        "title": "wifiManager.on('hotspotStateChange')",
+        "level": 2,
+        "line_start": 2994,
+        "line_end": 3030,
+        "summary": "on(type: 'hotspotStateChange', callback: Callback&lt;number&gt;): void\n\n注册热点状态改变事件，在业务退出时，要调用off(ty"
+      },
+      {
+        "section_id": "section-87",
+        "title": "wifiManager.off('hotspotStateChange')",
+        "level": 2,
+        "line_start": 3031,
+        "line_end": 3074,
+        "summary": "off(type: 'hotspotStateChange', callback?: Callback&lt;number&gt;): void\n\n取消注册热点状态改变事件。使用callback异步"
+      },
+      {
+        "section_id": "section-88",
+        "title": "wifiManager.on('p2pStateChange')",
+        "level": 2,
+        "line_start": 3075,
+        "line_end": 3112,
+        "summary": "on(type: 'p2pStateChange', callback: Callback&lt;number&gt;): void\n\n注册P2P开关状态改变事件，在业务退出时，要调用off(typ"
+      },
+      {
+        "section_id": "section-89",
+        "title": "wifiManager.off('p2pStateChange')",
+        "level": 2,
+        "line_start": 3113,
+        "line_end": 3155,
+        "summary": "off(type: 'p2pStateChange', callback?: Callback&lt;number&gt;): void\n\n取消注册P2P开关状态改变事件。使用callback异步回"
+      },
+      {
+        "section_id": "section-90",
+        "title": "wifiManager.on('p2pConnectionChange')",
+        "level": 2,
+        "line_start": 3156,
+        "line_end": 3183,
+        "summary": "on(type: 'p2pConnectionChange', callback: Callback&lt;WifiP2pLinkedInfo&gt;): void\n\n注册P2P连接状态改变事件，在"
+      },
+      {
+        "section_id": "section-91",
+        "title": "wifiManager.off('p2pConnectionChange')",
+        "level": 2,
+        "line_start": 3184,
+        "line_end": 3226,
+        "summary": "off(type: 'p2pConnectionChange', callback?: Callback&lt;WifiP2pLinkedInfo&gt;): void\n\n取消注册P2P连接状态改变"
+      },
+      {
+        "section_id": "section-92",
+        "title": "wifiManager.on('p2pDeviceChange')",
+        "level": 2,
+        "line_start": 3227,
+        "line_end": 3256,
+        "summary": "on(type: 'p2pDeviceChange', callback: Callback&lt;WifiP2pDevice&gt;): void\n\n注册P2P设备状态改变事件，在业务退出时，要调"
+      },
+      {
+        "section_id": "section-93",
+        "title": "wifiManager.off('p2pDeviceChange')",
+        "level": 2,
+        "line_start": 3257,
+        "line_end": 3297,
+        "summary": "off(type: 'p2pDeviceChange', callback?: Callback&lt;WifiP2pDevice&gt;): void\n\n取消注册P2P设备状态改变事件。使用cal"
+      },
+      {
+        "section_id": "section-94",
+        "title": "wifiManager.on('p2pPeerDeviceChange')",
+        "level": 2,
+        "line_start": 3298,
+        "line_end": 3327,
+        "summary": "on(type: 'p2pPeerDeviceChange', callback: Callback&lt;WifiP2pDevice[]&gt;): void\n\n注册P2P对端设备状态改变事件，在"
+      },
+      {
+        "section_id": "section-95",
+        "title": "wifiManager.off('p2pPeerDeviceChange')",
+        "level": 2,
+        "line_start": 3328,
+        "line_end": 3368,
+        "summary": "off(type: 'p2pPeerDeviceChange', callback?: Callback&lt;WifiP2pDevice[]&gt;): void\n\n取消注册P2P对端设备状态改变"
+      },
+      {
+        "section_id": "section-96",
+        "title": "wifiManager.on('p2pPersistentGroupChange')",
+        "level": 2,
+        "line_start": 3369,
+        "line_end": 3396,
+        "summary": "on(type: 'p2pPersistentGroupChange', callback: Callback&lt;void&gt;): void\n\n注册P2P永久组状态改变事件，在业务退出时，要"
+      },
+      {
+        "section_id": "section-97",
+        "title": "wifiManager.off('p2pPersistentGroupChange')",
+        "level": 2,
+        "line_start": 3397,
+        "line_end": 3439,
+        "summary": "off(type: 'p2pPersistentGroupChange', callback?: Callback&lt;void&gt;): void\n\n取消注册P2P永久组状态改变事件。使用ca"
+      },
+      {
+        "section_id": "section-98",
+        "title": "wifiManager.on('p2pDiscoveryChange')",
+        "level": 2,
+        "line_start": 3440,
+        "line_end": 3474,
+        "summary": "on(type: 'p2pDiscoveryChange', callback: Callback&lt;number&gt;): void\n\n注册发现设备状态改变事件，在业务退出时，要调用off("
+      },
+      {
+        "section_id": "section-99",
+        "title": "wifiManager.off('p2pDiscoveryChange')",
+        "level": 2,
+        "line_start": 3475,
+        "line_end": 3517,
+        "summary": "off(type: 'p2pDiscoveryChange', callback?: Callback&lt;number&gt;): void\n\n取消注册发现设备状态改变事件。使用callback"
+      }
+    ]
+  }
+}

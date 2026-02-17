@@ -1,0 +1,548 @@
+{
+  "doc_id": "errorcode-avsession",
+  "title": "媒体会话管理错误码",
+  "path": "zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md",
+  "metadata": {
+    "kit": "AVSession Kit",
+    "subsystem": "Multimedia",
+    "owner": "@ccfriend; @liao_qian",
+    "designer": "@ccfriend",
+    "tester": "@chenmingxi1_huawei",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "AVSession Kit Multimedia 模块的 媒体会话管理错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "媒体会话管理错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "6600101 会话服务端异常",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 32,
+        "summary": "**错误信息**\n\nSession service exception.\n\n**错误描述**\n\n会话服务端异常，应用端无法获取服务端的消息响应。如会话服务未运行或者会话服务通信失败。\n\n**可能原因"
+      },
+      {
+        "section_id": "section-2",
+        "title": "6600102 会话不存在",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 52,
+        "summary": "**错误信息**\n\nThe session does not exist.\n\n**错误描述**\n\n会话对象不存在时，向该会话设置参数或者发送命令。\n\n**可能原因**\n\n会话已被销毁，服务端无会话记"
+      },
+      {
+        "section_id": "section-3",
+        "title": "6600103 会话控制器不存在",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 71,
+        "summary": "**错误信息**\n\nThe session controller does not exist.\n\n**错误描述**\n\n会话控制器不存在时，向该控制器发送控制命令或者事件。\n\n**可能原因**\n\n控"
+      },
+      {
+        "section_id": "section-4",
+        "title": "6600104 远端会话连接失败",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 90,
+        "summary": "**错误信息**\n\nThe remote session connection failed.\n\n**错误描述**\n\n本端会话与远端会话通信失败。\n\n**可能原因**\n\n设备间通信断开。\n\n**处理"
+      },
+      {
+        "section_id": "section-5",
+        "title": "6600105 无效会话命令",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 108,
+        "summary": "**错误信息**\n\nInvalid session command.\n\n**错误描述**\n\n会话被控端不支持该被控命令或事件。\n\n**可能原因**\n\n被控端不支持该命令。\n\n**处理步骤**\n\n停止"
+      },
+      {
+        "section_id": "section-6",
+        "title": "6600106 会话未激活",
+        "level": 2,
+        "line_start": 109,
+        "line_end": 126,
+        "summary": "**错误信息**\n\nThe session is not activated.\n\n**错误描述**\n\n会话没有激活时，向会话发送控制命令或者事件。\n\n**可能原因**\n\n会话处于未激活状态。\n\n**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "6600107 命令&消息过载",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 145,
+        "summary": "**错误信息**\n\nToo many commands or events.\n\n**错误描述**\n\n会话客户端在一段时间内向服务端发送了过多的消息或者命令，引起服务端消息过载。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-8",
+        "title": "6600108 设备连接失败",
+        "level": 2,
+        "line_start": 146,
+        "line_end": 164,
+        "summary": "**错误信息**\n\nDevice connection failed.\n\n**错误描述**\n\n设备连接失败。\n\n**可能原因**\n\n设备连接逻辑异常或者选择连接的设备状态异常。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "6600109 远端会话不存在",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 182,
+        "summary": "**错误信息**\n\nThe remote connection is not established.\n\n**错误描述**\n\n查看的远端会话不存在，对应相关的接口调用失败返回。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-10",
+        "title": "6600110 应用程序的桌面歌词功能未开启",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 200,
+        "summary": "**错误信息**\n\nThe desktop lyrics feature of this application is not enabled.\n\n**错误描述**\n\n应用程序的桌面歌词功能未开启。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "6600111 当前设备不支持桌面歌词功能",
+        "level": 2,
+        "line_start": 201,
+        "line_end": 216,
+        "summary": "The desktop lyrics feature is not supported.\n\n**错误描述**\n\n当前设备不支持桌面歌词功能。\n\n**可能原因**\n\n当前设备不支持桌面歌词功能。\n\n*"
+      },
+      {
+        "section_id": "section-12",
+        "title": "6611000 投播控制器出现未知错误",
+        "level": 2,
+        "line_start": 217,
+        "line_end": 238,
+        "summary": "**错误信息**\n\nThe error code for cast control is unspecified.\n\n**错误描述**\n\n由投播控制器中的未知错误引起。\n\n**可能原因**\n\n1."
+      },
+      {
+        "section_id": "section-13",
+        "title": "6611001 远端设备出现未知错误",
+        "level": 2,
+        "line_start": 239,
+        "line_end": 256,
+        "summary": "**错误信息**\n\nAn unspecified error occurs in the remote player.\n\n**错误描述**\n\n由远端设备中的未知错误引起。\n\n**可能原因**\n\n远端"
+      },
+      {
+        "section_id": "section-14",
+        "title": "6611002 加载位置超过投播视频的总进度",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 274,
+        "summary": "**错误信息**\n\nThe playback position falls behind the live window.\n\n**错误描述**\n\n加载位置超过投播视频的总进度导致。\n\n**可能原因*"
+      },
+      {
+        "section_id": "section-15",
+        "title": "6611003 投播控制器加载超时",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 292,
+        "summary": "**错误信息**\n\nThe process of cast control times out.\n\n**错误描述**\n\n投播控制器加载超时。\n\n**可能原因**\n\n投播控制器加载超时。\n\n**处理步"
+      },
+      {
+        "section_id": "section-16",
+        "title": "6611004 运行时检查失败",
+        "level": 2,
+        "line_start": 293,
+        "line_end": 312,
+        "summary": "**错误信息**\n\nThe runtime check failed.\n\n**错误描述**\n\n运行时检查失败。\n\n**可能原因**\n\n1. 应用程序未遵守播放器的API要求（例如：传递无效参数）。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "6611100 跨设备数据传输被锁定",
+        "level": 2,
+        "line_start": 313,
+        "line_end": 330,
+        "summary": "**错误信息**\n\nCross-device data transmission is locked.\n\n**错误描述**\n\n跨设备数据传输被锁定。\n\n**可能原因**\n\n传输已锁定。\n\n**处理步"
+      },
+      {
+        "section_id": "section-18",
+        "title": "6611101 不支持当前进度条模式",
+        "level": 2,
+        "line_start": 331,
+        "line_end": 348,
+        "summary": "**错误信息**\n\nThe specified seek mode is not supported.\n\n**错误描述**\n\n不支持当前进度条模式\n\n**可能原因**\n\n设备不支持当前进度条模式。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "6611102 非法seek目标",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 366,
+        "summary": "**错误信息**\n\nThe position to seek to is out of the range of the media asset or the specified seek mode"
+      },
+      {
+        "section_id": "section-20",
+        "title": "6611103 不支持当前播放模式",
+        "level": 2,
+        "line_start": 367,
+        "line_end": 384,
+        "summary": "**错误信息**\n\nThe specified playback mode is not supported.\n\n**错误描述**\n\n设备不支持当前播放模式。\n\n**可能原因**\n\n设备不支持当前播"
+      },
+      {
+        "section_id": "section-21",
+        "title": "6611104 不支持当前播放速度",
+        "level": 2,
+        "line_start": 385,
+        "line_end": 402,
+        "summary": "**错误信息**\n\nThe specified playback speed is not supported.\n\n**错误描述**\n\n不支持当前播放速度。\n\n**可能原因**\n\n当前播放速度不受A"
+      },
+      {
+        "section_id": "section-22",
+        "title": "6611105 设备吊销",
+        "level": 2,
+        "line_start": 403,
+        "line_end": 420,
+        "summary": "**错误信息**\n\nThe action failed because either the media source device or the media sink device has bee"
+      },
+      {
+        "section_id": "section-23",
+        "title": "6611106 传入非法参数",
+        "level": 2,
+        "line_start": 421,
+        "line_end": 438,
+        "summary": "**错误信息**\n\nThe parameter is invalid, for example, the url is illegal to play.\n\n**错误描述**\n\n传入非法参数。\n\n**"
+      },
+      {
+        "section_id": "section-24",
+        "title": "6611107 内存分配失败",
+        "level": 2,
+        "line_start": 439,
+        "line_end": 458,
+        "summary": "**错误信息**\n\nAllocation of memory failed.\n\n**错误描述**\n\n分配内存失败。\n\n**可能原因**\n\n1. 内存不足。\n\n2. 系统无法分配内存。\n\n**处理步骤"
+      },
+      {
+        "section_id": "section-25",
+        "title": "6611108 不允许进行当前操作",
+        "level": 2,
+        "line_start": 459,
+        "line_end": 476,
+        "summary": "**错误信息**\n\nOperation is not allowed.\n\n**错误描述**\n\n不允许进行当前操作。\n\n**可能原因**\n\n不允许当前操作。\n\n**处理步骤**\n\n检查当前远端设备状态"
+      },
+      {
+        "section_id": "section-26",
+        "title": "6612000 未知的输入/输出错误",
+        "level": 2,
+        "line_start": 477,
+        "line_end": 494,
+        "summary": "**错误信息**\n\nAn unspecified input/output error occurs.\n\n**错误描述**\n\n由未知的输入/输出错误引起。\n\n**可能原因**\n\n对端设备回复的消息不"
+      },
+      {
+        "section_id": "section-27",
+        "title": "6612001 网络连接失败",
+        "level": 2,
+        "line_start": 495,
+        "line_end": 512,
+        "summary": "**错误信息**\n\nNetwork connection failure.\n\n**错误描述**\n\n网络连接失败。\n\n**可能原因**\n\n网络异常、对端网络断网等。\n\n**处理步骤**\n\n当前网络异常"
+      },
+      {
+        "section_id": "section-28",
+        "title": "6612002 网络超时",
+        "level": 2,
+        "line_start": 513,
+        "line_end": 530,
+        "summary": "**错误信息**\n\nNetwork timeout.\n\n**错误描述**\n\n网络超时导致服务器完成请求耗时过长。\n\n**可能原因**\n\n网络异常、对端网络断网、网络环境差等。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-29",
+        "title": "6612003 无效“Content-Type”HTTP头",
+        "level": 2,
+        "line_start": 531,
+        "line_end": 548,
+        "summary": "**错误信息**\n\nInvalid \"Content-Type\" HTTP header.\n\n**错误描述**\n\n无效“Content-Type”HTTP头。\n\n**可能原因**\n\n对端设备回复不符"
+      },
+      {
+        "section_id": "section-30",
+        "title": "6612004 HTTP服务器返回异常的HTTP响应状态码",
+        "level": 2,
+        "line_start": 549,
+        "line_end": 566,
+        "summary": "**错误信息**\n\nThe HTTP server returns an unexpected HTTP response status code.\n\n**错误描述**\n\n由HTTP服务器返回异常的"
+      },
+      {
+        "section_id": "section-31",
+        "title": "6612005 文件不存在",
+        "level": 2,
+        "line_start": 567,
+        "line_end": 584,
+        "summary": "**错误信息**\n\nThe file does not exist.\n\n**错误描述**\n\n文件不存在。\n\n**可能原因**\n\n在网络中未找到要播放的文件。\n\n**处理步骤**\n\n检查自身设置的资源"
+      },
+      {
+        "section_id": "section-32",
+        "title": "6612006 缺少执行IO操作的权限",
+        "level": 2,
+        "line_start": 585,
+        "line_end": 602,
+        "summary": "**错误信息**\n\nNo permission is granted to perform the IO operation.\n\n**错误描述**\n\n缺少执行IO操作的权限。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-33",
+        "title": "6612007 网络安全配置不允许此操作",
+        "level": 2,
+        "line_start": 603,
+        "line_end": 620,
+        "summary": "**错误信息**\n\nAccess to cleartext HTTP traffic is not allowed by the app's network security configurati"
+      },
+      {
+        "section_id": "section-34",
+        "title": "6612008 读取数据超出数据范围",
+        "level": 2,
+        "line_start": 621,
+        "line_end": 638,
+        "summary": "**错误信息**\n\nReading data out of the data bound.\n\n**错误描述**\n\n读取数据超出数据范围。\n\n**可能原因**\n\n文件读取异常。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-35",
+        "title": "6612100 缺少可播放的媒体资源。",
+        "level": 2,
+        "line_start": 639,
+        "line_end": 656,
+        "summary": "**错误信息**\n\nThe media does not contain any contents that can be played.\n\n**错误描述**\n\n媒体资源中不包含任何可播放的内容。"
+      },
+      {
+        "section_id": "section-36",
+        "title": "6612101 媒体资源无法被读取",
+        "level": 2,
+        "line_start": 657,
+        "line_end": 674,
+        "summary": "**错误信息**\n\nThe media cannot be read.\n\n**错误描述**\n\n媒体资源无法被读取。\n\n**可能原因**\n\n文件读取异常，可能是文件被损坏导致。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-37",
+        "title": "6612102 资源正在使用",
+        "level": 2,
+        "line_start": 675,
+        "line_end": 692,
+        "summary": "**错误信息**\n\nThis resource is already in use.\n\n**错误描述**\n\n该资源在使用中。\n\n**可能原因**\n\n资源在使用中。\n\n**处理步骤**\n\n检查自身设置"
+      },
+      {
+        "section_id": "section-38",
+        "title": "6612103 内容使用有效期已过",
+        "level": 2,
+        "line_start": 693,
+        "line_end": 710,
+        "summary": "**错误信息**\n\nThe content using the validity interval has expired.\n\n**错误描述**\n\n内容使用有效期已过。\n\n**可能原因**\n\n内容使"
+      },
+      {
+        "section_id": "section-39",
+        "title": "6612104 不允许使用请求的内容",
+        "level": 2,
+        "line_start": 711,
+        "line_end": 728,
+        "summary": "**错误信息**\n\nUsing the requested content to play is not allowed.\n\n**错误描述**\n\n不允许使用请求的内容。\n\n**可能原因**\n\n不允许"
+      },
+      {
+        "section_id": "section-40",
+        "title": "6612105 无法验证允许使用的内容",
+        "level": 2,
+        "line_start": 729,
+        "line_end": 746,
+        "summary": "**错误信息**\n\nThe use of the allowed content cannot be verified.\n\n**错误描述**\n\n无法验证允许使用的内容。\n\n**可能原因**\n\n无法验"
+      },
+      {
+        "section_id": "section-41",
+        "title": "6612106 资源使用频繁",
+        "level": 2,
+        "line_start": 747,
+        "line_end": 764,
+        "summary": "**错误信息**\n\nThe number of times this content has been used as requested has reached the maximum allow"
+      },
+      {
+        "section_id": "section-42",
+        "title": "6612107 本端向远端发送资源包失败",
+        "level": 2,
+        "line_start": 765,
+        "line_end": 782,
+        "summary": "**错误信息**\n\nAn error occurs when sending packet from source device to sink device.\n\n**错误描述**\n\n本端向远端发送"
+      },
+      {
+        "section_id": "section-43",
+        "title": "6613000 未知解析错误",
+        "level": 2,
+        "line_start": 783,
+        "line_end": 800,
+        "summary": "**错误信息**\n\nUnspecified error related to content parsing.\n\n**错误描述**\n\n由未知解析错误引起。\n\n**可能原因**\n\n对端设备回复的消息不"
+      },
+      {
+        "section_id": "section-44",
+        "title": "6613001 非法类型",
+        "level": 2,
+        "line_start": 801,
+        "line_end": 818,
+        "summary": "**错误信息**\n\nParsing error associated with media container format bit streams.\n\n**错误描述**\n\n非法类型。\n\n**可能原"
+      },
+      {
+        "section_id": "section-45",
+        "title": "6613002 相关媒体清单的解析错误",
+        "level": 2,
+        "line_start": 819,
+        "line_end": 836,
+        "summary": "**错误信息**\n\nParsing error associated with the media manifest.\n\n**错误描述**\n\n相关媒体清单的解析错误。\n\n**可能原因**\n\n此设备不"
+      },
+      {
+        "section_id": "section-46",
+        "title": "6613003 不支持该媒体格式",
+        "level": 2,
+        "line_start": 837,
+        "line_end": 854,
+        "summary": "**错误信息**\n\nAn error occurs when attempting to extract a file with an unsupported media container for"
+      },
+      {
+        "section_id": "section-47",
+        "title": "6613004 媒体清单中不支持此功能",
+        "level": 2,
+        "line_start": 855,
+        "line_end": 872,
+        "summary": "**错误信息**\n\nUnsupported feature in the media manifest.\n\n**错误描述**\n\n媒体清单中不支持此功能。\n\n**可能原因**\n\n此设备不支持播放当前加"
+      },
+      {
+        "section_id": "section-48",
+        "title": "6614000 未知的解码错误",
+        "level": 2,
+        "line_start": 873,
+        "line_end": 890,
+        "summary": "**错误信息**\n\nUnspecified decoding error.\n\n**错误描述**\n\n由未知的解码错误引起。\n\n**可能原因**\n\n远端设备解码器出现异常。\n\n**处理步骤**\n\n当前远"
+      },
+      {
+        "section_id": "section-49",
+        "title": "6614001 解码器初始化失败",
+        "level": 2,
+        "line_start": 891,
+        "line_end": 908,
+        "summary": "**错误信息**\n\nDecoder initialization failed.\n\n**错误描述**\n\n解码器初始化失败。\n\n**可能原因**\n\n远端设备解码器初始化出现异常。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-50",
+        "title": "6614002 解码器查询失败",
+        "level": 2,
+        "line_start": 909,
+        "line_end": 926,
+        "summary": "**错误信息**\n\nDecoder query failed.\n\n**错误描述**\n\n解码器查询失败。\n\n**可能原因**\n\n尝试播放或处理媒体文件时，设备或软件无法正确解码文件中的数据。\n\n**处"
+      },
+      {
+        "section_id": "section-51",
+        "title": "6614003 解码媒体样本时失败",
+        "level": 2,
+        "line_start": 927,
+        "line_end": 944,
+        "summary": "**错误信息**\n\nDecoding the media samples failed.\n\n**错误描述**\n\n解码媒体样本时失败。\n\n**可能原因**\n\n尝试访问的文件类型超出了当前设备的支持范围"
+      },
+      {
+        "section_id": "section-52",
+        "title": "6614004 所需解码的内容格式超出设备能力",
+        "level": 2,
+        "line_start": 945,
+        "line_end": 962,
+        "summary": "**错误信息**\n\nThe format of the content to decode exceeds the capabilities of the device.\n\n**错误描述**\n\n所需"
+      },
+      {
+        "section_id": "section-53",
+        "title": "6614005 解码不支持的内容格式",
+        "level": 2,
+        "line_start": 963,
+        "line_end": 980,
+        "summary": "**错误信息**\n\nThe format of the content to decode is not supported.\n\n**错误描述**\n\n解码不支持的内容格式而导致失败。\n\n**可能原因"
+      },
+      {
+        "section_id": "section-54",
+        "title": "6615000 音频渲染器相关的未知错误",
+        "level": 2,
+        "line_start": 981,
+        "line_end": 998,
+        "summary": "**错误信息**\n\nUnspecified errors related to the audio renderer.\n\n**错误描述**\n\n音频渲染器相关的未知错误引起。\n\n**可能原因**\n\n远"
+      },
+      {
+        "section_id": "section-55",
+        "title": "6615001 音频渲染器初始化异常",
+        "level": 2,
+        "line_start": 999,
+        "line_end": 1016,
+        "summary": "**错误信息**\n\nInitializing the audio renderer failed.\n\n**错误描述**\n\nAudioTrack初始化失败。\n\n**可能原因**\n\n远端设备的音频渲染器"
+      },
+      {
+        "section_id": "section-56",
+        "title": "6615002 音频渲染器写数据异常",
+        "level": 2,
+        "line_start": 1017,
+        "line_end": 1034,
+        "summary": "**错误信息**\n\nThe audio renderer fails to write data.\n\n**错误描述**\n\nAudioTrack写操作失败。\n\n**可能原因**\n\n远端设备的音频渲染器"
+      },
+      {
+        "section_id": "section-57",
+        "title": "6616000 DRM相关的未知错误",
+        "level": 2,
+        "line_start": 1035,
+        "line_end": 1052,
+        "summary": "**错误信息**\n\nUnspecified error related to DRM.\n\n**错误描述**\n\nDRM相关的未知错误。\n\n**可能原因**\n\n远端设备的DRM识别出现异常。\n\n**处理"
+      },
+      {
+        "section_id": "section-58",
+        "title": "6616001 设备不支持所选的DRM保护方案",
+        "level": 2,
+        "line_start": 1053,
+        "line_end": 1070,
+        "summary": "**错误信息**\n\nThe chosen DRM protection scheme is not supported by the device.\n\n**错误描述**\n\n由设备不支持所选的DRM保"
+      },
+      {
+        "section_id": "section-59",
+        "title": "6616002 调配设备时出现故障",
+        "level": 2,
+        "line_start": 1071,
+        "line_end": 1088,
+        "summary": "**错误信息**\n\nDevice provisioning failed.\n\n**错误描述**\n\n调配设备时出现故障。\n\n**可能原因**\n\n播放的DRM格式内容不兼容。\n\n**处理步骤**\n\n检查"
+      },
+      {
+        "section_id": "section-60",
+        "title": "6616003 尝试播放不兼容的DRM保护内容",
+        "level": 2,
+        "line_start": 1089,
+        "line_end": 1106,
+        "summary": "**错误信息**\n\nThe DRM-protected content to play is incompatible.\n\n**错误描述**\n\n由于尝试播放不兼容的DRM保护内容导致。\n\n**可能原"
+      },
+      {
+        "section_id": "section-61",
+        "title": "6616004 许可证获取失败",
+        "level": 2,
+        "line_start": 1107,
+        "line_end": 1124,
+        "summary": "**错误信息**\n\nFailed to obtain a license.\n\n**错误描述**\n\n许可证获取失败。\n\n**可能原因**\n\n违反数字版权管理（DRM）保护内容的许可证条款。\n\n**处理"
+      },
+      {
+        "section_id": "section-62",
+        "title": "6616005 许可证策略不允许的操作",
+        "level": 2,
+        "line_start": 1125,
+        "line_end": 1142,
+        "summary": "**错误信息**\n\nThe operation is disallowed by the license policy.\n\n**错误描述**\n\n由许可证策略不允许的操作引起。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-63",
+        "title": "6616006 DRM系统错误",
+        "level": 2,
+        "line_start": 1143,
+        "line_end": 1160,
+        "summary": "**错误信息**\n\nAn error occurs in the DRM system.\n\n**错误描述**\n\nDRM系统错误导致。\n\n**可能原因**\n\n远端设备的DRM识别出现异常。\n\n**处理"
+      },
+      {
+        "section_id": "section-64",
+        "title": "6616007 设备已吊销DRM权限",
+        "level": 2,
+        "line_start": 1161,
+        "line_end": 1178,
+        "summary": "**错误信息**\n\nThe device has revoked DRM privileges.\n\n**错误描述**\n\n设备已吊销DRM权限。\n\n**可能原因**\n\n通常表示设备的数字版权管理（DR"
+      },
+      {
+        "section_id": "section-65",
+        "title": "6616008 已过期的DRM许可证被加载到打开的DRM会话中",
+        "level": 2,
+        "line_start": 1179,
+        "line_end": 1196,
+        "summary": "**错误信息**\n\nThe DRM license being loaded into the open DRM session has expired.\n\n**错误描述**\n\n由已过期的DRM许可"
+      },
+      {
+        "section_id": "section-66",
+        "title": "6616100 DRM进程秘钥响应错误",
+        "level": 2,
+        "line_start": 1197,
+        "line_end": 1213,
+        "summary": "**错误信息**\n\nAn error occurs when the DRM processes the key response.\n\n**错误描述**\n\nDRM进程秘钥响应错误。\n\n**可能原因*"
+      }
+    ]
+  }
+}

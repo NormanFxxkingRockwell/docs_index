@@ -1,0 +1,300 @@
+{
+  "doc_id": "ts-particle-animation",
+  "title": "粒子动画 (Particle)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-particle-animation.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-particle-animation.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@CCFFWW",
+    "designer": "@CCFFWW",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 粒子动画 (Particle)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "粒子动画 (Particle)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 25,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 59,
+        "summary": "```typescript\ninterface ParticleInterface {\n  <\n    PARTICLE extends ParticleType,\n    COLOR_UPDATE"
+      },
+      {
+        "section_id": "section-3",
+        "title": "属性",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 124,
+        "summary": "除支持[通用属性](ts-component-general-attributes.md)外还支持以下属性：\n\n### disturbanceFields<sup>12+</sup>\n\ndistur"
+      },
+      {
+        "section_id": "section-4",
+        "title": "事件",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 127,
+        "summary": "支持[通用事件](ts-component-general-events.md)。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ParticleOptions",
+        "level": 2,
+        "line_start": 128,
+        "line_end": 166,
+        "summary": "```typescript\ninterface ParticleOptions<\n  PARTICLE extends ParticleType,\n  COLOR_UPDATER extends P"
+      },
+      {
+        "section_id": "section-6",
+        "title": "EmitterOptions",
+        "level": 2,
+        "line_start": 167,
+        "line_end": 192,
+        "summary": "```typescript\ninterface EmitterOptions<PARTICLE extends ParticleType> {   \n  particle: EmitterParti"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ParticleConfigs",
+        "level": 2,
+        "line_start": 193,
+        "line_end": 205,
+        "summary": "设置粒子配置项。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-8",
+        "title": "PointParticleParameters",
+        "level": 2,
+        "line_start": 206,
+        "line_end": 217,
+        "summary": "设置粒子半径。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ImageParticleParameters",
+        "level": 2,
+        "line_start": 218,
+        "line_end": 231,
+        "summary": "设置图片选项。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-10",
+        "title": "ParticleColorPropertyOptions",
+        "level": 2,
+        "line_start": 232,
+        "line_end": 252,
+        "summary": "```typescript\ninterface ParticleColorPropertyOptions<UPDATER extends ParticleUpdater> {\n  range: Pa"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ParticleColorPropertyUpdaterConfigs",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 266,
+        "summary": "设置粒子颜色属性更新器的配置。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI."
+      },
+      {
+        "section_id": "section-12",
+        "title": "ParticlePropertyOptions",
+        "level": 2,
+        "line_start": 267,
+        "line_end": 286,
+        "summary": "```typescript\ninterface ParticlePropertyOptions<TYPE, UPDATER extends ParticleUpdater> {\n  range: Pa"
+      },
+      {
+        "section_id": "section-13",
+        "title": "ParticlePropertyUpdaterConfigs",
+        "level": 2,
+        "line_start": 287,
+        "line_end": 307,
+        "summary": "```typescript\ninterface ParticlePropertyUpdaterConfigs<T> {\n    [ParticleUpdater.NONE]: void;\n    [P"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ParticlePropertyAnimation",
+        "level": 2,
+        "line_start": 308,
+        "line_end": 333,
+        "summary": "```typescript\ninterface ParticlePropertyAnimation<T> {\n  from: T;\n  to: T;\n  startMillis: number;"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ParticleType",
+        "level": 2,
+        "line_start": 334,
+        "line_end": 348,
+        "summary": "粒子类型。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-16",
+        "title": "ParticleEmitterShape",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 361,
+        "summary": "粒子发射器形状。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称  |  值  | 说明 |\n| -------- | -------- | -"
+      },
+      {
+        "section_id": "section-17",
+        "title": "DistributionType<sup>12+<sup>",
+        "level": 2,
+        "line_start": 362,
+        "line_end": 374,
+        "summary": "初始颜色随机值分布类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-18",
+        "title": "ParticleUpdater",
+        "level": 2,
+        "line_start": 375,
+        "line_end": 388,
+        "summary": "粒子变化类型。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-19",
+        "title": "DisturbanceFieldOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 389,
+        "line_end": 407,
+        "summary": "设置粒子扰动场参数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-20",
+        "title": "DisturbanceFieldShape<sup>12+</sup>",
+        "level": 2,
+        "line_start": 408,
+        "line_end": 421,
+        "summary": "粒子形状。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-21",
+        "title": "EmitterProperty<sup>12+</sup>",
+        "level": 2,
+        "line_start": 422,
+        "line_end": 435,
+        "summary": "设置发射器属性。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称 | 类型    | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-22",
+        "title": "ParticleTuple<sup>18+</sup>",
+        "level": 2,
+        "line_start": 436,
+        "line_end": 451,
+        "summary": "```typescript\ndeclare type ParticleTuple<T1, T2> = [T1, T2];\n```\n\n粒子元组，表示定义一些动画参数的类型。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-23",
+        "title": "Particles<sup>18+</sup>",
+        "level": 2,
+        "line_start": 452,
+        "line_end": 491,
+        "summary": "```typescript\ninterface Particles<\n  PARTICLE extends ParticleType,\n  COLOR_UPDATER extends Particl"
+      },
+      {
+        "section_id": "section-24",
+        "title": "VelocityOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 492,
+        "line_end": 508,
+        "summary": "粒子速度配置。\n\n> **说明：**\n>\n> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的"
+      },
+      {
+        "section_id": "section-25",
+        "title": "AccelerationOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 509,
+        "line_end": 535,
+        "summary": "```typescript\ndeclare interface AccelerationOptions<\n  ACC_SPEED_UPDATER extends ParticleUpdater,"
+      },
+      {
+        "section_id": "section-26",
+        "title": "EmitterParticleOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 536,
+        "line_end": 565,
+        "summary": "```typescript\ninterface EmitterParticleOptions<PARTICLE extends ParticleType> {\n  type: PARTICLE;"
+      },
+      {
+        "section_id": "section-27",
+        "title": "ParticleUpdaterOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 566,
+        "line_end": 589,
+        "summary": "```typescript\ninterface ParticleUpdaterOptions<TYPE, UPDATER extends ParticleUpdater> {\n  type: UPD"
+      },
+      {
+        "section_id": "section-28",
+        "title": "ParticleColorUpdaterOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 590,
+        "line_end": 613,
+        "summary": "```typescript\ninterface ParticleColorUpdaterOptions<UPDATER extends ParticleUpdater> {\n  type: UPDA"
+      },
+      {
+        "section_id": "section-29",
+        "title": "ParticleColorOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 614,
+        "line_end": 632,
+        "summary": "颜色变化方式为均匀变化的时候，在区间内随机生成一个差值。r、g、b、a四个颜色通道每秒分别使用差值叠加当前颜色值，生成目标颜色值。实现颜色随机变化的效果。\n\n> **说明：**\n>\n> 为规范匿名对"
+      },
+      {
+        "section_id": "section-30",
+        "title": "ParticleAnnulusRegion<sup>20+</sup>",
+        "level": 2,
+        "line_start": 633,
+        "line_end": 659,
+        "summary": "用于设置环形发射器区域的配置信息。\n\n> **说明：**\n>\n> - outerRadius、innerRadius小于零或使用百分比单位时，会按零进行处理。\n>\n> - 当outerRadius小"
+      },
+      {
+        "section_id": "section-31",
+        "title": "Vector2T\\<T><sup>22+</sup>",
+        "level": 2,
+        "line_start": 660,
+        "line_end": 674,
+        "summary": "type Vector2T\\<T> = Vector2T\\<T>\n\n定义Vector2T类型。其中Vector2T类型包含x和y两个属性值。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-32",
+        "title": "FieldRegion<sup>22+</sup>",
+        "level": 2,
+        "line_start": 675,
+        "line_end": 690,
+        "summary": "用于设置粒子场的区域信息。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ar"
+      },
+      {
+        "section_id": "section-33",
+        "title": "RippleFieldOptions<sup>22+</sup>",
+        "level": 2,
+        "line_start": 691,
+        "line_end": 709,
+        "summary": "用于描述粒子波动场信息的参数。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI."
+      },
+      {
+        "section_id": "section-34",
+        "title": "VelocityFieldOptions<sup>22+</sup>",
+        "level": 2,
+        "line_start": 710,
+        "line_end": 722,
+        "summary": "用于描述粒子速度场信息的参数。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI."
+      },
+      {
+        "section_id": "section-35",
+        "title": "示例",
+        "level": 2,
+        "line_start": 723,
+        "line_end": 1780,
+        "summary": "### 示例1（圆形初始化粒子）\n\n描述粒子动画基础用法，通过圆形初始化粒子。\n\n<!-- @[particle_example](https://gitcode.com/openharmony/a"
+      }
+    ]
+  }
+}

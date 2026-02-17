@@ -1,0 +1,188 @@
+{
+  "doc_id": "js-apis-pointer",
+  "title": "@ohos.multimodalInput.pointer (鼠标光标)",
+  "path": "zh-cn/application-dev/reference/apis-input-kit/js-apis-pointer.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-input-kit/js-apis-pointer.md",
+  "metadata": {
+    "kit": "Input Kit",
+    "subsystem": "MultimodalInput",
+    "owner": "@zhaoxueyuan",
+    "designer": "@hanruofei",
+    "tester": "@Lyuxin",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Input Kit MultimodalInput 模块的 @ohos.multimodalInput.pointer (鼠标光标)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalInput.pointer (鼠标光标)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```js\nimport { pointer } from '@kit.InputKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "pointer.setPointerVisible",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 75,
+        "summary": "setPointerVisible(visible: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置当前窗口的鼠标光标是否显示，使用c"
+      },
+      {
+        "section_id": "section-3",
+        "title": "pointer.setPointerVisible",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 132,
+        "summary": "setPointerVisible(visible: boolean): Promise&lt;void&gt;\n\n设置当前窗口的鼠标光标是否显示，使用Promise异步回调。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-4",
+        "title": "pointer.setPointerVisibleSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 178,
+        "summary": "setPointerVisibleSync(visible: boolean): void\n\n设置当前窗口鼠标光标的显示状态，使用同步方式。\n\n**系统能力**：SystemCapability.M"
+      },
+      {
+        "section_id": "section-5",
+        "title": "pointer.isPointerVisible",
+        "level": 2,
+        "line_start": 179,
+        "line_end": 230,
+        "summary": "isPointerVisible(callback: AsyncCallback&lt;boolean&gt;): void\n\n获取鼠标光标显示状态，使用callback异步回调。\n\n**系统能力*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "pointer.isPointerVisible",
+        "level": 2,
+        "line_start": 231,
+        "line_end": 272,
+        "summary": "isPointerVisible(): Promise&lt;boolean&gt;\n\n获取鼠标光标显示状态，使用Promise异步回调。\n\n**系统能力**：SystemCapability.Mu"
+      },
+      {
+        "section_id": "section-7",
+        "title": "pointer.isPointerVisibleSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 273,
+        "line_end": 310,
+        "summary": "isPointerVisibleSync(): boolean\n\n获取当前窗口鼠标光标的显示状态，使用同步方式。\n\n**系统能力**：SystemCapability.MultimodalInput"
+      },
+      {
+        "section_id": "section-8",
+        "title": "pointer.getPointerStyle",
+        "level": 2,
+        "line_start": 311,
+        "line_end": 371,
+        "summary": "getPointerStyle(windowId: number, callback: AsyncCallback&lt;PointerStyle&gt;): void\n\n获取指定窗口的鼠标样式类型"
+      },
+      {
+        "section_id": "section-9",
+        "title": "pointer.getPointerStyle",
+        "level": 2,
+        "line_start": 372,
+        "line_end": 439,
+        "summary": "getPointerStyle(windowId: number): Promise&lt;PointerStyle&gt;\n\n获取鼠标样式类型，使用Promise异步回调。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-10",
+        "title": "pointer.getPointerStyleSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 440,
+        "line_end": 492,
+        "summary": "getPointerStyleSync(windowId: number): PointerStyle\n\n查询指定窗口的鼠标样式类型，如向东箭头、向西箭头、向南箭头、向北箭头等。\n\n**系统能力**"
+      },
+      {
+        "section_id": "section-11",
+        "title": "pointer.setPointerStyle",
+        "level": 2,
+        "line_start": 493,
+        "line_end": 553,
+        "summary": "setPointerStyle(windowId: number, pointerStyle: PointerStyle, callback: AsyncCallback&lt;void&gt;):"
+      },
+      {
+        "section_id": "section-12",
+        "title": "pointer.setPointerStyle",
+        "level": 2,
+        "line_start": 554,
+        "line_end": 622,
+        "summary": "setPointerStyle(windowId: number, pointerStyle: PointerStyle): Promise&lt;void&gt;\n\n设置指定窗口的鼠标样式类型，使"
+      },
+      {
+        "section_id": "section-13",
+        "title": "pointer.setPointerStyleSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 623,
+        "line_end": 681,
+        "summary": "setPointerStyleSync(windowId: number, pointerStyle: PointerStyle): void\n\n设置指定窗口的鼠标样式类型，使用同步方式返回结果。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "PrimaryButton<sup>10+</sup>",
+        "level": 2,
+        "line_start": 682,
+        "line_end": 692,
+        "summary": "鼠标主键类型。\n\n**系统能力**：SystemCapability.MultimodalInput.Input.Pointer\n\n| 名称"
+      },
+      {
+        "section_id": "section-15",
+        "title": "RightClickType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 693,
+        "line_end": 706,
+        "summary": "右键菜单的触发方式。\n\n**系统能力**：SystemCapability.MultimodalInput.Input.Pointer\n\n| 名称"
+      },
+      {
+        "section_id": "section-16",
+        "title": "PointerStyle",
+        "level": 2,
+        "line_start": 707,
+        "line_end": 768,
+        "summary": "鼠标光标样式类型。\n\n**系统能力**：SystemCapability.MultimodalInput.Input.Pointer\n\n| 名称"
+      },
+      {
+        "section_id": "section-17",
+        "title": "pointer.setCustomCursor<sup>11+</sup>",
+        "level": 2,
+        "line_start": 769,
+        "line_end": 840,
+        "summary": "setCustomCursor(windowId: number, pixelMap: image.PixelMap, focusX?: number, focusY?: number): Prom"
+      },
+      {
+        "section_id": "section-18",
+        "title": "CustomCursor<sup>15+</sup>",
+        "level": 2,
+        "line_start": 841,
+        "line_end": 851,
+        "summary": "自定义光标资源。\n\n**系统能力**：SystemCapability.MultimodalInput.Input.Pointer\n| 名称     | 类型     | 只读     | 可选"
+      },
+      {
+        "section_id": "section-19",
+        "title": "CursorConfig<sup>15+</sup>",
+        "level": 2,
+        "line_start": 852,
+        "line_end": 861,
+        "summary": "自定义光标配置。\n\n**系统能力**：SystemCapability.MultimodalInput.Input.Pointer\n\n| 名称     | 类型     | 只读     | 可选"
+      },
+      {
+        "section_id": "section-20",
+        "title": "pointer.setCustomCursor<sup>15+</sup>",
+        "level": 2,
+        "line_start": 862,
+        "line_end": 936,
+        "summary": "setCustomCursor(windowId: number, cursor: CustomCursor, config: CursorConfig): Promise&lt;void&gt;"
+      },
+      {
+        "section_id": "section-21",
+        "title": "pointer.setCustomCursorSync<sup>11+</sup>",
+        "level": 2,
+        "line_start": 937,
+        "line_end": 1002,
+        "summary": "setCustomCursorSync(windowId: number, pixelMap: image.PixelMap, focusX?: number, focusY?: number):"
+      }
+    ]
+  }
+}

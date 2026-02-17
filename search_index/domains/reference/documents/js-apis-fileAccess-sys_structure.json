@@ -1,0 +1,156 @@
+{
+  "doc_id": "js-apis-fileAccess-sys",
+  "title": "@ohos.file.fileAccess (公共文件访问与管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-fileAccess-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-fileAccess-sys.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@wang_zhangjun; @gzhuangzhuang",
+    "designer": "@wang_zhangjun; @gzhuangzhuang; @renguang1116",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.file.fileAccess (公共文件访问与管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.fileAccess (公共文件访问与管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { fileAccess } from '@kit.CoreFileKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "常量",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 39,
+        "summary": "表示用于监听设备上线和下线通知的URI，用作注册监听的URI。\n\n**模型约束**：仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapabi"
+      },
+      {
+        "section_id": "section-3",
+        "title": "fileAccess.getFileAccessAbilityInfo",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 80,
+        "summary": "getFileAccessAbilityInfo() : Promise&lt;Array&lt;Want&gt;&gt;\n\n以异步方法获取系统内extension配置为fileAccess类型的所"
+      },
+      {
+        "section_id": "section-4",
+        "title": "fileAccess.getFileAccessAbilityInfo",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 125,
+        "summary": "getFileAccessAbilityInfo(callback: AsyncCallback&lt;Array&lt;Want&gt;&gt;): void\n\n以异步方法获取系统内extensi"
+      },
+      {
+        "section_id": "section-5",
+        "title": "fileAccess.createFileAccessHelper",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 186,
+        "summary": "createFileAccessHelper(context: Context, wants: Array&lt;Want&gt;) : FileAccessHelper\n\n以同步方法创建连接指定w"
+      },
+      {
+        "section_id": "section-6",
+        "title": "fileAccess.createFileAccessHelper",
+        "level": 2,
+        "line_start": 187,
+        "line_end": 239,
+        "summary": "createFileAccessHelper(context: Context) : FileAccessHelper\n\n以同步方法创建连接当前系统内所有文件管理服务的helper对象。\n\n**模型"
+      },
+      {
+        "section_id": "section-7",
+        "title": "FileInfo",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 385,
+        "summary": "表示文件(夹)属性信息和接口能力。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.FileMa"
+      },
+      {
+        "section_id": "section-8",
+        "title": "FileIterator",
+        "level": 2,
+        "line_start": 386,
+        "line_end": 421,
+        "summary": "表示文件夹的迭代器对象。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.FileManagem"
+      },
+      {
+        "section_id": "section-9",
+        "title": "RootInfo",
+        "level": 2,
+        "line_start": 422,
+        "line_end": 567,
+        "summary": "表示设备的根属性信息和接口能力。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.FileMan"
+      },
+      {
+        "section_id": "section-10",
+        "title": "RootIterator",
+        "level": 2,
+        "line_start": 568,
+        "line_end": 603,
+        "summary": "表示设备根目录的迭代器对象。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.FileManag"
+      },
+      {
+        "section_id": "section-11",
+        "title": "FileAccessHelper",
+        "level": 2,
+        "line_start": 604,
+        "line_end": 2699,
+        "summary": "FileAccessHelper对象。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.FileManagement.UserFileService"
+      },
+      {
+        "section_id": "section-12",
+        "title": "CopyResult<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2700,
+        "line_end": 2716,
+        "summary": "表示复制操作失败时的返回信息，复制成功时则没有返回信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.FileManagement.UserFile"
+      },
+      {
+        "section_id": "section-13",
+        "title": "OPENFLAGS",
+        "level": 2,
+        "line_start": 2717,
+        "line_end": 2732,
+        "summary": "枚举，目前支持的文件打开的标志位。\n\n**系统接口**：此接口为系统接口。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力** ：SystemCapability.FileM"
+      },
+      {
+        "section_id": "section-14",
+        "title": "FILEKEY<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2733,
+        "line_end": 2750,
+        "summary": "枚举，支持查询的键。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力** ：SystemCapability.FileManageme"
+      },
+      {
+        "section_id": "section-15",
+        "title": "NotifyType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2751,
+        "line_end": 2770,
+        "summary": "枚举，通知类型。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.FileManagement."
+      },
+      {
+        "section_id": "section-16",
+        "title": "NotifyMessage<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2771,
+        "line_end": 2787,
+        "summary": "通知回调函数的值。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.FileManagement"
+      },
+      {
+        "section_id": "section-17",
+        "title": "MoveResult<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2788,
+        "line_end": 2806,
+        "summary": "表示移动操作失败时的返回信息，移动成功时则没有返回信息。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapabi"
+      }
+    ]
+  }
+}

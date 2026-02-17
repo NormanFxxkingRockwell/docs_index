@@ -1,0 +1,372 @@
+{
+  "doc_id": "js-apis-usbManager",
+  "title": "@ohos.usbManager (USB管理)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-usbManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-usbManager.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "USB",
+    "owner": "@hwymlgitcode",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Basic Services Kit USB 模块的 @ohos.usbManager (USB管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.usbManager (USB管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { usbManager } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 37,
+        "summary": "凡是参数类型为[USBDevicePipe](#usbdevicepipe)的接口,都需要执行如下操作：\n \n**在使用接口前：**\n\n1. 调用[usbManager.getDevices](#u"
+      },
+      {
+        "section_id": "section-3",
+        "title": "usbManager.getDevices",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 125,
+        "summary": "getDevices(): Array&lt;Readonly&lt;USBDevice&gt;&gt;\n\n获取接入主设备的USB设备列表。\n\n> **说明：**\n>\n> 当USB服务正常运行但无设"
+      },
+      {
+        "section_id": "section-4",
+        "title": "usbManager.connectDevice",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 175,
+        "summary": "connectDevice(device: USBDevice): Readonly&lt;USBDevicePipe&gt;\n\n根据getDevices()返回的设备信息打开USB设备。如果USB"
+      },
+      {
+        "section_id": "section-5",
+        "title": "usbManager.hasRight",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 224,
+        "summary": "hasRight(deviceName: string): boolean\n\n判断是否有权访问该设备。\n\n如果“使用者”（如各种App或系统）有权访问设备则返回true；无权访问设备则返回false"
+      },
+      {
+        "section_id": "section-6",
+        "title": "usbManager.requestRight",
+        "level": 2,
+        "line_start": 225,
+        "line_end": 270,
+        "summary": "requestRight(deviceName: string): Promise&lt;boolean&gt;\n\n请求软件包的临时权限以访问设备。使用Promise异步回调。系统应用默认拥有访问设"
+      },
+      {
+        "section_id": "section-7",
+        "title": "usbManager.removeRight",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 318,
+        "summary": "removeRight(deviceName: string): boolean\n\n移除软件包访问设备的权限。系统应用默认拥有访问设备权限，调用此接口不会产生影响。\n\n**系统能力：**  Syst"
+      },
+      {
+        "section_id": "section-8",
+        "title": "usbManager.claimInterface",
+        "level": 2,
+        "line_start": 319,
+        "line_end": 373,
+        "summary": "claimInterface(pipe: USBDevicePipe, iface: USBInterface, force ?: boolean): number\n\n声明对USB设备某个接口的控制"
+      },
+      {
+        "section_id": "section-9",
+        "title": "usbManager.releaseInterface",
+        "level": 2,
+        "line_start": 374,
+        "line_end": 427,
+        "summary": "releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number\n\n释放claim过的通信接口。\n\n> **说明：**\n>\n> 在"
+      },
+      {
+        "section_id": "section-10",
+        "title": "usbManager.setConfiguration",
+        "level": 2,
+        "line_start": 428,
+        "line_end": 476,
+        "summary": "setConfiguration(pipe: USBDevicePipe, config: USBConfiguration): number\n\n设置设备配置。\n\n**系统能力：**  System"
+      },
+      {
+        "section_id": "section-11",
+        "title": "usbManager.setInterface",
+        "level": 2,
+        "line_start": 477,
+        "line_end": 532,
+        "summary": "setInterface(pipe: USBDevicePipe, iface: USBInterface): number\n\n设置设备接口。\n\n> **说明：**\n>\n> 一个USB接口可能存在多"
+      },
+      {
+        "section_id": "section-12",
+        "title": "usbManager.getRawDescriptor",
+        "level": 2,
+        "line_start": 533,
+        "line_end": 577,
+        "summary": "getRawDescriptor(pipe: USBDevicePipe): Uint8Array\n\n获取原始的USB描述符。如果USB服务异常，可能返回`undefined`，注意需要对接口返回值"
+      },
+      {
+        "section_id": "section-13",
+        "title": "usbManager.getFileDescriptor",
+        "level": 2,
+        "line_start": 578,
+        "line_end": 625,
+        "summary": "getFileDescriptor(pipe: USBDevicePipe): number\n\n获取文件描述符。\n\n**系统能力：**  SystemCapability.USB.USBManage"
+      },
+      {
+        "section_id": "section-14",
+        "title": "usbManager.controlTransfer<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 626,
+        "line_end": 695,
+        "summary": "controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, timeout ?: number): Promise&lt"
+      },
+      {
+        "section_id": "section-15",
+        "title": "usbManager.usbControlTransfer<sup>12+</sup>",
+        "level": 2,
+        "line_start": 696,
+        "line_end": 763,
+        "summary": "usbControlTransfer(pipe: USBDevicePipe, requestparam: USBDeviceRequestParams, timeout ?: number): P"
+      },
+      {
+        "section_id": "section-16",
+        "title": "usbManager.bulkTransfer",
+        "level": 2,
+        "line_start": 764,
+        "line_end": 836,
+        "summary": "bulkTransfer(pipe: USBDevicePipe, endpoint: USBEndpoint, buffer: Uint8Array, timeout ?: number): Pr"
+      },
+      {
+        "section_id": "section-17",
+        "title": "usbManager.usbSubmitTransfer<sup>18+</sup>",
+        "level": 2,
+        "line_start": 837,
+        "line_end": 921,
+        "summary": "usbSubmitTransfer(transfer: UsbDataTransferParams): void\n\n提交异步传输请求。\n\n> **说明：**\n>\n> 本接口为异步接口，调用后立刻返回"
+      },
+      {
+        "section_id": "section-18",
+        "title": "usbManager.usbCancelTransfer<sup>18+</sup>",
+        "level": 2,
+        "line_start": 922,
+        "line_end": 1004,
+        "summary": "usbCancelTransfer(transfer: UsbDataTransferParams): void\n\n取消异步传输请求。\n\n> **说明：**\n>\n> 该接口的主要作用是主动取消尚未完"
+      },
+      {
+        "section_id": "section-19",
+        "title": "usbManager.closePipe",
+        "level": 2,
+        "line_start": 1005,
+        "line_end": 1054,
+        "summary": "closePipe(pipe: USBDevicePipe): number\n\n关闭设备消息控制通道。\n\n1. 需要调用[usbManager.getDevices](#usbmanagergetd"
+      },
+      {
+        "section_id": "section-20",
+        "title": "usbManager.hasAccessoryRight<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1055,
+        "line_end": 1101,
+        "summary": "hasAccessoryRight(accessory: USBAccessory): boolean\n\n检查应用程序是否有权访问USB配件。\n\n需要调用[usbManager.getAccesso"
+      },
+      {
+        "section_id": "section-21",
+        "title": "usbManager.requestAccessoryRight<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1102,
+        "line_end": 1148,
+        "summary": "requestAccessoryRight(accessory: USBAccessory): Promise&lt;boolean&gt;\n\n为指定应用程序申请访问USB配件的访问权限。使用Pro"
+      },
+      {
+        "section_id": "section-22",
+        "title": "usbManager.cancelAccessoryRight<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1149,
+        "line_end": 1190,
+        "summary": "cancelAccessoryRight(accessory: USBAccessory): void\n\n取消当前应用程序访问USB配件的权限。\n\n需要调用[usbManager.getAccess"
+      },
+      {
+        "section_id": "section-23",
+        "title": "usbManager.getAccessoryList<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1191,
+        "line_end": 1225,
+        "summary": "getAccessoryList(): Array<Readonly&lt;USBAccessory&gt;>\n\n获取当前已接入主机的USB配件列表。\n\n**系统能力：**  SystemCapab"
+      },
+      {
+        "section_id": "section-24",
+        "title": "usbManager.openAccessory<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1226,
+        "line_end": 1279,
+        "summary": "openAccessory(accessory: USBAccessory): USBAccessoryHandle\n\n获取配件句柄并打开配件文件描述符。之后可以通过CoreFileKit提供的re"
+      },
+      {
+        "section_id": "section-25",
+        "title": "usbManager.closeAccessory<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1280,
+        "line_end": 1320,
+        "summary": "closeAccessory(accessoryHandle: USBAccessoryHandle): void\n\n关闭配件文件描述符。\n\n需要调用[usbManager.openAccessor"
+      },
+      {
+        "section_id": "section-26",
+        "title": "usbManager.resetUsbDevice<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1321,
+        "line_end": 1378,
+        "summary": "resetUsbDevice(pipe: USBDevicePipe): boolean\n\n重置USB外设。\n\n> **说明：**\n>\n> 本接口调用后会重置此前设置的配置和替换接口，请在调用之前确"
+      },
+      {
+        "section_id": "section-27",
+        "title": "USBEndpoint",
+        "level": 2,
+        "line_start": 1379,
+        "line_end": 1401,
+        "summary": "通过USB发送和接收数据的端口。通过[USBInterface](#usbinterface)获取。\n\n>**说明：**\n>\n> 主机控制器按照Endpoint类型调度。\n>\n> 协议层打包时依赖t"
+      },
+      {
+        "section_id": "section-28",
+        "title": "USBInterface",
+        "level": 2,
+        "line_start": 1402,
+        "line_end": 1417,
+        "summary": "一个[USBConfiguration](#usbconfiguration)中可以含有多个USBInterface，每个USBInterface提供一个功能。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-29",
+        "title": "USBConfiguration",
+        "level": 2,
+        "line_start": 1418,
+        "line_end": 1433,
+        "summary": "USB配置，一个[USBDevice](#usbdevice)中可以含有多个配置。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-30",
+        "title": "USBDevice",
+        "level": 2,
+        "line_start": 1434,
+        "line_end": 1455,
+        "summary": "USB设备信息。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称               | 类型"
+      },
+      {
+        "section_id": "section-31",
+        "title": "USBDevicePipe",
+        "level": 2,
+        "line_start": 1456,
+        "line_end": 1466,
+        "summary": "USB设备消息传输通道，用于确定设备。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称         | 类型   | 只读  | 可选    |"
+      },
+      {
+        "section_id": "section-32",
+        "title": "USBControlParams<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1467,
+        "line_end": 1485,
+        "summary": "控制传输参数。\n\n>**说明：**\n>\n> 从 API version 9开始支持，从API version 18开始废弃。建议使用 [USBDeviceRequestParams](#usbdev"
+      },
+      {
+        "section_id": "section-33",
+        "title": "USBDeviceRequestParams<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1486,
+        "line_end": 1500,
+        "summary": "控制传输参数。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-34",
+        "title": "USBRequestTargetType",
+        "level": 2,
+        "line_start": 1501,
+        "line_end": 1513,
+        "summary": "请求目标类型。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称                         | 值   | 说明   |\n| -"
+      },
+      {
+        "section_id": "section-35",
+        "title": "USBControlRequestType",
+        "level": 2,
+        "line_start": 1514,
+        "line_end": 1525,
+        "summary": "控制请求类型。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称                      | 值   | 说明   |\n| ----"
+      },
+      {
+        "section_id": "section-36",
+        "title": "USBRequestDirection",
+        "level": 2,
+        "line_start": 1526,
+        "line_end": 1536,
+        "summary": "请求方向。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称                        | 值   | 说明"
+      },
+      {
+        "section_id": "section-37",
+        "title": "USBAccessory<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1537,
+        "line_end": 1550,
+        "summary": "USB配件信息。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称         | 类型   | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-38",
+        "title": "USBAccessoryHandle<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1551,
+        "line_end": 1560,
+        "summary": "USB配件句柄。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称        | 类型   | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-39",
+        "title": "UsbDataTransferParams<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1561,
+        "line_end": 1579,
+        "summary": "作为通用USB数据传输接口，客户端需要填充这个对象中的参数，用以发起传输请求。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称         |"
+      },
+      {
+        "section_id": "section-40",
+        "title": "UsbTransferFlags<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1580,
+        "line_end": 1592,
+        "summary": "USB传输标志。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称                         | 值   | 说明   |\n|"
+      },
+      {
+        "section_id": "section-41",
+        "title": "UsbEndpointTransferType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1593,
+        "line_end": 1604,
+        "summary": "Usb传输类型。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称                         | 值   | 说明   |\n|"
+      },
+      {
+        "section_id": "section-42",
+        "title": "SubmitTransferCallback<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1605,
+        "line_end": 1616,
+        "summary": "Usb异步传输回调。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称        | 类型 | 只读 | 可选   | 说明    |\n| ---"
+      },
+      {
+        "section_id": "section-43",
+        "title": "UsbTransferStatus<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1617,
+        "line_end": 1632,
+        "summary": "数据处理完成后通过回调返回的状态码。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称                         | 值   |"
+      },
+      {
+        "section_id": "section-44",
+        "title": "UsbIsoPacketDescriptor<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1633,
+        "line_end": 1644,
+        "summary": "实时传输模式回调返回的分包信息。\n\n**系统能力：** SystemCapability.USB.USBManager\n\n| 名称         | 类型 | 只读  | 可选 | 说明    |"
+      }
+    ]
+  }
+}

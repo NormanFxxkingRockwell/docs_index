@@ -1,0 +1,76 @@
+{
+  "doc_id": "js-apis-enterprise-accountManager",
+  "title": "@ohos.enterprise.accountManager（账户管理）",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-accountManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-accountManager.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.accountManager（账户管理），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.accountManager（账户管理）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { accountManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "accountManager.disallowOsAccountAddition",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 78,
+        "summary": "disallowOsAccountAddition(admin: Want, disallow: boolean, accountId?: number): void\n\n禁止用户添加账号。\n\n**需"
+      },
+      {
+        "section_id": "section-3",
+        "title": "accountManager.isOsAccountAdditionDisallowed",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 136,
+        "summary": "isOsAccountAdditionDisallowed(admin: Want, accountId?: number): boolean\n\n查询是否禁止用户添加账号。\n\n**需要权限：** o"
+      },
+      {
+        "section_id": "section-4",
+        "title": "accountManager.addOsAccountAsync",
+        "level": 2,
+        "line_start": 137,
+        "line_end": 199,
+        "summary": "addOsAccountAsync(admin: Want, name: string, type: osAccount.OsAccountType): Promise&lt;osAccount.O"
+      },
+      {
+        "section_id": "section-5",
+        "title": "accountManager.setDomainAccountPolicy<sup>19+</sup>",
+        "level": 2,
+        "line_start": 200,
+        "line_end": 290,
+        "summary": "setDomainAccountPolicy(admin: Want, domainAccountInfo: osAccount.DomainAccountInfo, policy: DomainA"
+      },
+      {
+        "section_id": "section-6",
+        "title": "accountManager.getDomainAccountPolicy<sup>19+</sup>",
+        "level": 2,
+        "line_start": 291,
+        "line_end": 379,
+        "summary": "getDomainAccountPolicy(admin: Want, domainAccountInfo: osAccount.DomainAccountInfo): DomainAccountP"
+      },
+      {
+        "section_id": "section-7",
+        "title": "DomainAccountPolicy<sup>19+</sup>",
+        "level": 2,
+        "line_start": 380,
+        "line_end": 391,
+        "summary": "域账号策略。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称"
+      }
+    ]
+  }
+}

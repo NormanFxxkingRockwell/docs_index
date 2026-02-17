@@ -1,0 +1,84 @@
+{
+  "doc_id": "arkts-apis-graphics-drawing-ImageFilter",
+  "title": "Class (ImageFilter)",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-ImageFilter.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-ImageFilter.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphics 模块的 Class (ImageFilter)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (ImageFilter)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { drawing } from '@kit.ArkGraphics2D';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "createBlurImageFilter<sup>12+</sup>",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 65,
+        "summary": "static createBlurImageFilter(sigmaX: number, sigmaY: number, tileMode: TileMode, imageFilter?: Imag"
+      },
+      {
+        "section_id": "section-3",
+        "title": "createFromImage<sup>20+</sup>",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 134,
+        "summary": "static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null, dstRect?: common2D"
+      },
+      {
+        "section_id": "section-4",
+        "title": "createBlendImageFilter<sup>20+</sup>",
+        "level": 2,
+        "line_start": 135,
+        "line_end": 177,
+        "summary": "static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foreground: ImageFilter): I"
+      },
+      {
+        "section_id": "section-5",
+        "title": "createComposeImageFilter<sup>20+</sup>",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 216,
+        "summary": "static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): ImageFilter\n\n将两个图像滤波器进行级"
+      },
+      {
+        "section_id": "section-6",
+        "title": "createFromColorFilter<sup>12+</sup>",
+        "level": 2,
+        "line_start": 217,
+        "line_end": 254,
+        "summary": "static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter | null): ImageFilt"
+      },
+      {
+        "section_id": "section-7",
+        "title": "createOffsetImageFilter<sup>20+</sup>",
+        "level": 2,
+        "line_start": 255,
+        "line_end": 286,
+        "summary": "static createOffsetImageFilter(dx: number, dy: number, input?: ImageFilter | null): ImageFilter\n\n创建"
+      },
+      {
+        "section_id": "section-8",
+        "title": "createFromShaderEffect<sup>20+</sup>",
+        "level": 2,
+        "line_start": 287,
+        "line_end": 314,
+        "summary": "static createFromShaderEffect(shader: ShaderEffect): ImageFilter\n\n基于着色器创建一个图像滤波器。\n\n**系统能力**：SystemC"
+      }
+    ]
+  }
+}

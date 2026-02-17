@@ -1,0 +1,316 @@
+{
+  "doc_id": "js-apis-settings",
+  "title": "@ohos.settings (设置数据项名称)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-settings.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-settings.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Applications",
+    "owner": "@YingCong",
+    "designer": "@Kun_Wu",
+    "tester": "@dyx118186878",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Basic Services Kit Applications 模块的 @ohos.settings (设置数据项名称)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.settings (设置数据项名称)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 22,
+        "summary": "```js\nimport { settings } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "domainName",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 35,
+        "summary": "提供查询的域名。\n\n### 常量\n\n**系统能力：** SystemCapability.Applications.Settings.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-3",
+        "title": "date",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 50,
+        "summary": "提供设置时间和日期格式的数据项。\n\n### 常量\n\n**系统能力：** SystemCapability.Applications.Settings.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-4",
+        "title": "display",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 72,
+        "summary": "提供设置显示效果的数据项。\n\n### 常量\n\n**系统能力：** SystemCapability.Applications.Settings.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-5",
+        "title": "general",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 99,
+        "summary": "提供设置设备常规信息的数据项。\n\n### 常量\n\n**系统能力：** SystemCapability.Applications.Settings.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-6",
+        "title": "input",
+        "level": 2,
+        "line_start": 100,
+        "line_end": 118,
+        "summary": "提供设置有关输入法信息的数据项。\n\n### 常量\n\n**系统能力：** SystemCapability.Applications.Settings.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-7",
+        "title": "network",
+        "level": 2,
+        "line_start": 119,
+        "line_end": 132,
+        "summary": "提供设置网络信息的数据项。\n\n### 常量\n\n**系统能力：** SystemCapability.Applications.Settings.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-8",
+        "title": "phone",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 144,
+        "summary": "提供设置来电和去电接听方式的数据项。\n\n### 常量\n\n**系统能力：** SystemCapability.Applications.Settings.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-9",
+        "title": "sound",
+        "level": 2,
+        "line_start": 145,
+        "line_end": 166,
+        "summary": "提供设置声音效果的数据项。\n\n### 常量\n\n**系统能力：** SystemCapability.Applications.Settings.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-10",
+        "title": "TTS",
+        "level": 2,
+        "line_start": 167,
+        "line_end": 182,
+        "summary": "提供设置文本到语音(TTS)转换信息的数据项。\n\n### 常量\n\n**系统能力：** SystemCapability.Applications.Settings.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-11",
+        "title": "wireless",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 207,
+        "summary": "提供设置无线网络信息的数据项。\n\n### 常量\n\n**系统能力：** SystemCapability.Applications.Settings.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-12",
+        "title": "settings.setValue<sup>10+</sup>",
+        "level": 2,
+        "line_start": 208,
+        "line_end": 243,
+        "summary": "setValue(context: Context, name: string, value: string, callback: AsyncCallback\\<boolean>): void\n\n将"
+      },
+      {
+        "section_id": "section-13",
+        "title": "settings.setValue<sup>10+</sup>",
+        "level": 2,
+        "line_start": 244,
+        "line_end": 284,
+        "summary": "setValue(context: Context, name: string, value: string): Promise\\<boolean>\n\n将数据项名称及数据项的值保存到DEVICE_S"
+      },
+      {
+        "section_id": "section-14",
+        "title": "settings.setValue<sup>11+</sup>",
+        "level": 2,
+        "line_start": 285,
+        "line_end": 336,
+        "summary": "setValue(context: Context, name: string, value: string, domainName: string): Promise\\<boolean>\n\n将数据"
+      },
+      {
+        "section_id": "section-15",
+        "title": "settings.getValue<sup>10+</sup>",
+        "level": 2,
+        "line_start": 337,
+        "line_end": 372,
+        "summary": "getValue(context: Context, name: string, callback: AsyncCallback\\<string>): void\n\n获取数据库中DEVICE_SHAR"
+      },
+      {
+        "section_id": "section-16",
+        "title": "settings.getValue<sup>10+</sup>",
+        "level": 2,
+        "line_start": 373,
+        "line_end": 409,
+        "summary": "getValue(context: Context, name: string): Promise\\<string>\n\n获取数据库中DEVICE_SHARD域指定数据项的值。使用Promise异步回"
+      },
+      {
+        "section_id": "section-17",
+        "title": "settings.getValue<sup>11+</sup>",
+        "level": 2,
+        "line_start": 410,
+        "line_end": 451,
+        "summary": "getValue(context: Context, name: string, domainName: string): Promise\\<string>\n\n获取数据库中指定数据项的值。使用Pro"
+      },
+      {
+        "section_id": "section-18",
+        "title": "settings.getValueSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 452,
+        "line_end": 488,
+        "summary": "getValueSync(context: Context, name: string, defValue: string): string\n\n获取数据库中DEVICE_SHARED域指定数据项的值"
+      },
+      {
+        "section_id": "section-19",
+        "title": "settings.getValueSync<sup>11+</sup>",
+        "level": 2,
+        "line_start": 489,
+        "line_end": 530,
+        "summary": "getValueSync(context: Context, name: string, defValue: string, domainName: string): string\n\n获取数据项的值"
+      },
+      {
+        "section_id": "section-20",
+        "title": "settings.setValueSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 531,
+        "line_end": 572,
+        "summary": "setValueSync(context: Context, name: string, value: string): boolean\n\n将数据项名称及数据项的值保存到DEVICE_SHARED域"
+      },
+      {
+        "section_id": "section-21",
+        "title": "settings.setValueSync<sup>11+</sup>",
+        "level": 2,
+        "line_start": 573,
+        "line_end": 625,
+        "summary": "setValueSync(context: Context, name: string, value: string, domainName: string): boolean\n\n设置数据项的值。此"
+      },
+      {
+        "section_id": "section-22",
+        "title": "settings.registerKeyObserver<sup>11+</sup>",
+        "level": 2,
+        "line_start": 626,
+        "line_end": 665,
+        "summary": "registerKeyObserver(context: Context, name: string, domainName: string, observer:AsyncCallback\\<voi"
+      },
+      {
+        "section_id": "section-23",
+        "title": "settings.unregisterKeyObserver<sup>11+</sup>",
+        "level": 2,
+        "line_start": 666,
+        "line_end": 701,
+        "summary": "unregisterKeyObserver(context: Context, name: string, domainName: string): boolean\n\n同步方法，注销指定域名下对指定"
+      },
+      {
+        "section_id": "section-24",
+        "title": "settings.openNetworkManagerSettings<sup>18+</sup>",
+        "level": 2,
+        "line_start": 702,
+        "line_end": 749,
+        "summary": "openNetworkManagerSettings(context: Context): Promise\\<boolean>\n\n打开WLAN设置弹窗。使用Promise异步回调。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-25",
+        "title": "settings.enableAirplaneMode",
+        "level": 2,
+        "line_start": 750,
+        "line_end": 777,
+        "summary": "enableAirplaneMode(enable: boolean, callback: AsyncCallback\\<void>): void\n\n启用或禁用飞行模式。使用callback异步回调"
+      },
+      {
+        "section_id": "section-26",
+        "title": "settings.enableAirplaneMode",
+        "level": 2,
+        "line_start": 778,
+        "line_end": 808,
+        "summary": "enableAirplaneMode(enable: boolean): Promise\\<void>\n\n启用或禁用飞行模式。使用Promise异步回调（暂不支持）。\n\n**系统能力**：Syste"
+      },
+      {
+        "section_id": "section-27",
+        "title": "settings.canShowFloating",
+        "level": 2,
+        "line_start": 809,
+        "line_end": 834,
+        "summary": "canShowFloating(callback: AsyncCallback\\<boolean>): void\n\n检查应用是否能够以悬浮窗形式显示。使用callback异步回调（暂不支持）。\n\n*"
+      },
+      {
+        "section_id": "section-28",
+        "title": "settings.canShowFloating",
+        "level": 2,
+        "line_start": 835,
+        "line_end": 856,
+        "summary": "canShowFloating(): Promise\\<boolean>\n\n检查应用是否能够以悬浮窗形式显示。使用Promise异步回调（暂不支持）。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-29",
+        "title": "settings.getUriSync<sup>8+</sup>",
+        "level": 2,
+        "line_start": 857,
+        "line_end": 883,
+        "summary": "getUriSync(name: string): string\n\n获取数据项的URI（暂不支持）。\n\n**系统能力**：SystemCapability.Applications.Settings"
+      },
+      {
+        "section_id": "section-30",
+        "title": "settings.getURI<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 884,
+        "line_end": 910,
+        "summary": "getURI(name: string, callback: AsyncCallback\\<object>): void\n\n获取数据项的URI。使用callback异步回调（暂不支持）。\n\n> **"
+      },
+      {
+        "section_id": "section-31",
+        "title": "settings.getURI<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 911,
+        "line_end": 944,
+        "summary": "getURI(name: string): Promise\\<object>\n\n获取数据项的URI。使用Promise异步回调（暂不支持）。\n\n> **说明：**\n>\n> 从 API version"
+      },
+      {
+        "section_id": "section-32",
+        "title": "settings.getValue<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 945,
+        "line_end": 982,
+        "summary": "getValue(dataAbilityHelper: DataAbilityHelper, name: string, callback: AsyncCallback\\<object>): voi"
+      },
+      {
+        "section_id": "section-33",
+        "title": "settings.getValue<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 983,
+        "line_end": 1021,
+        "summary": "getValue(dataAbilityHelper: DataAbilityHelper, name: string): Promise\\<object>\n\n获取数据库中DEVICE_SHARD域"
+      },
+      {
+        "section_id": "section-34",
+        "title": "settings.getValueSync<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1022,
+        "line_end": 1060,
+        "summary": "getValueSync(dataAbilityHelper: DataAbilityHelper, name: string, defValue: string): string\n\n获取数据项的值"
+      },
+      {
+        "section_id": "section-35",
+        "title": "settings.setValueSync<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1061,
+        "line_end": 1104,
+        "summary": "setValueSync(dataAbilityHelper: DataAbilityHelper, name: string, value: string): boolean\n\n设置数据项的值。此"
+      },
+      {
+        "section_id": "section-36",
+        "title": "settings.openInputMethodSettings<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1105,
+        "line_end": 1143,
+        "summary": "openInputMethodSettings(context: Context): void\n\n打开输入法设置页面。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-37",
+        "title": "settings.openInputMethodDetail<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1144,
+        "line_end": 1185,
+        "summary": "openInputMethodDetail(context: Context, bundleName: string, inputMethodId: string): void\n\n打开输入法详情页面"
+      }
+    ]
+  }
+}

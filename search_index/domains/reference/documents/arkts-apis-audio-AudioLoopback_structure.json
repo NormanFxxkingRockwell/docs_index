@@ -1,0 +1,100 @@
+{
+  "doc_id": "arkts-apis-audio-AudioLoopback",
+  "title": "Interface (AudioLoopback)",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioLoopback.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioLoopback.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@songshenke",
+    "designer": "@caixuejiang; @hao-liangfei; @zhanganxiang",
+    "tester": "@Filger",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 Interface (AudioLoopback)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AudioLoopback)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { audio } from '@kit.AudioKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getStatus<sup>20+</sup>",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 53,
+        "summary": "getStatus(): Promise<AudioLoopbackStatus\\>\n\n获取音频返听状态。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Mul"
+      },
+      {
+        "section_id": "section-3",
+        "title": "setVolume<sup>20+</sup>",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 93,
+        "summary": "setVolume(volume: number): Promise&lt;void&gt;\n\n设置音频返听的音量。使用Promise异步回调。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-4",
+        "title": "on('statusChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 132,
+        "summary": "on(type: 'statusChange', callback: Callback<AudioLoopbackStatus\\>): void\n\n监听返听状态变化事件（当AudioLoopback"
+      },
+      {
+        "section_id": "section-5",
+        "title": "off('statusChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 179,
+        "summary": "off(type: 'statusChange', callback?: Callback&lt;AudioLoopbackStatus&gt;): void\n\n取消监听音频状态事件。使用callb"
+      },
+      {
+        "section_id": "section-6",
+        "title": "enable<sup>20+</sup>",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 226,
+        "summary": "enable(enable: boolean): Promise<boolean\\>\n\n启用或禁用音频返听器。使用Promise异步回调。\n\n**系统能力：** SystemCapability.M"
+      },
+      {
+        "section_id": "section-7",
+        "title": "setReverbPreset<sup>21+</sup>",
+        "level": 2,
+        "line_start": 227,
+        "line_end": 265,
+        "summary": "setReverbPreset(preset: AudioLoopbackReverbPreset): boolean\n\n设置音频返听器的混响模式。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getReverbPreset<sup>21+</sup>",
+        "level": 2,
+        "line_start": 266,
+        "line_end": 290,
+        "summary": "getReverbPreset(): AudioLoopbackReverbPreset\n\n获取当前音频返听器的混响模式。\n\n**系统能力：** SystemCapability.Multimedi"
+      },
+      {
+        "section_id": "section-9",
+        "title": "setEqualizerPreset<sup>21+</sup>",
+        "level": 2,
+        "line_start": 291,
+        "line_end": 329,
+        "summary": "setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean\n\n设置音频返听器的均衡器类型。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getEqualizerPreset<sup>21+</sup>",
+        "level": 2,
+        "line_start": 330,
+        "line_end": 353,
+        "summary": "getEqualizerPreset(): AudioLoopbackEqualizerPreset\n\n获取当前音频返听器的均衡器类型。\n\n**系统能力：** SystemCapability.Mu"
+      }
+    ]
+  }
+}

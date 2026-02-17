@@ -1,0 +1,684 @@
+{
+  "doc_id": "arkts-apis-uicontext-uicontext",
+  "title": "Class (UIContext)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkts-apis-uicontext-uicontext.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkts-apis-uicontext-uicontext.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xiang-shouxing",
+    "designer": "@xiang-shouxing",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 Class (UIContext)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (UIContext)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "constructor<sup>22+</sup>",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 144,
+        "summary": "constructor()\n\n构造UIContext对象。\n\n> **说明：**\n>\n> 通过构造函数创建的UIContext对象指向不明确的UI上下文，即不指向任何UI实例。该UIContext对"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getCallingScopeUIContext<sup>22+</sup>",
+        "level": 2,
+        "line_start": 145,
+        "line_end": 195,
+        "summary": "static getCallingScopeUIContext(): UIContext | undefined\n\n获取当前[调用作用域](../../ui/arkts-global-interfa"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getLastFocusedUIContext<sup>22+</sup>",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 242,
+        "summary": "static getLastFocusedUIContext(): UIContext | undefined\n\n获取最近一次切换到获焦状态的UI实例的UIContext。\n\n**原子化服务API："
+      },
+      {
+        "section_id": "section-4",
+        "title": "getLastForegroundUIContext<sup>22+</sup>",
+        "level": 2,
+        "line_start": 243,
+        "line_end": 289,
+        "summary": "static getLastForegroundUIContext(): UIContext | undefined\n\n获取最近一次切换到前台状态的UI实例的UIContext。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getAllUIContexts<sup>22+</sup>",
+        "level": 2,
+        "line_start": 290,
+        "line_end": 336,
+        "summary": "static getAllUIContexts(): UIContext[]\n\n获取所有当前有效的UIContext实例。\n\n**原子化服务API：** 从API version 22开始，该接口支"
+      },
+      {
+        "section_id": "section-6",
+        "title": "resolveUIContext<sup>22+</sup>",
+        "level": 2,
+        "line_start": 337,
+        "line_end": 386,
+        "summary": "static resolveUIContext(): ResolvedUIContext\n\n使用优先级策略获取带有解析策略的UIContext实例对象。\n\n>**说明：**\n>\n> 按照预定义的优先"
+      },
+      {
+        "section_id": "section-7",
+        "title": "isAvailable<sup>20+</sup>",
+        "level": 2,
+        "line_start": 387,
+        "line_end": 462,
+        "summary": "isAvailable(): boolean\n\n判断UIContext对象对应的UI实例是否有效。使用[getUIContext](arkts-apis-window-Window.md#getui"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getFont",
+        "level": 2,
+        "line_start": 463,
+        "line_end": 482,
+        "summary": "getFont(): Font\n\n获取Font对象。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getComponentUtils",
+        "level": 2,
+        "line_start": 483,
+        "line_end": 502,
+        "summary": "getComponentUtils(): ComponentUtils\n\n获取ComponentUtils对象。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getUIInspector",
+        "level": 2,
+        "line_start": 503,
+        "line_end": 522,
+        "summary": "getUIInspector(): UIInspector\n\n获取UIInspector对象。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n*"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getUIObserver<sup>11+</sup>",
+        "level": 2,
+        "line_start": 523,
+        "line_end": 586,
+        "summary": "getUIObserver(): UIObserver\n\n获取UIObserver对象。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-12",
+        "title": "getId<sup>22+</sup>",
+        "level": 2,
+        "line_start": 587,
+        "line_end": 619,
+        "summary": "getId(): number\n\n获取UI实例对象唯一标识，多实例场景下，开发者可使用此唯一标识区分多个UI实例对象，便于管理。\n\n**原子化服务API：** 从API version 22开始，该"
+      },
+      {
+        "section_id": "section-13",
+        "title": "getMediaQuery",
+        "level": 2,
+        "line_start": 620,
+        "line_end": 639,
+        "summary": "getMediaQuery(): MediaQuery\n\n获取MediaQuery对象。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getRouter",
+        "level": 2,
+        "line_start": 640,
+        "line_end": 659,
+        "summary": "getRouter(): Router\n\n获取Router对象。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-15",
+        "title": "getPromptAction",
+        "level": 2,
+        "line_start": 660,
+        "line_end": 679,
+        "summary": "getPromptAction(): PromptAction\n\n获取PromptAction对象。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "getOverlayManager<sup>12+</sup>",
+        "level": 2,
+        "line_start": 680,
+        "line_end": 699,
+        "summary": "getOverlayManager(): OverlayManager\n\n获取OverlayManager对象。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化"
+      },
+      {
+        "section_id": "section-17",
+        "title": "setOverlayManagerOptions<sup>15+</sup>",
+        "level": 2,
+        "line_start": 700,
+        "line_end": 725,
+        "summary": "setOverlayManagerOptions(options: OverlayManagerOptions): boolean\n\n设置[OverlayManager](arkts-apis-ui"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getOverlayManagerOptions<sup>15+</sup>",
+        "level": 2,
+        "line_start": 726,
+        "line_end": 745,
+        "summary": "getOverlayManagerOptions(): OverlayManagerOptions\n\n用于获取当前[OverlayManagerOptions](arkts-apis-uiconte"
+      },
+      {
+        "section_id": "section-19",
+        "title": "animateToImmediately<sup>23+</sup>",
+        "level": 2,
+        "line_start": 746,
+        "line_end": 824,
+        "summary": "animateToImmediately(param: AnimateParam, processor: Callback&lt;void&gt;): void\n\n通过UIContext对象指定明确"
+      },
+      {
+        "section_id": "section-20",
+        "title": "animateTo",
+        "level": 2,
+        "line_start": 825,
+        "line_end": 931,
+        "summary": "animateTo(value: AnimateParam, event: () => void): void\n\n提供animateTo接口来指定由于闭包代码导致的状态变化插入过渡动效。\n\n**原子"
+      },
+      {
+        "section_id": "section-21",
+        "title": "getSharedLocalStorage<sup>12+</sup>",
+        "level": 2,
+        "line_start": 932,
+        "line_end": 992,
+        "summary": "getSharedLocalStorage(): LocalStorage | undefined\n\n获取当前stage共享的LocalStorage实例。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-22",
+        "title": "getHostContext<sup>12+</sup>",
+        "level": 2,
+        "line_start": 993,
+        "line_end": 1037,
+        "summary": "getHostContext(): Context | undefined\n\n获得当前元能力的Context。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服"
+      },
+      {
+        "section_id": "section-23",
+        "title": "getFrameNodeById<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1038,
+        "line_end": 1067,
+        "summary": "getFrameNodeById(id: string): FrameNode | null\n\n通过组件的id获取组件树的实体节点。\n\n**原子化服务API：** 从API version 12开始"
+      },
+      {
+        "section_id": "section-24",
+        "title": "getAttachedFrameNodeById<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1068,
+        "line_end": 1122,
+        "summary": "getAttachedFrameNodeById(id: string): FrameNode | null\n\n通过组件的id获取当前窗口上的实体节点。\n\n**原子化服务API：** 从API ve"
+      },
+      {
+        "section_id": "section-25",
+        "title": "getFrameNodeByUniqueId<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1123,
+        "line_end": 1169,
+        "summary": "getFrameNodeByUniqueId(id: number): FrameNode | null\n\n提供getFrameNodeByUniqueId接口通过组件的uniqueId获取组件树的"
+      },
+      {
+        "section_id": "section-26",
+        "title": "getPageInfoByUniqueId<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1170,
+        "line_end": 1242,
+        "summary": "getPageInfoByUniqueId(id: number): PageInfo\n\n提供getPageInfoByUniqueId接口通过组件的uniqueId获取该节点对应的Router和N"
+      },
+      {
+        "section_id": "section-27",
+        "title": "getNavigationInfoByUniqueId<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1243,
+        "line_end": 1270,
+        "summary": "getNavigationInfoByUniqueId(id: number): observer.NavigationInfo | undefined\n\n提供getNavigationInfoBy"
+      },
+      {
+        "section_id": "section-28",
+        "title": "showAlertDialog",
+        "level": 2,
+        "line_start": 1271,
+        "line_end": 1329,
+        "summary": "showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogPar"
+      },
+      {
+        "section_id": "section-29",
+        "title": "showActionSheet",
+        "level": 2,
+        "line_start": 1330,
+        "line_end": 1400,
+        "summary": "showActionSheet(value: ActionSheetOptions): void\n\n定义列表弹窗并弹出。\n\n**原子化服务API：** 从API version 11开始，该接口支持"
+      },
+      {
+        "section_id": "section-30",
+        "title": "showDatePickerDialog",
+        "level": 2,
+        "line_start": 1401,
+        "line_end": 1476,
+        "summary": "showDatePickerDialog(options: DatePickerDialogOptions): void\n\n定义日期滑动选择器弹窗并弹出。\n\n>  **说明：**\n>\n>  不支持在"
+      },
+      {
+        "section_id": "section-31",
+        "title": "showTimePickerDialog",
+        "level": 2,
+        "line_start": 1477,
+        "line_end": 1543,
+        "summary": "showTimePickerDialog(options: TimePickerDialogOptions): void\n\n定义时间滑动选择器弹窗并弹出。\n\n>  **说明：**\n>\n>  不支持在"
+      },
+      {
+        "section_id": "section-32",
+        "title": "showTextPickerDialog",
+        "level": 2,
+        "line_start": 1544,
+        "line_end": 1621,
+        "summary": "showTextPickerDialog(options: TextPickerDialogOptions): void\n\n定义文本滑动选择器弹窗并弹出。\n\n>  **说明：**\n>\n>  不支持在"
+      },
+      {
+        "section_id": "section-33",
+        "title": "showTextPickerDialog<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1622,
+        "line_end": 1643,
+        "summary": "showTextPickerDialog(style: TextPickerDialogOptions\\|TextPickerDialogOptionsExt): void\n\n定义文本滑动选择器弹窗"
+      },
+      {
+        "section_id": "section-34",
+        "title": "createAnimator",
+        "level": 2,
+        "line_start": 1644,
+        "line_end": 1709,
+        "summary": "createAnimator(options: AnimatorOptions): AnimatorResult\n\n定义Animator类。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-35",
+        "title": "createAnimator<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1710,
+        "line_end": 1765,
+        "summary": "createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult\n\n创建animator动画结果对象（"
+      },
+      {
+        "section_id": "section-36",
+        "title": "runScopedTask",
+        "level": 2,
+        "line_start": 1766,
+        "line_end": 1805,
+        "summary": "runScopedTask(callback: () => void): void\n\n在当前UI上下文执行传入的回调函数。\n\n**原子化服务API：** 从API version 11开始，该接口支"
+      },
+      {
+        "section_id": "section-37",
+        "title": "setKeyboardAvoidMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1806,
+        "line_end": 1849,
+        "summary": "setKeyboardAvoidMode(value: KeyboardAvoidMode): void\n\n配置虚拟键盘弹出时，页面的避让模式。\n\n**原子化服务API：** 从API versio"
+      },
+      {
+        "section_id": "section-38",
+        "title": "getKeyboardAvoidMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1850,
+        "line_end": 1886,
+        "summary": "getKeyboardAvoidMode(): KeyboardAvoidMode\n\n获取虚拟键盘弹出时，页面的避让模式。\n\n**原子化服务API：** 从API version 11开始，该接口支"
+      },
+      {
+        "section_id": "section-39",
+        "title": "getAtomicServiceBar<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1887,
+        "line_end": 1925,
+        "summary": "getAtomicServiceBar(): Nullable\\<AtomicServiceBar>\n\n获取AtomicServiceBar对象，通过该对象设置原子化服务menuBar的属性。\n\n*"
+      },
+      {
+        "section_id": "section-40",
+        "title": "getDragController<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1926,
+        "line_end": 1945,
+        "summary": "getDragController(): DragController\n\n获取DragController对象，可通过该对象创建并发起拖拽。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-41",
+        "title": "keyframeAnimateTo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1946,
+        "line_end": 2022,
+        "summary": "keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array&lt;KeyframeState&gt;): void\n\n产生关键帧动"
+      },
+      {
+        "section_id": "section-42",
+        "title": "getFocusController<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2023,
+        "line_end": 2042,
+        "summary": "getFocusController(): FocusController\n\n获取[FocusController](arkts-apis-uicontext-focuscontroller.md)"
+      },
+      {
+        "section_id": "section-43",
+        "title": "getFilteredInspectorTree<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2043,
+        "line_end": 2142,
+        "summary": "getFilteredInspectorTree(filters?: Array\\<string\\>): string\n\n获取组件树及组件属性。此接口耗时较长，仅适用于测试场景。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-44",
+        "title": "getFilteredInspectorTreeById<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2143,
+        "line_end": 2222,
+        "summary": "getFilteredInspectorTreeById(id: string, depth: number, filters?: Array\\<string\\>): string\n\n获取指定的组件"
+      },
+      {
+        "section_id": "section-45",
+        "title": "getCursorController<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2223,
+        "line_end": 2242,
+        "summary": "getCursorController(): CursorController\n\n获取[CursorController](arkts-apis-uicontext-cursorcontroller"
+      },
+      {
+        "section_id": "section-46",
+        "title": "getContextMenuController<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2243,
+        "line_end": 2258,
+        "summary": "getContextMenuController(): ContextMenuController\n\n获取[ContextMenuController](arkts-apis-uicontext-c"
+      },
+      {
+        "section_id": "section-47",
+        "title": "getMeasureUtils<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2259,
+        "line_end": 2278,
+        "summary": "getMeasureUtils(): MeasureUtils\n\n允许用户通过UIContext对象，获取MeasureUtils对象进行文本计算。\n\n**原子化服务API：** 从API vers"
+      },
+      {
+        "section_id": "section-48",
+        "title": "getComponentSnapshot<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2279,
+        "line_end": 2300,
+        "summary": "getComponentSnapshot(): ComponentSnapshot\n\n获取ComponentSnapshot对象，可通过该对象获取组件截图的能力。\n\n典型使用场景（如长截图）及最佳实"
+      },
+      {
+        "section_id": "section-49",
+        "title": "vp2px<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2301,
+        "line_end": 2358,
+        "summary": "vp2px(value : number) : number\n\n将vp单位的数值转换为以px为单位的数值。\n\n转换公式为：px值 = vp值 × 像素密度\n\n像素密度：当前窗口生效的像素密度值，即屏"
+      },
+      {
+        "section_id": "section-50",
+        "title": "px2vp<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2359,
+        "line_end": 2416,
+        "summary": "px2vp(value : number) : number\n\n将px单位的数值转换为以vp为单位的数值。\n\n转换公式为：vp值 = px值 ÷ 像素密度\n\n像素密度：当前窗口生效的像素密度值，即屏"
+      },
+      {
+        "section_id": "section-51",
+        "title": "fp2px<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2417,
+        "line_end": 2474,
+        "summary": "fp2px(value : number) : number\n\n将fp单位的数值转换为以px为单位的数值。\n\n转换公式为：px值 = fp值 × 像素密度 × 字体缩放比例\n\n像素密度：当前窗口生效"
+      },
+      {
+        "section_id": "section-52",
+        "title": "px2fp<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2475,
+        "line_end": 2532,
+        "summary": "px2fp(value : number) : number\n\n将px单位的数值转换为以fp为单位的数值。\n\n转换公式为：fp值 = px值 ÷ 像素密度 ÷ 字体缩放比例\n\n像素密度：当前窗口生效"
+      },
+      {
+        "section_id": "section-53",
+        "title": "lpx2px<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2533,
+        "line_end": 2586,
+        "summary": "lpx2px(value : number) : number\n\n将lpx单位的数值转换为以px为单位的数值。\n\n转换公式为：px值 = lpx值 × 实际屏幕宽度与逻辑宽度（通过[designWi"
+      },
+      {
+        "section_id": "section-54",
+        "title": "px2lpx<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2587,
+        "line_end": 2640,
+        "summary": "px2lpx(value : number) : number\n\n将px单位的数值转换为以lpx为单位的数值。\n\n转换公式为：lpx值 = px值 ÷ 实际屏幕宽度与逻辑宽度（通过[designWi"
+      },
+      {
+        "section_id": "section-55",
+        "title": "getWindowName<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2641,
+        "line_end": 2687,
+        "summary": "getWindowName(): string | undefined\n\n获取当前实例所在窗口的名称。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-56",
+        "title": "getWindowId<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2688,
+        "line_end": 2737,
+        "summary": "getWindowId(): number | undefined\n\n获取当前应用实例所属的窗口ID。\n\n> **说明：**\n>\n>  若UIContext位于主应用程序进程中的[UIExtensi"
+      },
+      {
+        "section_id": "section-57",
+        "title": "getWindowWidthBreakpoint<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2738,
+        "line_end": 2786,
+        "summary": "getWindowWidthBreakpoint(): WidthBreakpoint\n\n获取当前实例所在窗口的宽度断点枚举值。具体枚举值根据窗口宽度vp值确定，详见 [WidthBreakpoin"
+      },
+      {
+        "section_id": "section-58",
+        "title": "getWindowHeightBreakpoint<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2787,
+        "line_end": 2836,
+        "summary": "getWindowHeightBreakpoint(): HeightBreakpoint\n\n获取当前实例所在窗口的高度断点。具体枚举值根据窗口高宽比确定，详见 [HeightBreakpoint]"
+      },
+      {
+        "section_id": "section-59",
+        "title": "postFrameCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2837,
+        "line_end": 2884,
+        "summary": "postFrameCallback(frameCallback: FrameCallback): void\n\n注册一个回调，仅在下一帧渲染时调用。\n\n**原子化服务API：** 从API versi"
+      },
+      {
+        "section_id": "section-60",
+        "title": "postDelayedFrameCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2885,
+        "line_end": 2933,
+        "summary": "postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: number): void\n\n注册一个回调，在延迟一段时间后的下一"
+      },
+      {
+        "section_id": "section-61",
+        "title": "requireDynamicSyncScene<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2934,
+        "line_end": 3005,
+        "summary": "requireDynamicSyncScene(id: string): Array&lt;DynamicSyncScene&gt;\n\n请求组件的动态帧率场景，用于自定义场景相关帧率配置。\n\n**原"
+      },
+      {
+        "section_id": "section-62",
+        "title": "openBindSheet<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3006,
+        "line_end": 3140,
+        "summary": "openBindSheet\\<T extends Object>(bindSheetContent: ComponentContent\\<T>, sheetOptions?: SheetOption"
+      },
+      {
+        "section_id": "section-63",
+        "title": "updateBindSheet<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3141,
+        "line_end": 3268,
+        "summary": "updateBindSheet\\<T extends Object>(bindSheetContent: ComponentContent\\<T>, sheetOptions: SheetOptio"
+      },
+      {
+        "section_id": "section-64",
+        "title": "closeBindSheet<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3269,
+        "line_end": 3394,
+        "summary": "closeBindSheet\\<T extends Object>(bindSheetContent: ComponentContent\\<T>): Promise&lt;void&gt;\n\n关闭b"
+      },
+      {
+        "section_id": "section-65",
+        "title": "isFollowingSystemFontScale<sup>13+</sup>",
+        "level": 2,
+        "line_start": 3395,
+        "line_end": 3427,
+        "summary": "isFollowingSystemFontScale(): boolean\n\n获取当前UI上下文是否跟随系统字体倍率。\n\n**原子化服务API：** 从API version 13开始，该接口支持在"
+      },
+      {
+        "section_id": "section-66",
+        "title": "getMaxFontScale<sup>13+</sup>",
+        "level": 2,
+        "line_start": 3428,
+        "line_end": 3460,
+        "summary": "getMaxFontScale(): number\n\n获取当前UI上下文最大字体倍率。\n\n**原子化服务API：** 从API version 13开始，该接口支持在原子化服务中使用。\n\n**系统能"
+      },
+      {
+        "section_id": "section-67",
+        "title": "bindTabsToScrollable<sup>13+</sup>",
+        "level": 2,
+        "line_start": 3461,
+        "line_end": 3580,
+        "summary": "bindTabsToScrollable(tabsController: TabsController, scroller: Scroller): void\n\n绑定Tabs组件和可滚动容器组件（支持"
+      },
+      {
+        "section_id": "section-68",
+        "title": "unbindTabsFromScrollable<sup>13+</sup>",
+        "level": 2,
+        "line_start": 3581,
+        "line_end": 3601,
+        "summary": "unbindTabsFromScrollable(tabsController: TabsController, scroller: Scroller): void\n\n解除Tabs组件和可滚动容器组"
+      },
+      {
+        "section_id": "section-69",
+        "title": "bindTabsToNestedScrollable<sup>13+</sup>",
+        "level": 2,
+        "line_start": 3602,
+        "line_end": 3623,
+        "summary": "bindTabsToNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller:"
+      },
+      {
+        "section_id": "section-70",
+        "title": "unbindTabsFromNestedScrollable<sup>13+</sup>",
+        "level": 2,
+        "line_start": 3624,
+        "line_end": 3645,
+        "summary": "unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScrol"
+      },
+      {
+        "section_id": "section-71",
+        "title": "enableSwipeBack<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3646,
+        "line_end": 3682,
+        "summary": "enableSwipeBack(enabled: Optional\\<boolean\\>): void\n\n设置是否支持应用内横向滑动返回上一级。\n\n**原子化服务API：** 从API versio"
+      },
+      {
+        "section_id": "section-72",
+        "title": "getTextMenuController<sup>16+</sup>",
+        "level": 2,
+        "line_start": 3683,
+        "line_end": 3702,
+        "summary": "getTextMenuController(): TextMenuController\n\n获取[TextMenuController](arkts-apis-uicontext-textmenuco"
+      },
+      {
+        "section_id": "section-73",
+        "title": "createUIContextWithoutWindow<sup>17+</sup>",
+        "level": 2,
+        "line_start": 3703,
+        "line_end": 3756,
+        "summary": "static createUIContextWithoutWindow(context: common.UIAbilityContext | common.ExtensionContext) : U"
+      },
+      {
+        "section_id": "section-74",
+        "title": "destroyUIContextWithoutWindow<sup>17+</sup>",
+        "level": 2,
+        "line_start": 3757,
+        "line_end": 3785,
+        "summary": "static destroyUIContextWithoutWindow(): void\n\n销毁[createUIContextWithoutWindow](#createuicontextwith"
+      },
+      {
+        "section_id": "section-75",
+        "title": "dispatchKeyEvent<sup>15+</sup>",
+        "level": 2,
+        "line_start": 3786,
+        "line_end": 3849,
+        "summary": "dispatchKeyEvent(node: number | string, event: KeyEvent): boolean\n\n按键事件应分发给指定的组件。为了确保行为的可预测性，目标组件必须"
+      },
+      {
+        "section_id": "section-76",
+        "title": "setPixelRoundMode<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3850,
+        "line_end": 3883,
+        "summary": "setPixelRoundMode(mode: PixelRoundMode): void\n\n配置当前页面的像素取整模式。\n\n**原子化服务API：** 从API version 18开始，该接口支"
+      },
+      {
+        "section_id": "section-77",
+        "title": "getPixelRoundMode<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3884,
+        "line_end": 3917,
+        "summary": "getPixelRoundMode(): PixelRoundMode\n\n获取当前页面的像素取整模式。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-78",
+        "title": "setResourceManagerCacheMaxCountForHSP<sup>21+</sup>",
+        "level": 2,
+        "line_start": 3918,
+        "line_end": 3972,
+        "summary": "static setResourceManagerCacheMaxCountForHSP(count: number): void\n\n设置HSP资源管理对象缓存个数上限。\n\n>  **说明：**\n>"
+      },
+      {
+        "section_id": "section-79",
+        "title": "setImageCacheCount<sup>23+</sup>",
+        "level": 2,
+        "line_start": 3973,
+        "line_end": 4018,
+        "summary": "setImageCacheCount(value: number): void\n\n设置内存中缓存解码后图片的数量上限，以加快同源图片的再次加载速度。默认值为0，表示不缓存。缓存使用LRU策略，新图片"
+      },
+      {
+        "section_id": "section-80",
+        "title": "setImageRawDataCacheSize<sup>23+</sup>",
+        "level": 2,
+        "line_start": 4019,
+        "line_end": 4062,
+        "summary": "setImageRawDataCacheSize(value: number): void\n\n设置内存中缓存解码前图片数据的大小上限，单位为字节，以加快再次加载同源图片的速度。默认值为0，表示不缓存"
+      },
+      {
+        "section_id": "section-81",
+        "title": "getMagnifier<sup>22+</sup>",
+        "level": 2,
+        "line_start": 4063,
+        "line_end": 4082,
+        "summary": "getMagnifier(): Magnifier\n\n获取[Magnifier](arkts-apis-uicontext-magnifier.md)对象，可控制放大镜显示和隐藏。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-82",
+        "title": "setCustomKeyboardContinueFeature<sup>23+</sup>",
+        "level": 2,
+        "line_start": 4083,
+        "line_end": 4209,
+        "summary": "setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void\n\n设置自定义键盘之间切换时，是否接续。"
+      },
+      {
+        "section_id": "section-83",
+        "title": "getPageRootNode<sup>24+</sup>",
+        "level": 2,
+        "line_start": 4210,
+        "line_end": 4362,
+        "summary": "getPageRootNode(): FrameNode | null\n\n获取UIContext对应页面的根节点。\n\n**原子化服务API：** 从API version 24开始，该接口支持在原子"
+      }
+    ]
+  }
+}

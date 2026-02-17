@@ -1,0 +1,76 @@
+{
+  "doc_id": "opengles",
+  "title": "OpenGL ES",
+  "path": "zh-cn/application-dev/reference/native-lib/opengles.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/native-lib/opengles.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@samhu1989",
+    "designer": "@shi-yang-2012",
+    "tester": "@zhaoxiaoguang2",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphics 模块的 OpenGL ES，提供相关接口和功能说明。",
+  "structure": {
+    "title": "OpenGL ES",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "支持的能力",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 13,
+        "summary": "OpenGL ES 3.2"
+      },
+      {
+        "section_id": "section-2",
+        "title": "标准库中导出的符号列表",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 17,
+        "summary": "[native api中导出的OpenGL ES 3.2符号列表](openglesv3-symbol.md)"
+      },
+      {
+        "section_id": "section-3",
+        "title": "引入OpenGL能力",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 42,
+        "summary": "如果开发者使用OpenGL的相关能力，需要添加相关动态链接库和头文件。\n\n**添加动态链接库**\n\nCMakeLists.txt中添加以下lib。\n\n```txt\nlibace_ndk.z.so\nl"
+      },
+      {
+        "section_id": "section-4",
+        "title": "相关参考",
+        "level": 2,
+        "line_start": 43,
+        "line_end": 54,
+        "summary": "针对OpenGL ES的使用和相关开发，需要同步了解NDK的开发过程，以及XComponent组件等的使用。具体可参考:\n\n- [NDK开发参考](../../napi/ndk-developmen"
+      },
+      {
+        "section_id": "section-5",
+        "title": "OpenGL ES扩展接口",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 89,
+        "summary": "- OpenGL ES扩展接口的官方参考文档：[OpenGL ES扩展接口](https://registry.khronos.org/OpenGL/index_es.php)\n- 开发者可以调用`"
+      },
+      {
+        "section_id": "section-6",
+        "title": "简单示例",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 824,
+        "summary": "```cpp\n\nvoid enableVertexAttrib(GLuint index, float *data, int32_t len)\n{\n    GLuint buffer;\n    gl"
+      },
+      {
+        "section_id": "section-7",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 825,
+        "line_end": 830,
+        "summary": "针对OpenGL ES的使用和相关开发，有以下相关实例可供参考：\n\n- [简易Native C++示例](https://gitcode.com/openharmony/codelabs/tree/"
+      }
+    ]
+  }
+}

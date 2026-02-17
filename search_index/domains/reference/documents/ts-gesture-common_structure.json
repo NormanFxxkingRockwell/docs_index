@@ -1,0 +1,228 @@
+{
+  "doc_id": "ts-gesture-common",
+  "title": "手势公共接口",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-gesture-common.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-gesture-common.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yihao-lin",
+    "designer": "@piggyguy",
+    "tester": "@songyanhong",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 手势公共接口，提供相关接口和功能说明。",
+  "structure": {
+    "title": "手势公共接口",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "GestureInterface\\<T><sup>11+</sup>",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 66,
+        "summary": "定义Gesture接口。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ScrollableTargetInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 102,
+        "summary": "手势识别器对应的滚动类容器组件的信息，继承于[EventTargetInfo](#eventtargetinfo12)。\n\n### isBegin<sup>12+</sup> \n\nisBegin()"
+      },
+      {
+        "section_id": "section-3",
+        "title": "EventTargetInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 122,
+        "summary": "手势识别器对应组件的信息。\n\n### getId<sup>12+</sup> \n\ngetId(): string\n\n返回当前组件的组件标识。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-4",
+        "title": "TouchRecognizer<sup>20+</sup>",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 156,
+        "summary": "触摸识别器对象。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-5",
+        "title": "GestureRecognizer<sup>12+</sup>",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 328,
+        "summary": "手势识别器对象。\n\n### getTag<sup>12+</sup> \n\ngetTag(): string\n\n返回当前手势识别器的tag。\n\n**原子化服务API：** 从API version 1"
+      },
+      {
+        "section_id": "section-6",
+        "title": "TapRecognizer<sup>18+</sup>",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 348,
+        "summary": "点击手势识别器对象，继承自[GestureRecognizer](#gesturerecognizer12)。\n\n### getTapCount<sup>18+</sup>\n\ngetTapCount"
+      },
+      {
+        "section_id": "section-7",
+        "title": "LongPressRecognizer<sup>18+</sup>",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 400,
+        "summary": "长按手势识别器对象，继承于[GestureRecognizer](#gesturerecognizer12)。\n\n### isRepeat<sup>18+</sup>\n\nisRepeat(): bo"
+      },
+      {
+        "section_id": "section-8",
+        "title": "SwipeRecognizer<sup>18+</sup>",
+        "level": 2,
+        "line_start": 401,
+        "line_end": 436,
+        "summary": "快滑手势识别器对象，继承于[GestureRecognizer](#gesturerecognizer12)。\n\n### getVelocityThreshold<sup>18+</sup>\n\nge"
+      },
+      {
+        "section_id": "section-9",
+        "title": "PinchRecognizer<sup>18+</sup>",
+        "level": 2,
+        "line_start": 437,
+        "line_end": 456,
+        "summary": "捏合手势识别器对象，继承于[GestureRecognizer](#gesturerecognizer12)。\n\n### getDistance<sup>18+</sup>\n\ngetDistance"
+      },
+      {
+        "section_id": "section-10",
+        "title": "RotationRecognizer<sup>18+</sup>",
+        "level": 2,
+        "line_start": 457,
+        "line_end": 476,
+        "summary": "旋转手势识别器对象，继承于[GestureRecognizer](#gesturerecognizer12)。\n\n### getAngle<sup>18+</sup>\n\ngetAngle(): nu"
+      },
+      {
+        "section_id": "section-11",
+        "title": "PanRecognizer<sup>12+</sup>",
+        "level": 2,
+        "line_start": 477,
+        "line_end": 548,
+        "summary": "滑动手势识别器对象，继承于[GestureRecognizer](#gesturerecognizer12)。\n\n### getPanGestureOptions<sup>12+</sup> \n\ng"
+      },
+      {
+        "section_id": "section-12",
+        "title": "GestureRecognizerState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 549,
+        "line_end": 565,
+        "summary": "定义手势识别器状态。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-13",
+        "title": "GestureEvent对象说明",
+        "level": 2,
+        "line_start": 566,
+        "line_end": 588,
+        "summary": "定义手势的事件信息。继承自[BaseEvent](ts-gesture-customize-judge.md#baseevent8)。\n\n**系统能力：** SystemCapability.Ark"
+      },
+      {
+        "section_id": "section-14",
+        "title": "GestureMask枚举说明",
+        "level": 2,
+        "line_start": 589,
+        "line_end": 601,
+        "summary": "定义是否屏蔽子组件手势。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-15",
+        "title": "GestureJudgeResult<sup>11+</sup>",
+        "level": 2,
+        "line_start": 602,
+        "line_end": 614,
+        "summary": "定义手势竞争结果。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-16",
+        "title": "GestureType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 615,
+        "line_end": 635,
+        "summary": "定义手势类型。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称  | 值 | 说明"
+      },
+      {
+        "section_id": "section-17",
+        "title": "GestureInfo<sup>11+</sup>对象说明",
+        "level": 2,
+        "line_start": 636,
+        "line_end": 649,
+        "summary": "手势信息类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-18",
+        "title": "FingerInfo<sup>8+</sup>对象说明",
+        "level": 2,
+        "line_start": 650,
+        "line_end": 668,
+        "summary": "手指信息类型。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称 | 类型 | 只读 | 可选| 说明 |\n| -------- | ------"
+      },
+      {
+        "section_id": "section-19",
+        "title": "GestureType",
+        "level": 2,
+        "line_start": 669,
+        "line_end": 688,
+        "summary": "type GestureType = TapGesture | LongPressGesture | PanGesture | PinchGesture | SwipeGesture | Rotat"
+      },
+      {
+        "section_id": "section-20",
+        "title": "BaseGestureEvent<sup>11+</sup>对象说明",
+        "level": 2,
+        "line_start": 689,
+        "line_end": 699,
+        "summary": "基础手势事件类型。继承自[BaseEvent](./ts-gesture-customize-judge.md#baseevent8)。\n\n**系统能力：** SystemCapability.Ar"
+      },
+      {
+        "section_id": "section-21",
+        "title": "TapGestureEvent<sup>11+</sup>对象说明",
+        "level": 2,
+        "line_start": 700,
+        "line_end": 711,
+        "summary": "继承自[BaseGestureEvent](#basegestureevent11对象说明)。可将该对象作为[onGestureJudgeBegin](./ts-gesture-customize-"
+      },
+      {
+        "section_id": "section-22",
+        "title": "LongPressGestureEvent<sup>11+</sup>对象说明",
+        "level": 2,
+        "line_start": 712,
+        "line_end": 723,
+        "summary": "继承自[BaseGestureEvent](#basegestureevent11对象说明)。可将该对象作为[onGestureJudgeBegin](./ts-gesture-customize-"
+      },
+      {
+        "section_id": "section-23",
+        "title": "PanGestureEvent<sup>11+</sup>对象说明",
+        "level": 2,
+        "line_start": 724,
+        "line_end": 739,
+        "summary": "继承自[BaseGestureEvent](#basegestureevent11对象说明)。可将该对象作为[onGestureJudgeBegin](./ts-gesture-customize-"
+      },
+      {
+        "section_id": "section-24",
+        "title": "PinchGestureEvent<sup>11+</sup>对象说明",
+        "level": 2,
+        "line_start": 740,
+        "line_end": 753,
+        "summary": "继承自[BaseGestureEvent](#basegestureevent11对象说明)。可将该对象作为[onGestureJudgeBegin](./ts-gesture-customize-"
+      },
+      {
+        "section_id": "section-25",
+        "title": "RotationGestureEvent<sup>11+</sup>对象说明",
+        "level": 2,
+        "line_start": 754,
+        "line_end": 765,
+        "summary": "继承自[BaseGestureEvent](#basegestureevent11对象说明)。可将该对象作为[onGestureJudgeBegin](./ts-gesture-customize-"
+      },
+      {
+        "section_id": "section-26",
+        "title": "SwipeGestureEvent<sup>11+</sup>对象说明",
+        "level": 2,
+        "line_start": 766,
+        "line_end": 777,
+        "summary": "继承自[BaseGestureEvent](#basegestureevent11对象说明)。可将该对象作为[onGestureJudgeBegin](./ts-gesture-customize-"
+      }
+    ]
+  }
+}

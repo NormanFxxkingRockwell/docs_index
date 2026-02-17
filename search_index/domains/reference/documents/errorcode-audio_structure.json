@@ -1,0 +1,76 @@
+{
+  "doc_id": "errorcode-audio",
+  "title": "Audio错误码",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@songshenke",
+    "designer": "@caixuejiang; @hao-liangfei; @zhanganxiang",
+    "tester": "@Filger",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 Audio错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Audio错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "6800101 无效入参",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 30,
+        "summary": "**错误信息**\n\nInvalid parameter.\n\n**错误描述**\n\n调用接口时，传入的参数无效。\n\n**可能原因**\n\n参数无效，比如值不在边界范围内，没有使用指定的枚举范围等。\n\n**"
+      },
+      {
+        "section_id": "section-2",
+        "title": "6800102 分配内存失败",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 50,
+        "summary": "**错误信息**\n\nMemory allocation failed.\n\n**错误描述**\n\n调用接口时，分配内存失败或者出现空指针。\n\n**可能原因**\n\n1. 系统内存压力大，没有足够的内存用来"
+      },
+      {
+        "section_id": "section-3",
+        "title": "6800103 状态不支持",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 69,
+        "summary": "**错误信息**\n\nOperation not permitted at current state.\n\n**错误描述**\n\n对象当前状态不支持此操作。\n\n**可能原因**\n\n对象当前状态不支持操作"
+      },
+      {
+        "section_id": "section-4",
+        "title": "6800104 参数选项不支持",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 88,
+        "summary": "**错误信息**\n\nUnsupported option.\n\n**错误描述**\n\n参数选项不支持。\n\n**可能原因**\n\n入参选值不在系统支持规格范围内。\n\n**处理步骤**\n\n1. 确认当前api"
+      },
+      {
+        "section_id": "section-5",
+        "title": "6800105 处理超时",
+        "level": 2,
+        "line_start": 89,
+        "line_end": 108,
+        "summary": "**错误信息**\n\nTimeout.\n\n**错误描述**\n\n处理等待超时。\n\n**可能原因**\n\n1. 系统内部存在异常，触发了内部接口的超时检测。\n2. 系统依赖应用及时处理回调函数，应用未及时返"
+      },
+      {
+        "section_id": "section-6",
+        "title": "6800201 音频流数量达到极限",
+        "level": 2,
+        "line_start": 109,
+        "line_end": 127,
+        "summary": "**错误信息**\n\nToo many audio streams.\n\n**错误描述**\n\n音频流达到系统可支持的最大数量。\n\n**可能原因**\n\n多余的音频流没有及时释放。\n\n**处理步骤**\n\n1"
+      },
+      {
+        "section_id": "section-7",
+        "title": "6800301 系统处理异常",
+        "level": 2,
+        "line_start": 128,
+        "line_end": 146,
+        "summary": "**错误信息**\n\nSystem error.\n\n**错误描述**\n\n系统处理异常。\n\n**可能原因**\n\n系统处理异常，比如系统服务重启、跨进程调用异常等。\n\n**处理步骤**\n\n系统内部通用错误"
+      }
+    ]
+  }
+}

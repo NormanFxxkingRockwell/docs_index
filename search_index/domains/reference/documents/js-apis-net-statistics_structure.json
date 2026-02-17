@@ -1,0 +1,220 @@
+{
+  "doc_id": "js-apis-net-statistics",
+  "title": "@ohos.net.statistics (流量管理)",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-net-statistics.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-net-statistics.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.statistics (流量管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.statistics (流量管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```js\nimport { statistics } from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "statistics.getIfaceRxBytes",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 61,
+        "summary": "getIfaceRxBytes(nic: string, callback: AsyncCallback\\<number>): void\n\n获取指定网卡实时下行流量，使用callback异步回调。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "statistics.getIfaceRxBytes",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 103,
+        "summary": "getIfaceRxBytes(nic: string): Promise\\<number>\n\n获取指定网卡实时下行流量，使用 Promise 异步回调。\n\n**系统能力**：SystemCapab"
+      },
+      {
+        "section_id": "section-4",
+        "title": "statistics.getIfaceTxBytes",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 143,
+        "summary": "getIfaceTxBytes(nic: string, callback: AsyncCallback\\<number>): void\n\n获取指定网卡实时上行流量，使用 callback 异步回调"
+      },
+      {
+        "section_id": "section-5",
+        "title": "statistics.getIfaceTxBytes",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 185,
+        "summary": "getIfaceTxBytes(nic: string): Promise\\<number>\n\n获取指定网卡实时上行流量，使用 Promise 异步回调。\n\n**系统能力**：SystemCapab"
+      },
+      {
+        "section_id": "section-6",
+        "title": "statistics.getCellularRxBytes",
+        "level": 2,
+        "line_start": 186,
+        "line_end": 223,
+        "summary": "getCellularRxBytes(callback: AsyncCallback\\<number>): void\n\n获取蜂窝实时下行流量，使用 callback 异步回调。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-7",
+        "title": "statistics.getCellularRxBytes",
+        "level": 2,
+        "line_start": 224,
+        "line_end": 258,
+        "summary": "getCellularRxBytes(): Promise\\<number>\n\n获取蜂窝实时下行流量，使用 Promise 异步回调。\n\n**系统能力**：SystemCapability.Comm"
+      },
+      {
+        "section_id": "section-8",
+        "title": "statistics.getCellularTxBytes",
+        "level": 2,
+        "line_start": 259,
+        "line_end": 296,
+        "summary": "getCellularTxBytes(callback: AsyncCallback\\<number>): void\n\n获取蜂窝实时上行流量，使用 callback 异步回调。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-9",
+        "title": "statistics.getCellularTxBytes",
+        "level": 2,
+        "line_start": 297,
+        "line_end": 331,
+        "summary": "getCellularTxBytes(): Promise\\<number>\n\n获取蜂窝实时上行流量，使用 Promise 异步回调。\n\n**系统能力**：SystemCapability.Comm"
+      },
+      {
+        "section_id": "section-10",
+        "title": "statistics.getAllRxBytes",
+        "level": 2,
+        "line_start": 332,
+        "line_end": 370,
+        "summary": "getAllRxBytes(callback: AsyncCallback\\<number>): void\n\n获取所有网卡实时下行流量，使用 callback 异步回调。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-11",
+        "title": "statistics.getAllRxBytes",
+        "level": 2,
+        "line_start": 371,
+        "line_end": 406,
+        "summary": "getAllRxBytes(): Promise\\<number>\n\n获取所有网卡实时下行流量，使用 Promise 异步回调。\n\n**原子化服务API：** 从API version 15开始，该"
+      },
+      {
+        "section_id": "section-12",
+        "title": "statistics.getAllTxBytes",
+        "level": 2,
+        "line_start": 407,
+        "line_end": 445,
+        "summary": "getAllTxBytes(callback: AsyncCallback\\<number>): void\n\n获取所有网卡实时上行流量，使用 callback 异步回调。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-13",
+        "title": "statistics.getAllTxBytes",
+        "level": 2,
+        "line_start": 446,
+        "line_end": 481,
+        "summary": "getAllTxBytes(): Promise\\<number>\n\n获取所有网卡实时上行流量，使用 Promise 异步回调。\n\n**原子化服务API：** 从API version 15开始，该"
+      },
+      {
+        "section_id": "section-14",
+        "title": "statistics.getUidRxBytes",
+        "level": 2,
+        "line_start": 482,
+        "line_end": 520,
+        "summary": "getUidRxBytes(uid: number, callback: AsyncCallback\\<number>): void\n\n获取指定应用实时下行流量，使用 callback 异步回调。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "statistics.getUidRxBytes",
+        "level": 2,
+        "line_start": 521,
+        "line_end": 561,
+        "summary": "getUidRxBytes(uid: number): Promise\\<number>\n\n获取指定应用实时下行流量，使用 Promise 异步回调。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-16",
+        "title": "statistics.getUidTxBytes",
+        "level": 2,
+        "line_start": 562,
+        "line_end": 600,
+        "summary": "getUidTxBytes(uid: number, callback: AsyncCallback\\<number>): void\n\n获取指定应用实时上行流量，使用 callback 异步回调。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "statistics.getUidTxBytes",
+        "level": 2,
+        "line_start": 601,
+        "line_end": 642,
+        "summary": "getUidTxBytes(uid: number): Promise\\<number>\n\n获取指定应用实时上行流量，使用 Promise 异步回调。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-18",
+        "title": "statistics.getSockfdRxBytes<sup>11+</sup>",
+        "level": 2,
+        "line_start": 643,
+        "line_end": 681,
+        "summary": "getSockfdRxBytes(sockfd: number, callback: AsyncCallback\\<number\\>): void\n\n获取指定socket的下行流量信息，使用 cal"
+      },
+      {
+        "section_id": "section-19",
+        "title": "statistics.getSockfdRxBytes<sup>11+</sup>",
+        "level": 2,
+        "line_start": 682,
+        "line_end": 726,
+        "summary": "getSockfdRxBytes(sockfd: number): Promise\\<number\\>\n\n获取指定socket的下行流量信息，使用 Promise 异步回调。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-20",
+        "title": "statistics.getSockfdTxBytes<sup>11+</sup>",
+        "level": 2,
+        "line_start": 727,
+        "line_end": 765,
+        "summary": "getSockfdTxBytes(sockfd: number, callback: AsyncCallback\\<number\\>): void\n\n获取指定socket的上行流量信息，使用 cal"
+      },
+      {
+        "section_id": "section-21",
+        "title": "statistics.getSockfdTxBytes<sup>11+</sup>",
+        "level": 2,
+        "line_start": 766,
+        "line_end": 810,
+        "summary": "getSockfdTxBytes(sockfd: number): Promise\\<number\\>\n\n获取指定socket的上行流量信息，使用 Promise 异步回调。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-22",
+        "title": "statistics.getSelfTrafficStats<sup>22+</sup>",
+        "level": 2,
+        "line_start": 811,
+        "line_end": 867,
+        "summary": "getSelfTrafficStats(networkInfo: NetworkInfo): Promise\\<NetStatsInfo\\>\n\n获取指定时间段内，本应用在指定网络中的流量使用情况。使"
+      },
+      {
+        "section_id": "section-23",
+        "title": "NetBearType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 868,
+        "line_end": 879,
+        "summary": "type NetBearType = connection.NetBearType\n\n网络类型。\n\n**系统能力**：SystemCapability.Communication.NetManage"
+      },
+      {
+        "section_id": "section-24",
+        "title": "NetworkInfo<sup>22+</sup>",
+        "level": 2,
+        "line_start": 880,
+        "line_end": 892,
+        "summary": "网络信息。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称        | 类型"
+      },
+      {
+        "section_id": "section-25",
+        "title": "NetStatsInfo<sup>22+</sup>",
+        "level": 2,
+        "line_start": 893,
+        "line_end": 904,
+        "summary": "获取的历史流量信息。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称      | 类型   | 只读 |可选| 说明"
+      }
+    ]
+  }
+}

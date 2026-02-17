@@ -1,0 +1,180 @@
+{
+  "doc_id": "js-apis-app-form-formProvider",
+  "title": "@ohos.app.form.formProvider (formProvider)",
+  "path": "zh-cn/application-dev/reference/apis-form-kit/js-apis-app-form-formProvider.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-form-kit/js-apis-app-form-formProvider.md",
+  "metadata": {
+    "kit": "Form Kit",
+    "subsystem": "Ability",
+    "owner": "@cx983299475",
+    "designer": "@xueyulong",
+    "tester": "@yangyuecheng",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "Form Kit Ability 模块的 @ohos.app.form.formProvider (formProvider)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.form.formProvider (formProvider)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { formProvider } from '@kit.FormKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "formProvider.setFormNextRefreshTime",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 73,
+        "summary": "setFormNextRefreshTime(formId: string, minute: number, callback: AsyncCallback&lt;void&gt;): void"
+      },
+      {
+        "section_id": "section-3",
+        "title": "formProvider.setFormNextRefreshTime",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 129,
+        "summary": "setFormNextRefreshTime(formId: string, minute: number): Promise&lt;void&gt;\n\n设置指定卡片的下一次更新时间，使用Promi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "formProvider.updateForm",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 189,
+        "summary": "updateForm(formId: string, formBindingData: formBindingData.FormBindingData, callback: AsyncCallbac"
+      },
+      {
+        "section_id": "section-5",
+        "title": "formProvider.updateForm",
+        "level": 2,
+        "line_start": 190,
+        "line_end": 252,
+        "summary": "updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise&lt;void&gt;"
+      },
+      {
+        "section_id": "section-6",
+        "title": "formProvider.getFormsInfo",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 297,
+        "summary": "getFormsInfo(callback: AsyncCallback&lt;Array&lt;formInfo.FormInfo&gt;&gt;): void\n\n获取设备上当前应用程序的卡片信息"
+      },
+      {
+        "section_id": "section-7",
+        "title": "formProvider.getFormsInfo",
+        "level": 2,
+        "line_start": 298,
+        "line_end": 348,
+        "summary": "getFormsInfo(filter: formInfo.FormInfoFilter, callback: AsyncCallback&lt;Array&lt;formInfo.FormInfo"
+      },
+      {
+        "section_id": "section-8",
+        "title": "formProvider.getFormsInfo",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 402,
+        "summary": "getFormsInfo(filter?: formInfo.FormInfoFilter): Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt;\n\n获取设备"
+      },
+      {
+        "section_id": "section-9",
+        "title": "formProvider.openFormEditAbility<sup>18+</sup>",
+        "level": 2,
+        "line_start": 403,
+        "line_end": 468,
+        "summary": "openFormEditAbility(abilityName: string, formId: string, isMainPage?: boolean): void\n\n打开卡片编辑页。\n\n**系"
+      },
+      {
+        "section_id": "section-10",
+        "title": "formProvider.closeFormEditAbility<sup>23+</sup>",
+        "level": 2,
+        "line_start": 469,
+        "line_end": 536,
+        "summary": "closeFormEditAbility(isMainPage?: boolean): void\n\n关闭卡片编辑页。\n\n**系统能力：** SystemCapability.Ability.Form"
+      },
+      {
+        "section_id": "section-11",
+        "title": "formProvider.openFormManager<sup>18+</sup>",
+        "level": 2,
+        "line_start": 537,
+        "line_end": 588,
+        "summary": "openFormManager(want: Want): void\n\n打开当前应用的卡片管理页面。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "formProvider.getPublishedFormInfoById<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 589,
+        "line_end": 642,
+        "summary": "getPublishedFormInfoById(formId: string): Promise&lt;formInfo.FormInfo&gt;\n\n获取设备上当前应用程序已经加桌的指定卡片信息，"
+      },
+      {
+        "section_id": "section-13",
+        "title": "formProvider.getPublishedFormInfos<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 643,
+        "line_end": 689,
+        "summary": "getPublishedFormInfos(): Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt;\n\n获取设备上当前应用程序所有已经加桌的卡片信息，使用Pr"
+      },
+      {
+        "section_id": "section-14",
+        "title": "formProvider.requestOverflow<sup>20+</sup>",
+        "level": 2,
+        "line_start": 690,
+        "line_end": 761,
+        "summary": "requestOverflow(formId: string, overflowInfo: formInfo.OverflowInfo): Promise&lt;void&gt;\n\n卡片提供方发起互"
+      },
+      {
+        "section_id": "section-15",
+        "title": "formProvider.cancelOverflow<sup>20+</sup>",
+        "level": 2,
+        "line_start": 762,
+        "line_end": 817,
+        "summary": "cancelOverflow(formId: string): Promise&lt;void&gt;\n\n卡片提供方发起取消互动卡片动效请求，只针对[场景动效类型互动卡片](../../form/a"
+      },
+      {
+        "section_id": "section-16",
+        "title": "formProvider.getFormRect<sup>20+</sup>",
+        "level": 2,
+        "line_start": 818,
+        "line_end": 870,
+        "summary": "getFormRect(formId: string): Promise&lt;formInfo.Rect&gt;\n\n查询卡片位置、尺寸，使用Promise异步回调。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-17",
+        "title": "formProvider.getPublishedRunningFormInfoById<sup>20+</sup>",
+        "level": 2,
+        "line_start": 871,
+        "line_end": 924,
+        "summary": "getPublishedRunningFormInfoById(formId: string): Promise&lt;formInfo.RunningFormInfo&gt;\n\n获取当前应用已加桌"
+      },
+      {
+        "section_id": "section-18",
+        "title": "formProvider.getPublishedRunningFormInfos<sup>20+</sup>",
+        "level": 2,
+        "line_start": 925,
+        "line_end": 967,
+        "summary": "getPublishedRunningFormInfos(): Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt;\n\n获取所有已加桌的卡片信息，"
+      },
+      {
+        "section_id": "section-19",
+        "title": "formProvider.reloadForms<sup>22+</sup>",
+        "level": 2,
+        "line_start": 968,
+        "line_end": 1025,
+        "summary": "reloadForms(context: UIAbilityContext, moduleName: string, abilityName: string, formName: string):"
+      },
+      {
+        "section_id": "section-20",
+        "title": "formProvider.reloadAllForms<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1026,
+        "line_end": 1076,
+        "summary": "reloadAllForms(context: UIAbilityContext): Promise&lt;number&gt;\n\n在应用主进程通过本接口可以通知FormExtension进程批量更"
+      }
+    ]
+  }
+}

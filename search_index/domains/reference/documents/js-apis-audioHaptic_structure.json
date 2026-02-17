@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-audioHaptic",
+  "title": "@ohos.multimedia.audioHaptic (音振协同)",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/js-apis-audioHaptic.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/js-apis-audioHaptic.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@songshenke",
+    "designer": "@caixuejiang; @hao-liangfei; @zhanganxiang",
+    "tester": "@Filger",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 @ohos.multimedia.audioHaptic (音振协同)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimedia.audioHaptic (音振协同)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { audioHaptic } from '@kit.AudioKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "audioHaptic.getAudioHapticManager",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 41,
+        "summary": "getAudioHapticManager(): AudioHapticManager\n\n获取音振管理器。\n\n**系统能力：** SystemCapability.Multimedia.AudioH"
+      },
+      {
+        "section_id": "section-3",
+        "title": "AudioLatencyMode",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 52,
+        "summary": "枚举，音频时延模式。\n\n**系统能力：** SystemCapability.Multimedia.AudioHaptic.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-4",
+        "title": "AudioHapticPlayerOptions",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 63,
+        "summary": "音振播放器选项。\n\n**系统能力：** SystemCapability.Multimedia.AudioHaptic.Core\n\n| 名称      | 类型            |只读  |"
+      },
+      {
+        "section_id": "section-5",
+        "title": "AudioHapticFileDescriptor<sup>20+</sup>",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 79,
+        "summary": "描述音振文件描述符。\n\n>**注意：**\n>\n> 开发者需要确保fd是可用的文件描述符，且offset和length的值都是正确的。\n\n**系统能力：**: SystemCapability.Mul"
+      },
+      {
+        "section_id": "section-6",
+        "title": "AudioHapticManager",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 366,
+        "summary": "管理音振协同功能。在调用AudioHapticManager的接口前，需要先通过[getAudioHapticManager](#audiohapticgetaudiohapticmanager)创"
+      },
+      {
+        "section_id": "section-7",
+        "title": "AudioHapticType",
+        "level": 2,
+        "line_start": 367,
+        "line_end": 377,
+        "summary": "枚举，音振类型。\n\n**系统能力：** SystemCapability.Multimedia.AudioHaptic.Core\n\n| 名称                            |"
+      },
+      {
+        "section_id": "section-8",
+        "title": "AudioHapticPlayer",
+        "level": 2,
+        "line_start": 378,
+        "line_end": 813,
+        "summary": "音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过[createPlayer](#createplayer)创建实例。\n\n### isMuted\n\nisM"
+      }
+    ]
+  }
+}

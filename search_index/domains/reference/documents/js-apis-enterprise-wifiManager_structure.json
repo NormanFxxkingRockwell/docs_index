@@ -1,0 +1,172 @@
+{
+  "doc_id": "js-apis-enterprise-wifiManager",
+  "title": "@ohos.enterprise.wifiManager（Wi-Fi管理）",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-wifiManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-wifiManager.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.wifiManager（Wi-Fi管理），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.wifiManager（Wi-Fi管理）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { wifiManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "wifiManager.isWifiActiveSync",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 81,
+        "summary": "isWifiActiveSync(admin: Want): boolean\n\n查询当前设备Wi-Fi开启状态。\n\n**需要权限：** ohos.permission.ENTERPRISE_MANA"
+      },
+      {
+        "section_id": "section-3",
+        "title": "wifiManager.setWifiProfileSync",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 464,
+        "summary": "setWifiProfileSync(admin: Want, profile: WifiProfile): void\n\n为当前设备配置Wi-Fi，连接到指定网络。\n\n**需要权限：** ohos."
+      },
+      {
+        "section_id": "section-4",
+        "title": "wifiManager.addAllowedWifiList<sup>19+</sup>",
+        "level": 2,
+        "line_start": 465,
+        "line_end": 525,
+        "summary": "addAllowedWifiList(admin: Want, list: Array&lt;WifiAccessInfo&gt;): void\n\n添加Wi-Fi允许名单。添加允许名单后当前设备仅允"
+      },
+      {
+        "section_id": "section-5",
+        "title": "wifiManager.removeAllowedWifiList<sup>19+</sup>",
+        "level": 2,
+        "line_start": 526,
+        "line_end": 580,
+        "summary": "removeAllowedWifiList(admin: Want, list: Array&lt;WifiAccessInfo&gt;): void\n\n移除Wi-Fi允许名单。若移除允许名单中的部"
+      },
+      {
+        "section_id": "section-6",
+        "title": "wifiManager.getAllowedWifiList<sup>19+</sup>",
+        "level": 2,
+        "line_start": 581,
+        "line_end": 634,
+        "summary": "getAllowedWifiList(admin: Want): Array&lt;WifiAccessInfo&gt;\n\n获取Wi-Fi允许名单。\n\n**需要权限：** ohos.permissi"
+      },
+      {
+        "section_id": "section-7",
+        "title": "wifiManager.addDisallowedWifiList<sup>19+</sup>",
+        "level": 2,
+        "line_start": 635,
+        "line_end": 695,
+        "summary": "addDisallowedWifiList(admin: Want, list: Array&lt;WifiAccessInfo&gt;): void\n\n添加Wi-Fi禁用名单。添加禁用名单后当前设"
+      },
+      {
+        "section_id": "section-8",
+        "title": "wifiManager.removeDisallowedWifiList<sup>19+</sup>",
+        "level": 2,
+        "line_start": 696,
+        "line_end": 750,
+        "summary": "removeDisallowedWifiList(admin: Want, list: Array&lt;WifiAccessInfo&gt;): void\n\n移除Wi-Fi禁用名单。若移除禁用名单"
+      },
+      {
+        "section_id": "section-9",
+        "title": "wifiManager.getDisallowedWifiList<sup>19+</sup>",
+        "level": 2,
+        "line_start": 751,
+        "line_end": 804,
+        "summary": "getDisallowedWifiList(admin: Want): Array&lt;WifiAccessInfo&gt;\n\n获取Wi-Fi禁用名单。\n\n**需要权限：** ohos.permi"
+      },
+      {
+        "section_id": "section-10",
+        "title": "WifiAccessInfo<sup>19+</sup>",
+        "level": 2,
+        "line_start": 805,
+        "line_end": 817,
+        "summary": "Wi-Fi的SSID和BSSID信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n\n| 名称"
+      },
+      {
+        "section_id": "section-11",
+        "title": "WifiProfile",
+        "level": 2,
+        "line_start": 818,
+        "line_end": 841,
+        "summary": "Wi-Fi配置信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n\n| 名称          | 类型"
+      },
+      {
+        "section_id": "section-12",
+        "title": "WifiSecurityType",
+        "level": 2,
+        "line_start": 842,
+        "line_end": 862,
+        "summary": "表示加密类型的枚举。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n\n| 名称"
+      },
+      {
+        "section_id": "section-13",
+        "title": "IpType",
+        "level": 2,
+        "line_start": 863,
+        "line_end": 876,
+        "summary": "表示IP类型的枚举。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n\n| 名称    | 值   | 说明"
+      },
+      {
+        "section_id": "section-14",
+        "title": "IpProfile",
+        "level": 2,
+        "line_start": 877,
+        "line_end": 892,
+        "summary": "IP配置信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-15",
+        "title": "WifiEapProfile",
+        "level": 2,
+        "line_start": 893,
+        "line_end": 918,
+        "summary": "可扩展身份验证协议配置信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n\n| 名称"
+      },
+      {
+        "section_id": "section-16",
+        "title": "EapMethod",
+        "level": 2,
+        "line_start": 919,
+        "line_end": 938,
+        "summary": "表示EAP认证方式的枚举。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n\n| 名称           |"
+      },
+      {
+        "section_id": "section-17",
+        "title": "Phase2Method",
+        "level": 2,
+        "line_start": 939,
+        "line_end": 957,
+        "summary": "表示第二阶段认证方式的枚举。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n\n\n| 名称"
+      },
+      {
+        "section_id": "section-18",
+        "title": "wifiManager.turnOnWifi<sup>20+</sup>",
+        "level": 2,
+        "line_start": 958,
+        "line_end": 1011,
+        "summary": "turnOnWifi(admin: Want, isForce: boolean): void\n\n打开Wi-Fi开关。\n\n以下情况下，通过本接口打开Wi-Fi开关，会打开失败并提示\"系统功能被禁用\""
+      },
+      {
+        "section_id": "section-19",
+        "title": "wifiManager.turnOffWifi<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1012,
+        "line_end": 1065,
+        "summary": "turnOffWifi(admin: Want): void\n\n关闭Wi-Fi开关。\n\n以下情况下，通过本接口关闭Wi-Fi开关，会提示\"系统功能被禁用\"：\n\n​已经通过[setDisallowed"
+      }
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "doc_id": "js-apis-display-sys",
+  "title": "@ohos.display (屏幕属性)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-display-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-display-sys.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "Window",
+    "owner": "@oh_wangxk; @logn",
+    "designer": "@hejunfei1991",
+    "tester": "@qinliwen0417",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkUI Window 模块的 @ohos.display (屏幕属性)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.display (屏幕属性)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { display } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "display.hasPrivateWindow<sup>9+</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 82,
+        "summary": "hasPrivateWindow(displayId: number): boolean\n\n查询指定display对象上是否有可见的隐私窗口。可通过[setWindowPrivacyMode()]("
+      },
+      {
+        "section_id": "section-3",
+        "title": "display.on('privateModeChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 123,
+        "summary": "on(type: 'privateModeChange', callback: Callback&lt;boolean&gt;): void\n\n开启屏幕隐私模式变化的监听。当屏幕前台有隐私窗口，则屏"
+      },
+      {
+        "section_id": "section-4",
+        "title": "display.off('privateModeChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 159,
+        "summary": "off(type: 'privateModeChange', callback?: Callback&lt;boolean&gt;): void\n\n关闭屏幕隐私模式变化的监听。当屏幕前台有隐私窗口，"
+      },
+      {
+        "section_id": "section-5",
+        "title": "display.setFoldDisplayMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 199,
+        "summary": "setFoldDisplayMode(mode: FoldDisplayMode): void\n\n更改可折叠设备的显示模式。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-6",
+        "title": "display.setFoldDisplayMode<sup>19+</sup>",
+        "level": 2,
+        "line_start": 200,
+        "line_end": 239,
+        "summary": "setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void\n\n更改可折叠设备的显示模式，并指明更改原因。\n\n**系统接口：** 此接"
+      },
+      {
+        "section_id": "section-7",
+        "title": "display.setFoldStatusLocked<sup>11+</sup>",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 277,
+        "summary": "setFoldStatusLocked(locked: boolean): void\n\n设置可折叠设备当前折叠状态的锁定状态。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-8",
+        "title": "display.addVirtualScreenBlocklist<sup>18+</sup>",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 332,
+        "summary": "addVirtualScreenBlocklist(windowIds: Array\\<number>): Promise\\<void>\n\n将窗口添加到禁止投屏显示的名单中，被添加的窗口无法在投屏时显"
+      },
+      {
+        "section_id": "section-9",
+        "title": "display.removeVirtualScreenBlocklist<sup>18+</sup>",
+        "level": 2,
+        "line_start": 333,
+        "line_end": 394,
+        "summary": "removeVirtualScreenBlocklist(windowIds: Array\\<number>): Promise\\<void>\n\n将窗口从禁止投屏显示的名单中移除，被移除的窗口可以在投"
+      },
+      {
+        "section_id": "section-10",
+        "title": "Display",
+        "level": 2,
+        "line_start": 395,
+        "line_end": 484,
+        "summary": "屏幕实例。描述display对象的属性和方法。\n\n下列API示例中都需先使用[getAllDisplays()](js-apis-display.md#displaygetalldisplays9)、"
+      }
+    ]
+  }
+}

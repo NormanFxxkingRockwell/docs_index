@@ -1,0 +1,124 @@
+{
+  "doc_id": "js-apis-system-file",
+  "title": "@system.file (文件存储)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-system-file.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-system-file.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@wangke25; @gsl_1234; @wuchengjun5",
+    "designer": "@gsl_1234; @wangke25",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @system.file (文件存储)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@system.file (文件存储)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 22,
+        "summary": "```ts\nimport file from '@system.file';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "file.move",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 71,
+        "summary": "move(Object): void\n\n将指定文件移动到其他指定位置。\n\n> **说明**： \n>\n> 除Lite Wearable外，从API version 10开始废弃，请使用[fs.move"
+      },
+      {
+        "section_id": "section-3",
+        "title": "file.copy",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 121,
+        "summary": "copy(Object): void\n\n将指定文件拷贝并存储到指定位置。\n\n> **说明**：\n>\n> 除Lite Wearable外，从API version 10开始废弃，请使用[fs.copy"
+      },
+      {
+        "section_id": "section-4",
+        "title": "file.list",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 184,
+        "summary": "list(Object): void\n\n获取指定路径下全部文件的列表。\n\n> **说明**： \n>\n> 除Lite Wearable外，从API version 10开始废弃，请使用[fs.list"
+      },
+      {
+        "section_id": "section-5",
+        "title": "file.get",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 243,
+        "summary": "get(Object): void\n\n获取指定本地文件的信息。\n\n> **说明**： \n>\n> 除Lite Wearable外，从API version 10开始废弃，请使用[fs.stat](js"
+      },
+      {
+        "section_id": "section-6",
+        "title": "file.delete",
+        "level": 2,
+        "line_start": 244,
+        "line_end": 291,
+        "summary": "delete(Object): void\n\n删除本地文件。\n\n> **说明**： \n>\n> 除Lite Wearable外，从API version 10开始废弃，请使用[fs.unlink](js"
+      },
+      {
+        "section_id": "section-7",
+        "title": "file.writeText",
+        "level": 2,
+        "line_start": 292,
+        "line_end": 342,
+        "summary": "writeText(Object): void\n\n写文本内容到指定文件。仅支持文本文档读写。\n\n> **说明**： \n>\n> 除Lite Wearable外，从API version 10开始废弃，"
+      },
+      {
+        "section_id": "section-8",
+        "title": "file.writeArrayBuffer",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 393,
+        "summary": "writeArrayBuffer(Object): void\n\n写Buffer内容到指定文件。仅支持文本文档读写。\n\n> **说明**： \n>\n> 除Lite Wearable外，从API vers"
+      },
+      {
+        "section_id": "section-9",
+        "title": "file.readText",
+        "level": 2,
+        "line_start": 394,
+        "line_end": 451,
+        "summary": "readText(Object): void\n\n从指定文件中读取文本内容。仅支持文本文档读写。\n\n> **说明**： \n>\n> 除Lite Wearable外，从API version 10开始废弃"
+      },
+      {
+        "section_id": "section-10",
+        "title": "file.readArrayBuffer",
+        "level": 2,
+        "line_start": 452,
+        "line_end": 509,
+        "summary": "readArrayBuffer(Object): void\n\n从指定文件中读取Buffer内容。仅支持文本文档读写。\n\n> **说明**： \n>\n> 除Lite Wearable外，从API ver"
+      },
+      {
+        "section_id": "section-11",
+        "title": "file.access",
+        "level": 2,
+        "line_start": 510,
+        "line_end": 557,
+        "summary": "access(Object): void\n\n判断指定文件或目录是否存在。\n\n> **说明**： \n>\n> 除Lite Wearable外，从API version 10开始废弃，请使用[fs.acc"
+      },
+      {
+        "section_id": "section-12",
+        "title": "file.mkdir",
+        "level": 2,
+        "line_start": 558,
+        "line_end": 605,
+        "summary": "mkdir(Object): void\n\n创建指定目录。\n\n> **说明**： \n>\n> 除Lite Wearable外，从API version 10开始废弃，请使用[fs.mkdir](js-a"
+      },
+      {
+        "section_id": "section-13",
+        "title": "file.rmdir",
+        "level": 2,
+        "line_start": 606,
+        "line_end": 652,
+        "summary": "rmdir(Object): void\n\n删除指定目录。\n\n> **说明**： \n>\n> 除Lite Wearable外，从API version 10开始废弃，请使用[fs.rmdir](js-a"
+      }
+    ]
+  }
+}

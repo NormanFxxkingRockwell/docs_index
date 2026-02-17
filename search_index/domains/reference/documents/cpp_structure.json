@@ -1,0 +1,60 @@
+{
+  "doc_id": "cpp",
+  "title": "c++标准库",
+  "path": "zh-cn/application-dev/reference/native-lib/cpp.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/native-lib/cpp.md",
+  "metadata": {
+    "kit": "Standard Libraries",
+    "subsystem": "arkcompiler",
+    "owner": "@eric96",
+    "designer": "@liuyingying19huawei",
+    "tester": "@hwu-mc",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Standard Libraries arkcompiler 模块的 c++标准库，提供相关接口和功能说明。",
+  "structure": {
+    "title": "c++标准库",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "libc++版本",
+        "level": 2,
+        "line_start": 12,
+        "line_end": 19,
+        "summary": "从OpenHarmony 4.0开始到<!--RP1-->OpenHarmony 6.0<!--RP1End-->，libc++升级到clang/llvm 15.0.4版本\n\n从OpenHarmon"
+      },
+      {
+        "section_id": "section-2",
+        "title": "C++语言支持能力",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 24,
+        "summary": "C++11、C++14标准已完全支持，C++17和C++20标准的部分特性已支持。开发者可以通过[如何修改代码工程所支持的C++语言版本](https://developer.huawei.com/"
+      },
+      {
+        "section_id": "section-3",
+        "title": "如何在CMake中选择C++",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 30,
+        "summary": "在NDK的{ndk_root}/build/cmake/ohos.toolchain.cmake文件中，定义了OHOS_STL变量，可以通过设置\"c++_shared\"或者\"c++_static\"来"
+      },
+      {
+        "section_id": "section-4",
+        "title": "C++运行时兼容性",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 41,
+        "summary": "在OpenHarmony系统中，系统库与应用原生库都在使用C++标准库，两部分升级节奏不一样，依赖C++运行时版本也可能不一样。系统库依赖的C++标准库随镜像版本升级，而应用原生库依赖的C++标准库"
+      },
+      {
+        "section_id": "section-5",
+        "title": "注意事项",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 46,
+        "summary": "1. C++运行时库工具链进行大版本升级的时候，不保证一定二进制兼容；一个应用包如果有多个动态库，这些动态库**必须用同一个大版本的clang工具链进行编译**，依赖相同版本的libc++_shar"
+      }
+    ]
+  }
+}

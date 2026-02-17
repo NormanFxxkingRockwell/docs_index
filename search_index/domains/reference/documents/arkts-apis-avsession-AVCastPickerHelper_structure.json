@@ -1,0 +1,68 @@
+{
+  "doc_id": "arkts-apis-avsession-AVCastPickerHelper",
+  "title": "Class (AVCastPickerHelper)",
+  "path": "zh-cn/application-dev/reference/apis-avsession-kit/arkts-apis-avsession-AVCastPickerHelper.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-avsession-kit/arkts-apis-avsession-AVCastPickerHelper.md",
+  "metadata": {
+    "kit": "AVSession Kit",
+    "subsystem": "Multimedia",
+    "owner": "@ccfriend; @liao_qian",
+    "designer": "@ccfriend",
+    "tester": "@chenmingxi1_huawei",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "AVSession Kit Multimedia 模块的 Class (AVCastPickerHelper)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (AVCastPickerHelper)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { avSession } from '@kit.AVSessionKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "constructor<sup>14+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 74,
+        "summary": "constructor(context: Context)\n\n创建AVCastPickerHelper对象，获取context参考[getHostContext](../apis-arkui/ark"
+      },
+      {
+        "section_id": "section-3",
+        "title": "select<sup>14+</sup>",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 132,
+        "summary": "select(options?: AVCastPickerOptions): Promise\\<void>\n\n通过选择模式拉起AVCastPicker界面，用户可以选择投播设备。接口采用Promis"
+      },
+      {
+        "section_id": "section-4",
+        "title": "resetCommunicationDevice<sup>21+</sup>",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 162,
+        "summary": "resetCommunicationDevice(): Promise\\<void>\n\n将应用通话设备恢复至默认设备。比如在语音通话场景下，手机设备的通话装置将恢复成听筒。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-5",
+        "title": "on('pickerStateChange')<sup>14+</sup>",
+        "level": 2,
+        "line_start": 163,
+        "line_end": 205,
+        "summary": "on(type: 'pickerStateChange', callback: Callback<AVCastPickerState\\>) : void\n\n设置半模态窗口变化的监听事件。\n\n每个指令"
+      },
+      {
+        "section_id": "section-6",
+        "title": "off('pickerStateChange')<sup>14+</sup>",
+        "level": 2,
+        "line_start": 206,
+        "line_end": 243,
+        "summary": "off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState\\>) : void\n\n取消半模态窗口变化事件监听。指定cal"
+      }
+    ]
+  }
+}

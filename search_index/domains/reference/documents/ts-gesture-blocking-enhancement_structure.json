@@ -1,0 +1,84 @@
+{
+  "doc_id": "ts-gesture-blocking-enhancement",
+  "title": "手势拦截增强",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-gesture-blocking-enhancement.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-gesture-blocking-enhancement.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yihao-lin",
+    "designer": "@piggyguy",
+    "tester": "@songyanhong",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 手势拦截增强，提供相关接口和功能说明。",
+  "structure": {
+    "title": "手势拦截增强",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "shouldBuiltInRecognizerParallelWith",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 35,
+        "summary": "shouldBuiltInRecognizerParallelWith(callback: ShouldBuiltInRecognizerParallelWithCallback): T\n\n提供系统"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ShouldBuiltInRecognizerParallelWithCallback",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 58,
+        "summary": "type ShouldBuiltInRecognizerParallelWithCallback = (current: GestureRecognizer, others: Array\\<Gest"
+      },
+      {
+        "section_id": "section-3",
+        "title": "onGestureRecognizerJudgeBegin<sup>13+</sup>",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 83,
+        "summary": "onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback, exposeInnerGesture: bo"
+      },
+      {
+        "section_id": "section-4",
+        "title": "onGestureRecognizerJudgeBegin",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 104,
+        "summary": "onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback): T\n\n给组件绑定自定义手势识别器判定回调。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "GestureRecognizerJudgeBeginCallback",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 129,
+        "summary": "type GestureRecognizerJudgeBeginCallback = (event: BaseGestureEvent, current: GestureRecognizer, re"
+      },
+      {
+        "section_id": "section-6",
+        "title": "onTouchTestDone<sup>20+</sup>",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 151,
+        "summary": "onTouchTestDone(callback: TouchTestDoneCallback): T\n\n提供在[触摸测试](../../../ui/arkts-interaction-basic-"
+      },
+      {
+        "section_id": "section-7",
+        "title": "TouchTestDoneCallback<sup>20+</sup>",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 168,
+        "summary": "type TouchTestDoneCallback = (event: BaseGestureEvent, recognizers: Array\\<GestureRecognizer\\>) =>"
+      },
+      {
+        "section_id": "section-8",
+        "title": "示例",
+        "level": 2,
+        "line_start": 169,
+        "line_end": 799,
+        "summary": "### 示例1（嵌套滚动）\n\n该示例通过shouldBuiltInRecognizerParallelWith和onGestureRecognizerJudgeBegin实现了嵌套滚动的功能。内部组"
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "doc_id": "development-intro-api",
+  "title": "开发说明",
+  "path": "zh-cn/application-dev/reference/development-intro-api.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/development-intro-api.md",
+  "metadata": {
+    "kit": "Common",
+    "subsystem": "Common",
+    "owner": "@RayShih",
+    "designer": "@RayShih",
+    "tester": "@RayShih",
+    "adviser": "@RayShih"
+  },
+  "summary": "Common Common 模块的 开发说明，提供相关接口和功能说明。",
+  "structure": {
+    "title": "开发说明",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "版本说明",
+        "level": 2,
+        "line_start": 12,
+        "line_end": 18,
+        "summary": "API参考采用两种方式标记组件或接口开始支持的版本号：\n\n- 对于新增组件或接口，会在章节开头进行说明，如：本模块首批接口从API version 7开始支持。\n- 对于某个已有组件或接口的新增特性"
+      },
+      {
+        "section_id": "section-2",
+        "title": "系统能力说明",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 32,
+        "summary": "系统能力（SystemCapability，简称SysCap），指操作系统中每一个相对独立的特性。不同的设备对应不同的系统能力集，每个系统能力对应多个接口。开发者可根据系统能力来判断是否可以使用某接"
+      },
+      {
+        "section_id": "section-3",
+        "title": "服务卡片说明",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 38,
+        "summary": "将应用/元服务的重要信息或操作前置到[服务卡片](../form/formkit-overview.md)（简称“卡片”），可达到服务直达、减少跳转层级的体验效果。\n- 对于支持在ArkTS卡片UI"
+      },
+      {
+        "section_id": "section-4",
+        "title": "权限说明",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 47,
+        "summary": "默认情况下，应用只能访问有限的系统资源。但某些情况下，应用为了扩展功能的诉求，需要访问额外的系统或其他应用的数据（包括用户个人数据）、功能。具体可参考[访问控制开发概述](../security/A"
+      },
+      {
+        "section_id": "section-5",
+        "title": "错误码使用说明",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 63,
+        "summary": "ArkTS API在使用过程中，可能会遇到错误。\n\n在可能出现错误的各个接口处，开发者可参考文档中提供的**错误码**部分，了解对应接口可能出现的错误码ID及错误信息，并根据需要进行处理。\n\n当前A"
+      },
+      {
+        "section_id": "section-6",
+        "title": "应用模型说明",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 72,
+        "summary": "随着系统的演进发展，先后提供了两种应用模型，FA模型和Stage模型。\n\n- 如果某个模块的接口仅支持其中一种模型，会在文档开头说明：本模块接口仅可在FA模型/Stage模型下使用。\n- 如果某个接"
+      },
+      {
+        "section_id": "section-7",
+        "title": "系统接口说明",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 89,
+        "summary": "OpenHarmony中提供的接口，部分是仅供OEM厂商使用的system api，普通应用无法使用。\n\n针对这种情况，在文档中会进行系统接口的声明：\n\n- 如果某个模块的接口均为system ap"
+      },
+      {
+        "section_id": "section-8",
+        "title": "废弃接口说明",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 98,
+        "summary": "废弃接口会使用上标“<sup>deprecated</sup>”标注，表示该接口不再推荐使用。\n\n废弃接口均会标注废弃起始版本，从废弃版本起的5个API level仍可以兼容使用，但不推荐此行为。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "doc_id": "js-apis-file-trash-sys",
+  "title": "@ohos.file.trash (回收站)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-trash-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-trash-sys.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@wang_zhangjun; @gzhuangzhuang",
+    "designer": "@wang_zhangjun; @gzhuangzhuang; @renguang1116",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.file.trash (回收站)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.trash (回收站)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```js\nimport { trash } from '@kit.CoreFileKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "trash.listFile",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 64,
+        "summary": "listFile(): Array\\<FileInfo>\n\n查询最近删除（回收站）列表中文件/目录信息。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口"
+      },
+      {
+        "section_id": "section-3",
+        "title": "trash.recover",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 96,
+        "summary": "recover(uri: string): void\n\n将uri对应文件/目录恢复到原路径。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**需"
+      },
+      {
+        "section_id": "section-4",
+        "title": "trash.completelyDelete",
+        "level": 2,
+        "line_start": 97,
+        "line_end": 128,
+        "summary": "completelyDelete(uri: string): void\n\n将uri对应文件/目录从最近删除（回收站）列表中彻底删除。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系"
+      },
+      {
+        "section_id": "section-5",
+        "title": "FileInfo",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 148,
+        "summary": "最近删除（回收站）内文件的FileInfo对象。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability"
+      }
+    ]
+  }
+}

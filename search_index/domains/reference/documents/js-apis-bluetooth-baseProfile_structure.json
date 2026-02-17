@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-bluetooth-baseProfile",
+  "title": "@ohos.bluetooth.baseProfile (蓝牙baseProfile模块)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-baseProfile.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-baseProfile.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.bluetooth.baseProfile (蓝牙baseProfile模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bluetooth.baseProfile (蓝牙baseProfile模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 20,
+        "summary": "```js\nimport { baseProfile } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "BaseProfile",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 24,
+        "summary": "基础Profile接口定义，提供订阅和获取连接状态等公共能力。如：[A2dpSourceProfile](js-apis-bluetooth-a2dp.md#a2dpsourceprofile)、["
+      },
+      {
+        "section_id": "section-3",
+        "title": "ProfileConnectionState",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 36,
+        "summary": "type ProfileConnectionState = constant.ProfileConnectionState\n\n本端和对端蓝牙设备间的Profile连接状态。\n\n**系统能力**：Sy"
+      },
+      {
+        "section_id": "section-4",
+        "title": "StateChangeParam",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 48,
+        "summary": "本端和对端蓝牙设备间Profile连接状态变化参数。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称     | 类型"
+      },
+      {
+        "section_id": "section-5",
+        "title": "DisconnectCause<sup>12+</sup>",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 63,
+        "summary": "枚举，Profile断开连接的原因。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称                 |"
+      },
+      {
+        "section_id": "section-6",
+        "title": "BaseProfile.getConnectedDevices",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 106,
+        "summary": "getConnectedDevices(): Array&lt;string&gt;\n\n获取和本端设备间已连接Profile的对端设备列表。\n\n**需要权限**：ohos.permission.AC"
+      },
+      {
+        "section_id": "section-7",
+        "title": "BaseProfile.getConnectionState",
+        "level": 2,
+        "line_start": 107,
+        "line_end": 158,
+        "summary": "getConnectionState(deviceId: string): ProfileConnectionState\n\n获取和对端设备间Profile的连接状态。\n\n- 从API version"
+      },
+      {
+        "section_id": "section-8",
+        "title": "BaseProfile.on('connectionStateChange')",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 202,
+        "summary": "on(type: 'connectionStateChange', callback: Callback&lt;StateChangeParam&gt;): void\n\n订阅Profile的连接状态"
+      },
+      {
+        "section_id": "section-9",
+        "title": "BaseProfile.off('connectionStateChange')",
+        "level": 2,
+        "line_start": 203,
+        "line_end": 246,
+        "summary": "off(type: 'connectionStateChange', callback?: Callback&lt;[StateChangeParam](#statechangeparam)&gt;"
+      }
+    ]
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "doc_id": "arkts-apis-camera-PhotoOutput",
+  "title": "Interface (PhotoOutput)",
+  "path": "zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-PhotoOutput.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-PhotoOutput.md",
+  "metadata": {
+    "kit": "Camera Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qano",
+    "designer": "@leo_ysl",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Camera Kit Multimedia 模块的 Interface (PhotoOutput)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (PhotoOutput)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { camera } from '@kit.CameraKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "capture",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 61,
+        "summary": "capture(callback: AsyncCallback\\<void\\>): void\n\n以默认设置触发一次拍照，通过注册回调函数获取结果。使用callback异步回调。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-3",
+        "title": "capture",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 100,
+        "summary": "capture(): Promise\\<void\\>\n\n以默认设置触发一次拍照。使用Promise异步回调。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-4",
+        "title": "capture",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 154,
+        "summary": "capture(setting: PhotoCaptureSetting, callback: AsyncCallback\\<void\\>): void\n\n以指定参数触发一次拍照，通过注册回调函数获"
+      },
+      {
+        "section_id": "section-5",
+        "title": "capture",
+        "level": 2,
+        "line_start": 155,
+        "line_end": 211,
+        "summary": "capture(setting: PhotoCaptureSetting): Promise\\<void\\>\n\n以指定参数触发一次拍照。使用Promise异步回调。\n\n**原子化服务API：** 从"
+      },
+      {
+        "section_id": "section-6",
+        "title": "on('photoAvailable')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 212,
+        "line_end": 252,
+        "summary": "on(type: 'photoAvailable', callback: AsyncCallback\\<Photo\\>): void\n\n注册监听拍照返回照片上报事件。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "off('photoAvailable')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 288,
+        "summary": "off(type: 'photoAvailable', callback?: AsyncCallback\\<Photo\\>): void\n\n注销监听拍照返回照片上报事件。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "onCapturePhotoAvailable<sup>23+</sup>",
+        "level": 2,
+        "line_start": 289,
+        "line_end": 327,
+        "summary": "onCapturePhotoAvailable(callback: Callback\\<CapturePhoto\\>): void\n\n注册监听全质量图和未压缩图。使用callback异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-9",
+        "title": "offCapturePhotoAvailable<sup>23+</sup>",
+        "level": 2,
+        "line_start": 328,
+        "line_end": 360,
+        "summary": "offCapturePhotoAvailable(callback?: Callback\\<CapturePhoto\\>): void\n\n注销监听全质量图和未压缩图。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "on('captureStartWithInfo')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 361,
+        "line_end": 399,
+        "summary": "on(type: 'captureStartWithInfo', callback: AsyncCallback\\<CaptureStartInfo\\>): void\n\n监听拍照开始，通过注册回调函"
+      },
+      {
+        "section_id": "section-11",
+        "title": "off('captureStartWithInfo')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 400,
+        "line_end": 426,
+        "summary": "off(type: 'captureStartWithInfo', callback?: AsyncCallback\\<CaptureStartInfo\\>): void\n\n注销监听拍照。\n\n**原"
+      },
+      {
+        "section_id": "section-12",
+        "title": "isMovingPhotoSupported<sup>12+</sup>",
+        "level": 2,
+        "line_start": 427,
+        "line_end": 468,
+        "summary": "isMovingPhotoSupported(): boolean\n\n查询是否支持动态照片拍摄。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "enableMovingPhoto<sup>12+</sup>",
+        "level": 2,
+        "line_start": 469,
+        "line_end": 512,
+        "summary": "enableMovingPhoto(enabled: boolean): void\n\n使能动态照片拍照。\n\n**需要权限：** ohos.permission.MICROPHONE\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-14",
+        "title": "on('photoAssetAvailable')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 513,
+        "line_end": 553,
+        "summary": "on(type: 'photoAssetAvailable', callback: AsyncCallback\\<photoAccessHelper.PhotoAsset\\>): void\n\n注册监"
+      },
+      {
+        "section_id": "section-15",
+        "title": "off('photoAssetAvailable')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 554,
+        "line_end": 578,
+        "summary": "off(type: 'photoAssetAvailable', callback?: AsyncCallback\\<photoAccessHelper.PhotoAsset\\>): void\n\n注"
+      },
+      {
+        "section_id": "section-16",
+        "title": "isMirrorSupported",
+        "level": 2,
+        "line_start": 579,
+        "line_end": 603,
+        "summary": "isMirrorSupported(): boolean\n\n查询是否支持镜像拍照。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-17",
+        "title": "enableMirror<sup>13+</sup>",
+        "level": 2,
+        "line_start": 604,
+        "line_end": 648,
+        "summary": "enableMirror(enabled: boolean): void\n\n是否启用动态照片镜像拍照。\n\n调用该接口前，需要通过[isMovingPhotoSupported](#ismovingp"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getSupportedMovingPhotoVideoCodecTypes<sup>13+</sup>",
+        "level": 2,
+        "line_start": 649,
+        "line_end": 681,
+        "summary": "getSupportedMovingPhotoVideoCodecTypes(): Array\\<VideoCodecType\\>\n\n查询支持的动态照片短视频编码类型。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-19",
+        "title": "setMovingPhotoVideoCodecType<sup>13+</sup>",
+        "level": 2,
+        "line_start": 682,
+        "line_end": 713,
+        "summary": "setMovingPhotoVideoCodecType(codecType: VideoCodecType): void\n\n设置动态照片短视频编码类型。\n\n**原子化服务API：** 从API v"
+      },
+      {
+        "section_id": "section-20",
+        "title": "on('frameShutter')",
+        "level": 2,
+        "line_start": 714,
+        "line_end": 749,
+        "summary": "on(type: 'frameShutter', callback: AsyncCallback\\<FrameShutterInfo\\>): void\n\n监听拍照帧输出捕获，通过注册回调函数获取结果"
+      },
+      {
+        "section_id": "section-21",
+        "title": "off('frameShutter')",
+        "level": 2,
+        "line_start": 750,
+        "line_end": 774,
+        "summary": "off(type: 'frameShutter', callback?: AsyncCallback\\<FrameShutterInfo\\>): void\n\n注销监听拍照帧输出捕获。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-22",
+        "title": "on('captureEnd')",
+        "level": 2,
+        "line_start": 775,
+        "line_end": 814,
+        "summary": "on(type: 'captureEnd', callback: AsyncCallback\\<CaptureEndInfo\\>): void\n\n监听拍照结束，通过注册回调函数获取结果。使用call"
+      },
+      {
+        "section_id": "section-23",
+        "title": "off('captureEnd')",
+        "level": 2,
+        "line_start": 815,
+        "line_end": 839,
+        "summary": "off(type: 'captureEnd', callback?: AsyncCallback\\<CaptureEndInfo\\>): void\n\n注销监听拍照结束。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-24",
+        "title": "on('frameShutterEnd')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 840,
+        "line_end": 878,
+        "summary": "on(type: 'frameShutterEnd', callback: AsyncCallback\\<FrameShutterEndInfo\\>): void\n\n监听拍照曝光结束捕获，通过注册回"
+      },
+      {
+        "section_id": "section-25",
+        "title": "off('frameShutterEnd')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 879,
+        "line_end": 903,
+        "summary": "off(type: 'frameShutterEnd', callback?: AsyncCallback\\<FrameShutterEndInfo\\>): void\n\n注销监听拍照曝光结束捕获。"
+      },
+      {
+        "section_id": "section-26",
+        "title": "on('captureReady')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 904,
+        "line_end": 942,
+        "summary": "on(type: 'captureReady', callback: AsyncCallback\\<void\\>): void\n\n监听可拍下一张，通过注册回调函数获取结果。使用callback异步回"
+      },
+      {
+        "section_id": "section-27",
+        "title": "off('captureReady')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 943,
+        "line_end": 967,
+        "summary": "off(type: 'captureReady', callback?: AsyncCallback\\<void\\>): void\n\n注销监听可拍下一张。\n\n**原子化服务API：** 从API v"
+      },
+      {
+        "section_id": "section-28",
+        "title": "on('estimatedCaptureDuration')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 968,
+        "line_end": 1006,
+        "summary": "on(type: 'estimatedCaptureDuration', callback: AsyncCallback\\<number\\>): void\n\n监听预估的拍照时间，通过注册回调函数获取"
+      },
+      {
+        "section_id": "section-29",
+        "title": "off('estimatedCaptureDuration')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1007,
+        "line_end": 1031,
+        "summary": "off(type: 'estimatedCaptureDuration', callback?: AsyncCallback\\<number\\>): void\n\n注销监听预估的拍照时间。\n\n**原子"
+      },
+      {
+        "section_id": "section-30",
+        "title": "on('error')",
+        "level": 2,
+        "line_start": 1032,
+        "line_end": 1066,
+        "summary": "on(type: 'error', callback: ErrorCallback): void\n\n监听拍照输出发生错误，通过注册回调函数获取结果。使用callback异步回调。\n\n> **说明：*"
+      },
+      {
+        "section_id": "section-31",
+        "title": "off('error')",
+        "level": 2,
+        "line_start": 1067,
+        "line_end": 1091,
+        "summary": "off(type: 'error', callback?: ErrorCallback): void\n\n注销监听拍照输出发生错误。\n\n**原子化服务API：** 从API version 19开始，"
+      },
+      {
+        "section_id": "section-32",
+        "title": "getActiveProfile<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1092,
+        "line_end": 1133,
+        "summary": "getActiveProfile(): Profile\n\n获取当前生效的配置信息。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-33",
+        "title": "getPhotoRotation<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1134,
+        "line_end": 1200,
+        "summary": "getPhotoRotation(deviceDegree?: number): ImageRotation\n\n获取拍照旋转角度。\n\n- 设备自然方向：设备默认使用方向。例如，直板机默认使用方向为竖"
+      },
+      {
+        "section_id": "section-34",
+        "title": "on('captureStart')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1201,
+        "line_end": 1238,
+        "summary": "on(type: 'captureStart', callback: AsyncCallback\\<number\\>): void\n\n监听拍照开始，通过注册回调函数获取Capture ID。使用ca"
+      },
+      {
+        "section_id": "section-35",
+        "title": "off('captureStart')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1239,
+        "line_end": 1266,
+        "summary": "off(type: 'captureStart', callback?: AsyncCallback\\<number\\>): void\n\n注销拍照开始的监听。\n\n> **说明：**\n> 从 API"
+      },
+      {
+        "section_id": "section-36",
+        "title": "isPhotoQualityPrioritizationSupported<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1267,
+        "line_end": 1316,
+        "summary": "isPhotoQualityPrioritizationSupported(qualityPrioritization: PhotoQualityPrioritization): boolean"
+      },
+      {
+        "section_id": "section-37",
+        "title": "setPhotoQualityPrioritization<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1317,
+        "line_end": 1361,
+        "summary": "setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization): void\n\n设置拍照画质优先策略。"
+      }
+    ]
+  }
+}

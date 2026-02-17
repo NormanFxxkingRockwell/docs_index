@@ -1,0 +1,164 @@
+{
+  "doc_id": "arkts-apis-image-ImagePacker",
+  "title": "Interface (ImagePacker)",
+  "path": "zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-ImagePacker.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-ImagePacker.md",
+  "metadata": {
+    "kit": "Image Kit",
+    "subsystem": "Multimedia",
+    "owner": "@aulight02",
+    "designer": "@liyang_bryan",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Image Kit Multimedia 模块的 Interface (ImagePacker)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (ImagePacker)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 28,
+        "summary": "```ts\nimport { image } from '@kit.ImageKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 36,
+        "summary": "**系统能力：** SystemCapability.Multimedia.Image.ImagePacker\n\n| 名称             | 类型           | 只读 | 可选"
+      },
+      {
+        "section_id": "section-3",
+        "title": "packToData<sup>13+</sup>",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 95,
+        "summary": "packToData(source: ImageSource, options: PackingOption): Promise\\<ArrayBuffer>\n\n图片压缩或重新编码。使用Promise"
+      },
+      {
+        "section_id": "section-4",
+        "title": "packToData<sup>13+</sup>",
+        "level": 2,
+        "line_start": 96,
+        "line_end": 160,
+        "summary": "packToData(source: PixelMap, options: PackingOption): Promise\\<ArrayBuffer>\n\n图片压缩或重新编码。使用Promise异步回"
+      },
+      {
+        "section_id": "section-5",
+        "title": "packing<sup>13+</sup>",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 221,
+        "summary": "packing(picture: Picture, options: PackingOption): Promise\\<ArrayBuffer>\n\n将图像压缩或重新编码。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "packToDataFromPixelmapSequence<sup>18+</sup>",
+        "level": 2,
+        "line_start": 222,
+        "line_end": 279,
+        "summary": "packToDataFromPixelmapSequence(pixelmapSequence: Array\\<PixelMap>, options: PackingOptionsForSequen"
+      },
+      {
+        "section_id": "section-7",
+        "title": "release",
+        "level": 2,
+        "line_start": 280,
+        "line_end": 314,
+        "summary": "release(callback: AsyncCallback\\<void>): void\n\n释放图片编码实例。使用callback异步回调。\n\n由于图片占用内存较大，所以当ImagePacker实"
+      },
+      {
+        "section_id": "section-8",
+        "title": "release",
+        "level": 2,
+        "line_start": 315,
+        "line_end": 347,
+        "summary": "release(): Promise\\<void>\n\n释放图片编码实例。使用Promise异步回调。\n\n由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用该方法，及时释放内"
+      },
+      {
+        "section_id": "section-9",
+        "title": "packToFile<sup>11+</sup>",
+        "level": 2,
+        "line_start": 348,
+        "line_end": 404,
+        "summary": "packToFile(source: ImageSource, fd: number, options: PackingOption, callback: AsyncCallback\\<void>)"
+      },
+      {
+        "section_id": "section-10",
+        "title": "packToFile<sup>11+</sup>",
+        "level": 2,
+        "line_start": 405,
+        "line_end": 464,
+        "summary": "packToFile (source: ImageSource, fd: number, options: PackingOption): Promise\\<void>\n\n指定编码参数，将Image"
+      },
+      {
+        "section_id": "section-11",
+        "title": "packToFile<sup>11+</sup>",
+        "level": 2,
+        "line_start": 465,
+        "line_end": 525,
+        "summary": "packToFile (source: PixelMap, fd: number, options: PackingOption,  callback: AsyncCallback\\<void>):"
+      },
+      {
+        "section_id": "section-12",
+        "title": "packToFile<sup>11+</sup>",
+        "level": 2,
+        "line_start": 526,
+        "line_end": 590,
+        "summary": "packToFile (source: PixelMap, fd: number, options: PackingOption): Promise\\<void>\n\n指定编码参数，将PixelMap"
+      },
+      {
+        "section_id": "section-13",
+        "title": "packToFile<sup>13+</sup>",
+        "level": 2,
+        "line_start": 591,
+        "line_end": 656,
+        "summary": "packToFile(picture: Picture, fd: number, options: PackingOption): Promise\\<void>\n\n指定编码参数，将Picture直接"
+      },
+      {
+        "section_id": "section-14",
+        "title": "packToFileFromPixelmapSequence<sup>18+</sup>",
+        "level": 2,
+        "line_start": 657,
+        "line_end": 718,
+        "summary": "packToFileFromPixelmapSequence(pixelmapSequence: Array\\<PixelMap>, fd: number, options: PackingOpti"
+      },
+      {
+        "section_id": "section-15",
+        "title": "packing<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 719,
+        "line_end": 761,
+        "summary": "packing(source: ImageSource, option: PackingOption, callback: AsyncCallback\\<ArrayBuffer>): void\n\n图"
+      },
+      {
+        "section_id": "section-16",
+        "title": "packing<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 762,
+        "line_end": 808,
+        "summary": "packing(source: ImageSource, option: PackingOption): Promise\\<ArrayBuffer>\n\n图片压缩或重新编码。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-17",
+        "title": "packing<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 809,
+        "line_end": 857,
+        "summary": "packing(source: PixelMap, option: PackingOption, callback: AsyncCallback\\<ArrayBuffer>): void\n\n图片压缩"
+      },
+      {
+        "section_id": "section-18",
+        "title": "packing<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 858,
+        "line_end": 910,
+        "summary": "packing(source: PixelMap, option: PackingOption): Promise\\<ArrayBuffer>\n\n图片压缩或重新编码。使用Promise异步回调。"
+      }
+    ]
+  }
+}

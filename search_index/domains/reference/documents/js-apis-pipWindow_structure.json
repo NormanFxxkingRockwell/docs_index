@@ -1,0 +1,212 @@
+{
+  "doc_id": "js-apis-pipWindow",
+  "title": "@ohos.PiPWindow (画中画窗口)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-pipWindow.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-pipWindow.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "Window",
+    "owner": "@waterwin",
+    "designer": "@nyankomiya",
+    "tester": "@qinliwen0417",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkUI Window 模块的 @ohos.PiPWindow (画中画窗口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.PiPWindow (画中画窗口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { PiPWindow } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "PiPWindow.isPiPEnabled",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 47,
+        "summary": "isPiPEnabled(): boolean\n\n判断当前系统是否支持画中画功能。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-3",
+        "title": "PiPWindow.create",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 181,
+        "summary": "create(config: PiPConfiguration): Promise&lt;PiPController&gt;\n\n创建画中画控制器，使用Promise异步回调。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-4",
+        "title": "PiPWindow.create<sup>12+</sup>",
+        "level": 2,
+        "line_start": 182,
+        "line_end": 263,
+        "summary": "create(config: PiPConfiguration, contentNode: typeNode.XComponent): Promise&lt;PiPController&gt;\n\n通"
+      },
+      {
+        "section_id": "section-5",
+        "title": "PiPConfiguration",
+        "level": 2,
+        "line_start": 264,
+        "line_end": 284,
+        "summary": "创建画中画控制器时的参数。\n\n**系统能力：** SystemCapability.Window.SessionManager\n\n| 名称                  | 类型"
+      },
+      {
+        "section_id": "section-6",
+        "title": "PiPWindowSize<sup>15+</sup>",
+        "level": 2,
+        "line_start": 285,
+        "line_end": 298,
+        "summary": "画中画窗口大小。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Window.Sessio"
+      },
+      {
+        "section_id": "section-7",
+        "title": "PiPWindowInfo<sup>15+</sup>",
+        "level": 2,
+        "line_start": 299,
+        "line_end": 311,
+        "summary": "画中画窗口信息。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Window.Sessio"
+      },
+      {
+        "section_id": "section-8",
+        "title": "PiPTemplateType",
+        "level": 2,
+        "line_start": 312,
+        "line_end": 326,
+        "summary": "画中画媒体类型枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Window.Sess"
+      },
+      {
+        "section_id": "section-9",
+        "title": "PiPState",
+        "level": 2,
+        "line_start": 327,
+        "line_end": 343,
+        "summary": "画中画生命周期状态枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Window.Se"
+      },
+      {
+        "section_id": "section-10",
+        "title": "PiPControlGroup<sup>12+</sup>",
+        "level": 2,
+        "line_start": 344,
+        "line_end": 361,
+        "summary": "type PiPControlGroup = VideoPlayControlGroup | VideoCallControlGroup | VideoMeetingControlGroup | V"
+      },
+      {
+        "section_id": "section-11",
+        "title": "VideoPlayControlGroup<sup>12+</sup>",
+        "level": 2,
+        "line_start": 362,
+        "line_end": 374,
+        "summary": "视频播放控件组枚举。仅当[PiPTemplateType](#piptemplatetype)为VIDEO_PLAY时使用。\n\n**原子化服务API：** 从API version 12开始，该接口"
+      },
+      {
+        "section_id": "section-12",
+        "title": "VideoCallControlGroup<sup>12+</sup>",
+        "level": 2,
+        "line_start": 375,
+        "line_end": 389,
+        "summary": "视频通话控件组枚举。仅当[PiPTemplateType](#piptemplatetype) 为VIDEO_CALL时使用。\n\n**原子化服务API：** 从API version 12开始，该接"
+      },
+      {
+        "section_id": "section-13",
+        "title": "VideoMeetingControlGroup<sup>12+</sup>",
+        "level": 2,
+        "line_start": 390,
+        "line_end": 404,
+        "summary": "视频会议控件组枚举。仅当[PiPTemplateType](#piptemplatetype) 为VIDEO_MEETING时使用。\n\n**原子化服务API：** 从API version 12开始"
+      },
+      {
+        "section_id": "section-14",
+        "title": "VideoLiveControlGroup<sup>12+</sup>",
+        "level": 2,
+        "line_start": 405,
+        "line_end": 417,
+        "summary": "视频直播控件组枚举。仅当[PiPTemplateType](#piptemplatetype) 为VIDEO_LIVE时使用。\n\n**原子化服务API：** 从API version 12开始，该接"
+      },
+      {
+        "section_id": "section-15",
+        "title": "PiPActionEventType",
+        "level": 2,
+        "line_start": 418,
+        "line_end": 434,
+        "summary": "type PiPActionEventType = PiPVideoActionEvent | PiPCallActionEvent | PiPMeetingActionEvent | PiPLiv"
+      },
+      {
+        "section_id": "section-16",
+        "title": "PiPVideoActionEvent",
+        "level": 2,
+        "line_start": 435,
+        "line_end": 452,
+        "summary": "type PiPVideoActionEvent = 'playbackStateChanged' | 'nextVideo' | 'previousVideo' | 'fastForward' |"
+      },
+      {
+        "section_id": "section-17",
+        "title": "PiPCallActionEvent",
+        "level": 2,
+        "line_start": 453,
+        "line_end": 470,
+        "summary": "type PiPCallActionEvent = 'hangUp' | 'micStateChanged' | 'videoStateChanged' | 'voiceStateChanged'"
+      },
+      {
+        "section_id": "section-18",
+        "title": "PiPMeetingActionEvent",
+        "level": 2,
+        "line_start": 471,
+        "line_end": 488,
+        "summary": "type PiPMeetingActionEvent = 'hangUp' | 'voiceStateChanged' | 'videoStateChanged' | 'micStateChange"
+      },
+      {
+        "section_id": "section-19",
+        "title": "PiPLiveActionEvent",
+        "level": 2,
+        "line_start": 489,
+        "line_end": 504,
+        "summary": "type PiPLiveActionEvent = 'playbackStateChanged' | 'voiceStateChanged'\n\n直播控制事件类型。\n\n**原子化服务API：** 从A"
+      },
+      {
+        "section_id": "section-20",
+        "title": "PiPControlStatus<sup>12+</sup>",
+        "level": 2,
+        "line_start": 505,
+        "line_end": 519,
+        "summary": "控制面板控件状态枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Window.Ses"
+      },
+      {
+        "section_id": "section-21",
+        "title": "PiPControlType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 520,
+        "line_end": 540,
+        "summary": "控制面板控件类型枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Window.Ses"
+      },
+      {
+        "section_id": "section-22",
+        "title": "ControlPanelActionEventCallback<sup>12+</sup>",
+        "level": 2,
+        "line_start": 541,
+        "line_end": 557,
+        "summary": "type ControlPanelActionEventCallback = (event: PiPActionEventType, status?: number) => void\n\n描述画中画控"
+      },
+      {
+        "section_id": "section-23",
+        "title": "ControlEventParam<sup>12+</sup>",
+        "level": 2,
+        "line_start": 558,
+        "line_end": 570,
+        "summary": "画中画控制面板控件动作回调的参数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Wind"
+      },
+      {
+        "section_id": "section-24",
+        "title": "PiPController",
+        "level": 2,
+        "line_start": 571,
+        "line_end": 1295,
+        "summary": "画中画控制器实例。用于启动、停止画中画以及更新回调注册等。\n\n下列API示例中都需先使用[PiPWindow.create()](#pipwindowcreate)方法获取到PiPControlle"
+      }
+    ]
+  }
+}

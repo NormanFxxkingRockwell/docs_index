@@ -1,0 +1,228 @@
+{
+  "doc_id": "js-apis-mechanicManager-sys",
+  "title": "@ohos.distributedHardware.mechanicManager (机械体控制模块)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-mechanic-kit/js-apis-mechanicManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mechanic-kit/js-apis-mechanicManager-sys.md",
+  "metadata": {
+    "kit": "Mechanic Kit",
+    "subsystem": "Mechanic",
+    "owner": "@hobbycao",
+    "designer": "@saga2025",
+    "tester": "@zhaodengqi",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Mechanic Kit Mechanic 模块的 @ohos.distributedHardware.mechanicManager (机械体控制模块)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.distributedHardware.mechanicManager (机械体控制模块)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```js\nimport { mechanicManager } from '@kit.MechanicKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "mechanicManager.setUserOperation",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 60,
+        "summary": "setUserOperation(operation: Operation, mac: string, params: string): void\n\n设置用户的连接或断开操作。\n\n**需要权限**："
+      },
+      {
+        "section_id": "section-3",
+        "title": "mechanicManager.setCameraTrackingLayout",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 95,
+        "summary": "setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void\n\n设置当前机械体设备摄像头跟踪布局。\n\n**系统能力**：Sy"
+      },
+      {
+        "section_id": "section-4",
+        "title": "mechanicManager.rotate",
+        "level": 2,
+        "line_start": 96,
+        "line_end": 145,
+        "summary": "rotate(mechId: number, angles: RotationAngles, duration: number): Promise\\<Result>\n\n将机械体设备旋转到相对角度。使"
+      },
+      {
+        "section_id": "section-5",
+        "title": "mechanicManager.rotateToEulerAngles",
+        "level": 2,
+        "line_start": 146,
+        "line_end": 194,
+        "summary": "rotateToEulerAngles(mechId: number, angles: EulerAngles, duration: number): Promise\\<Result>\n\n将机械体设"
+      },
+      {
+        "section_id": "section-6",
+        "title": "mechanicManager.getMaxRotationTime",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 234,
+        "summary": "getMaxRotationTime(mechId: number): number\n\n获取机械体设备的最大连续旋转持续时间。\n\n**系统能力**：SystemCapability.Mechanic"
+      },
+      {
+        "section_id": "section-7",
+        "title": "mechanicManager.getMaxRotationSpeed",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 274,
+        "summary": "getMaxRotationSpeed(mechId: number): RotationSpeed\n\n获取机械体设备的最大旋转速度。\n\n**系统能力**：SystemCapability.Mech"
+      },
+      {
+        "section_id": "section-8",
+        "title": "mechanicManager.rotateBySpeed",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 324,
+        "summary": "rotateBySpeed(mechId: number, speed: RotationSpeed, duration: number): Promise\\<Result>\n\n以指定速度旋转当前机"
+      },
+      {
+        "section_id": "section-9",
+        "title": "mechanicManager.stopMoving",
+        "level": 2,
+        "line_start": 325,
+        "line_end": 367,
+        "summary": "stopMoving(mechId: number): Promise\\<void>\n\n停止机械体设备的移动。使用Promise异步回调。\n\n**系统能力**：SystemCapability.Me"
+      },
+      {
+        "section_id": "section-10",
+        "title": "mechanicManager.getCurrentAngles",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 411,
+        "summary": "getCurrentAngles(mechId: number): EulerAngles\n\n获取指定机械体设备相对于初始位置的当前旋转角度。\n\n> **说明：**\n>\n> 初始位置：机械体设备初始"
+      },
+      {
+        "section_id": "section-11",
+        "title": "mechanicManager.getRotationLimits",
+        "level": 2,
+        "line_start": 412,
+        "line_end": 451,
+        "summary": "getRotationLimits(mechId: number): RotationLimits\n\n获取指定机械体设备相对于初始位置的最大旋转角度。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-12",
+        "title": "mechanicManager.on('rotationAxesStatusChange')",
+        "level": 2,
+        "line_start": 452,
+        "line_end": 487,
+        "summary": "on(type: 'rotationAxesStatusChange', callback: Callback\\<RotationAxesStateChangeInfo>): void\n\n注册旋转轴"
+      },
+      {
+        "section_id": "section-13",
+        "title": "mechanicManager.off('rotationAxesStatusChange')",
+        "level": 2,
+        "line_start": 488,
+        "line_end": 523,
+        "summary": "off(type: 'rotationAxesStatusChange', callback?: Callback\\<RotationAxesStateChangeInfo>): void\n\n取消注"
+      },
+      {
+        "section_id": "section-14",
+        "title": "mechanicManager.getRotationAxesStatus",
+        "level": 2,
+        "line_start": 524,
+        "line_end": 563,
+        "summary": "getRotationAxesStatus(mechId: number): RotationAxesStatus\n\n获取当前机械体设备旋转轴的状态。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-15",
+        "title": "mechanicManager.searchTarget<sup>21+<sup>",
+        "level": 2,
+        "line_start": 564,
+        "line_end": 610,
+        "summary": "searchTarget(target: TargetInfo, params: SearchParams): Promise\\<SearchResult>\n\n旋转机械体一周搜索目标。使用Promis"
+      },
+      {
+        "section_id": "section-16",
+        "title": "RotationAngles",
+        "level": 2,
+        "line_start": 611,
+        "line_end": 624,
+        "summary": "相对当前位置的旋转角度。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n**系统接口**：该接口为系统接口。\n\n| 名称   | 类型 | 只读 | 可选 |"
+      },
+      {
+        "section_id": "section-17",
+        "title": "EulerAngles",
+        "level": 2,
+        "line_start": 625,
+        "line_end": 638,
+        "summary": "相对于初始位置的绝对欧拉角。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n**系统接口**：该接口为系统接口。\n\n| 名称   | 类型 | 只读 | 可选"
+      },
+      {
+        "section_id": "section-18",
+        "title": "RotationSpeed",
+        "level": 2,
+        "line_start": 639,
+        "line_end": 652,
+        "summary": "旋转速度。负值表示顺时针旋转，正值表示逆时针旋转。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n**系统接口**：该接口为系统接口。\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-19",
+        "title": "RotationLimits",
+        "level": 2,
+        "line_start": 653,
+        "line_end": 669,
+        "summary": "相对于初始位置的旋转角度限制。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n**系统接口**：该接口为系统接口。\n\n| 名称   | 类型 | 只读 | 可选"
+      },
+      {
+        "section_id": "section-20",
+        "title": "RotationAxesStatus",
+        "level": 2,
+        "line_start": 670,
+        "line_end": 686,
+        "summary": "旋转轴状态。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n**系统接口**：该接口为系统接口。\n\n| 名称   | 类型 | 只读 | 可选 | 说明|\n|"
+      },
+      {
+        "section_id": "section-21",
+        "title": "RotationAxisLimited",
+        "level": 2,
+        "line_start": 687,
+        "line_end": 700,
+        "summary": "旋转轴限位状态的枚举。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n**系统接口**：该接口为系统接口。\n\n| 名称         | 值  | 说明"
+      },
+      {
+        "section_id": "section-22",
+        "title": "RotationAxesStateChangeInfo",
+        "level": 2,
+        "line_start": 701,
+        "line_end": 713,
+        "summary": "旋转轴状态变化信息。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n**系统接口**：该接口为系统接口。\n\n| 名称   | 类型 | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-23",
+        "title": "Operation",
+        "level": 2,
+        "line_start": 714,
+        "line_end": 726,
+        "summary": "用户操作的枚举。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n**系统接口**：该接口为系统接口。\n\n| 名称         | 值  | 说明"
+      },
+      {
+        "section_id": "section-24",
+        "title": "Result",
+        "level": 2,
+        "line_start": 727,
+        "line_end": 742,
+        "summary": "旋转执行结果的枚举。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n**系统接口**：该接口为系统接口。\n\n| 名称         | 值  | 说明"
+      },
+      {
+        "section_id": "section-25",
+        "title": "TargetType<sup>21+<sup>",
+        "level": 2,
+        "line_start": 743,
+        "line_end": 783,
+        "summary": "目标人脸信息的枚举。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n**系统接口**：该接口为系统接口。\n\n  | 名称 | 类型 | 值  | 说明|\n| -"
+      },
+      {
+        "section_id": "section-26",
+        "title": "SearchParams<sup>21+<sup>",
+        "level": 2,
+        "line_start": 784,
+        "line_end": 806,
+        "summary": "指定搜索的方向。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n**系统接口**：该接口为系统接口。\n\n| 名称   | 类型 | 只读 | 可选 | 说明|"
+      }
+    ]
+  }
+}

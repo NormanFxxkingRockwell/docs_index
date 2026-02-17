@@ -1,0 +1,300 @@
+{
+  "doc_id": "arkts-apis-data-relationalStore-RdbPredicates",
+  "title": "Class (RdbPredicates)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-RdbPredicates.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-RdbPredicates.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 Class (RdbPredicates)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (RdbPredicates)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { relationalStore } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "constructor",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 48,
+        "summary": "constructor(name: string)\n\n构造函数。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore"
+      },
+      {
+        "section_id": "section-3",
+        "title": "inDevices",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 106,
+        "summary": "inDevices(devices: Array&lt;string&gt;): RdbPredicates\n\n同步分布式数据库时连接到组网内指定的远程设备。\n\n> **说明：**\n>\n> 其中de"
+      },
+      {
+        "section_id": "section-4",
+        "title": "inAllDevices",
+        "level": 2,
+        "line_start": 107,
+        "line_end": 128,
+        "summary": "inAllDevices(): RdbPredicates\n\n同步分布式数据库时连接到组网内所有的远程设备。\n\n\n**系统能力：** SystemCapability.DistributedData"
+      },
+      {
+        "section_id": "section-5",
+        "title": "equalTo",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 166,
+        "summary": "equalTo(field: string, value: ValueType): RdbPredicates\n\n配置谓词以匹配数据表的field列中值为value的字段。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-6",
+        "title": "notEqualTo",
+        "level": 2,
+        "line_start": 167,
+        "line_end": 204,
+        "summary": "notEqualTo(field: string, value: ValueType): RdbPredicates\n\n配置谓词以匹配数据表的field列中值不为value的字段。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-7",
+        "title": "beginWrap",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 230,
+        "summary": "beginWrap(): RdbPredicates\n\n向谓词添加左括号。\n\n**系统能力：** SystemCapability.DistributedDataManager.Relational"
+      },
+      {
+        "section_id": "section-8",
+        "title": "endWrap",
+        "level": 2,
+        "line_start": 231,
+        "line_end": 256,
+        "summary": "endWrap(): RdbPredicates\n\n向谓词添加右括号。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalSt"
+      },
+      {
+        "section_id": "section-9",
+        "title": "or",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 280,
+        "summary": "or(): RdbPredicates\n\n将或条件添加到谓词中。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore"
+      },
+      {
+        "section_id": "section-10",
+        "title": "and",
+        "level": 2,
+        "line_start": 281,
+        "line_end": 304,
+        "summary": "and(): RdbPredicates\n\n向谓词添加和条件。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore."
+      },
+      {
+        "section_id": "section-11",
+        "title": "contains",
+        "level": 2,
+        "line_start": 305,
+        "line_end": 341,
+        "summary": "contains(field: string, value: string): RdbPredicates\n\n配置谓词以匹配数据表的field列中包含value的字段。\n\n**系统能力：** Sys"
+      },
+      {
+        "section_id": "section-12",
+        "title": "beginsWith",
+        "level": 2,
+        "line_start": 342,
+        "line_end": 378,
+        "summary": "beginsWith(field: string, value: string): RdbPredicates\n\n配置谓词以匹配数据表的field列中以value开头的字段。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-13",
+        "title": "endsWith",
+        "level": 2,
+        "line_start": 379,
+        "line_end": 415,
+        "summary": "endsWith(field: string, value: string): RdbPredicates\n\n配置谓词以匹配数据表的field列中以value结尾的字段。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-14",
+        "title": "isNull",
+        "level": 2,
+        "line_start": 416,
+        "line_end": 450,
+        "summary": "isNull(field: string): RdbPredicates\n\n配置谓词以匹配数据表的field列中值为null的字段。\n\n**系统能力：** SystemCapability.Dist"
+      },
+      {
+        "section_id": "section-15",
+        "title": "isNotNull",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 485,
+        "summary": "isNotNull(field: string): RdbPredicates\n\n配置谓词以匹配数据表的field列中值不为null的字段。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-16",
+        "title": "like",
+        "level": 2,
+        "line_start": 486,
+        "line_end": 522,
+        "summary": "like(field: string, value: string): RdbPredicates\n\n配置模糊查询条件，指定`field`列的模糊匹配条件。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-17",
+        "title": "glob",
+        "level": 2,
+        "line_start": 523,
+        "line_end": 559,
+        "summary": "glob(field: string, value: string): RdbPredicates\n\n配置谓词匹配数据字段为string的指定字段。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-18",
+        "title": "between",
+        "level": 2,
+        "line_start": 560,
+        "line_end": 597,
+        "summary": "between(field: string, low: ValueType, high: ValueType): RdbPredicates\n\n配置谓词以匹配数据表的field列中值在给定范围内的字"
+      },
+      {
+        "section_id": "section-19",
+        "title": "notBetween",
+        "level": 2,
+        "line_start": 598,
+        "line_end": 635,
+        "summary": "notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates\n\n配置谓词以匹配数据表的field列中值超出给定范"
+      },
+      {
+        "section_id": "section-20",
+        "title": "greaterThan",
+        "level": 2,
+        "line_start": 636,
+        "line_end": 672,
+        "summary": "greaterThan(field: string, value: ValueType): RdbPredicates\n\n配置谓词以匹配数据表的field列中值大于value的字段。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-21",
+        "title": "lessThan",
+        "level": 2,
+        "line_start": 673,
+        "line_end": 709,
+        "summary": "lessThan(field: string, value: ValueType): RdbPredicates\n\n配置谓词以匹配数据表的field列中值小于value的字段。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-22",
+        "title": "greaterThanOrEqualTo",
+        "level": 2,
+        "line_start": 710,
+        "line_end": 746,
+        "summary": "greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates\n\n配置谓词以匹配数据表的field列中值大于或者等于valu"
+      },
+      {
+        "section_id": "section-23",
+        "title": "lessThanOrEqualTo",
+        "level": 2,
+        "line_start": 747,
+        "line_end": 783,
+        "summary": "lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates\n\n配置谓词以匹配数据表的field列中值小于或者等于value的字"
+      },
+      {
+        "section_id": "section-24",
+        "title": "orderByAsc",
+        "level": 2,
+        "line_start": 784,
+        "line_end": 818,
+        "summary": "orderByAsc(field: string): RdbPredicates\n\n配置谓词以匹配数据表的field列中值按升序排序的列。\n\n**系统能力：** SystemCapability.D"
+      },
+      {
+        "section_id": "section-25",
+        "title": "orderByDesc",
+        "level": 2,
+        "line_start": 819,
+        "line_end": 853,
+        "summary": "orderByDesc(field: string): RdbPredicates\n\n配置谓词以匹配数据表的field列中值按降序排序的列。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-26",
+        "title": "distinct",
+        "level": 2,
+        "line_start": 854,
+        "line_end": 874,
+        "summary": "distinct(): RdbPredicates\n\n配置谓词以过滤重复记录并仅保留其中一个。\n\n**系统能力：** SystemCapability.DistributedDataManager."
+      },
+      {
+        "section_id": "section-27",
+        "title": "limitAs",
+        "level": 2,
+        "line_start": 875,
+        "line_end": 909,
+        "summary": "limitAs(value: number): RdbPredicates\n\n设置谓词的最大数据记录数量。\n\n**系统能力：** SystemCapability.DistributedDataMa"
+      },
+      {
+        "section_id": "section-28",
+        "title": "offsetAs",
+        "level": 2,
+        "line_start": 910,
+        "line_end": 944,
+        "summary": "offsetAs(rowOffset: number): RdbPredicates\n\n设置谓词查询结果返回的起始位置。需要同步调用limitAs接口指定查询数量，否则将无查询结果。如需查询指定偏移"
+      },
+      {
+        "section_id": "section-29",
+        "title": "groupBy",
+        "level": 2,
+        "line_start": 945,
+        "line_end": 979,
+        "summary": "groupBy(fields: Array&lt;string&gt;): RdbPredicates\n\n配置谓词按指定列分组查询结果。\n\n**系统能力：** SystemCapability.Di"
+      },
+      {
+        "section_id": "section-30",
+        "title": "indexedBy",
+        "level": 2,
+        "line_start": 980,
+        "line_end": 1014,
+        "summary": "indexedBy(field: string): RdbPredicates\n\n配置谓词以指定索引列。\n\n**系统能力：** SystemCapability.DistributedDataMan"
+      },
+      {
+        "section_id": "section-31",
+        "title": "in",
+        "level": 2,
+        "line_start": 1015,
+        "line_end": 1055,
+        "summary": "in(field: string, value: Array&lt;ValueType&gt;): RdbPredicates\n\n配置谓词条件，表示字段`field`的值必须在给定的`value`集"
+      },
+      {
+        "section_id": "section-32",
+        "title": "notIn",
+        "level": 2,
+        "line_start": 1056,
+        "line_end": 1092,
+        "summary": "notIn(field: string, value: Array&lt;ValueType&gt;): RdbPredicates\n\n将谓词配置为匹配数据字段为ValueType且值超出给定范围的"
+      },
+      {
+        "section_id": "section-33",
+        "title": "notContains<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1093,
+        "line_end": 1129,
+        "summary": "notContains(field: string, value: string): RdbPredicates\n\n配置谓词以匹配数据表的field列中不包含value的字段。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-34",
+        "title": "notLike<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1130,
+        "line_end": 1166,
+        "summary": "notLike(field: string, value: string): RdbPredicates\n\n配置模糊查询条件，指定`field`列**不包含**的模糊匹配条件。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-35",
+        "title": "having<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1167,
+        "line_end": 1211,
+        "summary": "having(conditions:string, args?: Array\\<ValueType>): RdbPredicates\n\n筛选符合条件的分组数据。\n\n**系统能力：** SystemC"
+      }
+    ]
+  }
+}

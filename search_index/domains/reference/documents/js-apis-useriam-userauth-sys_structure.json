@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-useriam-userauth-sys",
+  "title": "@ohos.userIAM.userAuth (用户认证)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-user-authentication-kit/js-apis-useriam-userauth-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-user-authentication-kit/js-apis-useriam-userauth-sys.md",
+  "metadata": {
+    "kit": "User Authentication Kit",
+    "subsystem": "UserIAM",
+    "owner": "@WALL_EYE",
+    "designer": "@lichangting518",
+    "tester": "@jane_lz",
+    "adviser": "@zengyawen"
+  },
+  "summary": "User Authentication Kit UserIAM 模块的 @ohos.userIAM.userAuth (用户认证)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.userIAM.userAuth (用户认证)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { userAuth } from '@kit.UserAuthenticationKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "AuthParam<sup>10+</sup>",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 34,
+        "summary": "用户认证相关参数。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.Core\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-3",
+        "title": "WindowModeType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 47,
+        "summary": "用户认证界面的显示类型。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.Core\n\n**系统接口：** 此接口为系统接口。\n\n| 名称       | 值"
+      },
+      {
+        "section_id": "section-4",
+        "title": "WidgetParam<sup>10+</sup>",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 57,
+        "summary": "用户认证界面配置相关参数。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.Core\n\n| 名称                 | 类型"
+      },
+      {
+        "section_id": "section-5",
+        "title": "NoticeType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 58,
+        "line_end": 69,
+        "summary": "用户身份认证的通知类型。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.Core\n\n**系统接口：** 此接口为系统接口。\n\n| 名称"
+      },
+      {
+        "section_id": "section-6",
+        "title": "userAuth.sendNotice<sup>10+</sup>",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 133,
+        "summary": "sendNotice(noticeType: NoticeType, eventData: string): void\n\n在使用统一身份认证控件进行用户身份认证时，用于接收来自统一身份认证控件的通知"
+      },
+      {
+        "section_id": "section-7",
+        "title": "UserAuthWidgetMgr<sup>10+</sup>",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 233,
+        "summary": "组件管理接口，可将用身份认证控件注册到UserAuthWidgetMgr中，由UserAuthWidgetMgr进行管理、调度。\n\n### on<sup>10+</sup>\n\non(type: 'c"
+      },
+      {
+        "section_id": "section-8",
+        "title": "userAuth.getUserAuthWidgetMgr<sup>10+</sup>",
+        "level": 2,
+        "line_start": 234,
+        "line_end": 288,
+        "summary": "getUserAuthWidgetMgr(version: number): UserAuthWidgetMgr\n\n获取UserAuthWidgetMgr对象，用于执行用户身份认证。\n\n> **说明"
+      },
+      {
+        "section_id": "section-9",
+        "title": "IAuthWidgetCallback<sup>10+</sup>",
+        "level": 2,
+        "line_start": 289,
+        "line_end": 330,
+        "summary": "认证组件通过该回调获取用户认证框架发送的命令。\n\n### sendCommand<sup>10+</sup>\n\nsendCommand(cmdData: string): void\n\n回调函数，用于"
+      },
+      {
+        "section_id": "section-10",
+        "title": "UserAuthType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 331,
+        "line_end": 379,
+        "summary": "表示身份认证的凭据类型枚举。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.Core\n\n| 名称        | 值   | 说明       |\n|"
+      },
+      {
+        "section_id": "section-11",
+        "title": "userAuth.queryReusableAuthResult<sup>20+</sup>",
+        "level": 2,
+        "line_start": 380,
+        "line_end": 444,
+        "summary": "queryReusableAuthResult(authParam: AuthParam): Uint8Array\n\n查询是否有可复用的身份认证结果。\n\n**需要权限：** ohos.permiss"
+      },
+      {
+        "section_id": "section-12",
+        "title": "UserAuthResultCode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 445,
+        "line_end": 457,
+        "summary": "表示返回码的枚举。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.Core\n\n**系统接口：** 此接口为系统接口。\n\n| 名称"
+      }
+    ]
+  }
+}

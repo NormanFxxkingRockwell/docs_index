@@ -1,0 +1,140 @@
+{
+  "doc_id": "js-apis-enterprise-bluetoothManager",
+  "title": "@ohos.enterprise.bluetoothManager（蓝牙管理）",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-bluetoothManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-bluetoothManager.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.bluetoothManager（蓝牙管理），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.bluetoothManager（蓝牙管理）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { bluetoothManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "bluetoothManager.getBluetoothInfo",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 82,
+        "summary": "getBluetoothInfo(admin: Want): BluetoothInfo\n\n查询设备蓝牙信息。\n\n**需要权限：** ohos.permission.ENTERPRISE_MANAG"
+      },
+      {
+        "section_id": "section-3",
+        "title": "bluetoothManager.addAllowedBluetoothDevices",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 141,
+        "summary": "addAllowedBluetoothDevices(admin: Want, deviceIds: Array\\<string>): void\n\n添加蓝牙设备可用名单。添加蓝牙设备可用名单后当前设"
+      },
+      {
+        "section_id": "section-4",
+        "title": "bluetoothManager.removeAllowedBluetoothDevices",
+        "level": 2,
+        "line_start": 142,
+        "line_end": 194,
+        "summary": "removeAllowedBluetoothDevices(admin: Want, deviceIds: Array\\<string>): void\n\n移除蓝牙设备可用名单。\n\n**需要权限：**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "bluetoothManager.getAllowedBluetoothDevices",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 249,
+        "summary": "getAllowedBluetoothDevices(admin: Want): Array\\<string>\n\n获取蓝牙设备可用名单。\n\n**需要权限：** ohos.permission.ENT"
+      },
+      {
+        "section_id": "section-6",
+        "title": "bluetoothManager.addDisallowedBluetoothDevices<sup>20+</sup>",
+        "level": 2,
+        "line_start": 250,
+        "line_end": 307,
+        "summary": "addDisallowedBluetoothDevices(admin: Want, deviceIds: Array&lt;string&gt;): void\n\n添加蓝牙设备禁用名单。添加禁用名单"
+      },
+      {
+        "section_id": "section-7",
+        "title": "bluetoothManager.removeDisallowedBluetoothDevices<sup>20+</sup>",
+        "level": 2,
+        "line_start": 308,
+        "line_end": 359,
+        "summary": "removeDisallowedBluetoothDevices(admin: Want, deviceIds: Array&lt;string&gt;): void\n\n移除蓝牙设备禁用名单。若移除"
+      },
+      {
+        "section_id": "section-8",
+        "title": "bluetoothManager.getDisallowedBluetoothDevices<sup>20+</sup>",
+        "level": 2,
+        "line_start": 360,
+        "line_end": 412,
+        "summary": "getDisallowedBluetoothDevices(admin: Want): Array&lt;string&gt;\n\n获取蓝牙设备禁用名单。\n\n**需要权限：** ohos.permis"
+      },
+      {
+        "section_id": "section-9",
+        "title": "BluetoothInfo",
+        "level": 2,
+        "line_start": 413,
+        "line_end": 426,
+        "summary": "设备的蓝牙信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**模型约束：** 此接口仅可在Stage模型"
+      },
+      {
+        "section_id": "section-10",
+        "title": "bluetoothManager.turnOnBluetooth<sup>20+</sup>",
+        "level": 2,
+        "line_start": 427,
+        "line_end": 476,
+        "summary": "turnOnBluetooth(admin: Want): void\n\n开启蓝牙。蓝牙开启后用户可以手动关闭。\n\n**需要权限：** ohos.permission.ENTERPRISE_MANAG"
+      },
+      {
+        "section_id": "section-11",
+        "title": "bluetoothManager.turnOffBluetooth<sup>20+</sup>",
+        "level": 2,
+        "line_start": 477,
+        "line_end": 526,
+        "summary": "turnOffBluetooth(admin: Want): void\n\n关闭蓝牙。蓝牙关闭后用户可以手动打开。\n\n**需要权限：** ohos.permission.ENTERPRISE_MANA"
+      },
+      {
+        "section_id": "section-12",
+        "title": "bluetoothManager.addDisallowedBluetoothProtocols<sup>20+</sup>",
+        "level": 2,
+        "line_start": 527,
+        "line_end": 580,
+        "summary": "addDisallowedBluetoothProtocols(admin: Want, accountId: number, protocols: Array&lt;Protocol&gt;):"
+      },
+      {
+        "section_id": "section-13",
+        "title": "bluetoothManager.removeDisallowedBluetoothProtocols<sup>20+</sup>",
+        "level": 2,
+        "line_start": 581,
+        "line_end": 634,
+        "summary": "removeDisallowedBluetoothProtocols(admin: Want, accountId: number, protocols: Array&lt;Protocol&gt;"
+      },
+      {
+        "section_id": "section-14",
+        "title": "bluetoothManager.getDisallowedBluetoothProtocols<sup>20+</sup>",
+        "level": 2,
+        "line_start": 635,
+        "line_end": 690,
+        "summary": "getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array&lt;Protocol&gt;\n\n获取指定用户的蓝牙协议"
+      },
+      {
+        "section_id": "section-15",
+        "title": "Protocol<sup>20+</sup>",
+        "level": 2,
+        "line_start": 691,
+        "line_end": 703,
+        "summary": "蓝牙协议类型。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**模型约束：** 此接口仅可在Stage模型下"
+      }
+    ]
+  }
+}

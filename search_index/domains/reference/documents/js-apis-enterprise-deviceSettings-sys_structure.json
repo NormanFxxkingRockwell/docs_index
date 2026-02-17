@@ -1,0 +1,132 @@
+{
+  "doc_id": "js-apis-enterprise-deviceSettings-sys",
+  "title": "@ohos.enterprise.deviceSettings （设备设置管理）(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-deviceSettings-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-deviceSettings-sys.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.deviceSettings （设备设置管理）(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.deviceSettings （设备设置管理）(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { deviceSettings } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "deviceSettings.setScreenOffTime<sup>11+</sup>",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 79,
+        "summary": "setScreenOffTime(admin: Want, time: number): void\n\n设置设备息屏时间。\n\n**需要权限：** ohos.permission.ENTERPRISE_"
+      },
+      {
+        "section_id": "section-3",
+        "title": "deviceSettings.getScreenOffTime",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 133,
+        "summary": "getScreenOffTime(admin: Want, callback: AsyncCallback&lt;number&gt;): void\n\n获取设备息屏时间，使用callback异步回调"
+      },
+      {
+        "section_id": "section-4",
+        "title": "deviceSettings.getScreenOffTime",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 191,
+        "summary": "getScreenOffTime(admin: Want): Promise&lt;number&gt;\n\n获取设备息屏时间，使用Promise异步回调。\n\n**需要权限：** ohos.permi"
+      },
+      {
+        "section_id": "section-5",
+        "title": "deviceSettings.installUserCertificate",
+        "level": 2,
+        "line_start": 192,
+        "line_end": 259,
+        "summary": "installUserCertificate(admin: Want, certificate: CertBlob, callback: AsyncCallback&lt;string&gt;):"
+      },
+      {
+        "section_id": "section-6",
+        "title": "deviceSettings.installUserCertificate",
+        "level": 2,
+        "line_start": 260,
+        "line_end": 331,
+        "summary": "installUserCertificate(admin: Want, certificate: CertBlob): Promise&lt;string&gt;\n\n安装用户证书，使用Promise"
+      },
+      {
+        "section_id": "section-7",
+        "title": "CertBlob",
+        "level": 2,
+        "line_start": 332,
+        "line_end": 342,
+        "summary": "证书信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称         | 类型     | 只读"
+      },
+      {
+        "section_id": "section-8",
+        "title": "deviceSettings.uninstallUserCertificate",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 399,
+        "summary": "uninstallUserCertificate(admin: Want, certUri: string, callback: AsyncCallback&lt;void&gt;): void"
+      },
+      {
+        "section_id": "section-9",
+        "title": "deviceSettings.uninstallUserCertificate",
+        "level": 2,
+        "line_start": 400,
+        "line_end": 460,
+        "summary": "uninstallUserCertificate(admin: Want, certUri: string): Promise&lt;void&gt;\n\n卸载用户证书，使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "deviceSettings.setPowerPolicy<sup>11+</sup>",
+        "level": 2,
+        "line_start": 461,
+        "line_end": 517,
+        "summary": "setPowerPolicy(admin: Want, powerScene: PowerScene, powerPolicy: PowerPolicy): void\n\n设置电源策略。\n\n**需要权"
+      },
+      {
+        "section_id": "section-11",
+        "title": "deviceSettings.getPowerPolicy<sup>11+</sup>",
+        "level": 2,
+        "line_start": 518,
+        "line_end": 576,
+        "summary": "getPowerPolicy(admin: Want, powerScene: PowerScene): PowerPolicy\n\n获取电源策略。\n\n**需要权限：** ohos.permissio"
+      },
+      {
+        "section_id": "section-12",
+        "title": "PowerPolicy<sup>11+</sup>",
+        "level": 2,
+        "line_start": 577,
+        "line_end": 589,
+        "summary": "电源策略。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**系统接口：** 此接口为系统接口。\n\n| 名称"
+      },
+      {
+        "section_id": "section-13",
+        "title": "PowerScene<sup>11+</sup>",
+        "level": 2,
+        "line_start": 590,
+        "line_end": 601,
+        "summary": "执行电源策略的场景。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "PowerPolicyAction<sup>11+</sup>",
+        "level": 2,
+        "line_start": 602,
+        "line_end": 617,
+        "summary": "执行电源策略的动作。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**系统接口：** 此接口为系统接口。"
+      }
+    ]
+  }
+}

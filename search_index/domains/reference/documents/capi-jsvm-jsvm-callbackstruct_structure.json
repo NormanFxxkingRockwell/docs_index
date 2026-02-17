@@ -1,0 +1,44 @@
+{
+  "doc_id": "capi-jsvm-jsvm-callbackstruct",
+  "title": "JSVM_CallbackStruct",
+  "path": "zh-cn/application-dev/reference/common/capi-jsvm-jsvm-callbackstruct.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/common/capi-jsvm-jsvm-callbackstruct.md",
+  "metadata": {
+    "kit": "Common Basic Capability",
+    "subsystem": "arkcompiler",
+    "owner": "@yuanxiaogou; @string_sz",
+    "designer": "@knightaoko",
+    "tester": "@test_lzz",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Common Basic Capability arkcompiler 模块的 JSVM_CallbackStruct，提供相关接口和功能说明。",
+  "structure": {
+    "title": "JSVM_CallbackStruct",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 22,
+        "summary": "用户提供的Native回调函数的指针和数据，这些函数通过JSVM-API接口暴露给JavaScript。\n\n**起始版本：** 11\n\n**相关模块：** [JSVM](capi-jsvm.md)"
+      },
+      {
+        "section_id": "section-2",
+        "title": "汇总",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 37,
+        "summary": "### 成员变量\n\n| 名称 | 描述 |\n| -- | -- |\n| void* data | 用户提供的Native回调函数的数据。 |\n\n\n### 成员函数\n\n| 名称 | 描述 |\n| --"
+      },
+      {
+        "section_id": "section-3",
+        "title": "成员函数说明",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 51,
+        "summary": "### callback()\n\n```c\nJSVM_Value(JSVM_CDECL* callback)(JSVM_Env env,JSVM_CallbackInfo info)\n```\n\n**描"
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-huksExternalCrypto",
+  "title": "@ohos.security.huksExternalCrypto（外部密钥管理）",
+  "path": "zh-cn/application-dev/reference/apis-universal-keystore-kit/js-apis-huksExternalCrypto.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-universal-keystore-kit/js-apis-huksExternalCrypto.md",
+  "metadata": {
+    "kit": "Universal Keystore Kit",
+    "subsystem": "Security",
+    "owner": "@wutiantian-gitee",
+    "designer": "@HighLowWorld",
+    "tester": "@wxy1234564846",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Universal Keystore Kit Security 模块的 @ohos.security.huksExternalCrypto（外部密钥管理），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.security.huksExternalCrypto（外部密钥管理）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { huksExternalCrypto } from '@kit.UniversalKeystoreKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "HuksExternalCryptoTagType",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 32,
+        "summary": "表示外部加密数据类型的枚举。\n\n**系统能力：** SystemCapability.Security.Huks.CryptoExtension\n\n| 名称  | 值   | 说明    |\n| -"
+      },
+      {
+        "section_id": "section-3",
+        "title": "HuksExternalCryptoTag",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 46,
+        "summary": "表示指定参数tag类型的枚举。\n\n**系统能力：** SystemCapability.Security.Huks.CryptoExtension\n\n| 名称    | 值   | 说明   |\n|"
+      },
+      {
+        "section_id": "section-4",
+        "title": "HuksExternalCryptoParam",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 57,
+        "summary": "表示传入的参数类型定义。\n\n**系统能力：** SystemCapability.Security.Huks.CryptoExtension\n\n| 名称 | 类型        | 只读 | 可选"
+      },
+      {
+        "section_id": "section-5",
+        "title": "HuksExternalPinAuthState",
+        "level": 2,
+        "line_start": 58,
+        "line_end": 70,
+        "summary": "表示Ukey PIN码管理的状态值的枚举。\n\n**系统能力：** SystemCapability.Security.Huks.CryptoExtension\n\n| 名称    | 值   | 说明"
+      },
+      {
+        "section_id": "section-6",
+        "title": "huksExternalCrypto.registerProvider",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 135,
+        "summary": "registerProvider(providerName: string, params: Array\\<HuksExternalCryptoParam>): Promise\\<void>\n\n注册"
+      },
+      {
+        "section_id": "section-7",
+        "title": "huksExternalCrypto.unregisterProvider",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 198,
+        "summary": "unregisterProvider(providerName: string, params?: Array\\<HuksExternalCryptoParam>): Promise\\<void>"
+      },
+      {
+        "section_id": "section-8",
+        "title": "huksExternalCrypto.getUkeyPinAuthState",
+        "level": 2,
+        "line_start": 199,
+        "line_end": 256,
+        "summary": "getUkeyPinAuthState(resourceId: string, params?: Array\\<HuksExternalCryptoParam>): Promise\\<HuksExt"
+      },
+      {
+        "section_id": "section-9",
+        "title": "huksExternalCrypto.getProperty",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 336,
+        "summary": "getProperty(resourceId: string, propertyId: string, params?: Array\\<HuksExternalCryptoParam>): Prom"
+      }
+    ]
+  }
+}

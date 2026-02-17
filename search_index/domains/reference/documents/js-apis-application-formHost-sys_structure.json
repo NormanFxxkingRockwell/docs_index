@@ -1,0 +1,300 @@
+{
+  "doc_id": "js-apis-application-formHost-sys",
+  "title": "@ohos.application.formHost (formHost)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-form-kit/js-apis-application-formHost-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-form-kit/js-apis-application-formHost-sys.md",
+  "metadata": {
+    "kit": "Form Kit",
+    "subsystem": "Ability",
+    "owner": "@cx983299475",
+    "designer": "@xueyulong",
+    "tester": "@yangyuecheng",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "Form Kit Ability 模块的 @ohos.application.formHost (formHost)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.application.formHost (formHost)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport formHost from '@ohos.application.formHost';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "deleteForm",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 52,
+        "summary": "deleteForm(formId: string, callback: AsyncCallback&lt;void&gt;): void\n\n删除指定的卡片。调用此方法后，应用程序将无法使用该卡片，"
+      },
+      {
+        "section_id": "section-3",
+        "title": "deleteForm",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 87,
+        "summary": "deleteForm(formId: string): Promise&lt;void&gt;\n\n删除指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务不再保留有关该卡片的信息。使用"
+      },
+      {
+        "section_id": "section-4",
+        "title": "releaseForm",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 119,
+        "summary": "releaseForm(formId: string, callback: AsyncCallback&lt;void&gt;): void\n\n释放指定的卡片。调用此方法后，应用程序将无法使用该卡片"
+      },
+      {
+        "section_id": "section-5",
+        "title": "releaseForm",
+        "level": 2,
+        "line_start": 120,
+        "line_end": 152,
+        "summary": "releaseForm(formId: string, isReleaseCache: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n释放"
+      },
+      {
+        "section_id": "section-6",
+        "title": "releaseForm",
+        "level": 2,
+        "line_start": 153,
+        "line_end": 188,
+        "summary": "releaseForm(formId: string, isReleaseCache?: boolean): Promise&lt;void&gt;\n\n释放指定的卡片。调用此方法后，应用程序将无法使"
+      },
+      {
+        "section_id": "section-7",
+        "title": "requestForm",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 218,
+        "summary": "requestForm(formId: string, callback: AsyncCallback&lt;void&gt;): void\n\n请求卡片更新。使用callback异步回调。\n\n**需"
+      },
+      {
+        "section_id": "section-8",
+        "title": "requestForm",
+        "level": 2,
+        "line_start": 219,
+        "line_end": 253,
+        "summary": "requestForm(formId: string): Promise&lt;void&gt;\n\n请求卡片更新。使用Promise异步回调。\n\n**需要权限：** ohos.permission."
+      },
+      {
+        "section_id": "section-9",
+        "title": "castTempForm",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 283,
+        "summary": "castTempForm(formId: string, callback: AsyncCallback&lt;void&gt;): void\n\n将指定的临时卡片转换为普通卡片。使用callback"
+      },
+      {
+        "section_id": "section-10",
+        "title": "castTempForm",
+        "level": 2,
+        "line_start": 284,
+        "line_end": 318,
+        "summary": "castTempForm(formId: string): Promise&lt;void&gt;\n\n将指定的临时卡片转换为普通卡片。使用Promise异步回调。\n\n**需要权限：** ohos.p"
+      },
+      {
+        "section_id": "section-11",
+        "title": "notifyVisibleForms",
+        "level": 2,
+        "line_start": 319,
+        "line_end": 348,
+        "summary": "notifyVisibleForms(formIds: Array&lt;string&gt;, callback: AsyncCallback&lt;void&gt;): void\n\n向卡片框架发"
+      },
+      {
+        "section_id": "section-12",
+        "title": "notifyVisibleForms",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 383,
+        "summary": "notifyVisibleForms(formIds: Array&lt;string&gt;): Promise&lt;void&gt;\n\n向卡片框架发送通知以使指定的卡片可见。该方法调用成功后，"
+      },
+      {
+        "section_id": "section-13",
+        "title": "notifyInvisibleForms",
+        "level": 2,
+        "line_start": 384,
+        "line_end": 413,
+        "summary": "notifyInvisibleForms(formIds: Array&lt;string&gt;, callback: AsyncCallback&lt;void&gt;): void\n\n向卡片框"
+      },
+      {
+        "section_id": "section-14",
+        "title": "notifyInvisibleForms",
+        "level": 2,
+        "line_start": 414,
+        "line_end": 448,
+        "summary": "notifyInvisibleForms(formIds: Array&lt;string&gt;): Promise&lt;void&gt;\n\n向卡片框架发送通知以使指定的卡片不可见。该方法调用成"
+      },
+      {
+        "section_id": "section-15",
+        "title": "enableFormsUpdate",
+        "level": 2,
+        "line_start": 449,
+        "line_end": 478,
+        "summary": "enableFormsUpdate(formIds: Array&lt;string&gt;, callback: AsyncCallback&lt;void&gt;): void\n\n向卡片框架发送"
+      },
+      {
+        "section_id": "section-16",
+        "title": "enableFormsUpdate",
+        "level": 2,
+        "line_start": 479,
+        "line_end": 513,
+        "summary": "enableFormsUpdate(formIds: Array&lt;string&gt;): Promise&lt;void&gt;\n\n向卡片框架发送通知以使指定的卡片可以更新。该方法调用成功后"
+      },
+      {
+        "section_id": "section-17",
+        "title": "disableFormsUpdate",
+        "level": 2,
+        "line_start": 514,
+        "line_end": 543,
+        "summary": "disableFormsUpdate(formIds: Array&lt;string&gt;, callback: AsyncCallback&lt;void&gt;): void\n\n向卡片框架发"
+      },
+      {
+        "section_id": "section-18",
+        "title": "disableFormsUpdate",
+        "level": 2,
+        "line_start": 544,
+        "line_end": 578,
+        "summary": "disableFormsUpdate(formIds: Array&lt;string&gt;): Promise&lt;void&gt;\n\n向卡片框架发送通知以使指定的卡片不可以更新。该方法调用成"
+      },
+      {
+        "section_id": "section-19",
+        "title": "isSystemReady",
+        "level": 2,
+        "line_start": 579,
+        "line_end": 605,
+        "summary": "isSystemReady(callback: AsyncCallback&lt;void&gt;): void\n\n检查系统是否准备好。使用callback异步回调。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-20",
+        "title": "isSystemReady",
+        "level": 2,
+        "line_start": 606,
+        "line_end": 632,
+        "summary": "isSystemReady(): Promise&lt;void&gt;\n\n检查系统是否准备好。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Ability."
+      },
+      {
+        "section_id": "section-21",
+        "title": "getAllFormsInfo",
+        "level": 2,
+        "line_start": 633,
+        "line_end": 663,
+        "summary": "getAllFormsInfo(callback: AsyncCallback&lt;Array&lt;formInfo.FormInfo&gt;&gt;): void\n\n获取设备上所有应用提供的卡"
+      },
+      {
+        "section_id": "section-22",
+        "title": "getAllFormsInfo",
+        "level": 2,
+        "line_start": 664,
+        "line_end": 692,
+        "summary": "getAllFormsInfo(): Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt;\n\n获取设备上所有应用提供的卡片信息。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-23",
+        "title": "getFormsInfo",
+        "level": 2,
+        "line_start": 693,
+        "line_end": 724,
+        "summary": "getFormsInfo(bundleName: string, callback: AsyncCallback&lt;Array&lt;formInfo.FormInfo&gt;&gt;): vo"
+      },
+      {
+        "section_id": "section-24",
+        "title": "getFormsInfo",
+        "level": 2,
+        "line_start": 725,
+        "line_end": 757,
+        "summary": "getFormsInfo(bundleName: string, moduleName: string, callback: AsyncCallback&lt;Array&lt;formInfo.F"
+      },
+      {
+        "section_id": "section-25",
+        "title": "getFormsInfo",
+        "level": 2,
+        "line_start": 758,
+        "line_end": 793,
+        "summary": "getFormsInfo(bundleName: string, moduleName?: string): Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt"
+      },
+      {
+        "section_id": "section-26",
+        "title": "deleteInvalidForms",
+        "level": 2,
+        "line_start": 794,
+        "line_end": 825,
+        "summary": "deleteInvalidForms(formIds: Array&lt;string&gt;, callback: AsyncCallback&lt;number&gt;): void\n\n根据列表"
+      },
+      {
+        "section_id": "section-27",
+        "title": "deleteInvalidForms",
+        "level": 2,
+        "line_start": 826,
+        "line_end": 860,
+        "summary": "deleteInvalidForms(formIds: Array&lt;string&gt;): Promise&lt;number&gt;\n\n根据列表删除应用程序的无效卡片。使用Promise异"
+      },
+      {
+        "section_id": "section-28",
+        "title": "acquireFormState",
+        "level": 2,
+        "line_start": 861,
+        "line_end": 903,
+        "summary": "acquireFormState(want: Want, callback: AsyncCallback&lt;formInfo.FormStateInfo&gt;): void\n\n获取卡片状态。使"
+      },
+      {
+        "section_id": "section-29",
+        "title": "acquireFormState",
+        "level": 2,
+        "line_start": 904,
+        "line_end": 949,
+        "summary": "acquireFormState(want: Want): Promise&lt;formInfo.FormStateInfo&gt;\n\n获取卡片状态。使用Promise异步回调。\n\n**需要权限："
+      },
+      {
+        "section_id": "section-30",
+        "title": "on('formUninstall')",
+        "level": 2,
+        "line_start": 950,
+        "line_end": 978,
+        "summary": "on(type: 'formUninstall', callback: Callback&lt;string&gt;): void\n\n订阅卡片卸载事件。使用callback异步回调。\n\n> **说明"
+      },
+      {
+        "section_id": "section-31",
+        "title": "off('formUninstall')",
+        "level": 2,
+        "line_start": 979,
+        "line_end": 1007,
+        "summary": "off(type: 'formUninstall', callback?: Callback&lt;string&gt;): void\n\n取消订阅卡片卸载事件。使用callback异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-32",
+        "title": "notifyFormsVisible",
+        "level": 2,
+        "line_start": 1008,
+        "line_end": 1038,
+        "summary": "notifyFormsVisible(formIds: Array&lt;string&gt;, isVisible: boolean, callback: AsyncCallback&lt;voi"
+      },
+      {
+        "section_id": "section-33",
+        "title": "notifyFormsVisible",
+        "level": 2,
+        "line_start": 1039,
+        "line_end": 1074,
+        "summary": "notifyFormsVisible(formIds: Array&lt;string&gt;, isVisible: boolean): Promise&lt;void&gt;\n\n通知卡片是否可见"
+      },
+      {
+        "section_id": "section-34",
+        "title": "notifyFormsEnableUpdate",
+        "level": 2,
+        "line_start": 1075,
+        "line_end": 1105,
+        "summary": "notifyFormsEnableUpdate(formIds: Array&lt;string&gt;, isEnableUpdate: boolean, callback: AsyncCallb"
+      },
+      {
+        "section_id": "section-35",
+        "title": "notifyFormsEnableUpdate",
+        "level": 2,
+        "line_start": 1106,
+        "line_end": 1141,
+        "summary": "notifyFormsEnableUpdate(formIds: Array&lt;string&gt;, isEnableUpdate: boolean): Promise&lt;void&gt;"
+      }
+    ]
+  }
+}

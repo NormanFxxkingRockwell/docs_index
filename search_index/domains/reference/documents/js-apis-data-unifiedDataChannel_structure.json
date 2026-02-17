@@ -1,0 +1,388 @@
+{
+  "doc_id": "js-apis-data-unifiedDataChannel",
+  "title": "@ohos.data.unifiedDataChannel (标准化数据通路)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/js-apis-data-unifiedDataChannel.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/js-apis-data-unifiedDataChannel.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@jcwen",
+    "designer": "@junathuawei1; @zph000",
+    "tester": "@lj_liujing; @yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 @ohos.data.unifiedDataChannel (标准化数据通路)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.data.unifiedDataChannel (标准化数据通路)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { unifiedDataChannel } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ShareOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 33,
+        "summary": "UDMF支持的设备内使用范围类型枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Di"
+      },
+      {
+        "section_id": "section-3",
+        "title": "GetDelayData<sup>12+</sup>",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 80,
+        "summary": "type GetDelayData = (type: string) => UnifiedData\n\n对UnifiedData的延迟封装，支持延迟获取数据。当前只支持同设备剪贴板场景，后续场景待开发"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ValueType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 102,
+        "summary": "type ValueType = number | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null |"
+      },
+      {
+        "section_id": "section-5",
+        "title": "UnifiedDataProperties<sup>12+</sup>",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 152,
+        "summary": "定义统一数据对象中所有数据记录的属性，包含时间戳、标签、粘贴范围以及一些附加数据等。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-6",
+        "title": "UnifiedData",
+        "level": 2,
+        "line_start": 153,
+        "line_end": 410,
+        "summary": "表示UDMF统一数据对象，提供封装一组数据记录的方法。\n\n**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core\n\n### 属性\n\n|"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Summary",
+        "level": 2,
+        "line_start": 411,
+        "line_end": 446,
+        "summary": "描述统一数据对象的数据摘要，包括数据类型和大小。\n\n**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core\n\n| 名称 | 类型 |"
+      },
+      {
+        "section_id": "section-8",
+        "title": "UnifiedRecord",
+        "level": 2,
+        "line_start": 447,
+        "line_end": 849,
+        "summary": "对UDMF支持的数据内容的抽象定义，称为数据记录。一个统一数据对象内包含一条或多条数据记录，例如一条文本记录、一条图片记录、一条HTML记录等。从API version 15开始，支持往数据记录中增"
+      },
+      {
+        "section_id": "section-9",
+        "title": "Text",
+        "level": 2,
+        "line_start": 850,
+        "line_end": 872,
+        "summary": "文本类型数据，是[UnifiedRecord](#unifiedrecord)的子类，也是文本类型数据的基类，用于描述文本类数据，推荐开发者优先使用Text的子类描述数据，如[PlainText]("
+      },
+      {
+        "section_id": "section-10",
+        "title": "PlainText",
+        "level": 2,
+        "line_start": 873,
+        "line_end": 893,
+        "summary": "[Text](#text)的子类，用于描述纯文本类数据。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**： SystemCapa"
+      },
+      {
+        "section_id": "section-11",
+        "title": "Hyperlink",
+        "level": 2,
+        "line_start": 894,
+        "line_end": 914,
+        "summary": "[Text](#text)的子类，用于描述超链接类型数据。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**： SystemCap"
+      },
+      {
+        "section_id": "section-12",
+        "title": "HTML",
+        "level": 2,
+        "line_start": 915,
+        "line_end": 935,
+        "summary": "HTML类型数据，是[Text](#text)的子类，用于描述超文本标记语言数据。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力*"
+      },
+      {
+        "section_id": "section-13",
+        "title": "File",
+        "level": 2,
+        "line_start": 936,
+        "line_end": 971,
+        "summary": "File类型数据，是[UnifiedRecord](#unifiedrecord)的子类，也是文件类型数据的基类，用于描述文件类型数据，推荐开发者优先使用File的子类描述数据，如[Image](#"
+      },
+      {
+        "section_id": "section-14",
+        "title": "Image",
+        "level": 2,
+        "line_start": 972,
+        "line_end": 1002,
+        "summary": "图片类型数据，是[File](#file)的子类，用于描述图片文件。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**： Syst"
+      },
+      {
+        "section_id": "section-15",
+        "title": "Video",
+        "level": 2,
+        "line_start": 1003,
+        "line_end": 1033,
+        "summary": "视频类型数据，是[File](#file)的子类，用于描述视频文件。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**： Syst"
+      },
+      {
+        "section_id": "section-16",
+        "title": "Audio",
+        "level": 2,
+        "line_start": 1034,
+        "line_end": 1064,
+        "summary": "音频类型数据，是[File](#file)的子类，用于描述音频文件。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**： Syst"
+      },
+      {
+        "section_id": "section-17",
+        "title": "Folder",
+        "level": 2,
+        "line_start": 1065,
+        "line_end": 1095,
+        "summary": "文件夹类型数据，是[File](#file)的子类，用于描述文件夹。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**： Syst"
+      },
+      {
+        "section_id": "section-18",
+        "title": "SystemDefinedRecord",
+        "level": 2,
+        "line_start": 1096,
+        "line_end": 1120,
+        "summary": "SystemDefinedRecord是[UnifiedRecord](#unifiedrecord)的子类，也是OpenHarmony系统特有数据类型的基类，用于描述仅在OpenHarmony系统"
+      },
+      {
+        "section_id": "section-19",
+        "title": "SystemDefinedForm",
+        "level": 2,
+        "line_start": 1121,
+        "line_end": 1154,
+        "summary": "系统定义的桌面卡片类型数据，是[SystemDefinedRecord](#systemdefinedrecord)的子类。\n\n**原子化服务API：** 从API version 11开始，该接口"
+      },
+      {
+        "section_id": "section-20",
+        "title": "SystemDefinedAppItem",
+        "level": 2,
+        "line_start": 1155,
+        "line_end": 1190,
+        "summary": "系统定义的桌面图标类型数据，是[SystemDefinedRecord](#systemdefinedrecord)的子类。\n\n**原子化服务API：** 从API version 11开始，该接口"
+      },
+      {
+        "section_id": "section-21",
+        "title": "SystemDefinedPixelMap",
+        "level": 2,
+        "line_start": 1191,
+        "line_end": 1244,
+        "summary": "与系统侧定义的[PixelMap](../apis-image-kit/arkts-apis-image-PixelMap.md)数据类型对应的图片数据类型，是[SystemDefinedRecor"
+      },
+      {
+        "section_id": "section-22",
+        "title": "ApplicationDefinedRecord",
+        "level": 2,
+        "line_start": 1245,
+        "line_end": 1267,
+        "summary": "ApplicationDefinedRecord是[UnifiedRecord](#unifiedrecord)的子类，也是应用自定义数据类型的基类，用于描述仅在应用生态内部流通的自定义数据类型，应"
+      },
+      {
+        "section_id": "section-23",
+        "title": "Intention",
+        "level": 2,
+        "line_start": 1268,
+        "line_end": 1281,
+        "summary": "UDMF已经支持的数据通路枚举类型。其主要用途是标识各种UDMF数据通路所面向的不同业务场景。\n\n**系统能力：** SystemCapability.DistributedDataManager."
+      },
+      {
+        "section_id": "section-24",
+        "title": "Visibility<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1282,
+        "line_end": 1292,
+        "summary": "表示数据的可见性等级枚举。\n\n**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core\n\n| 名称          | 值   | 说"
+      },
+      {
+        "section_id": "section-25",
+        "title": "Options",
+        "level": 2,
+        "line_start": 1293,
+        "line_end": 1304,
+        "summary": "UDMF提供的数据操作接口包含三个可选参数：intention、key和visibility。如果接口不需要这些参数，可以不填，具体要求请参阅该接口的参数说明。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-26",
+        "title": "FileConflictOptions<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1305,
+        "line_end": 1317,
+        "summary": "表示文件拷贝冲突时的可选策略的枚举。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Dis"
+      },
+      {
+        "section_id": "section-27",
+        "title": "ProgressIndicator<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1318,
+        "line_end": 1330,
+        "summary": "表示进度条指示选项的枚举，可选择是否采用系统默认进度显示。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-28",
+        "title": "ListenerStatus<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1331,
+        "line_end": 1349,
+        "summary": "表示从UDMF获取数据时的状态码的枚举。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.D"
+      },
+      {
+        "section_id": "section-29",
+        "title": "ProgressInfo<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1350,
+        "line_end": 1362,
+        "summary": "定义进度上报的数据。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Distributed"
+      },
+      {
+        "section_id": "section-30",
+        "title": "DataProgressListener<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1363,
+        "line_end": 1379,
+        "summary": "type DataProgressListener = (progressInfo: ProgressInfo, data: UnifiedData | null) => void\n\n定义获取进度信"
+      },
+      {
+        "section_id": "section-31",
+        "title": "GetDataParams<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1380,
+        "line_end": 1397,
+        "summary": "表示从UDMF获取数据时的参数，包含目标路径、文件冲突选项、进度条类型等。\n\n具体使用示例可见[拖拽异步获取数据](../apis-arkui/arkui-ts/ts-universal-event"
+      },
+      {
+        "section_id": "section-32",
+        "title": "DataLoadInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1398,
+        "line_end": 1415,
+        "summary": "用于描述被加载数据的类型与数量。\n\n- 在**数据发送方**中使用，表示实际可提供的数据范围，必须设置该字段。\n- 在**数据接收方**中使用，表示期望加载的数据类型与数量，可根据需要设置该字段。"
+      },
+      {
+        "section_id": "section-33",
+        "title": "DataLoadHandler<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1416,
+        "line_end": 1439,
+        "summary": "type DataLoadHandler = (acceptableInfo?: DataLoadInfo) => UnifiedData | null\n\n用于延迟加载数据的处理函数。支持数据发送方"
+      },
+      {
+        "section_id": "section-34",
+        "title": "DelayedDataLoadHandler<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1440,
+        "line_end": 1465,
+        "summary": "type DelayedDataLoadHandler = (acceptableInfo?: DataLoadInfo) => Promise<UnifiedData | null>\n\n用于延迟加"
+      },
+      {
+        "section_id": "section-35",
+        "title": "DataLoadParams<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1466,
+        "line_end": 1481,
+        "summary": "用于在延迟加载场景下描述发送方的数据加载策略。\n\n当同时传入loadHandler和delayedDataLoadHandler时，优先使用delayedDataLoadHandler，loadHa"
+      },
+      {
+        "section_id": "section-36",
+        "title": "unifiedDataChannel.insertData",
+        "level": 2,
+        "line_start": 1482,
+        "line_end": 1538,
+        "summary": "insertData(options: Options, data: UnifiedData, callback: AsyncCallback&lt;string&gt;): void\n\n将数据写入"
+      },
+      {
+        "section_id": "section-37",
+        "title": "unifiedDataChannel.insertData",
+        "level": 2,
+        "line_start": 1539,
+        "line_end": 1598,
+        "summary": "insertData(options: Options, data: UnifiedData): Promise&lt;string&gt;\n\n将数据写入UDMF的公共数据通路中，并生成数据的唯一标"
+      },
+      {
+        "section_id": "section-38",
+        "title": "unifiedDataChannel.updateData",
+        "level": 2,
+        "line_start": 1599,
+        "line_end": 1675,
+        "summary": "updateData(options: Options, data: UnifiedData, callback: AsyncCallback&lt;void&gt;): void\n\n更新已写入UD"
+      },
+      {
+        "section_id": "section-39",
+        "title": "unifiedDataChannel.updateData",
+        "level": 2,
+        "line_start": 1676,
+        "line_end": 1755,
+        "summary": "updateData(options: Options, data: UnifiedData): Promise&lt;void&gt;\n\n更新已写入UDMF的公共数据通路的数据，使用Promise"
+      },
+      {
+        "section_id": "section-40",
+        "title": "unifiedDataChannel.queryData",
+        "level": 2,
+        "line_start": 1756,
+        "line_end": 1813,
+        "summary": "queryData(options: Options, callback: AsyncCallback&lt;Array&lt;UnifiedData&gt;&gt;): void\n\n查询UDMF公"
+      },
+      {
+        "section_id": "section-41",
+        "title": "unifiedDataChannel.queryData",
+        "level": 2,
+        "line_start": 1814,
+        "line_end": 1874,
+        "summary": "queryData(options: Options): Promise&lt;Array&lt;UnifiedData&gt;&gt;\n\n查询UDMF公共数据通路的数据，使用Promise异步回调"
+      },
+      {
+        "section_id": "section-42",
+        "title": "unifiedDataChannel.deleteData",
+        "level": 2,
+        "line_start": 1875,
+        "line_end": 1932,
+        "summary": "deleteData(options: Options, callback: AsyncCallback&lt;Array&lt;UnifiedData&gt;&gt;): void\n\n删除UDMF"
+      },
+      {
+        "section_id": "section-43",
+        "title": "unifiedDataChannel.deleteData",
+        "level": 2,
+        "line_start": 1933,
+        "line_end": 1993,
+        "summary": "deleteData(options: Options): Promise&lt;Array&lt;UnifiedData&gt;&gt;\n\n删除UDMF公共数据通路的数据，返回删除的数据集，使用P"
+      },
+      {
+        "section_id": "section-44",
+        "title": "unifiedDataChannel.setAppShareOptions<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1994,
+        "line_end": 2035,
+        "summary": "setAppShareOptions(intention: Intention, shareOptions: ShareOptions): void\n\n设置应用内拖拽通道数据可使用的范围[Share"
+      },
+      {
+        "section_id": "section-45",
+        "title": "unifiedDataChannel.removeAppShareOptions<sup>14+</sup>",
+        "level": 2,
+        "line_start": 2036,
+        "line_end": 2075,
+        "summary": "removeAppShareOptions(intention: Intention): void\n\n清除[setAppShareOptions](#unifieddatachannelsetapp"
+      },
+      {
+        "section_id": "section-46",
+        "title": "unifiedDataChannel.convertRecordsToEntries<sup>17+</sup>",
+        "level": 2,
+        "line_start": 2076,
+        "line_end": 2151,
+        "summary": "convertRecordsToEntries(data: UnifiedData): void\n\n本接口用于将传入的data转换成多样式数据结构。若原data使用多个record去承载同一份数据的"
+      }
+    ]
+  }
+}

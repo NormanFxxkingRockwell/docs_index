@@ -1,0 +1,108 @@
+{
+  "doc_id": "js-apis-sendablePhotoAccessHelper",
+  "title": "@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)",
+  "path": "zh-cn/application-dev/reference/apis-media-library-kit/js-apis-sendablePhotoAccessHelper.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-library-kit/js-apis-sendablePhotoAccessHelper.md",
+  "metadata": {
+    "kit": "Media Library Kit",
+    "subsystem": "Multimedia",
+    "owner": "@yixiaoff",
+    "designer": "@liweilu1",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Library Kit Multimedia 模块的 @ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "sendablePhotoAccessHelper.getPhotoAccessHelper",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 74,
+        "summary": "getPhotoAccessHelper(context: Context): PhotoAccessHelper\n\n获取相册管理模块的实例，用于访问和修改相册中的媒体文件。\n\n**模型约束**："
+      },
+      {
+        "section_id": "section-3",
+        "title": "PhotoAccessHelper",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 458,
+        "summary": "### getAssets\n\ngetAssets(options: photoAccessHelper.FetchOptions): Promise&lt;FetchResult&lt;PhotoA"
+      },
+      {
+        "section_id": "section-4",
+        "title": "PhotoAsset",
+        "level": 2,
+        "line_start": 459,
+        "line_end": 758,
+        "summary": "提供封装文件属性的方法。\n\n### 属性\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-5",
+        "title": "FetchResult",
+        "level": 2,
+        "line_start": 759,
+        "line_end": 1127,
+        "summary": "文件检索结果集。\n\n### getCount\n\ngetCount(): number\n\n获取文件检索结果中的文件总数。\n\n**系统能力**：SystemCapability.FileManageme"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Album",
+        "level": 2,
+        "line_start": 1128,
+        "line_end": 1317,
+        "summary": "实体相册\n\n### 属性\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-7",
+        "title": "PhotoType",
+        "level": 2,
+        "line_start": 1318,
+        "line_end": 1330,
+        "summary": "枚举，媒体文件类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManageme"
+      },
+      {
+        "section_id": "section-8",
+        "title": "PhotoSubtype<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1331,
+        "line_end": 1344,
+        "summary": "枚举，不同[PhotoAsset](#photoasset)的类型。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能力**：Syste"
+      },
+      {
+        "section_id": "section-9",
+        "title": "DynamicRangeType<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1345,
+        "line_end": 1355,
+        "summary": "枚举，媒体文件的动态范围类型。\n\n**系统能力**: SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称  |  值 |  说明"
+      },
+      {
+        "section_id": "section-10",
+        "title": "AlbumType",
+        "level": 2,
+        "line_start": 1356,
+        "line_end": 1366,
+        "summary": "枚举，相册类型，表示是用户相册还是系统预置相册。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称   |"
+      },
+      {
+        "section_id": "section-11",
+        "title": "AlbumSubtype",
+        "level": 2,
+        "line_start": 1367,
+        "line_end": 1380,
+        "summary": "枚举，相册子类型，表示具体的相册类型。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称"
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "doc_id": "ts-container-ability-component-sys",
+  "title": "AbilityComponent (系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-ability-component-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-ability-component-sys.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zjsxstar",
+    "designer": "@sunbees",
+    "tester": "@liuli0427",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 AbilityComponent (系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "AbilityComponent (系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "使用约束",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 29,
+        "summary": "AbilityComponent为独立层次渲染，不能在之上叠加其他显示内容。\n\nAbilityComponent不支持处理输入事件，事件不经过当前Ability，直接分发给内部的Ability处理。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 34,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 49,
+        "summary": "AbilityComponent(value: {want: Want})\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-4",
+        "title": "事件",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 71,
+        "summary": "### onConnect\n\nonConnect(callback:()&nbsp;=&gt;&nbsp;void)\n\nAbilityComponent环境启动完成时的回调，之后可使用Ability"
+      },
+      {
+        "section_id": "section-5",
+        "title": "示例",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 98,
+        "summary": "```ts\n// xxx.ets\n@Entry\n@Component\nstruct MyComponent {\n\n  build() {\n      Column() {\n          Abi"
+      }
+    ]
+  }
+}

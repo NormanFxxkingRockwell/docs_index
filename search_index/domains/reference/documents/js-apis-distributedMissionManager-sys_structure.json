@@ -1,0 +1,180 @@
+{
+  "doc_id": "js-apis-distributedMissionManager-sys",
+  "title": "@ohos.distributedMissionManager (分布式任务管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-distributedMissionManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-distributedMissionManager-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "DistributedAbilityManager",
+    "owner": "@hobbycao",
+    "designer": "@gsxiaowen",
+    "tester": "@hanjiawei",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit DistributedAbilityManager 模块的 @ohos.distributedMissionManager (分布式任务管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.distributedMissionManager (分布式任务管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```js\nimport { distributedMissionManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "distributedMissionManager.registerMissionListener",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 91,
+        "summary": "registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback, callback: AsyncCall"
+      },
+      {
+        "section_id": "section-3",
+        "title": "distributedMissionManager.registerMissionListener",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 161,
+        "summary": "registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback): Promise&lt;void&gt"
+      },
+      {
+        "section_id": "section-4",
+        "title": "distributedMissionManager.unRegisterMissionListener",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 210,
+        "summary": "unRegisterMissionListener(parameter: MissionDeviceInfo, callback: AsyncCallback&lt;void&gt;): void;"
+      },
+      {
+        "section_id": "section-5",
+        "title": "distributedMissionManager.unRegisterMissionListener",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 260,
+        "summary": "unRegisterMissionListener(parameter: MissionDeviceInfo): Promise&lt;void&gt;\n\n取消任务状态监听。使用promise异步回"
+      },
+      {
+        "section_id": "section-6",
+        "title": "distributedMissionManager.startSyncRemoteMissions",
+        "level": 2,
+        "line_start": 261,
+        "line_end": 313,
+        "summary": "startSyncRemoteMissions(parameter: MissionParameter, callback: AsyncCallback&lt;void&gt;): void;\n\n开"
+      },
+      {
+        "section_id": "section-7",
+        "title": "distributedMissionManager.startSyncRemoteMissions",
+        "level": 2,
+        "line_start": 314,
+        "line_end": 369,
+        "summary": "startSyncRemoteMissions(parameter: MissionParameter): Promise&lt;void&gt;\n\n开始同步远端设备的任务列表。使用promise异"
+      },
+      {
+        "section_id": "section-8",
+        "title": "distributedMissionManager.stopSyncRemoteMissions",
+        "level": 2,
+        "line_start": 370,
+        "line_end": 420,
+        "summary": "stopSyncRemoteMissions(parameter: MissionDeviceInfo, callback: AsyncCallback&lt;void&gt;): void;\n\n停"
+      },
+      {
+        "section_id": "section-9",
+        "title": "distributedMissionManager.stopSyncRemoteMissions",
+        "level": 2,
+        "line_start": 421,
+        "line_end": 473,
+        "summary": "stopSyncRemoteMissions(parameter: MissionDeviceInfo): Promise&lt;void&gt;\n\n停止同步远端设备的任务列表。使用promise异"
+      },
+      {
+        "section_id": "section-10",
+        "title": "distributedMissionManager.continueMission",
+        "level": 2,
+        "line_start": 474,
+        "line_end": 541,
+        "summary": "continueMission(parameter: ContinueDeviceInfo, options: ContinueCallback, callback: AsyncCallback&l"
+      },
+      {
+        "section_id": "section-11",
+        "title": "distributedMissionManager.continueMission",
+        "level": 2,
+        "line_start": 542,
+        "line_end": 611,
+        "summary": "continueMission(parameter: ContinueDeviceInfo, options: ContinueCallback): Promise&lt;void&gt;\n\n通过指"
+      },
+      {
+        "section_id": "section-12",
+        "title": "distributedMissionManager.continueMission<sup>10+</sup>",
+        "level": 2,
+        "line_start": 612,
+        "line_end": 672,
+        "summary": "continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback&lt;void&gt;): void;\n\n通过指定包名"
+      },
+      {
+        "section_id": "section-13",
+        "title": "distributedMissionManager.continueMission<sup>10+</sup>",
+        "level": 2,
+        "line_start": 673,
+        "line_end": 736,
+        "summary": "continueMission(parameter: ContinueMissionInfo): Promise&lt;void&gt;\n\n通过指定包名（bundleName）的方式进行迁移任务。使"
+      },
+      {
+        "section_id": "section-14",
+        "title": "distributedMissionManager.on('continueStateChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 737,
+        "line_end": 778,
+        "summary": "on(type: 'continueStateChange',  callback: Callback&lt;ContinueCallbackInfo&gt;): void\n\n注册当前任务流转状态的"
+      },
+      {
+        "section_id": "section-15",
+        "title": "distributedMissionManager.off('continueStateChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 779,
+        "line_end": 820,
+        "summary": "off(type: 'continueStateChange',  callback?: Callback&lt;ContinueCallbackInfo&gt;): void\n\n取消当前任务流转的"
+      },
+      {
+        "section_id": "section-16",
+        "title": "MissionCallback",
+        "level": 2,
+        "line_start": 821,
+        "line_end": 834,
+        "summary": "type MissionCallback = _MissionCallback\n\n作为可以[registerMissionListener](js-apis-distributedMissionMa"
+      },
+      {
+        "section_id": "section-17",
+        "title": "MissionParameter",
+        "level": 2,
+        "line_start": 835,
+        "line_end": 848,
+        "summary": "type MissionParameter = _MissionParameter\n\n作为[startSyncRemoteMissions](js-apis-distributedMissionMa"
+      },
+      {
+        "section_id": "section-18",
+        "title": "MissionDeviceInfo",
+        "level": 2,
+        "line_start": 849,
+        "line_end": 862,
+        "summary": "type MissionDeviceInfo = _MissionDeviceInfo\n\n可以作为[registerMissionListener](js-apis-distributedMissi"
+      },
+      {
+        "section_id": "section-19",
+        "title": "ContinueState<sup>10+</sup>",
+        "level": 2,
+        "line_start": 863,
+        "line_end": 875,
+        "summary": "当前任务流转状态的枚举。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Mission"
+      },
+      {
+        "section_id": "section-20",
+        "title": "ContinueCallbackInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 876,
+        "line_end": 887,
+        "summary": "当前任务流转状态监听的回调信息，包含流转状态和流转信息。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.Ability.Ability"
+      }
+    ]
+  }
+}

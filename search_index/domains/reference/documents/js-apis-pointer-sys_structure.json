@@ -1,0 +1,524 @@
+{
+  "doc_id": "js-apis-pointer-sys",
+  "title": "@ohos.multimodalInput.pointer (鼠标光标)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-input-kit/js-apis-pointer-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-input-kit/js-apis-pointer-sys.md",
+  "metadata": {
+    "kit": "Input Kit",
+    "subsystem": "MultimodalInput",
+    "owner": "@zhaoxueyuan",
+    "designer": "@hanruofei",
+    "tester": "@Lyuxin",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Input Kit MultimodalInput 模块的 @ohos.multimodalInput.pointer (鼠标光标)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalInput.pointer (鼠标光标)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```js\nimport { pointer } from '@kit.InputKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "pointer.setPointerSpeed",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 80,
+        "summary": "setPointerSpeed(speed: number, callback: AsyncCallback&lt;void&gt;): void\n\n设置鼠标移动速度，使用AsyncCallback"
+      },
+      {
+        "section_id": "section-3",
+        "title": "pointer.setPointerSpeed",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 140,
+        "summary": "setPointerSpeed(speed: number): Promise&lt;void&gt;\n\n设置鼠标移动速度，使用Promise异步回调。\n\n**系统能力**：SystemCapabi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "pointer.setPointerSpeedSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 189,
+        "summary": "setPointerSpeedSync(speed: number): void\n\n使用同步方式设置鼠标移动速度。\n\n**系统能力**：SystemCapability.MultimodalInpu"
+      },
+      {
+        "section_id": "section-5",
+        "title": "pointer.getPointerSpeed",
+        "level": 2,
+        "line_start": 190,
+        "line_end": 245,
+        "summary": "getPointerSpeed(callback: AsyncCallback&lt;number&gt;): void\n\n获取鼠标移动速度，使用AsyncCallback异步方式返回结果。\n\n**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "pointer.getPointerSpeed",
+        "level": 2,
+        "line_start": 246,
+        "line_end": 297,
+        "summary": "getPointerSpeed(): Promise&lt;number&gt;\n\n获取当前鼠标移动速度，使用Promise异步回调。\n\n**系统能力**：SystemCapability.Mult"
+      },
+      {
+        "section_id": "section-7",
+        "title": "pointer.getPointerSpeedSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 298,
+        "line_end": 346,
+        "summary": "getPointerSpeedSync(): number\n\n使用同步方式获取当前鼠标移动速度。\n\n**系统能力**：SystemCapability.MultimodalInput.Input.P"
+      },
+      {
+        "section_id": "section-8",
+        "title": "pointer.setHoverScrollState<sup>10+</sup>",
+        "level": 2,
+        "line_start": 347,
+        "line_end": 402,
+        "summary": "setHoverScrollState(state: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置鼠标悬停滚动开关状态，使用Asyn"
+      },
+      {
+        "section_id": "section-9",
+        "title": "pointer.setHoverScrollState<sup>10+</sup>",
+        "level": 2,
+        "line_start": 403,
+        "line_end": 461,
+        "summary": "setHoverScrollState(state: boolean): Promise&lt;void&gt;\n\n设置鼠标悬停滚动开关状态，使用Promise异步回调。\n\n**系统能力**：Sys"
+      },
+      {
+        "section_id": "section-10",
+        "title": "pointer.getHoverScrollState<sup>10+</sup>",
+        "level": 2,
+        "line_start": 462,
+        "line_end": 516,
+        "summary": "getHoverScrollState(callback: AsyncCallback&lt;boolean&gt;): void\n\n获取鼠标悬停滚动开关状态，使用AsyncCallback异步方式"
+      },
+      {
+        "section_id": "section-11",
+        "title": "pointer.getHoverScrollState<sup>10+</sup>",
+        "level": 2,
+        "line_start": 517,
+        "line_end": 569,
+        "summary": "getHoverScrollState(): Promise&lt;boolean&gt;\n\n获取当前鼠标悬停滚动开关状态，使用Promise异步回调。\n\n**系统能力**：SystemCapabi"
+      },
+      {
+        "section_id": "section-12",
+        "title": "pointer.setMousePrimaryButton<sup>10+</sup>",
+        "level": 2,
+        "line_start": 570,
+        "line_end": 625,
+        "summary": "setMousePrimaryButton(primary: PrimaryButton, callback: AsyncCallback&lt;void&gt;): void\n\n设置鼠标主键，使用"
+      },
+      {
+        "section_id": "section-13",
+        "title": "pointer.setMousePrimaryButton<sup>10+</sup>",
+        "level": 2,
+        "line_start": 626,
+        "line_end": 684,
+        "summary": "setMousePrimaryButton(primary: PrimaryButton): Promise&lt;void&gt;\n\n设置鼠标主键，使用Promise异步回调。\n\n**系统能力**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "pointer.getMousePrimaryButton<sup>10+</sup>",
+        "level": 2,
+        "line_start": 685,
+        "line_end": 739,
+        "summary": "getMousePrimaryButton(callback: AsyncCallback&lt;PrimaryButton&gt;): void\n\n获取当前鼠标主键，使用AsyncCallback"
+      },
+      {
+        "section_id": "section-15",
+        "title": "pointer.getMousePrimaryButton<sup>10+</sup>",
+        "level": 2,
+        "line_start": 740,
+        "line_end": 792,
+        "summary": "getMousePrimaryButton(): Promise&lt;PrimaryButton&gt;\n\n获取当前鼠标主键，使用Promise异步回调。\n\n**系统能力**：SystemCapa"
+      },
+      {
+        "section_id": "section-16",
+        "title": "pointer.setMouseScrollRows<sup>10+</sup>",
+        "level": 2,
+        "line_start": 793,
+        "line_end": 848,
+        "summary": "setMouseScrollRows(rows: number, callback: AsyncCallback&lt;void&gt;): void\n\n设置鼠标滚动行数，使用AsyncCallba"
+      },
+      {
+        "section_id": "section-17",
+        "title": "pointer.setMouseScrollRows<sup>10+</sup>",
+        "level": 2,
+        "line_start": 849,
+        "line_end": 907,
+        "summary": "setMouseScrollRows(rows: number): Promise&lt;void&gt;\n\n设置鼠标滚动行数，使用Promise异步回调。\n\n**系统能力**：SystemCapa"
+      },
+      {
+        "section_id": "section-18",
+        "title": "pointer.getMouseScrollRows<sup>10+</sup>",
+        "level": 2,
+        "line_start": 908,
+        "line_end": 962,
+        "summary": "getMouseScrollRows(callback: AsyncCallback&lt;number&gt;): void\n\n获取鼠标滚动行数，使用AsyncCallback异步方式返回结果。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "pointer.getMouseScrollRows<sup>10+</sup>",
+        "level": 2,
+        "line_start": 963,
+        "line_end": 1015,
+        "summary": "getMouseScrollRows(): Promise&lt;number&gt;\n\n获取当前鼠标滚动行数，使用Promise异步回调。\n\n**系统能力**：SystemCapability.M"
+      },
+      {
+        "section_id": "section-20",
+        "title": "pointer.setTouchpadScrollSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1016,
+        "line_end": 1071,
+        "summary": "setTouchpadScrollSwitch(state: boolean, callback: AsyncCallback\\<void>): void\n\n设置触控板滚轴开关，使用AsyncCal"
+      },
+      {
+        "section_id": "section-21",
+        "title": "pointer.setTouchpadScrollSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1072,
+        "line_end": 1130,
+        "summary": "setTouchpadScrollSwitch(state: boolean): Promise\\<void>\n\n设置触控板滚轴开关，使用Promise异步回调。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-22",
+        "title": "pointer.getTouchpadScrollSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1131,
+        "line_end": 1185,
+        "summary": "getTouchpadScrollSwitch(callback:  AsyncCallback\\<boolean>): void\n\n获取触控板滚轴能力开启状态，使用AsyncCallback异步方"
+      },
+      {
+        "section_id": "section-23",
+        "title": "pointer.getTouchpadScrollSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1186,
+        "line_end": 1238,
+        "summary": "getTouchpadScrollSwitch(): Promise\\<boolean>\n\n获取触控板滚轴能力开启状态，使用Promise异步回调。\n\n**系统能力**：SystemCapabili"
+      },
+      {
+        "section_id": "section-24",
+        "title": "pointer.setTouchpadScrollDirection<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1239,
+        "line_end": 1294,
+        "summary": "setTouchpadScrollDirection(state: boolean, callback: AsyncCallback\\<void>): void\n\n设置触控板滚轴的方向，使用Asyn"
+      },
+      {
+        "section_id": "section-25",
+        "title": "pointer.setTouchpadScrollDirection<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1295,
+        "line_end": 1353,
+        "summary": "setTouchpadScrollDirection(state: boolean): Promise\\<void>\n\n设置触控板滚轴的方向，使用Promise异步回调。\n\n**系统能力**：Sys"
+      },
+      {
+        "section_id": "section-26",
+        "title": "pointer.getTouchpadScrollDirection<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1354,
+        "line_end": 1404,
+        "summary": "getTouchpadScrollDirection(callback:  AsyncCallback\\<boolean>): void\n\n获取触控板滚轴方向，使用AsyncCallback异步方式"
+      },
+      {
+        "section_id": "section-27",
+        "title": "pointer.getTouchpadScrollDirection<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1405,
+        "line_end": 1457,
+        "summary": "getTouchpadScrollDirection(): Promise\\<boolean>\n\n获取触控板滚轴方向，使用Promise异步回调。\n\n**系统能力**：SystemCapabilit"
+      },
+      {
+        "section_id": "section-28",
+        "title": "pointer.setTouchpadTapSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1458,
+        "line_end": 1513,
+        "summary": "setTouchpadTapSwitch(state: boolean, callback: AsyncCallback\\<void>): void\n\n设置触控板轻触功能开关，使用AsyncCall"
+      },
+      {
+        "section_id": "section-29",
+        "title": "pointer.setTouchpadTapSwitch <sup>10+</sup>",
+        "level": 2,
+        "line_start": 1514,
+        "line_end": 1572,
+        "summary": "setTouchpadTapSwitch(state: boolean): Promise\\<void>\n\n设置触控板轻触功能开关，使用Promise异步回调。\n\n**系统能力**：SystemCa"
+      },
+      {
+        "section_id": "section-30",
+        "title": "pointer.getTouchpadTapSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1573,
+        "line_end": 1627,
+        "summary": "getTouchpadTapSwitch(callback:  AsyncCallback\\<boolean>): void\n\n获取触控板轻触能力开启状态，使用AsyncCallback异步方式返回"
+      },
+      {
+        "section_id": "section-31",
+        "title": "pointer.getTouchpadTapSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1628,
+        "line_end": 1680,
+        "summary": "getTouchpadTapSwitch(): Promise\\<boolean>\n\n获取触控板轻触功能开启状态，使用Promise异步回调。\n\n**系统能力**：SystemCapability."
+      },
+      {
+        "section_id": "section-32",
+        "title": "pointer.setTouchpadPointerSpeed<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1681,
+        "line_end": 1736,
+        "summary": "setTouchpadPointerSpeed(speed: number, callback: AsyncCallback\\<void>): void\n\n设置触控板光标移动速度，使用AsyncCa"
+      },
+      {
+        "section_id": "section-33",
+        "title": "pointer.setTouchpadPointerSpeed<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1737,
+        "line_end": 1795,
+        "summary": "setTouchpadPointerSpeed(speed: number): Promise\\<void>\n\n设置触控板光标移动速度，使用Promise异步回调。\n\n**系统能力**：System"
+      },
+      {
+        "section_id": "section-34",
+        "title": "pointer.getTouchpadPointerSpeed<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1796,
+        "line_end": 1850,
+        "summary": "getTouchpadPointerSpeed(callback: AsyncCallback\\<number>): void\n\n获取触控板光标移动速度，使用AsyncCallback异步方式返回结"
+      },
+      {
+        "section_id": "section-35",
+        "title": "pointer.getTouchpadPointerSpeed<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1851,
+        "line_end": 1903,
+        "summary": "getTouchpadPointerSpeed(): Promise\\<number>\n\n获取触控板光标移动速度，使用Promise异步回调。\n\n**系统能力**：SystemCapability."
+      },
+      {
+        "section_id": "section-36",
+        "title": "pointer.setTouchpadPinchSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1904,
+        "line_end": 1959,
+        "summary": "setTouchpadPinchSwitch(state: boolean, callback: AsyncCallback\\<void>): void\n\n设置触控板双指捏合功能开关，使用Async"
+      },
+      {
+        "section_id": "section-37",
+        "title": "pointer.setTouchpadPinchSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1960,
+        "line_end": 2018,
+        "summary": "setTouchpadPinchSwitch(state: boolean): Promise\\<void>\n\n设置触控板双指捏合功能开关，使用Promise异步回调。\n\n**系统能力**：Syst"
+      },
+      {
+        "section_id": "section-38",
+        "title": "pointer.getTouchpadPinchSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2019,
+        "line_end": 2073,
+        "summary": "getTouchpadPinchSwitch(callback:  AsyncCallback\\<boolean>): void\n\n获取触控板双指捏合功能开启状态，使用AsyncCallback异步"
+      },
+      {
+        "section_id": "section-39",
+        "title": "pointer.getTouchpadPinchSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2074,
+        "line_end": 2126,
+        "summary": "getTouchpadPinchSwitch(): Promise\\<boolean>\n\n获取触控板双指捏合功能开启状态，使用Promise异步回调。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-40",
+        "title": "pointer.setTouchpadSwipeSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2127,
+        "line_end": 2182,
+        "summary": "setTouchpadSwipeSwitch(state: boolean, callback: AsyncCallback\\<void>): void\n\n设置触控板多指滑动功能开关，使用Async"
+      },
+      {
+        "section_id": "section-41",
+        "title": "pointer.setTouchpadSwipeSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2183,
+        "line_end": 2241,
+        "summary": "setTouchpadSwipeSwitch(state: boolean): Promise\\<void>\n\n设置触控板多指滑动功能开关，使用Promise异步回调。\n\n**系统能力**：Syst"
+      },
+      {
+        "section_id": "section-42",
+        "title": "pointer.getTouchpadSwipeSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2242,
+        "line_end": 2292,
+        "summary": "getTouchpadSwipeSwitch(callback:  AsyncCallback\\<boolean>): void\n\n获取触控板多指滑动功能开启状态，使用AsyncCallback异步"
+      },
+      {
+        "section_id": "section-43",
+        "title": "pointer.getTouchpadSwipeSwitch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2293,
+        "line_end": 2345,
+        "summary": "getTouchpadSwipeSwitch(): Promise\\<boolean>\n\n获取触控板多指滑动功能开启状态，使用Promise异步回调。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-44",
+        "title": "pointer.setTouchpadRightClickType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2346,
+        "line_end": 2401,
+        "summary": "setTouchpadRightClickType(type: RightClickType, callback: AsyncCallback\\<void>): void\n\n设置触控板右键菜单类型，"
+      },
+      {
+        "section_id": "section-45",
+        "title": "pointer.setTouchpadRightClickType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2402,
+        "line_end": 2460,
+        "summary": "setTouchpadRightClickType(type: RightClickType): Promise\\<void>\n\n设置触控板右键菜单类型，使用Promise异步回调。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-46",
+        "title": "pointer.getTouchpadRightClickType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2461,
+        "line_end": 2511,
+        "summary": "getTouchpadRightClickType(callback: AsyncCallback\\<RightClickType>): void\n\n获取触控板右键菜单类型，使用AsyncCallb"
+      },
+      {
+        "section_id": "section-47",
+        "title": "pointer.getTouchpadRightClickType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2512,
+        "line_end": 2564,
+        "summary": "getTouchpadRightClickType(): Promise\\<RightClickType>\n\n获取触控板右键菜单类型，使用Promise异步回调。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-48",
+        "title": "pointer.setPointerSize<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2565,
+        "line_end": 2620,
+        "summary": "setPointerSize(size: number, callback: AsyncCallback&lt;void&gt;): void\n\n设置鼠标光标大小，使用AsyncCallback异步"
+      },
+      {
+        "section_id": "section-49",
+        "title": "pointer.setPointerSize<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2621,
+        "line_end": 2679,
+        "summary": "setPointerSize(size: number): Promise&lt;void&gt;\n\n设置鼠标光标大小，使用Promise异步回调。\n\n**系统能力**：SystemCapabili"
+      },
+      {
+        "section_id": "section-50",
+        "title": "pointer.setPointerSizeSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2680,
+        "line_end": 2728,
+        "summary": "setPointerSizeSync(size: number): void\n\n设置鼠标光标大小，使用同步方式进行设置。\n\n**系统能力**：SystemCapability.MultimodalI"
+      },
+      {
+        "section_id": "section-51",
+        "title": "pointer.getPointerSize<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2729,
+        "line_end": 2783,
+        "summary": "getPointerSize(callback: AsyncCallback&lt;number&gt;): void\n\n获取鼠标光标大小，使用AsyncCallback异步方式返回结果。\n\n**系"
+      },
+      {
+        "section_id": "section-52",
+        "title": "pointer.getPointerSize<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2784,
+        "line_end": 2836,
+        "summary": "getPointerSize(): Promise&lt;number&gt;\n\n获取当前鼠标光标大小，使用Promise异步回调。\n\n**系统能力**：SystemCapability.Multi"
+      },
+      {
+        "section_id": "section-53",
+        "title": "pointer.getPointerSizeSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2837,
+        "line_end": 2885,
+        "summary": "getPointerSizeSync(): number\n\n获取鼠标光标大小，使用同步方式返回结果。\n\n**系统能力**：SystemCapability.MultimodalInput.Input"
+      },
+      {
+        "section_id": "section-54",
+        "title": "pointer.setPointerColor<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2886,
+        "line_end": 2945,
+        "summary": "setPointerColor(color: number, callback: AsyncCallback&lt;void&gt;): void\n\n设置鼠标光标颜色，使用AsyncCallback"
+      },
+      {
+        "section_id": "section-55",
+        "title": "pointer.setPointerColor<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2946,
+        "line_end": 3008,
+        "summary": "setPointerColor(color: number): Promise&lt;void&gt;\n\n设置鼠标光标颜色，使用Promise异步回调。\n\n> **说明**：\n>\n> 设置和调试时，"
+      },
+      {
+        "section_id": "section-56",
+        "title": "pointer.setPointerColorSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3009,
+        "line_end": 3061,
+        "summary": "setPointerColorSync(color: number): void\n\n设置鼠标光标颜色，使用同步方式进行设置。\n\n> **说明**：\n>\n> 设置和调试时，需连接外部设备，如鼠标、蓝牙"
+      },
+      {
+        "section_id": "section-57",
+        "title": "pointer.getPointerColor<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3062,
+        "line_end": 3116,
+        "summary": "getPointerColor(callback: AsyncCallback&lt;number&gt;): void\n\n获取鼠标光标颜色，使用AsyncCallback异步方式返回结果。\n\n**"
+      },
+      {
+        "section_id": "section-58",
+        "title": "pointer.getPointerColor<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3117,
+        "line_end": 3169,
+        "summary": "getPointerColor(): Promise&lt;number&gt;\n\n获取当前鼠标光标颜色，使用Promise异步回调。\n\n**系统能力**：SystemCapability.Mult"
+      },
+      {
+        "section_id": "section-59",
+        "title": "pointer.getPointerColorSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3170,
+        "line_end": 3218,
+        "summary": "getPointerColorSync(): number\n\n获取鼠标光标颜色，使用同步方式返回结果。\n\n**系统能力**：SystemCapability.MultimodalInput.Inpu"
+      },
+      {
+        "section_id": "section-60",
+        "title": "pointer.setTouchpadDoubleTapAndDragState<sup>14+</sup>",
+        "level": 2,
+        "line_start": 3219,
+        "line_end": 3274,
+        "summary": "setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallback\\<void>): void\n\n设置触控板双击拖拽开"
+      },
+      {
+        "section_id": "section-61",
+        "title": "pointer.setTouchpadDoubleTapAndDragState<sup>14+</sup>",
+        "level": 2,
+        "line_start": 3275,
+        "line_end": 3333,
+        "summary": "setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise\\<void>\n\n设置触控板双击拖拽开关状态，使用Promise异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-62",
+        "title": "pointer.getTouchpadDoubleTapAndDragState<sup>14+</sup>",
+        "level": 2,
+        "line_start": 3334,
+        "line_end": 3388,
+        "summary": "getTouchpadDoubleTapAndDragState(callback: AsyncCallback\\<boolean>): void\n\n获取触控板双击拖拽开关的开启状态，使用Async"
+      },
+      {
+        "section_id": "section-63",
+        "title": "pointer.getTouchpadDoubleTapAndDragState<sup>14+</sup>",
+        "level": 2,
+        "line_start": 3389,
+        "line_end": 3439,
+        "summary": "getTouchpadDoubleTapAndDragState(): Promise\\<boolean>\n\n获取触控板双击拖拽开关的开启状态，使用Promise异步回调。\n\n**系统能力**：Sy"
+      }
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "doc_id": "arkts-apis-photoAccessHelper-FetchResult",
+  "title": "Interface (FetchResult)",
+  "path": "zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-FetchResult.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis-photoAccessHelper-FetchResult.md",
+  "metadata": {
+    "kit": "Media Library Kit",
+    "subsystem": "Multimedia",
+    "owner": "@yixiaoff",
+    "designer": "@liweilu1",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Library Kit Multimedia 模块的 Interface (FetchResult)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (FetchResult)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { photoAccessHelper } from '@kit.MediaLibraryKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getCount",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 65,
+        "summary": "getCount(): number\n\n获取文件检索结果中的文件总数。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力**：Syst"
+      },
+      {
+        "section_id": "section-3",
+        "title": "isAfterLast",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 115,
+        "summary": "isAfterLast(): boolean\n\n检查结果集是否指向最后一行。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-4",
+        "title": "close",
+        "level": 2,
+        "line_start": 116,
+        "line_end": 158,
+        "summary": "close(): void\n\n释放FetchResult实例并使其失效，无法再调用其他方法。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getFirstObject",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 208,
+        "summary": "getFirstObject(callback: AsyncCallback&lt;T&gt;): void\n\n获取文件检索结果中的第一个文件资产。使用callback异步回调。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getFirstObject",
+        "level": 2,
+        "line_start": 209,
+        "line_end": 253,
+        "summary": "getFirstObject(): Promise&lt;T&gt;\n\n获取文件检索结果中的第一个文件资产。使用Promise异步回调。\n\n**原子化服务API：** 从API version 20"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getNextObject",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 308,
+        "summary": "getNextObject(callback: AsyncCallback&lt;T&gt;): void\n\n获取文件检索结果中的下一个文件资产。使用callback异步回调。\n\n在调用此方法之前，"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getNextObject",
+        "level": 2,
+        "line_start": 309,
+        "line_end": 358,
+        "summary": "getNextObject(): Promise&lt;T&gt;\n\n获取文件检索结果中的下一个文件资产。使用Promise异步回调。\n\n在调用此方法之前，必须使用[isAfterLast()](#"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getLastObject",
+        "level": 2,
+        "line_start": 359,
+        "line_end": 408,
+        "summary": "getLastObject(callback: AsyncCallback&lt;T&gt;): void\n\n获取文件检索结果中的最后一个文件资产。使用callback异步回调。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getLastObject",
+        "level": 2,
+        "line_start": 409,
+        "line_end": 453,
+        "summary": "getLastObject(): Promise&lt;T&gt;\n\n获取文件检索结果中的最后一个文件资产。使用Promise异步回调。\n\n**原子化服务API：** 从API version 20"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getObjectByPosition",
+        "level": 2,
+        "line_start": 454,
+        "line_end": 504,
+        "summary": "getObjectByPosition(index: number, callback: AsyncCallback&lt;T&gt;): void\n\n获取文件检索结果中具有指定索引的文件资产。使用"
+      },
+      {
+        "section_id": "section-12",
+        "title": "getObjectByPosition",
+        "level": 2,
+        "line_start": 505,
+        "line_end": 559,
+        "summary": "getObjectByPosition(index: number): Promise&lt;T&gt;\n\n获取文件检索结果中指定索引的文件资产。使用Promise异步回调。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-13",
+        "title": "getAllObjects",
+        "level": 2,
+        "line_start": 560,
+        "line_end": 609,
+        "summary": "getAllObjects(callback: AsyncCallback&lt;Array&lt;T&gt;&gt;): void\n\n获取文件检索结果中的所有文件资产。使用callback异步回调"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getAllObjects",
+        "level": 2,
+        "line_start": 610,
+        "line_end": 654,
+        "summary": "getAllObjects(): Promise&lt;Array&lt;T&gt;&gt;\n\n获取文件检索结果中的所有文件资产。使用Promise异步回调。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-15",
+        "title": "contains<sup>23+</sup>",
+        "level": 2,
+        "line_start": 655,
+        "line_end": 703,
+        "summary": "contains(object: T): Promise&lt;boolean&gt;\n\n判断文件检索结果中是否包含指定的文件资产。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在S"
+      },
+      {
+        "section_id": "section-16",
+        "title": "getObjectsByIndexSet<sup>23+</sup>",
+        "level": 2,
+        "line_start": 704,
+        "line_end": 760,
+        "summary": "getObjectsByIndexSet(indexSet: number[]): Promise\\<T[]\\>\n\n获取文件检索结果中指定索引集合对应的文件资产数组。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "getIndex<sup>23+</sup>",
+        "level": 2,
+        "line_start": 761,
+        "line_end": 809,
+        "summary": "getIndex(object: T): Promise&lt;number&gt;\n\n获取指定文件资产在文件检索结果中的索引。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在Sta"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getRangeObjects<sup>23+</sup>",
+        "level": 2,
+        "line_start": 810,
+        "line_end": 870,
+        "summary": "getRangeObjects(index: number, offset: number): Promise\\<T[]\\>\n\n在文件检索结果中，从指定索引（第一个参数）开始，获取指定长度（第二个参"
+      }
+    ]
+  }
+}

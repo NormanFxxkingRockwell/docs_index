@@ -1,0 +1,84 @@
+{
+  "doc_id": "errorcode-net-mdns",
+  "title": "MDNS错误码",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/errorcode-net-mdns.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/errorcode-net-mdns.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 MDNS错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "MDNS错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "2100002 连接服务失败",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 32,
+        "summary": "**错误信息**\n\nFailed to connect to the service.\n\n**错误描述**\n\n操作失败，连接系统服务发生异常。\n\n**可能原因**\n\n服务发生异常。\n\n**处理步骤*"
+      },
+      {
+        "section_id": "section-2",
+        "title": "2100003 系统内部错误",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 54,
+        "summary": "**错误信息**\n\nSystem internal error.\n\n**错误描述**\n\n系统内部错误。\n\n**可能原因**\n\n1.内存异常。\n\n2.空指针。\n\n**处理步骤**\n\n1.检查内存空间是"
+      },
+      {
+        "section_id": "section-3",
+        "title": "2204003 重复注册",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 72,
+        "summary": "**错误信息**\n\nCallback duplicated.\n\n**错误描述**\n\ncallback 已经存在。\n\n**可能原因**\n\n重复注册相同名称和类型的mDNS服务。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "2204007 服务已存在",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 90,
+        "summary": "**错误信息**\n\nService instance duplicated.\n\n**错误描述**\n\n服务已存在。\n\n**可能原因**\n\n之前注册的服务还在运行。\n\n**处理步骤**\n\n检查mDNS服"
+      },
+      {
+        "section_id": "section-5",
+        "title": "2204008 删除服务失败",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 108,
+        "summary": "**错误信息**\n\nFailed to delete the service instance.\n\n**错误描述**\n\n想要移除的服务不存在。\n\n**可能原因**\n\n之前已经把服务删除，二次删除相同"
+      },
+      {
+        "section_id": "section-6",
+        "title": "2204009 发送数据报文失败",
+        "level": 2,
+        "line_start": 109,
+        "line_end": 126,
+        "summary": "**错误信息**\n\nFailed to send packet.\n\n**错误描述**\n\n发送数据报文失败。\n\n**可能原因**\n\n当前没有可用网络。\n\n**处理步骤**\n\n检查当前设备是否连接到了可"
+      },
+      {
+        "section_id": "section-7",
+        "title": "2204010 发送消息失败",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 144,
+        "summary": "**错误信息**\n\nFailed to send the message.\n\n**错误描述**\n\n发送信息失败。\n\n**可能原因**\n\n局域网内不存在该mDNS服务。\n\n**处理步骤**\n\n检查局域"
+      },
+      {
+        "section_id": "section-8",
+        "title": "2204006 解析服务超时",
+        "level": 2,
+        "line_start": 145,
+        "line_end": 161,
+        "summary": "**错误信息**\n\nRequest timeout.\n\n**错误描述**\n\n解析服务超时。\n\n**可能原因**\n\n局域网内不存在该类型的mDNS服务。\n\n**处理步骤**\n\n检查局域网内目标类型的m"
+      }
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "doc_id": "js-apis-connectedTag",
+  "title": "@ohos.connectedTag (有源标签)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-connectedTag.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-connectedTag.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@bitbegin",
+    "designer": "@guofan912",
+    "tester": "@wuqingyang1",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.connectedTag (有源标签)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.connectedTag (有源标签)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```js\nimport { connectedTag } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "connectedTag.init<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 41,
+        "summary": "init(): boolean\n\n初始化有源标签芯片。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使用[initialize](#"
+      },
+      {
+        "section_id": "section-3",
+        "title": "connectedTag.initialize<sup>9+</sup>",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 61,
+        "summary": "initialize(): void\n\n初始化有源标签芯片。\n\n**需要权限：** ohos.permission.NFC_TAG\n\n**系统能力：** SystemCapability.Commu"
+      },
+      {
+        "section_id": "section-4",
+        "title": "connectedTag.uninit<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 81,
+        "summary": "uninit(): boolean\n\n卸载有源标签芯片资源。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使用[uninitiali"
+      },
+      {
+        "section_id": "section-5",
+        "title": "connectedTag.uninitialize<sup>9+</sup>",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 101,
+        "summary": "uninitialize(): void\n\n卸载有源标签芯片资源。\n\n**需要权限:** ohos.permission.NFC_TAG\n\n**系统能力:** SystemCapability.Co"
+      },
+      {
+        "section_id": "section-6",
+        "title": "connectedTag.readNdefTag<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 102,
+        "line_end": 134,
+        "summary": "readNdefTag(): Promise&lt;string&gt;\n\n读取有源标签内容，使用promise方式作为异步方法。\n\n> **说明：**\n>\n> 从 API version 8 开始"
+      },
+      {
+        "section_id": "section-7",
+        "title": "connectedTag.read<sup>9+</sup>",
+        "level": 2,
+        "line_start": 135,
+        "line_end": 173,
+        "summary": "read(): Promise&lt;number[]&gt;\n\n读取有源标签内容，使用promise方式作为异步方法。\n\n**需要权限：** ohos.permission.NFC_TAG\n\n**"
+      },
+      {
+        "section_id": "section-8",
+        "title": "connectedTag.readNdefTag<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 174,
+        "line_end": 207,
+        "summary": "readNdefTag(callback: AsyncCallback&lt;string&gt;): void\n\n读取有源标签内容，使用AsyncCallback方式作为异步方法。\n\n> **说明"
+      },
+      {
+        "section_id": "section-9",
+        "title": "connectedTag.read<sup>9+</sup>",
+        "level": 2,
+        "line_start": 208,
+        "line_end": 247,
+        "summary": "read(callback: AsyncCallback&lt;number[]&gt;): void\n\n读取有源标签内容，使用AsyncCallback方式作为异步方法。\n\n**需要权限：** o"
+      },
+      {
+        "section_id": "section-10",
+        "title": "connectedTag.writeNdefTag<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 248,
+        "line_end": 287,
+        "summary": "writeNdefTag(data: string): Promise&lt;void&gt;\n\n写入内容到有源标签，使用promise方式作为异步方法。\n\n> **说明：**\n>\n> 从 API"
+      },
+      {
+        "section_id": "section-11",
+        "title": "connectedTag.write<sup>9+</sup>",
+        "level": 2,
+        "line_start": 288,
+        "line_end": 334,
+        "summary": "write(data: number[]): Promise&lt;void&gt;\n\n写入内容到有源标签，使用promise方式作为异步方法。\n\n**需要权限：** ohos.permission"
+      },
+      {
+        "section_id": "section-12",
+        "title": "connectedTag.writeNdefTag<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 335,
+        "line_end": 370,
+        "summary": "writeNdefTag(data: string, callback: AsyncCallback&lt;void&gt;): void\n\n写入内容到有源标签，使用AsyncCallback方式作"
+      },
+      {
+        "section_id": "section-13",
+        "title": "connectedTag.write<sup>9+</sup>",
+        "level": 2,
+        "line_start": 371,
+        "line_end": 413,
+        "summary": "write(data: number[], callback: AsyncCallback&lt;void&gt;): void\n\n写入内容到有源标签，使用AsyncCallback方式作为异步方法"
+      },
+      {
+        "section_id": "section-14",
+        "title": "connectedTag.on('notify')",
+        "level": 2,
+        "line_start": 414,
+        "line_end": 430,
+        "summary": "on(type: \"notify\", callback: Callback&lt;number&gt;): void\n\n注册NFC场强状态事件。\n\n**需要权限**：ohos.permission."
+      },
+      {
+        "section_id": "section-15",
+        "title": "connectedTag.off('notify')",
+        "level": 2,
+        "line_start": 431,
+        "line_end": 492,
+        "summary": "off(type: \"notify\", callback?: Callback&lt;number&gt;): void\n\n取消NFC场强状态事件的注册。\n\n**需要权限**：ohos.permis"
+      },
+      {
+        "section_id": "section-16",
+        "title": "NfcRfType",
+        "level": 2,
+        "line_start": 493,
+        "line_end": 503,
+        "summary": "表示NFC场强状态的枚举。\n\n**系统能力**：SystemCapability.Communication.ConnectedTag\n\n| 名称 | 值 | 说明 |\n| -------- | -"
+      }
+    ]
+  }
+}

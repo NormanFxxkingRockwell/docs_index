@@ -1,0 +1,148 @@
+{
+  "doc_id": "js-apis-system-router",
+  "title": "@system.router (页面路由)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-system-router.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-system-router.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@mayaolll",
+    "designer": "@jiangdayuan",
+    "tester": "@Giacinta",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 @system.router (页面路由)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@system.router (页面路由)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 25,
+        "summary": "```ts\nimport router from '@system.router';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "router.push",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 78,
+        "summary": "push(options: RouterOptions): void\n\n跳转到应用内的指定页面。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**参数"
+      },
+      {
+        "section_id": "section-3",
+        "title": "router.replace",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 122,
+        "summary": "replace(options: RouterOptions): void\n\n用应用内的某个页面替换当前页面，并销毁被替换的页面。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-4",
+        "title": "router.back",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 204,
+        "summary": "back(options?: BackRouterOptions): void\n\n返回上一页面或指定的页面。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-5",
+        "title": "router.getParams<sup>7+</sup>",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 218,
+        "summary": "getParams(): ParamsInterface\n\n获取当前页面的参数信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**返回值：**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "router.clear",
+        "level": 2,
+        "line_start": 219,
+        "line_end": 238,
+        "summary": "clear(): void\n\n清空页面栈中的所有历史页面，仅保留当前页面作为栈顶页面。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**示例：**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "router.getLength",
+        "level": 2,
+        "line_start": 239,
+        "line_end": 265,
+        "summary": "getLength(): string\n\n获取当前在页面栈内的页面数量。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-8",
+        "title": "router.getState",
+        "level": 2,
+        "line_start": 266,
+        "line_end": 294,
+        "summary": "getState(): RouterState\n\n获取当前页面的状态信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**返回值：**\n\n| 参数类"
+      },
+      {
+        "section_id": "section-9",
+        "title": "router.enableAlertBeforeBackPage<sup>6+</sup>",
+        "level": 2,
+        "line_start": 295,
+        "line_end": 328,
+        "summary": "enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void\n\n开启页面返回询问对话框。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-10",
+        "title": "router.disableAlertBeforeBackPage<sup>6+</sup>",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 361,
+        "summary": "disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void\n\n禁用页面返回询问对话框。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-11",
+        "title": "RouterOptions",
+        "level": 2,
+        "line_start": 362,
+        "line_end": 373,
+        "summary": "定义路由器的选项。\n\n**系统能力：**  以下各项对应的系统能力均为SystemCapability.ArkUI.ArkUI.Lite\n\n| 名称   | 类型 | 必填 | 说明"
+      },
+      {
+        "section_id": "section-12",
+        "title": "BackRouterOptions",
+        "level": 2,
+        "line_start": 374,
+        "line_end": 384,
+        "summary": "定义路由器返回的选项。\n\n**系统能力：**  以下各项对应的系统能力有所不同，详见下表。\n\n| 名称   | 类型 | 必填 | 说明"
+      },
+      {
+        "section_id": "section-13",
+        "title": "RouterState",
+        "level": 2,
+        "line_start": 385,
+        "line_end": 396,
+        "summary": "定义路由器的状态。\n\n**系统能力：**  以下各项对应的系统能力均为SystemCapability.ArkUI.ArkUI.Full\n\n| 名称    | 类型   | 必填   | 说明"
+      },
+      {
+        "section_id": "section-14",
+        "title": "EnableAlertBeforeBackPageOptions<sup>6+</sup>",
+        "level": 2,
+        "line_start": 397,
+        "line_end": 409,
+        "summary": "定义EnableAlertBeforeBackPage选项。\n\n**系统能力：**  以下各项对应的系统能力均为SystemCapability.ArkUI.ArkUI.Full\n\n| 名称"
+      },
+      {
+        "section_id": "section-15",
+        "title": "DisableAlertBeforeBackPageOptions<sup>6+</sup>",
+        "level": 2,
+        "line_start": 410,
+        "line_end": 421,
+        "summary": "定义DisableAlertBeforeBackPage参数选项。\n\n**系统能力：**  以下各项对应的系统能力均为SystemCapability.ArkUI.ArkUI.Full\n\n| 名称"
+      },
+      {
+        "section_id": "section-16",
+        "title": "ParamsInterface",
+        "level": 2,
+        "line_start": 422,
+        "line_end": 427,
+        "summary": "| 名称          | 参数类型 | 说明           |\n| ------------- | -------- | -------------- |\n| [key: string]"
+      }
+    ]
+  }
+}

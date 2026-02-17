@@ -1,0 +1,588 @@
+{
+  "doc_id": "js-apis-radio-sys",
+  "title": "@ohos.telephony.radio (网络搜索)（系统接口）",
+  "path": "zh-cn/application-dev/reference/apis-telephony-kit/js-apis-radio-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-telephony-kit/js-apis-radio-sys.md",
+  "metadata": {
+    "kit": "Telephony Kit",
+    "subsystem": "Telephony",
+    "owner": "@Terence_Super",
+    "designer": "@Terence_Super",
+    "tester": "@jiang_99",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Telephony Kit Telephony 模块的 @ohos.telephony.radio (网络搜索)（系统接口），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.telephony.radio (网络搜索)（系统接口）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 22,
+        "summary": "```ts\nimport { radio } from '@kit.TelephonyKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "radio.setPrimarySlotId<sup>8+</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 72,
+        "summary": "setPrimarySlotId\\(slotId: number, callback: AsyncCallback\\<void\\>\\): void\n\n设置主卡所在卡槽的索引号。使用callback异"
+      },
+      {
+        "section_id": "section-3",
+        "title": "radio.setPrimarySlotId<sup>8+</sup>",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 124,
+        "summary": "setPrimarySlotId\\(slotId: number\\): Promise\\<void\\>\n\n设置主卡所在卡槽的索引号。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接"
+      },
+      {
+        "section_id": "section-4",
+        "title": "radio.getIMEI<sup>8+</sup>",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 171,
+        "summary": "getIMEI\\(callback: AsyncCallback\\<string\\>\\): void\n\n获取设备的主卡的IMEI。使用callback异步回调。\n\n**系统接口：** 此接口为系统接"
+      },
+      {
+        "section_id": "section-5",
+        "title": "radio.getIMEI<sup>8+</sup>",
+        "level": 2,
+        "line_start": 172,
+        "line_end": 220,
+        "summary": "getIMEI\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取设备的指定卡槽的IMEI。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "radio.getIMEI<sup>8+</sup>",
+        "level": 2,
+        "line_start": 221,
+        "line_end": 271,
+        "summary": "getIMEI\\(slotId?: number\\): Promise\\<string\\>\n\n获取设备的指定卡槽的IMEI。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "radio.getMEID<sup>8+</sup>",
+        "level": 2,
+        "line_start": 272,
+        "line_end": 318,
+        "summary": "getMEID\\(callback: AsyncCallback\\<string\\>\\): void\n\n获取设备的指定卡槽的MEID。使用callback异步回调。\n\n**系统接口：** 此接口为系"
+      },
+      {
+        "section_id": "section-8",
+        "title": "radio.getMEID<sup>8+</sup>",
+        "level": 2,
+        "line_start": 319,
+        "line_end": 367,
+        "summary": "getMEID\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取设备的指定卡槽的MEID。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "radio.getMEID<sup>8+</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 418,
+        "summary": "getMEID\\(slotId?: number\\): Promise\\<string\\>\n\n获取设备的指定卡槽的MEID。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "radio.getUniqueDeviceId<sup>8+</sup>",
+        "level": 2,
+        "line_start": 419,
+        "line_end": 467,
+        "summary": "getUniqueDeviceId\\(callback: AsyncCallback\\<string\\>\\): void\n\n获取设备主卡的唯一设备ID。使用callback异步回调。\n\n如果设备注册"
+      },
+      {
+        "section_id": "section-11",
+        "title": "radio.getUniqueDeviceId<sup>8+</sup>",
+        "level": 2,
+        "line_start": 468,
+        "line_end": 518,
+        "summary": "getUniqueDeviceId\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取设备的指定卡槽的唯一设备ID。使用ca"
+      },
+      {
+        "section_id": "section-12",
+        "title": "radio.getUniqueDeviceId<sup>8+</sup>",
+        "level": 2,
+        "line_start": 519,
+        "line_end": 571,
+        "summary": "getUniqueDeviceId\\(slotId?: number\\): Promise\\<string\\>\n\n获取设备的指定卡槽的唯一设备ID。使用Promise异步回调。\n\n如果设备注册的是3"
+      },
+      {
+        "section_id": "section-13",
+        "title": "radio.sendUpdateCellLocationRequest<sup>8+</sup>",
+        "level": 2,
+        "line_start": 572,
+        "line_end": 617,
+        "summary": "sendUpdateCellLocationRequest\\(callback: AsyncCallback\\<void\\>\\): void\n\n发送更新小区位置请求。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "radio.sendUpdateCellLocationRequest<sup>8+</sup>",
+        "level": 2,
+        "line_start": 618,
+        "line_end": 665,
+        "summary": "sendUpdateCellLocationRequest\\(slotId: number, callback: AsyncCallback\\<void\\>\\): void\n\n发送更新小区位置请求。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "radio.sendUpdateCellLocationRequest<sup>8+</sup>",
+        "level": 2,
+        "line_start": 666,
+        "line_end": 716,
+        "summary": "sendUpdateCellLocationRequest\\(slotId?: number\\): Promise\\<void\\>\n\n发送更新小区位置请求。使用Promise异步回调。\n\n**系统接"
+      },
+      {
+        "section_id": "section-16",
+        "title": "radio.getCellInformation<sup>8+</sup>",
+        "level": 2,
+        "line_start": 717,
+        "line_end": 763,
+        "summary": "getCellInformation\\(callback: AsyncCallback\\<Array\\<CellInformation\\>\\>\\): void\n\n获取小区信息。使用callback异"
+      },
+      {
+        "section_id": "section-17",
+        "title": "radio.getCellInformation<sup>8+</sup>",
+        "level": 2,
+        "line_start": 764,
+        "line_end": 812,
+        "summary": "getCellInformation\\(slotId: number, callback: AsyncCallback\\<Array\\<CellInformation\\>\\>\\): void\n\n获取"
+      },
+      {
+        "section_id": "section-18",
+        "title": "radio.getCellInformation<sup>8+</sup>",
+        "level": 2,
+        "line_start": 813,
+        "line_end": 863,
+        "summary": "getCellInformation\\(slotId?: number\\): Promise\\<Array\\<CellInformation\\>\\>\n\n获取小区信息。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "radio.setNetworkSelectionMode",
+        "level": 2,
+        "line_start": 864,
+        "line_end": 922,
+        "summary": "setNetworkSelectionMode\\(options: NetworkSelectionModeOptions, callback: AsyncCallback\\<void\\>\\): v"
+      },
+      {
+        "section_id": "section-20",
+        "title": "radio.setNetworkSelectionMode",
+        "level": 2,
+        "line_start": 923,
+        "line_end": 984,
+        "summary": "setNetworkSelectionMode\\(options: NetworkSelectionModeOptions\\): Promise\\<void\\>\n\n设置网络选择模式。使用Promis"
+      },
+      {
+        "section_id": "section-21",
+        "title": "radio.getNetworkSearchInformation",
+        "level": 2,
+        "line_start": 985,
+        "line_end": 1031,
+        "summary": "getNetworkSearchInformation\\(slotId: number, callback: AsyncCallback\\<NetworkSearchResult\\>\\): void"
+      },
+      {
+        "section_id": "section-22",
+        "title": "radio.getNetworkSearchInformation",
+        "level": 2,
+        "line_start": 1032,
+        "line_end": 1081,
+        "summary": "getNetworkSearchInformation\\(slotId: number\\): Promise\\<NetworkSearchResult\\>\n\n获取网络搜索信息。使用Promise异步"
+      },
+      {
+        "section_id": "section-23",
+        "title": "radio.getNrOptionMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1082,
+        "line_end": 1129,
+        "summary": "getNrOptionMode\\(callback: AsyncCallback\\<NrOptionMode\\>\\): void\n\n获取Nr选项模式。使用callback异步回调。\n\n> **说明："
+      },
+      {
+        "section_id": "section-24",
+        "title": "radio.getNrOptionMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1130,
+        "line_end": 1179,
+        "summary": "getNrOptionMode\\(slotId: number, callback: AsyncCallback\\<NrOptionMode\\>\\): void\n\n获取Nr选项模式 。使用callb"
+      },
+      {
+        "section_id": "section-25",
+        "title": "radio.getNrOptionMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1180,
+        "line_end": 1231,
+        "summary": "getNrOptionMode\\(slotId?: number\\): Promise\\<NrOptionMode\\>\n\n获取Nr选项模式 。使用Promise异步回调。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-26",
+        "title": "radio.turnOnRadio<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1232,
+        "line_end": 1278,
+        "summary": "turnOnRadio\\(callback: AsyncCallback\\<void\\>\\): void\n\n打开Radio。使用callback异步回调。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-27",
+        "title": "radio.turnOnRadio<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1279,
+        "line_end": 1327,
+        "summary": "turnOnRadio\\(slotId: number, callback: AsyncCallback\\<void\\>\\): void\n\n打开指定卡槽的Radio。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-28",
+        "title": "radio.turnOnRadio<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1328,
+        "line_end": 1378,
+        "summary": "turnOnRadio(slotId?: number): Promise\\<void\\>\n\n打开Radio。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限*"
+      },
+      {
+        "section_id": "section-29",
+        "title": "radio.turnOffRadio<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1379,
+        "line_end": 1425,
+        "summary": "turnOffRadio\\(callback: AsyncCallback\\<void\\>\\): void\n\n关闭Radio。使用callback异步回调。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-30",
+        "title": "radio.turnOffRadio<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1426,
+        "line_end": 1474,
+        "summary": "turnOffRadio\\(slotId: number, callback: AsyncCallback\\<void\\>\\): void\n\n关闭指定卡槽的Radio。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-31",
+        "title": "radio.turnOffRadio<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1475,
+        "line_end": 1525,
+        "summary": "turnOffRadio\\(slotId?: number\\): Promise\\<void\\>\n\n关闭Radio。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。\n\n**需要"
+      },
+      {
+        "section_id": "section-32",
+        "title": "radio.setPreferredNetwork<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1526,
+        "line_end": 1575,
+        "summary": "setPreferredNetwork\\(slotId: number, networkMode: PreferredNetworkMode, callback: AsyncCallback\\<vo"
+      },
+      {
+        "section_id": "section-33",
+        "title": "radio.setPreferredNetwork<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1576,
+        "line_end": 1628,
+        "summary": "setPreferredNetwork\\(slotId: number, networkMode: PreferredNetworkMode\\): Promise\\<void\\>\n\n设置首选网络。使"
+      },
+      {
+        "section_id": "section-34",
+        "title": "radio.getPreferredNetwork<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1629,
+        "line_end": 1676,
+        "summary": "getPreferredNetwork\\(slotId: number, callback: AsyncCallback\\<PreferredNetworkMode\\>\\): void\n\n获取首选网"
+      },
+      {
+        "section_id": "section-35",
+        "title": "radio.getPreferredNetwork<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1677,
+        "line_end": 1727,
+        "summary": "getPreferredNetwork\\(slotId: number\\): Promise\\<PreferredNetworkMode\\>\n\n获取首选网络。使用Promise异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-36",
+        "title": "radio.getImsRegInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1728,
+        "line_end": 1777,
+        "summary": "getImsRegInfo\\(slotId: number, imsType: ImsServiceType, callback: AsyncCallback\\<ImsRegInfo\\>\\): vo"
+      },
+      {
+        "section_id": "section-37",
+        "title": "radio.getImsRegInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1778,
+        "line_end": 1830,
+        "summary": "getImsRegInfo\\(slotId: number, imsType: ImsServiceType\\): Promise\\<ImsRegInfo\\>\n\n获取特定IMS服务类型的IMS注册状"
+      },
+      {
+        "section_id": "section-38",
+        "title": "radio.on('imsRegStateChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1831,
+        "line_end": 1875,
+        "summary": "on\\(type: 'imsRegStateChange', slotId: number, imsType: ImsServiceType, callback: Callback\\<ImsRegI"
+      },
+      {
+        "section_id": "section-39",
+        "title": "radio.off('imsRegStateChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1876,
+        "line_end": 1921,
+        "summary": "off\\(type: 'imsRegStateChange', slotId: number, imsType: ImsServiceType, callback?: Callback\\<ImsRe"
+      },
+      {
+        "section_id": "section-40",
+        "title": "radio.getBasebandVersion<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1922,
+        "line_end": 1970,
+        "summary": "getBasebandVersion\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取设备的基带版本号。使用callbac"
+      },
+      {
+        "section_id": "section-41",
+        "title": "radio.getBasebandVersion<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1971,
+        "line_end": 2022,
+        "summary": "getBasebandVersion\\(slotId: number\\): Promise\\<string\\>\n\n获取设备的基带版本号。使用Promise异步回调。\n\n**系统接口：** 此接口为系"
+      },
+      {
+        "section_id": "section-42",
+        "title": "radio.setNROptionMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2023,
+        "line_end": 2073,
+        "summary": "setNROptionMode\\(slotId: number, mode: NROptionMode, callback: AsyncCallback\\<void\\>\\): void\n\n设置NR选"
+      },
+      {
+        "section_id": "section-43",
+        "title": "radio.setNROptionMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2074,
+        "line_end": 2127,
+        "summary": "setNROptionMode\\(slotId: number, mode: NROptionMode\\): Promise\\<void\\>\n\n设置NR选项模式 。使用Promise异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-44",
+        "title": "radio.getNROptionMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2128,
+        "line_end": 2172,
+        "summary": "getNROptionMode\\(slotId: number, callback: AsyncCallback\\<NROptionMode\\>\\): void\n\n获取Nr选项模式 。使用callb"
+      },
+      {
+        "section_id": "section-45",
+        "title": "radio.getNROptionMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2173,
+        "line_end": 2221,
+        "summary": "getNROptionMode\\(slotId: number\\): Promise\\<NROptionMode\\>\n\n获取NR选项模式 。使用Promise异步回调。\n\n**系统接口：** 此接口"
+      },
+      {
+        "section_id": "section-46",
+        "title": "radio.getNetworkCapability<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2222,
+        "line_end": 2272,
+        "summary": "getNetworkCapability\\(slotId: number, type: NetworkCapabilityType, callback: AsyncCallback\\<Network"
+      },
+      {
+        "section_id": "section-47",
+        "title": "radio.getNetworkCapability<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2273,
+        "line_end": 2326,
+        "summary": "getNetworkCapability\\(slotId: number, type: NetworkCapabilityType\\): Promise\\<NetworkCapabilityStat"
+      },
+      {
+        "section_id": "section-48",
+        "title": "radio.setNetworkCapability<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2327,
+        "line_end": 2380,
+        "summary": "setNetworkCapability\\(slotId: number, type: NetworkCapabilityType, state: NetworkCapabilityState,"
+      },
+      {
+        "section_id": "section-49",
+        "title": "radio.setNetworkCapability<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2381,
+        "line_end": 2435,
+        "summary": "setNetworkCapability\\(slotId: number, type: NetworkCapabilityType, state: NetworkCapabilityState\\):"
+      },
+      {
+        "section_id": "section-50",
+        "title": "radio.factoryReset<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2436,
+        "line_end": 2486,
+        "summary": "factoryReset\\(slotId: number\\): Promise\\<void\\>\n\n重置网络状态设置。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。\n\n**需要"
+      },
+      {
+        "section_id": "section-51",
+        "title": "radio.getIMEISV<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2487,
+        "line_end": 2527,
+        "summary": "getIMEISV\\(slotId: number\\): string\n\n获取设备指定卡槽的软件版本号。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限**：ohos.permission"
+      },
+      {
+        "section_id": "section-52",
+        "title": "PreferredNetworkMode<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2528,
+        "line_end": 2572,
+        "summary": "首选网络模式。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称"
+      },
+      {
+        "section_id": "section-53",
+        "title": "CellInformation<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2573,
+        "line_end": 2584,
+        "summary": "小区信息。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称              |                  类型"
+      },
+      {
+        "section_id": "section-54",
+        "title": "CdmaCellInformation<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2585,
+        "line_end": 2600,
+        "summary": "CDMA小区信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称      | 类型   |"
+      },
+      {
+        "section_id": "section-55",
+        "title": "GsmCellInformation<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2601,
+        "line_end": 2617,
+        "summary": "GSM小区信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称   | 类型   | 只读"
+      },
+      {
+        "section_id": "section-56",
+        "title": "LteCellInformation<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2618,
+        "line_end": 2636,
+        "summary": "LTE小区信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称          | 类型"
+      },
+      {
+        "section_id": "section-57",
+        "title": "NrCellInformation<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2637,
+        "line_end": 2653,
+        "summary": "NR小区信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称    | 类型    |  只"
+      },
+      {
+        "section_id": "section-58",
+        "title": "TdscdmaCellInformation<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2654,
+        "line_end": 2670,
+        "summary": "TD-SCDMA小区信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-59",
+        "title": "WcdmaCellInformation<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2671,
+        "line_end": 2687,
+        "summary": "WCDMA小区信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称   | 类型   |"
+      },
+      {
+        "section_id": "section-60",
+        "title": "NrOptionMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2688,
+        "line_end": 2706,
+        "summary": "NR的选择模式。\n\n> **说明：**\n>\n> 从 API version 8开始支持，从API version 10开始废弃。建议使用[NROptionMode](#nroptionmode10)"
+      },
+      {
+        "section_id": "section-61",
+        "title": "NROptionMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2707,
+        "line_end": 2721,
+        "summary": "NR的选择模式。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称"
+      },
+      {
+        "section_id": "section-62",
+        "title": "NetworkSearchResult",
+        "level": 2,
+        "line_start": 2722,
+        "line_end": 2734,
+        "summary": "网络搜索结果。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称"
+      },
+      {
+        "section_id": "section-63",
+        "title": "NetworkInformation",
+        "level": 2,
+        "line_start": 2735,
+        "line_end": 2749,
+        "summary": "网络信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称            |"
+      },
+      {
+        "section_id": "section-64",
+        "title": "NetworkInformationState",
+        "level": 2,
+        "line_start": 2750,
+        "line_end": 2764,
+        "summary": "网络信息状态。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称              |"
+      },
+      {
+        "section_id": "section-65",
+        "title": "NetworkSelectionModeOptions",
+        "level": 2,
+        "line_start": 2765,
+        "line_end": 2779,
+        "summary": "网络选择模式选项。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称"
+      },
+      {
+        "section_id": "section-66",
+        "title": "ImsRegState<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2780,
+        "line_end": 2792,
+        "summary": "IMS注册状态。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称             |"
+      },
+      {
+        "section_id": "section-67",
+        "title": "ImsRegTech<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2793,
+        "line_end": 2807,
+        "summary": "IMS注册技术。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称"
+      },
+      {
+        "section_id": "section-68",
+        "title": "ImsRegInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2808,
+        "line_end": 2820,
+        "summary": "IMS注册信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称        | 类型"
+      },
+      {
+        "section_id": "section-69",
+        "title": "ImsServiceType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2821,
+        "line_end": 2835,
+        "summary": "IMS服务类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称       | 值   |"
+      },
+      {
+        "section_id": "section-70",
+        "title": "NetworkCapabilityType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2836,
+        "line_end": 2848,
+        "summary": "网络能力类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称             | 值"
+      },
+      {
+        "section_id": "section-71",
+        "title": "NetworkCapabilityState<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2849,
+        "line_end": 2861,
+        "summary": "网络能力开关状态。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称"
+      }
+    ]
+  }
+}

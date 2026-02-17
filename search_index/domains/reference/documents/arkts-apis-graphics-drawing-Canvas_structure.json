@@ -1,0 +1,500 @@
+{
+  "doc_id": "arkts-apis-graphics-drawing-Canvas",
+  "title": "Class (Canvas)",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Canvas.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Canvas.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphic",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphic 模块的 Class (Canvas)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (Canvas)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 28,
+        "summary": "```ts\nimport { drawing } from '@kit.ArkGraphics2D';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "constructor",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 72,
+        "summary": "constructor(pixelmap: image.PixelMap)\n\n创建一个以PixelMap作为绘制目标的Canvas对象。\n\n**原子化服务API：** 从API version 22"
+      },
+      {
+        "section_id": "section-3",
+        "title": "drawRect",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 113,
+        "summary": "drawRect(rect: common2D.Rect): void\n\n绘制一个矩形，默认使用黑色填充。\n\n**系统能力：** SystemCapability.Graphics.Drawing"
+      },
+      {
+        "section_id": "section-4",
+        "title": "drawRect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 114,
+        "line_end": 158,
+        "summary": "drawRect(left: number, top: number, right: number, bottom: number): void\n\n绘制一个矩形，默认使用黑色填充。性能优于[draw"
+      },
+      {
+        "section_id": "section-5",
+        "title": "drawRoundRect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 196,
+        "summary": "drawRoundRect(roundRect: RoundRect): void\n\n画一个圆角矩形。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "drawNestedRoundRect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 238,
+        "summary": "drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void\n\n绘制两个嵌套的圆角矩形，外部矩形边界必须包含内部矩形边界，否则无绘制效果"
+      },
+      {
+        "section_id": "section-7",
+        "title": "drawBackground<sup>12+</sup>",
+        "level": 2,
+        "line_start": 239,
+        "line_end": 277,
+        "summary": "drawBackground(brush: Brush): void\n\n使用画刷填充画布的可绘制区域。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "drawShadow<sup>12+</sup>",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 336,
+        "summary": "drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: n"
+      },
+      {
+        "section_id": "section-9",
+        "title": "drawShadow<sup>18+</sup>",
+        "level": 2,
+        "line_start": 337,
+        "line_end": 383,
+        "summary": "drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: n"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getLocalClipBounds<sup>12+</sup>",
+        "level": 2,
+        "line_start": 384,
+        "line_end": 419,
+        "summary": "getLocalClipBounds(): common2D.Rect\n\n获取画布裁剪区域的边界。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getTotalMatrix<sup>12+</sup>",
+        "level": 2,
+        "line_start": 420,
+        "line_end": 450,
+        "summary": "getTotalMatrix(): Matrix\n\n获取画布矩阵。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-12",
+        "title": "drawCircle",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 493,
+        "summary": "drawCircle(x: number, y: number, radius: number): void\n\n绘制一个圆形。如果半径小于等于零，则不绘制。默认使用黑色填充。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-13",
+        "title": "drawImage",
+        "level": 2,
+        "line_start": 494,
+        "line_end": 556,
+        "summary": "drawImage(pixelmap: image.PixelMap, left: number, top: number, samplingOptions?: SamplingOptions):"
+      },
+      {
+        "section_id": "section-14",
+        "title": "drawImageRect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 557,
+        "line_end": 619,
+        "summary": "drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?: SamplingOptions):"
+      },
+      {
+        "section_id": "section-15",
+        "title": "drawImageRectWithSrc<sup>12+</sup>",
+        "level": 2,
+        "line_start": 620,
+        "line_end": 685,
+        "summary": "drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect, samp"
+      },
+      {
+        "section_id": "section-16",
+        "title": "drawColor",
+        "level": 2,
+        "line_start": 686,
+        "line_end": 728,
+        "summary": "drawColor(color: common2D.Color, blendMode?: BlendMode): void\n\n使用指定颜色并按照指定的[BlendMode](arkts-apis-g"
+      },
+      {
+        "section_id": "section-17",
+        "title": "drawColor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 729,
+        "line_end": 768,
+        "summary": "drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: BlendMode): void\n\n使用"
+      },
+      {
+        "section_id": "section-18",
+        "title": "drawColor<sup>18+</sup>",
+        "level": 2,
+        "line_start": 769,
+        "line_end": 805,
+        "summary": "drawColor(color: number, blendMode?: BlendMode): void\n\n使用指定颜色并按照指定的[BlendMode](arkts-apis-graphics-"
+      },
+      {
+        "section_id": "section-19",
+        "title": "drawVertices<sup>23+</sup>",
+        "level": 2,
+        "line_start": 806,
+        "line_end": 864,
+        "summary": "drawVertices(vertexMode: VertexMode, vertexCount: number, positions: Array\\<common2D.Point\\>, texs:"
+      },
+      {
+        "section_id": "section-20",
+        "title": "drawPixelMapMesh<sup>12+</sup>",
+        "level": 2,
+        "line_start": 865,
+        "line_end": 933,
+        "summary": "drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: number, meshHeight: number, vertices: Array\\<"
+      },
+      {
+        "section_id": "section-21",
+        "title": "clear<sup>12+</sup>",
+        "level": 2,
+        "line_start": 934,
+        "line_end": 970,
+        "summary": "clear(color: common2D.Color): void\n\n使用指定颜色填充画布上的裁剪区域。效果等同于[drawColor](#drawcolor)。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-22",
+        "title": "clear<sup>18+</sup>",
+        "level": 2,
+        "line_start": 971,
+        "line_end": 999,
+        "summary": "clear(color: common2D.Color | number): void\n\n使用指定颜色填充画布上的裁剪区域。\n\n**系统能力：** SystemCapability.Graphics"
+      },
+      {
+        "section_id": "section-23",
+        "title": "getWidth<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1000,
+        "line_end": 1028,
+        "summary": "getWidth(): number\n\n获取画布的宽度。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型   | 说明"
+      },
+      {
+        "section_id": "section-24",
+        "title": "getHeight<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1029,
+        "line_end": 1057,
+        "summary": "getHeight(): number\n\n获取画布的高度。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型   | 说明"
+      },
+      {
+        "section_id": "section-25",
+        "title": "drawOval<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1058,
+        "line_end": 1100,
+        "summary": "drawOval(oval: common2D.Rect): void\n\n在画布上绘制一个椭圆，椭圆的形状和位置由椭圆的外切矩形给出。\n\n**系统能力：** SystemCapability.Gra"
+      },
+      {
+        "section_id": "section-26",
+        "title": "drawArc<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1101,
+        "line_end": 1145,
+        "summary": "drawArc(arc: common2D.Rect, startAngle: number, sweepAngle: number): void\n\n在画布上绘制圆弧。该方法允许指定起始角度、扫描角"
+      },
+      {
+        "section_id": "section-27",
+        "title": "drawPoint",
+        "level": 2,
+        "line_start": 1146,
+        "line_end": 1187,
+        "summary": "drawPoint(x: number, y: number): void\n\n绘制一个点。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数：**"
+      },
+      {
+        "section_id": "section-28",
+        "title": "drawPoints<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1188,
+        "line_end": 1230,
+        "summary": "drawPoints(points: Array\\<common2D.Point>, mode?: PointMode): void\n\n在画布上绘制一组点、线段或多边形。通过指定点的数组和绘制模式来"
+      },
+      {
+        "section_id": "section-29",
+        "title": "drawPath",
+        "level": 2,
+        "line_start": 1231,
+        "line_end": 1275,
+        "summary": "drawPath(path: Path): void\n\n绘制一个自定义路径，该路径包含了一组路径轮廓，每个路径轮廓可以是开放的或封闭的。\n\n**系统能力：** SystemCapability.Gr"
+      },
+      {
+        "section_id": "section-30",
+        "title": "drawLine",
+        "level": 2,
+        "line_start": 1276,
+        "line_end": 1319,
+        "summary": "drawLine(x0: number, y0: number, x1: number, y1: number): void\n\n画一条直线段，从指定的起点到终点。如果直线段的起点和终点是同一个点，无"
+      },
+      {
+        "section_id": "section-31",
+        "title": "drawTextBlob",
+        "level": 2,
+        "line_start": 1320,
+        "line_end": 1366,
+        "summary": "drawTextBlob(blob: TextBlob, x: number, y: number): void\n\n绘制一段文字。若构造blob的字体不支持待绘制字符，则该部分字符无法绘制。\n\n**"
+      },
+      {
+        "section_id": "section-32",
+        "title": "drawSingleCharacter<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1367,
+        "line_end": 1414,
+        "summary": "drawSingleCharacter(text: string, font: Font, x: number, y: number): void\n\n绘制单个字符。当前字型中的字体不支持待绘制字符时"
+      },
+      {
+        "section_id": "section-33",
+        "title": "drawSingleCharacterWithFeatures<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1415,
+        "line_end": 1463,
+        "summary": "drawSingleCharacterWithFeatures(text: string, font: Font, x: number, y: number, features: Array\\<Fo"
+      },
+      {
+        "section_id": "section-34",
+        "title": "drawRegion<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1464,
+        "line_end": 1506,
+        "summary": "drawRegion(region: Region): void\n\n绘制一个区域。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数**\n\n| 参"
+      },
+      {
+        "section_id": "section-35",
+        "title": "attachPen",
+        "level": 2,
+        "line_start": 1507,
+        "line_end": 1551,
+        "summary": "attachPen(pen: Pen): void\n\n绑定画笔到画布上，在画布上进行绘制时，将使用画笔的样式去绘制图形形状的轮廓。\n\n> **说明：**\n>\n> 执行该方法后，若pen的效果发生改变"
+      },
+      {
+        "section_id": "section-36",
+        "title": "attachBrush",
+        "level": 2,
+        "line_start": 1552,
+        "line_end": 1595,
+        "summary": "attachBrush(brush: Brush): void\n\n绑定画刷到画布上，在画布上进行绘制时，将使用画刷的样式对绘制图形形状的内部进行填充。\n\n> **说明：**\n>\n> 执行该方法后，若"
+      },
+      {
+        "section_id": "section-37",
+        "title": "detachPen",
+        "level": 2,
+        "line_start": 1596,
+        "line_end": 1622,
+        "summary": "detachPen(): void\n\n将画笔与画布解绑，在画布上进行绘制时，不会再使用画笔去绘制图形形状的轮廓。\n\n**系统能力：** SystemCapability.Graphics.Drawi"
+      },
+      {
+        "section_id": "section-38",
+        "title": "detachBrush",
+        "level": 2,
+        "line_start": 1623,
+        "line_end": 1648,
+        "summary": "detachBrush(): void\n\n将画刷与画布解绑，在画布上进行绘制时，不会再使用画刷对绘制图形形状的内部进行填充。\n\n**系统能力：** SystemCapability.Graphics"
+      },
+      {
+        "section_id": "section-39",
+        "title": "clipPath<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1649,
+        "line_end": 1691,
+        "summary": "clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void\n\n使用自定义路径对画布的可绘制区域进行裁剪。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-40",
+        "title": "clipRect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1692,
+        "line_end": 1730,
+        "summary": "clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void\n\n使用矩形对画布的可绘制区域进行裁剪。\n\n**"
+      },
+      {
+        "section_id": "section-41",
+        "title": "save<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1731,
+        "line_end": 1760,
+        "summary": "save(): number\n\n保存当前画布状态（画布矩阵和可绘制区域）到栈顶。需要与恢复接口[restore](#restore12)配合使用。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-42",
+        "title": "saveLayer<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1761,
+        "line_end": 1822,
+        "summary": "saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): number\n\n保存当前画布的矩阵和裁剪区域，并为后续绘制分配位图。调用恢"
+      },
+      {
+        "section_id": "section-43",
+        "title": "scale<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1823,
+        "line_end": 1865,
+        "summary": "scale(sx: number, sy: number): void\n\n在当前画布矩阵（默认是单位矩阵）的基础上再叠加一个缩放矩阵，后续绘制操作和裁剪操作的形状和位置都会自动叠加一个缩放效果。"
+      },
+      {
+        "section_id": "section-44",
+        "title": "skew<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1866,
+        "line_end": 1908,
+        "summary": "skew(sx: number, sy: number) : void\n\n在当前画布矩阵（默认是单位矩阵）的基础上再叠加一个倾斜矩阵，后续绘制操作和裁剪操作的形状和位置都会自动叠加一个倾斜效果。"
+      },
+      {
+        "section_id": "section-45",
+        "title": "rotate<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1909,
+        "line_end": 1952,
+        "summary": "rotate(degrees: number, sx: number, sy: number) : void\n\n在当前画布矩阵（默认是单位矩阵）的基础上再叠加一个旋转矩阵，后续绘制操作和裁剪操作的形"
+      },
+      {
+        "section_id": "section-46",
+        "title": "translate<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1953,
+        "line_end": 1995,
+        "summary": "translate(dx: number, dy: number): void\n\n在当前画布矩阵（默认是单位矩阵）的基础上再叠加一个平移矩阵，后续绘制操作和裁剪操作的形状和位置都会自动叠加一个平移效"
+      },
+      {
+        "section_id": "section-47",
+        "title": "getSaveCount<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1996,
+        "line_end": 2031,
+        "summary": "getSaveCount(): number\n\n获取栈中保存的画布状态（画布矩阵和裁剪区域）的数量。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**"
+      },
+      {
+        "section_id": "section-48",
+        "title": "restoreToCount<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2032,
+        "line_end": 2079,
+        "summary": "restoreToCount(count: number): void\n\n恢复到指定数量的画布状态（画布矩阵和裁剪区域）。\n\n**系统能力：** SystemCapability.Graphics."
+      },
+      {
+        "section_id": "section-49",
+        "title": "restore<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2080,
+        "line_end": 2106,
+        "summary": "restore(): void\n\n恢复保存在栈顶的画布状态（画布矩阵和裁剪区域）。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**示例：**\n\n``"
+      },
+      {
+        "section_id": "section-50",
+        "title": "concatMatrix<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2107,
+        "line_end": 2145,
+        "summary": "concatMatrix(matrix: Matrix): void\n\n画布现有矩阵左乘传入矩阵，不影响之前的绘制操作，后续绘制操作和裁剪操作的形状和位置都会受到该矩阵的影响。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-51",
+        "title": "setMatrix<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2146,
+        "line_end": 2184,
+        "summary": "setMatrix(matrix: Matrix): void\n\n设置画布的矩阵，后续绘制操作和裁剪操作的形状和位置都会受到该矩阵的影响。\n\n**系统能力：** SystemCapability.G"
+      },
+      {
+        "section_id": "section-52",
+        "title": "isClipEmpty<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2185,
+        "line_end": 2216,
+        "summary": "isClipEmpty(): boolean\n\n判断裁剪后的可绘制区域是否为空。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n|"
+      },
+      {
+        "section_id": "section-53",
+        "title": "clipRegion<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2217,
+        "line_end": 2257,
+        "summary": "clipRegion(region: Region, clipOp?: ClipOp): void\n\n在画布上裁剪一个区域。\n\n**系统能力：** SystemCapability.Graphics"
+      },
+      {
+        "section_id": "section-54",
+        "title": "clipRoundRect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2258,
+        "line_end": 2299,
+        "summary": "clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): void\n\n在画布上裁剪一个圆角矩形。\n\n*"
+      },
+      {
+        "section_id": "section-55",
+        "title": "resetMatrix<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2300,
+        "line_end": 2322,
+        "summary": "resetMatrix(): void\n\n将当前画布的矩阵重置为单位矩阵。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**示例：**\n\n```ts"
+      },
+      {
+        "section_id": "section-56",
+        "title": "quickRejectPath<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2323,
+        "line_end": 2364,
+        "summary": "quickRejectPath(path: Path): boolean\n\n判断路径与画布区域是否不相交。画布区域包含边界。\n\n**系统能力：** SystemCapability.Graphics"
+      },
+      {
+        "section_id": "section-57",
+        "title": "quickRejectRect<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2365,
+        "line_end": 2403,
+        "summary": "quickRejectRect(rect: common2D.Rect): boolean\n\n判断矩形和画布区域是否不相交。画布区域包含边界。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-58",
+        "title": "drawArcWithCenter<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2404,
+        "line_end": 2441,
+        "summary": "drawArcWithCenter(arc: common2D.Rect, startAngle: number, sweepAngle: number, useCenter: boolean):"
+      },
+      {
+        "section_id": "section-59",
+        "title": "drawImageNine<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2442,
+        "line_end": 2522,
+        "summary": "drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D.Rect, filterMode:"
+      },
+      {
+        "section_id": "section-60",
+        "title": "drawImageLattice<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2523,
+        "line_end": 2604,
+        "summary": "drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.Rect, filterMode: Fi"
+      }
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "doc_id": "errorcode-pasteboard",
+  "title": "剪贴板错误码",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "MiscServices",
+    "owner": "@yangxiaodong41",
+    "designer": "@guo867",
+    "tester": "@maxiaorong",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit MiscServices 模块的 剪贴板错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "剪贴板错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "12900001 索引超过范围",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 30,
+        "summary": "**错误信息** \n\nThe index is out of range.\n\n**错误描述**\n\n当调用getRecord等涉及索引的接口时，索引超过范围时，系统会报此错误码。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-2",
+        "title": "12900002 Record数量超过最大限制",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 49,
+        "summary": "**错误信息**\n\nThe number of records exceeds the upper limit.\n\n**错误描述**\n\n当添加Record时，若当前PasteData记录数已达到最大"
+      },
+      {
+        "section_id": "section-3",
+        "title": "12900003 另外一个复制或粘贴正在进行",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 70,
+        "summary": "与错误码[27787277](#27787277-另外一个复制或粘贴正在进行)含义相同。\n\n**错误信息**\n\nAnother copy or paste operation is in progr"
+      },
+      {
+        "section_id": "section-4",
+        "title": "12900004 禁止复制",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 91,
+        "summary": "与错误码[27787278](#27787278-禁止复制)含义相同。\n\n**错误信息**\n\nReplication is prohibited.\n\n**错误描述**\n\n当对不支持复制的数据内容进行"
+      },
+      {
+        "section_id": "section-5",
+        "title": "12900005 请求超时",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 109,
+        "summary": "**错误信息**\n\nExcessive processing time for internal data.\n\n**错误描述**\n\n当内部处理数据耗时过长时，系统会报此错误码。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "12900006 设置已存在",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 127,
+        "summary": "**错误信息**\n\nSettings already exist.\n\n**错误描述**\n\n当应用全局的可粘贴的范围已存在时，再次进行设置时，系统会报此错误码。\n\n**可能原因**\n\n应用全局的可粘贴"
+      },
+      {
+        "section_id": "section-7",
+        "title": "12900007 文件拷贝失败",
+        "level": 2,
+        "line_start": 128,
+        "line_end": 146,
+        "summary": "**错误信息**\n\nInvalid destUri or file system error.\n\n**错误描述**\n\n当文件拷贝失败时，系统会报此错误码。\n\n**可能原因**\n\n文件下载拷贝失败。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "12900008 拉起进度条hap失败",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 164,
+        "summary": "**错误信息**\n\nFailed to start progress.\n\n**错误描述**\n\n用系统默认进度显示，创建进度显示失败时，系统会报此错误码。\n\n**可能原因**\n\n系统线程异常。\n\n**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "12900009 进度上报异常",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 182,
+        "summary": "**错误信息**\n\nProgress exits abnormally.\n\n**错误描述**\n\n 采用系统默认进度显示，进度上报异常时，系统会报此错误码。\n\n**可能原因**\n\n进度显示异常。\n\n*"
+      },
+      {
+        "section_id": "section-10",
+        "title": "12900010 获取粘贴数据失败",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 200,
+        "summary": "**错误信息**\n\nSystem error occurred during paste execution.\n\n**错误描述**\n\n当获取粘贴数据失败时，系统会报此错误码。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-11",
+        "title": "27787277 另外一个复制或粘贴正在进行",
+        "level": 2,
+        "line_start": 201,
+        "line_end": 221,
+        "summary": "与错误码[12900003](#12900003-另外一个复制或粘贴正在进行)含义相同。\n\n**错误信息**\n\nAnother copy or paste operation is in progr"
+      },
+      {
+        "section_id": "section-12",
+        "title": "27787278 禁止复制",
+        "level": 2,
+        "line_start": 222,
+        "line_end": 241,
+        "summary": "与错误码[12900004](#12900004-禁止复制)含义相同。\n\n**错误信息**\n\nReplication is prohibited.\n\n**错误描述**\n\n当对不支持复制的数据内容进行"
+      }
+    ]
+  }
+}

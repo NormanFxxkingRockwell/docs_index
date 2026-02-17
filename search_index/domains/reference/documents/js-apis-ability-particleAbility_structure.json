@@ -1,0 +1,140 @@
+{
+  "doc_id": "js-apis-ability-particleAbility",
+  "title": "@ohos.ability.particleAbility (ParticleAbility模块)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-ability-particleAbility.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-ability-particleAbility.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@xialiangwei",
+    "designer": "@jsjzju",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.ability.particleAbility (ParticleAbility模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.ability.particleAbility (ParticleAbility模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "使用限制",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 21,
+        "summary": "particleAbility模块用来对Data和Service类型的Ability进行操作。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { particleAbility } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-3",
+        "title": "particleAbility.startAbility",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 76,
+        "summary": "startAbility(parameter: StartAbilityParameter, callback: AsyncCallback\\<void>): void\n\n启动指定的particle"
+      },
+      {
+        "section_id": "section-4",
+        "title": "particleAbility.startAbility",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 125,
+        "summary": "startAbility(parameter: StartAbilityParameter): Promise\\<void>\n\n启动指定的particleAbility。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "particleAbility.terminateSelf",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 154,
+        "summary": "terminateSelf(callback: AsyncCallback\\<void>): void\n\n销毁当前particleAbility。使用callback异步回调。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-6",
+        "title": "particleAbility.terminateSelf",
+        "level": 2,
+        "line_start": 155,
+        "line_end": 181,
+        "summary": "terminateSelf(): Promise\\<void>\n\n销毁当前particleAbility。使用Promise异步回调。\n\n**系统能力**：SystemCapability.Abil"
+      },
+      {
+        "section_id": "section-7",
+        "title": "particleAbility.acquireDataAbilityHelper",
+        "level": 2,
+        "line_start": 182,
+        "line_end": 217,
+        "summary": "acquireDataAbilityHelper(uri: string): DataAbilityHelper\n\n获取dataAbilityHelper对象。\n\n> **说明：**\n>\n> 组件启"
+      },
+      {
+        "section_id": "section-8",
+        "title": "particleAbility.startBackgroundRunning<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 218,
+        "line_end": 284,
+        "summary": "startBackgroundRunning(id: number, request: NotificationRequest, callback: AsyncCallback&lt;void&gt"
+      },
+      {
+        "section_id": "section-9",
+        "title": "particleAbility.startBackgroundRunning<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 285,
+        "line_end": 352,
+        "summary": "startBackgroundRunning(id: number, request: NotificationRequest): Promise&lt;void&gt;\n\n向系统申请长时任务。使用"
+      },
+      {
+        "section_id": "section-10",
+        "title": "particleAbility.cancelBackgroundRunning<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 353,
+        "line_end": 388,
+        "summary": "cancelBackgroundRunning(callback: AsyncCallback&lt;void&gt;): void\n\n向系统申请取消长时任务。使用callback异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-11",
+        "title": "particleAbility.cancelBackgroundRunning<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 389,
+        "line_end": 420,
+        "summary": "cancelBackgroundRunning(): Promise&lt;void&gt;\n\n向系统申请取消长时任务。使用Promise异步回调。\n\n**系统能力**：SystemCapabili"
+      },
+      {
+        "section_id": "section-12",
+        "title": "particleAbility.connectAbility",
+        "level": 2,
+        "line_start": 421,
+        "line_end": 480,
+        "summary": "connectAbility(request: Want, options:ConnectOptions): number\n\n将当前ability与指定的ServiceAbility进行连接。\n\n>"
+      },
+      {
+        "section_id": "section-13",
+        "title": "particleAbility.disconnectAbility",
+        "level": 2,
+        "line_start": 481,
+        "line_end": 526,
+        "summary": "disconnectAbility(connection: number, callback:AsyncCallback\\<void>): void\n\n断开当前ability与指定ServiceAb"
+      },
+      {
+        "section_id": "section-14",
+        "title": "particleAbility.disconnectAbility",
+        "level": 2,
+        "line_start": 527,
+        "line_end": 578,
+        "summary": "disconnectAbility(connection: number): Promise\\<void>\n\n断开当前ability与指定ServiceAbility的连接。使用Promise异步回"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ErrorCode",
+        "level": 2,
+        "line_start": 579,
+        "line_end": 588,
+        "summary": "定义启动Ability时返回的错误码。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.FAModel\n\n| 名称"
+      }
+    ]
+  }
+}

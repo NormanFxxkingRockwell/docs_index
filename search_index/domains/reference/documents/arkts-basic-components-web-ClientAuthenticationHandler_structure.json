@@ -1,0 +1,68 @@
+{
+  "doc_id": "arkts-basic-components-web-ClientAuthenticationHandler",
+  "title": "Class (ClientAuthenticationHandler)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-basic-components-web-ClientAuthenticationHandler.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-basic-components-web-ClientAuthenticationHandler.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Class (ClientAuthenticationHandler)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (ClientAuthenticationHandler)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "constructor<sup>9+</sup>",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 26,
+        "summary": "constructor()\n\nClientAuthenticationHandler的构造函数。\n\n**系统能力：** SystemCapability.Web.Webview.Core"
+      },
+      {
+        "section_id": "section-2",
+        "title": "confirm<sup>9+</sup>",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 41,
+        "summary": "confirm(priKeyFile : string, certChainFile : string): void\n\n通知Web组件使用指定的私钥和客户端证书链。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-3",
+        "title": "confirm<sup>10+</sup>",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 72,
+        "summary": "confirm(authUri : string): void\n\n通知Web组件使用指定的凭据(从证书管理模块获得)。\n\n> **说明：**\n>\n> 需要配置权限：ohos.permission.A"
+      },
+      {
+        "section_id": "section-4",
+        "title": "confirm<sup>22+</sup>",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 95,
+        "summary": "confirm(identity: string, credentialTypeOrCertChainFile: CredentialType \\| string): void\n\n通知Web组件使用"
+      },
+      {
+        "section_id": "section-5",
+        "title": "cancel<sup>9+</sup>",
+        "level": 2,
+        "line_start": 96,
+        "line_end": 103,
+        "summary": "cancel(): void\n\n通知Web组件取消相同host和port服务器发送的客户端证书请求事件。同时，相同host和port服务器的请求，不重复上报该事件。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ignore<sup>9+</sup>",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 110,
+        "summary": "ignore(): void\n\n通知Web组件忽略本次请求。\n\n**系统能力：** SystemCapability.Web.Webview.Core"
+      }
+    ]
+  }
+}

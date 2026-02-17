@@ -1,0 +1,364 @@
+{
+  "doc_id": "js-apis-window-sys",
+  "title": "@ohos.window (窗口)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-window-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-window-sys.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "Window",
+    "owner": "@waterwin",
+    "designer": "@nyankomiya",
+    "tester": "@qinliwen0417",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkUI Window 模块的 @ohos.window (窗口)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.window (窗口)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 29,
+        "summary": "```ts\nimport { window } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "WindowType<sup>7+</sup>",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 61,
+        "summary": "窗口类型枚举。\n\n\n| 名称                                  | 值 | 说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "Configuration<sup>9+</sup>",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 72,
+        "summary": "创建子窗口或系统窗口时的参数。\n\n**系统接口：** 此接口为系统接口。\n\n| 名称 | 类型 | 只读 | 可选 | 说明                       |\n| ----------"
+      },
+      {
+        "section_id": "section-4",
+        "title": "WindowMode<sup>7+</sup>",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 88,
+        "summary": "窗口模式枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-5",
+        "title": "WindowLayoutMode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 89,
+        "line_end": 102,
+        "summary": "窗口布局模式枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-6",
+        "title": "BlurStyle<sup>9+</sup>",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 117,
+        "summary": "窗口模糊类型枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-7",
+        "title": "AnimationType<sup>20+</sup>",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 129,
+        "summary": "窗口动画类型枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：**  SystemCapability.Window.SessionManager\n\n| 名称    | 值   |"
+      },
+      {
+        "section_id": "section-8",
+        "title": "SystemBarRegionTint<sup>8+</sup>",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 145,
+        "summary": "单个导航栏或状态栏回调信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n|"
+      },
+      {
+        "section_id": "section-9",
+        "title": "SystemBarTintState<sup>8+</sup>",
+        "level": 2,
+        "line_start": 146,
+        "line_end": 158,
+        "summary": "当前系统栏回调信息集合。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名"
+      },
+      {
+        "section_id": "section-10",
+        "title": "ScaleOptions<sup>9+</sup>",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 173,
+        "summary": "缩放参数。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.WindowManager.WindowManager.Core\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "RotateOptions<sup>9+</sup>",
+        "level": 2,
+        "line_start": 174,
+        "line_end": 189,
+        "summary": "旋转参数。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.WindowManager.WindowManager.Core\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-12",
+        "title": "TranslateOptions<sup>9+</sup>",
+        "level": 2,
+        "line_start": 190,
+        "line_end": 204,
+        "summary": "平移参数。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.WindowManager.WindowManager.Core\n\n| 名称 | 类型 |"
+      },
+      {
+        "section_id": "section-13",
+        "title": "StartAnimationSystemParams<sup>20+</sup>",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 221,
+        "summary": "启动动画配置，仅对全屏应用生效。\n\n不同应用间跳转场景不生效，仍保持系统默认动效。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Window.S"
+      },
+      {
+        "section_id": "section-14",
+        "title": "WindowCreateParams<sup>20+</sup>",
+        "level": 2,
+        "line_start": 222,
+        "line_end": 232,
+        "summary": "应用启动时的窗口参数配置。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Window.SessionManager\n| 名称"
+      },
+      {
+        "section_id": "section-15",
+        "title": "window.minimizeAll<sup>9+</sup>",
+        "level": 2,
+        "line_start": 233,
+        "line_end": 288,
+        "summary": "minimizeAll(id: number, callback: AsyncCallback&lt;void&gt;): void\n\n最小化指定ID的屏幕中的所有主窗口。\n\n**系统接口：** 此接"
+      },
+      {
+        "section_id": "section-16",
+        "title": "window.minimizeAll<sup>9+</sup>",
+        "level": 2,
+        "line_start": 289,
+        "line_end": 343,
+        "summary": "minimizeAll(id: number): Promise&lt;void&gt;\n\n最小化指定ID的屏幕中的所有主窗口，使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "window.minimizeAllWithExclusion<sup>23+</sup>",
+        "level": 2,
+        "line_start": 344,
+        "line_end": 399,
+        "summary": "minimizeAllWithExclusion(displayId: number, excludeWindowId: number): Promise&lt;void&gt;\n\n最小化指定ID的屏"
+      },
+      {
+        "section_id": "section-18",
+        "title": "window.toggleShownStateForAllAppWindows<sup>9+</sup>",
+        "level": 2,
+        "line_start": 400,
+        "line_end": 439,
+        "summary": "toggleShownStateForAllAppWindows(callback: AsyncCallback&lt;void&gt;): void\n\n多窗口快速切换时隐藏或者恢复应用窗口。\n\n**"
+      },
+      {
+        "section_id": "section-19",
+        "title": "window.toggleShownStateForAllAppWindows<sup>9+</sup>",
+        "level": 2,
+        "line_start": 440,
+        "line_end": 477,
+        "summary": "toggleShownStateForAllAppWindows(): Promise&lt;void&gt;\n\n多窗口快速切换时隐藏或者恢复应用窗口，使用Promise异步回调。\n\n**系统接口：*"
+      },
+      {
+        "section_id": "section-20",
+        "title": "window.setWindowLayoutMode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 478,
+        "line_end": 522,
+        "summary": "setWindowLayoutMode(mode: WindowLayoutMode, callback: AsyncCallback&lt;void&gt;): void\n\n设置窗口布局模式，使用c"
+      },
+      {
+        "section_id": "section-21",
+        "title": "window.setWindowLayoutMode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 523,
+        "line_end": 570,
+        "summary": "setWindowLayoutMode(mode: WindowLayoutMode): Promise&lt;void&gt;\n\n设置窗口布局模式，使用Promise异步回调。\n\n**系统接口：**"
+      },
+      {
+        "section_id": "section-22",
+        "title": "window.on('systemBarTintChange')<sup>8+</sup>",
+        "level": 2,
+        "line_start": 571,
+        "line_end": 608,
+        "summary": "on(type: 'systemBarTintChange', callback: Callback&lt;SystemBarTintState&gt;): void\n\n开启状态栏、导航栏属性变化的"
+      },
+      {
+        "section_id": "section-23",
+        "title": "window.off('systemBarTintChange')<sup>8+</sup>",
+        "level": 2,
+        "line_start": 609,
+        "line_end": 651,
+        "summary": "off(type: 'systemBarTintChange', callback?: Callback&lt;SystemBarTintState &gt;): void\n\n关闭状态栏、导航栏属性"
+      },
+      {
+        "section_id": "section-24",
+        "title": "window.on('gestureNavigationEnabledChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 652,
+        "line_end": 691,
+        "summary": "on(type: 'gestureNavigationEnabledChange', callback: Callback&lt;boolean&gt;): void\n\n添加手势导航启用状态变化的监"
+      },
+      {
+        "section_id": "section-25",
+        "title": "window.off('gestureNavigationEnabledChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 692,
+        "line_end": 735,
+        "summary": "off(type: 'gestureNavigationEnabledChange', callback?: Callback&lt;boolean&gt;): void\n\n移除手势导航启用状态变化"
+      },
+      {
+        "section_id": "section-26",
+        "title": "window.on('waterMarkFlagChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 736,
+        "line_end": 775,
+        "summary": "on(type: 'waterMarkFlagChange', callback: Callback&lt;boolean&gt;): void\n\n添加水印启用状态变化的监听。\n\n**系统接口：**"
+      },
+      {
+        "section_id": "section-27",
+        "title": "window.off('waterMarkFlagChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 776,
+        "line_end": 819,
+        "summary": "off(type: 'waterMarkFlagChange', callback?: Callback&lt;boolean&gt;): void\n\n移除水印启用状态变化的监听。\n\n**系统接口："
+      },
+      {
+        "section_id": "section-28",
+        "title": "window.setGestureNavigationEnabled<sup>10+</sup>",
+        "level": 2,
+        "line_start": 820,
+        "line_end": 865,
+        "summary": "setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置手势导航启用状态。"
+      },
+      {
+        "section_id": "section-29",
+        "title": "window.setGestureNavigationEnabled<sup>10+</sup>",
+        "level": 2,
+        "line_start": 866,
+        "line_end": 914,
+        "summary": "setGestureNavigationEnabled(enable: boolean): Promise&lt;void&gt;\n\n设置手势导航启用状态。使用Promise异步回调。系统出于安全的考"
+      },
+      {
+        "section_id": "section-30",
+        "title": "window.setWaterMarkImage<sup>10+</sup>",
+        "level": 2,
+        "line_start": 915,
+        "line_end": 974,
+        "summary": "setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: AsyncCallback&lt;void&gt;): v"
+      },
+      {
+        "section_id": "section-31",
+        "title": "window.setWaterMarkImage<sup>10+</sup>",
+        "level": 2,
+        "line_start": 975,
+        "line_end": 1037,
+        "summary": "setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise&lt;void&gt;\n\n设置屏幕水印图片显示状态。使用Pr"
+      },
+      {
+        "section_id": "section-32",
+        "title": "window.getSnapshot<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1038,
+        "line_end": 1088,
+        "summary": "getSnapshot(windowId: number): Promise<image.PixelMap>\n\n获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过"
+      },
+      {
+        "section_id": "section-33",
+        "title": "window.notifyScreenshotEvent<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1089,
+        "line_end": 1138,
+        "summary": "notifyScreenshotEvent(eventType: ScreenshotEventType): Promise&lt;void&gt;\n\n通知屏幕截屏的事件类型，使用Promise异步"
+      },
+      {
+        "section_id": "section-34",
+        "title": "window.getTopNavDestinationName<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1139,
+        "line_end": 1190,
+        "summary": "getTopNavDestinationName(windowId: number): Promise&lt;string&gt;\n\n获取指定的前台窗口当前栈顶[Navigation](arkui-"
+      },
+      {
+        "section_id": "section-35",
+        "title": "window.setSpecificSystemWindowZIndex<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1191,
+        "line_end": 1243,
+        "summary": "setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: number): Promise&lt;void&gt;\n\n设置系统窗口的窗"
+      },
+      {
+        "section_id": "section-36",
+        "title": "Window",
+        "level": 2,
+        "line_start": 1244,
+        "line_end": 4085,
+        "summary": "当前窗口实例，窗口管理器管理的基本单元。\n\n下列API示例中都需先使用[getLastWindow()](arkts-apis-window-f.md#windowgetlastwindow9)、["
+      },
+      {
+        "section_id": "section-37",
+        "title": "SubWindowOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4086,
+        "line_end": 4093,
+        "summary": "子窗口创建参数。\n\n| 名称      | 类型  | 只读 | 可选 | 说明         |\n| ---------- | ---- | ---- | ---- | -----------"
+      },
+      {
+        "section_id": "section-38",
+        "title": "WindowStage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 4094,
+        "line_end": 4395,
+        "summary": "窗口管理器。管理各个基本窗口单元，即[Window](arkts-apis-window-Window.md)实例。\n\n下列API示例中都需在[onWindowStageCreate()](../a"
+      },
+      {
+        "section_id": "section-39",
+        "title": "TransitionContext<sup>9+</sup>",
+        "level": 2,
+        "line_start": 4396,
+        "line_end": 4467,
+        "summary": "属性转换的上下文信息。\n\n**系统接口：** 此接口为系统接口。\n\n### 属性\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.WindowMana"
+      },
+      {
+        "section_id": "section-40",
+        "title": "TransitionController<sup>9+</sup>",
+        "level": 2,
+        "line_start": 4468,
+        "line_end": 4659,
+        "summary": "属性转换控制器。使用其子接口之前得先创建系统窗口，参照示例代码。\n\n**系统接口：** 此接口为系统接口。\n\n**示例：**\n\n```ts\nimport { BusinessError } from"
+      },
+      {
+        "section_id": "section-41",
+        "title": "ExtensionWindowAttribute<sup>14+</sup>",
+        "level": 2,
+        "line_start": 4660,
+        "line_end": 4674,
+        "summary": "扩展窗口的属性枚举。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Window.Ses"
+      },
+      {
+        "section_id": "section-42",
+        "title": "SystemWindowOptions<sup>14+</sup>",
+        "level": 2,
+        "line_start": 4675,
+        "line_end": 4688,
+        "summary": "系统窗口的创建参数。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Window.Ses"
+      },
+      {
+        "section_id": "section-43",
+        "title": "ExtensionWindowConfig<sup>14+</sup>",
+        "level": 2,
+        "line_start": 4689,
+        "line_end": 4705,
+        "summary": "创建扩展窗口时需要配置的参数。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Windo"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-system-bluetooth",
+  "title": "@system.bluetooth (蓝牙)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-system-bluetooth.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-system-bluetooth.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @system.bluetooth (蓝牙)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@system.bluetooth (蓝牙)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 23,
+        "summary": "```\nimport bluetooth from '@system.bluetooth';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "bluetooth.startBLEScan(OBJECT)",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 57,
+        "summary": "开始搜寻附近的低功耗蓝牙外围设备。此操作比较耗费系统资源，请在搜索并连接到设备后调用[bluetooth.stopBLEScan](#bluetoothstopblescanobject)方法停止搜"
+      },
+      {
+        "section_id": "section-3",
+        "title": "bluetooth.stopBLEScan(OBJECT)",
+        "level": 2,
+        "line_start": 58,
+        "line_end": 89,
+        "summary": "停止搜寻附近的低功耗蓝牙外围设备。与[bluetooth.startBLEScan(OBJECT)](#bluetoothstartblescanobject)接口配套使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "bluetooth.subscribeBLEFound(OBJECT)",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 133,
+        "summary": "订阅寻找到新设备。再次调用时，会覆盖前一次调用效果，即仅最后一次调用生效。\n\n**系统能力：** SystemCapability.Communication.Bluetooth.Lite\n\n**参"
+      },
+      {
+        "section_id": "section-5",
+        "title": "bluetooth.unsubscribeBLEFound()",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 146,
+        "summary": "解除订阅寻找到新设备。\n\n**系统能力：** SystemCapability.Communication.Bluetooth.Lite\n\n**示例：**\n\n  ```\n  bluetooth.un"
+      },
+      {
+        "section_id": "section-6",
+        "title": "常见错误码",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 161,
+        "summary": "| 错误码 | 说明 |\n| -------- | -------- |\n| 1100 | 是否处于已连接状态。 |\n| 1101 | 当前蓝牙适配器不可用。 |\n| 1102 | 没有找到指定设备"
+      }
+    ]
+  }
+}

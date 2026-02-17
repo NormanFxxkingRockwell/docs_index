@@ -1,0 +1,684 @@
+{
+  "doc_id": "arkts-apis-audio-AudioRenderer",
+  "title": "Interface (AudioRenderer)",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioRenderer.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioRenderer.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@songshenke",
+    "designer": "@caixuejiang; @hao-liangfei; @zhanganxiang",
+    "tester": "@Filger",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 Interface (AudioRenderer)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AudioRenderer)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { audio } from '@kit.AudioKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 39,
+        "summary": "**系统能力：** SystemCapability.Multimedia.Audio.Renderer\n\n| 名称  | 类型                     | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getRendererInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 67,
+        "summary": "getRendererInfo(callback: AsyncCallback<AudioRendererInfo\\>): void\n\n获取当前创建的音频渲染器信息。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getRendererInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 93,
+        "summary": "getRendererInfo(): Promise<AudioRendererInfo\\>\n\n获取当前创建的音频渲染器信息。使用Promise异步回调。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getRendererInfoSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 121,
+        "summary": "getRendererInfoSync(): AudioRendererInfo\n\n获取当前创建的音频渲染器信息。同步返回结果。\n\n**系统能力：** SystemCapability.Multim"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getStreamInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 149,
+        "summary": "getStreamInfo(callback: AsyncCallback<AudioStreamInfo\\>): void\n\n获取音频流信息。使用callback异步回调。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getStreamInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 179,
+        "summary": "getStreamInfo(): Promise<AudioStreamInfo\\>\n\n获取音频流信息。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Mult"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getStreamInfoSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 210,
+        "summary": "getStreamInfoSync(): AudioStreamInfo\n\n获取音频流信息。同步返回结果。\n\n**系统能力：** SystemCapability.Multimedia.Audio."
+      },
+      {
+        "section_id": "section-9",
+        "title": "getAudioStreamId<sup>9+</sup>",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 234,
+        "summary": "getAudioStreamId(callback: AsyncCallback<number\\>): void\n\n获取音频流id。使用callback异步回调。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getAudioStreamId<sup>9+</sup>",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 260,
+        "summary": "getAudioStreamId(): Promise<number\\>\n\n获取音频流id。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getAudioStreamIdSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 261,
+        "line_end": 288,
+        "summary": "getAudioStreamIdSync(): number\n\n获取音频流id。同步返回结果。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Render"
+      },
+      {
+        "section_id": "section-12",
+        "title": "setAudioEffectMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 289,
+        "line_end": 326,
+        "summary": "setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback\\<void>): void\n\n设置当前音效模式。使用callbac"
+      },
+      {
+        "section_id": "section-13",
+        "title": "setAudioEffectMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 327,
+        "line_end": 367,
+        "summary": "setAudioEffectMode(mode: AudioEffectMode): Promise\\<void>\n\n设置当前音效模式。使用Promise异步回调。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getAudioEffectMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 395,
+        "summary": "getAudioEffectMode(callback: AsyncCallback\\<AudioEffectMode>): void\n\n获取当前音效模式。使用callback异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-15",
+        "title": "getAudioEffectMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 396,
+        "line_end": 421,
+        "summary": "getAudioEffectMode(): Promise\\<AudioEffectMode>\n\n获取当前音效模式。使用Promise异步回调。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-16",
+        "title": "start<sup>8+</sup>",
+        "level": 2,
+        "line_start": 422,
+        "line_end": 449,
+        "summary": "start(callback: AsyncCallback<void\\>): void\n\n启动音频渲染器。使用callback异步回调。\n\n**系统能力：** SystemCapability.Mu"
+      },
+      {
+        "section_id": "section-17",
+        "title": "start<sup>8+</sup>",
+        "level": 2,
+        "line_start": 450,
+        "line_end": 475,
+        "summary": "start(): Promise<void\\>\n\n启动音频渲染器。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Render"
+      },
+      {
+        "section_id": "section-18",
+        "title": "pause<sup>8+</sup>",
+        "level": 2,
+        "line_start": 476,
+        "line_end": 503,
+        "summary": "pause(callback: AsyncCallback\\<void>): void\n\n暂停音频渲染。使用callback异步回调。\n\n**系统能力：** SystemCapability.Mul"
+      },
+      {
+        "section_id": "section-19",
+        "title": "pause<sup>8+</sup>",
+        "level": 2,
+        "line_start": 504,
+        "line_end": 529,
+        "summary": "pause(): Promise\\<void>\n\n暂停音频渲染。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Rendere"
+      },
+      {
+        "section_id": "section-20",
+        "title": "drain<sup>8+</sup>",
+        "level": 2,
+        "line_start": 530,
+        "line_end": 557,
+        "summary": "drain(callback: AsyncCallback\\<void>): void\n\n检查缓冲区是否已被耗尽。使用callback异步回调。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-21",
+        "title": "drain<sup>8+</sup>",
+        "level": 2,
+        "line_start": 558,
+        "line_end": 583,
+        "summary": "drain(): Promise\\<void>\n\n检查缓冲区是否已被耗尽。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Re"
+      },
+      {
+        "section_id": "section-22",
+        "title": "flush<sup>11+</sup>",
+        "level": 2,
+        "line_start": 584,
+        "line_end": 617,
+        "summary": "flush(): Promise\\<void>\n\n清空缓冲区（[AudioState](arkts-apis-audio-e.md#audiostate8)为STATE_RUNNING、STATE_"
+      },
+      {
+        "section_id": "section-23",
+        "title": "stop<sup>8+</sup>",
+        "level": 2,
+        "line_start": 618,
+        "line_end": 645,
+        "summary": "stop(callback: AsyncCallback\\<void>): void\n\n停止音频渲染。使用callback异步回调。\n\n**系统能力：** SystemCapability.Mult"
+      },
+      {
+        "section_id": "section-24",
+        "title": "stop<sup>8+</sup>",
+        "level": 2,
+        "line_start": 646,
+        "line_end": 671,
+        "summary": "stop(): Promise\\<void>\n\n停止音频渲染。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Renderer"
+      },
+      {
+        "section_id": "section-25",
+        "title": "release<sup>8+</sup>",
+        "level": 2,
+        "line_start": 672,
+        "line_end": 699,
+        "summary": "release(callback: AsyncCallback\\<void>): void\n\n释放音频渲染器。使用callback异步回调。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-26",
+        "title": "release<sup>8+</sup>",
+        "level": 2,
+        "line_start": 700,
+        "line_end": 725,
+        "summary": "release(): Promise\\<void>\n\n释放音频渲染器。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Rend"
+      },
+      {
+        "section_id": "section-27",
+        "title": "getAudioTime<sup>8+</sup>",
+        "level": 2,
+        "line_start": 726,
+        "line_end": 749,
+        "summary": "getAudioTime(callback: AsyncCallback\\<number>): void\n\n获取当前播放位置的时间戳（从1970年1月1日开始），单位为纳秒。使用callback异步"
+      },
+      {
+        "section_id": "section-28",
+        "title": "getAudioTime<sup>8+</sup>",
+        "level": 2,
+        "line_start": 750,
+        "line_end": 775,
+        "summary": "getAudioTime(): Promise\\<number>\n\n获取当前播放位置的时间戳（从1970年1月1日开始），单位为纳秒。使用Promise异步回调。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-29",
+        "title": "getAudioTimeSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 776,
+        "line_end": 803,
+        "summary": "getAudioTimeSync(): number\n\n获取当前播放位置的时间戳（从1970年1月1日开始），单位为纳秒。同步返回结果。\n\n**系统能力：** SystemCapability.Mu"
+      },
+      {
+        "section_id": "section-30",
+        "title": "getAudioTimestampInfo<sup>19+</sup>",
+        "level": 2,
+        "line_start": 804,
+        "line_end": 843,
+        "summary": "getAudioTimestampInfo(): Promise\\<AudioTimestampInfo>\n\n获取输出音频流时间戳和位置信息，适配倍速接口。使用Promise异步回调。\n\n获取输出音"
+      },
+      {
+        "section_id": "section-31",
+        "title": "getAudioTimestampInfoSync<sup>19+</sup>",
+        "level": 2,
+        "line_start": 844,
+        "line_end": 879,
+        "summary": "getAudioTimestampInfoSync(): AudioTimestampInfo\n\n获取音频流时间戳和当前数据帧位置信息。同步返回结果。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-32",
+        "title": "getLatency<sup>23+</sup>",
+        "level": 2,
+        "line_start": 880,
+        "line_end": 931,
+        "summary": "getLatency(type: AudioLatencyType): number\n\n获取当前音频路由的预估时延。\n\n> **说明：**\n>\n> - 无线连接的音频设备，时延估算会存在误差，结果仅"
+      },
+      {
+        "section_id": "section-33",
+        "title": "getBufferSize<sup>8+</sup>",
+        "level": 2,
+        "line_start": 932,
+        "line_end": 962,
+        "summary": "getBufferSize(callback: AsyncCallback\\<number>): void\n\n获取音频渲染器的最小缓冲区大小。使用callback异步回调。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-34",
+        "title": "getBufferSize<sup>8+</sup>",
+        "level": 2,
+        "line_start": 963,
+        "line_end": 991,
+        "summary": "getBufferSize(): Promise\\<number>\n\n获取音频渲染器的最小缓冲区大小。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multi"
+      },
+      {
+        "section_id": "section-35",
+        "title": "getBufferSizeSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 992,
+        "line_end": 1021,
+        "summary": "getBufferSizeSync(): number\n\n获取音频渲染器的最小缓冲区大小。同步返回结果。\n\n**系统能力：** SystemCapability.Multimedia.Audio.R"
+      },
+      {
+        "section_id": "section-36",
+        "title": "setSpeed<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1022,
+        "line_end": 1050,
+        "summary": "setSpeed(speed: number): void\n\n设置播放倍速。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Renderer\n\n**参数："
+      },
+      {
+        "section_id": "section-37",
+        "title": "getSpeed<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1051,
+        "line_end": 1070,
+        "summary": "getSpeed(): number\n\n获取播放倍速。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Renderer\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-38",
+        "title": "setInterruptMode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1071,
+        "line_end": 1103,
+        "summary": "setInterruptMode(mode: InterruptMode): Promise&lt;void&gt;\n\n设置应用的焦点模型。使用Promise异步回调。\n\n**系统能力：** Sys"
+      },
+      {
+        "section_id": "section-39",
+        "title": "setInterruptMode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1104,
+        "line_end": 1133,
+        "summary": "setInterruptMode(mode: InterruptMode, callback: AsyncCallback\\<void>): void\n\n设置应用的焦点模型。使用callback异步"
+      },
+      {
+        "section_id": "section-40",
+        "title": "setInterruptModeSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1134,
+        "line_end": 1170,
+        "summary": "setInterruptModeSync(mode: InterruptMode): void\n\n设置应用的焦点模型。同步设置。\n\n**系统能力：** SystemCapability.Multim"
+      },
+      {
+        "section_id": "section-41",
+        "title": "setVolume<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1171,
+        "line_end": 1201,
+        "summary": "setVolume(volume: number): Promise&lt;void&gt;\n\n设置音频流的音量。使用Promise异步回调。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-42",
+        "title": "setVolume<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1202,
+        "line_end": 1229,
+        "summary": "setVolume(volume: number, callback: AsyncCallback\\<void>): void\n\n设置音频流的音量。使用callback异步回调。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-43",
+        "title": "getVolume<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1230,
+        "line_end": 1257,
+        "summary": "getVolume(): number\n\n获取音频流的音量。同步返回结果。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Renderer\n\n**返回值："
+      },
+      {
+        "section_id": "section-44",
+        "title": "getMinStreamVolume<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1258,
+        "line_end": 1284,
+        "summary": "getMinStreamVolume(callback: AsyncCallback&lt;number&gt;): void\n\n获取音频流的最小音量。使用callback异步回调。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-45",
+        "title": "getMinStreamVolume<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1285,
+        "line_end": 1310,
+        "summary": "getMinStreamVolume(): Promise&lt;number&gt;\n\n获取音频流的最小音量。使用Promise异步回调。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-46",
+        "title": "getMinStreamVolumeSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1311,
+        "line_end": 1338,
+        "summary": "getMinStreamVolumeSync(): number\n\n获取音频流的最小音量。同步返回结果。\n\n**系统能力：** SystemCapability.Multimedia.Audio.R"
+      },
+      {
+        "section_id": "section-47",
+        "title": "getMaxStreamVolume<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1339,
+        "line_end": 1365,
+        "summary": "getMaxStreamVolume(callback: AsyncCallback&lt;number&gt;): void\n\n获取音频流的最大音量。使用callback异步回调。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-48",
+        "title": "getMaxStreamVolume<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1366,
+        "line_end": 1391,
+        "summary": "getMaxStreamVolume(): Promise&lt;number&gt;\n\n获取音频流的最大音量。使用Promise异步回调。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-49",
+        "title": "getMaxStreamVolumeSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1392,
+        "line_end": 1419,
+        "summary": "getMaxStreamVolumeSync(): number\n\n获取音频流的最大音量。同步返回结果。\n\n**系统能力：** SystemCapability.Multimedia.Audio.R"
+      },
+      {
+        "section_id": "section-50",
+        "title": "getUnderflowCount<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1420,
+        "line_end": 1446,
+        "summary": "getUnderflowCount(callback: AsyncCallback&lt;number&gt;): void\n\n获取当前播放音频流的欠载音频帧数量。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-51",
+        "title": "getUnderflowCount<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1447,
+        "line_end": 1472,
+        "summary": "getUnderflowCount(): Promise&lt;number&gt;\n\n获取当前播放音频流的欠载音频帧数量。使用Promise异步回调。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-52",
+        "title": "getUnderflowCountSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1473,
+        "line_end": 1500,
+        "summary": "getUnderflowCountSync(): number\n\n获取当前播放音频流的欠载音频帧数量，同步返回数据。\n\n**系统能力：** SystemCapability.Multimedia.A"
+      },
+      {
+        "section_id": "section-53",
+        "title": "getCurrentOutputDevices<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1501,
+        "line_end": 1536,
+        "summary": "getCurrentOutputDevices(callback: AsyncCallback&lt;AudioDeviceDescriptors&gt;): void\n\n获取音频流输出设备信息。使"
+      },
+      {
+        "section_id": "section-54",
+        "title": "getCurrentOutputDevices<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1537,
+        "line_end": 1571,
+        "summary": "getCurrentOutputDevices(): Promise&lt;AudioDeviceDescriptors&gt;\n\n获取音频流输出设备信息。使用Promise异步回调。\n\n**系统能"
+      },
+      {
+        "section_id": "section-55",
+        "title": "getCurrentOutputDevicesSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1572,
+        "line_end": 1607,
+        "summary": "getCurrentOutputDevicesSync(): AudioDeviceDescriptors\n\n获取音频流输出设备信息。同步返回结果。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-56",
+        "title": "setChannelBlendMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1608,
+        "line_end": 1639,
+        "summary": "setChannelBlendMode(mode: ChannelBlendMode): void\n\n设置单双声道混合模式。同步返回结果。\n\n**系统能力：** SystemCapability.M"
+      },
+      {
+        "section_id": "section-57",
+        "title": "setVolumeWithRamp<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1640,
+        "line_end": 1673,
+        "summary": "setVolumeWithRamp(volume: number, duration: number): void\n\n在指定时间范围内设置音量渐变模式。同步返回结果。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-58",
+        "title": "setSilentModeAndMixWithOthers<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1674,
+        "line_end": 1695,
+        "summary": "setSilentModeAndMixWithOthers(on: boolean): void\n\n设置静音并发播放模式。\n\n当设置为true，打开静音并发播放模式，系统将让此音频流静音播放，并且不"
+      },
+      {
+        "section_id": "section-59",
+        "title": "getSilentModeAndMixWithOthers<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1696,
+        "line_end": 1715,
+        "summary": "getSilentModeAndMixWithOthers(): boolean\n\n获取静音并发播放模式。\n\n**系统能力：** SystemCapability.Multimedia.Audio."
+      },
+      {
+        "section_id": "section-60",
+        "title": "setDefaultOutputDevice<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1716,
+        "line_end": 1767,
+        "summary": "setDefaultOutputDevice(deviceType: DeviceType): Promise&lt;void&gt;\n\n设置默认发声设备。使用Promise异步回调。\n\n> **说"
+      },
+      {
+        "section_id": "section-61",
+        "title": "on('audioInterrupt')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1768,
+        "line_end": 1852,
+        "summary": "on(type: 'audioInterrupt', callback: Callback\\<InterruptEvent>): void\n\n监听音频中断事件（当音频焦点发生变化时触发）。使用cal"
+      },
+      {
+        "section_id": "section-62",
+        "title": "off('audioInterrupt')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1853,
+        "line_end": 1938,
+        "summary": "off(type: 'audioInterrupt', callback?: Callback&lt;InterruptEvent&gt;): void\n\n取消监听音频中断事件。使用callback"
+      },
+      {
+        "section_id": "section-63",
+        "title": "on('markReach')<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1939,
+        "line_end": 1967,
+        "summary": "on(type: 'markReach', frame: number, callback: Callback&lt;number&gt;): void\n\n监听标记到达事件（当渲染的帧数到达fram"
+      },
+      {
+        "section_id": "section-64",
+        "title": "off('markReach')<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1968,
+        "line_end": 2000,
+        "summary": "off(type: 'markReach', callback?: Callback&lt;number&gt;): void\n\n取消监听标记到达事件。使用callback异步回调。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-65",
+        "title": "on('periodReach')<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2001,
+        "line_end": 2028,
+        "summary": "on(type: 'periodReach', frame: number, callback: Callback&lt;number&gt;): void\n\n监听标记到达事件（每当渲染的帧数达到f"
+      },
+      {
+        "section_id": "section-66",
+        "title": "off('periodReach')<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2029,
+        "line_end": 2061,
+        "summary": "off(type: 'periodReach', callback?: Callback&lt;number&gt;): void\n\n取消监听标记到达事件。使用callback异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-67",
+        "title": "on('stateChange')<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2062,
+        "line_end": 2089,
+        "summary": "on(type: 'stateChange', callback: Callback<AudioState\\>): void\n\n监听状态变化事件（当AudioRenderer的状态发生变化时触发）。"
+      },
+      {
+        "section_id": "section-68",
+        "title": "off('stateChange')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2090,
+        "line_end": 2133,
+        "summary": "off(type: 'stateChange', callback?: Callback&lt;AudioState&gt;): void\n\n取消监听状态变化事件。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-69",
+        "title": "on('outputDeviceChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2134,
+        "line_end": 2167,
+        "summary": "on(type: 'outputDeviceChange', callback: Callback\\<AudioDeviceDescriptors>): void\n\n监听音频输出设备变化事件（当音频"
+      },
+      {
+        "section_id": "section-70",
+        "title": "off('outputDeviceChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2168,
+        "line_end": 2209,
+        "summary": "off(type: 'outputDeviceChange', callback?: Callback\\<AudioDeviceDescriptors>): void\n\n取消监听音频输出设备变化事件"
+      },
+      {
+        "section_id": "section-71",
+        "title": "on('outputDeviceChangeWithInfo')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2210,
+        "line_end": 2244,
+        "summary": "on(type: 'outputDeviceChangeWithInfo', callback: Callback\\<AudioStreamDeviceChangeInfo>): void\n\n监听音"
+      },
+      {
+        "section_id": "section-72",
+        "title": "off('outputDeviceChangeWithInfo')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2245,
+        "line_end": 2287,
+        "summary": "off(type: 'outputDeviceChangeWithInfo', callback?: Callback\\<AudioStreamDeviceChangeInfo>): void\n\n取"
+      },
+      {
+        "section_id": "section-73",
+        "title": "on('writeData')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2288,
+        "line_end": 2358,
+        "summary": "on(type: 'writeData', callback: AudioRendererWriteDataCallback): void\n\n监听音频数据写入回调事件（当需要写入音频数据时触发），使"
+      },
+      {
+        "section_id": "section-74",
+        "title": "off('writeData')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2359,
+        "line_end": 2397,
+        "summary": "off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void\n\n取消监听音频数据写入回调事件。使用callback异"
+      },
+      {
+        "section_id": "section-75",
+        "title": "write<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2398,
+        "line_end": 2462,
+        "summary": "write(buffer: ArrayBuffer, callback: AsyncCallback\\<number>): void\n\n写入缓冲区。使用callback异步回调。\n\n> **说明：*"
+      },
+      {
+        "section_id": "section-76",
+        "title": "write<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2463,
+        "line_end": 2529,
+        "summary": "write(buffer: ArrayBuffer): Promise\\<number>\n\n写入缓冲区。使用Promise异步回调。\n\n> **说明：**\n> 从API version 8开始支持，"
+      },
+      {
+        "section_id": "section-77",
+        "title": "setRenderRate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2530,
+        "line_end": 2561,
+        "summary": "setRenderRate(rate: AudioRendererRate, callback: AsyncCallback\\<void>): void\n\n设置音频渲染速率。使用callback异步"
+      },
+      {
+        "section_id": "section-78",
+        "title": "setRenderRate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2562,
+        "line_end": 2596,
+        "summary": "setRenderRate(rate: AudioRendererRate): Promise\\<void>\n\n设置音频渲染速率。使用Promise异步回调。\n\n> **说明：**\n> 从API v"
+      },
+      {
+        "section_id": "section-79",
+        "title": "getRenderRate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2597,
+        "line_end": 2623,
+        "summary": "getRenderRate(callback: AsyncCallback\\<AudioRendererRate>): void\n\n获取音频渲染速率。使用callback异步回调。\n\n> **说明："
+      },
+      {
+        "section_id": "section-80",
+        "title": "getRenderRate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2624,
+        "line_end": 2652,
+        "summary": "getRenderRate(): Promise\\<AudioRendererRate>\n\n获取音频渲染速率。使用Promise异步回调。\n\n> **说明：**\n> 从API version 8开始"
+      },
+      {
+        "section_id": "section-81",
+        "title": "getRenderRateSync<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2653,
+        "line_end": 2683,
+        "summary": "getRenderRateSync(): AudioRendererRate\n\n获取音频渲染速率。同步返回结果。\n\n> **说明：**\n> 从API version 10开始支持，从API vers"
+      },
+      {
+        "section_id": "section-82",
+        "title": "setLoudnessGain<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2684,
+        "line_end": 2725,
+        "summary": "setLoudnessGain(loudnessGain: number): Promise\\<void>\n\n设置播放响度。使用Promise异步回调。\n\n> **说明：**\n>\n> - 该接口仅支"
+      },
+      {
+        "section_id": "section-83",
+        "title": "getLoudnessGain<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2726,
+        "line_end": 2744,
+        "summary": "getLoudnessGain(): number\n\n获取播放响度。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Renderer\n\n**返回值：**"
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "doc_id": "js-apis-app-ability-childProcessManager",
+  "title": "@ohos.app.ability.childProcessManager (子进程管理)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-childProcessManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-childProcessManager.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@SKY2001",
+    "designer": "@jsjzju",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.childProcessManager (子进程管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.childProcessManager (子进程管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 27,
+        "summary": "- 通过本模块中接口创建的子进程有如下限制:\n  - 创建的子进程不支持创建UI界面。  \n  - 创建的子进程不支持依赖Context的API调用（包括Context模块自身API及将Contex"
+      },
+      {
+        "section_id": "section-2",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 33,
+        "summary": "```ts\nimport { childProcessManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-3",
+        "title": "StartMode",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 44,
+        "summary": "子进程启动模式枚举。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Core\n\n| 名称                       | 值"
+      },
+      {
+        "section_id": "section-4",
+        "title": "childProcessManager.startChildProcess",
+        "level": 2,
+        "line_start": 45,
+        "line_end": 120,
+        "summary": "startChildProcess(srcEntry: string, startMode: StartMode): Promise&lt;number&gt;\n\n启动[ArkTS子进程](../."
+      },
+      {
+        "section_id": "section-5",
+        "title": "childProcessManager.startChildProcess",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 191,
+        "summary": "startChildProcess(srcEntry: string, startMode: StartMode, callback: AsyncCallback&lt;number&gt;): v"
+      },
+      {
+        "section_id": "section-6",
+        "title": "childProcessManager.startArkChildProcess<sup>12+</sup>",
+        "level": 2,
+        "line_start": 192,
+        "line_end": 306,
+        "summary": "startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?: ChildProcessOptions): Prom"
+      },
+      {
+        "section_id": "section-7",
+        "title": "childProcessManager.startNativeChildProcess<sup>13+</sup>",
+        "level": 2,
+        "line_start": 307,
+        "line_end": 426,
+        "summary": "startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions):"
+      }
+    ]
+  }
+}

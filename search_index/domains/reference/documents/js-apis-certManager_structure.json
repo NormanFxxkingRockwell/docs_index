@@ -1,0 +1,380 @@
+{
+  "doc_id": "js-apis-certManager",
+  "title": "@ohos.security.certManager (证书管理模块)",
+  "path": "zh-cn/application-dev/reference/apis-device-certificate-kit/js-apis-certManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-device-certificate-kit/js-apis-certManager.md",
+  "metadata": {
+    "kit": "Device Certificate Kit",
+    "subsystem": "Security",
+    "owner": "@chaceli",
+    "designer": "@chande",
+    "tester": "@zhangzhi1995",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Device Certificate Kit Security 模块的 @ohos.security.certManager (证书管理模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.security.certManager (证书管理模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { certificateManager } from '@kit.DeviceCertificateKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "CmKeyPurpose",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 32,
+        "summary": "表示密钥使用目的的枚举，用于签名、验签。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称       | 值 |  说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "CmKeyDigest",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 49,
+        "summary": "表示签名、验签使用的摘要算法的枚举。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称       | 值 |  说明"
+      },
+      {
+        "section_id": "section-4",
+        "title": "CmKeyPadding",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 61,
+        "summary": "表示签名、验签使用的填充方式的枚举。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称       | 值 |  说明"
+      },
+      {
+        "section_id": "section-5",
+        "title": "CMSignatureSpec",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 74,
+        "summary": "表示签名、验签操作使用的参数集合，包括密钥使用目的、填充方式和摘要算法。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-6",
+        "title": "CertInfo",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 93,
+        "summary": "表示证书详细信息。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-7",
+        "title": "CertAbstract",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 106,
+        "summary": "表示证书简要信息。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Credential",
+        "level": 2,
+        "line_start": 107,
+        "line_end": 122,
+        "summary": "表示凭据详细信息。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-9",
+        "title": "CredentialAbstract",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 134,
+        "summary": "表示凭据的简要信息。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-10",
+        "title": "CMResult",
+        "level": 2,
+        "line_start": 135,
+        "line_end": 151,
+        "summary": "表示接口的返回结果。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "CMHandle",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 161,
+        "summary": "表示签名、验签的初始化操作句柄。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-12",
+        "title": "CMErrorCode",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 181,
+        "summary": "表示调用证书管理相关API的错误码。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称       | 值 |  说明"
+      },
+      {
+        "section_id": "section-13",
+        "title": "CertType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 182,
+        "line_end": 192,
+        "summary": "表示证书类型。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称       | 值 |  说明      |\n| ----"
+      },
+      {
+        "section_id": "section-14",
+        "title": "CertScope<sup>18+</sup>",
+        "level": 2,
+        "line_start": 193,
+        "line_end": 203,
+        "summary": "表示证书的位置。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称       | 值 |  说明      |\n| ---"
+      },
+      {
+        "section_id": "section-15",
+        "title": "CertAlgorithm<sup>20+</sup>",
+        "level": 2,
+        "line_start": 204,
+        "line_end": 214,
+        "summary": "表示证书的算法类型。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称            | 值 | 说明"
+      },
+      {
+        "section_id": "section-16",
+        "title": "CertStoreProperty<sup>18+</sup>",
+        "level": 2,
+        "line_start": 215,
+        "line_end": 226,
+        "summary": "表示获取证书存储位置的参数集合，包括证书的类型及证书的位置。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-17",
+        "title": "AuthStorageLevel<sup>18+</sup>",
+        "level": 2,
+        "line_start": 227,
+        "line_end": 238,
+        "summary": "表示凭据的存储级别。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称         | 值   | 说明"
+      },
+      {
+        "section_id": "section-18",
+        "title": "CertificatePurpose<sup>22+</sup>",
+        "level": 2,
+        "line_start": 239,
+        "line_end": 251,
+        "summary": "表示凭据用途的枚举。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称    | 值   | 说明  |\n| -------"
+      },
+      {
+        "section_id": "section-19",
+        "title": "UkeyInfo<sup>22+</sup>",
+        "level": 2,
+        "line_start": 252,
+        "line_end": 261,
+        "summary": "提供USB凭据属性信息。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称           | 类型  | 只读 | 可"
+      },
+      {
+        "section_id": "section-20",
+        "title": "certificateManager.installPrivateCertificate",
+        "level": 2,
+        "line_start": 262,
+        "line_end": 315,
+        "summary": "installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, certAlias: string, callback: A"
+      },
+      {
+        "section_id": "section-21",
+        "title": "certificateManager.installPrivateCertificate",
+        "level": 2,
+        "line_start": 316,
+        "line_end": 374,
+        "summary": "installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, certAlias: string): Promise\\<C"
+      },
+      {
+        "section_id": "section-22",
+        "title": "certificateManager.installPrivateCertificate<sup>18+</sup>",
+        "level": 2,
+        "line_start": 375,
+        "line_end": 436,
+        "summary": "installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, certAlias: string, level: Auth"
+      },
+      {
+        "section_id": "section-23",
+        "title": "certificateManager.getPrivateCertificate",
+        "level": 2,
+        "line_start": 437,
+        "line_end": 487,
+        "summary": "getPrivateCertificate(keyUri: string, callback: AsyncCallback\\<CMResult>): void\n\n表示获取私有凭据的详细信息，使用Ca"
+      },
+      {
+        "section_id": "section-24",
+        "title": "certificateManager.getPrivateCertificate",
+        "level": 2,
+        "line_start": 488,
+        "line_end": 542,
+        "summary": "getPrivateCertificate(keyUri: string): Promise\\<CMResult>\n\n表示获取私有凭据详情，使用Promise方式异步返回结果。\n\n**需要权限：**"
+      },
+      {
+        "section_id": "section-25",
+        "title": "certificateManager.uninstallPrivateCertificate",
+        "level": 2,
+        "line_start": 543,
+        "line_end": 588,
+        "summary": "uninstallPrivateCertificate(keyUri: string, callback: AsyncCallback\\<void>): void\n\n表示卸载指定的私有凭据，使用Ca"
+      },
+      {
+        "section_id": "section-26",
+        "title": "certificateManager.uninstallPrivateCertificate",
+        "level": 2,
+        "line_start": 589,
+        "line_end": 638,
+        "summary": "uninstallPrivateCertificate(keyUri: string): Promise\\<void>\n\n表示卸载指定的私有凭据，使用Promise方式异步返回结果。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-27",
+        "title": "certificateManager.installUserTrustedCertificateSync<sup>18+</sup>",
+        "level": 2,
+        "line_start": 639,
+        "line_end": 696,
+        "summary": "installUserTrustedCertificateSync(cert: Uint8Array, certScope: CertScope) : CMResult\n\n表示安装用户CA证书。"
+      },
+      {
+        "section_id": "section-28",
+        "title": "certificateManager.uninstallUserTrustedCertificateSync<sup>18+</sup>",
+        "level": 2,
+        "line_start": 697,
+        "line_end": 736,
+        "summary": "uninstallUserTrustedCertificateSync(certUri: string) : void\n\n表示删除用户CA证书。\n\n**需要权限：** ohos.permission"
+      },
+      {
+        "section_id": "section-29",
+        "title": "certificateManager.init",
+        "level": 2,
+        "line_start": 737,
+        "line_end": 789,
+        "summary": "init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback\\<CMHandle>): void\n\n表示使用凭据进行签名、"
+      },
+      {
+        "section_id": "section-30",
+        "title": "certificateManager.init",
+        "level": 2,
+        "line_start": 790,
+        "line_end": 846,
+        "summary": "init(authUri: string, spec: CMSignatureSpec): Promise\\<CMHandle>\n\n表示使用凭据进行签名、验签的初始化操作，使用Promise方式异步"
+      },
+      {
+        "section_id": "section-31",
+        "title": "certificateManager.update",
+        "level": 2,
+        "line_start": 847,
+        "line_end": 898,
+        "summary": "update(handle: Uint8Array, data: Uint8Array, callback: AsyncCallback\\<void>): void\n\n表示签名、验签的数据更新操作，"
+      },
+      {
+        "section_id": "section-32",
+        "title": "certificateManager.update",
+        "level": 2,
+        "line_start": 899,
+        "line_end": 954,
+        "summary": "update(handle: Uint8Array, data: Uint8Array): Promise\\<void>\n\n表示签名、验签的数据更新操作，使用Promise方式异步返回结果。\n\n**"
+      },
+      {
+        "section_id": "section-33",
+        "title": "certificateManager.finish",
+        "level": 2,
+        "line_start": 955,
+        "line_end": 1007,
+        "summary": "finish(handle: Uint8Array, callback: AsyncCallback\\<CMResult>): void\n\n表示完成签名的操作，Callback回调异步返回结果。"
+      },
+      {
+        "section_id": "section-34",
+        "title": "certificateManager.finish",
+        "level": 2,
+        "line_start": 1008,
+        "line_end": 1059,
+        "summary": "finish(handle: Uint8Array, signature: Uint8Array, callback: AsyncCallback\\<CMResult>): void\n\n表示完成验签"
+      },
+      {
+        "section_id": "section-35",
+        "title": "certificateManager.finish",
+        "level": 2,
+        "line_start": 1060,
+        "line_end": 1129,
+        "summary": "finish(handle: Uint8Array, signature?: Uint8Array): Promise\\<CMResult>\n\n表示完成签名、验签的操作，使用Promise方式异步返"
+      },
+      {
+        "section_id": "section-36",
+        "title": "certificateManager.abort",
+        "level": 2,
+        "line_start": 1130,
+        "line_end": 1177,
+        "summary": "abort(handle: Uint8Array, callback: AsyncCallback\\<void>): void\n\n表示中止签名、验签的操作，使用Callback回调异步返回结果。"
+      },
+      {
+        "section_id": "section-37",
+        "title": "certificateManager.abort",
+        "level": 2,
+        "line_start": 1178,
+        "line_end": 1229,
+        "summary": "abort(handle: Uint8Array): Promise\\<void>\n\n表示中止签名、验签的操作，使用Promise方式异步返回结果。\n\n**需要权限：** ohos.permissi"
+      },
+      {
+        "section_id": "section-38",
+        "title": "certificateManager.getPublicCertificate<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1230,
+        "line_end": 1285,
+        "summary": "getPublicCertificate(keyUri: string): Promise\\<CMResult>\n\n表示获取用户公共凭据的详细信息，使用Promise方式异步返回结果。\n\n**需要权"
+      },
+      {
+        "section_id": "section-39",
+        "title": "certificateManager.isAuthorizedApp<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1286,
+        "line_end": 1338,
+        "summary": "isAuthorizedApp(keyUri: string): Promise\\<boolean>\n\n表示当前应用是否由指定的用户凭据授权，使用Promise方式异步返回结果。\n\n**需要权限：*"
+      },
+      {
+        "section_id": "section-40",
+        "title": "certificateManager.getAllUserTrustedCertificates<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1339,
+        "line_end": 1386,
+        "summary": "getAllUserTrustedCertificates(): Promise\\<CMResult>\n\n表示获取当前用户和设备公共位置的所有用户根CA证书列表，使用Promise方式异步返回结果。"
+      },
+      {
+        "section_id": "section-41",
+        "title": "certificateManager.getAllUserTrustedCertificates<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1387,
+        "line_end": 1444,
+        "summary": "getAllUserTrustedCertificates(scope: CertScope): Promise\\<CMResult>\n\n表示根据证书的位置获取用户根CA证书列表，使用Promise"
+      },
+      {
+        "section_id": "section-42",
+        "title": "certificateManager.getUserTrustedCertificate<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1445,
+        "line_end": 1498,
+        "summary": "getUserTrustedCertificate(certUri: string): Promise\\<CMResult>\n\n表示获取用户根CA证书的详细信息，使用Promise方式异步返回结果。"
+      },
+      {
+        "section_id": "section-43",
+        "title": "certificateManager.getPrivateCertificates<sup>13+</sup>",
+        "level": 2,
+        "line_start": 1499,
+        "line_end": 1545,
+        "summary": "getPrivateCertificates(): Promise\\<CMResult>\n\n表示获取应用安装的凭据列表，使用Promise方式异步返回结果。\n\n**需要权限：** ohos.perm"
+      },
+      {
+        "section_id": "section-44",
+        "title": "certificateManager.getCertificateStorePath<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1546,
+        "line_end": 1614,
+        "summary": "getCertificateStorePath(property: CertStoreProperty): string;\n\n表示获取证书的存储路径。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-45",
+        "title": "certificateManager.getUkeyCertificate<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1615,
+        "line_end": 1672,
+        "summary": "getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise\\<CMResult>\n\n表示获取USB凭据详细信息。使用Promise"
+      }
+    ]
+  }
+}

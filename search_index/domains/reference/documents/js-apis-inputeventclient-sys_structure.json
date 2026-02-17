@@ -1,0 +1,100 @@
+{
+  "doc_id": "js-apis-inputeventclient-sys",
+  "title": "@ohos.multimodalInput.inputEventClient (输入事件注入)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-input-kit/js-apis-inputeventclient-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-input-kit/js-apis-inputeventclient-sys.md",
+  "metadata": {
+    "kit": "Input Kit",
+    "subsystem": "MultimodalInput",
+    "owner": "@zhaoxueyuan",
+    "designer": "@hanruofei",
+    "tester": "@Lyuxin",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Input Kit MultimodalInput 模块的 @ohos.multimodalInput.inputEventClient (输入事件注入)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalInput.inputEventClient (输入事件注入)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```js\nimport { inputEventClient } from '@kit.InputKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "inputEventClient.injectEvent",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 86,
+        "summary": "injectEvent({KeyEvent: KeyEvent}): void\n\n按键(包括单个按键和组合键)注入。\n\n**系统能力：** SystemCapability.MultimodalIn"
+      },
+      {
+        "section_id": "section-3",
+        "title": "inputEventClient.injectKeyEvent<sup>11+</sup>",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 160,
+        "summary": "injectKeyEvent(keyEvent: KeyEventData): void\n\n按键(包括单个按键和组合键)事件注入。\n\n**系统能力：** SystemCapability.Multi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "inputEventClient.injectMouseEvent<sup>11+</sup>",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 274,
+        "summary": "injectMouseEvent(mouseEvent: MouseEventData): void\n\n鼠标/触控板事件注入。\n\n**系统能力：** SystemCapability.Multimo"
+      },
+      {
+        "section_id": "section-5",
+        "title": "inputEventClient.injectTouchEvent<sup>11+</sup>",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 377,
+        "summary": "injectTouchEvent(touchEvent: TouchEventData): void\n\n触屏输入事件注入。\n\n**系统能力：** SystemCapability.Multimoda"
+      },
+      {
+        "section_id": "section-6",
+        "title": "inputEventClient.permitInjection<sup>12+</sup>",
+        "level": 2,
+        "line_start": 378,
+        "line_end": 426,
+        "summary": "permitInjection(result: boolean): void\n\n允许事件注入权限。\n\n**系统能力：** SystemCapability.MultimodalInput.Input"
+      },
+      {
+        "section_id": "section-7",
+        "title": "KeyEvent",
+        "level": 2,
+        "line_start": 427,
+        "line_end": 439,
+        "summary": "按键注入描述信息。\n\n**系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator\n\n| 名称        | 类型   | 只读"
+      },
+      {
+        "section_id": "section-8",
+        "title": "KeyEventData<sup>11+</sup>",
+        "level": 2,
+        "line_start": 440,
+        "line_end": 449,
+        "summary": "按键注入描述信息。\n\n**系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator\n\n| 名称        | 类型   | 只读"
+      },
+      {
+        "section_id": "section-9",
+        "title": "MouseEventData<sup>11+</sup>",
+        "level": 2,
+        "line_start": 450,
+        "line_end": 460,
+        "summary": "鼠标注入描述信息。\n\n**系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator\n\n| 名称        | 类型   | 只读"
+      },
+      {
+        "section_id": "section-10",
+        "title": "TouchEventData<sup>11+</sup>",
+        "level": 2,
+        "line_start": 461,
+        "line_end": 470,
+        "summary": "触屏注入描述信息。\n\n**系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator\n\n| 名称        | 类型   | 只读"
+      }
+    ]
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "doc_id": "js-apis-request-cacheDownload",
+  "title": "@ohos.request.cacheDownload (缓存下载)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-request-cacheDownload.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-request-cacheDownload.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Request",
+    "owner": "@huaxin05",
+    "designer": "@hu-kai45",
+    "tester": "@liuhaonan2",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit Request 模块的 @ohos.request.cacheDownload (缓存下载)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.request.cacheDownload (缓存下载)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```js\nimport { cacheDownload } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "SslType<sup>21+</sup>",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 37,
+        "summary": "表示安全通信协议的枚举。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称 | 值 |说明 |\n| -------- | ----"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ErrorCode<sup>23+</sup>",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 51,
+        "summary": "表示错误返回信息的特定类型枚举。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称 | 值 |说明 |\n| -------- |"
+      },
+      {
+        "section_id": "section-4",
+        "title": "CacheStrategy<sup>23+</sup>",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 62,
+        "summary": "表示缓存刷新策略的枚举。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称 | 值 |说明 |\n| -------- | ----"
+      },
+      {
+        "section_id": "section-5",
+        "title": "CacheDownloadOptions",
+        "level": 2,
+        "line_start": 63,
+        "line_end": 75,
+        "summary": "缓存下载的配置选项。包括HTTP选项、传输选项和任务选项。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ResourceInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 85,
+        "summary": "预下载的资源信息。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称   | 类型     | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-7",
+        "title": "NetworkInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 96,
+        "summary": "预下载的网络信息。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称         | 类型       | 只读 | 可选 |"
+      },
+      {
+        "section_id": "section-8",
+        "title": "PerformanceInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 97,
+        "line_end": 112,
+        "summary": "预下载的性能信息。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称               | 类型     | 只读 |"
+      },
+      {
+        "section_id": "section-9",
+        "title": "DownloadInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 113,
+        "line_end": 124,
+        "summary": "预下载的下载信息。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称          | 类型"
+      },
+      {
+        "section_id": "section-10",
+        "title": "DownloadError<sup>23+</sup>",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 135,
+        "summary": "预下载错误回调的返回信息。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称          | 类型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "cacheDownload.download",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 190,
+        "summary": "download(url: string, options: CacheDownloadOptions): void\n\n启动一个缓存下载任务，若传输成功，则将数据下载到内存缓存和文件缓存中。\n\n-"
+      },
+      {
+        "section_id": "section-12",
+        "title": "cacheDownload.cancel",
+        "level": 2,
+        "line_start": 191,
+        "line_end": 241,
+        "summary": "cancel(url: string): void\n\n根据url移除一个正在执行的缓存下载任务，已保存的内存缓存和文件缓存不会受到影响。\n\n- 当不存在对应url的任务时无其他效果。\n\n- 使用该方"
+      },
+      {
+        "section_id": "section-13",
+        "title": "cacheDownload.setMemoryCacheSize",
+        "level": 2,
+        "line_start": 242,
+        "line_end": 280,
+        "summary": "setMemoryCacheSize(bytes: number): void\n\n设置缓存下载组件能够保存的内存缓存上限。\n\n- 使用该接口调整缓存大小时，默认使用“LRU”（最近最少使用）方式清除"
+      },
+      {
+        "section_id": "section-14",
+        "title": "cacheDownload.setFileCacheSize",
+        "level": 2,
+        "line_start": 281,
+        "line_end": 327,
+        "summary": "setFileCacheSize(bytes: number): void\n\n设置缓存下载组件能够保存的文件缓存的上限。\n\n- 使用该接口调整缓存大小时，默认使用“LRU”（最近最少使用）方式清除多"
+      },
+      {
+        "section_id": "section-15",
+        "title": "cacheDownload.setDownloadInfoListSize<sup>20+</sup>",
+        "level": 2,
+        "line_start": 328,
+        "line_end": 360,
+        "summary": "setDownloadInfoListSize(size: number): void\n\n设置下载信息列表的大小。\n\n- 下载信息列表用于存储预下载信息。\n\n- 下载信息和url一一对应，每次预下载"
+      },
+      {
+        "section_id": "section-16",
+        "title": "cacheDownload.getDownloadInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 361,
+        "line_end": 433,
+        "summary": "getDownloadInfo(url: string): DownloadInfo | undefined\n\n基于url获取预下载的下载信息。信息存储在内存中的下载信息列表，当应用程序退出时清除。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "cacheDownload.clearMemoryCache<sup>23+</sup>",
+        "level": 2,
+        "line_start": 434,
+        "line_end": 449,
+        "summary": "clearMemoryCache(): void\n\n清除缓存下载内容的内存缓存。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n**示例"
+      },
+      {
+        "section_id": "section-18",
+        "title": "cacheDownload.clearFileCache<sup>23+</sup>",
+        "level": 2,
+        "line_start": 450,
+        "line_end": 465,
+        "summary": "clearFileCache(): void\n\n清除保存下载内容的文件缓存。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n**示例：*"
+      },
+      {
+        "section_id": "section-19",
+        "title": "cacheDownload.onDownloadSuccess<sup>23+</sup>",
+        "level": 2,
+        "line_start": 466,
+        "line_end": 498,
+        "summary": "onDownloadSuccess(url: string, callback: Callback&lt;void&gt;): void\n\n订阅预下载的完成事件。使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-20",
+        "title": "cacheDownload.onDownloadError<sup>23+</sup>",
+        "level": 2,
+        "line_start": 499,
+        "line_end": 531,
+        "summary": "onDownloadError(url: string, callback: Callback&lt;DownloadError&gt;): void\n\n订阅预下载的错误事件。使用callback异"
+      },
+      {
+        "section_id": "section-21",
+        "title": "cacheDownload.offDownloadSuccess<sup>23+</sup>",
+        "level": 2,
+        "line_start": 532,
+        "line_end": 566,
+        "summary": "offDownloadSuccess(url: string, callback?: Callback&lt;void&gt;): void\n\n取消订阅预下载的完成事件。使用callback异步回调"
+      },
+      {
+        "section_id": "section-22",
+        "title": "cacheDownload.offDownloadError<sup>23+</sup>",
+        "level": 2,
+        "line_start": 567,
+        "line_end": 601,
+        "summary": "offDownloadError(url: string, callback?: Callback&lt;DownloadError&gt;): void\n\n取消订阅预下载的错误事件。使用callb"
+      }
+    ]
+  }
+}

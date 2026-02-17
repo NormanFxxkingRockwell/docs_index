@@ -1,0 +1,220 @@
+{
+  "doc_id": "js-apis-enterprise-securityManager",
+  "title": "@ohos.enterprise.securityManager（安全管理）",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-securityManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-securityManager.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.securityManager（安全管理），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.securityManager（安全管理）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { securityManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "securityManager.uninstallUserCertificate",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 82,
+        "summary": "uninstallUserCertificate(admin: Want, certUri: string): Promise&lt;void&gt;\n\n卸载用户证书，使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "securityManager.installUserCertificate",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 151,
+        "summary": "installUserCertificate(admin: Want, certificate: CertBlob): Promise&lt;string&gt;\n\n安装用户证书，使用Promise"
+      },
+      {
+        "section_id": "section-4",
+        "title": "securityManager.installUserCertificate<sup>18+</sup>",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 216,
+        "summary": "installUserCertificate(admin: Want, certificate: CertBlob, accountId: number): string\n\n支持按系统账户安装用户证"
+      },
+      {
+        "section_id": "section-5",
+        "title": "securityManager.getUserCertificates<sup>18+</sup>",
+        "level": 2,
+        "line_start": 217,
+        "line_end": 272,
+        "summary": "getUserCertificates(admin: Want, accountId: number): Array&lt;string&gt;\n\n获取指定系统账户下的用户证书信息。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-6",
+        "title": "securityManager.getSecurityStatus",
+        "level": 2,
+        "line_start": 273,
+        "line_end": 328,
+        "summary": "getSecurityStatus(admin: Want, item: string): string\n\n获取当前设备安全策略信息。\n\n**需要权限：** ohos.permission.ENTE"
+      },
+      {
+        "section_id": "section-7",
+        "title": "securityManager.setPasswordPolicy",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 385,
+        "summary": "setPasswordPolicy(admin: Want, policy: PasswordPolicy): void\n\n设置设备口令策略。\n\n**需要权限：** ohos.permission."
+      },
+      {
+        "section_id": "section-8",
+        "title": "securityManager.getPasswordPolicy",
+        "level": 2,
+        "line_start": 386,
+        "line_end": 440,
+        "summary": "getPasswordPolicy(admin: Want): PasswordPolicy\n\n获取设备口令策略。\n\n**需要权限：** ohos.permission.ENTERPRISE_MAN"
+      },
+      {
+        "section_id": "section-9",
+        "title": "securityManager.setAppClipboardPolicy",
+        "level": 2,
+        "line_start": 441,
+        "line_end": 494,
+        "summary": "setAppClipboardPolicy(admin: Want, tokenId: number, policy: ClipboardPolicy): void\n\n设置设备剪贴板策略。\n\n**需"
+      },
+      {
+        "section_id": "section-10",
+        "title": "securityManager.getAppClipboardPolicy",
+        "level": 2,
+        "line_start": 495,
+        "line_end": 551,
+        "summary": "getAppClipboardPolicy(admin: Want, tokenId?: number): string\n\n获取设备剪贴板策略。\n\n**需要权限：** ohos.permission"
+      },
+      {
+        "section_id": "section-11",
+        "title": "securityManager.setAppClipboardPolicy<sup>18+</sup>",
+        "level": 2,
+        "line_start": 552,
+        "line_end": 606,
+        "summary": "setAppClipboardPolicy(admin: Want, bundleName: string, accountId: number, policy: ClipboardPolicy):"
+      },
+      {
+        "section_id": "section-12",
+        "title": "securityManager.getAppClipboardPolicy<sup>18+</sup>",
+        "level": 2,
+        "line_start": 607,
+        "line_end": 664,
+        "summary": "getAppClipboardPolicy(admin: Want, bundleName: string, accountId: number): string\n\n获取指定用户下指定应用的设备剪贴"
+      },
+      {
+        "section_id": "section-13",
+        "title": "securityManager.setWatermarkImage<sup>14+</sup>",
+        "level": 2,
+        "line_start": 665,
+        "line_end": 724,
+        "summary": "setWatermarkImage(admin: Want, bundleName: string, source: string | image.PixelMap, accountId: numb"
+      },
+      {
+        "section_id": "section-14",
+        "title": "securityManager.cancelWatermarkImage<sup>14+</sup>",
+        "level": 2,
+        "line_start": 725,
+        "line_end": 777,
+        "summary": "cancelWatermarkImage(admin: Want, bundleName: string, accountId: number): void\n\n取消指定用户的水印策略。\n\n**需要权"
+      },
+      {
+        "section_id": "section-15",
+        "title": "securityManager.setPermissionManagedState<sup>20+</sup>",
+        "level": 2,
+        "line_start": 778,
+        "line_end": 838,
+        "summary": "setPermissionManagedState(admin: Want, applicationInstance: ApplicationInstance, permissions: Array"
+      },
+      {
+        "section_id": "section-16",
+        "title": "securityManager.getPermissionManagedState<sup>20+</sup>",
+        "level": 2,
+        "line_start": 839,
+        "line_end": 901,
+        "summary": "getPermissionManagedState(admin: Want, applicationInstance: ApplicationInstance, permission: string"
+      },
+      {
+        "section_id": "section-17",
+        "title": "securityManager.setExternalSourceExtensionsPolicy<sup>22+</sup>",
+        "level": 2,
+        "line_start": 902,
+        "line_end": 967,
+        "summary": "setExternalSourceExtensionsPolicy(admin: Want, policy: common.ManagedPolicy): void\n\n设置外部来源扩展程序的管控策略"
+      },
+      {
+        "section_id": "section-18",
+        "title": "securityManager.getExternalSourceExtensionsPolicy<sup>22+</sup>",
+        "level": 2,
+        "line_start": 968,
+        "line_end": 1023,
+        "summary": "getExternalSourceExtensionsPolicy(admin: Want): common.ManagedPolicy\n\n获取外部来源扩展程序的管控策略。\n\n**需要权限：** o"
+      },
+      {
+        "section_id": "section-19",
+        "title": "CertBlob",
+        "level": 2,
+        "line_start": 1024,
+        "line_end": 1034,
+        "summary": "证书信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称   | 类型       | 只读 | 可"
+      },
+      {
+        "section_id": "section-20",
+        "title": "PasswordPolicy",
+        "level": 2,
+        "line_start": 1035,
+        "line_end": 1046,
+        "summary": "设备口令策略。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称         | 类型     |"
+      },
+      {
+        "section_id": "section-21",
+        "title": "ClipboardPolicy",
+        "level": 2,
+        "line_start": 1047,
+        "line_end": 1059,
+        "summary": "设备剪贴板策略。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称         | 值 | 说明"
+      },
+      {
+        "section_id": "section-22",
+        "title": "ApplicationInstance<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1060,
+        "line_end": 1073,
+        "summary": "应用实例。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**模型约束：** 此接口仅可在Stage模型下使用"
+      },
+      {
+        "section_id": "section-23",
+        "title": "PermissionManagedState<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1074,
+        "line_end": 1087,
+        "summary": "应用权限的管理状态。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**模型约束：** 此接口仅可在Stage"
+      },
+      {
+        "section_id": "section-24",
+        "title": "securityManager.installEnterpriseReSignatureCertificate<sup>24+</sup>",
+        "level": 2,
+        "line_start": 1088,
+        "line_end": 1163,
+        "summary": "installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: string, fd: number, accountI"
+      },
+      {
+        "section_id": "section-25",
+        "title": "securityManager.uninstallEnterpriseReSignatureCertificate<sup>24+</sup>",
+        "level": 2,
+        "line_start": 1164,
+        "line_end": 1219,
+        "summary": "uninstallEnterpriseReSignatureCertificate(admin: Want, certificateAlias: string, accountId: number)"
+      }
+    ]
+  }
+}

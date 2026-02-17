@@ -1,0 +1,100 @@
+{
+  "doc_id": "js-apis-app-ability-sendableContextManager",
+  "title": "@ohos.app.ability.sendableContextManager (sendable上下文管理)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-sendableContextManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-sendableContextManager.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@linjunjie6; @xuzhihao666",
+    "designer": "@li-weifeng2024",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.sendableContextManager (sendable上下文管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.sendableContextManager (sendable上下文管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 29,
+        "summary": "本模块主要用于ArkTS并发实例间（包括主线程、TaskPool&Worker工作线程）的数据传递。\n\n例如，从主线程向子线程（如TaskPool或Worker工作线程）传递Sendable数据（符"
+      },
+      {
+        "section_id": "section-2",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 35,
+        "summary": "“Context转换为SendableContext”和“SendableContext转换为Context”两个环节中的Context类型必须保持一致。例如，主线程使用[convertFromCo"
+      },
+      {
+        "section_id": "section-3",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 41,
+        "summary": "```ts\nimport { sendableContextManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-4",
+        "title": "SendableContext",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 55,
+        "summary": "type SendableContext = _SendableContext\n\nSendable上下文，符合[Sendable协议](../../arkts-utils/arkts-sendabl"
+      },
+      {
+        "section_id": "section-5",
+        "title": "sendableContextManager.convertFromContext",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 122,
+        "summary": "convertFromContext(context: common.Context): SendableContext\n\n将Context转换为SendableContext对象。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-6",
+        "title": "sendableContextManager.convertToContext",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 234,
+        "summary": "convertToContext(sendableContext: SendableContext): common.Context\n\n将SendableContext对象转换为Context。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "sendableContextManager.convertToApplicationContext",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 348,
+        "summary": "convertToApplicationContext(sendableContext: SendableContext): common.ApplicationContext\n\n将Sendable"
+      },
+      {
+        "section_id": "section-8",
+        "title": "sendableContextManager.convertToAbilityStageContext",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 460,
+        "summary": "convertToAbilityStageContext(sendableContext: SendableContext): common.AbilityStageContext\n\n将Sendab"
+      },
+      {
+        "section_id": "section-9",
+        "title": "sendableContextManager.convertToUIAbilityContext",
+        "level": 2,
+        "line_start": 461,
+        "line_end": 571,
+        "summary": "convertToUIAbilityContext(sendableContext: SendableContext): common.UIAbilityContext\n\n将SendableCont"
+      },
+      {
+        "section_id": "section-10",
+        "title": "sendableContextManager.setEventHubMultithreadingEnabled<sup>20+<sup>",
+        "level": 2,
+        "line_start": 572,
+        "line_end": 691,
+        "summary": "setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void\n\n设置[Context](js-a"
+      }
+    ]
+  }
+}

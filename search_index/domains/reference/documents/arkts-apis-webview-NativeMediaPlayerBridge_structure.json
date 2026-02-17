@@ -1,0 +1,116 @@
+{
+  "doc_id": "arkts-apis-webview-NativeMediaPlayerBridge",
+  "title": "Interface (NativeMediaPlayerBridge)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-NativeMediaPlayerBridge.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-NativeMediaPlayerBridge.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zhangyao75477",
+    "designer": "@qiu-gongkai",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Interface (NativeMediaPlayerBridge)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (NativeMediaPlayerBridge)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "updateRect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 41,
+        "summary": "updateRect(x: number, y: number, width: number, height: number): void\n\n更新 surface 位置信息。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-2",
+        "title": "play<sup>12+</sup>",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 53,
+        "summary": "play(): void\n\n播放视频。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**示例：**\n\n完整示例代码参考[onCreateNativeM"
+      },
+      {
+        "section_id": "section-3",
+        "title": "pause<sup>12+</sup>",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 65,
+        "summary": "pause(): void\n\n暂停播放。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**示例：**\n\n完整示例代码参考[onCreateNative"
+      },
+      {
+        "section_id": "section-4",
+        "title": "seek<sup>12+</sup>",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 83,
+        "summary": "seek(targetTime: number): void\n\n播放跳转到某个时间点。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**参数：**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "setVolume<sup>12+</sup>",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 101,
+        "summary": "setVolume(volume: number): void\n\n设置播放器音量值。\n\n**参数：**\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------"
+      },
+      {
+        "section_id": "section-6",
+        "title": "setMuted<sup>12+</sup>",
+        "level": 2,
+        "line_start": 102,
+        "line_end": 119,
+        "summary": "setMuted(muted: boolean): void\n\n设置静音状态。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**参数：**\n\n| 参数"
+      },
+      {
+        "section_id": "section-7",
+        "title": "setPlaybackRate<sup>12+</sup>",
+        "level": 2,
+        "line_start": 120,
+        "line_end": 137,
+        "summary": "setPlaybackRate(playbackRate: number): void\n\n设置播放速度。\n\n**系统能力：** SystemCapability.Web.Webview.Core"
+      },
+      {
+        "section_id": "section-8",
+        "title": "release<sup>12+</sup>",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 149,
+        "summary": "release(): void\n\n销毁播放器。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**示例：**\n\n完整示例代码参考[onCreateNat"
+      },
+      {
+        "section_id": "section-9",
+        "title": "enterFullscreen<sup>12+</sup>",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 161,
+        "summary": "enterFullscreen(): void\n\n播放器进入全屏。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**示例：**\n\n完整示例代码参考[o"
+      },
+      {
+        "section_id": "section-10",
+        "title": "exitFullscreen<sup>12+</sup>",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 173,
+        "summary": "exitFullscreen(): void\n\n播放器退出全屏。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**示例：**\n\n完整示例代码参考[on"
+      },
+      {
+        "section_id": "section-11",
+        "title": "resumePlayer<sup>12+</sup>",
+        "level": 2,
+        "line_start": 174,
+        "line_end": 185,
+        "summary": "resumePlayer?(): void\n\n通知应用重建应用内播放器，并恢复应用内播放器的状态信息。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n*"
+      },
+      {
+        "section_id": "section-12",
+        "title": "suspendPlayer<sup>12+</sup>",
+        "level": 2,
+        "line_start": 186,
+        "line_end": 203,
+        "summary": "suspendPlayer?(type: SuspendType): void\n\n通知应用销毁应用内播放器，并保存应用内播放器的状态信息。\n\n**系统能力：** SystemCapability.W"
+      }
+    ]
+  }
+}

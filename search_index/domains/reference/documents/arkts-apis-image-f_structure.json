@@ -1,0 +1,340 @@
+{
+  "doc_id": "arkts-apis-image-f",
+  "title": "Functions",
+  "path": "zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-f.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-f.md",
+  "metadata": {
+    "kit": "Image Kit",
+    "subsystem": "Multimedia",
+    "owner": "@aulight02",
+    "designer": "@liyang_bryan",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Image Kit Multimedia 模块的 Functions，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Functions",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 18,
+        "summary": "```ts\nimport { image } from '@kit.ImageKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "image.createPicture<sup>13+</sup>",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 68,
+        "summary": "createPicture(mainPixelmap : PixelMap): Picture\n\n通过主图的pixelmap创建一个Picture对象。\n\n由于图片占用内存较大，所以当Picture"
+      },
+      {
+        "section_id": "section-3",
+        "title": "image.createPictureFromParcel<sup>13+</sup>",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 154,
+        "summary": "createPictureFromParcel(sequence: rpc.MessageSequence): Picture\n\n从MessageSequence中获取Picture。\n\n由于图片占"
+      },
+      {
+        "section_id": "section-4",
+        "title": "image.createPixelMap<sup>8+</sup>",
+        "level": 2,
+        "line_start": 155,
+        "line_end": 193,
+        "summary": "createPixelMap(colors: ArrayBuffer, options: InitializationOptions): Promise\\<PixelMap>\n\n通过属性创建Pixe"
+      },
+      {
+        "section_id": "section-5",
+        "title": "image.createPixelMap<sup>8+</sup>",
+        "level": 2,
+        "line_start": 194,
+        "line_end": 230,
+        "summary": "createPixelMap(colors: ArrayBuffer, options: InitializationOptions, callback: AsyncCallback\\<PixelM"
+      },
+      {
+        "section_id": "section-6",
+        "title": "image.createPixelMapUsingAllocator<sup>20+</sup>",
+        "level": 2,
+        "line_start": 231,
+        "line_end": 280,
+        "summary": "createPixelMapUsingAllocator(colors: ArrayBuffer, param: InitializationOptions, allocatorType?: All"
+      },
+      {
+        "section_id": "section-7",
+        "title": "image.createPixelMapFromParcel<sup>11+</sup>",
+        "level": 2,
+        "line_start": 281,
+        "line_end": 376,
+        "summary": "createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap\n\n从MessageSequence中获取PixelMap。\n\n由于"
+      },
+      {
+        "section_id": "section-8",
+        "title": "image.createPixelMapFromSurface<sup>11+</sup>",
+        "level": 2,
+        "line_start": 377,
+        "line_end": 427,
+        "summary": "createPixelMapFromSurface(surfaceId: string, region: Region): Promise\\<PixelMap>\n\n根据Surface ID和区域信息"
+      },
+      {
+        "section_id": "section-9",
+        "title": "image.createPixelMapFromSurfaceSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 428,
+        "line_end": 473,
+        "summary": "createPixelMapFromSurfaceSync(surfaceId: string, region: Region): PixelMap\n\n以同步方式，根据Surface ID和区域信息"
+      },
+      {
+        "section_id": "section-10",
+        "title": "image.createPixelMapFromSurface<sup>15+</sup>",
+        "level": 2,
+        "line_start": 474,
+        "line_end": 519,
+        "summary": "createPixelMapFromSurface(surfaceId: string): Promise\\<PixelMap>\n\n从Surface ID创建一个PixelMap对象。使用Promi"
+      },
+      {
+        "section_id": "section-11",
+        "title": "image.createPixelMapFromSurfaceSync<sup>15+</sup>",
+        "level": 2,
+        "line_start": 520,
+        "line_end": 560,
+        "summary": "createPixelMapFromSurfaceSync(surfaceId: string): PixelMap\n\n从Surface ID创建一个PixelMap对象，同步返回PixelMap结"
+      },
+      {
+        "section_id": "section-12",
+        "title": "image.createPixelMapFromSurfaceWithTransformation<sup>23+</sup>",
+        "level": 2,
+        "line_start": 561,
+        "line_end": 606,
+        "summary": "createPixelMapFromSurfaceWithTransformation(surfaceId: string, transformEnabled: boolean): Promise\\"
+      },
+      {
+        "section_id": "section-13",
+        "title": "image.createPixelMapFromSurfaceWithTransformationSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 607,
+        "line_end": 656,
+        "summary": "createPixelMapFromSurfaceWithTransformationSync(surfaceId: string, transformEnabled: boolean): Pixe"
+      },
+      {
+        "section_id": "section-14",
+        "title": "image.createPixelMapSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 657,
+        "line_end": 698,
+        "summary": "createPixelMapSync(colors: ArrayBuffer, options: InitializationOptions): PixelMap\n\n通过属性创建PixelMap，默"
+      },
+      {
+        "section_id": "section-15",
+        "title": "image.createPixelMapSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 699,
+        "line_end": 737,
+        "summary": "createPixelMapSync(options: InitializationOptions): PixelMap\n\n通过属性创建PixelMap，同步返回PixelMap结果。\n\n由于图片占"
+      },
+      {
+        "section_id": "section-16",
+        "title": "image.createPixelMapUsingAllocatorSync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 738,
+        "line_end": 782,
+        "summary": "createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: InitializationOptions, allocatorType?:"
+      },
+      {
+        "section_id": "section-17",
+        "title": "image.createPixelMapUsingAllocatorSync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 783,
+        "line_end": 824,
+        "summary": "createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): Pixe"
+      },
+      {
+        "section_id": "section-18",
+        "title": "image.createPremultipliedPixelMap<sup>12+</sup>",
+        "level": 2,
+        "line_start": 825,
+        "line_end": 882,
+        "summary": "createPremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback\\<void>): void\n\n将P"
+      },
+      {
+        "section_id": "section-19",
+        "title": "image.createPremultipliedPixelMap<sup>12+</sup>",
+        "level": 2,
+        "line_start": 883,
+        "line_end": 942,
+        "summary": "createPremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise\\<void>\n\n将PixelMap数据按照透明度非预乘格式转为预"
+      },
+      {
+        "section_id": "section-20",
+        "title": "image.createUnpremultipliedPixelMap<sup>12+</sup>",
+        "level": 2,
+        "line_start": 943,
+        "line_end": 1000,
+        "summary": "createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback\\<void>): void"
+      },
+      {
+        "section_id": "section-21",
+        "title": "image.createUnpremultipliedPixelMap<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1001,
+        "line_end": 1060,
+        "summary": "createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise\\<void>\n\n将PixelMap的透明通道预乘模式转变为非"
+      },
+      {
+        "section_id": "section-22",
+        "title": "image.createImageSource",
+        "level": 2,
+        "line_start": 1061,
+        "line_end": 1093,
+        "summary": "createImageSource(uri: string): ImageSource\n\n通过传入的uri创建ImageSource实例。\n\n由于图片占用内存较大，所以当ImageSource实例使"
+      },
+      {
+        "section_id": "section-23",
+        "title": "image.createImageSource<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1094,
+        "line_end": 1131,
+        "summary": "createImageSource(uri: string, options: SourceOptions): ImageSource\n\n通过传入的uri创建ImageSource实例。\n\n由于图片"
+      },
+      {
+        "section_id": "section-24",
+        "title": "image.createImageSource<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1132,
+        "line_end": 1168,
+        "summary": "createImageSource(fd: number): ImageSource\n\n通过传入文件描述符来创建ImageSource实例。\n\n由于图片占用内存较大，所以当ImageSource实例"
+      },
+      {
+        "section_id": "section-25",
+        "title": "image.createImageSource<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1169,
+        "line_end": 1209,
+        "summary": "createImageSource(fd: number, options: SourceOptions): ImageSource\n\n通过传入文件描述符来创建ImageSource实例。\n\n由于图"
+      },
+      {
+        "section_id": "section-26",
+        "title": "image.createImageSource<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1210,
+        "line_end": 1244,
+        "summary": "createImageSource(buf: ArrayBuffer): ImageSource\n\n通过缓冲区创建ImageSource实例。buf数据是未解码的数据，不可以传入类似于RBGA，YU"
+      },
+      {
+        "section_id": "section-27",
+        "title": "image.createImageSource<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1245,
+        "line_end": 1281,
+        "summary": "createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource\n\n通过缓冲区创建ImageSource实例。buf数"
+      },
+      {
+        "section_id": "section-28",
+        "title": "image.createImageSource<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1282,
+        "line_end": 1324,
+        "summary": "createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions): ImageSource"
+      },
+      {
+        "section_id": "section-29",
+        "title": "image.CreateIncrementalSource<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1325,
+        "line_end": 1380,
+        "summary": "CreateIncrementalSource(buf: ArrayBuffer): ImageSource\n\n通过缓冲区以增量的方式创建ImageSource实例，IncrementalSourc"
+      },
+      {
+        "section_id": "section-30",
+        "title": "image.CreateIncrementalSource<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1381,
+        "line_end": 1432,
+        "summary": "CreateIncrementalSource(buf: ArrayBuffer, options?: SourceOptions): ImageSource\n\n通过缓冲区以增量的方式创建Image"
+      },
+      {
+        "section_id": "section-31",
+        "title": "image.getImageSourceSupportedFormats<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1433,
+        "line_end": 1461,
+        "summary": "getImageSourceSupportedFormats(): string[]\n\n获取支持解码的图片格式，图片格式以mime type表示。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-32",
+        "title": "image.createImagePacker",
+        "level": 2,
+        "line_start": 1462,
+        "line_end": 1487,
+        "summary": "createImagePacker(): ImagePacker\n\n创建ImagePacker实例。\n\n由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release]"
+      },
+      {
+        "section_id": "section-33",
+        "title": "image.getImagePackerSupportedFormats<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1488,
+        "line_end": 1510,
+        "summary": "getImagePackerSupportedFormats(): string[]\n\n获取支持编码的图片格式，图片格式以mime type表示。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-34",
+        "title": "image.createAuxiliaryPicture<sup>13+</sup>",
+        "level": 2,
+        "line_start": 1511,
+        "line_end": 1565,
+        "summary": "createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: AuxiliaryPictureType): AuxiliaryPictu"
+      },
+      {
+        "section_id": "section-35",
+        "title": "image.createImageReceiver<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1566,
+        "line_end": 1607,
+        "summary": "createImageReceiver(size: Size, format: ImageFormat, capacity: number): ImageReceiver\n\n通过图片大小、图片格式、"
+      },
+      {
+        "section_id": "section-36",
+        "title": "image.createImageReceiver<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1608,
+        "line_end": 1649,
+        "summary": "createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | undefined\n\n通过ImageReceiverOpti"
+      },
+      {
+        "section_id": "section-37",
+        "title": "image.createImageCreator<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1650,
+        "line_end": 1692,
+        "summary": "createImageCreator(size: Size, format: ImageFormat, capacity: number): ImageCreator\n\n通过图片大小、图片格式、容量"
+      },
+      {
+        "section_id": "section-38",
+        "title": "image.createImageReceiver<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1693,
+        "line_end": 1727,
+        "summary": "createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver"
+      },
+      {
+        "section_id": "section-39",
+        "title": "image.createImageCreator<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1728,
+        "line_end": 1762,
+        "summary": "createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator"
+      },
+      {
+        "section_id": "section-40",
+        "title": "SVG标签说明",
+        "level": 2,
+        "line_start": 1763,
+        "line_end": 1804,
+        "summary": "从API version 10开始支持SVG标签，使用版本为(SVG) 1.1，SVG标签需设置width，height。SVG文件可添加xml声明，应以“<?xml”开头，当前支持的标签列表有："
+      }
+    ]
+  }
+}

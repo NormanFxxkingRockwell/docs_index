@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-networkSecurity",
+  "title": "@ohos.net.networkSecurity (网络安全校验)",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-networkSecurity.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-networkSecurity.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.networkSecurity (网络安全校验)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.networkSecurity (网络安全校验)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { networkSecurity } from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "完整示例",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 51,
+        "summary": "```ts\nimport { networkSecurity } from '@kit.NetworkKit';\n\n// Define certificate blobs\nconst cert: n"
+      },
+      {
+        "section_id": "section-3",
+        "title": "CertType",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 63,
+        "summary": "证书编码类型。\n\n**系统能力**: SystemCapability.Communication.NetStack\n\n| 名称          | 值    |      说明     |\n|"
+      },
+      {
+        "section_id": "section-4",
+        "title": "CertBlob",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 75,
+        "summary": "证书数据。 \n\n**系统能力**: SystemCapability.Communication.NetStack\n\n| 名称  | 类型                   | 只读      |"
+      },
+      {
+        "section_id": "section-5",
+        "title": "networkSecurity.certVerification",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 156,
+        "summary": "certVerification(cert: CertBlob, caCert?: CertBlob): Promise\\<number\\>\n\n从证书管理获取系统预置的CA证书和用户安装的CA证书，"
+      },
+      {
+        "section_id": "section-6",
+        "title": "networkSecurity.certVerificationSync",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 240,
+        "summary": "certVerificationSync(cert: CertBlob, caCert?: CertBlob): number\n\n从证书管理获取系统预置的CA证书和用户安装的CA证书，对应用传入的证"
+      },
+      {
+        "section_id": "section-7",
+        "title": "networkSecurity.isCleartextPermitted<sup>18+</sup>",
+        "level": 2,
+        "line_start": 241,
+        "line_end": 277,
+        "summary": "isCleartextPermitted(): boolean\n\n从应用预置network_config.json文件中获取整体明文HTTP是否允许信息，默认允许明文HTTP访问。\n\n**需要权限*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "networkSecurity.isCleartextPermittedByHostName<sup>18+</sup>",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 319,
+        "summary": "isCleartextPermittedByHostName(hostName: string): boolean\n\n从应用预置network_config.json文件中获取按域名明文HTTP是否"
+      }
+    ]
+  }
+}

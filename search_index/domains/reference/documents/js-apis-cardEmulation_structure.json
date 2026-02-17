@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-cardEmulation",
+  "title": "@ohos.nfc.cardEmulation (标准NFC-cardEmulation)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-cardEmulation.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-cardEmulation.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@amunra03",
+    "designer": "@wenxiaolin",
+    "tester": "@zs_111",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.nfc.cardEmulation (标准NFC-cardEmulation)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.nfc.cardEmulation (标准NFC-cardEmulation)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "HCE卡模拟和AID列表的声明定义",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 121,
+        "summary": "开发HCE卡模拟相关应用时，需要在应用的属性配置文件中，声明与NFC相关的属性值，比如，在module.json5文件中，声明下面属性值：\n```json\n// 适用于除轻量级智能穿戴产品之外其它设"
+      },
+      {
+        "section_id": "section-2",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 134,
+        "summary": "```js\n// 适用于除轻量级智能穿戴产品之外其它设备\nimport { cardEmulation } from '@kit.ConnectivityKit';\n```\n\n<!--code_no"
+      },
+      {
+        "section_id": "section-3",
+        "title": "FeatureType<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 135,
+        "line_end": 150,
+        "summary": "定义不同的NFC卡模拟类型。\n\n> **说明：**\n> \n> 从 API version 6 开始支持，从 API version 9 开始废弃，建议使用[hasHceCapability](#ca"
+      },
+      {
+        "section_id": "section-4",
+        "title": "CardType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 151,
+        "line_end": 163,
+        "summary": "定义卡模拟应用所使用的业务类型，是支付类型，还是其他类型。\n\n**系统能力：** SystemCapability.Communication.NFC.CardEmulation\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-5",
+        "title": "cardEmulation.isSupported<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 164,
+        "line_end": 209,
+        "summary": "isSupported(feature: number): boolean\n\n是否支持某种类型的卡模拟。\n\n> **说明：**\n> \n> 从 API version 6 开始支持，从 API ver"
+      },
+      {
+        "section_id": "section-6",
+        "title": "cardEmulation.hasHceCapability<sup>9+</sup>",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 259,
+        "summary": "hasHceCapability(): boolean\n\n判断设备是否支持HCE卡模拟功能。\n\n**系统能力：** SystemCapability.Communication.NFC.CardEm"
+      },
+      {
+        "section_id": "section-7",
+        "title": "cardEmulation.isDefaultService<sup>9+</sup>",
+        "level": 2,
+        "line_start": 260,
+        "line_end": 319,
+        "summary": "isDefaultService(elementName: ElementName, type: CardType): boolean\n\n判断指定的应用是否为指定业务类型的默认应用。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-8",
+        "title": "HceService<sup>8+</sup>",
+        "level": 2,
+        "line_start": 320,
+        "line_end": 757,
+        "summary": "提供HCE卡模拟的实现，主要包括接收对端读卡设备的APDU数据，并响应APDU数据到对端读卡设备。使用HCE相关接口前，必须先判断设备是否支持HCE卡模拟能力。\n\n### startHCE<sup>"
+      }
+    ]
+  }
+}

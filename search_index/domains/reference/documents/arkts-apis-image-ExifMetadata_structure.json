@@ -1,0 +1,92 @@
+{
+  "doc_id": "arkts-apis-image-ExifMetadata",
+  "title": "class (ExifMetadata)",
+  "path": "zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-ExifMetadata.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-ExifMetadata.md",
+  "metadata": {
+    "kit": "Image Kit",
+    "subsystem": "Multimedia",
+    "owner": "@aulight02",
+    "designer": "@liyang_bryan",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Image Kit Multimedia 模块的 class (ExifMetadata)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "class (ExifMetadata)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { image } from '@kit.ImageKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 175,
+        "summary": "**模型约束：** 此接口仅可在Stage模型下使用。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-3",
+        "title": "createInstance",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 202,
+        "summary": "static createInstance(): ExifMetadata\n\n创建一个空的[ExifMetadata](arkts-apis-image-ExifMetadata.md)实例。\n\n*"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getProperties",
+        "level": 2,
+        "line_start": 203,
+        "line_end": 263,
+        "summary": "getProperties(key: Array\\<string>): Promise\\<Record\\<string, string \\| null>>\n\n获取图像的元数据属性值。使用Promis"
+      },
+      {
+        "section_id": "section-5",
+        "title": "setProperties",
+        "level": 2,
+        "line_start": 264,
+        "line_end": 328,
+        "summary": "setProperties(records: Record\\<string, string \\| null>): Promise\\<void>\n\n批量设置图片元数据中的指定属性的值。使用Promis"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getAllProperties",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 375,
+        "summary": "getAllProperties(): Promise\\<Record\\<string, string \\| null>>\n\n获取图片中所有元数据的属性和值。使用Promise异步回调。\n\n**模型"
+      },
+      {
+        "section_id": "section-7",
+        "title": "clone",
+        "level": 2,
+        "line_start": 376,
+        "line_end": 421,
+        "summary": "clone(): Promise\\<ExifMetadata>\n\n对Exif元数据进行克隆。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getBlob<sup>23+</sup>",
+        "level": 2,
+        "line_start": 422,
+        "line_end": 462,
+        "summary": "getBlob(): Promise\\<ArrayBuffer>\n\n以二进制数据的形式获取元数据。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能"
+      },
+      {
+        "section_id": "section-9",
+        "title": "setBlob<sup>23+</sup>",
+        "level": 2,
+        "line_start": 463,
+        "line_end": 521,
+        "summary": "setBlob(blob: ArrayBuffer): Promise\\<void>\n\n使用二进制数据替换当前元数据。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在Stage模型下"
+      }
+    ]
+  }
+}

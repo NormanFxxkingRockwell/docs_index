@@ -1,0 +1,380 @@
+{
+  "doc_id": "js-apis-dlppermission",
+  "title": "@ohos.dlpPermission (数据防泄漏)",
+  "path": "zh-cn/application-dev/reference/apis-data-protection-kit/js-apis-dlppermission.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-data-protection-kit/js-apis-dlppermission.md",
+  "metadata": {
+    "kit": "Data Protection Kit",
+    "subsystem": "Security",
+    "owner": "@winnieHuYu",
+    "designer": "@lucky-jinduo",
+    "tester": "@nacyli",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Data Protection Kit Security 模块的 @ohos.dlpPermission (数据防泄漏)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.dlpPermission (数据防泄漏)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { dlpPermission } from '@kit.DataProtectionKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "dlpPermission.isDLPFile",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 72,
+        "summary": "isDLPFile(fd: number): Promise&lt;boolean&gt;\n\n根据文件的fd，查询该文件是否是DLP文件。使用Promise方式异步返回结果。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-3",
+        "title": "dlpPermission.isDLPFile",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 124,
+        "summary": "isDLPFile(fd: number, callback: AsyncCallback&lt;boolean&gt;): void\n\n根据文件的fd，查询该文件是否是DLP文件。使用callba"
+      },
+      {
+        "section_id": "section-4",
+        "title": "dlpPermission.getDLPPermissionInfo",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 168,
+        "summary": "getDLPPermissionInfo(): Promise&lt;DLPPermissionInfo&gt;\n\n查询当前DLP沙箱的权限信息。使用Promise方式异步返回结果。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-5",
+        "title": "dlpPermission.getDLPPermissionInfo",
+        "level": 2,
+        "line_start": 169,
+        "line_end": 217,
+        "summary": "getDLPPermissionInfo(callback: AsyncCallback&lt;DLPPermissionInfo&gt;): void\n\n查询当前DLP沙箱的权限信息。使用call"
+      },
+      {
+        "section_id": "section-6",
+        "title": "dlpPermission.getOriginalFileName",
+        "level": 2,
+        "line_start": 218,
+        "line_end": 260,
+        "summary": "getOriginalFileName(fileName: string): string\n\n获取指定DLP文件名的原始文件名。接口为同步接口。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-7",
+        "title": "dlpPermission.getDLPSuffix",
+        "level": 2,
+        "line_start": 261,
+        "line_end": 296,
+        "summary": "getDLPSuffix(): string\n\n获取DLP文件扩展名。接口为同步接口。\n\n**系统能力：** SystemCapability.Security.DataLossPrevention"
+      },
+      {
+        "section_id": "section-8",
+        "title": "dlpPermission.on('openDLPFile')",
+        "level": 2,
+        "line_start": 297,
+        "line_end": 337,
+        "summary": "on(type: 'openDLPFile', listener: Callback&lt;AccessedDLPFileInfo&gt;): void\n\n监听打开DLP文件。在当前应用的沙箱应用打"
+      },
+      {
+        "section_id": "section-9",
+        "title": "dlpPermission.off('openDLPFile')",
+        "level": 2,
+        "line_start": 338,
+        "line_end": 377,
+        "summary": "off(type: 'openDLPFile', listener?: Callback&lt;AccessedDLPFileInfo&gt;): void\n\n取消监听打开DLP文件。在当前应用的沙"
+      },
+      {
+        "section_id": "section-10",
+        "title": "dlpPermission.isInSandbox",
+        "level": 2,
+        "line_start": 378,
+        "line_end": 414,
+        "summary": "isInSandbox(): Promise&lt;boolean&gt;\n\n查询当前应用是否运行在DLP沙箱环境。使用Promise方式异步返回结果。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-11",
+        "title": "dlpPermission.isInSandbox",
+        "level": 2,
+        "line_start": 415,
+        "line_end": 457,
+        "summary": "isInSandbox(callback: AsyncCallback&lt;boolean&gt;): void\n\n查询当前应用是否运行在DLP沙箱环境。使用callback方式异步返回结果。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "dlpPermission.getDLPSupportedFileTypes",
+        "level": 2,
+        "line_start": 458,
+        "line_end": 494,
+        "summary": "getDLPSupportedFileTypes(): Promise&lt;Array&lt;string&gt;&gt;\n\n查询当前可支持权限设置和校验的文件扩展名类型列表。使用Promise方"
+      },
+      {
+        "section_id": "section-13",
+        "title": "dlpPermission.getDLPSupportedFileTypes",
+        "level": 2,
+        "line_start": 495,
+        "line_end": 537,
+        "summary": "getDLPSupportedFileTypes(callback: AsyncCallback&lt;Array&lt;string&gt;&gt;): void\n\n查询当前可支持权限设置和校验的"
+      },
+      {
+        "section_id": "section-14",
+        "title": "dlpPermission.setRetentionState",
+        "level": 2,
+        "line_start": 538,
+        "line_end": 587,
+        "summary": "setRetentionState(docUris: Array&lt;string&gt;): Promise&lt;void&gt;\n\n打开DLP文件时自动安装沙箱，关闭DLP文件时自动卸载沙箱"
+      },
+      {
+        "section_id": "section-15",
+        "title": "dlpPermission.setRetentionState",
+        "level": 2,
+        "line_start": 588,
+        "line_end": 634,
+        "summary": "setRetentionState(docUris: Array&lt;string&gt;, callback: AsyncCallback&lt;void&gt;): void\n\n打开DLP文件"
+      },
+      {
+        "section_id": "section-16",
+        "title": "dlpPermission.cancelRetentionState",
+        "level": 2,
+        "line_start": 635,
+        "line_end": 678,
+        "summary": "cancelRetentionState(docUris: Array&lt;string&gt;): Promise&lt;void&gt;\n\n取消沙箱保留状态即恢复DLP文件关闭时自动卸载沙箱策"
+      },
+      {
+        "section_id": "section-17",
+        "title": "dlpPermission.cancelRetentionState",
+        "level": 2,
+        "line_start": 679,
+        "line_end": 723,
+        "summary": "cancelRetentionState(docUris: Array&lt;string&gt;, callback: AsyncCallback&lt;void&gt;): void\n\n取消沙箱"
+      },
+      {
+        "section_id": "section-18",
+        "title": "dlpPermission.getRetentionSandboxList",
+        "level": 2,
+        "line_start": 724,
+        "line_end": 770,
+        "summary": "getRetentionSandboxList(bundleName?: string): Promise&lt;Array&lt;RetentionSandboxInfo&gt;&gt;\n\n查询指"
+      },
+      {
+        "section_id": "section-19",
+        "title": "dlpPermission.getRetentionSandboxList",
+        "level": 2,
+        "line_start": 771,
+        "line_end": 815,
+        "summary": "getRetentionSandboxList(bundleName: string, callback: AsyncCallback&lt;Array&lt;RetentionSandboxInf"
+      },
+      {
+        "section_id": "section-20",
+        "title": "dlpPermission.getRetentionSandboxList",
+        "level": 2,
+        "line_start": 816,
+        "line_end": 859,
+        "summary": "getRetentionSandboxList(callback: AsyncCallback&lt;Array&lt;RetentionSandboxInfo&gt;&gt;): void\n\n查询"
+      },
+      {
+        "section_id": "section-21",
+        "title": "dlpPermission.getDLPFileAccessRecords",
+        "level": 2,
+        "line_start": 860,
+        "line_end": 899,
+        "summary": "getDLPFileAccessRecords(): Promise&lt;Array&lt;AccessedDLPFileInfo&gt;&gt;\n\n查询最近访问的DLP文件列表。使用Promis"
+      },
+      {
+        "section_id": "section-22",
+        "title": "dlpPermission.getDLPFileAccessRecords",
+        "level": 2,
+        "line_start": 900,
+        "line_end": 943,
+        "summary": "getDLPFileAccessRecords(callback: AsyncCallback&lt;Array&lt;AccessedDLPFileInfo&gt;&gt;): void\n\n查询最"
+      },
+      {
+        "section_id": "section-23",
+        "title": "dlpPermission.startDLPManagerForResult<sup>11+</sup>",
+        "level": 2,
+        "line_start": 944,
+        "line_end": 1006,
+        "summary": "startDLPManagerForResult(context: common.UIAbilityContext, want: Want): Promise&lt;DLPManagerResult"
+      },
+      {
+        "section_id": "section-24",
+        "title": "dlpPermission.setSandboxAppConfig<sup>11+<sup>",
+        "level": 2,
+        "line_start": 1007,
+        "line_end": 1050,
+        "summary": "setSandboxAppConfig(configInfo: string): Promise&lt;void&gt;\n\n设置沙箱应用配置信息，使用Promise方式异步返回结果。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-25",
+        "title": "dlpPermission.cleanSandboxAppConfig<sup>11+<sup>",
+        "level": 2,
+        "line_start": 1051,
+        "line_end": 1087,
+        "summary": "cleanSandboxAppConfig(): Promise&lt;void&gt;\n\n清理沙箱应用配置信息，使用Promise方式异步返回结果。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-26",
+        "title": "dlpPermission.getSandboxAppConfig<sup>11+<sup>",
+        "level": 2,
+        "line_start": 1088,
+        "line_end": 1125,
+        "summary": "getSandboxAppConfig(): Promise&lt;string&gt;\n\n获取沙箱应用配置信息，使用Promise方式异步返回结果。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-27",
+        "title": "dlpPermission.isDLPFeatureProvided<sup>12+<sup>",
+        "level": 2,
+        "line_start": 1126,
+        "line_end": 1162,
+        "summary": "isDLPFeatureProvided(): Promise&lt;boolean&gt;\n\n查询当前系统是否提供加密保护特性，使用Promise方式异步返回结果。\n\n>**说明：**\n>\n> 该接"
+      },
+      {
+        "section_id": "section-28",
+        "title": "dlpPermission.setEnterprisePolicy<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1163,
+        "line_end": 1239,
+        "summary": "setEnterprisePolicy(policy: EnterprisePolicy): void\n\n设置企业应用防护策略。\n\n**需要权限：** ohos.permission.ENTERPR"
+      },
+      {
+        "section_id": "section-29",
+        "title": "ActionFlagType",
+        "level": 2,
+        "line_start": 1240,
+        "line_end": 1259,
+        "summary": "可以对DLP文件进行的操作类型枚举。例如：DLP沙箱应用可以根据是否具有操作权限，对其按钮进行置灰。\n\n**系统能力：** SystemCapability.Security.DataLossPre"
+      },
+      {
+        "section_id": "section-30",
+        "title": "DLPFileAccess",
+        "level": 2,
+        "line_start": 1260,
+        "line_end": 1272,
+        "summary": "DLP文件授权类型的枚举。\n\n**系统能力：** SystemCapability.Security.DataLossPrevention\n\n| 名称 | 值 | 说明 |\n| -------- |"
+      },
+      {
+        "section_id": "section-31",
+        "title": "DLPPermissionInfo",
+        "level": 2,
+        "line_start": 1273,
+        "line_end": 1283,
+        "summary": "表示DLP文件的权限信息。\n\n**系统能力：** SystemCapability.Security.DataLossPrevention\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n|"
+      },
+      {
+        "section_id": "section-32",
+        "title": "AccessedDLPFileInfo",
+        "level": 2,
+        "line_start": 1284,
+        "line_end": 1294,
+        "summary": "表示被打开的DLP文件的信息。\n\n**系统能力：** SystemCapability.Security.DataLossPrevention\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |"
+      },
+      {
+        "section_id": "section-33",
+        "title": "DLPManagerResult<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1295,
+        "line_end": 1307,
+        "summary": "表示打开DLP权限管理应用的结果。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability.Security.DataLossPrevent"
+      },
+      {
+        "section_id": "section-34",
+        "title": "RetentionSandboxInfo",
+        "level": 2,
+        "line_start": 1308,
+        "line_end": 1319,
+        "summary": "保留沙箱的沙箱信息。\n\n**系统能力：** SystemCapability.Security.DataLossPrevention\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| --"
+      },
+      {
+        "section_id": "section-35",
+        "title": "EnterprisePolicy<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1320,
+        "line_end": 1329,
+        "summary": "表示企业定制策略。\n\n**系统能力：** SystemCapability.Security.DataLossPrevention\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ---"
+      },
+      {
+        "section_id": "section-36",
+        "title": "dlpPermission.generateDlpFileForEnterprise<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1330,
+        "line_end": 1414,
+        "summary": "generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customPrope"
+      },
+      {
+        "section_id": "section-37",
+        "title": "dlpPermission.decryptDlpFile<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1415,
+        "line_end": 1485,
+        "summary": "decryptDlpFile(dlpFd: number, plaintextFd: number): Promise&lt;void&gt;\n\n将DLP文件解密生成明文文件。使用Promise异步"
+      },
+      {
+        "section_id": "section-38",
+        "title": "dlpPermission.queryDlpPolicy<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1486,
+        "line_end": 1547,
+        "summary": "queryDlpPolicy(dlpFd: number): Promise&lt;string&gt;\n\n在DLP文件中解析文件头，获取DLP明文策略。使用Promise异步回调。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-39",
+        "title": "ActionType<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1548,
+        "line_end": 1558,
+        "summary": "表示在文件设定的权限时间到期后所执行的动作枚举，默认为NOT_OPEN。\n\n**系统能力：** SystemCapability.Security.DataLossPrevention\n\n| 名称"
+      },
+      {
+        "section_id": "section-40",
+        "title": "AccountType<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1559,
+        "line_end": 1570,
+        "summary": "表示授权账号类型的枚举。\n\n**系统能力：** SystemCapability.Security.DataLossPrevention\n\n| 名称 | 值 | 说明 |\n| -------- |"
+      },
+      {
+        "section_id": "section-41",
+        "title": "CustomProperty<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1571,
+        "line_end": 1581,
+        "summary": "表示自定义策略。\n\n\n**系统能力：** SystemCapability.Security.DataLossPrevention\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ---"
+      },
+      {
+        "section_id": "section-42",
+        "title": "DLPProperty<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1582,
+        "line_end": 1604,
+        "summary": "表示授权相关信息。\n\n\n**系统能力：** SystemCapability.Security.DataLossPrevention\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| --"
+      },
+      {
+        "section_id": "section-43",
+        "title": "AuthUser<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1605,
+        "line_end": 1617,
+        "summary": "表示授权用户数据。\n\n**系统能力：** SystemCapability.Security.DataLossPrevention\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ---"
+      },
+      {
+        "section_id": "section-44",
+        "title": "DlpConnPlugin<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1618,
+        "line_end": 1656,
+        "summary": "被用于registerPlugin接口中，将回调能力注册到SA（System Ability）中。\n\n>**说明：**\n>\n> [registerPlugin](#registerplugin21)"
+      },
+      {
+        "section_id": "section-45",
+        "title": "DlpConnManager<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1657,
+        "line_end": 1743,
+        "summary": "用于调用registerPlugin和unregisterPlugin接口，将回调能力在SA（System Ability）中注册/注销。\n\n>**说明：**\n>\n> registerPlugi"
+      }
+    ]
+  }
+}

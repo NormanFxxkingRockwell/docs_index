@@ -1,0 +1,180 @@
+{
+  "doc_id": "js-apis-date-time",
+  "title": "@ohos.systemDateTime (系统时间、时区)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-date-time.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-date-time.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Time",
+    "owner": "@huaxin05",
+    "designer": "@hu-kai45",
+    "tester": "@murphy1984",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Basic Services Kit Time 模块的 @ohos.systemDateTime (系统时间、时区)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.systemDateTime (系统时间、时区)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { systemDateTime } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "TimeType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 31,
+        "summary": "定义获取时间的枚举类型。\n\n**系统能力**: SystemCapability.MiscServices.Time\n\n| 名称    | 值   | 说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "systemDateTime.getCurrentTime<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 77,
+        "summary": "getCurrentTime(isNano: boolean, callback: AsyncCallback&lt;number&gt;): void\n\n获取自Unix纪元以来经过的时间，使用ca"
+      },
+      {
+        "section_id": "section-4",
+        "title": "systemDateTime.getCurrentTime<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 78,
+        "line_end": 122,
+        "summary": "getCurrentTime(callback: AsyncCallback&lt;number&gt;): void\n\n获取自Unix纪元以来经过的时间，使用callback异步回调。\n\n> **"
+      },
+      {
+        "section_id": "section-5",
+        "title": "systemDateTime.getCurrentTime<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 171,
+        "summary": "getCurrentTime(isNano?: boolean): Promise&lt;number&gt;\n\n获取自Unix纪元以来经过的时间，使用Promise异步回调。\n\n> **说明：**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "systemDateTime.getRealActiveTime<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 172,
+        "line_end": 217,
+        "summary": "getRealActiveTime(isNano: boolean, callback: AsyncCallback&lt;number&gt;): void\n\n获取自系统启动以来经过的时间，不包括"
+      },
+      {
+        "section_id": "section-7",
+        "title": "systemDateTime.getRealActiveTime<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 218,
+        "line_end": 263,
+        "summary": "getRealActiveTime(callback: AsyncCallback&lt;number&gt;): void\n\n获取自系统启动以来经过的时间，不包括深度睡眠时间，使用callback"
+      },
+      {
+        "section_id": "section-8",
+        "title": "systemDateTime.getRealActiveTime<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 264,
+        "line_end": 311,
+        "summary": "getRealActiveTime(isNano?: boolean): Promise&lt;number&gt;\n\n获取自系统启动以来经过的时间，不包括深度睡眠时间，使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "systemDateTime.getRealTime<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 312,
+        "line_end": 357,
+        "summary": "getRealTime(isNano: boolean, callback: AsyncCallback&lt;number&gt;): void\n\n获取自系统启动以来经过的时间，包括深度睡眠时间，"
+      },
+      {
+        "section_id": "section-10",
+        "title": "systemDateTime.getRealTime<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 358,
+        "line_end": 402,
+        "summary": "getRealTime(callback: AsyncCallback&lt;number&gt;): void\n\n获取自系统启动以来经过的时间，包括深度睡眠时间，使用callback异步回调。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "systemDateTime.getRealTime<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 403,
+        "line_end": 451,
+        "summary": "getRealTime(isNano?: boolean): Promise&lt;number&gt;\n\n获取自系统启动以来经过的时间，包括深度睡眠时间，使用Promise异步回调。\n\n> **说"
+      },
+      {
+        "section_id": "section-12",
+        "title": "systemDateTime.getTime<sup>10+</sup>",
+        "level": 2,
+        "line_start": 452,
+        "line_end": 484,
+        "summary": "getTime(isNanoseconds?: boolean): number\n\n使用同步方式获取自Unix纪元以来到当前系统时间所经过的时间。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-13",
+        "title": "systemDateTime.getUptime<sup>10+</sup>",
+        "level": 2,
+        "line_start": 485,
+        "line_end": 526,
+        "summary": "getUptime(timeType: TimeType, isNanoseconds?: boolean): number\n\n使用同步方式获取自系统启动以来经过的时间。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-14",
+        "title": "systemDateTime.getDate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 527,
+        "line_end": 571,
+        "summary": "getDate(callback: AsyncCallback&lt;Date&gt;): void\n\n获取当前系统日期，使用callback异步回调。\n\n> **说明：**\n>\n> 从API ve"
+      },
+      {
+        "section_id": "section-15",
+        "title": "systemDateTime.getDate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 572,
+        "line_end": 614,
+        "summary": "getDate(): Promise&lt;Date&gt;\n\n获取当前系统日期，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API version 9开始支持，从API vers"
+      },
+      {
+        "section_id": "section-16",
+        "title": "systemDateTime.getTimezone",
+        "level": 2,
+        "line_start": 615,
+        "line_end": 647,
+        "summary": "getTimezone(callback: AsyncCallback&lt;string&gt;): void\n\n获取系统时区，使用callback异步回调。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-17",
+        "title": "systemDateTime.getTimezone",
+        "level": 2,
+        "line_start": 648,
+        "line_end": 678,
+        "summary": "getTimezone(): Promise&lt;string&gt;\n\n获取系统时区，使用Promise异步回调。\n\n**系统能力：** SystemCapability.MiscService"
+      },
+      {
+        "section_id": "section-18",
+        "title": "systemDateTime.getTimezoneSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 679,
+        "line_end": 705,
+        "summary": "getTimezoneSync(): string\n\n获取系统时区，使用同步方式。\n\n**系统能力：** SystemCapability.MiscServices.Time\n\n**返回值：**"
+      },
+      {
+        "section_id": "section-19",
+        "title": "支持的系统时区",
+        "level": 2,
+        "line_start": 706,
+        "line_end": 743,
+        "summary": "支持的系统时区及各时区与0时区相比的偏移量(单位：h)可见下表。\n\n| 时区                           | 偏移量         |\n| ----------------"
+      },
+      {
+        "section_id": "section-20",
+        "title": "systemDateTime.getAutoTimeStatus<sup>21+</sup>",
+        "level": 2,
+        "line_start": 744,
+        "line_end": 778,
+        "summary": "getAutoTimeStatus(): boolean\n\n获取自动设置时间开关状态，使用同步方式。\n\n**系统能力：** SystemCapability.MiscServices.Time\n\n*"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1124 @@
+{
+  "doc_id": "js-apis-file-fs",
+  "title": "@ohos.file.fs (文件管理)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-fs.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-fs.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@wangke25; @gsl_1234; @wuchengjun5",
+    "designer": "@gsl_1234; @wangke25",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.file.fs (文件管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.fs (文件管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { fileIo as fs } from '@kit.CoreFileKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 38,
+        "summary": "使用该功能模块对文件/目录进行操作前，需要先获取其应用沙箱路径，获取方式及其接口用法请参考：\n\n  ```ts\n  import { UIAbility } from '@kit.AbilityKi"
+      },
+      {
+        "section_id": "section-3",
+        "title": "fs.stat",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 76,
+        "summary": "stat(file: string | number): Promise&lt;Stat&gt;\n\n获取文件或目录详细属性信息，使用promise异步回调。\n\n**原子化服务API**：从API v"
+      },
+      {
+        "section_id": "section-4",
+        "title": "fs.stat",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 110,
+        "summary": "stat(file: string | number, callback: AsyncCallback&lt;Stat&gt;): void\n\n获取文件或目录的详细属性信息，使用callback异步"
+      },
+      {
+        "section_id": "section-5",
+        "title": "fs.statSync",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 143,
+        "summary": "statSync(file: string | number): Stat\n\n以同步方法获取文件或目录详细属性信息。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子"
+      },
+      {
+        "section_id": "section-6",
+        "title": "fs.access",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 187,
+        "summary": "access(path: string, mode?: AccessModeType): Promise&lt;boolean&gt;\n\n检查文件或目录是否存在，或校验操作权限，使用promise异"
+      },
+      {
+        "section_id": "section-7",
+        "title": "fs.access<sup>12+</sup>",
+        "level": 2,
+        "line_start": 188,
+        "line_end": 229,
+        "summary": "access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise&lt;boolean&gt;\n\n检查文件或目录是否"
+      },
+      {
+        "section_id": "section-8",
+        "title": "fs.access",
+        "level": 2,
+        "line_start": 230,
+        "line_end": 269,
+        "summary": "access(path: string, callback: AsyncCallback&lt;boolean&gt;): void\n\n检查文件或目录是否存在，使用callback异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "fs.accessSync",
+        "level": 2,
+        "line_start": 270,
+        "line_end": 314,
+        "summary": "accessSync(path: string, mode?: AccessModeType): boolean\n\n以同步方法检查文件或目录是否存在，或校验操作权限。<br>校验读、写或读写权限不通"
+      },
+      {
+        "section_id": "section-10",
+        "title": "fs.accessSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 315,
+        "line_end": 358,
+        "summary": "accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean\n\n以同步方法检查文件或目录是否在本地，或校"
+      },
+      {
+        "section_id": "section-11",
+        "title": "fs.close",
+        "level": 2,
+        "line_start": 359,
+        "line_end": 397,
+        "summary": "close(file: number | File): Promise&lt;void&gt;\n\n关闭文件或目录，使用promise异步回调。\n\n**原子化服务API**：从API version"
+      },
+      {
+        "section_id": "section-12",
+        "title": "fs.close",
+        "level": 2,
+        "line_start": 398,
+        "line_end": 433,
+        "summary": "close(file: number | File, callback: AsyncCallback&lt;void&gt;): void\n\n关闭文件或目录，使用callback异步回调。\n\n**原"
+      },
+      {
+        "section_id": "section-13",
+        "title": "fs.closeSync",
+        "level": 2,
+        "line_start": 434,
+        "line_end": 461,
+        "summary": "closeSync(file: number | File): void\n\n以同步方法关闭文件或目录。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "fs.copy<sup>11+</sup>",
+        "level": 2,
+        "line_start": 462,
+        "line_end": 520,
+        "summary": "copy(srcUri: string, destUri: string, options?: CopyOptions): Promise\\<void>\n\n拷贝文件或目录，使用promise异步回调"
+      },
+      {
+        "section_id": "section-15",
+        "title": "fs.copy<sup>11+</sup>",
+        "level": 2,
+        "line_start": 521,
+        "line_end": 568,
+        "summary": "copy(srcUri: string, destUri: string, callback: AsyncCallback\\<void>): void\n\n拷贝文件或者目录，使用callback异步回"
+      },
+      {
+        "section_id": "section-16",
+        "title": "fs.copy<sup>11+</sup>",
+        "level": 2,
+        "line_start": 569,
+        "line_end": 624,
+        "summary": "copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback\\<void>): void"
+      },
+      {
+        "section_id": "section-17",
+        "title": "fs.copyFile",
+        "level": 2,
+        "line_start": 625,
+        "line_end": 665,
+        "summary": "copyFile(src: string | number, dest: string | number, mode?: number): Promise&lt;void&gt;\n\n复制文件，使用p"
+      },
+      {
+        "section_id": "section-18",
+        "title": "fs.copyFile",
+        "level": 2,
+        "line_start": 666,
+        "line_end": 703,
+        "summary": "copyFile(src: string | number, dest: string | number, mode: number, callback: AsyncCallback&lt;void"
+      },
+      {
+        "section_id": "section-19",
+        "title": "fs.copyFile",
+        "level": 2,
+        "line_start": 704,
+        "line_end": 741,
+        "summary": "copyFile(src: string | number, dest: string | number, callback: AsyncCallback&lt;void&gt;): void\n\n复"
+      },
+      {
+        "section_id": "section-20",
+        "title": "fs.copyFileSync",
+        "level": 2,
+        "line_start": 742,
+        "line_end": 771,
+        "summary": "copyFileSync(src: string | number, dest: string | number, mode?: number): void\n\n以同步方法复制文件。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-21",
+        "title": "fs.copyDir<sup>10+</sup>",
+        "level": 2,
+        "line_start": 772,
+        "line_end": 811,
+        "summary": "copyDir(src: string, dest: string, mode?: number): Promise\\<void>\n\n复制源目录至目标路径下，使用promise异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-22",
+        "title": "fs.copyDir<sup>10+</sup>",
+        "level": 2,
+        "line_start": 812,
+        "line_end": 853,
+        "summary": "copyDir(src: string, dest: string, mode: number, callback: AsyncCallback\\<void, Array\\<ConflictFile"
+      },
+      {
+        "section_id": "section-23",
+        "title": "fs.copyDir<sup>10+</sup>",
+        "level": 2,
+        "line_start": 854,
+        "line_end": 896,
+        "summary": "copyDir(src: string, dest: string, callback: AsyncCallback\\<void, Array\\<ConflictFiles>>): void\n\n复制"
+      },
+      {
+        "section_id": "section-24",
+        "title": "fs.copyDirSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 897,
+        "line_end": 932,
+        "summary": "copyDirSync(src: string, dest: string, mode?: number): void\n\n以同步方法复制源目录至目标路径下。\n\n**系统能力**：SystemCapa"
+      },
+      {
+        "section_id": "section-25",
+        "title": "fs.dup<sup>10+</sup>",
+        "level": 2,
+        "line_start": 933,
+        "line_end": 968,
+        "summary": "dup(fd: number): File\n\n复制文件描述符，并返回对应的File对象。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO"
+      },
+      {
+        "section_id": "section-26",
+        "title": "fs.connectDfs<sup>12+</sup>",
+        "level": 2,
+        "line_start": 969,
+        "line_end": 1019,
+        "summary": "connectDfs(networkId: string, listeners: DfsListeners): Promise&lt;void&gt;\n\n业务调用connectDfs接口，触发建链。"
+      },
+      {
+        "section_id": "section-27",
+        "title": "fs.disconnectDfs<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1020,
+        "line_end": 1064,
+        "summary": "disconnectDfs(networkId: string): Promise&lt;void&gt;\n\n业务调用disconnectDfs接口，传入networkId参数，触发断链。\n\n**需"
+      },
+      {
+        "section_id": "section-28",
+        "title": "fs.setxattr<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1065,
+        "line_end": 1106,
+        "summary": "setxattr(path: string, key: string, value: string): Promise&lt;void&gt;\n\n设置文件或目录的扩展属性。使用promise异步回调"
+      },
+      {
+        "section_id": "section-29",
+        "title": "fs.setxattrSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1107,
+        "line_end": 1144,
+        "summary": "setxattrSync(path: string, key: string, value: string): void\n\n设置文件或目录的扩展属性。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-30",
+        "title": "fs.getxattr<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1145,
+        "line_end": 1185,
+        "summary": "getxattr(path: string, key: string): Promise&lt;string&gt;\n\n获取文件或目录的扩展属性。使用promise异步回调。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-31",
+        "title": "fs.getxattrSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1186,
+        "line_end": 1227,
+        "summary": "getxattrSync(path: string, key: string): string\n\n使用同步接口获取文件或目录的扩展属性。\n\n**系统能力**：SystemCapability.Fil"
+      },
+      {
+        "section_id": "section-32",
+        "title": "fs.mkdir",
+        "level": 2,
+        "line_start": 1228,
+        "line_end": 1265,
+        "summary": "mkdir(path: string): Promise&lt;void&gt;\n\n创建目录，使用promise异步回调。\n\n**原子化服务API**：从API version 11开始，该接口支持"
+      },
+      {
+        "section_id": "section-33",
+        "title": "fs.mkdir<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1266,
+        "line_end": 1304,
+        "summary": "mkdir(path: string, recursion: boolean): Promise\\<void>\n\n创建目录，使用promise异步回调。当recursion指定为true时，可递归创"
+      },
+      {
+        "section_id": "section-34",
+        "title": "fs.mkdir",
+        "level": 2,
+        "line_start": 1305,
+        "line_end": 1339,
+        "summary": "mkdir(path: string, callback: AsyncCallback&lt;void&gt;): void\n\n创建目录，使用callback异步回调。\n\n**原子化服务API**："
+      },
+      {
+        "section_id": "section-35",
+        "title": "fs.mkdir<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1340,
+        "line_end": 1375,
+        "summary": "mkdir(path: string, recursion: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n创建目录，使用callback"
+      },
+      {
+        "section_id": "section-36",
+        "title": "fs.mkdirSync",
+        "level": 2,
+        "line_start": 1376,
+        "line_end": 1402,
+        "summary": "mkdirSync(path: string): void\n\n以同步方法创建目录。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**"
+      },
+      {
+        "section_id": "section-37",
+        "title": "fs.mkdirSync<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1403,
+        "line_end": 1430,
+        "summary": "mkdirSync(path: string, recursion: boolean): void\n\n以同步方法创建目录。当recursion指定为true，可递归创建目录。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-38",
+        "title": "fs.open",
+        "level": 2,
+        "line_start": 1431,
+        "line_end": 1471,
+        "summary": "open(path: string, mode?: number): Promise&lt;File&gt;\n\n打开文件或目录，使用promise异步回调。支持使用URI打开文件。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-39",
+        "title": "fs.open",
+        "level": 2,
+        "line_start": 1472,
+        "line_end": 1510,
+        "summary": "open(path: string, mode: number, callback: AsyncCallback&lt;File&gt;): void\n\n打开文件或目录，可设置打开文件的选项。使用c"
+      },
+      {
+        "section_id": "section-40",
+        "title": "fs.open",
+        "level": 2,
+        "line_start": 1511,
+        "line_end": 1546,
+        "summary": "open(path: string, callback: AsyncCallback&lt;File&gt;): void\n\n打开文件或目录，使用callback异步回调。支持使用URI打开文件。"
+      },
+      {
+        "section_id": "section-41",
+        "title": "fs.openSync",
+        "level": 2,
+        "line_start": 1547,
+        "line_end": 1582,
+        "summary": "openSync(path: string, mode?: number): File\n\n以同步方法打开文件或目录。支持使用URI打开文件。\n\n**原子化服务API**：从API version 1"
+      },
+      {
+        "section_id": "section-42",
+        "title": "fs.read",
+        "level": 2,
+        "line_start": 1583,
+        "line_end": 1629,
+        "summary": "read(fd: number, buffer: ArrayBuffer, options?: ReadOptions): Promise&lt;number&gt;\n\n读取文件数据，使用promi"
+      },
+      {
+        "section_id": "section-43",
+        "title": "fs.read",
+        "level": 2,
+        "line_start": 1630,
+        "line_end": 1672,
+        "summary": "read(fd: number, buffer: ArrayBuffer, options?: ReadOptions, callback: AsyncCallback&lt;number&gt;)"
+      },
+      {
+        "section_id": "section-44",
+        "title": "fs.readSync",
+        "level": 2,
+        "line_start": 1673,
+        "line_end": 1710,
+        "summary": "readSync(fd: number, buffer: ArrayBuffer, options?: ReadOptions): number\n\n以同步方法从文件读取数据。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-45",
+        "title": "fs.rmdir",
+        "level": 2,
+        "line_start": 1711,
+        "line_end": 1752,
+        "summary": "rmdir(path: string): Promise&lt;void&gt;\n\n删除目录及其所有子目录和文件，使用promise异步回调。\n\n> **说明：**\n>\n> 该接口支持删除单个文件，"
+      },
+      {
+        "section_id": "section-46",
+        "title": "fs.rmdir",
+        "level": 2,
+        "line_start": 1753,
+        "line_end": 1791,
+        "summary": "rmdir(path: string, callback: AsyncCallback&lt;void&gt;): void\n\n删除目录及其所有子目录和文件，使用callback异步回调。\n\n> *"
+      },
+      {
+        "section_id": "section-47",
+        "title": "fs.rmdirSync",
+        "level": 2,
+        "line_start": 1792,
+        "line_end": 1822,
+        "summary": "rmdirSync(path: string): void\n\n以同步方法删除目录及其所有子目录和文件。\n\n> **说明：**\n>\n> 该接口支持删除单个文件，但不推荐使用此方法删除单个文件，推荐使用"
+      },
+      {
+        "section_id": "section-48",
+        "title": "fs.unlink",
+        "level": 2,
+        "line_start": 1823,
+        "line_end": 1860,
+        "summary": "unlink(path: string): Promise&lt;void&gt;\n\n删除单个文件，使用promise异步回调。\n\n**原子化服务API**：从API version 11开始，该接"
+      },
+      {
+        "section_id": "section-49",
+        "title": "fs.unlink",
+        "level": 2,
+        "line_start": 1861,
+        "line_end": 1895,
+        "summary": "unlink(path: string, callback: AsyncCallback&lt;void&gt;): void\n\n删除文件，使用callback异步回调。\n\n**原子化服务API**"
+      },
+      {
+        "section_id": "section-50",
+        "title": "fs.unlinkSync",
+        "level": 2,
+        "line_start": 1896,
+        "line_end": 1923,
+        "summary": "unlinkSync(path: string): void\n\n以同步方法删除文件。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力*"
+      },
+      {
+        "section_id": "section-51",
+        "title": "fs.write",
+        "level": 2,
+        "line_start": 1924,
+        "line_end": 1967,
+        "summary": "write(fd: number, buffer: ArrayBuffer | string, options?: WriteOptions): Promise&lt;number&gt;\n\n将数据"
+      },
+      {
+        "section_id": "section-52",
+        "title": "fs.write",
+        "level": 2,
+        "line_start": 1968,
+        "line_end": 2007,
+        "summary": "write(fd: number, buffer: ArrayBuffer | string, options?: WriteOptions, callback: AsyncCallback&lt;"
+      },
+      {
+        "section_id": "section-53",
+        "title": "fs.writeSync",
+        "level": 2,
+        "line_start": 2008,
+        "line_end": 2046,
+        "summary": "writeSync(fd: number, buffer: ArrayBuffer | string, options?: WriteOptions): number\n\n以同步方法将数据写入文件。"
+      },
+      {
+        "section_id": "section-54",
+        "title": "fs.truncate",
+        "level": 2,
+        "line_start": 2047,
+        "line_end": 2086,
+        "summary": "truncate(file: string | number, len?: number): Promise&lt;void&gt;\n\n截断文件，使用promise异步回调。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-55",
+        "title": "fs.truncate",
+        "level": 2,
+        "line_start": 2087,
+        "line_end": 2123,
+        "summary": "truncate(file: string | number, len?: number, callback: AsyncCallback&lt;void&gt;): void\n\n截断文件，使用ca"
+      },
+      {
+        "section_id": "section-56",
+        "title": "fs.truncateSync",
+        "level": 2,
+        "line_start": 2124,
+        "line_end": 2152,
+        "summary": "truncateSync(file: string | number, len?: number): void\n\n以同步方法截断文件内容。\n\n**原子化服务API**：从API version 11"
+      },
+      {
+        "section_id": "section-57",
+        "title": "fs.readLines<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2153,
+        "line_end": 2195,
+        "summary": "readLines(filePath: string, options?: Options): Promise&lt;ReaderIterator&gt;\n\n逐行读取文件文本内容，使用promise"
+      },
+      {
+        "section_id": "section-58",
+        "title": "fs.readLines<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2196,
+        "line_end": 2235,
+        "summary": "readLines(filePath: string, options?: Options, callback: AsyncCallback&lt;ReaderIterator&gt;): void"
+      },
+      {
+        "section_id": "section-59",
+        "title": "fs.readLinesSync<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2236,
+        "line_end": 2274,
+        "summary": "readLinesSync(filePath: string, options?: Options): ReaderIterator\n\n以同步方式逐行读取文件的文本内容。\n\n**系统能力**：Sys"
+      },
+      {
+        "section_id": "section-60",
+        "title": "ReaderIterator<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2275,
+        "line_end": 2318,
+        "summary": "文件读取迭代器。在调用ReaderIterator的方法前，需要先通过readLines方法（同步或异步）来构建一个ReaderIterator实例。\n\n### next<sup>11+</sup>"
+      },
+      {
+        "section_id": "section-61",
+        "title": "ReaderIteratorResult<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2319,
+        "line_end": 2329,
+        "summary": "文件读取迭代器返回结果，支持ReaderIterator接口使用。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称"
+      },
+      {
+        "section_id": "section-62",
+        "title": "fs.readText",
+        "level": 2,
+        "line_start": 2330,
+        "line_end": 2368,
+        "summary": "readText(filePath: string, options?: ReadTextOptions): Promise&lt;string&gt;\n\n基于文本方式读取文件（即直接读取文件的文本"
+      },
+      {
+        "section_id": "section-63",
+        "title": "fs.readText",
+        "level": 2,
+        "line_start": 2369,
+        "line_end": 2411,
+        "summary": "readText(filePath: string, options?: ReadTextOptions, callback: AsyncCallback&lt;string&gt;): void"
+      },
+      {
+        "section_id": "section-64",
+        "title": "fs.readTextSync",
+        "level": 2,
+        "line_start": 2412,
+        "line_end": 2454,
+        "summary": "readTextSync(filePath: string, options?: ReadTextOptions): string\n\n以同步方法基于文本方式读取文件（即直接读取文件的文本内容）。"
+      },
+      {
+        "section_id": "section-65",
+        "title": "fs.lstat",
+        "level": 2,
+        "line_start": 2455,
+        "line_end": 2490,
+        "summary": "lstat(path: string): Promise&lt;Stat&gt;\n\n获取链接文件信息，使用promise异步回调。\n\n**系统能力**：SystemCapability.FileMa"
+      },
+      {
+        "section_id": "section-66",
+        "title": "fs.lstat",
+        "level": 2,
+        "line_start": 2491,
+        "line_end": 2523,
+        "summary": "lstat(path: string, callback: AsyncCallback&lt;Stat&gt;): void\n\n获取链接文件信息，使用callback异步回调。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-67",
+        "title": "fs.lstatSync",
+        "level": 2,
+        "line_start": 2524,
+        "line_end": 2555,
+        "summary": "lstatSync(path: string): Stat\n\n以同步方法获取链接文件信息。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO"
+      },
+      {
+        "section_id": "section-68",
+        "title": "fs.rename",
+        "level": 2,
+        "line_start": 2556,
+        "line_end": 2599,
+        "summary": "rename(oldPath: string, newPath: string): Promise&lt;void&gt;\n\n重命名文件或目录，使用promise异步回调。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-69",
+        "title": "fs.rename",
+        "level": 2,
+        "line_start": 2600,
+        "line_end": 2640,
+        "summary": "rename(oldPath: string, newPath: string, callback: AsyncCallback&lt;void&gt;): void\n\n重命名文件或目录，使用cal"
+      },
+      {
+        "section_id": "section-70",
+        "title": "fs.renameSync",
+        "level": 2,
+        "line_start": 2641,
+        "line_end": 2673,
+        "summary": "renameSync(oldPath: string, newPath: string): void\n\n以同步方法重命名文件或目录。\n\n> **说明：**\n>\n> 该接口不支持在分布式文件路径下操作"
+      },
+      {
+        "section_id": "section-71",
+        "title": "fs.fsync",
+        "level": 2,
+        "line_start": 2674,
+        "line_end": 2712,
+        "summary": "fsync(fd: number): Promise&lt;void&gt;\n\n将文件系统缓存数据写入磁盘，使用promise异步回调。\n\n**系统能力**：SystemCapability.Fil"
+      },
+      {
+        "section_id": "section-72",
+        "title": "fs.fsync",
+        "level": 2,
+        "line_start": 2713,
+        "line_end": 2748,
+        "summary": "fsync(fd: number, callback: AsyncCallback&lt;void&gt;): void\n\n将文件系统缓存数据写入磁盘，使用callback异步回调。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-73",
+        "title": "fs.fsyncSync",
+        "level": 2,
+        "line_start": 2749,
+        "line_end": 2775,
+        "summary": "fsyncSync(fd: number): void\n\n以同步方法将文件系统缓存数据写入磁盘。\n\n**系统能力**：SystemCapability.FileManagement.File.Fil"
+      },
+      {
+        "section_id": "section-74",
+        "title": "fs.fdatasync",
+        "level": 2,
+        "line_start": 2776,
+        "line_end": 2814,
+        "summary": "fdatasync(fd: number): Promise&lt;void&gt;\n\n实现文件内容数据同步，使用promise异步回调。\n\n**系统能力**：SystemCapability.Fi"
+      },
+      {
+        "section_id": "section-75",
+        "title": "fs.fdatasync",
+        "level": 2,
+        "line_start": 2815,
+        "line_end": 2849,
+        "summary": "fdatasync(fd: number, callback: AsyncCallback&lt;void&gt;): void\n\n实现文件内容数据同步，使用callback异步回调。\n\n**系统能"
+      },
+      {
+        "section_id": "section-76",
+        "title": "fs.fdatasyncSync",
+        "level": 2,
+        "line_start": 2850,
+        "line_end": 2876,
+        "summary": "fdatasyncSync(fd: number): void\n\n以同步方法实现文件内容的数据同步。\n\n**系统能力**：SystemCapability.FileManagement.File.F"
+      },
+      {
+        "section_id": "section-77",
+        "title": "fs.symlink",
+        "level": 2,
+        "line_start": 2877,
+        "line_end": 2919,
+        "summary": "symlink(target: string, srcPath: string): Promise&lt;void&gt;\n\n基于文件路径创建符号链接，使用promise异步回调。\n\n> **说明："
+      },
+      {
+        "section_id": "section-78",
+        "title": "fs.symlink",
+        "level": 2,
+        "line_start": 2920,
+        "line_end": 2957,
+        "summary": "symlink(target: string, srcPath: string, callback: AsyncCallback&lt;void&gt;): void\n\n基于文件路径创建符号链接，使用"
+      },
+      {
+        "section_id": "section-79",
+        "title": "fs.symlinkSync",
+        "level": 2,
+        "line_start": 2958,
+        "line_end": 2988,
+        "summary": "symlinkSync(target: string, srcPath: string): void\n\n以同步的方法基于文件路径创建符号链接。\n\n> **说明：**\n>\n> 从API version"
+      },
+      {
+        "section_id": "section-80",
+        "title": "fs.listFile",
+        "level": 2,
+        "line_start": 2989,
+        "line_end": 3041,
+        "summary": "listFile(path: string, options?: ListFileOptions): Promise<string[]>\n\n默认列出当前目录下所有文件名和目录名。支持过滤。使用prom"
+      },
+      {
+        "section_id": "section-81",
+        "title": "fs.listFile",
+        "level": 2,
+        "line_start": 3042,
+        "line_end": 3091,
+        "summary": "listFile(path: string, options?: ListFileOptions, callback: AsyncCallback<string[]>): void\n\n默认列出当前目录"
+      },
+      {
+        "section_id": "section-82",
+        "title": "fs.listFileSync",
+        "level": 2,
+        "line_start": 3092,
+        "line_end": 3141,
+        "summary": "listFileSync(path: string, options?: ListFileOptions): string[]\n\n默认以同步方式列出当前目录下所有文件名和目录名。支持过滤。\n\n可通过"
+      },
+      {
+        "section_id": "section-83",
+        "title": "fs.lseek<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3142,
+        "line_end": 3176,
+        "summary": "lseek(fd: number, offset: number, whence?: WhenceType): number\n\n调整文件偏移指针位置。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-84",
+        "title": "fs.moveDir<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3177,
+        "line_end": 3219,
+        "summary": "moveDir(src: string, dest: string, mode?: number): Promise\\<void>\n\n移动源目录至目标路径下，使用promise异步回调。\n\n> **"
+      },
+      {
+        "section_id": "section-85",
+        "title": "fs.moveDir<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3220,
+        "line_end": 3310,
+        "summary": "moveDir(src: string, dest: string, mode: number, callback: AsyncCallback\\<void, Array\\<ConflictFile"
+      },
+      {
+        "section_id": "section-86",
+        "title": "fs.moveDirSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3311,
+        "line_end": 3356,
+        "summary": "moveDirSync(src: string, dest: string, mode?: number): void\n\n以同步方法移动源目录至目标路径下。\n\n> **说明：**\n>\n> 该接口不支"
+      },
+      {
+        "section_id": "section-87",
+        "title": "fs.moveFile",
+        "level": 2,
+        "line_start": 3357,
+        "line_end": 3399,
+        "summary": "moveFile(src: string, dest: string, mode?: number): Promise\\<void>\n\n移动文件，使用promise异步回调。\n\n> **说明：**"
+      },
+      {
+        "section_id": "section-88",
+        "title": "fs.moveFile",
+        "level": 2,
+        "line_start": 3400,
+        "line_end": 3439,
+        "summary": "moveFile(src: string, dest: string, mode: number, callback: AsyncCallback\\<void>): void\n\n移动文件，支持设置移"
+      },
+      {
+        "section_id": "section-89",
+        "title": "fs.moveFile",
+        "level": 2,
+        "line_start": 3440,
+        "line_end": 3478,
+        "summary": "moveFile(src: string, dest: string, callback: AsyncCallback\\<void>): void\n\n移动文件。如果移动位置存在同名文件，将强制覆盖。"
+      },
+      {
+        "section_id": "section-90",
+        "title": "fs.moveFileSync",
+        "level": 2,
+        "line_start": 3479,
+        "line_end": 3511,
+        "summary": "moveFileSync(src: string, dest: string, mode?: number): void\n\n以同步方式移动文件。\n\n> **说明：**\n>\n> 该接口不支持在分布式文"
+      },
+      {
+        "section_id": "section-91",
+        "title": "fs.mkdtemp",
+        "level": 2,
+        "line_start": 3512,
+        "line_end": 3546,
+        "summary": "mkdtemp(prefix: string): Promise&lt;string&gt;\n\n创建临时目录，使用promise异步回调。\n\n**系统能力**：SystemCapability.Fi"
+      },
+      {
+        "section_id": "section-92",
+        "title": "fs.mkdtemp",
+        "level": 2,
+        "line_start": 3547,
+        "line_end": 3578,
+        "summary": "mkdtemp(prefix: string, callback: AsyncCallback&lt;string&gt;): void\n\n创建临时目录，使用callback异步回调。\n\n**系统能"
+      },
+      {
+        "section_id": "section-93",
+        "title": "fs.mkdtempSync",
+        "level": 2,
+        "line_start": 3579,
+        "line_end": 3608,
+        "summary": "mkdtempSync(prefix: string): string\n\n以同步的方法创建临时目录。\n\n**系统能力**：SystemCapability.FileManagement.File.F"
+      },
+      {
+        "section_id": "section-94",
+        "title": "fs.utimes<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3609,
+        "line_end": 3636,
+        "summary": "utimes(path: string, mtime: number): void\n\n更改文件上次修改该文件的时间。\n\n**系统能力**：SystemCapability.FileManagemen"
+      },
+      {
+        "section_id": "section-95",
+        "title": "fs.createRandomAccessFile<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3637,
+        "line_end": 3676,
+        "summary": "createRandomAccessFile(file: string | File, mode?: number): Promise&lt;RandomAccessFile&gt;\n\n基于文件路径"
+      },
+      {
+        "section_id": "section-96",
+        "title": "fs.createRandomAccessFile<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3677,
+        "line_end": 3747,
+        "summary": "createRandomAccessFile(file: string | File, callback: AsyncCallback&lt;RandomAccessFile&gt;): void"
+      },
+      {
+        "section_id": "section-97",
+        "title": "fs.createRandomAccessFile<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3748,
+        "line_end": 3787,
+        "summary": "createRandomAccessFile(file: string | File, mode?: number, options?: RandomAccessFileOptions): Prom"
+      },
+      {
+        "section_id": "section-98",
+        "title": "fs.createRandomAccessFileSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3788,
+        "line_end": 3821,
+        "summary": "createRandomAccessFileSync(file: string | File, mode?: number): RandomAccessFile\n\n基于文件路径或文件对象创建Rand"
+      },
+      {
+        "section_id": "section-99",
+        "title": "fs.createRandomAccessFileSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3822,
+        "line_end": 3856,
+        "summary": "createRandomAccessFileSync(file: string | File, mode?: number, options?: RandomAccessFileOptions):"
+      },
+      {
+        "section_id": "section-100",
+        "title": "fs.createStream",
+        "level": 2,
+        "line_start": 3857,
+        "line_end": 3897,
+        "summary": "createStream(path: string, mode: string): Promise&lt;Stream&gt;\n\n基于文件路径创建文件流，使用promise异步回调。需要配合[Str"
+      },
+      {
+        "section_id": "section-101",
+        "title": "fs.createStream",
+        "level": 2,
+        "line_start": 3898,
+        "line_end": 3934,
+        "summary": "createStream(path: string, mode: string, callback: AsyncCallback&lt;Stream&gt;): void\n\n基于文件路径创建文件流，"
+      },
+      {
+        "section_id": "section-102",
+        "title": "fs.createStreamSync",
+        "level": 2,
+        "line_start": 3935,
+        "line_end": 3971,
+        "summary": "createStreamSync(path: string, mode: string): Stream\n\n以同步方法基于文件路径创建文件流。需要配合[Stream](#stream)中的close"
+      },
+      {
+        "section_id": "section-103",
+        "title": "fs.fdopenStream",
+        "level": 2,
+        "line_start": 3972,
+        "line_end": 4018,
+        "summary": "fdopenStream(fd: number, mode: string): Promise&lt;Stream&gt;\n\n基于文件描述符打开文件流，使用promise异步回调。需要配合[Stre"
+      },
+      {
+        "section_id": "section-104",
+        "title": "fs.fdopenStream",
+        "level": 2,
+        "line_start": 4019,
+        "line_end": 4062,
+        "summary": "fdopenStream(fd: number, mode: string, callback: AsyncCallback&lt;Stream&gt;): void\n\n基于文件描述符打开文件流，使"
+      },
+      {
+        "section_id": "section-105",
+        "title": "fs.fdopenStreamSync",
+        "level": 2,
+        "line_start": 4063,
+        "line_end": 4102,
+        "summary": "fdopenStreamSync(fd: number, mode: string): Stream\n\n以同步方法基于文件描述符打开文件流。需要配合[Stream](#stream)中的close("
+      },
+      {
+        "section_id": "section-106",
+        "title": "fs.createReadStream<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4103,
+        "line_end": 4144,
+        "summary": "createReadStream(path: string, options?: ReadStreamOptions ): ReadStream\n\n以同步方法打开文件可读流。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-107",
+        "title": "fs.createWriteStream<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4145,
+        "line_end": 4186,
+        "summary": "createWriteStream(path: string, options?: WriteStreamOptions): WriteStream\n\n以同步方法打开文件可写流。\n\n**系统能力**"
+      },
+      {
+        "section_id": "section-108",
+        "title": "AtomicFile<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4187,
+        "line_end": 4507,
+        "summary": "AtomicFile是一个用于对文件进行原子读写操作的类。\n\n在写操作时，通过写入临时文件，并在写入成功后将其重命名到原始文件位置来确保写入文件的完整性；而在写入失败时删除临时文件，不修改原始文件内容"
+      },
+      {
+        "section_id": "section-109",
+        "title": "fs.createWatcher<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4508,
+        "line_end": 4558,
+        "summary": "createWatcher(path: string, events: number, listener: WatchEventListener): Watcher\n\n创建Watcher对象，监听文"
+      },
+      {
+        "section_id": "section-110",
+        "title": "WatchEventListener<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4559,
+        "line_end": 4572,
+        "summary": "(event: WatchEvent): void\n\n事件监听类。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n**参数：**"
+      },
+      {
+        "section_id": "section-111",
+        "title": "WatchEvent<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4573,
+        "line_end": 4586,
+        "summary": "事件类\n\n### 属性\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称   | 类型   | 只读   | 可选   | 说明"
+      },
+      {
+        "section_id": "section-112",
+        "title": "Progress<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4587,
+        "line_end": 4597,
+        "summary": "拷贝进度回调数据\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称   | 类型   | 只读   | 可选   | 说明"
+      },
+      {
+        "section_id": "section-113",
+        "title": "TaskSignal<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4598,
+        "line_end": 4690,
+        "summary": "拷贝中断信号。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n### cancel<sup>12+</sup>\n\ncancel():"
+      },
+      {
+        "section_id": "section-114",
+        "title": "CopyOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4691,
+        "line_end": 4701,
+        "summary": "拷贝进度回调监听\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称   | 类型   | 只读   | 可选   | 说明"
+      },
+      {
+        "section_id": "section-115",
+        "title": "ProgressListener<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4702,
+        "line_end": 4725,
+        "summary": "拷贝进度监听。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 类型 | 说明 |\n| ----| ------|\n|(progre"
+      },
+      {
+        "section_id": "section-116",
+        "title": "Stat",
+        "level": 2,
+        "line_start": 4726,
+        "line_end": 4931,
+        "summary": "文件具体信息，在调用Stat的方法前，需要先通过[stat()](#fsstat)方法（同步或异步）构建一个Stat实例。\n\n### 属性\n\n**系统能力**：SystemCapability.Fi"
+      },
+      {
+        "section_id": "section-117",
+        "title": "Stream",
+        "level": 2,
+        "line_start": 4932,
+        "line_end": 5392,
+        "summary": "文件流，在调用Stream的方法前，需要先通过[fs.createStream](#fscreatestream)方法或者[fs.fdopenStream](#fsfdopenstream)（同步或"
+      },
+      {
+        "section_id": "section-118",
+        "title": "File",
+        "level": 2,
+        "line_start": 5393,
+        "line_end": 5559,
+        "summary": "由open接口打开的File对象。\n\n### 属性\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称   | 类型   | 只读"
+      },
+      {
+        "section_id": "section-119",
+        "title": "fs.DfsListeners<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5560,
+        "line_end": 5580,
+        "summary": "事件监听类。创建DFSListener对象，用于监听分布式文件系统状态。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n### onS"
+      },
+      {
+        "section_id": "section-120",
+        "title": "RandomAccessFile<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5581,
+        "line_end": 5971,
+        "summary": "随机读写文件流。在调用RandomAccessFile的方法前，需要先通过createRandomAccessFile()方法（同步或异步）来构建一个RandomAccessFile实例。\n\n###"
+      },
+      {
+        "section_id": "section-121",
+        "title": "Watcher<sup>10+</sup>",
+        "level": 2,
+        "line_start": 5972,
+        "line_end": 6017,
+        "summary": "文件目录变化监听对象。由createWatcher接口获得。\n\n### start<sup>10+</sup>\n\nstart(): void\n\n开启监听。\n\n**系统能力**：SystemCapab"
+      },
+      {
+        "section_id": "section-122",
+        "title": "OpenMode",
+        "level": 2,
+        "line_start": 6018,
+        "line_end": 6036,
+        "summary": "open接口flags参数常量。文件打开标签。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称   | 类型   | 值  |"
+      },
+      {
+        "section_id": "section-123",
+        "title": "Filter<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6037,
+        "line_end": 6053,
+        "summary": "文件过滤配置项，支持listFile接口使用。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability."
+      },
+      {
+        "section_id": "section-124",
+        "title": "ConflictFiles<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6054,
+        "line_end": 6064,
+        "summary": "冲突文件信息，支持copyDir及moveDir接口使用。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称        |"
+      },
+      {
+        "section_id": "section-125",
+        "title": "Options<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6065,
+        "line_end": 6074,
+        "summary": "可选项类型，支持readLines接口使用。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称        | 类型"
+      },
+      {
+        "section_id": "section-126",
+        "title": "WhenceType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6075,
+        "line_end": 6086,
+        "summary": "枚举，文件偏移指针相对偏移位置类型，支持lseek接口使用。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称        |"
+      },
+      {
+        "section_id": "section-127",
+        "title": "LocationType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6087,
+        "line_end": 6097,
+        "summary": "枚举，文件位置，表示该文件是否在本地或者云端存在。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称        | 值"
+      },
+      {
+        "section_id": "section-128",
+        "title": "AccessModeType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6098,
+        "line_end": 6112,
+        "summary": "枚举，表示需要校验的具体权限。若不填，默认校验文件是否存在。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapa"
+      },
+      {
+        "section_id": "section-129",
+        "title": "AccessFlagType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6113,
+        "line_end": 6122,
+        "summary": "枚举，表示需要校验的文件位置。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称        | 值       | 说明"
+      },
+      {
+        "section_id": "section-130",
+        "title": "ReadOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6123,
+        "line_end": 6135,
+        "summary": "可选项类型，支持read接口使用。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileMa"
+      },
+      {
+        "section_id": "section-131",
+        "title": "ReadTextOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6136,
+        "line_end": 6147,
+        "summary": "可选项类型，支持readText接口使用，ReadTextOptions继承至[ReadOptions](#readoptions11)。\n\n**系统能力**：SystemCapability.Fi"
+      },
+      {
+        "section_id": "section-132",
+        "title": "WriteOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6148,
+        "line_end": 6159,
+        "summary": "可选项类型，支持write接口使用，WriteOptions继承至[Options](#options11)。\n\n**系统能力**：SystemCapability.FileManagement.F"
+      },
+      {
+        "section_id": "section-133",
+        "title": "ListFileOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6160,
+        "line_end": 6173,
+        "summary": "可选项类型，支持listFile接口使用。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Fi"
+      },
+      {
+        "section_id": "section-134",
+        "title": "ReadStream<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6174,
+        "line_end": 6240,
+        "summary": "文件可读流，需要先通过[fs.createReadStream](#fscreatereadstream12)方法来构建一个ReadStream实例。ReadStream继承自数据流基类[strea"
+      },
+      {
+        "section_id": "section-135",
+        "title": "WriteStream<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6241,
+        "line_end": 6308,
+        "summary": "文件可写流，需要先通过[fs.createWriteStream](#fscreatewritestream12)方法来构建一个WriteStream实例。WriteStream继承自数据流基类[s"
+      },
+      {
+        "section_id": "section-136",
+        "title": "RandomAccessFileOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6309,
+        "line_end": 6319,
+        "summary": "可选项类型，支持 createRandomAccessFile 接口使用。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称 |"
+      },
+      {
+        "section_id": "section-137",
+        "title": "ReadStreamOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6320,
+        "line_end": 6330,
+        "summary": "可选项类型，支持 createReadStream 接口使用。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称 | 类型 |"
+      },
+      {
+        "section_id": "section-138",
+        "title": "WriteStreamOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6331,
+        "line_end": 6340,
+        "summary": "可选项类型，支持 createWriteStream 接口使用。\n\n**系统能力**：SystemCapability.FileManagement.File.FileIO\n\n| 名称 | 类型 |"
+      }
+    ]
+  }
+}

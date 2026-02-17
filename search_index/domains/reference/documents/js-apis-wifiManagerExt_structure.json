@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-wifiManagerExt",
+  "title": "@ohos.wifiManagerExt (WLAN扩展接口)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-wifiManagerExt.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-wifiManagerExt.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@qq_43802146",
+    "designer": "@qq_43802146",
+    "tester": "@furryfurry123",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.wifiManagerExt (WLAN扩展接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.wifiManagerExt (WLAN扩展接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```js\nimport { wifiManagerExt } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "wifiManagerExt.enableHotspot<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 56,
+        "summary": "enableHotspot(): void\n\n使能WLAN热点。\n\n> **说明：**\n> 从API version 9开始支持，从API version 10开始废弃。\n\n**需要权限：** oh"
+      },
+      {
+        "section_id": "section-3",
+        "title": "wifiManagerExt.disableHotspot<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 91,
+        "summary": "disableHotspot(): void\n\n去使能WLAN热点。\n\n> **说明：**\n> 从API version 9开始支持，从API version 10开始废弃。\n\n**需要权限：**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "wifiManagerExt.getSupportedPowerMode",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 116,
+        "summary": "getSupportedPowerMode(): Promise&lt;Array&lt;PowerMode&gt;&gt;\n\n获取支持的功率模式。使用Promise异步回调。\n\n**需要权限：**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "PowerMode",
+        "level": 2,
+        "line_start": 117,
+        "line_end": 129,
+        "summary": "表示功率模式的枚举。\n\n**系统能力：** SystemCapability.Ability.AbilityRuntime.Core\n\n| 名称 | 值 | 说明 |\n| -------- | --"
+      },
+      {
+        "section_id": "section-6",
+        "title": "wifiManagerExt.getSupportedPowerMode",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 169,
+        "summary": "getSupportedPowerMode(callback: AsyncCallback&lt;Array&lt;PowerMode&gt;&gt;): void\n\n获取支持的功率模式。使用cal"
+      },
+      {
+        "section_id": "section-7",
+        "title": "wifiManagerExt.getPowerMode",
+        "level": 2,
+        "line_start": 170,
+        "line_end": 211,
+        "summary": "getPowerMode(): Promise&lt;PowerMode&gt;\n\n获取功率模式，使用Promise异步回调。\n\n> **说明：**\n> 从API version 9开始支持，从AP"
+      },
+      {
+        "section_id": "section-8",
+        "title": "wifiManagerExt.getPowerMode",
+        "level": 2,
+        "line_start": 212,
+        "line_end": 257,
+        "summary": "getPowerMode(callback: AsyncCallback&lt;PowerMode&gt;): void\n\n获取功率模式。使用callback异步回调。\n\n**需要权限：** oho"
+      },
+      {
+        "section_id": "section-9",
+        "title": "wifiManagerExt.setPowerMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 258,
+        "line_end": 299,
+        "summary": "setPowerMode(mode: PowerMode) : void\n\n 设置功率模式。\n\n> **说明：**\n> 从API version 9开始支持，从API version 10开始废弃。"
+      }
+    ]
+  }
+}

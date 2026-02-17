@@ -1,0 +1,524 @@
+{
+  "doc_id": "js-apis-avsession-sys",
+  "title": "@ohos.multimedia.avsession (媒体会话管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-avsession-kit/js-apis-avsession-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-avsession-kit/js-apis-avsession-sys.md",
+  "metadata": {
+    "kit": "AVSession Kit",
+    "subsystem": "Multimedia",
+    "owner": "@ccfriend; @liao_qian",
+    "designer": "@ccfriend",
+    "tester": "@chenmingxi1_huawei",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "AVSession Kit Multimedia 模块的 @ohos.multimedia.avsession (媒体会话管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimedia.avsession (媒体会话管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { avSession } from '@kit.AVSessionKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 29,
+        "summary": "本文档仅提供系统接口说明，以下接口的使用说明均需先创建实例，请参考公开接口[avSession.createAVSession](arkts-apis-avsession-f.md#avsessio"
+      },
+      {
+        "section_id": "section-3",
+        "title": "avSession.getAllSessionDescriptors",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 91,
+        "summary": "getAllSessionDescriptors(callback: AsyncCallback\\<Array\\<Readonly\\<AVSessionDescriptor>>>): void"
+      },
+      {
+        "section_id": "section-4",
+        "title": "avSession.getSessionDescriptors<sup>22+</sup>",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 143,
+        "summary": "getSessionDescriptors(category: SessionCategory): Promise\\<Array\\<Readonly\\<AVSessionDescriptor>>>"
+      },
+      {
+        "section_id": "section-5",
+        "title": "avSession.getHistoricalSessionDescriptors<sup>10+</sup>",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 197,
+        "summary": "getHistoricalSessionDescriptors(maxSize?: number): Promise\\<Array\\<Readonly\\<AVSessionDescriptor>>>"
+      },
+      {
+        "section_id": "section-6",
+        "title": "avSession.getHistoricalSessionDescriptors<sup>10+</sup>",
+        "level": 2,
+        "line_start": 198,
+        "line_end": 248,
+        "summary": "getHistoricalSessionDescriptors(maxSize: number, callback: AsyncCallback\\<Array\\<Readonly\\<AVSessio"
+      },
+      {
+        "section_id": "section-7",
+        "title": "avSession.getHistoricalAVQueueInfos<sup>11+</sup>",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 294,
+        "summary": "getHistoricalAVQueueInfos(maxSize: number, maxAppSize: number) : Promise\\<Array\\<Readonly\\<AVQueueI"
+      },
+      {
+        "section_id": "section-8",
+        "title": "avSession.getHistoricalAVQueueInfos<sup>11+</sup>",
+        "level": 2,
+        "line_start": 295,
+        "line_end": 339,
+        "summary": "getHistoricalAVQueueInfos(maxSize: number, maxAppSize: number, callback: AsyncCallback\\<Array\\<Read"
+      },
+      {
+        "section_id": "section-9",
+        "title": "avSession.createController",
+        "level": 2,
+        "line_start": 340,
+        "line_end": 406,
+        "summary": "createController(sessionId: string, callback: AsyncCallback\\<AVSessionController>): void \n\n根据会话ID创建"
+      },
+      {
+        "section_id": "section-10",
+        "title": "avSession.castAudio",
+        "level": 2,
+        "line_start": 407,
+        "line_end": 471,
+        "summary": "castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>): Promise"
+      },
+      {
+        "section_id": "section-11",
+        "title": "avSession.castAudio",
+        "level": 2,
+        "line_start": 472,
+        "line_end": 532,
+        "summary": "castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>, callback"
+      },
+      {
+        "section_id": "section-12",
+        "title": "avSession.startAVPlayback<sup>11+</sup>",
+        "level": 2,
+        "line_start": 533,
+        "line_end": 581,
+        "summary": "startAVPlayback(bundleName: string, assetId: string): Promise\\<void>\n\n启动媒体播放应用程序。结果通过Promise异步回调方式返"
+      },
+      {
+        "section_id": "section-13",
+        "title": "avSession.startAVPlayback<sup>22+</sup>",
+        "level": 2,
+        "line_start": 582,
+        "line_end": 630,
+        "summary": "startAVPlayback(bundleName: string, assetId: string, info: CommandInfo): Promise\\<void>\n\n启动媒体播放应用程序"
+      },
+      {
+        "section_id": "section-14",
+        "title": "avSession.getDistributedSessionController<sup>18+</sup>",
+        "level": 2,
+        "line_start": 631,
+        "line_end": 679,
+        "summary": "getDistributedSessionController(distributedSessionType: DistributedSessionType): Promise<Array\\<AVS"
+      },
+      {
+        "section_id": "section-15",
+        "title": "SessionToken",
+        "level": 2,
+        "line_start": 680,
+        "line_end": 695,
+        "summary": "会话令牌的信息。\n\n**需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES，仅系统应用可用。\n\n**系统能力：** SystemCapability.Mul"
+      },
+      {
+        "section_id": "section-16",
+        "title": "avSession.on('sessionCreate')",
+        "level": 2,
+        "line_start": 696,
+        "line_end": 748,
+        "summary": "on(type: 'sessionCreate', callback: (session: AVSessionDescriptor) => void): void \n\n会话的创建事件监听。 使用ca"
+      },
+      {
+        "section_id": "section-17",
+        "title": "avSession.on('sessionDestroy')",
+        "level": 2,
+        "line_start": 749,
+        "line_end": 799,
+        "summary": "on(type: 'sessionDestroy', callback: (session: AVSessionDescriptor) => void): void \n\n会话的销毁事件监听。使用ca"
+      },
+      {
+        "section_id": "section-18",
+        "title": "avSession.on('topSessionChange')",
+        "level": 2,
+        "line_start": 800,
+        "line_end": 852,
+        "summary": "on(type: 'topSessionChange', callback: (session: AVSessionDescriptor) => void): void \n\n最新播放会话变更的事件监"
+      },
+      {
+        "section_id": "section-19",
+        "title": "avSession.off('sessionCreate')",
+        "level": 2,
+        "line_start": 853,
+        "line_end": 903,
+        "summary": "off(type: 'sessionCreate', callback?: (session: AVSessionDescriptor) => void): void \n\n注销会话创建事件监听。注销"
+      },
+      {
+        "section_id": "section-20",
+        "title": "avSession.off('sessionDestroy')",
+        "level": 2,
+        "line_start": 904,
+        "line_end": 954,
+        "summary": "off(type: 'sessionDestroy', callback?: (session: AVSessionDescriptor) => void): void \n\n注销会话销毁事件监听。注"
+      },
+      {
+        "section_id": "section-21",
+        "title": "avSession.off('topSessionChange')",
+        "level": 2,
+        "line_start": 955,
+        "line_end": 1005,
+        "summary": "off(type: 'topSessionChange', callback?: (session: AVSessionDescriptor) => void): void \n\n注销最新播放会话变更"
+      },
+      {
+        "section_id": "section-22",
+        "title": "avSession.on('sessionServiceDie')",
+        "level": 2,
+        "line_start": 1006,
+        "line_end": 1040,
+        "summary": "on(type: 'sessionServiceDie', callback: () => void): void\n\n监听会话的服务死亡事件。通知应用清理资源。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-23",
+        "title": "avSession.off('sessionServiceDie')",
+        "level": 2,
+        "line_start": 1041,
+        "line_end": 1074,
+        "summary": "off(type: 'sessionServiceDie', callback?: () => void): void\n\n取消会话服务死亡监听，取消后，不再进行服务死亡监听。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-24",
+        "title": "avSession.on('distributedSessionChange')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1075,
+        "line_end": 1112,
+        "summary": "on(type: 'distributedSessionChange', distributedSessionType: DistributedSessionType, callback: Call"
+      },
+      {
+        "section_id": "section-25",
+        "title": "avSession.off('distributedSessionChange')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1113,
+        "line_end": 1147,
+        "summary": "off(type: 'distributedSessionChange', distributedSessionType: DistributedSessionType, callback?: Ca"
+      },
+      {
+        "section_id": "section-26",
+        "title": "avSession.sendSystemAVKeyEvent",
+        "level": 2,
+        "line_start": 1148,
+        "line_end": 1196,
+        "summary": "sendSystemAVKeyEvent(event: KeyEvent, callback: AsyncCallback\\<void>): void\n\n发送按键事件给置顶会话。结果通过callba"
+      },
+      {
+        "section_id": "section-27",
+        "title": "avSession.sendSystemAVKeyEvent",
+        "level": 2,
+        "line_start": 1197,
+        "line_end": 1249,
+        "summary": "sendSystemAVKeyEvent(event: KeyEvent): Promise\\<void>\n\n发送按键事件给置顶会话。结果通过Promise异步回调方式返回。\n\n**需要权限：**"
+      },
+      {
+        "section_id": "section-28",
+        "title": "avSession.sendSystemControlCommand",
+        "level": 2,
+        "line_start": 1250,
+        "line_end": 1309,
+        "summary": "sendSystemControlCommand(command: AVControlCommand, callback: AsyncCallback\\<void>): void\n\n发送控制命令给置"
+      },
+      {
+        "section_id": "section-29",
+        "title": "avSession.sendSystemControlCommand",
+        "level": 2,
+        "line_start": 1310,
+        "line_end": 1374,
+        "summary": "sendSystemControlCommand(command: AVControlCommand): Promise\\<void>\n\n发送控制命令给置顶会话。结果通过Promise异步回调方式返"
+      },
+      {
+        "section_id": "section-30",
+        "title": "ProtocolType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1375,
+        "line_end": 1384,
+        "summary": "远端设备支持的协议类型。\n\n**系统能力：** SystemCapability.Multimedia.AVSession.AVCast\n\n| 名称                        |"
+      },
+      {
+        "section_id": "section-31",
+        "title": "avSession.startCastDeviceDiscovery<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1385,
+        "line_end": 1422,
+        "summary": "startCastDeviceDiscovery(callback: AsyncCallback\\<void>): void\n\n开始设备搜索发现。结果通过callback异步回调方式返回。\n\n**系"
+      },
+      {
+        "section_id": "section-32",
+        "title": "DistributedSessionType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1423,
+        "line_end": 1436,
+        "summary": "表示远端分布式设备支持的会话类型枚举。\n\n**系统能力：** SystemCapability.Multimedia.AVSession.Message\n\n**系统接口：** 该接口为系统接口。"
+      },
+      {
+        "section_id": "section-33",
+        "title": "avSession.startCastDeviceDiscovery<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1437,
+        "line_end": 1477,
+        "summary": "startCastDeviceDiscovery(filter: number, callback: AsyncCallback\\<void>): void\n\n指定过滤条件，开始设备搜索发现。结果通"
+      },
+      {
+        "section_id": "section-34",
+        "title": "avSession.startCastDeviceDiscovery<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1478,
+        "line_end": 1523,
+        "summary": "startCastDeviceDiscovery(filter?: number, drmSchemes?: Array\\<string>): Promise\\<void>\n\n开始设备搜索发现。结果"
+      },
+      {
+        "section_id": "section-35",
+        "title": "avSession.stopCastDeviceDiscovery<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1524,
+        "line_end": 1561,
+        "summary": "stopCastDeviceDiscovery(callback: AsyncCallback\\<void>): void\n\n结束设备搜索发现。结果通过callback异步回调方式返回。\n\n**系统"
+      },
+      {
+        "section_id": "section-36",
+        "title": "avSession.stopCastDeviceDiscovery<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1562,
+        "line_end": 1597,
+        "summary": "stopCastDeviceDiscovery(): Promise\\<void>\n\n结束设备搜索发现。结果通过Promise异步回调方式返回。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-37",
+        "title": "avSession.setDiscoverable<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1598,
+        "line_end": 1637,
+        "summary": "setDiscoverable(enable: boolean, callback: AsyncCallback\\<void>): void\n\n设置设备是否可被发现，用于投播接收端。结果通过call"
+      },
+      {
+        "section_id": "section-38",
+        "title": "avSession.setDiscoverable<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1638,
+        "line_end": 1680,
+        "summary": "setDiscoverable(enable: boolean): Promise\\<void>\n\n设置设备是否可被发现，用于投播接收端。结果通过Promise异步回调方式返回。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-39",
+        "title": "avSession.on('deviceAvailable')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1681,
+        "line_end": 1716,
+        "summary": "on(type: 'deviceAvailable', callback: (device: OutputDeviceInfo) => void): void\n\n设备发现回调监听。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-40",
+        "title": "avSession.off('deviceAvailable')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1717,
+        "line_end": 1748,
+        "summary": "off(type: 'deviceAvailable', callback?: (device: OutputDeviceInfo) => void): void\n\n取消设备发现回调的监听。\n\n**"
+      },
+      {
+        "section_id": "section-41",
+        "title": "avSession.on('deviceOffline')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1749,
+        "line_end": 1784,
+        "summary": "on(type: 'deviceOffline', callback: (deviceId: string) => void): void\n\n设备下线回调监听。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-42",
+        "title": "avSession.off('deviceOffline')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1785,
+        "line_end": 1818,
+        "summary": "off(type: 'deviceOffline', callback?: (deviceId: string) => void): void\n\n取消设备下线回调的监听。\n\n**需要权限：** oh"
+      },
+      {
+        "section_id": "section-43",
+        "title": "avSession.getAVCastController<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1819,
+        "line_end": 1888,
+        "summary": "getAVCastController(sessionId: string, callback: AsyncCallback\\<AVCastController>): void\n\n设备建立连接后，获"
+      },
+      {
+        "section_id": "section-44",
+        "title": "avSession.getAVCastController<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1889,
+        "line_end": 1961,
+        "summary": "getAVCastController(sessionId: string): Promise\\<AVCastController>\n\n设备建立连接后，获取投播控制器。结果通过Promise方式返回"
+      },
+      {
+        "section_id": "section-45",
+        "title": "avSession.startCasting<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1962,
+        "line_end": 2018,
+        "summary": "startCasting(session: SessionToken, device: OutputDeviceInfo, callback: AsyncCallback\\<void>): void"
+      },
+      {
+        "section_id": "section-46",
+        "title": "avSession.startCasting<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2019,
+        "line_end": 2077,
+        "summary": "startCasting(session: SessionToken, device: OutputDeviceInfo): Promise\\<void>\n\n启动投播。结果通过Promise异步回调"
+      },
+      {
+        "section_id": "section-47",
+        "title": "avSession.stopCasting<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2078,
+        "line_end": 2121,
+        "summary": "stopCasting(session: SessionToken, callback: AsyncCallback\\<void>): void\n\n结束投播。结果通过callback异步回调方式返回"
+      },
+      {
+        "section_id": "section-48",
+        "title": "avSession.stopCasting<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2122,
+        "line_end": 2168,
+        "summary": "stopCasting(session: SessionToken): Promise\\<void>\n\n结束投播。结果通过Promise异步回调方式返回。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-49",
+        "title": "avSession.startDeviceLogging<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2169,
+        "line_end": 2217,
+        "summary": "startDeviceLogging(url: string, maxSize?: number): Promise\\<void>\n\n开始将设备日志写入文件。结果通过Promise异步回调方式返回。"
+      },
+      {
+        "section_id": "section-50",
+        "title": "avSession.stopDeviceLogging<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2218,
+        "line_end": 2255,
+        "summary": "stopDeviceLogging(): Promise\\<void>\n\n停止当前设备日志写入。结果通过Promise异步回调方式返回。\n\n**系统能力：** SystemCapability.Mu"
+      },
+      {
+        "section_id": "section-51",
+        "title": "avSession.on('deviceLogEvent')<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2256,
+        "line_end": 2291,
+        "summary": "on(type: 'deviceLogEvent', callback: Callback\\<DeviceLogEventCode>): void\n\n监听日志事件的回调。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-52",
+        "title": "avSession.off('deviceLogEvent')<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2292,
+        "line_end": 2325,
+        "summary": "off(type: 'deviceLogEvent', callback?: Callback\\<DeviceLogEventCode>): void\n\n取消监听日志事件的回调。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-53",
+        "title": "DeviceState<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2326,
+        "line_end": 2340,
+        "summary": "投播设备的连接状态。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.AVSession.AVCast\n\n| 名称"
+      },
+      {
+        "section_id": "section-54",
+        "title": "avSession.on('deviceStateChanged')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2341,
+        "line_end": 2377,
+        "summary": "on(type: 'deviceStateChanged', callback: Callback\\<DeviceState\\>): void\n\n投播设备连接状态的回调函数。\n\n**系统接口：**"
+      },
+      {
+        "section_id": "section-55",
+        "title": "avSession.off('deviceStateChanged')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2378,
+        "line_end": 2411,
+        "summary": "off(type: 'deviceStateChanged', callback?: Callback\\<DeviceState>): void\n\n取消投播设备连接状态的监听。\n\n**系统接口：**"
+      },
+      {
+        "section_id": "section-56",
+        "title": "AVCastController<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2412,
+        "line_end": 2589,
+        "summary": "在投播建立后，调用[avSession.getAVCastController](arkts-apis-avsession-AVSession.md#getavcastcontroller10)后，"
+      },
+      {
+        "section_id": "section-57",
+        "title": "avSession.onActiveSessionChanged<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2590,
+        "line_end": 2647,
+        "summary": "function onActiveSessionChanged(callback: Callback<Array\\<AVSessionDescriptor>>): void\n\n允许在系统控制入口显示"
+      },
+      {
+        "section_id": "section-58",
+        "title": "avSession.offActiveSessionChanged<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2648,
+        "line_end": 2700,
+        "summary": "function offActiveSessionChanged(callback?: Callback<Array\\<AVSessionDescriptor>>): void\n\n取消允许在系统控制"
+      },
+      {
+        "section_id": "section-59",
+        "title": "AVQueueInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2701,
+        "line_end": 2716,
+        "summary": "歌单（歌曲列表）的相关属性。\n\n**系统能力：** SystemCapability.Multimedia.AVSession.Core\n\n**系统接口：** 该接口为系统接口。\n\n| 名称"
+      },
+      {
+        "section_id": "section-60",
+        "title": "DeviceInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2717,
+        "line_end": 2729,
+        "summary": "播放设备的相关信息。\n\n| 名称       | 类型           | 只读 | 可选 | 说明                   |\n| ---------- | -----------"
+      },
+      {
+        "section_id": "section-61",
+        "title": "AVSessionDescriptor",
+        "level": 2,
+        "line_start": 2730,
+        "line_end": 2739,
+        "summary": "会话的相关描述信息。\n\n**系统能力：** SystemCapability.Multimedia.AVSession.Manager\n\n| 名称          | 类型"
+      },
+      {
+        "section_id": "section-62",
+        "title": "DeviceLogEventCode<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2740,
+        "line_end": 2752,
+        "summary": "设备日志事件返回值的枚举。\n\n**系统能力：** SystemCapability.Multimedia.AVSession.AVCast\n\n**系统接口：** 该接口为系统接口。\n\n| 名称"
+      },
+      {
+        "section_id": "section-63",
+        "title": "SessionCategory<sup>22+</sup>",
+        "level": 2,
+        "line_start": 2753,
+        "line_end": 2765,
+        "summary": "表示不同场景会话类别的枚举。\n\n**系统能力：** SystemCapability.Multimedia.AVSession.Manager\n\n**系统接口：** 此接口是系统接口。\n\n| 名称"
+      }
+    ]
+  }
+}

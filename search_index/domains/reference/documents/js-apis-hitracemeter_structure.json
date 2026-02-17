@@ -1,0 +1,132 @@
+{
+  "doc_id": "js-apis-hitracemeter",
+  "title": "@ohos.hiTraceMeter (性能打点)",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hitracemeter.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hitracemeter.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@qq_437963121",
+    "designer": "@kutcherzhou1; @MontSaintMichel",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.hiTraceMeter (性能打点)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.hiTraceMeter (性能打点)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 31,
+        "summary": "```js\nimport { hiTraceMeter } from '@kit.PerformanceAnalysisKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "hiTraceMeter.startTrace",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 60,
+        "summary": "startTrace(name: string, taskId: number): void\n\n标记一个异步跟踪耗时任务的开始。\n\n如果有多个相同name的任务需要跟踪或者对同一个任务要跟踪多次，并"
+      },
+      {
+        "section_id": "section-3",
+        "title": "hiTraceMeter.finishTrace",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 109,
+        "summary": "finishTrace(name: string, taskId: number): void\n\n标记一个异步跟踪耗时任务的结束。\n\nfinishTrace的name和taskId必须与流程开始的["
+      },
+      {
+        "section_id": "section-4",
+        "title": "hiTraceMeter.traceByValue",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 138,
+        "summary": "traceByValue(name: string, count: number): void\n\n用来标记一个跟踪的整数变量，该变量的数值会不断变化。\n\n从API version 19开始，建议使用"
+      },
+      {
+        "section_id": "section-5",
+        "title": "HiTraceOutputLevel<sup>19+</sup>",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 156,
+        "summary": "枚举，跟踪输出级别。\n\n低于系统跟踪输出级别阈值的打点将不会生效。log版本阈值为INFO；nolog版本阈值为COMMERCIAL。\n\n**原子化服务API**：从API version 19开始"
+      },
+      {
+        "section_id": "section-6",
+        "title": "hiTraceMeter.startAsyncTrace<sup>19+</sup>",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 193,
+        "summary": "startAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: number, customCategory: string, cu"
+      },
+      {
+        "section_id": "section-7",
+        "title": "hiTraceMeter.finishAsyncTrace<sup>19+</sup>",
+        "level": 2,
+        "line_start": 194,
+        "line_end": 252,
+        "summary": "finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: number): void\n\n标记一个异步跟踪耗时任务的结束，分级"
+      },
+      {
+        "section_id": "section-8",
+        "title": "hiTraceMeter.startSyncTrace<sup>19+</sup>",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 282,
+        "summary": "startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: string): void\n\n标记一个同步跟踪耗时任务的开始"
+      },
+      {
+        "section_id": "section-9",
+        "title": "hiTraceMeter.finishSyncTrace<sup>19+</sup>",
+        "level": 2,
+        "line_start": 283,
+        "line_end": 323,
+        "summary": "finishSyncTrace(level: HiTraceOutputLevel): void\n\n标记一个同步跟踪耗时任务的结束，分级控制跟踪输出。\n\nfinishSyncTrace的level必"
+      },
+      {
+        "section_id": "section-10",
+        "title": "hiTraceMeter.traceByValue<sup>19+</sup>",
+        "level": 2,
+        "line_start": 324,
+        "line_end": 352,
+        "summary": "traceByValue(level: HiTraceOutputLevel, name: string, count: number): void\n\n整数跟踪事件，分级控制跟踪输出。用来标记一个预"
+      },
+      {
+        "section_id": "section-11",
+        "title": "hiTraceMeter.isTraceEnabled<sup>19+</sup>",
+        "level": 2,
+        "line_start": 353,
+        "line_end": 378,
+        "summary": "isTraceEnabled(): boolean\n\n判断当前是否开启应用trace捕获。\n\n**原子化服务API**：从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-12",
+        "title": "TraceEventListener<sup>22+</sup>",
+        "level": 2,
+        "line_start": 379,
+        "line_end": 394,
+        "summary": "type TraceEventListener = (traceStatus: boolean) => void\n\n定义应用trace捕获开关状态切换时的回调函数类型。\n\n**原子化服务API**："
+      },
+      {
+        "section_id": "section-13",
+        "title": "hiTraceMeter.registerTraceListener<sup>22+</sup>",
+        "level": 2,
+        "line_start": 395,
+        "line_end": 445,
+        "summary": "registerTraceListener(callback: TraceEventListener): number\n\n注册应用trace捕获开关通知回调，使用callback异步回调。\n\n注册成"
+      },
+      {
+        "section_id": "section-14",
+        "title": "hiTraceMeter.unregisterTraceListener<sup>22+</sup>",
+        "level": 2,
+        "line_start": 446,
+        "line_end": 479,
+        "summary": "unregisterTraceListener(index: number): number\n\n注销应用trace捕获开关通知回调。\n\n使用[registerTraceListener()](#hi"
+      }
+    ]
+  }
+}

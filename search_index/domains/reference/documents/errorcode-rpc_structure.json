@@ -1,0 +1,124 @@
+{
+  "doc_id": "errorcode-rpc",
+  "title": "RPC错误码",
+  "path": "zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md",
+  "metadata": {
+    "kit": "IPC Kit",
+    "subsystem": "Communication",
+    "owner": "@xdx19211@luodonghui0157",
+    "designer": "@zhaopeng_gitee",
+    "tester": "@maxiaorong",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "IPC Kit Communication 模块的 RPC错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "RPC错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "1900001 系统调用mmap失败",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 34,
+        "summary": "**错误信息**\n\nFailed to call mmap.\n\n**错误描述**\n\n执行系统调用mmap失败。\n\n**可能原因**\n\n1. 映射区域过大。\n2. 系统内存压力大，没有足够内存可以用来"
+      },
+      {
+        "section_id": "section-2",
+        "title": "1900002 系统调用ioctl失败",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 54,
+        "summary": "**错误信息**\n\nFailed to call ioctl.\n\n**错误描述**\n\n在共享内存文件描述符上执行系统调用ioctl失败。\n\n**可能原因**\n\n1. 设置的参数为内核非法参数。\n2."
+      },
+      {
+        "section_id": "section-3",
+        "title": "1900003 共享内存写数据失败",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 74,
+        "summary": "**错误信息**\n\nFailed to write data to the shared memory.\n\n**错误描述**\n\n向共享内存写数据失败。\n\n**可能原因**\n\n1. 单次写或者连续写的"
+      },
+      {
+        "section_id": "section-4",
+        "title": "1900004 共享内存读数据失败",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 94,
+        "summary": "**错误信息**\n\nFailed to read data from the shared memory.\n\n**错误描述**\n\n从共享内存读数据失败。\n\n**可能原因**\n\n1. 单次写或者连续写"
+      },
+      {
+        "section_id": "section-5",
+        "title": "1900005 ipc对象权限错误",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 112,
+        "summary": "**错误信息**\n\nOperation allowed only for the proxy object.\n\n**错误描述**\n\n只有proxy对象允许该操作。\n\n**可能原因**\n\n在Remot"
+      },
+      {
+        "section_id": "section-6",
+        "title": "1900006 ipc对象权限错误",
+        "level": 2,
+        "line_start": 113,
+        "line_end": 130,
+        "summary": "**错误信息**\n\nOperation allowed only for the remote object.\n\n**错误描述**\n\n只有remote对象允许该操作。\n\n**可能原因**\n\n在Rem"
+      },
+      {
+        "section_id": "section-7",
+        "title": "1900007 远端对象通信失败",
+        "level": 2,
+        "line_start": 131,
+        "line_end": 150,
+        "summary": "**错误信息**\n\nCommunication failed.\n\n**错误描述**\n\n和远端对象进行进程间通信失败。\n\n**可能原因**\n\n1. 远端对象已经销毁。\n2. 远端对象发生了销毁然后重新"
+      },
+      {
+        "section_id": "section-8",
+        "title": "1900008 非法的ipc对象",
+        "level": 2,
+        "line_start": 151,
+        "line_end": 170,
+        "summary": "**错误信息**\n\nThe proxy or remote object is invalid.\n\n**错误描述**\n\n非法的代理对象或者远端对象。\n\n**可能原因**\n\n1. 代理对象已经失效。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "1900009 向MessageSequence写入数据失败",
+        "level": 2,
+        "line_start": 171,
+        "line_end": 188,
+        "summary": "**错误信息**\n\nFailed to write data to the message sequence.\n\n**错误描述**\n\n向MessageSequence写数据失败。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-10",
+        "title": "1900010 读取MessageSequence数据失败",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 206,
+        "summary": "**错误信息**\n\nFailed to read data from the message sequence.\n\n**错误描述**\n\n读取MessageSequence数据失败。\n\n**可能原因*"
+      },
+      {
+        "section_id": "section-11",
+        "title": "1900011 内存分配失败",
+        "level": 2,
+        "line_start": 207,
+        "line_end": 224,
+        "summary": "**错误信息**\n\nMemory allocation failed.\n\n**错误描述**\n\n序列化过程中内存分配失败。\n\n**可能原因**\n\n写入的数据过大，数据取决于当前堆上还有多少可以连续分配"
+      },
+      {
+        "section_id": "section-12",
+        "title": "1900012 JS方法失败",
+        "level": 2,
+        "line_start": 225,
+        "line_end": 242,
+        "summary": "**错误信息**\n\nFailed to call the JS callback function.\n\n**错误描述**\n\n执行JS回调方法失败。\n\n**可能原因**\n\n业务的JS方法返回失败。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "1900013 系统调用dup失败",
+        "level": 2,
+        "line_start": 243,
+        "line_end": 261,
+        "summary": "**错误信息**\n\nFailed to call dup.\n\n**错误描述**\n\n执行系统调用dup失败。\n\n**可能原因**\n\n1. 进程的文件句柄资源已经耗尽。\n2. 入参fd已经被关闭。\n\n*"
+      }
+    ]
+  }
+}

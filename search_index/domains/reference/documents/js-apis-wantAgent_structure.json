@@ -1,0 +1,148 @@
+{
+  "doc_id": "js-apis-wantAgent",
+  "title": "@ohos.wantAgent (WantAgent模块)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-wantAgent.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-wantAgent.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@linjunjie6",
+    "designer": "@li-weifeng2024",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.wantAgent (WantAgent模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.wantAgent (WantAgent模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport wantAgent from '@ohos.wantAgent';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "wantAgent.getWantAgent",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 83,
+        "summary": "getWantAgent(info: WantAgentInfo, callback: AsyncCallback\\<WantAgent\\>): void\n\n创建WantAgent。创建失败返回的W"
+      },
+      {
+        "section_id": "section-3",
+        "title": "wantAgent.getWantAgent",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 140,
+        "summary": "getWantAgent(info: WantAgentInfo): Promise\\<WantAgent\\>\n\n创建WantAgent。创建失败返回的WantAgent为空值。使用Promise异"
+      },
+      {
+        "section_id": "section-4",
+        "title": "wantAgent.getBundleName",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 213,
+        "summary": "getBundleName(agent: WantAgent, callback: AsyncCallback\\<string\\>): void\n\n获取WantAgent实例的Bundle名称。使用"
+      },
+      {
+        "section_id": "section-5",
+        "title": "wantAgent.getBundleName",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 281,
+        "summary": "getBundleName(agent: WantAgent): Promise\\<string\\>\n\n获取WantAgent实例的Bundle名称。使用Promise异步回调。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-6",
+        "title": "wantAgent.getUid",
+        "level": 2,
+        "line_start": 282,
+        "line_end": 354,
+        "summary": "getUid(agent: WantAgent, callback: AsyncCallback\\<number\\>): void\n\n获取WantAgent实例的用户ID。使用callback异步回"
+      },
+      {
+        "section_id": "section-7",
+        "title": "wantAgent.getUid",
+        "level": 2,
+        "line_start": 355,
+        "line_end": 421,
+        "summary": "getUid(agent: WantAgent): Promise\\<number\\>\n\n获取WantAgent实例的用户ID。使用Promise异步回调。\n\n**原子化服务API**：从API v"
+      },
+      {
+        "section_id": "section-8",
+        "title": "wantAgent.cancel",
+        "level": 2,
+        "line_start": 422,
+        "line_end": 494,
+        "summary": "cancel(agent: WantAgent, callback: AsyncCallback\\<void\\>): void\n\n取消WantAgent实例。使用callback异步回调。\n\n**原"
+      },
+      {
+        "section_id": "section-9",
+        "title": "wantAgent.cancel",
+        "level": 2,
+        "line_start": 495,
+        "line_end": 563,
+        "summary": "cancel(agent: WantAgent): Promise\\<void\\>\n\n取消WantAgent实例。使用Promise异步回调。\n\n**原子化服务API**：从API version"
+      },
+      {
+        "section_id": "section-10",
+        "title": "wantAgent.trigger",
+        "level": 2,
+        "line_start": 564,
+        "line_end": 638,
+        "summary": "trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: Callback\\<CompleteData\\>): void\n\n主动激"
+      },
+      {
+        "section_id": "section-11",
+        "title": "wantAgent.equal",
+        "level": 2,
+        "line_start": 639,
+        "line_end": 714,
+        "summary": "equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback\\<boolean\\>): void\n\n判断两个WantA"
+      },
+      {
+        "section_id": "section-12",
+        "title": "wantAgent.equal",
+        "level": 2,
+        "line_start": 715,
+        "line_end": 783,
+        "summary": "equal(agent: WantAgent, otherAgent: WantAgent): Promise\\<boolean\\>\n\n判断两个WantAgent实例是否相等，以此来判断是否是来自同"
+      },
+      {
+        "section_id": "section-13",
+        "title": "WantAgentFlags",
+        "level": 2,
+        "line_start": 784,
+        "line_end": 802,
+        "summary": "**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Co"
+      },
+      {
+        "section_id": "section-14",
+        "title": "OperationType",
+        "level": 2,
+        "line_start": 803,
+        "line_end": 816,
+        "summary": "**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Co"
+      },
+      {
+        "section_id": "section-15",
+        "title": "CompleteData",
+        "level": 2,
+        "line_start": 817,
+        "line_end": 830,
+        "summary": "**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Co"
+      },
+      {
+        "section_id": "section-16",
+        "title": "WantAgent",
+        "level": 2,
+        "line_start": 831,
+        "line_end": 844,
+        "summary": "type WantAgent = object\n\nWantAgent对象。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：Sys"
+      }
+    ]
+  }
+}

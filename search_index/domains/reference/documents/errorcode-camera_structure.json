@@ -1,0 +1,108 @@
+{
+  "doc_id": "errorcode-camera",
+  "title": "Camera错误码",
+  "path": "zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md",
+  "metadata": {
+    "kit": "Camera Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qano",
+    "designer": "@leo_ysl",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Camera Kit Multimedia 模块的 Camera错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Camera错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "7400101 无效入参",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 30,
+        "summary": "**错误信息**\n\nParameter missing or parameter type incorrect.\n\n**错误描述**\n\n调用接口时，传入的参数无效。\n\n**可能原因**\n\n参数无效，"
+      },
+      {
+        "section_id": "section-2",
+        "title": "7400102 非法操作",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 48,
+        "summary": "**错误信息**\n\nOperation not allowed.\n\n**错误描述**\n\n未按照既定方式操作。\n\n**可能原因**\n\n接口执行顺序错误，比如在未调用[beginConfig](arkt"
+      },
+      {
+        "section_id": "section-3",
+        "title": "7400103 会话未配置",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 66,
+        "summary": "**错误信息**\n\nSession not config.\n\n**错误描述**\n\n会话未配置之前即执行了需要会话配置的操作。\n\n**可能原因**\n\n会话配置前，调用[start](arkts-api"
+      },
+      {
+        "section_id": "section-4",
+        "title": "7400104 会话未运行",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 84,
+        "summary": "**错误信息**\n\nSession not running.\n\n**错误描述**\n\n会话未运行之前即执行了需要会话运行的操作。\n\n**可能原因**\n\n会话运行前，调用[capture](arkts-"
+      },
+      {
+        "section_id": "section-5",
+        "title": "7400105 会话配置被锁定",
+        "level": 2,
+        "line_start": 85,
+        "line_end": 102,
+        "summary": "**错误信息**\n\nSession config locked.\n\n**错误描述**\n\n会话配置被锁定。\n\n**可能原因**\n\n其他线程已经锁定会话配置。\n\n**处理步骤**\n\n等待会话配置锁定被释"
+      },
+      {
+        "section_id": "section-6",
+        "title": "7400106 设备配置被锁定",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 120,
+        "summary": "**错误信息**\n\nDevice setting locked.\n\n**错误描述**\n\n设备配置被锁定。\n\n**可能原因**\n\n其他线程已经锁定设备配置。\n\n**处理步骤**\n\n等待设备配置锁定被释"
+      },
+      {
+        "section_id": "section-7",
+        "title": "7400107 相机冲突",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 138,
+        "summary": "**错误信息**\n\nCan not use camera cause of conflict.\n\n**错误描述**\n\n由于相机冲突导致无法使用。\n\n**可能原因**\n\n已经打开的相机与本地将要使用的"
+      },
+      {
+        "section_id": "section-8",
+        "title": "7400108 安全策略无法使用相机",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 156,
+        "summary": "**错误信息**\n\nCamera disabled cause of security reason.\n\n**错误描述**\n\n由于安全策略导致相机无法使用。\n\n**可能原因**\n\n应用退到后台，打开"
+      },
+      {
+        "section_id": "section-9",
+        "title": "7400109 相机设备被抢占",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 174,
+        "summary": "**错误信息**\n\nCan not use camera cause of preempted.\n\n**错误描述**\n\n由于相机被抢占导致无法使用相机。\n\n**可能原因**\n\n两个应用同时打开相同相"
+      },
+      {
+        "section_id": "section-10",
+        "title": "7400110 与当前配置存在冲突",
+        "level": 2,
+        "line_start": 175,
+        "line_end": 192,
+        "summary": "**错误信息**\n\nUnresolved conflicts with current configurations.\n\n**错误描述**\n\n由于当前提交的配置与设备所支持的配置存在不兼容。\n\n**"
+      },
+      {
+        "section_id": "section-11",
+        "title": "7400201 相机服务异常",
+        "level": 2,
+        "line_start": 193,
+        "line_end": 210,
+        "summary": "**错误信息**\n\nCamera service fatal error.\n\n**错误描述**\n\n相机服务异常。\n\n**可能原因**\n\n相机服务异常，比如相机服务重启、跨进程调用异常等。\n\n**处理"
+      }
+    ]
+  }
+}

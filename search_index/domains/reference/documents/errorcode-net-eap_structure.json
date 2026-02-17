@@ -1,0 +1,108 @@
+{
+  "doc_id": "errorcode-net-eap",
+  "title": "扩展认证错误码",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/errorcode-net-eap.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/errorcode-net-eap.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 扩展认证错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "扩展认证错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "33200001 无效的netId值",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 32,
+        "summary": "**错误信息**\n\nInvalid netId.\n\n**错误描述**\n\n不合法的net Id值。\n\n**可能原因**\n\nnet Id值不存在。\n\n**处理步骤**\n\n输入一个合法的net ID值。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "33200002 退出指定netId网卡扩展认证失败",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 50,
+        "summary": "**错误信息**\n\nlog off fail.\n\n**错误描述**\n\n退出指定的net Id的扩展认证失败。\n\n**可能原因**\n\nnet Id值不存在。\n\n**处理步骤**\n\n输入一个合法的net"
+      },
+      {
+        "section_id": "section-3",
+        "title": "33200003 无效的eth eap配置",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 68,
+        "summary": "**错误信息**\n\nInvalid profile.\n\n**错误描述**\n\n不合法的eth eap配置。\n\n**可能原因**\n\nprofile值配置错误。\n\n**处理步骤**\n\n配置正确的profi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "33200004 无效的eap结果值",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 86,
+        "summary": "**错误信息**\n\nInvalid result.\n\n**错误描述**\n\n不合法的eap result值。\n\n**可能原因**\n\n传入的result值不属于CustomResult范围。\n\n**处理"
+      },
+      {
+        "section_id": "section-5",
+        "title": "33200005 无效的eap数据长度",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 104,
+        "summary": "**错误信息**\n\nInvalid size of eap data.\n\n**错误描述**\n\n不合法的eap数据长度值。\n\n**可能原因**\n\n传入的eap数据长度与EapData中的bufferL"
+      },
+      {
+        "section_id": "section-6",
+        "title": "33200006 无效的网络类型",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 123,
+        "summary": "**错误信息**\n\nInvalid net type.\n\n**错误描述**\n\n网络类型不合法。\n\n**可能原因**\n\n传入的网络类型不支持。\n\n**处理步骤**\n\n传入支持的合法网络类型: WLAN"
+      },
+      {
+        "section_id": "section-7",
+        "title": "33200007 无效的eapCode值",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 141,
+        "summary": "**错误信息**\n\nInvalid eap code.\n\n**错误描述**\n\neap code不合法。\n\n**可能原因**\n\n传入的参数不在合理取值范围。\n\n**处理步骤**\n\neap code的合"
+      },
+      {
+        "section_id": "section-8",
+        "title": "33200008 无效的eapType值",
+        "level": 2,
+        "line_start": 142,
+        "line_end": 159,
+        "summary": "**错误信息**\n\nInvalid eap type.\n\n**错误描述**\n\neap type不合法。\n\n**可能原因**\n\n传入的参数不在合理取值范围。\n\n**处理步骤**\n\n传入合法的eap t"
+      },
+      {
+        "section_id": "section-9",
+        "title": "33200009 netmanager进程不存在",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 177,
+        "summary": "**错误信息**\n\nnetmanager stop.\n\n**错误描述**\n\nnetmanager进程不存在。\n\n**可能原因**\n\n系统netmanager进程问题。\n\n**处理步骤**\n\n重启机器"
+      },
+      {
+        "section_id": "section-10",
+        "title": "33200010 无效的eap状态",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 195,
+        "summary": "**错误信息**\n\nInvalid eth state.\n\n**错误描述**\n\n无效的eth状态。\n\n**可能原因**\n\n以太网卡工作状态异常。\n\n**处理步骤**\n\n可尝试插拔有线网重试。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "33200099 程序内部错误",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 214,
+        "summary": "**错误信息**\n\ninternal error.\n\n**错误描述**\n\n程序内部出现错误。\n\n**可能原因**\n\n内部程序异常。\n\n**处理步骤**\n\n重启机器重试。"
+      }
+    ]
+  }
+}

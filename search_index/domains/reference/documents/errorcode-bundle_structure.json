@@ -1,0 +1,764 @@
+{
+  "doc_id": "errorcode-bundle",
+  "title": "包管理子系统通用错误码",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Ability Kit BundleManager 模块的 包管理子系统通用错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "包管理子系统通用错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "17700001 指定的bundleName不存在",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 33,
+        "summary": "**错误信息**<br/>\nThe specified bundle name is not found.\n\n**错误描述**<br/>\n指定的bundleName不存在。\n\n**可能原因**<br"
+      },
+      {
+        "section_id": "section-2",
+        "title": "17700002 指定的moduleName不存在",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 53,
+        "summary": "**错误信息**<br/>\nThe specified module name is not found.\n\n**错误描述**<br/>\n指定的moduleName不存在。\n\n**可能原因**<br"
+      },
+      {
+        "section_id": "section-3",
+        "title": "17700003 指定的abilityName不存在",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 75,
+        "summary": "**错误信息**<br/>\nThe specified ability name is not found.\n\n**错误描述**<br/>\n指定的abilityName不存在。\n\n**可能原因**<"
+      },
+      {
+        "section_id": "section-4",
+        "title": "17700004 指定的用户不存在",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 91,
+        "summary": "**错误信息**<br/>\nThe specified user ID is not found.\n\n**错误描述**<br/>\n调用与用户相关接口时，传入的用户不存在。<!--Del-->[Bun"
+      },
+      {
+        "section_id": "section-5",
+        "title": "17700005 指定的appId为空字符串",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 105,
+        "summary": "**错误信息**<br/>\nThe specified app ID is an empty string.\n\n**错误描述**<br/>\n调用[appControl模块](../apis-abil"
+      },
+      {
+        "section_id": "section-6",
+        "title": "17700006 查询的权限不存在",
+        "level": 2,
+        "line_start": 106,
+        "line_end": 121,
+        "summary": "**错误信息**<br/>\nThe specified permission is not found.\n\n**错误描述**<br/>\n调用bundleManager模块中的[getPermissi"
+      },
+      {
+        "section_id": "section-7",
+        "title": "17700007 输入的设备Id有误",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 137,
+        "summary": "**错误信息**<br/>\nThe specified device ID is not found.\n\n**错误描述**<br/>\n调用[distributedBundle模块](../apis-"
+      },
+      {
+        "section_id": "section-8",
+        "title": "17700010 文件解析失败导致应用安装失败",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 155,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because the HAP fails to be parsed.\n\n**错误描述**<br/>\n调用instal"
+      },
+      {
+        "section_id": "section-9",
+        "title": "17700011 签名校验失败导致应用安装失败",
+        "level": 2,
+        "line_start": 156,
+        "line_end": 176,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because the HAP signature fails to be verified.\n\n**错误描述**<b"
+      },
+      {
+        "section_id": "section-10",
+        "title": "17700012 安装包路径无效或者文件过大导致应用安装失败",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 194,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because the HAP path is invalid or the HAP is too large.\n\n*"
+      },
+      {
+        "section_id": "section-11",
+        "title": "17700015 多个HAP配置信息不同导致应用安装失败",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 208,
+        "summary": "**错误信息**<br/>\nFailed to install the HAPs because they have different configuration information.\n\n**"
+      },
+      {
+        "section_id": "section-12",
+        "title": "17700016 系统磁盘空间不足导致应用安装失败",
+        "level": 2,
+        "line_start": 209,
+        "line_end": 222,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because of insufficient system disk space.\n\n**错误描述**<br/>\n调"
+      },
+      {
+        "section_id": "section-13",
+        "title": "17700017 新安装的应用版本号低于已安装的版本号导致应用安装失败",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 248,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP since the version of the HAP to install is too early.\n\n**错误"
+      },
+      {
+        "section_id": "section-14",
+        "title": "17700018 安装失败，依赖的模块不存在",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 262,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP or HSP because the dependent module does not exist.\n\n**错误描述"
+      },
+      {
+        "section_id": "section-15",
+        "title": "17700020 预置应用无法卸载",
+        "level": 2,
+        "line_start": 263,
+        "line_end": 278,
+        "summary": "**错误信息**<br/>\nThe preinstalled app cannot be uninstalled.\n\n**错误描述**<br/>\n调用installer模块中的[uninstall接"
+      },
+      {
+        "section_id": "section-16",
+        "title": "17700021 指定的uid无效",
+        "level": 2,
+        "line_start": 279,
+        "line_end": 297,
+        "summary": "**错误信息**<br/>\nThe specified uid is invalid.\n\n**错误描述**<br/>\n调用bundleManager模块中的[getBundleNameByUid接口"
+      },
+      {
+        "section_id": "section-17",
+        "title": "17700022 输入的待解析源文件无效",
+        "level": 2,
+        "line_start": 298,
+        "line_end": 313,
+        "summary": "**错误信息**<br/>\nThe input source file is invalid.\n\n**错误描述**<br/>\n调用bundleManager模块中的[getBundleArchive"
+      },
+      {
+        "section_id": "section-18",
+        "title": "17700023 指定的默认应用不存在",
+        "level": 2,
+        "line_start": 314,
+        "line_end": 327,
+        "summary": "**错误信息**<br/>\nThe specified default app does not exist.\n\n**错误描述**<br/>\n调用defaultAppManager模块中的[getD"
+      },
+      {
+        "section_id": "section-19",
+        "title": "17700024 没有相应的配置文件",
+        "level": 2,
+        "line_start": 328,
+        "line_end": 345,
+        "summary": "**错误信息**<br/>\nFailed to get the profile because the specified profile is not found in the HAP.\n\n**错"
+      },
+      {
+        "section_id": "section-20",
+        "title": "17700025 输入的type无效",
+        "level": 2,
+        "line_start": 346,
+        "line_end": 361,
+        "summary": "**错误信息**<br/>\nThe specified type is invalid.\n\n**错误描述**<br/>\n调用defaultAppManager模块的相关接口时，输入的type无效。"
+      },
+      {
+        "section_id": "section-21",
+        "title": "17700026 指定应用被禁用",
+        "level": 2,
+        "line_start": 362,
+        "line_end": 375,
+        "summary": "**错误信息**<br/>\nThe specified bundle is disabled.\n\n**错误描述**<br/>\n当调用查询应用的相关信息接口时，指定应用被禁用。\n\n**可能原因**<b"
+      },
+      {
+        "section_id": "section-22",
+        "title": "17700027 分布式服务未启动",
+        "level": 2,
+        "line_start": 376,
+        "line_end": 388,
+        "summary": "**错误信息**<br/>\nThe distributed service is not running.\n\n**错误描述**<br/>\n当调用[distributedBundle模块](../ap"
+      },
+      {
+        "section_id": "section-23",
+        "title": "17700028 输入的ability与type不匹配",
+        "level": 2,
+        "line_start": 389,
+        "line_end": 402,
+        "summary": "**错误信息**<br/>\nThe ability does not match the type.\n\n**错误描述**<br/>\n当调用defaultAppManager模块中的[setDefau"
+      },
+      {
+        "section_id": "section-24",
+        "title": "17700029 指定的ability被禁用",
+        "level": 2,
+        "line_start": 403,
+        "line_end": 416,
+        "summary": "**错误信息**<br/>\nThe specified ability is disabled.\n\n**错误描述**<br/>\n当调用查询ability相关信息的接口时，指定的ability被禁用。"
+      },
+      {
+        "section_id": "section-25",
+        "title": "17700030 指定的应用不支持清除缓存文件",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 431,
+        "summary": "**错误信息**<br/>\nThe specified bundle does not support clearing of cache files.\n\n**错误描述**<br/>\n当调用bund"
+      },
+      {
+        "section_id": "section-26",
+        "title": "17700031 Overlay特征校验失败导致HAP安装失败",
+        "level": 2,
+        "line_start": 432,
+        "line_end": 451,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because the overlay check of the HAP failed.\n\n**错误描述**<br/>"
+      },
+      {
+        "section_id": "section-27",
+        "title": "17700032 指定的应用不包含overlay特征的module",
+        "level": 2,
+        "line_start": 452,
+        "line_end": 465,
+        "summary": "**错误信息**<br/>\nThe specified bundle does not contain any overlay module.\n\n**错误描述**<br/>\n查询指定应用中overl"
+      },
+      {
+        "section_id": "section-28",
+        "title": "17700033 指定的module不是overlay特征的module",
+        "level": 2,
+        "line_start": 466,
+        "line_end": 479,
+        "summary": "**错误信息**<br/>\nThe specified module is not an overlay module.\n\n**错误描述**<br/>\n查询指定的overlay特征module的ov"
+      },
+      {
+        "section_id": "section-29",
+        "title": "17700034 指定的module是overlay特征的module",
+        "level": 2,
+        "line_start": 480,
+        "line_end": 493,
+        "summary": "**错误信息**<br/>\nThe specified module is an overlay module.\n\n**错误描述**<br/>\n查询指定的目标module所关联的overlayMod"
+      },
+      {
+        "section_id": "section-30",
+        "title": "17700035 指定的应用只包含overlay特征的module",
+        "level": 2,
+        "line_start": 494,
+        "line_end": 507,
+        "summary": "**错误信息**<br/>\nThe specified bundle is an overlay bundle.\n\n**错误描述**<br/>\n查询指定应用的目标module所关联的overlayM"
+      },
+      {
+        "section_id": "section-31",
+        "title": "17700036 共享库缺少AllowAppShareLibrary特权导致安装失败",
+        "level": 2,
+        "line_start": 508,
+        "line_end": 521,
+        "summary": "**错误信息**<br/>\nFailed to install the HSP due to the lack of required permission.\n\n**错误描述**<br/>\n共享库未"
+      },
+      {
+        "section_id": "section-32",
+        "title": "17700037 被卸载的shared library版本被其他应用依赖",
+        "level": 2,
+        "line_start": 522,
+        "line_end": 537,
+        "summary": "**错误信息**<br/>\nThe version of the shared bundle is dependent on other applications.\n\n**错误描述**<br/>\n当"
+      },
+      {
+        "section_id": "section-33",
+        "title": "17700038 被卸载的shared library不存在",
+        "level": 2,
+        "line_start": 538,
+        "line_end": 553,
+        "summary": "**错误信息**<br/>\nThe specified shared bundle does not exist.\n\n**错误描述**<br/>\n当卸载shared library时，卸载的shar"
+      },
+      {
+        "section_id": "section-34",
+        "title": "17700039 不允许安装应用间共享库",
+        "level": 2,
+        "line_start": 554,
+        "line_end": 568,
+        "summary": "**错误信息**<br/>\nFailed to install the HSP because installing a shared bundle specified by hapFilePaths"
+      },
+      {
+        "section_id": "section-35",
+        "title": "17700040 不允许卸载应用间共享库",
+        "level": 2,
+        "line_start": 569,
+        "line_end": 583,
+        "summary": "**错误信息**<br/>\nThe specified bundle is a shared bundle which cannot be uninstalled.\n\n**错误描述**<br/>\n卸载"
+      },
+      {
+        "section_id": "section-36",
+        "title": "17700041 企业设备管理不允许安装该应用",
+        "level": 2,
+        "line_start": 584,
+        "line_end": 596,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because the installation is forbidden by enterprise device m"
+      },
+      {
+        "section_id": "section-37",
+        "title": "17700042 数据代理中的uri配置错误",
+        "level": 2,
+        "line_start": 597,
+        "line_end": 611,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because of incorrect URI in the data proxy.\n\n**错误描述**<br/>\n安"
+      },
+      {
+        "section_id": "section-38",
+        "title": "17700043 数据代理中的权限配置错误",
+        "level": 2,
+        "line_start": 612,
+        "line_end": 626,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because of low APL in the non-system data proxy (required AP"
+      },
+      {
+        "section_id": "section-39",
+        "title": "17700044 安装包设置的多进程配置项与系统配置项设置矛盾",
+        "level": 2,
+        "line_start": 627,
+        "line_end": 640,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because the isolationMode configured is not supported.\n\n**错误"
+      },
+      {
+        "section_id": "section-40",
+        "title": "17700045 企业设备管理不允许卸载该应用",
+        "level": 2,
+        "line_start": 641,
+        "line_end": 653,
+        "summary": "**错误信息**<br/>\nFailed to uninstall the HAP because the uninstall is forbidden by enterprise device ma"
+      },
+      {
+        "section_id": "section-41",
+        "title": "17700047 要更新的应用版本没有大于当前版本",
+        "level": 2,
+        "line_start": 654,
+        "line_end": 668,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because the VersionCode to be updated is not greater than th"
+      },
+      {
+        "section_id": "section-42",
+        "title": "17700048 代码签名校验失败",
+        "level": 2,
+        "line_start": 669,
+        "line_end": 685,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because the code signature verification failed.\n\n**错误描述**<br"
+      },
+      {
+        "section_id": "section-43",
+        "title": "17700049 应用自升级时安装的应用与调用方包名不同",
+        "level": 2,
+        "line_start": 686,
+        "line_end": 698,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because the bundleName is different from the bundleName of t"
+      },
+      {
+        "section_id": "section-44",
+        "title": "17700050 企业MDM应用/普通企业应用不允许安装",
+        "level": 2,
+        "line_start": 699,
+        "line_end": 711,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because an enterprise normal/MDM bundle cannot be installed"
+      },
+      {
+        "section_id": "section-45",
+        "title": "17700051 应用自升级时调用方的签名证书profile文件中的类型不是企业mdm",
+        "level": 2,
+        "line_start": 712,
+        "line_end": 724,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because the distribution type of the caller application is n"
+      },
+      {
+        "section_id": "section-46",
+        "title": "17700052 非开发者模式下不允许安装调试应用",
+        "level": 2,
+        "line_start": 725,
+        "line_end": 737,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because a debug bundle can be installed only in developer mo"
+      },
+      {
+        "section_id": "section-47",
+        "title": "17700053 非应用市场调用",
+        "level": 2,
+        "line_start": 738,
+        "line_end": 750,
+        "summary": "**错误信息**<br/>\nThe caller is not AppGallery.\n\n**错误描述**<br/>\n非应用市场的应用调用，仅供应用市场调用的接口。\n\n**可能原因**<br/>\n调用"
+      },
+      {
+        "section_id": "section-48",
+        "title": "17700054 权限校验失败导致应用安装失败",
+        "level": 2,
+        "line_start": 751,
+        "line_end": 765,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because the HAP requests wrong permissions.\n\n**错误描述**<br/>\n待"
+      },
+      {
+        "section_id": "section-49",
+        "title": "17700055 指定的link无效",
+        "level": 2,
+        "line_start": 766,
+        "line_end": 779,
+        "summary": "**错误信息**<br/>\nThe specified link is invalid.\n\n**错误描述**<br/>\n调用bundleManager模块中的[canOpenLink接口](../a"
+      },
+      {
+        "section_id": "section-50",
+        "title": "17700056 指定link的scheme未在querySchemes字段下配置",
+        "level": 2,
+        "line_start": 780,
+        "line_end": 793,
+        "summary": "**错误信息**<br/>\nThe scheme of the specified link is not in the querySchemes.\n\n**错误描述**<br/>\n调用bundleM"
+      },
+      {
+        "section_id": "section-51",
+        "title": "17700057 指定的应用不是预置应用",
+        "level": 2,
+        "line_start": 794,
+        "line_end": 807,
+        "summary": "**错误信息**<br/>\nFailed to uninstall updates because the HAP is not pre-installed.\n\n**错误描述**<br/>\n调用in"
+      },
+      {
+        "section_id": "section-52",
+        "title": "17700058 指定的应用禁止在本设备或指定用户下安装",
+        "level": 2,
+        "line_start": 808,
+        "line_end": 823,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because this application is prohibited from being installed"
+      },
+      {
+        "section_id": "section-53",
+        "title": "17700059 指定的开发者ID不存在",
+        "level": 2,
+        "line_start": 824,
+        "line_end": 837,
+        "summary": "**错误信息**<br/>\nThe specified developerId is invalid.\n\n**错误描述**<br/>\n调用bundleManager模块中的[getAllBundle"
+      },
+      {
+        "section_id": "section-54",
+        "title": "17700060 指定的应用不允许被卸载",
+        "level": 2,
+        "line_start": 838,
+        "line_end": 853,
+        "summary": "**错误信息**<br/>\nThe specified application cannot be uninstalled.\n\n**错误描述**<br/>\n调用BundleInstaller模块中的"
+      },
+      {
+        "section_id": "section-55",
+        "title": "17700061 指定的应用分身索引无效",
+        "level": 2,
+        "line_start": 854,
+        "line_end": 871,
+        "summary": "**错误信息**<br/>\nThe appIndex is invalid.\n\n**错误描述**<br/>\n调用应用分身相关的接口时，指定的应用分身索引无效。\n\n**可能原因**<br/>\n1. 分"
+      },
+      {
+        "section_id": "section-56",
+        "title": "17700062 应用设置了卸载处置规则，不允许直接卸载",
+        "level": 2,
+        "line_start": 872,
+        "line_end": 885,
+        "summary": "**错误信息**<br/>\nFailed to uninstall the app because the app has uninstall rule.\n\n**错误描述**<br/>\n卸载应用时，"
+      },
+      {
+        "section_id": "section-57",
+        "title": "17700065 ShortcutInfo结构体中指定的want，不支持被拉起",
+        "level": 2,
+        "line_start": 886,
+        "line_end": 899,
+        "summary": "**错误信息**<br/>\nThe ability specified by want in the ShortcutInfo struct cannot be started.\n\n**错误描述**"
+      },
+      {
+        "section_id": "section-58",
+        "title": "17700066 安装失败，native软件包安装失败",
+        "level": 2,
+        "line_start": 900,
+        "line_end": 911,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because installing the native package failed.\n\n**错误描述**<br/"
+      },
+      {
+        "section_id": "section-59",
+        "title": "17700067 卸载应用失败，native软件包卸载失败",
+        "level": 2,
+        "line_start": 912,
+        "line_end": 922,
+        "summary": "**错误信息**<br/>\nFailed to uninstall the HAP because uninstalling the native package failed.\n\n**错误描述**"
+      },
+      {
+        "section_id": "section-60",
+        "title": "17700069 应用不支持创建分身",
+        "level": 2,
+        "line_start": 923,
+        "line_end": 938,
+        "summary": "**错误信息**<br/>\nThe app does not support the creation of an appClone instance.\n\n**错误描述**<br/>\n应用不支持创建"
+      },
+      {
+        "section_id": "section-61",
+        "title": "17700070 指定的快捷方式id不合法",
+        "level": 2,
+        "line_start": 939,
+        "line_end": 953,
+        "summary": "**错误信息**<br/>\nThe specified shortcut id is illegal.\n\n**错误描述**<br/>\n快捷方式id是不合法的。\n\n**可能原因**<br/>\n已经存在"
+      },
+      {
+        "section_id": "section-62",
+        "title": "17700071 不允许企业应用安装",
+        "level": 2,
+        "line_start": 954,
+        "line_end": 967,
+        "summary": "**错误信息**<br/>\nIt is not allowed to install the enterprise bundle.\n\n**错误描述**<br/>\n[特定的安装接口](../apis-a"
+      },
+      {
+        "section_id": "section-63",
+        "title": "17700072 Launch Want不存在",
+        "level": 2,
+        "line_start": 968,
+        "line_end": 981,
+        "summary": "**错误信息**<br/>\nThe launch want is not found.\n\n**错误描述**<br/>\n调用[bundleManager.getLaunchWant](../apis-a"
+      },
+      {
+        "section_id": "section-64",
+        "title": "17700073 由于设备上存在具有相同包名称但不同签名信息的应用程序，导致安装失败",
+        "level": 2,
+        "line_start": 982,
+        "line_end": 997,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP because an application with the same bundle name but differe"
+      },
+      {
+        "section_id": "section-65",
+        "title": "17700074 传入的appIdentifier无效",
+        "level": 2,
+        "line_start": 998,
+        "line_end": 1011,
+        "summary": "**错误信息**<br/>\nThe specified appIdentifier is invalid.\n\n**错误描述**<br/>\n调用[appControl模块](../apis-abili"
+      },
+      {
+        "section_id": "section-66",
+        "title": "17700075 want指定的bundleName与调用方不符",
+        "level": 2,
+        "line_start": 1012,
+        "line_end": 1025,
+        "summary": "**错误信息**<br/>\nThe specified bundleName of want is not the same with caller.\n\n**错误描述**<br/>\n设置卸载处置规则"
+      },
+      {
+        "section_id": "section-67",
+        "title": "17700076 签名证书profile文件中的类型被限制，不允许安装到当前设备中，导致安装失败",
+        "level": 2,
+        "line_start": 1026,
+        "line_end": 1038,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP or HSP because the app distribution type is not allowed.\n\n**"
+      },
+      {
+        "section_id": "section-68",
+        "title": "17700077 安装应用失败，但安装对应的预置应用成功",
+        "level": 2,
+        "line_start": 1039,
+        "line_end": 1055,
+        "summary": "**错误信息**<br/>\nFailed to install the HAP and restore to preinstalled bundle.\n\n**错误描述**<br/>\n安装指定应用前，"
+      },
+      {
+        "section_id": "section-69",
+        "title": "17700080 源路径中存在无效路径",
+        "level": 2,
+        "line_start": 1056,
+        "line_end": 1071,
+        "summary": "**错误信息**<br/>\nThe source paths are invalid.\n\n**错误描述**<br/>\n源路径无效。\n\n**可能原因**<br/>\n1. 源路径数组为空。\n2. 源路径"
+      },
+      {
+        "section_id": "section-70",
+        "title": "17700081 目标路径为无效路径",
+        "level": 2,
+        "line_start": 1072,
+        "line_end": 1087,
+        "summary": "**错误信息**<br/>\nThe destination path is invalid.\n\n**错误描述**<br/>\n目标路径无效。\n\n**可能原因**<br/>\n1. 目标路径为空。\n2."
+      },
+      {
+        "section_id": "section-71",
+        "title": "17700082 用户身份认证失败",
+        "level": 2,
+        "line_start": 1088,
+        "line_end": 1105,
+        "summary": "**错误信息**<br/>\nUser authentication failed.\n\n**错误描述**<br/>\n用户身份认证失败。\n\n**可能原因**<br/>\n1. 当前系统不支持用户身份认证。"
+      },
+      {
+        "section_id": "section-72",
+        "title": "17700083 用户身份认证超时",
+        "level": 2,
+        "line_start": 1106,
+        "line_end": 1119,
+        "summary": "**错误信息**<br/>\nWaiting for user authentication timeout.\n\n**错误描述**<br/>\n等待用户身份认证超时。\n\n**可能原因**<br/>\n用户"
+      },
+      {
+        "section_id": "section-73",
+        "title": "17700084 源路径中存在未开启权限路径",
+        "level": 2,
+        "line_start": 1120,
+        "line_end": 1133,
+        "summary": "**错误信息**<br/>\nThere are inaccessible path in the source paths.\n\n**错误描述**<br/>\n源路径中存在未开启读权限的路径。\n\n**可"
+      },
+      {
+        "section_id": "section-74",
+        "title": "17700085 目标路径未开启写权限",
+        "level": 2,
+        "line_start": 1134,
+        "line_end": 1147,
+        "summary": "**错误信息**<br/>\nThe destination path cannot be accessed.\n\n**错误描述**<br/>\n无法访问目标路径。\n\n**可能原因**<br/>\n目标路径"
+      },
+      {
+        "section_id": "section-75",
+        "title": "17700086 发生系统错误",
+        "level": 2,
+        "line_start": 1148,
+        "line_end": 1162,
+        "summary": "**错误信息**<br/>\nSystem error occurred during copy execution.\n\n**错误描述**<br/>\n拷贝执行过程中发生系统错误。\n\n**可能原因**<"
+      },
+      {
+        "section_id": "section-76",
+        "title": "17700087 当前设备不支持安装插件",
+        "level": 2,
+        "line_start": 1163,
+        "line_end": 1176,
+        "summary": "**错误信息**<br/>\nFailed to install the plugin because the current device does not support plugins. \n\n*"
+      },
+      {
+        "section_id": "section-77",
+        "title": "17700088 应用缺少安装插件的权限",
+        "level": 2,
+        "line_start": 1177,
+        "line_end": 1192,
+        "summary": "**错误信息**<br/>\nFailed to install the plugin because the host application lacks ohos.permission.kerne"
+      },
+      {
+        "section_id": "section-78",
+        "title": "17700089 插件的 pluginDistributionIDs 解析失败",
+        "level": 2,
+        "line_start": 1193,
+        "line_end": 1214,
+        "summary": "**错误信息**<br/>\nFailed to install the plugin because the plugin id fails to be parsed.\n\n**错误描述**<br/>"
+      },
+      {
+        "section_id": "section-79",
+        "title": "17700090 插件与应用之间 pluginDistributionIDs 校验失败",
+        "level": 2,
+        "line_start": 1215,
+        "line_end": 1235,
+        "summary": "**错误信息**<br/>\nFailed to install the plugin because the plugin id fails to be verified.\n\n**错误描述**<br"
+      },
+      {
+        "section_id": "section-80",
+        "title": "17700091 插件与主体同包名",
+        "level": 2,
+        "line_start": 1236,
+        "line_end": 1249,
+        "summary": "**错误信息**<br/>\nFailed to install the plugin because the plugin name is the same as the host bundle n"
+      },
+      {
+        "section_id": "section-81",
+        "title": "17700092 插件包名不存在",
+        "level": 2,
+        "line_start": 1250,
+        "line_end": 1265,
+        "summary": "**错误信息**<br/>\nFailed to uninstall the plugin because the specified plugin is not found.\n\n**错误描述**<b"
+      },
+      {
+        "section_id": "section-82",
+        "title": "17700101 包管理服务异常",
+        "level": 2,
+        "line_start": 1266,
+        "line_end": 1300,
+        "summary": "**错误信息**<br/>\nBundle manager service exception.\n\n**错误描述**<br/>\n包管理服务异常。\n\n**可能原因**<br/>\n场景一：\n\n系统出现未知的"
+      },
+      {
+        "section_id": "section-83",
+        "title": "17700201 abc文件校验失败",
+        "level": 2,
+        "line_start": 1301,
+        "line_end": 1313,
+        "summary": "**错误信息**<br/>\nFailed to verify the abc file.\n\n**错误描述**<br/>\n.abc文件路径校验失败。\n\n**可能原因**<br/>\n.abc文件不可信。"
+      },
+      {
+        "section_id": "section-84",
+        "title": "17700202 abc文件删除失败",
+        "level": 2,
+        "line_start": 1314,
+        "line_end": 1326,
+        "summary": "**错误信息**<br/>\nFailed to delete the abc file.\n\n**错误描述**<br/>\n.abc文件删除失败。\n\n**可能原因**<br/>\n.abc文件不存在。\n\n*"
+      },
+      {
+        "section_id": "section-85",
+        "title": "17700301 扩展资源添加失败",
+        "level": 2,
+        "line_start": 1327,
+        "line_end": 1339,
+        "summary": "**错误信息**<br/>\nFailed to add extended resources.\n\n**错误描述**<br/>\n扩展资源添加失败。\n\n**可能原因**<br/>\nhsp文件不存在或者不可"
+      },
+      {
+        "section_id": "section-86",
+        "title": "17700302 扩展资源删除失败",
+        "level": 2,
+        "line_start": 1340,
+        "line_end": 1352,
+        "summary": "**错误信息**<br/>\nFailed to remove extended resources.\n\n**错误描述**<br/>\n扩展资源删除失败。\n\n**可能原因**<br/>\nmoduleNam"
+      },
+      {
+        "section_id": "section-87",
+        "title": "17700303 扩展资源查询失败",
+        "level": 2,
+        "line_start": 1353,
+        "line_end": 1365,
+        "summary": "**错误信息**<br/>\nFailed to obtain extended resources.\n\n**错误描述**<br/>\n扩展资源查询失败。\n\n**可能原因**<br/>\nbundleNam"
+      },
+      {
+        "section_id": "section-88",
+        "title": "17700304 动态图标使能失败",
+        "level": 2,
+        "line_start": 1366,
+        "line_end": 1378,
+        "summary": "**错误信息**<br/>\nFailed to enable the dynamic icon.\n\n**错误描述**<br/>\n动态图标使能失败。\n\n**可能原因**<br/>\nhsp包没有正确的图标"
+      },
+      {
+        "section_id": "section-89",
+        "title": "17700305 动态图标去使能失败",
+        "level": 2,
+        "line_start": 1379,
+        "line_end": 1391,
+        "summary": "**错误信息**<br/>\nFailed to disable the dynamic icon.\n\n**错误描述**<br/>\n动态图标去使能失败。\n\n**可能原因**<br/>\nbundleNam"
+      },
+      {
+        "section_id": "section-90",
+        "title": "17700306 动态图标查询失败",
+        "level": 2,
+        "line_start": 1392,
+        "line_end": 1404,
+        "summary": "**错误信息**<br/>\nFailed to obtain the dynamic icon.\n\n**错误描述**<br/>\n动态图标查询失败。\n\n**可能原因**<br/>\nbundleName没"
+      },
+      {
+        "section_id": "section-91",
+        "title": "17700307 由于存在自定义主题，动态图标无法生效",
+        "level": 2,
+        "line_start": 1405,
+        "line_end": 1419,
+        "summary": "**错误信息**<br/>\nDynamic icons cannot take effect due to existing custom themes.\n\n**错误描述**<br/>\n由于存在自定义"
+      },
+      {
+        "section_id": "section-92",
+        "title": "17700351 无效的文件类型",
+        "level": 2,
+        "line_start": 1420,
+        "line_end": 1436,
+        "summary": "**错误信息**<br/>\nInvalid fileTypes.\n\n**错误描述**<br/>\n无效的文件类型。\n\n**可能原因**<br/>\n文件类型数组无效，例如：\n1. 数组长度超过1024。"
+      },
+      {
+        "section_id": "section-93",
+        "title": "18100001 ShortcutInfo列表中bundleName和appIndex不一一对应",
+        "level": 2,
+        "line_start": 1437,
+        "line_end": 1474,
+        "summary": "**错误信息**<br/>\nA combination of bundleName and appIndex in the shutcutInfo list is different from the"
+      }
+    ]
+  }
+}

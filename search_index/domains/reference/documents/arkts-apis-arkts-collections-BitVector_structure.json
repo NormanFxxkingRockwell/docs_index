@@ -1,0 +1,164 @@
+{
+  "doc_id": "arkts-apis-arkts-collections-BitVector",
+  "title": "Class (BitVector)",
+  "path": "zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-collections-BitVector.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-collections-BitVector.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@lijiamin2025",
+    "designer": "@weng-changcheng",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 Class (BitVector)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (BitVector)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { collections } from '@kit.ArkTS';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 34,
+        "summary": "**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-3",
+        "title": "constructor",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 57,
+        "summary": "constructor(length: number)\n\nBitVector的构造函数。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-4",
+        "title": "push",
+        "level": 2,
+        "line_start": 58,
+        "line_end": 100,
+        "summary": "push(element:number): boolean\n\n在BitVector尾部插入元素。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "pop",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 138,
+        "summary": "pop(): number\n\n弹出BitVector尾部的元素。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-6",
+        "title": "has",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 185,
+        "summary": "has(element: number, fromIndex: number, toIndex: number): boolean\n\n判断范围内是否包含特定bit值。\n\n**原子化服务API**：从"
+      },
+      {
+        "section_id": "section-7",
+        "title": "setBitsByRange",
+        "level": 2,
+        "line_start": 186,
+        "line_end": 226,
+        "summary": "setBitsByRange(element: number, fromIndex: number, toIndex: number): void\n\n将BitVector中指定范围的元素均设为特定b"
+      },
+      {
+        "section_id": "section-8",
+        "title": "setAllBits",
+        "level": 2,
+        "line_start": 227,
+        "line_end": 264,
+        "summary": "setAllBits(element: number): void\n\n将BitVector中所有元素均设为特定bit值。\n\n**原子化服务API**：从API version 12 开始，该接口支持"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getBitsByRange",
+        "level": 2,
+        "line_start": 265,
+        "line_end": 311,
+        "summary": "getBitsByRange(fromIndex: number, toIndex: number): BitVector\n\n获取指定范围内的bit值。\n\n**原子化服务API**：从API ver"
+      },
+      {
+        "section_id": "section-10",
+        "title": "resize",
+        "level": 2,
+        "line_start": 312,
+        "line_end": 356,
+        "summary": "resize(size: number): void\n\n改变BitVector的长度。\n\n若size大于原BitVector的长度，则扩充原BitVector的长度，多出的部分其元素设置为0；\n\n若"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getBitCountByRange",
+        "level": 2,
+        "line_start": 357,
+        "line_end": 404,
+        "summary": "getBitCountByRange(element: number, fromIndex: number, toIndex: number): number\n\n统计指定范围内获取指定bit值的数量"
+      },
+      {
+        "section_id": "section-12",
+        "title": "getIndexOf",
+        "level": 2,
+        "line_start": 405,
+        "line_end": 452,
+        "summary": "getIndexOf(element: number, fromIndex: number, toIndex: number): number\n\n返回指定bit值首次出现时的索引值，查找失败返回-1"
+      },
+      {
+        "section_id": "section-13",
+        "title": "getLastIndexOf",
+        "level": 2,
+        "line_start": 453,
+        "line_end": 500,
+        "summary": "getLastIndexOf(element: number, fromIndex: number, toIndex: number): number\n\n返回指定bit值最后一次出现时的下标值，查找"
+      },
+      {
+        "section_id": "section-14",
+        "title": "flipBitByIndex",
+        "level": 2,
+        "line_start": 501,
+        "line_end": 539,
+        "summary": "flipBitByIndex(index: number): void\n\n翻转BitVector指定索引处的bit值，0翻转为1，1翻转为0。\n\n**原子化服务API**：从API version"
+      },
+      {
+        "section_id": "section-15",
+        "title": "flipBitsByRange",
+        "level": 2,
+        "line_start": 540,
+        "line_end": 579,
+        "summary": "flipBitsByRange(fromIndex: number, toIndex: number): void\n\n翻转BitVector指定范围内的bit值，0翻转为1，1翻转为0。\n\n**原子"
+      },
+      {
+        "section_id": "section-16",
+        "title": "values",
+        "level": 2,
+        "line_start": 580,
+        "line_end": 621,
+        "summary": "values(): IterableIterator\\<number>\n\n返回一个新的迭代器对象，该对象包含BitVector中每个元素的值。\n\n**原子化服务API**：从API version"
+      },
+      {
+        "section_id": "section-17",
+        "title": "[Symbol.iterator]",
+        "level": 2,
+        "line_start": 622,
+        "line_end": 664,
+        "summary": "[Symbol.iterator]\\(): IterableIterator&lt;number&gt;\n\n返回一个迭代器，迭代器的每一项都是一个 JavaScript 对象，并返回该对象。\n\n>"
+      },
+      {
+        "section_id": "section-18",
+        "title": "[index: number]",
+        "level": 2,
+        "line_start": 665,
+        "line_end": 697,
+        "summary": "&#91;index: number&#93;: number\n\n返回BitVector指定索引位置的元素。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务"
+      }
+    ]
+  }
+}

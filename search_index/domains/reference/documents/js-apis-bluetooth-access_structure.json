@@ -1,0 +1,132 @@
+{
+  "doc_id": "js-apis-bluetooth-access",
+  "title": "@ohos.bluetooth.access (蓝牙access模块)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-access.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-access.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.bluetooth.access (蓝牙access模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bluetooth.access (蓝牙access模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```js\nimport { access } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "access.enableBluetooth",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 60,
+        "summary": "enableBluetooth(): void\n\n开启蓝牙。\n\n- 调用该接口时，系统弹出开启蓝牙的对话框，由用户确认是否需要开启蓝牙。如果应用想要感知用户操作对话框的行为，建议使用[access."
+      },
+      {
+        "section_id": "section-3",
+        "title": "access.enableBluetoothAsync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 110,
+        "summary": "enableBluetoothAsync(): Promise&lt;void&gt;\n\n开启蓝牙。使用Promise异步回调。\n- 调用该接口时，系统弹出开启蓝牙的对话框，由用户确认是否需要开启蓝"
+      },
+      {
+        "section_id": "section-4",
+        "title": "access.disableBluetooth",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 148,
+        "summary": "disableBluetooth(): void\n\n关闭蓝牙。\n- 调用该接口时，系统弹出关闭蓝牙的对话框，由用户确认是否需要关闭蓝牙。如果应用想要感知用户操作对话框的行为，建议使用[access."
+      },
+      {
+        "section_id": "section-5",
+        "title": "access.disableBluetoothAsync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 149,
+        "line_end": 198,
+        "summary": "disableBluetoothAsync(): Promise&lt;void&gt;\n\n关闭蓝牙。使用Promise异步回调。\n- 调用该接口时，系统弹出关闭蓝牙的对话框，由用户确认是否需要关闭"
+      },
+      {
+        "section_id": "section-6",
+        "title": "access.getState",
+        "level": 2,
+        "line_start": 199,
+        "line_end": 236,
+        "summary": "getState(): BluetoothState\n\n获取蓝牙开关状态。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：Sys"
+      },
+      {
+        "section_id": "section-7",
+        "title": "access.on('stateChange')<a name=\"stateChange\"></a>",
+        "level": 2,
+        "line_start": 237,
+        "line_end": 278,
+        "summary": "on(type: 'stateChange', callback: Callback&lt;BluetoothState&gt;): void\n\n订阅本端蓝牙开关状态变化事件。使用Callback异"
+      },
+      {
+        "section_id": "section-8",
+        "title": "access.off('stateChange')",
+        "level": 2,
+        "line_start": 279,
+        "line_end": 321,
+        "summary": "off(type: 'stateChange', callback?: Callback&lt;BluetoothState&gt;): void\n\n取消订阅本端蓝牙开关状态变化事件。从API18开"
+      },
+      {
+        "section_id": "section-9",
+        "title": "access.addPersistentDeviceId<sup>16+</sup>",
+        "level": 2,
+        "line_start": 322,
+        "line_end": 375,
+        "summary": "addPersistentDeviceId(deviceId: string): Promise&lt;void&gt;\n\n持久化存储蓝牙设备的虚拟MAC地址。使用Promise异步回调。\n- 应用"
+      },
+      {
+        "section_id": "section-10",
+        "title": "access.deletePersistentDeviceId<sup>16+</sup>",
+        "level": 2,
+        "line_start": 376,
+        "line_end": 425,
+        "summary": "deletePersistentDeviceId(deviceId: string): Promise&lt;void&gt;\n\n删除已持久化存储的蓝牙虚拟MAC地址。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "access.getPersistentDeviceIds<sup>16+</sup>",
+        "level": 2,
+        "line_start": 426,
+        "line_end": 466,
+        "summary": "getPersistentDeviceIds(): string[];\n\n获取应用持久化存储过的蓝牙虚拟MAC地址。\n\n**需要权限**：ohos.permission.ACCESS_BLUETOO"
+      },
+      {
+        "section_id": "section-12",
+        "title": "access.isValidRandomDeviceId<sup>16+</sup>",
+        "level": 2,
+        "line_start": 467,
+        "line_end": 517,
+        "summary": "isValidRandomDeviceId(deviceId: string): boolean;\n\n判断对端蓝牙设备的虚拟MAC地址是否有效。\n- 有效的虚拟MAC地址一般来源于蓝牙扫描结果，如："
+      },
+      {
+        "section_id": "section-13",
+        "title": "access.convertUuid<sup>22+</sup>",
+        "level": 2,
+        "line_start": 518,
+        "line_end": 558,
+        "summary": "convertUuid(uuid: string): string\n\n将指定格式的的UUID转换为128bit的UUID。\n\n常用的UUID格式主要包括16bit、32bit和128bit三种格式。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "BluetoothState",
+        "level": 2,
+        "line_start": 559,
+        "line_end": 576,
+        "summary": "枚举，蓝牙开关状态。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communication"
+      }
+    ]
+  }
+}

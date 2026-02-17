@@ -1,0 +1,60 @@
+{
+  "doc_id": "js-apis-infraredemitter",
+  "title": "@ohos.multimodalInput.infraredEmitter (红外管理)",
+  "path": "zh-cn/application-dev/reference/apis-input-kit/js-apis-infraredemitter.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-input-kit/js-apis-infraredemitter.md",
+  "metadata": {
+    "kit": "Input Kit",
+    "subsystem": "MultimodalInput",
+    "owner": "@zhaoxueyuan",
+    "designer": "@hanruofei",
+    "tester": "@Lyuxin",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Input Kit MultimodalInput 模块的 @ohos.multimodalInput.infraredEmitter (红外管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalInput.infraredEmitter (红外管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```js\nimport { infraredEmitter } from '@kit.InputKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "infraredEmitter.transmitInfrared",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 71,
+        "summary": "transmitInfrared(infraredFrequency: number, pattern: Array&lt;number&gt;): void\n\n产生特定频率和特定电平大小的红外信号"
+      },
+      {
+        "section_id": "section-3",
+        "title": "infraredEmitter.getInfraredFrequencies",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 121,
+        "summary": "getInfraredFrequencies(): Array&lt;InfraredFrequency&gt;\n\n查询设备支持的红外信号的频率范围。\n\n**需要权限**：ohos.permissi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "InfraredFrequency",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 132,
+        "summary": "红外信号的频率范围。\n\n**系统能力**：SystemCapability.MultimodalInput.Input.InfraredEmitter\n\n| 名称        | 类型   | 只"
+      },
+      {
+        "section_id": "section-5",
+        "title": "infraredEmitter.hasIrEmitter<sup>23+</sup>",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 179,
+        "summary": "hasIrEmitter(): Promise&lt;boolean&gt;\n\n查询设备是否配备红外发射器。使用Promise异步回调。\n\n**需要权限**：ohos.permission.MANA"
+      }
+    ]
+  }
+}

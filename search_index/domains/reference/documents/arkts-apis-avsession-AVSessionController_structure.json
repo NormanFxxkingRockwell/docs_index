@@ -1,0 +1,668 @@
+{
+  "doc_id": "arkts-apis-avsession-AVSessionController",
+  "title": "Interface (AVSessionController)",
+  "path": "zh-cn/application-dev/reference/apis-avsession-kit/arkts-apis-avsession-AVSessionController.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-avsession-kit/arkts-apis-avsession-AVSessionController.md",
+  "metadata": {
+    "kit": "AVSession Kit",
+    "subsystem": "Multimedia",
+    "owner": "@ccfriend; @liao_qian",
+    "designer": "@ccfriend",
+    "tester": "@chenmingxi1_huawei",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "AVSession Kit Multimedia 模块的 Interface (AVSessionController)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AVSessionController)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { avSession } from '@kit.AVSessionKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 72,
+        "summary": "**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Multimedia.AVSession.Co"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getAVPlaybackState<sup>10+</sup>",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 110,
+        "summary": "getAVPlaybackState(callback: AsyncCallback\\<AVPlaybackState>): void\n\n获取当前的远端播放状态。结果通过callback异步回调方式"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getAVPlaybackState<sup>10+</sup>",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 148,
+        "summary": "getAVPlaybackState(): Promise\\<AVPlaybackState>\n\n获取当前的远端播放状态。结果通过Promise异步回调方式返回。\n\n**原子化服务API：** 从A"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getAVMetadata<sup>10+</sup>",
+        "level": 2,
+        "line_start": 149,
+        "line_end": 186,
+        "summary": "getAVMetadata(): Promise\\<AVMetadata>\n\n获取会话元数据。结果通过Promise异步回调方式返回。\n\n**原子化服务API：** 从API version 12开"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getAVMetadata<sup>10+</sup>",
+        "level": 2,
+        "line_start": 187,
+        "line_end": 224,
+        "summary": "getAVMetadata(callback: AsyncCallback\\<AVMetadata>): void\n\n获取会话元数据。结果通过callback异步回调方式返回。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getAVQueueTitle<sup>10+</sup>",
+        "level": 2,
+        "line_start": 225,
+        "line_end": 262,
+        "summary": "getAVQueueTitle(): Promise\\<string>\n\n获取当前会话播放列表的名称。结果通过Promise异步回调方式返回。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getAVQueueTitle<sup>10+</sup>",
+        "level": 2,
+        "line_start": 263,
+        "line_end": 300,
+        "summary": "getAVQueueTitle(callback: AsyncCallback\\<string>): void\n\n获取当前播放列表的名称。结果通过callback异步回调方式返回。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-9",
+        "title": "getAVQueueItems<sup>10+</sup>",
+        "level": 2,
+        "line_start": 301,
+        "line_end": 338,
+        "summary": "getAVQueueItems(): Promise\\<Array\\<AVQueueItem>>\n\n获取当前会话播放列表相关信息。结果通过Promise异步回调方式返回。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getAVQueueItems<sup>10+</sup>",
+        "level": 2,
+        "line_start": 339,
+        "line_end": 376,
+        "summary": "getAVQueueItems(callback: AsyncCallback\\<Array\\<AVQueueItem>>): void\n\n获取当前播放列表相关信息。结果通过callback异步回调"
+      },
+      {
+        "section_id": "section-11",
+        "title": "skipToQueueItem<sup>10+</sup>",
+        "level": 2,
+        "line_start": 377,
+        "line_end": 422,
+        "summary": "skipToQueueItem(itemId: number): Promise\\<void>\n\n设置指定播放列表单项的ID，发送给session端处理，session端可以选择对这个单项歌曲进行播"
+      },
+      {
+        "section_id": "section-12",
+        "title": "skipToQueueItem<sup>10+</sup>",
+        "level": 2,
+        "line_start": 423,
+        "line_end": 463,
+        "summary": "skipToQueueItem(itemId: number, callback: AsyncCallback\\<void>): void\n\n设置指定播放列表单项的ID，发送给session端处理，"
+      },
+      {
+        "section_id": "section-13",
+        "title": "getOutputDevice<sup>10+</sup>",
+        "level": 2,
+        "line_start": 464,
+        "line_end": 500,
+        "summary": "getOutputDevice(): Promise\\<OutputDeviceInfo>\n\n获取播放设备信息。结果通过Promise异步回调方式返回。\n\n**原子化服务API：** 从API ve"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getOutputDevice<sup>10+</sup>",
+        "level": 2,
+        "line_start": 501,
+        "line_end": 537,
+        "summary": "getOutputDevice(callback: AsyncCallback\\<OutputDeviceInfo>): void\n\n获取播放设备信息。结果通过callback异步回调方式返回。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "sendAVKeyEvent<sup>10+</sup>",
+        "level": 2,
+        "line_start": 538,
+        "line_end": 589,
+        "summary": "sendAVKeyEvent(event: KeyEvent): Promise\\<void>\n\n发送按键事件到控制器对应的会话。结果通过Promise异步回调方式返回。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-16",
+        "title": "sendAVKeyEvent<sup>10+</sup>",
+        "level": 2,
+        "line_start": 590,
+        "line_end": 634,
+        "summary": "sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback\\<void>): void\n\n发送按键事件到会话。结果通过callback异步回调方式"
+      },
+      {
+        "section_id": "section-17",
+        "title": "getLaunchAbility<sup>10+</sup>",
+        "level": 2,
+        "line_start": 635,
+        "line_end": 672,
+        "summary": "getLaunchAbility(): Promise\\<WantAgent>\n\n获取应用在会话中保存的WantAgent对象。结果通过Promise异步回调方式返回。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getLaunchAbility<sup>10+</sup>",
+        "level": 2,
+        "line_start": 673,
+        "line_end": 710,
+        "summary": "getLaunchAbility(callback: AsyncCallback\\<WantAgent>): void\n\n获取应用在会话中保存的WantAgent对象。结果通过callback异步回"
+      },
+      {
+        "section_id": "section-19",
+        "title": "getRealPlaybackPositionSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 711,
+        "line_end": 741,
+        "summary": "getRealPlaybackPositionSync(): number\n\n获取当前播放位置。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "isActive<sup>10+</sup>",
+        "level": 2,
+        "line_start": 742,
+        "line_end": 779,
+        "summary": "isActive(): Promise\\<boolean>\n\n获取会话是否被激活。结果通过Promise异步回调方式返回。\n\n**原子化服务API：** 从API version 12开始，该接口支"
+      },
+      {
+        "section_id": "section-21",
+        "title": "isActive<sup>10+</sup>",
+        "level": 2,
+        "line_start": 780,
+        "line_end": 817,
+        "summary": "isActive(callback: AsyncCallback\\<boolean>): void\n\n判断会话是否被激活。结果通过callback异步回调方式返回。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-22",
+        "title": "destroy<sup>10+</sup>",
+        "level": 2,
+        "line_start": 818,
+        "line_end": 854,
+        "summary": "destroy(): Promise\\<void>\n\n销毁当前控制器，销毁后当前控制器不可再用。结果通过Promise异步回调方式返回。\n\n**原子化服务API：** 从API version 12"
+      },
+      {
+        "section_id": "section-23",
+        "title": "destroy<sup>10+</sup>",
+        "level": 2,
+        "line_start": 855,
+        "line_end": 891,
+        "summary": "destroy(callback: AsyncCallback\\<void>): void\n\n销毁当前控制器，销毁后当前控制器不可再用。结果通过callback异步回调方式返回。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-24",
+        "title": "getValidCommands<sup>10+</sup>",
+        "level": 2,
+        "line_start": 892,
+        "line_end": 929,
+        "summary": "getValidCommands(): Promise\\<Array\\<AVControlCommandType>>\n\n获取会话支持的有效命令。结果通过Promise异步回调方式返回。\n\n**原子化"
+      },
+      {
+        "section_id": "section-25",
+        "title": "getValidCommands<sup>10+</sup>",
+        "level": 2,
+        "line_start": 930,
+        "line_end": 967,
+        "summary": "getValidCommands(callback: AsyncCallback\\<Array\\<AVControlCommandType>>): void\n\n获取会话支持的有效命令。结果通过cal"
+      },
+      {
+        "section_id": "section-26",
+        "title": "sendControlCommand<sup>10+</sup>",
+        "level": 2,
+        "line_start": 968,
+        "line_end": 1020,
+        "summary": "sendControlCommand(command: AVControlCommand): Promise\\<void>\n\n通过控制器发送命令到其对应的会话。结果通过Promise异步回调方式返回"
+      },
+      {
+        "section_id": "section-27",
+        "title": "sendControlCommand<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1021,
+        "line_end": 1068,
+        "summary": "sendControlCommand(command: AVControlCommand, callback: AsyncCallback\\<void>): void\n\n通过会话控制器发送命令到其对"
+      },
+      {
+        "section_id": "section-28",
+        "title": "sendCommonCommand<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1069,
+        "line_end": 1136,
+        "summary": "sendCommonCommand(command: string, args: {[key: string]: Object}): Promise\\<void>\n\n通过会话控制器发送自定义控制命令"
+      },
+      {
+        "section_id": "section-29",
+        "title": "sendCommonCommand<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1137,
+        "line_end": 1197,
+        "summary": "sendCommonCommand(command: string, args: {[key: string]: Object}, callback: AsyncCallback\\<void>):"
+      },
+      {
+        "section_id": "section-30",
+        "title": "sendCustomData<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1198,
+        "line_end": 1274,
+        "summary": "sendCustomData(data: Record\\<string, Object>): Promise\\<void>\n\n发送私有数据到远端设备。使用Promise异步回调。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-31",
+        "title": "getExtras<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1275,
+        "line_end": 1351,
+        "summary": "getExtras(): Promise\\<{[key: string]: Object}>\n\n获取媒体提供方设置的自定义媒体数据包。使用Promise异步回调。\n\n**原子化服务API：** 从A"
+      },
+      {
+        "section_id": "section-32",
+        "title": "getExtras<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1352,
+        "line_end": 1406,
+        "summary": "getExtras(callback: AsyncCallback\\<{[key: string]: Object}>): void\n\n获取媒体提供方设置的自定义媒体数据包。使用callback异步"
+      },
+      {
+        "section_id": "section-33",
+        "title": "getExtrasWithEvent<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1407,
+        "line_end": 1467,
+        "summary": "getExtrasWithEvent(extraEvent: string): Promise\\<ExtraInfo>\n\n根据远端分布式事件类型，获取远端分布式媒体提供方设置的自定义媒体数据包。使用"
+      },
+      {
+        "section_id": "section-34",
+        "title": "isDesktopLyricEnabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1468,
+        "line_end": 1525,
+        "summary": "isDesktopLyricEnabled(): Promise\\<boolean>\n\n查询是否启用桌面歌词功能。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在Stage模型下使用"
+      },
+      {
+        "section_id": "section-35",
+        "title": "onDesktopLyricEnabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1526,
+        "line_end": 1584,
+        "summary": "onDesktopLyricEnabled(callback: Callback\\<boolean>): void\n\n桌面歌词功能启用状态变更的监听事件。使用callback异步回调。\n\n**模型约"
+      },
+      {
+        "section_id": "section-36",
+        "title": "offDesktopLyricEnabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1585,
+        "line_end": 1641,
+        "summary": "offDesktopLyricEnabled(callback?: Callback\\<boolean>): void\n\n取消桌面歌词启用状态变更事件监听，取消后将不再对该事件进行监听。使用call"
+      },
+      {
+        "section_id": "section-37",
+        "title": "setDesktopLyricVisible<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1642,
+        "line_end": 1708,
+        "summary": "setDesktopLyricVisible(visible: boolean): Promise\\<void>\n\n设置当前会话桌面歌词的显示状态。使用Promise异步回调。\n\n**模型约束：**"
+      },
+      {
+        "section_id": "section-38",
+        "title": "isDesktopLyricVisible<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1709,
+        "line_end": 1768,
+        "summary": "isDesktopLyricVisible(): Promise\\<boolean>\n\n查询当前会话桌面歌词的显示状态。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在Stage模型"
+      },
+      {
+        "section_id": "section-39",
+        "title": "onDesktopLyricVisibilityChanged<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1769,
+        "line_end": 1826,
+        "summary": "onDesktopLyricVisibilityChanged(callback: Callback\\<boolean>): void\n\n显示桌面歌词状态变更的监听事件。使用callback异步回调"
+      },
+      {
+        "section_id": "section-40",
+        "title": "offDesktopLyricVisibilityChanged<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1827,
+        "line_end": 1882,
+        "summary": "offDesktopLyricVisibilityChanged(callback?: Callback\\<boolean>): void\n\n取消显示桌面歌词状态变更事件监听，取消后将不再对该事件进"
+      },
+      {
+        "section_id": "section-41",
+        "title": "setDesktopLyricState<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1883,
+        "line_end": 1952,
+        "summary": "setDesktopLyricState(state: DesktopLyricState): Promise\\<void>\n\n设置当前会话桌面歌词状态。使用Promise异步回调。\n\n**模型约束"
+      },
+      {
+        "section_id": "section-42",
+        "title": "getDesktopLyricState<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1953,
+        "line_end": 2013,
+        "summary": "getDesktopLyricState(): Promise\\<DesktopLyricState>\n\n获取当前会话桌面歌词状态。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在S"
+      },
+      {
+        "section_id": "section-43",
+        "title": "onDesktopLyricStateChanged<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2014,
+        "line_end": 2071,
+        "summary": "onDesktopLyricStateChanged(callback: Callback\\<DesktopLyricState>): void\n\n桌面歌词状态变更的监听事件。使用callback异"
+      },
+      {
+        "section_id": "section-44",
+        "title": "offDesktopLyricStateChanged<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2072,
+        "line_end": 2127,
+        "summary": "offDesktopLyricStateChanged(callback?: Callback\\<DesktopLyricState>): void\n\n取消桌面歌词状态变更事件监听，取消后将不再对该"
+      },
+      {
+        "section_id": "section-45",
+        "title": "on('metadataChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2128,
+        "line_end": 2170,
+        "summary": "on(type: 'metadataChange', filter: Array\\<keyof AVMetadata> | 'all', callback: (data: AVMetadata) ="
+      },
+      {
+        "section_id": "section-46",
+        "title": "off('metadataChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2171,
+        "line_end": 2203,
+        "summary": "off(type: 'metadataChange', callback?: (data: AVMetadata) => void)\n\n取消元数据变化事件监听。指定callback，可取消对应监听；"
+      },
+      {
+        "section_id": "section-47",
+        "title": "on('playbackStateChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2204,
+        "line_end": 2245,
+        "summary": "on(type: 'playbackStateChange', filter: Array\\<keyof AVPlaybackState> | 'all', callback: (state: AV"
+      },
+      {
+        "section_id": "section-48",
+        "title": "off('playbackStateChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2246,
+        "line_end": 2278,
+        "summary": "off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)\n\n取消播放状态变化事件监听。指定callb"
+      },
+      {
+        "section_id": "section-49",
+        "title": "on('callMetadataChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2279,
+        "line_end": 2320,
+        "summary": "on(type: 'callMetadataChange', filter: Array\\<keyof CallMetadata> | 'all', callback: Callback\\<Call"
+      },
+      {
+        "section_id": "section-50",
+        "title": "off('callMetadataChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2321,
+        "line_end": 2353,
+        "summary": "off(type: 'callMetadataChange', callback?: Callback\\<CallMetadata>): void\n\n取消设置通话元数据变化事件监听。指定callba"
+      },
+      {
+        "section_id": "section-51",
+        "title": "on('callStateChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2354,
+        "line_end": 2395,
+        "summary": "on(type: 'callStateChange', filter: Array\\<keyof AVCallState> | 'all', callback: Callback\\<AVCallSt"
+      },
+      {
+        "section_id": "section-52",
+        "title": "off('callStateChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2396,
+        "line_end": 2428,
+        "summary": "off(type: 'callStateChange', callback?: Callback\\<AVCallState>): void\n\n取消设置通话状态变化事件监听。指定callback，可取"
+      },
+      {
+        "section_id": "section-53",
+        "title": "on('sessionDestroy')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2429,
+        "line_end": 2465,
+        "summary": "on(type: 'sessionDestroy', callback: () => void)\n\n会话销毁的监听事件。\n\n每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则"
+      },
+      {
+        "section_id": "section-54",
+        "title": "off('sessionDestroy')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2466,
+        "line_end": 2498,
+        "summary": "off(type: 'sessionDestroy', callback?: () => void)\n\n取消监听会话的销毁事件监听。指定callback，可取消对应监听；未指定callback，取消"
+      },
+      {
+        "section_id": "section-55",
+        "title": "on('activeStateChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2499,
+        "line_end": 2535,
+        "summary": "on(type: 'activeStateChange', callback: (isActive: boolean) => void)\n\n会话的激活状态的监听事件。\n\n每个指令支持注册多个回调，如"
+      },
+      {
+        "section_id": "section-56",
+        "title": "off('activeStateChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2536,
+        "line_end": 2568,
+        "summary": "off(type: 'activeStateChange', callback?: (isActive: boolean) => void)\n\n取消监听会话激活状态变化事件监听。指定callback"
+      },
+      {
+        "section_id": "section-57",
+        "title": "on('validCommandChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2569,
+        "line_end": 2606,
+        "summary": "on(type: 'validCommandChange', callback: (commands: Array\\<AVControlCommandType>) => void)\n\n会话支持的有效"
+      },
+      {
+        "section_id": "section-58",
+        "title": "off('validCommandChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2607,
+        "line_end": 2639,
+        "summary": "off(type: 'validCommandChange', callback?: (commands: Array\\<AVControlCommandType>) => void)\n\n取消监听会"
+      },
+      {
+        "section_id": "section-59",
+        "title": "on('outputDeviceChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2640,
+        "line_end": 2676,
+        "summary": "on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void"
+      },
+      {
+        "section_id": "section-60",
+        "title": "off('outputDeviceChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2677,
+        "line_end": 2709,
+        "summary": "off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => vo"
+      },
+      {
+        "section_id": "section-61",
+        "title": "on('sessionEvent')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2710,
+        "line_end": 2762,
+        "summary": "on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void):"
+      },
+      {
+        "section_id": "section-62",
+        "title": "off('sessionEvent')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2763,
+        "line_end": 2795,
+        "summary": "off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void)"
+      },
+      {
+        "section_id": "section-63",
+        "title": "on('queueItemsChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2796,
+        "line_end": 2832,
+        "summary": "on(type: 'queueItemsChange', callback: (items: Array<[AVQueueItem](arkts-apis-avsession-i.md#avqueu"
+      },
+      {
+        "section_id": "section-64",
+        "title": "off('queueItemsChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2833,
+        "line_end": 2865,
+        "summary": "off(type: 'queueItemsChange', callback?: (items: Array<[AVQueueItem](arkts-apis-avsession-i.md#avqu"
+      },
+      {
+        "section_id": "section-65",
+        "title": "on('queueTitleChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2866,
+        "line_end": 2900,
+        "summary": "on(type: 'queueTitleChange', callback: (title: string) => void): void\n\n媒体控制器设置会话自定义播放列表的名称变化的监听器。"
+      },
+      {
+        "section_id": "section-66",
+        "title": "off('queueTitleChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2901,
+        "line_end": 2933,
+        "summary": "off(type: 'queueTitleChange', callback?: (title: string) => void): void\n\n取消播放列表名称变化事件监听。指定callback，"
+      },
+      {
+        "section_id": "section-67",
+        "title": "on('extrasChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2934,
+        "line_end": 2984,
+        "summary": "on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void\n\n媒体控制器设置自定义媒体数据"
+      },
+      {
+        "section_id": "section-68",
+        "title": "off('extrasChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2985,
+        "line_end": 3017,
+        "summary": "off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void\n\n取消自定义媒体数据包变化"
+      },
+      {
+        "section_id": "section-69",
+        "title": "on('customDataChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3018,
+        "line_end": 3067,
+        "summary": "on(type: 'customDataChange', callback: Callback\\<Record\\<string, Object>>): void\n\n注册从远程设备发送的自定义数据的监"
+      },
+      {
+        "section_id": "section-70",
+        "title": "off('customDataChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3068,
+        "line_end": 3099,
+        "summary": "off(type: 'customDataChange', callback?: Callback\\<Record\\<string, Object>>): void\n\n取消自定义数据监听。\n\n**原"
+      },
+      {
+        "section_id": "section-71",
+        "title": "getAVPlaybackStateSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3100,
+        "line_end": 3138,
+        "summary": "getAVPlaybackStateSync(): AVPlaybackState;\n\n使用同步方法获取当前会话的播放状态。\n\n**原子化服务API：** 从API version 12开始，该接口"
+      },
+      {
+        "section_id": "section-72",
+        "title": "getAVMetadataSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3139,
+        "line_end": 3176,
+        "summary": "getAVMetadataSync(): AVMetadata\n\n使用同步方法获取会话元数据。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n*"
+      },
+      {
+        "section_id": "section-73",
+        "title": "getAVCallState<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3177,
+        "line_end": 3212,
+        "summary": "getAVCallState(): Promise\\<AVCallState>\n\n获取通话状态数据。结果通过Promise异步回调方式返回。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-74",
+        "title": "getAVCallState<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3213,
+        "line_end": 3250,
+        "summary": "getAVCallState(callback: AsyncCallback\\<AVCallState>): void\n\n获取通话状态数据。结果通过callback异步回调方式返回。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-75",
+        "title": "getCallMetadata<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3251,
+        "line_end": 3286,
+        "summary": "getCallMetadata(): Promise\\<CallMetadata>\n\n获取通话会话的元数据。结果通过Promise异步回调方式返回。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-76",
+        "title": "getCallMetadata<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3287,
+        "line_end": 3324,
+        "summary": "getCallMetadata(callback: AsyncCallback\\<CallMetadata>): void\n\n获取通话会话的元数据。结果通过callback异步回调方式返回。\n\n**"
+      },
+      {
+        "section_id": "section-77",
+        "title": "getAVQueueTitleSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3325,
+        "line_end": 3363,
+        "summary": "getAVQueueTitleSync(): string\n\n使用同步方法获取当前会话播放列表的名称。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-78",
+        "title": "getAVQueueItemsSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3364,
+        "line_end": 3402,
+        "summary": "getAVQueueItemsSync(): Array\\<AVQueueItem\\>\n\n使用同步方法获取当前会话播放列表相关信息。\n\n**原子化服务API：** 从API version 12开始"
+      },
+      {
+        "section_id": "section-79",
+        "title": "getOutputDeviceSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3403,
+        "line_end": 3440,
+        "summary": "getOutputDeviceSync(): OutputDeviceInfo\n\n使用同步方法获取当前输出设备信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原"
+      },
+      {
+        "section_id": "section-80",
+        "title": "isActiveSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3441,
+        "line_end": 3479,
+        "summary": "isActiveSync(): boolean\n\n使用同步方法判断会话是否被激活。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-81",
+        "title": "getValidCommandsSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3480,
+        "line_end": 3518,
+        "summary": "getValidCommandsSync(): Array\\<AVControlCommandType\\>\n\n使用同步方法获取会话支持的有效命令。\n\n**原子化服务API：** 从API versi"
+      }
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "doc_id": "js-apis-fusionConnectivity-partnerAgent",
+  "title": "@ohos.FusionConnectivity.partnerAgent（设备状态通知模块）",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-fusionConnectivity-partnerAgent.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-fusionConnectivity-partnerAgent.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.FusionConnectivity.partnerAgent（设备状态通知模块），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.FusionConnectivity.partnerAgent（设备状态通知模块）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```js\nimport { partnerAgent } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "partnerAgent.isPartnerAgentSupported",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 50,
+        "summary": "isPartnerAgentSupported(): boolean\n\n判断本机设备是否支持外设互通功能，若该接口返回值是false，该文件内的其他接口均无法使用。\n\n**系统能力**：System"
+      },
+      {
+        "section_id": "section-3",
+        "title": "partnerAgent.bindDevice",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 130,
+        "summary": "bindDevice(deviceAddress: PartnerDeviceAddress, deviceCapability: DeviceCapability, businessCapabil"
+      },
+      {
+        "section_id": "section-4",
+        "title": "partnerAgent.unbindDevice",
+        "level": 2,
+        "line_start": 131,
+        "line_end": 193,
+        "summary": "unbindDevice(deviceAddress: PartnerDeviceAddress): Promise&lt;void&gt;\n\n应用解注册设备，使用Promise异步回调。\n\n- 调"
+      },
+      {
+        "section_id": "section-5",
+        "title": "partnerAgent.isDeviceBound",
+        "level": 2,
+        "line_start": 194,
+        "line_end": 249,
+        "summary": "isDeviceBound(deviceAddress: PartnerDeviceAddress): boolean\n\n判断当前应用是否已注册过该设备。\n\n- 通过调用[bindDevice](#"
+      },
+      {
+        "section_id": "section-6",
+        "title": "partnerAgent.getBoundDevices",
+        "level": 2,
+        "line_start": 250,
+        "line_end": 291,
+        "summary": "getBoundDevices(): PartnerDeviceAddress[]\n\n获取应用当前注册过的所有设备。\n\n- 可通过调用[bindDevice](#partneragentbindde"
+      },
+      {
+        "section_id": "section-7",
+        "title": "partnerAgent.isDeviceControlEnabled",
+        "level": 2,
+        "line_start": 292,
+        "line_end": 348,
+        "summary": "isDeviceControlEnabled(deviceAddress: PartnerDeviceAddress): boolean\n\n判断当前设备的互通功能是否已经关闭。\n\n- 调用[bind"
+      },
+      {
+        "section_id": "section-8",
+        "title": "partnerAgent.DeviceCapability",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 361,
+        "summary": "描述设备支持的被发现能力。\n\n**系统能力**：SystemCapability.Communication.FusionConnectivity.Core\n\n**模型约束**： 此接口仅可在Sta"
+      },
+      {
+        "section_id": "section-9",
+        "title": "partnerAgent.BusinessCapability",
+        "level": 2,
+        "line_start": 362,
+        "line_end": 374,
+        "summary": "描述设备支持的业务功能。\n\n**系统能力**：SystemCapability.Communication.FusionConnectivity.Core\n\n**模型约束**： 此接口仅可在Stag"
+      },
+      {
+        "section_id": "section-10",
+        "title": "partnerAgent.PartnerDeviceAddress",
+        "level": 2,
+        "line_start": 375,
+        "line_end": 386,
+        "summary": "描述设备地址信息。\n\n**系统能力**：SystemCapability.Communication.FusionConnectivity.Core\n\n**模型约束**： 此接口仅可在Stage模型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "partnerAgent.PartnerAgentExtensionAbilityDestroyReason",
+        "level": 2,
+        "line_start": 387,
+        "line_end": 402,
+        "summary": "枚举，PartnerAgentExtensionAbility被销毁的原因。\n\n**系统能力**：SystemCapability.Communication.FusionConnectivity."
+      }
+    ]
+  }
+}

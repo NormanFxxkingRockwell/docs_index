@@ -1,0 +1,84 @@
+{
+  "doc_id": "errorcode-link-enhance",
+  "title": "增强连接错误码",
+  "path": "zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md",
+  "metadata": {
+    "kit": "Distributed Service Kit",
+    "subsystem": "DistributedSched",
+    "owner": "@wangJE",
+    "designer": "@lee_jet520",
+    "tester": "@Ytt-test",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Distributed Service Kit DistributedSched 模块的 增强连接错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "增强连接错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "32390200 客户端连接超时",
+        "level": 2,
+        "line_start": 12,
+        "line_end": 29,
+        "summary": "**错误信息**\n\nConnect timeout.\n\n**错误描述**\n\n连接因超时而失败。\n\n**可能原因**\n\n服务端设备无响应。\n\n**处理步骤**\n\n超时后重试。若与远端设备存在连接，请断"
+      },
+      {
+        "section_id": "section-2",
+        "title": "32390201 服务端服务未启动",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 47,
+        "summary": "**错误信息**\n\nPeer server is not started.\n\n**错误描述**\n\n服务端未开启对应服务。\n\n**可能原因**\n\n服务端未开启对应服务。\n\n**处理步骤**\n\n检查连接"
+      },
+      {
+        "section_id": "section-3",
+        "title": "32390202 服务个数超出限制",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 65,
+        "summary": "**错误信息**\n\nThe number of servers exceeds the limit.\n\n**错误描述**\n\n服务个数超出限制。\n\n**可能原因**\n\n已申请的Server资源超过10"
+      },
+      {
+        "section_id": "section-4",
+        "title": "32390203 服务名重复注册",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 83,
+        "summary": "**错误信息**\n\nDuplicate server name.\n\n**错误描述**\n\n重复注册相同的服务。\n\n**可能原因**\n\n正在创建的服务名已存在。\n\n**处理步骤**\n\n检查是否重复注册相"
+      },
+      {
+        "section_id": "section-5",
+        "title": "32390204 连接个数超出限制",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 101,
+        "summary": "**错误信息**\n\nThe number of connection exceeds the limit.\n\n**错误描述**\n\n连接个数超出限制。\n\n**可能原因**\n\n已申请的Connectio"
+      },
+      {
+        "section_id": "section-6",
+        "title": "32390205 连接状态不可用",
+        "level": 2,
+        "line_start": 102,
+        "line_end": 119,
+        "summary": "**错误信息**\n\nConnection is not ready.\n\n**错误描述**\n\n连接处于不可用状态。\n\n**可能原因**\n\n客户端或服务端应用正在使用已断开的连接。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "32390206 参数非法",
+        "level": 2,
+        "line_start": 120,
+        "line_end": 143,
+        "summary": "**错误信息**\n\nInvalid parameter. Possible causes: 1. Mandatory parameters are left unspecified; 2. Inco"
+      },
+      {
+        "section_id": "section-8",
+        "title": "32390300 内部错误",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 177,
+        "summary": "**错误信息**\n\nInternal error.\n\n**错误描述**\n\n内部出现其他错误。\n\n**可能原因**\n1. 传入无效的deviceId。\n\n2. 传入无效的name。\n\n3. 内部状态异"
+      }
+    ]
+  }
+}

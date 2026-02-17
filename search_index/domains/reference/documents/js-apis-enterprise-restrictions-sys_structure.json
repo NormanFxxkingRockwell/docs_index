@@ -1,0 +1,124 @@
+{
+  "doc_id": "js-apis-enterprise-restrictions-sys",
+  "title": "@ohos.enterprise.restrictions （限制类策略）(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-restrictions-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-restrictions-sys.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.restrictions （限制类策略）(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.restrictions （限制类策略）(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { restrictions } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "restrictions.setPrinterDisabled",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 81,
+        "summary": "setPrinterDisabled(admin: Want, disabled: boolean, callback: AsyncCallback\\<void>): void\n\n使设备禁用或启用打"
+      },
+      {
+        "section_id": "section-3",
+        "title": "restrictions.setPrinterDisabled",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 140,
+        "summary": "setPrinterDisabled(admin: Want, disabled: boolean): Promise\\<void>\n\n使设备禁用或启用打印能力。使用Promise异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "restrictions.isPrinterDisabled",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 194,
+        "summary": "isPrinterDisabled(admin: Want, callback: AsyncCallback\\<boolean>): void\n\n查询设备打印能力是否被禁用。使用callback异步"
+      },
+      {
+        "section_id": "section-5",
+        "title": "restrictions.isPrinterDisabled",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 252,
+        "summary": "isPrinterDisabled(admin: Want): Promise\\<boolean>\n\n查询设备打印能力是否被禁用。使用Promise异步回调。\n\n**需要权限：** ohos.per"
+      },
+      {
+        "section_id": "section-6",
+        "title": "restrictions.setHdcDisabled",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 307,
+        "summary": "setHdcDisabled(admin: Want, disabled: boolean, callback: AsyncCallback\\<void>): void\n\n使设备禁用或启用[HDC]"
+      },
+      {
+        "section_id": "section-7",
+        "title": "restrictions.setHdcDisabled",
+        "level": 2,
+        "line_start": 308,
+        "line_end": 366,
+        "summary": "setHdcDisabled(admin: Want, disabled: boolean): Promise\\<void>\n\n使设备禁用或启用HDC。使用Promise异步回调。\n\n**需要权限："
+      },
+      {
+        "section_id": "section-8",
+        "title": "restrictions.isHdcDisabled",
+        "level": 2,
+        "line_start": 367,
+        "line_end": 420,
+        "summary": "isHdcDisabled(admin: Want, callback: AsyncCallback\\<boolean>): void\n\n查询HDC是否被禁用。使用callback异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "restrictions.isHdcDisabled",
+        "level": 2,
+        "line_start": 421,
+        "line_end": 478,
+        "summary": "isHdcDisabled(admin: Want): Promise\\<boolean>\n\n查询HDC是否被禁用。使用Promise异步回调。\n\n**需要权限：** ohos.permission"
+      },
+      {
+        "section_id": "section-10",
+        "title": "restrictions.isMicrophoneDisabled<sup>11+</sup>",
+        "level": 2,
+        "line_start": 479,
+        "line_end": 536,
+        "summary": "isMicrophoneDisabled(admin: Want): boolean\n\n查询麦克风是否被禁用。\n\n**需要权限：** ohos.permission.ENTERPRISE_MANAG"
+      },
+      {
+        "section_id": "section-11",
+        "title": "restrictions.disableMicrophone<sup>11+</sup>",
+        "level": 2,
+        "line_start": 537,
+        "line_end": 589,
+        "summary": "disableMicrophone(admin: Want, disable: boolean): void\n\n使设备禁用或启用麦克风。\n\n**需要权限：** ohos.permission.ENT"
+      },
+      {
+        "section_id": "section-12",
+        "title": "restrictions.setFingerprintAuthDisabled<sup>11+</sup>",
+        "level": 2,
+        "line_start": 590,
+        "line_end": 643,
+        "summary": "setFingerprintAuthDisabled(admin: Want, disabled: boolean): void\n\n禁用或启用指纹认证。\n\n**需要权限：** ohos.permis"
+      },
+      {
+        "section_id": "section-13",
+        "title": "restrictions.isFingerprintAuthDisabled<sup>11+</sup>",
+        "level": 2,
+        "line_start": 644,
+        "line_end": 700,
+        "summary": "isFingerprintAuthDisabled(admin: Want): boolean\n\n查询指纹认证是否被禁用。\n\n**需要权限：** ohos.permission.ENTERPRISE"
+      }
+    ]
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "doc_id": "js-apis-useriam-userauth",
+  "title": "@ohos.userIAM.userAuth (用户认证)",
+  "path": "zh-cn/application-dev/reference/apis-user-authentication-kit/js-apis-useriam-userauth.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-user-authentication-kit/js-apis-useriam-userauth.md",
+  "metadata": {
+    "kit": "User Authentication Kit",
+    "subsystem": "UserIAM",
+    "owner": "@WALL_EYE",
+    "designer": "@lichangting518",
+    "tester": "@jane_lz",
+    "adviser": "@zengyawen"
+  },
+  "summary": "User Authentication Kit UserIAM 模块的 @ohos.userIAM.userAuth (用户认证)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.userIAM.userAuth (用户认证)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { userAuth } from '@kit.UserAuthenticationKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "常量",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 31,
+        "summary": "**系统能力：** SystemCapability.UserIAM.UserAuth.Core\n\n| 名称        | 类型   | 值   | 说明       |\n| ---------"
+      },
+      {
+        "section_id": "section-3",
+        "title": "AuthLockState<sup>22+</sup>",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 45,
+        "summary": "认证类型的身份认证冻结状态。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.UserIAM"
+      },
+      {
+        "section_id": "section-4",
+        "title": "UserAuthTipCode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 63,
+        "summary": "表示身份认证中间状态的枚举。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.UserIAM"
+      },
+      {
+        "section_id": "section-5",
+        "title": "EnrolledState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 76,
+        "summary": "用户注册凭据的状态。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.UserIAM.Use"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ReuseMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 89,
+        "summary": "复用解锁认证结果的模式。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.Core\n\n| 名称        | 值   | 说明       |\n| --"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ReuseUnlockResult<sup>12+</sup>",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 105,
+        "summary": "复用解锁认证结果。\n> **说明：**\n>\n> 如果身份认证解锁（包括设备解锁）后，在有效时间内凭据发生了变化，身份认证的结果依然可以复用，认证结果中返回当前实际的EnrolledState。若复用"
+      },
+      {
+        "section_id": "section-8",
+        "title": "userAuth.getAuthLockState<sup>22+</sup>",
+        "level": 2,
+        "line_start": 106,
+        "line_end": 164,
+        "summary": "getAuthLockState(authType: UserAuthType): Promise\\<AuthLockState>\n\n查询指定认证类型的冻结状态，使用Promise异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "userAuth.getEnrolledState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 215,
+        "summary": "getEnrolledState(authType: UserAuthType): EnrolledState\n\n查询凭据注册的状态，以检测用户注册凭据的变更。\n\n**需要权限：** ohos.pe"
+      },
+      {
+        "section_id": "section-10",
+        "title": "AuthParam<sup>10+</sup>",
+        "level": 2,
+        "line_start": 216,
+        "line_end": 229,
+        "summary": "用户认证相关参数。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.Core\n\n| 名称           | 类型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "WidgetParam<sup>10+</sup>",
+        "level": 2,
+        "line_start": 230,
+        "line_end": 241,
+        "summary": "用户认证界面配置相关参数。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.Core\n\n| 名称                 | 类型"
+      },
+      {
+        "section_id": "section-12",
+        "title": "UserAuthResult<sup>10+</sup>",
+        "level": 2,
+        "line_start": 242,
+        "line_end": 256,
+        "summary": "用户认证结果。认证成功时，返回认证类型和认证成功的令牌信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCa"
+      },
+      {
+        "section_id": "section-13",
+        "title": "IAuthCallback<sup>10+</sup>",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 434,
+        "summary": "返回认证结果的回调对象。\n\n### onResult<sup>10+</sup>\n\nonResult(result: UserAuthResult): void\n\n回调函数，返回认证结果。认证成功时"
+      },
+      {
+        "section_id": "section-14",
+        "title": "AuthTipInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 435,
+        "line_end": 447,
+        "summary": "用户认证中间状态。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.UserIAM.User"
+      },
+      {
+        "section_id": "section-15",
+        "title": "AuthTipCallback<sup>20+</sup>",
+        "level": 2,
+        "line_start": 448,
+        "line_end": 509,
+        "summary": "type AuthTipCallback = (authTipInfo: AuthTipInfo) => void\n\n回调函数，返回认证中间状态。\n\n**原子化服务API：** 从API versi"
+      },
+      {
+        "section_id": "section-16",
+        "title": "UserAuthInstance<sup>10+</sup>",
+        "level": 2,
+        "line_start": 510,
+        "line_end": 1022,
+        "summary": "用于执行用户身份认证，并支持使用统一用户身份认证控件。\n\n使用以下接口前，需先通过[getUserAuthInstance](#userauthgetuserauthinstance10)方法获取U"
+      },
+      {
+        "section_id": "section-17",
+        "title": "userAuth.getUserAuthInstance<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1023,
+        "line_end": 1098,
+        "summary": "getUserAuthInstance(authParam: AuthParam, widgetParam: WidgetParam): UserAuthInstance\n\n获取[UserAuthI"
+      },
+      {
+        "section_id": "section-18",
+        "title": "AuthResultInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1099,
+        "line_end": 1115,
+        "summary": "表示认证结果信息，用于描述认证结果。\n\n> **说明：**\n>\n> 从 API version 9 开始支持，从 API version 11 开始废弃，请使用[UserAuthResult](#u"
+      },
+      {
+        "section_id": "section-19",
+        "title": "TipInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1116,
+        "line_end": 1130,
+        "summary": "表示认证过程中的提示信息，用于提供认证过程的反馈。\n\n> **说明：**\n>\n> 从 API version 9 开始支持，从 API version 11 开始废弃，请使用[AuthTipInfo"
+      },
+      {
+        "section_id": "section-20",
+        "title": "EventInfo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1131,
+        "line_end": 1149,
+        "summary": "type EventInfo = AuthResultInfo | TipInfo\n\n表示认证过程中事件信息的类型。\n\n该类型为下表类型取值中的联合类型。\n\n> **说明：**\n>\n> 从 API"
+      },
+      {
+        "section_id": "section-21",
+        "title": "AuthEventKey<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1150,
+        "line_end": 1168,
+        "summary": "type AuthEventKey = 'result' | 'tip'\n\n表示认证事件类型的关键字，作为[on](#ondeprecated)接口的参数。\n\n该类型为下表类型取值中的联合类型。"
+      },
+      {
+        "section_id": "section-22",
+        "title": "AuthEvent<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1169,
+        "line_end": 1244,
+        "summary": "认证接口的异步回调对象。\n\n> **说明：**\n>\n> 从 API version 9 开始支持，从 API version 11 开始废弃，请使用[IAuthCallback](#iauthcal"
+      },
+      {
+        "section_id": "section-23",
+        "title": "AuthInstance<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1245,
+        "line_end": 1475,
+        "summary": "执行用户认证的对象。\n\n> **说明：**\n>\n> 从 API version 9 开始支持，从 API version 10 开始废弃，请使用[UserAuthInstance](#useraut"
+      },
+      {
+        "section_id": "section-24",
+        "title": "userAuth.getAuthInstance<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1476,
+        "line_end": 1532,
+        "summary": "getAuthInstance(challenge : Uint8Array, authType : UserAuthType, authTrustLevel : AuthTrustLevel):"
+      },
+      {
+        "section_id": "section-25",
+        "title": "userAuth.getAvailableStatus<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1533,
+        "line_end": 1592,
+        "summary": "getAvailableStatus(authType : UserAuthType, authTrustLevel : AuthTrustLevel): void\n\n查询指定类型和等级的认证能力是"
+      },
+      {
+        "section_id": "section-26",
+        "title": "UserAuthResultCode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1593,
+        "line_end": 1614,
+        "summary": "表示返回码的枚举。\n\n**系统能力：** SystemCapability.UserIAM.UserAuth.Core\n\n| 名称                    |   值   | 说明"
+      },
+      {
+        "section_id": "section-27",
+        "title": "UserAuth<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1615,
+        "line_end": 1804,
+        "summary": "认证器对象。\n\n### constructor<sup>(deprecated)</sup>\n\nconstructor()\n\n创建认证器对象。\n\n> **说明：**\n>\n> 从 API versio"
+      },
+      {
+        "section_id": "section-28",
+        "title": "IUserAuthCallback<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1805,
+        "line_end": 1908,
+        "summary": "返回认证结果的回调对象。\n\n> **说明：**\n>\n> 从 API version 8 开始支持，从 API version 9 开始废弃，请使用[AuthEvent](#autheventdepr"
+      },
+      {
+        "section_id": "section-29",
+        "title": "AuthResult<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1909,
+        "line_end": 1924,
+        "summary": "表示认证结果的对象。\n\n> **说明：**\n>\n> 从 API version 8 开始支持，从 API version 9 开始废弃，请使用[AuthResultInfo](#authresult"
+      },
+      {
+        "section_id": "section-30",
+        "title": "ResultCode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1925,
+        "line_end": 1948,
+        "summary": "表示返回码的枚举。\n\n> **说明：**\n>\n> 从 API version 8 开始支持，从 API version 9 开始废弃，请使用[UserAuthResultCode](#useraut"
+      },
+      {
+        "section_id": "section-31",
+        "title": "FaceTips<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1949,
+        "line_end": 1973,
+        "summary": "表示人脸认证过程中提示码的枚举。\n\n> **说明：**\n>\n> 从 API version 8 开始支持，从 API version 11 开始废弃。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-32",
+        "title": "FingerprintTips<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1974,
+        "line_end": 1993,
+        "summary": "表示指纹认证过程中提示码的枚举。\n\n> **说明：**\n>\n> 从 API version 8 开始支持，从 API version 11 开始废弃。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-33",
+        "title": "UserAuthType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1994,
+        "line_end": 2007,
+        "summary": "表示身份认证的凭据类型枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.UserIAM"
+      },
+      {
+        "section_id": "section-34",
+        "title": "AuthTrustLevel<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2008,
+        "line_end": 2024,
+        "summary": "表示认证结果的信任等级枚举。\n\n典型场景及举例可参考[认证可信等级划分原则](../../security/UserAuthenticationKit/user-authentication-ove"
+      },
+      {
+        "section_id": "section-35",
+        "title": "SecureLevel<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2025,
+        "line_end": 2040,
+        "summary": "type SecureLevel = string\n\n表示认证的安全级别。\n\n> **说明：**\n>\n> 从 API version 6 开始支持，从 API version 8 开始废弃，请使用["
+      },
+      {
+        "section_id": "section-36",
+        "title": "AuthType<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2041,
+        "line_end": 2056,
+        "summary": "type AuthType = string\n\n表示认证类型。\n\n> **说明：**\n>\n> 从 API version 6 开始支持，从 API version 8 开始废弃，请使用[UserAu"
+      },
+      {
+        "section_id": "section-37",
+        "title": "userAuth.getAuthenticator<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2057,
+        "line_end": 2081,
+        "summary": "getAuthenticator(): Authenticator\n\n获取Authenticator对象，用于执行用户身份认证。\n\n> **说明：**\n>\n> 从 API version 6 开始支"
+      },
+      {
+        "section_id": "section-38",
+        "title": "Authenticator<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2082,
+        "line_end": 2169,
+        "summary": "认证器对象。\n\n> **说明：**\n>\n> 从 API version 6 开始支持，从 API version 8 开始废弃，请使用[AuthInstance](#authinstancedepr"
+      },
+      {
+        "section_id": "section-39",
+        "title": "AuthenticationResult<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2170,
+        "line_end": 2194,
+        "summary": "表示认证结果的枚举。\n\n> **说明：**\n>\n> 从 API version 6 开始支持，从 API version 8 开始废弃，请使用[ResultCode](#resultcodedepr"
+      }
+    ]
+  }
+}

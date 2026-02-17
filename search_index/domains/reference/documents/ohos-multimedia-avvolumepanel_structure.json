@@ -1,0 +1,76 @@
+{
+  "doc_id": "ohos-multimedia-avvolumepanel",
+  "title": "@ohos.multimedia.avVolumePanel (音量面板)",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/ohos-multimedia-avvolumepanel.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/ohos-multimedia-avvolumepanel.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@ccfriend; @liao_qian",
+    "designer": "@ccfriend",
+    "tester": "@chenmingxi1_huawei",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 @ohos.multimedia.avVolumePanel (音量面板)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimedia.avVolumePanel (音量面板)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```js\nimport { AVVolumePanel } from '@kit.AudioKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 31,
+        "summary": "支持[通用属性](../apis-arkui/arkui-ts/ts-component-general-attributes.md)。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "AVVolumePanel",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 48,
+        "summary": "AVVolumePanel({volumeLevel?: number, volumeParameter?: AVVolumePanelParameter})\n\n音量面板，可用于在当前应用内展示音量"
+      },
+      {
+        "section_id": "section-4",
+        "title": "AVVolumePanelParameter",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 60,
+        "summary": "音量面板参数设置。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Multimedia.A"
+      },
+      {
+        "section_id": "section-5",
+        "title": "事件",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 64,
+        "summary": "支持[通用事件](../apis-arkui/arkui-ts/ts-component-general-events.md)。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "使用建议",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 69,
+        "summary": "1. 应用在实现自定义音量条的过程中，建议使用音频框架的音量变化监听接口，通过接口回调的音量类型volumeEvent.volumeType，音量等级volumeEvent.volume以及是否显示"
+      },
+      {
+        "section_id": "section-7",
+        "title": "示例",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 100,
+        "summary": "音量面板功能的示例说明参考如下。需要实际修改volume值或者按压音量按键体验调节音量效果。\n\n```ts\nimport { AVVolumePanel } from '@kit.AudioKit'"
+      }
+    ]
+  }
+}

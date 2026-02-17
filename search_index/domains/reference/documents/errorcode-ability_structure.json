@@ -1,0 +1,1100 @@
+{
+  "doc_id": "errorcode-ability",
+  "title": "元能力子系统错误码",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@dsz2025; @Luobniz21",
+    "designer": "@ccllee1",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 元能力子系统错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "元能力子系统错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "16000001 指定的Ability名称不存在",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 39,
+        "summary": "**错误信息**\n\nThe specified ability does not exist.\n\n**错误描述**\n\n当指定的Ability名称不存在时，方法将返回该错误码。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-2",
+        "title": "16000002 接口调用Ability类型错误",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 60,
+        "summary": "**错误信息**\n\nIncorrect ability type.\n\n**错误描述**\n\n当调用Ability相关接口时，被调用方的Ability类型与接口期望的类型不匹配。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-3",
+        "title": "16000003 指定的ID不存在",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 78,
+        "summary": "**错误信息**\n\nThe specified ID does not exist.\n\n**错误描述**\n\n当指定的ID不存在时，方法将返回该错误码。\n\n**可能原因**\n\n操作的目标ID不存在。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "16000004 可见性校验失败",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 97,
+        "summary": "**错误信息**\n\nCannot start an invisible component.\n\n**错误描述**\n\n当可见性校验失败时，方法将返回该错误码。\n\n**可能原因**\n\n应用可见性校验失败"
+      },
+      {
+        "section_id": "section-5",
+        "title": "16000005 指定的进程权限校验失败",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 115,
+        "summary": "**错误信息**\n\nThe specified process does not have the permission.\n\n**错误描述**\n\n当指定的进程权限校验失败时，方法将返回该错误码。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "16000006 不允许跨用户操作",
+        "level": 2,
+        "line_start": 116,
+        "line_end": 133,
+        "summary": "**错误信息**\n\nCross-user operations are not allowed.\n\n**错误描述**\n\n当应用跨用户操作时，方法将返回该错误码。\n\n**可能原因**\n\n应用进行了跨用"
+      },
+      {
+        "section_id": "section-7",
+        "title": "16000007 服务未响应",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 151,
+        "summary": "**错误信息**\n\nService busy. There are concurrent tasks. Try again later.\n\n**错误描述**\n\n当系统服务未响应时，方法将返回该错误码"
+      },
+      {
+        "section_id": "section-8",
+        "title": "16000008 众测应用到期",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 169,
+        "summary": "**错误信息**\n\nThe crowdtesting application expires.\n\n**错误描述**\n\n当众测应用到期时，方法将返回该错误码。\n\n**可能原因**\n\n众测应用到期，无法"
+      },
+      {
+        "section_id": "section-9",
+        "title": "16000009 wukong模式，不允许启动/停止ability",
+        "level": 2,
+        "line_start": 170,
+        "line_end": 187,
+        "summary": "**错误信息**\n\nAn ability cannot be started or stopped in Wukong mode.\n\n**错误描述**\n\n当wukong模式下，启动/停止abilit"
+      },
+      {
+        "section_id": "section-10",
+        "title": "16000010 不允许带迁移flag",
+        "level": 2,
+        "line_start": 188,
+        "line_end": 205,
+        "summary": "**错误信息**\n\nThe call with the continuation and prepare continuation flag is forbidden.\n\n**错误描述**\n\n当调用"
+      },
+      {
+        "section_id": "section-11",
+        "title": "16000011 上下文对象不存在",
+        "level": 2,
+        "line_start": 206,
+        "line_end": 223,
+        "summary": "**错误信息**\n\nThe context does not exist.\n\n**错误描述**\n\n当上下文对象不存在时，方法将返回该错误码。\n\n**可能原因**\n\n当前上下文对象不存在。\n\n**处理"
+      },
+      {
+        "section_id": "section-12",
+        "title": "16000012 应用被管控",
+        "level": 2,
+        "line_start": 224,
+        "line_end": 241,
+        "summary": "**错误信息**\n\nThe application is controlled.\n\n**错误描述**\n\n当应用受到管控时，将返回该错误码。\n\n**可能原因**\n\n应用被系统管控模块管控，不允许启动。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "16000013 应用被EDM管控",
+        "level": 2,
+        "line_start": 242,
+        "line_end": 259,
+        "summary": "**错误信息**\n\nThe application is controlled by EDM.\n\n**错误描述**\n\n当应用受到企业设备管理[Enterprise Device Manager](."
+      },
+      {
+        "section_id": "section-14",
+        "title": "16000015 服务超时",
+        "level": 2,
+        "line_start": 260,
+        "line_end": 277,
+        "summary": "**错误信息**\n\nService timeout.\n\n**错误描述**\n\n当服务超时时，方法将返回该错误码。\n\n**可能原因**\n\n服务超时。\n\n**处理步骤**\n\n服务超时，请稍后重试。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "16000018 限制API 11以上版本三方应用跳转",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 295,
+        "summary": "**错误信息**\n\nRedirection to a third-party application is not allowed in API version greater than 11."
+      },
+      {
+        "section_id": "section-16",
+        "title": "16000019 隐式启动未查找到匹配应用",
+        "level": 2,
+        "line_start": 296,
+        "line_end": 316,
+        "summary": "**错误信息**\n\nNo matching ability is found.\n\n**错误描述**\n\n隐式启动无法查找到匹配的Ability。\n\n**可能原因**\n\n1. 隐式启动的参数配置有误。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "16000020 传入的Context对象不是Ability级别Context",
+        "level": 2,
+        "line_start": 317,
+        "line_end": 335,
+        "summary": "**错误信息**\n\nThe context is not ability context.\n\n**错误描述**\n\n传入的Context对象不是Ability级别Context。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-18",
+        "title": "16000050 内部错误",
+        "level": 2,
+        "line_start": 336,
+        "line_end": 361,
+        "summary": "**错误信息**\n\nInternal error.\n\n**错误描述**\n\n当出现了开发者无法解决的内部异常错误（如内存申请失败、多线程处理异常、跨进程通信失败等）时，方法将返回该错误码。\n\n**可能"
+      },
+      {
+        "section_id": "section-19",
+        "title": "16000053 非顶层应用",
+        "level": 2,
+        "line_start": 362,
+        "line_end": 381,
+        "summary": "**错误信息**\n\nThe ability is not on the top of the UI.\n\n**错误描述**\n\n当前应用未显示在界面顶层时，方法将返回该错误码。\n\n**可能原因**\n\n用"
+      },
+      {
+        "section_id": "section-20",
+        "title": "16000055 免安装超时",
+        "level": 2,
+        "line_start": 382,
+        "line_end": 400,
+        "summary": "**错误信息**\n\nInstallation-free timed out.\n\n**错误描述**\n\n当免安装超时时，方法将返回该错误码。\n\n**可能原因**\n\n免安装超时。\n\n**处理步骤**\n\n免"
+      },
+      {
+        "section_id": "section-21",
+        "title": "16000058 指定的URI flag无效",
+        "level": 2,
+        "line_start": 401,
+        "line_end": 418,
+        "summary": "**错误信息**\n\nInvalid URI flag.\n\n**错误描述**\n\n指定的URI flag无效。\n\n**可能原因**\n\n传入的参数有误。\n\n**处理步骤**\n\n确认传入的参数属于Uri f"
+      },
+      {
+        "section_id": "section-22",
+        "title": "16000059 指定的URI类型无效",
+        "level": 2,
+        "line_start": 419,
+        "line_end": 436,
+        "summary": "**错误信息**\n\nInvalid URI type.\n\n**错误描述**\n\n指定的URI类型无效。\n\n**可能原因**\n\n传入的参数有误，目前URI授权管理仅支持file类型URI。\n\n**处理步"
+      },
+      {
+        "section_id": "section-23",
+        "title": "16000060 不支持沙箱应用授权URI",
+        "level": 2,
+        "line_start": 437,
+        "line_end": 455,
+        "summary": "**错误信息**\n\nA sandbox application cannot grant URI permission.\n\n**错误描述**\n\n当沙箱应用授权URI时，方法将返回该错误码。\n\n**可"
+      },
+      {
+        "section_id": "section-24",
+        "title": "16000061 不支持的操作",
+        "level": 2,
+        "line_start": 456,
+        "line_end": 473,
+        "summary": "**错误信息**\n\nOperation not supported.\n\n**错误描述**\n\n当操作在当前系统上不支持时，返回该错误码。\n\n**可能原因**\n\n操作在当前系统上不支持。\n\n**处理步骤"
+      },
+      {
+        "section_id": "section-25",
+        "title": "16000062 子进程数量超出上限",
+        "level": 2,
+        "line_start": 474,
+        "line_end": 491,
+        "summary": "**错误信息**\n\nThe number of child processes exceeds the upper limit.\n\n**错误描述**\n\n当申请创建子进程时，创建的子进程数量已经达到上"
+      },
+      {
+        "section_id": "section-26",
+        "title": "16000063 重启应用指定组件无效",
+        "level": 2,
+        "line_start": 492,
+        "line_end": 509,
+        "summary": "**错误信息**\n\nThe target to restart does not belong to the current application or is not a UIAbility."
+      },
+      {
+        "section_id": "section-27",
+        "title": "16000064 重启应用频繁",
+        "level": 2,
+        "line_start": 510,
+        "line_end": 527,
+        "summary": "**错误信息**\n\nRestart too frequently. Try again at least 3s later.\n\n**错误描述**\n\n当重启应用拉起指定组件时，3s内再次调用，返回该错"
+      },
+      {
+        "section_id": "section-28",
+        "title": "16000065 接口只支持Ability在前台时调用",
+        "level": 2,
+        "line_start": 528,
+        "line_end": 545,
+        "summary": "**错误信息**\n\nThe API can be called only when the ability is running in the foreground.\n\n**错误描述**\n\n当Abi"
+      },
+      {
+        "section_id": "section-29",
+        "title": "16000066  wukong模式，不允许移动Ability到前台/后台",
+        "level": 2,
+        "line_start": 546,
+        "line_end": 563,
+        "summary": "**错误信息**\n\nAn ability cannot switch to the foreground or background in Wukong mode.\n\n**错误描述**\n\n当wuko"
+      },
+      {
+        "section_id": "section-30",
+        "title": "16000067 Ability启动参数校验失败",
+        "level": 2,
+        "line_start": 564,
+        "line_end": 582,
+        "summary": "**错误信息**\n\nThe StartOptions check failed.\n\n**错误描述**\n\n当StartOptions相关的参数校验失败时，返回该错误码。\n\n**可能原因**\n\n1. 调"
+      },
+      {
+        "section_id": "section-31",
+        "title": "16000068 Ability已经在运行中",
+        "level": 2,
+        "line_start": 583,
+        "line_end": 600,
+        "summary": "**错误信息**\n\nThe ability is already running.\n\n**错误描述**\n\n当目标Ability已经在运行中时，返回该错误码。\n\n**可能原因**\n\n调用startAb"
+      },
+      {
+        "section_id": "section-32",
+        "title": "16000069 严格模式下不允许该类型Extension启动三方应用",
+        "level": 2,
+        "line_start": 601,
+        "line_end": 619,
+        "summary": "**错误信息**\n\nThe extension cannot start the third party application.\n\n**错误描述**\n\n严格模式下，不允许该类型Extension启"
+      },
+      {
+        "section_id": "section-33",
+        "title": "16000070 严格模式下不允许该类型Extension启动指定ServiceExtensionAbility",
+        "level": 2,
+        "line_start": 620,
+        "line_end": 638,
+        "summary": "**错误信息**\n\nThe extension cannot start the service.\n\n**错误描述**\n\n严格模式下，不允许该类型Extension启动指定ServiceExtens"
+      },
+      {
+        "section_id": "section-34",
+        "title": "16000071 不支持应用分身模式",
+        "level": 2,
+        "line_start": 639,
+        "line_end": 656,
+        "summary": "**错误信息**\n\nApp clone is not supported.\n\n**错误描述**\n\n当应用不支持分身模式时，返回该错误码。\n\n**可能原因**\n\n该应用没有在app.json5配置文件"
+      },
+      {
+        "section_id": "section-35",
+        "title": "16000072 不支持应用多开",
+        "level": 2,
+        "line_start": 657,
+        "line_end": 682,
+        "summary": "**错误信息**\n\nApp clone or multi-instance is not supported.\n\n**错误描述**\n\n当应用不支持多开时，返回该错误码。\n\n**可能原因**\n\n调用["
+      },
+      {
+        "section_id": "section-36",
+        "title": "16000073 传入的appCloneIndex是一个无效值",
+        "level": 2,
+        "line_start": 683,
+        "line_end": 702,
+        "summary": "**错误信息**\n\nThe app clone index is invalid.\n\n**错误描述**\n\n传入一个无效的appCloneIndex，返回该错误码。\n\n**可能原因**\n\n1.调用st"
+      },
+      {
+        "section_id": "section-37",
+        "title": "16000074 返回结果时requestCode对应的调用方不存在",
+        "level": 2,
+        "line_start": 703,
+        "line_end": 724,
+        "summary": "**错误信息**\n\nThe caller does not exist.\n\n**错误描述**\n\n通过backToCallerAbilityWithResult接口向调用方返回结果时，如果根据传入的r"
+      },
+      {
+        "section_id": "section-38",
+        "title": "16000075 不支持返回结果时拉起调用方",
+        "level": 2,
+        "line_start": 725,
+        "line_end": 743,
+        "summary": "**错误信息**\n\nBackToCaller is not supported.\n\n**错误描述**\n\n不支持通过backToCallerAbilityWithResult接口返回到调用方时，返回该"
+      },
+      {
+        "section_id": "section-39",
+        "title": "16000076 指定的APP_INSTANCE_KEY不存在",
+        "level": 2,
+        "line_start": 744,
+        "line_end": 761,
+        "summary": "**错误信息**\n\nThe app instance key is invalid.\n\n**错误描述**\n\n指定的[APP_INSTANCE_KEY](js-apis-app-ability-wan"
+      },
+      {
+        "section_id": "section-40",
+        "title": "16000077 应用的实例数量已达到上限",
+        "level": 2,
+        "line_start": 762,
+        "line_end": 779,
+        "summary": "**错误信息**\n\nThe number of app instances reaches the limit.\n\n**错误描述**\n\n当应用的实例数量达到上限后，继续创建应用实例，返回该错误码。"
+      },
+      {
+        "section_id": "section-41",
+        "title": "16000078 不支持应用多实例",
+        "level": 2,
+        "line_start": 780,
+        "line_end": 799,
+        "summary": "**错误信息**\n\nThe multi-instance is not supported.\n\n**错误描述**\n\n应用不支持多实例。\n\n**可能原因**\n\n1. 目标应用未配置多实例。\n2. 当前"
+      },
+      {
+        "section_id": "section-42",
+        "title": "16000079 不支持指定APP_INSTANCE_KEY",
+        "level": 2,
+        "line_start": 800,
+        "line_end": 817,
+        "summary": "**错误信息**\n\nThe APP_INSTANCE_KEY cannot be specified.\n\n**错误描述**\n\n[APP_INSTANCE_KEY](js-apis-app-abili"
+      },
+      {
+        "section_id": "section-43",
+        "title": "16000080 不支持创建新实例",
+        "level": 2,
+        "line_start": 818,
+        "line_end": 836,
+        "summary": "**错误信息**\n\nCreating a new instance is not supported.\n\n**错误描述**\n\n只允许应用使用[CREATE_APP_INSTANCE_KEY](js-"
+      },
+      {
+        "section_id": "section-44",
+        "title": "16000081 获取目标应用信息失败",
+        "level": 2,
+        "line_start": 837,
+        "line_end": 859,
+        "summary": "**错误信息**\n\nFailed to obtain the target application information.\n\n**错误描述**\n\n调用[URI授权相关接口](js-apis-uri"
+      },
+      {
+        "section_id": "section-45",
+        "title": "16000083 不允许该类型ExtensionAbility启动指定Ability",
+        "level": 2,
+        "line_start": 860,
+        "line_end": 877,
+        "summary": "**错误信息**\n\nThe ExtensionAbility cannot start the ability due to system control.\n\n**错误描述**\n\n不同类型Exten"
+      },
+      {
+        "section_id": "section-46",
+        "title": "16000084 只允许DelegatorAbility单次调用",
+        "level": 2,
+        "line_start": 878,
+        "line_end": 897,
+        "summary": "**错误信息**\n\nOnly DelegatorAbility is allowed to call this API, and only once.\n\n**错误描述**\n\n系统只允许Delegat"
+      },
+      {
+        "section_id": "section-47",
+        "title": "16000085 元能力与窗口的交互流程发生错误",
+        "level": 2,
+        "line_start": 898,
+        "line_end": 915,
+        "summary": "**错误信息**\n\nAn error occurred during the interaction between the ability and window.\n\n**错误描述**\n\n元能力与窗"
+      },
+      {
+        "section_id": "section-48",
+        "title": "16000086 传入的context不是UIAbilityContext",
+        "level": 2,
+        "line_start": 916,
+        "line_end": 933,
+        "summary": "**错误信息**\n\nThe context is not UIAbilityContext.\n\n**错误描述**\n\n传入的context不是UIAbilityContext。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-49",
+        "title": "16000090 调用方不是原子化服务",
+        "level": 2,
+        "line_start": 934,
+        "line_end": 952,
+        "summary": "**错误信息**\n\nThe caller is not an atomic service.\n\n**错误描述**\n\n调用方不是原子化服务。\n\n**可能原因**\n\n接口调用方不是原子化服务。\n\n**处"
+      },
+      {
+        "section_id": "section-50",
+        "title": "16000091 根据key获取文件URI数据失败",
+        "level": 2,
+        "line_start": 953,
+        "line_end": 975,
+        "summary": "**错误信息**\n\nFailed to get the file URI from the key.\n\n**错误描述**\n\n根据key获取文件URI失败。\n\n**可能原因**\n\n1. key为空。"
+      },
+      {
+        "section_id": "section-51",
+        "title": "16000092 无权限授权URI",
+        "level": 2,
+        "line_start": 976,
+        "line_end": 993,
+        "summary": "**错误信息**\n\nNo permission to authorize the URI.\n\n**错误描述**\n\n无权限授权URI。\n\n**可能原因**\n\n创建key时写入的URI存在无权限授权的U"
+      },
+      {
+        "section_id": "section-52",
+        "title": "16000093 调用方的token ID无效",
+        "level": 2,
+        "line_start": 994,
+        "line_end": 1011,
+        "summary": "**错误信息**\n\nThe caller token ID is invalid.\n\n**错误描述**\n\n调用方的token ID无效。\n\n**可能原因**\n\n系统未找到callerTokenId对"
+      },
+      {
+        "section_id": "section-53",
+        "title": "16000094 目标应用的token ID无效",
+        "level": 2,
+        "line_start": 1012,
+        "line_end": 1032,
+        "summary": "**错误信息**\n\nThe target token ID is invalid.\n\n**错误描述**\n\n目标应用的token ID无效。\n\n**可能原因**\n\n1. 系统未找到targetToke"
+      },
+      {
+        "section_id": "section-54",
+        "title": "16000100 监听Ability生命周期变化的AbilityMonitor方法执行失败",
+        "level": 2,
+        "line_start": 1033,
+        "line_end": 1076,
+        "summary": "**错误信息**\n\n - Calling AddAbilityMonitor failed.\n\n - Calling AddAbilityMonitorSync failed.\n\n - Callin"
+      },
+      {
+        "section_id": "section-55",
+        "title": "16000110 当前应用不在Kiosk模式的列表内",
+        "level": 2,
+        "line_start": 1077,
+        "line_end": 1094,
+        "summary": "**错误信息**\n\nThe current application is not in Kiosk app list and cannot enter Kiosk mode.\n\n**错误描述**"
+      },
+      {
+        "section_id": "section-56",
+        "title": "16000111 已经有应用进入了Kiosk模式",
+        "level": 2,
+        "line_start": 1095,
+        "line_end": 1112,
+        "summary": "**错误信息**\n\nThe system is already in Kiosk mode and cannot enter Kiosk mode again.\n\n**错误描述**\n\n当前系统已处于"
+      },
+      {
+        "section_id": "section-57",
+        "title": "16000112 当前系统没有应用进入Kiosk模式",
+        "level": 2,
+        "line_start": 1113,
+        "line_end": 1130,
+        "summary": "**错误信息**\n\nThe current application is not in Kiosk mode and cannot exit Kiosk mode.\n\n**错误描述**\n\n当前应用未"
+      },
+      {
+        "section_id": "section-58",
+        "title": "16000113 当前Ability不在前台",
+        "level": 2,
+        "line_start": 1131,
+        "line_end": 1149,
+        "summary": "**错误信息**\n\nCurrent ability is not in foreground.\n\n**错误描述**\n\n当Ability未处于前台状态时，尝试执行需在前台进行的操作将返回错误码。\n\n*"
+      },
+      {
+        "section_id": "section-59",
+        "title": "16000120 wantList内的元素个数超出4个或小于1个",
+        "level": 2,
+        "line_start": 1150,
+        "line_end": 1167,
+        "summary": "**错误信息**\n\nA maximum of four UIAbility instances can be started simultaneously.The current parameter"
+      },
+      {
+        "section_id": "section-60",
+        "title": "16000121 待启动的目标组件类型不是UIAbility",
+        "level": 2,
+        "line_start": 1168,
+        "line_end": 1185,
+        "summary": "**错误信息**\n\nThe target component type is not a UIAbility.\n\n**错误描述**\n\n待启动的目标组件类型不是UIAbility。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-61",
+        "title": "16000122 待启动的目标组件被系统管控模块拦截",
+        "level": 2,
+        "line_start": 1186,
+        "line_end": 1203,
+        "summary": "**错误信息**\n\nThe target component is blocked by the system module and does not support startup.\n\n**错误描"
+      },
+      {
+        "section_id": "section-62",
+        "title": "16000123 不支持隐式启动",
+        "level": 2,
+        "line_start": 1204,
+        "line_end": 1221,
+        "summary": "**错误信息**\n\nImplicit startup is not supported.\n\n**错误描述**\n\n不支持隐式启动。\n\n**可能原因**\n\nwantList参数中存在隐式Want。\n\n*"
+      },
+      {
+        "section_id": "section-63",
+        "title": "16000124 不支持启动分布式UIAbility",
+        "level": 2,
+        "line_start": 1222,
+        "line_end": 1239,
+        "summary": "**错误信息**\n\nStarting a remote UIAbility is not supported.\n\n**错误描述**\n\n不支持启动分布式UIAbility。\n\n**可能原因**\n\nWa"
+      },
+      {
+        "section_id": "section-64",
+        "title": "16000125 不支持启动插件",
+        "level": 2,
+        "line_start": 1240,
+        "line_end": 1257,
+        "summary": "**错误信息**\n\nStarting a plugin UIAbility is not supported.\n\n**错误描述**\n\n不支持启动插件。\n\n**可能原因**\n\nWant中的parame"
+      },
+      {
+        "section_id": "section-65",
+        "title": "16000126 不支持启动DLP文件",
+        "level": 2,
+        "line_start": 1258,
+        "line_end": 1276,
+        "summary": "**错误信息**\n\nStarting DLP files is not supported.\n\n**错误描述**\n\n不支持启动DLP文件。\n\n**可能原因**\n\nWant中传入了DLP文件。\n\n**"
+      },
+      {
+        "section_id": "section-66",
+        "title": "16000130 UIAbility不属于调用方",
+        "level": 2,
+        "line_start": 1277,
+        "line_end": 1294,
+        "summary": "**错误信息**\n\nThe UIAbility not belong to caller.\n\n**错误描述**\n\n目标UIAbility不属于调用方。\n\n**可能原因**\n\n启动了一个非自身应用的U"
+      },
+      {
+        "section_id": "section-67",
+        "title": "16000131 UIAbility已启动",
+        "level": 2,
+        "line_start": 1295,
+        "line_end": 1312,
+        "summary": "**错误信息**\n\nThe UIAbility is already exist, can not start again.\n\n**错误描述**\n\nUIAbility已启动，无法重新启动。\n\n**可"
+      },
+      {
+        "section_id": "section-68",
+        "title": "16000135 UIAbility的主窗不存在",
+        "level": 2,
+        "line_start": 1313,
+        "line_end": 1330,
+        "summary": "**错误信息**\n\nThe main window of this ability of this context does not exits.\n\n**错误描述**\n\n该UIAbility的主窗不"
+      },
+      {
+        "section_id": "section-69",
+        "title": "16000136 不允许通过App Linking方式拉起应用自身UIAbility",
+        "level": 2,
+        "line_start": 1331,
+        "line_end": 1349,
+        "summary": "**错误信息**\n\nThe UIAbility is prohibited from launching itself via App Linking.\n\n**错误描述**\n\n应用配置了不允许使用A"
+      },
+      {
+        "section_id": "section-70",
+        "title": "16000151 无效wantAgent对象",
+        "level": 2,
+        "line_start": 1350,
+        "line_end": 1371,
+        "summary": "**错误信息**\n\nInvalid wantAgent object.\n\n**错误描述**\n\n当传入接口的wantAgent对象无效时，方法将返回该错误码。\n\n**可能原因**\n\n1. 传入接口的w"
+      },
+      {
+        "section_id": "section-71",
+        "title": "16000153 wantAgent对象已被取消",
+        "level": 2,
+        "line_start": 1372,
+        "line_end": 1390,
+        "summary": "**错误信息**\n\nThe WantAgent has been canceled.\n\n**错误描述**\n\n当传入接口的wantAgent对象已被取消时，方法将返回该错误码。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-72",
+        "title": "16000200 不允许该调用方启动应用后台服务",
+        "level": 2,
+        "line_start": 1391,
+        "line_end": 1408,
+        "summary": "**错误信息**\n\nThe caller is not in the appIdentifierAllowList of the target application.\n\n**错误描述**\n\n调用方"
+      },
+      {
+        "section_id": "section-73",
+        "title": "16000201 目标服务还未启动",
+        "level": 2,
+        "line_start": 1409,
+        "line_end": 1427,
+        "summary": "**错误信息**\n\nThe target service has not been started yet.\n\n**错误描述**\n\n目标服务还未启动时，返回该错误码。\n\n**可能原因**\n\n使用[c"
+      },
+      {
+        "section_id": "section-74",
+        "title": "16200001 通用组件客户端(Caller)已回收",
+        "level": 2,
+        "line_start": 1428,
+        "line_end": 1447,
+        "summary": "**错误信息**\n\nThe caller has been released.\n\n**错误描述**\n\n当通用组件客户端(Caller)已回收时，方法将返回该错误码。\n\n**可能原因**\n\n通用组件客"
+      },
+      {
+        "section_id": "section-75",
+        "title": "16200002 通用组件服务端(Callee)无效",
+        "level": 2,
+        "line_start": 1448,
+        "line_end": 1465,
+        "summary": "**错误信息**\n\nThe callee does not exist.\n\n**错误描述**\n\n当通用组件服务端(Callee)无效时，方法将返回该错误码。\n\n**可能原因**\n\n通用组件服务端(C"
+      },
+      {
+        "section_id": "section-76",
+        "title": "16200004 方法已注册",
+        "level": 2,
+        "line_start": 1466,
+        "line_end": 1483,
+        "summary": "**错误信息**\n\nThe method has been registered.\n\n**错误描述**\n\n当方法已注册时，方法将返回该错误码。\n\n**可能原因**\n\n方法已在通用组件服务端(Call"
+      },
+      {
+        "section_id": "section-77",
+        "title": "16200005 方法未注册",
+        "level": 2,
+        "line_start": 1484,
+        "line_end": 1502,
+        "summary": "**错误信息**\n\nThe method has not been registered.\n\n**错误描述**\n\n当方法未注册时，方法将返回该错误码。\n\n**可能原因**\n\n方法未在通用组件服务端("
+      },
+      {
+        "section_id": "section-78",
+        "title": "16200006 没有权限设置常驻进程使能状态",
+        "level": 2,
+        "line_start": 1503,
+        "line_end": 1520,
+        "summary": "**错误信息**\n\nThe caller application can only set the resident status of the configured process.\n\n**错误描"
+      },
+      {
+        "section_id": "section-79",
+        "title": "16300001 指定的任务不存在",
+        "level": 2,
+        "line_start": 1521,
+        "line_end": 1538,
+        "summary": "**错误信息**\n\nMission not found.\n\n**错误描述**\n\n当指定的任务不存在时，方法将返回该错误码。\n\n**可能原因**\n\n操作的目标任务不存在。\n\n**处理步骤**\n\n确认操"
+      },
+      {
+        "section_id": "section-80",
+        "title": "16300002 指定的任务监听器不存在",
+        "level": 2,
+        "line_start": 1539,
+        "line_end": 1557,
+        "summary": "**错误信息**\n\nThe specified mission listener does not exist.\n\n**错误描述**\n\n当指定的任务监听器不存在时，方法将返回该错误码。\n\n**可能原"
+      },
+      {
+        "section_id": "section-81",
+        "title": "16300003 目标应用程序不是自身应用程序",
+        "level": 2,
+        "line_start": 1558,
+        "line_end": 1576,
+        "summary": "**错误信息**\n\nThe target application is not the current application.\n\n**错误描述**\n\n当被拉起的应用程序不是自身应用程序时，方法将返"
+      },
+      {
+        "section_id": "section-82",
+        "title": "18500001 指定的包名无效",
+        "level": 2,
+        "line_start": 1577,
+        "line_end": 1594,
+        "summary": "**错误信息**\n\nThe bundle does not exist or no patch has been applied.\n\n**错误描述**\n\n当指定的包名无效时，方法将返回该错误码。"
+      },
+      {
+        "section_id": "section-83",
+        "title": "18500002 指定的补丁包无效",
+        "level": 2,
+        "line_start": 1595,
+        "line_end": 1613,
+        "summary": "**错误信息**\n\nInvalid patch package.\n\n**错误描述**\n\n当指定的补丁包无效，补丁包不存在或不可访问时，方法将返回该错误码。\n\n**可能原因**\n\n待安装的补丁包文件不"
+      },
+      {
+        "section_id": "section-84",
+        "title": "18500008 快速修复内部错误",
+        "level": 2,
+        "line_start": 1614,
+        "line_end": 1631,
+        "summary": "**错误信息**\n\nInternal error.\n\n**错误描述**\n\n当内存申请、多线程处理异常等内部处理错误时，方法将返回该错误码。\n\n**可能原因**\n\n内存申请、多线程处理等内核通用错误。"
+      },
+      {
+        "section_id": "section-85",
+        "title": "18500009 该应用当前有正在处理的快速修复任务",
+        "level": 2,
+        "line_start": 1632,
+        "line_end": 1650,
+        "summary": "**错误信息**\n\nThe application has an ongoing quick fix task.\n\n**错误描述**\n\n该应用当前有正在处理的快速修复任务时，方法将返回该错误码。"
+      },
+      {
+        "section_id": "section-86",
+        "title": "16300004 指定的observer不存在",
+        "level": 2,
+        "line_start": 1651,
+        "line_end": 1669,
+        "summary": "**错误信息**\n\nThe observer does not exist.\n\n**错误描述**\n\n当监听器不存在时，方法将返回该错误码。\n\n**可能原因**\n\n当前监听器不存在或者已注销。\n\n**"
+      },
+      {
+        "section_id": "section-87",
+        "title": "16300005 指定的包信息不存在",
+        "level": 2,
+        "line_start": 1670,
+        "line_end": 1687,
+        "summary": "**错误信息**\n\nThe target bundle does not exist.\n\n**错误描述**\n\n预加载应用的包信息不存在时，方法将返回该错误码。\n\n**可能原因**\n\n预加载的bund"
+      },
+      {
+        "section_id": "section-88",
+        "title": "16300008 指定的包不存在主UIAbility",
+        "level": 2,
+        "line_start": 1688,
+        "line_end": 1705,
+        "summary": "**错误信息**\n\nThe target bundle has no MainAbility.\n\n**错误描述**\n\n应用不存在主UIAbility。\n\n**可能原因**\n\n应用的mainEleme"
+      },
+      {
+        "section_id": "section-89",
+        "title": "16300009 指定的包不存在状态栏",
+        "level": 2,
+        "line_start": 1706,
+        "line_end": 1723,
+        "summary": "**错误信息**\n\nThe target bundle has no status-bar ability.\n\n**错误描述**\n\n应用不存在状态栏。\n\n**可能原因**\n\n应用不存在状态栏。\n\n*"
+      },
+      {
+        "section_id": "section-90",
+        "title": "16300010 指定的应用在运行中但没有绑定状态栏",
+        "level": 2,
+        "line_start": 1724,
+        "line_end": 1742,
+        "summary": "**错误信息**\n\nThe target application is not attached to the status bar.\n\n**错误描述**\n\n应用运行后没有绑定状态栏。\n\n**可能原"
+      },
+      {
+        "section_id": "section-91",
+        "title": "29600001 图片编辑内部错误",
+        "level": 2,
+        "line_start": 1743,
+        "line_end": 1761,
+        "summary": "**错误信息**\n\nInternal error.\n\n**错误描述**\n\n当图片保存时发生内存申请、多线程处理异常等内部错误时，方法将返回该错误码。\n\n**可能原因**\n\n内存申请、多线程处理等内核"
+      },
+      {
+        "section_id": "section-92",
+        "title": "29600002 图片编辑内部错误",
+        "level": 2,
+        "line_start": 1762,
+        "line_end": 1779,
+        "summary": "**错误信息**\n\nImage input error.\n\n**错误描述**\n\n当图片uri不存在或无法解析图片时，方法将返回该错误码。\n\n**可能原因**\n\nuri不存在或uri非图片类型文件。"
+      },
+      {
+        "section_id": "section-93",
+        "title": "29600003 图片大小过大",
+        "level": 2,
+        "line_start": 1780,
+        "line_end": 1799,
+        "summary": "**错误信息**\n\nImage too big.\n\n**错误描述**\n\n入参所传入的图片大小过大。\n\n**可能原因**\n\n当入参图片大小超过50M时，方法将返回该错误码。\n\n**处理步骤**\n\n1."
+      },
+      {
+        "section_id": "section-94",
+        "title": "16300007 指定的原子化服务的下载安装任务信息不存在",
+        "level": 2,
+        "line_start": 1800,
+        "line_end": 1818,
+        "summary": "**错误信息**\n\nThe target free-installation task does not exist.\n\n**错误描述**\n\n为原子化服务窗口打开窗口时，指定的原子化服务的下载安装任"
+      },
+      {
+        "section_id": "section-95",
+        "title": "28800001 启动任务或其依赖项不存在",
+        "level": 2,
+        "line_start": 1819,
+        "line_end": 1836,
+        "summary": "**错误信息**\n\nStartup task or its dependency not found.\n\n**错误描述**\n\n执行启动任务时，如果找不到该启动任务或其依赖的任务，方法将返回该错误码。"
+      },
+      {
+        "section_id": "section-96",
+        "title": "28800002 启动任务之间存在循环依赖关系",
+        "level": 2,
+        "line_start": 1837,
+        "line_end": 1854,
+        "summary": "**错误信息**\n\nThe startup tasks have circular dependencies.\n\n**错误描述**\n\n在加载启动任务时，如果检测到启动任务之间存在循环依赖，方法将返回"
+      },
+      {
+        "section_id": "section-97",
+        "title": "28800003 运行启动任务时发生错误",
+        "level": 2,
+        "line_start": 1855,
+        "line_end": 1872,
+        "summary": "**错误信息**\n\nAn error occurred while running the startup tasks.\n\n**错误描述**\n\n运行启动任务时发生错误，方法将返回该错误码。\n\n**可"
+      },
+      {
+        "section_id": "section-98",
+        "title": "28800004 执行启动任务超时",
+        "level": 2,
+        "line_start": 1873,
+        "line_end": 1891,
+        "summary": "**错误信息**\n\nRunning startup tasks timeout.\n\n**错误描述**\n\n如果启动任务的执行时间超过设置的超时时间（默认为10000毫秒），方法将返回该错误码。\n\n**"
+      },
+      {
+        "section_id": "section-99",
+        "title": "16400001 目标应用类型不是系统级HSP",
+        "level": 2,
+        "line_start": 1892,
+        "line_end": 1909,
+        "summary": "**错误信息**\n\nThe input bundleName is not a system HSP.\n\n**错误描述**\n\n通过[createSystemHspModuleResourceMana"
+      },
+      {
+        "section_id": "section-100",
+        "title": "16000202 仅支持为appService类型的ExtensionAbility设置保活",
+        "level": 2,
+        "line_start": 1910,
+        "line_end": 1927,
+        "summary": "**错误信息**\n\nInvalid main element type.\n\n**错误描述**\n\n如果设置保活的对象不是appService类型的ExtensionAbility，方法将返回该错误码。"
+      },
+      {
+        "section_id": "section-101",
+        "title": "16000203 无法更改AppServiceExtensionAbility保活状态",
+        "level": 2,
+        "line_start": 1928,
+        "line_end": 1945,
+        "summary": "**错误信息**\n\nCannot change the keep-alive status.\n\n**错误描述**\n\n无法更改AppServiceExtensionAbility保活状态时，方法返回该"
+      },
+      {
+        "section_id": "section-102",
+        "title": "16000204 指定的应用未安装在userId为1的用户下",
+        "level": 2,
+        "line_start": 1946,
+        "line_end": 1964,
+        "summary": "**错误信息**\n\nThe target bundle is not in u1.\n\n**错误描述**\n\n当指定的应用未安装在userId为1的用户下时，方法返回该错误码。\n\n**可能原因**\n\n指"
+      },
+      {
+        "section_id": "section-103",
+        "title": "16000115 当前进程不支持设置为备选主控进程",
+        "level": 2,
+        "line_start": 1965,
+        "line_end": 1985,
+        "summary": "**错误信息**\n\nThe current process cannot be set as a candidate master process.\n\n**错误描述**\n\n当前进程不支持设置为备选主"
+      },
+      {
+        "section_id": "section-104",
+        "title": "16000116 当前进程已经是主控进程",
+        "level": 2,
+        "line_start": 1986,
+        "line_end": 2003,
+        "summary": "**错误信息**\n\nThe current process is already a master process and does not support cancellation.\n\n**错误描"
+      },
+      {
+        "section_id": "section-105",
+        "title": "16000117 当前进程非备选主控进程",
+        "level": 2,
+        "line_start": 2004,
+        "line_end": 2021,
+        "summary": "**错误信息**\n\nThe current process is not a candidate master process and does not support cancellation."
+      },
+      {
+        "section_id": "section-106",
+        "title": "16000118 当前进程非主控进程",
+        "level": 2,
+        "line_start": 2022,
+        "line_end": 2039,
+        "summary": "**错误信息**\n\nNot a master process.\n\n**错误描述**\n\n当前进程不是主控进程。\n\n**可能原因**\n\n当前进程不是主控进程，无法放弃当前进程的主控进程身份。\n\n**处理"
+      },
+      {
+        "section_id": "section-107",
+        "title": "16000119 存在未完成的请求",
+        "level": 2,
+        "line_start": 2040,
+        "line_end": 2060,
+        "summary": "**错误信息**\n\nCannot exit because there is an unfinished request.\n\n**错误描述**\n\n因为存在未完成的请求，放弃当前进程的主控进程身份失败"
+      },
+      {
+        "section_id": "section-108",
+        "title": "16000205 当前接口未在主线程中调用",
+        "level": 2,
+        "line_start": 2061,
+        "line_end": 2078,
+        "summary": "**错误信息**\n\nThe API is not called in the main thread.\n\n**错误描述**\n\n当前接口未在主线程调用。\n\n**可能原因**\n\n当前接口在worker或"
+      },
+      {
+        "section_id": "section-109",
+        "title": "10110000 装饰器参数声明错误",
+        "level": 2,
+        "line_start": 2079,
+        "line_end": 2096,
+        "summary": "**错误信息**\n\nDecorator parameters must be compile-time constants.\n\n**错误描述**\n\n代码中使用变量作为装饰器参数，要求使用编译期常量（"
+      },
+      {
+        "section_id": "section-110",
+        "title": "10110001 装饰器使用位置错误",
+        "level": 2,
+        "line_start": 2097,
+        "line_end": 2114,
+        "summary": "**错误信息**\n\nThe intent decorator can only be used in .ets files. \n\n**错误描述**\n\n意图装饰器使用在非.ets文件中。\n\n**可能原"
+      },
+      {
+        "section_id": "section-111",
+        "title": "10110002 装饰器调用形式错误",
+        "level": 2,
+        "line_start": 2115,
+        "line_end": 2132,
+        "summary": "**错误信息**\n\nDecorators must be called as functions. \n\n**错误描述**\n\n装饰器未使用函数调用形式。\n\n**可能原因**\n\n装饰器未使用函数调用形式"
+      },
+      {
+        "section_id": "section-112",
+        "title": "10110003 装饰器未提供必选参数",
+        "level": 2,
+        "line_start": 2133,
+        "line_end": 2150,
+        "summary": "**错误信息**\n\nRequired parameters are missing for the decorator.\n\n**错误描述**\n\n装饰器未提供必选参数。\n\n**可能原因**\n\n装饰器未"
+      },
+      {
+        "section_id": "section-113",
+        "title": "10110004 参数类型不符合装饰器参数要求",
+        "level": 2,
+        "line_start": 2151,
+        "line_end": 2168,
+        "summary": "**错误信息**\n\nThe parameter type does not match the decorator's requirement.\n\n**错误描述**\n\n参数类型不符合装饰器参数要求。"
+      },
+      {
+        "section_id": "section-114",
+        "title": "10110005 解析装饰器参数错误",
+        "level": 2,
+        "line_start": 2169,
+        "line_end": 2186,
+        "summary": "**错误信息**\n\nUnsupported parameters found in the decorator.\n\n**错误描述**\n\n装饰器参数中有不支持解析的参数。\n\n**可能原因**\n\n装饰器"
+      },
+      {
+        "section_id": "section-115",
+        "title": "10110006 存在循环依赖错误",
+        "level": 2,
+        "line_start": 2187,
+        "line_end": 2204,
+        "summary": "**错误信息**\n\nCircular dependencies detected in decorator parameters.\n\n**错误描述**\n\n装饰器参数中存在循环依赖。\n\n**可能原因*"
+      },
+      {
+        "section_id": "section-116",
+        "title": "10110007 参数定义根类型非object类型",
+        "level": 2,
+        "line_start": 2205,
+        "line_end": 2222,
+        "summary": "**错误信息**\n\nThe root type of the JSON Schema for Parameters must be object. \n\n**错误描述**\n\nParameters参数定"
+      },
+      {
+        "section_id": "section-117",
+        "title": "10110008 类属性缺少必填项",
+        "level": 2,
+        "line_start": 2223,
+        "line_end": 2240,
+        "summary": "**错误信息**\n\nA required field in the class property is missing.\n\n**错误描述**\n\n类属性中缺少JSON Schema定义的必填字段。"
+      },
+      {
+        "section_id": "section-118",
+        "title": "10110009 类属性字段类型不符合JSON Schema要求",
+        "level": 2,
+        "line_start": 2241,
+        "line_end": 2258,
+        "summary": "**错误信息**\n\nThe field type of the class property does not match the JSON Schema.\n\n**错误描述**\n\n类属性中字段类型与"
+      },
+      {
+        "section_id": "section-119",
+        "title": "10110010 类属性参数不符合oneOf/anyOf校验规则",
+        "level": 2,
+        "line_start": 2259,
+        "line_end": 2276,
+        "summary": "**错误信息**\n\nThe class property parameter violates the oneOf/anyOf validation rules in the JSON Schema"
+      },
+      {
+        "section_id": "section-120",
+        "title": "10110011 类属性中定义可选参数外的参数",
+        "level": 2,
+        "line_start": 2277,
+        "line_end": 2294,
+        "summary": "**错误信息**\n\nThe class property includes parameters not defined in the JSON Schema.\n\n**错误描述**\n\n类属性中使用了"
+      },
+      {
+        "section_id": "section-121",
+        "title": "10110012 存在重复的intentName定义",
+        "level": 2,
+        "line_start": 2295,
+        "line_end": 2312,
+        "summary": "**错误信息**\n\nDuplicate intentName definitions found.\n\n**错误描述**\n\n存在重复的intentName定义。\n\n**可能原因**\n\n模块中声明了一样"
+      },
+      {
+        "section_id": "section-122",
+        "title": "10110013 @InsightIntentFunctionMethod装饰的方法位置错误",
+        "level": 2,
+        "line_start": 2313,
+        "line_end": 2330,
+        "summary": "**错误信息**\n\nMethods decorated with @InsightIntentFunctionMethod must be in a class decorated with @In"
+      },
+      {
+        "section_id": "section-123",
+        "title": "10110014 未导出@InsightIntentFunction装饰的类",
+        "level": 2,
+        "line_start": 2331,
+        "line_end": 2348,
+        "summary": "**错误信息**\n\nThe class decorated with @InsightIntentFunction must be exported.\n\n**错误描述**\n\n@InsightInte"
+      },
+      {
+        "section_id": "section-124",
+        "title": "10110015 @InsightIntentFunctionMethod装饰的方法错误",
+        "level": 2,
+        "line_start": 2349,
+        "line_end": 2366,
+        "summary": "**错误信息**\n\nMethods decorated with @InsightIntentFunctionMethod must be static. \n\n**错误描述**\n\n@InsightI"
+      },
+      {
+        "section_id": "section-125",
+        "title": "10110016 @InsightIntentPage装饰器修饰位置错误",
+        "level": 2,
+        "line_start": 2367,
+        "line_end": 2384,
+        "summary": "**错误信息**\n\n@InsightIntentPage must be applied to a struct page.\n\n**错误描述**\n\n@InsightIntentPage装饰器未修饰在"
+      },
+      {
+        "section_id": "section-126",
+        "title": "10110017 @InsightIntentPage的pagePath匹配页面错误",
+        "level": 2,
+        "line_start": 2385,
+        "line_end": 2402,
+        "summary": "**错误信息**\n\npagePath in @InsightIntentPage does not match the actual page path. \n\n**错误描述**\n\n@InsightI"
+      },
+      {
+        "section_id": "section-127",
+        "title": "10110018 @InsightIntentEntry装饰的类继承错误",
+        "level": 2,
+        "line_start": 2403,
+        "line_end": 2420,
+        "summary": "**错误信息**\n\nClasses decorated with @InsightIntentEntry must inherit from InsightIntentEntryExecutor."
+      },
+      {
+        "section_id": "section-128",
+        "title": "10110019 未导出@InsightIntentEntry装饰的类",
+        "level": 2,
+        "line_start": 2421,
+        "line_end": 2438,
+        "summary": "**错误信息**\n\nThe class decorated with @InsightIntentEntry must be exported as default. \n\n**错误描述**\n\n@In"
+      },
+      {
+        "section_id": "section-129",
+        "title": "10110020 类被多个@InsightIntentEntity装饰器重复标记",
+        "level": 2,
+        "line_start": 2439,
+        "line_end": 2456,
+        "summary": "**错误信息**\n\nMultiple @InsightIntentEntity decorators applied to the same class. \n\n**错误描述**\n\n同一类被多个@In"
+      },
+      {
+        "section_id": "section-130",
+        "title": "10110021 @InsightIntentEntity装饰的类未实现InsightIntent.IntentEntity接口",
+        "level": 2,
+        "line_start": 2457,
+        "line_end": 2474,
+        "summary": "**错误信息**\n\nClasses decorated with @InsightIntentEntity must implement InsightIntent.IntentEntity.\n\n*"
+      },
+      {
+        "section_id": "section-131",
+        "title": "10110022 @InsightIntentForm装饰器修饰位置错误",
+        "level": 2,
+        "line_start": 2475,
+        "line_end": 2492,
+        "summary": "**错误信息**\n\n@InsightIntentForm must be applied to formExtensionAbility. \n\n**错误描述**\n\n@InsightIntentFor"
+      },
+      {
+        "section_id": "section-132",
+        "title": "10110023 @InsightIntentForm装饰器的参数formName匹配错误",
+        "level": 2,
+        "line_start": 2493,
+        "line_end": 2510,
+        "summary": "**错误信息**\n\nformName in @InsightIntentForm must match the widget name registered in formExtensionAbil"
+      },
+      {
+        "section_id": "section-133",
+        "title": "10110024 module.json5配置文件不存在",
+        "level": 2,
+        "line_start": 2511,
+        "line_end": 2528,
+        "summary": "**错误信息**\n\nThe module.json5 file is missing. \n\n**错误描述**\n\n工程中未找到module.json5配置文件。\n\n**可能原因**\n\nmodule.j"
+      },
+      {
+        "section_id": "section-134",
+        "title": "10110025 无法写入意图配置文件",
+        "level": 2,
+        "line_start": 2529,
+        "line_end": 2546,
+        "summary": "**错误信息**\n\nFailed to write to the intent configuration file.\n\n**错误描述**\n\n无法写入意图配置文件。\n\n**可能原因**\n\n权限不足或"
+      },
+      {
+        "section_id": "section-135",
+        "title": "10110027 生成OHMUrl失败",
+        "level": 2,
+        "line_start": 2547,
+        "line_end": 2563,
+        "summary": "**错误信息**\n\nGenerating standard OHMUrl failed with useNormalizedOHMUrl configuration not set to true."
+      }
+    ]
+  }
+}

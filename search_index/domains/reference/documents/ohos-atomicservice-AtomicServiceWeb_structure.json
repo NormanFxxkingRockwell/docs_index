@@ -1,0 +1,156 @@
+{
+  "doc_id": "ohos-atomicservice-AtomicServiceWeb",
+  "title": "AtomicServiceWeb",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ohos-atomicservice-AtomicServiceWeb.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ohos-atomicservice-AtomicServiceWeb.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@qq_36417014",
+    "designer": "@autojuan",
+    "tester": "@tinygreyy",
+    "adviser": "@zengyawen"
+  },
+  "summary": "ArkUI ArkUI 模块的 AtomicServiceWeb，提供相关接口和功能说明。",
+  "structure": {
+    "title": "AtomicServiceWeb",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "需要权限",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 20,
+        "summary": "访问在线网页时需添加网络权限：ohos.permission.INTERNET，具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permi"
+      },
+      {
+        "section_id": "section-2",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { AtomicServiceWeb } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-3",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 30,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-4",
+        "title": "属性",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 34,
+        "summary": "不支持[通用属性](ts-component-general-attributes.md)"
+      },
+      {
+        "section_id": "section-5",
+        "title": "AtomicServiceWeb",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 82,
+        "summary": "```ts\nAtomicServiceWeb({\n  src: ResourceStr,\n  controller: AtomicServiceWebController,\n  navPathSta"
+      },
+      {
+        "section_id": "section-6",
+        "title": "AtomicServiceWebController",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 332,
+        "summary": "通过AtomicServiceWebController可以控制AtomicServiceWeb组件各种行为。一个AtomicServiceWebController对象只能控制一个AtomicSe"
+      },
+      {
+        "section_id": "section-7",
+        "title": "WebHeader",
+        "level": 2,
+        "line_start": 333,
+        "line_end": 345,
+        "summary": "Web组件返回的请求/响应头对象。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkU"
+      },
+      {
+        "section_id": "section-8",
+        "title": "OnMessageEvent",
+        "level": 2,
+        "line_start": 346,
+        "line_end": 357,
+        "summary": "定义页面回退或销毁时触发该回调。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-9",
+        "title": "OnErrorReceiveEvent",
+        "level": 2,
+        "line_start": 358,
+        "line_end": 370,
+        "summary": "定义网页加载遇到错误时触发该回调。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkU"
+      },
+      {
+        "section_id": "section-10",
+        "title": "OnHttpErrorReceiveEvent",
+        "level": 2,
+        "line_start": 371,
+        "line_end": 383,
+        "summary": "定义网页收到加载资源加载HTTP错误时触发。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-11",
+        "title": "OnPageBeginEvent",
+        "level": 2,
+        "line_start": 384,
+        "line_end": 395,
+        "summary": "定义网页加载开始时触发的函数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI."
+      },
+      {
+        "section_id": "section-12",
+        "title": "OnPageEndEvent",
+        "level": 2,
+        "line_start": 396,
+        "line_end": 407,
+        "summary": "定义网页加载结束时触发的函数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI."
+      },
+      {
+        "section_id": "section-13",
+        "title": "OnLoadInterceptEvent",
+        "level": 2,
+        "line_start": 408,
+        "line_end": 419,
+        "summary": "当资源加载被拦截时，加载拦截事件。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkU"
+      },
+      {
+        "section_id": "section-14",
+        "title": "OnProgressChangeEvent",
+        "level": 2,
+        "line_start": 420,
+        "line_end": 431,
+        "summary": "定义网页加载进度变化时触发该回调。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkU"
+      },
+      {
+        "section_id": "section-15",
+        "title": "OnLoadInterceptCallback",
+        "level": 2,
+        "line_start": 432,
+        "line_end": 453,
+        "summary": "type OnLoadInterceptCallback = (event: OnLoadInterceptEvent) => boolean\n\n资源加载被拦截时触发该回调。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-16",
+        "title": "事件",
+        "level": 2,
+        "line_start": 454,
+        "line_end": 457,
+        "summary": "不支持[通用事件](ts-component-general-events.md)"
+      },
+      {
+        "section_id": "section-17",
+        "title": "示例",
+        "level": 2,
+        "line_start": 458,
+        "line_end": 823,
+        "summary": "### 示例1\n\n加载本地网页。\n\n```ts\n// xxx.ets\nimport { AtomicServiceWeb, AtomicServiceWebController } from '@k"
+      }
+    ]
+  }
+}

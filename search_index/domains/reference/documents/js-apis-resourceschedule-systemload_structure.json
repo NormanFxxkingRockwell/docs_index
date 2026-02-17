@@ -1,0 +1,60 @@
+{
+  "doc_id": "js-apis-resourceschedule-systemload",
+  "title": "@ohos.resourceschedule.systemload (性能功耗热融合档位)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-resourceschedule-systemload.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-resourceschedule-systemload.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Resourceschedule",
+    "owner": "@baiheng",
+    "designer": "@zhouben25",
+    "tester": "@leetestnady",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Basic Services Kit Resourceschedule 模块的 @ohos.resourceschedule.systemload (性能功耗热融合档位)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.resourceschedule.systemload (性能功耗热融合档位)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```\nimport { systemLoad } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "systemLoad.on('systemLoadChange')",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 60,
+        "summary": "on(type: 'systemLoadChange', callback: Callback\\<SystemLoadLevel>): void\n\n注册系统负载回调，感知系统负载融合档位变化，使用c"
+      },
+      {
+        "section_id": "section-3",
+        "title": "systemLoad.off('systemLoadChange')",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 100,
+        "summary": "off(type: 'systemLoadChange', callback?: Callback\\<SystemLoadLevel>): void\n\n取消注册系统负载回调，使用callback异步"
+      },
+      {
+        "section_id": "section-4",
+        "title": "systemLoad.getLevel",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 127,
+        "summary": "getLevel(): Promise&lt;[SystemLoadLevel](#systemloadlevel)&gt;\n\n获取系统负载融合档位，使用promise异步回调。\n\n**系统能力:*"
+      },
+      {
+        "section_id": "section-5",
+        "title": "SystemLoadLevel",
+        "level": 2,
+        "line_start": 128,
+        "line_end": 144,
+        "summary": "系统负载融合档位。\n\n**系统能力:** SystemCapability.ResourceSchedule.SystemLoad\n\n| 名称                     | 值  |"
+      }
+    ]
+  }
+}

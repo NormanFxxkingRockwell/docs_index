@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-file-securityLabel",
+  "title": "@ohos.file.securityLabel (数据标签)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-securityLabel.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-securityLabel.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@wangke25; @gsl_1234; @wuchengjun5",
+    "designer": "@gsl_1234; @wangke25",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.file.securityLabel (数据标签)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.securityLabel (数据标签)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { securityLabel } from '@kit.CoreFileKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 39,
+        "summary": "使用该功能模块对文件/目录进行操作前，需要先获取其应用沙箱路径，获取方式及其接口用法请参考：\n\n\n  ```ts\n  import { UIAbility } from '@kit.AbilityK"
+      },
+      {
+        "section_id": "section-3",
+        "title": "DataLevel",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 58,
+        "summary": "type DataLevel = 's0' | 's1' | 's2' | 's3' | 's4'\n\n数据安全等级。\n\n**系统能力**：SystemCapability.FileManagemen"
+      },
+      {
+        "section_id": "section-4",
+        "title": "securityLabel.setSecurityLabel",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 106,
+        "summary": "setSecurityLabel(path:string, type:DataLevel):Promise&lt;void&gt;\n\n设置文件或目录的数据安全等级。数据安全等级仅可由低向高或平级设置"
+      },
+      {
+        "section_id": "section-5",
+        "title": "securityLabel.setSecurityLabel",
+        "level": 2,
+        "line_start": 107,
+        "line_end": 151,
+        "summary": "setSecurityLabel(path:string, type:DataLevel, callback: AsyncCallback&lt;void&gt;):void\n\n设置文件或目录的数据"
+      },
+      {
+        "section_id": "section-6",
+        "title": "securityLabel.setSecurityLabelSync",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 188,
+        "summary": "setSecurityLabelSync(path:string, type:DataLevel):void\n\n以同步方法设置文件或目录的数据安全等级。数据安全等级仅可由低向高或平级设置。\n\n**系"
+      },
+      {
+        "section_id": "section-7",
+        "title": "securityLabel.getSecurityLabel",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 235,
+        "summary": "getSecurityLabel(path:string):Promise&lt;string&gt;\n\n获取文件或目录的数据安全等级。若未设置过数据安全等级则默认返回“s3”。使用Promise异"
+      },
+      {
+        "section_id": "section-8",
+        "title": "securityLabel.getSecurityLabel",
+        "level": 2,
+        "line_start": 236,
+        "line_end": 279,
+        "summary": "getSecurityLabel(path:string, callback:AsyncCallback&lt;string&gt;): void\n\n获取文件或目录的数据安全等级。若未设置过数据安全"
+      },
+      {
+        "section_id": "section-9",
+        "title": "securityLabel.getSecurityLabelSync",
+        "level": 2,
+        "line_start": 280,
+        "line_end": 322,
+        "summary": "getSecurityLabelSync(path:string):string\n\n以同步方法获取文件或目录的数据安全等级。若未设置过数据安全等级则默认返回“s3”。\n\n**系统能力**：Syste"
+      }
+    ]
+  }
+}

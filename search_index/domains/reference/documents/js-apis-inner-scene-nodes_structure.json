@@ -1,0 +1,108 @@
+{
+  "doc_id": "js-apis-inner-scene-nodes",
+  "title": "SceneNode",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics3d/js-apis-inner-scene-nodes.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics3d/js-apis-inner-scene-nodes.md",
+  "metadata": {
+    "kit": "ArkGraphics 3D",
+    "subsystem": "Graphics",
+    "owner": "@zzhao0",
+    "designer": "@zdustc",
+    "tester": "@zhangyue283",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 3D Graphics 模块的 SceneNode，提供相关接口和功能说明。",
+  "structure": {
+    "title": "SceneNode",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 21,
+        "summary": "```ts\nimport { LayerMask, NodeType, Container, Node, Geometry, LightType, Light, SpotLight, Directi"
+      },
+      {
+        "section_id": "section-2",
+        "title": "LayerMask",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 97,
+        "summary": "用于定义结点的图层掩码。\n\n### getEnabled\ngetEnabled(index: number): boolean\n\n获取指定图层下标图层掩码的使能状态。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-3",
+        "title": "NodeType",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 109,
+        "summary": "结点类型枚举。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n| 名称 | 值 | 说明 |\n| ---- | ---- | ---- |\n| NODE |"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Container\\<T>",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 308,
+        "summary": "定义场景对象的容器。容器提供了一种将场景对象分组到层次结构中的方法。\n\n### append\nappend(item: T): void\n\n追加一个对象到容器。\n\n**系统能力：** SystemCa"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Node",
+        "level": 2,
+        "line_start": 309,
+        "line_end": 360,
+        "summary": "3D场景由树状层次结构的结点组成，其中每个结点都实现了Node接口。继承自[SceneResource](js-apis-inner-scene-resources.md#sceneresource-"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Geometry",
+        "level": 2,
+        "line_start": 361,
+        "line_end": 370,
+        "summary": "几何节点类型，用于承载可渲染的网格数据，并支持可选的形变功能，继承自[Node](#node)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称"
+      },
+      {
+        "section_id": "section-7",
+        "title": "LightType",
+        "level": 2,
+        "line_start": 371,
+        "line_end": 380,
+        "summary": "光源类型枚举。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 值 | 说明 |\n| ---- | ---- | ---- |\n| DIREC"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Light",
+        "level": 2,
+        "line_start": 381,
+        "line_end": 393,
+        "summary": "光源，继承自[Node](#node)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ----"
+      },
+      {
+        "section_id": "section-9",
+        "title": "SpotLight",
+        "level": 2,
+        "line_start": 394,
+        "line_end": 410,
+        "summary": "聚光灯类型，继承自[Light](#light)。\n\n聚光灯会朝某个方向发出锥形光，强度随着圆锥角度的衰减由innerAngle和outerAngle两个参数定义。另外与点光源类似，强度也会随着距离光"
+      },
+      {
+        "section_id": "section-10",
+        "title": "DirectionalLight",
+        "level": 2,
+        "line_start": 411,
+        "line_end": 416,
+        "summary": "平行光类型，继承自[Light](#light)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D"
+      },
+      {
+        "section_id": "section-11",
+        "title": "Camera",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 627,
+        "summary": "相机类型，Camera继承自[Node](#node)。\n\n### 属性\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 | 只读 |"
+      }
+    ]
+  }
+}

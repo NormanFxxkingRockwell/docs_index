@@ -1,0 +1,100 @@
+{
+  "doc_id": "js-apis-data-intelligence",
+  "title": "@ohos.data.intelligence (智慧数据平台)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/js-apis-data-intelligence.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/js-apis-data-intelligence.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@my-2024",
+    "designer": "@cuile44; @fysun17; @AnruiWang",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 @ohos.data.intelligence (智慧数据平台)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.data.intelligence (智慧数据平台)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { intelligence } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "intelligence.getTextEmbeddingModel",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 78,
+        "summary": "getTextEmbeddingModel(config: ModelConfig): Promise&lt;TextEmbedding&gt;\n\n获取文本嵌入模型。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "intelligence.getImageEmbeddingModel",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 132,
+        "summary": "getImageEmbeddingModel(config: ModelConfig): Promise&lt;ImageEmbedding&gt;\n\n获取图像嵌入模型。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "intelligence.splitText",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 185,
+        "summary": "splitText(text: string, config: SplitConfig): Promise&lt;Array&lt;string&gt;&gt;\n\n获取文本的分块。使用Promise"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ModelConfig",
+        "level": 2,
+        "line_start": 186,
+        "line_end": 197,
+        "summary": "管理嵌入模型的配置信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core\n\n| 名称     | 类"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ModelVersion",
+        "level": 2,
+        "line_start": 198,
+        "line_end": 207,
+        "summary": "模型版本枚举。\n\n**系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core\n\n| 名称       | 值"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Image",
+        "level": 2,
+        "line_start": 208,
+        "line_end": 219,
+        "summary": "type Image = string\n\n表示图片的URI地址，对应为string类型。\n\n**系统能力：** SystemCapability.DistributedDataManager.Rel"
+      },
+      {
+        "section_id": "section-8",
+        "title": "SplitConfig",
+        "level": 2,
+        "line_start": 220,
+        "line_end": 231,
+        "summary": "管理文本分块的配置信息。\n\n**系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core\n\n| 名称     | 类"
+      },
+      {
+        "section_id": "section-9",
+        "title": "TextEmbedding",
+        "level": 2,
+        "line_start": 232,
+        "line_end": 417,
+        "summary": "描述多模态嵌入模型的文本嵌入函数。\n\n下列接口都需先使用[intelligence.getTextEmbeddingModel](#intelligencegettextembeddingmodel"
+      },
+      {
+        "section_id": "section-10",
+        "title": "ImageEmbedding",
+        "level": 2,
+        "line_start": 418,
+        "line_end": 552,
+        "summary": "描述多模态嵌入模型的图像嵌入函数。\n\n下列接口都需先使用[intelligence.getImageEmbeddingModel](#intelligencegetimageembeddingmod"
+      }
+    ]
+  }
+}

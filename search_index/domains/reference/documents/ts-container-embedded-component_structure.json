@@ -1,0 +1,76 @@
+{
+  "doc_id": "ts-container-embedded-component",
+  "title": "EmbeddedComponent",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-embedded-component.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-embedded-component.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@dutie123",
+    "designer": "@dutie123",
+    "tester": "@fredyuan0912",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 EmbeddedComponent，提供相关接口和功能说明。",
+  "structure": {
+    "title": "EmbeddedComponent",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "使用约束",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "EmbeddedComponent仅支持在拥有多进程权限的设备上使用。\n\nEmbeddedComponent只能在UIAbility中使用，且被拉起的EmbeddedUIExtensionAbili"
+      },
+      {
+        "section_id": "section-2",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 26,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 43,
+        "summary": "EmbeddedComponent(loader: Want, type: EmbeddedType)\n\n创建跨进程嵌入式组件，用于显示同包名EmbeddedUIExtensionAbility的U"
+      },
+      {
+        "section_id": "section-4",
+        "title": "属性",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 51,
+        "summary": "支持[通用属性](ts-component-general-attributes.md)。\n\n> **说明：**\n>\n> EmbeddedComponent组件宽高默认值和最小值均为10vp。不支持"
+      },
+      {
+        "section_id": "section-5",
+        "title": "事件",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 111,
+        "summary": "与屏幕坐标相关的事件信息会基于EmbeddedComponent的位置宽高进行坐标转换后传递给被拉起的EmbeddedUIExtensionAbility处理。\n\n不支持[点击](ts-univer"
+      },
+      {
+        "section_id": "section-6",
+        "title": "TerminationInfo",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 124,
+        "summary": "用于表示被拉起的EmbeddedUIExtensionAbility的返回结果。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-7",
+        "title": "示例（加载EmbeddedComponent）",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 269,
+        "summary": "本示例展示`EmbeddedComponent`组件和`EmbeddedUIExtensionAbility`的基础使用方式，示例应用的`bundleName`为\"com.example.embed"
+      }
+    ]
+  }
+}

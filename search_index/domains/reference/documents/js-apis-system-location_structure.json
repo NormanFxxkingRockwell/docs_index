@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-system-location",
+  "title": "@system.geolocation (地理位置)",
+  "path": "zh-cn/application-dev/reference/apis-location-kit/js-apis-system-location.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-location-kit/js-apis-system-location.md",
+  "metadata": {
+    "kit": "Location Kit",
+    "subsystem": "Location",
+    "owner": "@liu-binjun",
+    "designer": "@liu-binjun",
+    "tester": "@mhy123456789",
+    "adviser": "@RayShih"
+  },
+  "summary": "Location Kit Location 模块的 @system.geolocation (地理位置)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@system.geolocation (地理位置)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 23,
+        "summary": "```js\nimport geolocation from '@system.geolocation';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "权限列表",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 28,
+        "summary": "ohos.permission.LOCATION"
+      },
+      {
+        "section_id": "section-3",
+        "title": "geolocation.getLocation<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 65,
+        "summary": "getLocation(options?: GetLocationOption): void\n\n获取设备的地理位置。\n\n> **说明：**<br/>\n> 除Lite Wearable外，从API v"
+      },
+      {
+        "section_id": "section-4",
+        "title": "geolocation.getLocationType<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 100,
+        "summary": "getLocationType(options?: GetLocationTypeOption): void\n\n获取当前设备支持的定位类型。\n\n> **说明：**<br/>\n> 除Lite Wear"
+      },
+      {
+        "section_id": "section-5",
+        "title": "geolocation.subscribe<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 137,
+        "summary": "subscribe(options: SubscribeLocationOption): void\n\n订阅设备的地理位置信息。多次调用的话，只有最后一次的调用生效。\n\n> **说明：**<br/>"
+      },
+      {
+        "section_id": "section-6",
+        "title": "geolocation.unsubscribe<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 161,
+        "summary": "unsubscribe(): void\n\n取消订阅设备的地理位置信息。\n\n> **说明：**<br/>\n> 除Lite Wearable外，从API version 9开始废弃，建议使用[geoLo"
+      },
+      {
+        "section_id": "section-7",
+        "title": "geolocation.getSupportedCoordTypes<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 188,
+        "summary": "getSupportedCoordTypes(): Array&lt;string&gt;\n\n获取设备支持的坐标系类型。\n\n> **说明：**<br/>\n> 除Lite Wearable外，从API"
+      },
+      {
+        "section_id": "section-8",
+        "title": "GetLocationOption<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 217,
+        "summary": "单次定位请求的配置参数。\n\n> **说明：**<br/>\n> 除Lite Wearable外，从API version 9开始废弃，建议使用[geoLocationManager.CurrentLo"
+      },
+      {
+        "section_id": "section-9",
+        "title": "GeolocationResponse<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 218,
+        "line_end": 234,
+        "summary": "位置信息，包含经度、纬度、定位精度等信息。\n\n> **说明：**<br/>\n> 除Lite Wearable外，从API version 9开始废弃，建议使用[geoLocationManager."
+      },
+      {
+        "section_id": "section-10",
+        "title": "GetLocationTypeOption<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 249,
+        "summary": "查询定位类型接口的入参，用于存放回调函数，在查询成功或者失败时接收查询结果。\n\n> **说明：**<br/>\n> 除Lite Wearable外，从API version 9开始废弃。\n\n**系统能"
+      },
+      {
+        "section_id": "section-11",
+        "title": "GetLocationTypeResponse<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 250,
+        "line_end": 262,
+        "summary": "当前设备支持的定位类型列表\n\n> **说明：**<br/>\n> 除Lite Wearable外，从API version 9开始废弃。\n\n**系统能力**：SystemCapability.Loca"
+      },
+      {
+        "section_id": "section-12",
+        "title": "SubscribeLocationOption<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 263,
+        "line_end": 287,
+        "summary": "持续定位请求的配置参数。\n\n> **说明：**<br/>\n> 除Lite Wearable外，从API version 9开始废弃，建议使用[geoLocationManager.CurrentLo"
+      }
+    ]
+  }
+}

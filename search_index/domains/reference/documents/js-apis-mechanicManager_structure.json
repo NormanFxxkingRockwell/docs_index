@@ -1,0 +1,148 @@
+{
+  "doc_id": "js-apis-mechanicManager",
+  "title": "@ohos.distributedHardware.mechanicManager (机械体控制模块)",
+  "path": "zh-cn/application-dev/reference/apis-mechanic-kit/js-apis-mechanicManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mechanic-kit/js-apis-mechanicManager.md",
+  "metadata": {
+    "kit": "Mechanic Kit",
+    "subsystem": "Mechanic",
+    "owner": "@hobbycao",
+    "designer": "@saga2025",
+    "tester": "@zhaodengqi",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Mechanic Kit Mechanic 模块的 @ohos.distributedHardware.mechanicManager (机械体控制模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.distributedHardware.mechanicManager (机械体控制模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```js\nimport { mechanicManager } from '@kit.MechanicKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "mechanicManager.on('attachStateChange')",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 55,
+        "summary": "on(type: 'attachStateChange', callback: Callback\\<AttachStateChangeInfo>): void\n\n注册连接状态变化事件的回调监听，等待"
+      },
+      {
+        "section_id": "section-3",
+        "title": "mechanicManager.off('attachStateChange')",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 90,
+        "summary": "off(type: 'attachStateChange', callback?: Callback\\<AttachStateChangeInfo>): void\n\n取消注册连接状态变化事件的回调监"
+      },
+      {
+        "section_id": "section-4",
+        "title": "mechanicManager.getAttachedMechDevices",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 120,
+        "summary": "getAttachedMechDevices(): MechInfo[]\n\n获取已连接的机械体设备列表。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n**返回"
+      },
+      {
+        "section_id": "section-5",
+        "title": "mechanicManager.setCameraTrackingEnabled",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 152,
+        "summary": "setCameraTrackingEnabled(isEnabled: boolean): void\n\n启用或禁用当前机械体设备摄像头跟踪。\n\n**系统能力**：SystemCapability.M"
+      },
+      {
+        "section_id": "section-6",
+        "title": "mechanicManager.getCameraTrackingEnabled",
+        "level": 2,
+        "line_start": 153,
+        "line_end": 183,
+        "summary": "getCameraTrackingEnabled(): boolean\n\n检查当前机械体设备是否启用了摄像头跟踪。\n\n**系统能力**：SystemCapability.Mechanic.Core"
+      },
+      {
+        "section_id": "section-7",
+        "title": "mechanicManager.on('trackingStateChange')",
+        "level": 2,
+        "line_start": 184,
+        "line_end": 218,
+        "summary": "on(type: 'trackingStateChange', callback: Callback\\<TrackingEventInfo>): void\n\n注册跟踪状态变化事件的回调监听。使用ca"
+      },
+      {
+        "section_id": "section-8",
+        "title": "mechanicManager.off('trackingStateChange')",
+        "level": 2,
+        "line_start": 219,
+        "line_end": 253,
+        "summary": "off(type: 'trackingStateChange', callback?: Callback\\<TrackingEventInfo>): void\n\n取消注册跟踪状态变化事件的回调监听。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "mechanicManager.getCameraTrackingLayout",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 284,
+        "summary": "getCameraTrackingLayout(): CameraTrackingLayout\n\n获取当前机械体设备摄像头跟踪布局。\n\n**系统能力**：SystemCapability.Mecha"
+      },
+      {
+        "section_id": "section-10",
+        "title": "MechInfo",
+        "level": 2,
+        "line_start": 285,
+        "line_end": 296,
+        "summary": "机械体设备信息。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n| 名称   | 类型 | 只读 | 可选 | 说明|\n| ----- | ---- | ---"
+      },
+      {
+        "section_id": "section-11",
+        "title": "TrackingEventInfo",
+        "level": 2,
+        "line_start": 297,
+        "line_end": 306,
+        "summary": "跟踪事件信息。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n| 名称   | 类型 | 只读 | 可选 | 说明|\n| ----- | ---- | ----"
+      },
+      {
+        "section_id": "section-12",
+        "title": "AttachStateChangeInfo",
+        "level": 2,
+        "line_start": 307,
+        "line_end": 317,
+        "summary": "设备连接状态变化的信息。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n| 名称   | 类型 | 只读 | 可选 | 说明|\n| ----- | ---- |"
+      },
+      {
+        "section_id": "section-13",
+        "title": "TrackingEvent",
+        "level": 2,
+        "line_start": 318,
+        "line_end": 329,
+        "summary": "跟踪事件的枚举。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n| 名称         | 值  | 说明              |\n| --------"
+      },
+      {
+        "section_id": "section-14",
+        "title": "MechDeviceType",
+        "level": 2,
+        "line_start": 330,
+        "line_end": 339,
+        "summary": "机械体设备类型的枚举。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n| 名称         | 值  | 说明              |\n| -----"
+      },
+      {
+        "section_id": "section-15",
+        "title": "AttachState",
+        "level": 2,
+        "line_start": 340,
+        "line_end": 350,
+        "summary": "设备连接状态的枚举。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n| 名称         | 值  | 说明              |\n| ------"
+      },
+      {
+        "section_id": "section-16",
+        "title": "CameraTrackingLayout",
+        "level": 2,
+        "line_start": 351,
+        "line_end": 363,
+        "summary": "摄像头跟踪布局的枚举。\n\n**系统能力**：SystemCapability.Mechanic.Core\n\n| 名称         | 值  | 说明              |\n| -----"
+      }
+    ]
+  }
+}

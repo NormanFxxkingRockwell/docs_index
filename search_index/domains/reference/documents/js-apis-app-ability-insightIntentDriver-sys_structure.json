@@ -1,0 +1,212 @@
+{
+  "doc_id": "js-apis-app-ability-insightIntentDriver-sys",
+  "title": "@ohos.app.ability.insightIntentDriver (执行意图调用)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-insightIntentDriver-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-insightIntentDriver-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@linjunjie6",
+    "designer": "@li-weifeng2024",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.insightIntentDriver (执行意图调用)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.insightIntentDriver (执行意图调用)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { insightIntentDriver } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ExecuteParam",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 50,
+        "summary": "执行意图调用的参数。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Ability.Abili"
+      },
+      {
+        "section_id": "section-3",
+        "title": "InsightIntentInfoFilter<sup>23+<sup>",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 67,
+        "summary": "意图筛选器，描述目标意图的筛选条件，用于筛选设备上符合条件的意图。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-4",
+        "title": "InsightIntentType<sup>20+<sup>",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 81,
+        "summary": "表示通过意图装饰器定义的意图类型，可通过[getAllInsightIntentInfo](#insightintentdrivergetallinsightintentinfo20)等方法返回的["
+      },
+      {
+        "section_id": "section-5",
+        "title": "ExecuteModeForConfiguration<sup>23+<sup>",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 92,
+        "summary": "[使用配置文件开发的意图](../../application-models/insight-intent-config-development.md)支持的意图执行模式。例如，将[insight_"
+      },
+      {
+        "section_id": "section-6",
+        "title": "LinkIntentInfo<sup>20+<sup>",
+        "level": 2,
+        "line_start": 93,
+        "line_end": 106,
+        "summary": "LinkIntentInfo用于描述[@InsightIntentLink](./js-apis-app-ability-InsightIntentDecorator.md#insightinten"
+      },
+      {
+        "section_id": "section-7",
+        "title": "PageIntentInfo<sup>20+<sup>",
+        "level": 2,
+        "line_start": 107,
+        "line_end": 123,
+        "summary": "PageIntentInfo用于描述[@InsightIntentPage](./js-apis-app-ability-InsightIntentDecorator.md#insightinten"
+      },
+      {
+        "section_id": "section-8",
+        "title": "FunctionIntentInfo<sup>20+<sup>",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 133,
+        "summary": "[@InsightIntentFunctionMethod](./js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctio"
+      },
+      {
+        "section_id": "section-9",
+        "title": "FormIntentInfo<sup>20+<sup>",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 148,
+        "summary": "FormIntentInfo用于描述[@InsightIntentForm](./js-apis-app-ability-InsightIntentDecorator.md#insightinten"
+      },
+      {
+        "section_id": "section-10",
+        "title": "EntryIntentInfo<sup>20+<sup>",
+        "level": 2,
+        "line_start": 149,
+        "line_end": 163,
+        "summary": "EntryIntentInfo用于描述[@InsightIntentEntry](./js-apis-app-ability-InsightIntentDecorator.md#insightint"
+      },
+      {
+        "section_id": "section-11",
+        "title": "SubIntentInfoForConfiguration<sup>23+<sup>",
+        "level": 2,
+        "line_start": 164,
+        "line_end": 184,
+        "summary": "用于描述[使用配置文件开发的意图](../../application-models/insight-intent-config-development.md)的特有信息。\n\n**模型约束**：此接"
+      },
+      {
+        "section_id": "section-12",
+        "title": "UIAbilityIntentInfo<sup>23+<sup>",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 199,
+        "summary": "用于描述[使用配置文件开发的意图](../../application-models/insight-intent-config-development.md)所绑定的UIAbility组件信息。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "UIExtensionIntentInfo<sup>23+<sup>",
+        "level": 2,
+        "line_start": 200,
+        "line_end": 213,
+        "summary": "用于描述[使用配置文件开发的意图](../../application-models/insight-intent-config-development.md)所绑定的UIExtensionAbil"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ServiceExtensionIntentInfo<sup>23+<sup>",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 227,
+        "summary": "用于描述[使用配置文件开发的意图](../../application-models/insight-intent-config-development.md)所绑定的ServiceExtensio"
+      },
+      {
+        "section_id": "section-15",
+        "title": "DevelopType<sup>23+<sup>",
+        "level": 2,
+        "line_start": 228,
+        "line_end": 242,
+        "summary": "用于描述意图的开发方式。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Ability.Abi"
+      },
+      {
+        "section_id": "section-16",
+        "title": "EntityInfo<sup>20+<sup>",
+        "level": 2,
+        "line_start": 243,
+        "line_end": 260,
+        "summary": "EntityInfo继承自[IntentEntityDecoratorInfo](./js-apis-app-ability-InsightIntentDecorator.md#intententi"
+      },
+      {
+        "section_id": "section-17",
+        "title": "InsightIntentInfo<sup>20+<sup>",
+        "level": 2,
+        "line_start": 261,
+        "line_end": 291,
+        "summary": "意图信息，表示设备中意图的具体参数配置。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Abi"
+      },
+      {
+        "section_id": "section-18",
+        "title": "GetInsightIntentFlag<sup>20+<sup>",
+        "level": 2,
+        "line_start": 292,
+        "line_end": 330,
+        "summary": "意图信息（[InsightIntentInfo](#insightintentinfo20)）的标识，用于[getAllInsightIntentInfo](#insightintentdriver"
+      },
+      {
+        "section_id": "section-19",
+        "title": "insightIntentDriver.execute",
+        "level": 2,
+        "line_start": 331,
+        "line_end": 413,
+        "summary": "execute(param: ExecuteParam, callback: AsyncCallback<insightIntent.ExecuteResult>): void\n\n执行意图调用的接口"
+      },
+      {
+        "section_id": "section-20",
+        "title": "insightIntentDriver.execute",
+        "level": 2,
+        "line_start": 414,
+        "line_end": 495,
+        "summary": "execute(param: ExecuteParam): Promise<insightIntent.ExecuteResult>\n\n执行意图调用的接口。使用Promise异步回调。\n\n当调用方在"
+      },
+      {
+        "section_id": "section-21",
+        "title": "insightIntentDriver.getAllInsightIntentInfo<sup>20+<sup>",
+        "level": 2,
+        "line_start": 496,
+        "line_end": 552,
+        "summary": "getAllInsightIntentInfo(intentFlags: number): Promise<Array\\<[InsightIntentInfo](#insightintentinfo"
+      },
+      {
+        "section_id": "section-22",
+        "title": "insightIntentDriver.getInsightIntentInfoByBundleName<sup>20+<sup>",
+        "level": 2,
+        "line_start": 553,
+        "line_end": 611,
+        "summary": "getInsightIntentInfoByBundleName(bundleName: string, intentFlags: number): Promise<Array\\<[InsightI"
+      },
+      {
+        "section_id": "section-23",
+        "title": "insightIntentDriver.getInsightIntentInfoByIntentName<sup>20+<sup>",
+        "level": 2,
+        "line_start": 612,
+        "line_end": 676,
+        "summary": "getInsightIntentInfoByIntentName(bundleName: string, moduleName: string, intentName: string, intent"
+      },
+      {
+        "section_id": "section-24",
+        "title": "insightIntentDriver.getInsightIntentInfoByFilter<sup>23+<sup>",
+        "level": 2,
+        "line_start": 677,
+        "line_end": 740,
+        "summary": "getInsightIntentInfoByFilter(filter: InsightIntentInfoFilter): Promise<Array\\<InsightIntentInfo>>"
+      }
+    ]
+  }
+}

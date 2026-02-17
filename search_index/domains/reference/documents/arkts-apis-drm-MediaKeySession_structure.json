@@ -1,0 +1,188 @@
+{
+  "doc_id": "arkts-apis-drm-MediaKeySession",
+  "title": "Interface (MediaKeySession)",
+  "path": "zh-cn/application-dev/reference/apis-drm-kit/arkts-apis-drm-MediaKeySession.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-drm-kit/arkts-apis-drm-MediaKeySession.md",
+  "metadata": {
+    "kit": "Drm Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qin_wei_jie",
+    "designer": "@chris2981",
+    "tester": "@xdlinc",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Drm Kit Multimedia 模块的 Interface (MediaKeySession)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (MediaKeySession)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 19,
+        "summary": "```ts\nimport { drm } from '@kit.DrmKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "generateMediaKeyRequest",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 71,
+        "summary": "generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: number, options?: Opt"
+      },
+      {
+        "section_id": "section-3",
+        "title": "processMediaKeyResponse",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 120,
+        "summary": "processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array\\>\n\n处理媒体密钥响应。使用Promise异步回调。\n\n**原子化"
+      },
+      {
+        "section_id": "section-4",
+        "title": "checkMediaKeyStatus",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 161,
+        "summary": "checkMediaKeyStatus(): MediaKeyStatus[]\n\n检查当前媒体密钥状态。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-5",
+        "title": "clearMediaKeys",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 203,
+        "summary": "clearMediaKeys(): void\n\n清除当前媒体密钥。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-6",
+        "title": "generateOfflineReleaseRequest",
+        "level": 2,
+        "line_start": 204,
+        "line_end": 252,
+        "summary": "generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array\\>\n\n生成离线媒体密钥释放请求。使用Promise"
+      },
+      {
+        "section_id": "section-7",
+        "title": "processOfflineReleaseResponse",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 309,
+        "summary": "processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Promise<void\\>\n\n处理离线媒体"
+      },
+      {
+        "section_id": "section-8",
+        "title": "restoreOfflineMediaKeys",
+        "level": 2,
+        "line_start": 310,
+        "line_end": 358,
+        "summary": "restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void\\>\n\n恢复离线媒体密钥。使用Promise异步回调。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getContentProtectionLevel",
+        "level": 2,
+        "line_start": 359,
+        "line_end": 399,
+        "summary": "getContentProtectionLevel(): ContentProtectionLevel\n\n获取当前会话的内容保护级别。\n\n**原子化服务API：** 从API version 12开"
+      },
+      {
+        "section_id": "section-10",
+        "title": "requireSecureDecoderModule",
+        "level": 2,
+        "line_start": 400,
+        "line_end": 447,
+        "summary": "requireSecureDecoderModule(mimeType: string): boolean\n\n是否需要安全解码。\n\n**原子化服务API：** 从API version 12开始，该"
+      },
+      {
+        "section_id": "section-11",
+        "title": "on('keyRequired')",
+        "level": 2,
+        "line_start": 448,
+        "line_end": 485,
+        "summary": "on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void\n\n监听密钥请求事件。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "off('keyRequired')",
+        "level": 2,
+        "line_start": 486,
+        "line_end": 521,
+        "summary": "off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void\n\n注销密钥请求事件监听。使用callback异步回"
+      },
+      {
+        "section_id": "section-13",
+        "title": "on('keyExpired')",
+        "level": 2,
+        "line_start": 522,
+        "line_end": 559,
+        "summary": "on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void\n\n监听密钥过期事件。使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-14",
+        "title": "off('keyExpired')",
+        "level": 2,
+        "line_start": 560,
+        "line_end": 595,
+        "summary": "off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void\n\n注销密钥过期事件监听。使用callback异步回调"
+      },
+      {
+        "section_id": "section-15",
+        "title": "on('vendorDefined')",
+        "level": 2,
+        "line_start": 596,
+        "line_end": 633,
+        "summary": "on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void\n\n监听DRM解决方案自定义事件。使用callbac"
+      },
+      {
+        "section_id": "section-16",
+        "title": "off('vendorDefined')",
+        "level": 2,
+        "line_start": 634,
+        "line_end": 669,
+        "summary": "off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void\n\n注销DRM解决方案自定义事件监听。使用cal"
+      },
+      {
+        "section_id": "section-17",
+        "title": "on('expirationUpdate')",
+        "level": 2,
+        "line_start": 670,
+        "line_end": 707,
+        "summary": "on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void\n\n监听密钥过期更新事件。使用callback"
+      },
+      {
+        "section_id": "section-18",
+        "title": "off('expirationUpdate')",
+        "level": 2,
+        "line_start": 708,
+        "line_end": 743,
+        "summary": "off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void\n\n注销过期更新事件监听。使用callba"
+      },
+      {
+        "section_id": "section-19",
+        "title": "on('keysChange')",
+        "level": 2,
+        "line_start": 744,
+        "line_end": 783,
+        "summary": "on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void\n\n监听"
+      },
+      {
+        "section_id": "section-20",
+        "title": "off('keysChange')",
+        "level": 2,
+        "line_start": 784,
+        "line_end": 819,
+        "summary": "off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void"
+      },
+      {
+        "section_id": "section-21",
+        "title": "destroy",
+        "level": 2,
+        "line_start": 820,
+        "line_end": 855,
+        "summary": "destroy(): void\n\n销毁MediaKeySession实例。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** S"
+      }
+    ]
+  }
+}

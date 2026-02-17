@@ -1,0 +1,404 @@
+{
+  "doc_id": "js-apis-osAccount-sys",
+  "title": "@ohos.account.osAccount (系统账号管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-osAccount-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-osAccount-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Account",
+    "owner": "@steven-q",
+    "designer": "@JiDong-CS1",
+    "tester": "@zhaimengchao",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Basic Services Kit Account 模块的 @ohos.account.osAccount (系统账号管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.account.osAccount (系统账号管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { osAccount } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "AccountManager",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 2586,
+        "summary": "系统账号管理类。\n\n### activateOsAccount\n\nactivateOsAccount(localId: number, callback: AsyncCallback&lt;void"
+      },
+      {
+        "section_id": "section-3",
+        "title": "UserAuth<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2587,
+        "line_end": 3351,
+        "summary": "用户认证类。\n\n**系统接口：** 此接口为系统接口。\n\n### constructor<sup>8+</sup>\n\nconstructor()\n\n创建用户认证的实例。\n\n**系统接口：** 此接口"
+      },
+      {
+        "section_id": "section-4",
+        "title": "PINAuth<sup>8+</sup>",
+        "level": 2,
+        "line_start": 3352,
+        "line_end": 3454,
+        "summary": "PIN码认证基类。\n\n**系统接口：** 此接口为系统接口。\n\n### constructor<sup>8+</sup>\n\nconstructor()\n\n创建PIN码认证的实例。\n\n**系统接口：*"
+      },
+      {
+        "section_id": "section-5",
+        "title": "InputerManager <sup>9+</sup>",
+        "level": 2,
+        "line_start": 3455,
+        "line_end": 3551,
+        "summary": "凭据输入管理器。\n\n### registerInputer<sup>9+</sup>\n\nstatic registerInputer(authType: AuthType, inputer: IIn"
+      },
+      {
+        "section_id": "section-6",
+        "title": "DomainPlugin<sup>9+</sup>",
+        "level": 2,
+        "line_start": 3552,
+        "line_end": 4052,
+        "summary": "域插件，提供域账号认证功能。\n\n**系统接口：** 此接口为系统接口。\n\n### auth<sup>9+</sup>\n\nauth(domainAccountInfo: DomainAccountIn"
+      },
+      {
+        "section_id": "section-7",
+        "title": "DomainAccountManager <sup>9+</sup>",
+        "level": 2,
+        "line_start": 4053,
+        "line_end": 4856,
+        "summary": "域账号管理器类。\n\n### registerPlugin<sup>9+</sup>\n\nstatic registerPlugin(plugin: DomainPlugin): void\n\n注册域插件"
+      },
+      {
+        "section_id": "section-8",
+        "title": "UserIdentityManager<sup>8+</sup>",
+        "level": 2,
+        "line_start": 4857,
+        "line_end": 5702,
+        "summary": "获取用户身份管理类。\n\n**系统接口：** 此接口为系统接口。\n\n### constructor<sup>8+</sup>\n\nconstructor()\n\n用户身份管理类的默认构造函数。\n\n**系统"
+      },
+      {
+        "section_id": "section-9",
+        "title": "IInputData<sup>8+</sup>",
+        "level": 2,
+        "line_start": 5703,
+        "line_end": 5749,
+        "summary": "密码数据回调。\n\n**系统接口：** 此接口为系统接口。\n\n### onSetData<sup>8+</sup>\n\nonSetData(authSubType: AuthSubType, data:"
+      },
+      {
+        "section_id": "section-10",
+        "title": "IInputer<sup>8+</sup>",
+        "level": 2,
+        "line_start": 5750,
+        "line_end": 5793,
+        "summary": "凭据输入器回调。\n\n**系统接口：** 此接口为系统接口。\n\n### onGetData<sup>8+</sup>\n\nonGetData: (authSubType: AuthSubType, ca"
+      },
+      {
+        "section_id": "section-11",
+        "title": "IUserAuthCallback<sup>8+</sup>",
+        "level": 2,
+        "line_start": 5794,
+        "line_end": 5861,
+        "summary": "表示用户认证回调类。\n\n**系统接口：** 此接口为系统接口。\n\n### onResult<sup>8+</sup>\n\nonResult: (result: number, extraInfo: A"
+      },
+      {
+        "section_id": "section-12",
+        "title": "IIdmCallback<sup>8+</sup>",
+        "level": 2,
+        "line_start": 5862,
+        "line_end": 5929,
+        "summary": "表示身份管理回调类。\n\n**系统接口：** 此接口为系统接口。\n\n### onResult<sup>8+</sup>\n\nonResult: (result: number, extraInfo: R"
+      },
+      {
+        "section_id": "section-13",
+        "title": "GetPropertyRequest<sup>8+</sup>",
+        "level": 2,
+        "line_start": 5930,
+        "line_end": 5943,
+        "summary": "提供获取属性请求的信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称    | 类型"
+      },
+      {
+        "section_id": "section-14",
+        "title": "SetPropertyRequest<sup>8+</sup>",
+        "level": 2,
+        "line_start": 5944,
+        "line_end": 5957,
+        "summary": "提供设置属性请求的信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称    | 类型"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ExecutorProperty<sup>8+</sup>",
+        "level": 2,
+        "line_start": 5958,
+        "line_end": 5976,
+        "summary": "提供执行器的属性。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-16",
+        "title": "AuthResult<sup>8+</sup>",
+        "level": 2,
+        "line_start": 5977,
+        "line_end": 5994,
+        "summary": "表示认证结果的信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称        | 类型"
+      },
+      {
+        "section_id": "section-17",
+        "title": "CredentialInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 5995,
+        "line_end": 6010,
+        "summary": "表示凭证信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称        | 类型"
+      },
+      {
+        "section_id": "section-18",
+        "title": "RequestResult<sup>8+</sup>",
+        "level": 2,
+        "line_start": 6011,
+        "line_end": 6022,
+        "summary": "表示请求结果的信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称        | 类型"
+      },
+      {
+        "section_id": "section-19",
+        "title": "EnrolledCredInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 6023,
+        "line_end": 6039,
+        "summary": "表示已注册凭据的信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称        | 类型"
+      },
+      {
+        "section_id": "section-20",
+        "title": "GetPropertyType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 6040,
+        "line_end": 6057,
+        "summary": "表示要获取的属性类型的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称           |"
+      },
+      {
+        "section_id": "section-21",
+        "title": "SetPropertyType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 6058,
+        "line_end": 6069,
+        "summary": "表示要设置的属性类型的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称           |"
+      },
+      {
+        "section_id": "section-22",
+        "title": "AuthType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 6070,
+        "line_end": 6087,
+        "summary": "表示身份验证的凭据类型的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称  | 值 | 说明"
+      },
+      {
+        "section_id": "section-23",
+        "title": "AuthSubType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 6088,
+        "line_end": 6110,
+        "summary": "表示用于认证的凭据子类型的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称       | 值"
+      },
+      {
+        "section_id": "section-24",
+        "title": "AuthTrustLevel<sup>8+</sup>",
+        "level": 2,
+        "line_start": 6111,
+        "line_end": 6125,
+        "summary": "表示认证结果的受信任级别的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称  | 值 | 说明"
+      },
+      {
+        "section_id": "section-25",
+        "title": "Module<sup>8+</sup>",
+        "level": 2,
+        "line_start": 6126,
+        "line_end": 6137,
+        "summary": "表示获取信息的模块的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称       | 值 |"
+      },
+      {
+        "section_id": "section-26",
+        "title": "ResultCode<sup>8+</sup>",
+        "level": 2,
+        "line_start": 6138,
+        "line_end": 6159,
+        "summary": "表示身份验证结果码。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称"
+      },
+      {
+        "section_id": "section-27",
+        "title": "FaceTipsCode<sup>8+</sup>",
+        "level": 2,
+        "line_start": 6160,
+        "line_end": 6181,
+        "summary": "表示人脸验证过程中提示的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称"
+      },
+      {
+        "section_id": "section-28",
+        "title": "FingerprintTips<sup>8+</sup>",
+        "level": 2,
+        "line_start": 6182,
+        "line_end": 6200,
+        "summary": "表示指纹身份验证过程中提示的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称"
+      },
+      {
+        "section_id": "section-29",
+        "title": "OsAccountInfo",
+        "level": 2,
+        "line_start": 6201,
+        "line_end": 6211,
+        "summary": "表示系统账号信息。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称      | 类型   | 只读  | 可选  | 说明       |"
+      },
+      {
+        "section_id": "section-30",
+        "title": "OsAccountType",
+        "level": 2,
+        "line_start": 6212,
+        "line_end": 6221,
+        "summary": "表示系统账号类型的枚举。\n\n**系统能力：** SystemCapability.Account.OsAccount。\n\n| 名称   | 值 | 说明         |\n| ------ | -"
+      },
+      {
+        "section_id": "section-31",
+        "title": "DomainAccountInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 6222,
+        "line_end": 6232,
+        "summary": "表示域账号信息。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称      | 类型   | 只读  | 可选  | 说明       |\n|"
+      },
+      {
+        "section_id": "section-32",
+        "title": "ConstraintSourceTypeInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6233,
+        "line_end": 6245,
+        "summary": "表示约束来源类型信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称      | 类型   |"
+      },
+      {
+        "section_id": "section-33",
+        "title": "ConstraintSourceType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6246,
+        "line_end": 6260,
+        "summary": "表示约束来源类型的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称   | 值 | 说明"
+      },
+      {
+        "section_id": "section-34",
+        "title": "AuthStatusInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6261,
+        "line_end": 6273,
+        "summary": "表示认证状态信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称      | 类型   | 只读"
+      },
+      {
+        "section_id": "section-35",
+        "title": "GetDomainAccessTokenOptions<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6274,
+        "line_end": 6288,
+        "summary": "表示获取域访问令牌的选项。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-36",
+        "title": "GetDomainAccountInfoOptions<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6289,
+        "line_end": 6302,
+        "summary": "表示查询域账号信息的选项。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-37",
+        "title": "GetDomainAccountInfoPluginOptions<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6303,
+        "line_end": 6314,
+        "summary": "表示插件查询域账号信息的选项。GetDomainAccountInfoPluginOptions类继承[GetDomainAccountInfoOptions](#getdomainaccounti"
+      },
+      {
+        "section_id": "section-38",
+        "title": "OsAccountSwitchEventData<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6315,
+        "line_end": 6328,
+        "summary": "表示系统账号前后台开始切换和结束切换事件的数据结构。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称"
+      },
+      {
+        "section_id": "section-39",
+        "title": "ConstraintChangeInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 6329,
+        "line_end": 6341,
+        "summary": "表示约束变更信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称      | 类型   | 只读"
+      },
+      {
+        "section_id": "section-40",
+        "title": "CreateOsAccountOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6342,
+        "line_end": 6355,
+        "summary": "表示用于创建系统账号的可选参数。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-41",
+        "title": "CreateOsAccountForDomainOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6356,
+        "line_end": 6363,
+        "summary": "表示用于创建与指定域账号绑定的系统账号的可选参数。继承自[CreateOsAccountOptions](#createosaccountoptions12)。\n\n**系统接口：** 此接口为系统接"
+      },
+      {
+        "section_id": "section-42",
+        "title": "GetAuthInfoOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6364,
+        "line_end": 6376,
+        "summary": "表示[查询认证凭据信息](#getauthinfo12)的可选参数集合。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAcc"
+      },
+      {
+        "section_id": "section-43",
+        "title": "AuthIntent<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6377,
+        "line_end": 6391,
+        "summary": "表示认证意图的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称     | 值   | 说明"
+      },
+      {
+        "section_id": "section-44",
+        "title": "RemoteAuthOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6392,
+        "line_end": 6405,
+        "summary": "表示远程认证的可选参数集合。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称"
+      },
+      {
+        "section_id": "section-45",
+        "title": "AuthOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6406,
+        "line_end": 6419,
+        "summary": "表示[认证用户](#auth12)的可选参数集合。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称"
+      },
+      {
+        "section_id": "section-46",
+        "title": "GetInputDataOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6420,
+        "line_end": 6431,
+        "summary": "表示[通知调用者获取数据](#ongetdata8)的可选参数集合。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccou"
+      },
+      {
+        "section_id": "section-47",
+        "title": "CredentialChangeInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 6432,
+        "line_end": 6448,
+        "summary": "表示凭据变更信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称      | 类型   | 只读"
+      },
+      {
+        "section_id": "section-48",
+        "title": "CredentialChangeType<sup>23+</sup>",
+        "level": 2,
+        "line_start": 6449,
+        "line_end": 6462,
+        "summary": "表示凭据变更类型的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Account.OsAccount\n\n| 名称     | 值   | 说"
+      }
+    ]
+  }
+}

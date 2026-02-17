@@ -1,0 +1,188 @@
+{
+  "doc_id": "js-apis-appControl-sys",
+  "title": "@ohos.bundle.appControl (appControl模块)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-appControl-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-appControl-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Ability Kit BundleManager 模块的 @ohos.bundle.appControl (appControl模块)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bundle.appControl (appControl模块)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "``` ts\nimport { appControl } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "appControl.setDisposedStatus",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 83,
+        "summary": "setDisposedStatus(appId: string, disposedWant: Want): Promise\\<void>\n\n设置应用的处置状态。使用Promise异步回调。成功返回n"
+      },
+      {
+        "section_id": "section-3",
+        "title": "appControl.setDisposedStatus",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 140,
+        "summary": "setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCallback\\<void>): void;\n\n设置应用的处"
+      },
+      {
+        "section_id": "section-4",
+        "title": "appControl.setDisposedStatusSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 190,
+        "summary": "setDisposedStatusSync(appId: string, disposedWant: Want): void;\n\n以同步方法设置应用的处置状态。成功返回null，失败抛出对应异常。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "appControl.getDisposedStatus",
+        "level": 2,
+        "line_start": 191,
+        "line_end": 248,
+        "summary": "getDisposedStatus(appId: string): Promise\\<Want>;\n\n获取指定应用已设置的处置状态。使用Promise异步回调，成功返回应用的处置状态，失败返回对应错"
+      },
+      {
+        "section_id": "section-6",
+        "title": "appControl.getDisposedStatus",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 302,
+        "summary": "getDisposedStatus(appId: string, callback: AsyncCallback\\<Want>): void;\n\n获取指定应用的处置状态。使用callback异步回调"
+      },
+      {
+        "section_id": "section-7",
+        "title": "appControl.getDisposedStatusSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 303,
+        "line_end": 356,
+        "summary": "getDisposedStatusSync(appId: string): Want;\n\n以同步方法获取指定应用已设置的处置状态。成功返回应用的处置状态，失败抛出对应异常。\n\n**系统接口：** 此"
+      },
+      {
+        "section_id": "section-8",
+        "title": "appControl.deleteDisposedStatus",
+        "level": 2,
+        "line_start": 357,
+        "line_end": 414,
+        "summary": "deleteDisposedStatus(appId: string): Promise\\<void>\n\n删除应用的处置状态。使用promise异步回调，成功返回null，失败返回对应错误信息。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "appControl.deleteDisposedStatus",
+        "level": 2,
+        "line_start": 415,
+        "line_end": 466,
+        "summary": "deleteDisposedStatus(appId: string, callback: AsyncCallback\\<void>) : void\n\n删除应用的处置状态。使用callback异步回"
+      },
+      {
+        "section_id": "section-10",
+        "title": "appControl.deleteDisposedStatusSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 467,
+        "line_end": 515,
+        "summary": "deleteDisposedStatusSync(appId: string, appIndex?: number) : void\n\n以同步方法删除指定应用或分身应用的处置状态。成功返回null，失"
+      },
+      {
+        "section_id": "section-11",
+        "title": "appControl.getDisposedRule<sup>11+</sup>",
+        "level": 2,
+        "line_start": 516,
+        "line_end": 570,
+        "summary": "getDisposedRule(appId: string, appIndex?: number): DisposedRule\n\n获取指定应用或分身应用已设置的拦截规则。\n\n**系统接口：** 此接"
+      },
+      {
+        "section_id": "section-12",
+        "title": "appControl.getAllDisposedRules<sup>23+</sup>",
+        "level": 2,
+        "line_start": 571,
+        "line_end": 613,
+        "summary": "getAllDisposedRules(): Array\\<DisposedRuleConfiguration>\n\n获取当前用户下已设置的所有拦截规则。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "appControl.getDisposedRulesByBundle<sup>23+</sup>",
+        "level": 2,
+        "line_start": 614,
+        "line_end": 666,
+        "summary": "getDisposedRulesByBundle(bundleName: string): Array\\<DisposedRuleConfiguration>\n\n获取指定应用程序包设置的所有拦截规则"
+      },
+      {
+        "section_id": "section-14",
+        "title": "appControl.setDisposedRule<sup>11+</sup>",
+        "level": 2,
+        "line_start": 667,
+        "line_end": 737,
+        "summary": "setDisposedRule(appId: string, rule: DisposedRule, appIndex?: number): void\n\n设置指定应用或分身应用的拦截规则。\n\n**系"
+      },
+      {
+        "section_id": "section-15",
+        "title": "appControl.setDisposedRules<sup>20+</sup>",
+        "level": 2,
+        "line_start": 738,
+        "line_end": 825,
+        "summary": "setDisposedRules(disposedRuleConfigurations: Array\\<DisposedRuleConfiguration\\>): void\n\n批量设置指定应用或分身"
+      },
+      {
+        "section_id": "section-16",
+        "title": "appControl.setUninstallDisposedRule<sup>15+</sup>",
+        "level": 2,
+        "line_start": 826,
+        "line_end": 886,
+        "summary": "setUninstallDisposedRule(appIdentifier: string, rule: UninstallDisposedRule, appIndex?: number): vo"
+      },
+      {
+        "section_id": "section-17",
+        "title": "appControl.getUninstallDisposedRule<sup>15+</sup>",
+        "level": 2,
+        "line_start": 887,
+        "line_end": 941,
+        "summary": "getUninstallDisposedRule(appIdentifier: string, appIndex?: number): UninstallDisposedRule\n\n获取指定应用或分"
+      },
+      {
+        "section_id": "section-18",
+        "title": "appControl.deleteUninstallDisposedRule<sup>15+</sup>",
+        "level": 2,
+        "line_start": 942,
+        "line_end": 989,
+        "summary": "deleteUninstallDisposedRule(appIdentifier: string, appIndex?: number): void\n\n删除指定应用或分身应用的卸载处置规则。\n\n*"
+      },
+      {
+        "section_id": "section-19",
+        "title": "DisposedRule<sup>11+</sup>",
+        "level": 2,
+        "line_start": 990,
+        "line_end": 1046,
+        "summary": "标识拦截规则。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl。\n\n **系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "UninstallDisposedRule<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1047,
+        "line_end": 1073,
+        "summary": "标识卸载处置规则。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl。\n\n **系统接口：** 此接口为系统接"
+      },
+      {
+        "section_id": "section-21",
+        "title": "DisposedRuleConfiguration<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1074,
+        "line_end": 1086,
+        "summary": "标识批量设置拦截规则的配置。\n\n**系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl\n\n **系统接口：** 此接口"
+      }
+    ]
+  }
+}

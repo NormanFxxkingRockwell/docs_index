@@ -1,0 +1,116 @@
+{
+  "doc_id": "arkts-apis-media-AVMetadataExtractor",
+  "title": "Interface (AVMetadataExtractor)",
+  "path": "zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-AVMetadataExtractor.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-AVMetadataExtractor.md",
+  "metadata": {
+    "kit": "Media Kit",
+    "subsystem": "Multimedia",
+    "owner": "@wang-haizhou6",
+    "designer": "@HmQQQ",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Kit Multimedia 模块的 Interface (AVMetadataExtractor)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AVMetadataExtractor)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { media } from '@kit.MediaKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 32,
+        "summary": "**系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor\n\n| 名称"
+      },
+      {
+        "section_id": "section-3",
+        "title": "setUrlSource<sup>20+</sup>",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 70,
+        "summary": "setUrlSource(url: string, headers?: Record\\<string, string>): void\n\n网络点播资源地址描述，通过该接口设置数据源。只支持获取网络[f"
+      },
+      {
+        "section_id": "section-4",
+        "title": "fetchFrameByTime<sup>20+</sup>",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 135,
+        "summary": "fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise\\<ima"
+      },
+      {
+        "section_id": "section-5",
+        "title": "fetchFramesByTimes<sup>23+</sup>",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 201,
+        "summary": "fetchFramesByTimes(timesUs: number[], queryOption: AVImageQueryOptions, param: PixelMapParams, call"
+      },
+      {
+        "section_id": "section-6",
+        "title": "cancelAllFetchFrames<sup>23+</sup>",
+        "level": 2,
+        "line_start": 202,
+        "line_end": 229,
+        "summary": "cancelAllFetchFrames(): void\n\n取消正在进行的批量获取缩略图任务（已完成部分不受影响）。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "fetchMetadata<sup>11+</sup>",
+        "level": 2,
+        "line_start": 230,
+        "line_end": 272,
+        "summary": "fetchMetadata(callback: AsyncCallback\\<AVMetadata>): void\n\n获取媒体元数据。使用callback异步回调。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-8",
+        "title": "fetchMetadata<sup>11+</sup>",
+        "level": 2,
+        "line_start": 273,
+        "line_end": 313,
+        "summary": "fetchMetadata(): Promise\\<AVMetadata>\n\n获取媒体元数据。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedi"
+      },
+      {
+        "section_id": "section-9",
+        "title": "fetchAlbumCover<sup>11+</sup>",
+        "level": 2,
+        "line_start": 314,
+        "line_end": 358,
+        "summary": "fetchAlbumCover(callback: AsyncCallback\\<image.PixelMap>): void\n\n获取音频专辑封面。使用callback异步回调。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-10",
+        "title": "fetchAlbumCover<sup>11+</sup>",
+        "level": 2,
+        "line_start": 359,
+        "line_end": 401,
+        "summary": "fetchAlbumCover(): Promise\\<image.PixelMap>\n\n获取专辑封面。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Mult"
+      },
+      {
+        "section_id": "section-11",
+        "title": "release<sup>11+</sup>",
+        "level": 2,
+        "line_start": 402,
+        "line_end": 442,
+        "summary": "release(callback: AsyncCallback\\<void>): void\n\n释放资源。使用callback异步回调。\n\n**系统能力：** SystemCapability.Mul"
+      },
+      {
+        "section_id": "section-12",
+        "title": "release<sup>11+</sup>",
+        "level": 2,
+        "line_start": 443,
+        "line_end": 481,
+        "summary": "release(): Promise\\<void>\n\n释放资源。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia.Media.AVMetad"
+      }
+    ]
+  }
+}

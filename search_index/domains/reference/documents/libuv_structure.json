@@ -1,0 +1,76 @@
+{
+  "doc_id": "libuv",
+  "title": "libuv",
+  "path": "zh-cn/application-dev/reference/native-lib/libuv.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/native-lib/libuv.md",
+  "metadata": {
+    "kit": "NDK Development",
+    "subsystem": "Developtools",
+    "owner": "@fu-yongyong",
+    "designer": "@huangke11",
+    "tester": "@liuhaonan2",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "NDK Development Developtools 模块的 libuv，提供相关接口和功能说明。",
+  "structure": {
+    "title": "libuv",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "简介",
+        "level": 2,
+        "line_start": 8,
+        "line_end": 11,
+        "summary": "[libuv](http://libuv.org/)是一个跨平台库，基于事件驱动来实现异步I/O，适用于网络编程和文件系统操作。它是Node.js的核心库之一，也被其他语言的开发者广泛使用。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "支持的能力",
+        "level": 2,
+        "line_start": 12,
+        "line_end": 17,
+        "summary": "[libuv](http://libuv.org/)实现了跨平台的基于事件驱动的异步I/O。\n\n支持标准库接口。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "引入libuv能力",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 31,
+        "summary": "如果开发者需要使用libuv相关功能，首先请添加头文件：\n\n```c\n#include <uv.h>\n```\n\n其次在CMakeLists.txt中添加以下动态链接库：\n\n```txt\nlibuv."
+      },
+      {
+        "section_id": "section-4",
+        "title": "接口列表",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 35,
+        "summary": "详见[libuv支持的API文档](http://docs.libuv.org/en/v1.x/api.html)。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "OpenHarmony引入libuv的背景",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 51,
+        "summary": "在OpenHarmony的早期版本中，为了兼容Node.js的生态，将Node.js的Node-API引入到系统中，方便Node.js开发者快速接入OpenHarmony，扩展自己的JS接口。同时引"
+      },
+      {
+        "section_id": "section-6",
+        "title": "当前问题和解决方案",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 469,
+        "summary": "根据现有机制，一个线程上只能存在一个事件循环，为了适配系统应用的主事件循环，在主线程上的JS环境中，uvloop中的事件处理是由主事件循环监听其fd，触发一次`uv_run`来驱动的。因此部分依赖u"
+      },
+      {
+        "section_id": "section-7",
+        "title": "libuv使用指导",
+        "level": 2,
+        "line_start": 470,
+        "line_end": 1563,
+        "summary": "**重要：libuv NDK中所有依赖`uv_run`的接口在当前系统的应用主循环中无法及时生效，并且可能会导致卡顿掉帧的现象。因此不建议直接在JS主线程上使用libuv NDK接口，对于异步任务执"
+      }
+    ]
+  }
+}

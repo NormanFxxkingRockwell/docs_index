@@ -1,0 +1,76 @@
+{
+  "doc_id": "js-apis-inputconsumer-sys",
+  "title": "@ohos.multimodalInput.inputConsumer (全局快捷键)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-input-kit/js-apis-inputconsumer-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-input-kit/js-apis-inputconsumer-sys.md",
+  "metadata": {
+    "kit": "Input Kit",
+    "subsystem": "MultimodalInput",
+    "owner": "@zhaoxueyuan",
+    "designer": "@hanruofei",
+    "tester": "@Lyuxin",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Input Kit MultimodalInput 模块的 @ohos.multimodalInput.inputConsumer (全局快捷键)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalInput.inputConsumer (全局快捷键)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```js\nimport { inputConsumer } from '@kit.InputKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "inputConsumer.on('key')",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 90,
+        "summary": "on(type: 'key', keyOptions: KeyOptions, callback: Callback&lt;KeyOptions&gt;): void\n\n订阅系统快捷键，当满足条件的"
+      },
+      {
+        "section_id": "section-3",
+        "title": "inputConsumer.off('key')",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 176,
+        "summary": "off(type: 'key', keyOptions: KeyOptions, callback?: Callback&lt;KeyOptions&gt;): void\n\n取消订阅系统快捷键。使用"
+      },
+      {
+        "section_id": "section-4",
+        "title": "inputConsumer.setShieldStatus<sup>11+</sup>",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 228,
+        "summary": "setShieldStatus(shieldMode: ShieldMode, isShield: boolean): void\n\n设置系统快捷键屏蔽类型。\n\n**需要权限**: ohos.perm"
+      },
+      {
+        "section_id": "section-5",
+        "title": "inputConsumer.getShieldStatus<sup>11+</sup>",
+        "level": 2,
+        "line_start": 229,
+        "line_end": 285,
+        "summary": "getShieldStatus(shieldMode: ShieldMode): boolean\n\n获取系统快捷键屏蔽类型。\n\n**需要权限**: ohos.permission.INPUT_CON"
+      },
+      {
+        "section_id": "section-6",
+        "title": "KeyOptions",
+        "level": 2,
+        "line_start": 286,
+        "line_end": 299,
+        "summary": "组合键选项。\n\n**系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer\n\n| 名称        | 类型   | 只读   |"
+      },
+      {
+        "section_id": "section-7",
+        "title": "shieldMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 300,
+        "line_end": 308,
+        "summary": "系统快捷键屏蔽类型。\n\n**系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer\n\n| 名称"
+      }
+    ]
+  }
+}

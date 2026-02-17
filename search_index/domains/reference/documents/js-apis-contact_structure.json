@@ -1,0 +1,988 @@
+{
+  "doc_id": "js-apis-contact",
+  "title": "@ohos.contact (联系人)",
+  "path": "zh-cn/application-dev/reference/apis-contacts-kit/js-apis-contact.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-contacts-kit/js-apis-contact.md",
+  "metadata": {
+    "kit": "Contacts Kit",
+    "subsystem": "Applications",
+    "owner": "@librahCode",
+    "designer": "@yanghaoqian",
+    "tester": "@shangzhijie",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Contacts Kit Applications 模块的 @ohos.contact (联系人)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.contact (联系人)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { contact } from '@kit.ContactsKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "contact.addContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 79,
+        "summary": "addContact(context: Context, contact: Contact, callback: AsyncCallback&lt;number&gt;): void \n\n添加联系人"
+      },
+      {
+        "section_id": "section-3",
+        "title": "contact.addContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 124,
+        "summary": "addContact(contact: Contact, callback: AsyncCallback&lt;number&gt;): void\n\n添加联系人。使用callback异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-4",
+        "title": "contact.addContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 186,
+        "summary": "addContact(context: Context, contact: Contact): Promise<number&gt;\n\n添加联系人。使用Promise异步回调。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-5",
+        "title": "contact.addContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 187,
+        "line_end": 232,
+        "summary": "addContact(contact: Contact): Promise&lt;number&gt;\n\n添加联系人。使用Promise异步回调。\n\n> **说明**\n>\n> 从API versio"
+      },
+      {
+        "section_id": "section-6",
+        "title": "contact.deleteContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 233,
+        "line_end": 285,
+        "summary": "deleteContact(context: Context, key: string, callback: AsyncCallback&lt;void&gt;): void\n\n删除联系人。使用ca"
+      },
+      {
+        "section_id": "section-7",
+        "title": "contact.deleteContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 286,
+        "line_end": 328,
+        "summary": "deleteContact(key: string, callback: AsyncCallback&lt;void&gt;): void\n\n删除联系人。使用callback异步回调。\n\n> **说"
+      },
+      {
+        "section_id": "section-8",
+        "title": "contact.deleteContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 385,
+        "summary": "deleteContact(context: Context,  key: string): Promise&lt;void&gt;\n\n删除联系人。使用Promise异步回调。\n\n**需要权限**："
+      },
+      {
+        "section_id": "section-9",
+        "title": "contact.deleteContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 386,
+        "line_end": 430,
+        "summary": "deleteContact(key: string): Promise&lt;void&gt;\n\n删除联系人。使用Promise异步回调。\n\n> **说明**\n>\n> 从API version 7"
+      },
+      {
+        "section_id": "section-10",
+        "title": "contact.updateContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 431,
+        "line_end": 490,
+        "summary": "updateContact(context: Context, contact: Contact, callback: AsyncCallback&lt;void&gt;): void\n\n更新联系人"
+      },
+      {
+        "section_id": "section-11",
+        "title": "contact.updateContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 491,
+        "line_end": 540,
+        "summary": "updateContact(contact: Contact, callback: AsyncCallback&lt;void&gt;): void\n\n更新联系人。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "contact.updateContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 541,
+        "line_end": 603,
+        "summary": "updateContact(context: Context,  contact: Contact, attrs: ContactAttributes, callback: AsyncCallbac"
+      },
+      {
+        "section_id": "section-13",
+        "title": "contact.updateContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 604,
+        "line_end": 654,
+        "summary": "updateContact(contact: Contact, attrs: ContactAttributes, callback: AsyncCallback&lt;void&gt;): voi"
+      },
+      {
+        "section_id": "section-14",
+        "title": "contact.updateContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 655,
+        "line_end": 721,
+        "summary": "updateContact(context: Context,  contact: Contact, attrs?: ContactAttributes): Promise&lt;void&gt;"
+      },
+      {
+        "section_id": "section-15",
+        "title": "contact.updateContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 722,
+        "line_end": 776,
+        "summary": "updateContact(contact: Contact, attrs?: ContactAttributes): Promise&lt;void&gt;\n\n更新联系人（支持传入联系人的属性列表"
+      },
+      {
+        "section_id": "section-16",
+        "title": "contact.isLocalContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 777,
+        "line_end": 825,
+        "summary": "isLocalContact(context: Context,  id: number, callback: AsyncCallback&lt;boolean&gt;): void\n\n判断当前联系"
+      },
+      {
+        "section_id": "section-17",
+        "title": "contact.isLocalContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 826,
+        "line_end": 860,
+        "summary": "isLocalContact(id: number, callback: AsyncCallback&lt;boolean&gt;): void\n\n判断当前联系人id是否在电话簿中。使用callba"
+      },
+      {
+        "section_id": "section-18",
+        "title": "contact.isLocalContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 861,
+        "line_end": 913,
+        "summary": "isLocalContact(context: Context,  id: number): Promise&lt;boolean&gt;\n\n判断当前联系人id是否在电话簿中。使用Promise异步"
+      },
+      {
+        "section_id": "section-19",
+        "title": "contact.isLocalContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 914,
+        "line_end": 952,
+        "summary": "isLocalContact(id: number): Promise&lt;boolean&gt;\n\n判断当前联系人id是否在电话簿中。使用Promise异步回调。\n\n> **说明**\n>\n> 从"
+      },
+      {
+        "section_id": "section-20",
+        "title": "contact.isMyCard<sup>10+</sup>",
+        "level": 2,
+        "line_start": 953,
+        "line_end": 1001,
+        "summary": "isMyCard(context: Context,  id: number, callback: AsyncCallback&lt;boolean&gt;): void\n\n判断是否为“我的名片”。"
+      },
+      {
+        "section_id": "section-21",
+        "title": "contact.isMyCard<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1002,
+        "line_end": 1036,
+        "summary": "isMyCard(id: number, callback: AsyncCallback&lt;boolean&gt;): void\n\n判断是否为“我的名片”。使用callback异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-22",
+        "title": "contact.isMyCard<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1037,
+        "line_end": 1089,
+        "summary": "isMyCard(context: Context,  id: number): Promise&lt;boolean&gt;\n\n判断是否为“我的名片”。使用Promise异步回调。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-23",
+        "title": "contact.isMyCard<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1090,
+        "line_end": 1128,
+        "summary": "isMyCard(id: number): Promise&lt;boolean&gt;\n\n判断是否为“我的名片”。使用Promise异步回调。\n\n> **说明**\n>\n> 从API version"
+      },
+      {
+        "section_id": "section-24",
+        "title": "contact.queryMyCard<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1129,
+        "line_end": 1176,
+        "summary": "queryMyCard(context: Context,  callback: AsyncCallback&lt;Contact&gt;): void\n\n查询“我的名片”。使用callback异步"
+      },
+      {
+        "section_id": "section-25",
+        "title": "contact.queryMyCard<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1177,
+        "line_end": 1210,
+        "summary": "queryMyCard(callback: AsyncCallback&lt;Contact&gt;): void\n\n查询“我的名片”。使用callback异步回调。\n\n> **说明**\n>\n> 从"
+      },
+      {
+        "section_id": "section-26",
+        "title": "contact.queryMyCard<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1211,
+        "line_end": 1261,
+        "summary": "queryMyCard(context: Context,  attrs: ContactAttributes, callback: AsyncCallback&lt;Contact&gt;): v"
+      },
+      {
+        "section_id": "section-27",
+        "title": "contact.queryMyCard<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1262,
+        "line_end": 1298,
+        "summary": "queryMyCard(attrs: ContactAttributes, callback: AsyncCallback&lt;Contact&gt;): void\n\n查询“我的名片”（支持传入联"
+      },
+      {
+        "section_id": "section-28",
+        "title": "contact.queryMyCard<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1299,
+        "line_end": 1353,
+        "summary": "queryMyCard(context: Context,  attrs?: ContactAttributes): Promise&lt;Contact&gt;\n\n查询“我的名片”（支持传入联系人"
+      },
+      {
+        "section_id": "section-29",
+        "title": "contact.queryMyCard<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1354,
+        "line_end": 1394,
+        "summary": "queryMyCard(attrs?: ContactAttributes): Promise&lt;Contact&gt;\n\n查询“我的名片”（支持传入联系人的属性列表）。使用Promise异步回"
+      },
+      {
+        "section_id": "section-30",
+        "title": "contact.selectContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1395,
+        "line_end": 1426,
+        "summary": "selectContact(callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;): void\n\n调用选择联系人接口，打开选择联系人UI界面。使用c"
+      },
+      {
+        "section_id": "section-31",
+        "title": "contact.selectContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1427,
+        "line_end": 1457,
+        "summary": "selectContact(): Promise&lt;Array&lt;Contact&gt;&gt;\n\n调用选择联系人接口，打开选择联系人UI界面。使用Promise异步回调。\n\n> **说明*"
+      },
+      {
+        "section_id": "section-32",
+        "title": "contact.selectContacts<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1458,
+        "line_end": 1495,
+        "summary": "selectContacts(callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;): void\n\n调用选择联系人接口，打开选择联系人UI界面。使用"
+      },
+      {
+        "section_id": "section-33",
+        "title": "contact.selectContacts<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1496,
+        "line_end": 1525,
+        "summary": "selectContacts(): Promise&lt;Array&lt;Contact&gt;&gt;\n\n调用选择联系人接口，打开选择联系人UI界面。使用Promise异步回调。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-34",
+        "title": "contact.selectContacts<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1526,
+        "line_end": 1566,
+        "summary": "selectContacts(options: ContactSelectionOptions, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt"
+      },
+      {
+        "section_id": "section-35",
+        "title": "contact.selectContacts<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1567,
+        "line_end": 1609,
+        "summary": "selectContacts(options: ContactSelectionOptions): Promise&lt;Array&lt;Contact&gt;&gt;\n\n调用选择联系人接口，打开"
+      },
+      {
+        "section_id": "section-36",
+        "title": "contact.queryContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1610,
+        "line_end": 1658,
+        "summary": "queryContact(context: Context,  key: string,  callback: AsyncCallback&lt;Contact&gt;): void\n\n根据key查"
+      },
+      {
+        "section_id": "section-37",
+        "title": "contact.queryContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1659,
+        "line_end": 1693,
+        "summary": "queryContact(key: string,  callback: AsyncCallback&lt;Contact&gt;): void\n\n根据key查询联系人。使用callback异步回调"
+      },
+      {
+        "section_id": "section-38",
+        "title": "contact.queryContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1694,
+        "line_end": 1747,
+        "summary": "queryContact(context: Context,  key: string, holder: Holder, callback: AsyncCallback&lt;Contact&gt;"
+      },
+      {
+        "section_id": "section-39",
+        "title": "contact.queryContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1748,
+        "line_end": 1787,
+        "summary": "queryContact(key: string, holder: Holder, callback: AsyncCallback&lt;Contact&gt;): void\n\n根据key和hold"
+      },
+      {
+        "section_id": "section-40",
+        "title": "contact.queryContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1788,
+        "line_end": 1839,
+        "summary": "queryContact(context: Context,  key: string,  attrs: ContactAttributes, callback: AsyncCallback&lt;"
+      },
+      {
+        "section_id": "section-41",
+        "title": "contact.queryContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1840,
+        "line_end": 1877,
+        "summary": "queryContact(key: string,  attrs: ContactAttributes, callback: AsyncCallback&lt;Contact&gt;): void"
+      },
+      {
+        "section_id": "section-42",
+        "title": "contact.queryContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1878,
+        "line_end": 1934,
+        "summary": "queryContact(context: Context,  key: string, holder: Holder, attrs: ContactAttributes, callback: As"
+      },
+      {
+        "section_id": "section-43",
+        "title": "contact.queryContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1935,
+        "line_end": 1977,
+        "summary": "queryContact(key: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback&lt;Cont"
+      },
+      {
+        "section_id": "section-44",
+        "title": "contact.queryContact<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1978,
+        "line_end": 2038,
+        "summary": "queryContact(context: Context,  key: string, holder?: Holder, attrs?: ContactAttributes): Promise&l"
+      },
+      {
+        "section_id": "section-45",
+        "title": "contact.queryContact<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2039,
+        "line_end": 2085,
+        "summary": "queryContact(key: string, holder?: Holder, attrs?: ContactAttributes): Promise&lt;Contact&gt;\n\n根据ke"
+      },
+      {
+        "section_id": "section-46",
+        "title": "contact.queryContacts<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2086,
+        "line_end": 2133,
+        "summary": "queryContacts(context: Context,  callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;): void\n\n查询所有联系"
+      },
+      {
+        "section_id": "section-47",
+        "title": "contact.queryContacts<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2134,
+        "line_end": 2167,
+        "summary": "queryContacts(callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;): void\n\n查询所有联系人。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-48",
+        "title": "contact.queryContacts<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2168,
+        "line_end": 2220,
+        "summary": "queryContacts(context: Context,  holder: Holder, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt"
+      },
+      {
+        "section_id": "section-49",
+        "title": "contact.queryContacts<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2221,
+        "line_end": 2259,
+        "summary": "queryContacts(holder: Holder, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;): void\n\n根据holder查"
+      },
+      {
+        "section_id": "section-50",
+        "title": "contact.queryContacts<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2260,
+        "line_end": 2310,
+        "summary": "queryContacts(context: Context,  attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Cont"
+      },
+      {
+        "section_id": "section-51",
+        "title": "contact.queryContacts<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2311,
+        "line_end": 2347,
+        "summary": "queryContacts(attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;): void"
+      },
+      {
+        "section_id": "section-52",
+        "title": "contact.queryContacts<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2348,
+        "line_end": 2403,
+        "summary": "queryContacts(context: Context,  holder: Holder, attrs: ContactAttributes, callback: AsyncCallback&"
+      },
+      {
+        "section_id": "section-53",
+        "title": "contact.queryContacts<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2404,
+        "line_end": 2445,
+        "summary": "queryContacts(holder: Holder, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact"
+      },
+      {
+        "section_id": "section-54",
+        "title": "contact.queryContacts<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2446,
+        "line_end": 2505,
+        "summary": "queryContacts(context: Context,  holder?: Holder, attrs?: ContactAttributes): Promise&lt;Array&lt;C"
+      },
+      {
+        "section_id": "section-55",
+        "title": "contact.queryContacts<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2506,
+        "line_end": 2551,
+        "summary": "queryContacts(holder?: Holder, attrs?: ContactAttributes): Promise&lt;Array&lt;Contact&gt;&gt;\n\n根据h"
+      },
+      {
+        "section_id": "section-56",
+        "title": "contact.queryContactsByPhoneNumber<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2552,
+        "line_end": 2600,
+        "summary": "queryContactsByPhoneNumber(context: Context,  phoneNumber: string, callback: AsyncCallback&lt;Array"
+      },
+      {
+        "section_id": "section-57",
+        "title": "contact.queryContactsByPhoneNumber<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2601,
+        "line_end": 2635,
+        "summary": "queryContactsByPhoneNumber(phoneNumber: string, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;"
+      },
+      {
+        "section_id": "section-58",
+        "title": "contact.queryContactsByPhoneNumber<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2636,
+        "line_end": 2689,
+        "summary": "queryContactsByPhoneNumber(context: Context,  phoneNumber: string, holder: Holder, callback: AsyncC"
+      },
+      {
+        "section_id": "section-59",
+        "title": "contact.queryContactsByPhoneNumber<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2690,
+        "line_end": 2729,
+        "summary": "queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, callback: AsyncCallback&lt;Array&lt"
+      },
+      {
+        "section_id": "section-60",
+        "title": "contact.queryContactsByPhoneNumber<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2730,
+        "line_end": 2781,
+        "summary": "queryContactsByPhoneNumber(context: Context,  phoneNumber: string, attrs: ContactAttributes, callba"
+      },
+      {
+        "section_id": "section-61",
+        "title": "contact.queryContactsByPhoneNumber<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2782,
+        "line_end": 2819,
+        "summary": "queryContactsByPhoneNumber(phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback&l"
+      },
+      {
+        "section_id": "section-62",
+        "title": "contact.queryContactsByPhoneNumber<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2820,
+        "line_end": 2876,
+        "summary": "queryContactsByPhoneNumber(context: Context,  phoneNumber: string, holder: Holder, attrs: ContactAt"
+      },
+      {
+        "section_id": "section-63",
+        "title": "contact.queryContactsByPhoneNumber<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2877,
+        "line_end": 2919,
+        "summary": "queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, attrs: ContactAttributes, callback:"
+      },
+      {
+        "section_id": "section-64",
+        "title": "contact.queryContactsByPhoneNumber<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2920,
+        "line_end": 2980,
+        "summary": "queryContactsByPhoneNumber(context: Context,  phoneNumber: string, holder?: Holder, attrs?: Contact"
+      },
+      {
+        "section_id": "section-65",
+        "title": "contact.queryContactsByPhoneNumber<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2981,
+        "line_end": 3027,
+        "summary": "queryContactsByPhoneNumber(phoneNumber: string, holder?: Holder, attrs?: ContactAttributes): Promis"
+      },
+      {
+        "section_id": "section-66",
+        "title": "contact.queryContactsByEmail<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3028,
+        "line_end": 3076,
+        "summary": "queryContactsByEmail(context: Context,  email: string, callback: AsyncCallback&lt;Array&lt;Contact&"
+      },
+      {
+        "section_id": "section-67",
+        "title": "contact.queryContactsByEmail<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3077,
+        "line_end": 3111,
+        "summary": "queryContactsByEmail(email: string, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;): void\n\n根据e"
+      },
+      {
+        "section_id": "section-68",
+        "title": "contact.queryContactsByEmail<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3112,
+        "line_end": 3165,
+        "summary": "queryContactsByEmail(context: Context,  email: string, holder: Holder, callback: AsyncCallback&lt;A"
+      },
+      {
+        "section_id": "section-69",
+        "title": "contact.queryContactsByEmail<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3166,
+        "line_end": 3205,
+        "summary": "queryContactsByEmail(email: string, holder: Holder, callback: AsyncCallback&lt;Array&lt;Contact&gt;"
+      },
+      {
+        "section_id": "section-70",
+        "title": "contact.queryContactsByEmail<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3206,
+        "line_end": 3257,
+        "summary": "queryContactsByEmail(context: Context,  email: string, attrs: ContactAttributes, callback: AsyncCal"
+      },
+      {
+        "section_id": "section-71",
+        "title": "contact.queryContactsByEmail<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3258,
+        "line_end": 3295,
+        "summary": "queryContactsByEmail(email: string, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;C"
+      },
+      {
+        "section_id": "section-72",
+        "title": "contact.queryContactsByEmail<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3296,
+        "line_end": 3352,
+        "summary": "queryContactsByEmail(context: Context,  email: string, holder: Holder, attrs: ContactAttributes, ca"
+      },
+      {
+        "section_id": "section-73",
+        "title": "contact.queryContactsByEmail<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3353,
+        "line_end": 3395,
+        "summary": "queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallba"
+      },
+      {
+        "section_id": "section-74",
+        "title": "contact.queryContactsByEmail<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3396,
+        "line_end": 3456,
+        "summary": "queryContactsByEmail(context: Context,  email: string, holder?: Holder, attrs?: ContactAttributes):"
+      },
+      {
+        "section_id": "section-75",
+        "title": "contact.queryContactsByEmail<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3457,
+        "line_end": 3503,
+        "summary": "queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAttributes): Promise&lt;Array&l"
+      },
+      {
+        "section_id": "section-76",
+        "title": "contact.queryGroups<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3504,
+        "line_end": 3549,
+        "summary": "queryGroups(context: Context,  callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;): void\n\n查询联系人的所有群组"
+      },
+      {
+        "section_id": "section-77",
+        "title": "contact.queryGroups<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3550,
+        "line_end": 3583,
+        "summary": "queryGroups(callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;): void\n\n查询联系人的所有群组。使用callback异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-78",
+        "title": "contact.queryGroups<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3584,
+        "line_end": 3636,
+        "summary": "queryGroups(context: Context,  holder: Holder, callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;):"
+      },
+      {
+        "section_id": "section-79",
+        "title": "contact.queryGroups<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3637,
+        "line_end": 3675,
+        "summary": "queryGroups(holder: Holder, callback: AsyncCallback&lt;Array&lt;Group&gt;&gt;): void\n\n根据holder查询联系人"
+      },
+      {
+        "section_id": "section-80",
+        "title": "contact.queryGroups<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3676,
+        "line_end": 3732,
+        "summary": "queryGroups(context: Context,  holder?: Holder): Promise&lt;Array&lt;Group&gt;&gt;\n\n根据holder查询联系人的所"
+      },
+      {
+        "section_id": "section-81",
+        "title": "contact.queryGroups<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3733,
+        "line_end": 3775,
+        "summary": "queryGroups(holder?: Holder): Promise&lt;Array&lt;Group&gt;&gt;\n\n根据holder查询联系人的所有群组。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-82",
+        "title": "contact.queryHolders<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3776,
+        "line_end": 3823,
+        "summary": "queryHolders(context: Context, callback: AsyncCallback&lt;Array&lt;Holder&gt;&gt;): void\n\n查询所有创建联系人"
+      },
+      {
+        "section_id": "section-83",
+        "title": "contact.queryHolders<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3824,
+        "line_end": 3857,
+        "summary": "queryHolders(callback: AsyncCallback&lt;Array&lt;Holder&gt;&gt;): void\n\n查询所有创建联系人的应用信息。使用callback异步"
+      },
+      {
+        "section_id": "section-84",
+        "title": "contact.queryHolders<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3858,
+        "line_end": 3909,
+        "summary": "queryHolders(context: Context): Promise&lt;Array&lt;Holder&gt;&gt;\n\n查询所有创建联系人的应用信息。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-85",
+        "title": "contact.queryHolders<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3910,
+        "line_end": 3942,
+        "summary": "queryHolders(): Promise&lt;Array&lt;Holder&gt;&gt;\n\n查询所有创建联系人的应用信息。使用Promise异步回调。\n\n> **说明**\n>\n> 从AP"
+      },
+      {
+        "section_id": "section-86",
+        "title": "contact.queryKey<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3943,
+        "line_end": 3991,
+        "summary": "queryKey(context: Context,  id: number, callback: AsyncCallback&lt;string&gt;): void\n\n根据联系人的id查询联系人"
+      },
+      {
+        "section_id": "section-87",
+        "title": "contact.queryKey<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3992,
+        "line_end": 4026,
+        "summary": "queryKey(id: number, callback: AsyncCallback&lt;string&gt;): void\n\n根据联系人的id查询联系人的key。使用callback异步回调"
+      },
+      {
+        "section_id": "section-88",
+        "title": "contact.queryKey<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4027,
+        "line_end": 4080,
+        "summary": "queryKey(context: Context,  id: number, holder: Holder, callback: AsyncCallback&lt;string&gt;): voi"
+      },
+      {
+        "section_id": "section-89",
+        "title": "contact.queryKey<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4081,
+        "line_end": 4120,
+        "summary": "queryKey(id: number, holder: Holder, callback: AsyncCallback&lt;string&gt;): void\n\n根据联系人的id和holder查"
+      },
+      {
+        "section_id": "section-90",
+        "title": "contact.queryKey<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4121,
+        "line_end": 4178,
+        "summary": "queryKey(context: Context,  id: number, holder?: Holder): Promise&lt;string&gt;\n\n根据联系人的id和holder查询联"
+      },
+      {
+        "section_id": "section-91",
+        "title": "contact.queryKey<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4179,
+        "line_end": 4222,
+        "summary": "queryKey(id: number, holder?: Holder): Promise&lt;string&gt;\n\n根据联系人的id和holder查询联系人的key。使用Promise异步回"
+      },
+      {
+        "section_id": "section-92",
+        "title": "contact.queryContactsCount<sup>22+</sup>",
+        "level": 2,
+        "line_start": 4223,
+        "line_end": 4271,
+        "summary": "queryContactsCount(context: Context): Promise&lt;number&gt;\n\n查询所有联系人的数量。使用Promise异步回调。\n\n**原子化服务API*"
+      },
+      {
+        "section_id": "section-93",
+        "title": "contact.addContactViaUI<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4272,
+        "line_end": 4335,
+        "summary": "addContactViaUI(context: Context, contact: Contact): Promise&lt;number&gt;\n\n调用新建联系人接口，打开新建联系人UI界面，新"
+      },
+      {
+        "section_id": "section-94",
+        "title": "contact.saveToExistingContactViaUI<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4336,
+        "line_end": 4401,
+        "summary": "saveToExistingContactViaUI(context: Context, contact: Contact): Promise&lt;number&gt;\n\n调用保存至已有联系人接口"
+      },
+      {
+        "section_id": "section-95",
+        "title": "contact.addContacts<sup>23+</sup>",
+        "level": 2,
+        "line_start": 4402,
+        "line_end": 4463,
+        "summary": "addContacts(context: Context, contacts: Array&lt;Contact&gt;): Promise&lt;Array&lt;number&gt;&gt;"
+      },
+      {
+        "section_id": "section-96",
+        "title": "ContactSelectionOptions<sup>10+</sup>",
+        "level": 2,
+        "line_start": 4464,
+        "line_end": 4476,
+        "summary": "选择联系人条件。\n\n**系统能力**：SystemCapability.Applications.Contacts\n\n|                名称               |"
+      },
+      {
+        "section_id": "section-97",
+        "title": "ContactSelectionFilter<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4477,
+        "line_end": 4489,
+        "summary": "联系人查询过滤器。\n\n**原子化服务API**：从API version 15 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications."
+      },
+      {
+        "section_id": "section-98",
+        "title": "FilterType<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4490,
+        "line_end": 4503,
+        "summary": "枚举，联系人过滤类型。\n\n**原子化服务API**：从API version 15 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Application"
+      },
+      {
+        "section_id": "section-99",
+        "title": "FilterClause<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4504,
+        "line_end": 4518,
+        "summary": "联系人过滤条件。\n\n**原子化服务API**：从API version 15 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications.C"
+      },
+      {
+        "section_id": "section-100",
+        "title": "FilterOptions<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4519,
+        "line_end": 4531,
+        "summary": "联系人过滤参数。\n\n**原子化服务API**：从API version 15 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications.C"
+      },
+      {
+        "section_id": "section-101",
+        "title": "FilterCondition<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4532,
+        "line_end": 4548,
+        "summary": "枚举，过滤条件。\n\n**原子化服务API**：从API version 15 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications.C"
+      },
+      {
+        "section_id": "section-102",
+        "title": "DataFilter<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4549,
+        "line_end": 4561,
+        "summary": "联系人数据过滤项。\n\n**原子化服务API**：从API version 15 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications."
+      },
+      {
+        "section_id": "section-103",
+        "title": "DataField<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4562,
+        "line_end": 4575,
+        "summary": "枚举，联系人数据字段。\n\n**原子化服务API**：从API version 15 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Application"
+      },
+      {
+        "section_id": "section-104",
+        "title": "Contact",
+        "level": 2,
+        "line_start": 4576,
+        "line_end": 4638,
+        "summary": "联系人对象类。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications.Co"
+      },
+      {
+        "section_id": "section-105",
+        "title": "ContactAttributes",
+        "level": 2,
+        "line_start": 4639,
+        "line_end": 4666,
+        "summary": "联系人属性列表，一般作为入参用来标识希望查询的联系人属性。\n\n当传入为null时，默认查询全部属性。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-106",
+        "title": "Attribute",
+        "level": 2,
+        "line_start": 4667,
+        "line_end": 4699,
+        "summary": "枚举，联系人属性列表。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Application"
+      },
+      {
+        "section_id": "section-107",
+        "title": "Email",
+        "level": 2,
+        "line_start": 4700,
+        "line_end": 4753,
+        "summary": "联系人的邮箱。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications.Co"
+      },
+      {
+        "section_id": "section-108",
+        "title": "Holder",
+        "level": 2,
+        "line_start": 4754,
+        "line_end": 4777,
+        "summary": "创建联系人的应用信息类。\n\n**系统能力**：SystemCapability.Applications.ContactsData\n\n| 名称        | 类型   | 只读 | 可选 | 说"
+      },
+      {
+        "section_id": "section-109",
+        "title": "Event",
+        "level": 2,
+        "line_start": 4778,
+        "line_end": 4828,
+        "summary": "联系人事件类。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications.Co"
+      },
+      {
+        "section_id": "section-110",
+        "title": "Group",
+        "level": 2,
+        "line_start": 4829,
+        "line_end": 4852,
+        "summary": "联系人的群组类。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications.C"
+      },
+      {
+        "section_id": "section-111",
+        "title": "ImAddress",
+        "level": 2,
+        "line_start": 4853,
+        "line_end": 4909,
+        "summary": "联系人的即时消息地址。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Application"
+      },
+      {
+        "section_id": "section-112",
+        "title": "Name",
+        "level": 2,
+        "line_start": 4910,
+        "line_end": 4939,
+        "summary": "联系人的名字类。\n\n**系统能力**：SystemCapability.Applications.ContactsData\n\n| 名称               |   类型   | 只读 | 可"
+      },
+      {
+        "section_id": "section-113",
+        "title": "NickName",
+        "level": 2,
+        "line_start": 4940,
+        "line_end": 4961,
+        "summary": "联系人的昵称类。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications.C"
+      },
+      {
+        "section_id": "section-114",
+        "title": "Note",
+        "level": 2,
+        "line_start": 4962,
+        "line_end": 4983,
+        "summary": "联系人的备注类。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications.C"
+      },
+      {
+        "section_id": "section-115",
+        "title": "Organization",
+        "level": 2,
+        "line_start": 4984,
+        "line_end": 5007,
+        "summary": "联系人的组织类。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications.C"
+      },
+      {
+        "section_id": "section-116",
+        "title": "PhoneNumber",
+        "level": 2,
+        "line_start": 5008,
+        "line_end": 5076,
+        "summary": "联系人电话号码类。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications."
+      },
+      {
+        "section_id": "section-117",
+        "title": "Portrait",
+        "level": 2,
+        "line_start": 5077,
+        "line_end": 5115,
+        "summary": "联系人的头像类。\n\n> **说明：**\n>\n>  从API version 22开始，支持通过uri和[PixelMap](../apis-image-kit/arkts-apis-image-Pi"
+      },
+      {
+        "section_id": "section-118",
+        "title": "PostalAddress",
+        "level": 2,
+        "line_start": 5116,
+        "line_end": 5175,
+        "summary": "联系人的邮政地址类。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications"
+      },
+      {
+        "section_id": "section-119",
+        "title": "Relation",
+        "level": 2,
+        "line_start": 5176,
+        "line_end": 5239,
+        "summary": "联系人的关系类。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications.C"
+      },
+      {
+        "section_id": "section-120",
+        "title": "SipAddress",
+        "level": 2,
+        "line_start": 5240,
+        "line_end": 5290,
+        "summary": "联系人的会话发起协议(SIP)地址类。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.App"
+      },
+      {
+        "section_id": "section-121",
+        "title": "Website",
+        "level": 2,
+        "line_start": 5291,
+        "line_end": 5313,
+        "summary": "联系人的网站信息类。\n\n**原子化服务API**：从API version 11 开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Applications"
+      }
+    ]
+  }
+}

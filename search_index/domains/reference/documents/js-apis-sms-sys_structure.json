@@ -1,0 +1,508 @@
+{
+  "doc_id": "js-apis-sms-sys",
+  "title": "@ohos.telephony.sms (短信服务)（系统接口）",
+  "path": "zh-cn/application-dev/reference/apis-telephony-kit/js-apis-sms-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-telephony-kit/js-apis-sms-sys.md",
+  "metadata": {
+    "kit": "Telephony Kit",
+    "subsystem": "Telephony",
+    "owner": "@shao-yikai",
+    "designer": "@wnazgul",
+    "tester": "@jiang_99",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Telephony Kit Telephony 模块的 @ohos.telephony.sms (短信服务)（系统接口），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.telephony.sms (短信服务)（系统接口）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 24,
+        "summary": "```ts\nimport { sms } from '@kit.TelephonyKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "sms.sendMms<sup>11+</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 134,
+        "summary": "sendMms\\(context: Context, mmsParams: MmsParams, callback: AsyncCallback&lt;void&gt;\\): void\n\n发送彩信。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "sms.sendMms<sup>11+</sup>",
+        "level": 2,
+        "line_start": 135,
+        "line_end": 247,
+        "summary": "sendMms\\(context: Context, mmsParams: MmsParams\\): Promise&lt;void&gt;\n\n发送彩信。使用Promise异步回调。\n\n**系统接口"
+      },
+      {
+        "section_id": "section-4",
+        "title": "sms.downloadMms<sup>11+</sup>",
+        "level": 2,
+        "line_start": 248,
+        "line_end": 363,
+        "summary": "downloadMms\\(context: Context, mmsParams: MmsParams, callback: AsyncCallback&lt;void&gt;\\): void\n\n下"
+      },
+      {
+        "section_id": "section-5",
+        "title": "sms.downloadMms<sup>11+</sup>",
+        "level": 2,
+        "line_start": 364,
+        "line_end": 483,
+        "summary": "downloadMms\\(context: Context, mmsParams: MmsParams\\): Promise&lt;void&gt;\n\n下载彩信。使用Promise异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "sms.setDefaultSmsSlotId<sup>7+</sup>",
+        "level": 2,
+        "line_start": 484,
+        "line_end": 529,
+        "summary": "setDefaultSmsSlotId\\(slotId: number, callback: AsyncCallback&lt;void&gt;\\): void\n\n设置发送短信的默认SIM卡槽ID。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "sms.setDefaultSmsSlotId<sup>7+</sup>",
+        "level": 2,
+        "line_start": 530,
+        "line_end": 581,
+        "summary": "setDefaultSmsSlotId\\(slotId: number\\): Promise&lt;void&gt;\n\n设置发送短信的默认SIM卡槽ID。使用Promise异步回调。\n\n**系统接口"
+      },
+      {
+        "section_id": "section-8",
+        "title": "sms.setSmscAddr<sup>7+</sup>",
+        "level": 2,
+        "line_start": 582,
+        "line_end": 629,
+        "summary": "setSmscAddr\\(slotId: number, smscAddr: string, callback: AsyncCallback\\<void\\>\\): void\n\n设置短信服务中心（SM"
+      },
+      {
+        "section_id": "section-9",
+        "title": "sms.setSmscAddr<sup>7+</sup>",
+        "level": 2,
+        "line_start": 630,
+        "line_end": 684,
+        "summary": "setSmscAddr\\(slotId: number, smscAddr: string\\): Promise\\<void\\>\n\n设置短信服务中心（SMSC）地址。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "sms.getSmscAddr<sup>7+</sup>",
+        "level": 2,
+        "line_start": 685,
+        "line_end": 730,
+        "summary": "getSmscAddr\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取短信服务中心（SMSC）地址。使用callback"
+      },
+      {
+        "section_id": "section-11",
+        "title": "sms.getSmscAddr<sup>7+</sup>",
+        "level": 2,
+        "line_start": 731,
+        "line_end": 783,
+        "summary": "getSmscAddr\\(slotId: number\\): Promise\\<string\\>\n\n获取短信服务中心（SMSC）地址。使用Promise异步回调。\n\n**系统接口：** 此接口为系统"
+      },
+      {
+        "section_id": "section-12",
+        "title": "sms.splitMessage<sup>8+</sup>",
+        "level": 2,
+        "line_start": 784,
+        "line_end": 829,
+        "summary": "splitMessage\\(content: string, callback: AsyncCallback\\<Array\\<string\\>\\>\\): void\n\n将长短信拆分为多个片段。使用ca"
+      },
+      {
+        "section_id": "section-13",
+        "title": "sms.splitMessage<sup>8+</sup>",
+        "level": 2,
+        "line_start": 830,
+        "line_end": 882,
+        "summary": "splitMessage\\(content: string\\): Promise\\<Array\\<string\\>\\>\n\n将长短信拆分为多个片段。使用Promise异步回调。\n\n**系统接口：**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "sms.addSimMessage<sup>7+</sup>",
+        "level": 2,
+        "line_start": 883,
+        "line_end": 933,
+        "summary": "addSimMessage\\(options: SimMessageOptions, callback: AsyncCallback\\<void\\>\\): void\n\n添加SIM卡消息，sim卡消息"
+      },
+      {
+        "section_id": "section-15",
+        "title": "sms.addSimMessage<sup>7+</sup>",
+        "level": 2,
+        "line_start": 934,
+        "line_end": 990,
+        "summary": "addSimMessage\\(options: SimMessageOptions\\): Promise\\<void\\>\n\n添加SIM卡消息，sim卡消息满，添加报错。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "sms.delSimMessage<sup>7+</sup>",
+        "level": 2,
+        "line_start": 991,
+        "line_end": 1038,
+        "summary": "delSimMessage\\(slotId: number, msgIndex: number, callback: AsyncCallback\\<void\\>\\): void\n\n删除SIM卡消息，"
+      },
+      {
+        "section_id": "section-17",
+        "title": "sms.delSimMessage<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1039,
+        "line_end": 1093,
+        "summary": "delSimMessage\\(slotId: number, msgIndex: number\\): Promise\\<void\\>\n\n删除SIM卡消息，msgIndex无效时，删除报错。使用Pro"
+      },
+      {
+        "section_id": "section-18",
+        "title": "sms.updateSimMessage<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1094,
+        "line_end": 1145,
+        "summary": "updateSimMessage\\(options: UpdateSimMessageOptions, callback: AsyncCallback\\<void\\>\\): void\n\n更新SIM卡"
+      },
+      {
+        "section_id": "section-19",
+        "title": "sms.updateSimMessage<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1146,
+        "line_end": 1204,
+        "summary": "updateSimMessage\\(options: UpdateSimMessageOptions\\): Promise\\<void\\>\n\n更新SIM卡消息。使用Promise异步回调。\n\n**系"
+      },
+      {
+        "section_id": "section-20",
+        "title": "sms.getAllSimMessages<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1205,
+        "line_end": 1250,
+        "summary": "getAllSimMessages\\(slotId: number, callback: AsyncCallback\\<Array\\<SimShortMessage\\>\\>\\): void\n\n获取所"
+      },
+      {
+        "section_id": "section-21",
+        "title": "sms.getAllSimMessages<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1251,
+        "line_end": 1303,
+        "summary": "getAllSimMessages\\(slotId: number\\): Promise\\<Array\\<SimShortMessage\\>\\>\n\n获取所有SIM卡消息。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-22",
+        "title": "sms.setCBConfig<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1304,
+        "line_end": 1355,
+        "summary": "setCBConfig\\(options: CBConfigOptions, callback: AsyncCallback\\<void\\>\\): void\n\n设置小区广播配置。使用callback"
+      },
+      {
+        "section_id": "section-23",
+        "title": "sms.setCBConfig<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1356,
+        "line_end": 1414,
+        "summary": "setCBConfig\\(options: CBConfigOptions\\): Promise\\<void\\>\n\n设置小区广播配置。使用Promise异步回调。\n\n**系统接口：** 此接口为系统"
+      },
+      {
+        "section_id": "section-24",
+        "title": "sms.getSmsSegmentsInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1415,
+        "line_end": 1459,
+        "summary": "getSmsSegmentsInfo\\(slotId: number, message: string, force7bit: boolean, callback: AsyncCallback\\<S"
+      },
+      {
+        "section_id": "section-25",
+        "title": "sms.getSmsSegmentsInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1460,
+        "line_end": 1511,
+        "summary": "getSmsSegmentsInfo\\(slotId: number, message: string, force7bit: boolean\\): Promise\\<SmsSegmentsInfo"
+      },
+      {
+        "section_id": "section-26",
+        "title": "sms.isImsSmsSupported<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1512,
+        "line_end": 1554,
+        "summary": "isImsSmsSupported\\(slotId: number, callback: AsyncCallback\\<boolean\\>\\): void\n\n如果IMS已注册并且在IMS上支持SMS"
+      },
+      {
+        "section_id": "section-27",
+        "title": "sms.isImsSmsSupported<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1555,
+        "line_end": 1604,
+        "summary": "isImsSmsSupported\\(slotId: number\\): Promise\\<boolean\\>\n\n如果IMS已注册并且在IMS上支持SMS，则支持通过IMS发送SMS。使用Promi"
+      },
+      {
+        "section_id": "section-28",
+        "title": "sms.getImsShortMessageFormat<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1605,
+        "line_end": 1645,
+        "summary": "getImsShortMessageFormat\\(callback: AsyncCallback\\<string\\>\\): void\n\n获取IMS上支持的SMS格式。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-29",
+        "title": "sms.getImsShortMessageFormat<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1646,
+        "line_end": 1685,
+        "summary": "getImsShortMessageFormat\\(\\): Promise\\<string\\>\n\n获取IMS上支持的SMS格式。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-30",
+        "title": "sms.decodeMms<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1686,
+        "line_end": 1733,
+        "summary": "decodeMms\\(mmsFilePathName: string | Array\\<number\\>, callback: AsyncCallback\\<MmsInformation\\>\\):"
+      },
+      {
+        "section_id": "section-31",
+        "title": "sms.decodeMms<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1734,
+        "line_end": 1791,
+        "summary": "decodeMms\\(mmsFilePathName: string | Array\\<number\\>\\): Promise\\<MmsInformation\\>\n\n彩信解码。使用Promise异步"
+      },
+      {
+        "section_id": "section-32",
+        "title": "sms.encodeMms<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1792,
+        "line_end": 1842,
+        "summary": "encodeMms\\(mms: MmsInformation, callback: AsyncCallback\\<Array\\<number\\>\\>\\): void\n\n彩信编码。使用callback"
+      },
+      {
+        "section_id": "section-33",
+        "title": "sms.encodeMms<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1843,
+        "line_end": 1900,
+        "summary": "encodeMms\\(mms: MmsInformation\\): Promise\\<Array\\<number\\>\\>\n\n彩信编码。使用Promise异步回调。\n\n**系统接口：** 此接口为系统"
+      },
+      {
+        "section_id": "section-34",
+        "title": "MmsParams<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1901,
+        "line_end": 1915,
+        "summary": "发送彩信的参数。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|       名称       | 类型"
+      },
+      {
+        "section_id": "section-35",
+        "title": "MmsConfig<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1916,
+        "line_end": 1930,
+        "summary": "彩信配置文件。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|       名称       | 类型"
+      },
+      {
+        "section_id": "section-36",
+        "title": "MmsInformation<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1931,
+        "line_end": 1944,
+        "summary": "彩信信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|     名称    | 类型"
+      },
+      {
+        "section_id": "section-37",
+        "title": "MmsSendReq<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1945,
+        "line_end": 1970,
+        "summary": "彩信发送请求。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|       名称       | 类型"
+      },
+      {
+        "section_id": "section-38",
+        "title": "MmsSendConf<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1971,
+        "line_end": 1985,
+        "summary": "彩信发送配置。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|     名称      | 类型"
+      },
+      {
+        "section_id": "section-39",
+        "title": "MmsNotificationInd<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1986,
+        "line_end": 2006,
+        "summary": "彩信通知索引。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|      名称       | 类型"
+      },
+      {
+        "section_id": "section-40",
+        "title": "MmsAcknowledgeInd<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2007,
+        "line_end": 2020,
+        "summary": "彩信确认索引。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|      名称     | 类型"
+      },
+      {
+        "section_id": "section-41",
+        "title": "MmsRetrieveConf<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2021,
+        "line_end": 2045,
+        "summary": "彩信检索配置。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|      名称      | 类型"
+      },
+      {
+        "section_id": "section-42",
+        "title": "MmsReadOrigInd<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2046,
+        "line_end": 2062,
+        "summary": "彩信读取原始索引。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|    名称    | 类型"
+      },
+      {
+        "section_id": "section-43",
+        "title": "MmsReadRecInd<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2063,
+        "line_end": 2079,
+        "summary": "彩信读取记录索引。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|    名称    | 类型"
+      },
+      {
+        "section_id": "section-44",
+        "title": "MmsAttachment<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2080,
+        "line_end": 2100,
+        "summary": "彩信附件。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|          名称           | 类"
+      },
+      {
+        "section_id": "section-45",
+        "title": "MmsAddress<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2101,
+        "line_end": 2113,
+        "summary": "彩信地址。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|   名称  | 类型"
+      },
+      {
+        "section_id": "section-46",
+        "title": "MessageType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2114,
+        "line_end": 2133,
+        "summary": "消息类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|          名称             |"
+      },
+      {
+        "section_id": "section-47",
+        "title": "MmsPriorityType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2134,
+        "line_end": 2147,
+        "summary": "彩信优先级类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|    名称    | 值   | 说明"
+      },
+      {
+        "section_id": "section-48",
+        "title": "MmsVersionType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2148,
+        "line_end": 2162,
+        "summary": "彩信版本类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|      名称       | 值   | 说"
+      },
+      {
+        "section_id": "section-49",
+        "title": "MmsCharSets<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2163,
+        "line_end": 2187,
+        "summary": "彩信字符集。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|      名称       | 值     |"
+      },
+      {
+        "section_id": "section-50",
+        "title": "DispositionType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2188,
+        "line_end": 2201,
+        "summary": "处理类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|    名称    | 值   | 说明     |"
+      },
+      {
+        "section_id": "section-51",
+        "title": "ReportType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2202,
+        "line_end": 2214,
+        "summary": "报告类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|  名称   | 值   | 说明 |\n| ----"
+      },
+      {
+        "section_id": "section-52",
+        "title": "CBConfigOptions<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2215,
+        "line_end": 2230,
+        "summary": "小区广播配置选项。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|      名称      | 类型"
+      },
+      {
+        "section_id": "section-53",
+        "title": "SimMessageStatus<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2231,
+        "line_end": 2246,
+        "summary": "SIM卡消息状态。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|           名称"
+      },
+      {
+        "section_id": "section-54",
+        "title": "RanType<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2247,
+        "line_end": 2259,
+        "summary": "设备网络制式。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|   名称    | 值   | 说明 |\n|"
+      },
+      {
+        "section_id": "section-55",
+        "title": "SmsEncodingScheme<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2260,
+        "line_end": 2274,
+        "summary": "短信编码方案。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|         名称         | 值"
+      },
+      {
+        "section_id": "section-56",
+        "title": "SimMessageOptions<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2275,
+        "line_end": 2289,
+        "summary": "SIM卡消息选项。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|  名称  | 类型"
+      },
+      {
+        "section_id": "section-57",
+        "title": "UpdateSimMessageOptions<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2290,
+        "line_end": 2305,
+        "summary": "更新SIM卡消息选项。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|   名称    | 类型"
+      },
+      {
+        "section_id": "section-58",
+        "title": "SimShortMessage<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2306,
+        "line_end": 2319,
+        "summary": "SIM卡短消息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|       名称       | 类型"
+      },
+      {
+        "section_id": "section-59",
+        "title": "MmsDeliveryInd<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2320,
+        "line_end": 2335,
+        "summary": "彩信发送标识。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|    名称   | 类型"
+      },
+      {
+        "section_id": "section-60",
+        "title": "MmsRespInd<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2336,
+        "line_end": 2350,
+        "summary": "彩信回复标志。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|     名称      | 类型"
+      },
+      {
+        "section_id": "section-61",
+        "title": "SmsSegmentsInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2351,
+        "line_end": 2365,
+        "summary": "短信段信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.SmsMms\n\n|        名称          | 类型"
+      }
+    ]
+  }
+}

@@ -1,0 +1,708 @@
+{
+  "doc_id": "js-apis-geoLocationManager",
+  "title": "@ohos.geoLocationManager (位置服务)",
+  "path": "zh-cn/application-dev/reference/apis-location-kit/js-apis-geoLocationManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-location-kit/js-apis-geoLocationManager.md",
+  "metadata": {
+    "kit": "Location Kit",
+    "subsystem": "Location",
+    "owner": "@liu-binjun",
+    "designer": "@liu-binjun",
+    "tester": "@mhy123456789",
+    "adviser": "@RayShih"
+  },
+  "summary": "Location Kit Location 模块的 @ohos.geoLocationManager (位置服务)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.geoLocationManager (位置服务)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "申请权限",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "<!--RP1-->\n请参考[申请位置权限开发指导](../../device/location/location-permission-guidelines.md#开发步骤)。\n<!--RP1En"
+      },
+      {
+        "section_id": "section-2",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 30,
+        "summary": "```ts\nimport { geoLocationManager } from '@kit.LocationKit';\n```"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ReverseGeoCodeRequest",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 45,
+        "summary": "逆地理编码请求参数。\n\n**系统能力**：SystemCapability.Location.Location.Geocoder\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ----"
+      },
+      {
+        "section_id": "section-4",
+        "title": "GeoCodeRequest",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 63,
+        "summary": "地理编码请求参数。\n\n**系统能力**：SystemCapability.Location.Location.Geocoder\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -----"
+      },
+      {
+        "section_id": "section-5",
+        "title": "GeoAddress",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 91,
+        "summary": "地理编码地址信息。\n\n**系统能力**：SystemCapability.Location.Location.Geocoder\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -----"
+      },
+      {
+        "section_id": "section-6",
+        "title": "LocationRequest",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 108,
+        "summary": "位置信息请求参数。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location.Loca"
+      },
+      {
+        "section_id": "section-7",
+        "title": "CurrentLocationRequest",
+        "level": 2,
+        "line_start": 109,
+        "line_end": 124,
+        "summary": "当前位置信息请求参数。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location.Lo"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ContinuousLocationRequest<sup>12+</sup>",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 139,
+        "summary": "持续定位的请求参数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location.Loc"
+      },
+      {
+        "section_id": "section-9",
+        "title": "SingleLocationRequest<sup>12+</sup>",
+        "level": 2,
+        "line_start": 140,
+        "line_end": 154,
+        "summary": "单次定位的请求参数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location.Loc"
+      },
+      {
+        "section_id": "section-10",
+        "title": "SatelliteStatusInfo",
+        "level": 2,
+        "line_start": 155,
+        "line_end": 172,
+        "summary": "卫星状态信息。\n\n**系统能力**：SystemCapability.Location.Location.Gnss\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------- |"
+      },
+      {
+        "section_id": "section-11",
+        "title": "CachedGnssLocationsRequest",
+        "level": 2,
+        "line_start": 173,
+        "line_end": 184,
+        "summary": "请求订阅GNSS缓存位置上报功能接口的配置参数。\n\n**系统能力**：SystemCapability.Location.Location.Gnss\n\n| 名称 | 类型 | 只读 | 可选 | 说"
+      },
+      {
+        "section_id": "section-12",
+        "title": "Geofence",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 199,
+        "summary": "GNSS围栏的配置参数。目前只支持圆形围栏。\n\n**系统能力**：SystemCapability.Location.Location.Geofence\n\n| 名称 | 类型 | 只读 | 可选 |"
+      },
+      {
+        "section_id": "section-13",
+        "title": "GeofenceRequest",
+        "level": 2,
+        "line_start": 200,
+        "line_end": 211,
+        "summary": "请求添加GNSS围栏消息中携带的参数，包括定位场景和围栏信息。\n\n**系统能力**：SystemCapability.Location.Location.Geofence\n\n| 名称 | 类型 |"
+      },
+      {
+        "section_id": "section-14",
+        "title": "LocationCommand",
+        "level": 2,
+        "line_start": 212,
+        "line_end": 223,
+        "summary": "扩展命令参数。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------- |"
+      },
+      {
+        "section_id": "section-15",
+        "title": "Location",
+        "level": 2,
+        "line_start": 224,
+        "line_end": 250,
+        "summary": "位置信息。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------- | --"
+      },
+      {
+        "section_id": "section-16",
+        "title": "GeofenceTransition<sup>12+</sup>",
+        "level": 2,
+        "line_start": 251,
+        "line_end": 263,
+        "summary": "地理围栏事件信息；包含地理围栏ID和具体的地理围栏事件。\n\n**系统能力**：SystemCapability.Location.Location.Geofence\n\n| 名称 | 类型 | 只读"
+      },
+      {
+        "section_id": "section-17",
+        "title": "GnssGeofenceRequest<sup>12+</sup>",
+        "level": 2,
+        "line_start": 264,
+        "line_end": 279,
+        "summary": "GNSS地理围栏请求参数。\n\n**系统能力**：SystemCapability.Location.Location.Geofence\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -"
+      },
+      {
+        "section_id": "section-18",
+        "title": "CountryCode",
+        "level": 2,
+        "line_start": 280,
+        "line_end": 291,
+        "summary": "国家码信息，包含国家码字符串和国家码的来源信息。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n| 名称 | 类型 | 只读 | 可选 | 说"
+      },
+      {
+        "section_id": "section-19",
+        "title": "LocationRequestPriority",
+        "level": 2,
+        "line_start": 292,
+        "line_end": 307,
+        "summary": "位置请求中位置信息优先级类型。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Locatio"
+      },
+      {
+        "section_id": "section-20",
+        "title": "LocationRequestScenario",
+        "level": 2,
+        "line_start": 308,
+        "line_end": 329,
+        "summary": "位置请求中定位场景类型。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location.L"
+      },
+      {
+        "section_id": "section-21",
+        "title": "CountryCodeType",
+        "level": 2,
+        "line_start": 330,
+        "line_end": 343,
+        "summary": "国家码来源类型。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n| 名称 | 值 | 说明 |\n| -------- | -------- |"
+      },
+      {
+        "section_id": "section-22",
+        "title": "CoordinateSystemType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 344,
+        "line_end": 355,
+        "summary": "坐标系类型。\n\n**系统能力**：SystemCapability.Location.Location.Geofence\n\n| 名称 | 值 | 说明 |\n| -------- | --------"
+      },
+      {
+        "section_id": "section-23",
+        "title": "GeofenceTransitionEvent<sup>12+</sup>",
+        "level": 2,
+        "line_start": 356,
+        "line_end": 368,
+        "summary": "地理围栏事件。\n\n**系统能力**：SystemCapability.Location.Location.Geofence\n\n| 名称 | 值 | 说明 |\n| -------- | -------"
+      },
+      {
+        "section_id": "section-24",
+        "title": "SatelliteConstellationCategory<sup>12+</sup>",
+        "level": 2,
+        "line_start": 369,
+        "line_end": 386,
+        "summary": "卫星星座类型。\n\n**系统能力**：SystemCapability.Location.Location.Gnss\n\n| 名称 | 值 | 说明 |\n| -------- | -------- |"
+      },
+      {
+        "section_id": "section-25",
+        "title": "SatelliteAdditionalInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 387,
+        "line_end": 401,
+        "summary": "卫星附加信息类型。\n\n**系统能力**：SystemCapability.Location.Location.Gnss\n\n| 名称 | 值 | 说明 |\n| -------- | --------"
+      },
+      {
+        "section_id": "section-26",
+        "title": "PowerConsumptionScenario<sup>12+</sup>",
+        "level": 2,
+        "line_start": 402,
+        "line_end": 416,
+        "summary": "位置请求中的功耗场景类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location."
+      },
+      {
+        "section_id": "section-27",
+        "title": "UserActivityScenario<sup>12+</sup>",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 436,
+        "summary": "位置请求中的用户活动场景类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Locatio"
+      },
+      {
+        "section_id": "section-28",
+        "title": "LocatingPriority<sup>12+</sup>",
+        "level": 2,
+        "line_start": 437,
+        "line_end": 450,
+        "summary": "单次位置请求中的优先级类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location"
+      },
+      {
+        "section_id": "section-29",
+        "title": "LocationError<sup>12+</sup>",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 467,
+        "summary": "持续定位过程中的错误信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location."
+      },
+      {
+        "section_id": "section-30",
+        "title": "LocationSourceType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 468,
+        "line_end": 483,
+        "summary": "定位结果的来源。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location.Locat"
+      },
+      {
+        "section_id": "section-31",
+        "title": "BluetoothScanResult<sup>16+</sup>",
+        "level": 2,
+        "line_start": 484,
+        "line_end": 498,
+        "summary": "蓝牙扫描结果。\n\n**系统能力**：SystemCapability.Location.Location.Core\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------- |"
+      },
+      {
+        "section_id": "section-32",
+        "title": "Poi<sup>19+</sup>",
+        "level": 2,
+        "line_start": 499,
+        "line_end": 519,
+        "summary": "POI(Point of Interest, 兴趣点)信息。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCap"
+      },
+      {
+        "section_id": "section-33",
+        "title": "PoiInfo<sup>19+</sup>",
+        "level": 2,
+        "line_start": 520,
+        "line_end": 533,
+        "summary": "POI信息结构体。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location.Loca"
+      },
+      {
+        "section_id": "section-34",
+        "title": "SportsType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 534,
+        "line_end": 548,
+        "summary": "运动类型。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location.Location"
+      },
+      {
+        "section_id": "section-35",
+        "title": "BeaconFenceInfoType<sup>20+</sup>",
+        "level": 2,
+        "line_start": 549,
+        "line_end": 561,
+        "summary": "beacon围栏信息类型。当前仅支持设备制造商数据过滤。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapab"
+      },
+      {
+        "section_id": "section-36",
+        "title": "BeaconManufactureData<sup>20+</sup>",
+        "level": 2,
+        "line_start": 562,
+        "line_end": 576,
+        "summary": "beacon设备制造商数据。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location"
+      },
+      {
+        "section_id": "section-37",
+        "title": "BeaconFence<sup>20+</sup>",
+        "level": 2,
+        "line_start": 577,
+        "line_end": 590,
+        "summary": "beacon围栏的参数配置。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Location"
+      },
+      {
+        "section_id": "section-38",
+        "title": "BeaconFenceRequest<sup>20+</sup>",
+        "level": 2,
+        "line_start": 591,
+        "line_end": 605,
+        "summary": "beacon围栏请求参数。transitionCallback与fenceExtensionAbilityName任选其一，都不填则参数无效。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-39",
+        "title": "geoLocationManager.on('locationChange')",
+        "level": 2,
+        "line_start": 606,
+        "line_end": 675,
+        "summary": "on(type: 'locationChange', request: LocationRequest | ContinuousLocationRequest, callback: Callback"
+      },
+      {
+        "section_id": "section-40",
+        "title": "geoLocationManager.off('locationChange')",
+        "level": 2,
+        "line_start": 676,
+        "line_end": 729,
+        "summary": "off(type: 'locationChange', callback?: Callback&lt;Location&gt;): void\n\n关闭位置变化订阅，并删除对应的定位请求。\n\n**原子化"
+      },
+      {
+        "section_id": "section-41",
+        "title": "geoLocationManager.on('locationError')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 730,
+        "line_end": 791,
+        "summary": "on(type: 'locationError', callback: Callback&lt;LocationError&gt;): void\n\n订阅持续定位过程中的错误码。使用callback异"
+      },
+      {
+        "section_id": "section-42",
+        "title": "geoLocationManager.off('locationError')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 792,
+        "line_end": 838,
+        "summary": "off(type: 'locationError', callback?: Callback&lt;LocationError&gt;): void\n\n取消订阅持续定位过程中的错误码。\n\n**原子化"
+      },
+      {
+        "section_id": "section-43",
+        "title": "geoLocationManager.on('locationEnabledChange')",
+        "level": 2,
+        "line_start": 839,
+        "line_end": 879,
+        "summary": "on(type: 'locationEnabledChange', callback: Callback&lt;boolean&gt;): void\n\n订阅位置服务状态变化。使用callback异步"
+      },
+      {
+        "section_id": "section-44",
+        "title": "geoLocationManager.off('locationEnabledChange')",
+        "level": 2,
+        "line_start": 880,
+        "line_end": 921,
+        "summary": "off(type: 'locationEnabledChange', callback?: Callback&lt;boolean&gt;): void\n\n取消订阅位置服务状态变化。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-45",
+        "title": "geoLocationManager.on('cachedGnssLocationsChange')",
+        "level": 2,
+        "line_start": 922,
+        "line_end": 971,
+        "summary": "on(type: 'cachedGnssLocationsChange', request: CachedGnssLocationsRequest, callback: Callback&lt;Ar"
+      },
+      {
+        "section_id": "section-46",
+        "title": "geoLocationManager.off('cachedGnssLocationsChange')",
+        "level": 2,
+        "line_start": 972,
+        "line_end": 1021,
+        "summary": "off(type: 'cachedGnssLocationsChange', callback?: Callback&lt;Array&lt;Location&gt;&gt;): void\n\n取消订"
+      },
+      {
+        "section_id": "section-47",
+        "title": "geoLocationManager.on('satelliteStatusChange')",
+        "level": 2,
+        "line_start": 1022,
+        "line_end": 1096,
+        "summary": "on(type: 'satelliteStatusChange', callback: Callback&lt;SatelliteStatusInfo&gt;): void\n\n订阅GNSS卫星状态信"
+      },
+      {
+        "section_id": "section-48",
+        "title": "geoLocationManager.off('satelliteStatusChange')",
+        "level": 2,
+        "line_start": 1097,
+        "line_end": 1143,
+        "summary": "off(type: 'satelliteStatusChange', callback?: Callback&lt;SatelliteStatusInfo&gt;): void\n\n取消订阅GNSS卫"
+      },
+      {
+        "section_id": "section-49",
+        "title": "geoLocationManager.on('nmeaMessage')",
+        "level": 2,
+        "line_start": 1144,
+        "line_end": 1190,
+        "summary": "on(type: 'nmeaMessage', callback: Callback&lt;string&gt;): void\n\n订阅GNSS NMEA信息上报事件。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-50",
+        "title": "geoLocationManager.off('nmeaMessage')",
+        "level": 2,
+        "line_start": 1191,
+        "line_end": 1238,
+        "summary": "off(type: 'nmeaMessage', callback?: Callback&lt;string&gt;): void\n\n取消订阅GNSS NMEA信息上报事件。\n\n**需要权限**：o"
+      },
+      {
+        "section_id": "section-51",
+        "title": "geoLocationManager.on('gnssFenceStatusChange')",
+        "level": 2,
+        "line_start": 1239,
+        "line_end": 1303,
+        "summary": "on(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: WantAgent): void\n\n添加一个围栏，并订阅地理围栏事"
+      },
+      {
+        "section_id": "section-52",
+        "title": "geoLocationManager.off('gnssFenceStatusChange')",
+        "level": 2,
+        "line_start": 1304,
+        "line_end": 1369,
+        "summary": "off(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: WantAgent): void\n\n删除一个围栏，并取消订阅该围"
+      },
+      {
+        "section_id": "section-53",
+        "title": "geoLocationManager.on('countryCodeChange')",
+        "level": 2,
+        "line_start": 1370,
+        "line_end": 1413,
+        "summary": "on(type: 'countryCodeChange', callback: Callback&lt;CountryCode&gt;): void\n\n订阅国家码信息变化事件。使用callback异"
+      },
+      {
+        "section_id": "section-54",
+        "title": "geoLocationManager.off('countryCodeChange')",
+        "level": 2,
+        "line_start": 1414,
+        "line_end": 1457,
+        "summary": "off(type: 'countryCodeChange', callback?: Callback&lt;CountryCode&gt;): void\n\n取消订阅国家码变化事件。\n\n**系统能力*"
+      },
+      {
+        "section_id": "section-55",
+        "title": "geoLocationManager.getCurrentLocation",
+        "level": 2,
+        "line_start": 1458,
+        "line_end": 1536,
+        "summary": "getCurrentLocation(request: CurrentLocationRequest | SingleLocationRequest, callback: AsyncCallback"
+      },
+      {
+        "section_id": "section-56",
+        "title": "geoLocationManager.getCurrentLocation",
+        "level": 2,
+        "line_start": 1537,
+        "line_end": 1589,
+        "summary": "getCurrentLocation(callback: AsyncCallback&lt;Location&gt;): void\n\n获取当前位置，使用callback异步回调。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-57",
+        "title": "geoLocationManager.getCurrentLocation",
+        "level": 2,
+        "line_start": 1590,
+        "line_end": 1667,
+        "summary": "getCurrentLocation(request?: CurrentLocationRequest | SingleLocationRequest): Promise&lt;Location&g"
+      },
+      {
+        "section_id": "section-58",
+        "title": "geoLocationManager.getLastLocation",
+        "level": 2,
+        "line_start": 1668,
+        "line_end": 1710,
+        "summary": "getLastLocation(): Location\n\n获取上一次位置。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**需要权限**：oh"
+      },
+      {
+        "section_id": "section-59",
+        "title": "geoLocationManager.isLocationEnabled",
+        "level": 2,
+        "line_start": 1711,
+        "line_end": 1748,
+        "summary": "isLocationEnabled(): boolean\n\n判断位置服务是否已经开启。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能"
+      },
+      {
+        "section_id": "section-60",
+        "title": "geoLocationManager.getAddressesFromLocation",
+        "level": 2,
+        "line_start": 1749,
+        "line_end": 1799,
+        "summary": "getAddressesFromLocation(request: ReverseGeoCodeRequest, callback: AsyncCallback&lt;Array&lt;GeoAdd"
+      },
+      {
+        "section_id": "section-61",
+        "title": "geoLocationManager.getAddressesFromLocation",
+        "level": 2,
+        "line_start": 1800,
+        "line_end": 1854,
+        "summary": "getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise&lt;Array&lt;GeoAddress&gt;&gt;\n\n调"
+      },
+      {
+        "section_id": "section-62",
+        "title": "geoLocationManager.getAddressesFromLocationName",
+        "level": 2,
+        "line_start": 1855,
+        "line_end": 1901,
+        "summary": "getAddressesFromLocationName(request: GeoCodeRequest, callback: AsyncCallback&lt;Array&lt;GeoAddres"
+      },
+      {
+        "section_id": "section-63",
+        "title": "geoLocationManager.getAddressesFromLocationName",
+        "level": 2,
+        "line_start": 1902,
+        "line_end": 1951,
+        "summary": "getAddressesFromLocationName(request: GeoCodeRequest): Promise&lt;Array&lt;GeoAddress&gt;&gt;\n\n调用地理"
+      },
+      {
+        "section_id": "section-64",
+        "title": "geoLocationManager.isGeocoderAvailable",
+        "level": 2,
+        "line_start": 1952,
+        "line_end": 1987,
+        "summary": "isGeocoderAvailable(): boolean\n\n判断地理编码与逆地理编码服务状态。\n\n**系统能力**：SystemCapability.Location.Location.Geoc"
+      },
+      {
+        "section_id": "section-65",
+        "title": "geoLocationManager.getCachedGnssLocationsSize",
+        "level": 2,
+        "line_start": 1988,
+        "line_end": 2035,
+        "summary": "getCachedGnssLocationsSize(callback: AsyncCallback&lt;number&gt;): void\n\n获取GNSS芯片缓存位置的个数。该接口功能由GNSS"
+      },
+      {
+        "section_id": "section-66",
+        "title": "geoLocationManager.getCachedGnssLocationsSize",
+        "level": 2,
+        "line_start": 2036,
+        "line_end": 2081,
+        "summary": "getCachedGnssLocationsSize(): Promise&lt;number&gt;\n\n获取GNSS芯片缓存位置的个数。该接口功能由GNSS定位芯片提供（仅部分型号支持），如果设备"
+      },
+      {
+        "section_id": "section-67",
+        "title": "geoLocationManager.flushCachedGnssLocations",
+        "level": 2,
+        "line_start": 2082,
+        "line_end": 2127,
+        "summary": "flushCachedGnssLocations(callback: AsyncCallback&lt;void&gt;): void\n\n读取并清空GNSS芯片所有缓存位置。该接口功能由GNSS定位"
+      },
+      {
+        "section_id": "section-68",
+        "title": "geoLocationManager.flushCachedGnssLocations",
+        "level": 2,
+        "line_start": 2128,
+        "line_end": 2174,
+        "summary": "flushCachedGnssLocations(): Promise&lt;void&gt;\n\n读取并清空GNSS芯片所有缓存位置。该接口功能由GNSS定位芯片提供（仅部分型号支持），如果设备无此"
+      },
+      {
+        "section_id": "section-69",
+        "title": "geoLocationManager.sendCommand",
+        "level": 2,
+        "line_start": 2175,
+        "line_end": 2217,
+        "summary": "sendCommand(command: LocationCommand, callback: AsyncCallback&lt;void&gt;): void\n\n给位置服务子系统的各个部件发送扩展"
+      },
+      {
+        "section_id": "section-70",
+        "title": "geoLocationManager.sendCommand",
+        "level": 2,
+        "line_start": 2218,
+        "line_end": 2267,
+        "summary": "sendCommand(command: LocationCommand): Promise&lt;void&gt;\n\n给位置服务子系统的各个部件发送扩展命令。使用Promise异步回调。\n\n**系"
+      },
+      {
+        "section_id": "section-71",
+        "title": "geoLocationManager.getCountryCode",
+        "level": 2,
+        "line_start": 2268,
+        "line_end": 2312,
+        "summary": "getCountryCode(callback: AsyncCallback&lt;CountryCode&gt;): void\n\n查询当前的国家码。使用callback异步回调。\n\n**系统能力*"
+      },
+      {
+        "section_id": "section-72",
+        "title": "geoLocationManager.getCountryCode",
+        "level": 2,
+        "line_start": 2313,
+        "line_end": 2355,
+        "summary": "getCountryCode(): Promise&lt;CountryCode&gt;\n\n查询当前的国家码。使用Promise异步回调。\n\n**系统能力**：SystemCapability.Lo"
+      },
+      {
+        "section_id": "section-73",
+        "title": "geoLocationManager.addGnssGeofence<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2356,
+        "line_end": 2474,
+        "summary": "addGnssGeofence(fenceRequest: GnssGeofenceRequest): Promise&lt;number&gt;\n\n添加一个GNSS地理围栏，并订阅地理围栏事件。使"
+      },
+      {
+        "section_id": "section-74",
+        "title": "geoLocationManager.removeGnssGeofence<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2475,
+        "line_end": 2529,
+        "summary": "removeGnssGeofence(geofenceId: number): Promise&lt;void&gt;\n\n删除一个GNSS地理围栏，并取消订阅该地理围栏事件。使用Promise异步回"
+      },
+      {
+        "section_id": "section-75",
+        "title": "geoLocationManager.getGeofenceSupportedCoordTypes<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2530,
+        "line_end": 2566,
+        "summary": "getGeofenceSupportedCoordTypes(): Array&lt;CoordinateSystemType&gt;\n\n获取地理围栏功能支持的坐标系列表。\n\n**系统能力**：Sy"
+      },
+      {
+        "section_id": "section-76",
+        "title": "geoLocationManager.getCurrentWifiBssidForLocating<sup>14+</sup>",
+        "level": 2,
+        "line_start": 2567,
+        "line_end": 2608,
+        "summary": "getCurrentWifiBssidForLocating(): string\n\n获取连接的Wi-Fi AP（Access Point）的Bssid（Basic Service Set Ident"
+      },
+      {
+        "section_id": "section-77",
+        "title": "geoLocationManager.on('bluetoothScanResultChange')<sup>16+</sup>",
+        "level": 2,
+        "line_start": 2609,
+        "line_end": 2661,
+        "summary": "on(type: 'bluetoothScanResultChange', callback: Callback&lt;BluetoothScanResult&gt;): void\n\n订阅蓝牙扫描信"
+      },
+      {
+        "section_id": "section-78",
+        "title": "geoLocationManager.off('bluetoothScanResultChange')<sup>16+</sup>",
+        "level": 2,
+        "line_start": 2662,
+        "line_end": 2706,
+        "summary": "off(type: 'bluetoothScanResultChange', callback?: Callback&lt;BluetoothScanResult&gt;): void\n\n取消订阅蓝"
+      },
+      {
+        "section_id": "section-79",
+        "title": "geoLocationManager.isPoiServiceSupported<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2707,
+        "line_end": 2734,
+        "summary": "isPoiServiceSupported(): boolean\n\n查询系统（即软件）是否支持POI服务。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-80",
+        "title": "geoLocationManager.getPoiInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2735,
+        "line_end": 2782,
+        "summary": "getPoiInfo(): Promise&lt;PoiInfo&gt;\n\n获取当前位置附近的POI信息。使用Promise异步回调。\n\n**原子化服务API：** 从API version 20开"
+      },
+      {
+        "section_id": "section-81",
+        "title": "geoLocationManager.getDistanceBetweenLocations<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2783,
+        "line_end": 2843,
+        "summary": "getDistanceBetweenLocations(location1: Location, location2: Location): number\n\n获取两个位置之间的直线距离。\n\n**原子"
+      },
+      {
+        "section_id": "section-82",
+        "title": "geoLocationManager.addBeaconFence<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2844,
+        "line_end": 2935,
+        "summary": "addBeaconFence(fenceRequest: BeaconFenceRequest): Promise&lt;number&gt;\n\n添加一个beacon围栏，并订阅地理围栏事件。使用P"
+      },
+      {
+        "section_id": "section-83",
+        "title": "geoLocationManager.removeBeaconFence<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2936,
+        "line_end": 3004,
+        "summary": "removeBeaconFence(beaconFence?: BeaconFence): Promise&lt;void&gt;\n\n删除beacon围栏，并取消订阅地理围栏事件。使用Promise"
+      },
+      {
+        "section_id": "section-84",
+        "title": "geoLocationManager.isBeaconFenceSupported<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3005,
+        "line_end": 3032,
+        "summary": "isBeaconFenceSupported(): boolean;\n\n判断当前设备是否支持beacon围栏。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服"
+      },
+      {
+        "section_id": "section-85",
+        "title": "geoLocationManager.isWlanBssidMatched<sup>21+</sup>",
+        "level": 2,
+        "line_start": 3033,
+        "line_end": 3086,
+        "summary": "isWlanBssidMatched(wlanBssidArray: Array&lt;string&gt;, rssiThreshold: number, needStartScan: boole"
+      },
+      {
+        "section_id": "section-86",
+        "title": "geoLocationManager.getActiveGeoFences<sup>23+</sup>",
+        "level": 2,
+        "line_start": 3087,
+        "line_end": 3132,
+        "summary": "getActiveGeoFences(): Promise&lt;Map&lt;int, Geofence&gt;&gt;\n\n查询当前有效的围栏信息。使用Promise异步回调。\n\n**需要权限**"
+      }
+    ]
+  }
+}

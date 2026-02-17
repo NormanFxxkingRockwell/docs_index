@@ -1,0 +1,76 @@
+{
+  "doc_id": "errorcode-certManagerDialog",
+  "title": "证书管理对话框错误码",
+  "path": "zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md",
+  "metadata": {
+    "kit": "Device Certificate Kit",
+    "subsystem": "Security",
+    "owner": "@chaceli",
+    "designer": "@chande",
+    "tester": "@zhangzhi1995",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Device Certificate Kit Security 模块的 证书管理对话框错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "证书管理对话框错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "29700001 内部错误",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 27,
+        "summary": "**错误信息**\n\nInternal error. Possible causes: 1. IPC communication failed; 2. Memory operation error;"
+      },
+      {
+        "section_id": "section-2",
+        "title": "29700002 操作取消",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 41,
+        "summary": "**错误信息**\n\nThe user cancels the installation operation.\n\n**可能原因**\n\n调用API时用户取消操作。\n\n**处理步骤**\n\n无需处理。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "29700003 证书安装失败错误",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 55,
+        "summary": "**错误信息**\n\nThe user install certificate failed in the certificate manager dialog, such as the certif"
+      },
+      {
+        "section_id": "section-4",
+        "title": "29700004 设备类型不支持",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 69,
+        "summary": "**错误信息**\n\nThe API is not supported on this device.\n\n**可能原因**\n\n调用API时当前设备非PC设备。\n\n**处理步骤**\n\n更换PC设备调用此"
+      },
+      {
+        "section_id": "section-5",
+        "title": "29700005 操作不符合设备安全策略",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 83,
+        "summary": "**错误信息**\n\nThe operation does not comply with the device security policy, such as the device does no"
+      },
+      {
+        "section_id": "section-6",
+        "title": "29700006 入参校验失败",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 97,
+        "summary": "**错误信息**\n\nThe input parameters validation failed.\n\n**可能原因**\n\n参数格式异常或参数范围无效。\n\n**处理步骤**\n\n检查接口入参格式或范围。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "29700007 无可用授权证书",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 111,
+        "summary": "**错误信息**\n\nNo Available certificate for authorization\n\n**可能原因**\n\n没有可用的授权证书。\n\n**处理步骤**\n\n安装有效证书凭据。"
+      }
+    ]
+  }
+}

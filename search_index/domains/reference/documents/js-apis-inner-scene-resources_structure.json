@@ -1,0 +1,236 @@
+{
+  "doc_id": "js-apis-inner-scene-resources",
+  "title": "SceneResource",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics3d/js-apis-inner-scene-resources.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics3d/js-apis-inner-scene-resources.md",
+  "metadata": {
+    "kit": "ArkGraphics 3D",
+    "subsystem": "Graphics",
+    "owner": "@zzhao0",
+    "designer": "@zdustc",
+    "tester": "@zhangyue283",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 3D Graphics 模块的 SceneResource，提供相关接口和功能说明。",
+  "structure": {
+    "title": "SceneResource",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 19,
+        "summary": "```ts\nimport { SceneResourceType, SceneResource, Shader, MaterialType, CullMode, Blend, RenderSort,"
+      },
+      {
+        "section_id": "section-2",
+        "title": "SceneResourceType",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 37,
+        "summary": "场景资源类型枚举，对场景中的资源进行分类。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 值 | 说明 |\n| ---- | ---- |"
+      },
+      {
+        "section_id": "section-3",
+        "title": "SceneResource",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 80,
+        "summary": "用于表示场景中的资源。\n\n### 属性\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ----"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Shader",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 144,
+        "summary": "着色器，继承自[SceneResource](#sceneresource-1)。\n\n### 属性\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称"
+      },
+      {
+        "section_id": "section-5",
+        "title": "MaterialType",
+        "level": 2,
+        "line_start": 145,
+        "line_end": 156,
+        "summary": "场景中物体材质类型枚举，定义材质的渲染方式。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 值 | 说明 |\n| ---- | ---- |"
+      },
+      {
+        "section_id": "section-6",
+        "title": "CullMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 167,
+        "summary": "用于设置基于物理渲染（PBR）材质的剔除模式枚举。通过控制剔除物体的正面或背面几何面片，提升渲染性能和视觉效果。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Blend<sup>20+</sup>",
+        "level": 2,
+        "line_start": 168,
+        "line_end": 176,
+        "summary": "用于控制材质的透明效果。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ---- | ----"
+      },
+      {
+        "section_id": "section-8",
+        "title": "RenderSort<sup>20+</sup>",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 186,
+        "summary": "定义材质物体的渲染顺序，控制不同物体在渲染管线中的绘制先后。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 | 只读 | 可选 | 说"
+      },
+      {
+        "section_id": "section-9",
+        "title": "PolygonMode<sup>23+</sup>",
+        "level": 2,
+        "line_start": 187,
+        "line_end": 197,
+        "summary": "控制多边形绘制模式的枚举。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 值 | 说明 |\n| ---- | ---- | ---- |\n|"
+      },
+      {
+        "section_id": "section-10",
+        "title": "Material",
+        "level": 2,
+        "line_start": 198,
+        "line_end": 211,
+        "summary": "材质类型，继承自[SceneResource](#sceneresource-1)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 |"
+      },
+      {
+        "section_id": "section-11",
+        "title": "MaterialProperty<sup>20+</sup>",
+        "level": 2,
+        "line_start": 212,
+        "line_end": 222,
+        "summary": "材质属性接口，用于定义材质所使用的纹理、属性因子及纹理采样器信息。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 | 只读 | 可选"
+      },
+      {
+        "section_id": "section-12",
+        "title": "MetallicRoughnessMaterial<sup>20+</sup>",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 240,
+        "summary": "用于实现真实感外观的材质资源。采用基于物理渲染（PBR）的金属-粗糙度模型，通过调节金属度和粗糙度参数，可模拟金属、塑料等不同材质的表面光照与反射效果，继承自[Material](#material)"
+      },
+      {
+        "section_id": "section-13",
+        "title": "ShaderMaterial",
+        "level": 2,
+        "line_start": 241,
+        "line_end": 249,
+        "summary": "着色器材质，继承自[Material](#material)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 | 只读 | 可选 |"
+      },
+      {
+        "section_id": "section-14",
+        "title": "UnlitMaterial<sup>23+</sup>",
+        "level": 2,
+        "line_start": 250,
+        "line_end": 259,
+        "summary": "不受光照影响的材质，其着色值只与设置的基础颜色有关，与光照条件无关，继承自[Material](#material)。\n\n**系统能力：** SystemCapability.ArkUi.Graph"
+      },
+      {
+        "section_id": "section-15",
+        "title": "OcclusionMaterial<sup>23+</sup>",
+        "level": 2,
+        "line_start": 260,
+        "line_end": 265,
+        "summary": "遮挡材质，能够遮挡场景中的其他物体但不会遮挡环境，继承自[Material](#material)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D"
+      },
+      {
+        "section_id": "section-16",
+        "title": "SamplerFilter<sup>20+</sup>",
+        "level": 2,
+        "line_start": 266,
+        "line_end": 276,
+        "summary": "采样器过滤模式枚举，定义纹理采样时的插值方法，用于控制纹理在缩放或变形时如何计算最终像素的颜色值。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称"
+      },
+      {
+        "section_id": "section-17",
+        "title": "SamplerAddressMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 277,
+        "line_end": 287,
+        "summary": "采样器寻址模式枚举，用于控制纹理坐标超出[0, 1]范围时的处理方式。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 值 | 说明 |\n|"
+      },
+      {
+        "section_id": "section-18",
+        "title": "Sampler<sup>20+</sup>",
+        "level": 2,
+        "line_start": 288,
+        "line_end": 300,
+        "summary": "采样器接口，用于定义纹理贴图采样时的过滤方式。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -"
+      },
+      {
+        "section_id": "section-19",
+        "title": "SubMesh",
+        "level": 2,
+        "line_start": 301,
+        "line_end": 311,
+        "summary": "子网格类型。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ---- | ---- | ----"
+      },
+      {
+        "section_id": "section-20",
+        "title": "Morpher<sup>20+</sup>",
+        "level": 2,
+        "line_start": 312,
+        "line_end": 320,
+        "summary": "用于控制3D模型的形变，通过调整不同形变目标的权重，实现模型的动态变形效果。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 | 只读"
+      },
+      {
+        "section_id": "section-21",
+        "title": "Mesh",
+        "level": 2,
+        "line_start": 321,
+        "line_end": 331,
+        "summary": "网格类型，继承自[SceneResource](#sceneresource-1)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 |"
+      },
+      {
+        "section_id": "section-22",
+        "title": "MeshResource<sup>18+</sup>",
+        "level": 2,
+        "line_start": 332,
+        "line_end": 336,
+        "summary": "网格资源，继承自[SceneResource](#sceneresource-1)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D"
+      },
+      {
+        "section_id": "section-23",
+        "title": "Animation",
+        "level": 2,
+        "line_start": 337,
+        "line_end": 563,
+        "summary": "动画类型，继承自[SceneResource](#sceneresource-1)。\n\n### 属性\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名"
+      },
+      {
+        "section_id": "section-24",
+        "title": "EnvironmentBackgroundType",
+        "level": 2,
+        "line_start": 564,
+        "line_end": 575,
+        "summary": "环境背景类型枚举，用于定义场景的背景呈现方式。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 值 | 说明 |\n| ---- | ----"
+      },
+      {
+        "section_id": "section-25",
+        "title": "Environment",
+        "level": 2,
+        "line_start": 576,
+        "line_end": 591,
+        "summary": "环境类型，继承自[SceneResource](#sceneresource-1)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 |"
+      },
+      {
+        "section_id": "section-26",
+        "title": "Image",
+        "level": 2,
+        "line_start": 592,
+        "line_end": 601,
+        "summary": "图片类型，继承自[SceneResource](#sceneresource-1)。\n\n**系统能力：** SystemCapability.ArkUi.Graphics3D\n\n| 名称 | 类型 |"
+      },
+      {
+        "section_id": "section-27",
+        "title": "Effect<sup>21+</sup>",
+        "level": 2,
+        "line_start": 602,
+        "line_end": 690,
+        "summary": "特效类型，继承自[SceneResource](#sceneresource-1)。由[createEffect](js-apis-inner-scene.md#createeffect21)接口获"
+      }
+    ]
+  }
+}

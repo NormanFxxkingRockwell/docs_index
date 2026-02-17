@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-application-accessibilityExtensionAbility-sys",
+  "title": "@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-accessibility-kit/js-apis-application-accessibilityExtensionAbility-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-accessibility-kit/js-apis-application-accessibilityExtensionAbility-sys.md",
+  "metadata": {
+    "kit": "Accessibility Kit",
+    "subsystem": "BarrierFree",
+    "owner": "@qiiiiiiian",
+    "designer": "@z7o",
+    "tester": "@A_qqq",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Accessibility Kit BarrierFree 模块的 @ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 21,
+        "summary": "```ts\nimport { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "AccessibilityEventInfo",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 39,
+        "summary": "无障碍事件信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.BarrierFree.Accessibility.Core\n\n### 属性\n\n| 名"
+      },
+      {
+        "section_id": "section-3",
+        "title": "AccessibilityExtensionAbility.onAccessibilityConnect",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 74,
+        "summary": "onAccessibilityConnect(): void\n\n连接无障碍服务成功后的回调函数。\n\n用户启用AccessibilityExtensionAbility时，系统服务完成连接后回调该接口"
+      },
+      {
+        "section_id": "section-4",
+        "title": "AccessibilityExtensionAbility.onAccessibilityDisconnect",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 109,
+        "summary": "onAccessibilityDisconnect(): void\n\n断开无障碍服务成功后的回调函数。\n\n用户停用AccessibilityExtensionAbility时，系统服务完成断开连接后"
+      },
+      {
+        "section_id": "section-5",
+        "title": "AccessibilityExtensionAbility.onAccessibilityEventInfo",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 151,
+        "summary": "onAccessibilityEventInfo(event: AccessibilityEventInfo): void;\n\n在应用和事件发生时回调该接口，根据事件信息处理业务逻辑。通常需要重写。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "AccessibilityExtensionAbility.onAccessibilityKeyEvent",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 200,
+        "summary": "onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean;\n\n在物理按键按下时回调该方法，在该方法中根据业务判断是否消费事件。\n\n**系统接口**：此"
+      }
+    ]
+  }
+}

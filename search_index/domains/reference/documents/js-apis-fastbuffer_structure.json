@@ -1,0 +1,148 @@
+{
+  "doc_id": "js-apis-fastbuffer",
+  "title": "@ohos.fastbuffer (FastBuffer)",
+  "path": "zh-cn/application-dev/reference/apis-arkts/js-apis-fastbuffer.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/js-apis-fastbuffer.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@xliu-huanwei; @shilei123; @huanghello",
+    "designer": "@yuanyao14",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 @ohos.fastbuffer (FastBuffer)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.fastbuffer (FastBuffer)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { fastbuffer } from '@kit.ArkTS';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "BufferEncoding",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 51,
+        "summary": "type BufferEncoding = 'ascii' | 'utf8' | 'utf-8' | 'utf16le' | 'ucs2' | 'ucs-2' | 'base64' | 'base6"
+      },
+      {
+        "section_id": "section-3",
+        "title": "fastbuffer.alloc",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 89,
+        "summary": "alloc(size: number, fill?: string | FastBuffer | number, encoding?: BufferEncoding): FastBuffer\n\n创建"
+      },
+      {
+        "section_id": "section-4",
+        "title": "fastbuffer.allocUninitializedFromPool",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 121,
+        "summary": "allocUninitializedFromPool(size: number): FastBuffer\n\n从缓冲池中创建指定大小未初始化的FastBuffer对象，需要使用[fill](#fill"
+      },
+      {
+        "section_id": "section-5",
+        "title": "fastbuffer.allocUninitialized",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 153,
+        "summary": "allocUninitialized(size: number): FastBuffer\n\n创建指定大小未初始化的FastBuffer对象，需要使用[fill](#fill)函数来初始化FastBu"
+      },
+      {
+        "section_id": "section-6",
+        "title": "fastbuffer.byteLength",
+        "level": 2,
+        "line_start": 154,
+        "line_end": 190,
+        "summary": "byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer, en"
+      },
+      {
+        "section_id": "section-7",
+        "title": "fastbuffer.compare",
+        "level": 2,
+        "line_start": 191,
+        "line_end": 234,
+        "summary": "compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): -1 | 0 | 1\n\n返回两个FastBuffer对象"
+      },
+      {
+        "section_id": "section-8",
+        "title": "fastbuffer.concat",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 281,
+        "summary": "concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBuffer\n\n将数组中指定字节长度的内容复制到新的Fast"
+      },
+      {
+        "section_id": "section-9",
+        "title": "fastbuffer.from",
+        "level": 2,
+        "line_start": 282,
+        "line_end": 313,
+        "summary": "from(array: number[]): FastBuffer\n\n根据指定数组创建新的FastBuffer对象。\n\n**系统能力：** SystemCapability.Utils.Lang"
+      },
+      {
+        "section_id": "section-10",
+        "title": "fastbuffer.from",
+        "level": 2,
+        "line_start": 314,
+        "line_end": 357,
+        "summary": "from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffe"
+      },
+      {
+        "section_id": "section-11",
+        "title": "fastbuffer.from",
+        "level": 2,
+        "line_start": 358,
+        "line_end": 408,
+        "summary": "from(buffer: FastBuffer | Uint8Array): FastBuffer\n\n当入参为FastBuffer对象时，创建新的FastBuffer对象并复制入参FastBuffe"
+      },
+      {
+        "section_id": "section-12",
+        "title": "fastbuffer.from",
+        "level": 2,
+        "line_start": 409,
+        "line_end": 446,
+        "summary": "from(value: string, encoding?: BufferEncoding): FastBuffer\n\n根据指定编码格式的字符串，创建新的FastBuffer对象。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-13",
+        "title": "fastbuffer.isBuffer",
+        "level": 2,
+        "line_start": 447,
+        "line_end": 490,
+        "summary": "isBuffer(obj: Object): boolean\n\n判断`obj`是否为FastBuffer。\n\n**原子化服务API**：从API version 20开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-14",
+        "title": "fastbuffer.isEncoding",
+        "level": 2,
+        "line_start": 491,
+        "line_end": 527,
+        "summary": "isEncoding(encoding: string): boolean\n\n判断`encoding`是否为支持的编码格式。\n\n**原子化服务API**：从API version 20开始，该接口支"
+      },
+      {
+        "section_id": "section-15",
+        "title": "fastbuffer.transcode",
+        "level": 2,
+        "line_start": 528,
+        "line_end": 563,
+        "summary": "transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: string): FastBuffer\n\n将FastBuffer"
+      },
+      {
+        "section_id": "section-16",
+        "title": "FastBuffer",
+        "level": 2,
+        "line_start": 564,
+        "line_end": 3173,
+        "summary": "### 属性\n\n**系统能力：** SystemCapability.Utils.Lang\n\n**原子化服务API**：从API version 20开始，该接口支持在原子化服务中使用。\n\n| 名称"
+      }
+    ]
+  }
+}

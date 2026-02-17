@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-backgroundProcessManager",
+  "title": "@ohos.resourceschedule.backgroundProcessManager (后台子进程管控)",
+  "path": "zh-cn/application-dev/reference/apis-backgroundtasks-kit/js-apis-backgroundProcessManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-backgroundtasks-kit/js-apis-backgroundProcessManager.md",
+  "metadata": {
+    "kit": "Background Tasks Kit",
+    "subsystem": "Resourceschedule",
+    "owner": "@hongjianfeng",
+    "designer": "@zhouben25",
+    "tester": "@leetestnady",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Background Tasks Kit Resourceschedule 模块的 @ohos.resourceschedule.backgroundProcessManager (后台子进程管控)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.resourceschedule.backgroundProcessManager (后台子进程管控)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { backgroundProcessManager } from '@kit.BackgroundTasksKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "backgroundProcessManager.setProcessPriority",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 65,
+        "summary": "setProcessPriority(pid: number, priority: ProcessPriority): Promise&lt;void&gt;\n\n设置子进程的压制档位，子进程被压制后"
+      },
+      {
+        "section_id": "section-3",
+        "title": "backgroundProcessManager.resetProcessPriority",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 99,
+        "summary": "resetProcessPriority(pid: number): Promise&lt;void&gt;\n\n为子进程解压制，即子进程策略恢复为主进程调度策略。若主进程调度策略发生变化，如从后台切"
+      },
+      {
+        "section_id": "section-4",
+        "title": "backgroundProcessManager.setPowerSaveMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 100,
+        "line_end": 155,
+        "summary": "setPowerSaveMode(pid: number, powerSaveMode: PowerSaveMode): Promise&lt;void&gt;\n\n设置进程的能效模式，使用Promi"
+      },
+      {
+        "section_id": "section-5",
+        "title": "backgroundProcessManager.isPowerSaveMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 156,
+        "line_end": 205,
+        "summary": "isPowerSaveMode(pid: number): Promise&lt;boolean&gt;\n\n查询进程是否处于能效模式，使用Promise异步回调。\n\n**设备行为差异**：该接口在P"
+      },
+      {
+        "section_id": "section-6",
+        "title": "backgroundProcessManager.getPowerSaveMode<sup>23+</sup>",
+        "level": 2,
+        "line_start": 206,
+        "line_end": 255,
+        "summary": "getPowerSaveMode(pid: number): Promise&lt;PowerSaveMode&gt;\n\n获取进程能效模式。使用Promise异步回调。\n\n**设备行为差异：** 该"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ProcessPriority",
+        "level": 2,
+        "line_start": 256,
+        "line_end": 266,
+        "summary": "子进程压制档位。\n\n**系统能力**： SystemCapability.Resourceschedule.BackgroundProcessManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-8",
+        "title": "PowerSaveMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 267,
+        "line_end": 278,
+        "summary": "能效模式。\n\n**系统能力**： SystemCapability.Resourceschedule.BackgroundProcessManager\n\n| 名称 | 值 | 说明 |\n|-----"
+      }
+    ]
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "doc_id": "errorcode-access-token",
+  "title": "访问控制错误码",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Security",
+    "owner": "@xia-bubai",
+    "designer": "@linshuqing; @hehehe-li",
+    "tester": "@leiyuqian",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Ability Kit Security 模块的 访问控制错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "访问控制错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "12100001 入参错误",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 43,
+        "summary": "**错误信息**\n\nInvalid Parameter. Error message: messageInfo.\n\n**错误描述**\n\n当入参错误时，将返回该错误码。\n\n**可能原因**\n\n1. t"
+      },
+      {
+        "section_id": "section-2",
+        "title": "12100002 tokenId不存在",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 63,
+        "summary": "**错误信息**\n\nTokenId does not exist.\n\n**错误描述**\n\n当指定的tokenId不符合条件时，将返回该错误码。\n\n**可能原因**\n\n1. 指定的tokenId不存在"
+      },
+      {
+        "section_id": "section-3",
+        "title": "12100003 权限名不存在",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 84,
+        "summary": "**错误信息**\n\nPermission does not exist.\n\n**错误描述**\n\n当指定的权限名不符合条件时，将返回该错误码。\n\n**可能原因**\n\n1. 系统中不存在指定的权限，包括"
+      },
+      {
+        "section_id": "section-4",
+        "title": "12100004 接口未配套使用",
+        "level": 2,
+        "line_start": 85,
+        "line_end": 105,
+        "summary": "**错误信息**\n\nThe API is not used in pair with others.\n\n**错误描述**\n\n当接口未配套使用时，将返回该错误码。\n\n**可能原因**\n\n1. 当前接口"
+      },
+      {
+        "section_id": "section-5",
+        "title": "12100005 监听器数量超过限制",
+        "level": 2,
+        "line_start": 106,
+        "line_end": 124,
+        "summary": "**错误信息**\n\nThe number of listeners exceeds the limit.\n\n**错误描述**\n\n当监听器数量超过限制时，将返回该错误码。\n\n**可能原因**\n\n该错误"
+      },
+      {
+        "section_id": "section-6",
+        "title": "12100006 指定的应用不支持被授予或被取消授予指定的权限",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 145,
+        "summary": "**错误信息**\n\nThe specified application does not support the permissions granted or ungranted as specif"
+      },
+      {
+        "section_id": "section-7",
+        "title": "12100007 系统服务工作异常",
+        "level": 2,
+        "line_start": 146,
+        "line_end": 165,
+        "summary": "**错误信息**\n\nThe service is abnormal.\n\n**错误描述**\n\n当系统服务工作异常时，将返回该错误码。\n\n**可能原因**\n\n1. 权限管理服务无法正常启动。\n2. IP"
+      },
+      {
+        "section_id": "section-8",
+        "title": "12100008 内存申请失败",
+        "level": 2,
+        "line_start": 166,
+        "line_end": 184,
+        "summary": "**错误信息**\n\nOut of memory.\n\n**错误描述**\n\n当内存申请失败时，将返回该错误码。\n\n**可能原因**\n\n系统内存不足。\n\n**处理步骤**\n\n系统内存不足，请稍后重试，或者"
+      },
+      {
+        "section_id": "section-9",
+        "title": "12100009 服务内部错误",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 211,
+        "summary": "**错误信息**\n\nCommon inner error.\n\n**错误描述**\n\n当服务内部发生错误或权限弹框发生错误时，将返回该错误码。\n\n**可能原因**\n\n1. 内部错误\n   - 系统服务内"
+      },
+      {
+        "section_id": "section-10",
+        "title": "12100010 存在未被处理的请求",
+        "level": 2,
+        "line_start": 212,
+        "line_end": 230,
+        "summary": "**错误信息**\n\nThe request already exists.\n\n**错误描述**\n\n当存在未被处理的请求时，将返回该错误码。\n\n**可能原因**\n\n上一次请求未被处理。\n\n**处理步骤"
+      },
+      {
+        "section_id": "section-11",
+        "title": "12100011 输入的所有权限均已被授权",
+        "level": 2,
+        "line_start": 231,
+        "line_end": 248,
+        "summary": "**错误信息**\n\nAll permissions in the permission list have been granted.\n\n**错误描述**\n\n当输入的所有权限均已被授权时，将返回该错"
+      },
+      {
+        "section_id": "section-12",
+        "title": "12100012 输入的权限中存在未被用户拒绝过的权限",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 266,
+        "summary": "**错误信息**\n\nThe permission list contains the permission that has not been revoked by the user.\n\n**错误描"
+      },
+      {
+        "section_id": "section-13",
+        "title": "12100013 全局开关已开启",
+        "level": 2,
+        "line_start": 267,
+        "line_end": 284,
+        "summary": "**错误信息**\n\nThe specific global switch is already open.\n\n**错误描述**\n\n当全局开关已开启时，将返回该错误码。\n\n**可能原因**\n\n全局开关"
+      },
+      {
+        "section_id": "section-14",
+        "title": "12100014 非预期的权限",
+        "level": 2,
+        "line_start": 285,
+        "line_end": 304,
+        "summary": "**错误信息**\n\nUnexpected permission.\n\n**错误描述**\n\n当输入的权限不符合使用场景时，将返回该错误码。\n\n**可能原因**\n\n1. [再次拉起权限设置弹框](js-a"
+      }
+    ]
+  }
+}

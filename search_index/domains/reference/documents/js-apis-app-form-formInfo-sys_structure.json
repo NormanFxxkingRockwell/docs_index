@@ -1,0 +1,180 @@
+{
+  "doc_id": "js-apis-app-form-formInfo-sys",
+  "title": "@ohos.app.form.formInfo (formInfo)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-form-kit/js-apis-app-form-formInfo-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-form-kit/js-apis-app-form-formInfo-sys.md",
+  "metadata": {
+    "kit": "Form Kit",
+    "subsystem": "Ability",
+    "owner": "@cx983299475",
+    "designer": "@xueyulong",
+    "tester": "@yangyuecheng",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "Form Kit Ability 模块的 @ohos.app.form.formInfo (formInfo)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.form.formInfo (formInfo)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { formInfo } from '@kit.FormKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "FormInfo",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 39,
+        "summary": "卡片配置信息。\n\n**系统能力：** SystemCapability.Ability.Form\n\n| 名称        | 类型                 | 只读    | 可选"
+      },
+      {
+        "section_id": "section-3",
+        "title": "FormParam",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 55,
+        "summary": "卡片参数枚举。\n\n**系统能力：** SystemCapability.Ability.Form\n\n| 名称        | 值   | 说明         |\n| ----------- |"
+      },
+      {
+        "section_id": "section-4",
+        "title": "FormUsageState<sup>11+</sup>",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 68,
+        "summary": "卡片当前使用状态枚举。\n\n**系统能力：** SystemCapability.Ability.Form\n\n**系统接口：** 此接口为系统接口。\n\n| 名称        |  值   | 说明"
+      },
+      {
+        "section_id": "section-5",
+        "title": "RunningFormInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 84,
+        "summary": "已添加的卡片信息，包括使用中的以及未使用的卡片。\n\n**系统能力：** SystemCapability.Ability.Form\n\n**系统接口：** 此接口为系统接口。\n\n| 名称"
+      },
+      {
+        "section_id": "section-6",
+        "title": "formProviderFilter<sup>10+</sup>",
+        "level": 2,
+        "line_start": 85,
+        "line_end": 103,
+        "summary": "卡片提供方信息。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability.Ability.Form\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "FormInfoFilter",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 117,
+        "summary": "卡片信息过滤器，仅将符合过滤器内要求的卡片信息返回。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-8",
+        "title": "FormLocation<sup>12+</sup>",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 136,
+        "summary": "卡片当前位置枚举。\n\n**系统能力**：SystemCapability.Ability.Form\n\n| 名称                         | 值   | 说明"
+      },
+      {
+        "section_id": "section-9",
+        "title": "PublishFormResult<sup>12+</sup>",
+        "level": 2,
+        "line_start": 137,
+        "line_end": 149,
+        "summary": "发布卡片加桌结果。\n\n**系统能力：** SystemCapability.Ability.Form\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n| 名称    | 类型"
+      },
+      {
+        "section_id": "section-10",
+        "title": "PublishFormErrorCode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 164,
+        "summary": "发布卡片加桌错误码枚举。\n\n**系统能力**：SystemCapability.Ability.Form\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n| 名称           |"
+      },
+      {
+        "section_id": "section-11",
+        "title": "RenderingMode<sup>18+</sup>",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 176,
+        "summary": "卡片支持的渲染模式枚举。\n\n**系统能力：** SystemCapability.Ability.Form\n\n| 名称        | 值   | 说明         |\n| ---------"
+      },
+      {
+        "section_id": "section-12",
+        "title": "OverflowRequest<sup>20+</sup>",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 190,
+        "summary": "互动卡片动效请求信息。\n\n**系统能力：** SystemCapability.Ability.Form\n\n**系统接口：** 此接口为系统接口。\n\n| 名称 | 类型 | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-13",
+        "title": "ChangeSceneAnimationStateRequest<sup>20+</sup>",
+        "level": 2,
+        "line_start": 191,
+        "line_end": 203,
+        "summary": "互动卡片状态切换请求信息。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现"
+      },
+      {
+        "section_id": "section-14",
+        "title": "FunInteractionParams<sup>20+</sup>",
+        "level": 2,
+        "line_start": 204,
+        "line_end": 218,
+        "summary": "趣味交互卡片配置参数。\n\n**系统能力：** SystemCapability.Ability.Form\n\n**系统接口：** 此接口为系统接口。\n\n| 名称 | 类型 | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-15",
+        "title": "SceneAnimationParams<sup>20+</sup>",
+        "level": 2,
+        "line_start": 219,
+        "line_end": 231,
+        "summary": "场景动效卡片配置参数。\n\n**系统能力：** SystemCapability.Ability.Form\n\n**系统接口：** 此接口为系统接口。\n\n| 名称 | 类型 | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-16",
+        "title": "GetFormRectInfoCallback<sup>20+</sup>",
+        "level": 2,
+        "line_start": 232,
+        "line_end": 282,
+        "summary": "### (formId: string): Promise&lt;formInfo.Rect&gt;\n\n卡片位置、尺寸查询回调。使用Promise异步回调。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-17",
+        "title": "TemplateFormDetailInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 283,
+        "line_end": 303,
+        "summary": "模板卡对应的真实卡片信息。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability.Ability.Form\n\n**系统接口：** 此接口为"
+      },
+      {
+        "section_id": "section-18",
+        "title": "TemplateFormDetailInfoCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 304,
+        "line_end": 340,
+        "summary": "type TemplateFormDetailInfoCallback =  (info: Array\\<TemplateFormDetailInfo>) => void\n\n模板卡真实卡片信息回调。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "PublishFormCrossBundleInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 341,
+        "line_end": 356,
+        "summary": "跨应用加卡管控信息。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability.Ability.Form\n\n**系统接口：** 此接口为系统接"
+      },
+      {
+        "section_id": "section-20",
+        "title": "PublishFormCrossBundleControlCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 357,
+        "line_end": 392,
+        "summary": "type PublishFormCrossBundleControlCallback = (info: PublishFormCrossBundleInfo) => boolean\n\n跨应用加卡管控"
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "doc_id": "arkts-apis-image-Metadata",
+  "title": "Interface (Metadata)",
+  "path": "zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-Metadata.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-Metadata.md",
+  "metadata": {
+    "kit": "Image Kit",
+    "subsystem": "Multimedia",
+    "owner": "@aulight02",
+    "designer": "@liyang_bryan",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Image Kit Multimedia 模块的 Interface (Metadata)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (Metadata)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { image } from '@kit.ImageKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getProperties<sup>13+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 80,
+        "summary": "getProperties(key: Array\\<string>): Promise\\<Record\\<string, string \\| null>>\n\n获取图像中属性的值。使用Promise异"
+      },
+      {
+        "section_id": "section-3",
+        "title": "setProperties<sup>13+</sup>",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 143,
+        "summary": "setProperties(records: Record\\<string, string \\| null>): Promise\\<void>\n\n批量设置图片元数据中的指定属性的值。使用Promis"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getAllProperties<sup>13+</sup>",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 189,
+        "summary": "getAllProperties(): Promise\\<Record\\<string, string \\| null>>\n\n获取图片中所有元数据的属性和值。使用Promise异步回调。\n\n如要查询"
+      },
+      {
+        "section_id": "section-5",
+        "title": "clone<sup>13+</sup>",
+        "level": 2,
+        "line_start": 190,
+        "line_end": 232,
+        "summary": "clone(): Promise\\<Metadata>\n\n对元数据进行克隆。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia.Image.C"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getBlob<sup>23+</sup>",
+        "level": 2,
+        "line_start": 233,
+        "line_end": 275,
+        "summary": "getBlob(): Promise\\<ArrayBuffer>\n\n以二进制数据的形式获取元数据。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能"
+      },
+      {
+        "section_id": "section-7",
+        "title": "setBlob<sup>23+</sup>",
+        "level": 2,
+        "line_start": 276,
+        "line_end": 337,
+        "summary": "setBlob(blob: ArrayBuffer): Promise\\<void>\n\n使用二进制数据替换当前元数据。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在Stage模型下"
+      }
+    ]
+  }
+}

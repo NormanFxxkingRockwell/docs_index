@@ -1,0 +1,100 @@
+{
+  "doc_id": "arkts-apis-image-ImageCreator",
+  "title": "Interface (ImageCreator)",
+  "path": "zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-ImageCreator.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-ImageCreator.md",
+  "metadata": {
+    "kit": "Image Kit",
+    "subsystem": "Multimedia",
+    "owner": "@aulight02",
+    "designer": "@liyang_bryan",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Image Kit Multimedia 模块的 Interface (ImageCreator)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (ImageCreator)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { image } from '@kit.ImageKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 34,
+        "summary": "**系统能力：** SystemCapability.Multimedia.Image.ImageCreator\n\n| 名称     | 类型                         | 只"
+      },
+      {
+        "section_id": "section-3",
+        "title": "dequeueImage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 64,
+        "summary": "dequeueImage(callback: AsyncCallback\\<Image>): void\n\n从空闲队列中获取buffer图片，用于绘制UI内容。使用callback异步回调。\n\n**系"
+      },
+      {
+        "section_id": "section-4",
+        "title": "dequeueImage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 92,
+        "summary": "dequeueImage(): Promise\\<Image>\n\n从空闲队列中获取buffer图片，用于绘制UI内容。使用Promise异步回调。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-5",
+        "title": "queueImage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 93,
+        "line_end": 135,
+        "summary": "queueImage(image: Image, callback: AsyncCallback\\<void>): void\n\n将绘制好的图片放入队列。使用callback异步回调。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-6",
+        "title": "queueImage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 181,
+        "summary": "queueImage(image: Image): Promise\\<void>\n\n将绘制好的图片放入队列。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Mu"
+      },
+      {
+        "section_id": "section-7",
+        "title": "on<sup>9+</sup>",
+        "level": 2,
+        "line_start": 182,
+        "line_end": 212,
+        "summary": "on(type: 'imageRelease', callback: AsyncCallback\\<void>): void\n\n监听imageRelease事件。使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "off<sup>13+</sup>",
+        "level": 2,
+        "line_start": 213,
+        "line_end": 239,
+        "summary": "off(type: 'imageRelease', callback?: AsyncCallback\\<void>): void\n\n释放buffer时，移除注册的回调函数。使用callback异步回"
+      },
+      {
+        "section_id": "section-9",
+        "title": "release<sup>9+</sup>",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 273,
+        "summary": "release(callback: AsyncCallback\\<void>): void\n\n释放当前图像。使用callback异步回调。\n\n由于图片占用内存较大，所以当ImageCreator实例"
+      },
+      {
+        "section_id": "section-10",
+        "title": "release<sup>9+</sup>",
+        "level": 2,
+        "line_start": 274,
+        "line_end": 305,
+        "summary": "release(): Promise\\<void>\n\n释放当前图像。使用Promise异步回调。\n\n由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用该方法，及时释放内存"
+      }
+    ]
+  }
+}

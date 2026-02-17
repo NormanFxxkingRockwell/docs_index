@@ -1,0 +1,60 @@
+{
+  "doc_id": "js-apis-certManager-sys",
+  "title": "@ohos.security.certManager (证书管理模块)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-device-certificate-kit/js-apis-certManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-device-certificate-kit/js-apis-certManager-sys.md",
+  "metadata": {
+    "kit": "Device Certificate Kit",
+    "subsystem": "Security",
+    "owner": "@chaceli",
+    "designer": "@chande",
+    "tester": "@zhangzhi1995",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Device Certificate Kit Security 模块的 @ohos.security.certManager (证书管理模块)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.security.certManager (证书管理模块)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { certificateManager } from '@kit.DeviceCertificateKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "CMErrorCode",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 32,
+        "summary": "表示调用证书管理相关API的错误码。\n\n**系统能力：** SystemCapability.Security.CertificateManager\n\n| 名称       | 值 |  说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "certificateManager.getAllAppPrivateCertificates",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 85,
+        "summary": "getAllAppPrivateCertificates(callback: AsyncCallback\\<CMResult>): void\n\n表示获取所有私有凭据列表，使用Callback回调异步"
+      },
+      {
+        "section_id": "section-4",
+        "title": "certificateManager.getAllAppPrivateCertificates",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 136,
+        "summary": "getAllAppPrivateCertificates(): Promise\\<CMResult>\n\n表示获取所有私有凭据列表，使用Promise方式异步返回结果。\n\n**需要权限：** ohos"
+      },
+      {
+        "section_id": "section-5",
+        "title": "certificateManager.getAllSystemAppCertificates<sup>12+</sup>",
+        "level": 2,
+        "line_start": 137,
+        "line_end": 187,
+        "summary": "getAllSystemAppCertificates(): Promise\\<CMResult>\n\n表示获取所有系统凭据列表，使用Promise方式异步返回结果。\n\n**需要权限：** ohos."
+      }
+    ]
+  }
+}

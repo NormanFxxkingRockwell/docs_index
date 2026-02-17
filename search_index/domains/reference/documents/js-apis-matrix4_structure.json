@@ -1,0 +1,148 @@
+{
+  "doc_id": "js-apis-matrix4",
+  "title": "@ohos.matrix4 (矩阵变换)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-matrix4.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-matrix4.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@CCFFWW",
+    "designer": "@CCFFWW",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 @ohos.matrix4 (矩阵变换)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.matrix4 (矩阵变换)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 22,
+        "summary": "```ts\nimport { matrix4 } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "matrix4.init",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 93,
+        "summary": "init(options: [number,number,number,number,number,number,number,number,number,number,number,number,"
+      },
+      {
+        "section_id": "section-3",
+        "title": "matrix4.identity",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 143,
+        "summary": "identity(): Matrix4Transit\n\nMatrix的初始化函数，可以返回一个单位矩阵对象。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Matrix4Transit",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 631,
+        "summary": "矩阵对象。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：**  SystemCapability.ArkUI.ArkUI.Ful"
+      },
+      {
+        "section_id": "section-5",
+        "title": "TranslateOption",
+        "level": 2,
+        "line_start": 632,
+        "line_end": 645,
+        "summary": "平移参数。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ScaleOption",
+        "level": 2,
+        "line_start": 646,
+        "line_end": 661,
+        "summary": "缩放参数。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-7",
+        "title": "RotateOption",
+        "level": 2,
+        "line_start": 662,
+        "line_end": 678,
+        "summary": "旋转参数。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-8",
+        "title": "PolyToPolyOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 679,
+        "line_end": 694,
+        "summary": "多边形到多边形的映射选项。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ar"
+      },
+      {
+        "section_id": "section-9",
+        "title": "Point<sup>12+</sup>",
+        "level": 2,
+        "line_start": 695,
+        "line_end": 707,
+        "summary": "坐标点的数据结构。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-10",
+        "title": "matrix4.copy<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 708,
+        "line_end": 760,
+        "summary": "copy(): Matrix4Transit\n\n\nMatrix的拷贝函数，可以拷贝一份当前的矩阵对象。\n\n> **说明：**\n>\n> 从API version 7开始支持，从API version"
+      },
+      {
+        "section_id": "section-11",
+        "title": "matrix4.invert<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 761,
+        "line_end": 778,
+        "summary": "invert(): Matrix4Transit\n\nMatrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效果正好相反。\n\n> **说明：**\n>\n> 从API version 7开始支持，从A"
+      },
+      {
+        "section_id": "section-12",
+        "title": "matrix4.combine<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 779,
+        "line_end": 802,
+        "summary": "combine(options: Matrix4Transit): Matrix4Transit\n\nMatrix的叠加函数，可以将两个矩阵的效果叠加起来生成一个新的矩阵对象。\n\n> **说明：**"
+      },
+      {
+        "section_id": "section-13",
+        "title": "matrix4.translate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 803,
+        "line_end": 826,
+        "summary": "translate(options: TranslateOption): Matrix4Transit\n\nMatrix的平移函数，可以为当前矩阵增加x轴/y轴/z轴平移效果。\n\n> **说明：**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "matrix4.scale<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 827,
+        "line_end": 850,
+        "summary": "scale(options: ScaleOption): Matrix4Transit\n\nMatrix的缩放函数，可以为当前矩阵增加x轴/y轴/z轴缩放效果。\n\n> **说明：**\n>\n> 从API"
+      },
+      {
+        "section_id": "section-15",
+        "title": "matrix4.rotate<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 851,
+        "line_end": 874,
+        "summary": "rotate(options: RotateOption): Matrix4Transit\n\nMatrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。\n\n> **说明：**\n>\n> 从A"
+      },
+      {
+        "section_id": "section-16",
+        "title": "matrix4.transformPoint<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 875,
+        "line_end": 897,
+        "summary": "transformPoint(options: [number, number]): [number, number]\n\nMatrix的坐标点转换函数，可以将当前的变换效果作用到一个坐标点上。\n\n>"
+      }
+    ]
+  }
+}

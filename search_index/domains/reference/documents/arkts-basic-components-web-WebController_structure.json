@@ -1,0 +1,188 @@
+{
+  "doc_id": "arkts-basic-components-web-WebController",
+  "title": "Class (WebController)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-basic-components-web-WebController.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-basic-components-web-WebController.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@yp99ustc; @aohui; @zourongchun",
+    "designer": "@LongLie; @yaomingliu; @zhufenghao",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Class (WebController)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (WebController)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "创建对象",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 27,
+        "summary": "<!--deprecated_code_no_check-->\n```ts\nlet webController: WebController = new WebController()\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "constructor<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 39,
+        "summary": "constructor()\n\nWebController的构造函数。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使用[constr"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getCookieManager<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 78,
+        "summary": "getCookieManager(): WebCookie\n\n获取Web组件cookie管理对象。\n\n> **说明：**\n>\n> 从API version 9开始支持，从API version 9开"
+      },
+      {
+        "section_id": "section-4",
+        "title": "requestFocus<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 111,
+        "summary": "requestFocus()\n\n使当前web页面获取焦点。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使用[requestFocu"
+      },
+      {
+        "section_id": "section-5",
+        "title": "accessBackward<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 151,
+        "summary": "accessBackward(): boolean\n\n当前页面是否可后退，即当前页面是否有返回历史记录。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version"
+      },
+      {
+        "section_id": "section-6",
+        "title": "accessForward<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 191,
+        "summary": "accessForward(): boolean\n\n当前页面是否可前进，即当前页面是否有前进历史记录。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version"
+      },
+      {
+        "section_id": "section-7",
+        "title": "accessStep<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 192,
+        "line_end": 238,
+        "summary": "accessStep(step: number): boolean\n\n当前页面是否可前进或者后退给定的step步。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API ve"
+      },
+      {
+        "section_id": "section-8",
+        "title": "backward<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 239,
+        "line_end": 271,
+        "summary": "backward()\n\n按照历史栈，后退一个页面。一般结合accessBackward一起使用。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始"
+      },
+      {
+        "section_id": "section-9",
+        "title": "forward<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 272,
+        "line_end": 304,
+        "summary": "forward()\n\n按照历史栈，前进一个页面。一般结合accessForward一起使用。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃"
+      },
+      {
+        "section_id": "section-10",
+        "title": "deleteJavaScriptRegister<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 305,
+        "line_end": 344,
+        "summary": "deleteJavaScriptRegister(name: string)\n\n删除通过registerJavaScriptProxy注册到window上的指定name的应用侧JavaScript对"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getHitTest<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 345,
+        "line_end": 384,
+        "summary": "getHitTest(): HitTestType\n\n获取当前被点击区域的元素类型。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使"
+      },
+      {
+        "section_id": "section-12",
+        "title": "loadData<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 385,
+        "line_end": 435,
+        "summary": "loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?"
+      },
+      {
+        "section_id": "section-13",
+        "title": "loadUrl<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 436,
+        "line_end": 479,
+        "summary": "loadUrl(options: { url: string | Resource, headers?: Array\\<Header\\> })\n\n使用指定的http头加载指定的URL。\n\n通过loa"
+      },
+      {
+        "section_id": "section-14",
+        "title": "onActive<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 480,
+        "line_end": 512,
+        "summary": "onActive(): void\n\n调用此接口通知Web组件进入前台激活状态。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使用[o"
+      },
+      {
+        "section_id": "section-15",
+        "title": "onInactive<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 513,
+        "line_end": 545,
+        "summary": "onInactive(): void\n\n调用此接口通知Web组件进入未激活状态。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使用["
+      },
+      {
+        "section_id": "section-16",
+        "title": "zoom<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 546,
+        "line_end": 585,
+        "summary": "zoom(factor: number): void\n\n调整当前网页的缩放比例。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使用["
+      },
+      {
+        "section_id": "section-17",
+        "title": "refresh<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 586,
+        "line_end": 618,
+        "summary": "refresh()\n\n调用此接口通知Web组件刷新网页。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使用[refresh<sup>"
+      },
+      {
+        "section_id": "section-18",
+        "title": "registerJavaScriptProxy<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 619,
+        "line_end": 699,
+        "summary": "registerJavaScriptProxy(options: { object: object, name: string, methodList: Array\\<string\\> })\n\n注入"
+      },
+      {
+        "section_id": "section-19",
+        "title": "runJavaScript<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 700,
+        "line_end": 767,
+        "summary": "runJavaScript(options: { script: string, callback?: (result: string) => void })\n\n异步执行JavaScript脚本，并"
+      },
+      {
+        "section_id": "section-20",
+        "title": "stop<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 768,
+        "line_end": 800,
+        "summary": "stop()\n\n停止页面加载。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使用[stop<sup>9+</sup>](./arkt"
+      },
+      {
+        "section_id": "section-21",
+        "title": "clearHistory<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 801,
+        "line_end": 832,
+        "summary": "clearHistory(): void\n\n删除所有前进后退记录。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使用[clearHi"
+      }
+    ]
+  }
+}

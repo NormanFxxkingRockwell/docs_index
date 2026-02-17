@@ -1,0 +1,268 @@
+{
+  "doc_id": "js-apis-enterprise-adminManager-sys",
+  "title": "@ohos.enterprise.adminManager（admin权限管理）(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-adminManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-adminManager-sys.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.adminManager（admin权限管理）(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.adminManager（admin权限管理）(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { adminManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "adminManager.enableAdmin",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 86,
+        "summary": "enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminType, callback: AsyncCallback\\<"
+      },
+      {
+        "section_id": "section-3",
+        "title": "adminManager.enableAdmin",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 149,
+        "summary": "enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminType, userId: number, callback:"
+      },
+      {
+        "section_id": "section-4",
+        "title": "adminManager.enableAdmin",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 215,
+        "summary": "enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminType, userId?: number): Promise"
+      },
+      {
+        "section_id": "section-5",
+        "title": "adminManager.disableAdmin",
+        "level": 2,
+        "line_start": 216,
+        "line_end": 268,
+        "summary": "disableAdmin(admin: Want, callback: AsyncCallback\\<void>): void\n\n将当前用户下指定的普通设备管理应用解除激活。使用callback异步"
+      },
+      {
+        "section_id": "section-6",
+        "title": "adminManager.disableAdmin",
+        "level": 2,
+        "line_start": 269,
+        "line_end": 322,
+        "summary": "disableAdmin(admin: Want, userId: number, callback: AsyncCallback\\<void>): void\n\n将指定用户（通过userId指定）下"
+      },
+      {
+        "section_id": "section-7",
+        "title": "adminManager.disableSuperAdmin",
+        "level": 2,
+        "line_start": 323,
+        "line_end": 372,
+        "summary": "disableSuperAdmin(bundleName: String, callback: AsyncCallback\\<void>): void\n\n根据bundleName将超级设备管理应用解"
+      },
+      {
+        "section_id": "section-8",
+        "title": "adminManager.disableSuperAdmin",
+        "level": 2,
+        "line_start": 373,
+        "line_end": 424,
+        "summary": "disableSuperAdmin(bundleName: String): Promise\\<void>\n\n根据bundleName将超级设备管理应用解除激活。使用promise异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "adminManager.isAdminEnabled",
+        "level": 2,
+        "line_start": 425,
+        "line_end": 473,
+        "summary": "isAdminEnabled(admin: Want, callback: AsyncCallback\\<boolean>): void\n\n查询当前用户下指定的设备管理应用是否被激活。使用callb"
+      },
+      {
+        "section_id": "section-10",
+        "title": "adminManager.isAdminEnabled",
+        "level": 2,
+        "line_start": 474,
+        "line_end": 524,
+        "summary": "isAdminEnabled(admin: Want, userId: number, callback: AsyncCallback\\<boolean>): void\n\n查询指定用户（通过user"
+      },
+      {
+        "section_id": "section-11",
+        "title": "adminManager.isAdminEnabled",
+        "level": 2,
+        "line_start": 525,
+        "line_end": 579,
+        "summary": "isAdminEnabled(admin: Want, userId?: number): Promise\\<boolean>\n\n查询当前/指定用户下指定的设备管理应用是否被激活。使用promise"
+      },
+      {
+        "section_id": "section-12",
+        "title": "adminManager.isSuperAdmin",
+        "level": 2,
+        "line_start": 580,
+        "line_end": 625,
+        "summary": "isSuperAdmin(bundleName: String, callback: AsyncCallback\\<boolean>): void\n\n根据bundleName查询管理员用户下的超级设"
+      },
+      {
+        "section_id": "section-13",
+        "title": "adminManager.isSuperAdmin",
+        "level": 2,
+        "line_start": 626,
+        "line_end": 675,
+        "summary": "isSuperAdmin(bundleName: String): Promise\\<boolean>\n\n根据bundleName查询管理员用户下的超级设备管理应用是否被激活。使用promise异步"
+      },
+      {
+        "section_id": "section-14",
+        "title": "adminManager.getSuperAdmin<sup>12+</sup>",
+        "level": 2,
+        "line_start": 676,
+        "line_end": 714,
+        "summary": "getSuperAdmin(): Promise\\<Want>\n\n查询管理员用户下的超级设备管理应用。使用promise异步回调。\n\n**系统能力：** SystemCapability.Custo"
+      },
+      {
+        "section_id": "section-15",
+        "title": "adminManager.setEnterpriseInfo",
+        "level": 2,
+        "line_start": 715,
+        "line_end": 773,
+        "summary": "setEnterpriseInfo(admin: Want, enterpriseInfo: EnterpriseInfo, callback: AsyncCallback\\<void>): voi"
+      },
+      {
+        "section_id": "section-16",
+        "title": "adminManager.setEnterpriseInfo",
+        "level": 2,
+        "line_start": 774,
+        "line_end": 834,
+        "summary": "setEnterpriseInfo(admin: Want, enterpriseInfo: EnterpriseInfo): Promise\\<void>\n\n设置设备管理应用的企业信息。使用pro"
+      },
+      {
+        "section_id": "section-17",
+        "title": "adminManager.getEnterpriseInfo",
+        "level": 2,
+        "line_start": 835,
+        "line_end": 884,
+        "summary": "getEnterpriseInfo(admin: Want, callback: AsyncCallback&lt;EnterpriseInfo&gt;): void\n\n获取设备管理应用的企业信息。"
+      },
+      {
+        "section_id": "section-18",
+        "title": "adminManager.getEnterpriseInfo",
+        "level": 2,
+        "line_start": 885,
+        "line_end": 938,
+        "summary": "getEnterpriseInfo(admin: Want): Promise&lt;EnterpriseInfo&gt;\n\n获取设备管理应用的企业信息，使用promise异步回调。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-19",
+        "title": "adminManager.subscribeManagedEvent",
+        "level": 2,
+        "line_start": 939,
+        "line_end": 994,
+        "summary": "subscribeManagedEvent(admin: Want, managedEvents: Array\\<ManagedEvent>, callback: AsyncCallback\\<vo"
+      },
+      {
+        "section_id": "section-20",
+        "title": "adminManager.subscribeManagedEvent",
+        "level": 2,
+        "line_start": 995,
+        "line_end": 1053,
+        "summary": "subscribeManagedEvent(admin: Want, managedEvents: Array\\<ManagedEvent>): Promise\\<void>\n\n订阅系统管理事件。使"
+      },
+      {
+        "section_id": "section-21",
+        "title": "adminManager.unsubscribeManagedEvent",
+        "level": 2,
+        "line_start": 1054,
+        "line_end": 1109,
+        "summary": "unsubscribeManagedEvent(admin: Want, managedEvents: Array\\<ManagedEvent>, callback: AsyncCallback\\<"
+      },
+      {
+        "section_id": "section-22",
+        "title": "adminManager.unsubscribeManagedEvent",
+        "level": 2,
+        "line_start": 1110,
+        "line_end": 1168,
+        "summary": "unsubscribeManagedEvent(admin: Want, managedEvents: Array\\<ManagedEvent>): Promise\\<void>\n\n取消订阅系统管理"
+      },
+      {
+        "section_id": "section-23",
+        "title": "adminManager.authorizeAdmin<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1169,
+        "line_end": 1226,
+        "summary": "authorizeAdmin(admin: Want, bundleName: string, callback: AsyncCallback&lt;void&gt;): void\n\n授予指定应用管"
+      },
+      {
+        "section_id": "section-24",
+        "title": "adminManager.authorizeAdmin<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1227,
+        "line_end": 1287,
+        "summary": "authorizeAdmin(admin: Want, bundleName: string): Promise&lt;void&gt;\n\n授予指定应用管理员权限。使用Promise异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-25",
+        "title": "adminManager.getAdmins<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1288,
+        "line_end": 1327,
+        "summary": "getAdmins(): Promise&lt;Array&lt;Want&gt;&gt;\n\n查询当前用户下的所有设备管理应用。使用promise异步回调。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-26",
+        "title": "adminManager.replaceSuperAdmin<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1328,
+        "line_end": 1385,
+        "summary": "replaceSuperAdmin(oldAdmin: Want, newAdmin: Want, isKeepPolicy: boolean): void\n\n将指定应用替换成超级设备管理应用。"
+      },
+      {
+        "section_id": "section-27",
+        "title": "adminManager.setAdminRunningMode<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1386,
+        "line_end": 1439,
+        "summary": "setAdminRunningMode(admin: Want, mode: RunningMode): void\n\n设置设备管理应用的运行模式。\n\n**需要权限：** ohos.permissio"
+      },
+      {
+        "section_id": "section-28",
+        "title": "adminManager.setDelegatedPolicies<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1440,
+        "line_end": 1488,
+        "summary": "setDelegatedPolicies(bundleName: string, accountId: number, policies: Array&lt;string&gt;): void"
+      },
+      {
+        "section_id": "section-29",
+        "title": "EnterpriseInfo",
+        "level": 2,
+        "line_start": 1489,
+        "line_end": 1501,
+        "summary": "设备管理应用的企业信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-30",
+        "title": "AdminType",
+        "level": 2,
+        "line_start": 1502,
+        "line_end": 1514,
+        "summary": "设备管理应用的类型。 \n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-31",
+        "title": "RunningMode<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1515,
+        "line_end": 1528,
+        "summary": "设备管理的运行模式。 \n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**系统接口：** 此接口为系统接口。"
+      }
+    ]
+  }
+}

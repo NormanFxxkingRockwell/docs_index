@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-batteryStatistics-sys",
+  "title": "@ohos.batteryStatistics (耗电统计)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-batteryStatistics-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-batteryStatistics-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "PowerManager",
+    "owner": "@zhang-yinglie; @volcano_wang",
+    "designer": "@wangyantian0",
+    "tester": "@alien0208",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Basic Services Kit PowerManager 模块的 @ohos.batteryStatistics (耗电统计)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.batteryStatistics (耗电统计)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```js\nimport {batteryStats} from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "batteryStats.getBatteryStats",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 60,
+        "summary": "getBatteryStats(): Promise<Array&lt;BatteryStatsInfo&gt;>\n\n获取耗电信息列表。使用Promise异步回调。\n\n**系统接口：** 此接口为系"
+      },
+      {
+        "section_id": "section-3",
+        "title": "batteryStats.getBatteryStats",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 98,
+        "summary": "getBatteryStats(callback: AsyncCallback<Array&lt;BatteryStatsInfo&gt;>): void\n\n获取耗电信息列表。使用callback异"
+      },
+      {
+        "section_id": "section-4",
+        "title": "batteryStats.getAppPowerValue",
+        "level": 2,
+        "line_start": 99,
+        "line_end": 141,
+        "summary": "getAppPowerValue(uid: number): number\n\n获取应用的耗电量。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.P"
+      },
+      {
+        "section_id": "section-5",
+        "title": "batteryStats.getAppPowerPercent",
+        "level": 2,
+        "line_start": 142,
+        "line_end": 184,
+        "summary": "getAppPowerPercent(uid: number): number\n\n获取应用的耗电百分比。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-6",
+        "title": "batteryStats.getHardwareUnitPowerValue",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 227,
+        "summary": "getHardwareUnitPowerValue(type: ConsumptionType): number\n\n根据耗电类型获取硬件单元的耗电量。\n\n**系统接口：** 此接口为系统接口。\n\n*"
+      },
+      {
+        "section_id": "section-7",
+        "title": "batteryStats.getHardwareUnitPowerPercent",
+        "level": 2,
+        "line_start": 228,
+        "line_end": 270,
+        "summary": "getHardwareUnitPowerPercent(type: ConsumptionType): number\n\n根据耗电类型获取硬件单元的耗电百分比。\n\n**系统接口：** 此接口为系统接口"
+      },
+      {
+        "section_id": "section-8",
+        "title": "BatteryStatsInfo",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 286,
+        "summary": "设备的耗电信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.PowerManager.BatteryStatistics\n\n### 属性\n\n|"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ConsumptionType",
+        "level": 2,
+        "line_start": 287,
+        "line_end": 306,
+        "summary": "表示电量消耗类型的枚举值。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.PowerManager.BatteryStatistics\n\n| 名称"
+      }
+    ]
+  }
+}

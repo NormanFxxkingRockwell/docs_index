@@ -1,0 +1,84 @@
+{
+  "doc_id": "arkts-apis-webview-WebHttpBodyStream",
+  "title": "Class (WebHttpBodyStream)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebHttpBodyStream.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebHttpBodyStream.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Class (WebHttpBodyStream)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (WebHttpBodyStream)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { webview } from '@kit.ArkWeb';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "initialize<sup>12+</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 129,
+        "summary": "initialize(): Promise\\<void\\>\n\n初始化WebHttpBodyStream。\n\n**系统能力：** SystemCapability.Web.Webview.Core"
+      },
+      {
+        "section_id": "section-3",
+        "title": "read<sup>12+</sup>",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 161,
+        "summary": "read(size: number): Promise\\<ArrayBuffer\\>\n\n读取WebHttpBodyStream中的数据。\n\n**系统能力：** SystemCapability.We"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getSize<sup>12+</sup>",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 179,
+        "summary": "getSize(): number\n\n获取WebHttpBodyStream中的数据大小，分块传输时总是返回零。\n\n**系统能力：** SystemCapability.Web.Webview.Co"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getPosition<sup>12+</sup>",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 197,
+        "summary": "getPosition(): number\n\n读取WebHttpBodyStream中当前的读取位置。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "isChunked<sup>12+</sup>",
+        "level": 2,
+        "line_start": 198,
+        "line_end": 215,
+        "summary": "isChunked(): boolean\n\nWebHttpBodyStream是否采用分块传输。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**返回"
+      },
+      {
+        "section_id": "section-7",
+        "title": "isEof<sup>12+</sup>",
+        "level": 2,
+        "line_start": 216,
+        "line_end": 233,
+        "summary": "isEof(): boolean\n\n判断WebHttpBodyStream中的所有数据是否都已被读取。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "isInMemory<sup>12+</sup>",
+        "level": 2,
+        "line_start": 234,
+        "line_end": 250,
+        "summary": "isInMemory(): boolean\n\n判断WebHttpBodyStream中的上传数据是否在内存中。\n\n**系统能力：** SystemCapability.Web.Webview.Cor"
+      }
+    ]
+  }
+}

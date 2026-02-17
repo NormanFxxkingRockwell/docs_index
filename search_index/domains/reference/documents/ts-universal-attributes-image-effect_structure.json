@@ -1,0 +1,412 @@
+{
+  "doc_id": "ts-universal-attributes-image-effect",
+  "title": "图像效果",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@CCFFWW",
+    "designer": "@CCFFWW",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 图像效果，提供相关接口和功能说明。",
+  "structure": {
+    "title": "图像效果",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "blur",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 39,
+        "summary": "blur(value: number, options?: BlurOptions): T\n\n为组件添加内容模糊效果。\n\n**卡片能力：** 从API version 9开始，该接口支持在ArkTS"
+      },
+      {
+        "section_id": "section-2",
+        "title": "blur<sup>18+</sup>",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 64,
+        "summary": "blur(blurRadius: Optional\\<number>, options?: BlurOptions): T\n\n为组件添加内容模糊效果。与[blur](#blur)相比，blurRad"
+      },
+      {
+        "section_id": "section-3",
+        "title": "blur<sup>19+</sup>",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 90,
+        "summary": "blur(blurRadius: Optional\\<number>, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): T"
+      },
+      {
+        "section_id": "section-4",
+        "title": "shadow",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 114,
+        "summary": "shadow(value: ShadowOptions | ShadowStyle): T\n\n为组件添加阴影效果。\n\n**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片"
+      },
+      {
+        "section_id": "section-5",
+        "title": "shadow<sup>18+</sup>",
+        "level": 2,
+        "line_start": 115,
+        "line_end": 138,
+        "summary": "shadow(options: Optional\\<ShadowOptions | ShadowStyle>): T\n\n为组件添加阴影效果。与[shadow](#shadow)相比，options参"
+      },
+      {
+        "section_id": "section-6",
+        "title": "grayscale",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 162,
+        "summary": "grayscale(value: number): T\n\n为组件添加灰度效果。上层渲染灰度会覆盖下层子组件渲染。不通过该接口设置时，默认无变化。\n\n**卡片能力：** 从API version 9开"
+      },
+      {
+        "section_id": "section-7",
+        "title": "grayscale<sup>18+</sup>",
+        "level": 2,
+        "line_start": 163,
+        "line_end": 186,
+        "summary": "grayscale(grayscale: Optional\\<number>): T\n\n为组件添加灰度效果。上层渲染灰度会覆盖下层子组件渲染。不通过该接口设置时，默认无变化。与[grayscale]"
+      },
+      {
+        "section_id": "section-8",
+        "title": "brightness",
+        "level": 2,
+        "line_start": 187,
+        "line_end": 210,
+        "summary": "brightness(value: number): T\n\n为组件添加高光效果。不通过该接口设置时，默认无变化。\n\n**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中"
+      },
+      {
+        "section_id": "section-9",
+        "title": "brightness<sup>18+</sup>",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 234,
+        "summary": "brightness(brightness: Optional\\<number>): T\n\n为组件添加高光效果。不通过该接口设置时，默认无变化。与[brightness](#brightness)相"
+      },
+      {
+        "section_id": "section-10",
+        "title": "saturate",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 258,
+        "summary": "saturate(value: number): T\n\n为组件添加饱和度效果。不通过该接口设置时，默认无变化。\n\n**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中使"
+      },
+      {
+        "section_id": "section-11",
+        "title": "saturate<sup>18+</sup>",
+        "level": 2,
+        "line_start": 259,
+        "line_end": 282,
+        "summary": "saturate(saturate: Optional\\<number>): T\n\n为组件添加饱和度效果。不通过该接口设置时，默认无变化。与[saturate](#saturate)相比，satur"
+      },
+      {
+        "section_id": "section-12",
+        "title": "contrast",
+        "level": 2,
+        "line_start": 283,
+        "line_end": 306,
+        "summary": "contrast(value: number): T\n\n为组件添加对比度效果。不通过该接口设置时，默认无变化。\n\n**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中使"
+      },
+      {
+        "section_id": "section-13",
+        "title": "contrast<sup>18+</sup>",
+        "level": 2,
+        "line_start": 307,
+        "line_end": 330,
+        "summary": "contrast(contrast: Optional\\<number>): T\n\n为组件添加对比度效果。不通过该接口设置时，默认无变化。与[contrast](#contrast)相比，contr"
+      },
+      {
+        "section_id": "section-14",
+        "title": "invert",
+        "level": 2,
+        "line_start": 331,
+        "line_end": 354,
+        "summary": "invert(value: number | InvertOptions): T\n\n反转输入的图像。\n\n**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中使用。\n\n*"
+      },
+      {
+        "section_id": "section-15",
+        "title": "invert<sup>18+</sup>",
+        "level": 2,
+        "line_start": 355,
+        "line_end": 378,
+        "summary": "invert(options: Optional\\<number | InvertOptions>): T\n\n反转输入的图像。与[invert](#invert)相比，options参数新增了对un"
+      },
+      {
+        "section_id": "section-16",
+        "title": "sepia",
+        "level": 2,
+        "line_start": 379,
+        "line_end": 402,
+        "summary": "sepia(value: number): T\n\n将图像转换为深褐色。\n\n**卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从A"
+      },
+      {
+        "section_id": "section-17",
+        "title": "sepia<sup>18+</sup>",
+        "level": 2,
+        "line_start": 403,
+        "line_end": 426,
+        "summary": "sepia(sepia: Optional\\<number>): T\n\n将图像转换为深褐色。与[sepia](#sepia)相比，sepia参数新增了对undefined类型的支持。\n\n**卡片能力"
+      },
+      {
+        "section_id": "section-18",
+        "title": "hueRotate",
+        "level": 2,
+        "line_start": 427,
+        "line_end": 450,
+        "summary": "hueRotate(value: number | string): T\n\n色相旋转效果。不通过该接口设置时，默认无变化。\n\n**卡片能力：** 从API version 9开始，该接口支持在Ark"
+      },
+      {
+        "section_id": "section-19",
+        "title": "hueRotate<sup>18+</sup>",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 474,
+        "summary": "hueRotate(rotation: Optional\\<number | string>): T\n\n色相旋转效果。不通过该接口设置时，默认无变化。与[hueRotate](#huerotate)"
+      },
+      {
+        "section_id": "section-20",
+        "title": "colorBlend",
+        "level": 2,
+        "line_start": 475,
+        "line_end": 498,
+        "summary": "colorBlend(value: Color | string | Resource): T\n\n为组件添加颜色叠加效果。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-21",
+        "title": "colorBlend<sup>18+</sup>",
+        "level": 2,
+        "line_start": 499,
+        "line_end": 522,
+        "summary": "colorBlend(color: Optional\\<Color | string | Resource>): T\n\n为组件添加颜色叠加效果。与[colorBlend](#colorblend)相"
+      },
+      {
+        "section_id": "section-22",
+        "title": "linearGradientBlur<sup>12+</sup>",
+        "level": 2,
+        "line_start": 523,
+        "line_end": 545,
+        "summary": "linearGradientBlur(value: number, options: LinearGradientBlurOptions): T\n\n为组件添加内容线性渐变模糊效果。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-23",
+        "title": "linearGradientBlur<sup>18+</sup>",
+        "level": 2,
+        "line_start": 546,
+        "line_end": 568,
+        "summary": "linearGradientBlur(blurRadius: Optional\\<number>, options: Optional\\<LinearGradientBlurOptions>): T"
+      },
+      {
+        "section_id": "section-24",
+        "title": "renderGroup<sup>10+</sup>",
+        "level": 2,
+        "line_start": 569,
+        "line_end": 594,
+        "summary": "renderGroup(value: boolean): T\n\n设置是否组成节点组。节点组表示当前组件和子组件组成的子树先在离屏画布中渲染，再与父组件融合绘制。设置为节点组后，系统会缓存绘制结果，提"
+      },
+      {
+        "section_id": "section-25",
+        "title": "renderGroup<sup>18+</sup>",
+        "level": 2,
+        "line_start": 595,
+        "line_end": 622,
+        "summary": "renderGroup(isGroup: Optional\\<boolean>): T\n\n设置是否组成节点组。节点组表示当前组件和子组件组成的子树先在离屏画布中渲染，再与父组件融合绘制。设置为节点组"
+      },
+      {
+        "section_id": "section-26",
+        "title": "blendMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 623,
+        "line_end": 647,
+        "summary": "blendMode(value: BlendMode, type?: BlendApplyType): T\n\n将当前控件的内容（包含子节点内容）与下方画布（可能为离屏画布）已有内容进行混合。\n\n**"
+      },
+      {
+        "section_id": "section-27",
+        "title": "blendMode<sup>18+</sup>",
+        "level": 2,
+        "line_start": 648,
+        "line_end": 672,
+        "summary": "blendMode(mode: Optional\\<BlendMode>, type?: BlendApplyType): T\n\n将当前控件的内容（包含子节点内容）与下方画布（可能为离屏画布）已有内"
+      },
+      {
+        "section_id": "section-28",
+        "title": "BlendApplyType<sup>11+</sup>枚举说明",
+        "level": 2,
+        "line_start": 673,
+        "line_end": 687,
+        "summary": "指示如何将指定的混合模式应用于视图的内容。\n\n**卡片能力：** 从API version 11开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 12"
+      },
+      {
+        "section_id": "section-29",
+        "title": "useShadowBatching<sup>11+</sup>",
+        "level": 2,
+        "line_start": 688,
+        "line_end": 711,
+        "summary": "useShadowBatching(value: boolean): T\n\n控件内部子节点的阴影进行同层绘制，同层元素阴影重叠。\n\n**原子化服务API：** 从API version 12开始，该"
+      },
+      {
+        "section_id": "section-30",
+        "title": "useShadowBatching<sup>18+</sup>",
+        "level": 2,
+        "line_start": 712,
+        "line_end": 735,
+        "summary": "useShadowBatching(use: Optional\\<boolean>): T\n\n控件内部子节点的阴影进行同层绘制，同层元素阴影重叠。与[useShadowBatching<sup>11"
+      },
+      {
+        "section_id": "section-31",
+        "title": "sphericalEffect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 736,
+        "line_end": 757,
+        "summary": "sphericalEffect(value: number): T\n\n设置组件的图像球面化程度。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-32",
+        "title": "sphericalEffect<sup>18+</sup>",
+        "level": 2,
+        "line_start": 758,
+        "line_end": 779,
+        "summary": "sphericalEffect(effect: Optional\\<number>): T\n\n设置组件的图像球面化程度。与[sphericalEffect<sup>12+</sup>](#spher"
+      },
+      {
+        "section_id": "section-33",
+        "title": "lightUpEffect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 780,
+        "line_end": 801,
+        "summary": "lightUpEffect(value: number): T\n\n设置组件图像亮起程度。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-34",
+        "title": "lightUpEffect<sup>18+</sup>",
+        "level": 2,
+        "line_start": 802,
+        "line_end": 823,
+        "summary": "lightUpEffect(degree: Optional\\<number>): T\n\n设置组件图像亮起程度。与[lightUpEffect<sup>12+</sup>](#lightupeffe"
+      },
+      {
+        "section_id": "section-35",
+        "title": "pixelStretchEffect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 824,
+        "line_end": 845,
+        "summary": "pixelStretchEffect(options: PixelStretchEffectOptions): T\n\n设置组件的图像边缘像素扩展距离。\n\n**原子化服务API：** 从API ver"
+      },
+      {
+        "section_id": "section-36",
+        "title": "pixelStretchEffect<sup>18+</sup>",
+        "level": 2,
+        "line_start": 846,
+        "line_end": 867,
+        "summary": "pixelStretchEffect(options: Optional\\<PixelStretchEffectOptions>): T\n\n设置组件的图像边缘像素扩展距离。与[pixelStretc"
+      },
+      {
+        "section_id": "section-37",
+        "title": "PixelStretchEffectOptions<sup>10+</sup>",
+        "level": 2,
+        "line_start": 868,
+        "line_end": 882,
+        "summary": "像素扩展属性集合，用于描述像素扩展的信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-38",
+        "title": "systemBarEffect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 883,
+        "line_end": 898,
+        "summary": "systemBarEffect(): T\n\n根据背景进行智能反色并且带有模糊效果。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-39",
+        "title": "ShadowType<sup>10+</sup>枚举说明",
+        "level": 2,
+        "line_start": 899,
+        "line_end": 912,
+        "summary": "阴影类型。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-40",
+        "title": "ShadowOptions对象说明",
+        "level": 2,
+        "line_start": 913,
+        "line_end": 927,
+        "summary": "阴影属性集合，用于设置阴影的模糊半径、阴影的颜色、X轴和Y轴的偏移量。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-41",
+        "title": "ShadowStyle<sup>10+</sup>枚举说明",
+        "level": 2,
+        "line_start": 928,
+        "line_end": 944,
+        "summary": "组件阴影效果。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-42",
+        "title": "BlendMode<sup>11+</sup>枚举说明",
+        "level": 2,
+        "line_start": 945,
+        "line_end": 991,
+        "summary": "混合模式。\n\n>  **说明：**\n>\n>  blendMode枚举中，s表示源像素，d表示目标像素，sa表示原像素透明度，da表示目标像素透明度，r表示混合后像素，ra表示混合后像素透明度。\n\n*"
+      },
+      {
+        "section_id": "section-43",
+        "title": "LinearGradientBlurOptions<sup>12+</sup>对象",
+        "level": 2,
+        "line_start": 992,
+        "line_end": 1002,
+        "summary": "**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称"
+      },
+      {
+        "section_id": "section-44",
+        "title": "FractionStop<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1003,
+        "line_end": 1016,
+        "summary": "type FractionStop = [ number, number ]\n\n定义模糊段。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**"
+      },
+      {
+        "section_id": "section-45",
+        "title": "InvertOptions<sup>11+</sup>对象说明",
+        "level": 2,
+        "line_start": 1017,
+        "line_end": 1031,
+        "summary": "前景智能取反色。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-46",
+        "title": "BackgroundImageOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1032,
+        "line_end": 1050,
+        "summary": "定义背景图选项。\n\n>  **说明：**\n>\n>  背景图片的同步加载可能会带来潜在性能问题，详情可见[Image](ts-basic-components-image.md#image-1)中说明"
+      },
+      {
+        "section_id": "section-47",
+        "title": "freeze<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1051,
+        "line_end": 1076,
+        "summary": "freeze(value: boolean): T\n\n设置当前控件和子控件是否整体离屏渲染绘制后重复绘制缓存，不再进行内部属性更新。\n\n>**说明：**\n>\n> 从API version 20开始，"
+      },
+      {
+        "section_id": "section-48",
+        "title": "freeze<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1077,
+        "line_end": 1102,
+        "summary": "freeze(freeze: Optional\\<boolean>): T\n\n设置当前控件和子控件是否整体离屏渲染绘制后重复绘制缓存，不再进行内部属性更新。与[freeze](#freeze12)相"
+      },
+      {
+        "section_id": "section-49",
+        "title": "示例",
+        "level": 2,
+        "line_start": 1103,
+        "line_end": 1599,
+        "summary": "### 示例1（设置图片不同属性效果）\n设置图片的效果，包括阴影，灰度，高光，饱和度，对比度，图像反转，叠色，色相旋转等。\n```ts\n// xxx.ets\n@Entry\n@Component\nst"
+      }
+    ]
+  }
+}

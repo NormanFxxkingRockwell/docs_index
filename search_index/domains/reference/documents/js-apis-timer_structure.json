@@ -1,0 +1,60 @@
+{
+  "doc_id": "js-apis-timer",
+  "title": "Timer (定时器)",
+  "path": "zh-cn/application-dev/reference/common/js-apis-timer.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/common/js-apis-timer.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@yao_dashuai",
+    "designer": "@yao_dashuai",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 Timer (定时器)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Timer (定时器)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "setTimeout",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 86,
+        "summary": "setTimeout(handler: Function | string, delay?: number, ...arguments: any[]): number\n\n设置一个定时器，该定时器在定"
+      },
+      {
+        "section_id": "section-2",
+        "title": "clearTimeout",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 114,
+        "summary": "clearTimeout(timeoutID?: number): void\n\n可取消通过调用setTimeout()建立的定时器。\n\n定时器对象保存在创建它的线程内，删除定时器时需要在该线程中进行"
+      },
+      {
+        "section_id": "section-3",
+        "title": "setInterval",
+        "level": 2,
+        "line_start": 115,
+        "line_end": 149,
+        "summary": "setInterval(handler: Function | string, delay: number, ...arguments: any[]): number\n\n重复调用一个函数，在每次调用"
+      },
+      {
+        "section_id": "section-4",
+        "title": "clearInterval",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 176,
+        "summary": "clearInterval(intervalID?: number): void\n\n可取消通过setInterval()设置的重复定时任务。\n\n定时器对象保存在创建它的线程内，删除定时器时需要在该线"
+      },
+      {
+        "section_id": "section-5",
+        "title": "其他说明",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 199,
+        "summary": "### 超时延迟\n如果页面正忙于其他任务，超时可能比预期晚。setTimeout的函数或代码片段在下一个时间周期执行。例如：\n  ```ts\n  function foo() {\n    consol"
+      }
+    ]
+  }
+}

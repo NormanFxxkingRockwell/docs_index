@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-selectionInput-selectionManager",
+  "title": "@ohos.selectionInput.selectionManager (划词管理)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-selectionInput-selectionManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-selectionInput-selectionManager.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "SelectionInput",
+    "owner": "@no86",
+    "designer": "@mmwwbb",
+    "tester": "@dong-dongzhen",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit SelectionInput 模块的 @ohos.selectionInput.selectionManager (划词管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.selectionInput.selectionManager (划词管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { selectionManager } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "selectionManager.on('selectionCompleted')",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 60,
+        "summary": "on(type: 'selectionCompleted', callback: Callback\\<SelectionInfo>): void\n\n订阅划词完成事件。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "selectionManager.off('selectionCompleted')",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 92,
+        "summary": "off(type: 'selectionCompleted', callback?: Callback\\<SelectionInfo>): void\n\n取消订阅划词完成事件。使用callback异步"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getSelectionContent()",
+        "level": 2,
+        "line_start": 93,
+        "line_end": 132,
+        "summary": "getSelectionContent(): Promise\\<string>\n\n获取选中文本的内容。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Selec"
+      },
+      {
+        "section_id": "section-5",
+        "title": "createPanel",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 207,
+        "summary": "createPanel(ctx: Context, info: PanelInfo): Promise\\<Panel>\n\n创建划词面板。使用Promise异步回调。\n\n单个划词应用仅允许创建一个[主"
+      },
+      {
+        "section_id": "section-6",
+        "title": "destroyPanel",
+        "level": 2,
+        "line_start": 208,
+        "line_end": 292,
+        "summary": "destroyPanel(panel: Panel): Promise\\<void>\n\n销毁划词面板。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Selec"
+      },
+      {
+        "section_id": "section-7",
+        "title": "SelectionInfo",
+        "level": 2,
+        "line_start": 293,
+        "line_end": 315,
+        "summary": "划词事件信息。\n\n**系统能力：** SystemCapability.SelectionInput.Selection\n\n**模型约束：** 此接口仅可在Stage模式下使用。\n\n| 名称"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Panel",
+        "level": 2,
+        "line_start": 316,
+        "line_end": 702,
+        "summary": "划词面板。\n\n**系统能力：** SystemCapability.SelectionInput.Selection\n\n**模型约束：** 此接口仅可在Stage模式下使用。\n\n下列API均需使用["
+      },
+      {
+        "section_id": "section-9",
+        "title": "SelectionType",
+        "level": 2,
+        "line_start": 703,
+        "line_end": 716,
+        "summary": "定义触发划词的类型枚举。\n\n**系统能力：** SystemCapability.SelectionInput.Selection\n\n**模型约束：** 此接口仅可在Stage模式下使用。\n\n| 名"
+      }
+    ]
+  }
+}

@@ -1,0 +1,532 @@
+{
+  "doc_id": "js-apis-bluetooth-ble",
+  "title": "@ohos.bluetooth.ble (蓝牙ble模块)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-ble.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-ble.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.bluetooth.ble (蓝牙ble模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bluetooth.ble (蓝牙ble模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 24,
+        "summary": "```js\nimport { ble } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ProfileConnectionState",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 38,
+        "summary": "type ProfileConnectionState = constant.ProfileConnectionState\n\n蓝牙设备的Profile协议连接状态。\n\n**原子化服务API**：从A"
+      },
+      {
+        "section_id": "section-3",
+        "title": "BluetoothAddress<sup>23+</sup>",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 50,
+        "summary": "type BluetoothAddress = common.BluetoothAddress\n\n描述蓝牙设备地址信息的参数结构，包括地址与地址类型。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ble.createGattServer",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 75,
+        "summary": "createGattServer(): GattServer\n\n创建[GattServer](#gattserver)实例，表示GATT连接中的server端。\n- 通过该实例可以操作server端"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ble.createGattClientDevice",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 119,
+        "summary": "createGattClientDevice(deviceId: string): GattClientDevice\n\n创建[GattClientDevice](#gattclientdevice)"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ble.getConnectedBLEDevices",
+        "level": 2,
+        "line_start": 120,
+        "line_end": 159,
+        "summary": "getConnectedBLEDevices(): Array&lt;string&gt;\n\n获取和本机设备已连接GATT的BLE设备集合。\n- 建议给server端使用，client端使用返回的设"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ble.getConnectedBLEDevices<sup>21+</sup>",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 207,
+        "summary": "getConnectedBLEDevices(profile: BleProfile): Array&lt;string&gt;\n\n根据指定的本机设备Profile协议类型，获取和本机设备已连接GA"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ble.startBLEScan",
+        "level": 2,
+        "line_start": 208,
+        "line_end": 274,
+        "summary": "startBLEScan(filters: Array&lt;ScanFilter&gt;, options?: ScanOptions): void\n\n发起BLE扫描流程。\n- 扫描结果会通过[b"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ble.stopBLEScan",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 312,
+        "summary": "stopBLEScan(): void\n\n停止BLE扫描流程。\n- 停止的BLE扫描由[ble.startBLEScan](#blestartblescan)触发。\n- 当应用不再需要扫描BLE设备"
+      },
+      {
+        "section_id": "section-10",
+        "title": "ble.startAdvertising",
+        "level": 2,
+        "line_start": 313,
+        "line_end": 401,
+        "summary": "startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): v"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ble.stopAdvertising",
+        "level": 2,
+        "line_start": 402,
+        "line_end": 439,
+        "summary": "stopAdvertising(): void\n\n停止发送BLE广播报文。\n- 停止的BLE广播是由[ble.startAdvertising](#blestartadvertising)触发的。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ble.startAdvertising<sup>11+</sup>",
+        "level": 2,
+        "line_start": 440,
+        "line_end": 540,
+        "summary": "startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback&lt;number&gt;): void"
+      },
+      {
+        "section_id": "section-13",
+        "title": "ble.startAdvertising<sup>11+</sup>",
+        "level": 2,
+        "line_start": 541,
+        "line_end": 642,
+        "summary": "startAdvertising(advertisingParams: AdvertisingParams): Promise&lt;number&gt;\n\n首次启动发送BLE广播报文。使用Prom"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ble.enableAdvertising<sup>11+</sup>",
+        "level": 2,
+        "line_start": 643,
+        "line_end": 750,
+        "summary": "enableAdvertising(advertisingEnableParams: AdvertisingEnableParams, callback: AsyncCallback&lt;void"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ble.enableAdvertising<sup>11+</sup>",
+        "level": 2,
+        "line_start": 751,
+        "line_end": 862,
+        "summary": "enableAdvertising(advertisingEnableParams: AdvertisingEnableParams): Promise&lt;void&gt;\n\n重新启动指定标识的"
+      },
+      {
+        "section_id": "section-16",
+        "title": "ble.disableAdvertising<sup>11+</sup>",
+        "level": 2,
+        "line_start": 863,
+        "line_end": 966,
+        "summary": "disableAdvertising(advertisingDisableParams: AdvertisingDisableParams, callback: AsyncCallback&lt;v"
+      },
+      {
+        "section_id": "section-17",
+        "title": "ble.disableAdvertising<sup>11+</sup>",
+        "level": 2,
+        "line_start": 967,
+        "line_end": 1073,
+        "summary": "disableAdvertising(advertisingDisableParams: AdvertisingDisableParams): Promise&lt;void&gt;\n\n停止指定标识"
+      },
+      {
+        "section_id": "section-18",
+        "title": "ble.stopAdvertising<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1074,
+        "line_end": 1175,
+        "summary": "stopAdvertising(advertisingId: number, callback: AsyncCallback&lt;void&gt;): void\n\n完全停止发送BLE广播。使用Ca"
+      },
+      {
+        "section_id": "section-19",
+        "title": "ble.stopAdvertising<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1176,
+        "line_end": 1281,
+        "summary": "stopAdvertising(advertisingId: number): Promise&lt;void&gt;\n\n完全停止发送BLE广播。使用Promise异步回调。\n- 与API vers"
+      },
+      {
+        "section_id": "section-20",
+        "title": "ble.on('advertisingStateChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1282,
+        "line_end": 1324,
+        "summary": "on(type: 'advertisingStateChange', callback: Callback&lt;AdvertisingStateChangeInfo&gt;): void\n\n订阅B"
+      },
+      {
+        "section_id": "section-21",
+        "title": "ble.off('advertisingStateChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1325,
+        "line_end": 1368,
+        "summary": "off(type: 'advertisingStateChange', callback?: Callback&lt;AdvertisingStateChangeInfo&gt;): void\n\n取"
+      },
+      {
+        "section_id": "section-22",
+        "title": "ble.on('BLEDeviceFind')",
+        "level": 2,
+        "line_start": 1369,
+        "line_end": 1413,
+        "summary": "on(type: 'BLEDeviceFind', callback: Callback&lt;Array&lt;ScanResult&gt;&gt;): void\n\n订阅BLE设备扫描结果上报事件"
+      },
+      {
+        "section_id": "section-23",
+        "title": "ble.off('BLEDeviceFind')",
+        "level": 2,
+        "line_start": 1414,
+        "line_end": 1461,
+        "summary": "off(type: 'BLEDeviceFind', callback?: Callback&lt;Array&lt;ScanResult&gt;&gt;): void\n\n取消订阅BLE设备扫描结果"
+      },
+      {
+        "section_id": "section-24",
+        "title": "GattServer",
+        "level": 2,
+        "line_start": 1462,
+        "line_end": 2715,
+        "summary": "GATT通信中的服务端类。\n- 通过[ble.createGattServer](#blecreategattserver)方法可以构造server实例。\n- 通过该实例可以操作server端的行为"
+      },
+      {
+        "section_id": "section-25",
+        "title": "GattClientDevice",
+        "level": 2,
+        "line_start": 2716,
+        "line_end": 4719,
+        "summary": "GATT客户端类，提供了和服务端进行连接和数据传输等操作方法。\n\n- 使用该类的方法前，需通过[createGattClientDevice](#blecreategattclientdevice)"
+      },
+      {
+        "section_id": "section-26",
+        "title": "ble.createBleScanner<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4720,
+        "line_end": 4744,
+        "summary": "createBleScanner(): BleScanner\n\n创建一个[BleScanner](#blescanner15)实例对象，可用于发起或停止BLE扫描等流程。\n\n**原子化服务API**"
+      },
+      {
+        "section_id": "section-27",
+        "title": "BleScanner<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4745,
+        "line_end": 4962,
+        "summary": "BLE扫描类，提供了扫描相关的操作方法。<br>\n- 使用该类的方法前，需通过[createBleScanner](#blecreateblescanner15)方法构造该类的实例。<br>\n- 通"
+      },
+      {
+        "section_id": "section-28",
+        "title": "GattService",
+        "level": 2,
+        "line_start": 4963,
+        "line_end": 4979,
+        "summary": "GATT服务结构定义，可包含多个特征值[BLECharacteristic](#blecharacteristic)和依赖的其他服务。\n\n**原子化服务API**：从API version 12开始"
+      },
+      {
+        "section_id": "section-29",
+        "title": "BLECharacteristic",
+        "level": 2,
+        "line_start": 4980,
+        "line_end": 4996,
+        "summary": "GATT特征值结构定义，是服务[GattService](#gattservice)的核心数据单元。\n\n**系统能力**：SystemCapability.Communication.Bluetoo"
+      },
+      {
+        "section_id": "section-30",
+        "title": "BLEDescriptor",
+        "level": 2,
+        "line_start": 4997,
+        "line_end": 5012,
+        "summary": "GATT描述符结构定义，是特征值[BLECharacteristic](#blecharacteristic)的数据单元，用于描述特征值的附加信息和属性。\n\n**系统能力**：SystemCapab"
+      },
+      {
+        "section_id": "section-31",
+        "title": "NotifyCharacteristic",
+        "level": 2,
+        "line_start": 5013,
+        "line_end": 5028,
+        "summary": "描述server端特征值发生变化时，server端发送特征值通知的参数结构。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：Sy"
+      },
+      {
+        "section_id": "section-32",
+        "title": "CharacteristicReadRequest",
+        "level": 2,
+        "line_start": 5029,
+        "line_end": 5045,
+        "summary": "描述server端订阅client端读特征值请求事件后，接收到的事件参数结构。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-33",
+        "title": "CharacteristicWriteRequest",
+        "level": 2,
+        "line_start": 5046,
+        "line_end": 5065,
+        "summary": "描述server端订阅client端写特征值请求事件后，接收到的事件参数结构。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-34",
+        "title": "DescriptorReadRequest",
+        "level": 2,
+        "line_start": 5066,
+        "line_end": 5083,
+        "summary": "描述server端订阅client端读描述符请求事件后，接收到的事件参数结构。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-35",
+        "title": "DescriptorWriteRequest",
+        "level": 2,
+        "line_start": 5084,
+        "line_end": 5104,
+        "summary": "描述server端订阅client端写描述符请求事件后，接收到的事件参数结构。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-36",
+        "title": "ServerResponse",
+        "level": 2,
+        "line_start": 5105,
+        "line_end": 5121,
+        "summary": "描述server端回复client端读或者写请求的响应参数结构。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCa"
+      },
+      {
+        "section_id": "section-37",
+        "title": "BLEConnectionChangeState",
+        "level": 2,
+        "line_start": 5122,
+        "line_end": 5134,
+        "summary": "描述GATT profile协议连接状态。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称     | 类型"
+      },
+      {
+        "section_id": "section-38",
+        "title": "ScanResult",
+        "level": 2,
+        "line_start": 5135,
+        "line_end": 5156,
+        "summary": "扫描到符合过滤条件的广播报文后，上报的扫描数据。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称       | 类型"
+      },
+      {
+        "section_id": "section-39",
+        "title": "AdvertiseSetting",
+        "level": 2,
+        "line_start": 5157,
+        "line_end": 5171,
+        "summary": "描述BLE广播的发送参数。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communicat"
+      },
+      {
+        "section_id": "section-40",
+        "title": "AdvertiseData",
+        "level": 2,
+        "line_start": 5172,
+        "line_end": 5188,
+        "summary": "描述BLE广播报文数据内容，也可以用作回复扫描请求的广播报文数据内容。当前只支持传统广播，因此报文最大长度为31个字节。若超出最大长度（31个字节）限制，会导致启动广播失败。\n\n- 若携带了所有参数"
+      },
+      {
+        "section_id": "section-41",
+        "title": "AdvertisingParams<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5189,
+        "line_end": 5201,
+        "summary": "首次启动BLE广播时设置的参数。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称                | 类型"
+      },
+      {
+        "section_id": "section-42",
+        "title": "AdvertisingEnableParams<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5202,
+        "line_end": 5212,
+        "summary": "启动指定标识的BLE广播时设置的参数。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称                |"
+      },
+      {
+        "section_id": "section-43",
+        "title": "AdvertisingDisableParams<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5213,
+        "line_end": 5222,
+        "summary": "停止指定标识的BLE广播时设置的参数。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称                |"
+      },
+      {
+        "section_id": "section-44",
+        "title": "AdvertisingStateChangeInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5223,
+        "line_end": 5233,
+        "summary": "描述BLE广播启动、停止的状态信息。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称                | 类"
+      },
+      {
+        "section_id": "section-45",
+        "title": "ManufactureData",
+        "level": 2,
+        "line_start": 5234,
+        "line_end": 5247,
+        "summary": "描述BLE广播报文中制造商数据内容。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Commu"
+      },
+      {
+        "section_id": "section-46",
+        "title": "ServiceData",
+        "level": 2,
+        "line_start": 5248,
+        "line_end": 5261,
+        "summary": "描述BLE广播报文中的服务数据内容。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Commu"
+      },
+      {
+        "section_id": "section-47",
+        "title": "ScanFilter",
+        "level": 2,
+        "line_start": 5262,
+        "line_end": 5284,
+        "summary": "扫描BLE广播的过滤条件，只有符合该条件的广播报文才会上报。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-48",
+        "title": "ScanOptions",
+        "level": 2,
+        "line_start": 5285,
+        "line_end": 5299,
+        "summary": "BLE扫描的配置参数。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称        | 类型"
+      },
+      {
+        "section_id": "section-49",
+        "title": "GattProperties",
+        "level": 2,
+        "line_start": 5300,
+        "line_end": 5317,
+        "summary": "描述GATT特征值支持的属性。决定了特征值内容和描述符如何被使用和访问。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-50",
+        "title": "GattPermissions<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5318,
+        "line_end": 5336,
+        "summary": "描述读写GATT特征值或描述符需具备的权限。\n\n**原子化服务API**：从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.C"
+      },
+      {
+        "section_id": "section-51",
+        "title": "PhyValue<sup>23+</sup>",
+        "level": 2,
+        "line_start": 5337,
+        "line_end": 5352,
+        "summary": "连接链路的物理通道类型配置参数。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n**模型约束**：此接口仅可在Stage模型下使用"
+      },
+      {
+        "section_id": "section-52",
+        "title": "GattWriteType",
+        "level": 2,
+        "line_start": 5353,
+        "line_end": 5366,
+        "summary": "枚举，写入特征值的方式（不同的取值，对端蓝牙设备的表现不一样）。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCa"
+      },
+      {
+        "section_id": "section-53",
+        "title": "ScanDuty",
+        "level": 2,
+        "line_start": 5367,
+        "line_end": 5381,
+        "summary": "枚举，扫描模式，表示不同的扫描性能和功耗情况。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability."
+      },
+      {
+        "section_id": "section-54",
+        "title": "MatchMode",
+        "level": 2,
+        "line_start": 5382,
+        "line_end": 5394,
+        "summary": "枚举，硬件过滤匹配模式。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communicati"
+      },
+      {
+        "section_id": "section-55",
+        "title": "AdvertisingState<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5395,
+        "line_end": 5407,
+        "summary": "枚举，不同操作对应的BLE广播状态。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称      | 值    | 说明"
+      },
+      {
+        "section_id": "section-56",
+        "title": "PhyType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5408,
+        "line_end": 5420,
+        "summary": "枚举，指定扫描过程中接收BLE广播报文的物理通道。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapabilit"
+      },
+      {
+        "section_id": "section-57",
+        "title": "ScanReport<sup>15+</sup>",
+        "level": 2,
+        "line_start": 5421,
+        "line_end": 5433,
+        "summary": "上报的扫描数据。\n\n**原子化服务API**：从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communication.B"
+      },
+      {
+        "section_id": "section-58",
+        "title": "ScanReportType<sup>15+</sup>",
+        "level": 2,
+        "line_start": 5434,
+        "line_end": 5445,
+        "summary": "枚举，扫描结果上报类型。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称      | 值    | 说明"
+      },
+      {
+        "section_id": "section-59",
+        "title": "GattDisconnectReason<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5446,
+        "line_end": 5460,
+        "summary": "枚举，指定GATT链路断开的原因。\n\n**原子化服务API**：从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Commun"
+      },
+      {
+        "section_id": "section-60",
+        "title": "BleProfile<sup>21+</sup>",
+        "level": 2,
+        "line_start": 5461,
+        "line_end": 5472,
+        "summary": "枚举，指定当前设备的Profile协议类型。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称      | 值    |"
+      },
+      {
+        "section_id": "section-61",
+        "title": "ScanReportMode<sup>15+</sup>",
+        "level": 2,
+        "line_start": 5473,
+        "line_end": 5485,
+        "summary": "枚举，扫描结果上报模式。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称      | 值    | 说明"
+      },
+      {
+        "section_id": "section-62",
+        "title": "ConnectionParam<sup>22+</sup>",
+        "level": 2,
+        "line_start": 5486,
+        "line_end": 5497,
+        "summary": "枚举，连接参数类型。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称      | 值    | 说明"
+      },
+      {
+        "section_id": "section-63",
+        "title": "BlePhy<sup>23+</sup>",
+        "level": 2,
+        "line_start": 5498,
+        "line_end": 5511,
+        "summary": "枚举，连接与广播的物理通道类型。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n**模型约束**：此接口仅可在Stage模型下使用"
+      },
+      {
+        "section_id": "section-64",
+        "title": "CodedPhyMode<sup>23+</sup>",
+        "level": 2,
+        "line_start": 5512,
+        "line_end": 5524,
+        "summary": "枚举，BLE_PHY_CODED类型下的编码方式。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n**模型约束**：此接口仅可在S"
+      }
+    ]
+  }
+}

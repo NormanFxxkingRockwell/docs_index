@@ -1,0 +1,108 @@
+{
+  "doc_id": "ts-container-grid",
+  "title": "Grid",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-grid.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-grid.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zcdqs; @fangyuhao",
+    "designer": "@zcdqs",
+    "tester": "@liuzhenshuo",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 Grid，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Grid",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 46,
+        "summary": "仅支持[GridItem](ts-container-griditem.md)子组件和自定义组件。自定义组件在Grid下使用时，建议使用GridItem作为自定义组件的顶层组件，不建议给自定义组件设"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 63,
+        "summary": "Grid(scroller?: Scroller, layoutOptions?: GridLayoutOptions)\n\n创建网格容器。\n\n**原子化服务API：** 从API version 1"
+      },
+      {
+        "section_id": "section-3",
+        "title": "GridLayoutOptions<sup>10+</sup>对象说明",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 78,
+        "summary": "Grid布局选项。其中，irregularIndexes和onGetIrregularSizeByIndex可对仅设置rowsTemplate或columnsTemplate的Grid使用，可以指定"
+      },
+      {
+        "section_id": "section-4",
+        "title": "属性",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 621,
+        "summary": "除支持[通用属性](ts-component-general-attributes.md)和[滚动组件通用属性](ts-container-scrollable-common.md#属性)外，还支持"
+      },
+      {
+        "section_id": "section-5",
+        "title": "GridItemAlignment<sup>12+</sup>枚举说明",
+        "level": 2,
+        "line_start": 622,
+        "line_end": 642,
+        "summary": "GridItem的对齐方式枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-6",
+        "title": "GridDirection<sup>8+</sup>枚举说明",
+        "level": 2,
+        "line_start": 643,
+        "line_end": 657,
+        "summary": "主轴布局方向枚举。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-7",
+        "title": "事件",
+        "level": 2,
+        "line_start": 658,
+        "line_end": 915,
+        "summary": "除支持[通用事件](ts-component-general-events.md)和[滚动组件通用事件](ts-container-scrollable-common.md#事件)外，还支持以下事件"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ComputedBarAttribute<sup>10+</sup>对象说明",
+        "level": 2,
+        "line_start": 916,
+        "line_end": 928,
+        "summary": "滚动条位置和长度对象。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkU"
+      },
+      {
+        "section_id": "section-9",
+        "title": "UIGridEvent<sup>19+</sup>",
+        "level": 2,
+        "line_start": 929,
+        "line_end": 987,
+        "summary": "frameNode中[getEvent('Grid')](../js-apis-arkui-frameNode.md#geteventgrid19)方法的返回值，可用于给Grid节点设置滚动事件。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "OnGridScrollIndexCallback<sup>19+</sup>",
+        "level": 2,
+        "line_start": 988,
+        "line_end": 1003,
+        "summary": "type OnGridScrollIndexCallback = (first: number, last: number) => void\n\nGrid组件可见区域item变化事件的回调类型。\n\n**"
+      },
+      {
+        "section_id": "section-11",
+        "title": "示例",
+        "level": 2,
+        "line_start": 1004,
+        "line_end": 3138,
+        "summary": "### 示例1（固定行列Grid）\n\n可以使用[GridLayoutOptions](#gridlayoutoptions10对象说明)中的onGetRectByIndex指定GridItem的位置"
+      }
+    ]
+  }
+}

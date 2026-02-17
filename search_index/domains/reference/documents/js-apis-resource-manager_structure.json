@@ -1,0 +1,172 @@
+{
+  "doc_id": "js-apis-resource-manager",
+  "title": "@ohos.resourceManager (资源管理)",
+  "path": "zh-cn/application-dev/reference/apis-localization-kit/js-apis-resource-manager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-localization-kit/js-apis-resource-manager.md",
+  "metadata": {
+    "kit": "Localization Kit",
+    "subsystem": "Global",
+    "owner": "@liule_123",
+    "designer": "@buda_wy",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Localization Kit Global 模块的 @ohos.resourceManager (资源管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.resourceManager (资源管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```js\nimport { resourceManager } from '@kit.LocalizationKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 43,
+        "summary": "从API version 9开始，Stage模型支持通过Context获取资源管理resourceManager对象，无需再导入模块。\n\nFA模型仍需要先导入模块，再调用[getResourceMa"
+      },
+      {
+        "section_id": "section-3",
+        "title": "resourceManager.getResourceManager",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 86,
+        "summary": "getResourceManager(callback: AsyncCallback&lt;ResourceManager&gt;): void\n\n获取当前应用的资源管理对象，使用callback异"
+      },
+      {
+        "section_id": "section-4",
+        "title": "resourceManager.getResourceManager",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 132,
+        "summary": "getResourceManager(bundleName: string, callback: AsyncCallback&lt;ResourceManager&gt;): void\n\n获取指定应"
+      },
+      {
+        "section_id": "section-5",
+        "title": "resourceManager.getResourceManager",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 171,
+        "summary": "getResourceManager(): Promise&lt;ResourceManager&gt;\n\n获取当前应用的资源管理对象，使用Promise异步回调。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-6",
+        "title": "resourceManager.getResourceManager",
+        "level": 2,
+        "line_start": 172,
+        "line_end": 219,
+        "summary": "getResourceManager(bundleName: string): Promise&lt;ResourceManager&gt;\n\n获取指定应用的资源管理对象，使用Promise异步回调"
+      },
+      {
+        "section_id": "section-7",
+        "title": "resourceManager.getSysResourceManager<sup>20+</sup>",
+        "level": 2,
+        "line_start": 220,
+        "line_end": 263,
+        "summary": "getSysResourceManager(): ResourceManager\n\n获取系统资源管理对象。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Direction",
+        "level": 2,
+        "line_start": 264,
+        "line_end": 277,
+        "summary": "用于表示设备屏幕方向。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.Res"
+      },
+      {
+        "section_id": "section-9",
+        "title": "DeviceType",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 295,
+        "summary": "用于表示当前设备类型。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.Res"
+      },
+      {
+        "section_id": "section-10",
+        "title": "ScreenDensity",
+        "level": 2,
+        "line_start": 296,
+        "line_end": 313,
+        "summary": "用于表示当前设备屏幕密度。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.R"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ColorMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 314,
+        "line_end": 327,
+        "summary": "用于表示当前设备颜色模式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.R"
+      },
+      {
+        "section_id": "section-12",
+        "title": "Configuration",
+        "level": 2,
+        "line_start": 328,
+        "line_end": 345,
+        "summary": "表示当前设备的状态。\n\n**系统能力：** SystemCapability.Global.ResourceManager\n\n| 名称                        | 类型"
+      },
+      {
+        "section_id": "section-13",
+        "title": "DeviceCapability",
+        "level": 2,
+        "line_start": 346,
+        "line_end": 359,
+        "summary": "表示设备支持的能力。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.Reso"
+      },
+      {
+        "section_id": "section-14",
+        "title": "RawFileDescriptor<sup>9+</sup>",
+        "level": 2,
+        "line_start": 360,
+        "line_end": 371,
+        "summary": "type RawFileDescriptor = _RawFileDescriptor\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能"
+      },
+      {
+        "section_id": "section-15",
+        "title": "Resource<sup>9+</sup>",
+        "level": 2,
+        "line_start": 372,
+        "line_end": 383,
+        "summary": "type Resource = _Resource\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-16",
+        "title": "ResourceManager",
+        "level": 2,
+        "line_start": 384,
+        "line_end": 7965,
+        "summary": "提供访问应用资源和系统资源的能力。\n\n> **说明：**\n>\n> - ResourceManager涉及到的方法，仅限基于TS扩展的声明式开发范式使用。\n>\n> - 资源文件在工程的resource"
+      },
+      {
+        "section_id": "section-17",
+        "title": "resourceManager.getSystemResourceManager<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 7966,
+        "line_end": 8015,
+        "summary": "getSystemResourceManager(): ResourceManager\n\n获取系统资源管理ResourceManager对象。\n\n> **说明**\n>\n> 当前接口获取到的系统资源管"
+      },
+      {
+        "section_id": "section-18",
+        "title": "AsyncCallback<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 8016,
+        "line_end": 8040,
+        "summary": "> **说明**\n>\n> 从API version 6开始支持，从API version 9开始废弃，建议使用[AsyncCallback](../apis-basic-services-kit/j"
+      },
+      {
+        "section_id": "section-19",
+        "title": "附录",
+        "level": 2,
+        "line_start": 8041,
+        "line_end": 8180,
+        "summary": "- 示例代码中用到的'app.string.test'文件内容如下：\n\n  ```json5\n  // 资源文件路径: src/main/resources/base/element/string."
+      }
+    ]
+  }
+}

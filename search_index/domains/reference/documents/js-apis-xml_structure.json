@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-xml",
+  "title": "@ohos.xml (XML解析与生成)",
+  "path": "zh-cn/application-dev/reference/apis-arkts/js-apis-xml.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/js-apis-xml.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@xliu-huanwei; @shilei123; @huanghello",
+    "designer": "@yuanyao14",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 @ohos.xml (XML解析与生成)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.xml (XML解析与生成)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { xml } from '@kit.ArkTS';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "XmlSerializer",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 450,
+        "summary": "XmlSerializer接口用于生成XML文件。\n\n### constructor\n\nconstructor(buffer: ArrayBuffer | DataView, encoding?:"
+      },
+      {
+        "section_id": "section-3",
+        "title": "XmlDynamicSerializer<sup>20+</sup>",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 927,
+        "summary": "XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容长度时，推荐使用该类。\n\n> **说明：**\n>\n> 使用该类构造的对象无需自行创建ArrayBuffer，程"
+      },
+      {
+        "section_id": "section-4",
+        "title": "XmlPullParser",
+        "level": 2,
+        "line_start": 928,
+        "line_end": 1077,
+        "summary": "XmlPullParser接口用于解析现有的XML文件。\n\n### constructor\n\nconstructor(buffer: ArrayBuffer | DataView, encoding"
+      },
+      {
+        "section_id": "section-5",
+        "title": "AttributeWithTagCb<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1078,
+        "line_end": 1099,
+        "summary": "type AttributeWithTagCb = (tagName: string, key: string, value: string) => boolean\n\n**原子化服务API：** 从"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ParseOptions",
+        "level": 2,
+        "line_start": 1100,
+        "line_end": 1116,
+        "summary": "XML解析选项。\n\n\n**系统能力：** SystemCapability.Utils.Lang。\n\n\n| 名称                           | 类型"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ParseInfo",
+        "level": 2,
+        "line_start": 1117,
+        "line_end": 1499,
+        "summary": "当前XML解析信息。\n\n\n### getColumnNumber\n\ngetColumnNumber(): number\n\n获取当前列号，从1开始计数。\n\n**原子化服务API**：从API vers"
+      },
+      {
+        "section_id": "section-8",
+        "title": "EventType",
+        "level": 2,
+        "line_start": 1500,
+        "line_end": 1520,
+        "summary": "事件类型枚举。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n| 名"
+      }
+    ]
+  }
+}

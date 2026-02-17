@@ -1,0 +1,124 @@
+{
+  "doc_id": "js-apis-font",
+  "title": "@ohos.font (注册自定义字体)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-font.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-font.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@hddgzw",
+    "designer": "@xiangyuan6",
+    "tester": "@jiaoaozihao",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 @ohos.font (注册自定义字体)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.font (注册自定义字体)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { font } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "font.registerFont<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 48,
+        "summary": "registerFont(options: FontOptions): void\n\n在字体管理中注册自定义字体。\n\n该接口为异步接口，不支持并发调用。\n\n> **说明：**\n>\n> - 从API v"
+      },
+      {
+        "section_id": "section-3",
+        "title": "FontOptions",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 132,
+        "summary": "注册的自定义字体信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkU"
+      },
+      {
+        "section_id": "section-4",
+        "title": "font.getSystemFontList<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 188,
+        "summary": "getSystemFontList(): Array\\<string>\n\n获取系统字体列表。\n\n该接口仅在PC/2in1设备上生效，在其他设备上返回空数组。\n\n推荐使用[getSystemFontF"
+      },
+      {
+        "section_id": "section-5",
+        "title": "font.getFontByName<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 216,
+        "summary": "getFontByName(fontName: string): FontInfo\n\n根据传入的系统字体名称获取系统字体的相关信息。\n\n> **说明：**\n>\n> - 从API version 10"
+      },
+      {
+        "section_id": "section-6",
+        "title": "FontInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 217,
+        "line_end": 276,
+        "summary": "字体的详细信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-7",
+        "title": "font.getUIFontConfig<sup>11+</sup>",
+        "level": 2,
+        "line_start": 277,
+        "line_end": 293,
+        "summary": "getUIFontConfig() : UIFontConfig\n\n获取系统字体配置文件的UI字体配置信息。\n\n该接口仅支持获取配置文件内的信息以及当UI上下文不明确时可能返回undefined，如"
+      },
+      {
+        "section_id": "section-8",
+        "title": "UIFontConfig<sup>11+</sup>",
+        "level": 2,
+        "line_start": 294,
+        "line_end": 306,
+        "summary": "系统的UI字体配置信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-9",
+        "title": "UIFontGenericInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 307,
+        "line_end": 319,
+        "summary": "系统所支持的通用字体集列表。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.A"
+      },
+      {
+        "section_id": "section-10",
+        "title": "UIFontFallbackGroupInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 320,
+        "line_end": 331,
+        "summary": "备用字体集。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Ful"
+      },
+      {
+        "section_id": "section-11",
+        "title": "UIFontAliasInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 332,
+        "line_end": 343,
+        "summary": "别名列表。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-12",
+        "title": "UIFontAdjustInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 344,
+        "line_end": 355,
+        "summary": "字体原本的weight值和显示实际值的映射列表。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-13",
+        "title": "UIFontFallbackInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 356,
+        "line_end": 412,
+        "summary": "该字体集的备用字体。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      }
+    ]
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "doc_id": "js-apis-arkui-frameNode",
+  "title": "FrameNode",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-frameNode.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-frameNode.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xiang-shouxing",
+    "designer": "@xiang-shouxing",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 FrameNode，提供相关接口和功能说明。",
+  "structure": {
+    "title": "FrameNode",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { FrameNode, LayoutConstraint, ExpandMode, typeNode, NodeAdapter } from \"@kit.ArkUI\";"
+      },
+      {
+        "section_id": "section-2",
+        "title": "LayoutConstraint<sup>12+</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 38,
+        "summary": "描述组件的布局约束。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-3",
+        "title": "CrossLanguageOptions<sup>15+</sup>",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 50,
+        "summary": "该接口用于配置或查询FrameNode的跨语言访问权限。例如，针对ArkTS语言创建的节点，可通过该接口控制是否允许通过非ArkTS语言进行属性访问或修改。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ExpandMode<sup>15+</sup>",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 64,
+        "summary": "子节点展开模式枚举。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-5",
+        "title": "InteractionEventBindingInfo<sup>19+</sup>",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 79,
+        "summary": "组件的交互事件绑定状态信息。如果当前节点上绑定了所要查询的交互事件，调用查询接口时返回一个InteractionEventBindingInfo对象，指示事件绑定详细信息。\n\n**原子化服务API："
+      },
+      {
+        "section_id": "section-6",
+        "title": "UIState<sup>20+</sup>",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 95,
+        "summary": "多态样式状态枚举，用于处理多态样式。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Ark"
+      },
+      {
+        "section_id": "section-7",
+        "title": "UIStatesChangeHandler<sup>20+</sup>",
+        "level": 2,
+        "line_start": 96,
+        "line_end": 112,
+        "summary": "type UIStatesChangeHandler = (node: FrameNode, currentUIStates: number) => void\n\n当UI状态发生变化时触发的回调。接收"
+      },
+      {
+        "section_id": "section-8",
+        "title": "FrameNode",
+        "level": 2,
+        "line_start": 113,
+        "line_end": 3234,
+        "summary": "### constructor\n\nconstructor(uiContext: UIContext)\n\nFrameNode的构造函数。\n\n**原子化服务API：** 从API version 12开"
+      },
+      {
+        "section_id": "section-9",
+        "title": "TypedFrameNode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3235,
+        "line_end": 3253,
+        "summary": "TypedFrameNode继承自[FrameNode](#framenode-1)，用于声明具体类型的FrameNode。\n\n### 属性\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-10",
+        "title": "typeNode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3254,
+        "line_end": 8034,
+        "summary": "typeNode提供创建具体类型的FrameNode能力，可通过FrameNode的基础接口进行自定义的挂载，使用占位容器进行显示。\n\n使用typeNode创建[Text](./arkui-ts/t"
+      },
+      {
+        "section_id": "section-11",
+        "title": "NodeAdapter<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8035,
+        "line_end": 8357,
+        "summary": "NodeAdapter提供FrameNode的数据懒加载能力，通过[LazyForEach](./arkui-ts/ts-rendering-control-lazyforeach.md)实现接口功"
+      },
+      {
+        "section_id": "section-12",
+        "title": "自定义具体类型节点示例",
+        "level": 2,
+        "line_start": 8358,
+        "line_end": 8399,
+        "summary": "以Text节点为例，创建Text类型节点。\n\n```ts\nimport { NodeController, FrameNode, typeNode } from '@kit.ArkUI';\n\n//"
+      },
+      {
+        "section_id": "section-13",
+        "title": "节点操作示例",
+        "level": 2,
+        "line_start": 8400,
+        "line_end": 8928,
+        "summary": "```ts\nimport { NodeController, FrameNode, UIContext, typeNode } from '@kit.ArkUI';\nimport { Business"
+      },
+      {
+        "section_id": "section-14",
+        "title": "LazyForEach场景节点操作示例",
+        "level": 2,
+        "line_start": 8929,
+        "line_end": 9190,
+        "summary": "```ts\nimport { NodeController, FrameNode, UIContext, BuilderNode, ExpandMode, LengthUnit } from '@k"
+      },
+      {
+        "section_id": "section-15",
+        "title": "基础事件示例",
+        "level": 2,
+        "line_start": 9191,
+        "line_end": 9319,
+        "summary": "```ts\nimport { NodeController, FrameNode } from '@kit.ArkUI';\n\n// 继承NodeController实现自定义UI控制器\nclass M"
+      },
+      {
+        "section_id": "section-16",
+        "title": "LazyForEach场景基础事件使用示例",
+        "level": 2,
+        "line_start": 9320,
+        "line_end": 9644,
+        "summary": "<!--code_no_check-->\n\n```ts\n// index.ets\nimport {Track, TrackManager, TrackNode} from \"./track\"\n\n@B"
+      },
+      {
+        "section_id": "section-17",
+        "title": "手势事件示例",
+        "level": 2,
+        "line_start": 9645,
+        "line_end": 9712,
+        "summary": "```ts\nimport { NodeController, FrameNode } from '@kit.ArkUI';\n\n// 继承NodeController实现自定义UI控制器\nclass M"
+      },
+      {
+        "section_id": "section-18",
+        "title": "节点自定义示例",
+        "level": 2,
+        "line_start": 9713,
+        "line_end": 9828,
+        "summary": "```ts\nimport { UIContext, DrawContext, FrameNode, NodeController, LayoutConstraint, Size, Position"
+      },
+      {
+        "section_id": "section-19",
+        "title": "NodeAdapter使用示例",
+        "level": 2,
+        "line_start": 9829,
+        "line_end": 10026,
+        "summary": "```ts\nimport { FrameNode, NodeController, NodeAdapter, typeNode } from '@kit.ArkUI';\n\n// 自定义NodeAda"
+      },
+      {
+        "section_id": "section-20",
+        "title": "节点复用回收使用示例",
+        "level": 2,
+        "line_start": 10027,
+        "line_end": 10126,
+        "summary": "```ts\nimport { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';\n\nclass Params"
+      },
+      {
+        "section_id": "section-21",
+        "title": "组件设置和删除多态样式状态示例",
+        "level": 2,
+        "line_start": 10127,
+        "line_end": 10240,
+        "summary": "```ts\nimport { NodeController, FrameNode, typeNode, UIState } from '@kit.ArkUI';\n\n// 继承NodeControll"
+      },
+      {
+        "section_id": "section-22",
+        "title": "动画创建与取消示例",
+        "level": 2,
+        "line_start": 10241,
+        "line_end": 10343,
+        "summary": "该示例说明在FrameNode上[createAnimation](#createanimation20)、[cancelAnimations](#cancelanimations20)、[getN"
+      },
+      {
+        "section_id": "section-23",
+        "title": "滚动事件示例",
+        "level": 2,
+        "line_start": 10344,
+        "line_end": 10434,
+        "summary": "```ts\nimport { NodeController, FrameNode, typeNode } from '@kit.ArkUI';\n\n// 继承NodeController实现自定义UI"
+      },
+      {
+        "section_id": "section-24",
+        "title": "检验FrameNode是否有效示例",
+        "level": 2,
+        "line_start": 10435,
+        "line_end": 10550,
+        "summary": "该示例演示了FrameNode释放节点前后分别使用[isDisposed](#isdisposed20)接口验证节点的状态，释放节点前节点调用isDisposed接口返回true，释放节点后节点调用"
+      },
+      {
+        "section_id": "section-25",
+        "title": "检验NodeAdapter是否有效示例",
+        "level": 2,
+        "line_start": 10551,
+        "line_end": 10670,
+        "summary": "该示例演示了[NodeAdapter](#nodeadapter12)释放节点前后分别使用[isDisposed](#isdisposed20)接口验证节点的状态，释放节点前节点调用isDispos"
+      },
+      {
+        "section_id": "section-26",
+        "title": "获取根节点示例",
+        "level": 2,
+        "line_start": 10671,
+        "line_end": 10722,
+        "summary": "该示例演示了如何通过FrameNode的[getParent](#getparent12)接口获取当前页面根节点。\n\n```ts\n@Component\nstruct ChildView {\n  @S"
+      },
+      {
+        "section_id": "section-27",
+        "title": "接纳为附属节点示例",
+        "level": 2,
+        "line_start": 10723,
+        "line_end": 10801,
+        "summary": "从API version 22开始，该示例演示了如何通过FrameNode的[adoptChild](#adoptchild22)和[removeAdoptedChild](#removeadopt"
+      },
+      {
+        "section_id": "section-28",
+        "title": "局部与窗口坐标转化示例",
+        "level": 2,
+        "line_start": 10802,
+        "line_end": 10864,
+        "summary": "该示例演示了如何通过FrameNode的[convertPositionToWindow](#convertpositiontowindow23)和[convertPositionFromWindo"
+      }
+    ]
+  }
+}

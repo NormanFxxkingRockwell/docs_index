@@ -1,0 +1,76 @@
+{
+  "doc_id": "arkts-apis-camera-AutoExposure",
+  "title": "Interface (AutoExposure)",
+  "path": "zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-AutoExposure.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-AutoExposure.md",
+  "metadata": {
+    "kit": "Camera Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qano",
+    "designer": "@leo_ysl",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Camera Kit Multimedia 模块的 Interface (AutoExposure)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AutoExposure)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { camera } from '@kit.CameraKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getExposureMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 69,
+        "summary": "getExposureMode(): ExposureMode\n\n获取当前曝光模式。\n\n> **说明：**\n>\n> 若未通过[setExposureMode](arkts-apis-camera-A"
+      },
+      {
+        "section_id": "section-3",
+        "title": "setExposureMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 110,
+        "summary": "setExposureMode(aeMode: ExposureMode): void\n\n设置曝光模式。进行设置之前，需要先检查设备是否支持指定的曝光模式，可使用方法[isExposureModeS"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getMeteringPoint<sup>11+</sup>",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 152,
+        "summary": "getMeteringPoint(): Point\n\n查询曝光区域中心点。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-5",
+        "title": "setMeteringPoint<sup>11+</sup>",
+        "level": 2,
+        "line_start": 153,
+        "line_end": 195,
+        "summary": "setMeteringPoint(point: Point): void\n\n设置曝光区域中心点，曝光点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。\n\n此坐标系是以设备充电口在"
+      },
+      {
+        "section_id": "section-6",
+        "title": "setExposureBias<sup>11+</sup>",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 241,
+        "summary": "setExposureBias(exposureBias: number): void\n\n设置曝光补偿，曝光补偿值（EV）。\n\n进行设置之前，建议先通过方法[getExposureBiasRange"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getExposureValue<sup>11+</sup>",
+        "level": 2,
+        "line_start": 242,
+        "line_end": 284,
+        "summary": "getExposureValue(): number\n\n查询当前曝光值。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Sy"
+      }
+    ]
+  }
+}

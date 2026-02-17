@@ -1,0 +1,364 @@
+{
+  "doc_id": "js-apis-system-sensor",
+  "title": "@system.sensor (传感器)",
+  "path": "zh-cn/application-dev/reference/apis-sensor-service-kit/js-apis-system-sensor.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-sensor-service-kit/js-apis-system-sensor.md",
+  "metadata": {
+    "kit": "Sensor Service Kit",
+    "subsystem": "Sensors",
+    "owner": "@dilligencer",
+    "designer": "@butterls",
+    "tester": "@murphy84",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Sensor Service Kit Sensors 模块的 @system.sensor (传感器)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@system.sensor (传感器)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 29,
+        "summary": "```ts\nimport { Sensor } from '@kit.SensorServiceKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Sensor.subscribeAccelerometer",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 69,
+        "summary": "subscribeAccelerometer(options: subscribeAccelerometerOptions): void\n\n观察加速度数据变化。针对同一个应用，多次点击调用时，会覆"
+      },
+      {
+        "section_id": "section-3",
+        "title": "Sensor.unsubscribeAccelerometer",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 87,
+        "summary": "unsubscribeAccelerometer(): void\n\n取消订阅加速度数据。\n\n除Lite Wearable外，从API Version8开始，推荐使用[ACCELEROMETER](j"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Sensor.subscribeCompass",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 122,
+        "summary": "subscribeCompass(options: SubscribeCompassOptions): void\n\n订阅罗盘数据变化。针对同一个应用，多次点击调用时，会覆盖前面的调用效果，即仅最后"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Sensor.unsubscribeCompass",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 138,
+        "summary": "unsubscribeCompass(): void\n\n取消订阅罗盘。\n\n除Lite Wearable外，从API Version8开始，推荐使用[ORIENTATION](js-apis-sens"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Sensor.subscribeProximity",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 175,
+        "summary": "subscribeProximity(options: SubscribeProximityOptions): void\n\n订阅距离感应数据变化。针对同一个应用，多次点击调用时，会覆盖前面的调用效"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Sensor.unsubscribeProximity",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 193,
+        "summary": "unsubscribeProximity(): void\n\n取消订阅距离感应。\n\n除Lite Wearable外，从API Version8开始，推荐使用[PROXIMITY](js-apis-se"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Sensor.subscribeLight",
+        "level": 2,
+        "line_start": 194,
+        "line_end": 230,
+        "summary": "subscribeLight(options: SubscribeLightOptions): void\n\n订阅环境光线感应数据变化。再次调用时，会覆盖前一次调用效果，即仅最后一次调用生效。\n\n除"
+      },
+      {
+        "section_id": "section-9",
+        "title": "Sensor.unsubscribeLight",
+        "level": 2,
+        "line_start": 231,
+        "line_end": 248,
+        "summary": "unsubscribeLight(): void\n\n取消订阅环境光线感应。\n\n除Lite Wearable外，从API Version8开始，推荐使用[AMBIENT_LIGHT](js-apis-"
+      },
+      {
+        "section_id": "section-10",
+        "title": "Sensor.subscribeStepCounter",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 285,
+        "summary": "subscribeStepCounter(options: SubscribeStepCounterOptions): void\n\n订阅计步传感器数据变化。针对同一个应用，多次点击调用时，会覆盖前"
+      },
+      {
+        "section_id": "section-11",
+        "title": "Sensor.unsubscribeStepCounter",
+        "level": 2,
+        "line_start": 286,
+        "line_end": 304,
+        "summary": "unsubscribeStepCounter(): void\n\n取消订阅计步传感器。\n\n除Lite Wearable外，从API Version8开始，推荐使用[PEDOMETER](js-apis"
+      },
+      {
+        "section_id": "section-12",
+        "title": "Sensor.subscribeBarometer",
+        "level": 2,
+        "line_start": 305,
+        "line_end": 340,
+        "summary": "subscribeBarometer(options: SubscribeBarometerOptions): void\n\n订阅气压计传感器数据变化。针对同一个应用，多次点击调用时，会覆盖前面的调用"
+      },
+      {
+        "section_id": "section-13",
+        "title": "Sensor.unsubscribeBarometer",
+        "level": 2,
+        "line_start": 341,
+        "line_end": 357,
+        "summary": "unsubscribeBarometer(): void\n\n取消订阅气压计传感器。\n\n除Lite Wearable外，从API Version8开始，推荐使用[BAROMETER](js-apis-"
+      },
+      {
+        "section_id": "section-14",
+        "title": "Sensor.subscribeHeartRate",
+        "level": 2,
+        "line_start": 358,
+        "line_end": 395,
+        "summary": "subscribeHeartRate(options: SubscribeHeartRateOptions): void\n\n订阅心率传感器数据变化。针对同一个应用，多次点击调用时，会覆盖前面的调用"
+      },
+      {
+        "section_id": "section-15",
+        "title": "Sensor.unsubscribeHeartRate",
+        "level": 2,
+        "line_start": 396,
+        "line_end": 413,
+        "summary": "unsubscribeHeartRate(): void\n\n取消订阅心率传感器。\n\n除Lite Wearable外，从API Version8开始，推荐使用[HEART_RATE](js-apis-"
+      },
+      {
+        "section_id": "section-16",
+        "title": "Sensor.subscribeOnBodyState",
+        "level": 2,
+        "line_start": 414,
+        "line_end": 448,
+        "summary": "subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void\n\n订阅设备佩戴状态。针对同一个应用，多次点击调用时，会覆盖前面的调"
+      },
+      {
+        "section_id": "section-17",
+        "title": "Sensor.unsubscribeOnBodyState",
+        "level": 2,
+        "line_start": 449,
+        "line_end": 464,
+        "summary": "unsubscribeOnBodyState(): void\n\n取消订阅设备佩戴状态。\n\n除Lite Wearable外，从API Version8开始，推荐使用[WEAR_DETECTION](j"
+      },
+      {
+        "section_id": "section-18",
+        "title": "Sensor.getOnBodyState",
+        "level": 2,
+        "line_start": 465,
+        "line_end": 494,
+        "summary": "getOnBodyState(options: GetOnBodyStateOptions): void\n\n获取设备佩戴状态。\n\n**系统能力**：SystemCapability.Sensors"
+      },
+      {
+        "section_id": "section-19",
+        "title": "Sensor.subscribeDeviceOrientation<sup>6+</sup>",
+        "level": 2,
+        "line_start": 495,
+        "line_end": 536,
+        "summary": "subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void\n\n观察设备方向传感器数据变化。\n\n针对同一"
+      },
+      {
+        "section_id": "section-20",
+        "title": "Sensor.unsubscribeDeviceOrientation<sup>6+</sup>",
+        "level": 2,
+        "line_start": 537,
+        "line_end": 554,
+        "summary": "unsubscribeDeviceOrientation(): void\n\n取消订阅设备方向传感器数据。\n\n除Lite Wearable外，从API Version8开始，推荐使用[ORIENTAT"
+      },
+      {
+        "section_id": "section-21",
+        "title": "Sensor.subscribeGyroscope<sup>6+</sup>",
+        "level": 2,
+        "line_start": 555,
+        "line_end": 596,
+        "summary": "subscribeGyroscope(options: SubscribeGyroscopeOptions): void\n\n观察陀螺仪传感器数据变化。\n\n针对同一个应用，多次点击调用时，会覆盖前面"
+      },
+      {
+        "section_id": "section-22",
+        "title": "Sensor.unsubscribeGyroscope<sup>6+</sup>",
+        "level": 2,
+        "line_start": 597,
+        "line_end": 614,
+        "summary": "unsubscribeGyroscope(): void\n\n取消订阅陀螺仪传感器数据。\n\n除Lite Wearable外，从API Version8开始，推荐使用[GYROSCOPE](js-api"
+      },
+      {
+        "section_id": "section-23",
+        "title": "subscribeAccelerometerOptions",
+        "level": 2,
+        "line_start": 615,
+        "line_end": 628,
+        "summary": "用于监听加速度传感器数据的回调函数的执行频率。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n**需要权限**：ohos.permission.AC"
+      },
+      {
+        "section_id": "section-24",
+        "title": "AccelerometerResponse",
+        "level": 2,
+        "line_start": 629,
+        "line_end": 642,
+        "summary": "感应到加速度数据变化后的回调函数。  \n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n**需要权限**：ohos.permission.ACCELE"
+      },
+      {
+        "section_id": "section-25",
+        "title": "SubscribeCompassOptions",
+        "level": 2,
+        "line_start": 643,
+        "line_end": 653,
+        "summary": "当罗盘传感器数据发生变化时调用。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n| 名称    | 类型"
+      },
+      {
+        "section_id": "section-26",
+        "title": "CompassResponse",
+        "level": 2,
+        "line_start": 654,
+        "line_end": 663,
+        "summary": "罗盘数据改变后触发的回调函数。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n| 名称      | 类型   | 必填 | 说明"
+      },
+      {
+        "section_id": "section-27",
+        "title": "SubscribeProximityOptions",
+        "level": 2,
+        "line_start": 664,
+        "line_end": 676,
+        "summary": "当距离传感器数据发生变化时调用。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n**设备行为差异**：该接口在Lite Wearable中无效果，在"
+      },
+      {
+        "section_id": "section-28",
+        "title": "ProximityResponse",
+        "level": 2,
+        "line_start": 677,
+        "line_end": 688,
+        "summary": "距离感应数据改变后调用的回调函数。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n**设备行为差异**：该接口在Lite Wearable中无效果，"
+      },
+      {
+        "section_id": "section-29",
+        "title": "SubscribeLightOptions",
+        "level": 2,
+        "line_start": 689,
+        "line_end": 701,
+        "summary": "当环境光传感器数据发生变化时调用。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n**设备行为差异**：该接口在Lite Wearable中无效果，"
+      },
+      {
+        "section_id": "section-30",
+        "title": "LightResponse",
+        "level": 2,
+        "line_start": 702,
+        "line_end": 713,
+        "summary": "光线感应数据改变后的回调函数。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n**设备行为差异**：该接口在Lite Wearable中无效果，在其"
+      },
+      {
+        "section_id": "section-31",
+        "title": "SubscribeStepCounterOptions",
+        "level": 2,
+        "line_start": 714,
+        "line_end": 726,
+        "summary": "当步进计数器传感器数据发生变化时调用。\n\n**需要权限**：ohos.permission.ACTIVITY_MOTION\n\n**系统能力**：SystemCapability.Sensors.Se"
+      },
+      {
+        "section_id": "section-32",
+        "title": "StepCounterResponse",
+        "level": 2,
+        "line_start": 727,
+        "line_end": 738,
+        "summary": "计步传感器数据改变后的回调函数。\n\n**需要权限**：ohos.permission.ACTIVITY_MOTION\n\n**系统能力**：SystemCapability.Sensors.Senso"
+      },
+      {
+        "section_id": "section-33",
+        "title": "SubscribeBarometerOptions",
+        "level": 2,
+        "line_start": 739,
+        "line_end": 749,
+        "summary": "当气压计传感器数据发生变化时调用。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n| 名称    | 类型"
+      },
+      {
+        "section_id": "section-34",
+        "title": "BarometerResponse",
+        "level": 2,
+        "line_start": 750,
+        "line_end": 759,
+        "summary": "气压计传感器数据改变后的回调函数。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n| 名称     | 类型   | 必填 | 说明"
+      },
+      {
+        "section_id": "section-35",
+        "title": "SubscribeHeartRateOptions",
+        "level": 2,
+        "line_start": 760,
+        "line_end": 772,
+        "summary": "当心率传感器数据发生变化时调用。\n\n**需要权限**：ohos.permission.READ_HEALTH_DATA \n\n**系统能力**：SystemCapability.Sensors.Sen"
+      },
+      {
+        "section_id": "section-36",
+        "title": "HeartRateResponse",
+        "level": 2,
+        "line_start": 773,
+        "line_end": 784,
+        "summary": "心率传感器数据改变后的回调函数，默认频率5s/次。\n\n**需要权限**：ohos.permission.READ_HEALTH_DATA \n\n**系统能力**：SystemCapability.Se"
+      },
+      {
+        "section_id": "section-37",
+        "title": "SubscribeOnBodyStateOptions",
+        "level": 2,
+        "line_start": 785,
+        "line_end": 795,
+        "summary": "当传感器所在设备穿戴状态改变时调用，分为已穿戴和未穿戴。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n| 名称    | 类型"
+      },
+      {
+        "section_id": "section-38",
+        "title": "OnBodyStateResponse",
+        "level": 2,
+        "line_start": 796,
+        "line_end": 805,
+        "summary": "传感器所在设备是否穿戴。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n| 名称  | 类型    | 必填 | 说明"
+      },
+      {
+        "section_id": "section-39",
+        "title": "GetOnBodyStateOptions",
+        "level": 2,
+        "line_start": 806,
+        "line_end": 817,
+        "summary": "获取传感器所在设备穿戴状态时调用。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n| 名称     | 类型"
+      },
+      {
+        "section_id": "section-40",
+        "title": "SubscribeDeviceOrientationOptions<sup>6+</sup>",
+        "level": 2,
+        "line_start": 818,
+        "line_end": 831,
+        "summary": "用于监听设备方向传感器数据的回调函数的执行频率。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n**设备行为差异**：该接口在Lite Wearab"
+      },
+      {
+        "section_id": "section-41",
+        "title": "DeviceOrientationResponse<sup>6+</sup>",
+        "level": 2,
+        "line_start": 832,
+        "line_end": 845,
+        "summary": "感应到设备方向传感器数据变化后的回调函数。\n\n**系统能力**：SystemCapability.Sensors.Sensor.Lite\n\n**设备行为差异**：该接口在Lite Wearable中"
+      },
+      {
+        "section_id": "section-42",
+        "title": "SubscribeGyroscopeOptions<sup>6+</sup>",
+        "level": 2,
+        "line_start": 846,
+        "line_end": 859,
+        "summary": "用于侦听陀螺仪传感器数据的回调函数的执行频率。\n\n**需要权限**：ohos.permission.GYROSCOPE\n\n**系统能力**：SystemCapability.Sensors.Sens"
+      },
+      {
+        "section_id": "section-43",
+        "title": "GyroscopeResponse<sup>6+</sup>",
+        "level": 2,
+        "line_start": 860,
+        "line_end": 872,
+        "summary": "感应到陀螺仪传感器数据变化后的回调函数。\n\n**需要权限**：ohos.permission.GYROSCOPE\n\n**系统能力**：SystemCapability.Sensors.Sensor."
+      }
+    ]
+  }
+}

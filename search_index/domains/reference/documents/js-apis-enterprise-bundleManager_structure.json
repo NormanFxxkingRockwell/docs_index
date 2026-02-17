@@ -1,0 +1,220 @@
+{
+  "doc_id": "js-apis-enterprise-bundleManager",
+  "title": "@ohos.enterprise.bundleManager（包管理）",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-bundleManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-bundleManager.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.bundleManager（包管理），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.bundleManager（包管理）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { bundleManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "bundleManager.addAllowedInstallBundlesSync",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 79,
+        "summary": "addAllowedInstallBundlesSync(admin: Want, appIds: Array&lt;string&gt;, accountId?: number): void\n\n添"
+      },
+      {
+        "section_id": "section-3",
+        "title": "bundleManager.removeAllowedInstallBundlesSync",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 134,
+        "summary": "removeAllowedInstallBundlesSync(admin: Want, appIds: Array&lt;string&gt;, accountId?: number): void"
+      },
+      {
+        "section_id": "section-4",
+        "title": "bundleManager.getAllowedInstallBundlesSync",
+        "level": 2,
+        "line_start": 135,
+        "line_end": 190,
+        "summary": "getAllowedInstallBundlesSync(admin: Want, accountId?: number): Array&lt;string&gt;\n\n获取当前/指定用户下的应用程序"
+      },
+      {
+        "section_id": "section-5",
+        "title": "bundleManager.addDisallowedInstallBundlesSync",
+        "level": 2,
+        "line_start": 191,
+        "line_end": 245,
+        "summary": "addDisallowedInstallBundlesSync(admin: Want, appIds: Array&lt;string&gt;, accountId?: number): void"
+      },
+      {
+        "section_id": "section-6",
+        "title": "bundleManager.removeDisallowedInstallBundlesSync",
+        "level": 2,
+        "line_start": 246,
+        "line_end": 300,
+        "summary": "removeDisallowedInstallBundlesSync(admin: Want, appIds: Array&lt;string&gt;, accountId?: number): v"
+      },
+      {
+        "section_id": "section-7",
+        "title": "bundleManager.getDisallowedInstallBundlesSync",
+        "level": 2,
+        "line_start": 301,
+        "line_end": 357,
+        "summary": "getDisallowedInstallBundlesSync(admin: Want, accountId?: number): Array&lt;string&gt;\n\n获取当前/指定用户下的应"
+      },
+      {
+        "section_id": "section-8",
+        "title": "bundleManager.addDisallowedUninstallBundlesSync",
+        "level": 2,
+        "line_start": 358,
+        "line_end": 413,
+        "summary": "addDisallowedUninstallBundlesSync(admin: Want, appIds: Array&lt;string&gt;, accountId?: number): vo"
+      },
+      {
+        "section_id": "section-9",
+        "title": "bundleManager.removeDisallowedUninstallBundlesSync",
+        "level": 2,
+        "line_start": 414,
+        "line_end": 469,
+        "summary": "removeDisallowedUninstallBundlesSync(admin: Want, appIds: Array&lt;string&gt;, accountId?: number):"
+      },
+      {
+        "section_id": "section-10",
+        "title": "bundleManager.getDisallowedUninstallBundlesSync",
+        "level": 2,
+        "line_start": 470,
+        "line_end": 526,
+        "summary": "getDisallowedUninstallBundlesSync(admin: Want, accountId?: number): Array&lt;string&gt;\n\n获取当前/指定用户下"
+      },
+      {
+        "section_id": "section-11",
+        "title": "bundleManager.uninstall",
+        "level": 2,
+        "line_start": 527,
+        "line_end": 585,
+        "summary": "uninstall(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean): Promise&lt;void&"
+      },
+      {
+        "section_id": "section-12",
+        "title": "bundleManager.install",
+        "level": 2,
+        "line_start": 586,
+        "line_end": 678,
+        "summary": "install(admin: Want, hapFilePaths: Array\\<string>, installParam?: InstallParam): Promise\\<void>\n\n安装"
+      },
+      {
+        "section_id": "section-13",
+        "title": "bundleManager.getInstalledBundleList<sup>20+</sup>",
+        "level": 2,
+        "line_start": 679,
+        "line_end": 734,
+        "summary": "getInstalledBundleList(admin: Want, accountId: number): Promise\\<Array\\<BundleInfo>>\n\n获取设备指定用户下已安装应"
+      },
+      {
+        "section_id": "section-14",
+        "title": "bundleManager.getInstalledBundleList<sup>23+</sup>",
+        "level": 2,
+        "line_start": 735,
+        "line_end": 793,
+        "summary": "getInstalledBundleList(admin: Want, accountId: number, bundleInfoGetFlag: number): Promise\\<Array\\<"
+      },
+      {
+        "section_id": "section-15",
+        "title": "InstallParam",
+        "level": 2,
+        "line_start": 794,
+        "line_end": 805,
+        "summary": "应用包安装需指定的参数信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-16",
+        "title": "bundleManager.addInstallationAllowedAppDistributionTypes<sup>20+</sup>",
+        "level": 2,
+        "line_start": 806,
+        "line_end": 858,
+        "summary": "addInstallationAllowedAppDistributionTypes(admin: Want, appDistributionTypes: Array&lt;AppDistribut"
+      },
+      {
+        "section_id": "section-17",
+        "title": "bundleManager.removeInstallationAllowedAppDistributionTypes<sup>20+</sup>",
+        "level": 2,
+        "line_start": 859,
+        "line_end": 911,
+        "summary": "removeInstallationAllowedAppDistributionTypes(admin: Want, appDistributionTypes: Array&lt;AppDistri"
+      },
+      {
+        "section_id": "section-18",
+        "title": "bundleManager.getInstallationAllowedAppDistributionTypes<sup>20+</sup>",
+        "level": 2,
+        "line_start": 912,
+        "line_end": 964,
+        "summary": "getInstallationAllowedAppDistributionTypes(admin: Want): Array&lt;AppDistributionType&gt;\n\n获取可安装的应用"
+      },
+      {
+        "section_id": "section-19",
+        "title": "bundleManager.installMarketApps<sup>22+</sup>",
+        "level": 2,
+        "line_start": 965,
+        "line_end": 1019,
+        "summary": "installMarketApps(admin: Want, bundleNames: Array\\<string>): void\n\n下载并安装应用市场应用。\n> **说明：**\n>\n> 本接口调用"
+      },
+      {
+        "section_id": "section-20",
+        "title": "AppDistributionType<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1020,
+        "line_end": 1034,
+        "summary": "应用程序签名证书的分发类型。详细介绍请参见[ApplicationInfo](../apis-ability-kit/js-apis-bundleManager-applicationInfo.md"
+      },
+      {
+        "section_id": "section-21",
+        "title": "BundleInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1035,
+        "line_end": 1056,
+        "summary": "描述应用包信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-22",
+        "title": "SignatureInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1057,
+        "line_end": 1070,
+        "summary": "描述应用包的签名信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-23",
+        "title": "ApplicationInfo<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1071,
+        "line_end": 1106,
+        "summary": "应用程序信息。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-24",
+        "title": "Resource<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1107,
+        "line_end": 1118,
+        "summary": "资源相关信息，包括应用包名、应用模块名、资源id。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-25",
+        "title": "BundleInfoGetFlag<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1119,
+        "line_end": 1132,
+        "summary": "包信息获取标志，指示需要获取的包信息的内容。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n| 名称"
+      }
+    ]
+  }
+}

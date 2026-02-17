@@ -1,0 +1,180 @@
+{
+  "doc_id": "js-apis-awareness-onScreen-sys",
+  "title": "@ohos.multimodalAwareness.onScreen（屏上感知）(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-multimodalawareness-kit/js-apis-awareness-onScreen-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-multimodalawareness-kit/js-apis-awareness-onScreen-sys.md",
+  "metadata": {
+    "kit": "Multimodal Awareness Kit",
+    "subsystem": "MultimodalAwareness",
+    "owner": "@dilligencer",
+    "designer": "@zou_ye",
+    "tester": "@judan",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Multimodal Awareness Kit MultimodalAwareness 模块的 @ohos.multimodalAwareness.onScreen（屏上感知）(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalAwareness.onScreen（屏上感知）(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { onScreen } from '@kit.MultimodalAwarenessKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Scenario",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 34,
+        "summary": "定义屏上内容的场景类型。\n\n**系统能力**：SystemCapability.MultimodalAwareness.OnScreenAwareness\n\n**系统API**：此接口为系统接口"
+      },
+      {
+        "section_id": "section-3",
+        "title": "EventType",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 46,
+        "summary": "定义控制事件的类型。\n\n**系统能力**：SystemCapability.MultimodalAwareness.OnScreenAwareness\n\n**系统API**：此接口为系统接口\n\n|"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Paragraph",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 61,
+        "summary": "段落信息。\n\n**系统能力**：SystemCapability.MultimodalAwareness.OnScreenAwareness\n\n**系统API**：此接口为系统接口\n\n| 名称 |"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ContentOptions",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 76,
+        "summary": "屏上内容的获取选项。\n\n**系统能力**：SystemCapability.MultimodalAwareness.OnScreenAwareness\n\n**系统API**：此接口为系统接口\n\n|"
+      },
+      {
+        "section_id": "section-6",
+        "title": "PageContent",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 95,
+        "summary": "屏上内容。\n\n**系统能力**：SystemCapability.MultimodalAwareness.OnScreenAwareness\n\n**系统API**：此接口为系统接口\n\n| 名称 |"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ControlEvent",
+        "level": 2,
+        "line_start": 96,
+        "line_end": 110,
+        "summary": "控制事件。\n\n**系统能力**：SystemCapability.MultimodalAwareness.OnScreenAwareness\n\n**系统API**：此接口为系统接口\n\n| 名称 |"
+      },
+      {
+        "section_id": "section-8",
+        "title": "OnscreenAwarenessCap<sup>23+</sup>",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 136,
+        "summary": "屏上感知能力（包括阅读场景感知、OCR识别等功能）。\n\n**系统能力**：SystemCapability.MultimodalAwareness.OnScreenAwareness\n\n**系统AP"
+      },
+      {
+        "section_id": "section-9",
+        "title": "OnscreenAwarenessOptions<sup>23+</sup>",
+        "level": 2,
+        "line_start": 137,
+        "line_end": 148,
+        "summary": "屏上感知参数列表，用于特定场景下获取屏上信息，如提供窗口ID用以采集应用界面内容和链接。\n\n**系统能力**：SystemCapability.MultimodalAwareness.OnScree"
+      },
+      {
+        "section_id": "section-10",
+        "title": "CollectStrategy<sup>23+</sup>",
+        "level": 2,
+        "line_start": 149,
+        "line_end": 164,
+        "summary": "页面信息收集策略。\n\n**系统能力**：SystemCapability.MultimodalAwareness.OnScreenAwareness\n\n**系统API**：此接口为系统接口\n\n| 名"
+      },
+      {
+        "section_id": "section-11",
+        "title": "EntityInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 178,
+        "summary": "提供感知到的实体信息，包括内容、链接、图像和其他类型的实体。\n\n**系统能力**：SystemCapability.MultimodalAwareness.OnScreenAwareness\n\n**"
+      },
+      {
+        "section_id": "section-12",
+        "title": "OnscreenAwarenessInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 179,
+        "line_end": 200,
+        "summary": "屏上感知返回信息列表。\n\n**系统能力**：SystemCapability.MultimodalAwareness.OnScreenAwareness\n\n**系统API**：此接口为系统接口\n\n|"
+      },
+      {
+        "section_id": "section-13",
+        "title": "ReadingScreenPermissionStatus<sup>23+</sup>",
+        "level": 2,
+        "line_start": 201,
+        "line_end": 214,
+        "summary": "读取屏幕信息的授权状态\n\n**系统能力**：SystemCapability.MultimodalAwareness.OnScreenAwareness\n\n**系统API**：此接口为系统接口\n\n|"
+      },
+      {
+        "section_id": "section-14",
+        "title": "onScreen.getPageContent",
+        "level": 2,
+        "line_start": 215,
+        "line_end": 268,
+        "summary": "getPageContent(options?: [ContentOptions](#contentoptions)): Promise&lt;[PageContent](#pagecontent)"
+      },
+      {
+        "section_id": "section-15",
+        "title": "onScreen.sendControlEvent",
+        "level": 2,
+        "line_start": 269,
+        "line_end": 337,
+        "summary": "sendControlEvent(event: [ControlEvent](#controlevent)): Promise&lt;void&gt;\n\n在需要控制的窗口在桌面上时，在调用[onSc"
+      },
+      {
+        "section_id": "section-16",
+        "title": "onScreen.subscribe<sup>23+</sup>",
+        "level": 2,
+        "line_start": 338,
+        "line_end": 400,
+        "summary": "subscribe(capability: OnscreenAwarenessCap, \n          callback: Callback&lt;OnscreenAwarenessInfo&g"
+      },
+      {
+        "section_id": "section-17",
+        "title": "onScreen.unsubscribe<sup>23+</sup>",
+        "level": 2,
+        "line_start": 401,
+        "line_end": 451,
+        "summary": "unsubscribe(capability: OnscreenAwarenessCap, \n            callback?: Callback&lt;OnscreenAwareness"
+      },
+      {
+        "section_id": "section-18",
+        "title": "onScreen.trigger<sup>23+</sup>",
+        "level": 2,
+        "line_start": 452,
+        "line_end": 516,
+        "summary": "trigger(capability: OnscreenAwarenessCap, \n        options?: OnscreenAwarenessOptions): Promise&lt;"
+      },
+      {
+        "section_id": "section-19",
+        "title": "onScreen.onReadingScreenPermissionListener<sup>23+</sup>",
+        "level": 2,
+        "line_start": 517,
+        "line_end": 561,
+        "summary": "onReadingScreenPermissionListener(callback: Callback&lt;ReadingScreenPermissionStatus&gt;): void\n\n开"
+      },
+      {
+        "section_id": "section-20",
+        "title": "onScreen.offReadingScreenPermissionListener<sup>23+</sup>",
+        "level": 2,
+        "line_start": 562,
+        "line_end": 602,
+        "summary": "offReadingScreenPermissionListener(callback?: Callback&lt;ReadingScreenPermissionStatus&gt;): void"
+      }
+    ]
+  }
+}

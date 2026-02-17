@@ -1,0 +1,668 @@
+{
+  "doc_id": "js-apis-sim-sys",
+  "title": "@ohos.telephony.sim (SIM卡管理)（系统接口）",
+  "path": "zh-cn/application-dev/reference/apis-telephony-kit/js-apis-sim-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-telephony-kit/js-apis-sim-sys.md",
+  "metadata": {
+    "kit": "Telephony Kit",
+    "subsystem": "Telephony",
+    "owner": "@Fanyl8",
+    "designer": "@ghxbob",
+    "tester": "@weitiantian",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Telephony Kit Telephony 模块的 @ohos.telephony.sim (SIM卡管理)（系统接口），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.telephony.sim (SIM卡管理)（系统接口）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { sim } from '@kit.TelephonyKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "sim.isOperatorSimCard<sup>11+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 73,
+        "summary": "isOperatorSimCard\\(slotId: number, operator: OperatorSimCard\\): boolean\n\n获取指定卡槽SIM卡是否为指定运营商卡。\n\n**系统"
+      },
+      {
+        "section_id": "section-3",
+        "title": "sim.setDefaultVoiceSlotId<sup>7+</sup>",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 120,
+        "summary": "setDefaultVoiceSlotId\\(slotId: number, callback: AsyncCallback\\<void\\>\\): void\n\n设置默认语音业务的卡槽ID。使用cal"
+      },
+      {
+        "section_id": "section-4",
+        "title": "sim.setDefaultVoiceSlotId<sup>7+</sup>",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 173,
+        "summary": "setDefaultVoiceSlotId\\(slotId: number\\): Promise\\<void\\>\n\n设置默认语音业务的卡槽ID。使用Promise异步回调。\n\n**系统接口：** 此"
+      },
+      {
+        "section_id": "section-5",
+        "title": "sim.setShowName<sup>8+</sup>",
+        "level": 2,
+        "line_start": 174,
+        "line_end": 220,
+        "summary": "setShowName\\(slotId: number, name: string, callback: AsyncCallback\\<void\\>\\): void\n\n设置指定卡槽SIM卡显示的名称"
+      },
+      {
+        "section_id": "section-6",
+        "title": "sim.setShowName<sup>8+</sup>",
+        "level": 2,
+        "line_start": 221,
+        "line_end": 274,
+        "summary": "setShowName\\(slotId: number, name: string\\): Promise\\<void\\>\n\n设置指定卡槽SIM卡显示的名称。使用Promise异步回调。\n\n**系统接"
+      },
+      {
+        "section_id": "section-7",
+        "title": "sim.getShowName<sup>8+</sup>",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 320,
+        "summary": "getShowName\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取指定卡槽SIM卡的名称。使用callback异步回"
+      },
+      {
+        "section_id": "section-8",
+        "title": "sim.getShowName<sup>8+</sup>",
+        "level": 2,
+        "line_start": 321,
+        "line_end": 372,
+        "summary": "getShowName\\(slotId: number\\): Promise\\<string\\>\n\n获取指定卡槽SIM卡的名称。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "sim.setShowNumber<sup>8+</sup>",
+        "level": 2,
+        "line_start": 373,
+        "line_end": 420,
+        "summary": "setShowNumber\\(slotId: number, number: string, callback: AsyncCallback\\<void\\>\\): void\n\n设置指定卡槽SIM卡的"
+      },
+      {
+        "section_id": "section-10",
+        "title": "sim.setShowNumber<sup>8+</sup>",
+        "level": 2,
+        "line_start": 421,
+        "line_end": 474,
+        "summary": "setShowNumber\\(slotId: number, number: string\\): Promise\\<void\\>\n\n设置指定卡槽SIM卡的号码。使用Promise异步回调。\n\n**系"
+      },
+      {
+        "section_id": "section-11",
+        "title": "sim.getShowNumber<sup>8+</sup>",
+        "level": 2,
+        "line_start": 475,
+        "line_end": 520,
+        "summary": "getShowNumber\\(slotId: number, callback: AsyncCallback\\<string\\>): void\n\n获取指定卡槽SIM卡的号码。使用callback异步"
+      },
+      {
+        "section_id": "section-12",
+        "title": "sim.getShowNumber<sup>8+</sup>",
+        "level": 2,
+        "line_start": 521,
+        "line_end": 572,
+        "summary": "getShowNumber\\(slotId: number\\): Promise\\<string\\>\n\n获取指定卡槽SIM卡的号码。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接"
+      },
+      {
+        "section_id": "section-13",
+        "title": "sim.activateSim<sup>8+</sup>",
+        "level": 2,
+        "line_start": 573,
+        "line_end": 618,
+        "summary": "activateSim\\(slotId: number, callback: AsyncCallback\\<void\\>\\): void\n\n激活指定卡槽SIM卡。使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-14",
+        "title": "sim.activateSim<sup>8+</sup>",
+        "level": 2,
+        "line_start": 619,
+        "line_end": 670,
+        "summary": "activateSim\\(slotId: number\\): Promise\\<void\\>\n\n激活指定卡槽SIM卡。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。\n\n**需"
+      },
+      {
+        "section_id": "section-15",
+        "title": "sim.deactivateSim<sup>8+</sup>",
+        "level": 2,
+        "line_start": 671,
+        "line_end": 716,
+        "summary": "deactivateSim\\(slotId: number, callback: AsyncCallback\\<void\\>\\): void\n\n禁用指定卡槽SIM卡。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "sim.deactivateSim<sup>8+</sup>",
+        "level": 2,
+        "line_start": 717,
+        "line_end": 768,
+        "summary": "deactivateSim\\(slotId: number\\): Promise\\<void\\>\n\n禁用指定卡槽SIM卡。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。\n\n*"
+      },
+      {
+        "section_id": "section-17",
+        "title": "sim.setLockState<sup>7+</sup>",
+        "level": 2,
+        "line_start": 769,
+        "line_end": 821,
+        "summary": "setLockState\\(slotId: number, options: LockInfo, callback: AsyncCallback\\<LockStatusResponse\\>\\): v"
+      },
+      {
+        "section_id": "section-18",
+        "title": "sim.setLockState<sup>7+</sup>",
+        "level": 2,
+        "line_start": 822,
+        "line_end": 880,
+        "summary": "setLockState\\(slotId: number, options: LockInfo\\): Promise\\<LockStatusResponse\\>\n\n设置指定卡槽SIM卡的锁状态。使用"
+      },
+      {
+        "section_id": "section-19",
+        "title": "sim.getLockState<sup>8+</sup>",
+        "level": 2,
+        "line_start": 881,
+        "line_end": 928,
+        "summary": "getLockState\\(slotId: number, lockType: LockType, callback: AsyncCallback\\<LockState\\>\\): void\n\n获取指"
+      },
+      {
+        "section_id": "section-20",
+        "title": "sim.getLockState<sup>8+</sup>",
+        "level": 2,
+        "line_start": 929,
+        "line_end": 982,
+        "summary": "getLockState\\(slotId: number, lockType: LockType\\): Promise\\<LockState\\>\n\n获取指定卡槽SIM卡的锁状态。使用Promise异"
+      },
+      {
+        "section_id": "section-21",
+        "title": "sim.alterPin<sup>7+</sup>",
+        "level": 2,
+        "line_start": 983,
+        "line_end": 1031,
+        "summary": "alterPin\\(slotId: number, newPin: string, oldPin: string, callback: AsyncCallback\\<LockStatusRespon"
+      },
+      {
+        "section_id": "section-22",
+        "title": "sim.alterPin<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1032,
+        "line_end": 1086,
+        "summary": "alterPin\\(slotId: number, newPin: string, oldPin: string\\): Promise\\<LockStatusResponse\\>\n\n更改Pin密码。"
+      },
+      {
+        "section_id": "section-23",
+        "title": "sim.alterPin2<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1087,
+        "line_end": 1135,
+        "summary": "alterPin2\\(slotId: number, newPin2: string, oldPin2: string, callback: AsyncCallback\\<LockStatusRes"
+      },
+      {
+        "section_id": "section-24",
+        "title": "sim.alterPin2<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1136,
+        "line_end": 1190,
+        "summary": "alterPin2\\(slotId: number, newPin2: string, oldPin2: string\\): Promise\\<LockStatusResponse\\>\n\n更改Pin"
+      },
+      {
+        "section_id": "section-25",
+        "title": "sim.unlockPin<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1191,
+        "line_end": 1239,
+        "summary": "unlockPin\\(slotId: number, pin: string, callback: AsyncCallback\\<LockStatusResponse\\>\\): void\n\n解锁指定"
+      },
+      {
+        "section_id": "section-26",
+        "title": "sim.unlockPin<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1240,
+        "line_end": 1294,
+        "summary": "unlockPin\\(slotId: number, pin: string\\): Promise\\<LockStatusResponse\\>\n\n解锁指定卡槽SIM卡密码。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-27",
+        "title": "sim.unlockPuk<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1295,
+        "line_end": 1345,
+        "summary": "unlockPuk\\(slotId: number, newPin: string, puk: string, callback: AsyncCallback\\<LockStatusResponse"
+      },
+      {
+        "section_id": "section-28",
+        "title": "sim.unlockPuk<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1346,
+        "line_end": 1402,
+        "summary": "unlockPuk\\(slotId: number, newPin: string, puk: string\\): Promise\\<LockStatusResponse\\>\n\n解锁指定卡槽SIM卡"
+      },
+      {
+        "section_id": "section-29",
+        "title": "sim.unlockPin2<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1403,
+        "line_end": 1451,
+        "summary": "unlockPin2\\(slotId: number, pin2: string, callback: AsyncCallback\\<LockStatusResponse\\>\\): void\n\n解锁"
+      },
+      {
+        "section_id": "section-30",
+        "title": "sim.unlockPin2<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1452,
+        "line_end": 1506,
+        "summary": "unlockPin2\\(slotId: number, pin2: string\\): Promise\\<LockStatusResponse\\>\n\n解锁指定卡槽SIM卡密码。使用Promise异步"
+      },
+      {
+        "section_id": "section-31",
+        "title": "sim.unlockPuk2<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1507,
+        "line_end": 1557,
+        "summary": "unlockPuk2\\(slotId: number, newPin2: string, puk2: string, callback: AsyncCallback\\<LockStatusRespo"
+      },
+      {
+        "section_id": "section-32",
+        "title": "sim.unlockPuk2<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1558,
+        "line_end": 1614,
+        "summary": "unlockPuk2\\(slotId: number, newPin2: string, puk2: string\\): Promise\\<LockStatusResponse\\>\n\n解锁指定卡槽S"
+      },
+      {
+        "section_id": "section-33",
+        "title": "sim.getSimIccId<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1615,
+        "line_end": 1660,
+        "summary": "getSimIccId\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取指定卡槽SIM卡的ICCID。使用callback"
+      },
+      {
+        "section_id": "section-34",
+        "title": "sim.getSimIccId<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1661,
+        "line_end": 1712,
+        "summary": "getSimIccId\\(slotId: number\\): Promise\\<string\\>\n\n获取指定卡槽SIM卡的ICCID。使用Promise异步回调。\n\n**系统接口：** 此接口为系统"
+      },
+      {
+        "section_id": "section-35",
+        "title": "sim.getVoiceMailIdentifier<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1713,
+        "line_end": 1758,
+        "summary": "getVoiceMailIdentifier\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取指定卡槽中SIM卡语音信箱的"
+      },
+      {
+        "section_id": "section-36",
+        "title": "sim.getVoiceMailIdentifier<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1759,
+        "line_end": 1810,
+        "summary": "getVoiceMailIdentifier\\(slotId: number\\): Promise\\<string\\>\n\n获取指定卡槽中SIM卡语音信箱的alpha标识符。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-37",
+        "title": "sim.getVoiceMailNumber<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1811,
+        "line_end": 1856,
+        "summary": "getVoiceMailNumber\\(slotId: number, callback: AsyncCallback\\<string\\>): void\n\n获取指定卡槽中SIM卡的语音信箱号。使用c"
+      },
+      {
+        "section_id": "section-38",
+        "title": "sim.getVoiceMailNumber<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1857,
+        "line_end": 1909,
+        "summary": "getVoiceMailNumber\\(slotId: number\\): Promise\\<string\\>\n\n获取指定卡槽中SIM卡的语音信箱号。使用Promise异步回调。\n\n**系统接口：*"
+      },
+      {
+        "section_id": "section-39",
+        "title": "sim.setVoiceMailInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1910,
+        "line_end": 1958,
+        "summary": "setVoiceMailInfo\\(slotId: number, mailName: string, mailNumber: string, callback: AsyncCallback\\<vo"
+      },
+      {
+        "section_id": "section-40",
+        "title": "sim.setVoiceMailInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1959,
+        "line_end": 2013,
+        "summary": "setVoiceMailInfo\\(slotId: number, mailName: string, mailNumber: string\\): Promise\\<void\\>\n\n设置语音邮件信息"
+      },
+      {
+        "section_id": "section-41",
+        "title": "sim.getSimTelephoneNumber<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2014,
+        "line_end": 2059,
+        "summary": "getSimTelephoneNumber\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取指定卡槽中SIM卡的MSISD"
+      },
+      {
+        "section_id": "section-42",
+        "title": "sim.getSimTelephoneNumber<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2060,
+        "line_end": 2111,
+        "summary": "getSimTelephoneNumber\\(slotId: number\\): Promise\\<string\\>\n\n获取指定卡槽中SIM卡的MSISDN。使用Promise异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-43",
+        "title": "sim.getSimGid1<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2112,
+        "line_end": 2157,
+        "summary": "getSimGid1\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取指定卡槽中SIM卡的组标识符级别1（GID1）。使用"
+      },
+      {
+        "section_id": "section-44",
+        "title": "sim.getSimGid1<sup>7+</sup>",
+        "level": 2,
+        "line_start": 2158,
+        "line_end": 2209,
+        "summary": "getSimGid1\\(slotId: number\\): Promise\\<string\\>\n\n获取指定卡槽中SIM卡的组标识符级别1（GID1）。使用Promise异步回调。\n\n**系统接口：*"
+      },
+      {
+        "section_id": "section-45",
+        "title": "sim.getIMSI",
+        "level": 2,
+        "line_start": 2210,
+        "line_end": 2255,
+        "summary": "getIMSI\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取国际移动用户识别码。使用callback异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-46",
+        "title": "sim.getIMSI",
+        "level": 2,
+        "line_start": 2256,
+        "line_end": 2307,
+        "summary": "getIMSI\\(slotId: number\\): Promise\\<string\\>\n\n获取国际移动用户识别码。使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。\n\n**需要"
+      },
+      {
+        "section_id": "section-47",
+        "title": "sim.getOperatorConfigs<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2308,
+        "line_end": 2352,
+        "summary": "getOperatorConfigs\\(slotId: number, callback: AsyncCallback\\<Array\\<OperatorConfig\\>\\>\\): void\n\n获取运"
+      },
+      {
+        "section_id": "section-48",
+        "title": "sim.getOperatorConfigs<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2353,
+        "line_end": 2403,
+        "summary": "getOperatorConfigs\\(slotId: number\\): Promise\\<Array\\<OperatorConfig\\>\\>\n\n获取运营商配置。使用Promise异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-49",
+        "title": "sim.queryIccDiallingNumbers<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2404,
+        "line_end": 2456,
+        "summary": "queryIccDiallingNumbers\\(slotId: number, type: ContactType, callback: AsyncCallback\\<Array\\<Diallin"
+      },
+      {
+        "section_id": "section-50",
+        "title": "sim.queryIccDiallingNumbers<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2457,
+        "line_end": 2515,
+        "summary": "queryIccDiallingNumbers\\(slotId: number, type: ContactType\\): Promise\\<Array\\<DiallingNumbersInfo\\>"
+      },
+      {
+        "section_id": "section-51",
+        "title": "sim.addIccDiallingNumbers<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2516,
+        "line_end": 2574,
+        "summary": "addIccDiallingNumbers\\(slotId: number, type: ContactType, diallingNumbers: DiallingNumbersInfo, cal"
+      },
+      {
+        "section_id": "section-52",
+        "title": "sim.addIccDiallingNumbers<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2575,
+        "line_end": 2638,
+        "summary": "addIccDiallingNumbers\\(slotId: number, type: ContactType, diallingNumbers: DiallingNumbersInfo\\): P"
+      },
+      {
+        "section_id": "section-53",
+        "title": "sim.delIccDiallingNumbers<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2639,
+        "line_end": 2698,
+        "summary": "delIccDiallingNumbers\\(slotId: number, type: ContactType, diallingNumbers: DiallingNumbersInfo, cal"
+      },
+      {
+        "section_id": "section-54",
+        "title": "sim.delIccDiallingNumbers<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2699,
+        "line_end": 2762,
+        "summary": "delIccDiallingNumbers\\(slotId: number, type: ContactType, diallingNumbers: DiallingNumbersInfo\\): P"
+      },
+      {
+        "section_id": "section-55",
+        "title": "sim.updateIccDiallingNumbers<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2763,
+        "line_end": 2822,
+        "summary": "updateIccDiallingNumbers\\(slotId: number, type: ContactType, diallingNumbers: DiallingNumbersInfo,"
+      },
+      {
+        "section_id": "section-56",
+        "title": "sim.updateIccDiallingNumbers<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2823,
+        "line_end": 2887,
+        "summary": "updateIccDiallingNumbers\\(slotId: number, type: ContactType, diallingNumbers: DiallingNumbersInfo\\)"
+      },
+      {
+        "section_id": "section-57",
+        "title": "sim.sendEnvelopeCmd<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2888,
+        "line_end": 2934,
+        "summary": "sendEnvelopeCmd\\(slotId: number, cmd: string, callback: AsyncCallback\\<void\\>\\): void\n\n发送信封命令。使用cal"
+      },
+      {
+        "section_id": "section-58",
+        "title": "sim.sendEnvelopeCmd<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2935,
+        "line_end": 2987,
+        "summary": "sendEnvelopeCmd\\(slotId: number, cmd: string\\): Promise\\<void\\>\n\n发送信封命令。使用Promise异步回调。\n\n**系统接口：** 此"
+      },
+      {
+        "section_id": "section-59",
+        "title": "sim.sendTerminalResponseCmd<sup>8+</sup>",
+        "level": 2,
+        "line_start": 2988,
+        "line_end": 3034,
+        "summary": "sendTerminalResponseCmd\\(slotId: number, cmd: string, callback: AsyncCallback\\<void\\>\\): void\n\n发送终端"
+      },
+      {
+        "section_id": "section-60",
+        "title": "sim.sendTerminalResponseCmd<sup>8+</sup>",
+        "level": 2,
+        "line_start": 3035,
+        "line_end": 3088,
+        "summary": "sendTerminalResponseCmd\\(slotId: number, cmd: string\\): Promise\\<void\\>\n\n发送终端响应命令。使用Promise异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-61",
+        "title": "sim.unlockSimLock<sup>8+</sup>",
+        "level": 2,
+        "line_start": 3089,
+        "line_end": 3140,
+        "summary": "unlockSimLock\\(slotId: number, lockInfo: PersoLockInfo, callback: AsyncCallback\\<LockStatusResponse"
+      },
+      {
+        "section_id": "section-62",
+        "title": "sim.unlockSimLock<sup>8+</sup>",
+        "level": 2,
+        "line_start": 3141,
+        "line_end": 3198,
+        "summary": "unlockSimLock\\(slotId: number, lockInfo: PersoLockInfo\\): Promise\\<LockStatusResponse\\>\n\n解锁SIM卡锁。使用"
+      },
+      {
+        "section_id": "section-63",
+        "title": "sim.getDsdsMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3199,
+        "line_end": 3244,
+        "summary": "getDsdsMode\\(callback: AsyncCallback\\<DsdsMode\\>\\): void\n\n获取设备支持的DSDS（Dual Sim Dual Standby） Mode。使"
+      },
+      {
+        "section_id": "section-64",
+        "title": "sim.getDsdsMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3245,
+        "line_end": 3289,
+        "summary": "getDsdsMode\\(\\): Promise\\<DsdsMode\\>\n\n获取设备支持的DSDS（Dual Sim Dual Standby） Mode。使用Promise异步回调。\n\n**系统接"
+      },
+      {
+        "section_id": "section-65",
+        "title": "sim.getSimAuthentication<sup>14+</sup>",
+        "level": 2,
+        "line_start": 3290,
+        "line_end": 3344,
+        "summary": "getSimAuthentication\\(slotId: number, authType: AuthType, authData: string\\): Promise\\<SimAuthentic"
+      },
+      {
+        "section_id": "section-66",
+        "title": "sim.getAllSimAccountInfoList<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3345,
+        "line_end": 3385,
+        "summary": "getAllSimAccountInfoList(callback: AsyncCallback\\<Array\\<IccAccountInfo\\>\\>): void\n\n获取所有SIM卡账户信息的列表"
+      },
+      {
+        "section_id": "section-67",
+        "title": "sim.getAllSimAccountInfoList<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3386,
+        "line_end": 3431,
+        "summary": "getAllSimAccountInfoList(): Promise\\<Array\\<IccAccountInfo\\>\\>\n\n获取所有SIM卡的账户信息列表。返回一个解析为IccAccountIn"
+      },
+      {
+        "section_id": "section-68",
+        "title": "LockType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 3432,
+        "line_end": 3444,
+        "summary": "锁类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称     | 值   | 说明"
+      },
+      {
+        "section_id": "section-69",
+        "title": "LockState<sup>8+</sup>",
+        "level": 2,
+        "line_start": 3445,
+        "line_end": 3457,
+        "summary": "锁状态。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称     | 值   | 说明"
+      },
+      {
+        "section_id": "section-70",
+        "title": "PersoLockType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 3458,
+        "line_end": 3478,
+        "summary": "定制锁类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称         | 值   |"
+      },
+      {
+        "section_id": "section-71",
+        "title": "LockStatusResponse<sup>7+</sup>",
+        "level": 2,
+        "line_start": 3479,
+        "line_end": 3491,
+        "summary": "锁状态响应。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称            | 类型"
+      },
+      {
+        "section_id": "section-72",
+        "title": "LockInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 3492,
+        "line_end": 3505,
+        "summary": "锁状态响应。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称     |"
+      },
+      {
+        "section_id": "section-73",
+        "title": "PersoLockInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 3506,
+        "line_end": 3520,
+        "summary": "锁状态响应。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称     |"
+      },
+      {
+        "section_id": "section-74",
+        "title": "OperatorConfig<sup>8+</sup>",
+        "level": 2,
+        "line_start": 3521,
+        "line_end": 3533,
+        "summary": "运营商配置。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称  | 类型   | 必填 | 说"
+      },
+      {
+        "section_id": "section-75",
+        "title": "DiallingNumbersInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 3534,
+        "line_end": 3548,
+        "summary": "拨号号码信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-76",
+        "title": "ContactType<sup>8+</sup>",
+        "level": 2,
+        "line_start": 3549,
+        "line_end": 3561,
+        "summary": "联系人类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称            | 值"
+      },
+      {
+        "section_id": "section-77",
+        "title": "OperatorConfigKey<sup>9+</sup>",
+        "level": 2,
+        "line_start": 3562,
+        "line_end": 3592,
+        "summary": "运营商配置键。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n|"
+      },
+      {
+        "section_id": "section-78",
+        "title": "DsdsMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3593,
+        "line_end": 3607,
+        "summary": "设备支持的DSDS Mode。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称"
+      },
+      {
+        "section_id": "section-79",
+        "title": "OperatorSimCard<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3608,
+        "line_end": 3619,
+        "summary": "运营商名称。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称                |"
+      },
+      {
+        "section_id": "section-80",
+        "title": "AuthType<sup>14+</sup>",
+        "level": 2,
+        "line_start": 3620,
+        "line_end": 3632,
+        "summary": "身份验证类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称"
+      },
+      {
+        "section_id": "section-81",
+        "title": "SimAuthenticationResponse<sup>14+</sup>",
+        "level": 2,
+        "line_start": 3633,
+        "line_end": 3645,
+        "summary": "SIM卡鉴权响应。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称         | 类型"
+      }
+    ]
+  }
+}

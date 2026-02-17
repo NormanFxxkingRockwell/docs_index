@@ -1,0 +1,124 @@
+{
+  "doc_id": "js-apis-net-connection-sys",
+  "title": "@ohos.net.connection (网络连接管理)（系统接口）",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-net-connection-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-net-connection-sys.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.connection (网络连接管理)（系统接口），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.connection (网络连接管理)（系统接口）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 23,
+        "summary": "```ts\nimport { connection } from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "connection.getGlobalHttpProxy<sup>10+</sup>",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 60,
+        "summary": "getGlobalHttpProxy(callback: AsyncCallback\\<HttpProxy>): void\n\n获取网络的全局代理配置信息，使用callback异步回调。\n\n**系统接"
+      },
+      {
+        "section_id": "section-3",
+        "title": "connection.getGlobalHttpProxy<sup>10+</sup>",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 97,
+        "summary": "getGlobalHttpProxy(): Promise\\<HttpProxy>;\n\n获取网络的全局代理配置信息，使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**系统能"
+      },
+      {
+        "section_id": "section-4",
+        "title": "connection.setGlobalHttpProxy<sup>10+</sup>",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 149,
+        "summary": "setGlobalHttpProxy(httpProxy: HttpProxy, callback: AsyncCallback\\<void>): void\n\n设置网络全局Http代理配置信息，使用"
+      },
+      {
+        "section_id": "section-5",
+        "title": "connection.setGlobalHttpProxy<sup>10+</sup>",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 204,
+        "summary": "setGlobalHttpProxy(httpProxy: HttpProxy): Promise\\<void>;\n\n设置网络全局Http代理配置信息，使用Promise异步回调。\n\n**系统接口*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "connection.enableAirplaneMode",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 243,
+        "summary": "enableAirplaneMode(callback: AsyncCallback\\<void>): void\n\n开启飞行模式，使用callback异步回调。\n\n**系统接口**：此接口为系统接口"
+      },
+      {
+        "section_id": "section-7",
+        "title": "connection.enableAirplaneMode",
+        "level": 2,
+        "line_start": 244,
+        "line_end": 280,
+        "summary": "enableAirplaneMode(): Promise\\<void>\n\n开启飞行模式，使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：ohos.perm"
+      },
+      {
+        "section_id": "section-8",
+        "title": "connection.disableAirplaneMode",
+        "level": 2,
+        "line_start": 281,
+        "line_end": 319,
+        "summary": "disableAirplaneMode(callback: AsyncCallback\\<void>): void\n\n关闭飞行模式，使用callback异步回调。\n\n**系统接口**：此接口为系统接"
+      },
+      {
+        "section_id": "section-9",
+        "title": "connection.disableAirplaneMode",
+        "level": 2,
+        "line_start": 320,
+        "line_end": 357,
+        "summary": "disableAirplaneMode(): Promise\\<void>\n\n关闭飞行模式，使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：ohos.per"
+      },
+      {
+        "section_id": "section-10",
+        "title": "connection.factoryReset<sup>11+</sup>",
+        "level": 2,
+        "line_start": 358,
+        "line_end": 397,
+        "summary": "factoryReset(): Promise\\<void\\>\n\n出厂重置网络设置，使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：ohos.permiss"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ProxyMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 398,
+        "line_end": 410,
+        "summary": "表示代理模式的枚举。使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Co"
+      },
+      {
+        "section_id": "section-12",
+        "title": "connection.setProxyMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 411,
+        "line_end": 458,
+        "summary": "setProxyMode(mode: ProxyMode): Promise\\<void\\>\n\n设置代理模式。使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**"
+      },
+      {
+        "section_id": "section-13",
+        "title": "connection.getProxyMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 459,
+        "line_end": 496,
+        "summary": "getProxyMode(): Promise\\<ProxyMode\\>\n\n获取当前的代理模式。使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：ohos.p"
+      }
+    ]
+  }
+}

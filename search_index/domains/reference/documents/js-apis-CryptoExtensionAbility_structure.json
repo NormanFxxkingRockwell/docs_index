@@ -1,0 +1,140 @@
+{
+  "doc_id": "js-apis-CryptoExtensionAbility",
+  "title": "@ohos.security.CryptoExtensionAbility (密钥扩展能力)",
+  "path": "zh-cn/application-dev/reference/apis-universal-keystore-kit/js-apis-CryptoExtensionAbility.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-universal-keystore-kit/js-apis-CryptoExtensionAbility.md",
+  "metadata": {
+    "kit": "Universal Keystore Kit",
+    "subsystem": "Security",
+    "owner": "@wutiantian-gitee",
+    "designer": "@HighLowWorld",
+    "tester": "@wxy1234564846",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Universal Keystore Kit Security 模块的 @ohos.security.CryptoExtensionAbility (密钥扩展能力)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.security.CryptoExtensionAbility (密钥扩展能力)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 33,
+        "summary": "```ts\nimport { huks, huksExternalCrypto, CryptoExtensionAbility } from '@kit.UniversalKeystoreKit';"
+      },
+      {
+        "section_id": "section-2",
+        "title": "HuksCryptoExtensionResultCode",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 52,
+        "summary": "[HuksCryptoExtensionResult](#hukscryptoextensionresult)中的resultCode枚举值。\n\n**模型约束：** 此接口仅可在Stage模型下使用"
+      },
+      {
+        "section_id": "section-3",
+        "title": "HuksCryptoExtensionCertInfo",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 64,
+        "summary": "[HuksCryptoExtensionResult](#hukscryptoextensionresult)中的certs数组中的元素。\n\n**系统能力：** SystemCapability.S"
+      },
+      {
+        "section_id": "section-4",
+        "title": "HuksCryptoExtensionResult",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 80,
+        "summary": "接口返回值的通用类型。\n\n**系统能力：** SystemCapability.Security.Huks.CryptoExtension\n\n| 名称 | 类型  | 只读 | 可选 | 说明 |"
+      },
+      {
+        "section_id": "section-5",
+        "title": "CryptoExtensionAbility.onOpenResource",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 120,
+        "summary": "onOpenResource(resourceId: string, params: Array\\<huksExternalCrypto.HuksExternalCryptoParam>): Pro"
+      },
+      {
+        "section_id": "section-6",
+        "title": "CryptoExtensionAbility.onCloseResource",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 159,
+        "summary": "onCloseResource(handle: string, params: Array\\<huksExternalCrypto.HuksExternalCryptoParam>): Promis"
+      },
+      {
+        "section_id": "section-7",
+        "title": "CryptoExtensionAbility.onGetProperty",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 201,
+        "summary": "onGetProperty(handle: string, propertyId: string, params: Array\\<huksExternalCrypto.HuksExternalCry"
+      },
+      {
+        "section_id": "section-8",
+        "title": "CryptoExtensionAbility.onAuthUkeyPin",
+        "level": 2,
+        "line_start": 202,
+        "line_end": 241,
+        "summary": "onAuthUkeyPin(handle: string, params: Array\\<huksExternalCrypto.HuksExternalCryptoParam>): Promise\\"
+      },
+      {
+        "section_id": "section-9",
+        "title": "CryptoExtensionAbility.onGetUkeyPinAuthState",
+        "level": 2,
+        "line_start": 242,
+        "line_end": 281,
+        "summary": "onGetUkeyPinAuthState(handle: string, params: Array\\<huksExternalCrypto.HuksExternalCryptoParam>):"
+      },
+      {
+        "section_id": "section-10",
+        "title": "CryptoExtensionAbility.onClearUkeyPinAuthState",
+        "level": 2,
+        "line_start": 282,
+        "line_end": 319,
+        "summary": "onClearUkeyPinAuthState(handle: string, params: Array\\<huksExternalCrypto.HuksExternalCryptoParam>)"
+      },
+      {
+        "section_id": "section-11",
+        "title": "CryptoExtensionAbility.onInitSession",
+        "level": 2,
+        "line_start": 320,
+        "line_end": 358,
+        "summary": "onInitSession(handle: string, params: huks.HuksOptions): Promise\\<HuksCryptoExtensionResult>\n\n三段式初始"
+      },
+      {
+        "section_id": "section-12",
+        "title": "CryptoExtensionAbility.onUpdateSession",
+        "level": 2,
+        "line_start": 359,
+        "line_end": 398,
+        "summary": "onUpdateSession(initHandle: string, params: huks.HuksOptions): Promise\\<HuksCryptoExtensionResult>"
+      },
+      {
+        "section_id": "section-13",
+        "title": "CryptoExtensionAbility.onFinishSession",
+        "level": 2,
+        "line_start": 399,
+        "line_end": 438,
+        "summary": "onFinishSession(initHandle: string, params: huks.HuksOptions): Promise\\<HuksCryptoExtensionResult>"
+      },
+      {
+        "section_id": "section-14",
+        "title": "CryptoExtensionAbility.onExportCertificate",
+        "level": 2,
+        "line_start": 439,
+        "line_end": 479,
+        "summary": "onExportCertificate(resourceId: string, params?: Array\\<huksExternalCrypto.HuksExternalCryptoParam>"
+      },
+      {
+        "section_id": "section-15",
+        "title": "CryptoExtensionAbility.onEnumCertificates",
+        "level": 2,
+        "line_start": 480,
+        "line_end": 519,
+        "summary": "onEnumCertificates(params?: Array\\<huksExternalCrypto.HuksExternalCryptoParam>): Promise\\<HuksCrypt"
+      }
+    ]
+  }
+}

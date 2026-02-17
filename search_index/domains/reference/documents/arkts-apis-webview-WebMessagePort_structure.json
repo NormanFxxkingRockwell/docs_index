@@ -1,0 +1,76 @@
+{
+  "doc_id": "arkts-apis-webview-WebMessagePort",
+  "title": "Interface (WebMessagePort)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebMessagePort.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebMessagePort.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Interface (WebMessagePort)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (WebMessagePort)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { webview } from '@kit.ArkWeb';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 32,
+        "summary": "**系统能力：** SystemCapability.Web.Webview.Core\n\n| 名称         | 类型   | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "postMessageEvent",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 86,
+        "summary": "postMessageEvent(message: WebMessage): void\n\n发送[WebMessage](./arkts-apis-webview-t.md#webmessage)类型"
+      },
+      {
+        "section_id": "section-4",
+        "title": "onMessageEvent",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 151,
+        "summary": "onMessageEvent(callback: (result: WebMessage) => void): void\n\n在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMes"
+      },
+      {
+        "section_id": "section-5",
+        "title": "postMessageEventExt<sup>10+</sup>",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 174,
+        "summary": "postMessageEventExt(message: WebMessageExt): void\n\n发送[WebMessageType](./arkts-apis-webview-e.md#web"
+      },
+      {
+        "section_id": "section-6",
+        "title": "onMessageEventExt<sup>10+</sup>",
+        "level": 2,
+        "line_start": 175,
+        "line_end": 487,
+        "summary": "onMessageEventExt(callback: (result: WebMessageExt) => void): void\n\n在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的["
+      },
+      {
+        "section_id": "section-7",
+        "title": "close",
+        "level": 2,
+        "line_start": 488,
+        "line_end": 538,
+        "summary": "close(): void\n\n不需要发送消息时关闭该消息端口。在使用close前，请先使用[createWebMessagePorts](./arkts-apis-webview-WebviewCo"
+      }
+    ]
+  }
+}

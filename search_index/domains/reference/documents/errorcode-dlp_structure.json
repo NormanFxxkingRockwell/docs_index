@@ -1,0 +1,220 @@
+{
+  "doc_id": "errorcode-dlp",
+  "title": "DLP服务错误码",
+  "path": "zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md",
+  "metadata": {
+    "kit": "Data Protection Kit",
+    "subsystem": "Security",
+    "owner": "@winnieHuYu",
+    "designer": "@lucky-jinduo",
+    "tester": "@nacyli",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Data Protection Kit Security 模块的 DLP服务错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "DLP服务错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "19100001 入参错误",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 46,
+        "summary": "**错误信息**\n\nInvalid parameter value.\n\n**错误描述**\n\n非法参数。\n\n**可能原因**\n\n1. 账号长度为空或长度大于1024。\n\n2. 账号类型错误。\n\n3."
+      },
+      {
+        "section_id": "section-2",
+        "title": "19100002 加解密出错",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 66,
+        "summary": "**错误信息**\n\nCredential service busy due to too many tasks or duplicate tasks.\n\n**错误描述**\n\n启动加解密出错。\n\n**"
+      },
+      {
+        "section_id": "section-3",
+        "title": "19100003 加解密超时",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 84,
+        "summary": "**错误信息**\n\nCredential task time out.\n\n**错误描述**\n\n加解密超时。\n\n**可能原因**\n\nDLP文件加解密时间超过10秒。\n\n**处理步骤**\n\n请等待一段时"
+      },
+      {
+        "section_id": "section-4",
+        "title": "19100004 凭据服务错误",
+        "level": 2,
+        "line_start": 85,
+        "line_end": 104,
+        "summary": "**错误信息**\n\nCredential service error.\n\n**错误描述**\n\n凭据服务错误。\n\n**可能原因**\n\n1. DLP凭据服务不存在。\n\n2. DLP凭据服务异常。\n\n**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "19100005 凭据认证服务器错误",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 124,
+        "summary": "**错误信息**\n\nCredential authentication server error.\n\n**错误描述**\n\n凭据认证服务器错误。\n\n**可能原因**\n\n1. 凭据认证服务器无法连接。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "19100006 非DLP沙箱应用",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 142,
+        "summary": "**错误信息**\n\nNo permission to call this API, which is available only for DLP sandbox applications.\n\n**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "19100007 DLP沙箱应用不允许调用此接口",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 160,
+        "summary": "**错误信息**\n\nNo permission to call this API, which is available only for non-DLP sandbox applications."
+      },
+      {
+        "section_id": "section-8",
+        "title": "19100008 非DLP文件",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 178,
+        "summary": "**错误信息**\n\nThe file is not a DLP file.\n\n**错误描述**\n\n文件不是DLP文件。\n\n**可能原因**\n\n操作非DLP文件格式文件。\n\n**处理步骤**\n\n请使用"
+      },
+      {
+        "section_id": "section-9",
+        "title": "19100009 操作DLP文件失败",
+        "level": 2,
+        "line_start": 179,
+        "line_end": 205,
+        "summary": "**错误信息**\n\nFailed to operate the DLP file.\n\n**错误描述**\n\n操作DLP文件失败。\n\n**可能原因**\n\n1. 当前用户不在授权范围内。\n\n2. 安装沙箱"
+      },
+      {
+        "section_id": "section-10",
+        "title": "19100010 只读DLP文件",
+        "level": 2,
+        "line_start": 206,
+        "line_end": 226,
+        "summary": "**错误信息**\n\nThe DLP file is read only.\n\n**错误描述**\n\nDLP文件只读。\n\n**可能原因**\n\n1. 尝试去掉只读DLP文件的权限。\n\n2. 尝试写只读DLP"
+      },
+      {
+        "section_id": "section-11",
+        "title": "19100011 系统服务工作异常",
+        "level": 2,
+        "line_start": 227,
+        "line_end": 252,
+        "summary": "**错误信息**\n\nThe system ability works abnormally.\n\n**错误描述**\n\n系统服务工作异常。\n\n**可能原因**\n\n1. DLP权限服务无法正常启动。\n\n2"
+      },
+      {
+        "section_id": "section-12",
+        "title": "19100012 内存申请失败",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 270,
+        "summary": "**错误信息**\n\nSystem memory is insufficient.\n\n**错误描述**\n\n内存申请失败。\n\n**可能原因**\n\n系统内存不足。\n\n**处理步骤**\n\n系统内存不足，请稍"
+      },
+      {
+        "section_id": "section-13",
+        "title": "19100013 用户无权限",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 288,
+        "summary": "**错误信息**\n\nThe user does not have the permission.\n\n**错误描述**\n\n用户无权限。\n\n**可能原因**\n\n当前登录账号无此文件的权限。\n\n**处理步"
+      },
+      {
+        "section_id": "section-14",
+        "title": "19100014 账号未登录",
+        "level": 2,
+        "line_start": 289,
+        "line_end": 307,
+        "summary": "**错误信息**\n\nAccount not logged in.\n\n**错误描述**\n\n账号未登录。\n\n**可能原因**\n\n对应类型账号未登录。\n\n**处理步骤**\n\n请登录账号。\n\n<!--Del"
+      },
+      {
+        "section_id": "section-15",
+        "title": "19100015 系统需要升级",
+        "level": 2,
+        "line_start": 308,
+        "line_end": 326,
+        "summary": "**错误信息**\n\nThe system needs to be upgraded.\n\n**错误描述**\n\n系统需要升级。\n\n**可能原因**\n\n当前系统版本需要升级。\n\n**处理步骤**\n\n请升级"
+      },
+      {
+        "section_id": "section-16",
+        "title": "19100016 want参数中没有uri",
+        "level": 2,
+        "line_start": 327,
+        "line_end": 344,
+        "summary": "**错误信息**\n\nThe uri field is missing in the want parameter.\n\n**错误描述**\n\nwant参数中没有uri。\n\n**可能原因**\n\nwant参"
+      },
+      {
+        "section_id": "section-17",
+        "title": "19100017 want参数中parameters内没有displayName",
+        "level": 2,
+        "line_start": 345,
+        "line_end": 362,
+        "summary": "**错误信息**\n\nThe displayName field is missing in the want parameter.\n\n**错误描述**\n\nwant参数中parameters内没有di"
+      },
+      {
+        "section_id": "section-18",
+        "title": "19100018 应用未授权",
+        "level": 2,
+        "line_start": 363,
+        "line_end": 381,
+        "summary": "**错误信息**\n\nThe application is not authorized.\n\n**错误描述**\n\n应用未授权。\n\n**可能原因**\n\n应用不在授信应用名单中。\n\n**处理步骤**\n\n接"
+      },
+      {
+        "section_id": "section-19",
+        "title": "19100019 DLP文件已过期",
+        "level": 2,
+        "line_start": 382,
+        "line_end": 401,
+        "summary": "**错误信息**\n\nThe DLP file has expired.\n\n**错误描述**\n\nDLP文件已过期。\n\n**可能原因**\n\n当前时间超出授权期限。\n\n**处理步骤**\n\n请联系文件拥有者"
+      },
+      {
+        "section_id": "section-20",
+        "title": "19100020 网络未连接",
+        "level": 2,
+        "line_start": 402,
+        "line_end": 420,
+        "summary": "**错误信息**\n\nNo network connection.\n\n**错误描述**\n\n网络未连接。\n\n**可能原因**\n\n网络未连接或未认证。\n\n**处理步骤**\n\n请连接网络。\n<!--DelE"
+      },
+      {
+        "section_id": "section-21",
+        "title": "19100021 设置企业应用策略失败",
+        "level": 2,
+        "line_start": 421,
+        "line_end": 438,
+        "summary": "**错误信息**\n\nFailed to set the enterprise policy.\n\n**错误描述**\n\n设置企业应用策略失败。\n\n**可能原因**\n\n输入策略格式异常。\n\n**处理步骤*"
+      },
+      {
+        "section_id": "section-22",
+        "title": "19110001 参数错误",
+        "level": 2,
+        "line_start": 439,
+        "line_end": 458,
+        "summary": "**错误信息**\n\nParameter error.\n\n**错误描述**\n\n参数错误。\n\n**可能原因**\n\n1. 策略格式错误。\n\n2. 参数范围错误。\n\n**处理步骤**\n\n请传入正确的参数。"
+      },
+      {
+        "section_id": "section-23",
+        "title": "19110002 文件敏感信息识别超时",
+        "level": 2,
+        "line_start": 459,
+        "line_end": 476,
+        "summary": "**错误信息**\n\nSensitive file content identification timed out.\n\n**错误描述**\n\n文件敏感信息识别超时。\n\n**可能原因**\n\n文件敏感信息"
+      },
+      {
+        "section_id": "section-24",
+        "title": "19110003 文件不支持",
+        "level": 2,
+        "line_start": 477,
+        "line_end": 498,
+        "summary": "**错误信息**\n\nThe file is not supported.\n\n**错误描述**\n\n文件不支持。\n\n**可能原因**\n\n1. 文件路径不存在。\n\n2. 文件类型不支持。\n\n3. 文件权限"
+      },
+      {
+        "section_id": "section-25",
+        "title": "19110004 系统功能运行异常",
+        "level": 2,
+        "line_start": 499,
+        "line_end": 521,
+        "summary": "**错误信息**\n\nA system error has occurred.\n\n**错误描述**\n\n系统功能运行异常。\n\n**可能原因**\n\n1. 服务无法正常启动。\n\n2. 服务依赖的服务无法正常"
+      }
+    ]
+  }
+}

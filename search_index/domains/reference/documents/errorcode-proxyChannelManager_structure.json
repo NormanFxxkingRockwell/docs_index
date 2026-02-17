@@ -1,0 +1,92 @@
+{
+  "doc_id": "errorcode-proxyChannelManager",
+  "title": "代理通道管理错误码",
+  "path": "zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md",
+  "metadata": {
+    "kit": "Distributed Service Kit",
+    "subsystem": "DistributedSched",
+    "owner": "@wangJE",
+    "designer": "@lee_jet520",
+    "tester": "@Ytt-test",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Distributed Service Kit DistributedSched 模块的 代理通道管理错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "代理通道管理错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "32390001 蓝牙已关闭",
+        "level": 2,
+        "line_start": 12,
+        "line_end": 29,
+        "summary": "**错误信息**\n\nBR is disabled.\n\n**错误描述**\n\n本端设备已关闭蓝牙。\n\n**可能原因**\n\n本端设备蓝牙已关闭。\n\n**处理步骤**\n\n打开本端设备蓝牙，重新尝试操作。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "32390002 蓝牙未配对",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 51,
+        "summary": "**错误信息**\n\nDevice not paired.\n\n**错误描述**\n\n本端设备蓝牙未配对成功。\n\n**可能原因**\n\n1. 本端设备未与目标设备完成蓝牙配对。\n2. 对端设备的服务未起监听"
+      },
+      {
+        "section_id": "section-3",
+        "title": "32390004 通道ID非法或者不可用",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 71,
+        "summary": "**错误信息**\n\nChannelId is invalid or unavailable.\n\n**错误描述**\n\n通道ID非法或者不可用。\n\n**可能原因**\n\n1. 传入了非法的channelI"
+      },
+      {
+        "section_id": "section-4",
+        "title": "32390006 参数错误",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 90,
+        "summary": "**错误信息**\n\nParameter error.\n\n**错误描述**\n\n参数校验异常。\n\n**可能原因**\n\n1. 传入的mac或者uuid格式异常。\n2. 函数入参类型错误。\n\n**处理步骤*"
+      },
+      {
+        "section_id": "section-5",
+        "title": "32390100 内部异常",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 108,
+        "summary": "**错误信息**\n\nInternal error.\n\n**错误描述**\n\n内部异常。\n\n**可能原因**\n\n系统错误，如空指针、内存不足、分布式服务异常重启、IPC异常、JS引擎异常等。\n\n**处理"
+      },
+      {
+        "section_id": "section-6",
+        "title": "32390101 调用受限",
+        "level": 2,
+        "line_start": 109,
+        "line_end": 126,
+        "summary": "**错误信息**\n\nCall is restricted.\n\n**错误描述**\n\n非法调用，调用受限。\n\n**可能原因**\n\n未授权进程进行了访问。\n\n**处理步骤**\n\n申请对应权限。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "32390102 操作失败或者连接超时",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 145,
+        "summary": "**错误信息**\n\nOperation failed or Connection timed out.\n\n**错误描述**\n\n操作失败或者连接超时。\n\n**可能原因**\n\n底层蓝牙故障导致连接失败或"
+      },
+      {
+        "section_id": "section-8",
+        "title": "32390103 发送数据超长",
+        "level": 2,
+        "line_start": 146,
+        "line_end": 163,
+        "summary": "**错误信息**\n\nData too long.\n\n**错误描述**\n\n发送数据超长。\n\n**可能原因**\n\n发送的数据长度超过了4096个字节。\n\n**处理步骤**\n\n检查发送的数据长度。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "32390104 发送数据失败",
+        "level": 2,
+        "line_start": 164,
+        "line_end": 181,
+        "summary": "**错误信息**\n\nSend failed.\n\n**错误描述**\n\n发送数据失败。\n\n**可能原因**\n\n蓝牙故障。\n\n**处理步骤**\n\n1. 尝试重启本端设备蓝牙和目标设备蓝牙。\n2. 尝试重启"
+      }
+    ]
+  }
+}

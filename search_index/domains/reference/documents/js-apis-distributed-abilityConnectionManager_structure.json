@@ -1,0 +1,252 @@
+{
+  "doc_id": "js-apis-distributed-abilityConnectionManager",
+  "title": "@ohos.distributedsched.abilityConnectionManager (应用多端协同管理)",
+  "path": "zh-cn/application-dev/reference/apis-distributedservice-kit/js-apis-distributed-abilityConnectionManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-distributedservice-kit/js-apis-distributed-abilityConnectionManager.md",
+  "metadata": {
+    "kit": "Distributed Service Kit",
+    "subsystem": "DistributedSched",
+    "owner": "@hobbycao",
+    "designer": "@gsxiaowen",
+    "tester": "@hanjiawei",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Distributed Service Kit DistributedSched 模块的 @ohos.distributedsched.abilityConnectionManager (应用多端协同管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.distributedsched.abilityConnectionManager (应用多端协同管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```js\nimport { abilityConnectionManager } from '@kit.DistributedServiceKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "abilityConnectionManager.createAbilityConnectionSession",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 176,
+        "summary": "createAbilityConnectionSession(serviceName:&nbsp;string,&nbsp;context:&nbsp;Context,&nbsp;peerInfo:"
+      },
+      {
+        "section_id": "section-3",
+        "title": "abilityConnectionManager.destroyAbilityConnectionSession",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 203,
+        "summary": "destroyAbilityConnectionSession(sessionId:&nbsp;number):&nbsp;void\n\n销毁应用间的协同会话。\n\n**模型约束**：此接口仅可在Sta"
+      },
+      {
+        "section_id": "section-4",
+        "title": "abilityConnectionManager.getPeerInfoById",
+        "level": 2,
+        "line_start": 204,
+        "line_end": 244,
+        "summary": "getPeerInfoById(sessionId:&nbsp;number):&nbsp;PeerInfo&nbsp;|&nbsp;undefined\n\n获取指定会话中对端应用信息。\n\n**模型约"
+      },
+      {
+        "section_id": "section-5",
+        "title": "abilityConnectionManager.connect",
+        "level": 2,
+        "line_start": 245,
+        "line_end": 293,
+        "summary": "connect(sessionId:&nbsp;number):&nbsp;Promise&lt;ConnectResult&gt;\n\n创建协同会话成功并获得会话ID后，设备A上可进行UIAbili"
+      },
+      {
+        "section_id": "section-6",
+        "title": "abilityConnectionManager.acceptConnect",
+        "level": 2,
+        "line_start": 294,
+        "line_end": 379,
+        "summary": "acceptConnect(sessionId:&nbsp;number,&nbsp;token:&nbsp;string):&nbsp;Promise&lt;void&gt;\n\n设备B上的应用，在"
+      },
+      {
+        "section_id": "section-7",
+        "title": "abilityConnectionManager.disconnect",
+        "level": 2,
+        "line_start": 380,
+        "line_end": 406,
+        "summary": "disconnect(sessionId:&nbsp;number):&nbsp;void\n\n当协同业务执行完毕后，协同双端的任意一台设备，应断开UIAbility的连接，结束协同状态。\n\n**模型"
+      },
+      {
+        "section_id": "section-8",
+        "title": "abilityConnectionManager.reject",
+        "level": 2,
+        "line_start": 407,
+        "line_end": 452,
+        "summary": "reject(token:&nbsp;string,&nbsp;reason:&nbsp;string):&nbsp;void;\n\n在跨端应用协同过程中，在拒绝对端的连接请求后，向对端发送拒绝原因。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "abilityConnectionManager.on('connect')",
+        "level": 2,
+        "line_start": 453,
+        "line_end": 491,
+        "summary": "on(type:&nbsp;'connect',&nbsp;sessionId:&nbsp;number,&nbsp;callback:&nbsp;Callback&lt;EventCallback"
+      },
+      {
+        "section_id": "section-10",
+        "title": "abilityConnectionManager.off('connect')",
+        "level": 2,
+        "line_start": 492,
+        "line_end": 527,
+        "summary": "off(type:&nbsp;'connect',&nbsp;sessionId:&nbsp;number,&nbsp;callback?:&nbsp;Callback&lt;EventCallba"
+      },
+      {
+        "section_id": "section-11",
+        "title": "abilityConnectionManager.on('disconnect')",
+        "level": 2,
+        "line_start": 528,
+        "line_end": 566,
+        "summary": "on(type:&nbsp;'disconnect',&nbsp;sessionId:&nbsp;number,&nbsp;callback:&nbsp;Callback&lt;EventCallb"
+      },
+      {
+        "section_id": "section-12",
+        "title": "abilityConnectionManager.off('disconnect')",
+        "level": 2,
+        "line_start": 567,
+        "line_end": 603,
+        "summary": "off(type:&nbsp;'disconnect',&nbsp;sessionId:&nbsp;number,&nbsp;callback?:&nbsp;Callback&lt;EventCal"
+      },
+      {
+        "section_id": "section-13",
+        "title": "abilityConnectionManager.on('receiveMessage')",
+        "level": 2,
+        "line_start": 604,
+        "line_end": 642,
+        "summary": "on(type:&nbsp;'receiveMessage',&nbsp;sessionId:&nbsp;number,&nbsp;callback:&nbsp;Callback&lt;EventC"
+      },
+      {
+        "section_id": "section-14",
+        "title": "abilityConnectionManager.off('receiveMessage')",
+        "level": 2,
+        "line_start": 643,
+        "line_end": 679,
+        "summary": "off(type:&nbsp;'receiveMessage',&nbsp;sessionId:&nbsp;number,&nbsp;callback?:&nbsp;Callback&lt;Even"
+      },
+      {
+        "section_id": "section-15",
+        "title": "abilityConnectionManager.on('receiveData')",
+        "level": 2,
+        "line_start": 680,
+        "line_end": 718,
+        "summary": "on(type:&nbsp;'receiveData',&nbsp;sessionId:&nbsp;number,&nbsp;callback:&nbsp;Callback&lt;EventCall"
+      },
+      {
+        "section_id": "section-16",
+        "title": "abilityConnectionManager.off('receiveData')",
+        "level": 2,
+        "line_start": 719,
+        "line_end": 755,
+        "summary": "off(type:&nbsp;'receiveData',&nbsp;sessionId:&nbsp;number,&nbsp;callback?:&nbsp;Callback&lt;EventCa"
+      },
+      {
+        "section_id": "section-17",
+        "title": "abilityConnectionManager.sendMessage",
+        "level": 2,
+        "line_start": 756,
+        "line_end": 800,
+        "summary": "sendMessage(sessionId:&nbsp;number,&nbsp;msg:&nbsp;string):&nbsp;Promise&lt;void&gt;\n\n应用连接成功后，设备A或设"
+      },
+      {
+        "section_id": "section-18",
+        "title": "abilityConnectionManager.sendData",
+        "level": 2,
+        "line_start": 801,
+        "line_end": 849,
+        "summary": "sendData(sessionId:&nbsp;number,&nbsp;data:&nbsp;ArrayBuffer):&nbsp;Promise&lt;void&gt;\n\n应用连接成功后，设备"
+      },
+      {
+        "section_id": "section-19",
+        "title": "PeerInfo",
+        "level": 2,
+        "line_start": 850,
+        "line_end": 865,
+        "summary": "应用协同信息。\n\n **模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration"
+      },
+      {
+        "section_id": "section-20",
+        "title": "ConnectOptions",
+        "level": 2,
+        "line_start": 866,
+        "line_end": 879,
+        "summary": "应用连接时所需的连接选项。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaborat"
+      },
+      {
+        "section_id": "section-21",
+        "title": "ConnectResult",
+        "level": 2,
+        "line_start": 880,
+        "line_end": 893,
+        "summary": "连接的结果。\n\n **模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration\n\n|"
+      },
+      {
+        "section_id": "section-22",
+        "title": "EventCallbackInfo",
+        "level": 2,
+        "line_start": 894,
+        "line_end": 908,
+        "summary": "回调方法的接收信息。\n\n **模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboratio"
+      },
+      {
+        "section_id": "section-23",
+        "title": "CollaborateEventInfo",
+        "level": 2,
+        "line_start": 909,
+        "line_end": 921,
+        "summary": "协同事件信息。\n\n **模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration"
+      },
+      {
+        "section_id": "section-24",
+        "title": "ConnectErrorCode",
+        "level": 2,
+        "line_start": 922,
+        "line_end": 938,
+        "summary": "连接的错误码。\n\n **模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboration"
+      },
+      {
+        "section_id": "section-25",
+        "title": "StartOptionParams",
+        "level": 2,
+        "line_start": 939,
+        "line_end": 950,
+        "summary": "启动选项参数的枚举。\n\n **模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboratio"
+      },
+      {
+        "section_id": "section-26",
+        "title": "CollaborateEventType",
+        "level": 2,
+        "line_start": 951,
+        "line_end": 963,
+        "summary": "协同事件类型的枚举。\n\n **模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboratio"
+      },
+      {
+        "section_id": "section-27",
+        "title": "DisconnectReason",
+        "level": 2,
+        "line_start": 964,
+        "line_end": 977,
+        "summary": "当前断连原因的枚举。\n\n **模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboratio"
+      },
+      {
+        "section_id": "section-28",
+        "title": "CollaborationKeys",
+        "level": 2,
+        "line_start": 978,
+        "line_end": 991,
+        "summary": "应用协作键值的枚举。\n\n **模型约束**：此接口仅可在Stage模型下使用。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaboratio"
+      },
+      {
+        "section_id": "section-29",
+        "title": "CollaborationValues",
+        "level": 2,
+        "line_start": 992,
+        "line_end": 1003,
+        "summary": "**模型约束**：此接口仅可在Stage模型下使用。\n\n应用协作相关值的枚举。\n\n**系统能力**：SystemCapability.DistributedSched.AppCollaborati"
+      }
+    ]
+  }
+}

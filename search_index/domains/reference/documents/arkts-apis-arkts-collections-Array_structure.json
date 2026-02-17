@@ -1,0 +1,412 @@
+{
+  "doc_id": "arkts-apis-arkts-collections-Array",
+  "title": "Class (Array)",
+  "path": "zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-collections-Array.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-collections-Array.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@lijiamin2025",
+    "designer": "@weng-changcheng",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 Class (Array)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (Array)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 29,
+        "summary": "```ts\nimport { collections } from '@kit.ArkTS';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 40,
+        "summary": "**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-3",
+        "title": "constructor",
+        "level": 2,
+        "line_start": 41,
+        "line_end": 64,
+        "summary": "constructor()\n\n创建一个ArkTS Array的构造函数。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-4",
+        "title": "constructor",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 95,
+        "summary": "constructor(first: T, ...left: T[])\n\nArkTS Array的构造函数，通过开发者提供的元素进行初始化。\n\n**原子化服务API**：从API version 1"
+      },
+      {
+        "section_id": "section-5",
+        "title": "constructor",
+        "level": 2,
+        "line_start": 96,
+        "line_end": 127,
+        "summary": "constructor(...items: T[])\n\nArkTS Array的构造函数，通过开发者提供的元素进行初始化。\n\n**原子化服务API**：从API version 12 开始，该接口支"
+      },
+      {
+        "section_id": "section-6",
+        "title": "create",
+        "level": 2,
+        "line_start": 128,
+        "line_end": 164,
+        "summary": "static create\\<T>(arrayLength: number, initialValue: T): Array\\<T>\n\n生成一个固定长度的Array，其中，每个元素的初始值为init"
+      },
+      {
+        "section_id": "section-7",
+        "title": "from",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 209,
+        "summary": "static from\\<T>(arrayLike: ArrayLike\\<T>): Array\\<T>\n\n从一个实现了ArrayLike接口的对象创建一个新的ArkTS Array。\n\n**原子化"
+      },
+      {
+        "section_id": "section-8",
+        "title": "from",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 251,
+        "summary": "static from\\<T>(iterable: Iterable\\<T>): Array\\<T>\n\n从一个实现了Iterable接口的对象创建一个新的ArkTS Array。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-9",
+        "title": "from<sup>18+</sup>",
+        "level": 2,
+        "line_start": 252,
+        "line_end": 290,
+        "summary": "static from\\<T>(arrayLike: ArrayLike\\<T> | Iterable\\<T>, mapFn: ArrayFromMapFn\\<T, T>): Array\\<T>"
+      },
+      {
+        "section_id": "section-10",
+        "title": "from<sup>18+</sup>",
+        "level": 2,
+        "line_start": 291,
+        "line_end": 329,
+        "summary": "static from\\<U, T>(arrayLike: ArrayLike\\<U> | Iterable\\<U>, mapFn: ArrayFromMapFn\\<U, T>): Array\\<T"
+      },
+      {
+        "section_id": "section-11",
+        "title": "isArray<sup>18+</sup>",
+        "level": 2,
+        "line_start": 330,
+        "line_end": 367,
+        "summary": "static isArray(value: Object | undefined | null): boolean\n\n检查传入的参数是否是一个ArkTS Array。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-12",
+        "title": "of<sup>18+</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 404,
+        "summary": "static of\\<T>(...items: T\\[]): Array\\<T>\n\n通过可变数量的参数创建一个新的ArkTS Array。\n\n**原子化服务API：** 从API version 1"
+      },
+      {
+        "section_id": "section-13",
+        "title": "copyWithin<sup>18+</sup>",
+        "level": 2,
+        "line_start": 405,
+        "line_end": 445,
+        "summary": "copyWithin(target: number, start: number, end?: number): Array\\<T>\n\n从ArkTS Array指定范围内的元素依次拷贝到目标位置。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "lastIndexOf<sup>18+</sup>",
+        "level": 2,
+        "line_start": 446,
+        "line_end": 487,
+        "summary": "lastIndexOf(searchElement: T, fromIndex?: number): number\n\n返回ArkTS Array实例中最后一次出现searchElement的索引，如"
+      },
+      {
+        "section_id": "section-15",
+        "title": "some<sup>18+</sup>",
+        "level": 2,
+        "line_start": 488,
+        "line_end": 524,
+        "summary": "some(predicate: ArrayPredicateFn\\<T, Array\\<T>>): boolean\n\n测试ArkTS Array是否存在满足指定条件的元素。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-16",
+        "title": "reduceRight<sup>18+</sup>",
+        "level": 2,
+        "line_start": 525,
+        "line_end": 564,
+        "summary": "reduceRight(callbackFn: ArrayReduceCallback\\<T, T, Array\\<T>>): T\n\n对Array中的每个元素按照从右到左顺序执行回调函数，将其结果作"
+      },
+      {
+        "section_id": "section-17",
+        "title": "reduceRight<sup>18+</sup>",
+        "level": 2,
+        "line_start": 565,
+        "line_end": 606,
+        "summary": "reduceRight\\<U = T>(callbackFn: ArrayReduceCallback\\<U, T, Array\\<T>>, initialValue: U): U\n\n与 [redu"
+      },
+      {
+        "section_id": "section-18",
+        "title": "pop",
+        "level": 2,
+        "line_start": 607,
+        "line_end": 638,
+        "summary": "pop(): T | undefined\n\n从ArkTS Array中移除并返回最后一个元素。如果Array为空，则返回undefined，且Array不发生变化。\n\n**原子化服务API**：从A"
+      },
+      {
+        "section_id": "section-19",
+        "title": "push",
+        "level": 2,
+        "line_start": 639,
+        "line_end": 677,
+        "summary": "push(...items: T[]): number\n\n在ArkTS Array的末尾添加元素，并返回新的Array长度。\n\n**原子化服务API**：从API version 12 开始，该接口"
+      },
+      {
+        "section_id": "section-20",
+        "title": "join",
+        "level": 2,
+        "line_start": 678,
+        "line_end": 716,
+        "summary": "join(separator?: string): string\n\n将ArkTS Array的所有元素连接成一个字符串，元素之间可以用指定的分隔符分隔。\n\n**原子化服务API**：从API ver"
+      },
+      {
+        "section_id": "section-21",
+        "title": "shift",
+        "level": 2,
+        "line_start": 717,
+        "line_end": 748,
+        "summary": "shift(): T | undefined\n\n从ArkTS Array中移除并返回第一个元素。如果Array为空，则返回undefined，且Array不发生变化。\n\n**原子化服务API**：从"
+      },
+      {
+        "section_id": "section-22",
+        "title": "reverse<sup>18+</sup>",
+        "level": 2,
+        "line_start": 749,
+        "line_end": 781,
+        "summary": "reverse(): Array\\<T>\n\n反转ArkTS Array数组中的元素，并返回同一数组的引用。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-23",
+        "title": "unshift",
+        "level": 2,
+        "line_start": 782,
+        "line_end": 820,
+        "summary": "unshift(...items: T[]): number\n\n在ArkTS Array的首端插入元素，并返回新的Array长度。\n\n**原子化服务API**：从API version 12 开始，"
+      },
+      {
+        "section_id": "section-24",
+        "title": "toString<sup>18+</sup>",
+        "level": 2,
+        "line_start": 821,
+        "line_end": 853,
+        "summary": "toString(): string\n\nArkTS数组转换为字符串。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-25",
+        "title": "slice",
+        "level": 2,
+        "line_start": 854,
+        "line_end": 892,
+        "summary": "slice(start?: number, end?: number): Array\\<T>\n\n返回一个新的Array，该Array是原始ArkTS Array的切片。\n\n**原子化服务API**："
+      },
+      {
+        "section_id": "section-26",
+        "title": "sort",
+        "level": 2,
+        "line_start": 893,
+        "line_end": 932,
+        "summary": "sort(compareFn?: (a: T, b: T) => number): Array\\<T>\n\n对ArkTS Array进行排序，并返回排序后的Array。\n\n**原子化服务API**：从"
+      },
+      {
+        "section_id": "section-27",
+        "title": "indexOf",
+        "level": 2,
+        "line_start": 933,
+        "line_end": 972,
+        "summary": "indexOf(searchElement: T, fromIndex?: number): number\n\n返回在ArkTS Array中搜索元素首次出现的索引，如果不存在则返回-1。\n\n**原子"
+      },
+      {
+        "section_id": "section-28",
+        "title": "forEach",
+        "level": 2,
+        "line_start": 973,
+        "line_end": 1007,
+        "summary": "forEach(callbackFn: (value: T, index: number, array: Array\\<T>) => void): void\n\n对Array中的每个元素执行提供的回调"
+      },
+      {
+        "section_id": "section-29",
+        "title": "map",
+        "level": 2,
+        "line_start": 1008,
+        "line_end": 1050,
+        "summary": "map\\<U>(callbackFn: (value: T, index: number, array: Array\\<T>) => U): Array\\<U>\n\n对Array中的每个元素执行提供的"
+      },
+      {
+        "section_id": "section-30",
+        "title": "filter",
+        "level": 2,
+        "line_start": 1051,
+        "line_end": 1089,
+        "summary": "filter(predicate: (value: T, index: number, array: Array\\<T>) => boolean): Array\\<T>\n\n返回一个新Array，其中"
+      },
+      {
+        "section_id": "section-31",
+        "title": "reduce",
+        "level": 2,
+        "line_start": 1090,
+        "line_end": 1128,
+        "summary": "reduce(callbackFn: (previousValue: T, currentValue: T, currentIndex: number, array: Array\\<T>) => T"
+      },
+      {
+        "section_id": "section-32",
+        "title": "reduce",
+        "level": 2,
+        "line_start": 1129,
+        "line_end": 1169,
+        "summary": "reduce\\<U>(callbackFn: (previousValue: U, currentValue: T, currentIndex: number, array: Array\\<T>)"
+      },
+      {
+        "section_id": "section-33",
+        "title": "at",
+        "level": 2,
+        "line_start": 1170,
+        "line_end": 1209,
+        "summary": "at(index: number): T | undefined\n\n返回Array中指定索引位置的元素。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-34",
+        "title": "entries",
+        "level": 2,
+        "line_start": 1210,
+        "line_end": 1242,
+        "summary": "entries(): IterableIterator<[number, T]>\n\n返回一个新的可迭代对象，该对象包含Array中每个元素的键值对。\n\n**原子化服务API**：从API versi"
+      },
+      {
+        "section_id": "section-35",
+        "title": "keys",
+        "level": 2,
+        "line_start": 1243,
+        "line_end": 1277,
+        "summary": "keys(): IterableIterator\\<number>\n\n返回一个新的可迭代对象，该对象包含Array中每个元素的索引。\n\n**原子化服务API**：从API version 12 开始"
+      },
+      {
+        "section_id": "section-36",
+        "title": "values",
+        "level": 2,
+        "line_start": 1278,
+        "line_end": 1312,
+        "summary": "values(): IterableIterator\\<T>\n\n返回一个新的可迭代对象，该对象包含Array中每个元素的值。\n\n**原子化服务API**：从API version 12 开始，该接口"
+      },
+      {
+        "section_id": "section-37",
+        "title": "find",
+        "level": 2,
+        "line_start": 1313,
+        "line_end": 1351,
+        "summary": "find(predicate: (value: T, index: number, obj: Array\\<T>) => boolean): T | undefined\n\n返回Array中第一个满足"
+      },
+      {
+        "section_id": "section-38",
+        "title": "includes",
+        "level": 2,
+        "line_start": 1352,
+        "line_end": 1391,
+        "summary": "includes(searchElement: T, fromIndex?: number): boolean\n\n判断Array是否包含指定的元素，并返回一个布尔值。\n\n**原子化服务API**：从"
+      },
+      {
+        "section_id": "section-39",
+        "title": "findIndex",
+        "level": 2,
+        "line_start": 1392,
+        "line_end": 1430,
+        "summary": "findIndex(predicate: (value: T, index: number, obj: Array\\<T>) => boolean): number\n\n返回Array中第一个满足指定"
+      },
+      {
+        "section_id": "section-40",
+        "title": "fill",
+        "level": 2,
+        "line_start": 1431,
+        "line_end": 1471,
+        "summary": "fill(value: T, start?: number, end?: number): Array\\<T>\n\n使用指定的值填充Array中指定范围的所有元素。\n\n**原子化服务API**：从AP"
+      },
+      {
+        "section_id": "section-41",
+        "title": "shrinkTo",
+        "level": 2,
+        "line_start": 1472,
+        "line_end": 1507,
+        "summary": "shrinkTo(arrayLength: number): void\n\n使Array收缩到指定长度。\n\n**原子化服务API**：从API version 12 开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-42",
+        "title": "extendTo",
+        "level": 2,
+        "line_start": 1508,
+        "line_end": 1544,
+        "summary": "extendTo(arrayLength: number, initialValue: T): void\n\n使Array扩展到指定长度，扩展的部分使用给定值填充。\n\n**原子化服务API**：从AP"
+      },
+      {
+        "section_id": "section-43",
+        "title": "concat",
+        "level": 2,
+        "line_start": 1545,
+        "line_end": 1586,
+        "summary": "concat(...items: ConcatArray\\<T>[]): Array\\<T>\n\n拼接两个或多个数组。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原"
+      },
+      {
+        "section_id": "section-44",
+        "title": "splice",
+        "level": 2,
+        "line_start": 1587,
+        "line_end": 1625,
+        "summary": "splice(start: number): Array\\<T>\n\n删除Array中指定位置(start)以及之后的所有元素。\n\n**原子化服务API**：从API version 12 开始，该接"
+      },
+      {
+        "section_id": "section-45",
+        "title": "every<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1626,
+        "line_end": 1662,
+        "summary": "every(predicate: ArrayPredicateFn\\<T, Array\\<T>>): boolean\n\n测试ArkTS Array中的所有元素是否满足指定条件。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-46",
+        "title": "toLocaleString<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1663,
+        "line_end": 1696,
+        "summary": "toLocaleString(): string\n\n根据当前应用的系统地区获取符合当前文化习惯的字符串表示形式，让每个元素调用自己的toLocaleString方法转换为字符串，然后使用逗号将每个元"
+      },
+      {
+        "section_id": "section-47",
+        "title": "splice",
+        "level": 2,
+        "line_start": 1697,
+        "line_end": 1744,
+        "summary": "splice(start: number, deleteCount: number, ...items: T[]): Array\\<T>\n\n删除Array中指定位置的元素，需要时在Array的指定位"
+      },
+      {
+        "section_id": "section-48",
+        "title": "[Symbol.iterator]",
+        "level": 2,
+        "line_start": 1745,
+        "line_end": 1782,
+        "summary": "[Symbol.iterator]\\(): IterableIterator&lt;T&gt;\n\n返回一个迭代器，迭代器的每一项都是一个 JavaScript 对象，并返回该对象。\n\n> **说明："
+      },
+      {
+        "section_id": "section-49",
+        "title": "[index: number]",
+        "level": 2,
+        "line_start": 1783,
+        "line_end": 1820,
+        "summary": "&#91;index: number&#93;: T\n\n返回Array指定索引位置的元素。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系"
+      }
+    ]
+  }
+}

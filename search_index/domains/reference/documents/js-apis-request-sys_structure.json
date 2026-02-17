@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-request-sys",
+  "title": "@ohos.request (上传下载)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-request-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-request-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Request",
+    "owner": "@huaxin05",
+    "designer": "@hu-kai45",
+    "tester": "@liuhaonan2",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit Request 模块的 @ohos.request (上传下载)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.request (上传下载)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 25,
+        "summary": "```js\nimport { request } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Filter<sup>10+</sup>",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 36,
+        "summary": "过滤条件。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称   | 类型     | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "TaskInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 47,
+        "summary": "查询结果的任务信息数据结构。提供普通查询和系统查询，两种字段的可见范围不同。\n\n**系统能力**：SystemCapability.Request.FileTransferAgent\n\n| 名称"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Notification<sup>15+</sup>",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 60,
+        "summary": "通知栏自定义信息。\n\n**需要权限**：ohos.permission.REQUEST_DISABLE_NOTIFICATION\n\n**系统能力**：SystemCapability.Request"
+      },
+      {
+        "section_id": "section-5",
+        "title": "request.agent.query<sup>10+</sup>",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 106,
+        "summary": "query(id: string, callback: AsyncCallback&lt;TaskInfo&gt;): void\n\n根据任务id查询任务的详细信息。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "request.agent.query<sup>10+</sup>",
+        "level": 2,
+        "line_start": 107,
+        "line_end": 154,
+        "summary": "query(id: string): Promise&lt;TaskInfo&gt;\n\n根据任务id查询任务的详细信息。使用Promise异步回调。\n\n**需要权限**：ohos.permissio"
+      }
+    ]
+  }
+}

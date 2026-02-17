@@ -1,0 +1,260 @@
+{
+  "doc_id": "js-apis-bluetooth-connection-sys",
+  "title": "@ohos.bluetooth.connection (蓝牙connection模块)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-connection-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-bluetooth-connection-sys.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@enjoy_sunshine",
+    "designer": "@chengguohong; @tangjia15",
+    "tester": "@wangfeng517",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.bluetooth.connection (蓝牙connection模块)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bluetooth.connection (蓝牙connection模块)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 24,
+        "summary": "```js\nimport { connection } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "connection.pairCredibleDevice",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 77,
+        "summary": "pairCredibleDevice(deviceId: string, transport: BluetoothTransport, callback: AsyncCallback&lt;void"
+      },
+      {
+        "section_id": "section-3",
+        "title": "connection.pairCredibleDevice",
+        "level": 2,
+        "line_start": 78,
+        "line_end": 132,
+        "summary": "pairCredibleDevice(deviceId: string, transport: BluetoothTransport): Promise&lt;void&gt;\n\n向可信的远端设备发"
+      },
+      {
+        "section_id": "section-4",
+        "title": "connection.cancelPairedDevice",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 180,
+        "summary": "cancelPairedDevice(deviceId: string, callback: AsyncCallback&lt;void&gt;): void\n\n删除配对的远程设备。使用Callba"
+      },
+      {
+        "section_id": "section-5",
+        "title": "connection.cancelPairedDevice",
+        "level": 2,
+        "line_start": 181,
+        "line_end": 236,
+        "summary": "cancelPairedDevice(deviceId: string): Promise&lt;void&gt;\n\n删除配对的远程设备。使用Promise异步回调。\n\n**系统接口**：此接口为系"
+      },
+      {
+        "section_id": "section-6",
+        "title": "connection.cancelPairingDevice",
+        "level": 2,
+        "line_start": 237,
+        "line_end": 281,
+        "summary": "cancelPairingDevice(deviceId: string, callback: AsyncCallback&lt;void&gt;): void\n\n删除正在配对中的远程设备。使用Ca"
+      },
+      {
+        "section_id": "section-7",
+        "title": "connection.cancelPairingDevice",
+        "level": 2,
+        "line_start": 282,
+        "line_end": 331,
+        "summary": "cancelPairingDevice(deviceId: string): Promise&lt;void&gt;\n\n删除正在配对中的远程设备。使用Promise异步回调。\n\n**系统接口**：此"
+      },
+      {
+        "section_id": "section-8",
+        "title": "connection.getLocalProfileUuids",
+        "level": 2,
+        "line_start": 332,
+        "line_end": 377,
+        "summary": "getLocalProfileUuids(callback: AsyncCallback&lt;Array&lt;ProfileUuids&gt;&gt;): void\n\n获取本地设备的profil"
+      },
+      {
+        "section_id": "section-9",
+        "title": "connection.getLocalProfileUuids",
+        "level": 2,
+        "line_start": 378,
+        "line_end": 425,
+        "summary": "getLocalProfileUuids(): Promise&lt;Array&lt;ProfileUuids&gt;&gt;\n\n获取本地设备的profile UUID。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-10",
+        "title": "connection.disconnectAllowedProfiles<sup>11+</sup>",
+        "level": 2,
+        "line_start": 426,
+        "line_end": 476,
+        "summary": "disconnectAllowedProfiles(deviceId: string, callback: AsyncCallback&lt;void&gt;): void\n\n断开远端设备所有连接的"
+      },
+      {
+        "section_id": "section-11",
+        "title": "connection.disconnectAllowedProfiles<sup>11+</sup>",
+        "level": 2,
+        "line_start": 477,
+        "line_end": 530,
+        "summary": "disconnectAllowedProfiles(deviceId: string): Promise&lt;void&gt;\n\n断开远端设备所有连接的profiles。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-12",
+        "title": "connection.getRemoteProductId<sup>11+</sup>",
+        "level": 2,
+        "line_start": 531,
+        "line_end": 575,
+        "summary": "getRemoteProductId(deviceId: string): string\n\n获取对端蓝牙设备的Product ID。从API16开始不再校验ohos.permission.ACCES"
+      },
+      {
+        "section_id": "section-13",
+        "title": "connection.setRemoteDeviceType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 576,
+        "line_end": 626,
+        "summary": "setRemoteDeviceType(deviceId: string, type: DeviceType): Promise&lt;void&gt;\n\n设置蓝牙远端设备自定义类型。使用Promi"
+      },
+      {
+        "section_id": "section-14",
+        "title": "connection.getRemoteDeviceType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 627,
+        "line_end": 674,
+        "summary": "getRemoteDeviceType(deviceId: string): Promise&lt;DeviceType&gt;\n\n获取蓝牙远端设备自定义类型。使用Promise异步回调。从API1"
+      },
+      {
+        "section_id": "section-15",
+        "title": "connection.controlDeviceAction<sup>15+</sup>",
+        "level": 2,
+        "line_start": 675,
+        "line_end": 734,
+        "summary": "controlDeviceAction(controlDeviceActionParams: ControlDeviceActionParams): Promise&lt;void&gt;\n\n查找蓝"
+      },
+      {
+        "section_id": "section-16",
+        "title": "connection.updateCloudBluetoothDevice<sup>15+</sup>",
+        "level": 2,
+        "line_start": 735,
+        "line_end": 816,
+        "summary": "updateCloudBluetoothDevice(trustedPairedDevices: TrustedPairedDevices): Promise&lt;void&gt;\n\n更新云设备到"
+      },
+      {
+        "section_id": "section-17",
+        "title": "connection.pairDeviceOutOfBand<sup>23+</sup>",
+        "level": 2,
+        "line_start": 817,
+        "line_end": 890,
+        "summary": "pairDeviceOutOfBand(transport: BluetoothTransport, p192Data: OobData | null, p256Data: OobData | nu"
+      },
+      {
+        "section_id": "section-18",
+        "title": "connection.generateLocalOobData<sup>23+</sup>",
+        "level": 2,
+        "line_start": 891,
+        "line_end": 945,
+        "summary": "generateLocalOobData(transport: BluetoothTransport): Promise&lt;OobData&gt;\n\n获取本机的带外（Out of Band, ["
+      },
+      {
+        "section_id": "section-19",
+        "title": "PinRequiredParam",
+        "level": 2,
+        "line_start": 946,
+        "line_end": 955,
+        "summary": "描述配对请求参数。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称       | 类型   | 只读   | 可选"
+      },
+      {
+        "section_id": "section-20",
+        "title": "ControlDeviceActionParams<sup>15+</sup>",
+        "level": 2,
+        "line_start": 956,
+        "line_end": 970,
+        "summary": "控制命令的配置参数。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-21",
+        "title": "PinType",
+        "level": 2,
+        "line_start": 971,
+        "line_end": 991,
+        "summary": "枚举，蓝牙配对类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-22",
+        "title": "DeviceType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 992,
+        "line_end": 1011,
+        "summary": "枚举，蓝牙远程设备的自定义类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-23",
+        "title": "BatteryInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1012,
+        "line_end": 1022,
+        "summary": "描述电量信息的内容。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称       | 类型   | 只读   | 可选"
+      },
+      {
+        "section_id": "section-24",
+        "title": "ControlType<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1023,
+        "line_end": 1039,
+        "summary": "枚举，控制类型。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-25",
+        "title": "ControlTypeValue<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1040,
+        "line_end": 1054,
+        "summary": "枚举，控制动作。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称    | 值"
+      },
+      {
+        "section_id": "section-26",
+        "title": "ControlObject<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1055,
+        "line_end": 1069,
+        "summary": "枚举，控制对象。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-27",
+        "title": "TrustedPairedDevices<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1070,
+        "line_end": 1081,
+        "summary": "云设备列表。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core\n\n| 名称       | 类型"
+      },
+      {
+        "section_id": "section-28",
+        "title": "TrustedPairedDevice<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1082,
+        "line_end": 1108,
+        "summary": "云设备信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core。\n\n| 名称       | 类"
+      },
+      {
+        "section_id": "section-29",
+        "title": "OobData<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1109,
+        "line_end": 1127,
+        "summary": "用于OOB配对的数据对象。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.Bluetooth.Core。\n\n**模型约束*"
+      },
+      {
+        "section_id": "section-30",
+        "title": "DeviceRole<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1128,
+        "line_end": 1144,
+        "summary": "枚举，蓝牙设备在连接过程中的[角色](../../connectivity/bluetooth/bluetooth-overview.md#设备角色)。\n\n**系统接口**：此接口为系统接口。\n\n*"
+      }
+    ]
+  }
+}

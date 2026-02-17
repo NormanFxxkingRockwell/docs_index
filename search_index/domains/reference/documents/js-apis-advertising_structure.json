@@ -1,0 +1,140 @@
+{
+  "doc_id": "js-apis-advertising",
+  "title": "@ohos.advertising (广告服务框架)",
+  "path": "zh-cn/application-dev/reference/apis-ads-kit/js-apis-advertising.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ads-kit/js-apis-advertising.md",
+  "metadata": {
+    "kit": "Ads Kit",
+    "subsystem": "Advertising",
+    "owner": "@SukiEvas",
+    "designer": "@zhansf1988",
+    "tester": "@hongmei_may",
+    "adviser": "@RayShih"
+  },
+  "summary": "Ads Kit Advertising 模块的 @ohos.advertising (广告服务框架)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.advertising (广告服务框架)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { advertising } from '@kit.AdsKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "advertising.showAd",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 64,
+        "summary": "showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.UIAbilityContext): void\n\n展示全屏"
+      },
+      {
+        "section_id": "section-3",
+        "title": "advertising.getAdRequestBody<sup>12+</sup>",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 110,
+        "summary": "getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise&lt;string&gt;\n\n获取广告请求响"
+      },
+      {
+        "section_id": "section-4",
+        "title": "advertising.parseAdResponse<sup>12+</sup>",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 164,
+        "summary": "parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityCo"
+      },
+      {
+        "section_id": "section-5",
+        "title": "advertising.registerWebAdInterface<sup>12+</sup>",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 218,
+        "summary": "registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext)"
+      },
+      {
+        "section_id": "section-6",
+        "title": "advertising.registerWebAdInterface<sup>16+</sup>",
+        "level": 2,
+        "line_start": 219,
+        "line_end": 273,
+        "summary": "registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext,"
+      },
+      {
+        "section_id": "section-7",
+        "title": "advertising.deleteWebAdInterface<sup>16+</sup>",
+        "level": 2,
+        "line_start": 274,
+        "line_end": 325,
+        "summary": "deleteWebAdInterface(controller: web_webview.WebviewController, needRefresh: boolean): void\n\n删除通过re"
+      },
+      {
+        "section_id": "section-8",
+        "title": "AdLoader",
+        "level": 2,
+        "line_start": 326,
+        "line_end": 481,
+        "summary": "提供加载广告的功能。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Advertising"
+      },
+      {
+        "section_id": "section-9",
+        "title": "AdLoadListener",
+        "level": 2,
+        "line_start": 482,
+        "line_end": 535,
+        "summary": "单广告位广告请求回调。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Advertisin"
+      },
+      {
+        "section_id": "section-10",
+        "title": "MultiSlotsAdLoadListener",
+        "level": 2,
+        "line_start": 536,
+        "line_end": 589,
+        "summary": "多广告位广告请求回调。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Advertisin"
+      },
+      {
+        "section_id": "section-11",
+        "title": "AdInteractionListener",
+        "level": 2,
+        "line_start": 590,
+        "line_end": 626,
+        "summary": "广告状态变化回调。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Advertising."
+      },
+      {
+        "section_id": "section-12",
+        "title": "AdOptions",
+        "level": 2,
+        "line_start": 627,
+        "line_end": 641,
+        "summary": "广告配置参数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Advertising.Ad"
+      },
+      {
+        "section_id": "section-13",
+        "title": "AdRequestParams",
+        "level": 2,
+        "line_start": 642,
+        "line_end": 659,
+        "summary": "广告请求参数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Advertising.Ad"
+      },
+      {
+        "section_id": "section-14",
+        "title": "AdDisplayOptions",
+        "level": 2,
+        "line_start": 660,
+        "line_end": 676,
+        "summary": "广告展示参数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Advertising.Ad"
+      },
+      {
+        "section_id": "section-15",
+        "title": "Advertisement",
+        "level": 2,
+        "line_start": 677,
+        "line_end": 689,
+        "summary": "type Advertisement = _Advertisement\n\n请求的广告内容。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系"
+      }
+    ]
+  }
+}

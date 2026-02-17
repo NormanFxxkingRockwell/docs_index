@@ -1,0 +1,140 @@
+{
+  "doc_id": "ts-container-listitem",
+  "title": "ListItem",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-listitem.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-listitem.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yylong",
+    "designer": "@yylong",
+    "tester": "@liuzhenshuo",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 ListItem，提供相关接口和功能说明。",
+  "structure": {
+    "title": "ListItem",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 21,
+        "summary": "可以包含单个子组件。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 61,
+        "summary": "### ListItem<sup>10+</sup>\n\nListItem(value?: ListItemOptions)\n\n创建ListItem组件。\n\n**卡片能力：** 从API versio"
+      },
+      {
+        "section_id": "section-3",
+        "title": "属性",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 153,
+        "summary": "除支持[通用属性](ts-component-general-attributes.md)外，还支持以下属性：\n\n### sticky<sup>(deprecated)</sup>\n\nsticky("
+      },
+      {
+        "section_id": "section-4",
+        "title": "Sticky<sup>(deprecated)</sup>枚举说明",
+        "level": 2,
+        "line_start": 154,
+        "line_end": 169,
+        "summary": "ListItem吸顶效果枚举。\n\n> **说明：**\n>\n> 从API version 7开始支持，从API version 9开始废弃，建议使用[List组件stickyStyle枚举](ts-c"
+      },
+      {
+        "section_id": "section-5",
+        "title": "EditMode<sup>(deprecated)</sup>枚举说明",
+        "level": 2,
+        "line_start": 170,
+        "line_end": 185,
+        "summary": "ListItem元素编辑模式枚举。\n\n> **说明：**\n>\n> 从API version 7开始支持，从API version 9开始废弃，无替代接口。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-6",
+        "title": "SwipeEdgeEffect<sup>9+</sup>枚举说明",
+        "level": 2,
+        "line_start": 186,
+        "line_end": 198,
+        "summary": "滑动效果枚举。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-7",
+        "title": "SwipeActionOptions<sup>9+</sup>对象说明",
+        "level": 2,
+        "line_start": 199,
+        "line_end": 213,
+        "summary": "start和end对应的@builder函数中顶层必须是单个组件，否则会引发未定义行为。如果@builder函数中顶层是if/else、ForEach等语句，那么需要保证if/else、ForEac"
+      },
+      {
+        "section_id": "section-8",
+        "title": "SwipeActionItem<sup>10+</sup>对象说明",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 229,
+        "summary": "List垂直布局，ListItem向右滑动时，item左边的长距离滑动删除选项。向左滑动时，item右边的长距离滑动删除选项。\n</br>List水平布局，ListItem向上滑动时，item下边的"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ListItemOptions<sup>10+</sup>对象说明",
+        "level": 2,
+        "line_start": 230,
+        "line_end": 241,
+        "summary": "ListItem组件参数。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ar"
+      },
+      {
+        "section_id": "section-10",
+        "title": "ListItemStyle<sup>10+</sup>枚举说明",
+        "level": 2,
+        "line_start": 242,
+        "line_end": 254,
+        "summary": "List组件卡片样式枚举。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ar"
+      },
+      {
+        "section_id": "section-11",
+        "title": "SwipeActionState<sup>11+</sup>枚举说明",
+        "level": 2,
+        "line_start": 255,
+        "line_end": 268,
+        "summary": "列表项滑动状态枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-12",
+        "title": "事件",
+        "level": 2,
+        "line_start": 269,
+        "line_end": 288,
+        "summary": "### onSelect<sup>8+</sup>\n\nonSelect(event:&nbsp;(isSelected:&nbsp;boolean)&nbsp;=&gt;&nbsp;void)\n\nL"
+      },
+      {
+        "section_id": "section-13",
+        "title": "ListItemSwipeActionManager<sup>21+</sup>",
+        "level": 2,
+        "line_start": 289,
+        "line_end": 345,
+        "summary": "ListItem划出菜单的管理器。\n\n### expand<sup>21+</sup>\nexpand(node: FrameNode, direction: ListItemSwipeActionD"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ListItemSwipeActionDirection<sup>21+</sup>枚举说明",
+        "level": 2,
+        "line_start": 346,
+        "line_end": 358,
+        "summary": "ListItem划出菜单的展开方向。\n\n**原子化服务API：** 从API version 21开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Ark"
+      },
+      {
+        "section_id": "section-15",
+        "title": "示例",
+        "level": 2,
+        "line_start": 359,
+        "line_end": 730,
+        "summary": "### 示例1（创建ListItem）\n该示例实现了创建ListItem的基本用法。\n\n```ts\n// xxx.ets\nexport class ListDataSource implements"
+      }
+    ]
+  }
+}

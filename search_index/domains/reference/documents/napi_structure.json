@@ -1,0 +1,76 @@
+{
+  "doc_id": "napi",
+  "title": "Node-API",
+  "path": "zh-cn/application-dev/reference/native-lib/napi.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/native-lib/napi.md",
+  "metadata": {
+    "kit": "NDK",
+    "subsystem": "ArkCompiler",
+    "owner": "@xliu-huanwei; @shilei123; @huanghello",
+    "designer": "@shilei123",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "NDK ArkCompiler 模块的 Node-API，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Node-API",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "简介",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 12,
+        "summary": "Node-API是用于封装JavaScript能力为Native插件的API，独立于底层JavaScript，并作为Node.js的一部分。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "支持的能力",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 18,
+        "summary": "Node-API可以去除底层的JavaScript引擎的差异，提供一套稳定的接口。\n\nOpenHarmony的Node-API组件对Node-API的接口进行了重新实现，底层对接了ArkJS等引擎。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "引入Node-API能力",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 32,
+        "summary": "如果开发者需要使用Node-API相关功能，首先请添加头文件：\n\n```cpp\n#include <napi/native_api.h>\n```\n\n其次在CMakeLists.txt中添加以下动态链"
+      },
+      {
+        "section_id": "section-4",
+        "title": "已从Node-API组件标准库中导出的符号列表",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 184,
+        "summary": "从Node-API标准库导出的接口，其使用方法及行为基于[Node.js](https://nodejs.org/docs/latest-v12.x/api/n-api.html)，并进行了部分[能"
+      },
+      {
+        "section_id": "section-5",
+        "title": "已导出符号列表与标准库对应符号的差异",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 681,
+        "summary": "### napi_throw_error\n\n**返回：**\n\n- 当code为空指针时，标准库会返回napi_invalid_arg，而OpenHarmony中未做判断。\n\n- 该导出接口允许cod"
+      },
+      {
+        "section_id": "section-6",
+        "title": "未从Node-API组件标准库中导出的符号列表",
+        "level": 2,
+        "line_start": 682,
+        "line_end": 687,
+        "summary": "|符号类型|符号名|说明|\n| --- | --- | --- |\n|FUNC|napi_adjust_external_memory|调整js `Object`持有的外部内存。|"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Node-API组件扩展的符号列表",
+        "level": 2,
+        "line_start": 688,
+        "line_end": 1904,
+        "summary": "|符号类型|符号名|说明|起始支持API版本|\n| --- | --- | --- | --- |\n|FUNC|napi_queue_async_work_with_qos|将异步工作对象加到队列，"
+      }
+    ]
+  }
+}

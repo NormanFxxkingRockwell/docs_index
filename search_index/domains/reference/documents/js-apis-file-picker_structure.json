@@ -1,0 +1,140 @@
+{
+  "doc_id": "js-apis-file-picker",
+  "title": "@ohos.file.picker (选择器)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-picker.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-picker.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@wang_zhangjun; @gzhuangzhuang",
+    "designer": "@wang_zhangjun; @gzhuangzhuang; @renguang1116",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.file.picker (选择器)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.picker (选择器)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport  { picker } from '@kit.CoreFileKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "DocumentViewPicker",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 441,
+        "summary": "文件选择器对象，用来支撑选择和保存各种格式文档。在使用前，需要先创建DocumentViewPicker实例。\n\n**系统能力**：SystemCapability.FileManagement.U"
+      },
+      {
+        "section_id": "section-3",
+        "title": "AudioViewPicker",
+        "level": 2,
+        "line_start": 442,
+        "line_end": 748,
+        "summary": "音频选择器对象，用来支撑选择和保存音频类文件等用户场景。在使用前，需要先创建AudioViewPicker实例。\n\n**系统能力**：SystemCapability.FileManagement."
+      },
+      {
+        "section_id": "section-4",
+        "title": "DocumentSelectMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 749,
+        "line_end": 762,
+        "summary": "枚举，picker选择的文档类型。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileMa"
+      },
+      {
+        "section_id": "section-5",
+        "title": "DocumentSelectOptions",
+        "level": 2,
+        "line_start": 763,
+        "line_end": 778,
+        "summary": "文档选择选项。\n\n| 名称                    | 类型                                          | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-6",
+        "title": "DocumentPickerMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 779,
+        "line_end": 791,
+        "summary": "枚举，picker保存的模式。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileMana"
+      },
+      {
+        "section_id": "section-7",
+        "title": "MergeTypeMode<sup>15+</sup>",
+        "level": 2,
+        "line_start": 792,
+        "line_end": 809,
+        "summary": "枚举，文件聚合类型。\n\n**原子化服务API**：从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagemen"
+      },
+      {
+        "section_id": "section-8",
+        "title": "DocumentSaveOptions",
+        "level": 2,
+        "line_start": 810,
+        "line_end": 821,
+        "summary": "文档保存选项。\n\n| 名称                    | 类型                                          | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-9",
+        "title": "AudioSelectOptions",
+        "level": 2,
+        "line_start": 822,
+        "line_end": 833,
+        "summary": "音频选择选项。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagement.U"
+      },
+      {
+        "section_id": "section-10",
+        "title": "AudioSaveOptions",
+        "level": 2,
+        "line_start": 834,
+        "line_end": 845,
+        "summary": "音频保存选项。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagement.U"
+      },
+      {
+        "section_id": "section-11",
+        "title": "PhotoViewPicker<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 846,
+        "line_end": 1193,
+        "summary": "图库选择器对象，用来支撑选择图片/视频和保存图片/视频等用户场景。选择文件推荐使用[PhotoAccessHelper的PhotoViewPicker](../apis-media-library-"
+      },
+      {
+        "section_id": "section-12",
+        "title": "PhotoViewMIMETypes<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1194,
+        "line_end": 1211,
+        "summary": "枚举，可选择的媒体文件类型。\n\n> **说明：**\n>\n> 从API version 9开始支持，从API version 12开始废弃。建议使用[photoAccessHelper.PhotoVi"
+      },
+      {
+        "section_id": "section-13",
+        "title": "PhotoSelectOptions<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1212,
+        "line_end": 1228,
+        "summary": "图库选择选项。\n\n> **说明：**\n>\n> 从API version 9开始支持，从API version 12开始废弃。建议使用[photoAccessHelper.PhotoSelectOpt"
+      },
+      {
+        "section_id": "section-14",
+        "title": "PhotoSelectResult<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1229,
+        "line_end": 1245,
+        "summary": "返回图库选择后的结果集。\n\n> **说明：**\n>\n> 从API version 9开始支持，从API version 12开始废弃。建议使用[photoAccessHelper.PhotoSele"
+      },
+      {
+        "section_id": "section-15",
+        "title": "PhotoSaveOptions<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1246,
+        "line_end": 1259,
+        "summary": "图片或视频的保存选项。\n\n> **说明：**\n>\n> 从API version 9开始支持，从API version 12开始废弃。建议使用[SaveButtonOptions](../apis-a"
+      }
+    ]
+  }
+}

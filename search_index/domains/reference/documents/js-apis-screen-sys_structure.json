@@ -1,0 +1,316 @@
+{
+  "doc_id": "js-apis-screen-sys",
+  "title": "@ohos.screen (屏幕)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-screen-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-screen-sys.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "Window",
+    "owner": "@oh_wangxk; @logn",
+    "designer": "@hejunfei1991",
+    "tester": "@qinliwen0417",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkUI Window 模块的 @ohos.screen (屏幕)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.screen (屏幕)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { screen } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "screen.getAllScreens",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 66,
+        "summary": "getAllScreens(callback: AsyncCallback&lt;Array&lt;Screen&gt;&gt;): void\n\n获取所有的屏幕，使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-3",
+        "title": "screen.getAllScreens",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 108,
+        "summary": "getAllScreens(): Promise&lt;Array&lt;Screen&gt;&gt;\n\n获取所有的屏幕，使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。\n\n*"
+      },
+      {
+        "section_id": "section-4",
+        "title": "screen.on('connect' | 'disconnect' | 'change')",
+        "level": 2,
+        "line_start": 109,
+        "line_end": 143,
+        "summary": "on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback&lt;number&gt;): void\n\n开启屏幕状态变"
+      },
+      {
+        "section_id": "section-5",
+        "title": "screen.off('connect' | 'disconnect' | 'change')",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 179,
+        "summary": "off(eventType: 'connect' | 'disconnect' | 'change', callback?: Callback&lt;number&gt;): void\n\n关闭屏幕状"
+      },
+      {
+        "section_id": "section-6",
+        "title": "screen.makeMirror",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 224,
+        "summary": "makeMirror(mainScreen:number, mirrorScreen:Array&lt;number&gt;, callback: AsyncCallback&lt;number&g"
+      },
+      {
+        "section_id": "section-7",
+        "title": "screen.makeMirror",
+        "level": 2,
+        "line_start": 225,
+        "line_end": 271,
+        "summary": "makeMirror(mainScreen:number, mirrorScreen:Array&lt;number&gt;): Promise&lt;number&gt;\n\n将屏幕设置为镜像模式，"
+      },
+      {
+        "section_id": "section-8",
+        "title": "screen.stopMirror<sup>10+</sup>",
+        "level": 2,
+        "line_start": 272,
+        "line_end": 314,
+        "summary": "stopMirror(mirrorScreen:Array&lt;number&gt;, callback: AsyncCallback&lt;void&gt;): void\n\n停止屏幕的镜像模式，"
+      },
+      {
+        "section_id": "section-9",
+        "title": "screen.stopMirror<sup>10+</sup>",
+        "level": 2,
+        "line_start": 315,
+        "line_end": 359,
+        "summary": "stopMirror(mirrorScreen:Array&lt;number&gt;): Promise&lt;void&gt;\n\n停止屏幕的镜像模式，使用Promise异步回调。\n\n**系统接口"
+      },
+      {
+        "section_id": "section-10",
+        "title": "screen.makeUnique<sup>18+</sup>",
+        "level": 2,
+        "line_start": 360,
+        "line_end": 406,
+        "summary": "makeUnique(uniqueScreen: Array&lt;number&gt;): Promise&lt;Array&lt;number&gt;&gt;\n\n将屏幕设置为异源模式，使用Pro"
+      },
+      {
+        "section_id": "section-11",
+        "title": "screen.createVirtualScreen",
+        "level": 2,
+        "line_start": 407,
+        "line_end": 470,
+        "summary": "createVirtualScreen(options:VirtualScreenOption, callback: AsyncCallback&lt;Screen&gt;): void\n\n创建虚拟"
+      },
+      {
+        "section_id": "section-12",
+        "title": "screen.createVirtualScreen",
+        "level": 2,
+        "line_start": 471,
+        "line_end": 537,
+        "summary": "createVirtualScreen(options:VirtualScreenOption): Promise&lt;Screen&gt;\n\n创建虚拟屏幕，使用Promise异步回调。\n\n**系"
+      },
+      {
+        "section_id": "section-13",
+        "title": "screen.destroyVirtualScreen",
+        "level": 2,
+        "line_start": 538,
+        "line_end": 581,
+        "summary": "destroyVirtualScreen(screenId:number, callback: AsyncCallback&lt;void&gt;): void\n\n销毁虚拟屏幕，使用callback"
+      },
+      {
+        "section_id": "section-14",
+        "title": "screen.destroyVirtualScreen",
+        "level": 2,
+        "line_start": 582,
+        "line_end": 627,
+        "summary": "destroyVirtualScreen(screenId:number): Promise&lt;void&gt;\n\n销毁虚拟屏幕，使用Promise异步回调。\n\n**系统接口：** 此接口为系统"
+      },
+      {
+        "section_id": "section-15",
+        "title": "screen.setVirtualScreenSurface",
+        "level": 2,
+        "line_start": 628,
+        "line_end": 699,
+        "summary": "setVirtualScreenSurface(screenId:number, surfaceId: string, callback: AsyncCallback&lt;void&gt;): v"
+      },
+      {
+        "section_id": "section-16",
+        "title": "screen.setVirtualScreenSurface",
+        "level": 2,
+        "line_start": 700,
+        "line_end": 773,
+        "summary": "setVirtualScreenSurface(screenId:number, surfaceId: string): Promise&lt;void&gt;\n\n设置虚拟屏幕的surface，表示"
+      },
+      {
+        "section_id": "section-17",
+        "title": "screen.setScreenPrivacyMaskImage<sup>19+</sup>",
+        "level": 2,
+        "line_start": 774,
+        "line_end": 829,
+        "summary": "setScreenPrivacyMaskImage(screenId:number, image?: image.PixelMap): Promise&lt;void&gt;\n\n设置屏幕的隐私蒙版图"
+      },
+      {
+        "section_id": "section-18",
+        "title": "screen.isScreenRotationLocked",
+        "level": 2,
+        "line_start": 830,
+        "line_end": 865,
+        "summary": "isScreenRotationLocked(): Promise&lt;boolean&gt;\n\n查询当前自动转屏是否锁定，使用Promise异步回调。\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "screen.isScreenRotationLocked",
+        "level": 2,
+        "line_start": 866,
+        "line_end": 904,
+        "summary": "isScreenRotationLocked(callback: AsyncCallback&lt;boolean&gt;): void\n\n查询当前自动转屏是否锁定，使用callback异步回调。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "screen.setScreenRotationLocked",
+        "level": 2,
+        "line_start": 905,
+        "line_end": 950,
+        "summary": "setScreenRotationLocked(isLocked: boolean): Promise&lt;void&gt;\n\n设置自动转屏开关是否锁定，使用Promise异步回调。\n\n**系统接"
+      },
+      {
+        "section_id": "section-21",
+        "title": "screen.setScreenRotationLocked",
+        "level": 2,
+        "line_start": 951,
+        "line_end": 994,
+        "summary": "setScreenRotationLocked(isLocked: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置自动转屏开关是否锁定"
+      },
+      {
+        "section_id": "section-22",
+        "title": "screen.setMultiScreenMode<sup>13+</sup>",
+        "level": 2,
+        "line_start": 995,
+        "line_end": 1043,
+        "summary": "setMultiScreenMode(primaryScreenId: number, secondaryScreenId: number, secondaryScreenMode: MultiSc"
+      },
+      {
+        "section_id": "section-23",
+        "title": "screen.setMultiScreenRelativePosition<sup>13+</sup>",
+        "level": 2,
+        "line_start": 1044,
+        "line_end": 1101,
+        "summary": "setMultiScreenRelativePosition(mainScreenOptions: MultiScreenPositionOptions, secondaryScreenOption"
+      },
+      {
+        "section_id": "section-24",
+        "title": "screen.makeMirrorWithRegion<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1102,
+        "line_end": 1154,
+        "summary": "makeMirrorWithRegion(mainScreen:number, mirrorScreen:Array&lt;number&gt;, mainScreenRegion:Rect): P"
+      },
+      {
+        "section_id": "section-25",
+        "title": "screen.makeExpand<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1155,
+        "line_end": 1210,
+        "summary": "makeExpand(options:Array&lt;ExpandOption&gt;, callback: AsyncCallback&lt;number&gt;): void\n\n将屏幕设置为扩"
+      },
+      {
+        "section_id": "section-26",
+        "title": "screen.makeExpand<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1211,
+        "line_end": 1267,
+        "summary": "makeExpand(options:Array&lt;ExpandOption&gt;): Promise&lt;number&gt;\n\n将屏幕设置为扩展模式，使用Promise异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-27",
+        "title": "screen.stopExpand<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1268,
+        "line_end": 1314,
+        "summary": "stopExpand(expandScreen:Array&lt;number&gt;, callback: AsyncCallback&lt;void&gt;): void\n\n停止屏幕的扩展模式，"
+      },
+      {
+        "section_id": "section-28",
+        "title": "screen.stopExpand<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1315,
+        "line_end": 1363,
+        "summary": "stopExpand(expandScreen:Array&lt;number&gt;): Promise&lt;void&gt;\n\n停止屏幕的扩展模式，使用Promise异步回调。\n\n> **说明"
+      },
+      {
+        "section_id": "section-29",
+        "title": "ExpandOption",
+        "level": 2,
+        "line_start": 1364,
+        "line_end": 1377,
+        "summary": "扩展屏幕的参数。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-30",
+        "title": "MultiScreenMode<sup>13+</sup>",
+        "level": 2,
+        "line_start": 1378,
+        "line_end": 1390,
+        "summary": "屏幕模式枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-31",
+        "title": "MultiScreenPositionOptions<sup>13+</sup>",
+        "level": 2,
+        "line_start": 1391,
+        "line_end": 1404,
+        "summary": "屏幕位置信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-32",
+        "title": "VirtualScreenOption",
+        "level": 2,
+        "line_start": 1405,
+        "line_end": 1421,
+        "summary": "创建虚拟屏幕的参数。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-33",
+        "title": "Screen",
+        "level": 2,
+        "line_start": 1422,
+        "line_end": 1853,
+        "summary": "屏幕实例。\n\n下列API示例中都需先使用[getAllScreens()](#screengetallscreens)、[createVirtualScreen()](#screencreatevi"
+      },
+      {
+        "section_id": "section-34",
+        "title": "Orientation",
+        "level": 2,
+        "line_start": 1854,
+        "line_end": 1869,
+        "summary": "屏幕方向枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-35",
+        "title": "ScreenSourceMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1870,
+        "line_end": 1884,
+        "summary": "屏幕显示内容来源模式枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n|"
+      },
+      {
+        "section_id": "section-36",
+        "title": "ScreenModeInfo",
+        "level": 2,
+        "line_start": 1885,
+        "line_end": 1899,
+        "summary": "屏幕显示模式信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-37",
+        "title": "Rect<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1900,
+        "line_end": 1913,
+        "summary": "矩形信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名称"
+      }
+    ]
+  }
+}

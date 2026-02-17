@@ -1,0 +1,268 @@
+{
+  "doc_id": "errorcode-net-http",
+  "title": "HTTP错误码",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/errorcode-net-http.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/errorcode-net-http.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 HTTP错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "HTTP错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "2300001 不支持的协议",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 31,
+        "summary": "**错误信息**\n\nUnsupported protocol.\n\n**错误描述**\n\n协议版本服务器不支持。\n\n**可能原因**\n\n传入的协议版本，服务器不支持。\n\n**处理步骤**\n\n请检查传入的"
+      },
+      {
+        "section_id": "section-2",
+        "title": "2300003 URL格式错误",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 49,
+        "summary": "**错误信息**\n\nInvalid URL format or missing URL.\n\n**错误描述**\n\nURL格式错误。\n\n**可能原因**\n\n可能传入的url格式不正确。\n\n**处理步骤*"
+      },
+      {
+        "section_id": "section-3",
+        "title": "2300005 代理服务器域名解析失败",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 67,
+        "summary": "**错误信息**\n\nFailed to resolve the proxy name.\n\n**错误描述**\n\n代理服务器的域名无法解析。\n\n**可能原因**\n\n服务器的URL不正确。\n\n**处理步骤"
+      },
+      {
+        "section_id": "section-4",
+        "title": "2300006 域名解析失败",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 89,
+        "summary": "**错误信息**\n\nFailed to resolve the host name.\n\n**错误描述**\n\n服务器的域名无法解析。\n\n**可能原因**\n\n1.传入的服务器的URL不正确。\n\n2.网络"
+      },
+      {
+        "section_id": "section-5",
+        "title": "2300007 无法连接到服务器",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 107,
+        "summary": "**错误信息**\n\nFailed to connect to the server.\n\n**错误描述**\n\n服务器无法连接。\n\n**可能原因**\n\n可能传入的url格式不正确。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "2300008 服务器返回非法数据",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 125,
+        "summary": "**错误信息**\n\nInvalid server response.\n\n**错误描述**\n\n服务器返回非法数据。\n\n**可能原因**\n\n服务器出错，返回了非HTTP格式的数据。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "2300009 拒绝对远程资源的访问",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 143,
+        "summary": "**错误信息**\n\nAccess to the remote resource denied.\n\n**错误描述**\n\n拒绝对远程资源的访问。\n\n**可能原因**\n\n指定的内容被服务器拒绝访问。\n\n*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "2300016 HTTP2帧层错误",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 161,
+        "summary": "**错误信息**\n\nError in the HTTP2 framing layer.\n\n**错误描述**\n\nHTTP2层级的错误。\n\n**可能原因**\n\n服务器不支持HTTP2。\n\n**处理步骤*"
+      },
+      {
+        "section_id": "section-9",
+        "title": "2300018 服务器返回数据不完整",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 179,
+        "summary": "**错误信息**\n\nTransferred a partial file.\n\n**错误描述**\n\n服务器返回的数据不完整。\n\n**可能原因**\n\n可能与服务器实现有关。\n\n**处理步骤**\n\n排查服"
+      },
+      {
+        "section_id": "section-10",
+        "title": "2300023 向磁盘/应用程序写入接收数据失败",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 199,
+        "summary": "**错误信息**\n\nFailed to write the received data to the disk or application.\n\n**错误描述**\n\n向磁盘/应用程序写入接收数据失败"
+      },
+      {
+        "section_id": "section-11",
+        "title": "2300025 上传失败",
+        "level": 2,
+        "line_start": 200,
+        "line_end": 217,
+        "summary": "**错误信息**\n\nUpload failed.\n\n**错误描述**\n\n上传失败。\n\n**可能原因**\n\n文件过大或者网络问题，对于FTP，服务器通常会拒绝STOR命令，错误缓冲区通常包含服务器的解"
+      },
+      {
+        "section_id": "section-12",
+        "title": "2300026 从文件/应用程序中打开/读取本地数据失败",
+        "level": 2,
+        "line_start": 218,
+        "line_end": 235,
+        "summary": "**错误信息**\n\nFailed to open or read local data from the file or application.\n\n**错误描述**\n\n从文件/应用程序中打开/读取"
+      },
+      {
+        "section_id": "section-13",
+        "title": "2300027 内存不足",
+        "level": 2,
+        "line_start": 236,
+        "line_end": 253,
+        "summary": "**错误信息**\n\nOut of memory.\n\n**错误描述**\n\n内存不足。\n\n**可能原因**\n\n内存不足。\n\n**处理步骤**\n\n排查系统内存。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "2300028 操作超时",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 271,
+        "summary": "**错误信息**\n\nOperation timeout.\n\n**错误描述**\n\n操作超时。\n\n**可能原因**\n\nTCP连接超时或读写超时。\n\n**处理步骤**\n\n排查网络或服务器问题，例如网络是否"
+      },
+      {
+        "section_id": "section-15",
+        "title": "2300047 重定向次数达到最大值",
+        "level": 2,
+        "line_start": 272,
+        "line_end": 289,
+        "summary": "**错误信息**\n\nThe number of redirections reaches the maximum allowed.\n\n**错误描述**\n\n重定向次数达到最大值。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-16",
+        "title": "2300052 服务器没有返回内容",
+        "level": 2,
+        "line_start": 290,
+        "line_end": 307,
+        "summary": "**错误信息**\n\nThe server returned nothing (no header or data).\n\n**错误描述**\n\n服务器没有返回内容。\n\n**可能原因**\n\n可能与服务器实"
+      },
+      {
+        "section_id": "section-17",
+        "title": "2300055 发送网络数据失败",
+        "level": 2,
+        "line_start": 308,
+        "line_end": 325,
+        "summary": "**错误信息**\n\nFailed to send data to the peer.\n\n**错误描述**\n\n无法往对端发送数据，发送网络数据失败。\n\n**可能原因**\n\n网络问题。\n\n**处理步骤*"
+      },
+      {
+        "section_id": "section-18",
+        "title": "2300056 接收网络数据失败",
+        "level": 2,
+        "line_start": 326,
+        "line_end": 343,
+        "summary": "**错误信息**\n\nFailed to receive data from the peer.\n\n**错误描述**\n\n无法从对端收到数据，接收网络数据失败。\n\n**可能原因**\n\n网络问题。\n\n**"
+      },
+      {
+        "section_id": "section-19",
+        "title": "2300058 本地SSL证书错误",
+        "level": 2,
+        "line_start": 344,
+        "line_end": 361,
+        "summary": "**错误信息**\n\nLocal SSL certificate error.\n\n**错误描述**\n\n本地SSL证书错误。\n\n**可能原因**\n\nSSL证书格式有错误。\n\n**处理步骤**\n\n检查SS"
+      },
+      {
+        "section_id": "section-20",
+        "title": "2300059 无法使用指定的密码",
+        "level": 2,
+        "line_start": 362,
+        "line_end": 379,
+        "summary": "**错误信息**\n\nThe specified SSL cipher cannot be used.\n\n**错误描述**\n\n无法使用指定的密码。\n\n**可能原因**\n\nclient和server协商"
+      },
+      {
+        "section_id": "section-21",
+        "title": "2300060 远程服务器SSL证书或SSH密钥不正确",
+        "level": 2,
+        "line_start": 380,
+        "line_end": 397,
+        "summary": "**错误信息**\n\nInvalid SSL peer certificate or SSH remote key.\n\n**错误描述**\n\n远程服务器SSL证书或SSH密钥不正确。\n\n**可能原因**"
+      },
+      {
+        "section_id": "section-22",
+        "title": "2300061 无法识别或错误的HTTP编码格式",
+        "level": 2,
+        "line_start": 398,
+        "line_end": 415,
+        "summary": "**错误信息**\n\nInvalid HTTP encoding format.\n\n**错误描述**\n\n无法识别或错误的HTTP编码格式。\n\n**可能原因**\n\nHTTP编码格式不正确。\n\n**处理步"
+      },
+      {
+        "section_id": "section-23",
+        "title": "2300063 超出最大文件大小",
+        "level": 2,
+        "line_start": 416,
+        "line_end": 433,
+        "summary": "**错误信息**\n\nMaximum file size exceeded.\n\n**错误描述**\n\n超出最大文件大小。\n\n**可能原因**\n\n下载的文件过大。\n\n**处理步骤**\n\n排查服务器实现。"
+      },
+      {
+        "section_id": "section-24",
+        "title": "2300070 服务器磁盘空间不足",
+        "level": 2,
+        "line_start": 434,
+        "line_end": 451,
+        "summary": "**错误信息**\n\nRemote disk full.\n\n**错误描述**\n\n服务器磁盘空间不足。\n\n**可能原因**\n\n服务器磁盘已满。\n\n**处理步骤**\n\n检查服务器磁盘空间。"
+      },
+      {
+        "section_id": "section-25",
+        "title": "2300073 服务器返回文件已存在",
+        "level": 2,
+        "line_start": 452,
+        "line_end": 469,
+        "summary": "**错误信息**\n\nRemote file already exists.\n\n**错误描述**\n\n服务器返回文件已存在。\n\n**可能原因**\n\n上传文件的时候，服务器返回文件已经存在。\n\n**处理步"
+      },
+      {
+        "section_id": "section-26",
+        "title": "2300077 SSL CA证书不存在或没有访问权限",
+        "level": 2,
+        "line_start": 470,
+        "line_end": 487,
+        "summary": "**错误信息**\n\nThe SSL CA certificate does not exist or is inaccessible.\n\n**错误描述**\n\nSSL CA证书不存在或没有访问权限。"
+      },
+      {
+        "section_id": "section-27",
+        "title": "2300078 URL请求的文件不存在",
+        "level": 2,
+        "line_start": 488,
+        "line_end": 505,
+        "summary": "**错误信息**\n\nRemote file not found.\n\n**错误描述**\n\nURL请求的文件不存在。\n\n**可能原因**\n\nURL请求的文件不存在。\n\n**处理步骤**\n\n检查URL请求"
+      },
+      {
+        "section_id": "section-28",
+        "title": "2300094 身份校验失败",
+        "level": 2,
+        "line_start": 506,
+        "line_end": 523,
+        "summary": "**错误信息**\n\nAuthentication error.\n\n**错误描述**\n\n身份校验失败。\n\n**可能原因**\n\n传入的校验身份的字段与服务器不匹配。\n\n**处理步骤**\n\n排查传入的校验"
+      },
+      {
+        "section_id": "section-29",
+        "title": "2300997 明文HTTP被拦截",
+        "level": 2,
+        "line_start": 524,
+        "line_end": 541,
+        "summary": "**错误信息**\n\nCleartext traffic not permitted.\n\n**错误描述**\n\n明文HTTP被拦截，不允许访问。\n\n**可能原因**\n\n应用配置network_confi"
+      },
+      {
+        "section_id": "section-30",
+        "title": "2300998 不允许访问域名",
+        "level": 2,
+        "line_start": 542,
+        "line_end": 559,
+        "summary": "**错误信息**\n\nIt is not allowed to access this domain.\n\n**错误描述**\n\n不允许访问此域名。\n\n**可能原因**\n\n元服务应用未正确配置服务器域名。"
+      },
+      {
+        "section_id": "section-31",
+        "title": "2300999 内部错误",
+        "level": 2,
+        "line_start": 560,
+        "line_end": 577,
+        "summary": "**错误信息**\n\nInternal error.\n\n**错误描述**\n\n内部错误。\n\n**可能原因**\n\n未知错误。\n\n**处理步骤**\n\n未知错误。"
+      }
+    ]
+  }
+}

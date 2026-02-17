@@ -1,0 +1,68 @@
+{
+  "doc_id": "arkts-apis-webview-WebResourceHandler",
+  "title": "Class (WebResourceHandler)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebResourceHandler.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-WebResourceHandler.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Class (WebResourceHandler)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (WebResourceHandler)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { webview } from '@kit.ArkWeb';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "didReceiveResponse<sup>12+</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 51,
+        "summary": "didReceiveResponse(response: WebSchemeHandlerResponse): void\n\n将构造的响应头传递给被拦截的请求。\n\n**系统能力：** SystemCa"
+      },
+      {
+        "section_id": "section-3",
+        "title": "didReceiveResponseBody<sup>12+</sup>",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 78,
+        "summary": "didReceiveResponseBody(data: ArrayBuffer): void\n\n将构造的响应体传递给被拦截的请求。\n\n**系统能力：** SystemCapability.Web."
+      },
+      {
+        "section_id": "section-4",
+        "title": "didFinish<sup>12+</sup>",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 98,
+        "summary": "didFinish(): void\n\n通知Web组件被拦截的请求已经完成，并且没有更多的数据可用，调用前需要优先调用[didReceiveResponse](#didreceiveresponse1"
+      },
+      {
+        "section_id": "section-5",
+        "title": "didFail<sup>12+</sup>",
+        "level": 2,
+        "line_start": 99,
+        "line_end": 126,
+        "summary": "didFail(code: WebNetErrorList): void\n\n通知ArkWeb内核被拦截请求应该返回失败，调用前需要优先调用[didReceiveResponse](#didrecei"
+      },
+      {
+        "section_id": "section-6",
+        "title": "didFail<sup>20+</sup>",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 223,
+        "summary": "didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void\n\n通知ArkWeb内核，被拦截请求应返回失败。若complet"
+      }
+    ]
+  }
+}

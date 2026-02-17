@@ -1,0 +1,396 @@
+{
+  "doc_id": "js-apis-sim",
+  "title": "@ohos.telephony.sim (SIM卡管理)",
+  "path": "zh-cn/application-dev/reference/apis-telephony-kit/js-apis-sim.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-telephony-kit/js-apis-sim.md",
+  "metadata": {
+    "kit": "Telephony Kit",
+    "subsystem": "Telephony",
+    "owner": "@Fanyl8",
+    "designer": "@ghxbob",
+    "tester": "@weitiantian",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Telephony Kit Telephony 模块的 @ohos.telephony.sim (SIM卡管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.telephony.sim (SIM卡管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { sim } from '@kit.TelephonyKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "sim.isSimActive<sup>7+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 48,
+        "summary": "isSimActive\\(slotId: number, callback: AsyncCallback\\<boolean\\>\\): void\n\n获取指定卡槽SIM卡是否激活。使用callback异"
+      },
+      {
+        "section_id": "section-3",
+        "title": "sim.isSimActive<sup>7+</sup>",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 81,
+        "summary": "isSimActive\\(slotId: number\\): Promise\\<boolean\\>\n\n获取指定卡槽SIM卡是否激活。使用Promise异步回调。\n\n**系统能力**：SystemCa"
+      },
+      {
+        "section_id": "section-4",
+        "title": "sim.isSimActiveSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 111,
+        "summary": "isSimActiveSync\\(slotId: number\\): boolean\n\n获取指定卡槽SIM卡是否激活。\n\n**系统能力**：SystemCapability.Telephony.Co"
+      },
+      {
+        "section_id": "section-5",
+        "title": "sim.getDefaultVoiceSlotId<sup>7+</sup>",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 136,
+        "summary": "getDefaultVoiceSlotId\\(callback: AsyncCallback\\<number\\>\\): void\n\n获取默认语音业务的卡槽ID。使用callback异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "sim.getDefaultVoiceSlotId<sup>7+</sup>",
+        "level": 2,
+        "line_start": 137,
+        "line_end": 163,
+        "summary": "getDefaultVoiceSlotId\\(\\): Promise\\<number\\>\n\n获取默认语音业务的卡槽ID。使用Promise异步回调。\n\n**系统能力**：SystemCapabili"
+      },
+      {
+        "section_id": "section-7",
+        "title": "sim.hasOperatorPrivileges<sup>7+</sup>",
+        "level": 2,
+        "line_start": 164,
+        "line_end": 201,
+        "summary": "hasOperatorPrivileges\\(slotId: number, callback: AsyncCallback\\<boolean\\>\\): void\n\n检查应用(调用者)是否已被授予运"
+      },
+      {
+        "section_id": "section-8",
+        "title": "sim.hasOperatorPrivileges<sup>7+</sup>",
+        "level": 2,
+        "line_start": 202,
+        "line_end": 246,
+        "summary": "hasOperatorPrivileges\\(slotId: number\\): Promise\\<boolean\\>\n\n检查应用(调用者)是否已被授予运营商权限。使用Promise异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-9",
+        "title": "sim.getISOCountryCodeForSim",
+        "level": 2,
+        "line_start": 247,
+        "line_end": 286,
+        "summary": "getISOCountryCodeForSim\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取指定卡槽SIM卡的ISO国"
+      },
+      {
+        "section_id": "section-10",
+        "title": "sim.getISOCountryCodeForSim",
+        "level": 2,
+        "line_start": 287,
+        "line_end": 332,
+        "summary": "getISOCountryCodeForSim\\(slotId: number\\): Promise\\<string\\>\n\n获取指定卡槽SIM卡的ISO国家码。使用Promise异步回调。\n\n**系"
+      },
+      {
+        "section_id": "section-11",
+        "title": "sim.getISOCountryCodeForSimSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 333,
+        "line_end": 363,
+        "summary": "getISOCountryCodeForSimSync\\(slotId: number\\): string\n\n获取指定卡槽SIM卡的ISO国家码。\n\n**系统能力**：SystemCapabilit"
+      },
+      {
+        "section_id": "section-12",
+        "title": "sim.getSimOperatorNumeric",
+        "level": 2,
+        "line_start": 364,
+        "line_end": 403,
+        "summary": "getSimOperatorNumeric\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取指定卡槽SIM卡的归属PLMN"
+      },
+      {
+        "section_id": "section-13",
+        "title": "sim.getSimOperatorNumeric",
+        "level": 2,
+        "line_start": 404,
+        "line_end": 449,
+        "summary": "getSimOperatorNumeric\\(slotId: number\\): Promise\\<string\\>\n\n获取指定卡槽SIM卡的归属PLMN(Public Land Mobile Ne"
+      },
+      {
+        "section_id": "section-14",
+        "title": "sim.getSimOperatorNumericSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 450,
+        "line_end": 480,
+        "summary": "getSimOperatorNumericSync\\(slotId: number\\): string\n\n获取指定卡槽SIM卡的归属PLMN(Public Land Mobile Network)号"
+      },
+      {
+        "section_id": "section-15",
+        "title": "sim.getSimSpn",
+        "level": 2,
+        "line_start": 481,
+        "line_end": 520,
+        "summary": "getSimSpn\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取指定卡槽SIM卡的服务提供商名称(Service Pr"
+      },
+      {
+        "section_id": "section-16",
+        "title": "sim.getSimSpn",
+        "level": 2,
+        "line_start": 521,
+        "line_end": 566,
+        "summary": "getSimSpn\\(slotId: number\\): Promise\\<string\\>\n\n获取指定卡槽SIM卡的服务提供商名称(Service Provider Name，SPN)。使用Pro"
+      },
+      {
+        "section_id": "section-17",
+        "title": "sim.getSimSpnSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 567,
+        "line_end": 597,
+        "summary": "getSimSpnSync\\(slotId: number\\): string\n\n获取指定卡槽SIM卡的服务提供商名称(Service Provider Name，SPN)。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-18",
+        "title": "sim.getSimState",
+        "level": 2,
+        "line_start": 598,
+        "line_end": 636,
+        "summary": "getSimState\\(slotId: number, callback: AsyncCallback\\<SimState\\>\\): void\n\n获取指定卡槽的SIM卡状态。使用callback异"
+      },
+      {
+        "section_id": "section-19",
+        "title": "sim.getSimState",
+        "level": 2,
+        "line_start": 637,
+        "line_end": 681,
+        "summary": "getSimState\\(slotId: number\\): Promise\\<SimState\\>\n\n获取指定卡槽的SIM卡状态。使用Promise异步回调。\n\n**系统能力**：SystemCa"
+      },
+      {
+        "section_id": "section-20",
+        "title": "sim.getSimStateSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 682,
+        "line_end": 711,
+        "summary": "getSimStateSync\\(slotId: number\\): SimState\n\n获取指定卡槽的SIM卡状态。\n\n**系统能力**：SystemCapability.Telephony.Co"
+      },
+      {
+        "section_id": "section-21",
+        "title": "sim.getCardType<sup>7+</sup>",
+        "level": 2,
+        "line_start": 712,
+        "line_end": 751,
+        "summary": "getCardType\\(slotId: number, callback: AsyncCallback\\<CardType\\>\\): void\n\n获取指定卡槽SIM卡的卡类型。使用callback"
+      },
+      {
+        "section_id": "section-22",
+        "title": "sim.getCardType<sup>7+</sup>",
+        "level": 2,
+        "line_start": 752,
+        "line_end": 797,
+        "summary": "getCardType\\(slotId: number\\): Promise\\<CardType\\>\n\n获取指定卡槽SIM卡的卡类型。使用Promise异步回调。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-23",
+        "title": "sim.getCardTypeSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 798,
+        "line_end": 828,
+        "summary": "getCardTypeSync\\(slotId: number\\): CardType\n\n获取指定卡槽SIM卡的卡类型。\n\n**系统能力**：SystemCapability.Telephony.C"
+      },
+      {
+        "section_id": "section-24",
+        "title": "sim.hasSimCard<sup>7+</sup>",
+        "level": 2,
+        "line_start": 829,
+        "line_end": 867,
+        "summary": "hasSimCard\\(slotId: number, callback: AsyncCallback\\<boolean\\>\\): void\n\n获取指定卡槽SIM卡是否插卡。使用callback异步"
+      },
+      {
+        "section_id": "section-25",
+        "title": "sim.hasSimCard<sup>7+</sup>",
+        "level": 2,
+        "line_start": 868,
+        "line_end": 912,
+        "summary": "hasSimCard\\(slotId: number\\): Promise\\<boolean\\>\n\n获取指定卡槽SIM卡是否插卡。使用Promise异步回调。\n\n**系统能力**：SystemCap"
+      },
+      {
+        "section_id": "section-26",
+        "title": "sim.hasSimCardSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 913,
+        "line_end": 941,
+        "summary": "hasSimCardSync\\(slotId: number\\): boolean\n\n获取指定卡槽SIM卡是否插卡。\n\n**系统能力**：SystemCapability.Telephony.Cor"
+      },
+      {
+        "section_id": "section-27",
+        "title": "sim.getSimAccountInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 942,
+        "line_end": 988,
+        "summary": "getSimAccountInfo\\(slotId: number, callback: AsyncCallback\\<IccAccountInfo\\>\\): void\n\n获取SIM卡账户信息。使用"
+      },
+      {
+        "section_id": "section-28",
+        "title": "sim.getSimAccountInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 989,
+        "line_end": 1041,
+        "summary": "getSimAccountInfo\\(slotId: number\\): Promise\\<IccAccountInfo\\>\n\n获取SIM卡账户信息。使用Promise异步回调。\n\n**需要权限**"
+      },
+      {
+        "section_id": "section-29",
+        "title": "sim.getActiveSimAccountInfoList<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1042,
+        "line_end": 1085,
+        "summary": "getActiveSimAccountInfoList\\(callback: AsyncCallback\\<Array\\<IccAccountInfo\\>\\>\\): void\n\n获取激活SIM卡账户"
+      },
+      {
+        "section_id": "section-30",
+        "title": "sim.getMaxSimCount<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1086,
+        "line_end": 1108,
+        "summary": "getMaxSimCount\\(\\): number\n\n获取卡槽数量。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n**返回值：**\n\n| 类"
+      },
+      {
+        "section_id": "section-31",
+        "title": "sim.getActiveSimAccountInfoList<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1109,
+        "line_end": 1153,
+        "summary": "getActiveSimAccountInfoList\\(\\): Promise\\<Array\\<IccAccountInfo\\>\\>\n\n获取激活SIM卡账户信息列表。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-32",
+        "title": "sim.getOpKey<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1154,
+        "line_end": 1201,
+        "summary": "getOpKey\\(slotId: number, callback: AsyncCallback\\<string\\>): void\n\n获取指定卡槽中SIM卡的opkey。使用callback异步回"
+      },
+      {
+        "section_id": "section-33",
+        "title": "sim.getOpKey<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1202,
+        "line_end": 1247,
+        "summary": "getOpKey\\(slotId: number\\): Promise\\<string\\>\n\n获取指定卡槽中SIM卡的opkey。使用Promise异步回调。\n\n**系统能力**：SystemCap"
+      },
+      {
+        "section_id": "section-34",
+        "title": "sim.getOpKeySync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1248,
+        "line_end": 1277,
+        "summary": "getOpKeySync\\(slotId: number\\): string\n\n获取指定卡槽中SIM卡的opkey。\n\n**系统能力**：SystemCapability.Telephony.Cor"
+      },
+      {
+        "section_id": "section-35",
+        "title": "sim.getOpName<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1278,
+        "line_end": 1325,
+        "summary": "getOpName\\(slotId: number, callback: AsyncCallback\\<string\\>\\): void\n\n获取指定卡槽中SIM卡的OpName。使用callback"
+      },
+      {
+        "section_id": "section-36",
+        "title": "sim.getOpName<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1326,
+        "line_end": 1371,
+        "summary": "getOpName\\(slotId: number\\): Promise\\<string\\>\n\n获取指定卡槽中SIM卡的OpName。使用Promise异步回调。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-37",
+        "title": "sim.getOpNameSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1372,
+        "line_end": 1401,
+        "summary": "getOpNameSync\\(slotId: number\\): string\n\n获取指定卡槽中SIM卡的OpName。\n\n**系统能力**：SystemCapability.Telephony.C"
+      },
+      {
+        "section_id": "section-38",
+        "title": "sim.getDefaultVoiceSimId<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1402,
+        "line_end": 1440,
+        "summary": "getDefaultVoiceSimId\\(callback: AsyncCallback\\<number\\>\\): void\n\n获取默认语音业务的SIM卡ID。使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-39",
+        "title": "sim.getDefaultVoiceSimId<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1441,
+        "line_end": 1481,
+        "summary": "getDefaultVoiceSimId\\(\\): Promise\\<number\\>\n\n获取默认语音业务的SIM卡ID。使用Promise异步回调。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-40",
+        "title": "sim.getSimLabel<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1482,
+        "line_end": 1519,
+        "summary": "getSimLabel(slotId: number, callback: AsyncCallback\\<SimLabel\\>): void\n\n查看卡槽ID和SIM卡的对应关系：- 卡槽1对应SIM"
+      },
+      {
+        "section_id": "section-41",
+        "title": "sim.getSimLabel<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1520,
+        "line_end": 1565,
+        "summary": "getSimLabel(slotId: number): Promise\\<SimLabel\\>\n\n获取SIM卡的标签信息。使用Promise异步回调。\n\n**系统能力**：SystemCapabi"
+      },
+      {
+        "section_id": "section-42",
+        "title": "sim.getSimLabelSync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1566,
+        "line_end": 1595,
+        "summary": "getSimLabelSync(slotId: number): SimLabel\n\n通过传入SIM卡槽的ID，获取对应的SIM卡标签。\n\n**系统能力**：SystemCapability.Tel"
+      },
+      {
+        "section_id": "section-43",
+        "title": "SimType<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1596,
+        "line_end": 1607,
+        "summary": "SIM卡类型的枚举。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称                | 值 |  说明"
+      },
+      {
+        "section_id": "section-44",
+        "title": "SimLabel<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1608,
+        "line_end": 1618,
+        "summary": "SIM卡标签。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称         | 类型 | 只读| 可选  | 说明"
+      },
+      {
+        "section_id": "section-45",
+        "title": "SimState",
+        "level": 2,
+        "line_start": 1619,
+        "line_end": 1633,
+        "summary": "SIM卡状态。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称                  | 值   | 说明"
+      },
+      {
+        "section_id": "section-46",
+        "title": "CardType<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1634,
+        "line_end": 1652,
+        "summary": "卡类型。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称 | 值 | 说明 |\n| ----- | ----- | ----- |\n|U"
+      },
+      {
+        "section_id": "section-47",
+        "title": "IccAccountInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1653,
+        "line_end": 1667,
+        "summary": "Icc账户信息。\n\n**系统能力**：SystemCapability.Telephony.CoreService\n\n| 名称       | 类型    | 只读|可选| 说明"
+      }
+    ]
+  }
+}

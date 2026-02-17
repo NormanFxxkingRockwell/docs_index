@@ -1,0 +1,116 @@
+{
+  "doc_id": "ts-security-components-savebutton",
+  "title": "SaveButton",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "Security",
+    "owner": "@harylee",
+    "designer": "@linshuqing; @hehehe-li",
+    "tester": "@leiyuqian",
+    "adviser": "@zengyawen"
+  },
+  "summary": "ArkUI Security 模块的 SaveButton，提供相关接口和功能说明。",
+  "structure": {
+    "title": "SaveButton",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 19,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 51,
+        "summary": "### SaveButton\n\nSaveButton()\n\n默认创建带有图标、文本、背景的保存控件。\n\n为避免控件样式不合法导致授权失败，请开发者先了解安全控件样式的[约束与限制](../../.."
+      },
+      {
+        "section_id": "section-3",
+        "title": "SaveButtonOptions",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 77,
+        "summary": "用于指定保存控件的图标、文本等指定元素。\n\n> **说明：**\n>\n> - icon或text需至少传入一个。<br>\n> - 如果icon、text都不传入，SaveButton中的options"
+      },
+      {
+        "section_id": "section-4",
+        "title": "SaveIconStyle枚举说明",
+        "level": 2,
+        "line_start": 78,
+        "line_end": 90,
+        "summary": "保存控件的图标风格。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-5",
+        "title": "SaveDescription枚举说明",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 112,
+        "summary": "保存控件的文本描述。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称 | 值 | 说明 |\n| -------- | -------- | --"
+      },
+      {
+        "section_id": "section-6",
+        "title": "SaveButtonOnClickResult枚举说明",
+        "level": 2,
+        "line_start": 113,
+        "line_end": 124,
+        "summary": "保存控件点击后的授权结果。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称 | 值 | 说明 |\n| -------- | -------- |"
+      },
+      {
+        "section_id": "section-7",
+        "title": "SaveButtonCallback<sup>18+</sup>",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 142,
+        "summary": "type SaveButtonCallback = (event: ClickEvent, result: SaveButtonOnClickResult, error?: BusinessErro"
+      },
+      {
+        "section_id": "section-8",
+        "title": "SaveButtonAttribute",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 251,
+        "summary": "SaveButtonAttribute提供自定义图标（setIcon）、自定义文本（setText）、图标尺寸（iconSize）、图标圆角（iconBorderRadius），以及按压态效果（sta"
+      },
+      {
+        "section_id": "section-9",
+        "title": "属性",
+        "level": 2,
+        "line_start": 252,
+        "line_end": 255,
+        "summary": "不支持通用属性，仅继承[安全控件通用属性](ts-securitycomponent-attributes.md)。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "事件",
+        "level": 2,
+        "line_start": 256,
+        "line_end": 275,
+        "summary": "不支持通用事件，仅支持以下事件：\n\n### onClick\n\nonClick(event: SaveButtonCallback)\n\n点击动作触发该回调。\n\n**原子化服务API：** 从API v"
+      },
+      {
+        "section_id": "section-11",
+        "title": "示例1",
+        "level": 2,
+        "line_start": 276,
+        "line_end": 352,
+        "summary": "```ts\n// xxx.ets\nimport { photoAccessHelper } from '@kit.MediaLibraryKit';\nimport { fileIo } from '"
+      },
+      {
+        "section_id": "section-12",
+        "title": "示例2",
+        "level": 2,
+        "line_start": 353,
+        "line_end": 426,
+        "summary": "应用需要申请权限：ohos.permission.CUSTOMIZE_SAVE_BUTTON\n\n```ts\n// xxx.ets\n@Entry\n@Component\nstruct SetIcon {"
+      }
+    ]
+  }
+}

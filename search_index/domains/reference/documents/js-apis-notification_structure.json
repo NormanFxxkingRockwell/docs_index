@@ -1,0 +1,388 @@
+{
+  "doc_id": "js-apis-notification",
+  "title": "@ohos.notification (Notification模块)",
+  "path": "zh-cn/application-dev/reference/apis-notification-kit/js-apis-notification.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-notification-kit/js-apis-notification.md",
+  "metadata": {
+    "kit": "Notification Kit",
+    "subsystem": "Notification",
+    "owner": "@peixu",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Notification Kit Notification 模块的 @ohos.notification (Notification模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.notification (Notification模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport Notification from '@ohos.notification';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Notification.publish",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 67,
+        "summary": "publish(request: NotificationRequest, callback: AsyncCallback\\<void\\>): void\n\n发布通知（callback形式）。\n\n**"
+      },
+      {
+        "section_id": "section-3",
+        "title": "Notification.publish",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 112,
+        "summary": "publish(request: NotificationRequest): Promise\\<void\\>\n\n发布通知（Promise形式）。\n\n**系统能力**：SystemCapability"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Notification.cancel",
+        "level": 2,
+        "line_start": 113,
+        "line_end": 146,
+        "summary": "cancel(id: number, label: string, callback: AsyncCallback\\<void\\>): void\n\n通过通知ID和通知标签取消已发布的通知（callb"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Notification.cancel",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 181,
+        "summary": "cancel(id: number, label?: string): Promise\\<void\\>\n\n取消与指定通知ID相匹配的已发布通知，label可以指定也可以不指定（Promise形式）。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Notification.cancel",
+        "level": 2,
+        "line_start": 182,
+        "line_end": 214,
+        "summary": "cancel(id: number, callback: AsyncCallback\\<void\\>): void\n\n取消与指定通知ID相匹配的已发布通知（callback形式）。\n\n**系统能力*"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Notification.cancelAll",
+        "level": 2,
+        "line_start": 215,
+        "line_end": 244,
+        "summary": "cancelAll(callback: AsyncCallback\\<void\\>): void\n\n取消所有已发布的通知（callback形式）。\n\n**系统能力**：SystemCapabilit"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Notification.cancelAll",
+        "level": 2,
+        "line_start": 245,
+        "line_end": 270,
+        "summary": "cancelAll(): Promise\\<void\\>\n\n取消所有已发布的通知（Promise形式）。\n\n**系统能力**：SystemCapability.Notification.Notifi"
+      },
+      {
+        "section_id": "section-9",
+        "title": "Notification.addSlot",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 301,
+        "summary": "addSlot(type: SlotType, callback: AsyncCallback\\<void\\>): void\n\n创建指定类型的通知通道（callback形式）。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-10",
+        "title": "Notification.addSlot",
+        "level": 2,
+        "line_start": 302,
+        "line_end": 333,
+        "summary": "addSlot(type: SlotType): Promise\\<void\\>\n\n创建指定类型的通知通道（Promise形式）。\n\n**系统能力**：SystemCapability.Notifi"
+      },
+      {
+        "section_id": "section-11",
+        "title": "Notification.getSlot",
+        "level": 2,
+        "line_start": 334,
+        "line_end": 365,
+        "summary": "getSlot(slotType: SlotType, callback: AsyncCallback\\<NotificationSlot\\>): void\n\n获取一个指定类型的通知通道（callb"
+      },
+      {
+        "section_id": "section-12",
+        "title": "Notification.getSlot",
+        "level": 2,
+        "line_start": 366,
+        "line_end": 398,
+        "summary": "getSlot(slotType: SlotType): Promise\\<NotificationSlot\\>\n\n获取一个指定类型的通知通道（Promise形式）。\n\n**系统能力**：Syste"
+      },
+      {
+        "section_id": "section-13",
+        "title": "Notification.getSlots",
+        "level": 2,
+        "line_start": 399,
+        "line_end": 428,
+        "summary": "getSlots(callback: AsyncCallback\\<Array\\<NotificationSlot>>): void\n\n获取此应用程序的所有通知通道（callback形式）。\n\n**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "Notification.getSlots",
+        "level": 2,
+        "line_start": 429,
+        "line_end": 454,
+        "summary": "getSlots(): Promise\\<Array\\<NotificationSlot\\>>\n\n获取此应用程序的所有通知通道（Promise形式）。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-15",
+        "title": "Notification.removeSlot",
+        "level": 2,
+        "line_start": 455,
+        "line_end": 486,
+        "summary": "removeSlot(slotType: SlotType, callback: AsyncCallback\\<void\\>): void\n\n删除指定类型的通知通道（callback形式）。\n\n**"
+      },
+      {
+        "section_id": "section-16",
+        "title": "Notification.removeSlot",
+        "level": 2,
+        "line_start": 487,
+        "line_end": 519,
+        "summary": "removeSlot(slotType: SlotType): Promise\\<void\\>\n\n删除指定类型的通知通道（Promise形式）。\n\n**系统能力**：SystemCapability"
+      },
+      {
+        "section_id": "section-17",
+        "title": "Notification.removeAllSlots",
+        "level": 2,
+        "line_start": 520,
+        "line_end": 548,
+        "summary": "removeAllSlots(callback: AsyncCallback\\<void\\>): void\n\n删除所有通知通道（callback形式）。\n\n**系统能力**：SystemCapabi"
+      },
+      {
+        "section_id": "section-18",
+        "title": "Notification.removeAllSlots",
+        "level": 2,
+        "line_start": 549,
+        "line_end": 574,
+        "summary": "removeAllSlots(): Promise\\<void\\>\n\n删除所有通知通道（Promise形式）。\n\n**系统能力**：SystemCapability.Notification.Not"
+      },
+      {
+        "section_id": "section-19",
+        "title": "Notification.getActiveNotificationCount",
+        "level": 2,
+        "line_start": 575,
+        "line_end": 604,
+        "summary": "getActiveNotificationCount(callback: AsyncCallback\\<number\\>): void\n\n获取当前应用未删除的通知数（Callback形式）。\n\n**"
+      },
+      {
+        "section_id": "section-20",
+        "title": "Notification.getActiveNotificationCount",
+        "level": 2,
+        "line_start": 605,
+        "line_end": 630,
+        "summary": "getActiveNotificationCount(): Promise\\<number\\>\n\n获取当前应用未删除的通知数（Promise形式）。\n\n**系统能力**：SystemCapabili"
+      },
+      {
+        "section_id": "section-21",
+        "title": "Notification.getActiveNotifications",
+        "level": 2,
+        "line_start": 631,
+        "line_end": 661,
+        "summary": "getActiveNotifications(callback: AsyncCallback<Array\\<NotificationRequest\\>>): void\n\n获取当前应用未删除的通知列表"
+      },
+      {
+        "section_id": "section-22",
+        "title": "Notification.getActiveNotifications",
+        "level": 2,
+        "line_start": 662,
+        "line_end": 688,
+        "summary": "getActiveNotifications(): Promise\\<Array\\<[NotificationRequest](#notificationrequest)\\>\\>\n\n获取当前应用未删"
+      },
+      {
+        "section_id": "section-23",
+        "title": "Notification.cancelGroup<sup>8+</sup>",
+        "level": 2,
+        "line_start": 689,
+        "line_end": 721,
+        "summary": "cancelGroup(groupName: string, callback: AsyncCallback\\<void\\>): void\n\n取消本应用指定组下的通知（Callback形式）。\n\n*"
+      },
+      {
+        "section_id": "section-24",
+        "title": "Notification.cancelGroup<sup>8+</sup>",
+        "level": 2,
+        "line_start": 722,
+        "line_end": 754,
+        "summary": "cancelGroup(groupName: string): Promise\\<void\\>\n\n取消本应用指定组下的通知（Promise形式）。\n\n**系统能力**：SystemCapabilit"
+      },
+      {
+        "section_id": "section-25",
+        "title": "Notification.isSupportTemplate<sup>8+</sup>",
+        "level": 2,
+        "line_start": 755,
+        "line_end": 786,
+        "summary": "isSupportTemplate(templateName: string, callback: AsyncCallback\\<boolean\\>): void\n\n查询模板是否存在（Callbac"
+      },
+      {
+        "section_id": "section-26",
+        "title": "Notification.isSupportTemplate<sup>8+</sup>",
+        "level": 2,
+        "line_start": 787,
+        "line_end": 819,
+        "summary": "isSupportTemplate(templateName: string): Promise\\<boolean\\>\n\n查询模板是否存在（Promise形式）。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-27",
+        "title": "Notification.requestEnableNotification<sup>8+</sup>",
+        "level": 2,
+        "line_start": 820,
+        "line_end": 849,
+        "summary": "requestEnableNotification(callback: AsyncCallback\\<void\\>): void\n\n应用请求通知使能（Callback形式）。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-28",
+        "title": "Notification.requestEnableNotification<sup>8+</sup>",
+        "level": 2,
+        "line_start": 850,
+        "line_end": 875,
+        "summary": "requestEnableNotification(): Promise\\<void\\>\n\n应用请求通知使能（Promise形式）。\n\n**系统能力**：SystemCapability.Notif"
+      },
+      {
+        "section_id": "section-29",
+        "title": "Notification.isDistributedEnabled<sup>8+</sup>",
+        "level": 2,
+        "line_start": 876,
+        "line_end": 905,
+        "summary": "isDistributedEnabled(callback: AsyncCallback\\<boolean>): void\n\n查询设备是否支持分布式通知（Callback形式）。\n\n**系统能力**"
+      },
+      {
+        "section_id": "section-30",
+        "title": "Notification.isDistributedEnabled<sup>8+</sup>",
+        "level": 2,
+        "line_start": 906,
+        "line_end": 931,
+        "summary": "isDistributedEnabled(): Promise\\<boolean>\n\n查询设备是否支持分布式通知（Promise形式）。\n\n**系统能力**：SystemCapability.Not"
+      },
+      {
+        "section_id": "section-31",
+        "title": "ContentType",
+        "level": 2,
+        "line_start": 932,
+        "line_end": 943,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n| 名称                              | 值"
+      },
+      {
+        "section_id": "section-32",
+        "title": "SlotLevel",
+        "level": 2,
+        "line_start": 944,
+        "line_end": 956,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n| 名称                              | 值"
+      },
+      {
+        "section_id": "section-33",
+        "title": "BundleOption<sup>deprecated</sup>",
+        "level": 2,
+        "line_start": 957,
+        "line_end": 968,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n> **说明：**\n> 从 API version 7开始支持，从API version 9"
+      },
+      {
+        "section_id": "section-34",
+        "title": "NotificationKey<sup>deprecated</sup>",
+        "level": 2,
+        "line_start": 969,
+        "line_end": 981,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n> **说明：**\n> 从 API version 7开始支持，从API version 9"
+      },
+      {
+        "section_id": "section-35",
+        "title": "SlotType",
+        "level": 2,
+        "line_start": 982,
+        "line_end": 994,
+        "summary": "**系统能力**：SystemCapability.Notification.Notification\n\n| 名称                 | 值       | 说明       |\n|"
+      },
+      {
+        "section_id": "section-36",
+        "title": "NotificationActionButton",
+        "level": 2,
+        "line_start": 995,
+        "line_end": 1008,
+        "summary": "描述通知中显示的操作按钮。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-37",
+        "title": "NotificationBasicContent",
+        "level": 2,
+        "line_start": 1009,
+        "line_end": 1021,
+        "summary": "描述普通文本通知。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n| 名称           | 类型   | 可读 | 可写 | 说"
+      },
+      {
+        "section_id": "section-38",
+        "title": "NotificationLongTextContent",
+        "level": 2,
+        "line_start": 1022,
+        "line_end": 1037,
+        "summary": "描述长文本通知。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n| 名称           | 类型   | 可读 | 可写 | 说明"
+      },
+      {
+        "section_id": "section-39",
+        "title": "NotificationMultiLineContent",
+        "level": 2,
+        "line_start": 1038,
+        "line_end": 1053,
+        "summary": "描述多行文本通知。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n| 名称           | 类型            | 可读"
+      },
+      {
+        "section_id": "section-40",
+        "title": "NotificationPictureContent",
+        "level": 2,
+        "line_start": 1054,
+        "line_end": 1069,
+        "summary": "描述附有图片的通知。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n| 名称           | 类型           | 可读"
+      },
+      {
+        "section_id": "section-41",
+        "title": "NotificationContent",
+        "level": 2,
+        "line_start": 1070,
+        "line_end": 1083,
+        "summary": "描述通知类型。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n| 名称        | 类型"
+      },
+      {
+        "section_id": "section-42",
+        "title": "NotificationRequest",
+        "level": 2,
+        "line_start": 1084,
+        "line_end": 1125,
+        "summary": "描述通知的请求。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n| 名称                  | 类型"
+      },
+      {
+        "section_id": "section-43",
+        "title": "DistributedOptions<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1126,
+        "line_end": 1138,
+        "summary": "描述分布式选项。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n| 名称                   | 类型"
+      },
+      {
+        "section_id": "section-44",
+        "title": "NotificationSlot",
+        "level": 2,
+        "line_start": 1139,
+        "line_end": 1159,
+        "summary": "描述通知槽\n\n**系统能力**：SystemCapability.Notification.Notification\n\n| 名称                 | 类型"
+      },
+      {
+        "section_id": "section-45",
+        "title": "NotificationTemplate<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1160,
+        "line_end": 1171,
+        "summary": "通知模板。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n| 名称 | 类型                    | 可读 | 可写"
+      },
+      {
+        "section_id": "section-46",
+        "title": "NotificationUserInput<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1172,
+        "line_end": 1181,
+        "summary": "保存用户输入的通知消息。\n\n**系统能力**：SystemCapability.Notification.Notification\n\n| 名称     | 类型   | 可读 | 可写 | 说明"
+      }
+    ]
+  }
+}

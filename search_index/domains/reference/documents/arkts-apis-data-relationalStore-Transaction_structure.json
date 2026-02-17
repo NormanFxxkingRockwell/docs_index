@@ -1,0 +1,252 @@
+{
+  "doc_id": "arkts-apis-data-relationalStore-Transaction",
+  "title": "Interface (Transaction)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-Transaction.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-Transaction.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 Interface (Transaction)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (Transaction)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 70,
+        "summary": "```ts\nimport { relationalStore } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "commit<sup>14+</sup>",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 121,
+        "summary": "commit(): Promise&lt;void&gt;\n\n提交已执行的SQL语句，使用Promise异步回调。如果是使用异步接口执行sql语句，请确保异步接口执行完成之后再调用commit接口，"
+      },
+      {
+        "section_id": "section-3",
+        "title": "rollback<sup>14+</sup>",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 172,
+        "summary": "rollback(): Promise&lt;void&gt;\n\n回滚已经执行的SQL语句，使用Promise异步回调。调用rollback接口之后，该Transaction对象及创建的Result"
+      },
+      {
+        "section_id": "section-4",
+        "title": "insert<sup>14+</sup>",
+        "level": 2,
+        "line_start": 173,
+        "line_end": 247,
+        "summary": "insert(table: string, values: ValuesBucket, conflict?: ConflictResolution): Promise&lt;number&gt;"
+      },
+      {
+        "section_id": "section-5",
+        "title": "insertSync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 248,
+        "line_end": 329,
+        "summary": "insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesBucket, conflict?: C"
+      },
+      {
+        "section_id": "section-6",
+        "title": "batchInsert<sup>14+</sup>",
+        "level": 2,
+        "line_start": 330,
+        "line_end": 418,
+        "summary": "batchInsert(table: string, values: Array&lt;ValuesBucket&gt;): Promise&lt;number&gt;\n\n向目标表中插入一组数据，使"
+      },
+      {
+        "section_id": "section-7",
+        "title": "batchInsertSync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 419,
+        "line_end": 507,
+        "summary": "batchInsertSync(table: string, values: Array&lt;ValuesBucket&gt;): number\n\n向目标表中插入一组数据。\n\n按每批32766个参"
+      },
+      {
+        "section_id": "section-8",
+        "title": "batchInsertWithConflictResolution<sup>18+</sup>",
+        "level": 2,
+        "line_start": 508,
+        "line_end": 609,
+        "summary": "batchInsertWithConflictResolution(table: string, values: Array&lt;ValuesBucket&gt;, conflict: Confl"
+      },
+      {
+        "section_id": "section-9",
+        "title": "batchInsertWithConflictResolutionSync<sup>18+</sup>",
+        "level": 2,
+        "line_start": 610,
+        "line_end": 710,
+        "summary": "batchInsertWithConflictResolutionSync(table: string, values: Array&lt;ValuesBucket&gt;, conflict: C"
+      },
+      {
+        "section_id": "section-10",
+        "title": "batchInsertWithReturning<sup>23+</sup>",
+        "level": 2,
+        "line_start": 711,
+        "line_end": 785,
+        "summary": "batchInsertWithReturning(table: string, values: Array\\<ValuesBucket\\>, config: ReturningConfig, con"
+      },
+      {
+        "section_id": "section-11",
+        "title": "batchInsertWithReturningSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 786,
+        "line_end": 860,
+        "summary": "batchInsertWithReturningSync(table: string, values: Array\\<ValuesBucket\\>, config: ReturningConfig,"
+      },
+      {
+        "section_id": "section-12",
+        "title": "update<sup>14+</sup>",
+        "level": 2,
+        "line_start": 861,
+        "line_end": 935,
+        "summary": "update(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): Promise&lt;"
+      },
+      {
+        "section_id": "section-13",
+        "title": "updateSync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 936,
+        "line_end": 1010,
+        "summary": "updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): number"
+      },
+      {
+        "section_id": "section-14",
+        "title": "updateWithReturning<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1011,
+        "line_end": 1081,
+        "summary": "updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig, confl"
+      },
+      {
+        "section_id": "section-15",
+        "title": "updateWithReturningSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1082,
+        "line_end": 1152,
+        "summary": "updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig, c"
+      },
+      {
+        "section_id": "section-16",
+        "title": "delete<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1153,
+        "line_end": 1219,
+        "summary": "delete(predicates: RdbPredicates):Promise&lt;number&gt;\n\n根据RdbPredicates的指定实例对象从数据库中删除数据，使用Promise异"
+      },
+      {
+        "section_id": "section-17",
+        "title": "deleteSync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1220,
+        "line_end": 1285,
+        "summary": "deleteSync(predicates: RdbPredicates): number\n\n根据RdbPredicates的指定实例对象从数据库中删除数据。\n\n**系统能力：** SystemCa"
+      },
+      {
+        "section_id": "section-18",
+        "title": "deleteWithReturning<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1286,
+        "line_end": 1349,
+        "summary": "deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise\\<Result\\>\n\n根据RdbPr"
+      },
+      {
+        "section_id": "section-19",
+        "title": "deleteWithReturningSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1350,
+        "line_end": 1413,
+        "summary": "deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Result\n\n根据RdbPredicate"
+      },
+      {
+        "section_id": "section-20",
+        "title": "query<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1414,
+        "line_end": 1487,
+        "summary": "query(predicates: RdbPredicates, columns?: Array&lt;string&gt;): Promise&lt;ResultSet&gt;\n\n根据指定条件查询"
+      },
+      {
+        "section_id": "section-21",
+        "title": "querySync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1488,
+        "line_end": 1561,
+        "summary": "querySync(predicates: RdbPredicates, columns?: Array&lt;string&gt;): ResultSet\n\n根据指定条件查询数据库中的数据。对qu"
+      },
+      {
+        "section_id": "section-22",
+        "title": "querySql<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1562,
+        "line_end": 1632,
+        "summary": "querySql(sql: string, args?: Array&lt;ValueType&gt;): Promise&lt;ResultSet&gt;\n\n根据指定SQL语句查询数据库中的数据，"
+      },
+      {
+        "section_id": "section-23",
+        "title": "querySqlSync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1633,
+        "line_end": 1703,
+        "summary": "querySqlSync(sql: string, args?: Array&lt;ValueType&gt;): ResultSet\n\n根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达"
+      },
+      {
+        "section_id": "section-24",
+        "title": "queryWithoutRowCount<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1704,
+        "line_end": 1774,
+        "summary": "queryWithoutRowCount(predicates: RdbPredicates, columns?: Array&lt;string&gt;): Promise&lt;LiteResu"
+      },
+      {
+        "section_id": "section-25",
+        "title": "queryWithoutRowCountSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1775,
+        "line_end": 1845,
+        "summary": "queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array&lt;string&gt;): LiteResultSet"
+      },
+      {
+        "section_id": "section-26",
+        "title": "querySqlWithoutRowCount<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1846,
+        "line_end": 1915,
+        "summary": "querySqlWithoutRowCount(sql: string, bindArgs?: Array&lt;ValueType&gt;): Promise&lt;LiteResultSet&g"
+      },
+      {
+        "section_id": "section-27",
+        "title": "querySqlWithoutRowCountSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1916,
+        "line_end": 1985,
+        "summary": "querySqlWithoutRowCountSync(sql: string, bindArgs?: Array&lt;ValueType&gt;):LiteResultSet\n\n根据指定SQL语"
+      },
+      {
+        "section_id": "section-28",
+        "title": "execute<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1986,
+        "line_end": 2061,
+        "summary": "execute(sql: string, args?: Array&lt;ValueType&gt;): Promise&lt;ValueType&gt;\n\n执行包含指定参数的SQL语句，语句中的各"
+      },
+      {
+        "section_id": "section-29",
+        "title": "executeSync<sup>14+</sup>",
+        "level": 2,
+        "line_start": 2062,
+        "line_end": 2136,
+        "summary": "executeSync(sql: string, args?: Array&lt;ValueType&gt;): ValueType\n\n执行包含指定参数的SQL语句，语句中的各种表达式和操作符之间的"
+      }
+    ]
+  }
+}

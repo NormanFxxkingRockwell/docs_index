@@ -1,0 +1,132 @@
+{
+  "doc_id": "js-apis-app-ability-abilityConstant",
+  "title": "@ohos.app.ability.AbilityConstant (Ability相关常量)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-abilityConstant.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-abilityConstant.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@littlejerry1",
+    "designer": "@ccllee1",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.AbilityConstant (Ability相关常量)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.AbilityConstant (Ability相关常量)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { AbilityConstant } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "常量",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 33,
+        "summary": "**系统能力**：SystemCapability.Ability.AbilityBase\n\n**原子化服务API**：从API version 20开始，该接口支持在原子化服务中使用。\n\n| 名称"
+      },
+      {
+        "section_id": "section-3",
+        "title": "LaunchParam",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 49,
+        "summary": "启动参数，主要包括Ability启动原因以及上次退出原因。Ability启动时由系统自动传入，开发者无需修改。\n\n**系统能力**：SystemCapability.Ability.AbilityR"
+      },
+      {
+        "section_id": "section-4",
+        "title": "LaunchReason",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 82,
+        "summary": "Ability启动原因，该类型为枚举，可配合UIAbility的[onCreate(want, launchParam)](js-apis-app-ability-uiAbility.md#oncr"
+      },
+      {
+        "section_id": "section-5",
+        "title": "LastExitReason",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 119,
+        "summary": "Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate()](js-apis-app-ability-uiAbility.md#oncreate)方法根据launch"
+      },
+      {
+        "section_id": "section-6",
+        "title": "LastExitDetailInfo<sup>18+</sup>",
+        "level": 2,
+        "line_start": 120,
+        "line_end": 160,
+        "summary": "记录Ability所在进程上次退出时的关键运行信息。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Core\n\n| 名称 | 类型 | 只读 |"
+      },
+      {
+        "section_id": "section-7",
+        "title": "OnContinueResult",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 186,
+        "summary": "Ability迁移结果，该类型为枚举，可配合UIAbility的[onContinue()](js-apis-app-ability-uiAbility.md#oncontinue)方法完成相应的返"
+      },
+      {
+        "section_id": "section-8",
+        "title": "MemoryLevel",
+        "level": 2,
+        "line_start": 187,
+        "line_end": 219,
+        "summary": "整机可用内存级别，该类型为枚举，可配合UIAbility的[onMemoryLevel()](js-apis-app-ability-ability.md#abilityonmemorylevel)"
+      },
+      {
+        "section_id": "section-9",
+        "title": "WindowMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 220,
+        "line_end": 257,
+        "summary": "启动UIAbility时窗口的创建模式，类型为枚举。可配合[startAbility](js-apis-inner-application-uiAbilityContext.md#startabil"
+      },
+      {
+        "section_id": "section-10",
+        "title": "OnSaveResult",
+        "level": 2,
+        "line_start": 258,
+        "line_end": 286,
+        "summary": "保存应用数据的结果，该类型为枚举。配合UIAbility的[onSaveState()](js-apis-app-ability-uiAbility.md#onsavestate)方法使用，可以实现"
+      },
+      {
+        "section_id": "section-11",
+        "title": "StateType",
+        "level": 2,
+        "line_start": 287,
+        "line_end": 314,
+        "summary": "保存应用数据场景原因，该类型为枚举。配合UIAbility的[onSaveState()](js-apis-app-ability-uiAbility.md#onsavestate)方法使用，可以实"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ContinueState<sup>10+</sup>",
+        "level": 2,
+        "line_start": 315,
+        "line_end": 342,
+        "summary": "流转状态枚举值。用于表示当前应用任务流转的状态。可配合[UIAbilityContext](js-apis-inner-application-uiAbilityContext.md)的[setMi"
+      },
+      {
+        "section_id": "section-13",
+        "title": "CollaborateResult<sup>18+</sup>",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 365,
+        "summary": "应用协同状态，该类型为枚举。用于多设备场景下，调用方应用拉起协同方应用时，协同方应用是否接受协同。需要配合UIAbility的[onCollaborate()](js-apis-app-abilit"
+      },
+      {
+        "section_id": "section-14",
+        "title": "PrepareTermination<sup>15+</sup>",
+        "level": 2,
+        "line_start": 366,
+        "line_end": 390,
+        "summary": "应用准备关闭时返回的动作，该类型为枚举。需要配合[AbilityStage](js-apis-app-ability-abilityStage.md)的[onPrepareTermination]("
+      }
+    ]
+  }
+}

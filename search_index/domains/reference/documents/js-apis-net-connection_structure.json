@@ -1,0 +1,636 @@
+{
+  "doc_id": "js-apis-net-connection",
+  "title": "@ohos.net.connection (网络连接管理)",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-net-connection.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-net-connection.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.connection (网络连接管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.connection (网络连接管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { connection } from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "connection.createNetConnection",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 75,
+        "summary": "createNetConnection(netSpecifier?: NetSpecifier, timeout?: number): NetConnection\n\n创建一个NetConnectio"
+      },
+      {
+        "section_id": "section-3",
+        "title": "connection.getDefaultNet",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 129,
+        "summary": "getDefaultNet(callback: AsyncCallback\\<NetHandle>): void\n\n获取系统默认使用的网络句柄，包含网络ID。使用callback异步回调。\n\n> *"
+      },
+      {
+        "section_id": "section-4",
+        "title": "connection.getDefaultNet",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 177,
+        "summary": "getDefaultNet(): Promise\\<NetHandle>\n\n获取系统默认使用的网络句柄，包含网络ID。使用Promise异步回调。\n\n> **说明：**\n>\n>- 系统默认使用的网络"
+      },
+      {
+        "section_id": "section-5",
+        "title": "connection.getDefaultNetSync<sup>9+</sup>",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 224,
+        "summary": "getDefaultNetSync(): NetHandle\n\n获取系统默认使用的网络句柄，包含网络ID。使用同步方式返回。\n\n> **说明：**\n>\n>- 系统默认使用的网络，该网络的capabi"
+      },
+      {
+        "section_id": "section-6",
+        "title": "connection.setAppHttpProxy<sup>11+</sup>",
+        "level": 2,
+        "line_start": 225,
+        "line_end": 283,
+        "summary": "setAppHttpProxy(httpProxy: HttpProxy): void\n\n设置应用级Http代理配置信息。\n\n> **说明：**\n>\n> 若需使用本接口所配置的代理信息，则需在[Ht"
+      },
+      {
+        "section_id": "section-7",
+        "title": "connection.getDefaultHttpProxy<sup>10+</sup>",
+        "level": 2,
+        "line_start": 284,
+        "line_end": 326,
+        "summary": "getDefaultHttpProxy(callback: AsyncCallback\\<HttpProxy>): void\n\n获取网络的默认代理配置信息。使用callback异步回调。\n\n> **"
+      },
+      {
+        "section_id": "section-8",
+        "title": "connection.getDefaultHttpProxy<sup>10+</sup>",
+        "level": 2,
+        "line_start": 327,
+        "line_end": 367,
+        "summary": "getDefaultHttpProxy(): Promise\\<HttpProxy>\n\n获取网络默认的代理配置信息。使用Promise异步回调。\n\n> **说明：**\n>\n>- 如果设置了全局代理，"
+      },
+      {
+        "section_id": "section-9",
+        "title": "connection.getAppNet<sup>9+</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 406,
+        "summary": "getAppNet(callback: AsyncCallback\\<NetHandle>): void\n\n获取App绑定的网络句柄。使用callback异步回调。\n\n**系统能力**：System"
+      },
+      {
+        "section_id": "section-10",
+        "title": "connection.getAppNet<sup>9+</sup>",
+        "level": 2,
+        "line_start": 407,
+        "line_end": 442,
+        "summary": "getAppNet(): Promise\\<NetHandle>\n\n获取App绑定的网络信息。使用Promise异步回调。\n\n**系统能力**：SystemCapability.Communicat"
+      },
+      {
+        "section_id": "section-11",
+        "title": "connection.getAppNetSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 443,
+        "line_end": 473,
+        "summary": "getAppNetSync(): NetHandle\n\n获取App绑定的网络信息。使用同步方式返回。\n\n**系统能力**：SystemCapability.Communication.NetMana"
+      },
+      {
+        "section_id": "section-12",
+        "title": "connection.setAppNet<sup>9+</sup>",
+        "level": 2,
+        "line_start": 474,
+        "line_end": 541,
+        "summary": "setAppNet(netHandle: NetHandle, callback: AsyncCallback\\<void>): void\n\n将App绑定到特定的网络，绑定后App只能通过netHa"
+      },
+      {
+        "section_id": "section-13",
+        "title": "connection.setAppNet<sup>9+</sup>",
+        "level": 2,
+        "line_start": 542,
+        "line_end": 611,
+        "summary": "setAppNet(netHandle: NetHandle): Promise\\<void\\>\n\n将App异步绑定到特定的网络，绑定后App只能通过netHandle对应的网络访问网络。使用Pro"
+      },
+      {
+        "section_id": "section-14",
+        "title": "connection.getAllNets",
+        "level": 2,
+        "line_start": 612,
+        "line_end": 653,
+        "summary": "getAllNets(callback: AsyncCallback&lt;Array&lt;NetHandle&gt;&gt;): void\n\n获取所有处于连接状态的网络列表，使用callback"
+      },
+      {
+        "section_id": "section-15",
+        "title": "connection.getAllNets",
+        "level": 2,
+        "line_start": 654,
+        "line_end": 689,
+        "summary": "getAllNets(): Promise&lt;Array&lt;NetHandle&gt;&gt;\n\n获取所有处于连接状态的网络列表。使用Promise异步回调。\n\n**需要权限**：ohos."
+      },
+      {
+        "section_id": "section-16",
+        "title": "connection.getAllNetsSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 690,
+        "line_end": 723,
+        "summary": "getAllNetsSync(): Array&lt;NetHandle&gt;\n\n获取所有处于连接状态的网络列表。使用同步方式返回。\n\n**需要权限**：ohos.permission.GET_N"
+      },
+      {
+        "section_id": "section-17",
+        "title": "connection.getConnectionProperties",
+        "level": 2,
+        "line_start": 724,
+        "line_end": 774,
+        "summary": "getConnectionProperties(netHandle: NetHandle, callback: AsyncCallback\\<ConnectionProperties>): void"
+      },
+      {
+        "section_id": "section-18",
+        "title": "connection.getConnectionProperties",
+        "level": 2,
+        "line_start": 775,
+        "line_end": 825,
+        "summary": "getConnectionProperties(netHandle: NetHandle): Promise\\<ConnectionProperties>\n\n获取netHandle对应的网络的连接信"
+      },
+      {
+        "section_id": "section-19",
+        "title": "connection.getConnectionPropertiesSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 826,
+        "line_end": 879,
+        "summary": "getConnectionPropertiesSync(netHandle: NetHandle): ConnectionProperties\n\n获取netHandle对应的网络的连接信息，包含网卡"
+      },
+      {
+        "section_id": "section-20",
+        "title": "connection.getNetCapabilities",
+        "level": 2,
+        "line_start": 880,
+        "line_end": 933,
+        "summary": "getNetCapabilities(netHandle: NetHandle, callback: AsyncCallback\\<NetCapabilities>): void\n\n获取netHan"
+      },
+      {
+        "section_id": "section-21",
+        "title": "connection.getNetCapabilities",
+        "level": 2,
+        "line_start": 934,
+        "line_end": 988,
+        "summary": "getNetCapabilities(netHandle: NetHandle): Promise\\<NetCapabilities>\n\n获取netHandle对应网络的能力集，包含上/下行带宽、网"
+      },
+      {
+        "section_id": "section-22",
+        "title": "connection.getNetCapabilitiesSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 989,
+        "line_end": 1044,
+        "summary": "getNetCapabilitiesSync(netHandle: NetHandle): NetCapabilities\n\n获取netHandle对应网络的能力信息，包含上/下行带宽、网络具体能力"
+      },
+      {
+        "section_id": "section-23",
+        "title": "connection.isDefaultNetMetered<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1045,
+        "line_end": 1083,
+        "summary": "isDefaultNetMetered(callback: AsyncCallback\\<boolean>): void\n\n检查当前默认网络上的数据流量使用是否被计费（例如：WiFi网络不会被计费，"
+      },
+      {
+        "section_id": "section-24",
+        "title": "connection.isDefaultNetMetered<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1084,
+        "line_end": 1119,
+        "summary": "isDefaultNetMetered(): Promise\\<boolean>\n\n检查当前默认网络上的数据流量使用是否被计费（例如：WiFi网络不会被计费，蜂窝网络会被计费）。使用Promise异"
+      },
+      {
+        "section_id": "section-25",
+        "title": "connection.isDefaultNetMeteredSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1120,
+        "line_end": 1153,
+        "summary": "isDefaultNetMeteredSync(): boolean\n\n检查当前网络上的数据流量使用是否被计费（例如：WiFi网络不会被计费，蜂窝网络会被计费）。使用同步方式返回。\n\n**需要权限*"
+      },
+      {
+        "section_id": "section-26",
+        "title": "connection.hasDefaultNet",
+        "level": 2,
+        "line_start": 1154,
+        "line_end": 1192,
+        "summary": "hasDefaultNet(callback: AsyncCallback\\<boolean>): void\n\n获取当前是否有可用网络，使用callback异步回调。如果有可用网络，可以使用[get"
+      },
+      {
+        "section_id": "section-27",
+        "title": "connection.hasDefaultNet",
+        "level": 2,
+        "line_start": 1193,
+        "line_end": 1228,
+        "summary": "hasDefaultNet(): Promise\\<boolean>\n\n获取当前是否有可用网络。使用Promise异步回调。如果有可用网络，可以使用[getDefaultNet](#connecti"
+      },
+      {
+        "section_id": "section-28",
+        "title": "connection.hasDefaultNetSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1229,
+        "line_end": 1263,
+        "summary": "hasDefaultNetSync(): boolean\n\n获取当前是否有可用网络。使用同步方式返回。\n\n**需要权限**：ohos.permission.GET_NETWORK_INFO\n\n**系"
+      },
+      {
+        "section_id": "section-29",
+        "title": "connection.reportNetConnected",
+        "level": 2,
+        "line_start": 1264,
+        "line_end": 1309,
+        "summary": "reportNetConnected(netHandle: NetHandle, callback: AsyncCallback&lt;void&gt;): void\n\n向网络管理上报网络处于可用状"
+      },
+      {
+        "section_id": "section-30",
+        "title": "connection.reportNetConnected",
+        "level": 2,
+        "line_start": 1310,
+        "line_end": 1354,
+        "summary": "reportNetConnected(netHandle: NetHandle): Promise\\<void\\>\n\n向网络管理报告网络处于可用状态。使用Promise异步回调。\n\n**需要权限**"
+      },
+      {
+        "section_id": "section-31",
+        "title": "connection.reportNetDisconnected",
+        "level": 2,
+        "line_start": 1355,
+        "line_end": 1404,
+        "summary": "reportNetDisconnected(netHandle: NetHandle, callback: AsyncCallback&lt;void&gt;): void\n\n向网络管理上报网络处于"
+      },
+      {
+        "section_id": "section-32",
+        "title": "connection.reportNetDisconnected",
+        "level": 2,
+        "line_start": 1405,
+        "line_end": 1449,
+        "summary": "reportNetDisconnected(netHandle: NetHandle): Promise&lt;void&gt;\n\n向网络管理上报网络处于不可用状态。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-33",
+        "title": "connection.getAddressesByName",
+        "level": 2,
+        "line_start": 1450,
+        "line_end": 1493,
+        "summary": "getAddressesByName(host: string, callback: AsyncCallback\\<Array\\<NetAddress>>): void\n\n使用当前默认网络解析主机名"
+      },
+      {
+        "section_id": "section-34",
+        "title": "connection.getAddressesByName",
+        "level": 2,
+        "line_start": 1494,
+        "line_end": 1537,
+        "summary": "getAddressesByName(host: string): Promise\\<Array\\<NetAddress\\>\\>\n\n使用当前默认网络解析主机名以获取所有IP地址。使用Promise异"
+      },
+      {
+        "section_id": "section-35",
+        "title": "connection.getAddressesByNameWithOptions<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1538,
+        "line_end": 1589,
+        "summary": "getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise\\<Array\\<NetAddress\\>\\>"
+      },
+      {
+        "section_id": "section-36",
+        "title": "QueryOptions<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1590,
+        "line_end": 1599,
+        "summary": "需要查询的IP类型。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称 | 类型  | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-37",
+        "title": "FamilyType<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1600,
+        "line_end": 1611,
+        "summary": "需要查询的具体IP地址类型。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称  |值         | 说明"
+      },
+      {
+        "section_id": "section-38",
+        "title": "connection.addCustomDnsRule<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1612,
+        "line_end": 1662,
+        "summary": "addCustomDnsRule(host: string, ip: Array\\<string\\>, callback: AsyncCallback\\<void\\>): void\n\n为当前应用程序"
+      },
+      {
+        "section_id": "section-39",
+        "title": "connection.addCustomDnsRule<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1663,
+        "line_end": 1716,
+        "summary": "addCustomDnsRule(host: string, ip: Array\\<string\\>): Promise\\<void\\>\n\n为当前应用程序添加自定义host和对应的IP地址的映射。使"
+      },
+      {
+        "section_id": "section-40",
+        "title": "connection.removeCustomDnsRule<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1717,
+        "line_end": 1766,
+        "summary": "removeCustomDnsRule(host: string, callback: AsyncCallback\\<void\\>): void\n\n删除当前应用程序中对应host的自定义DNS规则。"
+      },
+      {
+        "section_id": "section-41",
+        "title": "connection.removeCustomDnsRule<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1767,
+        "line_end": 1819,
+        "summary": "removeCustomDnsRule(host: string): Promise\\<void\\>\n\n删除当前应用程序中对应host的自定义DNS规则。使用Promise异步回调。\n\n> **说明"
+      },
+      {
+        "section_id": "section-42",
+        "title": "connection.clearCustomDnsRules<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1820,
+        "line_end": 1862,
+        "summary": "clearCustomDnsRules(callback: AsyncCallback\\<void\\>): void\n\n删除当前应用程序的所有的自定义DNS规则。使用callback异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-43",
+        "title": "connection.clearCustomDnsRules<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1863,
+        "line_end": 1902,
+        "summary": "clearCustomDnsRules(): Promise\\<void\\>\n\n删除当前应用程序的所有的自定义DNS规则。使用Promise异步回调。\n\n**需要权限**：ohos.permissi"
+      },
+      {
+        "section_id": "section-44",
+        "title": "connection.setPacFileUrl<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1903,
+        "line_end": 1940,
+        "summary": "setPacFileUrl(pacFileUrl: string): void\n\n设置PAC脚本（Proxy Auto-Configuration Script，代理自动配置脚本）的URL地址，并启"
+      },
+      {
+        "section_id": "section-45",
+        "title": "connection.getPacFileUrl<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1941,
+        "line_end": 1971,
+        "summary": "getPacFileUrl(): string\n\n获取当前PAC脚本的URL地址。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core"
+      },
+      {
+        "section_id": "section-46",
+        "title": "connection.findProxyForUrl<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1972,
+        "line_end": 2007,
+        "summary": "findProxyForUrl(url: string): string\n\n通过设置的PAC脚本，解析指定的URL代理地址，返回对应的PAC代理信息。\n\n> **说明：**\n>\n> 1、可通过 [s"
+      },
+      {
+        "section_id": "section-47",
+        "title": "connection.setPacUrl<sup>15+</sup>",
+        "level": 2,
+        "line_start": 2008,
+        "line_end": 2047,
+        "summary": "setPacUrl(pacUrl: string): void\n\n设置系统级代理自动配置（Proxy Auto Config，PAC）脚本地址。\n\n> **说明：**\n>\n> 只支持设置脚本地址，不"
+      },
+      {
+        "section_id": "section-48",
+        "title": "connection.getPacUrl<sup>15+</sup>",
+        "level": 2,
+        "line_start": 2048,
+        "line_end": 2078,
+        "summary": "getPacUrl(): string\n\n获取系统级代理自动配置（PAC）脚本地址。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core"
+      },
+      {
+        "section_id": "section-49",
+        "title": "connection.setNetExtAttribute<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2079,
+        "line_end": 2135,
+        "summary": "setNetExtAttribute(netHandle: NetHandle, netExtAttribute: string): Promise\\<void\\>\n\n为netHandle对应的网络"
+      },
+      {
+        "section_id": "section-50",
+        "title": "connection.setNetExtAttributeSync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2136,
+        "line_end": 2179,
+        "summary": "setNetExtAttributeSync(netHandle: NetHandle, netExtAttribute: string): void\n\n为netHandle对应的网络设置扩展属性，"
+      },
+      {
+        "section_id": "section-51",
+        "title": "connection.getNetExtAttribute<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2180,
+        "line_end": 2231,
+        "summary": "getNetExtAttribute(netHandle: NetHandle): Promise\\<string\\>\n\n获取netHandle对应网络的扩展属性，以确定网络的安全级别。使用Prom"
+      },
+      {
+        "section_id": "section-52",
+        "title": "connection.getNetExtAttributeSync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2232,
+        "line_end": 2278,
+        "summary": "getNetExtAttributeSync(netHandle: NetHandle): string\n\n获取netHandle对应网络的扩展属性，以确定网络的安全级别。使用同步方式返回。\n\n**"
+      },
+      {
+        "section_id": "section-53",
+        "title": "connection.getIpNeighTable<sup>22+</sup>",
+        "level": 2,
+        "line_start": 2279,
+        "line_end": 2328,
+        "summary": "getIpNeighTable(): Promise\\<Array\\<NetIpMacInfo>>\n\n获取本地设备IP邻居表条目信息，包括IPv4和IPv6，每个条目信息包括IP地址、MAC地址、网"
+      },
+      {
+        "section_id": "section-54",
+        "title": "connection.getConnectOwnerUid<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2329,
+        "line_end": 2386,
+        "summary": "getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: NetAddress): Promise\\<number>"
+      },
+      {
+        "section_id": "section-55",
+        "title": "connection.getConnectOwnerUidSync<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2387,
+        "line_end": 2448,
+        "summary": "getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remote: NetAddress): number\n\n用于查询"
+      },
+      {
+        "section_id": "section-56",
+        "title": "connection.getDnsAscii<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2449,
+        "line_end": 2497,
+        "summary": "getDnsAscii(host: string, flag?: ConversionProcess): string\n\n将Unicode编码形式的主机名转换为ASCII编码形式，并可通过可选的转换"
+      },
+      {
+        "section_id": "section-57",
+        "title": "connection.getDnsUnicode<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2498,
+        "line_end": 2539,
+        "summary": "getDnsUnicode(host: string, flag?: ConversionProcess): string\n\n使用Punycode编码方式，将ASCII编码形式的主机名转换为Unic"
+      },
+      {
+        "section_id": "section-58",
+        "title": "NetConnection",
+        "level": 2,
+        "line_start": 2540,
+        "line_end": 2887,
+        "summary": "网络连接对象类型。\n\n> **说明：**\n>\n>（1）设备从无网络状态转变为有网络状态时，将触发netAvailable事件、netCapabilitiesChange事件和netConnectio"
+      },
+      {
+        "section_id": "section-59",
+        "title": "NetHandle",
+        "level": 2,
+        "line_start": 2888,
+        "line_end": 3344,
+        "summary": "网络句柄。\n\n在调用NetHandle的方法之前，需要先获取NetHandle对象。例如可通过[getDefaultNet](#connectiongetdefaultnet)获取系统当前默认网络的"
+      },
+      {
+        "section_id": "section-60",
+        "title": "NetCap",
+        "level": 2,
+        "line_start": 3345,
+        "line_end": 3360,
+        "summary": "网络具体能力。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称                  | 值   | 说明"
+      },
+      {
+        "section_id": "section-61",
+        "title": "NetBearType",
+        "level": 2,
+        "line_start": 3361,
+        "line_end": 3374,
+        "summary": "网络类型。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n|            名称         | 值   | 说明"
+      },
+      {
+        "section_id": "section-62",
+        "title": "ConversionProcess<sup>23+</sup>",
+        "level": 2,
+        "line_start": 3375,
+        "line_end": 3386,
+        "summary": "ASCII/Unicode转码转换流程参数的枚举。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称 | 值 | 说明 |"
+      },
+      {
+        "section_id": "section-63",
+        "title": "HttpProxy<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3387,
+        "line_end": 3400,
+        "summary": "网络代理配置信息\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称    | 类型   | 只读|可选 |说明"
+      },
+      {
+        "section_id": "section-64",
+        "title": "NetSpecifier",
+        "level": 2,
+        "line_start": 3401,
+        "line_end": 3439,
+        "summary": "提供承载数据网络能力的实例。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communic"
+      },
+      {
+        "section_id": "section-65",
+        "title": "NetCapabilityInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3440,
+        "line_end": 3452,
+        "summary": "提供承载数据网络能力的实例。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communic"
+      },
+      {
+        "section_id": "section-66",
+        "title": "NetCapabilities",
+        "level": 2,
+        "line_start": 3453,
+        "line_end": 3465,
+        "summary": "网络的能力集。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称    | 类型   | 只读|可选 |说明"
+      },
+      {
+        "section_id": "section-67",
+        "title": "NetConnectionPropertyInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3466,
+        "line_end": 3478,
+        "summary": "网络连接信息。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n### 属性\n\n| 名称    | 类型   | 只读|可选 |说"
+      },
+      {
+        "section_id": "section-68",
+        "title": "NetBlockStatusInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3479,
+        "line_end": 3491,
+        "summary": "获取网络状态信息。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n### 属性\n\n| 名称    | 类型   | 只读|可选"
+      },
+      {
+        "section_id": "section-69",
+        "title": "ConnectionProperties",
+        "level": 2,
+        "line_start": 3492,
+        "line_end": 3509,
+        "summary": "网络连接信息。\n>**注意：**\n>\n> linkAddresses、routes和dnses可能为空，需要做好空值保护，建议使用前先判断对象是否存在。  \n\n**系统能力**：SystemCapa"
+      },
+      {
+        "section_id": "section-70",
+        "title": "RouteInfo",
+        "level": 2,
+        "line_start": 3510,
+        "line_end": 3524,
+        "summary": "网络路由信息。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称    | 类型   | 只读|可选 |说明"
+      },
+      {
+        "section_id": "section-71",
+        "title": "LinkAddress",
+        "level": 2,
+        "line_start": 3525,
+        "line_end": 3535,
+        "summary": "网络链路信息。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称    | 类型   | 只读|可选 |说明"
+      },
+      {
+        "section_id": "section-72",
+        "title": "NetAddress",
+        "level": 2,
+        "line_start": 3536,
+        "line_end": 3549,
+        "summary": "网络地址。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communication.Net"
+      },
+      {
+        "section_id": "section-73",
+        "title": "HttpRequest",
+        "level": 2,
+        "line_start": 3550,
+        "line_end": 3563,
+        "summary": "type HttpRequest = http.HttpRequest\n\n定义一个HTTP请求，可以通过[http.createHttp](js-apis-http.md#httpcreatehtt"
+      },
+      {
+        "section_id": "section-74",
+        "title": "TCPSocket",
+        "level": 2,
+        "line_start": 3564,
+        "line_end": 3575,
+        "summary": "type TCPSocket = socket.TCPSocket\n\n定义一个TCPSocket对象，可以通过[socket.constructTCPSocketInstance](js-apis-"
+      },
+      {
+        "section_id": "section-75",
+        "title": "UDPSocket",
+        "level": 2,
+        "line_start": 3576,
+        "line_end": 3588,
+        "summary": "type UDPSocket = socket.UDPSocket\n\n定义一个UDPSocket对象，可以通过[socket.constructUDPSocketInstance](js-apis-"
+      },
+      {
+        "section_id": "section-76",
+        "title": "NetIpMacInfo<sup>22+</sup>",
+        "level": 2,
+        "line_start": 3589,
+        "line_end": 3600,
+        "summary": "IP邻居表条目信息。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称    | 类型   | 只读|可选 |说明"
+      },
+      {
+        "section_id": "section-77",
+        "title": "ProtocolType<sup>23+</sup>",
+        "level": 2,
+        "line_start": 3601,
+        "line_end": 3610,
+        "summary": "网络协议类型的枚举。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称            | 值   | 说明"
+      }
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "doc_id": "js-apis-app-ability-application",
+  "title": "@ohos.app.ability.application (应用工具类)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-application.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-application.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@li-weifeng2024",
+    "designer": "@li-weifeng2024",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.application (应用工具类)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.application (应用工具类)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { application } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "AppPreloadType<sup>22+</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 36,
+        "summary": "表示应用当前进程的预加载类型枚举。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Core\n\n| 名称                 | 值"
+      },
+      {
+        "section_id": "section-3",
+        "title": "application.createModuleContext<sup>12+</sup>",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 98,
+        "summary": "createModuleContext(context: Context, moduleName: string): Promise\\<Context>\n\n创建指定模块的上下文。创建出的模块上下文中"
+      },
+      {
+        "section_id": "section-4",
+        "title": "application.getApplicationContext<sup>14+</sup>",
+        "level": 2,
+        "line_start": 99,
+        "line_end": 143,
+        "summary": "getApplicationContext(): ApplicationContext\n\n获取应用上下文。开发者使用该接口时，无需依赖Context基类。\n\n重复调用该接口，将生成新的Applica"
+      },
+      {
+        "section_id": "section-5",
+        "title": "application.getApplicationContextInstance<sup>23+</sup>",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 188,
+        "summary": "getApplicationContextInstance(): ApplicationContext\n\n获取应用上下文。开发者使用该接口时，无需依赖Context基类。\n\n重复调用该接口，将获取同"
+      },
+      {
+        "section_id": "section-6",
+        "title": "application.createPluginModuleContext<sup>19+</sup>",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 239,
+        "summary": "createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Pr"
+      },
+      {
+        "section_id": "section-7",
+        "title": "application.promoteCurrentToCandidateMasterProcess<sup>20+</sup>",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 314,
+        "summary": "promoteCurrentToCandidateMasterProcess(insertToHead: boolean): Promise\\<void>\n\n开发者可以调用该接口将当前进程放入[备选"
+      },
+      {
+        "section_id": "section-8",
+        "title": "application.demoteCurrentFromCandidateMasterProcess<sup>20+</sup>",
+        "level": 2,
+        "line_start": 315,
+        "line_end": 365,
+        "summary": "demoteCurrentFromCandidateMasterProcess(): Promise\\<void>\n\n撤销当前进程的备选主控进程资格。使用Promise异步回调。\n\n**系统能力**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "application.exitMasterProcessRole<sup>21+</sup>",
+        "level": 2,
+        "line_start": 366,
+        "line_end": 416,
+        "summary": "exitMasterProcessRole(): Promise\\<void>\n\n放弃当前进程的[主控进程](../../application-models/ability-terminology"
+      },
+      {
+        "section_id": "section-10",
+        "title": "application.getAppPreloadType<sup>22+</sup>",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 446,
+        "summary": "getAppPreloadType(): AppPreloadType\n\n获取应用当前进程的预加载类型。\n\n> **说明：**\n>\n> - 只有在进程首次执行[AbilityStage.onCrea"
+      }
+    ]
+  }
+}

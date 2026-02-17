@@ -1,0 +1,188 @@
+{
+  "doc_id": "arkts-apis-graphics-drawing-Region",
+  "title": "Class (Region)",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Region.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Region.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphics 模块的 Class (Region)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (Region)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { drawing } from '@kit.ArkGraphics2D';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "constructor<sup>20+</sup>",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 59,
+        "summary": "constructor()\n\n构造一个区域对象。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n```ts\nimport { RenderNode }"
+      },
+      {
+        "section_id": "section-3",
+        "title": "constructor<sup>20+</sup>",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 100,
+        "summary": "constructor(region: Region)\n\n拷贝一个区域对象。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数：**\n\n| 参数名"
+      },
+      {
+        "section_id": "section-4",
+        "title": "constructor<sup>20+</sup>",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 142,
+        "summary": "constructor(left: number, top: number, right: number, bottom: number)\n\n构造矩形区域。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-5",
+        "title": "isEqual<sup>20+</sup>",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 194,
+        "summary": "isEqual(other: Region): boolean\n\n用于判断其他区域是否与当前区域相等。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "isComplex<sup>20+</sup>",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 240,
+        "summary": "isComplex(): boolean\n\n判断当前区域是否包含多个矩形。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-7",
+        "title": "isEmpty<sup>20+</sup>",
+        "level": 2,
+        "line_start": 241,
+        "line_end": 284,
+        "summary": "isEmpty(): boolean\n\n判断当前区域是否为空。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型    | 说"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getBounds<sup>20+</sup>",
+        "level": 2,
+        "line_start": 285,
+        "line_end": 307,
+        "summary": "getBounds(): common2D.Rect\n\n获取区域的边界。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getBoundaryPath<sup>20+</sup>",
+        "level": 2,
+        "line_start": 308,
+        "line_end": 330,
+        "summary": "getBoundaryPath(): Path\n\n返回一个新路径，该路径取自当前区域的边界。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值："
+      },
+      {
+        "section_id": "section-10",
+        "title": "isPointContained<sup>12+</sup>",
+        "level": 2,
+        "line_start": 331,
+        "line_end": 389,
+        "summary": "isPointContained(x: number, y: number) : boolean\n\n判断测试点是否在区域内。\n\n**系统能力：** SystemCapability.Graphics"
+      },
+      {
+        "section_id": "section-11",
+        "title": "offset<sup>20+</sup>",
+        "level": 2,
+        "line_start": 390,
+        "line_end": 432,
+        "summary": "offset(dx: number, dy: number): void\n\n对区域进行平移。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数：*"
+      },
+      {
+        "section_id": "section-12",
+        "title": "isRegionContained<sup>12+</sup>",
+        "level": 2,
+        "line_start": 433,
+        "line_end": 492,
+        "summary": "isRegionContained(other: Region) : boolean\n\n判断其他区域是否在当前区域内。\n\n**系统能力：** SystemCapability.Graphics.Dr"
+      },
+      {
+        "section_id": "section-13",
+        "title": "op<sup>12+</sup>",
+        "level": 2,
+        "line_start": 493,
+        "line_end": 552,
+        "summary": "op(region: Region, regionOp: RegionOp) : boolean\n\n将当前区域与指定区域进行运算，并替换为运算结果。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-14",
+        "title": "quickReject<sup>12+</sup>",
+        "level": 2,
+        "line_start": 553,
+        "line_end": 612,
+        "summary": "quickReject(left: number, top: number, right: number, bottom: number) : boolean\n\n快速判断矩形和区域是否不相交，实际上"
+      },
+      {
+        "section_id": "section-15",
+        "title": "quickRejectRegion<sup>20+</sup>",
+        "level": 2,
+        "line_start": 613,
+        "line_end": 662,
+        "summary": "quickRejectRegion(region: Region): boolean\n\n判断当前区域是否与另一个区域不相交。实际上比较的是两个区域的外接矩形是否不相交，因此会有误差。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-16",
+        "title": "setPath<sup>12+</sup>",
+        "level": 2,
+        "line_start": 663,
+        "line_end": 722,
+        "summary": "setPath(path: Path, clip: Region) : boolean\n\n设置一个与裁剪区域内路径轮廓相匹配的区域。\n\n**系统能力：** SystemCapability.Grap"
+      },
+      {
+        "section_id": "section-17",
+        "title": "setRegion<sup>20+</sup>",
+        "level": 2,
+        "line_start": 723,
+        "line_end": 764,
+        "summary": "setRegion(region: Region): void\n\n设置当前区域为另一块区域。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数：*"
+      },
+      {
+        "section_id": "section-18",
+        "title": "setEmpty<sup>20+</sup>",
+        "level": 2,
+        "line_start": 765,
+        "line_end": 791,
+        "summary": "setEmpty(): void\n\n设置当前区域为空。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**示例：**\n\n```ts\nimport { R"
+      },
+      {
+        "section_id": "section-19",
+        "title": "setRect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 792,
+        "line_end": 850,
+        "summary": "setRect(left: number, top: number, right: number, bottom: number) : boolean\n\n设置一个矩形区域。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-20",
+        "title": "isRect<sup>23+</sup>",
+        "level": 2,
+        "line_start": 851,
+        "line_end": 901,
+        "summary": "isRect(): boolean\n\n判断当前区域是否等同于单个矩形。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability.Graphi"
+      },
+      {
+        "section_id": "section-21",
+        "title": "quickContains<sup>23+</sup>",
+        "level": 2,
+        "line_start": 902,
+        "line_end": 958,
+        "summary": "quickContains(left: number, top: number, right: number, bottom: number): boolean\n\n判断当前区域是否等同于单个矩形并且"
+      }
+    ]
+  }
+}

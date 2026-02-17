@@ -1,0 +1,468 @@
+{
+  "doc_id": "js-apis-i18n",
+  "title": "@ohos.i18n (国际化-I18n)",
+  "path": "zh-cn/application-dev/reference/apis-localization-kit/js-apis-i18n.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-localization-kit/js-apis-i18n.md",
+  "metadata": {
+    "kit": "Localization Kit",
+    "subsystem": "Global",
+    "owner": "@yliupy",
+    "designer": "@sunyaozu",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Localization Kit Global 模块的 @ohos.i18n (国际化-I18n)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.i18n (国际化-I18n)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 28,
+        "summary": "```ts\nimport { i18n } from '@kit.LocalizationKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "System<sup>9+</sup>",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 653,
+        "summary": "提供系统属性相关的能力，包括语言地区名称翻译、支持的语言地区列表获取和系统语言地区获取等。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系"
+      },
+      {
+        "section_id": "section-3",
+        "title": "TemperatureType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 654,
+        "line_end": 667,
+        "summary": "温度单位的枚举。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.I18n"
+      },
+      {
+        "section_id": "section-4",
+        "title": "WeekDay<sup>18+</sup>",
+        "level": 2,
+        "line_start": 668,
+        "line_end": 686,
+        "summary": "周起始日的枚举，取值范围为周一至周日。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Gl"
+      },
+      {
+        "section_id": "section-5",
+        "title": "i18n.isRTL",
+        "level": 2,
+        "line_start": 687,
+        "line_end": 716,
+        "summary": "isRTL(locale: string): boolean\n\n判断语言是否为镜像语言。在镜像语言下，UI界面需要[镜像显示](../../internationalization/i18n-ui-"
+      },
+      {
+        "section_id": "section-6",
+        "title": "i18n.getCalendar<sup>8+</sup>",
+        "level": 2,
+        "line_start": 717,
+        "line_end": 746,
+        "summary": "getCalendar(locale: string, type? : string): Calendar\n\n获取指定区域和历法的日历对象。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-7",
+        "title": "EntityRecognizer<sup>11+</sup>",
+        "level": 2,
+        "line_start": 747,
+        "line_end": 841,
+        "summary": "提供实体识别相关的能力，可以获取文本中实体的类型和起止位置。当前支持识别的实体包括电话号码和时间日期。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-8",
+        "title": "EntityInfoItem<sup>11+</sup>",
+        "level": 2,
+        "line_start": 842,
+        "line_end": 855,
+        "summary": "实体信息属性。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.I18n\n\n|"
+      },
+      {
+        "section_id": "section-9",
+        "title": "Calendar<sup>8+</sup>",
+        "level": 2,
+        "line_start": 856,
+        "line_end": 1332,
+        "summary": "提供历法相关的能力，包括历法名称获取和日期计算等。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-10",
+        "title": "PhoneNumberFormat<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1333,
+        "line_end": 1487,
+        "summary": "提供电话号码相关的能力，包括电话号码有效性判断、格式化和归属地获取。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-11",
+        "title": "PhoneNumberFormatOptions<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1488,
+        "line_end": 1500,
+        "summary": "电话号码格式化时可设置的配置项。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Globa"
+      },
+      {
+        "section_id": "section-12",
+        "title": "UnitInfo<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1501,
+        "line_end": 1514,
+        "summary": "度量衡单位信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.I18n"
+      },
+      {
+        "section_id": "section-13",
+        "title": "i18n.getInstance<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1515,
+        "line_end": 1544,
+        "summary": "getInstance(locale?: string): IndexUtil\n\n创建并返回IndexUtil对象。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原"
+      },
+      {
+        "section_id": "section-14",
+        "title": "IndexUtil<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1545,
+        "line_end": 1634,
+        "summary": "提供索引相关的能力，包括区域索引列表和文本索引值获取。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-15",
+        "title": "i18n.getLineInstance<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1635,
+        "line_end": 1664,
+        "summary": "getLineInstance(locale: string): BreakIterator\n\n获取用于获取可换行点的BreakIterator对象。BreakIterator对象内部维护一个换行迭"
+      },
+      {
+        "section_id": "section-16",
+        "title": "BreakIterator<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1665,
+        "line_end": 1930,
+        "summary": "提供文本换行相关的能力，包括可换行点的获取、移动和识别等。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-17",
+        "title": "i18n.getTimeZone",
+        "level": 2,
+        "line_start": 1931,
+        "line_end": 1959,
+        "summary": "getTimeZone(zoneID?: string): TimeZone\n\n获取时区ID对应的时区对象。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-18",
+        "title": "TimeZone",
+        "level": 2,
+        "line_start": 1960,
+        "line_end": 2279,
+        "summary": "提供时区相关的能力，包括时区名称翻译、偏移量获取和跳变规则获取等。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-19",
+        "title": "ZoneRules<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2280,
+        "line_end": 2322,
+        "summary": "提供查询时区跳变规则的能力。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global."
+      },
+      {
+        "section_id": "section-20",
+        "title": "ZoneOffsetTransition<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2323,
+        "line_end": 2415,
+        "summary": "提供解析时区跳变规则的能力。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global."
+      },
+      {
+        "section_id": "section-21",
+        "title": "Transliterator<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2416,
+        "line_end": 2523,
+        "summary": "提供文本音译相关的能力，包括音译支持范围获取和文本音译等。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-22",
+        "title": "Unicode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2524,
+        "line_end": 2836,
+        "summary": "提供字符属性相关的能力，包括判断字符是否为空格、数字和字母等。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-23",
+        "title": "I18NUtil<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2837,
+        "line_end": 3194,
+        "summary": "国际化工具类，提供单位转换、获取日期顺序、获取时段名称、区域匹配和路径本地化等能力。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-24",
+        "title": "Normalizer<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3195,
+        "line_end": 3290,
+        "summary": "提供文本标准化的能力。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.I18"
+      },
+      {
+        "section_id": "section-25",
+        "title": "NormalizerMode<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3291,
+        "line_end": 3306,
+        "summary": "文本标准化范式的枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.I18"
+      },
+      {
+        "section_id": "section-26",
+        "title": "HolidayManager<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3307,
+        "line_end": 3446,
+        "summary": "提供解析节假日数据的能力，包括节假日判断和指定年份节假日列表获取等。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-27",
+        "title": "HolidayInfoItem<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3447,
+        "line_end": 3462,
+        "summary": "节假日信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.I18n\n\n|"
+      },
+      {
+        "section_id": "section-28",
+        "title": "HolidayLocalName<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3463,
+        "line_end": 3476,
+        "summary": "节假日名称在不同语言下的翻译。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global"
+      },
+      {
+        "section_id": "section-29",
+        "title": "i18n.getSimpleDateTimeFormatByPattern<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3477,
+        "line_end": 3521,
+        "summary": "getSimpleDateTimeFormatByPattern(pattern: string, locale?: Intl.Locale): SimpleDateTimeFormat\n\n通过模式"
+      },
+      {
+        "section_id": "section-30",
+        "title": "i18n.getSimpleDateTimeFormatByPattern<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3522,
+        "line_end": 3568,
+        "summary": "getSimpleDateTimeFormatByPattern(pattern: string, locale?: intl.Locale): SimpleDateTimeFormat\n\n> 从A"
+      },
+      {
+        "section_id": "section-31",
+        "title": "i18n.getSimpleDateTimeFormatBySkeleton<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3569,
+        "line_end": 3613,
+        "summary": "getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleDateTimeFormat\n\n通过"
+      },
+      {
+        "section_id": "section-32",
+        "title": "i18n.getSimpleDateTimeFormatBySkeleton<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3614,
+        "line_end": 3660,
+        "summary": "getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleDateTimeFormat\n\n>"
+      },
+      {
+        "section_id": "section-33",
+        "title": "SimpleDateTimeFormat<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3661,
+        "line_end": 3714,
+        "summary": "提供时间日期格式化的能力。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.I"
+      },
+      {
+        "section_id": "section-34",
+        "title": "StyledDateTimeFormat<sup>23+</sup>",
+        "level": 2,
+        "line_start": 3715,
+        "line_end": 3823,
+        "summary": "提供富文本时间日期格式化的能力。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Globa"
+      },
+      {
+        "section_id": "section-35",
+        "title": "StyledDateTimeFormatOptions<sup>23+</sup>",
+        "level": 2,
+        "line_start": 3824,
+        "line_end": 3844,
+        "summary": "创建富文本显示的时间日期格式化对象时的可选配置项。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-36",
+        "title": "i18n.getSimpleNumberFormatBySkeleton<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3845,
+        "line_end": 3889,
+        "summary": "getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleNumberFormat\n\n通过框架字符"
+      },
+      {
+        "section_id": "section-37",
+        "title": "i18n.getSimpleNumberFormatBySkeleton<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3890,
+        "line_end": 3936,
+        "summary": "getSimpleNumberFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleNumberFormat\n\n> 从API"
+      },
+      {
+        "section_id": "section-38",
+        "title": "SimpleNumberFormat<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3937,
+        "line_end": 3981,
+        "summary": "基于框架字符串提供数字格式化的能力。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Glo"
+      },
+      {
+        "section_id": "section-39",
+        "title": "StyledNumberFormat<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3982,
+        "line_end": 4156,
+        "summary": "提供富文本数字格式化的能力。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global."
+      },
+      {
+        "section_id": "section-40",
+        "title": "StyledNumberFormatOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 4157,
+        "line_end": 4171,
+        "summary": "创建富文本显示的数字格式化对象时的可选配置项。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-41",
+        "title": "AdvancedMeasureFormat<sup>23+</sup>",
+        "level": 2,
+        "line_start": 4172,
+        "line_end": 4245,
+        "summary": "提供数字格式化能力。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.I18n"
+      },
+      {
+        "section_id": "section-42",
+        "title": "AdvancedMeasureFormatOptions<sup>23+</sup>",
+        "level": 2,
+        "line_start": 4246,
+        "line_end": 4259,
+        "summary": "创建数字格式化对象时的可选配置项。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Glob"
+      },
+      {
+        "section_id": "section-43",
+        "title": "UnitUsage<sup>23+</sup>",
+        "level": 2,
+        "line_start": 4260,
+        "line_end": 4295,
+        "summary": "单位格式化使用场景的枚举。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Global.I"
+      },
+      {
+        "section_id": "section-44",
+        "title": "i18n.getDisplayCountry<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4296,
+        "line_end": 4327,
+        "summary": "getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string\n\n> 从API version"
+      },
+      {
+        "section_id": "section-45",
+        "title": "i18n.getDisplayLanguage<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4328,
+        "line_end": 4360,
+        "summary": "getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string\n\n> 从API versio"
+      },
+      {
+        "section_id": "section-46",
+        "title": "i18n.getSystemLanguage<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4361,
+        "line_end": 4384,
+        "summary": "getSystemLanguage(): string\n\n> 从API version 7开始支持，从API version 9开始废弃，建议使用[System.getSystemLanguage]"
+      },
+      {
+        "section_id": "section-47",
+        "title": "i18n.getSystemRegion<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4385,
+        "line_end": 4408,
+        "summary": "getSystemRegion(): string\n\n> 从API version 7开始支持，从API version 9开始废弃，建议使用[System.getSystemRegion](#ge"
+      },
+      {
+        "section_id": "section-48",
+        "title": "i18n.getSystemLocale<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4409,
+        "line_end": 4432,
+        "summary": "getSystemLocale(): string\n\n> 从API version 7开始支持，从API version 9开始废弃，建议使用[System.getSystemLocale](#ge"
+      },
+      {
+        "section_id": "section-49",
+        "title": "i18n.is24HourClock<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4433,
+        "line_end": 4456,
+        "summary": "is24HourClock(): boolean\n\n> 从API version 7开始支持，从API version 9开始废弃，建议使用[System.is24HourClock](#is24h"
+      },
+      {
+        "section_id": "section-50",
+        "title": "i18n.set24HourClock<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4457,
+        "line_end": 4489,
+        "summary": "set24HourClock(option: boolean): boolean\n\n> 从API version 7开始支持，从API version 9开始废弃，替代接口仅支持系统应用使用。\n\n修"
+      },
+      {
+        "section_id": "section-51",
+        "title": "i18n.addPreferredLanguage<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4490,
+        "line_end": 4525,
+        "summary": "addPreferredLanguage(language: string, index?: number): boolean\n\n> 从API version 8开始支持，从API version"
+      },
+      {
+        "section_id": "section-52",
+        "title": "i18n.removePreferredLanguage<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4526,
+        "line_end": 4559,
+        "summary": "removePreferredLanguage(index: number): boolean\n\n> 从API version 8开始支持，从API version 9开始废弃，替代接口仅支持系统应"
+      },
+      {
+        "section_id": "section-53",
+        "title": "i18n.getPreferredLanguageList<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4560,
+        "line_end": 4583,
+        "summary": "getPreferredLanguageList(): Array&lt;string&gt;\n\n> 从API version 8开始支持，从API version 9开始废弃，建议使用[Syste"
+      },
+      {
+        "section_id": "section-54",
+        "title": "i18n.getFirstPreferredLanguage<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4584,
+        "line_end": 4607,
+        "summary": "getFirstPreferredLanguage(): string\n\n> 从API version 8开始支持，从API version 9开始废弃，建议使用[System.getFirstPr"
+      },
+      {
+        "section_id": "section-55",
+        "title": "Util<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4608,
+        "line_end": 4637,
+        "summary": "### unitConvert<sup>(deprecated)</sup>\n\nunitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: n"
+      },
+      {
+        "section_id": "section-56",
+        "title": "Character<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 4638,
+        "line_end": 4846,
+        "summary": "### isDigit<sup>(deprecated)</sup>\n\nisDigit(ch: string): boolean\n\n> 从API version 8开始支持，从API versio"
+      }
+    ]
+  }
+}

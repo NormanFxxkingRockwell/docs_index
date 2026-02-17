@@ -1,0 +1,180 @@
+{
+  "doc_id": "arkts-apis-arkts-utils-SendableLruCache",
+  "title": "SendableLruCache<K, V>",
+  "path": "zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-utils-SendableLruCache.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/arkts-apis-arkts-utils-SendableLruCache.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@lijiamin2025",
+    "designer": "@weng-changcheng",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 SendableLruCache<K, V>，提供相关接口和功能说明。",
+  "structure": {
+    "title": "SendableLruCache<K, V>",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { ArkTSUtils } from '@kit.ArkTS'\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 45,
+        "summary": "**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-3",
+        "title": "constructor<sup>18+</sup>",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 67,
+        "summary": "constructor(capacity?: number)\n\n默认构造函数用于创建一个新的SendableLruCache实例，默认容量为64。\n\n**原子化服务API：** 从API versi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "updateCapacity<sup>18+</sup>",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 98,
+        "summary": "updateCapacity(newCapacity: number): void\n\n将缓冲区容量设置为指定值。如果缓冲区中值的总数超过指定容量，将删除最少使用的键值对。\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-5",
+        "title": "toString<sup>18+</sup>",
+        "level": 2,
+        "line_start": 99,
+        "line_end": 126,
+        "summary": "toString(): string\n\n返回对象的字符串表示形式。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getCapacity<sup>18+</sup>",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 151,
+        "summary": "getCapacity(): number\n\n获取当前缓冲区的容量。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-7",
+        "title": "clear<sup>18+</sup>",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 175,
+        "summary": "clear(): void\n\n从当前缓冲区清除所有键值对。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getCreateCount<sup>18+</sup>",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 215,
+        "summary": "getCreateCount(): number\n\n获取调用内部默认接口创建对象的次数。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getMissCount<sup>18+</sup>",
+        "level": 2,
+        "line_start": 216,
+        "line_end": 242,
+        "summary": "getMissCount(): number\n\n获取查询值不匹配的次数。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getRemoveCount<sup>18+</sup>",
+        "level": 2,
+        "line_start": 243,
+        "line_end": 270,
+        "summary": "getRemoveCount(): number\n\n获取缓冲区键值对的回收次数。当缓冲区数量超过容量限制时，最少使用的键值对将被回收。\n\n**原子化服务API：** 从API version 18开"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getMatchCount<sup>18+</sup>",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 297,
+        "summary": "getMatchCount(): number\n\n获取查询值匹配成功的次数。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-12",
+        "title": "getPutCount<sup>18+</sup>",
+        "level": 2,
+        "line_start": 298,
+        "line_end": 323,
+        "summary": "getPutCount(): number\n\n获取将值添加到缓冲区的次数。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-13",
+        "title": "isEmpty<sup>18+</sup>",
+        "level": 2,
+        "line_start": 324,
+        "line_end": 349,
+        "summary": "isEmpty(): boolean\n\n检查当前缓冲区是否为空。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-14",
+        "title": "get<sup>18+</sup>",
+        "level": 2,
+        "line_start": 350,
+        "line_end": 381,
+        "summary": "get(key: K): V | undefined\n\n返回键对应的值。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-15",
+        "title": "put<sup>18+</sup>",
+        "level": 2,
+        "line_start": 382,
+        "line_end": 413,
+        "summary": "put(key: K,value: V): V\n\n将键值对添加到缓冲区，并返回与添加的键关联的值。当缓冲区中值的数量超过容量时，会执行删除操作。\n\n**原子化服务API：** 从API versio"
+      },
+      {
+        "section_id": "section-16",
+        "title": "values<sup>18+</sup>",
+        "level": 2,
+        "line_start": 414,
+        "line_end": 441,
+        "summary": "values(): V[]\n\n获取当前缓冲区中所有值的列表，按从最近访问到最少访问的顺序排列，最近访问的键值对表示有最新操作。\n\n**原子化服务API：** 从API version 18开始，该接"
+      },
+      {
+        "section_id": "section-17",
+        "title": "keys<sup>18+</sup>",
+        "level": 2,
+        "line_start": 442,
+        "line_end": 468,
+        "summary": "keys(): K[]\n\n获取当前缓冲区中所有键，按从最近访问到最少访问的顺序排列。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-18",
+        "title": "remove<sup>18+</sup>",
+        "level": 2,
+        "line_start": 469,
+        "line_end": 500,
+        "summary": "remove(key: K): V | undefined\n\n从当前缓冲区中删除指定键及其关联值，返回该键关联的值。若键不存在，则返回undefined。\n\n**原子化服务API：** 从API v"
+      },
+      {
+        "section_id": "section-19",
+        "title": "contains<sup>18+</sup>",
+        "level": 2,
+        "line_start": 501,
+        "line_end": 532,
+        "summary": "contains(key: K): boolean\n\n检查当前缓冲区是否包含指定的键，如果存在，返回true；否则，返回false。\n\n**原子化服务API：** 从API version 18开始"
+      },
+      {
+        "section_id": "section-20",
+        "title": "entries<sup>18+</sup>",
+        "level": 2,
+        "line_start": 533,
+        "line_end": 563,
+        "summary": "entries(): IterableIterator&lt;[K,V]&gt;\n\n允许迭代包含在这个对象中的所有键值对。\n\n**原子化服务API：** 从API version 18开始，该接口支"
+      }
+    ]
+  }
+}

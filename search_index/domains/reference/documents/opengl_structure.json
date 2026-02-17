@@ -1,0 +1,68 @@
+{
+  "doc_id": "opengl",
+  "title": "OpenGL",
+  "path": "zh-cn/application-dev/reference/native-lib/opengl.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/native-lib/opengl.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@samhu1989",
+    "designer": "@shi-yang-2012",
+    "tester": "@zhaoxiaoguang2",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphics 模块的 OpenGL，提供相关接口和功能说明。",
+  "structure": {
+    "title": "OpenGL",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "支持的能力及设备",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 21,
+        "summary": "支持能力：\n\n- 从API version 20开始，支持使用OpenGL 3.0。\n\n- 从API version 22开始，支持使用OpenGL 4.2。\n\n支持设备：\n\n从API versio"
+      },
+      {
+        "section_id": "section-2",
+        "title": "查询当前设备是否支持OpenGL",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 56,
+        "summary": "从API version 22开始，支持使用OH_Graphics_QueryGL接口判断设备是否支持使用OpenGL功能以及是否需要回退使用OpenGL ES 。\n\n**设备行为差异：** OH_"
+      },
+      {
+        "section_id": "section-3",
+        "title": "标准库中导出的符号列表",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 60,
+        "summary": "[native api中导出的OpenGL符号列表](opengl-symbol.md)"
+      },
+      {
+        "section_id": "section-4",
+        "title": "OpenGL扩展接口及示例",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 66,
+        "summary": "OpenGL扩展接口及使用，可参考[OpenGL ES扩展接口](opengles.md#opengl-es扩展接口)。\n\n相关接口使用示例，可参考[OpenGL ES简单示例](opengles."
+      },
+      {
+        "section_id": "section-5",
+        "title": "引入OpenGL能力",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 103,
+        "summary": "如果开发者需要使用OpenGL的相关能力，需要添加相关动态链接库和头文件。\n\n**添加动态链接库**\n\nCMakeLists.txt中添加以下lib。\n\n```txt\nlibace_ndk.z.so"
+      },
+      {
+        "section_id": "section-6",
+        "title": "相关参考",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 114,
+        "summary": "针对OpenGL的使用和相关开发，需要同步了解NDK的开发过程，以及XComponent组件等的使用。具体可参考:\n\n- [NDK开发参考](../../napi/ndk-development-o"
+      }
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "doc_id": "js-apis-secureElement",
+  "title": "@ohos.secureElement (安全单元的通道管理)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-secureElement.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-secureElement.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@amunra03",
+    "designer": "@wenxiaolin",
+    "tester": "@zs_111",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.secureElement (安全单元的通道管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.secureElement (安全单元的通道管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "**导入模块**",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 29,
+        "summary": "```js\nimport { omapi } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ServiceState",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 40,
+        "summary": "定义不同的SE服务状态值。\n\n**系统能力：**  SystemCapability.Communication.SecureElement\n\n| 名称         | 值   | 说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "omapi.newSEService<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 41,
+        "line_end": 99,
+        "summary": "newSEService(type: 'serviceState', callback: Callback\\<ServiceState>): SEService\n\n建立一个可用于连接到系统中所有可用"
+      },
+      {
+        "section_id": "section-4",
+        "title": "omapi.createService<sup>12+</sup>",
+        "level": 2,
+        "line_start": 100,
+        "line_end": 146,
+        "summary": "createService(): Promise\\<SEService>;\n\n建立一个可用于连接到系统中所有可用SE的新连接（服务）。连接过程较为耗时，所以此方法仅提供异步方式。使用Promise异"
+      },
+      {
+        "section_id": "section-5",
+        "title": "omapi.on<sup>18+</sup>",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 175,
+        "summary": "on(type: 'stateChanged', callback: Callback\\<ServiceState>): void;\n\n注册监听服务状态变化事件。\n\n调用[omapi.newSESe"
+      },
+      {
+        "section_id": "section-6",
+        "title": "omapi.off<sup>18+</sup>",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 243,
+        "summary": "off(type: 'stateChanged', callback?: Callback\\<ServiceState>): void;\n\n取消订阅服务状态更改事件。\n\n**系统能力：**  Sys"
+      },
+      {
+        "section_id": "section-7",
+        "title": "SEService",
+        "level": 2,
+        "line_start": 244,
+        "line_end": 418,
+        "summary": "SEService表示可用于连接到系统中所有可用SE的连接（服务），通过[createService](#omapicreateservice12)获取SEService实例。\n\n### SESer"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Reader",
+        "level": 2,
+        "line_start": 419,
+        "line_end": 606,
+        "summary": "Reader的实例表示该设备支持的SE，如果支持eSE、SIM和SIM2，则返回3个实例，其中SIM2从API version 22开始支持。通过[SEService.getReaders](#se"
+      },
+      {
+        "section_id": "section-9",
+        "title": "Session",
+        "level": 2,
+        "line_start": 607,
+        "line_end": 1315,
+        "summary": "Session的实例表示在某个SE Reader实例上创建连接会话。通过[Reader.openSession](#readeropensession)获取Session实例。\n\n### Sessi"
+      },
+      {
+        "section_id": "section-10",
+        "title": "Channel",
+        "level": 2,
+        "line_start": 1316,
+        "line_end": 1618,
+        "summary": "Channel的实例表示在某个Session实例上创建通道，可能为基础通道或逻辑通道。通过[Session.openBasicChannel](#sessionopenbasicchannel)或["
+      }
+    ]
+  }
+}

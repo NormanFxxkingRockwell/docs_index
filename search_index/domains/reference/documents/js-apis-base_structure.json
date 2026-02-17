@@ -1,0 +1,60 @@
+{
+  "doc_id": "js-apis-base",
+  "title": "@ohos.base (公共回调信息)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-base.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-base.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Base",
+    "owner": "@majiajun518",
+    "designer": "@majiajun518",
+    "tester": "@jiyong_sd",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit Base 模块的 @ohos.base (公共回调信息)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.base (公共回调信息)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 28,
+        "summary": "ArkTS示例： \n```typescript\nimport { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Callback",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 48,
+        "summary": "Callback\\<T> {\n\n(data: T): void;\n\n}\n\n通用回调函数。\n\n开发者在使用时，可自定义data的类型，回调将返回对应类型的信息。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ErrorCallback",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 70,
+        "summary": "ErrorCallback\\<T extends Error = BusinessError> {\n\n(err: T): void;\n\n}\n\n通用回调函数，携带错误参数。\n\n回调返回的信息为[Bus"
+      },
+      {
+        "section_id": "section-4",
+        "title": "AsyncCallback",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 93,
+        "summary": "AsyncCallback\\<T, E = void> {\n\n(err: BusinessError\\<E>, data: T): void;\n\n}\n\n通用回调函数，携带错误参数和异步返回值。\n\n错"
+      },
+      {
+        "section_id": "section-5",
+        "title": "BusinessError",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 107,
+        "summary": "BusinessError\\<T = void> extends Error { code: number; data?: T; }\n\n错误参数。\n\n**原子化服务API：** 从API versi"
+      }
+    ]
+  }
+}

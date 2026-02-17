@@ -1,0 +1,100 @@
+{
+  "doc_id": "ts-custom-component-new-lifecycle",
+  "title": "自定义组件的生命周期（推荐）",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-custom-component-new-lifecycle.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-custom-component-new-lifecycle.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@seaside_wu1; @xin11112",
+    "designer": "@chenbenzhi",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "ArkUI ArkUI 模块的 自定义组件的生命周期（推荐），提供相关接口和功能说明。",
+  "structure": {
+    "title": "自定义组件的生命周期（推荐）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "\\@ComponentInit",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 30,
+        "summary": "ComponentInit: MethodDecorator\n\n\\@ComponentInit装饰的函数在自定义组件初始化即将完成时执行。开发者可以在此时注册监听和修改变量。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-2",
+        "title": "\\@ComponentAppear",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 46,
+        "summary": "ComponentAppear: MethodDecorator\n\n与aboutToAppear相似，\\@ComponentAppear装饰的函数在创建自定义组件的新实例后，在其build()函数执"
+      },
+      {
+        "section_id": "section-3",
+        "title": "\\@ComponentBuilt",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 62,
+        "summary": "ComponentBuilt: MethodDecorator\n\n\\@ComponentBuilt装饰的函数在自定义组件的build()函数首次执行后调用，即从CustomComponentLife"
+      },
+      {
+        "section_id": "section-4",
+        "title": "\\@ComponentDisappear",
+        "level": 2,
+        "line_start": 63,
+        "line_end": 78,
+        "summary": "ComponentDisappear: MethodDecorator\n\n\\@ComponentDisappear装饰的函数在自定义组件析构销毁时执行。不建议在此函数中改变状态变量，特别是\\@Lin"
+      },
+      {
+        "section_id": "section-5",
+        "title": "\\@ComponentReuse",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 106,
+        "summary": "ComponentReuse: MethodDecorator\n\n当可复用的自定义组件从缓存中重新添加到节点树时调用\\@ComponentReuse装饰的函数，即从CustomComponentLi"
+      },
+      {
+        "section_id": "section-6",
+        "title": "\\@ComponentRecycle",
+        "level": 2,
+        "line_start": 107,
+        "line_end": 122,
+        "summary": "ComponentRecycle: MethodDecorator\n\n当组件被回收后触发，先执行应用程序中定义的必要回收操作，完成回收后调用此装饰器装饰的函数，即从CustomComponentLi"
+      },
+      {
+        "section_id": "section-7",
+        "title": "CustomComponentLifecycle",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 201,
+        "summary": "CustomComponentLifecycle用于监控自定义组件生命周期的变化，开发者可以通过[UIUtils.getLifecycle](../js-apis-stateManagement.m"
+      },
+      {
+        "section_id": "section-8",
+        "title": "CustomComponentLifecycleObserver",
+        "level": 2,
+        "line_start": 202,
+        "line_end": 362,
+        "summary": "用户注册自定义组件生命周期回调后，当该自定义组件的生命周期发生变化时，将触发监听器中相应的生命周期回调。\n\n### aboutToAppear\n\naboutToAppear?(): void\n\nab"
+      },
+      {
+        "section_id": "section-9",
+        "title": "CustomComponentLifecycleState",
+        "level": 2,
+        "line_start": 363,
+        "line_end": 402,
+        "summary": "自定义组件当前的生命周期状态。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI."
+      },
+      {
+        "section_id": "section-10",
+        "title": "生命周期使用示例",
+        "level": 2,
+        "line_start": 403,
+        "line_end": 490,
+        "summary": "本示例展示了生命周期回调函数的部分使用场景：\n\n1. 自定义组件Child的创建触发\\@ComponentInit、\\@ComponentAppear，Child执行build()后，触发\\@Com"
+      }
+    ]
+  }
+}

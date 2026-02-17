@@ -1,0 +1,92 @@
+{
+  "doc_id": "arkts-apis-graphics-drawing-ColorFilter",
+  "title": "Class (ColorFilter)",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-ColorFilter.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-ColorFilter.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphics 模块的 Class (ColorFilter)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (ColorFilter)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { drawing } from '@kit.ArkGraphics2D';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "createBlendModeColorFilter",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 63,
+        "summary": "createBlendModeColorFilter(color: common2D.Color, mode: BlendMode) : ColorFilter\n\n创建指定的颜色和混合模式的颜色滤波"
+      },
+      {
+        "section_id": "section-3",
+        "title": "createBlendModeColorFilter<sup>18+</sup>",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 100,
+        "summary": "static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMode) : ColorFilter\n\n使"
+      },
+      {
+        "section_id": "section-4",
+        "title": "createComposeColorFilter",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 140,
+        "summary": "createComposeColorFilter(outer: ColorFilter, inner: ColorFilter) : ColorFilter\n\n创建一个先应用inner进行滤波，再应"
+      },
+      {
+        "section_id": "section-5",
+        "title": "createLinearToSRGBGamma",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 162,
+        "summary": "createLinearToSRGBGamma() : ColorFilter\n\n创建一个从线性颜色空间转换到SRGB颜色空间的颜色滤波器。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-6",
+        "title": "createSRGBGammaToLinear",
+        "level": 2,
+        "line_start": 163,
+        "line_end": 184,
+        "summary": "createSRGBGammaToLinear() : ColorFilter\n\n创建一个从SRGB颜色空间转换到线性颜色空间的颜色滤波器。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-7",
+        "title": "createLumaColorFilter",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 206,
+        "summary": "createLumaColorFilter() : ColorFilter\n\n创建一个颜色滤波器将其输入的亮度值乘以透明度通道，并将红色、绿色和蓝色通道设置为零。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-8",
+        "title": "createMatrixColorFilter<sup>12+</sup>",
+        "level": 2,
+        "line_start": 207,
+        "line_end": 247,
+        "summary": "static createMatrixColorFilter(matrix: Array\\<number>): ColorFilter\n\n创建颜色滤波器，通过4x5颜色矩阵变换颜色。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-9",
+        "title": "createLightingColorFilter<sup>20+</sup>",
+        "level": 2,
+        "line_start": 248,
+        "line_end": 276,
+        "summary": "static createLightingColorFilter(mutColor: common2D.Color | number, addColor: common2D.Color | numb"
+      }
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "doc_id": "js-apis-application-accessibilityExtensionAbility",
+  "title": "@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)",
+  "path": "zh-cn/application-dev/reference/apis-accessibility-kit/js-apis-application-accessibilityExtensionAbility.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-accessibility-kit/js-apis-application-accessibilityExtensionAbility.md",
+  "metadata": {
+    "kit": "Accessibility Kit",
+    "subsystem": "BarrierFree",
+    "owner": "@qiiiiiiian",
+    "designer": "@z7o",
+    "tester": "@A_qqq",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Accessibility Kit BarrierFree 模块的 @ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.application.AccessibilityExtensionAbility (辅助功能扩展能力)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "AccessibilityExtensionAbility",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 33,
+        "summary": "AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能业务的能力。\n\n### 属性\n\n**系统能力**：SystemCapability.B"
+      },
+      {
+        "section_id": "section-3",
+        "title": "AccessibilityEvent",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 51,
+        "summary": "辅助事件信息。\n\n### 属性\n\n**系统能力**：SystemCapability.BarrierFree.Accessibility.Core\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-4",
+        "title": "AccessibilityElement<sup>10+</sup>",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 71,
+        "summary": "type AccessibilityElement = _AccessibilityElement\n\n表示无障碍节点元素，请参考[AccessibilityElement](js-apis-inne"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ElementAttributeValues<sup>10+</sup>",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 91,
+        "summary": "type ElementAttributeValues = _ElementAttributeValues\n\n表示节点元素具备的属性名称及属性值类型信息，请参考[ElementAttributeVa"
+      },
+      {
+        "section_id": "section-6",
+        "title": "FocusDirection<sup>10+</sup>",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 111,
+        "summary": "type FocusDirection = _FocusDirection\n\n表示查询下一焦点元素的方向，请参考[FocusDirection](js-apis-inner-application-"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ElementAttributeKeys<sup>10+</sup>",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 131,
+        "summary": "type ElementAttributeKeys = keyof ElementAttributeValues\n\n表示[ElementAttributeValues](js-apis-inner-"
+      },
+      {
+        "section_id": "section-8",
+        "title": "FocusType<sup>10+</sup>",
+        "level": 2,
+        "line_start": 132,
+        "line_end": 151,
+        "summary": "type FocusType = _FocusType\n\n表示查询焦点元素的类型，请参考[FocusType](js-apis-inner-application-accessibilityExte"
+      },
+      {
+        "section_id": "section-9",
+        "title": "WindowType <sup>10+</sup>",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 171,
+        "summary": "type WindowType = _WindowType\n\n表示窗口的类型，请参考[WindowType](js-apis-inner-application-accessibilityExten"
+      },
+      {
+        "section_id": "section-10",
+        "title": "Rect<sup>10+</sup>",
+        "level": 2,
+        "line_start": 172,
+        "line_end": 191,
+        "summary": "type Rect = _Rect\n\n表示矩形区域，请参考[Rect](js-apis-inner-application-accessibilityExtensionContext.md#rect"
+      },
+      {
+        "section_id": "section-11",
+        "title": "AccessibilityExtensionContext<sup>10+</sup>",
+        "level": 2,
+        "line_start": 192,
+        "line_end": 215,
+        "summary": "type AccessibilityExtensionContext = _AccessibilityExtensionContext.default\n\n表示辅助功能扩展的上下文环境，请参考[Acc"
+      },
+      {
+        "section_id": "section-12",
+        "title": "GestureType",
+        "level": 2,
+        "line_start": 216,
+        "line_end": 265,
+        "summary": "type GestureType = 'left' | 'leftThenRight' | 'leftThenUp' | 'leftThenDown' | 'right' | 'rightThenL"
+      },
+      {
+        "section_id": "section-13",
+        "title": "PageUpdateType",
+        "level": 2,
+        "line_start": 266,
+        "line_end": 278,
+        "summary": "type PageUpdateType = 'pageContentUpdate' | 'pageStateUpdate'\n\n页面刷新类型。\n\n**系统能力**：SystemCapability.B"
+      },
+      {
+        "section_id": "section-14",
+        "title": "TouchGuideType",
+        "level": 2,
+        "line_start": 279,
+        "line_end": 291,
+        "summary": "type TouchGuideType = 'touchBegin' | 'touchEnd'\n\n触摸浏览事件类型。\n\n**系统能力**：SystemCapability.BarrierFree.A"
+      },
+      {
+        "section_id": "section-15",
+        "title": "AccessibilityExtensionAbility.onConnect<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 292,
+        "line_end": 315,
+        "summary": "onConnect(): void;\n\n用户启用AccessibilityExtensionAbility时，系统服务完成连接后，回调此接口，可以该方法中执行初始化业务逻辑操作。该方法可以选择性重写"
+      },
+      {
+        "section_id": "section-16",
+        "title": "AccessibilityExtensionAbility.onDisconnect<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 316,
+        "line_end": 339,
+        "summary": "onDisconnect(): void;\n\n用户停用AccessibilityExtensionAbility时，系统服务完成断开连接后，回调此接口，可以该方法中执行资源回收退出业务逻辑操作。该方"
+      },
+      {
+        "section_id": "section-17",
+        "title": "AccessibilityExtensionAbility.onAccessibilityEvent<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 340,
+        "line_end": 372,
+        "summary": "onAccessibilityEvent(event: AccessibilityEvent): void;\n\n在关注的应用及事件类型对应的事件发生时回调此接口，可以在该方法中根据事件信息进行业务逻"
+      },
+      {
+        "section_id": "section-18",
+        "title": "AccessibilityExtensionAbility.onKeyEvent<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 373,
+        "line_end": 413,
+        "summary": "onKeyEvent(keyEvent: KeyEvent): boolean;\n\n在物理按键按下时回调此方法，可以在该方法中根据业务判断是否对事件进行拦截。\n\n> **说明：**\n>\n> 从API"
+      }
+    ]
+  }
+}

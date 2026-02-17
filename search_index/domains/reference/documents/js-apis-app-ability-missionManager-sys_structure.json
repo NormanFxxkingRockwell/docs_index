@@ -1,0 +1,252 @@
+{
+  "doc_id": "js-apis-app-ability-missionManager-sys",
+  "title": "@ohos.app.ability.missionManager (missionManager)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-missionManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-missionManager-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@littlejerry1",
+    "designer": "@ccllee1",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.missionManager (missionManager)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.missionManager (missionManager)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { missionManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "权限列表",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 27,
+        "summary": "ohos.permission.MANAGE_MISSIONS"
+      },
+      {
+        "section_id": "section-3",
+        "title": "missionManager.on('mission')",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 129,
+        "summary": "on(type:'mission', listener: MissionListener): number\n\n注册系统任务状态监听器。\n\n**需要权限**：ohos.permission.MANAG"
+      },
+      {
+        "section_id": "section-4",
+        "title": "missionManager.off('mission')",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 245,
+        "summary": "off(type: 'mission', listenerId: number, callback: AsyncCallback&lt;void&gt;): void\n\n解注册任务状态监听器。使用c"
+      },
+      {
+        "section_id": "section-5",
+        "title": "missionManager.off('mission')",
+        "level": 2,
+        "line_start": 246,
+        "line_end": 361,
+        "summary": "off(type: 'mission', listenerId: number): Promise&lt;void&gt;\n\n解注册任务状态监听。使用Promise异步回调。\n\n**需要权限**：o"
+      },
+      {
+        "section_id": "section-6",
+        "title": "missionManager.getMissionInfo",
+        "level": 2,
+        "line_start": 362,
+        "line_end": 429,
+        "summary": "getMissionInfo(deviceId: string, missionId: number, callback: AsyncCallback&lt;MissionInfo&gt;): vo"
+      },
+      {
+        "section_id": "section-7",
+        "title": "missionManager.getMissionInfo",
+        "level": 2,
+        "line_start": 430,
+        "line_end": 486,
+        "summary": "getMissionInfo(deviceId: string, missionId: number): Promise&lt;MissionInfo&gt;\n\n获取任务信息。使用Promise异步"
+      },
+      {
+        "section_id": "section-8",
+        "title": "missionManager.getMissionInfos",
+        "level": 2,
+        "line_start": 487,
+        "line_end": 539,
+        "summary": "getMissionInfos(deviceId: string, numMax: number, callback: AsyncCallback&lt;Array&lt;MissionInfo&g"
+      },
+      {
+        "section_id": "section-9",
+        "title": "missionManager.getMissionInfos",
+        "level": 2,
+        "line_start": 540,
+        "line_end": 592,
+        "summary": "getMissionInfos(deviceId: string, numMax: number): Promise&lt;Array&lt;MissionInfo&gt;&gt;\n\n获取所有任务信"
+      },
+      {
+        "section_id": "section-10",
+        "title": "missionManager.getMissionSnapShot",
+        "level": 2,
+        "line_start": 593,
+        "line_end": 643,
+        "summary": "getMissionSnapShot(deviceId: string, missionId: number, callback: AsyncCallback&lt;MissionSnapshot&"
+      },
+      {
+        "section_id": "section-11",
+        "title": "missionManager.getMissionSnapShot",
+        "level": 2,
+        "line_start": 644,
+        "line_end": 697,
+        "summary": "getMissionSnapShot(deviceId: string, missionId: number): Promise&lt;MissionSnapshot&gt;\n\n获取任务快照。使用P"
+      },
+      {
+        "section_id": "section-12",
+        "title": "missionManager.getLowResolutionMissionSnapShot",
+        "level": 2,
+        "line_start": 698,
+        "line_end": 749,
+        "summary": "getLowResolutionMissionSnapShot(deviceId: string, missionId: number, callback: AsyncCallback\\<Missi"
+      },
+      {
+        "section_id": "section-13",
+        "title": "missionManager.getLowResolutionMissionSnapShot",
+        "level": 2,
+        "line_start": 750,
+        "line_end": 805,
+        "summary": "getLowResolutionMissionSnapShot(deviceId: string, missionId: number): Promise\\<MissionSnapshot>\n\n获取"
+      },
+      {
+        "section_id": "section-14",
+        "title": "missionManager.lockMission",
+        "level": 2,
+        "line_start": 806,
+        "line_end": 857,
+        "summary": "lockMission(missionId: number, callback: AsyncCallback&lt;void&gt;): void\n\n锁定指定任务ID的任务。使用callback异步"
+      },
+      {
+        "section_id": "section-15",
+        "title": "missionManager.lockMission",
+        "level": 2,
+        "line_start": 858,
+        "line_end": 911,
+        "summary": "lockMission(missionId: number): Promise&lt;void&gt;\n\n锁定指定任务ID的任务。使用Promise异步回调。\n\n**需要权限**：ohos.perm"
+      },
+      {
+        "section_id": "section-16",
+        "title": "missionManager.unlockMission",
+        "level": 2,
+        "line_start": 912,
+        "line_end": 962,
+        "summary": "unlockMission(missionId: number, callback: AsyncCallback&lt;void&gt;): void\n\n解锁指定任务ID的任务。使用callback"
+      },
+      {
+        "section_id": "section-17",
+        "title": "missionManager.unlockMission",
+        "level": 2,
+        "line_start": 963,
+        "line_end": 1017,
+        "summary": "unlockMission(missionId: number): Promise&lt;void&gt;\n\n解锁指定任务ID的任务。使用Promise异步回调。\n\n**需要权限**：ohos.pe"
+      },
+      {
+        "section_id": "section-18",
+        "title": "missionManager.clearMission",
+        "level": 2,
+        "line_start": 1018,
+        "line_end": 1069,
+        "summary": "clearMission(missionId: number, callback: AsyncCallback&lt;void&gt;): void\n\n清理指定任务ID的任务，无论该任务是否被锁定。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "missionManager.clearMission",
+        "level": 2,
+        "line_start": 1070,
+        "line_end": 1123,
+        "summary": "clearMission(missionId: number): Promise&lt;void&gt;\n\n清理指定任务ID的任务，无论该任务是否被锁定。使用Promise异步回调。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-20",
+        "title": "missionManager.clearAllMissions",
+        "level": 2,
+        "line_start": 1124,
+        "line_end": 1171,
+        "summary": "clearAllMissions(callback: AsyncCallback&lt;void&gt;): void\n\n清理所有未锁定的任务。使用callback异步回调。\n\n**需要权限**：o"
+      },
+      {
+        "section_id": "section-21",
+        "title": "missionManager.clearAllMissions",
+        "level": 2,
+        "line_start": 1172,
+        "line_end": 1216,
+        "summary": "clearAllMissions(): Promise&lt;void&gt;\n\n清理所有未锁定的任务。使用Promise异步回调。\n\n**需要权限**：ohos.permission.MANAGE"
+      },
+      {
+        "section_id": "section-22",
+        "title": "missionManager.moveMissionToFront",
+        "level": 2,
+        "line_start": 1217,
+        "line_end": 1268,
+        "summary": "moveMissionToFront(missionId: number, callback: AsyncCallback&lt;void&gt;): void\n\n把指定任务ID的任务切到前台。使用"
+      },
+      {
+        "section_id": "section-23",
+        "title": "missionManager.moveMissionToFront",
+        "level": 2,
+        "line_start": 1269,
+        "line_end": 1321,
+        "summary": "moveMissionToFront(missionId: number, options: StartOptions, callback: AsyncCallback&lt;void&gt;):"
+      },
+      {
+        "section_id": "section-24",
+        "title": "missionManager.moveMissionToFront",
+        "level": 2,
+        "line_start": 1322,
+        "line_end": 1377,
+        "summary": "moveMissionToFront(missionId: number, options?: StartOptions): Promise&lt;void&gt;\n\n把指定任务ID的任务切到前台，"
+      },
+      {
+        "section_id": "section-25",
+        "title": "missionManager.moveMissionsToForeground<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1378,
+        "line_end": 1444,
+        "summary": "moveMissionsToForeground(missionIds: Array&lt;number&gt;, callback: AsyncCallback&lt;void&gt;): voi"
+      },
+      {
+        "section_id": "section-26",
+        "title": "missionManager.moveMissionsToForeground<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1445,
+        "line_end": 1512,
+        "summary": "moveMissionsToForeground(missionIds: Array&lt;number&gt;, topMission: number, callback: AsyncCallba"
+      },
+      {
+        "section_id": "section-27",
+        "title": "missionManager.moveMissionsToForeground<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1513,
+        "line_end": 1581,
+        "summary": "moveMissionsToForeground(missionIds: Array&lt;number&gt;, topMission?: number): Promise&lt;void&gt;"
+      },
+      {
+        "section_id": "section-28",
+        "title": "missionManager.moveMissionsToBackground<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1582,
+        "line_end": 1645,
+        "summary": "moveMissionsToBackground(missionIds: Array&lt;number&gt;, callback: AsyncCallback&lt;Array&lt;numbe"
+      },
+      {
+        "section_id": "section-29",
+        "title": "missionManager.moveMissionsToBackground<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1646,
+        "line_end": 1709,
+        "summary": "moveMissionsToBackground(missionIds : Array&lt;number&gt;): Promise&lt;Array&lt;number&gt;&gt;\n\n将指定"
+      }
+    ]
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "doc_id": "ts-universal-attributes-focus",
+  "title": "焦点控制",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-attributes-focus.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-attributes-focus.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yihao-lin",
+    "designer": "@piggyguy",
+    "tester": "@songyanhong",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 焦点控制，提供相关接口和功能说明。",
+  "structure": {
+    "title": "焦点控制",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "focusable",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 42,
+        "summary": "focusable(value: boolean): T\n\n设置当前组件是否可以获焦。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能"
+      },
+      {
+        "section_id": "section-2",
+        "title": "tabIndex<sup>9+</sup>",
+        "level": 2,
+        "line_start": 43,
+        "line_end": 68,
+        "summary": "tabIndex(index: number): T\n\n自定义组件tab键走焦能力。当组件未设置tabIndex时，默认按照预设的焦点移动规则进行焦点移动。\n\n>  **说明：**\n>\n>  - t"
+      },
+      {
+        "section_id": "section-3",
+        "title": "defaultFocus<sup>9+</sup>",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 94,
+        "summary": "defaultFocus(value: boolean): T\n\n设置当前组件是否为当前[层级页面](../../../ui/arkts-common-events-focus-event.md#基"
+      },
+      {
+        "section_id": "section-4",
+        "title": "groupDefaultFocus<sup>9+</sup>",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 116,
+        "summary": "groupDefaultFocus(value: boolean): T\n\n设置当前组件是否为当前组件所在容器获焦时的默认焦点。当组件未设置groupDefaultFocus时，组件默认不为当前组件"
+      },
+      {
+        "section_id": "section-5",
+        "title": "focusOnTouch<sup>9+</sup>",
+        "level": 2,
+        "line_start": 117,
+        "line_end": 138,
+        "summary": "focusOnTouch(value: boolean): T\n\n设置当前组件是否支持点击获焦能力。当组件未设置focusOnTouch时，组件默认不支持点击获焦能力。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "focusBox<sup>12+</sup>",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 160,
+        "summary": "focusBox(style: FocusBoxStyle): T\n\n设置当前组件系统焦点框样式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "focusControl<sup>9+</sup>",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 196,
+        "summary": "焦点控制模块。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Fu"
+      },
+      {
+        "section_id": "section-8",
+        "title": "FocusBoxStyle<sup>12+</sup>对象说明",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 210,
+        "summary": "设置当前组件系统焦点框样式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.A"
+      },
+      {
+        "section_id": "section-9",
+        "title": "focusScopePriority<sup>12+</sup>",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 260,
+        "summary": "focusScopePriority(scopeId: string, priority?: FocusPriority): T\n\n设置当前组件在指定容器内获焦的优先级。需要配合[focusScop"
+      },
+      {
+        "section_id": "section-10",
+        "title": "focusScopeId<sup>12+</sup>",
+        "level": 2,
+        "line_start": 261,
+        "line_end": 283,
+        "summary": "focusScopeId(id: string, isGroup?: boolean): T\n\n设置当前容器组件的id标识，以及是否为焦点组。\n\n**原子化服务API：**  从API versio"
+      },
+      {
+        "section_id": "section-11",
+        "title": "focusScopeId<sup>14+</sup>",
+        "level": 2,
+        "line_start": 284,
+        "line_end": 307,
+        "summary": "focusScopeId(id: string, isGroup?: boolean, arrowStepOut?: boolean): T\n\n设置当前容器组件的id标识，以及是否为焦点组。新增参数"
+      },
+      {
+        "section_id": "section-12",
+        "title": "tabStop<sup>14+</sup>",
+        "level": 2,
+        "line_start": 308,
+        "line_end": 335,
+        "summary": "tabStop(isTabStop: boolean): T\n\n设置当前容器组件的tabStop，可决定焦点在走焦时是否会停留在当前容器。\n\n**原子化服务API：** 从API version 1"
+      },
+      {
+        "section_id": "section-13",
+        "title": "nextFocus<sup>18+</sup>",
+        "level": 2,
+        "line_start": 336,
+        "line_end": 357,
+        "summary": "nextFocus(nextStep: Optional\\<FocusMovement>): T\n\n设置组件的自定义焦点走焦逻辑。\n\n**原子化服务API：** 从API version 18开始，"
+      },
+      {
+        "section_id": "section-14",
+        "title": "FocusMovement<sup>18+</sup>对象说明",
+        "level": 2,
+        "line_start": 358,
+        "line_end": 378,
+        "summary": "设置对应的按键对应的走焦目的组件，缺省则遵循默认走焦规则。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-15",
+        "title": "示例",
+        "level": 2,
+        "line_start": 379,
+        "line_end": 961,
+        "summary": "### 示例1（设置组件获焦和走焦的效果）\n\n该示例通过配置[defaultFocus](#defaultfocus9)可以使绑定的组件成为[层级页面](../../../ui/arkts-comm"
+      }
+    ]
+  }
+}

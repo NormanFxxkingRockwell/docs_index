@@ -1,0 +1,276 @@
+{
+  "doc_id": "js-apis-taskpool",
+  "title": "@ohos.taskpool（启动任务池）",
+  "path": "zh-cn/application-dev/reference/apis-arkts/js-apis-taskpool.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/js-apis-taskpool.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@lijiamin2025",
+    "designer": "@weng-changcheng",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 @ohos.taskpool（启动任务池），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.taskpool（启动任务池）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 33,
+        "summary": "```ts\nimport { taskpool } from '@kit.ArkTS';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "taskpool.execute",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 81,
+        "summary": "execute(func: Function, ...args: Object[]): Promise\\<Object>\n\n将待执行的函数放入taskpool的内部任务队列，函数不会立即执行，而是等"
+      },
+      {
+        "section_id": "section-3",
+        "title": "taskpool.execute<sup>13+</sup>",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 147,
+        "summary": "execute<A extends Array\\<Object>, R>(func: (...args: A) => R | Promise\\<R>, ...args: A): Promise\\<R"
+      },
+      {
+        "section_id": "section-4",
+        "title": "taskpool.execute",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 206,
+        "summary": "execute(task: Task, priority?: Priority): Promise\\<Object>\n\n将创建好的任务添加到taskpool的内部任务队列中，任务不会立即执行，而是等"
+      },
+      {
+        "section_id": "section-5",
+        "title": "taskpool.execute<sup>13+</sup>",
+        "level": 2,
+        "line_start": 207,
+        "line_end": 267,
+        "summary": "execute<A extends Array\\<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise\\<R>\n\n将"
+      },
+      {
+        "section_id": "section-6",
+        "title": "taskpool.execute<sup>10+</sup>",
+        "level": 2,
+        "line_start": 268,
+        "line_end": 328,
+        "summary": "execute(group: TaskGroup, priority?: Priority): Promise<Object[]>\n\n将创建好的任务组放入taskpool内部任务队列，任务组中的任务"
+      },
+      {
+        "section_id": "section-7",
+        "title": "taskpool.executeDelayed<sup>11+</sup>",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 387,
+        "summary": "executeDelayed(delayTime: number, task: Task, priority?: Priority): Promise\\<Object>\n\n延时执行任务。当前执行模式"
+      },
+      {
+        "section_id": "section-8",
+        "title": "taskpool.executeDelayed<sup>13+</sup>",
+        "level": 2,
+        "line_start": 388,
+        "line_end": 445,
+        "summary": "executeDelayed<A extends Array\\<Object>, R>(delayTime: number, task: GenericsTask\\<A, R>, priority?"
+      },
+      {
+        "section_id": "section-9",
+        "title": "taskpool.executePeriodically<sup>12+</sup>",
+        "level": 2,
+        "line_start": 446,
+        "line_end": 521,
+        "summary": "executePeriodically(period: number, task: Task, priority?: Priority): void\n\n周期任务每隔period时长执行一次。当前执行"
+      },
+      {
+        "section_id": "section-10",
+        "title": "taskpool.executePeriodically<sup>13+</sup>",
+        "level": 2,
+        "line_start": 522,
+        "line_end": 598,
+        "summary": "executePeriodically<A extends Array\\<Object>, R>(period: number, task: GenericsTask\\<A, R>, priorit"
+      },
+      {
+        "section_id": "section-11",
+        "title": "taskpool.cancel",
+        "level": 2,
+        "line_start": 599,
+        "line_end": 682,
+        "summary": "cancel(task: Task): void\n\n取消任务池中的任务。当任务在taskpool等待队列中，取消该任务后该任务将不再执行，并返回任务被取消的异常；当任务已经在taskpool工作线程"
+      },
+      {
+        "section_id": "section-12",
+        "title": "taskpool.cancel<sup>10+</sup>",
+        "level": 2,
+        "line_start": 683,
+        "line_end": 749,
+        "summary": "cancel(group: TaskGroup): void\n\n取消任务池中的任务组。如果任务组中的任务未全部执行结束，返回undefined作为任务组结果。\n\n从API version 20开始，"
+      },
+      {
+        "section_id": "section-13",
+        "title": "taskpool.cancel<sup>18+</sup>",
+        "level": 2,
+        "line_start": 750,
+        "line_end": 818,
+        "summary": "cancel(taskId: number): void\n\n通过任务ID取消任务池中的任务。如果任务在taskpool等待队列中，取消后任务将不再执行，并返回任务取消的异常。如果任务已在taskpo"
+      },
+      {
+        "section_id": "section-14",
+        "title": "taskpool.terminateTask<sup>12+</sup>",
+        "level": 2,
+        "line_start": 819,
+        "line_end": 866,
+        "summary": "terminateTask(longTask: LongTask): void\n\n中止任务池中的长时任务，在长时任务执行完成后调用。中止后，执行长时任务的线程可能会被回收。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-15",
+        "title": "taskpool.isConcurrent<sup>12+</sup>",
+        "level": 2,
+        "line_start": 867,
+        "line_end": 906,
+        "summary": "isConcurrent(func: Function): boolean\n\n检查函数是否为并发函数。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-16",
+        "title": "taskpool.getTaskPoolInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 907,
+        "line_end": 928,
+        "summary": "getTaskPoolInfo(): TaskPoolInfo\n\n获取任务池的线程信息和任务信息。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-17",
+        "title": "taskpool.getTask<sup>22+</sup>",
+        "level": 2,
+        "line_start": 929,
+        "line_end": 995,
+        "summary": "getTask(taskId: number, taskName?: string): Task | undefined\n\n通过taskId或taskId与taskName获取对应的Task实例。"
+      },
+      {
+        "section_id": "section-18",
+        "title": "Priority",
+        "level": 2,
+        "line_start": 996,
+        "line_end": 1044,
+        "summary": "表示所创建任务（Task）执行时的优先级。工作线程优先级跟随任务优先级更新，对应关系参考[QoS等级定义](../../napi/qos-guidelines.md#qos等级定义)。\n\n**系统能"
+      },
+      {
+        "section_id": "section-19",
+        "title": "Task",
+        "level": 2,
+        "line_start": 1045,
+        "line_end": 1952,
+        "summary": "任务可以多次执行，也可以放入任务组、串行队列或异步队列执行，还支持添加依赖关系。\n\n### 属性\n\n**系统能力：** SystemCapability.Utils.Lang\n\n| 名称"
+      },
+      {
+        "section_id": "section-20",
+        "title": "CallbackFunction<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1953,
+        "line_end": 1963,
+        "summary": "type CallbackFunction = () => void\n\n注册的回调函数类型。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n**原子化服务API：*"
+      },
+      {
+        "section_id": "section-21",
+        "title": "CallbackFunctionWithError<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1964,
+        "line_end": 1980,
+        "summary": "type CallbackFunctionWithError = (e: Error) => void\n\n注册带有错误码的回调函数类型。\n\n**系统能力：** SystemCapability.Ut"
+      },
+      {
+        "section_id": "section-22",
+        "title": "LongTask<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1981,
+        "line_end": 2005,
+        "summary": "表示长时任务。LongTask继承自[Task](#task)。\n\n长时任务不设置执行时间上限，长时间运行不会触发超时异常，但不支持将同一任务多次执行或者将该任务加入任务组（TaskGroup）。"
+      },
+      {
+        "section_id": "section-23",
+        "title": "GenericsTask<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2006,
+        "line_end": 2106,
+        "summary": "表示泛型任务。GenericsTask继承自[Task](#task)。\n\n相比创建Task，创建GenericsTask可以在编译阶段校验并发函数的传参和返回值类型。其余行为与Task相同。\n\n*"
+      },
+      {
+        "section_id": "section-24",
+        "title": "TaskGroup<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2107,
+        "line_end": 2248,
+        "summary": "表示任务组，一次执行一组任务，适用于执行一组有关联的任务。如果所有任务正常执行，异步执行完毕后返回所有任务结果的数组，数组中元素的顺序与[addTask](#addtask10-1)的顺序相同；如果"
+      },
+      {
+        "section_id": "section-25",
+        "title": "SequenceRunner <sup>11+</sup>",
+        "level": 2,
+        "line_start": 2249,
+        "line_end": 2396,
+        "summary": "表示串行队列的任务，用于执行一组需要串行执行的任务。\n\n### constructor<sup>11+</sup>\n\nconstructor(priority?: Priority)\n\nSequen"
+      },
+      {
+        "section_id": "section-26",
+        "title": "AsyncRunner<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2397,
+        "line_end": 2549,
+        "summary": "表示异步队列。可以指定任务执行的并发度和排队策略。\n\n### constructor<sup>18+</sup>\n\nconstructor(runningCapacity: number, wait"
+      },
+      {
+        "section_id": "section-27",
+        "title": "State<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2550,
+        "line_end": 2564,
+        "summary": "表示任务（Task）状态的枚举。当任务创建成功后，调用execute，任务进入taskpool等待队列，状态设置为WAITING；任务从等待队列出来进入taskpool工作线程中，任务状态更新为RU"
+      },
+      {
+        "section_id": "section-28",
+        "title": "TaskInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2565,
+        "line_end": 2582,
+        "summary": "任务的内部信息。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n### 属性\n\n**系统能力：** SystemCapability.Utils.Lang\n\n| 名"
+      },
+      {
+        "section_id": "section-29",
+        "title": "ThreadInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2583,
+        "line_end": 2600,
+        "summary": "工作线程的内部信息。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n### 属性\n\n**系统能力：** SystemCapability.Utils.Lang\n\n*"
+      },
+      {
+        "section_id": "section-30",
+        "title": "TaskPoolInfo<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2601,
+        "line_end": 2617,
+        "summary": "任务池的内部信息。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n### 属性\n\n**系统能力：** SystemCapability.Utils.Lang\n\n**"
+      },
+      {
+        "section_id": "section-31",
+        "title": "TaskResult<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2618,
+        "line_end": 2712,
+        "summary": "处于等待或执行过程中的任务进行取消操作后，在catch分支里捕获到BusinessError里的补充信息。其他场景下该信息为undefined。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-32",
+        "title": "其他说明",
+        "level": 2,
+        "line_start": 2713,
+        "line_end": 3031,
+        "summary": "### 序列化支持类型\n序列化支持类型参考[线程间通信对象概述](../../arkts-utils/serializable-overview.md)里的介绍。\n\n### 简单使用\n\n**示例一*"
+      }
+    ]
+  }
+}

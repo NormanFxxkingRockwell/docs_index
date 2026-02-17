@@ -1,0 +1,196 @@
+{
+  "doc_id": "errorcode-inputmethod-framework",
+  "title": "输入法框架错误码",
+  "path": "zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md",
+  "metadata": {
+    "kit": "IME Kit",
+    "subsystem": "MiscServices",
+    "owner": "@illybyy",
+    "designer": "@andeszhang",
+    "tester": "@murphy84",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "IME Kit MiscServices 模块的 输入法框架错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "输入法框架错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "12800001 包管理服务异常",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 30,
+        "summary": "**错误信息**\n\nBundle manager error.\n\n**错误描述**\n\n当依赖包管理接口来获取一些信息失败时，系统会报此错误码。\n\n**可能原因**\n\n在调用getInputMetho"
+      },
+      {
+        "section_id": "section-2",
+        "title": "12800002 输入法应用异常",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 51,
+        "summary": "**错误信息**\n\nInput method engine error. Possible causes:\n1. input method panel not created.\n2. the inp"
+      },
+      {
+        "section_id": "section-3",
+        "title": "12800003 客户端应用异常",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 76,
+        "summary": "**错误信息**\n\nInput method client error. Possible causes: \n1. the edit box is not focused.\n2. no edit b"
+      },
+      {
+        "section_id": "section-4",
+        "title": "12800004 不是输入法应用",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 94,
+        "summary": "**错误信息**\n\nNot an input method application.\n\n**错误描述**\n\n当其他应用调用了仅支持输入法应用调用的接口时，系统会报此错误码。\n\n**可能原因**\n\n在"
+      },
+      {
+        "section_id": "section-5",
+        "title": "12800005 配置固化失败",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 112,
+        "summary": "**错误信息**\n\nConfiguration persistence error.\n\n**错误描述**\n\n当保存配置失败时，系统会报此错误码。\n\n**可能原因**\n\n当调用切换输入法接口的时候，会"
+      },
+      {
+        "section_id": "section-6",
+        "title": "12800006 输入法控制器异常",
+        "level": 2,
+        "line_start": 113,
+        "line_end": 130,
+        "summary": "**错误信息**\n\nInput method controller error. Possible cause: create InputMethodController object failed"
+      },
+      {
+        "section_id": "section-7",
+        "title": "12800007 输入法设置器异常",
+        "level": 2,
+        "line_start": 131,
+        "line_end": 148,
+        "summary": "**错误信息**\n\nInput method setter error. Possible cause: create InputMethodSetting object failed.\n\n**错误"
+      },
+      {
+        "section_id": "section-8",
+        "title": "12800008 输入法管理服务异常",
+        "level": 2,
+        "line_start": 149,
+        "line_end": 166,
+        "summary": "**错误信息**\n\nInput method manager service error. Possible cause: a system error, such as null pointer,"
+      },
+      {
+        "section_id": "section-9",
+        "title": "12800009 输入法客户端未绑定",
+        "level": 2,
+        "line_start": 167,
+        "line_end": 184,
+        "summary": "**错误信息**\n\nInput method client detached.\n\n**错误描述**\n\n当前应用未绑定输入法应用。\n\n**可能原因**\n\n当前应用在没有绑定输入法的情况下执行了比如sh"
+      },
+      {
+        "section_id": "section-10",
+        "title": "12800010 不是系统配置的默认输入法",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 202,
+        "summary": "**错误信息**\n\nNot the preconfigured default input method.\n\n**错误描述**\n\n调用者应用不是系统配置的默认输入法。\n\n**可能原因**\n\n其他应用"
+      },
+      {
+        "section_id": "section-11",
+        "title": "12800011 当前输入框不支持预上屏",
+        "level": 2,
+        "line_start": 203,
+        "line_end": 220,
+        "summary": "**错误信息**\n\nText preview not supported.\n\n**错误描述**\n\n当前输入框不支持预上屏。\n\n**可能原因**\n\n当前输入框未支持预上屏功能。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-12",
+        "title": "12800012 软键盘类型面板未创建",
+        "level": 2,
+        "line_start": 221,
+        "line_end": 238,
+        "summary": "**错误信息**\n\nThe input method panel does not exist.\n\n**错误描述**\n\n软键盘类型输入法面板未创建。\n\n**可能原因**\n\n调用者输入法应用未创建软键"
+      },
+      {
+        "section_id": "section-13",
+        "title": "12800013 窗口管理服务错误",
+        "level": 2,
+        "line_start": 239,
+        "line_end": 256,
+        "summary": "**错误信息**\n\nWindow manager service error.\n\n**错误描述**\n\n窗口管理服务错误。\n\n**可能原因**\n\n开发者调用此接口后，系统会使用窗口管理服务模块的能力。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "12800014 输入法应用非完全访问模式",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 274,
+        "summary": "**错误信息**\n\nThe input method is in basic mode.\n\n**错误描述**\n\n输入法应用非完全访问模式。\n\n**可能原因**\n\n开发者调用要求需开启完全访问模式的接"
+      },
+      {
+        "section_id": "section-15",
+        "title": "12800015 消息接收端无法接收自定义通信数据",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 292,
+        "summary": "**错误信息**\n\nThe other side does not accept the request.\n\n**错误描述**\n\n消息接收端无法接收自定义通信数据。\n\n**可能原因**\n\n开发者调用"
+      },
+      {
+        "section_id": "section-16",
+        "title": "12800016 输入法客户端未处于编辑状态",
+        "level": 2,
+        "line_start": 293,
+        "line_end": 310,
+        "summary": "**错误信息**\n\nInput method client is not editable.\n\n**错误描述**\n\n输入法客户端未处于编辑状态。\n\n**可能原因**\n\n输入法客户端绑定后退出编辑状态"
+      },
+      {
+        "section_id": "section-17",
+        "title": "12800017 无效的面板类型或面板状态",
+        "level": 2,
+        "line_start": 311,
+        "line_end": 328,
+        "summary": "**错误信息**\n\nInvalid panel type or panel flag.\n\n**错误描述**\n\n无效的面板类型或面板状态。\n\n**可能原因**\n\n当前的输入法[面板类型](js-api"
+      },
+      {
+        "section_id": "section-18",
+        "title": "12800018 输入法未找到",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 347,
+        "summary": "**错误信息**\n\nThe input method is not found.\n\n**错误描述**\n\n输入法未找到。\n\n**可能原因**\n\n该输入法未安装。\n\n**处理步骤**\n\n开发者可以通过接"
+      },
+      {
+        "section_id": "section-19",
+        "title": "12800019 系统配置的默认输入法不支持此操作",
+        "level": 2,
+        "line_start": 348,
+        "line_end": 367,
+        "summary": "**错误信息**\n\nCurrent operation cannot be applied to the preconfigured default input method.\n\n**错误描述**"
+      },
+      {
+        "section_id": "section-20",
+        "title": "12800020 沉浸效果不正确",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 392,
+        "summary": "**错误信息**\n\nInvalid immersive effect.\n1. The gradient mode and the fluid light mode can only be used"
+      },
+      {
+        "section_id": "section-21",
+        "title": "12800021 系统配置的默认输入法不支持此操作",
+        "level": 2,
+        "line_start": 393,
+        "line_end": 419,
+        "summary": "**错误信息**\n\nThis operation is allowed only after adjustPanelRect or resize is called.\n\n**错误描述**\n\n必须先调"
+      },
+      {
+        "section_id": "section-22",
+        "title": "12800022 无效的displayId",
+        "level": 2,
+        "line_start": 420,
+        "line_end": 436,
+        "summary": "**错误信息**\n\nInvalid displayId.\n\n**错误描述**\n\n无效的displayId。\n\n**可能原因**\n\n调用[getSystemPanelCurrentInsets](js"
+      }
+    ]
+  }
+}

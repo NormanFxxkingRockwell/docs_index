@@ -1,0 +1,76 @@
+{
+  "doc_id": "js-apis-enterprise-browser",
+  "title": "@ohos.enterprise.browser（浏览器管理）",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-browser.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-browser.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.browser（浏览器管理），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.browser（浏览器管理）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { browser } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "browser.setPolicySync",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 85,
+        "summary": "setPolicySync(admin: Want, appId: string, policyName: string, policyValue: string): void\n\n为指定的浏览器设置"
+      },
+      {
+        "section_id": "section-3",
+        "title": "browser.getPoliciesSync",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 140,
+        "summary": "getPoliciesSync(admin: Want, appId: string): string\n\n通过appid获取指定浏览器设置的策略。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-4",
+        "title": "browser.setManagedBrowserPolicy<sup>15+</sup>",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 198,
+        "summary": "setManagedBrowserPolicy(admin: Want, bundleName: string, policyName: string, policyValue: string):"
+      },
+      {
+        "section_id": "section-5",
+        "title": "browser.getManagedBrowserPolicy<sup>15+</sup>",
+        "level": 2,
+        "line_start": 199,
+        "line_end": 256,
+        "summary": "getManagedBrowserPolicy(admin: Want, bundleName: string): ArrayBuffer\n\n通过应用包名获取指定浏览器的浏览器策略。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-6",
+        "title": "browser.getSelfManagedBrowserPolicyVersion<sup>15+</sup>",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 285,
+        "summary": "getSelfManagedBrowserPolicyVersion(): string\n\n获取指定浏览器的浏览器策略版本。\n\n**系统能力：** SystemCapability.Customiz"
+      },
+      {
+        "section_id": "section-7",
+        "title": "browser.getSelfManagedBrowserPolicy<sup>15+</sup>",
+        "level": 2,
+        "line_start": 286,
+        "line_end": 317,
+        "summary": "getSelfManagedBrowserPolicy(): ArrayBuffer\n\n获取当前设备浏览器策略。\n\n**系统能力：** SystemCapability.Customization."
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-screenshot-sys",
+  "title": "@ohos.screenshot (屏幕截图)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-screenshot-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-screenshot-sys.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "Window",
+    "owner": "@oh_wangxk; @logn",
+    "designer": "@hejunfei1991",
+    "tester": "@qinliwen0417",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkUI Window 模块的 @ohos.screenshot (屏幕截图)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.screenshot (屏幕截图)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { screenshot } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ScreenshotOptions",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 38,
+        "summary": "设置截取图像的信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-3",
+        "title": "HdrScreenshotOptions<sup>20+</sup>",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 52,
+        "summary": "设置截取HDR图像的信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Window.SessionManager\n\n| 名称"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Size",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 65,
+        "summary": "表示截取图像的大小。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-5",
+        "title": "screenshot.save",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 125,
+        "summary": "save(options: ScreenshotOptions, callback: AsyncCallback&lt;image.PixelMap&gt;): void\n\n获取屏幕截图，使用cal"
+      },
+      {
+        "section_id": "section-6",
+        "title": "screenshot.save",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 169,
+        "summary": "save(callback: AsyncCallback&lt;image.PixelMap&gt;): void\n\n获取屏幕截图，使用callback异步回调。\n\n**系统接口：** 此接口为系统"
+      },
+      {
+        "section_id": "section-7",
+        "title": "screenshot.save",
+        "level": 2,
+        "line_start": 170,
+        "line_end": 239,
+        "summary": "save(options?: ScreenshotOptions): Promise&lt;image.PixelMap&gt;\n\n获取屏幕截图，使用Promise异步回调。\n\n**系统接口：**"
+      },
+      {
+        "section_id": "section-8",
+        "title": "screenshot.saveHdrPicture<sup>20+</sup>",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 306,
+        "summary": "saveHdrPicture(options?: HdrScreenshotOptions): Promise&lt;Array&lt;image.PixelMap&gt;&gt;\n\n获取屏幕截图，"
+      }
+    ]
+  }
+}

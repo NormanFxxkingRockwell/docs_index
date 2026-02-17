@@ -1,0 +1,140 @@
+{
+  "doc_id": "arkts-apis-webview-NativeMediaPlayerHandler",
+  "title": "Interface (NativeMediaPlayerHandler)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-NativeMediaPlayerHandler.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-NativeMediaPlayerHandler.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zhangyao75477",
+    "designer": "@qiu-gongkai",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Interface (NativeMediaPlayerHandler)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (NativeMediaPlayerHandler)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "handleStatusChanged<sup>12+</sup>",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 36,
+        "summary": "handleStatusChanged(status: PlaybackStatus): void\n\n当播放器的播放状态发生变化时，调用该方法将播放状态通知给 ArkWeb 内核。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-2",
+        "title": "handleVolumeChanged<sup>12+</sup>",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 54,
+        "summary": "handleVolumeChanged(volume: number): void\n\n当播放器的音量发生变化时，调用该方法将音量通知给 ArkWeb 内核。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-3",
+        "title": "handleMutedChanged<sup>12+</sup>",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 72,
+        "summary": "handleMutedChanged(muted: boolean): void\n\n当播放器的静音状态发生变化时，调用该方法将静音状态通知给 ArkWeb 内核。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-4",
+        "title": "handlePlaybackRateChanged<sup>12+</sup>",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 90,
+        "summary": "handlePlaybackRateChanged(playbackRate: number): void\n\n当播放器的播放速度发生变化时，调用该方法将播放速度通知给 ArkWeb 内核。\n\n**系"
+      },
+      {
+        "section_id": "section-5",
+        "title": "handleDurationChanged<sup>12+</sup>",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 108,
+        "summary": "handleDurationChanged(duration: number): void\n\n当播放器解析出媒体的总时长时，调用该方法将媒体的总时长通知给 ArkWeb 内核。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "handleTimeUpdate<sup>12+</sup>",
+        "level": 2,
+        "line_start": 109,
+        "line_end": 126,
+        "summary": "handleTimeUpdate(currentPlayTime: number): void\n\n当媒体的播放进度发生变化时，调用该方法将媒体的播放进度通知给 ArkWeb 内核。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-7",
+        "title": "handleBufferedEndTimeChanged<sup>12+</sup>",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 144,
+        "summary": "handleBufferedEndTimeChanged(bufferedEndTime: number): void\n\n当媒体的缓冲时长发生变化时，调用该方法将媒体的缓冲时长通知给 ArkWeb"
+      },
+      {
+        "section_id": "section-8",
+        "title": "handleEnded<sup>12+</sup>",
+        "level": 2,
+        "line_start": 145,
+        "line_end": 156,
+        "summary": "handleEnded(): void\n\n当媒体播放结束时，调用该方法通知给 ArkWeb 内核。\n\n**系统能力：** SystemCapability.Web.Webview.Core\n\n**示"
+      },
+      {
+        "section_id": "section-9",
+        "title": "handleNetworkStateChanged<sup>12+</sup>",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 174,
+        "summary": "handleNetworkStateChanged(state: NetworkState): void\n\n当播放器的网络状态发生变化时，调用该方法将播放器的网络状态通知给 ArkWeb 内核。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "handleReadyStateChanged<sup>12+</sup>",
+        "level": 2,
+        "line_start": 175,
+        "line_end": 192,
+        "summary": "handleReadyStateChanged(state: ReadyState): void\n\n当播放器的缓存状态发生变化时，调用该方法将播放器的缓存状态通知给 ArkWeb 内核。\n\n**系统"
+      },
+      {
+        "section_id": "section-11",
+        "title": "handleFullscreenChanged<sup>12+</sup>",
+        "level": 2,
+        "line_start": 193,
+        "line_end": 210,
+        "summary": "handleFullscreenChanged(fullscreen: boolean): void\n\n当播放器的全屏状态发生变化时，调用该方法将播放器的全屏状态通知给 ArkWeb 内核。\n\n**"
+      },
+      {
+        "section_id": "section-12",
+        "title": "handleSeeking<sup>12+</sup>",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 222,
+        "summary": "handleSeeking(): void\n\n当播放器进入seek 状态时，调用该方法通知 ArkWeb 内核。\n\n**系统能力：** SystemCapability.Web.Webview.Co"
+      },
+      {
+        "section_id": "section-13",
+        "title": "handleSeekFinished<sup>12+</sup>",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 234,
+        "summary": "handleSeekFinished(): void\n\n当播放器 seek 完成后，调用该方法通知 ArkWeb 内核。\n\n**系统能力：** SystemCapability.Web.Webvie"
+      },
+      {
+        "section_id": "section-14",
+        "title": "handleError<sup>12+</sup>",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 253,
+        "summary": "handleError(error: MediaError, errorMessage: string): void\n\n当播放器发生错误时， 调用该方法通知 ArkWeb 内核。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-15",
+        "title": "handleVideoSizeChanged<sup>12+</sup>",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 272,
+        "summary": "handleVideoSizeChanged(width: number, height: number): void\n\n当播放器解析出视频的尺寸时， 调用该方法通知 ArkWeb 内核。\n\n**系"
+      }
+    ]
+  }
+}

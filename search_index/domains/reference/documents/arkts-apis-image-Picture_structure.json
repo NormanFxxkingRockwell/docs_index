@@ -1,0 +1,108 @@
+{
+  "doc_id": "arkts-apis-image-Picture",
+  "title": "Interface (Picture)",
+  "path": "zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-Picture.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-Picture.md",
+  "metadata": {
+    "kit": "Image Kit",
+    "subsystem": "Multimedia",
+    "owner": "@aulight02",
+    "designer": "@liyang_bryan",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Image Kit Multimedia 模块的 Interface (Picture)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (Picture)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { image } from '@kit.ImageKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getMainPixelmap<sup>13+</sup>",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 61,
+        "summary": "getMainPixelmap(): PixelMap\n\n获取主图的pixelmap。\n\n**系统能力：** SystemCapability.Multimedia.Image.Core\n\n**返回"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getHdrComposedPixelmap<sup>13+</sup>",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 108,
+        "summary": "getHdrComposedPixelmap(): Promise\\<PixelMap>\n\n合成HDR图并获取HDR图的pixelmap。使用Promise异步回调。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getHdrComposedPixelmapWithOptions<sup>23+</sup>",
+        "level": 2,
+        "line_start": 109,
+        "line_end": 171,
+        "summary": "getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise\\<PixelMap | undefined>\n\n合成H"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getGainmapPixelmap<sup>13+</sup>",
+        "level": 2,
+        "line_start": 172,
+        "line_end": 213,
+        "summary": "getGainmapPixelmap(): PixelMap | null\n\n获取增益图的pixelmap。\n\n**系统能力：** SystemCapability.Multimedia.Image"
+      },
+      {
+        "section_id": "section-6",
+        "title": "setAuxiliaryPicture<sup>13+</sup>",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 264,
+        "summary": "setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPicture): void\n\n设置辅助图。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getAuxiliaryPicture<sup>13+</sup>",
+        "level": 2,
+        "line_start": 265,
+        "line_end": 303,
+        "summary": "getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null\n\n根据类型获取辅助图。\n\n**系统能力：** Sys"
+      },
+      {
+        "section_id": "section-8",
+        "title": "setMetadata<sup>13+</sup>",
+        "level": 2,
+        "line_start": 304,
+        "line_end": 367,
+        "summary": "setMetadata(metadataType: MetadataType, metadata: Metadata): Promise\\<void>\n\n设置主图的元数据。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getMetadata<sup>13+</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 414,
+        "summary": "getMetadata(metadataType: MetadataType): Promise\\<Metadata>\n\n获取主图的元数据。使用Promise异步回调。\n\n**系统能力：** Sys"
+      },
+      {
+        "section_id": "section-10",
+        "title": "marshalling<sup>13+</sup>",
+        "level": 2,
+        "line_start": 415,
+        "line_end": 484,
+        "summary": "marshalling(sequence: rpc.MessageSequence): void\n\n将picture序列化后写入MessageSequence。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-11",
+        "title": "release<sup>13+</sup>",
+        "level": 2,
+        "line_start": 485,
+        "line_end": 514,
+        "summary": "release(): void\n\n释放picture对象。\n\n由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用该方法及时释放内存。\n\n释放时应确保该对象的所有异步方法均执行完成，"
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-net-vpnExtension",
+  "title": "@ohos.net.vpnExtension (VPN 增强管理)",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-net-vpnExtension.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-net-vpnExtension.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.vpnExtension (VPN 增强管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.vpnExtension (VPN 增强管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 29,
+        "summary": "```js\nimport { vpnExtension } from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "LinkAddress",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 40,
+        "summary": "type LinkAddress = connection.LinkAddress\n\n获取网络链接信息。\n\n**系统能力**：SystemCapability.Communication.NetMan"
+      },
+      {
+        "section_id": "section-3",
+        "title": "RouteInfo",
+        "level": 2,
+        "line_start": 41,
+        "line_end": 51,
+        "summary": "type RouteInfo = connection.RouteInfo\n\n获取网络路由信息。\n\n**系统能力**：SystemCapability.Communication.NetManager"
+      },
+      {
+        "section_id": "section-4",
+        "title": "VpnExtensionContext",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 62,
+        "summary": "type VpnExtensionContext = _VpnExtensionContext\n\nVPN扩展的上下文。它允许访问serviceExtension特定资源。\n\n**系统能力**：Syst"
+      },
+      {
+        "section_id": "section-5",
+        "title": "vpnExtension.startVpnExtensionAbility",
+        "level": 2,
+        "line_start": 63,
+        "line_end": 139,
+        "summary": "startVpnExtensionAbility(want: Want): Promise\\<void>\n\n启动新的三方VPN功能。使用Promise异步回调。\n\n**系统能力**：SystemCa"
+      },
+      {
+        "section_id": "section-6",
+        "title": "vpnExtension.stopVpnExtensionAbility",
+        "level": 2,
+        "line_start": 140,
+        "line_end": 224,
+        "summary": "stopVpnExtensionAbility(want: Want): Promise\\<void>\n\n停止同一应用程序中的服务。使用Promise异步回调。\n\n**系统能力**：SystemCa"
+      },
+      {
+        "section_id": "section-7",
+        "title": "vpnExtension.createVpnConnection",
+        "level": 2,
+        "line_start": 225,
+        "line_end": 274,
+        "summary": "createVpnConnection(context: VpnExtensionContext): VpnConnection\n\n创建一个三方VPN连接对象。\n\n> **说明：**\n>\n> 调用c"
+      },
+      {
+        "section_id": "section-8",
+        "title": "VpnConnection",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 633,
+        "summary": "VPN连接对象。在调用VpnConnection的方法前，需要先通过vpnExt.createVpnConnection创建VPN连接对象。\n\n### create\n\ncreate(config:"
+      },
+      {
+        "section_id": "section-9",
+        "title": "VpnConfig",
+        "level": 2,
+        "line_start": 634,
+        "line_end": 694,
+        "summary": "三方VPN配置参数。\n\n**系统能力**：SystemCapability.Communication.NetManager.Vpn\n\n| 名称             | 类型"
+      }
+    ]
+  }
+}

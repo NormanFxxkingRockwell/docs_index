@@ -1,0 +1,844 @@
+{
+  "doc_id": "js-apis-camera-sys",
+  "title": "@ohos.multimedia.camera (相机管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-camera-kit/js-apis-camera-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-camera-kit/js-apis-camera-sys.md",
+  "metadata": {
+    "kit": "Camera Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qano",
+    "designer": "@leo_ysl",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Camera Kit Multimedia 模块的 @ohos.multimedia.camera (相机管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimedia.camera (相机管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { camera } from '@kit.CameraKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "SceneMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 44,
+        "summary": "枚举，相机支持模式。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称                     | 值"
+      },
+      {
+        "section_id": "section-3",
+        "title": "SlowMotionStatus<sup>12+</sup>",
+        "level": 2,
+        "line_start": 45,
+        "line_end": 58,
+        "summary": "枚举，慢动作状态。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称             | 值   | 说明"
+      },
+      {
+        "section_id": "section-4",
+        "title": "LcdFlashStatus<sup>12+</sup>",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 71,
+        "summary": "lcd闪光灯信息项。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Photo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 83,
+        "summary": "全质量图对象。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ExposureMode",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 95,
+        "summary": "枚举，曝光模式。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-7",
+        "title": "PolicyType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 96,
+        "line_end": 107,
+        "summary": "枚举，策略类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-8",
+        "title": "LightPaintingType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 122,
+        "summary": "枚举，流光快门模式类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-9",
+        "title": "CameraManager",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 582,
+        "summary": "相机管理器类，使用前需要通过[getCameraManager](arkts-apis-camera-f.md#cameragetcameramanager)获取相机管理实例。\n\n### creat"
+      },
+      {
+        "section_id": "section-10",
+        "title": "CameraOutputCapability",
+        "level": 2,
+        "line_start": 583,
+        "line_end": 594,
+        "summary": "相机输出能力项。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-11",
+        "title": "CameraFormat",
+        "level": 2,
+        "line_start": 595,
+        "line_end": 609,
+        "summary": "枚举，输出格式。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-12",
+        "title": "CameraInput",
+        "level": 2,
+        "line_start": 610,
+        "line_end": 615,
+        "summary": "相机设备输入对象。\n\n会话中[Session](arkts-apis-camera-Session.md)使用的相机信息。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "DepthDataAccuracy<sup>13+</sup>",
+        "level": 2,
+        "line_start": 616,
+        "line_end": 628,
+        "summary": "深度数据的精度。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-14",
+        "title": "DepthProfile<sup>13+</sup>",
+        "level": 2,
+        "line_start": 629,
+        "line_end": 640,
+        "summary": "深度数据配置信息项，继承[Profile](arkts-apis-camera-i.md#profile)。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-15",
+        "title": "DepthDataQualityLevel<sup>13+</sup>",
+        "level": 2,
+        "line_start": 641,
+        "line_end": 654,
+        "summary": "深度数据的质量。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-16",
+        "title": "DepthData<sup>13+</sup>",
+        "level": 2,
+        "line_start": 655,
+        "line_end": 703,
+        "summary": "深度数据对象。\n\n### 属性\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-17",
+        "title": "DepthDataOutput<sup>13+</sup>",
+        "level": 2,
+        "line_start": 704,
+        "line_end": 951,
+        "summary": "深度信息输出类。继承[CameraOutput](arkts-apis-camera-CameraOutput.md)。\n\n### start<sup>13+</sup>\n\nstart(): Pro"
+      },
+      {
+        "section_id": "section-18",
+        "title": "DepthFusionQuery<sup>14+</sup>",
+        "level": 2,
+        "line_start": 952,
+        "line_end": 1034,
+        "summary": "深度融合查询类。\n\n### isDepthFusionSupported<sup>14+</sup>\n\nisDepthFusionSupported(): boolean\n\n查询是否支持深度融合，通"
+      },
+      {
+        "section_id": "section-19",
+        "title": "DepthFusion<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1035,
+        "line_end": 1123,
+        "summary": "深度融合类。继承[DepthFusionQuery](js-apis-camera-sys.md#depthfusionquery14)。\n\n### isDepthFusionEnabled<sup"
+      },
+      {
+        "section_id": "section-20",
+        "title": "PrelaunchConfig",
+        "level": 2,
+        "line_start": 1124,
+        "line_end": 1140,
+        "summary": "相机预启动配置参数。\n\n当前sensor级别预热，待扩展流预热参数。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Came"
+      },
+      {
+        "section_id": "section-21",
+        "title": "RestoreParamType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1141,
+        "line_end": 1154,
+        "summary": "预保存参数类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-22",
+        "title": "SettingParam<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1155,
+        "line_end": 1168,
+        "summary": "用于预热出图的效果参数。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-23",
+        "title": "PreviewOutput",
+        "level": 2,
+        "line_start": 1169,
+        "line_end": 1472,
+        "summary": "预览输出类。继承[CameraOutput](arkts-apis-camera-CameraOutput.md)。\n\n### addDeferredSurface\n\naddDeferredSurf"
+      },
+      {
+        "section_id": "section-24",
+        "title": "DeferredDeliveryImageType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1473,
+        "line_end": 1486,
+        "summary": "枚举，分段式能力类型。即将拍照/录像分为两个阶段，一阶段以较快速度输出图片/视频提供给用户，二阶段完成优化处理，重新输出高质量图片/视频。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-25",
+        "title": "DeferredPhotoProxy<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1487,
+        "line_end": 1558,
+        "summary": "类对象，缩略图代理类。\n\n### getThumbnail<sup>11+</sup>\n\ngetThumbnail(): Promise<image.PixelMap>\n\n通过缩略图代理类提供的方法"
+      },
+      {
+        "section_id": "section-26",
+        "title": "PhotoOutput",
+        "level": 2,
+        "line_start": 1559,
+        "line_end": 2160,
+        "summary": "拍照会话中使用的输出信息，继承[CameraOutput](arkts-apis-camera-CameraOutput.md)。\n\n### burstCapture<sup>12+</sup>"
+      },
+      {
+        "section_id": "section-27",
+        "title": "MetadataOutput",
+        "level": 2,
+        "line_start": 2161,
+        "line_end": 2164,
+        "summary": "metadata流。继承[CameraOutput](arkts-apis-camera-CameraOutput.md)。"
+      },
+      {
+        "section_id": "section-28",
+        "title": "MetadataObjectType",
+        "level": 2,
+        "line_start": 2165,
+        "line_end": 2179,
+        "summary": "枚举，metadata元数据检测类型。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-29",
+        "title": "Emotion<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2180,
+        "line_end": 2191,
+        "summary": "枚举，人脸检测信息中的情绪类型。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称                       | 值"
+      },
+      {
+        "section_id": "section-30",
+        "title": "MetadataObject",
+        "level": 2,
+        "line_start": 2192,
+        "line_end": 2202,
+        "summary": "相机检测元数据信息的基础类型，[CameraInput](#camerainput)相机信息中的数据来源，通过metadataOutput.[on('metadataObjectsAvailable"
+      },
+      {
+        "section_id": "section-31",
+        "title": "MetadataFaceObject<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2203,
+        "line_end": 2218,
+        "summary": "相机检测到的人脸元数据信息，继承自[MetadataObject](#metadataobject)，[CameraInput](#camerainput)相机信息中的数据来源，通过metadata"
+      },
+      {
+        "section_id": "section-32",
+        "title": "MetadataHumanBodyObject<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2219,
+        "line_end": 2224,
+        "summary": "相机检测到的人体元数据信息，继承自[MetadataObject](#metadataobject)，[CameraInput](#camerainput)相机信息中的数据来源，通过metadata"
+      },
+      {
+        "section_id": "section-33",
+        "title": "MetadataCatFaceObject<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2225,
+        "line_end": 2235,
+        "summary": "相机检测到的猫脸元数据信息，继承自[MetadataObject](#metadataobject)，[CameraInput](#camerainput)相机信息中的数据来源，通过metadata"
+      },
+      {
+        "section_id": "section-34",
+        "title": "MetadataCatBodyObject<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2236,
+        "line_end": 2241,
+        "summary": "相机检测到的猫的身体元数据信息，继承自[MetadataObject](#metadataobject)，[CameraInput](#camerainput)相机信息中的数据来源，通过metada"
+      },
+      {
+        "section_id": "section-35",
+        "title": "MetadataDogFaceObject<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2242,
+        "line_end": 2252,
+        "summary": "相机检测到的狗脸元数据信息，继承自[MetadataObject](#metadataobject)，[CameraInput](#camerainput)相机信息中的数据来源，通过metadata"
+      },
+      {
+        "section_id": "section-36",
+        "title": "MetadataDogBodyObject<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2253,
+        "line_end": 2258,
+        "summary": "相机检测到的狗的身体元数据信息，继承自[MetadataObject](#metadataobject)，[CameraInput](#camerainput)相机信息中的数据来源，通过metada"
+      },
+      {
+        "section_id": "section-37",
+        "title": "MetadataSalientDetectionObject<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2259,
+        "line_end": 2264,
+        "summary": "相机检测到的显著性元数据信息，继承自[MetadataObject](#metadataobject)，[CameraInput](#camerainput)相机信息中的数据来源，通过metadat"
+      },
+      {
+        "section_id": "section-38",
+        "title": "MetadataBarcodeObject<sup>14+</sup>",
+        "level": 2,
+        "line_start": 2265,
+        "line_end": 2270,
+        "summary": "相机检测到的二维码元数据信息，继承自[MetadataObject](#metadataobject)，[CameraInput](#camerainput)相机信息中的数据来源，通过metadat"
+      },
+      {
+        "section_id": "section-39",
+        "title": "PortraitEffect",
+        "level": 2,
+        "line_start": 2271,
+        "line_end": 2287,
+        "summary": "人像效果类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称             |"
+      },
+      {
+        "section_id": "section-40",
+        "title": "BeautyQuery<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2288,
+        "line_end": 2376,
+        "summary": "提供了获取和设置美颜效果的方法。\n\n### getSupportedBeautyTypes<sup>11+</sup>\n\ngetSupportedBeautyTypes(): Array\\<Beau"
+      },
+      {
+        "section_id": "section-41",
+        "title": "BeautyType",
+        "level": 2,
+        "line_start": 2377,
+        "line_end": 2391,
+        "summary": "美颜类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称             | 值"
+      },
+      {
+        "section_id": "section-42",
+        "title": "ManualExposureQuery<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2392,
+        "line_end": 2430,
+        "summary": "此接口提供了查询设备对手动曝光范围支持的功能。\n\n### getSupportedExposureRange<sup>11+</sup>\n\ngetSupportedExposureRange():"
+      },
+      {
+        "section_id": "section-43",
+        "title": "ManualExposure<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2431,
+        "line_end": 2510,
+        "summary": "ManualExposure extends [ManualExposureQuery](#manualexposurequery12)\n\n提供了获取和设置曝光值的功能。\n\n### getExpos"
+      },
+      {
+        "section_id": "section-44",
+        "title": "TripodStatus<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2511,
+        "line_end": 2524,
+        "summary": "枚举，脚架状态枚举。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称       | 值   | 说明"
+      },
+      {
+        "section_id": "section-45",
+        "title": "SceneFeatureType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2525,
+        "line_end": 2536,
+        "summary": "枚举，场景特性枚举。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称                            | 值"
+      },
+      {
+        "section_id": "section-46",
+        "title": "SceneFeatureDetectionResult<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2537,
+        "line_end": 2549,
+        "summary": "场景检测结果信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称     | 类型"
+      },
+      {
+        "section_id": "section-47",
+        "title": "TripodDetectionResult<sup>13+</sup>",
+        "level": 2,
+        "line_start": 2550,
+        "line_end": 2563,
+        "summary": "TripodDetectionResult extends [SceneFeatureDetectionResult](#scenefeaturedetectionresult12)\n\n脚架检测信息"
+      },
+      {
+        "section_id": "section-48",
+        "title": "SceneDetection<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2564,
+        "line_end": 2664,
+        "summary": "场景检测能力。\n\n### isSceneFeatureSupported<sup>12+</sup>\n\nisSceneFeatureSupported(type: SceneFeatureType)"
+      },
+      {
+        "section_id": "section-49",
+        "title": "ZoomPointInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2665,
+        "line_end": 2677,
+        "summary": "等效焦距信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称     | 类型"
+      },
+      {
+        "section_id": "section-50",
+        "title": "ZoomQuery<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2678,
+        "line_end": 2725,
+        "summary": "提供获取当前模式的等效焦距信息列表的方法。\n\n### getZoomPointInfos<sup>12+</sup>\n\ngetZoomPointInfos(): Array\\<ZoomPointIn"
+      },
+      {
+        "section_id": "section-51",
+        "title": "Zoom<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2726,
+        "line_end": 2801,
+        "summary": "Zoom extend [ZoomQuery](#zoomquery12)\n\n提供了处理设备变焦效果的相关方法，包括获取当前的变焦比，设置变焦比率，以及通过平滑方法设置目标变焦比，以及一些开启和结束"
+      },
+      {
+        "section_id": "section-52",
+        "title": "ZoomRange<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2802,
+        "line_end": 2814,
+        "summary": "获取支持的变焦范围。变焦范围为[min, max)，即包括最小值，不包括最大值。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedi"
+      },
+      {
+        "section_id": "section-53",
+        "title": "Beauty<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2815,
+        "line_end": 2911,
+        "summary": "Beauty extends [BeautyQuery](#beautyquery12)\n\n提供了获取和设置美颜效果的方法。\n\n### setBeauty<sup>11+</sup>\n\nsetBea"
+      },
+      {
+        "section_id": "section-54",
+        "title": "ColorEffectQuery<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2912,
+        "line_end": 2949,
+        "summary": "提供了一个查询设备支持的颜色效果类型的方法。\n\n### getSupportedColorEffects<sup>11+</sup>\n\ngetSupportedColorEffects(): Arr"
+      },
+      {
+        "section_id": "section-55",
+        "title": "ColorEffect<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2950,
+        "line_end": 3022,
+        "summary": "ColorEffect extends [ColorEffectQuery](#coloreffectquery12)\n\n提供了获取和设置镜头色彩效果的相关功能。\n\n### setColorEffe"
+      },
+      {
+        "section_id": "section-56",
+        "title": "ColorEffectType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3023,
+        "line_end": 3037,
+        "summary": "枚举，色彩效果类型。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-57",
+        "title": "PortraitQuery<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3038,
+        "line_end": 3075,
+        "summary": "人像查询类，用于获取人像参数。\n\n### getSupportedPortraitEffects\n\ngetSupportedPortraitEffects(): Array\\<PortraitEff"
+      },
+      {
+        "section_id": "section-58",
+        "title": "Portrait<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3076,
+        "line_end": 3158,
+        "summary": "Portrait继承自[PortraitQuery](#portraitquery12)。\n\n人像类，用于设置人像参数。\n\n### setPortraitEffect\n\nsetPortraitEff"
+      },
+      {
+        "section_id": "section-59",
+        "title": "PhysicalAperture<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3159,
+        "line_end": 3171,
+        "summary": "物理光圈信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称       | 类型"
+      },
+      {
+        "section_id": "section-60",
+        "title": "Aperture<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3172,
+        "line_end": 3377,
+        "summary": "光圈类，用于设置光圈参数。\n\n### getSupportedVirtualApertures<sup>11+</sup>\n\ngetSupportedVirtualApertures(): Arra"
+      },
+      {
+        "section_id": "section-61",
+        "title": "CaptureSession<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 3378,
+        "line_end": 3571,
+        "summary": "拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-apis-camera-CameraInput.md)、[CameraOutput](arkts-apis-cam"
+      },
+      {
+        "section_id": "section-62",
+        "title": "PhotoSessionForSys<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3572,
+        "line_end": 3581,
+        "summary": "PhotoSessionForSys extends PhotoSession, Beauty, ColorEffect, ColorManagement, Macro, SceneDetectio"
+      },
+      {
+        "section_id": "section-63",
+        "title": "PhotoSession<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3582,
+        "line_end": 3743,
+        "summary": "PhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorManagement\n\n普通拍照模式会话类，继承自[Sess"
+      },
+      {
+        "section_id": "section-64",
+        "title": "FocusTrackingMode<sup>15+</sup>",
+        "level": 2,
+        "line_start": 3744,
+        "line_end": 3753,
+        "summary": "枚举，对焦追踪模式。\n\n**系统能力**： SystemCapability.Multimedia.Camera.Core\n\n| 名称 | 值   | 说明   |\n| ---- | ---- |"
+      },
+      {
+        "section_id": "section-65",
+        "title": "FocusTrackingInfo<sup>15+</sup>",
+        "level": 2,
+        "line_start": 3754,
+        "line_end": 3764,
+        "summary": "相机对焦追踪信息，通过VideoSessionForSys.[on('focusTrackingInfoAvailable')](#onfocustrackinginfoavailable15)接口"
+      },
+      {
+        "section_id": "section-66",
+        "title": "LightStatus<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3765,
+        "line_end": 3777,
+        "summary": "枚举，相机光线状态（通过VideoSessionForSys.[on('lightStatusChange')](#onlightstatuschange18)接口获取）。\n\n**系统接口：** 此"
+      },
+      {
+        "section_id": "section-67",
+        "title": "VideoSessionForSys<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3778,
+        "line_end": 3787,
+        "summary": "VideoSessionForSys extends VideoSession, Beauty, ColorEffect, ColorManagement, Aperture, ColorReser"
+      },
+      {
+        "section_id": "section-68",
+        "title": "VideoSession<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3788,
+        "line_end": 4042,
+        "summary": "VideoSession extends Session, Flash, AutoExposure, Focus, Zoom, Stabilization, ColorManagement\n\n普通录"
+      },
+      {
+        "section_id": "section-69",
+        "title": "PortraitPhotoSession<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4043,
+        "line_end": 4301,
+        "summary": "PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorM"
+      },
+      {
+        "section_id": "section-70",
+        "title": "NightPhotoSession<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4302,
+        "line_end": 4561,
+        "summary": "NightPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ColorManagement,"
+      },
+      {
+        "section_id": "section-71",
+        "title": "HighResolutionPhotoSession<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4562,
+        "line_end": 4718,
+        "summary": "HighResolutionPhotoSession extends Session, AutoExposure, Focus\n\n高像素拍照模式会话类，继承自[Session](arkts-apis"
+      },
+      {
+        "section_id": "section-72",
+        "title": "SketchStatusData<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4719,
+        "line_end": 4732,
+        "summary": "画中画状态返回数据。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称          |"
+      },
+      {
+        "section_id": "section-73",
+        "title": "SlowMotionVideoSession<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4733,
+        "line_end": 5128,
+        "summary": "SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect\n\n慢动作录像模式会话类，继"
+      },
+      {
+        "section_id": "section-74",
+        "title": "PanoramaPhotoSession<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5129,
+        "line_end": 5250,
+        "summary": "PanoramaPhotoSession extends Session, Focus, AutoExposure, WhiteBalance, ColorEffect\n\n全景拍照模式会话类，继承自"
+      },
+      {
+        "section_id": "section-75",
+        "title": "IsoInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5251,
+        "line_end": 5264,
+        "summary": "ISO参数信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称 | 类型    | 只读"
+      },
+      {
+        "section_id": "section-76",
+        "title": "ExposureInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5265,
+        "line_end": 5278,
+        "summary": "曝光参数信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-77",
+        "title": "ApertureInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5279,
+        "line_end": 5292,
+        "summary": "光圈参数信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称      | 类型"
+      },
+      {
+        "section_id": "section-78",
+        "title": "LuminationInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5293,
+        "line_end": 5304,
+        "summary": "光照参数信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称        | 类型"
+      },
+      {
+        "section_id": "section-79",
+        "title": "CameraFormat",
+        "level": 2,
+        "line_start": 5305,
+        "line_end": 5314,
+        "summary": "枚举，输出格式。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称                     | 值        |"
+      },
+      {
+        "section_id": "section-80",
+        "title": "ExposureMeteringMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5315,
+        "line_end": 5328,
+        "summary": "枚举，测光模式。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-81",
+        "title": "AutoExposureQuery<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5329,
+        "line_end": 5383,
+        "summary": "提供了查询设备是否支持特定曝光模式，曝光补偿的范围，以及是否支持特定的曝光测光模式的方法。\n\n### isExposureMeteringModeSupported<sup>12+</sup>\n\ni"
+      },
+      {
+        "section_id": "section-82",
+        "title": "AutoExposure",
+        "level": 2,
+        "line_start": 5384,
+        "line_end": 5474,
+        "summary": "AutoExposure extends [AutoExposureQuery](#autoexposurequery12)\n\n提供了处理设备自动曝光的相关功能，包括获取和设置曝光模式、测量点，查询"
+      },
+      {
+        "section_id": "section-83",
+        "title": "FocusRangeType<sup>15+</sup>",
+        "level": 2,
+        "line_start": 5475,
+        "line_end": 5485,
+        "summary": "枚举，对焦范围类型。\n\n**系统能力**： SystemCapability.Multimedia.Camera.Core\n\n| 名称 | 值   | 说明       |\n| ---- | ---"
+      },
+      {
+        "section_id": "section-84",
+        "title": "FocusDrivenType<sup>15+</sup>",
+        "level": 2,
+        "line_start": 5486,
+        "line_end": 5496,
+        "summary": "枚举，对焦驱动类型。\n\n**系统能力**： SystemCapability.Multimedia.Camera.Core\n\n| 名称 | 值   | 说明       |\n| ---- | ---"
+      },
+      {
+        "section_id": "section-85",
+        "title": "FocusQuery<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5497,
+        "line_end": 5643,
+        "summary": "提供了查询是否支持对焦辅助的方法。\n\n### isFocusAssistSupported<sup>12+</sup>\n\nisFocusAssistSupported(): boolean\n\n检测是"
+      },
+      {
+        "section_id": "section-86",
+        "title": "Focus",
+        "level": 2,
+        "line_start": 5644,
+        "line_end": 5907,
+        "summary": "Focus extends [FocusQuery](#focusquery12)\n\n提供了获取和设置相机对焦模式和对焦点位置的方法。\n\n### setFocusAssist<sup>12+</su"
+      },
+      {
+        "section_id": "section-87",
+        "title": "ManualFocus<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5908,
+        "line_end": 5997,
+        "summary": "手动对焦类，对设备手动设置对焦操作。\n\n### setFocusDistance<sup>12+</sup>\n\nsetFocusDistance(distance: number): void\n\n手"
+      },
+      {
+        "section_id": "section-88",
+        "title": "ManualIsoQuery<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5998,
+        "line_end": 6087,
+        "summary": "提供了查询设备是否支持手动设置ISO和获取设备支持的ISO范围的方法。\n\n### isManualIsoSupported<sup>12+</sup>\n\nisManualIsoSupported()"
+      },
+      {
+        "section_id": "section-89",
+        "title": "ManualIso<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6088,
+        "line_end": 6182,
+        "summary": "ManualIso extends [ManualIsoQuery](#manualisoquery12)\n\n提供了获取和设置设备手动ISO（感光度）的功能。\n\n### setIso<sup>12+"
+      },
+      {
+        "section_id": "section-90",
+        "title": "ProfessionalPhotoSession<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6183,
+        "line_end": 6716,
+        "summary": "ProfessionalPhotoSession extends Session, AutoExposure, ManualExposure, Focus, ManualFocus, WhiteBa"
+      },
+      {
+        "section_id": "section-91",
+        "title": "ProfessionalVideoSession<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6717,
+        "line_end": 7250,
+        "summary": "ProfessionalVideoSession extends Session, AutoExposure, ManualExposure, Focus, ManualFocus, WhiteBa"
+      },
+      {
+        "section_id": "section-92",
+        "title": "MacroPhotoSession<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7251,
+        "line_end": 7480,
+        "summary": "MacroPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ManualFocus\n\n微距拍照"
+      },
+      {
+        "section_id": "section-93",
+        "title": "MacroVideoSession<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7481,
+        "line_end": 7710,
+        "summary": "MacroVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ManualFocus\n\n微距录像"
+      },
+      {
+        "section_id": "section-94",
+        "title": "FlashQuery<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7711,
+        "line_end": 7747,
+        "summary": "此接口提供了查阅设备闪光灯信息相应的方法，包括是否支持lcd闪光灯。\n\n### isLcdFlashSupported<sup>12+</sup>\n\nisLcdFlashSupported(): b"
+      },
+      {
+        "section_id": "section-95",
+        "title": "Flash<sup>11+</sup>",
+        "level": 2,
+        "line_start": 7748,
+        "line_end": 7794,
+        "summary": "Flash extends [FlashQuery](arkts-apis-camera-FlashQuery.md)\n\n闪光灯类，对设备闪光灯操作。\n\n### enableLcdFlash<sup"
+      },
+      {
+        "section_id": "section-96",
+        "title": "TimeLapseRecordState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7795,
+        "line_end": 7807,
+        "summary": "枚举，延时摄影录制状态。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-97",
+        "title": "TimeLapsePreviewType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7808,
+        "line_end": 7820,
+        "summary": "枚举，延时摄影预览类型，影响拍摄算法。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.Camera.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-98",
+        "title": "TryAEInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7821,
+        "line_end": 7835,
+        "summary": "TryAE参数信息，TryAE是指延时摄影时硬件会根据环境光照变化上报状态的操作。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Multimed"
+      },
+      {
+        "section_id": "section-99",
+        "title": "TimeLapsePhotoSession<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7836,
+        "line_end": 8705,
+        "summary": "TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso,"
+      },
+      {
+        "section_id": "section-100",
+        "title": "LightPaintingPhotoSession<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8706,
+        "line_end": 9043,
+        "summary": "LightPaintingPhotoSession extends Session, Flash, Focus, Zoom, ColorEffect\n\n流光快门拍照模式会话类，继承自[Session"
+      },
+      {
+        "section_id": "section-101",
+        "title": "ColorReservationType<sup>15+</sup>",
+        "level": 2,
+        "line_start": 9044,
+        "line_end": 9054,
+        "summary": "枚举，色彩保留类型。\n\n**系统能力**： SystemCapability.Multimedia.Camera.Core\n\n| 名称     | 值   | 说明             |\n|"
+      },
+      {
+        "section_id": "section-102",
+        "title": "ColorReservationQuery<sup>15+</sup>",
+        "level": 2,
+        "line_start": 9055,
+        "line_end": 9101,
+        "summary": "提供了查询设备支持的色彩保留类型的功能。\n\n### getSupportedColorReservationTypes<sup>15+</sup>\n\ngetSupportedColorReserva"
+      },
+      {
+        "section_id": "section-103",
+        "title": "ColorReservation<sup>15+</sup>",
+        "level": 2,
+        "line_start": 9102,
+        "line_end": 9194,
+        "summary": "ColorReservation extends [ColorReservationQuery](#colorreservationquery15)\n\n提供了获取和设置相机色彩保留类型的方法。\n\n#"
+      }
+    ]
+  }
+}

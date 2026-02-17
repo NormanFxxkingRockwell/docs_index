@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-file-hash",
+  "title": "@ohos.file.hash (文件哈希处理)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-hash.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-hash.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@wangke25; @gsl_1234; @wuchengjun5",
+    "designer": "@gsl_1234; @wangke25",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.file.hash (文件哈希处理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.hash (文件哈希处理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { hash } from '@kit.CoreFileKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 38,
+        "summary": "使用该功能模块对文件/目录进行操作前，需要先获取其应用沙箱路径，获取方式及其接口用法请参考：\n\n  ```ts\n  import { UIAbility } from '@kit.AbilityKi"
+      },
+      {
+        "section_id": "section-3",
+        "title": "hash.hash",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 82,
+        "summary": "hash(path: string, algorithm: string): Promise&lt;string&gt;\n\n计算文件的哈希值，使用Promise异步回调。\n\n**原子化服务API**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "hash.hash",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 122,
+        "summary": "hash(path: string, algorithm: string, callback: AsyncCallback&lt;string&gt;): void\n\n计算文件的哈希值，使用call"
+      },
+      {
+        "section_id": "section-5",
+        "title": "hash.createHash<sup>12+</sup>",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 177,
+        "summary": "createHash(algorithm: string): HashStream\n\n创建并返回 HashStream 对象，该对象可用于使用给定的 algorithm 生成哈希摘要。\n\n**系统能"
+      },
+      {
+        "section_id": "section-6",
+        "title": "HashStream<sup>12+</sup>",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 250,
+        "summary": "HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createHash](#hashcreatehash12) 接口获得。\n\n### update<sup>12+</sup>\n\nup"
+      }
+    ]
+  }
+}

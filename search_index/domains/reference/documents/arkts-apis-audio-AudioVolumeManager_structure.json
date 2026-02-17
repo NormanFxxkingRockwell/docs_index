@@ -1,0 +1,156 @@
+{
+  "doc_id": "arkts-apis-audio-AudioVolumeManager",
+  "title": "Interface (AudioVolumeManager)",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioVolumeManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioVolumeManager.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@songshenke",
+    "designer": "@caixuejiang; @hao-liangfei; @zhanganxiang",
+    "tester": "@Filger",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 Interface (AudioVolumeManager)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AudioVolumeManager)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { audio } from '@kit.AudioKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getVolumeGroupManager<sup>9+</sup>",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 55,
+        "summary": "getVolumeGroupManager(groupId: number, callback: AsyncCallback<AudioVolumeGroupManager\\>\\): void\n\n获"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getVolumeGroupManager<sup>9+</sup>",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 90,
+        "summary": "getVolumeGroupManager(groupId: number\\): Promise<AudioVolumeGroupManager\\>\n\n获取音频组音量管理器实例。使用Promise异"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getVolumeGroupManagerSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 135,
+        "summary": "getVolumeGroupManagerSync(groupId: number\\): AudioVolumeGroupManager\n\n获取音频组音量管理器实例。同步返回结果。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getAppVolumePercentage<sup>19+</sup>",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 161,
+        "summary": "getAppVolumePercentage(): Promise<number\\>\n\n获取应用的音量（范围为[0, 100]）。使用Promise异步回调。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-6",
+        "title": "setAppVolumePercentage<sup>19+</sup>",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 202,
+        "summary": "setAppVolumePercentage(volume: number\\): Promise<void\\>\n\n设置应用的音量（范围为[0, 100]）。使用Promise异步回调。\n\n**原子化"
+      },
+      {
+        "section_id": "section-7",
+        "title": "on('volumeChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 203,
+        "line_end": 239,
+        "summary": "on(type: 'volumeChange', callback: Callback\\<VolumeEvent>): void\n\n监听系统音量变化事件（当系统音量发生变化时触发）。使用callba"
+      },
+      {
+        "section_id": "section-8",
+        "title": "off('volumeChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 284,
+        "summary": "off(type: 'volumeChange', callback?: Callback\\<VolumeEvent>): void\n\n取消监听系统音量变化事件。使用callback异步回调。\n\n>"
+      },
+      {
+        "section_id": "section-9",
+        "title": "on('appVolumeChange')<sup>19+</sup>",
+        "level": 2,
+        "line_start": 285,
+        "line_end": 317,
+        "summary": "on(type: 'appVolumeChange', callback: Callback\\<VolumeEvent>): void\n\n监听当前应用的应用级音量变化事件（当应用级音量发生变化时触发"
+      },
+      {
+        "section_id": "section-10",
+        "title": "off('appVolumeChange')<sup>19+</sup>",
+        "level": 2,
+        "line_start": 318,
+        "line_end": 358,
+        "summary": "off(type: 'appVolumeChange', callback?: Callback\\<VolumeEvent>): void\n\n取消监听当前应用的应用级音量变化事件。使用callbac"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getVolumeByStream<sup>20+</sup>",
+        "level": 2,
+        "line_start": 359,
+        "line_end": 404,
+        "summary": "getVolumeByStream(streamUsage: StreamUsage): number\n\n获取指定音频流的音量。\n\n**原子化服务API：** 从API version 23开始，该"
+      },
+      {
+        "section_id": "section-12",
+        "title": "getMinVolumeByStream<sup>20+</sup>",
+        "level": 2,
+        "line_start": 405,
+        "line_end": 450,
+        "summary": "getMinVolumeByStream(streamUsage: StreamUsage): number\n\n获取指定音频流的最小音量。\n\n**原子化服务API：** 从API version 2"
+      },
+      {
+        "section_id": "section-13",
+        "title": "getMaxVolumeByStream<sup>20+</sup>",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 496,
+        "summary": "getMaxVolumeByStream(streamUsage: StreamUsage): number\n\n获取指定音频流的最大音量。\n\n**原子化服务API：** 从API version 2"
+      },
+      {
+        "section_id": "section-14",
+        "title": "isSystemMutedForStream<sup>20+</sup>",
+        "level": 2,
+        "line_start": 497,
+        "line_end": 540,
+        "summary": "isSystemMutedForStream(streamUsage: StreamUsage): boolean\n\n检查指定音频流是否静音。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-15",
+        "title": "getVolumeInUnitOfDbByStream<sup>20+</sup>",
+        "level": 2,
+        "line_start": 541,
+        "line_end": 587,
+        "summary": "getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: number, device: DeviceType): num"
+      },
+      {
+        "section_id": "section-16",
+        "title": "on('streamVolumeChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 588,
+        "line_end": 621,
+        "summary": "on(type: 'streamVolumeChange', streamUsage: StreamUsage, callback: Callback\\<StreamVolumeEvent>):"
+      },
+      {
+        "section_id": "section-17",
+        "title": "off('streamVolumeChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 622,
+        "line_end": 654,
+        "summary": "off(type: 'streamVolumeChange', callback?: Callback\\<StreamVolumeEvent>): void\n\n取消监听系统音频流音量变化事件（当系统"
+      }
+    ]
+  }
+}

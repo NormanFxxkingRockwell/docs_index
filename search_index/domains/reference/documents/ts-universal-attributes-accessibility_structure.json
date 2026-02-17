@@ -1,0 +1,196 @@
+{
+  "doc_id": "ts-universal-attributes-accessibility",
+  "title": "无障碍属性",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zhanghangkai10241",
+    "designer": "@dutie123",
+    "tester": "@fredyuan0912",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 无障碍属性，提供相关接口和功能说明。",
+  "structure": {
+    "title": "无障碍属性",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "accessibilityGroup",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 42,
+        "summary": "accessibilityGroup(value: boolean):T\n\n设置是否启用无障碍分组。启用无障碍分组后，组件及其子组件作为一整个可选组件，无障碍服务不再关注子组件内容。\n\n若组件启用无"
+      },
+      {
+        "section_id": "section-2",
+        "title": "accessibilityGroup<sup>14+</sup>",
+        "level": 2,
+        "line_start": 43,
+        "line_end": 79,
+        "summary": "accessibilityGroup(isGroup: boolean, accessibilityOptions: AccessibilityOptions):T\n\n设置是否启用无障碍分组。启用无"
+      },
+      {
+        "section_id": "section-3",
+        "title": "accessibilityText",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 103,
+        "summary": "accessibilityText(value: string):T\n\n设置无障碍文本。当组件不包含文本属性时，开发人员可通过设置无障碍文本属性，使不包含文字信息的组件能够播报无障碍文本的内容；当组"
+      },
+      {
+        "section_id": "section-4",
+        "title": "accessibilityText<sup>12+</sup>",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 132,
+        "summary": "accessibilityText(text: Resource):T\n\n设置无障碍文本，支持通过[Resource](ts-types.md#resource)引用资源文件。当组件不包含文本属性时"
+      },
+      {
+        "section_id": "section-5",
+        "title": "accessibilityDescription",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 156,
+        "summary": "accessibilityDescription(value: string):T\n\n设置无障碍说明。该属性用于为用户进一步说明当前组件，开发人员可为组件设置相对较详细的解释文本，帮助用户理解将要执"
+      },
+      {
+        "section_id": "section-6",
+        "title": "accessibilityDescription<sup>12+</sup>",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 184,
+        "summary": "accessibilityDescription(description: Resource):T\n\n设置无障碍说明，支持通过[Resource](ts-types.md#resource)引用资源"
+      },
+      {
+        "section_id": "section-7",
+        "title": "accessibilityLevel",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 208,
+        "summary": "accessibilityLevel(value: string):T\n\n设置无障碍重要性。该属性用于控制某个组件是否可被无障碍辅助服务所识别。\n\n**卡片能力：** 从API version 12"
+      },
+      {
+        "section_id": "section-8",
+        "title": "accessibilityVirtualNode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 209,
+        "line_end": 236,
+        "summary": "accessibilityVirtualNode(builder: CustomBuilder):T\n\n设置无障碍虚拟子节点。对自绘制组件传入一个自定义的CustomBuilder，该CustomB"
+      },
+      {
+        "section_id": "section-9",
+        "title": "accessibilityChecked<sup>13+</sup>",
+        "level": 2,
+        "line_start": 237,
+        "line_end": 264,
+        "summary": "accessibilityChecked(isCheck: boolean):T\n\n无障碍节点是否选中的状态维护，用于支持多选的情况使用，表示组件是否被选中。此接口只影响屏幕朗读场景下的组件状态播报"
+      },
+      {
+        "section_id": "section-10",
+        "title": "accessibilitySelected<sup>13+</sup>",
+        "level": 2,
+        "line_start": 265,
+        "line_end": 292,
+        "summary": "accessibilitySelected(isSelect: boolean):T\n\n无障碍节点是否选中的状态维护，用于支持单选的情况使用，表示组件是否被选中。此接口只影响屏幕朗读场景下的组件状态"
+      },
+      {
+        "section_id": "section-11",
+        "title": "accessibilityRole<sup>18+</sup>",
+        "level": 2,
+        "line_start": 293,
+        "line_end": 316,
+        "summary": "accessibilityRole(role: AccessibilityRoleType):T\n\n设置无障碍组件类型，特定组件类型有特定的朗读方式，可以根据应用诉求，修改组件类型，用于控制无障碍模"
+      },
+      {
+        "section_id": "section-12",
+        "title": "AccessibilityRoleType<sup>18+</sup>枚举说明",
+        "level": 2,
+        "line_start": 317,
+        "line_end": 454,
+        "summary": "定义组件的屏幕朗读功能角色类型。\n\n**卡片能力：** 从API version 18开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 18开始，该接"
+      },
+      {
+        "section_id": "section-13",
+        "title": "accessibilityNextFocusId<sup>18+</sup>",
+        "level": 2,
+        "line_start": 455,
+        "line_end": 478,
+        "summary": "accessibilityNextFocusId(nextId: string):T\n\n指定屏幕朗读扫动走焦过程中组件的下一个焦点。\n\n**卡片能力：** 从API version 18开始，该接口"
+      },
+      {
+        "section_id": "section-14",
+        "title": "accessibilityDefaultFocus<sup>18+</sup>",
+        "level": 2,
+        "line_start": 479,
+        "line_end": 502,
+        "summary": "accessibilityDefaultFocus(focus: boolean):T\n\n为页面设置屏幕朗读初始焦点。\n\n**卡片能力：** 从API version 18开始，该接口支持在ArkT"
+      },
+      {
+        "section_id": "section-15",
+        "title": "accessibilityUseSamePage<sup>18+</sup>",
+        "level": 2,
+        "line_start": 503,
+        "line_end": 528,
+        "summary": "accessibilityUseSamePage(pageMode: AccessibilitySamePageMode):T\n\n设置当前组件和宿主应用为同page模式。\n\n针对跨进程嵌入式显示的组"
+      },
+      {
+        "section_id": "section-16",
+        "title": "AccessibilitySamePageMode<sup>18+</sup>枚举说明",
+        "level": 2,
+        "line_start": 529,
+        "line_end": 543,
+        "summary": "当前跨进程嵌入式显示的组件和宿主应用的同page模式。\n\n**卡片能力：** 从API version 18开始，该接口支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API vers"
+      },
+      {
+        "section_id": "section-17",
+        "title": "accessibilityScrollTriggerable<sup>18+</sup>",
+        "level": 2,
+        "line_start": 544,
+        "line_end": 567,
+        "summary": "accessibilityScrollTriggerable(isTriggerable: boolean):T\n\n设置无障碍节点是否支持屏幕朗读滚动操作。当屏幕朗读在扫动走焦时，若容器内当前页面无"
+      },
+      {
+        "section_id": "section-18",
+        "title": "accessibilityTextHint<sup>12+</sup>",
+        "level": 2,
+        "line_start": 568,
+        "line_end": 595,
+        "summary": "accessibilityTextHint(value: string):T\n\n设置组件的文本提示信息，供无障碍辅助应用查询。\n\n>**说明：**\n>\n> 从API version 20开始，该接口"
+      },
+      {
+        "section_id": "section-19",
+        "title": "accessibilityFocusDrawLevel<sup>19+</sup>",
+        "level": 2,
+        "line_start": 596,
+        "line_end": 626,
+        "summary": "accessibilityFocusDrawLevel(drawLevel: FocusDrawLevel):T\n\n无障碍焦点绿框的绘制层级设置功能。\n\n> **说明：**\n>\n> 1. 在聚焦节点"
+      },
+      {
+        "section_id": "section-20",
+        "title": "accessibilityStateDescription<sup>23+</sup>",
+        "level": 2,
+        "line_start": 627,
+        "line_end": 650,
+        "summary": "accessibilityStateDescription(description: string | Resource | undefined): T\n\n设置组件的状态播报文本，用于屏幕朗读场景下"
+      },
+      {
+        "section_id": "section-21",
+        "title": "accessibilityActionOptions<sup>23+</sup>",
+        "level": 2,
+        "line_start": 651,
+        "line_end": 674,
+        "summary": "accessibilityActionOptions(option: AccessibilityActionOptions | undefined): T\n\n设置组件的无障碍操作的可选参数，用于限制"
+      },
+      {
+        "section_id": "section-22",
+        "title": "示例",
+        "level": 2,
+        "line_start": 675,
+        "line_end": 1035,
+        "summary": "### 示例1（设置无障碍文本和无障碍说明）\n\n该示例主要演示accessibilityText无障碍文本和accessibilityDescription无障碍说明的播报内容。\n\n```ts\n//"
+      }
+    ]
+  }
+}

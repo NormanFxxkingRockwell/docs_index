@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-hilog",
+  "title": "@ohos.hilog (HiLog日志打印)",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hilog.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hilog.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@liuyifeifei;@buzhenwang",
+    "designer": "@shenchenkai",
+    "tester": "@liyang2235",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.hilog (HiLog日志打印)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.hilog (HiLog日志打印)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```js\nimport { hilog } from '@kit.PerformanceAnalysisKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "hilog.isLoggable",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 51,
+        "summary": "isLoggable(domain: number, tag: string, level: LogLevel) : boolean\n\n在打印日志前调用该接口，用于检查指定领域标识、日志标识和级别的"
+      },
+      {
+        "section_id": "section-3",
+        "title": "LogLevel",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 67,
+        "summary": "日志级别。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.HiviewDFX.HiLog\n\n|"
+      },
+      {
+        "section_id": "section-4",
+        "title": "hilog.debug",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 104,
+        "summary": "debug(domain: number, tag: string, format: string, ...args: any[]) : void\n\n打印DEBUG级别的日志。\n\nDEBUG级别的日"
+      },
+      {
+        "section_id": "section-5",
+        "title": "hilog.info",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 139,
+        "summary": "info(domain: number, tag: string, format: string, ...args: any[]) : void\n\n打印INFO级别的日志。\n\n**原子化服务API*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "hilog.warn",
+        "level": 2,
+        "line_start": 140,
+        "line_end": 174,
+        "summary": "warn(domain: number, tag: string, format: string, ...args: any[]) : void\n\n打印WARN级别的日志。\n\n**原子化服务API*"
+      },
+      {
+        "section_id": "section-7",
+        "title": "hilog.error",
+        "level": 2,
+        "line_start": 175,
+        "line_end": 209,
+        "summary": "error(domain: number, tag: string, format: string, ...args: any[]) : void\n\n打印ERROR级别的日志。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-8",
+        "title": "hilog.fatal",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 244,
+        "summary": "fatal(domain: number, tag: string, format: string, ...args: any[]) : void\n\n打印FATAL级别的日志。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-9",
+        "title": "hilog.setMinLogLevel<sup>15+</sup>",
+        "level": 2,
+        "line_start": 245,
+        "line_end": 295,
+        "summary": "setMinLogLevel(level: LogLevel): void\n\n设置应用日志打印的最低日志级别，用于拦截低级别日志打印。\n\n> **注意：**\n>\n> 如果设置的日志级别低于[全局日志"
+      },
+      {
+        "section_id": "section-10",
+        "title": "hilog.setLogLevel<sup>21+</sup>",
+        "level": 2,
+        "line_start": 296,
+        "line_end": 318,
+        "summary": "setLogLevel(level: LogLevel, prefer: PreferStrategy): void\n\n设置当前应用程序进程的最低日志级别。\n\n可通过prefer参数配置不同的偏好策"
+      },
+      {
+        "section_id": "section-11",
+        "title": "PreferStrategy<sup>21+</sup>",
+        "level": 2,
+        "line_start": 319,
+        "line_end": 363,
+        "summary": "偏好策略。\n\n**原子化服务API**：从API version 21开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.HiviewDFX.HiLog\n\n|"
+      },
+      {
+        "section_id": "section-12",
+        "title": "参数格式符",
+        "level": 2,
+        "line_start": 364,
+        "line_end": 410,
+        "summary": "上述接口中，日志打印的格式化参数需按照如下格式打印：\n\n%{[private flag]}specifier\n\n|  隐私标识符（private flag） | 说明 |\n| -----------"
+      }
+    ]
+  }
+}

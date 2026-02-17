@@ -1,0 +1,52 @@
+{
+  "doc_id": "js-apis-awareness-deviceStatus",
+  "title": "@ohos.multimodalAwareness.deviceStatus（设备状态感知）",
+  "path": "zh-cn/application-dev/reference/apis-multimodalawareness-kit/js-apis-awareness-deviceStatus.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-multimodalawareness-kit/js-apis-awareness-deviceStatus.md",
+  "metadata": {
+    "kit": "Multimodal Awareness Kit",
+    "subsystem": "MultimodalAwareness",
+    "owner": "@dilligencer",
+    "designer": "@zou_ye",
+    "tester": "@judan",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Multimodal Awareness Kit MultimodalAwareness 模块的 @ohos.multimodalAwareness.deviceStatus（设备状态感知），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalAwareness.deviceStatus（设备状态感知）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\n  import { deviceStatus } from '@kit.MultimodalAwarenessKit';\n  ```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "SteadyStandingStatus",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 33,
+        "summary": "设备静止姿态感知状态（支架态）。\n\n设备进入支架态指设备静止，且屏幕与水平面角度处于45度-135度。折叠屏手机需处于折叠状态或者完全展开状态。\n\n**系统能力**：SystemCapability"
+      },
+      {
+        "section_id": "section-3",
+        "title": "deviceStatus.on('steadyStandingDetect')",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 70,
+        "summary": "on(type: 'steadyStandingDetect', callback: Callback&lt;SteadyStandingStatus&gt;): void\n\n订阅设备静止姿态感知"
+      },
+      {
+        "section_id": "section-4",
+        "title": "deviceStatus.off('steadyStandingDetect')",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 127,
+        "summary": "off(type: 'steadyStandingDetect', callback?: Callback&lt;SteadyStandingStatus&gt;): void\n\n取消订阅设备静止姿"
+      }
+    ]
+  }
+}

@@ -1,0 +1,412 @@
+{
+  "doc_id": "js-apis-net-policy-sys",
+  "title": "@ohos.net.policy (网络策略管理)（系统接口）",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-net-policy-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-net-policy-sys.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.policy (网络策略管理)（系统接口），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.policy (网络策略管理)（系统接口）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { policy } from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "policy.setBackgroundAllowed",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 62,
+        "summary": "setBackgroundAllowed(isAllowed: boolean, callback: AsyncCallback\\<void>): void\n\n设置是否允许后台应用访问网络，使用 c"
+      },
+      {
+        "section_id": "section-3",
+        "title": "policy.setBackgroundAllowed",
+        "level": 2,
+        "line_start": 63,
+        "line_end": 109,
+        "summary": "setBackgroundAllowed(isAllowed: boolean): Promise\\<void>\n\n设置是否允许后台应用访问网络，使用 Promise 异步回调。\n\n**系统接口**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "policy.isBackgroundAllowed",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 149,
+        "summary": "isBackgroundAllowed(callback: AsyncCallback\\<boolean>): void\n\n获取当前应用是否允许后台访问网络，使用 callback 异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-5",
+        "title": "policy.isBackgroundAllowed",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 193,
+        "summary": "isBackgroundAllowed(): Promise\\<boolean>\n\n获取当前应用是否允许后台访问网络，使用 Promise 异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "policy.setPolicyByUid",
+        "level": 2,
+        "line_start": 194,
+        "line_end": 234,
+        "summary": "setPolicyByUid(uid: number, policy: NetUidPolicy, callback: AsyncCallback\\<void>): void\n\n设置对应 uid 应"
+      },
+      {
+        "section_id": "section-7",
+        "title": "policy.setPolicyByUid",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 285,
+        "summary": "setPolicyByUid(uid: number, policy: NetUidPolicy): Promise\\<void>\n\n设置对应 uid 应用是否能够访问计量网络的策略，使用 Prom"
+      },
+      {
+        "section_id": "section-8",
+        "title": "policy.getPolicyByUid",
+        "level": 2,
+        "line_start": 286,
+        "line_end": 326,
+        "summary": "getPolicyByUid(uid: number, callback: AsyncCallback\\<NetUidPolicy>): void\n\n通过应用 uid 获取对应访问网络策略，使用 c"
+      },
+      {
+        "section_id": "section-9",
+        "title": "policy.getPolicyByUid",
+        "level": 2,
+        "line_start": 327,
+        "line_end": 376,
+        "summary": "getPolicyByUid(uid: number): Promise\\<NetUidPolicy>\n\n通过应用 uid 获取对应访问网络策略，使用 Promise 异步回调。\n\n**系统接口**"
+      },
+      {
+        "section_id": "section-10",
+        "title": "policy.getUidsByPolicy",
+        "level": 2,
+        "line_start": 377,
+        "line_end": 417,
+        "summary": "getUidsByPolicy(policy: NetUidPolicy, callback: AsyncCallback\\<Array\\<number>>): void\n\n通过策略获取跟策略匹配的"
+      },
+      {
+        "section_id": "section-11",
+        "title": "policy.getUidsByPolicy",
+        "level": 2,
+        "line_start": 418,
+        "line_end": 467,
+        "summary": "getUidsByPolicy(policy: NetUidPolicy): Promise\\<Array\\<number>>\n\n通过策略获取跟策略匹配的所有 uid，使用 Promise 异步回调"
+      },
+      {
+        "section_id": "section-12",
+        "title": "policy.getNetQuotaPolicies",
+        "level": 2,
+        "line_start": 468,
+        "line_end": 507,
+        "summary": "getNetQuotaPolicies(callback: AsyncCallback\\<Array\\<NetQuotaPolicy>>): void\n\n获取计量网络策略，使用 callback 异"
+      },
+      {
+        "section_id": "section-13",
+        "title": "policy.getNetQuotaPolicies",
+        "level": 2,
+        "line_start": 508,
+        "line_end": 550,
+        "summary": "getNetQuotaPolicies(): Promise\\<Array\\<NetQuotaPolicy>>\n\n获取计量网络策略，使用 Promise 异步回调。\n\n**系统接口**：此接口为系统"
+      },
+      {
+        "section_id": "section-14",
+        "title": "policy.setNetQuotaPolicies",
+        "level": 2,
+        "line_start": 551,
+        "line_end": 608,
+        "summary": "setNetQuotaPolicies(quotaPolicies: Array\\<NetQuotaPolicy>, callback: AsyncCallback\\<void>): void\n\n设"
+      },
+      {
+        "section_id": "section-15",
+        "title": "policy.setNetQuotaPolicies",
+        "level": 2,
+        "line_start": 609,
+        "line_end": 676,
+        "summary": "setNetQuotaPolicies(quotaPolicies: Array\\<NetQuotaPolicy>): Promise\\<void>\n\n设置计量网络策略，使用 Promise 异步回"
+      },
+      {
+        "section_id": "section-16",
+        "title": "policy.isUidNetAllowed",
+        "level": 2,
+        "line_start": 677,
+        "line_end": 718,
+        "summary": "isUidNetAllowed(uid: number, isMetered: boolean, callback: AsyncCallback\\<boolean>): void\n\n判断对应 uid"
+      },
+      {
+        "section_id": "section-17",
+        "title": "policy.isUidNetAllowed",
+        "level": 2,
+        "line_start": 719,
+        "line_end": 769,
+        "summary": "isUidNetAllowed(uid: number, isMetered: boolean): Promise\\<boolean>\n\n判断对应 uid 能否访问计量或非计量网络，使用 Promi"
+      },
+      {
+        "section_id": "section-18",
+        "title": "policy.isUidNetAllowed",
+        "level": 2,
+        "line_start": 770,
+        "line_end": 811,
+        "summary": "isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback\\<boolean>): void\n\n获取对应 uid 能否访问"
+      },
+      {
+        "section_id": "section-19",
+        "title": "policy.isUidNetAllowed",
+        "level": 2,
+        "line_start": 812,
+        "line_end": 862,
+        "summary": "isUidNetAllowed(uid: number, iface: string): Promise\\<boolean>\n\n获取对应 uid 能否访问指定的 iface 的网络，使用 Promi"
+      },
+      {
+        "section_id": "section-20",
+        "title": "policy.setDeviceIdleTrustlist",
+        "level": 2,
+        "line_start": 863,
+        "line_end": 903,
+        "summary": "setDeviceIdleTrustlist(uids: Array\\<number>, isAllowed: boolean, callback: AsyncCallback\\<void>): v"
+      },
+      {
+        "section_id": "section-21",
+        "title": "policy.setDeviceIdleTrustlist",
+        "level": 2,
+        "line_start": 904,
+        "line_end": 954,
+        "summary": "setDeviceIdleTrustlist(uids: Array\\<number>, isAllowed: boolean): Promise\\<void>\n\n设置多个 uid 是否在休眠防火墙"
+      },
+      {
+        "section_id": "section-22",
+        "title": "policy.getDeviceIdleTrustlist",
+        "level": 2,
+        "line_start": 955,
+        "line_end": 994,
+        "summary": "getDeviceIdleTrustlist(callback: AsyncCallback\\<Array\\<number>>): void\n\n获取休眠模式白名单所包含的 uid，使用 callba"
+      },
+      {
+        "section_id": "section-23",
+        "title": "policy.getDeviceIdleTrustlist",
+        "level": 2,
+        "line_start": 995,
+        "line_end": 1037,
+        "summary": "getDeviceIdleTrustlist(): Promise\\<Array\\<number>>\n\n获取休眠模式白名单所包含的 uid，使用 Promise 异步回调。\n\n**系统接口**：此接"
+      },
+      {
+        "section_id": "section-24",
+        "title": "policy.getBackgroundPolicyByUid",
+        "level": 2,
+        "line_start": 1038,
+        "line_end": 1078,
+        "summary": "getBackgroundPolicyByUid(uid: number, callback: AsyncCallback\\<NetBackgroundPolicy>): void\n\n获取指定 ui"
+      },
+      {
+        "section_id": "section-25",
+        "title": "policy.getBackgroundPolicyByUid",
+        "level": 2,
+        "line_start": 1079,
+        "line_end": 1128,
+        "summary": "getBackgroundPolicyByUid(uid: number): Promise\\<NetBackgroundPolicy>\n\n获取指定 uid 能否访问后台网络，使用 Promise"
+      },
+      {
+        "section_id": "section-26",
+        "title": "policy.resetPolicies",
+        "level": 2,
+        "line_start": 1129,
+        "line_end": 1168,
+        "summary": "resetPolicies(simId: string, callback: AsyncCallback\\<void>): void\n\n重置对应 sim 卡 id 的蜂窝网络、后台网络策略、防火墙策"
+      },
+      {
+        "section_id": "section-27",
+        "title": "policy.resetPolicies",
+        "level": 2,
+        "line_start": 1169,
+        "line_end": 1218,
+        "summary": "resetPolicies(simId: string): Promise\\<void>\n\n重置对应 sim 卡 id 的蜂窝网络、后台网络策略、防火墙策略、应用对应的策略，使用 Promise 异"
+      },
+      {
+        "section_id": "section-28",
+        "title": "policy.updateRemindPolicy",
+        "level": 2,
+        "line_start": 1219,
+        "line_end": 1266,
+        "summary": "updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType, callback: AsyncCall"
+      },
+      {
+        "section_id": "section-29",
+        "title": "policy.updateRemindPolicy",
+        "level": 2,
+        "line_start": 1267,
+        "line_end": 1323,
+        "summary": "updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType): Promise\\<void>\n\n更新"
+      },
+      {
+        "section_id": "section-30",
+        "title": "policy.setPowerSaveTrustlist",
+        "level": 2,
+        "line_start": 1324,
+        "line_end": 1364,
+        "summary": "setPowerSaveTrustlist(uids: Array\\<number>, isAllowed: boolean, callback: AsyncCallback\\<void>): vo"
+      },
+      {
+        "section_id": "section-31",
+        "title": "policy.setPowerSaveTrustlist",
+        "level": 2,
+        "line_start": 1365,
+        "line_end": 1415,
+        "summary": "setPowerSaveTrustlist(uids: Array\\<number>, isAllowed: boolean): Promise\\<void>\n\n设置指定 uid 应用是否在省电防火"
+      },
+      {
+        "section_id": "section-32",
+        "title": "policy.getPowerSaveTrustlist",
+        "level": 2,
+        "line_start": 1416,
+        "line_end": 1455,
+        "summary": "getPowerSaveTrustlist(callback: AsyncCallback\\<Array\\<number>>): void\n\n获取省电模式白名单所包含的 uid 数组，使用 call"
+      },
+      {
+        "section_id": "section-33",
+        "title": "policy.getPowerSaveTrustlist",
+        "level": 2,
+        "line_start": 1456,
+        "line_end": 1498,
+        "summary": "getPowerSaveTrustlist(): Promise\\<Array\\<number>>\n\n获取休眠模式白名单所包含的 uid 数组，使用 Promise 异步回调。\n\n**系统接口**："
+      },
+      {
+        "section_id": "section-34",
+        "title": "policy.setNetworkAccessPolicy<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1499,
+        "line_end": 1554,
+        "summary": "setNetworkAccessPolicy(uid: number, policy: NetworkAccessPolicy, isReconfirmed?: boolean): Promise\\"
+      },
+      {
+        "section_id": "section-35",
+        "title": "policy.getNetworkAccessPolicy<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1555,
+        "line_end": 1604,
+        "summary": "getNetworkAccessPolicy(uid: number): Promise\\<NetworkAccessPolicy>\n\n获取指定 uid 能否访问网络策略，使用 Promise 异步"
+      },
+      {
+        "section_id": "section-36",
+        "title": "policy.getNetworkAccessPolicy<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1605,
+        "line_end": 1663,
+        "summary": "getNetworkAccessPolicy(): Promise\\<UidNetworkAccessPolicy>\n\n获取当前用户下所有应用 app 能否访问网络策略信息，使用 Promise 异"
+      },
+      {
+        "section_id": "section-37",
+        "title": "policy.on",
+        "level": 2,
+        "line_start": 1664,
+        "line_end": 2172,
+        "summary": "网络策略的句柄。\n\n### on('netUidPolicyChange')\n\non(type: \"netUidPolicyChange\", callback: Callback\\<NetUidPo"
+      },
+      {
+        "section_id": "section-38",
+        "title": "NetBackgroundPolicy",
+        "level": 2,
+        "line_start": 2173,
+        "line_end": 2187,
+        "summary": "后台网络策略。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-39",
+        "title": "NetQuotaPolicy",
+        "level": 2,
+        "line_start": 2188,
+        "line_end": 2200,
+        "summary": "计量网络策略。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-40",
+        "title": "NetworkMatchRule",
+        "level": 2,
+        "line_start": 2201,
+        "line_end": 2214,
+        "summary": "网络标识，用来确定设置哪一个网络\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-41",
+        "title": "QuotaPolicy",
+        "level": 2,
+        "line_start": 2215,
+        "line_end": 2232,
+        "summary": "计量网络策略\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-42",
+        "title": "LimitAction",
+        "level": 2,
+        "line_start": 2233,
+        "line_end": 2246,
+        "summary": "限制动作。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-43",
+        "title": "NetUidRule",
+        "level": 2,
+        "line_start": 2247,
+        "line_end": 2263,
+        "summary": "计量网络规则。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-44",
+        "title": "NetUidRuleInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2264,
+        "line_end": 2276,
+        "summary": "生成网络唯一标识。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-45",
+        "title": "NetUidPolicyInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2277,
+        "line_end": 2289,
+        "summary": "注册网络UID策略变化的回调函数。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名"
+      },
+      {
+        "section_id": "section-46",
+        "title": "RemindType",
+        "level": 2,
+        "line_start": 2290,
+        "line_end": 2302,
+        "summary": "提醒类型。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-47",
+        "title": "NetUidPolicy",
+        "level": 2,
+        "line_start": 2303,
+        "line_end": 2316,
+        "summary": "应用对应的网络策略。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-48",
+        "title": "NetworkAccessPolicy<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2317,
+        "line_end": 2331,
+        "summary": "应用对应的连接网络的策略。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-49",
+        "title": "UidNetworkAccessPolicy<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2332,
+        "line_end": 2342,
+        "summary": "应用标识以及对应应用连接网络的策略。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Core\n\n|"
+      }
+    ]
+  }
+}

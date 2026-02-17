@@ -1,0 +1,92 @@
+{
+  "doc_id": "errorcode-ets-loader",
+  "title": "编译工具链错误码",
+  "path": "zh-cn/application-dev/reference/apis-arkts/errorcode-ets-loader.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/errorcode-ets-loader.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "arkcompiler",
+    "owner": "@aftott",
+    "designer": "@hufeng20",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "ArkTS arkcompiler 模块的 编译工具链错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "编译工具链错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "10311001 导入ArkTS文件错误",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 30,
+        "summary": "**错误信息**\n\nImporting ArkTS files in JS and TS files is forbidden.\n\n**错误描述**\n\n禁止在JS和TS文件中导入ArkTS文件。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "10311002 解析OhmUrl错误",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 49,
+        "summary": "**错误信息**\n\nFailed to resolve OhmUrl. Failed to get a resolved OhmUrl for `${filePath}` imported by `"
+      },
+      {
+        "section_id": "section-3",
+        "title": "10311003 获取Kit配置文件错误",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 69,
+        "summary": "**错误信息**\n\nKit `${moduleRequest}` has no corresponding config file in ArkTS SDK.\n\n**错误描述**\n\nKit `${m"
+      },
+      {
+        "section_id": "section-4",
+        "title": "10311005 导入Kit标识符错误",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 87,
+        "summary": "**错误信息**\n\nIdentifier `${this.importName}` comes from `${this.symbol.source}` which can not be impor"
+      },
+      {
+        "section_id": "section-5",
+        "title": "10311006 导入名称未从Kit中导出错误",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 107,
+        "summary": "**错误信息**\n\n`${importName}` is not exported from Kit `${KitInfo.getCurrentKitName()}`.\n\n**错误描述**\n\n`${"
+      },
+      {
+        "section_id": "section-6",
+        "title": "10311007 Kit命名空间导入或导出错误",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 125,
+        "summary": "**错误信息**\n\nNamespace import or export of Kit is not supported currently.\n\n**错误描述**\n\n当前不支持Kit的命名空间导入或"
+      },
+      {
+        "section_id": "section-7",
+        "title": "10311008 Kit空导入错误",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 143,
+        "summary": "**错误信息**\n\nCan not use empty import(side-effect import) statement with Kit `${(kitNode.moduleSpecifi"
+      },
+      {
+        "section_id": "section-8",
+        "title": "10311009 ES2ABC执行错误",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 161,
+        "summary": "**错误信息**\n\nFailed to execute es2abc.\n\n**错误描述**\n\n无法执行es2abc。\n\n**可能原因**\n\nes2abc执行过程中出现错误。\n\n**处理步骤**\n\n请"
+      },
+      {
+        "section_id": "section-9",
+        "title": "10311010 懒加载导入重新导出错误",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 180,
+        "summary": "**错误信息**\n\n`${elementText}` of lazy-import is re-export.\n\n**错误描述**\n\n`${elementText}`的懒加载导入被重新导出。\n\n**"
+      }
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "doc_id": "js-apis-certManagerDialog",
+  "title": "@ohos.security.certManagerDialog (证书管理对话框模块)",
+  "path": "zh-cn/application-dev/reference/apis-device-certificate-kit/js-apis-certManagerDialog.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-device-certificate-kit/js-apis-certManagerDialog.md",
+  "metadata": {
+    "kit": "Device Certificate Kit",
+    "subsystem": "Security",
+    "owner": "@chaceli",
+    "designer": "@chande",
+    "tester": "@zhangzhi1995",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Device Certificate Kit Security 模块的 @ohos.security.certManagerDialog (证书管理对话框模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.security.certManagerDialog (证书管理对话框模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { certificateManagerDialog } from '@kit.DeviceCertificateKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "CertificateDialogPageType",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 36,
+        "summary": "表示证书管理对话框的页面类型。\n\n**系统能力：** SystemCapability.Security.CertificateManagerDialog\n\n**模型约束：** 此接口仅可在Stag"
+      },
+      {
+        "section_id": "section-3",
+        "title": "CertificateType<sup>14+</sup>",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 52,
+        "summary": "表示安装证书的类型。\n\n**系统能力：** SystemCapability.Security.CertificateManagerDialog\n\n**模型约束：** 此接口仅可在Stage模型下使"
+      },
+      {
+        "section_id": "section-4",
+        "title": "CertificateScope<sup>14+</sup>",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 67,
+        "summary": "表示安装证书的使用范围。\n\n**系统能力：** SystemCapability.Security.CertificateManagerDialog\n\n**模型约束：** 此接口仅可在Stage模型"
+      },
+      {
+        "section_id": "section-5",
+        "title": "CertificateDialogErrorCode",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 85,
+        "summary": "表示调用证书管理对话框相关API的错误码。\n\n**系统能力：** SystemCapability.Security.CertificateManagerDialog\n\n**模型约束：** 此接口仅"
+      },
+      {
+        "section_id": "section-6",
+        "title": "CertificateDialogProperty<sup>18+</sup>",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 97,
+        "summary": "表示证书管理对话框的属性。\n\n**系统能力：** SystemCapability.Security.CertificateManagerDialog\n\n**模型约束：** 此接口仅可在Stage模"
+      },
+      {
+        "section_id": "section-7",
+        "title": "CertReference<sup>22+</sup>",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 110,
+        "summary": "表示证书凭据的引用信息。\n\n**系统能力：** SystemCapability.Security.CertificateManagerDialog\n\n**模型约束：** 此接口仅可在Stage模型"
+      },
+      {
+        "section_id": "section-8",
+        "title": "UkeyAuthRequest<sup>22+</sup>",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 122,
+        "summary": "USB证书凭据授权请求信息。\n\n**系统能力：** SystemCapability.Security.CertificateManagerDialog\n\n**模型约束：** 此接口仅可在Stage"
+      },
+      {
+        "section_id": "section-9",
+        "title": "AuthorizeRequest<sup>22+</sup>",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 135,
+        "summary": "证书授权请求信息。\n\n**系统能力：** SystemCapability.Security.CertificateManagerDialog\n\n**模型约束：** 此接口仅可在Stage模型下使用"
+      },
+      {
+        "section_id": "section-10",
+        "title": "certificateManagerDialog.openCertificateManagerDialog",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 191,
+        "summary": "openCertificateManagerDialog(context: common.Context, pageType: CertificateDialogPageType): Promise"
+      },
+      {
+        "section_id": "section-11",
+        "title": "certificateManagerDialog.openInstallCertificateDialog<sup>14+</sup>",
+        "level": 2,
+        "line_start": 192,
+        "line_end": 262,
+        "summary": "openInstallCertificateDialog(context: common.Context, certType: CertificateType, certScope: Certifi"
+      },
+      {
+        "section_id": "section-12",
+        "title": "certificateManagerDialog.openUninstallCertificateDialog<sup>18+</sup>",
+        "level": 2,
+        "line_start": 263,
+        "line_end": 328,
+        "summary": "openUninstallCertificateDialog(context: common.Context, certType: CertificateType, certUri: string)"
+      },
+      {
+        "section_id": "section-13",
+        "title": "certificateManagerDialog.openCertificateDetailDialog<sup>18+</sup>",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 395,
+        "summary": "openCertificateDetailDialog(context: common.Context, cert: Uint8Array, property: CertificateDialogP"
+      },
+      {
+        "section_id": "section-14",
+        "title": "certificateManagerDialog.openAuthorizeDialog<sup>20+</sup>",
+        "level": 2,
+        "line_start": 396,
+        "line_end": 450,
+        "summary": "openAuthorizeDialog(context: common.Context): Promise\\<string>\n\n打开证书管理对话框的授权页面。在弹出的页面中，用户可以为应用授权证书。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "certificateManagerDialog.openAuthorizeDialog<sup>22+</sup>",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 518,
+        "summary": "openAuthorizeDialog(context: common.Context, authorizeRequest: AuthorizeRequest): Promise\\<CertRefe"
+      },
+      {
+        "section_id": "section-16",
+        "title": "certificateManagerDialog.openUkeyAuthDialog<sup>22+</sup>",
+        "level": 2,
+        "line_start": 519,
+        "line_end": 581,
+        "summary": "openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRequest): Promise\\<void>\n\n打开US"
+      }
+    ]
+  }
+}

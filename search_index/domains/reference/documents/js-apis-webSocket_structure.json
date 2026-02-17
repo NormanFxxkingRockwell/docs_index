@@ -1,0 +1,164 @@
+{
+  "doc_id": "js-apis-webSocket",
+  "title": "@ohos.net.webSocket (WebSocket连接)",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-webSocket.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-webSocket.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.webSocket (WebSocket连接)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.webSocket (WebSocket连接)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { webSocket } from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "webSocket.createWebSocket",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 49,
+        "summary": "createWebSocket(): WebSocket\n\n创建一个WebSocket对象，里面包括建立连接、关闭连接、发送数据和订阅/取消订阅WebSocket连接的打开事件、接收到服务器消息事件"
+      },
+      {
+        "section_id": "section-3",
+        "title": "WebSocket",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 882,
+        "summary": "在调用WebSocket的方法前，需要先通过[webSocket.createWebSocket](#websocketcreatewebsocket)创建一个WebSocket。\n\n### con"
+      },
+      {
+        "section_id": "section-4",
+        "title": "webSocket.createWebSocketServer<sup>19+</sup>",
+        "level": 2,
+        "line_start": 883,
+        "line_end": 906,
+        "summary": "createWebSocketServer(): WebSocketServer\n\n创建一个WebSocketServer对象，包括启动服务、发送数据、关闭连接、列出客户端信息、停止服务，订阅/取消"
+      },
+      {
+        "section_id": "section-5",
+        "title": "WebSocketServer<sup>19+</sup>",
+        "level": 2,
+        "line_start": 907,
+        "line_end": 1463,
+        "summary": "在调用WebSocketServer方法前，需要先通过[webSocket.createWebSocketServer](#websocketcreatewebsocketserver19)创建一个"
+      },
+      {
+        "section_id": "section-6",
+        "title": "WebSocketRequestOptions",
+        "level": 2,
+        "line_start": 1464,
+        "line_end": 1480,
+        "summary": "建立WebSocket连接时，可选参数的类型和说明。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称 | 类型 |  只读  | 可选"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ClientCert<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1481,
+        "line_end": 1492,
+        "summary": "客户端证书类型。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称 | 类型   | 只读 |可选| 说明"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ProxyConfiguration<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1493,
+        "line_end": 1505,
+        "summary": "type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy\n\n网络代理配置信息\n\n**系统能力**：SystemCapability.Com"
+      },
+      {
+        "section_id": "section-9",
+        "title": "WebSocketCloseOptions",
+        "level": 2,
+        "line_start": 1506,
+        "line_end": 1518,
+        "summary": "关闭WebSocket连接时，可选参数的类型和说明。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-10",
+        "title": "CloseResult<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1519,
+        "line_end": 1531,
+        "summary": "关闭WebSocket连接时，订阅close事件得到的关闭结果。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ResponseHeaders<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1532,
+        "line_end": 1543,
+        "summary": "type ResponseHeaders = { [k: string]: string | string[] | undefined; }\n\n服务器发送的响应头。\n\n**系统能力**：System"
+      },
+      {
+        "section_id": "section-12",
+        "title": "close错误码说明",
+        "level": 2,
+        "line_start": 1544,
+        "line_end": 1557,
+        "summary": "发送给服务端的错误码必须为正整数，取值范围为[1000,1015],可以自行定义，如果未指定错误码或传入值不在上述范围内，错误码将会被设置为默认值1000。下面的列表仅供参考。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-13",
+        "title": "HttpProxy<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1558,
+        "line_end": 1569,
+        "summary": "type HttpProxy = connection.HttpProxy\n\n网络全局代理配置信息。\n\n**系统能力**：SystemCapability.Communication.NetMana"
+      },
+      {
+        "section_id": "section-14",
+        "title": "WebSocketServerConfig<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1570,
+        "line_end": 1584,
+        "summary": "启动服务端的service时，需要输入的配置信息和说明。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称 | 类型   | 只读 |"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ServerCert<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1585,
+        "line_end": 1595,
+        "summary": "指定服务端证书的信息，包括服务端证书文件路径和服务端证书的私钥文件路径。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-16",
+        "title": "WebSocketMessage<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1596,
+        "line_end": 1606,
+        "summary": "从指定客户端接收到的消息，包括客户端的信息和数据。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称 | 类型   | 只读 | 可选"
+      },
+      {
+        "section_id": "section-17",
+        "title": "WebSocketConnection<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1607,
+        "line_end": 1617,
+        "summary": "客户端信息，包括客户端的ip地址和端口号port。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称 | 类型   | 只读 | 可选"
+      },
+      {
+        "section_id": "section-18",
+        "title": "ClientConnectionCloseCallback<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1618,
+        "line_end": 1630,
+        "summary": "type ClientConnectionCloseCallback = (clientConnection: WebSocketConnection, closeReason: CloseResu"
+      }
+    ]
+  }
+}

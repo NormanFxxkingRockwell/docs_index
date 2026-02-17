@@ -1,0 +1,148 @@
+{
+  "doc_id": "arkts-apis-camera-Session",
+  "title": "Interface (Session)",
+  "path": "zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-Session.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-Session.md",
+  "metadata": {
+    "kit": "Camera Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qano",
+    "designer": "@leo_ysl",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Camera Kit Multimedia 模块的 Interface (Session)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (Session)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { camera } from '@kit.CameraKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "beginConfig<sup>11+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 56,
+        "summary": "beginConfig(): void\n\n开始配置会话。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-3",
+        "title": "commitConfig<sup>11+</sup>",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 97,
+        "summary": "commitConfig(callback: AsyncCallback\\<void\\>): void\n\n提交配置信息，通过注册回调函数获取结果。使用callback异步回调。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-4",
+        "title": "commitConfig<sup>11+</sup>",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 137,
+        "summary": "commitConfig(): Promise\\<void\\>\n\n提交配置信息。使用Promise异步回调。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-5",
+        "title": "canAddInput<sup>11+</sup>",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 168,
+        "summary": "canAddInput(cameraInput: CameraInput): boolean\n\n判断当前cameraInput是否可以添加到session中。当前函数需要在[beginConfig]"
+      },
+      {
+        "section_id": "section-6",
+        "title": "addInput<sup>11+</sup>",
+        "level": 2,
+        "line_start": 169,
+        "line_end": 210,
+        "summary": "addInput(cameraInput: CameraInput): void\n\n把[CameraInput](arkts-apis-camera-CameraInput.md)加入到会话。\n\n*"
+      },
+      {
+        "section_id": "section-7",
+        "title": "removeInput<sup>11+</sup>",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 252,
+        "summary": "removeInput(cameraInput: CameraInput): void\n\n移除[CameraInput](arkts-apis-camera-CameraInput.md)。当前函数"
+      },
+      {
+        "section_id": "section-8",
+        "title": "canAddOutput<sup>11+</sup>",
+        "level": 2,
+        "line_start": 253,
+        "line_end": 283,
+        "summary": "canAddOutput(cameraOutput: CameraOutput): boolean\n\n判断当前cameraOutput是否可以添加到session中。当前函数需要在[addInput"
+      },
+      {
+        "section_id": "section-9",
+        "title": "addOutput<sup>11+</sup>",
+        "level": 2,
+        "line_start": 284,
+        "line_end": 325,
+        "summary": "addOutput(cameraOutput: CameraOutput): void\n\n把[CameraOutput](arkts-apis-camera-CameraOutput.md)加入到会"
+      },
+      {
+        "section_id": "section-10",
+        "title": "removeOutput<sup>11+</sup>",
+        "level": 2,
+        "line_start": 326,
+        "line_end": 367,
+        "summary": "removeOutput(cameraOutput: CameraOutput): void\n\n从会话中移除[CameraOutput](arkts-apis-camera-CameraOutput"
+      },
+      {
+        "section_id": "section-11",
+        "title": "start<sup>11+</sup>",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 409,
+        "summary": "start(callback: AsyncCallback\\<void\\>): void\n\n开始会话工作，通过注册回调函数获取结果。使用callback异步回调。\n\n**原子化服务API：** 从A"
+      },
+      {
+        "section_id": "section-12",
+        "title": "start<sup>11+</sup>",
+        "level": 2,
+        "line_start": 410,
+        "line_end": 449,
+        "summary": "start(): Promise\\<void\\>\n\n开始会话工作。使用Promise异步回调。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n*"
+      },
+      {
+        "section_id": "section-13",
+        "title": "stop<sup>11+</sup>",
+        "level": 2,
+        "line_start": 450,
+        "line_end": 489,
+        "summary": "stop(callback: AsyncCallback\\<void\\>): void\n\n停止会话工作，通过注册回调函数获取结果。使用callback异步回调。\n\n**原子化服务API：** 从AP"
+      },
+      {
+        "section_id": "section-14",
+        "title": "stop<sup>11+</sup>",
+        "level": 2,
+        "line_start": 490,
+        "line_end": 527,
+        "summary": "stop(): Promise\\<void\\>\n\n停止会话工作。使用Promise异步回调。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**"
+      },
+      {
+        "section_id": "section-15",
+        "title": "release<sup>11+</sup>",
+        "level": 2,
+        "line_start": 528,
+        "line_end": 567,
+        "summary": "release(callback: AsyncCallback\\<void\\>): void\n\n释放会话资源，通过注册回调函数获取结果。使用callback异步回调。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-16",
+        "title": "release<sup>11+</sup>",
+        "level": 2,
+        "line_start": 568,
+        "line_end": 605,
+        "summary": "release(): Promise\\<void\\>\n\n释放会话资源。使用Promise异步回调。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。"
+      }
+    ]
+  }
+}

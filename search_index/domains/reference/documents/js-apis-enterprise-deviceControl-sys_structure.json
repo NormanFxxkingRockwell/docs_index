@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-enterprise-deviceControl-sys",
+  "title": "@ohos.enterprise.deviceControl（设备控制管理）(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-deviceControl-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-deviceControl-sys.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.deviceControl（设备控制管理）(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.deviceControl（设备控制管理）(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { deviceControl } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "deviceControl.resetFactory",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 80,
+        "summary": "resetFactory(admin: Want, callback: AsyncCallback\\<void>): void\n\n使设备恢复出厂设置。使用callback异步回调。\n\n**需要权限："
+      },
+      {
+        "section_id": "section-3",
+        "title": "deviceControl.resetFactory",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 137,
+        "summary": "resetFactory(admin: Want): Promise\\<void>\n\n使设备恢复出厂设置。使用Promise异步回调。\n\n**需要权限：** ohos.permission.ENTE"
+      },
+      {
+        "section_id": "section-4",
+        "title": "deviceControl.shutdown<sup>11+</sup>",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 188,
+        "summary": "shutdown(admin: Want): void\n\n使设备关机。\n\n**需要权限：** ohos.permission.ENTERPRISE_REBOOT\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-5",
+        "title": "deviceControl.reboot<sup>11+</sup>",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 239,
+        "summary": "reboot(admin: Want): void\n\n使设备重启。\n\n**需要权限：** ohos.permission.ENTERPRISE_REBOOT\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-6",
+        "title": "deviceControl.lockScreen<sup>11+</sup>",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 289,
+        "summary": "lockScreen(admin: Want): void\n\n使设备屏幕锁定。设置之后设备立即锁屏。\n\n**需要权限：** ohos.permission.ENTERPRISE_LOCK_DEVIC"
+      }
+    ]
+  }
+}

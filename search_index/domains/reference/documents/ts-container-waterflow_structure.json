@@ -1,0 +1,116 @@
+{
+  "doc_id": "ts-container-waterflow",
+  "title": "WaterFlow",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-waterflow.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-waterflow.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@fangyuhao",
+    "designer": "@zcdqs",
+    "tester": "@liuzhenshuo",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 WaterFlow，提供相关接口和功能说明。",
+  "structure": {
+    "title": "WaterFlow",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 38,
+        "summary": "仅支持[FlowItem](ts-container-flowitem.md)子组件和自定义组件。自定义组件在WaterFlow下使用时，建议使用FlowItem作为自定组件的顶层组件，不建议给自"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 55,
+        "summary": "WaterFlow(options?:  WaterFlowOptions)\n\n创建瀑布流容器。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "WaterFlowOptions对象说明",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 70,
+        "summary": "瀑布流组件参数对象。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称     | 类型"
+      },
+      {
+        "section_id": "section-4",
+        "title": "WaterFlowSections<sup>12+</sup>",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 190,
+        "summary": "瀑布流分组信息。\n\n> **说明：**\n>\n> 使用splice、push、update修改分组信息后需要保证所有分组子节点总数与瀑布流实际子节点总数一致，否则会出现瀑布流因为不能正常布局而无法滑动"
+      },
+      {
+        "section_id": "section-5",
+        "title": "SectionOptions<sup>12+</sup>对象说明",
+        "level": 2,
+        "line_start": 191,
+        "line_end": 208,
+        "summary": "FlowItem分组配置信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI."
+      },
+      {
+        "section_id": "section-6",
+        "title": "GetItemMainSizeByIndex<sup>12+</sup>",
+        "level": 2,
+        "line_start": 209,
+        "line_end": 230,
+        "summary": "type GetItemMainSizeByIndex = (index: number) => number\n\n根据index获取指定Item的主轴大小。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-7",
+        "title": "WaterFlowLayoutMode<sup>12+</sup>枚举说明",
+        "level": 2,
+        "line_start": 231,
+        "line_end": 254,
+        "summary": "瀑布流组件布局模式枚举。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-8",
+        "title": "属性",
+        "level": 2,
+        "line_start": 255,
+        "line_end": 511,
+        "summary": "除支持[通用属性](ts-component-general-attributes.md)和[滚动组件通用属性](ts-container-scrollable-common.md#属性)外，还支持"
+      },
+      {
+        "section_id": "section-9",
+        "title": "事件",
+        "level": 2,
+        "line_start": 512,
+        "line_end": 609,
+        "summary": "除支持[通用事件](ts-component-general-events.md)和[滚动组件通用事件](ts-container-scrollable-common.md#事件)外，还支持以下事件"
+      },
+      {
+        "section_id": "section-10",
+        "title": "UIWaterFlowEvent<sup>19+</sup>",
+        "level": 2,
+        "line_start": 610,
+        "line_end": 668,
+        "summary": "frameNode中[getEvent('WaterFlow')](../js-apis-arkui-frameNode.md#geteventwaterflow19)方法的返回值，可用于给Water"
+      },
+      {
+        "section_id": "section-11",
+        "title": "OnWaterFlowScrollIndexCallback<sup>19+</sup>",
+        "level": 2,
+        "line_start": 669,
+        "line_end": 684,
+        "summary": "type OnWaterFlowScrollIndexCallback = (first: number, last: number) => void\n\nWaterFlow组件可见区域item变化事件"
+      },
+      {
+        "section_id": "section-12",
+        "title": "示例",
+        "level": 2,
+        "line_start": 685,
+        "line_end": 2161,
+        "summary": "### 示例1（使用基本瀑布流）\n该示例展示了WaterFlow组件数据加载处理、属性设置和事件回调等基本使用场景。\n\nWaterFlowDataSource实现了LazyForEach数据源接口["
+      }
+    ]
+  }
+}

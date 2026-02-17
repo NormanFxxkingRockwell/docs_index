@@ -1,0 +1,196 @@
+{
+  "doc_id": "js-apis-app-ability-common",
+  "title": "@ohos.app.ability.common (Ability公共模块)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-common.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-common.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@zexin_c",
+    "designer": "@li-weifeng2024",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.common (Ability公共模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.common (Ability公共模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { common } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "UIAbilityContext",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 37,
+        "summary": "type UIAbilityContext = _UIAbilityContext.default\n\n[UIAbility](../apis-ability-kit/js-apis-app-abil"
+      },
+      {
+        "section_id": "section-3",
+        "title": "AbilityStageContext",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 53,
+        "summary": "type AbilityStageContext = _AbilityStageContext.default\n\n[AbilityStage](../apis-ability-kit/js-apis"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ApplicationContext",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 69,
+        "summary": "type ApplicationContext = _ApplicationContext.default\n\n应用上下文，继承自Context。\n\n**原子化服务API**：从API version"
+      },
+      {
+        "section_id": "section-5",
+        "title": "BaseContext",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 85,
+        "summary": "type BaseContext = _BaseContext.default\n\n所有Context类型的父类。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Context",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 101,
+        "summary": "type Context = _Context.default\n\n[Stage模型](../../application-models/ability-terminology.md#stage模型)"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ExtensionContext",
+        "level": 2,
+        "line_start": 102,
+        "line_end": 117,
+        "summary": "type ExtensionContext = _ExtensionContext.default\n\n[ExtensionAbility](../apis-ability-kit/js-apis-a"
+      },
+      {
+        "section_id": "section-8",
+        "title": "FormExtensionContext",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 133,
+        "summary": "type FormExtensionContext = _FormExtensionContext.default\n\n[FormExtensionAbility](../apis-form-kit/"
+      },
+      {
+        "section_id": "section-9",
+        "title": "VpnExtensionContext<sup>11+<sup>",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 147,
+        "summary": "type VpnExtensionContext = _VpnExtensionContext.default\n\n[VpnExtensionAbility](../apis-network-kit/"
+      },
+      {
+        "section_id": "section-10",
+        "title": "EventHub",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 163,
+        "summary": "type EventHub = _EventHub.default\n\nEventHub是系统提供的基于发布-订阅模式实现的事件通信机制。\n\n**原子化服务API**：从API version 11开"
+      },
+      {
+        "section_id": "section-11",
+        "title": "PacMap",
+        "level": 2,
+        "line_start": 164,
+        "line_end": 177,
+        "summary": "type PacMap = _PacMap\n\n存储基础数据类型的容器。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：Syste"
+      },
+      {
+        "section_id": "section-12",
+        "title": "AbilityResult",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 193,
+        "summary": "type AbilityResult = _AbilityResult\n\n定义Ability被拉起并退出后返回的结果码和数据。\n\n**原子化服务API**：从API version 11开始，该接口"
+      },
+      {
+        "section_id": "section-13",
+        "title": "AbilityStartCallback<sup>11+<sup>",
+        "level": 2,
+        "line_start": 194,
+        "line_end": 209,
+        "summary": "type AbilityStartCallback = _AbilityStartCallback\n\n定义了拉起UIExtensionAbility的回调结果，通常作为[UIAbilityConte"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ConnectOptions",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 223,
+        "summary": "type ConnectOptions = _ConnectOptions\n\n在连接指定的后台服务时作为入参，用于接收与后台服务的连接状态。\n\n**系统能力**：SystemCapability.A"
+      },
+      {
+        "section_id": "section-15",
+        "title": "UIExtensionContext<sup>10+</sup>",
+        "level": 2,
+        "line_start": 224,
+        "line_end": 237,
+        "summary": "type UIExtensionContext = _UIExtensionContext.default\n\n[UIExtensionAbility](../apis-ability-kit/js-"
+      },
+      {
+        "section_id": "section-16",
+        "title": "EmbeddableUIAbilityContext<sup>12+<sup>",
+        "level": 2,
+        "line_start": 238,
+        "line_end": 253,
+        "summary": "type EmbeddableUIAbilityContext = _EmbeddableUIAbilityContext.default\n\n[EmbeddableUIAbility](../api"
+      },
+      {
+        "section_id": "section-17",
+        "title": "PhotoEditorExtensionContext<sup>12+<sup>",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 267,
+        "summary": "type PhotoEditorExtensionContext = _PhotoEditorExtensionContext.default\n\n[PhotoEditorExtensionAbili"
+      },
+      {
+        "section_id": "section-18",
+        "title": "UIServiceProxy<sup>14+<sup>",
+        "level": 2,
+        "line_start": 268,
+        "line_end": 283,
+        "summary": "type UIServiceProxy = _UIServiceProxy.default\n\nUIServiceProxy提供了与UIServiceExtensionAbility服务端数据通信的能"
+      },
+      {
+        "section_id": "section-19",
+        "title": "UIServiceExtensionConnectCallback<sup>14+<sup>",
+        "level": 2,
+        "line_start": 284,
+        "line_end": 299,
+        "summary": "type UIServiceExtensionConnectCallback = _UIServiceExtensionConnectCallback.default\n\n在连接指定的UIServic"
+      },
+      {
+        "section_id": "section-20",
+        "title": "AppServiceExtensionContext<sup>20+</sup>",
+        "level": 2,
+        "line_start": 300,
+        "line_end": 313,
+        "summary": "type AppServiceExtensionContext = _AppServiceExtensionContext.default\n\n[AppServiceExtensionAbility]"
+      },
+      {
+        "section_id": "section-21",
+        "title": "FormEditExtensionContext<sup>22+</sup>",
+        "level": 2,
+        "line_start": 314,
+        "line_end": 329,
+        "summary": "type FormEditExtensionContext = _FormEditExtensionContext.default\n\n[FormEditExtensionAbility](../ap"
+      },
+      {
+        "section_id": "section-22",
+        "title": "LiveFormExtensionContext<sup>22+</sup>",
+        "level": 2,
+        "line_start": 330,
+        "line_end": 373,
+        "summary": "type LiveFormExtensionContext = _LiveFormExtensionContext.default\n\n[LiveFormExtensionAbility](../ap"
+      }
+    ]
+  }
+}

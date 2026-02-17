@@ -1,0 +1,428 @@
+{
+  "doc_id": "js-apis-app-ability-appManager-sys",
+  "title": "@ohos.app.ability.appManager (appManager)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-appManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-appManager-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@SKY2001",
+    "designer": "@yzkp",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.appManager (appManager)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.appManager (appManager)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { appManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "appManager.PreloadMode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 36,
+        "summary": "表示预加载应用进程模式的枚举。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Core\n\n**系统接口**：此接口为系统接口。\n\n**模型约束*"
+      },
+      {
+        "section_id": "section-3",
+        "title": "KeepAliveAppType<sup>14+</sup>",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 50,
+        "summary": "表示被保活应用的应用类型。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-4",
+        "title": "KeepAliveSetter<sup>14+</sup>",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 63,
+        "summary": "表示应用保活的设置方类型。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-5",
+        "title": "KeepAliveBundleInfo<sup>14+</sup>",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 79,
+        "summary": "定义应用保活信息，可以通过[getKeepAliveBundles](#appmanagergetkeepalivebundles14)或[getKeepAliveAppServiceExtensi"
+      },
+      {
+        "section_id": "section-6",
+        "title": "appManager.isSharedBundleRunning<sup>10+</sup>",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 131,
+        "summary": "isSharedBundleRunning(bundleName: string, versionCode: number): Promise\\<boolean>\n\n检查共享库是否正在使用。使用Pr"
+      },
+      {
+        "section_id": "section-7",
+        "title": "appManager.isSharedBundleRunning<sup>10+</sup>",
+        "level": 2,
+        "line_start": 132,
+        "line_end": 179,
+        "summary": "isSharedBundleRunning(bundleName: string, versionCode: number, callback: AsyncCallback\\<boolean>):"
+      },
+      {
+        "section_id": "section-8",
+        "title": "appManager.on('appForegroundState')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 230,
+        "summary": "on(type: 'appForegroundState', observer: AppForegroundStateObserver): void\n\n注册应用启动和退出的监听器，可用于系统应用监听"
+      },
+      {
+        "section_id": "section-9",
+        "title": "appManager.on('abilityFirstFrameState')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 231,
+        "line_end": 282,
+        "summary": "on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string):"
+      },
+      {
+        "section_id": "section-10",
+        "title": "appManager.off('appForegroundState')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 283,
+        "line_end": 346,
+        "summary": "off(type: 'appForegroundState', observer?: AppForegroundStateObserver): void\n\n注销应用启动和退出的监听器。\n\n**系统接"
+      },
+      {
+        "section_id": "section-11",
+        "title": "appManager.off('abilityFirstFrameState')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 347,
+        "line_end": 405,
+        "summary": "off(type: 'abilityFirstFrameState', observer?: AbilityFirstFrameStateObserver): void\n\n取消注册监听Ability"
+      },
+      {
+        "section_id": "section-12",
+        "title": "appManager.on('applicationState')<sup>21+</sup>",
+        "level": 2,
+        "line_start": 406,
+        "line_end": 493,
+        "summary": "on(type: 'applicationState', observer: ApplicationStateObserver, filter: AppStateFilter): number\n\n注"
+      },
+      {
+        "section_id": "section-13",
+        "title": "appManager.getForegroundApplications",
+        "level": 2,
+        "line_start": 494,
+        "line_end": 545,
+        "summary": "getForegroundApplications(callback: AsyncCallback\\<Array\\<AppStateData>>): void\n\n获取当前所有前台应用的信息。该应用信"
+      },
+      {
+        "section_id": "section-14",
+        "title": "appManager.getForegroundApplications",
+        "level": 2,
+        "line_start": 546,
+        "line_end": 586,
+        "summary": "getForegroundApplications(): Promise\\<Array\\<AppStateData>>\n\n获取当前所有前台应用的信息。该应用信息由[AppStateData](js-"
+      },
+      {
+        "section_id": "section-15",
+        "title": "appManager.killProcessWithAccount",
+        "level": 2,
+        "line_start": 587,
+        "line_end": 648,
+        "summary": "killProcessWithAccount(bundleName: string, accountId: number): Promise\\<void\\>\n\n终止account进程。使用Promi"
+      },
+      {
+        "section_id": "section-16",
+        "title": "appManager.killProcessWithAccount<sup>14+</sup>",
+        "level": 2,
+        "line_start": 649,
+        "line_end": 714,
+        "summary": "killProcessWithAccount(bundleName: string, accountId: number, clearPageStack: boolean, appIndex?: n"
+      },
+      {
+        "section_id": "section-17",
+        "title": "appManager.killProcessWithAccount",
+        "level": 2,
+        "line_start": 715,
+        "line_end": 769,
+        "summary": "killProcessWithAccount(bundleName: string, accountId: number, callback: AsyncCallback\\<void\\>): voi"
+      },
+      {
+        "section_id": "section-18",
+        "title": "appManager.killProcessesByBundleName",
+        "level": 2,
+        "line_start": 770,
+        "line_end": 824,
+        "summary": "killProcessesByBundleName(bundleName: string, callback: AsyncCallback\\<void>)\n\n通过Bundle名称终止进程。使用cal"
+      },
+      {
+        "section_id": "section-19",
+        "title": "appManager.killProcessesByBundleName",
+        "level": 2,
+        "line_start": 825,
+        "line_end": 880,
+        "summary": "killProcessesByBundleName(bundleName: string): Promise\\<void>\n\n通过Bundle名称终止进程。使用Promise异步回调。\n\n**需要权"
+      },
+      {
+        "section_id": "section-20",
+        "title": "appManager.clearUpApplicationData",
+        "level": 2,
+        "line_start": 881,
+        "line_end": 935,
+        "summary": "clearUpApplicationData(bundleName: string, callback: AsyncCallback\\<void>): void\n\n通过Bundle名称清除应用数据。"
+      },
+      {
+        "section_id": "section-21",
+        "title": "appManager.clearUpApplicationData",
+        "level": 2,
+        "line_start": 936,
+        "line_end": 991,
+        "summary": "clearUpApplicationData(bundleName: string): Promise\\<void>\n\n通过Bundle名称清除应用数据。使用Promise异步回调。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-22",
+        "title": "appManager.getProcessMemoryByPid<sup>10+</sup>",
+        "level": 2,
+        "line_start": 992,
+        "line_end": 1042,
+        "summary": "getProcessMemoryByPid(pid: number, callback: AsyncCallback\\<number>): void\n\n通过pid查询对应进程占用的内存大小。使用ca"
+      },
+      {
+        "section_id": "section-23",
+        "title": "appManager.getProcessMemoryByPid<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1043,
+        "line_end": 1095,
+        "summary": "getProcessMemoryByPid(pid: number): Promise\\<number>\n\n通过pid查询对应进程占用的内存大小。使用Promise异步回调。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-24",
+        "title": "appManager.getRunningProcessInfoByBundleName<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1096,
+        "line_end": 1146,
+        "summary": "getRunningProcessInfoByBundleName(bundleName: string, callback: AsyncCallback\\<Array\\<ProcessInform"
+      },
+      {
+        "section_id": "section-25",
+        "title": "appManager.getRunningProcessInfoByBundleName<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1147,
+        "line_end": 1199,
+        "summary": "getRunningProcessInfoByBundleName(bundleName: string): Promise\\<Array\\<ProcessInformation>>\n\n通过bund"
+      },
+      {
+        "section_id": "section-26",
+        "title": "appManager.getRunningProcessInfoByBundleName<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1200,
+        "line_end": 1252,
+        "summary": "getRunningProcessInfoByBundleName(bundleName: string, userId: number, callback: AsyncCallback\\<Arra"
+      },
+      {
+        "section_id": "section-27",
+        "title": "appManager.getRunningProcessInfoByBundleName<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1253,
+        "line_end": 1307,
+        "summary": "getRunningProcessInfoByBundleName(bundleName: string, userId: number): Promise\\<Array\\<ProcessInfor"
+      },
+      {
+        "section_id": "section-28",
+        "title": "appManager.isApplicationRunning<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1308,
+        "line_end": 1357,
+        "summary": "isApplicationRunning(bundleName: string): Promise\\<boolean>\n\n查询所有用户下指定包名的应用是否正在运行。使用Promise异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-29",
+        "title": "appManager.isApplicationRunning<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1358,
+        "line_end": 1410,
+        "summary": "isApplicationRunning(bundleName: string, callback: AsyncCallback\\<boolean>): void\n\n查询所有用户下指定包名的应用是否"
+      },
+      {
+        "section_id": "section-30",
+        "title": "ApplicationState",
+        "level": 2,
+        "line_start": 1411,
+        "line_end": 1427,
+        "summary": "应用状态，该类型为枚举，可配合[AbilityStateData](js-apis-inner-application-abilityStateData.md)返回相应的应用状态。\n\n**系统能力*"
+      },
+      {
+        "section_id": "section-31",
+        "title": "appManager.getRunningProcessInformationByBundleType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1428,
+        "line_end": 1482,
+        "summary": "getRunningProcessInformationByBundleType(bundleType: bundleManager.BundleType): Promise\\<Array\\<Pro"
+      },
+      {
+        "section_id": "section-32",
+        "title": "appManager.preloadApplication<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1483,
+        "line_end": 1547,
+        "summary": "preloadApplication(bundleName: string, userId: number, mode: PreloadMode, appIndex?: number): Promi"
+      },
+      {
+        "section_id": "section-33",
+        "title": "appManager.getRunningMultiAppInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1548,
+        "line_end": 1604,
+        "summary": "getRunningMultiAppInfo(bundleName: string): Promise\\<RunningMultiAppInfo>\n\n根据应用包名获取系统中运行态的应用多开（即在一个"
+      },
+      {
+        "section_id": "section-34",
+        "title": "appManager.terminateMission<sup>13+</sup>",
+        "level": 2,
+        "line_start": 1605,
+        "line_end": 1670,
+        "summary": "terminateMission(missionId: number): Promise\\<void>\n\n关闭指定的任务。使用Promise异步回调。\n\n**需要权限**：ohos.permissi"
+      },
+      {
+        "section_id": "section-35",
+        "title": "appManager.getSupportedProcessCachePids<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1671,
+        "line_end": 1731,
+        "summary": "getSupportedProcessCachePids(bundleName : string): Promise\\<Array\\<number>>\n\n查询当前应用中支持缓存后快速启动的进程PID"
+      },
+      {
+        "section_id": "section-36",
+        "title": "appManager.clearUpAppData<sup>13+</sup>",
+        "level": 2,
+        "line_start": 1732,
+        "line_end": 1790,
+        "summary": "clearUpAppData(bundleName: string, appCloneIndex?: number): Promise\\<void>\n\n根据Bundle名称和应用分身索引，清除指定应"
+      },
+      {
+        "section_id": "section-37",
+        "title": "appManager.setKeepAliveForBundle<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1791,
+        "line_end": 1861,
+        "summary": "setKeepAliveForBundle(bundleName: string, userId: number, enable: boolean): Promise\\<void>\n\n为指定用户下的"
+      },
+      {
+        "section_id": "section-38",
+        "title": "appManager.getKeepAliveBundles<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1862,
+        "line_end": 1922,
+        "summary": "getKeepAliveBundles(type: KeepAliveAppType, userId?: number): Promise\\<Array\\<KeepAliveBundleInfo>>"
+      },
+      {
+        "section_id": "section-39",
+        "title": "appManager.killProcessesInBatch<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1923,
+        "line_end": 1980,
+        "summary": "killProcessesInBatch(pids: Array\\<number>): Promise\\<void>\n\n批量终止进程。使用Promise异步回调。\n\n**需要权限**：ohos.pe"
+      },
+      {
+        "section_id": "section-40",
+        "title": "appManager.setKeepAliveForAppServiceExtension<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1981,
+        "line_end": 2045,
+        "summary": "setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean): Promise\\<void>\n\n为AppServi"
+      },
+      {
+        "section_id": "section-41",
+        "title": "appManager.getKeepAliveAppServiceExtensions<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2046,
+        "line_end": 2096,
+        "summary": "getKeepAliveAppServiceExtensions(): Promise\\<Array\\<KeepAliveBundleInfo>>\n\n获取所有保活的AppServiceExtensi"
+      },
+      {
+        "section_id": "section-42",
+        "title": "AppForegroundStateObserver<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2097,
+        "line_end": 2108,
+        "summary": "type AppForegroundStateObserver = _AppForegroundStateObserver\n\n应用启动和退出的状态监听。\n\n**系统能力**：SystemCapabi"
+      },
+      {
+        "section_id": "section-43",
+        "title": "AbilityFirstFrameStateObserver<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2109,
+        "line_end": 2120,
+        "summary": "type AbilityFirstFrameStateObserver = _AbilityFirstFrameStateObserver\n\nUIAbility首帧绘制完成事件监听对象。\n\n**系统"
+      },
+      {
+        "section_id": "section-44",
+        "title": "AbilityFirstFrameStateData<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2121,
+        "line_end": 2132,
+        "summary": "type AbilityFirstFrameStateData = _AbilityFirstFrameStateData\n\nUIAbility首帧绘制完成回调上报数据结构。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-45",
+        "title": "RunningMultiAppInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2133,
+        "line_end": 2144,
+        "summary": "type RunningMultiAppInfo = _RunningMultiAppInfo\n\n应用多开在运行态的结构信息。\n\n**系统能力**：SystemCapability.Ability."
+      },
+      {
+        "section_id": "section-46",
+        "title": "FilterBundleType<sup>21+</sup>",
+        "level": 2,
+        "line_start": 2145,
+        "line_end": 2157,
+        "summary": "表示要监听的的应用类型，该类型为枚举。可配合[AppStateFilter](#appstatefilter21)过滤想要监听的应用类型。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**"
+      },
+      {
+        "section_id": "section-47",
+        "title": "FilterAppStateType<sup>21+</sup>",
+        "level": 2,
+        "line_start": 2158,
+        "line_end": 2172,
+        "summary": "表示要监听的应用状态，该类型为枚举。可配合[AppStateFilter](#appstatefilter21)过滤想要监听的应用状态。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-48",
+        "title": "FilterProcessStateType<sup>21+</sup>",
+        "level": 2,
+        "line_start": 2173,
+        "line_end": 2187,
+        "summary": "表示要监听的进程状态，该类型为枚举。可配合[AppStateFilter](#appstatefilter21)过滤想要监听的进程状态。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-49",
+        "title": "FilterAbilityStateType<sup>21+</sup>",
+        "level": 2,
+        "line_start": 2188,
+        "line_end": 2202,
+        "summary": "表示要监听的Ability状态，该类型为枚举。可配合[AppStateFilter](#appstatefilter21)过滤想要监听的Ability状态。\n\n**系统接口**：此接口为系统接口。"
+      },
+      {
+        "section_id": "section-50",
+        "title": "FilterCallback<sup>21+</sup>",
+        "level": 2,
+        "line_start": 2203,
+        "line_end": 2220,
+        "summary": "表示要监听的回调函数，该类型为枚举。可配合[AppStateFilter](#appstatefilter21)过滤想要监听的回调函数。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-51",
+        "title": "AppStateFilter<sup>21+</sup>",
+        "level": 2,
+        "line_start": 2221,
+        "line_end": 2235,
+        "summary": "应用生命周期变化事件的过滤器，可作为[on](#appmanageronapplicationstate21)的参数用于筛选所需监听的应用生命周期变化事件。\n\n**系统能力**：SystemCapa"
+      }
+    ]
+  }
+}

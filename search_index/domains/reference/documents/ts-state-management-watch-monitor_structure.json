@@ -1,0 +1,68 @@
+{
+  "doc_id": "ts-state-management-watch-monitor",
+  "title": "状态变量变化监听",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-state-management-watch-monitor.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-state-management-watch-monitor.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 状态变量变化监听，提供相关接口和功能说明。",
+  "structure": {
+    "title": "状态变量变化监听",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "Watch",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 63,
+        "summary": "Watch: (value: string) => PropertyDecorator\n\n@Watch装饰器用于状态管理V1中对状态变量变化的监听。@Watch的详细使用方式见[@Watch装饰器"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Monitor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 75,
+        "summary": "Monitor: MonitorDecorator\n\n@Monitor装饰器用于状态管理V2中对状态变量变化的监听。@Monitor相关内容的详细使用方式见[@Monitor装饰器：状态变量修改异步"
+      },
+      {
+        "section_id": "section-3",
+        "title": "MonitorDecorator<sup>12+</sup>",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 145,
+        "summary": "type MonitorDecorator = (value: string, ...args: string[]) => MethodDecorator\n\n@Monitor装饰器的实际类型。\n\n*"
+      },
+      {
+        "section_id": "section-4",
+        "title": "IMonitor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 146,
+        "line_end": 232,
+        "summary": "当监听的变量变化时，状态管理框架侧将回调开发者注册的函数，并传入变化信息。变化信息的类型即为IMonitor类型。\n\n### 属性\n\n**卡片能力：** 从API version 23开始，该接口支"
+      },
+      {
+        "section_id": "section-5",
+        "title": "IMonitorValue\\<T\\><sup>12+</sup>",
+        "level": 2,
+        "line_start": 233,
+        "line_end": 277,
+        "summary": "@Monitor监听变量变化的具体信息，通过IMonitor的value接口获取。T为变量类型。\n\n### 属性\n\n**卡片能力：** 从API version 23开始，该接口支持在ArkTS卡片"
+      },
+      {
+        "section_id": "section-6",
+        "title": "SyncMonitor<sup>23+</sup>",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 348,
+        "summary": "SyncMonitor: MonitorDecorator\n\n@SyncMonitor装饰器用于状态管理V2中对状态变量变化的监听。@SyncMonitor相关内容的详细使用方式见[@SyncMon"
+      }
+    ]
+  }
+}

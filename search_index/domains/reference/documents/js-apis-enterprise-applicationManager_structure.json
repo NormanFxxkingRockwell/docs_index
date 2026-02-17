@@ -1,0 +1,284 @@
+{
+  "doc_id": "js-apis-enterprise-applicationManager",
+  "title": "@ohos.enterprise.applicationManager（应用管理）",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-applicationManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-applicationManager.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.applicationManager（应用管理），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.applicationManager（应用管理）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { applicationManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "applicationManager.addDisallowedRunningBundlesSync",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 81,
+        "summary": "addDisallowedRunningBundlesSync(admin: Want, appIds: Array\\<string>, accountId?: number): void\n\n添加应"
+      },
+      {
+        "section_id": "section-3",
+        "title": "applicationManager.removeDisallowedRunningBundlesSync",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 136,
+        "summary": "removeDisallowedRunningBundlesSync(admin: Want, appIds:  Array\\<string>, accountId?: number): void"
+      },
+      {
+        "section_id": "section-4",
+        "title": "applicationManager.getDisallowedRunningBundlesSync",
+        "level": 2,
+        "line_start": 137,
+        "line_end": 193,
+        "summary": "getDisallowedRunningBundlesSync(admin: Want, accountId?: number): Array&lt;string>\n\n获取当前/指定用户下的应用运行"
+      },
+      {
+        "section_id": "section-5",
+        "title": "applicationManager.addAllowedRunningBundles<sup>21+</sup>",
+        "level": 2,
+        "line_start": 194,
+        "line_end": 257,
+        "summary": "addAllowedRunningBundles(admin: Want, appIdentifiers: Array\\<string>, accountId: number): void\n\n添加应"
+      },
+      {
+        "section_id": "section-6",
+        "title": "applicationManager.removeAllowedRunningBundles<sup>21+</sup>",
+        "level": 2,
+        "line_start": 258,
+        "line_end": 312,
+        "summary": "removeAllowedRunningBundles(admin: Want, appIdentifiers: Array\\<string>, accountId: number): void"
+      },
+      {
+        "section_id": "section-7",
+        "title": "applicationManager.getAllowedRunningBundles<sup>21+</sup>",
+        "level": 2,
+        "line_start": 313,
+        "line_end": 367,
+        "summary": "getAllowedRunningBundles(admin: Want, accountId: number): Array&lt;string>\n\n获取指定用户下的应用运行允许名单。\n\n**需要"
+      },
+      {
+        "section_id": "section-8",
+        "title": "applicationManager.addAutoStartApps",
+        "level": 2,
+        "line_start": 368,
+        "line_end": 428,
+        "summary": "addAutoStartApps(admin: Want, autoStartApps: Array\\<Want>): void\n\n为当前用户添加开机自启动应用名单。通过本接口添加至自启动名单的应用"
+      },
+      {
+        "section_id": "section-9",
+        "title": "applicationManager.removeAutoStartApps",
+        "level": 2,
+        "line_start": 429,
+        "line_end": 488,
+        "summary": "removeAutoStartApps(admin: Want, autoStartApps: Array\\<Want>): void\n\n为当前用户删除开机自启动应用名单。\n\n**需要权限：** o"
+      },
+      {
+        "section_id": "section-10",
+        "title": "applicationManager.removeAutoStartApps<sup>20+</sup>",
+        "level": 2,
+        "line_start": 489,
+        "line_end": 550,
+        "summary": "removeAutoStartApps(admin: Want, autoStartApps: Array\\<Want>, accountId: number): void\n\n删除指定用户的开机自启"
+      },
+      {
+        "section_id": "section-11",
+        "title": "applicationManager.getAutoStartApps",
+        "level": 2,
+        "line_start": 551,
+        "line_end": 607,
+        "summary": "getAutoStartApps(admin: Want): Array\\<Want>\n\n查询当前用户开机自启动应用名单。\n\n**需要权限：** ohos.permission.ENTERPRISE"
+      },
+      {
+        "section_id": "section-12",
+        "title": "applicationManager.addAutoStartApps<sup>20+</sup>",
+        "level": 2,
+        "line_start": 608,
+        "line_end": 670,
+        "summary": "addAutoStartApps(admin: Want, autoStartApps: Array\\<Want>, accountId: number, disallowModify: boole"
+      },
+      {
+        "section_id": "section-13",
+        "title": "applicationManager.getAutoStartApps<sup>20+</sup>",
+        "level": 2,
+        "line_start": 671,
+        "line_end": 727,
+        "summary": "getAutoStartApps(admin: Want, accountId: number): Array\\<Want>\n\n查询指定用户下的开机自启动应用名单。\n\n**需要权限：** ohos."
+      },
+      {
+        "section_id": "section-14",
+        "title": "applicationManager.isModifyAutoStartAppsDisallowed<sup>20+</sup>",
+        "level": 2,
+        "line_start": 728,
+        "line_end": 791,
+        "summary": "isModifyAutoStartAppsDisallowed(admin: Want, autoStartApp: Want, accountId: number): boolean\n\n查询指定用"
+      },
+      {
+        "section_id": "section-15",
+        "title": "applicationManager.addKeepAliveApps<sup>14+</sup>",
+        "level": 2,
+        "line_start": 792,
+        "line_end": 851,
+        "summary": "addKeepAliveApps(admin: Want, bundleNames: Array\\<string>, accountId: number): void\n\n添加保活应用名单，添加后将自"
+      },
+      {
+        "section_id": "section-16",
+        "title": "applicationManager.addKeepAliveApps<sup>20+</sup>",
+        "level": 2,
+        "line_start": 852,
+        "line_end": 912,
+        "summary": "addKeepAliveApps(admin: Want, bundleNames: Array\\<string>, accountId: number, disallowModify: boole"
+      },
+      {
+        "section_id": "section-17",
+        "title": "applicationManager.removeKeepAliveApps<sup>14+</sup>",
+        "level": 2,
+        "line_start": 913,
+        "line_end": 969,
+        "summary": "removeKeepAliveApps(admin: Want, bundleNames: Array\\<string>, accountId: number): void\n\n移除保活应用名单中的指"
+      },
+      {
+        "section_id": "section-18",
+        "title": "applicationManager.getKeepAliveApps<sup>14+</sup>",
+        "level": 2,
+        "line_start": 970,
+        "line_end": 1027,
+        "summary": "getKeepAliveApps(admin: Want, accountId: number): Array&lt;string>\n\n获取保活应用包名。\n\n**需要权限：** ohos.permi"
+      },
+      {
+        "section_id": "section-19",
+        "title": "applicationManager.isModifyKeepAliveAppsDisallowed<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1028,
+        "line_end": 1088,
+        "summary": "isModifyKeepAliveAppsDisallowed(admin: Want, accountId: number, bundleName: string): boolean\n\n查询应用是"
+      },
+      {
+        "section_id": "section-20",
+        "title": "applicationManager.clearUpApplicationData<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1089,
+        "line_end": 1143,
+        "summary": "clearUpApplicationData(admin: Want, bundleName: string, appIndex: number, accountId: number): void"
+      },
+      {
+        "section_id": "section-21",
+        "title": "applicationManager.setAllowedKioskApps<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1144,
+        "line_end": 1198,
+        "summary": "setAllowedKioskApps(admin: Want, appIdentifiers: Array&lt;string&gt;): void\n\n设置允许在Kiosk模式下运行的应用。\n\nK"
+      },
+      {
+        "section_id": "section-22",
+        "title": "applicationManager.getAllowedKioskApps<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1199,
+        "line_end": 1252,
+        "summary": "getAllowedKioskApps(admin: Want): Array&lt;string&gt;\n\n获取允许在Kiosk模式下运行的应用。\n\n**需要权限：** ohos.permissi"
+      },
+      {
+        "section_id": "section-23",
+        "title": "applicationManager.isAppKioskAllowed<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1253,
+        "line_end": 1288,
+        "summary": "isAppKioskAllowed(appIdentifier: string): boolean\n\n查询某应用是否允许在Kiosk模式下运行。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-24",
+        "title": "applicationManager.setKioskFeatures<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1289,
+        "line_end": 1344,
+        "summary": "setKioskFeatures(admin: Want, features: Array\\<KioskFeature>): void\n\n设置Kiosk模式的特征。通过本接口可以控制在[Kiosk模"
+      },
+      {
+        "section_id": "section-25",
+        "title": "KioskFeature<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1345,
+        "line_end": 1357,
+        "summary": "Kiosk模式的特征。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**模型约束：** 此接口仅可在Stag"
+      },
+      {
+        "section_id": "section-26",
+        "title": "applicationManager.addUserNonStopApps<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1358,
+        "line_end": 1422,
+        "summary": "addUserNonStopApps(admin: Want, applicationInstances: Array&lt;common.ApplicationInstance&gt;): voi"
+      },
+      {
+        "section_id": "section-27",
+        "title": "applicationManager.removeUserNonStopApps<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1423,
+        "line_end": 1485,
+        "summary": "removeUserNonStopApps(admin: Want, applicationInstances: Array&lt;common.ApplicationInstance&gt;):"
+      },
+      {
+        "section_id": "section-28",
+        "title": "applicationManager.getUserNonStopApps<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1486,
+        "line_end": 1541,
+        "summary": "getUserNonStopApps(admin: Want): Array&lt;common.ApplicationInstance&gt;\n\n获取当前设备下所有用户不可关停应用名单。\n\n**需"
+      },
+      {
+        "section_id": "section-29",
+        "title": "applicationManager.addFreezeExemptedApps<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1542,
+        "line_end": 1606,
+        "summary": "addFreezeExemptedApps(admin: Want, applicationInstances: Array&lt;common.ApplicationInstance&gt;):"
+      },
+      {
+        "section_id": "section-30",
+        "title": "applicationManager.removeFreezeExemptedApps<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1607,
+        "line_end": 1669,
+        "summary": "removeFreezeExemptedApps(admin: Want, applicationInstances: Array&lt;common.ApplicationInstance&gt;"
+      },
+      {
+        "section_id": "section-31",
+        "title": "applicationManager.getFreezeExemptedApps<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1670,
+        "line_end": 1725,
+        "summary": "getFreezeExemptedApps(admin: Want): Array&lt;common.ApplicationInstance&gt;\n\n获取当前设备下所有用户后台防冻结应用名单。"
+      },
+      {
+        "section_id": "section-32",
+        "title": "applicationManager.setAbilityDisabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1726,
+        "line_end": 1784,
+        "summary": "setAbilityDisabled(admin: Want, bundleName: string, accountId: number, abilityName: string, isDisab"
+      },
+      {
+        "section_id": "section-33",
+        "title": "applicationManager.isAbilityDisabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1785,
+        "line_end": 1846,
+        "summary": "isAbilityDisabled(admin: Want, bundleName: string, accountId: number, abilityName: string): boolean"
+      }
+    ]
+  }
+}

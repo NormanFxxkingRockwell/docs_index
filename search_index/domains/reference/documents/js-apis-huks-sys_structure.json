@@ -1,0 +1,108 @@
+{
+  "doc_id": "js-apis-huks-sys",
+  "title": "@ohos.security.huks (通用密钥库系统)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-universal-keystore-kit/js-apis-huks-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-universal-keystore-kit/js-apis-huks-sys.md",
+  "metadata": {
+    "kit": "Universal Keystore Kit",
+    "subsystem": "Security",
+    "owner": "@wutiantian-gitee",
+    "designer": "@HighLowWorld",
+    "tester": "@wxy1234564846",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Universal Keystore Kit Security 模块的 @ohos.security.huks (通用密钥库系统)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.security.huks (通用密钥库系统)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { huks } from '@kit.UniversalKeystoreKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "huks.generateKeyItemAsUser",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 124,
+        "summary": "generateKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions) : Promise\\<void>"
+      },
+      {
+        "section_id": "section-3",
+        "title": "huks.deleteKeyItemAsUser",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 237,
+        "summary": "deleteKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions) : Promise\\<void>\n\n指"
+      },
+      {
+        "section_id": "section-4",
+        "title": "huks.importKeyItemAsUser",
+        "level": 2,
+        "line_start": 238,
+        "line_end": 343,
+        "summary": "importKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions) : Promise\\<void>\n\n指"
+      },
+      {
+        "section_id": "section-5",
+        "title": "huks.attestKeyItemAsUser",
+        "level": 2,
+        "line_start": 344,
+        "line_end": 497,
+        "summary": "attestKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions) : Promise\\<HuksRetu"
+      },
+      {
+        "section_id": "section-6",
+        "title": "huks.anonAttestKeyItemAsUser",
+        "level": 2,
+        "line_start": 498,
+        "line_end": 654,
+        "summary": "anonAttestKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions) : Promise\\<Huks"
+      },
+      {
+        "section_id": "section-7",
+        "title": "huks.importWrappedKeyItemAsUser",
+        "level": 2,
+        "line_start": 655,
+        "line_end": 1321,
+        "summary": "importWrappedKeyItemAsUser(userId: number, keyAlias: string, wrappingKeyAlias: string, huksOptions:"
+      },
+      {
+        "section_id": "section-8",
+        "title": "huks.exportKeyItemAsUser",
+        "level": 2,
+        "line_start": 1322,
+        "line_end": 1441,
+        "summary": "exportKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions) : Promise\\<HuksRetu"
+      },
+      {
+        "section_id": "section-9",
+        "title": "huks.getKeyItemPropertiesAsUser",
+        "level": 2,
+        "line_start": 1442,
+        "line_end": 1558,
+        "summary": "getKeyItemPropertiesAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions) : Promise\\<H"
+      },
+      {
+        "section_id": "section-10",
+        "title": "huks.hasKeyItemAsUser",
+        "level": 2,
+        "line_start": 1559,
+        "line_end": 1674,
+        "summary": "hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions) : Promise\\<boolean>\n\n指"
+      },
+      {
+        "section_id": "section-11",
+        "title": "huks.initSessionAsUser",
+        "level": 2,
+        "line_start": 1675,
+        "line_end": 1890,
+        "summary": "initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions) : Promise\\<HuksSessio"
+      }
+    ]
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "doc_id": "arkts-apis-graphics-drawing-Pen",
+  "title": "Class (Pen)",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Pen.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Pen.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphics 模块的 Class (Pen)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (Pen)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { drawing } from '@kit.ArkGraphics2D';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "constructor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 41,
+        "summary": "constructor()\n\n构造一个新的画笔对象。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**示例：**\n\n```ts\nimport { dr"
+      },
+      {
+        "section_id": "section-3",
+        "title": "constructor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 75,
+        "summary": "constructor(pen: Pen)\n\n复制构造一个新的画笔对象。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数：**\n\n| 参数名 |"
+      },
+      {
+        "section_id": "section-4",
+        "title": "setMiterLimit<sup>12+</sup>",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 106,
+        "summary": "setMiterLimit(miter: number): void\n\n设置折线尖角长度与线宽的最大比值，当画笔绘制一条折线，并且[JoinStyle](arkts-apis-graphics-dr"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getMiterLimit<sup>12+</sup>",
+        "level": 2,
+        "line_start": 107,
+        "line_end": 129,
+        "summary": "getMiterLimit(): number\n\n获取折线尖角的限制值。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-6",
+        "title": "setImageFilter<sup>12+</sup>",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 163,
+        "summary": "setImageFilter(filter: ImageFilter | null): void\n\n设置画笔的图像滤波器。\n\n**系统能力：** SystemCapability.Graphics."
+      },
+      {
+        "section_id": "section-7",
+        "title": "getColorFilter<sup>12+</sup>",
+        "level": 2,
+        "line_start": 164,
+        "line_end": 188,
+        "summary": "getColorFilter(): ColorFilter\n\n获取画笔的颜色滤波器。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**"
+      },
+      {
+        "section_id": "section-8",
+        "title": "setColor",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 220,
+        "summary": "setColor(color: common2D.Color) : void\n\n设置画笔的颜色。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数"
+      },
+      {
+        "section_id": "section-9",
+        "title": "setColor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 221,
+        "line_end": 254,
+        "summary": "setColor(alpha: number, red: number, green: number, blue: number): void\n\n设置画笔的颜色。性能优于[setColor](#se"
+      },
+      {
+        "section_id": "section-10",
+        "title": "setColor<sup>18+</sup>",
+        "level": 2,
+        "line_start": 255,
+        "line_end": 277,
+        "summary": "setColor(color: number) : void\n\n设置画笔的颜色。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数：**\n\n| 参"
+      },
+      {
+        "section_id": "section-11",
+        "title": "setColor4f<sup>20+</sup>",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 303,
+        "summary": "setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void"
+      },
+      {
+        "section_id": "section-12",
+        "title": "getColor<sup>12+</sup>",
+        "level": 2,
+        "line_start": 304,
+        "line_end": 328,
+        "summary": "getColor(): common2D.Color\n\n获取画笔的颜色。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-13",
+        "title": "getColor4f<sup>20+</sup>",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 354,
+        "summary": "getColor4f(): common2D.Color4f\n\n获取画笔的颜色，与[getColor](#getcolor12)的区别在于返回值类型为浮点数，适用于需要浮点数类型的场景。\n\n**系统"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getHexColor<sup>18+</sup>",
+        "level": 2,
+        "line_start": 355,
+        "line_end": 380,
+        "summary": "getHexColor(): number\n\n获取画笔的颜色。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-15",
+        "title": "setStrokeWidth",
+        "level": 2,
+        "line_start": 381,
+        "line_end": 411,
+        "summary": "setStrokeWidth(width: number) : void\n\n设置画笔的线宽。0线宽被视作特殊的极细线宽，在绘制时始终会被绘制为1像素，不随画布的缩放而改变；负数线宽在实际绘制时会被视"
+      },
+      {
+        "section_id": "section-16",
+        "title": "getWidth<sup>12+</sup>",
+        "level": 2,
+        "line_start": 412,
+        "line_end": 434,
+        "summary": "getWidth(): number\n\n获取画笔的线宽属性，线宽描述了画笔绘制图形轮廓的宽度。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值"
+      },
+      {
+        "section_id": "section-17",
+        "title": "setAntiAlias",
+        "level": 2,
+        "line_start": 435,
+        "line_end": 465,
+        "summary": "setAntiAlias(aa: boolean) : void\n\n设置画笔是否开启抗锯齿。开启后，可以使得图形的边缘在显示时更平滑。未调用此接口设置时，系统默认关闭抗锯齿。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-18",
+        "title": "isAntiAlias<sup>12+</sup>",
+        "level": 2,
+        "line_start": 466,
+        "line_end": 488,
+        "summary": "isAntiAlias(): boolean\n\n获取画笔是否开启抗锯齿属性。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-19",
+        "title": "setAlpha",
+        "level": 2,
+        "line_start": 489,
+        "line_end": 519,
+        "summary": "setAlpha(alpha: number) : void\n\n设置画笔的透明度。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数：**\n\n|"
+      },
+      {
+        "section_id": "section-20",
+        "title": "getAlpha<sup>12+</sup>",
+        "level": 2,
+        "line_start": 520,
+        "line_end": 542,
+        "summary": "getAlpha(): number\n\n获取画笔的透明度。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型   | 说明"
+      },
+      {
+        "section_id": "section-21",
+        "title": "setColorFilter",
+        "level": 2,
+        "line_start": 543,
+        "line_end": 574,
+        "summary": "setColorFilter(filter: ColorFilter | null) : void\n\n给画笔添加额外的颜色滤波器。\n\n**系统能力：** SystemCapability.Graph"
+      },
+      {
+        "section_id": "section-22",
+        "title": "setMaskFilter<sup>12+</sup>",
+        "level": 2,
+        "line_start": 575,
+        "line_end": 614,
+        "summary": "setMaskFilter(filter: MaskFilter | null): void\n\n给画笔添加额外的蒙版滤镜。\n\n**系统能力：** SystemCapability.Graphics."
+      },
+      {
+        "section_id": "section-23",
+        "title": "setPathEffect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 615,
+        "line_end": 654,
+        "summary": "setPathEffect(effect: PathEffect | null): void\n\n设置画笔路径效果。\n\n**系统能力：** SystemCapability.Graphics.Draw"
+      },
+      {
+        "section_id": "section-24",
+        "title": "setShaderEffect<sup>12+</sup>",
+        "level": 2,
+        "line_start": 655,
+        "line_end": 686,
+        "summary": "setShaderEffect(shaderEffect: ShaderEffect | null): void\n\n设置画笔着色器效果。\n\n**系统能力：** SystemCapability.Gr"
+      },
+      {
+        "section_id": "section-25",
+        "title": "setShadowLayer<sup>12+</sup>",
+        "level": 2,
+        "line_start": 687,
+        "line_end": 737,
+        "summary": "setShadowLayer(shadowLayer: ShadowLayer | null): void\n\n设置画笔阴影层效果。当前仅在绘制文字时生效。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-26",
+        "title": "setBlendMode",
+        "level": 2,
+        "line_start": 738,
+        "line_end": 768,
+        "summary": "setBlendMode(mode: BlendMode) : void\n\n设置画笔的混合模式。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**参数"
+      },
+      {
+        "section_id": "section-27",
+        "title": "setJoinStyle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 769,
+        "line_end": 807,
+        "summary": "setJoinStyle(style: JoinStyle): void\n\n设置画笔绘制转角的样式。未调用此接口设置时，系统默认的转角样式为MITER_JOIN。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-28",
+        "title": "getJoinStyle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 808,
+        "line_end": 839,
+        "summary": "getJoinStyle(): JoinStyle\n\n获取画笔绘制转角的样式。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类"
+      },
+      {
+        "section_id": "section-29",
+        "title": "setCapStyle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 840,
+        "line_end": 878,
+        "summary": "setCapStyle(style: CapStyle): void\n\n设置画笔的线帽样式。未调用此接口设置时，系统默认的线帽样式为FLAT_CAP。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-30",
+        "title": "getCapStyle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 879,
+        "line_end": 910,
+        "summary": "getCapStyle(): CapStyle\n\n获取画笔的线帽样式。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**返回值：**\n\n| 类型"
+      },
+      {
+        "section_id": "section-31",
+        "title": "setDither",
+        "level": 2,
+        "line_start": 911,
+        "line_end": 941,
+        "summary": "setDither(dither: boolean) : void\n\n开启画笔的抖动绘制效果。抖动绘制可以使得绘制出的颜色更加真实。\n\n**系统能力：** SystemCapability.Grap"
+      },
+      {
+        "section_id": "section-32",
+        "title": "getFillPath<sup>12+</sup>",
+        "level": 2,
+        "line_start": 942,
+        "line_end": 983,
+        "summary": "getFillPath(src: Path, dst: Path): boolean\n\n获取使用画笔绘制的源路径轮廓，并用目标路径表示。\n\n**系统能力：** SystemCapability.Gr"
+      },
+      {
+        "section_id": "section-33",
+        "title": "reset<sup>12+</sup>",
+        "level": 2,
+        "line_start": 984,
+        "line_end": 999,
+        "summary": "reset(): void\n\n重置当前画笔为初始状态。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**示例：**\n\n```ts\nimport { d"
+      }
+    ]
+  }
+}

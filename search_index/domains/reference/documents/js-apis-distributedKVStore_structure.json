@@ -1,0 +1,180 @@
+{
+  "doc_id": "js-apis-distributedKVStore",
+  "title": "@ohos.data.distributedKVStore (分布式键值数据库)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/js-apis-distributedKVStore.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/js-apis-distributedKVStore.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@ding_dong_dong",
+    "designer": "@ding_dong_dong",
+    "tester": "@logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 @ohos.data.distributedKVStore (分布式键值数据库)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.data.distributedKVStore (分布式键值数据库)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 28,
+        "summary": "```ts\nimport { distributedKVStore } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "KVManagerConfig",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 39,
+        "summary": "提供KVManager实例的配置信息，包括调用方的包名和应用的上下文。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core"
+      },
+      {
+        "section_id": "section-3",
+        "title": "Constants",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 54,
+        "summary": "分布式键值数据库常量。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ValueType",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 69,
+        "summary": "数据类型枚举。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称       | 值 | 说明"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Value",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 80,
+        "summary": "存储在数据库中的值对象。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称  | 类型   | 只读 | 可"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Entry",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 91,
+        "summary": "存储在数据库中的键值对。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称  | 类型        | 只"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ChangeNotification",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 104,
+        "summary": "数据变更时通知的对象，包括数据插入的数据、更新的数据、删除的数据和设备ID。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.C"
+      },
+      {
+        "section_id": "section-8",
+        "title": "SyncMode",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 116,
+        "summary": "同步模式枚举。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称      | 值 | 说明"
+      },
+      {
+        "section_id": "section-9",
+        "title": "SubscribeType",
+        "level": 2,
+        "line_start": 117,
+        "line_end": 128,
+        "summary": "订阅类型枚举。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core\n\n| 名称                  | 值"
+      },
+      {
+        "section_id": "section-10",
+        "title": "KVStoreType",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 137,
+        "summary": "分布式键值数据库类型枚举。\n\n| 名称                 | 值 | 说明"
+      },
+      {
+        "section_id": "section-11",
+        "title": "SecurityLevel",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 156,
+        "summary": "数据库的安全级别枚举。\n> **说明**：\n>\n> 在单设备使用场景下，KV数据库支持修改securityLevel参数进行安全等级升级。升级操作需要注意以下几点：\n> * 该操作不支持跨设备同步的"
+      },
+      {
+        "section_id": "section-12",
+        "title": "Options",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 170,
+        "summary": "用于提供创建数据库的配置信息。\n\n| 名称          | 类型                        | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-13",
+        "title": "Schema",
+        "level": 2,
+        "line_start": 171,
+        "line_end": 216,
+        "summary": "表示数据库模式，可以在创建或打开数据库时创建Schema对象并将它们放入[Options](#options)中。\n\n**系统能力：** SystemCapability.DistributedDa"
+      },
+      {
+        "section_id": "section-14",
+        "title": "FieldNode",
+        "level": 2,
+        "line_start": 217,
+        "line_end": 300,
+        "summary": "表示 Schema 实例的节点，提供定义存储在数据库中的值的方法。\n\n**系统能力：** SystemCapability.DistributedDataManager.KVStore.Distri"
+      },
+      {
+        "section_id": "section-15",
+        "title": "distributedKVStore.createKVManager",
+        "level": 2,
+        "line_start": 301,
+        "line_end": 390,
+        "summary": "createKVManager(config: KVManagerConfig): KVManager\n\n创建一个KVManager对象实例，用于管理数据库对象。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-16",
+        "title": "KVManager",
+        "level": 2,
+        "line_start": 391,
+        "line_end": 962,
+        "summary": "分布式键值数据库管理实例，用于获取分布式键值数据库的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](#distributedkvstorecreatekvm"
+      },
+      {
+        "section_id": "section-17",
+        "title": "KVStoreResultSet",
+        "level": 2,
+        "line_start": 963,
+        "line_end": 1459,
+        "summary": "提供获取数据库结果集的相关方法，包括查询和移动数据读取位置等。同时允许打开的结果集的最大数量为8个。\n\nKVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如"
+      },
+      {
+        "section_id": "section-18",
+        "title": "Query",
+        "level": 2,
+        "line_start": 1460,
+        "line_end": 2709,
+        "summary": "使用谓词表示数据库查询，提供创建Query实例、查询数据库中的数据和添加谓词的方法。一个Query对象中谓词数量上限为256个。\n\n**系统能力：** SystemCapability.Distri"
+      },
+      {
+        "section_id": "section-19",
+        "title": "SingleKVStore",
+        "level": 2,
+        "line_start": 2710,
+        "line_end": 5581,
+        "summary": "SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据端端同步完成的方法。\n\n在调用SingleKVStore的方法前，需要先通过[getKVStore](#getkv"
+      },
+      {
+        "section_id": "section-20",
+        "title": "DeviceKVStore",
+        "level": 2,
+        "line_start": 5582,
+        "line_end": 7282,
+        "summary": "设备协同数据库，继承自SingleKVStore，提供查询数据和端端同步数据的方法，可以使用SingleKVStore的方法例如：put、putBatch等。\n\n设备协同数据库，以设备维度对数据进行"
+      }
+    ]
+  }
+}

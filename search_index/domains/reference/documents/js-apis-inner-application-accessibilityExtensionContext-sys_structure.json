@@ -1,0 +1,180 @@
+{
+  "doc_id": "js-apis-inner-application-accessibilityExtensionContext-sys",
+  "title": "AccessibilityExtensionContext (辅助功能扩展上下文)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-accessibility-kit/js-apis-inner-application-accessibilityExtensionContext-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-accessibility-kit/js-apis-inner-application-accessibilityExtensionContext-sys.md",
+  "metadata": {
+    "kit": "Accessibility Kit",
+    "subsystem": "BarrierFree",
+    "owner": "@qiiiiiiian",
+    "designer": "@z7o",
+    "tester": "@A_qqq",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Accessibility Kit BarrierFree 模块的 AccessibilityExtensionContext (辅助功能扩展上下文)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "AccessibilityExtensionContext (辅助功能扩展上下文)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 32,
+        "summary": "在使用AccessibilityExtensionContext功能前，需要先通过AccessibilityExtensionAbility子类实例获取一个AccessibilityExtensio"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Parameter<sup>20+</sup>",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 55,
+        "summary": "无障碍节点元素执行特定操作时，为操作提供具体设置的参数值。详见[无障碍节点元素可执行的操作](./js-apis-accessibility-sys.md#accessibilityaction)。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "AccessibilityGrid<sup>20+</sup>",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 69,
+        "summary": "辅助功能网格信息。详见[AccessibilityElement.currentItem](#accessibilityelement)。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "AccessibilitySpan<sup>20+</sup>",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 85,
+        "summary": "辅助功能超链接文本信息。详见[AccessibilityElement.spans](#accessibilityelement)。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：Sy"
+      },
+      {
+        "section_id": "section-5",
+        "title": "FocusRule<sup>23+</sup>",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 102,
+        "summary": "type FocusRule = 'bypassSelf' | 'bypassSelfDescendants' | 'checkSelf' | 'checkSelfBypassDescendants"
+      },
+      {
+        "section_id": "section-6",
+        "title": "FocusCondition<sup>23+</sup>",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 121,
+        "summary": "type FocusCondition = 'forward' | 'backward' | 'findLast' | 'getForwardScrollAncestor' | 'getBackwa"
+      },
+      {
+        "section_id": "section-7",
+        "title": "FocusMoveResult<sup>23+</sup>",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 135,
+        "summary": "查询无障碍节点返回值类型。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.BarrierFree.Accessibility.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-8",
+        "title": "startAbility<sup>12+</sup>",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 215,
+        "summary": "startAbility(want: Want): Promise\\<void>\n\n提供拉起前台页面的能力。使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**："
+      },
+      {
+        "section_id": "section-9",
+        "title": "AccessibilityExtensionContext.getElements<sup>18+</sup>",
+        "level": 2,
+        "line_start": 216,
+        "line_end": 294,
+        "summary": "getElements(windowId: number, elementId?: number): Promise<Array&lt;AccessibilityElement&gt;>\n\n提供批量"
+      },
+      {
+        "section_id": "section-10",
+        "title": "AccessibilityExtensionContext.getDefaultFocusedElementIds<sup>18+</sup>",
+        "level": 2,
+        "line_start": 295,
+        "line_end": 370,
+        "summary": "getDefaultFocusedElementIds(windowId: number): Promise<Array&lt;number&gt;>\n\n提供查询应用自定义默认焦点的能力。使用Pro"
+      },
+      {
+        "section_id": "section-11",
+        "title": "AccessibilityExtensionContext.holdRunningLockSync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 371,
+        "line_end": 433,
+        "summary": "holdRunningLockSync(): void\n\n持有RunningLock锁，持锁后，屏幕不会自动灭屏。\n\n**需要权限**：ohos.permission.ACCESSIBILITY_E"
+      },
+      {
+        "section_id": "section-12",
+        "title": "AccessibilityExtensionContext.unholdRunningLockSync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 434,
+        "line_end": 496,
+        "summary": "unholdRunningLockSync(): void\n\n释放RunningLock锁，恢复自动灭屏。\n\n**需要权限**：ohos.permission.ACCESSIBILITY_EXTEN"
+      },
+      {
+        "section_id": "section-13",
+        "title": "AccessibilityExtensionContext.on('preDisconnect')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 497,
+        "line_end": 570,
+        "summary": "on(type: 'preDisconnect', callback: Callback&lt;void&gt;): void\n\n向无障碍服务注册回调函数，在无障碍服务关闭该无障碍扩展服务前会执行该"
+      },
+      {
+        "section_id": "section-14",
+        "title": "AccessibilityExtensionContext.off('preDisconnect')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 571,
+        "line_end": 642,
+        "summary": "off(type: 'preDisconnect', callback?: Callback&lt;void&gt;): void\n\n取消已经向无障碍服务注册的预关闭回调函数，无障碍服务关闭该扩展服"
+      },
+      {
+        "section_id": "section-15",
+        "title": "AccessibilityExtensionContext.notifyDisconnect<sup>20+</sup>",
+        "level": 2,
+        "line_start": 643,
+        "line_end": 707,
+        "summary": "notifyDisconnect(): void\n\n通知无障碍服务可以关闭该无障碍扩展服务。\n\n此函数需要与注册预关闭接口[on('preDisconnect')](#accessibilityex"
+      },
+      {
+        "section_id": "section-16",
+        "title": "getAccessibilityFocusedElement<sup>20+</sup>",
+        "level": 2,
+        "line_start": 708,
+        "line_end": 778,
+        "summary": "getAccessibilityFocusedElement(): Promise\\<AccessibilityElement>;\n\n获取当前获得焦点的元素。使用Promise异步回调。\n\n**需要"
+      },
+      {
+        "section_id": "section-17",
+        "title": "getRootInActiveWindow<sup>20+</sup>",
+        "level": 2,
+        "line_start": 779,
+        "line_end": 855,
+        "summary": "getRootInActiveWindow(windowId ?: number): Promise\\<[AccessibilityElement](#accessibilityelement)>;"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getAccessibilityWindowsSync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 856,
+        "line_end": 934,
+        "summary": "getAccessibilityWindowsSync(displayId?: number): Array\\<[AccessibilityElement](#accessibilityelemen"
+      },
+      {
+        "section_id": "section-19",
+        "title": "AccessibilityElement",
+        "level": 2,
+        "line_start": 935,
+        "line_end": 1815,
+        "summary": "无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用 [AccessibilityExtensionContext.getAccessibilityF"
+      },
+      {
+        "section_id": "section-20",
+        "title": "ElementAttributeValues",
+        "level": 2,
+        "line_start": 1816,
+        "line_end": 1829,
+        "summary": "节点元素具备的属性名称及属性值类型信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力**：SystemCapability.BarrierFree.Accessibility.Core"
+      }
+    ]
+  }
+}

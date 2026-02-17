@@ -1,0 +1,300 @@
+{
+  "doc_id": "js-apis-hiviewdfx-hiappevent",
+  "title": "@ohos.hiviewdfx.hiAppEvent (应用事件打点)",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hiviewdfx-hiappevent.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hiviewdfx-hiappevent.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@liujiaxing2024",
+    "designer": "@junjie_shi",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.hiviewdfx.hiAppEvent (应用事件打点)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.hiviewdfx.hiAppEvent (应用事件打点)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 27,
+        "summary": "```ts\nimport { hiAppEvent } from '@kit.PerformanceAnalysisKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "hiAppEvent.addWatcher",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 176,
+        "summary": "addWatcher(watcher: Watcher): AppEventPackageHolder\n\n添加事件观察者。可通过事件观察者的回调函数监听事件。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-3",
+        "title": "hiAppEvent.removeWatcher",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 217,
+        "summary": "removeWatcher(watcher: Watcher): void\n\n移除事件观察者。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n*"
+      },
+      {
+        "section_id": "section-4",
+        "title": "hiAppEvent.setEventParam<sup>12+</sup>",
+        "level": 2,
+        "line_start": 218,
+        "line_end": 275,
+        "summary": "setEventParam(params: Record&lt;string, ParamType&gt;, domain: string, name?: string): Promise&lt;v"
+      },
+      {
+        "section_id": "section-5",
+        "title": "hiAppEvent.setEventConfig<sup>15+</sup>",
+        "level": 2,
+        "line_start": 276,
+        "line_end": 332,
+        "summary": "setEventConfig(name: string, config: Record&lt;string, ParamType&gt;): Promise&lt;void&gt;\n\n事件相关的配置"
+      },
+      {
+        "section_id": "section-6",
+        "title": "hiAppEvent.configEventPolicy<sup>22+</sup>",
+        "level": 2,
+        "line_start": 333,
+        "line_end": 381,
+        "summary": "configEventPolicy(policy: EventPolicy): Promise&lt;void&gt;\n\n系统事件相关的配置策略设置方法，使用Promise方式作为异步回调。\n\n在同"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Watcher",
+        "level": 2,
+        "line_start": 382,
+        "line_end": 401,
+        "summary": "提供事件观察者的参数选项。用于配置和管理事件的观察者，实现对特定事件的监听和处理。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-8",
+        "title": "TriggerCondition",
+        "level": 2,
+        "line_start": 402,
+        "line_end": 416,
+        "summary": "提供设置[Watcher](#watcher)的onTrigger回调触发条件的参数选项。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系"
+      },
+      {
+        "section_id": "section-9",
+        "title": "AppEventFilter",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 435,
+        "summary": "提供设置[Watcher](#watcher)的订阅过滤条件的参数选项。用于在事件观察者中设置事件过滤条件，确保只有满足过滤条件的事件才会被监听处理。\n\n**原子化服务API：** 从API ver"
+      },
+      {
+        "section_id": "section-10",
+        "title": "AppEventPackageHolder",
+        "level": 2,
+        "line_start": 436,
+        "line_end": 570,
+        "summary": "订阅数据持有者类，用于对事件信息进行处理。\n\n### constructor\n\nconstructor(watcherName: string)\n\n类构造函数，用于创建订阅数据持有者实例。先通过[a"
+      },
+      {
+        "section_id": "section-11",
+        "title": "AppEventInfo",
+        "level": 2,
+        "line_start": 571,
+        "line_end": 586,
+        "summary": "提供事件信息的参数选项。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.HiviewDFX"
+      },
+      {
+        "section_id": "section-12",
+        "title": "AppEventPackage",
+        "level": 2,
+        "line_start": 587,
+        "line_end": 601,
+        "summary": "提供订阅返回的事件包的参数定义。可用于获取事件包的详细信息，事件包由[takeNext](#takenext)接口获得。\n\n**系统能力：** SystemCapability.HiviewDFX."
+      },
+      {
+        "section_id": "section-13",
+        "title": "AppEventGroup<sup>11+</sup>",
+        "level": 2,
+        "line_start": 602,
+        "line_end": 615,
+        "summary": "提供订阅返回的事件组的参数定义。可用于获取事件组的详细信息，事件组常在[Watcher](#watcher)的onReceive回调中使用。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-14",
+        "title": "hiAppEvent.write",
+        "level": 2,
+        "line_start": 616,
+        "line_end": 680,
+        "summary": "write(info: AppEventInfo, callback: AsyncCallback&lt;void&gt;): void\n\n应用事件打点方法，将AppEventInfo类型的事件进行"
+      },
+      {
+        "section_id": "section-15",
+        "title": "hiAppEvent.write",
+        "level": 2,
+        "line_start": 681,
+        "line_end": 748,
+        "summary": "write(info: AppEventInfo): Promise&lt;void&gt;\n\n应用事件打点方法，将AppEventInfo类型的事件进行存储，使用Promise方式作为异步回调。通"
+      },
+      {
+        "section_id": "section-16",
+        "title": "hiAppEvent.addProcessor<sup>11+</sup>",
+        "level": 2,
+        "line_start": 749,
+        "line_end": 797,
+        "summary": "addProcessor(processor: Processor): number\n\n添加数据处理者配置信息，用于配置处理者接收的事件名等信息。事件发生后处理者可以接收事件。\n\n该接口为同步接口，"
+      },
+      {
+        "section_id": "section-17",
+        "title": "hiAppEvent.addProcessorFromConfig<sup>20+</sup>",
+        "level": 2,
+        "line_start": 798,
+        "line_end": 845,
+        "summary": "addProcessorFromConfig(processorName: string, configName?: string): Promise&lt;number&gt;\n\n<!--RP1-"
+      },
+      {
+        "section_id": "section-18",
+        "title": "hiAppEvent.removeProcessor<sup>11+</sup>",
+        "level": 2,
+        "line_start": 846,
+        "line_end": 887,
+        "summary": "removeProcessor(id: number): void\n\n移除上报事件的数据处理者。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "hiAppEvent.setUserId<sup>11+</sup>",
+        "level": 2,
+        "line_start": 888,
+        "line_end": 925,
+        "summary": "setUserId(name: string, value: string): void\n\n设置用户ID值。用于在配置[Processor](#processor11)数据处理者时进行关联。\n\n**"
+      },
+      {
+        "section_id": "section-20",
+        "title": "hiAppEvent.getUserId<sup>11+</sup>",
+        "level": 2,
+        "line_start": 926,
+        "line_end": 970,
+        "summary": "getUserId(name: string): string\n\n获取通过setUserId接口设置的value值。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原"
+      },
+      {
+        "section_id": "section-21",
+        "title": "hiAppEvent.setUserProperty<sup>11+</sup>",
+        "level": 2,
+        "line_start": 971,
+        "line_end": 1008,
+        "summary": "setUserProperty(name: string, value: string): void\n\n设置用户属性值。用于在配置[Processor](#processor11)数据处理者时进行关"
+      },
+      {
+        "section_id": "section-22",
+        "title": "hiAppEvent.getUserProperty<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1009,
+        "line_end": 1053,
+        "summary": "getUserProperty(name: string): string\n\n获取通过setUserProperty接口设置的value值。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-23",
+        "title": "hiAppEvent.clearData",
+        "level": 2,
+        "line_start": 1054,
+        "line_end": 1070,
+        "summary": "clearData(): void\n\n应用事件打点数据清理方法，将当前应用存储在本地的打点数据进行清除。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-24",
+        "title": "hiAppEvent.configure",
+        "level": 2,
+        "line_start": 1071,
+        "line_end": 1112,
+        "summary": "configure(config: ConfigOption): void\n\n应用事件打点配置方法，支持配置打点开关和目录存储配额大小。\n\n**原子化服务API：** 从API version 11"
+      },
+      {
+        "section_id": "section-25",
+        "title": "ConfigOption",
+        "level": 2,
+        "line_start": 1113,
+        "line_end": 1126,
+        "summary": "提供对应用事件打点功能的配置选项。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Hivi"
+      },
+      {
+        "section_id": "section-26",
+        "title": "EventPolicy<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1127,
+        "line_end": 1140,
+        "summary": "提供系统事件配置策略的定义，用于使用[configEventPolicy](#hiappeventconfigeventpolicy22)设置事件配置策略。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-27",
+        "title": "MainThreadJankPolicy<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1141,
+        "line_end": 1158,
+        "summary": "提供主线程超时事件配置策略的定义。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Hivi"
+      },
+      {
+        "section_id": "section-28",
+        "title": "CpuUsageHighPolicy<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1159,
+        "line_end": 1179,
+        "summary": "提供CPU高负载事件配置策略的定义。\n \n> **注意：**\n> \n> 该接口被调用后，会将设置值持久化。后续重复调用该接口时，若不设置对应参数，则取上一次系统取用的值。\n \n**原子化服务API"
+      },
+      {
+        "section_id": "section-29",
+        "title": "Processor<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1180,
+        "line_end": 1203,
+        "summary": "可以上报事件的数据处理者对象。用于事件的上报和管理，开发者可自定义数据处理配置，满足不同的数据处理需求。\n\n**系统能力：** SystemCapability.HiviewDFX.HiAppEve"
+      },
+      {
+        "section_id": "section-30",
+        "title": "AppEventReportConfig<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1204,
+        "line_end": 1218,
+        "summary": "数据处理者可以上报事件的描述配置。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Hivi"
+      },
+      {
+        "section_id": "section-31",
+        "title": "ParamType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1219,
+        "line_end": 1236,
+        "summary": "type ParamType = number | string | boolean | Array&lt;string&gt;\n\n事件自定义参数值的类型。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-32",
+        "title": "EventType",
+        "level": 2,
+        "line_start": 1237,
+        "line_end": 1252,
+        "summary": "事件类型枚举。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.HiviewDFX.HiAp"
+      },
+      {
+        "section_id": "section-33",
+        "title": "hiAppEvent.domain<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1253,
+        "line_end": 1265,
+        "summary": "提供领域名称常量。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.HiviewDFX.Hi"
+      },
+      {
+        "section_id": "section-34",
+        "title": "hiAppEvent.event",
+        "level": 2,
+        "line_start": 1266,
+        "line_end": 1290,
+        "summary": "提供事件名称常量。包含系统事件名称常量和应用事件名称常量，其中应用事件名称常量是为开发者在调用[Write](#hiappeventwrite-1)接口进行应用事件打点时预留的可选自定义事件名称。"
+      },
+      {
+        "section_id": "section-35",
+        "title": "hiAppEvent.param",
+        "level": 2,
+        "line_start": 1291,
+        "line_end": 1304,
+        "summary": "提供参数名称常量。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.HiviewDFX.Hi"
+      }
+    ]
+  }
+}

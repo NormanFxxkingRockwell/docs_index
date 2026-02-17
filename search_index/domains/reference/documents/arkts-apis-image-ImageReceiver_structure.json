@@ -1,0 +1,116 @@
+{
+  "doc_id": "arkts-apis-image-ImageReceiver",
+  "title": "Interface (ImageReceiver)",
+  "path": "zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-ImageReceiver.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-ImageReceiver.md",
+  "metadata": {
+    "kit": "Image Kit",
+    "subsystem": "Multimedia",
+    "owner": "@aulight02",
+    "designer": "@liyang_bryan",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Image Kit Multimedia 模块的 Interface (ImageReceiver)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (ImageReceiver)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { image } from '@kit.ImageKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 37,
+        "summary": "**系统能力：** SystemCapability.Multimedia.Image.ImageReceiver\n\n| 名称     | 类型                         |"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getReceivingSurfaceId<sup>9+</sup>",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 67,
+        "summary": "getReceivingSurfaceId(callback: AsyncCallback\\<string>): void\n\n用于获取一个surface id供Camera或其他组件使用。使用cal"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getReceivingSurfaceId<sup>9+</sup>",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 95,
+        "summary": "getReceivingSurfaceId(): Promise\\<string>\n\n用于获取一个surface id供Camera或其他组件使用。使用Promise异步回调。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "readLatestImage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 96,
+        "line_end": 128,
+        "summary": "readLatestImage(callback: AsyncCallback\\<Image>): void\n\n从ImageReceiver读取最新的图片。使用callback异步回调。\n\n> **"
+      },
+      {
+        "section_id": "section-6",
+        "title": "readLatestImage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 159,
+        "summary": "readLatestImage(): Promise\\<Image>\n\n从ImageReceiver读取最新的图片。使用Promise异步回调。\n\n> **注意**：\n>此接口需要在[on](#on"
+      },
+      {
+        "section_id": "section-7",
+        "title": "readNextImage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 192,
+        "summary": "readNextImage(callback: AsyncCallback\\<Image>): void\n\n从ImageReceiver读取下一张图片。使用callback异步回调。\n\n> **注意"
+      },
+      {
+        "section_id": "section-8",
+        "title": "readNextImage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 193,
+        "line_end": 223,
+        "summary": "readNextImage(): Promise\\<Image>\n\n从ImageReceiver读取下一张图片。使用Promise异步回调。\n\n> **注意**：\n>此接口需要在[on](#on9)"
+      },
+      {
+        "section_id": "section-9",
+        "title": "on<sup>9+</sup>",
+        "level": 2,
+        "line_start": 224,
+        "line_end": 248,
+        "summary": "on(type: 'imageArrival', callback: AsyncCallback\\<void>): void\n\n接收图片时注册回调。使用callback异步回调。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-10",
+        "title": "off<sup>13+</sup>",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 275,
+        "summary": "off(type: 'imageArrival', callback?: AsyncCallback\\<void>): void\n\n释放buffer时移除注册回调。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "release<sup>9+</sup>",
+        "level": 2,
+        "line_start": 276,
+        "line_end": 309,
+        "summary": "release(callback: AsyncCallback\\<void>): void\n\n释放ImageReceiver实例。使用callback异步回调。\n\n由于图片占用内存较大，所以当Ima"
+      },
+      {
+        "section_id": "section-12",
+        "title": "release<sup>9+</sup>",
+        "level": 2,
+        "line_start": 310,
+        "line_end": 341,
+        "summary": "release(): Promise\\<void>\n\n释放ImageReceiver实例。使用Promise异步回调。\n\n由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动"
+      }
+    ]
+  }
+}

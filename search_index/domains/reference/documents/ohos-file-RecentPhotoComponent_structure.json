@@ -1,0 +1,100 @@
+{
+  "doc_id": "ohos-file-RecentPhotoComponent",
+  "title": "@ohos.file.RecentPhotoComponent (最近图片组件)",
+  "path": "zh-cn/application-dev/reference/apis-media-library-kit/ohos-file-RecentPhotoComponent.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-library-kit/ohos-file-RecentPhotoComponent.md",
+  "metadata": {
+    "kit": "Media Library Kit",
+    "subsystem": "Multimedia",
+    "owner": "@xuchangda",
+    "designer": "@guxinggang",
+    "tester": "@wangbeibei",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Library Kit Multimedia 模块的 @ohos.file.RecentPhotoComponent (最近图片组件)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.RecentPhotoComponent (最近图片组件)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 23,
+        "summary": "```ts\nimport {\n  RecentPhotoComponent, RecentPhotoOptions, RecentPhotoCheckResultCallback, RecentPh"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 27,
+        "summary": "支持[通用属性](../apis-arkui/arkui-ts/ts-component-general-attributes.md)。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "RecentPhotoComponent",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 46,
+        "summary": "RecentPhotoComponent({ recentPhotoOptions?: RecentPhotoOptions, onRecentPhotoCheckResult?: RecentPh"
+      },
+      {
+        "section_id": "section-4",
+        "title": "RecentPhotoOptions",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 60,
+        "summary": "最近图片配置选项。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-5",
+        "title": "RecentPhotoInfo<sup>13+</sup>",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 73,
+        "summary": "最近图片相关信息。\n\n**原子化服务API**：从API version 13开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagement"
+      },
+      {
+        "section_id": "section-6",
+        "title": "RecentPhotoCheckResultCallback",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 89,
+        "summary": "type RecentPhotoCheckResultCallback = (recentPhotoExists: boolean) => void\n\n最近图片查询结果回调事件。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-7",
+        "title": "RecentPhotoClickCallback",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 111,
+        "summary": "type RecentPhotoClickCallback = (recentPhotoInfo: BaseItemInfo) => boolean\n\n选择最近图片触发的回调事件。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-8",
+        "title": "RecentPhotoCheckInfoCallback<sup>13+</sup>",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 128,
+        "summary": "type RecentPhotoCheckInfoCallback = (recentPhotoExists: boolean, info: RecentPhotoInfo) => void\n\n最近"
+      },
+      {
+        "section_id": "section-9",
+        "title": "PhotoSource",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 142,
+        "summary": "枚举，图片或者视频数据的来源类型。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileMa"
+      },
+      {
+        "section_id": "section-10",
+        "title": "示例",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 205,
+        "summary": "```ts\n// xxx.ets\nimport {\n  photoAccessHelper,\n   RecentPhotoComponent, \n   RecentPhotoOptions,"
+      }
+    ]
+  }
+}

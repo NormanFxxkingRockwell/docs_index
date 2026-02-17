@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-fileShare",
+  "title": "@ohos.fileshare (文件分享)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-fileShare.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-fileShare.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@lvzhenjie; @hongjin-li_admin",
+    "designer": "@chenxi0605; @JerryH1011",
+    "tester": "@leiyuqian",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.fileshare (文件分享)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.fileshare (文件分享)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { fileShare } from '@kit.CoreFileKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "OperationMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 34,
+        "summary": "枚举，授予或使能权限的URI访问模式。\n\n**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization"
+      },
+      {
+        "section_id": "section-3",
+        "title": "PolicyErrorCode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 47,
+        "summary": "枚举，授予或使能权限策略失败的URI对应的错误码。\n\n**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthoriza"
+      },
+      {
+        "section_id": "section-4",
+        "title": "PolicyErrorResult<sup>11+</sup>",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 63,
+        "summary": "授予或使能权限失败的URI策略结果。支持persistPermission、revokePermission、activatePermission、deactivatePermission接口抛出错"
+      },
+      {
+        "section_id": "section-5",
+        "title": "PolicyInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 74,
+        "summary": "需要授予或使能权限URI的策略信息。\n\n**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization\n\n|"
+      },
+      {
+        "section_id": "section-6",
+        "title": "PathPolicyInfo<sup>15+</sup>",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 85,
+        "summary": "需要查询的文件或目录的信息。\n\n**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization\n\n| 名称"
+      },
+      {
+        "section_id": "section-7",
+        "title": "PolicyType<sup>15+</sup>",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 96,
+        "summary": "枚举，所查询策略信息对应的授权模式。\n\n**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization\n\n|"
+      },
+      {
+        "section_id": "section-8",
+        "title": "fileShare.persistPermission<sup>11+</sup>",
+        "level": 2,
+        "line_start": 97,
+        "line_end": 171,
+        "summary": "persistPermission(policies: Array&lt;PolicyInfo>): Promise&lt;void&gt;\n\n异步方法对所选择的多个文件或目录URI持久化授权，使用"
+      },
+      {
+        "section_id": "section-9",
+        "title": "fileShare.revokePermission<sup>11+</sup>",
+        "level": 2,
+        "line_start": 172,
+        "line_end": 245,
+        "summary": "revokePermission(policies: Array&lt;PolicyInfo&gt;): Promise&lt;void&gt;\n\n异步方法对所选择的多个文件或目录uri取消持久化授"
+      },
+      {
+        "section_id": "section-10",
+        "title": "fileShare.activatePermission<sup>11+</sup>",
+        "level": 2,
+        "line_start": 246,
+        "line_end": 319,
+        "summary": "activatePermission(policies: Array&lt;PolicyInfo>): Promise&lt;void&gt;\n\n异步方法使能多个已经永久授权过的文件或目录，使用Pr"
+      },
+      {
+        "section_id": "section-11",
+        "title": "fileShare.deactivatePermission<sup>11+</sup>",
+        "level": 2,
+        "line_start": 320,
+        "line_end": 390,
+        "summary": "deactivatePermission(policies: Array&lt;PolicyInfo>): Promise&lt;void&gt;\n\n异步方法取消使能授权过的多个文件或目录，使用Pr"
+      },
+      {
+        "section_id": "section-12",
+        "title": "fileShare.checkPersistentPermission<sup>12+</sup>",
+        "level": 2,
+        "line_start": 391,
+        "line_end": 459,
+        "summary": "checkPersistentPermission(policies: Array&lt;PolicyInfo>): Promise&lt;Array&lt;boolean&gt;&gt;\n\n异步方"
+      }
+    ]
+  }
+}

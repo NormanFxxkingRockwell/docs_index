@@ -1,0 +1,84 @@
+{
+  "doc_id": "ts-container-arclist",
+  "title": "ArcList",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-arclist.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-arclist.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yylong",
+    "designer": "@yylong",
+    "tester": "@liuzhenshuo",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 ArcList，提供相关接口和功能说明。",
+  "structure": {
+    "title": "ArcList",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 38,
+        "summary": "> **说明：**\n>\n> - ArcListAttribute是用于配置ArcList组件属性的关键接口。API version 21及之前版本，导入ArcList组件后需要开发者手动导入ArcL"
+      },
+      {
+        "section_id": "section-2",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 57,
+        "summary": "仅支持[ArcListItem](ts-container-arclistitem.md)子组件。\n\n> **说明：**\n>\n> ArcList的子组件索引值计算规则：\n>\n> - 按子组件的顺序依"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口",
+        "level": 2,
+        "line_start": 58,
+        "line_end": 73,
+        "summary": "ArcList(options?: ArkListOptions)\n\n创建弧形列表实例，传入弧形列表配置项参数。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化"
+      },
+      {
+        "section_id": "section-4",
+        "title": "属性",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 275,
+        "summary": "除支持[通用属性](ts-component-general-attributes.md)外，还支持以下属性：\n\n### digitalCrownSensitivity\n\ndigitalCrownS"
+      },
+      {
+        "section_id": "section-5",
+        "title": "事件",
+        "level": 2,
+        "line_start": 276,
+        "line_end": 398,
+        "summary": "### onScrollIndex\n\nonScrollIndex(handler: Optional\\<ArcScrollIndexHandler>)\n\n当子组件划入或划出ArcList的显示区域时"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ArkListOptions",
+        "level": 2,
+        "line_start": 399,
+        "line_end": 412,
+        "summary": "包含创建ArcList组件的基础参数。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Ar"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ArcScrollIndexHandler",
+        "level": 2,
+        "line_start": 413,
+        "line_end": 430,
+        "summary": "type ArcScrollIndexHandler = (start: number, end: number, center: number) => void\n\n有子组件划入或划出ArcList"
+      },
+      {
+        "section_id": "section-8",
+        "title": "示例",
+        "level": 2,
+        "line_start": 431,
+        "line_end": 512,
+        "summary": "该示例增加了ArcList支持标题栏设置的效果，子项自动缩放显示。\n\n```ts\n// xxx.ets\nimport { ComponentContent, LengthMetrics } from"
+      }
+    ]
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "doc_id": "js-apis-ability-featureAbility",
+  "title": "@ohos.ability.featureAbility (FeatureAbility模块)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-ability-featureAbility.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-ability-featureAbility.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@lidongrui",
+    "designer": "@ccllee1",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.ability.featureAbility (FeatureAbility模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.ability.featureAbility (FeatureAbility模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "使用限制",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 21,
+        "summary": "FeatureAbility模块的接口只能在Page类型的Ability中调用。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "```ts\nimport { featureAbility } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-3",
+        "title": "featureAbility.startAbility",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 81,
+        "summary": "startAbility(parameter: StartAbilityParameter, callback: AsyncCallback\\<number>): void\n\n启动新的Ability"
+      },
+      {
+        "section_id": "section-4",
+        "title": "featureAbility.startAbility",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 133,
+        "summary": "startAbility(parameter: StartAbilityParameter): Promise\\<number>\n\n启动新的Ability。使用Promise异步回调。\n\n> **说"
+      },
+      {
+        "section_id": "section-5",
+        "title": "featureAbility.acquireDataAbilityHelper<sup>7+</sup>",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 172,
+        "summary": "acquireDataAbilityHelper(uri: string): DataAbilityHelper\n\n获取dataAbilityHelper对象。\n\n> **说明：**\n>\n> 组件启"
+      },
+      {
+        "section_id": "section-6",
+        "title": "featureAbility.startAbilityForResult<sup>7+</sup>",
+        "level": 2,
+        "line_start": 173,
+        "line_end": 227,
+        "summary": "startAbilityForResult(parameter: StartAbilityParameter, callback: AsyncCallback\\<AbilityResult>): v"
+      },
+      {
+        "section_id": "section-7",
+        "title": "featureAbility.startAbilityForResult<sup>7+</sup>",
+        "level": 2,
+        "line_start": 228,
+        "line_end": 293,
+        "summary": "startAbilityForResult(parameter: StartAbilityParameter): Promise\\<AbilityResult>\n\n启动一个Ability。使用Pro"
+      },
+      {
+        "section_id": "section-8",
+        "title": "featureAbility.terminateSelfWithResult<sup>7+</sup>",
+        "level": 2,
+        "line_start": 294,
+        "line_end": 348,
+        "summary": "terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback\\<void>): void\n\n停止当前的Abili"
+      },
+      {
+        "section_id": "section-9",
+        "title": "featureAbility.terminateSelfWithResult<sup>7+</sup>",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 407,
+        "summary": "terminateSelfWithResult(parameter: AbilityResult): Promise\\<void>\n\n停止当前的Ability。使用Promise异步回调。如果该Ab"
+      },
+      {
+        "section_id": "section-10",
+        "title": "featureAbility.hasWindowFocus<sup>7+<sup>",
+        "level": 2,
+        "line_start": 408,
+        "line_end": 438,
+        "summary": "hasWindowFocus(callback: AsyncCallback\\<boolean>): void\n\n检查Ability的主窗口是否具有窗口焦点。使用callback异步回调。\n\n**模"
+      },
+      {
+        "section_id": "section-11",
+        "title": "featureAbility.hasWindowFocus<sup>7+<sup>",
+        "level": 2,
+        "line_start": 439,
+        "line_end": 465,
+        "summary": "hasWindowFocus(): Promise\\<boolean>\n\n检查Ability的主窗口是否具有窗口焦点。使用Promise异步回调。\n\n**模型约束**：此接口仅可在FA模型下使用。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "featureAbility.getWant",
+        "level": 2,
+        "line_start": 466,
+        "line_end": 496,
+        "summary": "getWant(callback: AsyncCallback\\<Want>): void\n\n获取要拉起的Ability对应的Want。使用callback异步回调。\n\n**模型约束**：此接口仅可"
+      },
+      {
+        "section_id": "section-13",
+        "title": "featureAbility.getWant",
+        "level": 2,
+        "line_start": 497,
+        "line_end": 523,
+        "summary": "getWant(): Promise\\<Want>\n\n获取要拉起的Ability对应的Want。使用Promise异步回调。\n\n**模型约束**：此接口仅可在FA模型下使用。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-14",
+        "title": "featureAbility.getContext",
+        "level": 2,
+        "line_start": 524,
+        "line_end": 555,
+        "summary": "getContext(): Context\n\n获取应用上下文。\n\n**模型约束**：此接口仅可在FA模型下使用。\n\n**系统能力**：SystemCapability.Ability.Ability"
+      },
+      {
+        "section_id": "section-15",
+        "title": "featureAbility.terminateSelf<sup>7+</sup>",
+        "level": 2,
+        "line_start": 556,
+        "line_end": 584,
+        "summary": "terminateSelf(callback: AsyncCallback\\<void>): void\n\n停止当前的Ability。使用callback异步回调。\n\n**模型约束**：此接口仅可在F"
+      },
+      {
+        "section_id": "section-16",
+        "title": "featureAbility.terminateSelf<sup>7+</sup>",
+        "level": 2,
+        "line_start": 585,
+        "line_end": 614,
+        "summary": "terminateSelf(): Promise\\<void>\n\n停止当前的Ability。使用Promise异步回调。\n\n**模型约束**：此接口仅可在FA模型下使用。\n\n**系统能力**：Sys"
+      },
+      {
+        "section_id": "section-17",
+        "title": "featureAbility.connectAbility<sup>7+</sup>",
+        "level": 2,
+        "line_start": 615,
+        "line_end": 669,
+        "summary": "connectAbility(request: Want, options:ConnectOptions): number\n\n将当前Ability与指定的ServiceAbility进行连接。\n\n>"
+      },
+      {
+        "section_id": "section-18",
+        "title": "featureAbility.disconnectAbility<sup>7+</sup>",
+        "level": 2,
+        "line_start": 670,
+        "line_end": 720,
+        "summary": "disconnectAbility(connection: number, callback:AsyncCallback\\<void>): void\n\n断开与指定ServiceAbility的连接。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "featureAbility.disconnectAbility<sup>7+</sup>",
+        "level": 2,
+        "line_start": 721,
+        "line_end": 776,
+        "summary": "disconnectAbility(connection: number): Promise\\<void>\n\n断开与指定ServiceAbility的连接。使用Promise异步回调。\n\n**模型约"
+      },
+      {
+        "section_id": "section-20",
+        "title": "featureAbility.getWindow<sup>7+</sup>",
+        "level": 2,
+        "line_start": 777,
+        "line_end": 809,
+        "summary": "getWindow(callback: AsyncCallback\\<window.Window>): void\n\n获取当前Ability对应的窗口。使用callback异步回调。\n\n**模型约束*"
+      },
+      {
+        "section_id": "section-21",
+        "title": "featureAbility.getWindow<sup>7+</sup>",
+        "level": 2,
+        "line_start": 810,
+        "line_end": 840,
+        "summary": "getWindow(): Promise\\<window.Window>\n\n获取当前Ability对应的窗口。使用Promise异步回调。\n\n**模型约束**：此接口仅可在FA模型下使用。\n\n**系"
+      },
+      {
+        "section_id": "section-22",
+        "title": "AbilityWindowConfiguration<sup>7+</sup>",
+        "level": 2,
+        "line_start": 841,
+        "line_end": 865,
+        "summary": "表示当前Ability对应的窗口配置项，使用时通过featureAbility.AbilityWindowConfiguration获取。\n\n**模型约束**：此接口仅可在FA模型下使用。\n\n**系"
+      },
+      {
+        "section_id": "section-23",
+        "title": "AbilityStartSetting<sup>7+</sup>",
+        "level": 2,
+        "line_start": 866,
+        "line_end": 890,
+        "summary": "表示当前Ability对应的窗口属性，abilityStartSetting属性是一个定义为[key: string]: any的对象，key对应设定类型为：AbilityStartSetting枚"
+      },
+      {
+        "section_id": "section-24",
+        "title": "ErrorCode<sup>7+</sup>",
+        "level": 2,
+        "line_start": 891,
+        "line_end": 905,
+        "summary": "定义启动Ability时返回的错误码。\n\n**模型约束**：此接口仅可在FA模型下使用。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.FAMo"
+      },
+      {
+        "section_id": "section-25",
+        "title": "DataAbilityOperationType<sup>7+</sup>",
+        "level": 2,
+        "line_start": 906,
+        "line_end": 920,
+        "summary": "表示数据的操作类型。DataAbility批量操作数据时可以通过该枚举值指定操作类型。\n\n**模型约束**：此接口仅可在FA模型下使用。\n\n**系统能力**：SystemCapability.Abi"
+      },
+      {
+        "section_id": "section-26",
+        "title": "Context<sup>9+</sup>",
+        "level": 2,
+        "line_start": 921,
+        "line_end": 934,
+        "summary": "type Context = _Context\n\nContext模块。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Core\n\n**模型约束*"
+      },
+      {
+        "section_id": "section-27",
+        "title": "AppVersionInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 935,
+        "line_end": 948,
+        "summary": "type AppVersionInfo = _AppVersionInfo\n\n应用版本信息。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Co"
+      },
+      {
+        "section_id": "section-28",
+        "title": "ProcessInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 949,
+        "line_end": 962,
+        "summary": "type ProcessInfo = _ProcessInfo\n\n进程信息。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Core\n\n**模型"
+      }
+    ]
+  }
+}

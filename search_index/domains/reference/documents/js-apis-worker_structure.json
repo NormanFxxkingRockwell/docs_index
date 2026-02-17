@@ -1,0 +1,204 @@
+{
+  "doc_id": "js-apis-worker",
+  "title": "@ohos.worker (启动一个Worker)",
+  "path": "zh-cn/application-dev/reference/apis-arkts/js-apis-worker.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/js-apis-worker.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@lijiamin2025",
+    "designer": "@weng-changcheng",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 @ohos.worker (启动一个Worker)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.worker (启动一个Worker)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 26,
+        "summary": "```ts\nimport { worker } from '@kit.ArkTS';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 36,
+        "summary": "**系统能力：** SystemCapability.Utils.Lang\n\n| 名称                              | 类型"
+      },
+      {
+        "section_id": "section-3",
+        "title": "WorkerOptions",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 50,
+        "summary": "Worker构造函数的选项，用于为Worker添加其他信息。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n|"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ThreadWorkerPriority<sup>18+</sup>",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 67,
+        "summary": "Worker线程的优先级枚举，各优先级对应关系请参考[QoS等级定义](../../napi/qos-guidelines.md#qos等级定义)。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ThreadWorker<sup>9+</sup>",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 833,
+        "summary": "使用以下方法前，需先构造ThreadWorker实例。ThreadWorker类继承自[WorkerEventTarget](#workereventtarget9)。\n\n### 属性\n\n**系统能"
+      },
+      {
+        "section_id": "section-6",
+        "title": "WorkerEventTarget<sup>9+</sup>",
+        "level": 2,
+        "line_start": 834,
+        "line_end": 1011,
+        "summary": "用于管理Worker的监听事件。\n\n### addEventListener<sup>9+</sup>\n\naddEventListener(type: string, listener: Worke"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ThreadWorkerGlobalScope<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1012,
+        "line_end": 1323,
+        "summary": "Worker线程用于与宿主线程通信的类。ThreadWorkerGlobalScope类继承[GlobalScope](#globalscope9)。\n\n### 属性\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-8",
+        "title": "WorkerEventListener<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1324,
+        "line_end": 1374,
+        "summary": "事件监听类。\n\n### (event: Event)<sup>9+</sup>\n\n(event: Event): void | Promise&lt;void&gt;\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "GlobalScope<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1375,
+        "line_end": 1389,
+        "summary": "Worker线程自身的运行环境，GlobalScope类继承[WorkerEventTarget](#workereventtarget9)。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-10",
+        "title": "MessageEvents<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1390,
+        "line_end": 1401,
+        "summary": "消息类，持有Worker线程间传递的数据，MessageEvents类继承[Event](#event)。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-11",
+        "title": "MessageType",
+        "level": 2,
+        "line_start": 1402,
+        "line_end": 1416,
+        "summary": "type MessageType = 'message' | 'messageerror'\n\n表示消息类型。预留数据类型，暂未实现。\n\n**原子化服务API：** 从API version 12开始"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ErrorCallback<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1417,
+        "line_end": 1432,
+        "summary": "type ErrorCallback = (err: ErrorEvent) => void\n\n表示异常回调类型。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子"
+      },
+      {
+        "section_id": "section-13",
+        "title": "Worker<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1433,
+        "line_end": 1657,
+        "summary": "使用以下方法前，均需先构造Worker实例，Worker类继承[EventTarget](#eventtargetdeprecated)。\n\n> **说明：**<br/>\n> 从API versio"
+      },
+      {
+        "section_id": "section-14",
+        "title": "EventTarget<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1658,
+        "line_end": 1820,
+        "summary": "> **说明：**<br/>\n> 从API version 7开始支持，从API version 9开始废弃，建议使用[WorkerEventTarget<sup>9+</sup>](#workere"
+      },
+      {
+        "section_id": "section-15",
+        "title": "DedicatedWorkerGlobalScope<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1821,
+        "line_end": 1970,
+        "summary": "Worker线程用于与宿主线程通信的类。DedicatedWorkerGlobalScope类继承[WorkerGlobalScope](#workerglobalscopedeprecated)。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "PostMessageOptions",
+        "level": 2,
+        "line_start": 1971,
+        "line_end": 1983,
+        "summary": "明确数据传递过程中需要转移所有权的对象，这些对象必须是ArrayBuffer，在发送方的上下文中将变为不可用，仅在接收方可用。\n\n**原子化服务API**：从API version 11开始，该接口"
+      },
+      {
+        "section_id": "section-17",
+        "title": "Event",
+        "level": 2,
+        "line_start": 1984,
+        "line_end": 1997,
+        "summary": "事件类。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n| 名称"
+      },
+      {
+        "section_id": "section-18",
+        "title": "EventListener<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1998,
+        "line_end": 2040,
+        "summary": "事件监听类用于处理事件。\n\n> **说明：**\n>\n> 从API version 7开始支持，从API version 9开始废弃，建议使用[WorkerEventListener<sup>9+</"
+      },
+      {
+        "section_id": "section-19",
+        "title": "ErrorEvent",
+        "level": 2,
+        "line_start": 2041,
+        "line_end": 2057,
+        "summary": "错误事件类用于表示Worker执行过程中出现异常的详细信息，该类继承[Event](#event)。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "MessageEvent\\<T\\>",
+        "level": 2,
+        "line_start": 2058,
+        "line_end": 2070,
+        "summary": "消息类，持有Worker线程间传递的数据，MessageEvent类继承[Event](#event)。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-21",
+        "title": "WorkerGlobalScope<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 2071,
+        "line_end": 2086,
+        "summary": "Worker线程自身的运行环境，WorkerGlobalScope类继承[EventTarget](#eventtargetdeprecated)。\n\n> **说明：**<br/>\n> 从API v"
+      },
+      {
+        "section_id": "section-22",
+        "title": "其他说明",
+        "level": 2,
+        "line_start": 2087,
+        "line_end": 2141,
+        "summary": "### 序列化支持类型\n\n序列化支持类型包括：除Symbol之外的基础类型、Date、String、RegExp、Array、Map、Set、Object（仅限简单对象，比如通过\"{}\"或者\"new"
+      },
+      {
+        "section_id": "section-23",
+        "title": "完整示例",
+        "level": 2,
+        "line_start": 2142,
+        "line_end": 2390,
+        "summary": "> **说明：**<br/>\n> API version 8及之前的版本仅支持FA模型，如需使用，注意更换构造Worker的接口和创建Worker线程中与宿主线程通信的对象的两个方法。<br>\n###"
+      }
+    ]
+  }
+}

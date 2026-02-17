@@ -1,0 +1,292 @@
+{
+  "doc_id": "js-apis-reminderAgentManager",
+  "title": "@ohos.reminderAgentManager (后台代理提醒)",
+  "path": "zh-cn/application-dev/reference/apis-backgroundtasks-kit/js-apis-reminderAgentManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-backgroundtasks-kit/js-apis-reminderAgentManager.md",
+  "metadata": {
+    "kit": "Background Tasks Kit",
+    "subsystem": "Resourceschedule",
+    "owner": "@cheng-shichang",
+    "designer": "@zhouben25",
+    "tester": "@leetestnady",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Background Tasks Kit Resourceschedule 模块的 @ohos.reminderAgentManager (后台代理提醒)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.reminderAgentManager (后台代理提醒)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { reminderAgentManager } from '@kit.BackgroundTasksKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "reminderAgentManager.publishReminder",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 76,
+        "summary": "publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback\\<number>): void\n\n发布后台代理提醒。使用c"
+      },
+      {
+        "section_id": "section-3",
+        "title": "reminderAgentManager.publishReminder",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 134,
+        "summary": "publishReminder(reminderReq: ReminderRequest): Promise\\<number>\n\n发布后台代理提醒。使用Promise异步回调。\n\n如果[Remind"
+      },
+      {
+        "section_id": "section-4",
+        "title": "reminderAgentManager.cancelReminder",
+        "level": 2,
+        "line_start": 135,
+        "line_end": 175,
+        "summary": "cancelReminder(reminderId: number, callback: AsyncCallback\\<void>): void\n\n取消指定id的代理提醒。使用callback异步回"
+      },
+      {
+        "section_id": "section-5",
+        "title": "reminderAgentManager.cancelReminder",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 219,
+        "summary": "cancelReminder(reminderId: number): Promise\\<void>\n\n取消指定id的代理提醒。使用Promise异步回调。\n\n**系统能力**： SystemCap"
+      },
+      {
+        "section_id": "section-6",
+        "title": "reminderAgentManager.getValidReminders",
+        "level": 2,
+        "line_start": 220,
+        "line_end": 277,
+        "summary": "getValidReminders(callback: AsyncCallback<Array\\<ReminderRequest>>): void\n\n获取当前应用设置的所有[有效（未过期）的代理提醒"
+      },
+      {
+        "section_id": "section-7",
+        "title": "reminderAgentManager.getValidReminders",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 333,
+        "summary": "getValidReminders(): Promise\\<Array\\<ReminderRequest>>\n\n获取当前应用设置的所有[有效（未过期）的代理提醒](../../task-manage"
+      },
+      {
+        "section_id": "section-8",
+        "title": "reminderAgentManager.cancelAllReminders",
+        "level": 2,
+        "line_start": 334,
+        "line_end": 371,
+        "summary": "cancelAllReminders(callback: AsyncCallback\\<void>): void\n\n取消当前应用设置的所有代理提醒。使用callback异步回调。\n\n**系统能力**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "reminderAgentManager.cancelAllReminders",
+        "level": 2,
+        "line_start": 372,
+        "line_end": 408,
+        "summary": "cancelAllReminders(): Promise\\<void>\n\n取消当前应用设置的所有代理提醒。使用Promise异步回调。\n\n**系统能力**： SystemCapability.No"
+      },
+      {
+        "section_id": "section-10",
+        "title": "reminderAgentManager.addNotificationSlot",
+        "level": 2,
+        "line_start": 409,
+        "line_end": 452,
+        "summary": "addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback\\<void>): void\n\n添加通知渠道。使用callbac"
+      },
+      {
+        "section_id": "section-11",
+        "title": "reminderAgentManager.addNotificationSlot",
+        "level": 2,
+        "line_start": 453,
+        "line_end": 498,
+        "summary": "addNotificationSlot(slot: NotificationSlot): Promise\\<void>\n\n添加通知渠道。使用Promise异步回调。\n\n**系统能力**： Syste"
+      },
+      {
+        "section_id": "section-12",
+        "title": "reminderAgentManager.removeNotificationSlot",
+        "level": 2,
+        "line_start": 499,
+        "line_end": 539,
+        "summary": "removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback\\<void>): void\n\n删除指定"
+      },
+      {
+        "section_id": "section-13",
+        "title": "reminderAgentManager.removeNotificationSlot",
+        "level": 2,
+        "line_start": 540,
+        "line_end": 581,
+        "summary": "removeNotificationSlot(slotType: notification.SlotType): Promise\\<void>\n\n删除指定的通知渠道类型，使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "reminderAgentManager.getAllValidReminders<sup>12+</sup>",
+        "level": 2,
+        "line_start": 582,
+        "line_end": 636,
+        "summary": "getAllValidReminders(): Promise\\<Array\\<ReminderInfo>>\n\n获取当前应用设置的所有[有效（未过期）的代理提醒](../../task-manage"
+      },
+      {
+        "section_id": "section-15",
+        "title": "reminderAgentManager.addExcludeDate<sup>12+</sup>",
+        "level": 2,
+        "line_start": 637,
+        "line_end": 682,
+        "summary": "addExcludeDate(reminderId: number, date: Date): Promise\\<void>\n\n为指定id的周期性的日历提醒，添加不提醒日期（如每天提醒的日历，设置周"
+      },
+      {
+        "section_id": "section-16",
+        "title": "reminderAgentManager.deleteExcludeDates<sup>12+</sup>",
+        "level": 2,
+        "line_start": 683,
+        "line_end": 725,
+        "summary": "deleteExcludeDates(reminderId: number): Promise\\<void>\n\n为指定id的周期性的日历提醒，删除设置的所有不提醒日期。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "reminderAgentManager.getExcludeDates<sup>12+</sup>",
+        "level": 2,
+        "line_start": 726,
+        "line_end": 771,
+        "summary": "getExcludeDates(reminderId: number): Promise\\<Array\\<Date>>\n\n为指定id的周期性的日历提醒，查询设置的所有不提醒日期。使用Promise异"
+      },
+      {
+        "section_id": "section-18",
+        "title": "reminderAgentManager.updateReminder<sup>20+</sup>",
+        "level": 2,
+        "line_start": 772,
+        "line_end": 823,
+        "summary": "updateReminder(reminderId: number, reminderReq: ReminderRequest): Promise\\<void>\n\n更新指定id的代理提醒，使用Pro"
+      },
+      {
+        "section_id": "section-19",
+        "title": "reminderAgentManager.cancelReminderOnDisplay<sup>23+</sup>",
+        "level": 2,
+        "line_start": 824,
+        "line_end": 866,
+        "summary": "cancelReminderOnDisplay(reminderId: number): Promise\\<void>\n\n取消当前通知中心内显示的通知卡片，不取消代理提醒数据。例如：每天重复的提醒，"
+      },
+      {
+        "section_id": "section-20",
+        "title": "reminderAgentManager.subscribeReminderState<sup>23+</sup>",
+        "level": 2,
+        "line_start": 867,
+        "line_end": 916,
+        "summary": "subscribeReminderState(callback: Callback\\<Array\\<ReminderState>>): Promise\\<void>\n\n订阅代理提醒状态。使用Prom"
+      },
+      {
+        "section_id": "section-21",
+        "title": "reminderAgentManager.unsubscribeReminderState<sup>23+</sup>",
+        "level": 2,
+        "line_start": 917,
+        "line_end": 963,
+        "summary": "unsubscribeReminderState(callback?: Callback\\<Array\\<ReminderState>>): Promise\\<void>\n\n取消订阅代理提醒状态。使"
+      },
+      {
+        "section_id": "section-22",
+        "title": "ActionButtonType",
+        "level": 2,
+        "line_start": 964,
+        "line_end": 974,
+        "summary": "提醒上的按钮的类型。\n\n**系统能力**：SystemCapability.Notification.ReminderAgent\n\n| 名称 | 值 | 说明 |\n| -------- | ----"
+      },
+      {
+        "section_id": "section-23",
+        "title": "ReminderType",
+        "level": 2,
+        "line_start": 975,
+        "line_end": 986,
+        "summary": "提醒的类型。\n\n**系统能力**：SystemCapability.Notification.ReminderAgent\n\n| 名称 | 值 | 说明 |\n| -------- | --------"
+      },
+      {
+        "section_id": "section-24",
+        "title": "RingChannel<sup>20+</sup>",
+        "level": 2,
+        "line_start": 987,
+        "line_end": 999,
+        "summary": "自定义提示音的音频播放通道。\n\n**系统能力**：SystemCapability.Notification.ReminderAgent\n\n| 名称 | 值 | 说明 |\n| -------- |"
+      },
+      {
+        "section_id": "section-25",
+        "title": "ActionButton",
+        "level": 2,
+        "line_start": 1000,
+        "line_end": 1012,
+        "summary": "弹出的提醒中按钮的类型和标题。\n\n**系统能力**：SystemCapability.Notification.ReminderAgent\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n|"
+      },
+      {
+        "section_id": "section-26",
+        "title": "WantAgent",
+        "level": 2,
+        "line_start": 1013,
+        "line_end": 1027,
+        "summary": "跳转目标的ability信息。\n\n**系统能力**：SystemCapability.Notification.ReminderAgent\n\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |"
+      },
+      {
+        "section_id": "section-27",
+        "title": "MaxScreenWantAgent",
+        "level": 2,
+        "line_start": 1028,
+        "line_end": 1039,
+        "summary": "通知中心弹出提醒时，全屏显示自动拉起目标的ability信息。该接口为预留接口，暂不支持使用。\n\n**系统能力**：SystemCapability.Notification.ReminderAge"
+      },
+      {
+        "section_id": "section-28",
+        "title": "ReminderRequest",
+        "level": 2,
+        "line_start": 1040,
+        "line_end": 1071,
+        "summary": "代理提醒对象，用于设置提醒类型、响铃时长等具体信息。\n\n**系统能力**：SystemCapability.Notification.ReminderAgent\n\n| 名称 | 类型 | 只读 |"
+      },
+      {
+        "section_id": "section-29",
+        "title": "ReminderRequestCalendar",
+        "level": 2,
+        "line_start": 1072,
+        "line_end": 1088,
+        "summary": "ReminderRequestCalendar extends ReminderRequest\n\n日历实例对象，用于设置提醒的时间。\n\n**系统能力**：SystemCapability.Notif"
+      },
+      {
+        "section_id": "section-30",
+        "title": "ReminderRequestAlarm",
+        "level": 2,
+        "line_start": 1089,
+        "line_end": 1103,
+        "summary": "ReminderRequestAlarm extends ReminderRequest\n\n闹钟实例对象，用于设置提醒的时间。\n\n**系统能力**：SystemCapability.Notifica"
+      },
+      {
+        "section_id": "section-31",
+        "title": "ReminderRequestTimer",
+        "level": 2,
+        "line_start": 1104,
+        "line_end": 1116,
+        "summary": "ReminderRequestTimer extends ReminderRequest\n\n倒计时实例对象，用于设置提醒的时间。\n\n**系统能力**：SystemCapability.Notific"
+      },
+      {
+        "section_id": "section-32",
+        "title": "LocalDateTime",
+        "level": 2,
+        "line_start": 1117,
+        "line_end": 1131,
+        "summary": "用于日历类提醒设置时指定时间信息。\n\n**系统能力**：SystemCapability.Notification.ReminderAgent\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |"
+      },
+      {
+        "section_id": "section-33",
+        "title": "ReminderInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1132,
+        "line_end": 1142,
+        "summary": "代理提醒信息，包含 ReminderRequest 和 ReminderId。\n\n**系统能力**：SystemCapability.Notification.ReminderAgent\n\n| 名称"
+      },
+      {
+        "section_id": "section-34",
+        "title": "ReminderState<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1143,
+        "line_end": 1157,
+        "summary": "代理提醒状态信息。状态信息会在如下两种情况发送通知：<br>\n1. 用户点击代理提醒的通知按钮时，如果应用进程存在，则会发送用户点击的按钮类型的通知给应用。如果应用未运行，则无法收到通知。\n2. 由"
+      }
+    ]
+  }
+}

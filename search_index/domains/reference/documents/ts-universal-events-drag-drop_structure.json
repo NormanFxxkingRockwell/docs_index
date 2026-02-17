@@ -1,0 +1,220 @@
+{
+  "doc_id": "ts-universal-events-drag-drop",
+  "title": "拖拽事件",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-events-drag-drop.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-universal-events-drag-drop.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yihao-lin",
+    "designer": "@piggyguy",
+    "tester": "@songyanhong",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 拖拽事件，提供相关接口和功能说明。",
+  "structure": {
+    "title": "拖拽事件",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "onDragStart",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 63,
+        "summary": "onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | DragItemInfo): T\n\n在手"
+      },
+      {
+        "section_id": "section-2",
+        "title": "onDragEnter",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 85,
+        "summary": "onDragEnter(event: (event: DragEvent, extraParams?: string) => void): T\n\n拖拽进入组件范围内时，触发回调，当监听了[onDro"
+      },
+      {
+        "section_id": "section-3",
+        "title": "onDragMove",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 107,
+        "summary": "onDragMove(event: (event: DragEvent, extraParams?: string) => void): T\n\n拖拽在组件范围内移动时，触发回调，当监听了[onDro"
+      },
+      {
+        "section_id": "section-4",
+        "title": "onDragLeave",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 129,
+        "summary": "onDragLeave(event: (event: DragEvent, extraParams?: string) => void): T\n\n拖拽离开组件范围内时，触发回调，当监听了[onDro"
+      },
+      {
+        "section_id": "section-5",
+        "title": "onDrop",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 151,
+        "summary": "onDrop(event: (event: DragEvent, extraParams?: string) => void): T\n\n绑定此事件的组件可作为释放目标。当在本组件范围内停止拖放行为时"
+      },
+      {
+        "section_id": "section-6",
+        "title": "onDrop<sup>15+</sup>",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 174,
+        "summary": "onDrop(eventCallback: OnDragEventCallback, dropOptions?: DropOptions): T\n\n绑定此事件的组件可作为拖拽释放目标，当在本组件范围"
+      },
+      {
+        "section_id": "section-7",
+        "title": "onDragEnd<sup>10+</sup>",
+        "level": 2,
+        "line_start": 175,
+        "line_end": 196,
+        "summary": "onDragEnd(event: (event: DragEvent, extraParams?: string) => void): T\n\n绑定此事件的组件触发的拖拽结束后，触发回调。\n\n**原子"
+      },
+      {
+        "section_id": "section-8",
+        "title": "onPreDrag<sup>12+</sup>",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 222,
+        "summary": "onPreDrag(callback: Callback\\<PreDragStatus>): T\n\n绑定此事件的组件，当处于手势拖拽发起前的不同阶段时，触发回调。拖拽发起前的各阶段可参考[PreDr"
+      },
+      {
+        "section_id": "section-9",
+        "title": "onDragSpringLoading<sup>20+</sup>",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 247,
+        "summary": "onDragSpringLoading(callback: Callback\\<SpringLoadingContext\\> | null, configuration?: DragSpringLo"
+      },
+      {
+        "section_id": "section-10",
+        "title": "DragItemInfo",
+        "level": 2,
+        "line_start": 248,
+        "line_end": 261,
+        "summary": "定义拖拽过程中拖拽项的相关信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-11",
+        "title": "PreviewConfiguration<sup>15+</sup>",
+        "level": 2,
+        "line_start": 262,
+        "line_end": 274,
+        "summary": "配置自定义拖拽过程中的预览图样式。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkU"
+      },
+      {
+        "section_id": "section-12",
+        "title": "extraParams说明",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 285,
+        "summary": "用于返回组件在拖拽中需要用到的额外信息。\n\n  extraParams是JSON对象转换的string字符串，可以通过JSON.parse转换的JSON对象获取如下属性。\n\n| 名称"
+      },
+      {
+        "section_id": "section-13",
+        "title": "DragEvent<sup>7+</sup>",
+        "level": 2,
+        "line_start": 286,
+        "line_end": 726,
+        "summary": "**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n### 属性\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-14",
+        "title": "DragResult<sup>10+</sup>枚举说明",
+        "level": 2,
+        "line_start": 727,
+        "line_end": 742,
+        "summary": "定义拖拽操作的结果及组件的落入选定状态。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.A"
+      },
+      {
+        "section_id": "section-15",
+        "title": "DragBehavior<sup>10+</sup>",
+        "level": 2,
+        "line_start": 743,
+        "line_end": 755,
+        "summary": "当设置[DragResult](#dragresult10枚举说明)为DROP_ENABLED后，可设置DragBehavior为复制（COPY）或剪切（MOVE）。当DragBehavior为复制"
+      },
+      {
+        "section_id": "section-16",
+        "title": "PreDragStatus<sup>12+</sup>枚举说明",
+        "level": 2,
+        "line_start": 756,
+        "line_end": 772,
+        "summary": "定义拖拽手势触发前的各阶段状态。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称 | 值 | 说明 |\n| ---- | - | -------"
+      },
+      {
+        "section_id": "section-17",
+        "title": "UnifiedData<sup>10+</sup>",
+        "level": 2,
+        "line_start": 773,
+        "line_end": 786,
+        "summary": "type UnifiedData = UnifiedData\n\n拖拽相关的数据。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-18",
+        "title": "Summary<sup>10+</sup>",
+        "level": 2,
+        "line_start": 787,
+        "line_end": 800,
+        "summary": "type Summary = Summary\n\n拖拽相关数据的简介。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-19",
+        "title": "DataLoadParams<sup>20+</sup>",
+        "level": 2,
+        "line_start": 801,
+        "line_end": 814,
+        "summary": "type DataLoadParams = DataLoadParams\n\n落入操作时使用的数据加载参数。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中"
+      },
+      {
+        "section_id": "section-20",
+        "title": "DataSyncOptions<sup>15+</sup>",
+        "level": 2,
+        "line_start": 815,
+        "line_end": 828,
+        "summary": "type DataSyncOptions = GetDataParams\n\n作为startDataLoading的入参对象。\n\n**原子化服务API：** 从API version 15开始，该接口"
+      },
+      {
+        "section_id": "section-21",
+        "title": "OnDragEventCallback<sup>15+</sup>",
+        "level": 2,
+        "line_start": 829,
+        "line_end": 845,
+        "summary": "type OnDragEventCallback = (event: DragEvent, extraParams?: string) => void\n\n拖拽事件的回调函数。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-22",
+        "title": "DropOptions<sup>15+</sup>",
+        "level": 2,
+        "line_start": 846,
+        "line_end": 857,
+        "summary": "设置落入过程的参数。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-23",
+        "title": "DragSpringLoadingConfiguration<sup>20+</sup>",
+        "level": 2,
+        "line_start": 858,
+        "line_end": 871,
+        "summary": "type DragSpringLoadingConfiguration = DragSpringLoadingConfiguration\n\n定义拖拽的悬停检测配置参数的接口。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-24",
+        "title": "SpringLoadingContext<sup>20+</sup>",
+        "level": 2,
+        "line_start": 872,
+        "line_end": 885,
+        "summary": "type SpringLoadingContext = SpringLoadingContext\n\n定义回调上下文信息的类，用于在悬停检测回调中传递给应用程序，使其能访问拖拽状态。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-25",
+        "title": "示例",
+        "level": 2,
+        "line_start": 886,
+        "line_end": 1794,
+        "summary": "### 示例1（设置组件拖拽和落入）\n\n示例1展示了部分组件（如Image和Text等）拖拽和可落入区域的设置。\n\n```ts\n// xxx.ets\nimport { unifiedDataChan"
+      }
+    ]
+  }
+}

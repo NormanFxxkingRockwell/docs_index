@@ -1,0 +1,108 @@
+{
+  "doc_id": "ts-container-ui-extension-component-sys",
+  "title": "UIExtensionComponent (系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-ui-extension-component-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-container-ui-extension-component-sys.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@dutie123",
+    "designer": "@dutie123",
+    "tester": "@fredyuan0912",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 UIExtensionComponent (系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "UIExtensionComponent (系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "使用约束",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 29,
+        "summary": "本组件不支持预览。\n\n被拉起的Ability必须是带UI的Ability扩展，如何实现带UI的Ability扩展请参考[实现带UI的Ability扩展](../../apis-ability-kit"
+      },
+      {
+        "section_id": "section-2",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 33,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 48,
+        "summary": "UIExtensionComponent(want: Want, options?: UIExtensionOptions)\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-4",
+        "title": "属性",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 52,
+        "summary": "支持[通用属性](ts-component-general-attributes.md)。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "事件",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 203,
+        "summary": "不支持[点击](ts-universal-events-click.md)等通用事件。\n\n将事件经过坐标转换后传递给对端Ability处理。\n\n支持以下事件：\n\n### onRemoteReady"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ReceiveCallback<sup>18+</sup>",
+        "level": 2,
+        "line_start": 204,
+        "line_end": 216,
+        "summary": "type ReceiveCallback = [Callback](../../apis-basic-services-kit/js-apis-base.md#callback)\\<Record\\<s"
+      },
+      {
+        "section_id": "section-7",
+        "title": "UIExtensionOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 217,
+        "line_end": 233,
+        "summary": "用于在UIExtensionComponent进行构造的时传递可选的构造参数。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.ArkUI.ArkU"
+      },
+      {
+        "section_id": "section-8",
+        "title": "DpiFollowStrategy<sup>12+</sup>",
+        "level": 2,
+        "line_start": 234,
+        "line_end": 244,
+        "summary": "**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称"
+      },
+      {
+        "section_id": "section-9",
+        "title": "WindowModeFollowStrategy<sup>18+</sup>",
+        "level": 2,
+        "line_start": 245,
+        "line_end": 257,
+        "summary": "窗口Mode跟随策略，用于设置窗口Mode，使其能够跟随宿主或UIExtensionAbility。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-10",
+        "title": "UIExtensionProxy",
+        "level": 2,
+        "line_start": 258,
+        "line_end": 375,
+        "summary": "用于在双方建立连接成功后，组件使用方向被拉起的Ability发送数据、订阅和取消订阅注册。\n\n### send\n\nsend(data: Record\\<string, Object\\>): void"
+      },
+      {
+        "section_id": "section-11",
+        "title": "示例",
+        "level": 2,
+        "line_start": 376,
+        "line_end": 780,
+        "summary": "### 示例1 (加载UIExtension)\n\nUIExtensionComponent组件使用分为使用方和提供方。本示例仅展示组件使用的方法和扩展的Ability，实际运行需在设备中安装bund"
+      }
+    ]
+  }
+}

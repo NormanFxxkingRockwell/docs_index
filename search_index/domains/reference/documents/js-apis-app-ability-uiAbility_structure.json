@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-app-ability-uiAbility",
+  "title": "@ohos.app.ability.UIAbility (带界面的应用组件)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-uiAbility.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-uiAbility.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@littlejerry1; @Luobniz21",
+    "designer": "@ccllee1",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.UIAbility (带界面的应用组件)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.UIAbility (带界面的应用组件)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "UIAbility生命周期状态",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 30,
+        "summary": "**图1** UIAbility生命周期状态\n\n![Ability-Life-Cycle](../../application-models/figures/Ability-Life-Cycle.p"
+      },
+      {
+        "section_id": "section-2",
+        "title": "后台通信能力",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 43,
+        "summary": "通过Call调用可以与目标UIAbility进行后台通信。Call调用示意图如下所示。\n\n\n**图2** Call调用示意图\n\n![call](../../application-models/fi"
+      },
+      {
+        "section_id": "section-3",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 49,
+        "summary": "```ts\nimport { UIAbility } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-4",
+        "title": "UIAbility",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 952,
+        "summary": "表示包含UI界面的应用组件，提供组件创建、销毁、前后台切换等生命周期回调，同时也具备后台通信能力。\n\n### 属性\n\n**系统能力**：SystemCapability.Ability.Abilit"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Caller",
+        "level": 2,
+        "line_start": 953,
+        "line_end": 1455,
+        "summary": "调用方Caller UIAbility通过[startAbilityByCall](js-apis-inner-application-uiAbilityContext.md#startabilit"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Callee",
+        "level": 2,
+        "line_start": 1456,
+        "line_end": 1578,
+        "summary": "系统为UIAbility创建的后台通信对象，Callee UIAbility（被调用方）可以通过Callee对象接收Caller对象发送的数据。\n\n### on\n\non(method: string"
+      },
+      {
+        "section_id": "section-7",
+        "title": "OnReleaseCallback",
+        "level": 2,
+        "line_start": 1579,
+        "line_end": 1594,
+        "summary": "### (msg: string)\n\n(msg: string): void\n\n注册通用组件服务端Stub（桩）断开监听通知的回调函数类型。\n\n**系统能力**：SystemCapability.A"
+      },
+      {
+        "section_id": "section-8",
+        "title": "OnRemoteStateChangeCallback<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1595,
+        "line_end": 1610,
+        "summary": "### (msg: string)<sup>10+</sup>\n\n(msg: string): void\n\n注册协同场景下跨设备组件状态变化监听通知的回调函数类型。\n\n**系统能力**：System"
+      },
+      {
+        "section_id": "section-9",
+        "title": "CalleeCallback",
+        "level": 2,
+        "line_start": 1611,
+        "line_end": 1632,
+        "summary": "### (indata: rpc.MessageSequence)\n\n(indata: rpc.MessageSequence): rpc.Parcelable\n\n通用组件服务端注册消息通知的回调函"
+      }
+    ]
+  }
+}

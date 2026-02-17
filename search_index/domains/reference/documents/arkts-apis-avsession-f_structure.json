@@ -1,0 +1,124 @@
+{
+  "doc_id": "arkts-apis-avsession-f",
+  "title": "Functions",
+  "path": "zh-cn/application-dev/reference/apis-avsession-kit/arkts-apis-avsession-f.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-avsession-kit/arkts-apis-avsession-f.md",
+  "metadata": {
+    "kit": "AVSession Kit",
+    "subsystem": "Multimedia",
+    "owner": "@ccfriend; @liao_qian",
+    "designer": "@ccfriend",
+    "tester": "@chenmingxi1_huawei",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "AVSession Kit Multimedia 模块的 Functions，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Functions",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 18,
+        "summary": "```ts\nimport { avSession } from '@kit.AVSessionKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "avSession.createAVSession<sup>10+</sup>",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 85,
+        "summary": "createAVSession(context: Context, tag: string, type: AVSessionType): Promise\\<AVSession>\n\n创建会话对象，一个"
+      },
+      {
+        "section_id": "section-3",
+        "title": "avSession.createAVSession<sup>10+</sup>",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 147,
+        "summary": "createAVSession(context: Context, tag: string, type: AVSessionType, callback: AsyncCallback\\<AVSess"
+      },
+      {
+        "section_id": "section-4",
+        "title": "avSession.getAVSession<sup>22+</sup>",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 215,
+        "summary": "getAVSession(context: Context): Promise\\<AVSession>\n\n获取会话对象。使用Promise异步回调。\n\n该接口可将当前进程已创建过的会话对象返回，如果"
+      },
+      {
+        "section_id": "section-5",
+        "title": "avSession.getAllSessionDescriptors<sup>23+</sup>",
+        "level": 2,
+        "line_start": 216,
+        "line_end": 274,
+        "summary": "getAllSessionDescriptors(): Promise\\<Array\\<Readonly\\<AVSessionDescriptor>>>\n\n获取所有设置过媒体信息且注册过控制回调的会"
+      },
+      {
+        "section_id": "section-6",
+        "title": "avSession.createController<sup>23+</sup>",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 341,
+        "summary": "createController(sessionId: string): Promise\\<AVSessionController>\n\n根据会话ID创建会话控制器。使用Promise异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-7",
+        "title": "avSession.onSessionCreate<sup>23+</sup>",
+        "level": 2,
+        "line_start": 342,
+        "line_end": 393,
+        "summary": "onSessionCreate(callback: Callback\\<AVSessionDescriptor>): void\n\n监听会话创建事件。使用callback异步回调。\n\n**需要权限：*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "avSession.onSessionDestroy<sup>23+</sup>",
+        "level": 2,
+        "line_start": 394,
+        "line_end": 442,
+        "summary": "onSessionDestroy(callback: Callback\\<AVSessionDescriptor>): void\n\n监听会话的销毁事件。使用callback异步回调。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-9",
+        "title": "avSession.onTopSessionChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 443,
+        "line_end": 493,
+        "summary": "onTopSessionChange(callback: Callback\\<AVSessionDescriptor>): void\n\n监听最新播放会话变更的事件。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "avSession.offSessionCreate<sup>23+</sup>",
+        "level": 2,
+        "line_start": 494,
+        "line_end": 542,
+        "summary": "offSessionCreate(callback?: Callback\\<AVSessionDescriptor>): void\n\n注销会话创建事件监听。注销后，不再接收该事件。\n\n**需要权限："
+      },
+      {
+        "section_id": "section-11",
+        "title": "avSession.offSessionDestroy<sup>23+</sup>",
+        "level": 2,
+        "line_start": 543,
+        "line_end": 591,
+        "summary": "offSessionDestroy(callback?: Callback\\<AVSessionDescriptor>): void\n\n注销会话销毁事件监听。注销后，不再监听该事件。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-12",
+        "title": "avSession.offTopSessionChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 592,
+        "line_end": 640,
+        "summary": "offTopSessionChange(callback?: Callback\\<AVSessionDescriptor>): void\n\n注销最新播放会话变更事件监听。注销后，不再进行该事件的监听"
+      },
+      {
+        "section_id": "section-13",
+        "title": "avSession.isDesktopLyricSupported<sup>23+</sup>",
+        "level": 2,
+        "line_start": 641,
+        "line_end": 677,
+        "summary": "isDesktopLyricSupported(): Promise\\<boolean>\n\n设备是否支持桌面歌词功能。使用Promise异步回调。\n\n**模型约束：** 此接口仅可在Stage模型下"
+      }
+    ]
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "doc_id": "js-apis-configPolicy-sys",
+  "title": "@ohos.configPolicy (配置策略)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-configPolicy-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-configPolicy-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Customization",
+    "owner": "@liule_123",
+    "designer": "@sunshine_1984",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Basic Services Kit Customization 模块的 @ohos.configPolicy (配置策略)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.configPolicy (配置策略)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```ts\nimport { configPolicy } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getOneCfgFile",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 63,
+        "summary": "getOneCfgFile(relPath: string, callback: AsyncCallback&lt;string&gt;)\n\n获取指定文件名优先级最高的配置文件路径。使用callba"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getOneCfgFile",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 111,
+        "summary": "getOneCfgFile(relPath: string): Promise&lt;string&gt;\n\n获取指定文件名优先级最高的配置文件路径。使用Promise异步回调。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getCfgFiles",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 150,
+        "summary": "getCfgFiles(relPath: string, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)\n\n获取指定文件名的所有文件列表，按优"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getCfgFiles",
+        "level": 2,
+        "line_start": 151,
+        "line_end": 198,
+        "summary": "getCfgFiles(relPath: string): Promise&lt;Array&lt;string&gt;&gt;\n\n获取指定文件名的所有文件列表，按优先级从低到高。使用Promise"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getCfgDirList",
+        "level": 2,
+        "line_start": 199,
+        "line_end": 234,
+        "summary": "getCfgDirList(callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)\n\n获取配置层级目录列表，按优先级从低到高。使用callback异步"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getCfgDirList",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 267,
+        "summary": "getCfgDirList(): Promise&lt;Array&lt;string&gt;&gt;\n\n获取配置层级目录列表，按优先级从低到高。使用Promise异步回调。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getOneCfgFile<sup>11+</sup>",
+        "level": 2,
+        "line_start": 268,
+        "line_end": 310,
+        "summary": "getOneCfgFile(relPath: string, followMode: FollowXMode, callback: AsyncCallback&lt;string&gt;)\n\n根据提"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getOneCfgFile<sup>11+</sup>",
+        "level": 2,
+        "line_start": 311,
+        "line_end": 354,
+        "summary": "getOneCfgFile(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback&lt;s"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getOneCfgFile<sup>11+</sup>",
+        "level": 2,
+        "line_start": 355,
+        "line_end": 405,
+        "summary": "getOneCfgFile(relPath: string, followMode: FollowXMode, extra?: string): Promise&lt;string&gt;\n\n根据提"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getOneCfgFileSync<sup>11+</sup>",
+        "level": 2,
+        "line_start": 406,
+        "line_end": 452,
+        "summary": "getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: string): string\n\n根据提供的跟随模式，获取指"
+      },
+      {
+        "section_id": "section-12",
+        "title": "getCfgFiles<sup>11+</sup>",
+        "level": 2,
+        "line_start": 453,
+        "line_end": 494,
+        "summary": "getCfgFiles(relPath: string, followMode: FollowXMode, callback: AsyncCallback&lt;Array&lt;string&gt"
+      },
+      {
+        "section_id": "section-13",
+        "title": "getCfgFiles<sup>11+</sup>",
+        "level": 2,
+        "line_start": 495,
+        "line_end": 538,
+        "summary": "getCfgFiles(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback&lt;Arr"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getCfgFiles<sup>11+</sup>",
+        "level": 2,
+        "line_start": 539,
+        "line_end": 589,
+        "summary": "getCfgFiles(relPath: string, followMode: FollowXMode, extra?: string): Promise&lt;Array&lt;string&g"
+      },
+      {
+        "section_id": "section-15",
+        "title": "getCfgFilesSync<sup>11+</sup>",
+        "level": 2,
+        "line_start": 590,
+        "line_end": 636,
+        "summary": "getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: string): Array&lt;string&gt;\n\n根据"
+      },
+      {
+        "section_id": "section-16",
+        "title": "getCfgDirListSync<sup>11+</sup>",
+        "level": 2,
+        "line_start": 637,
+        "line_end": 666,
+        "summary": "getCfgDirListSync(): Array&lt;string&gt;\n\n获取配置层级目录列表，按优先级从低到高。\n\n**系统能力：** SystemCapability.Customiz"
+      },
+      {
+        "section_id": "section-17",
+        "title": "FollowXMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 667,
+        "line_end": 679,
+        "summary": "**系统能力：** SystemCapability.Customization.ConfigPolicy\n\n| 名称                           | 值  | 说明"
+      }
+    ]
+  }
+}

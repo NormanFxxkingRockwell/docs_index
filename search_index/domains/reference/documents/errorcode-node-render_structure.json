@@ -1,0 +1,84 @@
+{
+  "doc_id": "errorcode-node-render",
+  "title": "渲染节点错误码",
+  "path": "zh-cn/application-dev/reference/apis-arkui/errorcode-node-render.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/errorcode-node-render.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xiang-shouxing",
+    "designer": "@xiang-shouxing",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 渲染节点错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "渲染节点错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "106401 当前节点不是自定义节点",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 30,
+        "summary": "**错误信息**\n\nThe node type is not custom node.\n\n**错误描述**\n\n当前操作的节点不是NDK侧的自定义节点。\n\n**可能原因**\n\n开发者传入的ArkUI_"
+      },
+      {
+        "section_id": "section-2",
+        "title": "106402 当前节点已存在子节点",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 48,
+        "summary": "**错误信息**\n\nNode already has children.\n\n**错误描述**\n\n当前操作的自定义节点已存在子节点。\n\n**可能原因**\n\n开发者构造render树时，作为根节点的自定"
+      },
+      {
+        "section_id": "section-3",
+        "title": "106403 当前渲染节点存在父组件",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 66,
+        "summary": "**错误信息**\n\nRenderNode parent is existed.\n\n**错误描述**\n\n当前操作的渲染节点已有父节点，无法挂载至相应自定义组件下。\n\n**可能原因**\n\n开发者传入的A"
+      },
+      {
+        "section_id": "section-4",
+        "title": "106404 未找到对应的渲染子节点",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 84,
+        "summary": "**错误信息**\n\nRenderNode child is not exist.\n\n**错误描述**\n\n无法查找到对应的渲染子节点。\n\n**可能原因**\n\n开发者传入的ArkUI_RenderNod"
+      },
+      {
+        "section_id": "section-5",
+        "title": "106405 参数值超出范围",
+        "level": 2,
+        "line_start": 85,
+        "line_end": 102,
+        "summary": "**错误信息**\n\nParam is out of range.\n\n**错误描述**\n\n入参值超出接口接收值的范围。\n\n**可能原因**\n\n开发者传入的参数超出该接口的边界。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-6",
+        "title": "106406 当前渲染节点从FrameNode中获取",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 120,
+        "summary": "**错误信息**\n\nThe RenderNode is obtained from a FrameNode.\n\n**错误描述**\n\n该RenderNode是从FrameNode获取得到的，此类节点不"
+      },
+      {
+        "section_id": "section-7",
+        "title": "106407 当前渲染节点从FrameNode中获取且该FrameNode已被取消接纳为附属节点或销毁",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 138,
+        "summary": "**错误信息**\n\nThe RenderNode is obtained from a FrameNode, and its corresponding FrameNode is no longer"
+      },
+      {
+        "section_id": "section-8",
+        "title": "106408 当前节点不处于被接纳状态",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 155,
+        "summary": "**错误信息**\n\nThe node is not adopted.\n\n**错误描述**\n\n该节点未被接纳，不能获取其RenderNode。\n\n**可能原因**\n\n该节点未被接纳，不能获取其Rend"
+      }
+    ]
+  }
+}

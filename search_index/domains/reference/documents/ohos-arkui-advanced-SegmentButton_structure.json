@@ -1,0 +1,204 @@
+{
+  "doc_id": "ohos-arkui-advanced-SegmentButton",
+  "title": "SegmentButton",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ohos-arkui-advanced-SegmentButton.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ohos-arkui-advanced-SegmentButton.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xieziang",
+    "designer": "@youzhi92",
+    "tester": "@TerryTsao",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 SegmentButton，提供相关接口和功能说明。",
+  "structure": {
+    "title": "SegmentButton",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray } from '@kit.ArkU"
+      },
+      {
+        "section_id": "section-2",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 25,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-3",
+        "title": "属性",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 29,
+        "summary": "不支持[通用属性](ts-component-general-attributes.md)。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "事件",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 33,
+        "summary": "不支持[通用事件](ts-component-general-events.md)。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "SegmentButton",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 54,
+        "summary": "SegmentButton({ options: SegmentButtonOptions, selectedIndexes: number[], onItemClicked: Callback\\<"
+      },
+      {
+        "section_id": "section-6",
+        "title": "SegmentButtonOptions",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 160,
+        "summary": ">**说明：** \n> \n> 不支持设置字体类型。\n\n分段按钮选项类用于提供初始数据和自定义属性。\n\n**装饰器类型：** @Observed\n\n### 属性\n\n**系统能力：** SystemCa"
+      },
+      {
+        "section_id": "section-7",
+        "title": "DimensionNoPercentage",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 180,
+        "summary": "type DimensionNoPercentage = PX | VP | FP | LPX | Resource\n\n不支持百分比类型的长度联合类型。\n\n**原子化服务API：** 从API ve"
+      },
+      {
+        "section_id": "section-8",
+        "title": "CommonSegmentButtonOptions",
+        "level": 2,
+        "line_start": 181,
+        "line_end": 209,
+        "summary": "定义分段按钮组件的可自定义的属性。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**设备行为差异：** 该接口在Wearable设备上使用时，应用程序"
+      },
+      {
+        "section_id": "section-9",
+        "title": "BorderRadiusMode<sup>20+</sup>",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 224,
+        "summary": "边框圆角模式枚举，用于控制分段按钮的圆角计算方式。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabil"
+      },
+      {
+        "section_id": "section-10",
+        "title": "TabSegmentButtonConstructionOptions",
+        "level": 2,
+        "line_start": 225,
+        "line_end": 240,
+        "summary": "构建页签类的SegmentButtonOptions对象。\n\n继承[CommonSegmentButtonOptions](#commonsegmentbuttonoptions)。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-11",
+        "title": "CapsuleSegmentButtonConstructionOptions",
+        "level": 2,
+        "line_start": 241,
+        "line_end": 257,
+        "summary": "用于构建胶囊类的SegmentButtonOptions对象。\n\n继承[CommonSegmentButtonOptions](#commonsegmentbuttonoptions)。\n\n**原子"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ItemRestriction",
+        "level": 2,
+        "line_start": 258,
+        "line_end": 277,
+        "summary": "type ItemRestriction\\<T> = [T, T, T?, T?, T?]\n\n保存按钮信息的元组类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在"
+      },
+      {
+        "section_id": "section-13",
+        "title": "SegmentButtonItemTuple",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 295,
+        "summary": "type SegmentButtonItemTuple = ItemRestriction\\<SegmentButtonTextItem> | ItemRestriction\\<SegmentBut"
+      },
+      {
+        "section_id": "section-14",
+        "title": "SegmentButtonItemArray",
+        "level": 2,
+        "line_start": 296,
+        "line_end": 313,
+        "summary": "type SegmentButtonItemArray = Array\\<SegmentButtonTextItem> | Array\\<SegmentButtonIconItem> | Array"
+      },
+      {
+        "section_id": "section-15",
+        "title": "SegmentButtonItemOptionsArray",
+        "level": 2,
+        "line_start": 314,
+        "line_end": 500,
+        "summary": "用于保存按钮信息的数组。\n\n**装饰器类型：** @Observed\n\n>**说明：**\n>\n> SegmentButtonItemOptionsArray仅支持保存2到5个按钮信息元素。\n\n###"
+      },
+      {
+        "section_id": "section-16",
+        "title": "TabSegmentButtonOptions",
+        "level": 2,
+        "line_start": 501,
+        "line_end": 514,
+        "summary": "页签类分段按钮选项。继承自[TabSegmentButtonConstructionOptions](#tabsegmentbuttonconstructionoptions)。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-17",
+        "title": "CapsuleSegmentButtonOptions",
+        "level": 2,
+        "line_start": 515,
+        "line_end": 528,
+        "summary": "胶囊类分段按钮选项。继承自[CapsuleSegmentButtonConstructionOptions](#capsulesegmentbuttonconstructionoptions)。"
+      },
+      {
+        "section_id": "section-18",
+        "title": "SegmentButtonTextItem",
+        "level": 2,
+        "line_start": 529,
+        "line_end": 542,
+        "summary": "文本按钮信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**设备行为差异：** 该接口在Wearable设备上使用时，应用程序运行异常，异常信息中"
+      },
+      {
+        "section_id": "section-19",
+        "title": "SegmentButtonIconItem",
+        "level": 2,
+        "line_start": 543,
+        "line_end": 563,
+        "summary": "图标按钮信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**设备行为差异：** 该接口在Wearable设备上使用时，应用程序运行异常，异常信息中"
+      },
+      {
+        "section_id": "section-20",
+        "title": "SegmentButtonIconTextItem",
+        "level": 2,
+        "line_start": 564,
+        "line_end": 585,
+        "summary": "图标与文本按钮信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**设备行为差异：** 该接口在Wearable设备上使用时，应用程序运行异常，异常"
+      },
+      {
+        "section_id": "section-21",
+        "title": "SegmentButtonItemOptions",
+        "level": 2,
+        "line_start": 586,
+        "line_end": 626,
+        "summary": "分段按钮中的按钮选项。\n\n**装饰器类型：** @Observed\n\n### 属性\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**设备行为差异：**"
+      },
+      {
+        "section_id": "section-22",
+        "title": "SegmentButtonItemOptionsConstructorOptions",
+        "level": 2,
+        "line_start": 627,
+        "line_end": 644,
+        "summary": "构造参数用于SegmentButtonItemOptions。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**设备行为差异：** 该接口在Weara"
+      },
+      {
+        "section_id": "section-23",
+        "title": "示例",
+        "level": 2,
+        "line_start": 645,
+        "line_end": 1204,
+        "summary": "### 示例1（设置分段按钮的类型）\n\n通过配置SegmentButtonOptions的tab和capsule，创建两种不同类型的分段按钮。\n\n```ts\nimport {\n  ItemRestr"
+      }
+    ]
+  }
+}

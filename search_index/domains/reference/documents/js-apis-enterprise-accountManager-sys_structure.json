@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-enterprise-accountManager-sys",
+  "title": "@ohos.enterprise.accountManager（账户管理）(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-accountManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-accountManager-sys.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.accountManager（账户管理）(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.accountManager（账户管理）(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { accountManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "accountManager.disallowAddLocalAccount",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 81,
+        "summary": "disallowAddLocalAccount(admin: Want, disallow: boolean, callback: AsyncCallback&lt;void&gt;): void"
+      },
+      {
+        "section_id": "section-3",
+        "title": "accountManager.disallowAddLocalAccount",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 140,
+        "summary": "disallowAddLocalAccount(admin: Want, disallow: boolean): Promise&lt;void&gt;\n\n禁止设备创建本地用户。使用promise异"
+      },
+      {
+        "section_id": "section-4",
+        "title": "accountManager.disallowAddOsAccountByUser<sup>11+</sup>",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 195,
+        "summary": "disallowAddOsAccountByUser(admin: Want, userId: number, disallow: boolean): void\n\n禁止用户添加账号。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-5",
+        "title": "accountManager.isAddOsAccountByUserDisallowed<sup>11+</sup>",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 255,
+        "summary": "isAddOsAccountByUserDisallowed(admin: Want, userId: number): boolean\n\n查询是否禁止某用户添加账号。\n\n**需要权限：** oho"
+      },
+      {
+        "section_id": "section-6",
+        "title": "accountManager.addOsAccount<sup>11+</sup>",
+        "level": 2,
+        "line_start": 256,
+        "line_end": 319,
+        "summary": "addOsAccount(admin: Want, name: string, type: osAccount.OsAccountType): osAccount.OsAccountInfo\n\n后台"
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "doc_id": "js-apis-app-ability-applicationStateChangeCallback",
+  "title": "@ohos.app.ability.ApplicationStateChangeCallback (应用进程状态变化监听器)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-applicationStateChangeCallback.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-applicationStateChangeCallback.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@SKY2001",
+    "designer": "@yzkp",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.ApplicationStateChangeCallback (应用进程状态变化监听器)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.ApplicationStateChangeCallback (应用进程状态变化监听器)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 28,
+        "summary": "该模块仅支持监听当前进程的前后台状态变化。如果需要监听整个应用的前后台状态变化，可使用[ApplicationStateObserver.onForegroundApplicationChanged"
+      },
+      {
+        "section_id": "section-2",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 34,
+        "summary": "```ts\nimport { ApplicationStateChangeCallback } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ApplicationStateChangeCallback.onApplicationForeground",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 48,
+        "summary": "onApplicationForeground(): void\n\n当前进程从后台切换到前台时触发回调。当该回调触发时，并不表示进程已完全处于前台状态，而是即将进入前台状态，此时无法执行需要依赖前台状"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ApplicationStateChangeCallback.onApplicationBackground",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 102,
+        "summary": "onApplicationBackground(): void\n\n当前进程从前台切换到后台时触发回调。当该回调触发时，表示进程已完全处于后台状态，可以执行适合在后台状态下完成的操作（例如清理内存缓存"
+      }
+    ]
+  }
+}

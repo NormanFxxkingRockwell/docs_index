@@ -1,0 +1,252 @@
+{
+  "doc_id": "js-apis-intelligentVoice-sys",
+  "title": "@ohos.ai.intelligentVoice (智能语音)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-intelligentVoice-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-intelligentVoice-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "AI",
+    "owner": "@y00416036",
+    "designer": "@jinjunwen",
+    "tester": "@gx1016",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit AI 模块的 @ohos.ai.intelligentVoice (智能语音)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.ai.intelligentVoice (智能语音)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 30,
+        "summary": "```ts\nimport { intelligentVoice } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "intelligentVoice.getIntelligentVoiceManager",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 70,
+        "summary": "getIntelligentVoiceManager(): IntelligentVoiceManager\n\n获取智能语音管理类。\n\n**需要权限：** ohos.permission.MANAGE"
+      },
+      {
+        "section_id": "section-3",
+        "title": "intelligentVoice.getWakeupManager<sup>12+</sup>",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 111,
+        "summary": "getWakeupManager(): WakeupManager\n\n获取唤醒管理类。\n\n**需要权限：** ohos.permission.MANAGE_INTELLIGENT_VOICE\n\n**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "intelligentVoice.createEnrollIntelligentVoiceEngine",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 159,
+        "summary": "createEnrollIntelligentVoiceEngine(descriptor: EnrollIntelligentVoiceEngineDescriptor, callback: As"
+      },
+      {
+        "section_id": "section-5",
+        "title": "intelligentVoice.createEnrollIntelligentVoiceEngine",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 211,
+        "summary": "createEnrollIntelligentVoiceEngine(descriptor: EnrollIntelligentVoiceEngineDescriptor): Promise&lt;"
+      },
+      {
+        "section_id": "section-6",
+        "title": "intelligentVoice.createWakeupIntelligentVoiceEngine",
+        "level": 2,
+        "line_start": 212,
+        "line_end": 261,
+        "summary": "createWakeupIntelligentVoiceEngine(descriptor: WakeupIntelligentVoiceEngineDescriptor, callback: As"
+      },
+      {
+        "section_id": "section-7",
+        "title": "intelligentVoice.createWakeupIntelligentVoiceEngine",
+        "level": 2,
+        "line_start": 262,
+        "line_end": 313,
+        "summary": "createWakeupIntelligentVoiceEngine(descriptor: WakeupIntelligentVoiceEngineDescriptor): Promise&lt;"
+      },
+      {
+        "section_id": "section-8",
+        "title": "IntelligentVoiceManager",
+        "level": 2,
+        "line_start": 314,
+        "line_end": 418,
+        "summary": "智能语音管理类，使用前需要通过[getIntelligentVoiceManager()](#intelligentvoicegetintelligentvoicemanager)获取智能语音管理实"
+      },
+      {
+        "section_id": "section-9",
+        "title": "WakeupManager<sup>12+</sup>",
+        "level": 2,
+        "line_start": 419,
+        "line_end": 711,
+        "summary": "唤醒管理类，使用前需要通过[getWakeupManager()](#intelligentvoicegetwakeupmanager12)获取唤醒管理实例。\n\n### setParameter<s"
+      },
+      {
+        "section_id": "section-10",
+        "title": "UploadFileType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 712,
+        "line_end": 722,
+        "summary": "枚举，上传文件类型。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称                       | 值   |"
+      },
+      {
+        "section_id": "section-11",
+        "title": "UploadFile<sup>12+</sup>",
+        "level": 2,
+        "line_start": 723,
+        "line_end": 734,
+        "summary": "上传文件内容，包含文件类型，文件描述和内容。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-12",
+        "title": "WakeupSourceFile<sup>12+</sup>",
+        "level": 2,
+        "line_start": 735,
+        "line_end": 745,
+        "summary": "唤醒资源文件。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-13",
+        "title": "EvaluationResultCode<sup>12+</sup>",
+        "level": 2,
+        "line_start": 746,
+        "line_end": 768,
+        "summary": "枚举，自定义唤醒词返回错误码类型。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-14",
+        "title": "EvaluationResult<sup>12+</sup>",
+        "level": 2,
+        "line_start": 769,
+        "line_end": 779,
+        "summary": "唤醒词评估结果。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ServiceChangeType",
+        "level": 2,
+        "line_start": 780,
+        "line_end": 789,
+        "summary": "枚举，服务状态变更类型。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称                       | 值"
+      },
+      {
+        "section_id": "section-16",
+        "title": "IntelligentVoiceEngineType",
+        "level": 2,
+        "line_start": 790,
+        "line_end": 801,
+        "summary": "枚举，智能语音引擎类型。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称                       | 值"
+      },
+      {
+        "section_id": "section-17",
+        "title": "EnrollIntelligentVoiceEngineDescriptor",
+        "level": 2,
+        "line_start": 802,
+        "line_end": 811,
+        "summary": "注册智能语音引擎描述符。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-18",
+        "title": "WakeupIntelligentVoiceEngineDescriptor",
+        "level": 2,
+        "line_start": 812,
+        "line_end": 822,
+        "summary": "唤醒智能语音引擎描述符。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-19",
+        "title": "EnrollEngineConfig",
+        "level": 2,
+        "line_start": 823,
+        "line_end": 833,
+        "summary": "描述注册引擎配置。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-20",
+        "title": "SensibilityType",
+        "level": 2,
+        "line_start": 834,
+        "line_end": 847,
+        "summary": "枚举，唤醒灵敏度类型。\n\n灵敏度用于调整唤醒的门限，灵敏度越高，门限越低，就越容易唤醒。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core"
+      },
+      {
+        "section_id": "section-21",
+        "title": "WakeupHapInfo",
+        "level": 2,
+        "line_start": 848,
+        "line_end": 858,
+        "summary": "描述唤醒应用的hap信息。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-22",
+        "title": "WakeupIntelligentVoiceEventType",
+        "level": 2,
+        "line_start": 859,
+        "line_end": 870,
+        "summary": "枚举，唤醒智能语音事件类型。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称                       | 值"
+      },
+      {
+        "section_id": "section-23",
+        "title": "IntelligentVoiceErrorCode",
+        "level": 2,
+        "line_start": 871,
+        "line_end": 886,
+        "summary": "枚举，智能语音错误码。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称                       | 值"
+      },
+      {
+        "section_id": "section-24",
+        "title": "CapturerChannel<sup>12+</sup>",
+        "level": 2,
+        "line_start": 887,
+        "line_end": 899,
+        "summary": "枚举，枚举捕获器通道。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称                       | 值"
+      },
+      {
+        "section_id": "section-25",
+        "title": "EnrollResult",
+        "level": 2,
+        "line_start": 900,
+        "line_end": 916,
+        "summary": "枚举，注册结果。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称                       | 值   | 说"
+      },
+      {
+        "section_id": "section-26",
+        "title": "EnrollCallbackInfo",
+        "level": 2,
+        "line_start": 917,
+        "line_end": 927,
+        "summary": "注册回调信息。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-27",
+        "title": "WakeupIntelligentVoiceEngineCallbackInfo",
+        "level": 2,
+        "line_start": 928,
+        "line_end": 939,
+        "summary": "描述唤醒智能语音引擎回调信息。\n\n**系统能力：** SystemCapability.AI.IntelligentVoice.Core\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-28",
+        "title": "EnrollIntelligentVoiceEngine",
+        "level": 2,
+        "line_start": 940,
+        "line_end": 1888,
+        "summary": "实现注册智能语音引擎，通过[createEnrollIntelligentVoiceEngine()](#intelligentvoicecreateenrollintelligentvoiceen"
+      },
+      {
+        "section_id": "section-29",
+        "title": "WakeupIntelligentVoiceEngine",
+        "level": 2,
+        "line_start": 1889,
+        "line_end": 2675,
+        "summary": "实现唤醒智能语音引擎，通过[createWakeupIntelligentVoiceEngine()](#intelligentvoicecreatewakeupintelligentvoiceen"
+      }
+    ]
+  }
+}

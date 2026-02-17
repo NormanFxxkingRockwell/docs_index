@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-launcherBundleManager-sys",
+  "title": "@ohos.bundle.launcherBundleManager (launcherBundleManager模块)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-launcherBundleManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-launcherBundleManager-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Ability Kit BundleManager 模块的 @ohos.bundle.launcherBundleManager (launcherBundleManager模块)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bundle.launcherBundleManager (launcherBundleManager模块)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 23,
+        "summary": "```ts\nimport { launcherBundleManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "launcherBundleManager.getLauncherAbilityInfo",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 78,
+        "summary": "getLauncherAbilityInfo(bundleName: string, userId: number, callback: AsyncCallback\\<Array\\<Launcher"
+      },
+      {
+        "section_id": "section-3",
+        "title": "launcherBundleManager.getLauncherAbilityInfo",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 136,
+        "summary": "getLauncherAbilityInfo(bundleName: string, userId: number) : Promise\\<Array\\<LauncherAbilityInfo\\>\\"
+      },
+      {
+        "section_id": "section-4",
+        "title": "launcherBundleManager.getAllLauncherAbilityInfo",
+        "level": 2,
+        "line_start": 137,
+        "line_end": 188,
+        "summary": "getAllLauncherAbilityInfo(userId: number, callback: AsyncCallback\\<Array\\<LauncherAbilityInfo\\>\\>)"
+      },
+      {
+        "section_id": "section-5",
+        "title": "launcherBundleManager.getAllLauncherAbilityInfo",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 244,
+        "summary": "getAllLauncherAbilityInfo(userId: number) : Promise\\<Array\\<LauncherAbilityInfo\\>\\>\n\n查询指定用户下所有应用的[L"
+      },
+      {
+        "section_id": "section-6",
+        "title": "launcherBundleManager.getShortcutInfo",
+        "level": 2,
+        "line_start": 245,
+        "line_end": 300,
+        "summary": "getShortcutInfo(bundleName :string, callback: AsyncCallback\\<Array\\<ShortcutInfo\\>\\>) : void\n\n查询当前用"
+      },
+      {
+        "section_id": "section-7",
+        "title": "launcherBundleManager.getShortcutInfo",
+        "level": 2,
+        "line_start": 301,
+        "line_end": 359,
+        "summary": "getShortcutInfo(bundleName : string) : Promise\\<Array\\<ShortcutInfo\\>\\>\n\n查询当前用户下指定应用的快捷方式信息[Shortcu"
+      },
+      {
+        "section_id": "section-8",
+        "title": "launcherBundleManager.getShortcutInfoSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 360,
+        "line_end": 414,
+        "summary": "getShortcutInfoSync(bundleName : string) : Array\\<ShortcutInfo\\>\n\n查询当前用户下指定应用的快捷方式信息[ShortcutInfo]("
+      },
+      {
+        "section_id": "section-9",
+        "title": "launcherBundleManager.getShortcutInfoSync<sup>13+</sup>",
+        "level": 2,
+        "line_start": 415,
+        "line_end": 471,
+        "summary": "getShortcutInfoSync(bundleName: string, userId: number) : Array\\<ShortcutInfo\\>\n\n查询指定用户下指定应用的快捷方式信息"
+      },
+      {
+        "section_id": "section-10",
+        "title": "launcherBundleManager.startShortcut<sup>12+</sup>",
+        "level": 2,
+        "line_start": 472,
+        "line_end": 538,
+        "summary": "startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Promise\\<void\\>\n\n拉起指定[ShortcutIn"
+      },
+      {
+        "section_id": "section-11",
+        "title": "launcherBundleManager.startShortcutWithReason<sup>20+</sup>",
+        "level": 2,
+        "line_start": 539,
+        "line_end": 611,
+        "summary": "startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string, options?: StartOptions): P"
+      },
+      {
+        "section_id": "section-12",
+        "title": "launcherBundleManager.getShortcutInfoByAppIndex<sup>20+</sup>",
+        "level": 2,
+        "line_start": 612,
+        "line_end": 666,
+        "summary": "getShortcutInfoByAppIndex(bundleName: string, appIndex: number): Array\\<ShortcutInfo\\>\n\n查询当前用户下指定分身"
+      }
+    ]
+  }
+}

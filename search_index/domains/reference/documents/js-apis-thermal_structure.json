@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-thermal",
+  "title": "@ohos.thermal (热管理)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-thermal.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-thermal.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "PowerManager",
+    "owner": "@zhang-yinglie; @volcano_wang",
+    "designer": "@wangyantian0",
+    "tester": "@alien0208",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Basic Services Kit PowerManager 模块的 @ohos.thermal (热管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.thermal (热管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```js\nimport {thermal} from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "thermal.registerThermalLevelCallback<sup>9+</sup>",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 56,
+        "summary": "registerThermalLevelCallback(callback: Callback&lt;ThermalLevel&gt;): void\n\n**方法介绍：** 订阅热档位变化时的回调提醒"
+      },
+      {
+        "section_id": "section-3",
+        "title": "thermal.unregisterThermalLevelCallback<sup>9+</sup>",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 91,
+        "summary": "unregisterThermalLevelCallback(callback?: Callback\\<void>): void\n\n**方法介绍：** 取消订阅热档位变化时的回调提醒。使用callb"
+      },
+      {
+        "section_id": "section-4",
+        "title": "thermal.getLevel<sup>9+</sup>",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 113,
+        "summary": "getLevel(): ThermalLevel\n\n**方法介绍：** 获取当前热档位信息。\n\n**系统能力：** SystemCapability.PowerManager.ThermalMana"
+      },
+      {
+        "section_id": "section-5",
+        "title": "thermal.subscribeThermalLevel<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 114,
+        "line_end": 137,
+        "summary": "subscribeThermalLevel(callback: AsyncCallback&lt;ThermalLevel&gt;): void\n\n> **说明：**<br>从API version"
+      },
+      {
+        "section_id": "section-6",
+        "title": "thermal.unsubscribeThermalLevel<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 161,
+        "summary": "unsubscribeThermalLevel(callback?: AsyncCallback\\<void>): void\n\n> **说明：**<br>从API version 8开始支持，从AP"
+      },
+      {
+        "section_id": "section-7",
+        "title": "thermal.getThermalLevel<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 184,
+        "summary": "getThermalLevel(): ThermalLevel\n\n> **说明：**<br>从API version 8开始支持，从API version 9开始不再维护，建议使用[thermal."
+      },
+      {
+        "section_id": "section-8",
+        "title": "ThermalLevel",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 200,
+        "summary": "热档位信息。\n\n**系统能力：** SystemCapability.PowerManager.ThermalManager\n\n| 名称       | 值   | 说明"
+      }
+    ]
+  }
+}

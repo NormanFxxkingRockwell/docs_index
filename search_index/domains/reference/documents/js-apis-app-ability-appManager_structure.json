@@ -1,0 +1,188 @@
+{
+  "doc_id": "js-apis-app-ability-appManager",
+  "title": "@ohos.app.ability.appManager (应用管理)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-appManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-appManager.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@SKY2001",
+    "designer": "@yzkp",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.appManager (应用管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.appManager (应用管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { appManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ProcessState<sup>10+</sup>",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 36,
+        "summary": "表示进程状态的枚举。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Ability.Abili"
+      },
+      {
+        "section_id": "section-3",
+        "title": "appManager.isRunningInStabilityTest",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 80,
+        "summary": "isRunningInStabilityTest(callback: AsyncCallback&lt;boolean&gt;): void\n\n查询当前系统是否处于稳定性测试场景。使用callbac"
+      },
+      {
+        "section_id": "section-4",
+        "title": "appManager.isRunningInStabilityTest",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 122,
+        "summary": "isRunningInStabilityTest(): Promise&lt;boolean&gt;\n\n查询当前系统是否处于稳定性测试场景。使用Promise异步回调。\n\n> **说明：**\n>\n>"
+      },
+      {
+        "section_id": "section-5",
+        "title": "appManager.isRamConstrainedDevice",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 159,
+        "summary": "isRamConstrainedDevice(): Promise\\<boolean>\n\n查询当前设备是否为RAM受限设备（内存资源严重受限的设备）。使用Promise异步回调。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-6",
+        "title": "appManager.isRamConstrainedDevice",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 198,
+        "summary": "isRamConstrainedDevice(callback: AsyncCallback\\<boolean>): void\n\n查询当前设备是否为RAM受限设备（内存资源严重受限的设备）。使用ca"
+      },
+      {
+        "section_id": "section-7",
+        "title": "appManager.getAppMemorySize",
+        "level": 2,
+        "line_start": 199,
+        "line_end": 235,
+        "summary": "getAppMemorySize(): Promise\\<number>\n\n获取当前应用程序可以使用的最大内存（RAM）值。使用Promise异步回调。\n\n**原子化服务API**：从API ver"
+      },
+      {
+        "section_id": "section-8",
+        "title": "appManager.getAppMemorySize",
+        "level": 2,
+        "line_start": 236,
+        "line_end": 274,
+        "summary": "getAppMemorySize(callback: AsyncCallback\\<number>): void\n\n获取当前应用程序可以使用的最大内存（RAM）值。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "appManager.getRunningProcessInformation",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 316,
+        "summary": "getRunningProcessInformation(): Promise\\<Array\\<ProcessInformation>>\n\n获取当前应用运行进程的相关信息。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-10",
+        "title": "appManager.getRunningProcessInformation",
+        "level": 2,
+        "line_start": 317,
+        "line_end": 360,
+        "summary": "getRunningProcessInformation(callback: AsyncCallback\\<Array\\<ProcessInformation>>): void\n\n获取当前应用运行进"
+      },
+      {
+        "section_id": "section-11",
+        "title": "appManager.on('applicationState')<sup>14+</sup>",
+        "level": 2,
+        "line_start": 361,
+        "line_end": 433,
+        "summary": "on(type: 'applicationState', observer: ApplicationStateObserver): number\n\n注册所有应用程序的状态监听器。\n\n**需要权限**"
+      },
+      {
+        "section_id": "section-12",
+        "title": "appManager.on('applicationState')<sup>14+</sup>",
+        "level": 2,
+        "line_start": 434,
+        "line_end": 509,
+        "summary": "on(type: 'applicationState', observer: ApplicationStateObserver, bundleNameList: Array\\<string>): n"
+      },
+      {
+        "section_id": "section-13",
+        "title": "appManager.off('applicationState')<sup>14+</sup>",
+        "level": 2,
+        "line_start": 510,
+        "line_end": 598,
+        "summary": "off(type: 'applicationState', observerId: number): Promise\\<void>\n\n注销应用状态监听器。使用Promise异步回调。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-14",
+        "title": "appManager.off('applicationState')<sup>15+</sup>",
+        "level": 2,
+        "line_start": 599,
+        "line_end": 686,
+        "summary": "off(type: 'applicationState', observerId: number, callback: AsyncCallback\\<void>): void\n\n注销应用状态监听器。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "appManager.killProcessesByBundleName<sup>14+</sup>",
+        "level": 2,
+        "line_start": 687,
+        "line_end": 743,
+        "summary": "killProcessesByBundleName(bundleName: string, clearPageStack: boolean, appIndex?: number): Promise\\"
+      },
+      {
+        "section_id": "section-16",
+        "title": "appManager.isAppRunning<sup>14+</sup>",
+        "level": 2,
+        "line_start": 744,
+        "line_end": 800,
+        "summary": "isAppRunning(bundleName: string, appCloneIndex?: number): Promise\\<boolean>\n\n判断所有用户下指定包名和分身应用索引的应用是"
+      },
+      {
+        "section_id": "section-17",
+        "title": "AbilityStateData<sup>14+</sup>",
+        "level": 2,
+        "line_start": 801,
+        "line_end": 812,
+        "summary": "type AbilityStateData = _AbilityStateData.default\n\nAbility状态信息。\n\n**系统能力**：SystemCapability.Ability."
+      },
+      {
+        "section_id": "section-18",
+        "title": "AppStateData<sup>14+</sup>",
+        "level": 2,
+        "line_start": 813,
+        "line_end": 824,
+        "summary": "type AppStateData = _AppStateData.default\n\n应用状态信息。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntim"
+      },
+      {
+        "section_id": "section-19",
+        "title": "ApplicationStateObserver<sup>14+</sup>",
+        "level": 2,
+        "line_start": 825,
+        "line_end": 836,
+        "summary": "type ApplicationStateObserver = _ApplicationStateObserver.default\n\n应用状态监听器。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-20",
+        "title": "ProcessInformation",
+        "level": 2,
+        "line_start": 837,
+        "line_end": 850,
+        "summary": "type ProcessInformation = _ProcessInformation\n\n进程信息。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用"
+      },
+      {
+        "section_id": "section-21",
+        "title": "ProcessData<sup>14+</sup>",
+        "level": 2,
+        "line_start": 851,
+        "line_end": 861,
+        "summary": "type ProcessData = _ProcessData.default\n\n进程数据。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Co"
+      }
+    ]
+  }
+}

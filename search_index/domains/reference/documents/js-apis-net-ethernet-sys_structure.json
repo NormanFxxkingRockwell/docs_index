@@ -1,0 +1,156 @@
+{
+  "doc_id": "js-apis-net-ethernet-sys",
+  "title": "@ohos.net.ethernet (以太网连接管理)（系统接口）",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-net-ethernet-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-net-ethernet-sys.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.ethernet (以太网连接管理)（系统接口），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.ethernet (以太网连接管理)（系统接口）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { ethernet } from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ethernet.setIfaceConfig",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 81,
+        "summary": "setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: AsyncCallback\\<void>): void\n\n设置"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ethernet.setIfaceConfig",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 145,
+        "summary": "setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise\\<void>\n\n设置网络接口配置信息，使用Promise异步回调"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ethernet.getIfaceConfig",
+        "level": 2,
+        "line_start": 146,
+        "line_end": 196,
+        "summary": "getIfaceConfig(iface: string, callback: AsyncCallback\\<InterfaceConfiguration>): void\n\n获取指定网络接口信息，使"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ethernet.getIfaceConfig",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 250,
+        "summary": "getIfaceConfig(iface: string): Promise\\<InterfaceConfiguration>\n\n获取指定网络接口信息，使用Promise异步回调。\n\n**系统接口*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ethernet.isIfaceActive",
+        "level": 2,
+        "line_start": 251,
+        "line_end": 296,
+        "summary": "isIfaceActive(iface: string, callback: AsyncCallback\\<number>): void\n\n判断接口是否已激活，使用callback异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ethernet.isIfaceActive",
+        "level": 2,
+        "line_start": 297,
+        "line_end": 345,
+        "summary": "isIfaceActive(iface: string): Promise\\<number>\n\n判断接口是否已激活，使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ethernet.getAllActiveIfaces",
+        "level": 2,
+        "line_start": 346,
+        "line_end": 390,
+        "summary": "getAllActiveIfaces(callback: AsyncCallback\\<Array\\<string>>): void\n\n获取活动的网络接口，使用callback异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ethernet.getAllActiveIfaces",
+        "level": 2,
+        "line_start": 391,
+        "line_end": 433,
+        "summary": "getAllActiveIfaces(): Promise\\<Array\\<string>>\n\n获取活动的网络接口，使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**需要权"
+      },
+      {
+        "section_id": "section-10",
+        "title": "ethernet.on('interfaceStateChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 434,
+        "line_end": 470,
+        "summary": "on(type: 'interfaceStateChange', callback: Callback\\<InterfaceStateInfo>): void\n\n注册网卡热插拔事件，使用callba"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ethernet.off('interfaceStateChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 471,
+        "line_end": 506,
+        "summary": "off(type: 'interfaceStateChange', callback?: Callback\\<InterfaceStateInfo\\>): void\n\n注销网卡热插拔事件，使用cal"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ethernet.getEthernetDeviceInfos<sup>20+</sup>",
+        "level": 2,
+        "line_start": 507,
+        "line_end": 550,
+        "summary": "getEthernetDeviceInfos(): Promise\\<Array\\<EthernetDeviceInfos>>\n\n获取本机以太网卡的设备信息（如供应商名称、产品名称、最大连接速率等）"
+      },
+      {
+        "section_id": "section-13",
+        "title": "InterfaceConfiguration",
+        "level": 2,
+        "line_start": 551,
+        "line_end": 568,
+        "summary": "以太网连接配置网络信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Ethernet\n\n| 名称"
+      },
+      {
+        "section_id": "section-14",
+        "title": "InterfaceStateInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 569,
+        "line_end": 581,
+        "summary": "监听以太网卡状态变化。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Ethernet\n\n| 名称"
+      },
+      {
+        "section_id": "section-15",
+        "title": "IPSetMode",
+        "level": 2,
+        "line_start": 582,
+        "line_end": 596,
+        "summary": "以太网连接模式。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Ethernet\n\n| 名称"
+      },
+      {
+        "section_id": "section-16",
+        "title": "EthernetDeviceInfos<sup>20+</sup>",
+        "level": 2,
+        "line_start": 597,
+        "line_end": 614,
+        "summary": "以太网设备信息。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Ethernet\n\n| 名称"
+      },
+      {
+        "section_id": "section-17",
+        "title": "DeviceConnectionType<sup>20+</sup>",
+        "level": 2,
+        "line_start": 615,
+        "line_end": 626,
+        "summary": "以太网设备连接模式。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.Communication.NetManager.Ethernet\n\n| 名称"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-arkui-Prefetcher",
+  "title": "@ohos.arkui.Prefetcher (Prefetching)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-Prefetcher.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-Prefetcher.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@maorh",
+    "designer": "@lixingchi1",
+    "tester": "@TerryTsao",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 @ohos.arkui.Prefetcher (Prefetching)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.arkui.Prefetcher (Prefetching)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 23,
+        "summary": "```ts\nimport { BasicPrefetcher, IDataSourcePrefetching, IPrefetcher } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "IPrefetcher",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 89,
+        "summary": "实现此接口以提供预取能力。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-3",
+        "title": "BasicPrefetcher",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 142,
+        "summary": "BasicPrefetcher是IPrefetcher的基础实现。它提供了一种智能数据预取算法，以根据屏幕上可见区域的实时变化和预取持续时间的变化来决定应预取哪些数据项。它还可以根据用户的滚动操作来确"
+      },
+      {
+        "section_id": "section-4",
+        "title": "IDataSourcePrefetching",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 194,
+        "summary": "继承自[IDataSource](./arkui-ts/ts-rendering-control-lazyforeach.md#idatasource)。实现该接口，提供具备预取能力的DataSou"
+      },
+      {
+        "section_id": "section-5",
+        "title": "示例",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 416,
+        "summary": "下面示例展示了Prefetcher的预加载能力。该示例采用分页的方式，配合LazyForEach实现懒加载效果，并通过添加延时来模拟加载过程。\n\n```typescript\nimport { Bas"
+      },
+      {
+        "section_id": "section-6",
+        "title": "补充说明",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 419,
+        "summary": "开发者也可使用OpenHarmony三方库[@netteam/prefetcher](https://ohpm.openharmony.cn/#/cn/detail/@netteam%2Fprefe"
+      }
+    ]
+  }
+}

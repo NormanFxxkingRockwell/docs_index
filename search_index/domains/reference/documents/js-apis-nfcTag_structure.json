@@ -1,0 +1,436 @@
+{
+  "doc_id": "js-apis-nfcTag",
+  "title": "@ohos.nfc.tag (标准NFC-Tag)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-nfcTag.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-nfcTag.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@amunra03",
+    "designer": "@wenxiaolin",
+    "tester": "@zs_111",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.nfc.tag (标准NFC-Tag)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.nfc.tag (标准NFC-Tag)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "**导入模块**",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```js\nimport { tag } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "**tag.TagInfo**",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 87,
+        "summary": "在对相关Tag类型卡片进行读写之前，必须先获取[TagInfo](#taginfo)相关属性值，以确认设备读取到的Tag卡片支持哪些技术类型。这样Tag应用程序才能调用正确的接口和所读取到的Tag卡"
+      },
+      {
+        "section_id": "section-3",
+        "title": "tag.getNfcATag<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 111,
+        "summary": "getNfcATag(tagInfo: [TagInfo](#taginfo)): [NfcATag](js-apis-nfctech.md#nfcatag)\n\n获取NFC A类型Tag对象，通过该"
+      },
+      {
+        "section_id": "section-4",
+        "title": "tag.getNfcA<sup>9+</sup>",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 143,
+        "summary": "getNfcA(tagInfo: [TagInfo](#taginfo)): [NfcATag](js-apis-nfctech.md#nfcatag)\n\n获取NFC A类型Tag对象，通过该对象可"
+      },
+      {
+        "section_id": "section-5",
+        "title": "tag.getNfcBTag<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 167,
+        "summary": "getNfcBTag(tagInfo: [TagInfo](#taginfo)): [NfcBTag](js-apis-nfctech.md#nfcbtag)\n\n获取NFC B类型Tag对象，通过该"
+      },
+      {
+        "section_id": "section-6",
+        "title": "tag.getNfcB<sup>9+</sup>",
+        "level": 2,
+        "line_start": 168,
+        "line_end": 199,
+        "summary": "getNfcB(tagInfo: [TagInfo](#taginfo)): [NfcBTag](js-apis-nfctech.md#nfcbtag)\n\n获取NFC B类型Tag对象，通过该对象可"
+      },
+      {
+        "section_id": "section-7",
+        "title": "tag.getNfcFTag<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 200,
+        "line_end": 223,
+        "summary": "getNfcFTag(tagInfo: [TagInfo](#taginfo)): [NfcFTag](js-apis-nfctech.md#nfcftag)\n\n获取NFC F类型Tag对象，通过该"
+      },
+      {
+        "section_id": "section-8",
+        "title": "tag.getNfcF<sup>9+</sup>",
+        "level": 2,
+        "line_start": 224,
+        "line_end": 255,
+        "summary": "getNfcF(tagInfo: [TagInfo](#taginfo)): [NfcFTag](js-apis-nfctech.md#nfcftag)\n\n获取NFC F类型Tag对象，通过该对象可"
+      },
+      {
+        "section_id": "section-9",
+        "title": "tag.getNfcVTag<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 256,
+        "line_end": 279,
+        "summary": "getNfcVTag(tagInfo: [TagInfo](#taginfo)): [NfcVTag](js-apis-nfctech.md#nfcvtag)\n\n获取NFC V类型Tag对象，通过该"
+      },
+      {
+        "section_id": "section-10",
+        "title": "tag.getNfcV<sup>9+</sup>",
+        "level": 2,
+        "line_start": 280,
+        "line_end": 311,
+        "summary": "getNfcV(tagInfo: [TagInfo](#taginfo)): [NfcVTag](js-apis-nfctech.md#nfcvtag)\n\n获取NFC V类型Tag对象，通过该对象可"
+      },
+      {
+        "section_id": "section-11",
+        "title": "tag.getIsoDep<sup>9+</sup>",
+        "level": 2,
+        "line_start": 312,
+        "line_end": 343,
+        "summary": "getIsoDep(tagInfo: [TagInfo](#taginfo)): [IsoDepTag](js-apis-nfctech.md#isodeptag9 )\n\n获取IsoDep类型Tag"
+      },
+      {
+        "section_id": "section-12",
+        "title": "tag.getNdef<sup>9+</sup>",
+        "level": 2,
+        "line_start": 344,
+        "line_end": 375,
+        "summary": "getNdef(tagInfo: [TagInfo](#taginfo)): [NdefTag](js-apis-nfctech.md#ndeftag9)\n\n获取NDEF类型Tag对象，通过该对象可"
+      },
+      {
+        "section_id": "section-13",
+        "title": "tag.getMifareClassic<sup>9+</sup>",
+        "level": 2,
+        "line_start": 376,
+        "line_end": 407,
+        "summary": "getMifareClassic(tagInfo: [TagInfo](#taginfo)): [MifareClassicTag](js-apis-nfctech.md#mifareclassic"
+      },
+      {
+        "section_id": "section-14",
+        "title": "tag.getMifareUltralight<sup>9+</sup>",
+        "level": 2,
+        "line_start": 408,
+        "line_end": 438,
+        "summary": "getMifareUltralight(tagInfo: [TagInfo](#taginfo)): [MifareUltralightTag](js-apis-nfctech.md#mifareu"
+      },
+      {
+        "section_id": "section-15",
+        "title": "tag.getNdefFormatable<sup>9+</sup>",
+        "level": 2,
+        "line_start": 439,
+        "line_end": 469,
+        "summary": "getNdefFormatable(tagInfo: [TagInfo](#taginfo)): [NdefFormatableTag](js-apis-nfctech.md#ndefformata"
+      },
+      {
+        "section_id": "section-16",
+        "title": "tag.getBarcodeTag<sup>18+</sup>",
+        "level": 2,
+        "line_start": 470,
+        "line_end": 502,
+        "summary": "getBarcodeTag(tagInfo: [TagInfo](#taginfo)): [BarcodeTag](js-apis-nfctech.md#barcodetag18)\n\n获取Barco"
+      },
+      {
+        "section_id": "section-17",
+        "title": "tag.getTagInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 503,
+        "line_end": 533,
+        "summary": "getTagInfo(want: [Want](../apis-ability-kit/js-apis-app-ability-want.md#want)): [TagInfo](#taginfo)"
+      },
+      {
+        "section_id": "section-18",
+        "title": "tag.registerForegroundDispatch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 534,
+        "line_end": 569,
+        "summary": "registerForegroundDispatch(elementName: [ElementName](../apis-ability-kit/js-apis-bundleManager-ele"
+      },
+      {
+        "section_id": "section-19",
+        "title": "tag.unregisterForegroundDispatch<sup>10+</sup>",
+        "level": 2,
+        "line_start": 570,
+        "line_end": 659,
+        "summary": "unregisterForegroundDispatch(elementName: [ElementName](../apis-ability-kit/js-apis-bundleManager-e"
+      },
+      {
+        "section_id": "section-20",
+        "title": "tag.on<sup>11+</sup>",
+        "level": 2,
+        "line_start": 660,
+        "line_end": 696,
+        "summary": "on(type: 'readerMode', elementName: [ElementName](../apis-ability-kit/js-apis-bundleManager-element"
+      },
+      {
+        "section_id": "section-21",
+        "title": "tag.off<sup>11+</sup>",
+        "level": 2,
+        "line_start": 697,
+        "line_end": 789,
+        "summary": "off(type: 'readerMode', elementName: [ElementName](../apis-ability-kit/js-apis-bundleManager-elemen"
+      },
+      {
+        "section_id": "section-22",
+        "title": "tag.on<sup>23+</sup>",
+        "level": 2,
+        "line_start": 790,
+        "line_end": 829,
+        "summary": "on(type: 'readerModeWithInterval', elementName: ElementName, discTech: number[], callback: AsyncCal"
+      },
+      {
+        "section_id": "section-23",
+        "title": "tag.off<sup>23+</sup>",
+        "level": 2,
+        "line_start": 830,
+        "line_end": 922,
+        "summary": "off(type: 'readerModeWithInterval', elementName: ElementName, callback: AsyncCallback&lt;TagInfo&gt"
+      },
+      {
+        "section_id": "section-24",
+        "title": "tag.ndef.makeUriRecord<sup>9+</sup>",
+        "level": 2,
+        "line_start": 923,
+        "line_end": 971,
+        "summary": "makeUriRecord(uri: string): NdefRecord\n\n根据输入的URI，构建NDEF标签的Record数据对象。\n\n**系统能力：** SystemCapability.C"
+      },
+      {
+        "section_id": "section-25",
+        "title": "tag.ndef.makeTextRecord<sup>9+</sup>",
+        "level": 2,
+        "line_start": 972,
+        "line_end": 1022,
+        "summary": "makeTextRecord(text: string, locale: string): NdefRecord\n\n根据输入的文本数据和编码类型，构建NDEF标签的Record。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-26",
+        "title": "tag.ndef.makeApplicationRecord<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1023,
+        "line_end": 1071,
+        "summary": "makeApplicationRecord(bundleName: string): NdefRecord\n\n根据OpenHarmony应用的bundlename，构建NDEF标签的Record。"
+      },
+      {
+        "section_id": "section-27",
+        "title": "tag.ndef.makeMimeRecord<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1072,
+        "line_end": 1121,
+        "summary": "makeMimeRecord(mimeType: string, mimeData: number[]): NdefRecord\n\n根据输入的MIME数据和类型，构建NDEF标签的Record。"
+      },
+      {
+        "section_id": "section-28",
+        "title": "tag.ndef.makeExternalRecord<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1122,
+        "line_end": 1174,
+        "summary": "makeExternalRecord(domainName: string, type: string, externalData: number[]): NdefRecord\n\n根据应用程序特定的"
+      },
+      {
+        "section_id": "section-29",
+        "title": "tag.ndef.messageToBytes<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1175,
+        "line_end": 1219,
+        "summary": "messageToBytes(ndefMessage: [NdefMessage](js-apis-nfctech.md#ndefmessage9)): number[]\n\n把输入的NDEF消息数据"
+      },
+      {
+        "section_id": "section-30",
+        "title": "tag.ndef.createNdefMessage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1220,
+        "line_end": 1262,
+        "summary": "createNdefMessage(data: number[]): [NdefMessage](js-apis-nfctech.md#ndefmessage9)\n\n使用原始字节数据创建NDEF标签"
+      },
+      {
+        "section_id": "section-31",
+        "title": "tag.ndef.createNdefMessage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1263,
+        "line_end": 1308,
+        "summary": "createNdefMessage(ndefRecords: NdefRecord[]): [NdefMessage](js-apis-nfctech.md#ndefmessage9)\n\n使用NDE"
+      },
+      {
+        "section_id": "section-32",
+        "title": "TagInfo",
+        "level": 2,
+        "line_start": 1309,
+        "line_end": 1322,
+        "summary": "NFC服务在读取到标签时给出的对象，通过该对象属性，应用知道该标签支持哪些技术类型，并使用匹配的技术类型来调用相关接口。\n\n**系统能力：** SystemCapability.Communicat"
+      },
+      {
+        "section_id": "section-33",
+        "title": "NdefRecord<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1323,
+        "line_end": 1336,
+        "summary": "NDEF标签Record属性的定义，参考NDEF标签技术规范《NFCForum-TS-NDEF_1.0》的定义细节。\n\n**系统能力：** SystemCapability.Communication"
+      },
+      {
+        "section_id": "section-34",
+        "title": "常量",
+        "level": 2,
+        "line_start": 1337,
+        "line_end": 1354,
+        "summary": "NFC Tag有多种不同的技术类型，定义常量描述不同的技术类型。\n\n**系统能力：** SystemCapability.Communication.NFC.Tag\n\n| **名称**"
+      },
+      {
+        "section_id": "section-35",
+        "title": "TnfType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1355,
+        "line_end": 1371,
+        "summary": "NDEF Record的TNF(Type Name Field)类型值，参考NDEF标签技术规范《NFCForum-TS-NDEF_1.0》的定义细节。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-36",
+        "title": "NDEF Record RTD类型定义",
+        "level": 2,
+        "line_start": 1372,
+        "line_end": 1383,
+        "summary": "NDEF Record的RTD(Record Type Definition)类型值，参考NDEF标签技术规范《NFCForum-TS-NDEF_1.0》的定义细节。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-37",
+        "title": "NfcForumType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1384,
+        "line_end": 1398,
+        "summary": "NFC Forum标准里面Tag类型的定义。\n\n**系统能力：** SystemCapability.Communication.NFC.Tag\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-38",
+        "title": "MifareClassicType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1399,
+        "line_end": 1412,
+        "summary": "MIFARE Classic标签类型的定义。\n\n**系统能力：** SystemCapability.Communication.NFC.Tag\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-39",
+        "title": "MifareClassicSize<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1413,
+        "line_end": 1426,
+        "summary": "MIFARE Classic标签存储大小的定义。\n\n**系统能力：** SystemCapability.Communication.NFC.Tag\n\n**原子化服务API：** 从API versi"
+      },
+      {
+        "section_id": "section-40",
+        "title": "MifareUltralightType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1427,
+        "line_end": 1439,
+        "summary": "MIFARE Ultralight标签类型的定义。\n\n**系统能力：** SystemCapability.Communication.NFC.Tag\n\n**原子化服务API：** 从API vers"
+      },
+      {
+        "section_id": "section-41",
+        "title": "NfcATag",
+        "level": 2,
+        "line_start": 1440,
+        "line_end": 1453,
+        "summary": "type NfcATag = _NfcATag\n\n获取NfcATag。\n\n**系统能力**：SystemCapability.Communication.NFC.Tag\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-42",
+        "title": "NfcBTag",
+        "level": 2,
+        "line_start": 1454,
+        "line_end": 1467,
+        "summary": "type NfcBTag = _NfcBTag\n\n获取NfcBTag。\n\n**系统能力**：SystemCapability.Communication.NFC.Tag\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-43",
+        "title": "NfcFTag",
+        "level": 2,
+        "line_start": 1468,
+        "line_end": 1481,
+        "summary": "type NfcFTag = _NfcFTag\n\n获取NfcFTag。\n\n**系统能力**：SystemCapability.Communication.NFC.Tag\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-44",
+        "title": "NfcVTag",
+        "level": 2,
+        "line_start": 1482,
+        "line_end": 1495,
+        "summary": "type NfcVTag = _NfcVTag\n\n获取NfcVTag。\n\n**系统能力**：SystemCapability.Communication.NFC.Tag\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-45",
+        "title": "IsoDepTag<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1496,
+        "line_end": 1509,
+        "summary": "type IsoDepTag = _IsoDepTag\n\n获取IsoDepTag。\n\n**系统能力**：SystemCapability.Communication.NFC.Tag\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-46",
+        "title": "NdefTag<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1510,
+        "line_end": 1523,
+        "summary": "type NdefTag = _NdefTag\n\n获取NdefTag。\n\n**系统能力**：SystemCapability.Communication.NFC.Tag\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-47",
+        "title": "MifareClassicTag<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1524,
+        "line_end": 1537,
+        "summary": "type MifareClassicTag = _MifareClassicTag\n\n获取MifareClassicTag。\n\n**系统能力**：SystemCapability.Communica"
+      },
+      {
+        "section_id": "section-48",
+        "title": "MifareUltralightTag<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1538,
+        "line_end": 1551,
+        "summary": "type MifareUltralightTag = _MifareUltralightTag;\n\n获取MifareUltralightTag。\n\n**系统能力**：SystemCapability"
+      },
+      {
+        "section_id": "section-49",
+        "title": "NdefFormatableTag<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1552,
+        "line_end": 1565,
+        "summary": "type NdefFormatableTag = _NdefFormatableTag\n\n获取NdefFormatableTag。\n\n**系统能力**：SystemCapability.Commun"
+      },
+      {
+        "section_id": "section-50",
+        "title": "BarcodeTag<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1566,
+        "line_end": 1579,
+        "summary": "type BarcodeTag = _BarcodeTag\n\n获取BarcodeTag。\n\n**系统能力**：SystemCapability.Communication.NFC.Tag\n\n**原子"
+      },
+      {
+        "section_id": "section-51",
+        "title": "NdefMessage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1580,
+        "line_end": 1593,
+        "summary": "type NdefMessage = _NdefMessage\n\n获取NdefMessage。\n\n**系统能力**：SystemCapability.Communication.NFC.Tag\n\n*"
+      },
+      {
+        "section_id": "section-52",
+        "title": "TagSession",
+        "level": 2,
+        "line_start": 1594,
+        "line_end": 1607,
+        "summary": "type TagSession = _TagSession\n\n获取TagSession。\n\n**系统能力**：SystemCapability.Communication.NFC.Tag\n\n**原子"
+      }
+    ]
+  }
+}

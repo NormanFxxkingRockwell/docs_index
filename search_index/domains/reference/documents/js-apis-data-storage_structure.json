@@ -1,0 +1,132 @@
+{
+  "doc_id": "js-apis-data-storage",
+  "title": "@ohos.data.storage (轻量级存储)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/js-apis-data-storage.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/js-apis-data-storage.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@ding_dong_dong",
+    "designer": "@ding_dong_dong",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 @ohos.data.storage (轻量级存储)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.data.storage (轻量级存储)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 23,
+        "summary": "```js\nimport data_storage from '@ohos.data.storage';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "常量",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 33,
+        "summary": "**系统能力：** 以下各项对应的系统能力均为SystemCapability.DistributedDataManager.Preferences.Core\n\n| 名称             |"
+      },
+      {
+        "section_id": "section-3",
+        "title": "data_storage.getStorageSync",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 71,
+        "summary": "getStorageSync(path: string): Storage\n\n读取指定文件，将数据加载到Storage实例，用于数据操作。\n\n**系统能力：** SystemCapability.D"
+      },
+      {
+        "section_id": "section-4",
+        "title": "data_storage.getStorage",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 109,
+        "summary": "getStorage(path: string, callback: AsyncCallback&lt;Storage&gt;): void\n\n读取指定文件，将数据加载到Storage实例，用于数据"
+      },
+      {
+        "section_id": "section-5",
+        "title": "data_storage.getStorage",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 151,
+        "summary": "getStorage(path: string): Promise&lt;Storage&gt;\n\n读取指定文件，将数据加载到Storage实例，用于数据操作，使用Promise方式返回结果，此方法"
+      },
+      {
+        "section_id": "section-6",
+        "title": "data_storage.deleteStorageSync",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 180,
+        "summary": "deleteStorageSync(path: string): void\n\n从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件时，应用不允许再使用该"
+      },
+      {
+        "section_id": "section-7",
+        "title": "data_storage.deleteStorage",
+        "level": 2,
+        "line_start": 181,
+        "line_end": 217,
+        "summary": "deleteStorage(path: string, callback: AsyncCallback&lt;void&gt;): void\n\n从内存中移除指定文件对应的Storage单实例，并删除"
+      },
+      {
+        "section_id": "section-8",
+        "title": "data_storage.deleteStorage",
+        "level": 2,
+        "line_start": 218,
+        "line_end": 258,
+        "summary": "deleteStorage(path: string): Promise&lt;void&gt;\n\n从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件"
+      },
+      {
+        "section_id": "section-9",
+        "title": "data_storage.removeStorageFromCacheSync",
+        "level": 2,
+        "line_start": 259,
+        "line_end": 287,
+        "summary": "removeStorageFromCacheSync(path: string): void\n\n从内存中移除指定文件对应的Storage单实例。移除Storage单实例时，应用不允许再使用该实例进行"
+      },
+      {
+        "section_id": "section-10",
+        "title": "data_storage.removeStorageFromCache",
+        "level": 2,
+        "line_start": 288,
+        "line_end": 324,
+        "summary": "removeStorageFromCache(path: string, callback: AsyncCallback&lt;void&gt;): void\n\n从内存中移除指定文件对应的Stora"
+      },
+      {
+        "section_id": "section-11",
+        "title": "data_storage.removeStorageFromCache",
+        "level": 2,
+        "line_start": 325,
+        "line_end": 364,
+        "summary": "removeStorageFromCache(path: string): Promise&lt;void&gt;\n\n从内存中移除指定文件对应的Storage单实例。移除Storage单实例时，应用"
+      },
+      {
+        "section_id": "section-12",
+        "title": "Storage",
+        "level": 2,
+        "line_start": 365,
+        "line_end": 913,
+        "summary": "提供获取和修改存储数据的接口。\n\n下列接口都需先使用[data_storage.getStorage](#data_storagegetstorage)或[data_storage.getStora"
+      },
+      {
+        "section_id": "section-13",
+        "title": "StorageObserver",
+        "level": 2,
+        "line_start": 914,
+        "line_end": 921,
+        "summary": "**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core\n\n| 名称 | 类型 | 必填 | 说明"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ValueType",
+        "level": 2,
+        "line_start": 922,
+        "line_end": 935,
+        "summary": "type ValueType = number | string | boolean\n\n用于表示允许的数据字段类型。\n\n**系统能力：** SystemCapability.DistributedD"
+      }
+    ]
+  }
+}

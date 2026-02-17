@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-floatingBall",
+  "title": "@ohos.window.floatingBall (闪控球窗口)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-floatingBall.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-floatingBall.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "Window",
+    "owner": "@betafringe007",
+    "designer": "@zhoulin_",
+    "tester": "@qinliwen0417",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkUI Window 模块的 @ohos.window.floatingBall (闪控球窗口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.window.floatingBall (闪控球窗口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { floatingBall } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "floatingBall.isFloatingBallEnabled",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 43,
+        "summary": "isFloatingBallEnabled(): boolean\n\n判断当前设备是否支持闪控球功能。\n\n**系统能力：** SystemCapability.Window.SessionManage"
+      },
+      {
+        "section_id": "section-3",
+        "title": "floatingBall.create",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 99,
+        "summary": "create(config: FloatingBallConfiguration): Promise&lt;FloatingBallController&gt;\n\n创建闪控球控制器，使用Promis"
+      },
+      {
+        "section_id": "section-4",
+        "title": "FloatingBallConfiguration",
+        "level": 2,
+        "line_start": 100,
+        "line_end": 109,
+        "summary": "创建闪控球控制器时需要提供的参数配置。\n\n**系统能力：** SystemCapability.Window.SessionManager\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n|"
+      },
+      {
+        "section_id": "section-5",
+        "title": "FloatingBallController",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 520,
+        "summary": "闪控球控制器实例，用于启动、更新、停止闪控球以及注册回调等操作。\n\n下列API示例中都需先使用[floatingBall.create()](#floatingballcreate)方法获取到闪控球"
+      },
+      {
+        "section_id": "section-6",
+        "title": "FloatingBallParams",
+        "level": 2,
+        "line_start": 521,
+        "line_end": 534,
+        "summary": "启动和更新闪控球的配置参数。\n\n**系统能力：** SystemCapability.Window.SessionManager\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n|-----"
+      },
+      {
+        "section_id": "section-7",
+        "title": "FloatingBallState",
+        "level": 2,
+        "line_start": 535,
+        "line_end": 545,
+        "summary": "闪控球生命周期状态的枚举。\n\n**系统能力：** SystemCapability.Window.SessionManager\n\n| 名称 | 值 | 说明 |\n|------------|----"
+      },
+      {
+        "section_id": "section-8",
+        "title": "FloatingBallTemplate",
+        "level": 2,
+        "line_start": 546,
+        "line_end": 558,
+        "summary": "闪控球模板类型的枚举。\n\n**系统能力：** SystemCapability.Window.SessionManager\n\n| 名称 | 值 | 说明 |\n|------------|------"
+      },
+      {
+        "section_id": "section-9",
+        "title": "FloatingBallWindowInfo",
+        "level": 2,
+        "line_start": 559,
+        "line_end": 567,
+        "summary": "闪控球窗口信息。\n\n**系统能力：** SystemCapability.Window.SessionManager\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n|-----------"
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "doc_id": "arkts-apis-webview-GeolocationPermissions",
+  "title": "Class (GeolocationPermissions)",
+  "path": "zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-GeolocationPermissions.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkweb/arkts-apis-webview-GeolocationPermissions.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zhang-yinglie",
+    "designer": "@handyohos",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "ArkWeb Web 模块的 Class (GeolocationPermissions)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Class (GeolocationPermissions)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { webview } from '@kit.ArkWeb';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "需要权限",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 30,
+        "summary": "访问地理位置时需添加权限：ohos.permission.LOCATION、ohos.permission.APPROXIMATELY_LOCATION、ohos.permission.LOCATI"
+      },
+      {
+        "section_id": "section-3",
+        "title": "allowGeolocation",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 83,
+        "summary": "static allowGeolocation(origin: string, incognito?: boolean): void\n\n允许指定来源使用地理位置接口。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-4",
+        "title": "deleteGeolocation",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 136,
+        "summary": "static deleteGeolocation(origin: string, incognito?: boolean): void\n\n清除指定来源的地理位置权限状态。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getAccessibleGeolocation",
+        "level": 2,
+        "line_start": 137,
+        "line_end": 196,
+        "summary": "static getAccessibleGeolocation(origin: string, callback: AsyncCallback\\<boolean>, incognito?: bool"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getAccessibleGeolocation",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 260,
+        "summary": "static getAccessibleGeolocation(origin: string, incognito?: boolean): Promise\\<boolean>\n\n以Promise方式"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getStoredGeolocation",
+        "level": 2,
+        "line_start": 261,
+        "line_end": 318,
+        "summary": "static getStoredGeolocation(callback: AsyncCallback\\<Array\\<string>>, incognito?: boolean): void\n\n以"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getStoredGeolocation",
+        "level": 2,
+        "line_start": 319,
+        "line_end": 380,
+        "summary": "static getStoredGeolocation(incognito?: boolean): Promise\\<Array\\<string>>\n\n以Promise方式异步获取已存储地理位置权限"
+      },
+      {
+        "section_id": "section-9",
+        "title": "deleteAllGeolocation",
+        "level": 2,
+        "line_start": 381,
+        "line_end": 421,
+        "summary": "static deleteAllGeolocation(incognito?: boolean): void\n\n清除所有来源的地理位置权限状态。\n\n**系统能力：** SystemCapabilit"
+      }
+    ]
+  }
+}

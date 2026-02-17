@@ -1,0 +1,68 @@
+{
+  "doc_id": "errorcode-hiviewdfx-hicollie",
+  "title": "HiCollie错误码",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hicollie.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hicollie.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@rr_cn",
+    "designer": "@peterhuangyu",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 HiCollie错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "HiCollie错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "29800001 系统服务获取失败",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 31,
+        "summary": "**错误信息**\n\nWrong thread context.The function can not be called from main thread.\n\n**错误描述**\n\n调用接口线程错误"
+      },
+      {
+        "section_id": "section-2",
+        "title": "29800002 远程调用失败",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 49,
+        "summary": "**错误信息**\n\nRemote call failed.\n\n**错误描述**\n\n当前接口请求远程服务失败。\n\n**可能原因**\n\n服务未启动或崩溃。\n\n**处理步骤**\n\n建议重试。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "29800003 无效的timer名称",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 67,
+        "summary": "**错误信息**\n\nInvalid timer name.\n\n**错误描述**\n\ntimer name是无效的。\n\n**可能原因**\n\n传入的字符指针name为nullptr或name指向空字符串。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "29800004 无效的timeout值",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 85,
+        "summary": "**错误信息**\n\nInvalid timeout value.\n\n**错误描述**\n\ntimeout值是无效的。\n\n**可能原因**\n\n传入的timeout的值为0。\n\n**处理步骤**\n\n检查传"
+      },
+      {
+        "section_id": "section-5",
+        "title": "29800005 错误的进程上下文",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 103,
+        "summary": "**错误信息**\n\nWrong process context.\n\n**错误描述**\n\n进程上下文错误。\n\n**可能原因**\n\n接入函数执行时长检测定时器的进程是appspawn或nativespa"
+      },
+      {
+        "section_id": "section-6",
+        "title": "29800006 错误的timer id参数",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 123,
+        "summary": "**错误信息**\n\nWrong timer id output param.\n\n**错误描述**\n\n错误的任务id值参数。\n\n**可能原因**\n\n- 传入的整型指针id为nullptr；\n- 接入函"
+      }
+    ]
+  }
+}

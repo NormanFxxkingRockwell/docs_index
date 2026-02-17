@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-wifiext",
+  "title": "@ohos.wifiext (WLAN扩展接口)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-wifiext.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-wifiext.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@qq_43802146",
+    "designer": "@qq_43802146",
+    "tester": "@furryfurry123",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.wifiext (WLAN扩展接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.wifiext (WLAN扩展接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```js\nimport wifiext from '@ohos.wifiext';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "wifiext.enableHotspot<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 43,
+        "summary": "enableHotspot(): boolean;\n\n使能WLAN热点。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[wifi"
+      },
+      {
+        "section_id": "section-3",
+        "title": "wifiext.disableHotspot<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 64,
+        "summary": "disableHotspot(): boolean;\n\n去使能WLAN热点。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃。建议使用[wi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "wifiext.getSupportedPowerModel<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 85,
+        "summary": "getSupportedPowerModel(): Promise&lt;Array&lt;PowerModel&gt;&gt;\n\n获取支持的功率模式。使用Promise异步回调。\n\n> **说明："
+      },
+      {
+        "section_id": "section-5",
+        "title": "PowerModel",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 98,
+        "summary": "表示功率模式的枚举。\n\n**系统能力：** SystemCapability.Communication.WiFi.AP.Extension\n\n| 名称 | 值 | 说明 |\n| --------"
+      },
+      {
+        "section_id": "section-6",
+        "title": "wifiext.getSupportedPowerModel",
+        "level": 2,
+        "line_start": 99,
+        "line_end": 115,
+        "summary": "getSupportedPowerModel(callback: AsyncCallback&lt;Array&lt;PowerModel&gt;&gt;): void\n\n获取支持的功率模式。使用c"
+      },
+      {
+        "section_id": "section-7",
+        "title": "wifiext.getPowerModel<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 116,
+        "line_end": 136,
+        "summary": "getPowerModel(): Promise&lt;PowerModel&gt;\n\n获取功率模式，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API version 8开始支持"
+      },
+      {
+        "section_id": "section-8",
+        "title": "wifiext.getPowerModel<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 137,
+        "line_end": 157,
+        "summary": "getPowerModel(callback: AsyncCallback&lt;PowerModel&gt;): void\n\n获取功率模式。使用callback异步回调。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-9",
+        "title": "wifiext.setPowerModel",
+        "level": 2,
+        "line_start": 158,
+        "line_end": 179,
+        "summary": "setPowerModel(model: PowerModel) : boolean;\n\n 设置功率模式。\n\n**需要权限：** ohos.permission.MANAGE_WIFI_HOTSPO"
+      }
+    ]
+  }
+}

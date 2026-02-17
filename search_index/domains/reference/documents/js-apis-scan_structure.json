@@ -1,0 +1,252 @@
+{
+  "doc_id": "js-apis-scan",
+  "title": "@ohos.scan (扫描)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-scan.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-scan.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Print",
+    "owner": "@guoshengbang",
+    "designer": "@Q-haosu",
+    "tester": "@Q-haosu",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit Print 模块的 @ohos.scan (扫描)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.scan (扫描)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { scan } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ScanErrorCode",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 45,
+        "summary": "定义扫描错误码的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| -------"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ConstraintType",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 58,
+        "summary": "定义参数限制类型的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| ------"
+      },
+      {
+        "section_id": "section-4",
+        "title": "PhysicalUnit",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 74,
+        "summary": "定义物理单位的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| --------"
+      },
+      {
+        "section_id": "section-5",
+        "title": "OptionValueType",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 87,
+        "summary": "定义选项值类型的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| -------"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ScannerSyncMode",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 98,
+        "summary": "定义扫描仪同步码的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| ------"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ScannerDiscoveryMode",
+        "level": 2,
+        "line_start": 99,
+        "line_end": 109,
+        "summary": "定义扫描仪发现方式的枚举。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n| **名称** | **值** | **说明** |\n| -----"
+      },
+      {
+        "section_id": "section-8",
+        "title": "Range",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 122,
+        "summary": "定义范围的接口。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**属性：**\n| **名称** | **类型** | **只读** | **可"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ScannerParameter",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 142,
+        "summary": "定义扫描仪参数的接口。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**属性：**\n| **名称** | **类型** | **只读** |"
+      },
+      {
+        "section_id": "section-10",
+        "title": "ScannerOptionValue",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 156,
+        "summary": "定义扫描仪选项值的接口。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**属性：**\n| **名称** | **类型** | **只读** |"
+      },
+      {
+        "section_id": "section-11",
+        "title": "PictureScanProgress",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 169,
+        "summary": "定义图片扫描进度的接口。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**属性：**\n| **名称** | **类型** | **只读** |"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ScannerDevice",
+        "level": 2,
+        "line_start": 170,
+        "line_end": 185,
+        "summary": "定义扫描仪设备的接口。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**属性：**\n| **名称** | **类型** | **只读** |"
+      },
+      {
+        "section_id": "section-13",
+        "title": "ScannerSyncDevice",
+        "level": 2,
+        "line_start": 186,
+        "line_end": 200,
+        "summary": "定义扫描仪同步设备的接口。\n\n**系统能力：** SystemCapability.Print.PrintFramework\n\n**属性：**\n| **名称** | **类型** | **只读**"
+      },
+      {
+        "section_id": "section-14",
+        "title": "scan.init",
+        "level": 2,
+        "line_start": 201,
+        "line_end": 234,
+        "summary": "init(): Promise&lt;void&gt;\n\n初始化扫描服务。使用Promise异步回调。\n\n**需要权限：** ohos.permission.PRINT\n\n**系统能力：** Sys"
+      },
+      {
+        "section_id": "section-15",
+        "title": "scan.exit",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 268,
+        "summary": "exit(): Promise&lt;void&gt;\n\n退出扫描服务。使用Promise异步回调。\n\n**需要权限：** ohos.permission.PRINT\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-16",
+        "title": "scan.startScannerDiscovery",
+        "level": 2,
+        "line_start": 269,
+        "line_end": 302,
+        "summary": "startScannerDiscovery(): Promise&lt;void&gt;\n\n开始发现扫描仪。使用Promise异步回调。\n\n**需要权限：** ohos.permission.PRI"
+      },
+      {
+        "section_id": "section-17",
+        "title": "scan.openScanner",
+        "level": 2,
+        "line_start": 303,
+        "line_end": 342,
+        "summary": "openScanner(scannerId: string): Promise&lt;void&gt;\n\n打开扫描仪。使用Promise异步回调。\n\n**需要权限：** ohos.permissio"
+      },
+      {
+        "section_id": "section-18",
+        "title": "scan.closeScanner",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 382,
+        "summary": "closeScanner(scannerId: string): Promise&lt;void&gt;\n\n关闭扫描仪。使用Promise异步回调。\n\n**需要权限：** ohos.permissi"
+      },
+      {
+        "section_id": "section-19",
+        "title": "scan.getScannerParameter",
+        "level": 2,
+        "line_start": 383,
+        "line_end": 422,
+        "summary": "getScannerParameter(scannerId: string): Promise&lt;ScannerParameter[]&gt;\n\n获取扫描仪参数。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "scan.setScannerParameter",
+        "level": 2,
+        "line_start": 423,
+        "line_end": 469,
+        "summary": "setScannerParameter(scannerId: string, optionIndex: number, value: ScannerOptionValue): Promise&lt;"
+      },
+      {
+        "section_id": "section-21",
+        "title": "scan.setScanAutoOption",
+        "level": 2,
+        "line_start": 470,
+        "line_end": 511,
+        "summary": "setScanAutoOption(scannerId: string, optionIndex: number): Promise&lt;void&gt;\n\n设置扫描选项为自动模式。使用Promi"
+      },
+      {
+        "section_id": "section-22",
+        "title": "scan.getScannerCurrentSetting",
+        "level": 2,
+        "line_start": 512,
+        "line_end": 553,
+        "summary": "getScannerCurrentSetting(scannerId: string, optionIndex: number): Promise&lt;ScannerOptionValue&gt;"
+      },
+      {
+        "section_id": "section-23",
+        "title": "scan.startScan",
+        "level": 2,
+        "line_start": 554,
+        "line_end": 595,
+        "summary": "startScan(scannerId: string, batchMode: boolean): Promise&lt;void&gt;\n\n开始扫描。使用Promise异步回调。\n\n**需要权限："
+      },
+      {
+        "section_id": "section-24",
+        "title": "scan.cancelScan",
+        "level": 2,
+        "line_start": 596,
+        "line_end": 635,
+        "summary": "cancelScan(scannerId: string): Promise&lt;void&gt;\n\n取消扫描。使用Promise异步回调。\n\n**需要权限：** ohos.permission."
+      },
+      {
+        "section_id": "section-25",
+        "title": "scan.getPictureScanProgress",
+        "level": 2,
+        "line_start": 636,
+        "line_end": 675,
+        "summary": "getPictureScanProgress(scannerId: string): Promise&lt;PictureScanProgress&gt;\n\n获取图片扫描进度。使用Promise异步"
+      },
+      {
+        "section_id": "section-26",
+        "title": "scan.on",
+        "level": 2,
+        "line_start": 676,
+        "line_end": 707,
+        "summary": "on(type: 'scanDeviceFound', callback: Callback&lt;ScannerDevice&gt;): void\n\n注册扫描仪设备发现事件回调。使用callbac"
+      },
+      {
+        "section_id": "section-27",
+        "title": "scan.off",
+        "level": 2,
+        "line_start": 708,
+        "line_end": 742,
+        "summary": "off(type: 'scanDeviceFound', callback?: Callback&lt;ScannerDevice&gt;): void\n\n取消注册扫描仪设备发现事件回调。使用cal"
+      },
+      {
+        "section_id": "section-28",
+        "title": "scan.on",
+        "level": 2,
+        "line_start": 743,
+        "line_end": 774,
+        "summary": "on(type: 'scanDeviceSync', callback: Callback&lt;ScannerSyncDevice&gt;): void\n\n注册扫描仪设备同步事件回调。使用call"
+      },
+      {
+        "section_id": "section-29",
+        "title": "scan.off",
+        "level": 2,
+        "line_start": 775,
+        "line_end": 808,
+        "summary": "off(type: 'scanDeviceSync', callback?: Callback&lt;ScannerSyncDevice&gt;): void\n\n取消注册扫描仪设备同步事件回调。使用"
+      }
+    ]
+  }
+}

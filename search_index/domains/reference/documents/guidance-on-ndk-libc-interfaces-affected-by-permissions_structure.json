@@ -1,0 +1,76 @@
+{
+  "doc_id": "guidance-on-ndk-libc-interfaces-affected-by-permissions",
+  "title": "NDK涉及的musl libc接口使用限制的说明",
+  "path": "zh-cn/application-dev/reference/native-lib/guidance-on-ndk-libc-interfaces-affected-by-permissions.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/native-lib/guidance-on-ndk-libc-interfaces-affected-by-permissions.md",
+  "metadata": {
+    "kit": "NDK Development",
+    "subsystem": "commonlibrary",
+    "owner": "@liyiming13",
+    "designer": "@huang_huijin",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "NDK Development commonlibrary 模块的 NDK涉及的musl libc接口使用限制的说明，提供相关接口和功能说明。",
+  "structure": {
+    "title": "NDK涉及的musl libc接口使用限制的说明",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 14,
+        "summary": "开发者使用DevEco Studio或者NDK进行应用开发时，可能涉及到使用musl libc的接口能力，因为musl libc的个别接口可能受多种系统和环境的限制而无法使用，此时可以通过本文档进行"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Seccomp机制影响的musl接口 <!--Del-->",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 103,
+        "summary": "Seccomp机制可参考[Seccomp策略使能开发指导](../../../device-dev/subsystems/subsys-boot-init-seccomp.md)。<!--Del"
+      },
+      {
+        "section_id": "section-3",
+        "title": "内核没有对外开放影响的musl接口",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 111,
+        "summary": "| 头文件          | musl接口名称   |\n| -------------- | -------------- |\n| sys/fanotify.h | fanotify_init"
+      },
+      {
+        "section_id": "section-4",
+        "title": "SELinux机制影响的musl接口 <!--Del-->",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 207,
+        "summary": "SELinux的说明可参考[OpenHarmony SELinux概述](../../../device-dev/subsystems/subsys-security-selinux-overv"
+      },
+      {
+        "section_id": "section-5",
+        "title": "沙箱机制影响的musl接口",
+        "level": 2,
+        "line_start": 208,
+        "line_end": 229,
+        "summary": "沙箱机制可参考 [应用沙箱目录](../../file-management/app-sandbox-directory.md)。\n\n引入errno.h头文件，检查errno错误状态码，如果错误状态"
+      },
+      {
+        "section_id": "section-6",
+        "title": "空实现或默认失败的musl接口",
+        "level": 2,
+        "line_start": 230,
+        "line_end": 244,
+        "summary": "| 头文件         |  musl接口名称  |\n| -------------- | ------------- |\n| netdb.h        | getnetbyaddr"
+      },
+      {
+        "section_id": "section-7",
+        "title": "需要特殊权限才能执行的musl接口",
+        "level": 2,
+        "line_start": 245,
+        "line_end": 268,
+        "summary": "引入errno.h头文件，检查errno错误状态码，如果错误状态码是EPERM，则接口报错可能是由系统Capabilities安全机制引起的，也有可能是内核其他安全管控引起的。\n\n常见可能受Capa"
+      }
+    ]
+  }
+}

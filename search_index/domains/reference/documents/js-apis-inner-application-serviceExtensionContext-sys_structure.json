@@ -1,0 +1,316 @@
+{
+  "doc_id": "js-apis-inner-application-serviceExtensionContext-sys",
+  "title": "ServiceExtensionContext (系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-inner-application-serviceExtensionContext-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-inner-application-serviceExtensionContext-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@yewei0794",
+    "designer": "@jsjzju",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 ServiceExtensionContext (系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "ServiceExtensionContext (系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```ts\nimport { common } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 44,
+        "summary": "在使用ServiceExtensionContext的功能前，需要通过ServiceExtensionAbility子类实例获取。\n\n**示例：**\n\n```ts\nimport { ServiceE"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ServiceExtensionContext.startAbility",
+        "level": 2,
+        "line_start": 45,
+        "line_end": 125,
+        "summary": "startAbility(want: Want, callback: AsyncCallback&lt;void&gt;): void\n\n启动Ability。仅支持在主线程调用。使用callback"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ServiceExtensionContext.startAbility",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 215,
+        "summary": "startAbility(want: Want, options?: StartOptions): Promise\\<void>\n\n启动Ability。仅支持在主线程调用。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ServiceExtensionContext.startAbility",
+        "level": 2,
+        "line_start": 216,
+        "line_end": 301,
+        "summary": "startAbility(want: Want, options: StartOptions, callback: AsyncCallback&lt;void&gt;): void\n\n启动Abili"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ServiceExtensionContext.startAbilityWithAccount",
+        "level": 2,
+        "line_start": 302,
+        "line_end": 392,
+        "summary": "startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback\\<void>): void\n\n根据acc"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ServiceExtensionContext.startAbilityWithAccount",
+        "level": 2,
+        "line_start": 393,
+        "line_end": 486,
+        "summary": "startAbilityWithAccount(want: Want, accountId: number, options: StartOptions, callback: AsyncCallba"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ServiceExtensionContext.startAbilityWithAccount",
+        "level": 2,
+        "line_start": 487,
+        "line_end": 586,
+        "summary": "startAbilityWithAccount(want: Want, accountId: number, options?: StartOptions): Promise\\<void>\n\n根据a"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ServiceExtensionContext.startServiceExtensionAbility",
+        "level": 2,
+        "line_start": 587,
+        "line_end": 657,
+        "summary": "startServiceExtensionAbility(want: Want, callback: AsyncCallback\\<void>): void\n\n启动一个新的ServiceExtens"
+      },
+      {
+        "section_id": "section-10",
+        "title": "ServiceExtensionContext.startServiceExtensionAbility",
+        "level": 2,
+        "line_start": 658,
+        "line_end": 733,
+        "summary": "startServiceExtensionAbility(want: Want): Promise\\<void>\n\n启动一个新的ServiceExtensionAbility。使用Promise异步"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ServiceExtensionContext.startServiceExtensionAbilityWithAccount",
+        "level": 2,
+        "line_start": 734,
+        "line_end": 813,
+        "summary": "startServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback\\<voi"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ServiceExtensionContext.startServiceExtensionAbilityWithAccount",
+        "level": 2,
+        "line_start": 814,
+        "line_end": 898,
+        "summary": "startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise\\<void>\n\n启动一个新的Servi"
+      },
+      {
+        "section_id": "section-13",
+        "title": "ServiceExtensionContext.startAbilityAsCaller<sup>10+<sup>",
+        "level": 2,
+        "line_start": 899,
+        "line_end": 977,
+        "summary": "startAbilityAsCaller(want: Want, callback: AsyncCallback\\<void>): void\n\n使用设置的caller信息启动一个Ability，ca"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ServiceExtensionContext.startAbilityAsCaller<sup>10+<sup>",
+        "level": 2,
+        "line_start": 978,
+        "line_end": 1059,
+        "summary": "startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback\\<void>): void\n\n使用设置"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ServiceExtensionContext.startAbilityAsCaller<sup>10+<sup>",
+        "level": 2,
+        "line_start": 1060,
+        "line_end": 1149,
+        "summary": "startAbilityAsCaller(want: Want, options?: StartOptions): Promise\\<void>\n\n使用设置的caller信息启动一个Ability，"
+      },
+      {
+        "section_id": "section-16",
+        "title": "ServiceExtensionContext.stopServiceExtensionAbility",
+        "level": 2,
+        "line_start": 1150,
+        "line_end": 1216,
+        "summary": "stopServiceExtensionAbility(want: Want, callback: AsyncCallback\\<void>): void\n\n停止指定的ServiceExtensio"
+      },
+      {
+        "section_id": "section-17",
+        "title": "ServiceExtensionContext.stopServiceExtensionAbility",
+        "level": 2,
+        "line_start": 1217,
+        "line_end": 1288,
+        "summary": "stopServiceExtensionAbility(want: Want): Promise\\<void>\n\n停止指定的ServiceExtensionAbility后台服务。使用Promise"
+      },
+      {
+        "section_id": "section-18",
+        "title": "ServiceExtensionContext.stopServiceExtensionAbilityWithAccount",
+        "level": 2,
+        "line_start": 1289,
+        "line_end": 1363,
+        "summary": "stopServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback\\<void"
+      },
+      {
+        "section_id": "section-19",
+        "title": "ServiceExtensionContext.stopServiceExtensionAbilityWithAccount",
+        "level": 2,
+        "line_start": 1364,
+        "line_end": 1443,
+        "summary": "stopServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise\\<void>\n\n停止指定账号下指定的Se"
+      },
+      {
+        "section_id": "section-20",
+        "title": "ServiceExtensionContext.terminateSelf",
+        "level": 2,
+        "line_start": 1444,
+        "line_end": 1491,
+        "summary": "terminateSelf(callback: AsyncCallback&lt;void&gt;): void\n\n停止Ability自身。仅支持在主线程调用。使用callback异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-21",
+        "title": "ServiceExtensionContext.terminateSelf",
+        "level": 2,
+        "line_start": 1492,
+        "line_end": 1536,
+        "summary": "terminateSelf(): Promise&lt;void&gt;\n\n停止Ability自身。仅支持在主线程调用。使用Promise异步回调。\n\n**系统能力**：SystemCapabili"
+      },
+      {
+        "section_id": "section-22",
+        "title": "ServiceExtensionContext.connectServiceExtensionAbility",
+        "level": 2,
+        "line_start": 1537,
+        "line_end": 1621,
+        "summary": "connectServiceExtensionAbility(want: Want, options: ConnectOptions): number\n\n将当前Ability连接到一个Service"
+      },
+      {
+        "section_id": "section-23",
+        "title": "ServiceExtensionContext.connectServiceExtensionAbilityWithAccount",
+        "level": 2,
+        "line_start": 1622,
+        "line_end": 1715,
+        "summary": "connectServiceExtensionAbilityWithAccount(want: Want, accountId: number, options: ConnectOptions):"
+      },
+      {
+        "section_id": "section-24",
+        "title": "ServiceExtensionContext.disconnectServiceExtensionAbility",
+        "level": 2,
+        "line_start": 1716,
+        "line_end": 1775,
+        "summary": "disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback&lt;void&gt;): void\n\n将"
+      },
+      {
+        "section_id": "section-25",
+        "title": "ServiceExtensionContext.disconnectServiceExtensionAbility",
+        "level": 2,
+        "line_start": 1776,
+        "line_end": 1841,
+        "summary": "disconnectServiceExtensionAbility(connection: number): Promise&lt;void&gt;\n\n将一个Ability与绑定的服务类型的Abil"
+      },
+      {
+        "section_id": "section-26",
+        "title": "ServiceExtensionContext.startAbilityByCall",
+        "level": 2,
+        "line_start": 1842,
+        "line_end": 1962,
+        "summary": "startAbilityByCall(want: Want): Promise&lt;Caller&gt;\n\n启动指定Ability至前台或后台，同时获取其Caller通信接口，调用方可使用Call"
+      },
+      {
+        "section_id": "section-27",
+        "title": "ServiceExtensionContext.startRecentAbility",
+        "level": 2,
+        "line_start": 1963,
+        "line_end": 2046,
+        "summary": "startRecentAbility(want: Want, callback: AsyncCallback\\<void>): void\n\n启动一个指定的Ability，如果该Ability有多个实"
+      },
+      {
+        "section_id": "section-28",
+        "title": "ServiceExtensionContext.startRecentAbility",
+        "level": 2,
+        "line_start": 2047,
+        "line_end": 2135,
+        "summary": "startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback\\<void>): void\n\n启动一个指定"
+      },
+      {
+        "section_id": "section-29",
+        "title": "ServiceExtensionContext.startRecentAbility",
+        "level": 2,
+        "line_start": 2136,
+        "line_end": 2223,
+        "summary": "startRecentAbility(want: Want, options?: StartOptions): Promise\\<void>\n\n启动一个指定的Ability，如果该Ability有多"
+      },
+      {
+        "section_id": "section-30",
+        "title": "ServiceExtensionContext.startAbilityByCallWithAccount<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2224,
+        "line_end": 2318,
+        "summary": "startAbilityByCallWithAccount(want: Want, accountId: number): Promise&lt;Caller&gt;\n\n根据accountId对指定"
+      },
+      {
+        "section_id": "section-31",
+        "title": "ServiceExtensionContext.requestModalUIExtension<sup>11+<sup>",
+        "level": 2,
+        "line_start": 2319,
+        "line_end": 2395,
+        "summary": "requestModalUIExtension(pickerWant: Want): Promise\\<void>\n\n请求在指定的获焦应用上拉起对应类型的UIExtensionAbility。其中，"
+      },
+      {
+        "section_id": "section-32",
+        "title": "ServiceExtensionContext.requestModalUIExtension<sup>11+<sup>",
+        "level": 2,
+        "line_start": 2396,
+        "line_end": 2467,
+        "summary": "requestModalUIExtension(pickerWant: Want, callback: AsyncCallback\\<void>): void\n\n请求在指定的获焦应用上拉起对应类型的"
+      },
+      {
+        "section_id": "section-33",
+        "title": "ServiceExtensionContext.openLink<sup>12+<sup>",
+        "level": 2,
+        "line_start": 2468,
+        "line_end": 2567,
+        "summary": "openLink(link: string, options?: OpenLinkOptions): Promise&lt;void&gt;\n\n通过AppLinking启动UIAbility。仅支持"
+      },
+      {
+        "section_id": "section-34",
+        "title": "ServiceExtensionContext.preStartMission<sup>12+<sup>",
+        "level": 2,
+        "line_start": 2568,
+        "line_end": 2652,
+        "summary": "preStartMission(bundleName: string, moduleName: string, abilityName: string, startTime: string): Pr"
+      },
+      {
+        "section_id": "section-35",
+        "title": "ServiceExtensionContext.startUIServiceExtensionAbility<sup>14+<sup>",
+        "level": 2,
+        "line_start": 2653,
+        "line_end": 2721,
+        "summary": "startUIServiceExtensionAbility(want: Want): Promise&lt;void&gt;\n\n启动一个新的[UIServiceExtensionAbility]("
+      },
+      {
+        "section_id": "section-36",
+        "title": "ServiceExtensionContext.openAtomicService<sup>18+<sup>",
+        "level": 2,
+        "line_start": 2722,
+        "line_end": 2791,
+        "summary": "openAtomicService(appId: string, options?: AtomicServiceOptions): Promise&lt;void&gt;\n\n通过应用ID，拉起原子化服"
+      },
+      {
+        "section_id": "section-37",
+        "title": "ServiceExtensionContext.startUIAbilities<sup>20+</sup>",
+        "level": 2,
+        "line_start": 2792,
+        "line_end": 2881,
+        "summary": "startUIAbilities(wantList: Array\\<Want>): Promise\\<void>\n\n同时启动多个UIAbility。使用Promise异步回调。\n\n开发者可以传入多个"
+      }
+    ]
+  }
+}

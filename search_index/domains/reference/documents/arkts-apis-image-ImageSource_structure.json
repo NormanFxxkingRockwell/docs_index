@@ -1,0 +1,332 @@
+{
+  "doc_id": "arkts-apis-image-ImageSource",
+  "title": "Interface (ImageSource)",
+  "path": "zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-ImageSource.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-image-kit/arkts-apis-image-ImageSource.md",
+  "metadata": {
+    "kit": "Image Kit",
+    "subsystem": "Multimedia",
+    "owner": "@aulight02",
+    "designer": "@liyang_bryan",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Image Kit Multimedia 模块的 Interface (ImageSource)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (ImageSource)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { image } from '@kit.ImageKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 34,
+        "summary": "**系统能力：** SystemCapability.Multimedia.Image.ImageSource\n\n| 名称             | 类型           | 只读 | 可选"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getImageInfo",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 69,
+        "summary": "getImageInfo(index: number, callback: AsyncCallback\\<ImageInfo>): void\n\n获取指定序号的图片信息。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getImageInfo",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 103,
+        "summary": "getImageInfo(callback: AsyncCallback\\<ImageInfo>): void\n\n获取图片信息。使用callback异步回调。\n\n**卡片能力：** 从API ver"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getImageInfo",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 142,
+        "summary": "getImageInfo(index?: number): Promise\\<ImageInfo>\n\n获取图片信息。使用Promise异步回调。\n\n**卡片能力：** 从API version 12"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getImageInfoSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 184,
+        "summary": "getImageInfoSync(index?: number): ImageInfo\n\n获取指定序号的图片信息，使用同步形式返回图片信息。\n\n> **说明：**\n>\n> 该方法为同步方法，调用时会"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getImageProperty<sup>11+</sup>",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 242,
+        "summary": "getImageProperty(key:PropertyKey, options?: ImagePropertyOptions): Promise\\<string>\n\n获取图片中给定索引处图像的指"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getImageProperties<sup>12+</sup>",
+        "level": 2,
+        "line_start": 243,
+        "line_end": 291,
+        "summary": "getImageProperties(key: Array&#60;PropertyKey&#62;): Promise<Record<PropertyKey, string|null>>\n\n批量获"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getImagePropertySync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 292,
+        "line_end": 345,
+        "summary": "getImagePropertySync(key:PropertyKey): string\n\n获取图片Exif指定属性键的值，使用同步形式返回结果。\n\n>**说明：**\n>\n> - 该方法仅支持JP"
+      },
+      {
+        "section_id": "section-10",
+        "title": "modifyImageProperty<sup>11+</sup>",
+        "level": 2,
+        "line_start": 346,
+        "line_end": 402,
+        "summary": "modifyImageProperty(key: PropertyKey, value: string): Promise\\<void>\n\n通过指定的键修改图片属性的值。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "modifyImageProperties<sup>12+</sup>",
+        "level": 2,
+        "line_start": 403,
+        "line_end": 462,
+        "summary": "modifyImageProperties(records: Record<PropertyKey, string|null>): Promise\\<void>\n\n批量通过指定的键修改图片属性的值。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "modifyImagePropertiesEnhanced<sup>22+</sup>",
+        "level": 2,
+        "line_start": 463,
+        "line_end": 521,
+        "summary": "modifyImagePropertiesEnhanced(records: Record\\<string, string | null\\>): Promise\\<void\\>\n\n批量修改图片属性。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "readImageMetadata<sup>23+</sup>",
+        "level": 2,
+        "line_start": 522,
+        "line_end": 586,
+        "summary": "readImageMetadata(propertyKeys?: string[], index?: number): Promise\\<ImageMetadata>\n\n读取图像源的元数据，使用pr"
+      },
+      {
+        "section_id": "section-14",
+        "title": "writeImageMetadata<sup>23+</sup>",
+        "level": 2,
+        "line_start": 587,
+        "line_end": 643,
+        "summary": "writeImageMetadata(imageMetadata: ImageMetadata): Promise\\<void>\n\n批量修改图片属性。使用Promise异步回调。\n\n> **说明：*"
+      },
+      {
+        "section_id": "section-15",
+        "title": "updateData<sup>9+</sup>",
+        "level": 2,
+        "line_start": 644,
+        "line_end": 682,
+        "summary": "updateData(buf: ArrayBuffer, isFinished: boolean, offset: number, length: number): Promise\\<void>"
+      },
+      {
+        "section_id": "section-16",
+        "title": "updateData<sup>9+</sup>",
+        "level": 2,
+        "line_start": 683,
+        "line_end": 717,
+        "summary": "updateData(buf: ArrayBuffer, isFinished: boolean, offset: number, length: number, callback: AsyncCa"
+      },
+      {
+        "section_id": "section-17",
+        "title": "createPicture<sup>13+</sup>",
+        "level": 2,
+        "line_start": 718,
+        "line_end": 766,
+        "summary": "createPicture(options?: DecodingOptionsForPicture): Promise\\<Picture>\n\n通过图片解码参数创建Picture对象。使用Promis"
+      },
+      {
+        "section_id": "section-18",
+        "title": "createPictureAtIndex<sup>20+</sup>",
+        "level": 2,
+        "line_start": 767,
+        "line_end": 818,
+        "summary": "createPictureAtIndex(index: number): Promise\\<Picture>\n\n通过指定序号的图片（目前仅支持GIF和HEIF<sup>23+</sup>图像序列格式"
+      },
+      {
+        "section_id": "section-19",
+        "title": "createPixelMap<sup>7+</sup>",
+        "level": 2,
+        "line_start": 819,
+        "line_end": 864,
+        "summary": "createPixelMap(options?: DecodingOptions): Promise\\<PixelMap>\n\n通过图片解码参数创建PixelMap对象。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "createPixelMap<sup>7+</sup>",
+        "level": 2,
+        "line_start": 865,
+        "line_end": 906,
+        "summary": "createPixelMap(callback: AsyncCallback\\<PixelMap>): void\n\n通过默认参数创建PixelMap对象。使用callback异步回调。\n\n从API"
+      },
+      {
+        "section_id": "section-21",
+        "title": "createPixelMap<sup>7+</sup>",
+        "level": 2,
+        "line_start": 907,
+        "line_end": 960,
+        "summary": "createPixelMap(options: DecodingOptions, callback: AsyncCallback\\<PixelMap>): void\n\n通过图片解码参数创建Pixel"
+      },
+      {
+        "section_id": "section-22",
+        "title": "createPixelMapSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 961,
+        "line_end": 1017,
+        "summary": "createPixelMapSync(options?: DecodingOptions): PixelMap\n\n通过图片解码参数同步创建PixelMap对象。\n\n由于图片占用内存较大，所以当Pix"
+      },
+      {
+        "section_id": "section-23",
+        "title": "createPixelMapList<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1018,
+        "line_end": 1088,
+        "summary": "createPixelMapList(options?: DecodingOptions): Promise<Array\\<PixelMap>>\n\n通过图片解码参数创建PixelMap数组。使用Pr"
+      },
+      {
+        "section_id": "section-24",
+        "title": "createPixelMapList<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1089,
+        "line_end": 1147,
+        "summary": "createPixelMapList(callback: AsyncCallback<Array\\<PixelMap>>): void\n\n通过默认参数创建PixelMap数组。使用callback异"
+      },
+      {
+        "section_id": "section-25",
+        "title": "createPixelMapList<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1148,
+        "line_end": 1215,
+        "summary": "createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array\\<PixelMap>>): void\n\n通过图片"
+      },
+      {
+        "section_id": "section-26",
+        "title": "createPixelMapUsingAllocator<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1216,
+        "line_end": 1283,
+        "summary": "createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise\\<Pi"
+      },
+      {
+        "section_id": "section-27",
+        "title": "createPixelMapUsingAllocatorSync<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1284,
+        "line_end": 1353,
+        "summary": "createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMa"
+      },
+      {
+        "section_id": "section-28",
+        "title": "getDelayTimeList<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1354,
+        "line_end": 1398,
+        "summary": "getDelayTimeList(callback: AsyncCallback<Array\\<number>>): void\n\n获取图像延迟时间数组。使用callback异步回调。此接口仅用于gi"
+      },
+      {
+        "section_id": "section-29",
+        "title": "getDelayTimeList<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1399,
+        "line_end": 1441,
+        "summary": "getDelayTimeList(): Promise<Array\\<number>>\n\n获取图像延迟时间数组。使用Promise异步回调。此接口仅用于gif图片和webp图片。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-30",
+        "title": "getFrameCount<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1442,
+        "line_end": 1487,
+        "summary": "getFrameCount(callback: AsyncCallback\\<number>): void\n\n获取图像帧数。使用callback异步回调。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-31",
+        "title": "getFrameCount<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1488,
+        "line_end": 1531,
+        "summary": "getFrameCount(): Promise\\<number>\n\n获取图像帧数。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Multimedia.Ima"
+      },
+      {
+        "section_id": "section-32",
+        "title": "getDisposalTypeList<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1532,
+        "line_end": 1570,
+        "summary": "getDisposalTypeList(): Promise\\<Array\\<number>>\n\n获取图像帧过渡模式数组。使用Promise异步回调。此接口仅用于gif图片。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-33",
+        "title": "release",
+        "level": 2,
+        "line_start": 1571,
+        "line_end": 1604,
+        "summary": "release(callback: AsyncCallback\\<void>): void\n\n释放ImageSource实例。使用callback异步回调。\n\n由于图片占用内存较大，所以当Image"
+      },
+      {
+        "section_id": "section-34",
+        "title": "release",
+        "level": 2,
+        "line_start": 1605,
+        "line_end": 1636,
+        "summary": "release(): Promise\\<void>\n\n释放ImageSource实例。使用Promise异步回调。\n\n由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用该方"
+      },
+      {
+        "section_id": "section-35",
+        "title": "getImageProperty<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1637,
+        "line_end": 1678,
+        "summary": "getImageProperty(key:string, options?: GetImagePropertyOptions): Promise\\<string>\n\n获取图片中给定索引处图像的指定属"
+      },
+      {
+        "section_id": "section-36",
+        "title": "getImageProperty<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1679,
+        "line_end": 1715,
+        "summary": "getImageProperty(key:string, callback: AsyncCallback\\<string>): void\n\n获取图片中给定索引处图像的指定属性键的值。使用callba"
+      },
+      {
+        "section_id": "section-37",
+        "title": "getImageProperty<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1716,
+        "line_end": 1754,
+        "summary": "getImageProperty(key:string, options: GetImagePropertyOptions, callback: AsyncCallback\\<string>): v"
+      },
+      {
+        "section_id": "section-38",
+        "title": "modifyImageProperty<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1755,
+        "line_end": 1801,
+        "summary": "modifyImageProperty(key: string, value: string): Promise\\<void>\n\n通过指定的键修改图片属性的值。使用Promise异步回调。\n\n该接口"
+      },
+      {
+        "section_id": "section-39",
+        "title": "modifyImageProperty<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1802,
+        "line_end": 1841,
+        "summary": "modifyImageProperty(key: string, value: string, callback: AsyncCallback\\<void>): void\n\n通过指定的键修改图片属性"
+      }
+    ]
+  }
+}

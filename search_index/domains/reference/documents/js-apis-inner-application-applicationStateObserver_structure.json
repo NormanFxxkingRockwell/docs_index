@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-inner-application-applicationStateObserver",
+  "title": "ApplicationStateObserver",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@SKY2001",
+    "designer": "@yzkp",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 ApplicationStateObserver，提供相关接口和功能说明。",
+  "structure": {
+    "title": "ApplicationStateObserver",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { appManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "ApplicationStateObserver.onForegroundApplicationChanged",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 34,
+        "summary": "onForegroundApplicationChanged(appStateData: AppStateData): void\n\n应用前后台状态发生变化时执行的回调函数。\n\n**系统能力**：Sy"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ApplicationStateObserver.onAbilityStateChanged",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 48,
+        "summary": "onAbilityStateChanged(abilityStateData: AbilityStateData): void\n\nAbility状态发生变化时执行的回调函数。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ApplicationStateObserver.onProcessCreated",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 62,
+        "summary": "onProcessCreated(processData: ProcessData): void\n\n进程创建时执行的回调函数。\n\n**系统能力**：SystemCapability.Ability."
+      },
+      {
+        "section_id": "section-5",
+        "title": "ApplicationStateObserver.onProcessDied",
+        "level": 2,
+        "line_start": 63,
+        "line_end": 76,
+        "summary": "onProcessDied(processData: ProcessData): void\n\n进程销毁时执行的回调函数。\n\n**系统能力**：SystemCapability.Ability.Abi"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ApplicationStateObserver.onProcessStateChanged",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 90,
+        "summary": "onProcessStateChanged(processData: ProcessData): void\n\n进程状态更新时执行的回调函数。\n\n**系统能力**：SystemCapability.A"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ApplicationStateObserver.onAppStarted",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 104,
+        "summary": "onAppStarted(appStateData: AppStateData): void\n\n应用第一个进程创建时执行的回调函数。\n\n**系统能力**：SystemCapability.Abili"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ApplicationStateObserver.onAppStopped",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 118,
+        "summary": "onAppStopped(appStateData: AppStateData): void\n\n应用最后一个进程销毁时执行的回调函数。\n\n**系统能力**：SystemCapability.Abil"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ProcessData",
+        "level": 2,
+        "line_start": 119,
+        "line_end": 159,
+        "summary": "type ProcessData = _ProcessData.default\n\n进程数据信息。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime."
+      }
+    ]
+  }
+}

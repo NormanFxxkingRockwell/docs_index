@@ -1,0 +1,132 @@
+{
+  "doc_id": "ts-media-components-video",
+  "title": "Video",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-media-components-video.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-media-components-video.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@sd-wu",
+    "designer": "@sunbees",
+    "tester": "@liuli0427",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 Video，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Video",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "权限列表",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 21,
+        "summary": "使用网络视频时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permis"
+      },
+      {
+        "section_id": "section-2",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 26,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 42,
+        "summary": "### Video\n\nVideo(value: VideoOptions)\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-4",
+        "title": "VideoOptions对象说明",
+        "level": 2,
+        "line_start": 43,
+        "line_end": 57,
+        "summary": "定义Video的具体配置参数。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称       | 类型    | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-5",
+        "title": "PlaybackSpeed<sup>8+</sup>枚举说明",
+        "level": 2,
+        "line_start": 58,
+        "line_end": 76,
+        "summary": "视频播放倍速选项。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称                  | 值         | 说明"
+      },
+      {
+        "section_id": "section-6",
+        "title": "属性",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 239,
+        "summary": "除支持[通用属性](ts-component-general-attributes.md)外，还支持以下属性：\n\n### muted\n\nmuted(value: boolean)\n\n设置视频是否静音"
+      },
+      {
+        "section_id": "section-7",
+        "title": "事件",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 407,
+        "summary": "除支持[通用事件](ts-component-general-events.md)外，还支持以下事件：\n\n### onStart\n\nonStart(event:&nbsp;VoidCallback)"
+      },
+      {
+        "section_id": "section-8",
+        "title": "FullscreenInfo<sup>18+</sup>对象说明",
+        "level": 2,
+        "line_start": 408,
+        "line_end": 423,
+        "summary": "用于描述当前视频是否进入全屏播放状态。\n\n> **说明：**\n>\n> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版"
+      },
+      {
+        "section_id": "section-9",
+        "title": "PreparedInfo<sup>18+</sup>对象说明",
+        "level": 2,
+        "line_start": 424,
+        "line_end": 439,
+        "summary": "用于描述当前视频的时长。\n\n> **说明：**\n>\n> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元"
+      },
+      {
+        "section_id": "section-10",
+        "title": "PlaybackInfo<sup>18+</sup>对象说明",
+        "level": 2,
+        "line_start": 440,
+        "line_end": 455,
+        "summary": "用于描述当前视频播放的进度。\n\n> **说明：**\n>\n> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内"
+      },
+      {
+        "section_id": "section-11",
+        "title": "PosterOptions<sup>18+</sup>对象说明",
+        "level": 2,
+        "line_start": 456,
+        "line_end": 466,
+        "summary": "用于描述当前视频是否配置首帧送显。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称       | 类型    | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-12",
+        "title": "VideoController",
+        "level": 2,
+        "line_start": 467,
+        "line_end": 597,
+        "summary": "一个VideoController对象可以控制一个或多个Video。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-13",
+        "title": "SeekMode<sup>8+</sup>枚举说明",
+        "level": 2,
+        "line_start": 598,
+        "line_end": 612,
+        "summary": "视频跳转模式选项。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI."
+      },
+      {
+        "section_id": "section-14",
+        "title": "示例",
+        "level": 2,
+        "line_start": 613,
+        "line_end": 1068,
+        "summary": "### 示例1（视频播放基础用法）\n\n基础用法包括：控制栏、预览图、自动播放、播放速度、响应快捷键（从API version 15开始，支持通过[enableShortcutKey](#enable"
+      }
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "doc_id": "ts-custom-component-api",
+  "title": "自定义组件内置方法",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-custom-component-api.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-custom-component-api.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xiang-shouxing",
+    "designer": "@xiang-shouxing",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 自定义组件内置方法，提供相关接口和功能说明。",
+  "structure": {
+    "title": "自定义组件内置方法",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "getUIContext",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 31,
+        "summary": "getUIContext(): UIContext\n\n获取UIContext对象。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-2",
+        "title": "UIContext",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 61,
+        "summary": "type UIContext = UIContext\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getUniqueId<sup>12+</sup>",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 93,
+        "summary": "getUniqueId(): number\n\n获取当前组件的UniqueId。UniqueId为系统为每个组件分配的Id，可保证当前应用中的唯一性。若在组件对应的节点未创建或已销毁时获取，返回无效U"
+      },
+      {
+        "section_id": "section-4",
+        "title": "queryNavDestinationInfo",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 140,
+        "summary": "queryNavDestinationInfo(): NavDestinationInfo | undefined;\n\n查询自定义组件所属的NavDestination信息，仅当自定义组件在NavD"
+      },
+      {
+        "section_id": "section-5",
+        "title": "queryNavDestinationInfo<sup>18+</sup>",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 266,
+        "summary": "queryNavDestinationInfo(isInner: Optional\\<boolean>): NavDestinationInfo | undefined\n\n查询当前自定义组件距离最近"
+      },
+      {
+        "section_id": "section-6",
+        "title": "NavDestinationInfo",
+        "level": 2,
+        "line_start": 267,
+        "line_end": 281,
+        "summary": "type NavDestinationInfo = NavDestinationInfo\n\nNavDestinationInfo实例对象。\n\n**系统能力：** SystemCapability.A"
+      },
+      {
+        "section_id": "section-7",
+        "title": "queryNavigationInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 282,
+        "line_end": 337,
+        "summary": "queryNavigationInfo(): NavigationInfo | undefined\n\n查询自定义组件所属的Navigation信息。\n\n**原子化服务API：** 从API vers"
+      },
+      {
+        "section_id": "section-8",
+        "title": "NavigationInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 338,
+        "line_end": 351,
+        "summary": "type NavigationInfo = NavigationInfo\n\nNavigationInfo实例对象。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-9",
+        "title": "queryRouterPageInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 352,
+        "line_end": 385,
+        "summary": "queryRouterPageInfo(): RouterPageInfo | undefined;\n\n获取RouterPageInfo实例对象。\n\n**原子化服务API：** 从API versi"
+      },
+      {
+        "section_id": "section-10",
+        "title": "RouterPageInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 386,
+        "line_end": 399,
+        "summary": "type RouterPageInfo = RouterPageInfo\n\nRouterPageInfo实例对象。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getDialogController<sup>18+</sup>",
+        "level": 2,
+        "line_start": 400,
+        "line_end": 481,
+        "summary": "getDialogController(): PromptActionDialogController | undefined\n\n获取PromptActionDialogController实例对象"
+      },
+      {
+        "section_id": "section-12",
+        "title": "PromptActionDialogController<sup>18+</sup>",
+        "level": 2,
+        "line_start": 482,
+        "line_end": 495,
+        "summary": "type PromptActionDialogController = promptAction.DialogController\n\n自定义弹窗控制器，可以控制当前自定义弹窗，具体控制能力包括关闭弹"
+      }
+    ]
+  }
+}

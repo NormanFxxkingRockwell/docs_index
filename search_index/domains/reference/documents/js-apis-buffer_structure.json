@@ -1,0 +1,164 @@
+{
+  "doc_id": "js-apis-buffer",
+  "title": "@ohos.buffer (Buffer)",
+  "path": "zh-cn/application-dev/reference/apis-arkts/js-apis-buffer.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/js-apis-buffer.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@xliu-huanwei; @shilei123; @huanghello",
+    "designer": "@yuanyao14",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 @ohos.buffer (Buffer)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.buffer (Buffer)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { buffer } from '@kit.ArkTS';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "BufferEncoding",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 46,
+        "summary": "type BufferEncoding = 'ascii' | 'utf8' | 'utf-8' | 'utf16le' | 'ucs2' | 'ucs-2' | 'base64' | 'base6"
+      },
+      {
+        "section_id": "section-3",
+        "title": "buffer.alloc",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 93,
+        "summary": "alloc(size: number, fill?: string | Buffer | number, encoding?: BufferEncoding): Buffer\n\n创建指定字节长度的B"
+      },
+      {
+        "section_id": "section-4",
+        "title": "buffer.allocUninitializedFromPool",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 135,
+        "summary": "allocUninitializedFromPool(size: number): Buffer\n\n创建指定大小未初始化的Buffer对象。内存从缓冲池分配。\n\n创建的Buffer内容未知，需要使用"
+      },
+      {
+        "section_id": "section-5",
+        "title": "buffer.allocUninitialized",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 177,
+        "summary": "allocUninitialized(size: number): Buffer\n\n创建指定大小未初始化的Buffer对象。内存不从缓冲池分配。\n\n创建的Buffer的内容未知，需要使用[fill]"
+      },
+      {
+        "section_id": "section-6",
+        "title": "buffer.byteLength",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 218,
+        "summary": "byteLength(string: string | Buffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer, encod"
+      },
+      {
+        "section_id": "section-7",
+        "title": "buffer.compare",
+        "level": 2,
+        "line_start": 219,
+        "line_end": 262,
+        "summary": "compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): -1 | 0 | 1\n\n返回两个Buffer对象的比较结果，通常用于对B"
+      },
+      {
+        "section_id": "section-8",
+        "title": "buffer.concat",
+        "level": 2,
+        "line_start": 263,
+        "line_end": 306,
+        "summary": "concat(list: Buffer[] | Uint8Array[], totalLength?: number): Buffer\n\n将数组中的内容复制指定字节长度到新的Buffer对象中并返回"
+      },
+      {
+        "section_id": "section-9",
+        "title": "buffer.from",
+        "level": 2,
+        "line_start": 307,
+        "line_end": 346,
+        "summary": "from(array: number[]): Buffer\n\n根据指定数组创建新的Buffer对象。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-10",
+        "title": "buffer.from",
+        "level": 2,
+        "line_start": 347,
+        "line_end": 389,
+        "summary": "from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): Buffer\n\n创"
+      },
+      {
+        "section_id": "section-11",
+        "title": "buffer.from",
+        "level": 2,
+        "line_start": 390,
+        "line_end": 438,
+        "summary": "from(buffer: Buffer | Uint8Array): Buffer\n\n当入参为Buffer对象时，创建新的Buffer对象并复制入参Buffer对象的数据，然后返回新对象。\n\n当入参"
+      },
+      {
+        "section_id": "section-12",
+        "title": "buffer.from",
+        "level": 2,
+        "line_start": 439,
+        "line_end": 479,
+        "summary": "from(object: Object, offsetOrEncoding: number | string, length: number): Buffer\n\n根据指定的`object`类型数据，"
+      },
+      {
+        "section_id": "section-13",
+        "title": "buffer.from",
+        "level": 2,
+        "line_start": 480,
+        "line_end": 525,
+        "summary": "from(string: String, encoding?: BufferEncoding): Buffer\n\n根据指定编码格式的字符串，创建新的Buffer对象。\n\n**原子化服务API**：从"
+      },
+      {
+        "section_id": "section-14",
+        "title": "buffer.isBuffer",
+        "level": 2,
+        "line_start": 526,
+        "line_end": 569,
+        "summary": "isBuffer(obj: Object): boolean\n\n判断`obj`是否为Buffer。\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "buffer.isEncoding",
+        "level": 2,
+        "line_start": 570,
+        "line_end": 606,
+        "summary": "isEncoding(encoding: string): boolean\n\n判断`encoding`是否为支持的编码格式。\n\n**原子化服务API**：从API version 11开始，该接口支"
+      },
+      {
+        "section_id": "section-16",
+        "title": "buffer.transcode",
+        "level": 2,
+        "line_start": 607,
+        "line_end": 648,
+        "summary": "transcode(source: Buffer | Uint8Array, fromEnc: string, toEnc: string): Buffer\n\n将Buffer或Uint8Array对"
+      },
+      {
+        "section_id": "section-17",
+        "title": "Buffer",
+        "level": 2,
+        "line_start": 649,
+        "line_end": 3413,
+        "summary": "### 属性\n\n**系统能力：** SystemCapability.Utils.Lang\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。\n\n| 名称"
+      },
+      {
+        "section_id": "section-18",
+        "title": "Blob",
+        "level": 2,
+        "line_start": 3414,
+        "line_end": 3551,
+        "summary": "### 属性\n\n**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Utils.Lang\n\n| 名称"
+      }
+    ]
+  }
+}

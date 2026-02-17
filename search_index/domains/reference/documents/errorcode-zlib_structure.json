@@ -1,0 +1,92 @@
+{
+  "doc_id": "errorcode-zlib",
+  "title": "zlib子系统错误码",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Ability Kit BundleManager 模块的 zlib子系统错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "zlib子系统错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "900001 传入的源文件错误",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 32,
+        "summary": "**错误信息**\n\nThe input source file is invalid.\n\n**错误描述**\n\n当调用compressFile或decompressFile接口时，传入源文件无效。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "900002 传入的目标文件错误",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 52,
+        "summary": "**错误信息**\n\nThe input destination file is invalid.\n\n**错误描述**\n\n当调用compressFile或decompressFile接口时，传入目标文"
+      },
+      {
+        "section_id": "section-3",
+        "title": "900003 传入的源文件格式错误或者已损坏",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 73,
+        "summary": "**错误信息**\n\nThe input source file is not in ZIP format or is damaged.\n\n**错误描述**\n\n当调用decompressFile接口时"
+      },
+      {
+        "section_id": "section-4",
+        "title": "17800002 传入的文件或访问模式错误",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 93,
+        "summary": "**错误信息**\n\nNo such file or access mode error.\n\n**错误描述**\n\n当调用gzopen或gzdopen接口时，传入的文件路径、文件描述符或文件访问模式错误"
+      },
+      {
+        "section_id": "section-5",
+        "title": "17800004 压缩流或解压流错误",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 115,
+        "summary": "**错误信息**\n\nCompression or decompression stream error, which may be caused by an initialization error"
+      },
+      {
+        "section_id": "section-6",
+        "title": "17800005 传入的数据错误",
+        "level": 2,
+        "line_start": 116,
+        "line_end": 133,
+        "summary": "**错误信息**\n\nThe input data is incorrect. For example, the data does not conform to the zlib compressi"
+      },
+      {
+        "section_id": "section-7",
+        "title": "17800006 内存分配失败错误",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 151,
+        "summary": "**错误信息**\n\nMemory allocation failed.\n\n**错误描述**\n\n当调用gzclose或gzclosew接口时，内存分配失败。\n\n**可能原因**\n\n在调用gzclose"
+      },
+      {
+        "section_id": "section-8",
+        "title": "17800007 传入的缓冲区错误",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 171,
+        "summary": "**错误信息**\n\nThe input buffer is incorrect, and the output buffer is too small to accommodate the comp"
+      },
+      {
+        "section_id": "section-9",
+        "title": "17800009 内部结构错误",
+        "level": 2,
+        "line_start": 172,
+        "line_end": 196,
+        "summary": "**错误信息**\n\nInternal structure error.\n\n**错误描述**\n\n当调用gzputc、gzwrite、gzread等接口时，传入的参数错误或接口调用前，调用打开gz文件的"
+      }
+    ]
+  }
+}

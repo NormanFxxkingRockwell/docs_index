@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-jsleakwatcher",
+  "title": "@ohos.hiviewdfx.jsLeakWatcher (js泄漏检测)",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-jsleakwatcher.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-jsleakwatcher.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@lu_tao",
+    "designer": "@martin_duan",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.hiviewdfx.jsLeakWatcher (js泄漏检测)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.hiviewdfx.jsLeakWatcher (js泄漏检测)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 22,
+        "summary": "```js\nimport { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "jsLeakWatcher.enable",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 43,
+        "summary": "enable(isEnable: boolean): void\n\n使能js对象泄漏检测，默认关闭。\n\n**系统能力**：SystemCapability.HiviewDFX.HiChecker\n\n*"
+      },
+      {
+        "section_id": "section-3",
+        "title": "jsLeakWatcher.watch",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 66,
+        "summary": "watch(obj: object, msg: string): void\n\n注册待检测泄漏的对象。\n\n**系统能力**：SystemCapability.HiviewDFX.HiChecker"
+      },
+      {
+        "section_id": "section-4",
+        "title": "jsLeakWatcher.check",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 86,
+        "summary": "check(): string\n\n获取已通过jsLeakWatcher.watch注册发生泄漏的对象列表，触发GC后未被回收的对象会被标记为泄漏。\n\n**系统能力**：SystemCapabilit"
+      },
+      {
+        "section_id": "section-5",
+        "title": "jsLeakWatcher.dump",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 122,
+        "summary": "dump(filePath: string): Array&lt;string&gt;\n\n导出泄漏列表和虚拟机内存快照。\n\n**系统能力**：SystemCapability.HiviewDFX.H"
+      },
+      {
+        "section_id": "section-6",
+        "title": "jsLeakWatcher.enableLeakWatcher<sup>20+</sup>",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 168,
+        "summary": "enableLeakWatcher(isEnabled: boolean, configs: Array&lt;string&gt;, callback: Callback&lt;Array&lt;"
+      }
+    ]
+  }
+}

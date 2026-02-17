@@ -1,0 +1,164 @@
+{
+  "doc_id": "errorcode-stateManagement",
+  "title": "状态管理错误码",
+  "path": "zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@liwenzhen3",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "ArkUI ArkUI 模块的 状态管理错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "状态管理错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "130000 addMonitor/clearMonitor非法目标对象",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 32,
+        "summary": "**错误信息**\n\nThe target is not a custom component instance or V2 class instance.\n\n**错误描述**\n\n[addMonito"
+      },
+      {
+        "section_id": "section-2",
+        "title": "130001 addMonitor/clearMonitor非法路径",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 50,
+        "summary": "**错误信息**\n\nThe path is invalid.\n\n**错误描述**\n\naddMonitor/clearMonitor的路径参数不合法。\n\n**可能原因**\n\n路径不是string或者不"
+      },
+      {
+        "section_id": "section-3",
+        "title": "130002 addMonitor/clearMonitor非法回调方法",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 68,
+        "summary": "**错误信息**\n\nmonitorCallback is not a function or an anonymous function.\n\n**错误描述**\n\naddMonitor/clearMo"
+      },
+      {
+        "section_id": "section-4",
+        "title": "140001 applySync/flushUpdates/flushUIUpdates非法调用",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 86,
+        "summary": "**错误信息**\n\nThe function is not allowed to be called in @Computed.\n\n**错误描述**\n\napplySync/flushUpdates/"
+      },
+      {
+        "section_id": "section-5",
+        "title": "140002 flushUpdates/flushUIUpdates非法调用",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 104,
+        "summary": "**错误信息**\n\nThe function is not allowed to be called in @Monitor.\n\n**错误描述**\n\nflushUpdates/flushUIUpda"
+      },
+      {
+        "section_id": "section-6",
+        "title": "140103 AppStorageV2和PersistenceV2使用不支持的数据类型",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 122,
+        "summary": "**错误信息**\n\nNot supported type! The type should have function constructor signature.\n\n**错误描述**\n\n使用[Ap"
+      },
+      {
+        "section_id": "section-7",
+        "title": "140104 AppStorageV2和PersistenceV2使用非法的默认值创建函数",
+        "level": 2,
+        "line_start": 123,
+        "line_end": 140,
+        "summary": "**错误信息**\n\nThe default creator should be function when first connect\n\n**错误描述**\n\n使用[AppStorageV2](./j"
+      },
+      {
+        "section_id": "section-8",
+        "title": "140105 PersistenceV2混用connect和globalConnect并使用相同的key",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 158,
+        "summary": "**错误信息**\n\nERROR, Duplicate key used when connect\n\n**错误描述**\n\n[connect](./js-apis-stateManagement.md#"
+      },
+      {
+        "section_id": "section-9",
+        "title": "140106 使用PersistenceV2存储数据到不支持的加密级别",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 176,
+        "summary": "**错误信息**\n\nAreaMode Value Error! value range can only in EL1-EL5\n\n**错误描述**\n\n使用[PersistenceV2](./js-a"
+      },
+      {
+        "section_id": "section-10",
+        "title": "140107 AppStorageV2和PersistenceV2数据类型不匹配",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 196,
+        "summary": "**错误信息**\n\nThe type of target mismatches the type of source.\n\n**错误描述**\n\n使用[AppStorageV2](./js-apis-s"
+      },
+      {
+        "section_id": "section-11",
+        "title": "140108 PersistenceV2缺少类型参数",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 214,
+        "summary": "**错误信息**\n\nMiss @Type.\n\n**错误描述**\n\n[PersistenceV2](./js-apis-stateManagement.md#persistencev2)的[globa"
+      },
+      {
+        "section_id": "section-12",
+        "title": "140109 @Builder非法触发参数属性赋值",
+        "level": 2,
+        "line_start": 215,
+        "line_end": 232,
+        "summary": "**错误信息**\n\n@Builder: Invalid attempt to set(write to) parameter error!\n\n**错误描述**\n\n在[\\@Builder](../.."
+      },
+      {
+        "section_id": "section-13",
+        "title": "140110 在UI中使用非@Track装饰的属性发生运行时报错",
+        "level": 2,
+        "line_start": 233,
+        "line_end": 250,
+        "summary": "**错误信息**\n\nIllegal usage of not @Track'ed property on UI!\n\n**错误描述**\n\n如果类里中一个[\\@Track](../../ui/state"
+      },
+      {
+        "section_id": "section-14",
+        "title": "140112 @Consume缺失对应的@Provide",
+        "level": 2,
+        "line_start": 251,
+        "line_end": 271,
+        "summary": "**错误信息**\n\n@Consume missing @Provide property with name or default value. Fail to resolve @Consume."
+      },
+      {
+        "section_id": "section-15",
+        "title": "140113 复用\\@ComponentV2自定义组件但工具链版本过低",
+        "level": 2,
+        "line_start": 272,
+        "line_end": 289,
+        "summary": "**错误信息**\n\nOld toolchain detected. Please upgrade to the latest.\n\n**错误描述**\n\n从API version 23开始，支持[\\@R"
+      },
+      {
+        "section_id": "section-16",
+        "title": "140114 声明重复key的\\@Provide",
+        "level": 2,
+        "line_start": 290,
+        "line_end": 307,
+        "summary": "**错误信息**\n\nduplicate @Provide property. Property with this name is provided by one of the ancestor V"
+      },
+      {
+        "section_id": "section-17",
+        "title": "140115 状态管理V1状态变量使用了非法的类型",
+        "level": 2,
+        "line_start": 308,
+        "line_end": 325,
+        "summary": "**错误信息**\n\nIllegal variable value error with decorated variable\n\n**错误描述**\n\n创建状态管理V1状态变量时，使用了不支持的类型。"
+      },
+      {
+        "section_id": "section-18",
+        "title": "140116 AppStorageV2使用非法的key",
+        "level": 2,
+        "line_start": 326,
+        "line_end": 343,
+        "summary": "**错误信息**\n\nThe key is invalid, key must be a string type\n\n**错误描述**\n\n使用[AppStorageV2](./js-apis-state"
+      }
+    ]
+  }
+}

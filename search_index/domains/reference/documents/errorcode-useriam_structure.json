@@ -1,0 +1,172 @@
+{
+  "doc_id": "errorcode-useriam",
+  "title": "用户认证错误码",
+  "path": "zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md",
+  "metadata": {
+    "kit": "User Authentication Kit",
+    "subsystem": "UserIAM",
+    "owner": "@WALL_EYE",
+    "designer": "@lichangting518",
+    "tester": "@jane_lz",
+    "adviser": "@zengyawen"
+  },
+  "summary": "User Authentication Kit UserIAM 模块的 用户认证错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "用户认证错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "12500001 认证失败",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 31,
+        "summary": "**错误信息**\n\nAuthentication failed.\n\n**错误描述**\n\n认证失败。\n\n**可能原因**\n\n当前凭据与设备里已经录入的凭据比对失败。\n\n**处理步骤**\n\n重新发起认证"
+      },
+      {
+        "section_id": "section-2",
+        "title": "12500002 身份认证系统通用错误码",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 53,
+        "summary": "**错误信息**\n\nGeneral operation error.\n\n**错误描述**\n\n开发者无法恢复的身份认证系统内部错误。\n\n**可能原因**\n\n1. NAPI层解析参数出错。\n2. 用户认"
+      },
+      {
+        "section_id": "section-3",
+        "title": "12500003 认证被取消",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 72,
+        "summary": "**错误信息**\n\nAuthentication canceled.\n\n**错误描述**\n\n认证被取消。\n\n**可能原因**\n\n1. 认证被用户手动取消。\n2. 认证被后发起的认证请求抢占。\n\n**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "12500004 认证操作超时",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 90,
+        "summary": "**错误信息**\n\nAuthentication timeout.\n\n**错误描述**\n\n认证操作超时。\n\n**可能原因**\n\n当前的认证操作超过了设定的时限。\n\n**处理步骤**\n\n重新调用认证接"
+      },
+      {
+        "section_id": "section-5",
+        "title": "12500005 认证类型不支持",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 109,
+        "summary": "**错误信息**\n\nThe authentication type is not supported.\n\n**错误描述**\n\n认证类型不支持。\n\n**可能原因**\n\n1. 传入的认证类型参数不支持，"
+      },
+      {
+        "section_id": "section-6",
+        "title": "12500006 认证信任等级不支持",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 128,
+        "summary": "**错误信息**\n\nThe authentication trust level is not supported.\n\n**错误描述**\n\n认证信任等级不支持。\n\n**可能原因**\n\n1. 调用us"
+      },
+      {
+        "section_id": "section-7",
+        "title": "12500007 认证服务繁忙",
+        "level": 2,
+        "line_start": 129,
+        "line_end": 146,
+        "summary": "**错误信息**\n\nAuthentication service is busy.\n\n**错误描述**\n\n认证服务繁忙。\n\n**可能原因**\n\n用户在身份认证控件界面点击了导航按钮时返回这个错误码，"
+      },
+      {
+        "section_id": "section-8",
+        "title": "12500008 参数校验失败",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 164,
+        "summary": "**错误信息**\n\nThe parameter is out of range.\n\n**错误描述**\n\n参数取值超出合法范围。\n\n**可能原因**\n\n参数错误。\n\n**处理步骤**\n\n检查接口参数重"
+      },
+      {
+        "section_id": "section-9",
+        "title": "12500009 认证被锁定",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 182,
+        "summary": "**错误信息**\n\nAuthentication is locked out.\n\n**错误描述**\n\n认证被锁定。\n\n**可能原因**\n\n当前认证失败的次数超过了上限，触发防爆模式，认证被锁定。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "12500010 该类型的凭据没有录入",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 200,
+        "summary": "**错误信息**\n\nThe type of credential has not been enrolled.\n\n**错误描述**\n\n该类型的凭据没有录入。\n\n**可能原因**\n\n例如调用userA"
+      },
+      {
+        "section_id": "section-11",
+        "title": "12500011 提示/通知切换自定义认证",
+        "level": 2,
+        "line_start": 201,
+        "line_end": 218,
+        "summary": "**错误信息**\n\nSwitched to the custom authentication process.\n\n**错误描述**\n\n切换到自定义认证流程。\n\n**可能原因**\n\n当前的认证操作被"
+      },
+      {
+        "section_id": "section-12",
+        "title": "12500013 密码过期",
+        "level": 2,
+        "line_start": 219,
+        "line_end": 237,
+        "summary": "**错误信息**\n\nOperation failed because of PIN expired.\n\n**错误描述**\n\n密码过期。\n\n**可能原因**\n\n由于系统锁屏口令过期，认证操作执行失败。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "12500015 AuthToken完整性校验失败",
+        "level": 2,
+        "line_start": 238,
+        "line_end": 255,
+        "summary": "**错误信息**\n\nOperation failed because of authToken integrity check failed.\n\n**错误描述**\n\nAuthToken完整性校验失败"
+      },
+      {
+        "section_id": "section-14",
+        "title": "12500016 AuthToken过期",
+        "level": 2,
+        "line_start": 256,
+        "line_end": 273,
+        "summary": "**错误信息**\n\nOperation failed because of authToken has expired.\n\n**错误描述**\n\nAuthToken过期。\n\n**可能原因**\n\n当Au"
+      },
+      {
+        "section_id": "section-15",
+        "title": "12500017 复用身份认证结果失败",
+        "level": 2,
+        "line_start": 274,
+        "line_end": 292,
+        "summary": "**错误信息**\n\nFailed to reuse authentication result.\n\n**错误描述**\n\n复用身份认证结果失败。\n\n**可能原因**\n\n1. 认证类型与指定的类型不匹配"
+      },
+      {
+        "section_id": "section-16",
+        "title": "12700001 人脸服务不可用",
+        "level": 2,
+        "line_start": 293,
+        "line_end": 313,
+        "summary": "**错误信息**\n\nThe service is unavailable.\n\n**错误描述**\n\n人脸服务不可用。\n\n**可能原因**\n\n1. 例如调用faceAuth模块的setSurfaceId"
+      },
+      {
+        "section_id": "section-17",
+        "title": "32600001 系统服务工作异常",
+        "level": 2,
+        "line_start": 314,
+        "line_end": 333,
+        "summary": "**错误信息**\n\nThe system service is not working properly. Please try again later.\n\n**错误描述**\n\n系统服务不可用。"
+      },
+      {
+        "section_id": "section-18",
+        "title": "32600002 模板未找到",
+        "level": 2,
+        "line_start": 334,
+        "line_end": 351,
+        "summary": "**错误信息**\n\nThe template is not found.\n\n**错误描述**\n\n模板未找到。\n\n**可能原因**\n\n模板ID错误。\n\n**处理步骤**\n\n确认模板ID是否正确。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "32600003 业务ID无效",
+        "level": 2,
+        "line_start": 352,
+        "line_end": 370,
+        "summary": "**错误信息**\n\nThe business id is invalid.\n\n**错误描述**\n\n业务ID无效。\n\n**可能原因**\n\n业务ID错误。\n\n**处理步骤**\n\n需确认业务ID是否正确。"
+      }
+    ]
+  }
+}

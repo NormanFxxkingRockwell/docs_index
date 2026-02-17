@@ -1,0 +1,148 @@
+{
+  "doc_id": "js-apis-uiEffect-sys",
+  "title": "@ohos.graphics.uiEffect (效果级联)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-uiEffect-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkgraphics2d/js-apis-uiEffect-sys.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hanamaru",
+    "designer": "@gaoweihua",
+    "tester": "@zhaoxiaoguang2",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D Graphics 模块的 @ohos.graphics.uiEffect (效果级联)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.graphics.uiEffect (效果级联)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 24,
+        "summary": "```ts\nimport { uiEffect } from \"@kit.ArkGraphics2D\";\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "uiEffect.createBrightnessBlender",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 52,
+        "summary": "createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlender\n\n创建BrightnessBlender实例用于给组"
+      },
+      {
+        "section_id": "section-3",
+        "title": "uiEffect.createHdrBrightnessBlender<sup>20+</sup>",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 103,
+        "summary": "createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender\n\n创建[HdrBrightnessBle"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Filter",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 897,
+        "summary": "Filter效果类，用于将相应的效果添加到指定的组件上。在调用Filter的方法前，需要先通过[createFilter](js-apis-uiEffect.md#uieffectcreatefilt"
+      },
+      {
+        "section_id": "section-5",
+        "title": "TileMode",
+        "level": 2,
+        "line_start": 898,
+        "line_end": 911,
+        "summary": "像素填充模式枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**系统接口：** 此接口为系统接口。\n\n| 名称   | 值 | 说明 |\n| ---"
+      },
+      {
+        "section_id": "section-6",
+        "title": "WaterRippleMode",
+        "level": 2,
+        "line_start": 912,
+        "line_end": 925,
+        "summary": "水波纹场景模式枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**系统接口：** 此接口为系统接口。\n\n| 名称   | 值 | 说明 |\n| --"
+      },
+      {
+        "section_id": "section-7",
+        "title": "FlyMode",
+        "level": 2,
+        "line_start": 926,
+        "line_end": 937,
+        "summary": "飞入飞出形变场景模式枚举。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**系统接口：** 此接口为系统接口。\n\n| 名称   | 值 | 说明 |\n|"
+      },
+      {
+        "section_id": "section-8",
+        "title": "VisualEffect",
+        "level": 2,
+        "line_start": 938,
+        "line_end": 1199,
+        "summary": "VisualEffect效果类，用于将相应的效果添加到指定的组件上。在调用VisualEffect的方法前，需要先通过[createEffect](js-apis-uiEffect.md#uieffe"
+      },
+      {
+        "section_id": "section-9",
+        "title": "Blender<sup>13+</sup>",
+        "level": 2,
+        "line_start": 1200,
+        "line_end": 1214,
+        "summary": "type Blender = BrightnessBlender | HdrBrightnessBlender\n\n混合器类型，用于描述混合效果。\n\n**系统能力：** SystemCapabilit"
+      },
+      {
+        "section_id": "section-10",
+        "title": "BrightnessBlender",
+        "level": 2,
+        "line_start": 1215,
+        "line_end": 1232,
+        "summary": "提亮混合器，用于将提亮效果添加到指定的组件上。在调用BrightnessBlender前，需要先通过[createBrightnessBlender](#uieffectcreatebrightnes"
+      },
+      {
+        "section_id": "section-11",
+        "title": "HdrBrightnessBlender<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1233,
+        "line_end": 1241,
+        "summary": "支持HDR的提亮混合器（继承自[BrightnessBlender](#brightnessblender)），用于将提亮效果添加到指定的组件上。在调用HdrBrightnessBlender前，需要"
+      },
+      {
+        "section_id": "section-12",
+        "title": "Color<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1242,
+        "line_end": 1254,
+        "summary": "RGBA格式的颜色描述。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n| 名称  | 类型   | 只读 | 可选 | 说明"
+      },
+      {
+        "section_id": "section-13",
+        "title": "LiquidMaterialEffectParam<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1255,
+        "line_end": 1272,
+        "summary": "材质的各项参数及其用途的详细说明。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n| 名称             | 类型"
+      },
+      {
+        "section_id": "section-14",
+        "title": "BrightnessParam<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1273,
+        "line_end": 1290,
+        "summary": "材质提亮参数的详细说明。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n| 名称          | 类型                     |"
+      },
+      {
+        "section_id": "section-15",
+        "title": "Mask<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1291,
+        "line_end": 1704,
+        "summary": "Mask效果类，作为[Filter](#filter)以及[VisualEffect](#visualeffect)的输入使用。\n\n### createRippleMask<sup>20+</sup>"
+      },
+      {
+        "section_id": "section-16",
+        "title": "BrightnessBlenderParam",
+        "level": 2,
+        "line_start": 1705,
+        "line_end": 1721,
+        "summary": "BrightnessBlender参数列表。\n\n**系统能力：** SystemCapability.Graphics.Drawing\n\n**系统接口：** 此接口为系统接口。\n\n| 名称"
+      }
+    ]
+  }
+}

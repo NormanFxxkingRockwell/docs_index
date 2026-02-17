@@ -1,0 +1,196 @@
+{
+  "doc_id": "js-apis-systemSoundManager-sys",
+  "title": "@ohos.multimedia.systemSoundManager (系统声音管理)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/js-apis-systemSoundManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/js-apis-systemSoundManager-sys.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@songshenke",
+    "designer": "@caixuejiang; @hao-liangfei; @zhanganxiang",
+    "tester": "@Filger",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 @ohos.multimedia.systemSoundManager (系统声音管理)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimedia.systemSoundManager (系统声音管理)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { systemSoundManager } from '@kit.AudioKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "常量",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 36,
+        "summary": "**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.SystemSound.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-3",
+        "title": "RingtoneType",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 51,
+        "summary": "枚举，铃声类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.SystemSound.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-4",
+        "title": "SystemToneType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 65,
+        "summary": "枚举，系统铃声类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.SystemSound.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-5",
+        "title": "MediaType<sup>20+</sup>",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 78,
+        "summary": "枚举，媒体类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.SystemSound.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-6",
+        "title": "SystemSoundError<sup>20+</sup>",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 97,
+        "summary": "枚举，系统声音错误类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.SystemSound.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ToneCustomizedType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 110,
+        "summary": "枚举，铃声自定义类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.SystemSound.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ToneAttrs<sup>12+</sup>",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 427,
+        "summary": "管理铃声属性。在调用ToneAttrs<sup>12+</sup>的接口前，需要先通过[createCustomizedToneAttrs](#systemsoundmanagercreatecus"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ToneAttrsArray<sup>12+</sup>",
+        "level": 2,
+        "line_start": 428,
+        "line_end": 441,
+        "summary": "type ToneAttrsArray = Array&lt;[ToneAttrs](#toneattrs12)&gt;\n\n铃音属性数组。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-10",
+        "title": "systemSoundManager.createCustomizedToneAttrs<sup>12+</sup>",
+        "level": 2,
+        "line_start": 442,
+        "line_end": 469,
+        "summary": "createCustomizedToneAttrs(): ToneAttrs\n\n创建自定义铃声属性。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ToneHapticsFeature<sup>13+</sup>",
+        "level": 2,
+        "line_start": 470,
+        "line_end": 482,
+        "summary": "枚举，系统振动风格定义。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.SystemSound.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ToneHapticsType<sup>14+</sup>",
+        "level": 2,
+        "line_start": 483,
+        "line_end": 498,
+        "summary": "枚举，系统铃音的振动类型。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.SystemSound.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-13",
+        "title": "ToneHapticsMode<sup>14+</sup>",
+        "level": 2,
+        "line_start": 499,
+        "line_end": 512,
+        "summary": "枚举，系统铃音场景的振动模式。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.SystemSound.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ToneHapticsSettings<sup>14+</sup>",
+        "level": 2,
+        "line_start": 513,
+        "line_end": 525,
+        "summary": "系统铃音的振动设置。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability.Multimedia.SystemSound.Core\n\n| 名称"
+      },
+      {
+        "section_id": "section-15",
+        "title": "ToneHapticsAttrs<sup>14+</sup>",
+        "level": 2,
+        "line_start": 526,
+        "line_end": 708,
+        "summary": "系统铃音的振动属性。在调用ToneHapticsAttrs<sup>14+</sup>的接口前，需要先通过[getToneHapticsList](#gettonehapticslist14)或[g"
+      },
+      {
+        "section_id": "section-16",
+        "title": "ToneHapticsAttrsArray<sup>14+</sup>",
+        "level": 2,
+        "line_start": 709,
+        "line_end": 722,
+        "summary": "type ToneHapticsAttrsArray = Array&lt;ToneHapticsAttrs&gt;\n\n系统铃音的振动属性数组。\n\n**系统接口：** 该接口为系统接口。\n\n**系统"
+      },
+      {
+        "section_id": "section-17",
+        "title": "systemSoundManager.getSystemSoundManager",
+        "level": 2,
+        "line_start": 723,
+        "line_end": 743,
+        "summary": "getSystemSoundManager(): SystemSoundManager\n\n获取系统声音管理器。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-18",
+        "title": "SystemSoundManager",
+        "level": 2,
+        "line_start": 744,
+        "line_end": 2434,
+        "summary": "管理系统声音。在调用SystemSoundManager的接口前，需要先通过[getSystemSoundManager](#systemsoundmanagergetsystemsoundmana"
+      },
+      {
+        "section_id": "section-19",
+        "title": "RingtonePlayer<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2435,
+        "line_end": 2448,
+        "summary": "type RingtonePlayer = _RingtonePlayer\n\n系统铃音播放器对象。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-20",
+        "title": "SystemTonePlayer<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2449,
+        "line_end": 2462,
+        "summary": "type SystemTonePlayer = _SystemTonePlayer\n\n系统提示音播放器对象。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-21",
+        "title": "RingtoneOptions<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2463,
+        "line_end": 2476,
+        "summary": "type RingtoneOptions = _RingtoneOptions\n\n系统铃音播放器配置项。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-22",
+        "title": "SystemToneOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2477,
+        "line_end": 2493,
+        "summary": "type SystemToneOptions = _SystemToneOptions\n\n系统提示音播放器配置项。\n\n**系统接口：** 该接口为系统接口。\n\n**系统能力：** SystemCap"
+      }
+    ]
+  }
+}

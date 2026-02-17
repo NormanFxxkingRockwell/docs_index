@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-stream",
+  "title": "@ohos.util.stream (数据流基类stream)",
+  "path": "zh-cn/application-dev/reference/apis-arkts/js-apis-stream.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/js-apis-stream.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@xliu-huanwei; @shilei123; @huanghello",
+    "designer": "@yuanyao14",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 @ohos.util.stream (数据流基类stream)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.util.stream (数据流基类stream)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { stream  } from '@kit.ArkTS';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Writable",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 521,
+        "summary": "可写入数据的流。可写流允许将数据写入到目标中，这个目标可以是文件、HTTP 响应、标准输出、另一个流等。\n\n### 属性\n\n**原子化服务API：** 从API version 12开始，该接口支持"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ReadableOptions",
+        "level": 2,
+        "line_start": 522,
+        "line_end": 533,
+        "summary": "Readable构造函数的选项信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Uti"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Readable",
+        "level": 2,
+        "line_start": 534,
+        "line_end": 1146,
+        "summary": "表示可读取数据的流。可读流用于从数据源（如文件、网络套接字等）读取数据。\n\n### 属性\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Duplex",
+        "level": 2,
+        "line_start": 1147,
+        "line_end": 1515,
+        "summary": "双工流是一个同时支持可读和可写能力的流。双工流允许数据在两个方向上进行传输，既可以读取数据，又可以写入数据。\n\nDuplex类继承[Readable](#readable)，支持Readable中所"
+      },
+      {
+        "section_id": "section-6",
+        "title": "Transform",
+        "level": 2,
+        "line_start": 1516,
+        "line_end": 1628,
+        "summary": "转换流是一个特殊的双工流，支持可读和可写能力的流，可以对数据进行转换并输出结果。Transform类继承[Duplex](#duplex)，支持Duplex中所有的方法。\n\n### construc"
+      }
+    ]
+  }
+}

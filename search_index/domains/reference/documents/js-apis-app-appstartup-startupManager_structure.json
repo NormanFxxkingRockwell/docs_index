@@ -1,0 +1,76 @@
+{
+  "doc_id": "js-apis-app-appstartup-startupManager",
+  "title": "@ohos.app.appstartup.startupManager (启动框架管理能力)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-appstartup-startupManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-appstartup-startupManager.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@yzkp",
+    "designer": "@yzkp",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.appstartup.startupManager (启动框架管理能力)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.appstartup.startupManager (启动框架管理能力)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { startupManager }  from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "startupManager.run",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 90,
+        "summary": "run(startupTasks: Array\\<string\\>, config?: StartupConfig): Promise\\<void\\>\n\n执行启动框架启动任务或加载so文件。\n\n> *"
+      },
+      {
+        "section_id": "section-3",
+        "title": "startupManager.run<sup>20+</sup>",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 164,
+        "summary": "run(startupTasks: Array\\<string\\>, context: common.AbilityStageContext, config: StartupConfig): Pro"
+      },
+      {
+        "section_id": "section-4",
+        "title": "startupManager.removeAllStartupTaskResults",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 213,
+        "summary": "removeAllStartupTaskResults(): void\n\n删除所有启动任务结果。\n\n如果存在so预加载任务，则将对应so文件置为未加载状态。对于缓存中已加载的so文件，不会被移除。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "startupManager.getStartupTaskResult",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 280,
+        "summary": "getStartupTaskResult(startupTask: string): Object\n\n获取指定启动任务或so预加载任务的执行结果。\n\n**系统能力**：SystemCapabilit"
+      },
+      {
+        "section_id": "section-6",
+        "title": "startupManager.isStartupTaskInitialized",
+        "level": 2,
+        "line_start": 281,
+        "line_end": 357,
+        "summary": "isStartupTaskInitialized(startupTask: string): boolean\n\n获取指定启动任务或so预加载任务是否已初始化。\n\n**系统能力**：SystemCap"
+      },
+      {
+        "section_id": "section-7",
+        "title": "startupManager.removeStartupTaskResult",
+        "level": 2,
+        "line_start": 358,
+        "line_end": 421,
+        "summary": "removeStartupTaskResult(startupTask: string): void\n\n删除指定启动任务或so预加载任务的初始化结果。\n\n- 输入为启动任务名时，删除指定启动任务的初"
+      }
+    ]
+  }
+}

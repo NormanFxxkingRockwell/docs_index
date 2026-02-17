@@ -1,0 +1,268 @@
+{
+  "doc_id": "arkts-apis-audio-AudioVolumeGroupManager",
+  "title": "Interface (AudioVolumeGroupManager)",
+  "path": "zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioVolumeGroupManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioVolumeGroupManager.md",
+  "metadata": {
+    "kit": "Audio Kit",
+    "subsystem": "Multimedia",
+    "owner": "@songshenke",
+    "designer": "@caixuejiang; @hao-liangfei; @zhanganxiang",
+    "tester": "@Filger",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Audio Kit Multimedia 模块的 Interface (AudioVolumeGroupManager)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (AudioVolumeGroupManager)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { audio } from '@kit.AudioKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 56,
+        "summary": "getVolume(volumeType: AudioVolumeType, callback: AsyncCallback&lt;number&gt;): void\n\n获取指定流的音量。使用cal"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 87,
+        "summary": "getVolume(volumeType: AudioVolumeType): Promise&lt;number&gt;\n\n获取指定流的音量。使用Promise异步回调。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getVolumeSync<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 133,
+        "summary": "getVolumeSync(volumeType: AudioVolumeType): number\n\n获取指定流的音量。同步返回结果。\n\n> **说明：**\n> 从API version 10开始"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getMinVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 165,
+        "summary": "getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback&lt;number&gt;): void\n\n获取指定流的最小音量。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getMinVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 166,
+        "line_end": 196,
+        "summary": "getMinVolume(volumeType: AudioVolumeType): Promise&lt;number&gt;\n\n获取指定流的最小音量。使用Promise异步回调。\n\n> **说明"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getMinVolumeSync<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 242,
+        "summary": "getMinVolumeSync(volumeType: AudioVolumeType): number\n\n获取指定流的最小音量。同步返回结果。\n\n> **说明：**\n> 从API version"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getMaxVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 243,
+        "line_end": 274,
+        "summary": "getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback&lt;number&gt;): void\n\n获取指定流的最大音量。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getMaxVolume<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 305,
+        "summary": "getMaxVolume(volumeType: AudioVolumeType): Promise&lt;number&gt;\n\n获取指定流的最大音量。使用Promise异步回调。\n\n> **说明"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getMaxVolumeSync<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 351,
+        "summary": "getMaxVolumeSync(volumeType: AudioVolumeType): number\n\n获取指定流的最大音量。同步返回结果。\n\n> **说明：**\n> 从API version"
+      },
+      {
+        "section_id": "section-11",
+        "title": "isMute<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 352,
+        "line_end": 383,
+        "summary": "isMute(volumeType: AudioVolumeType, callback: AsyncCallback&lt;boolean&gt;): void\n\n获取指定音量流静音状态。使用ca"
+      },
+      {
+        "section_id": "section-12",
+        "title": "isMute<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 384,
+        "line_end": 414,
+        "summary": "isMute(volumeType: AudioVolumeType): Promise&lt;boolean&gt;\n\n获取指定音量流是否被静音。使用Promise异步回调。\n\n> **说明：**"
+      },
+      {
+        "section_id": "section-13",
+        "title": "isMuteSync<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 415,
+        "line_end": 460,
+        "summary": "isMuteSync(volumeType: AudioVolumeType): boolean\n\n获取指定音量流是否被静音。同步返回结果。\n\n> **说明：**\n> 从API version 10"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getRingerMode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 461,
+        "line_end": 488,
+        "summary": "getRingerMode(callback: AsyncCallback&lt;AudioRingMode&gt;): void\n\n获取铃声模式。使用callback异步回调。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-15",
+        "title": "getRingerMode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 489,
+        "line_end": 514,
+        "summary": "getRingerMode(): Promise&lt;AudioRingMode&gt;\n\n获取铃声模式。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Mu"
+      },
+      {
+        "section_id": "section-16",
+        "title": "getRingerModeSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 515,
+        "line_end": 542,
+        "summary": "getRingerModeSync(): AudioRingMode\n\n获取铃声模式。同步返回结果。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Vol"
+      },
+      {
+        "section_id": "section-17",
+        "title": "on('ringerModeChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 543,
+        "line_end": 574,
+        "summary": "on(type: 'ringerModeChange', callback: Callback\\<AudioRingMode>): void\n\n监听铃声模式变化事件（当[AudioRingMode]"
+      },
+      {
+        "section_id": "section-18",
+        "title": "off('ringerModeChange')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 575,
+        "line_end": 613,
+        "summary": "off(type: 'ringerModeChange', callback?: Callback&lt;AudioRingMode&gt;): void\n\n取消监听铃声模式变化事件。使用callb"
+      },
+      {
+        "section_id": "section-19",
+        "title": "isMicrophoneMute<sup>9+</sup>",
+        "level": 2,
+        "line_start": 614,
+        "line_end": 641,
+        "summary": "isMicrophoneMute(callback: AsyncCallback&lt;boolean&gt;): void\n\n获取麦克风静音状态。使用callback异步回调。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-20",
+        "title": "isMicrophoneMute<sup>9+</sup>",
+        "level": 2,
+        "line_start": 642,
+        "line_end": 667,
+        "summary": "isMicrophoneMute(): Promise&lt;boolean&gt;\n\n获取麦克风静音状态。使用Promise异步回调。\n\n**系统能力：** SystemCapability.Mu"
+      },
+      {
+        "section_id": "section-21",
+        "title": "isMicrophoneMuteSync<sup>10+</sup>",
+        "level": 2,
+        "line_start": 668,
+        "line_end": 695,
+        "summary": "isMicrophoneMuteSync(): boolean\n\n获取麦克风静音状态。同步返回结果。\n\n**系统能力：** SystemCapability.Multimedia.Audio.Vol"
+      },
+      {
+        "section_id": "section-22",
+        "title": "on('micStateChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 696,
+        "line_end": 729,
+        "summary": "on(type: 'micStateChange', callback: Callback&lt;MicStateChangeEvent&gt;): void\n\n监听系统麦克风状态更改事件（当检测到"
+      },
+      {
+        "section_id": "section-23",
+        "title": "off('micStateChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 730,
+        "line_end": 769,
+        "summary": "off(type: 'micStateChange', callback?: Callback&lt;MicStateChangeEvent&gt;): void\n\n取消监听系统麦克风状态更改事件。"
+      },
+      {
+        "section_id": "section-24",
+        "title": "isVolumeUnadjustable<sup>10+</sup>",
+        "level": 2,
+        "line_start": 770,
+        "line_end": 790,
+        "summary": "isVolumeUnadjustable(): boolean\n\n获取固定音量模式开关状态，打开时进入固定音量模式，此时音量固定无法被调节。同步返回结果。\n\n**系统能力：** SystemCapa"
+      },
+      {
+        "section_id": "section-25",
+        "title": "getSystemVolumeInDb<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 791,
+        "line_end": 834,
+        "summary": "getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: DeviceType, callback:"
+      },
+      {
+        "section_id": "section-26",
+        "title": "getSystemVolumeInDb<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 835,
+        "line_end": 881,
+        "summary": "getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: DeviceType): Promise&"
+      },
+      {
+        "section_id": "section-27",
+        "title": "getSystemVolumeInDbSync<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 882,
+        "line_end": 929,
+        "summary": "getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: number, device: DeviceType): numb"
+      },
+      {
+        "section_id": "section-28",
+        "title": "getMaxAmplitudeForInputDevice<sup>12+</sup>",
+        "level": 2,
+        "line_start": 930,
+        "line_end": 980,
+        "summary": "getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise&lt;number&gt;\n\n获取输入设备音频流"
+      },
+      {
+        "section_id": "section-29",
+        "title": "getMaxAmplitudeForOutputDevice<sup>12+</sup>",
+        "level": 2,
+        "line_start": 981,
+        "line_end": 1030,
+        "summary": "getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise&lt;number&gt;\n\n获取输出设备音"
+      },
+      {
+        "section_id": "section-30",
+        "title": "setMicrophoneMute<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1031,
+        "line_end": 1065,
+        "summary": "setMicrophoneMute(mute: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置麦克风静音状态。使用callback异步"
+      },
+      {
+        "section_id": "section-31",
+        "title": "setMicrophoneMute<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1066,
+        "line_end": 1099,
+        "summary": "setMicrophoneMute(mute: boolean): Promise&lt;void&gt;\n\n设置麦克风静音状态。使用Promise异步回调。\n\n> **说明：**\n>\n> 从API"
+      }
+    ]
+  }
+}

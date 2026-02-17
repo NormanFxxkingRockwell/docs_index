@@ -1,0 +1,164 @@
+{
+  "doc_id": "errorcode-net-networkSecurity",
+  "title": "网络安全校验错误码",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 网络安全校验错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "网络安全校验错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "2305001 未定义的错误",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 31,
+        "summary": "**错误信息**\n\nUnspecified error.\n\n**错误描述**\n\n不可预估的错误。\n\n**可能原因**\n\nSSL发生未知错误。\n\n**处理步骤**\n\n检查参数和输入、捕获异常、调试和日"
+      },
+      {
+        "section_id": "section-2",
+        "title": "2305002 获取证书颁发者失败",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 49,
+        "summary": "**错误信息**\n\nUnable to get issuer certificate.\n\n**错误描述**\n\n无法获取发行证书。\n\n**可能原因**\n\n通常是因为证书链不完整，或者服务器配置了错误的"
+      },
+      {
+        "section_id": "section-3",
+        "title": "2305003 获取证书吊销列表失败",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 67,
+        "summary": "**错误信息**\n\nUnable to get certificate revocation list (CRL).\n\n**错误描述**\n\n无法获取证书注销列表（CRL）。\n\n**可能原因**\n\n通"
+      },
+      {
+        "section_id": "section-4",
+        "title": "2305004 无法解密证书签名",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 85,
+        "summary": "**错误信息**\n\nUnable to decrypt certificate signature.\n\n**错误描述**\n\n无法解密证书签名。\n\n**可能原因**\n\n通常是因为缺少或错误的私钥。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "2305005 无法解密证书吊销列表签名",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 103,
+        "summary": "**错误信息**\n\nUnable to decrypt CRL signature.\n\n**错误描述**\n\n无法解密CRL签名。\n\n**可能原因**\n\nCRL的加密算法不被客户端支持，或者用于加密C"
+      },
+      {
+        "section_id": "section-6",
+        "title": "2305006 无法解码颁发者公钥",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 121,
+        "summary": "**错误信息**\n\nUnable to decode issuer public key.\n\n**错误描述**\n\n无法解码发行公钥。\n\n**可能原因**\n\n证书格式不正确，或者公钥数据损坏。\n\n**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "2305007 证书签名失败",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 140,
+        "summary": "**错误信息**\n\nCertificate signature failure.\n\n**错误描述**\n\n证书签名失败。\n\n**可能原因**\n\n证书的签名计算错误，或者证书使用的数字签名算法不被客户端"
+      },
+      {
+        "section_id": "section-8",
+        "title": "2305008 证书吊销列表签名失败",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 158,
+        "summary": "**错误信息**\n\nCRL signature failure.\n\n**错误描述**\n\nCRL签名失败。\n\n**可能原因**\n\nCRL的签名计算错误，或者CRL使用的数字签名算法不被客户端支持。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "2305009 证书尚未生效",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 176,
+        "summary": "**错误信息**\n\nCertificate is not yet valid.\n\n**错误描述**\n\n证书尚未生效。\n\n**可能原因**\n\n证书的开始日期在当前日期之后。\n\n**处理步骤**\n\n检查"
+      },
+      {
+        "section_id": "section-10",
+        "title": "2305010 证书已过期",
+        "level": 2,
+        "line_start": 177,
+        "line_end": 194,
+        "summary": "**错误信息**\n\nCertificate has expired.\n\n**错误描述**\n\n证书已过期。\n\n**可能原因**\n\n证书的结束日期在当前日期之前。\n\n**处理步骤**\n\n检查证书的开始和"
+      },
+      {
+        "section_id": "section-11",
+        "title": "2305011 CRL尚未生效",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 213,
+        "summary": "**错误信息**\n\nCRL is not yet valid.\n\n**错误描述**\n\nCRL尚未生效。\n\n**可能原因**\n\nCRL的开始日期在当前日期之后。\n\n**处理步骤**\n\n1. 检查并确保"
+      },
+      {
+        "section_id": "section-12",
+        "title": "2305012 CRL已过期",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 231,
+        "summary": "**错误信息**\n\nCRL has expired.\n\n**错误描述**\n\nCRL已过期。\n\n**可能原因**\n\nCRL的结束日期在当前日期之前。\n\n**处理步骤**\n\n更新CRL以获取最新的CRL"
+      },
+      {
+        "section_id": "section-13",
+        "title": "2305018 自签名证书",
+        "level": 2,
+        "line_start": 232,
+        "line_end": 249,
+        "summary": "**错误信息**\n\nSelf-signed certificate.\n\n**错误描述**\n\n自签名证书。\n\n**可能原因**\n\n证书的签名是由证书自身的公钥进行的，不是受信任的证书颁发机构（CA）颁"
+      },
+      {
+        "section_id": "section-14",
+        "title": "2305020 无法获取本地证书",
+        "level": 2,
+        "line_start": 250,
+        "line_end": 270,
+        "summary": "**错误信息**\n\nUnable to get local issuer certificate.\n\n**错误描述**\n\n无法获取本地证书颁发机构证书。\n\n**可能原因**\n\n因为客户端的证书存储或"
+      },
+      {
+        "section_id": "section-15",
+        "title": "2305023 证书已被吊销",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 288,
+        "summary": "**错误信息**\n\nCertificate has been revoked.\n\n**错误描述**\n\n该证书已被吊销。\n\n**可能原因**\n\n证书存在过期、被吊销或证书链不完整等问题。\n\n**处理步"
+      },
+      {
+        "section_id": "section-16",
+        "title": "2305024 无效的证书颁发机构（CA）",
+        "level": 2,
+        "line_start": 289,
+        "line_end": 306,
+        "summary": "**错误信息**\n\nInvalid certificate authority (CA).\n\n**错误描述**\n\n无效的证书颁发机构（CA）。\n\n**可能原因**\n\n通常是因为CA的证书已过期或被吊"
+      },
+      {
+        "section_id": "section-17",
+        "title": "2305027 证书不可信",
+        "level": 2,
+        "line_start": 307,
+        "line_end": 326,
+        "summary": "**错误信息**\n\nCertificate is untrusted.\n\n**错误描述**\n\n证书不受信任。\n\n**可能原因**\n\n通常是因为证书由不受信任的证书颁发机构（CA）签发，或者证书已被吊"
+      },
+      {
+        "section_id": "section-18",
+        "title": "2305069 无效的证书验证上下文",
+        "level": 2,
+        "line_start": 327,
+        "line_end": 344,
+        "summary": "**错误信息**\n\nInvalid certificate verification context.\n\n**错误描述**\n\n无效的证书验证上下文。\n\n**可能原因**\n\n可能的原因包括但不限于：证"
+      }
+    ]
+  }
+}

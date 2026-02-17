@@ -1,0 +1,212 @@
+{
+  "doc_id": "js-apis-file-backup-sys",
+  "title": "@ohos.file.backup (备份恢复)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-backup-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-backup-sys.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@lvzhenjie",
+    "designer": "@wang_zhangjun; @chenxi0605",
+    "tester": "@liuhonggang123",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.file.backup (备份恢复)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.backup (备份恢复)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { backup } from '@kit.CoreFileKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "FileMeta",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 32,
+        "summary": "文件的元数据，包含一个应用名称以及文件URI。FileMeta在执行备份/恢复时是不可缺少的对象。\n\n**系统能力**：SystemCapability.FileManagement.Storage"
+      },
+      {
+        "section_id": "section-3",
+        "title": "FileData",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 46,
+        "summary": "文件的元数据，包含一个已经打开的文件描述符。FileData在执行备份/恢复时是不可缺少的对象。\n\n> **说明：**\n>\n> FileData使用完成后必须关闭，如不关闭会出现内存泄露问题。关闭的"
+      },
+      {
+        "section_id": "section-4",
+        "title": "FileManifestData<sup>12+</sup>",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 60,
+        "summary": "文件的元数据，包含一个已经打开的文件描述符。FileManifestData所打开的内容是一个清单文件，用于描述应用增量备份/恢复时对应文件的基础信息。FileManifestData在执行增量备份"
+      },
+      {
+        "section_id": "section-5",
+        "title": "IncrementalBackupTime<sup>12+</sup>",
+        "level": 2,
+        "line_start": 61,
+        "line_end": 71,
+        "summary": "用于记录最后一次的增量备份时间，用于描述备份增量的时间点。\n\n**系统能力**：SystemCapability.FileManagement.StorageService.Backup\n\n| 名称"
+      },
+      {
+        "section_id": "section-6",
+        "title": "BackupParams<sup>12+</sup>",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 81,
+        "summary": "为备份恢复提供可选配置参数以json格式的字符串形式存在。\n\n**系统能力**：SystemCapability.FileManagement.StorageService.Backup\n\n| 名称"
+      },
+      {
+        "section_id": "section-7",
+        "title": "BackupPriority<sup>12+</sup>",
+        "level": 2,
+        "line_start": 82,
+        "line_end": 91,
+        "summary": "为备份恢复提供优先级配置。\n\n**系统能力**：SystemCapability.FileManagement.StorageService.Backup\n\n| 名称     | 类型   | 只读"
+      },
+      {
+        "section_id": "section-8",
+        "title": "IncrementalBackupData<sup>12+</sup>",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 101,
+        "summary": "一次增量备份对象。继承[IncrementalBackupTime](#incrementalbackuptime12)，[FileManifestData](#filemanifestdata12"
+      },
+      {
+        "section_id": "section-9",
+        "title": "File",
+        "level": 2,
+        "line_start": 102,
+        "line_end": 113,
+        "summary": "一个文件对象。\n\n继承[FileMeta](#filemeta)和[FileData](#filedata)。\n\n> **说明：**\n>\n> file.backup.File与@ohos.file."
+      },
+      {
+        "section_id": "section-10",
+        "title": "File<sup>12+</sup>",
+        "level": 2,
+        "line_start": 114,
+        "line_end": 125,
+        "summary": "一个文件对象。\n\n继承[FileMeta](#filemeta)和[FileData](#filedata)和[FileManifestData](#filemanifestdata12)。\n\n>"
+      },
+      {
+        "section_id": "section-11",
+        "title": "FileSystemRequestConfig<sup>23+</sup>",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 141,
+        "summary": "配置系统执行碎片清理所需的参数。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力**：SystemCapability.FileMan"
+      },
+      {
+        "section_id": "section-12",
+        "title": "GeneralCallbacks",
+        "level": 2,
+        "line_start": 142,
+        "line_end": 438,
+        "summary": "备份/恢复过程中的通用回调，备份服务将通过这些回调通知客户端其应用的备份/恢复阶段。\n\n**系统能力**：SystemCapability.FileManagement.StorageService"
+      },
+      {
+        "section_id": "section-13",
+        "title": "backup.fileSystemServiceRequest<sup>23+</sup>",
+        "level": 2,
+        "line_start": 439,
+        "line_end": 494,
+        "summary": "fileSystemServiceRequest(config: FileSystemRequestConfig): Promise&lt;number&gt;\n\n整理存储器件碎片化空间，改善用户卡"
+      },
+      {
+        "section_id": "section-14",
+        "title": "backup.getBackupVersion<sup>18+</sup>",
+        "level": 2,
+        "line_start": 495,
+        "line_end": 544,
+        "summary": "getBackupVersion(): string\n\n获取备份恢复版本号信息。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：ohos.permission.BACKUP\n\n**系统"
+      },
+      {
+        "section_id": "section-15",
+        "title": "backup.getLocalCapabilities",
+        "level": 2,
+        "line_start": 545,
+        "line_end": 615,
+        "summary": "getLocalCapabilities(callback: AsyncCallback&lt;FileData&gt;): void\n\n用于获取一个描述本地能力的Json文件。使用callback"
+      },
+      {
+        "section_id": "section-16",
+        "title": "backup.getLocalCapabilities",
+        "level": 2,
+        "line_start": 616,
+        "line_end": 683,
+        "summary": "getLocalCapabilities(): Promise&lt;FileData&gt;\n\n用于获取一个描述本地能力的Json文件。使用Promise异步回调。\n\n**系统接口**：此接口为系"
+      },
+      {
+        "section_id": "section-17",
+        "title": "backup.getLocalCapabilities<sup>12+</sup>",
+        "level": 2,
+        "line_start": 684,
+        "line_end": 745,
+        "summary": "getLocalCapabilities(dataList:Array&lt;IncrementalBackupTime&gt;): Promise&lt;FileData&gt;\n\n用于获取一个描"
+      },
+      {
+        "section_id": "section-18",
+        "title": "backup.getBackupInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 746,
+        "line_end": 797,
+        "summary": "getBackupInfo(bundleToBackup: string): string\n\n获取需要备份的应用信息。\n\n**系统接口**：此接口为系统接口。\n\n**需要权限**：ohos.perm"
+      },
+      {
+        "section_id": "section-19",
+        "title": "backup.updateTimer<sup>12+</sup>",
+        "level": 2,
+        "line_start": 798,
+        "line_end": 855,
+        "summary": "updateTimer(bundleName: string, timeout: number): boolean\n\n设置应用备份或恢复的时长，调用时机为onBundleBegin之后，onBund"
+      },
+      {
+        "section_id": "section-20",
+        "title": "backup.updateSendRate<sup>12+</sup>",
+        "level": 2,
+        "line_start": 856,
+        "line_end": 913,
+        "summary": "updateSendRate(bundleName: string, sendRate: number): boolean\n\n更新备份应用发送fd的速率，调用时机为onBundleBegin之后，o"
+      },
+      {
+        "section_id": "section-21",
+        "title": "OnBackupSizeReport<sup>18+</sup>",
+        "level": 2,
+        "line_start": 914,
+        "line_end": 938,
+        "summary": "type OnBackupSizeReport = (reportInfo: string) => void\n\n框架返回的应用待备份的数据量大小。\n\n**系统接口**：此接口为系统接口。\n\n**系统"
+      },
+      {
+        "section_id": "section-22",
+        "title": "SessionBackup",
+        "level": 2,
+        "line_start": 939,
+        "line_end": 1923,
+        "summary": "备份流程对象，用来支撑应用备份的流程。在使用前，需要先创建SessionBackup实例。\n\n### constructor\n\nconstructor(callbacks: GeneralCallb"
+      },
+      {
+        "section_id": "section-23",
+        "title": "SessionRestore",
+        "level": 2,
+        "line_start": 1924,
+        "line_end": 3236,
+        "summary": "恢复流程对象，用来支撑应用恢复的流程。在使用前，需要先创建SessionRestore实例。\n\n### constructor\n\nconstructor(callbacks: GeneralCall"
+      },
+      {
+        "section_id": "section-24",
+        "title": "IncrementalBackupSession<sup>12+</sup>",
+        "level": 2,
+        "line_start": 3237,
+        "line_end": 4238,
+        "summary": "增量备份流程对象，用来支撑应用增量备份的流程。在使用前，需要先创建IncrementalBackupSession实例。\n\n### constructor<sup>12+</sup>\n\nconstr"
+      }
+    ]
+  }
+}

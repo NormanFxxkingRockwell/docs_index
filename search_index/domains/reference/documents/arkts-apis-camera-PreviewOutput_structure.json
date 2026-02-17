@@ -1,0 +1,172 @@
+{
+  "doc_id": "arkts-apis-camera-PreviewOutput",
+  "title": "Interface (PreviewOutput)",
+  "path": "zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-PreviewOutput.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-PreviewOutput.md",
+  "metadata": {
+    "kit": "Camera Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qano",
+    "designer": "@leo_ysl",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Camera Kit Multimedia 模块的 Interface (PreviewOutput)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (PreviewOutput)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { camera } from '@kit.CameraKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "on('frameStart')",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 59,
+        "summary": "on(type: 'frameStart', callback: AsyncCallback\\<void\\>): void\n\n监听预览帧启动，通过注册回调函数获取结果。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "off('frameStart')",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 84,
+        "summary": "off(type: 'frameStart', callback?: AsyncCallback\\<void\\>): void\n\n注销预览帧启动的监听。\n\n**原子化服务API：** 从API ve"
+      },
+      {
+        "section_id": "section-4",
+        "title": "on('frameEnd')",
+        "level": 2,
+        "line_start": 85,
+        "line_end": 123,
+        "summary": "on(type: 'frameEnd', callback: AsyncCallback\\<void\\>): void\n\n监听预览帧结束，通过注册回调函数获取结果。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "off('frameEnd')",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 148,
+        "summary": "off(type: 'frameEnd', callback?: AsyncCallback\\<void\\>): void\n\n注销监听预览帧结束。\n\n**原子化服务API：** 从API versi"
+      },
+      {
+        "section_id": "section-6",
+        "title": "on('error')",
+        "level": 2,
+        "line_start": 149,
+        "line_end": 183,
+        "summary": "on(type: 'error', callback: ErrorCallback): void\n\n监听预览输出的错误事件，通过注册回调函数获取结果。使用callback异步回调。\n\n> **说明："
+      },
+      {
+        "section_id": "section-7",
+        "title": "off('error')",
+        "level": 2,
+        "line_start": 184,
+        "line_end": 208,
+        "summary": "off(type: 'error', callback?: ErrorCallback): void\n\n注销监听预览输出的错误事件。\n\n**原子化服务API：** 从API version 19开始"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getSupportedFrameRates<sup>12+</sup>",
+        "level": 2,
+        "line_start": 209,
+        "line_end": 233,
+        "summary": "getSupportedFrameRates(): Array\\<FrameRateRange\\>\n\n查询支持的帧率范围。\n\n**原子化服务API：** 从API version 19开始，该接口"
+      },
+      {
+        "section_id": "section-9",
+        "title": "setFrameRate<sup>12+</sup>",
+        "level": 2,
+        "line_start": 234,
+        "line_end": 272,
+        "summary": "setFrameRate(minFps: number, maxFps: number): void\n\n设置预览流帧率范围，设置的范围必须在支持的帧率范围内。\n\n进行设置前，可通过[getSuppo"
+      },
+      {
+        "section_id": "section-10",
+        "title": "getActiveFrameRate<sup>12+</sup>",
+        "level": 2,
+        "line_start": 273,
+        "line_end": 299,
+        "summary": "getActiveFrameRate(): FrameRateRange\n\n获取已设置的帧率范围。\n\n使用[setFrameRate](#setframerate12)接口对预览流设置过帧率后可查询"
+      },
+      {
+        "section_id": "section-11",
+        "title": "getActiveProfile<sup>12+</sup>",
+        "level": 2,
+        "line_start": 300,
+        "line_end": 341,
+        "summary": "getActiveProfile(): Profile\n\n获取当前生效的配置信息。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-12",
+        "title": "getPreviewRotation<sup>12+</sup>",
+        "level": 2,
+        "line_start": 342,
+        "line_end": 409,
+        "summary": "getPreviewRotation(displayRotation?: number): ImageRotation\n\n获取预览旋转角度。\n\n- 设备自然方向：设备默认使用方向。例如，直板机默认使"
+      },
+      {
+        "section_id": "section-13",
+        "title": "setPreviewRotation<sup>12+</sup>",
+        "level": 2,
+        "line_start": 410,
+        "line_end": 453,
+        "summary": "setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): void\n\n设置预览旋转角度。\n\n**原"
+      },
+      {
+        "section_id": "section-14",
+        "title": "start<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 454,
+        "line_end": 494,
+        "summary": "start(callback: AsyncCallback\\<void\\>): void\n\n开始输出预览流，通过注册回调函数获取结果。使用callback异步回调。\n\n> **说明：**\n>从 AP"
+      },
+      {
+        "section_id": "section-15",
+        "title": "start<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 495,
+        "line_end": 533,
+        "summary": "start(): Promise\\<void\\>\n\n开始输出预览流。使用Promise异步回调。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始"
+      },
+      {
+        "section_id": "section-16",
+        "title": "stop<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 534,
+        "line_end": 566,
+        "summary": "stop(callback: AsyncCallback\\<void\\>): void\n\n停止输出预览流，通过注册回调函数获取结果。使用callback异步回调。\n\n> **说明：**\n>从 API"
+      },
+      {
+        "section_id": "section-17",
+        "title": "stop<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 567,
+        "line_end": 597,
+        "summary": "stop(): Promise\\<void\\>\n\n停止输出预览流。使用Promise异步回调。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始废"
+      },
+      {
+        "section_id": "section-18",
+        "title": "isBandwidthCompressionSupported<sup>23+</sup>",
+        "level": 2,
+        "line_start": 598,
+        "line_end": 631,
+        "summary": "isBandwidthCompressionSupported(): boolean\n\n检查是否支持预览带宽压缩（指通过编码减少数据量，降低其在传输链路中的带宽占用）。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-19",
+        "title": "enableBandwidthCompression<sup>23+</sup>",
+        "level": 2,
+        "line_start": 632,
+        "line_end": 678,
+        "summary": "enableBandwidthCompression(enabled: boolean): void\n\n使能预览带宽压缩。\n\n使能之前，可先使用方法[isBandwidthCompressionSu"
+      }
+    ]
+  }
+}

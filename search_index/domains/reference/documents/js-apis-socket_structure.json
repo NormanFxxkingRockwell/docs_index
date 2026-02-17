@@ -1,0 +1,372 @@
+{
+  "doc_id": "js-apis-socket",
+  "title": "@ohos.net.socket (Socket连接)",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-socket.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-socket.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.socket (Socket连接)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.socket (Socket连接)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { socket } from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "socket.constructUDPSocketInstance",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 43,
+        "summary": "constructUDPSocketInstance(): UDPSocket\n\n创建一个UDPSocket对象。\n\n**系统能力**：SystemCapability.Communication."
+      },
+      {
+        "section_id": "section-3",
+        "title": "UDPSocket",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 1002,
+        "summary": "UDPSocket连接。在调用UDPSocket的方法前，需要先通过[socket.constructUDPSocketInstance](#socketconstructudpsocketinst"
+      },
+      {
+        "section_id": "section-4",
+        "title": "NetAddress",
+        "level": 2,
+        "line_start": 1003,
+        "line_end": 1014,
+        "summary": "目标地址信息。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ProxyOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1015,
+        "line_end": 1027,
+        "summary": "Socket代理信息。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ProxyTypes<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1028,
+        "line_end": 1038,
+        "summary": "Socket代理类型。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称      |    值    | 说明"
+      },
+      {
+        "section_id": "section-7",
+        "title": "UDPSendOptions",
+        "level": 2,
+        "line_start": 1039,
+        "line_end": 1050,
+        "summary": "UDPSocket发送参数。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-8",
+        "title": "UDPExtraOptions",
+        "level": 2,
+        "line_start": 1051,
+        "line_end": 1060,
+        "summary": "UDPSocket连接的其他属性。继承自[ExtraOptionsBase](#extraoptionsbase)。\n\n**系统能力**：SystemCapability.Communication"
+      },
+      {
+        "section_id": "section-9",
+        "title": "SocketMessageInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1061,
+        "line_end": 1071,
+        "summary": "socket连接信息\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-10",
+        "title": "SocketStateBase",
+        "level": 2,
+        "line_start": 1072,
+        "line_end": 1083,
+        "summary": "Socket的状态信息。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "SocketRemoteInfo",
+        "level": 2,
+        "line_start": 1084,
+        "line_end": 1096,
+        "summary": "Socket的连接信息。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-12",
+        "title": "UDP 错误码说明",
+        "level": 2,
+        "line_start": 1097,
+        "line_end": 1102,
+        "summary": "UDP 其余错误码映射形式为：2301000 + Linux内核错误码。\n\n错误码的详细介绍参见[Socket错误码](errorcode-net-socket.md)。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "socket.constructMulticastSocketInstance<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1103,
+        "line_end": 1122,
+        "summary": "constructMulticastSocketInstance(): MulticastSocket\n\n创建一个MulticastSocket对象。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-14",
+        "title": "MulticastSocket<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1123,
+        "line_end": 1752,
+        "summary": "MulticastSocket连接。在调用MulticastSocket的方法前，需要先通过[socket.constructMulticastSocketInstance](#socketcons"
+      },
+      {
+        "section_id": "section-15",
+        "title": "socket.constructTCPSocketInstance",
+        "level": 2,
+        "line_start": 1753,
+        "line_end": 1773,
+        "summary": "constructTCPSocketInstance(): TCPSocket\n\n创建一个TCPSocket对象。\n\n**系统能力**：SystemCapability.Communication."
+      },
+      {
+        "section_id": "section-16",
+        "title": "TCPSocket",
+        "level": 2,
+        "line_start": 1774,
+        "line_end": 2979,
+        "summary": "TCPSocket连接。在调用TCPSocket的方法前，需要先通过[socket.constructTCPSocketInstance](#socketconstructtcpsocketinst"
+      },
+      {
+        "section_id": "section-17",
+        "title": "TCPConnectOptions",
+        "level": 2,
+        "line_start": 2980,
+        "line_end": 2991,
+        "summary": "TCPSocket连接的参数。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-18",
+        "title": "TCPSendOptions",
+        "level": 2,
+        "line_start": 2992,
+        "line_end": 3002,
+        "summary": "TCPSocket发送请求的参数。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-19",
+        "title": "TCPExtraOptions",
+        "level": 2,
+        "line_start": 3003,
+        "line_end": 3015,
+        "summary": "TCPSocket连接的其他属性。继承自[ExtraOptionsBase](#extraoptionsbase)。\n\n**系统能力**：SystemCapability.Communication"
+      },
+      {
+        "section_id": "section-20",
+        "title": "socket.constructTCPSocketServerInstance<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3016,
+        "line_end": 3036,
+        "summary": "constructTCPSocketServerInstance(): TCPSocketServer\n\n创建一个TCPSocketServer对象。\n\n**系统能力**：SystemCapabil"
+      },
+      {
+        "section_id": "section-21",
+        "title": "TCPSocketServer<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3037,
+        "line_end": 3785,
+        "summary": "TCPSocketServer连接。在调用TCPSocketServer的方法前，需要先通过[socket.constructTCPSocketServerInstance](#socketcons"
+      },
+      {
+        "section_id": "section-22",
+        "title": "TCPSocketConnection<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3786,
+        "line_end": 4451,
+        "summary": "TCPSocketConnection连接，即TCPSocket客户端与服务端的连接。在调用TCPSocketConnection的方法前，需要先获取TCPSocketConnection对象。"
+      },
+      {
+        "section_id": "section-23",
+        "title": "TCP 错误码说明",
+        "level": 2,
+        "line_start": 4452,
+        "line_end": 4457,
+        "summary": "TCP 其余错误码映射形式为：2301000 + Linux内核错误码。\n\n错误码的详细介绍参见[Socket错误码](errorcode-net-socket.md)。"
+      },
+      {
+        "section_id": "section-24",
+        "title": "socket.constructLocalSocketInstance<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4458,
+        "line_end": 4478,
+        "summary": "constructLocalSocketInstance(): LocalSocket\n\n创建一个LocalSocket对象。\n\n**系统能力**：SystemCapability.Communic"
+      },
+      {
+        "section_id": "section-25",
+        "title": "LocalSocket<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4479,
+        "line_end": 5296,
+        "summary": "LocalSocket连接。在调用LocalSocket的方法前，需要先通过[socket.constructLocalSocketInstance](#socketconstructlocalso"
+      },
+      {
+        "section_id": "section-26",
+        "title": "LocalSocketMessageInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5297,
+        "line_end": 5308,
+        "summary": "LocalSocket客户端与服务端通信时接收的数据。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-27",
+        "title": "LocalAddress<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5309,
+        "line_end": 5318,
+        "summary": "LocalSocket本地套接字文件路径信息，在传入套接字路径进行绑定时，会在此路径下创建套接字文件。\n\n**系统能力**：SystemCapability.Communication.NetSta"
+      },
+      {
+        "section_id": "section-28",
+        "title": "LocalConnectOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5319,
+        "line_end": 5329,
+        "summary": "LocalSocket客户端在连接服务端时传入的参数信息。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-29",
+        "title": "LocalSendOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5330,
+        "line_end": 5340,
+        "summary": "LocalSocket发送请求的参数。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-30",
+        "title": "ExtraOptionsBase",
+        "level": 2,
+        "line_start": 5341,
+        "line_end": 5353,
+        "summary": "Socket套接字的基础属性。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-31",
+        "title": "socket.constructLocalSocketServerInstance<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5354,
+        "line_end": 5374,
+        "summary": "constructLocalSocketServerInstance(): LocalSocketServer\n\n创建一个LocalSocketServer对象。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-32",
+        "title": "LocalSocketServer<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5375,
+        "line_end": 5923,
+        "summary": "LocalSocketServer类。在调用LocalSocketServer的方法前，需要先通过[socket.constructLocalSocketServerInstance](#socke"
+      },
+      {
+        "section_id": "section-33",
+        "title": "LocalSocketConnection<sup>11+</sup>",
+        "level": 2,
+        "line_start": 5924,
+        "line_end": 6394,
+        "summary": "LocalSocketConnection连接，即LocalSocket客户端与服务端的会话连接。在调用LocalSocketConnection的方法前，需要先获取LocalSocketConne"
+      },
+      {
+        "section_id": "section-34",
+        "title": "LocalSocket 错误码说明",
+        "level": 2,
+        "line_start": 6395,
+        "line_end": 6400,
+        "summary": "LocalSocket 错误码映射形式为：2301000 + Linux内核错误码。\n\n错误码的详细介绍参见[Socket错误码](errorcode-net-socket.md)。"
+      },
+      {
+        "section_id": "section-35",
+        "title": "socket.constructTLSSocketInstance<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6401,
+        "line_end": 6422,
+        "summary": "constructTLSSocketInstance(): TLSSocket\n\n创建并返回一个TLSSocket对象。\n\n**系统能力**：SystemCapability.Communicati"
+      },
+      {
+        "section_id": "section-36",
+        "title": "socket.constructTLSSocketInstance<sup>12+</sup>",
+        "level": 2,
+        "line_start": 6423,
+        "line_end": 6484,
+        "summary": "constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket\n\n将TCPSocket升级为TLSSocket，创建并返回一个TLSSocke"
+      },
+      {
+        "section_id": "section-37",
+        "title": "TLSSocket<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6485,
+        "line_end": 8207,
+        "summary": "TLSSocket连接。在调用TLSSocket的方法前，需要先通过[socket.constructTLSSocketInstance](#socketconstructtlssocketinst"
+      },
+      {
+        "section_id": "section-38",
+        "title": "TLSConnectOptions<sup>9+</sup>",
+        "level": 2,
+        "line_start": 8208,
+        "line_end": 8222,
+        "summary": "TLS连接的操作。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-39",
+        "title": "TLSSecureOptions<sup>9+</sup>",
+        "level": 2,
+        "line_start": 8223,
+        "line_end": 8240,
+        "summary": "TLS安全相关操作。当本地证书cert和私钥key不为空时，开启双向验证模式。cert和key其中一项为空时，开启单向验证模式。\n\n**系统能力**：SystemCapability.Communi"
+      },
+      {
+        "section_id": "section-40",
+        "title": "Protocol<sup>9+</sup>",
+        "level": 2,
+        "line_start": 8241,
+        "line_end": 8251,
+        "summary": "TLS通信的协议版本。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称      |    值    | 说明"
+      },
+      {
+        "section_id": "section-41",
+        "title": "X509CertRawData<sup>9+</sup>",
+        "level": 2,
+        "line_start": 8252,
+        "line_end": 8263,
+        "summary": "type X509CertRawData = cert.EncodingBlob\n\n存储证书的数据。\n\n**系统能力**：SystemCapability.Communication.NetStac"
+      },
+      {
+        "section_id": "section-42",
+        "title": "socket.constructTLSSocketServerInstance<sup>10+</sup>",
+        "level": 2,
+        "line_start": 8264,
+        "line_end": 8286,
+        "summary": "constructTLSSocketServerInstance(): TLSSocketServer\n\n创建并返回一个TLSSocketServer对象。\n\n**系统能力**：SystemCapa"
+      },
+      {
+        "section_id": "section-43",
+        "title": "TLSSocketServer<sup>10+</sup>",
+        "level": 2,
+        "line_start": 8287,
+        "line_end": 9419,
+        "summary": "TLSSocketServer连接。在调用TLSSocketServer的方法前，需要先通过[socket.constructTLSSocketServerInstance](#socketcons"
+      },
+      {
+        "section_id": "section-44",
+        "title": "TLSSocketConnection<sup>10+</sup>",
+        "level": 2,
+        "line_start": 9420,
+        "line_end": 10740,
+        "summary": "TLSSocketConnection连接，即TLSSocket客户端与服务端的连接。在调用TLSSocketConnection的方法前，需要先获取TLSSocketConnection对象。"
+      }
+    ]
+  }
+}

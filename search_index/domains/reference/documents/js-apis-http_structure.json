@@ -1,0 +1,364 @@
+{
+  "doc_id": "js-apis-http",
+  "title": "@ohos.net.http (数据请求)",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-http.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-http.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.http (数据请求)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.http (数据请求)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { http } from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "完整示例",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 141,
+        "summary": ">**说明：** \n>\n>在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UI"
+      },
+      {
+        "section_id": "section-3",
+        "title": "http.createHttp",
+        "level": 2,
+        "line_start": 142,
+        "line_end": 168,
+        "summary": "createHttp(): HttpRequest\n\n创建一个HTTP请求，里面包括发起请求、中断请求、订阅/取消订阅HTTP Response Header事件。当发起多个HTTP请求时，需为每个"
+      },
+      {
+        "section_id": "section-4",
+        "title": "HttpRequest",
+        "level": 2,
+        "line_start": 169,
+        "line_end": 1135,
+        "summary": "HTTP请求任务。在调用HttpRequest的方法前，需要先通过[createHttp()](#httpcreatehttp)创建一个任务。\n\n### request\n\nrequest(url:"
+      },
+      {
+        "section_id": "section-5",
+        "title": "HttpRequestOptions",
+        "level": 2,
+        "line_start": 1136,
+        "line_end": 1174,
+        "summary": "发起HTTP请求时，可选配置信息。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-6",
+        "title": "RequestMethod",
+        "level": 2,
+        "line_start": 1175,
+        "line_end": 1193,
+        "summary": "HTTP 请求方法。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communicatio"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ResponseCode",
+        "level": 2,
+        "line_start": 1194,
+        "line_end": 1238,
+        "summary": "发起请求返回的响应码。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称              | 值   | 说明"
+      },
+      {
+        "section_id": "section-8",
+        "title": "HttpResponse",
+        "level": 2,
+        "line_start": 1239,
+        "line_end": 1253,
+        "summary": "request方法回调函数的返回值类型。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ClientCert<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1254,
+        "line_end": 1266,
+        "summary": "客户端证书类型。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-10",
+        "title": "PerformanceTiming<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1267,
+        "line_end": 1285,
+        "summary": "性能打点(单位：毫秒)。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-11",
+        "title": "DataReceiveProgressInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1286,
+        "line_end": 1298,
+        "summary": "数据接收信息。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communication.N"
+      },
+      {
+        "section_id": "section-12",
+        "title": "DataSendProgressInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1299,
+        "line_end": 1313,
+        "summary": "数据发送信息。\n\n**原子化服务API：** 从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communication.N"
+      },
+      {
+        "section_id": "section-13",
+        "title": "MultiFormData<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1314,
+        "line_end": 1327,
+        "summary": "多部分表单数据的类型。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-14",
+        "title": "http.createHttpResponseCache<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1328,
+        "line_end": 1357,
+        "summary": "createHttpResponseCache(cacheSize?: number): HttpResponseCache\n\n创建一个HttpResponseCache对象，可用于存储HTTP请求"
+      },
+      {
+        "section_id": "section-15",
+        "title": "HttpResponseCache<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1358,
+        "line_end": 1553,
+        "summary": "存储HTTP访问请求响应的对象。在调用HttpResponseCache的方法前，需要先通过[createHttpResponseCache()](#httpcreatehttpresponseca"
+      },
+      {
+        "section_id": "section-16",
+        "title": "HttpDataType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1554,
+        "line_end": 1567,
+        "summary": "HTTP的数据类型。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communicatio"
+      },
+      {
+        "section_id": "section-17",
+        "title": "HttpProtocol<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1568,
+        "line_end": 1579,
+        "summary": "HTTP协议版本。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称  |   值   | 说明"
+      },
+      {
+        "section_id": "section-18",
+        "title": "CertType<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1580,
+        "line_end": 1591,
+        "summary": "枚举，证书类型。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称 |   值   | 说明       |\n| --- | -----"
+      },
+      {
+        "section_id": "section-19",
+        "title": "CertificatePinning<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1592,
+        "line_end": 1602,
+        "summary": "由应用配置的证书。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n| 名称   | 类型"
+      },
+      {
+        "section_id": "section-20",
+        "title": "HttpProxy<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1603,
+        "line_end": 1616,
+        "summary": "type HttpProxy = connection.HttpProxy\n\n网络代理配置信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-21",
+        "title": "AddressFamily<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1617,
+        "line_end": 1628,
+        "summary": "枚举，解析目标域名时限定的地址类型。\n\n**系统能力**：SystemCapability.Communication.NetStack\n\n|       名称       |     值"
+      },
+      {
+        "section_id": "section-22",
+        "title": "Credential<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1629,
+        "line_end": 1641,
+        "summary": "会话中服务器身份验证设置所使用的身份验证凭据，包括用户名和密码。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemC"
+      },
+      {
+        "section_id": "section-23",
+        "title": "ServerAuthentication<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1642,
+        "line_end": 1655,
+        "summary": "HTTP服务器身份验证。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communicat"
+      },
+      {
+        "section_id": "section-24",
+        "title": "TlsConfig<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1656,
+        "line_end": 1669,
+        "summary": "TLS加密版本及套件配置。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communica"
+      },
+      {
+        "section_id": "section-25",
+        "title": "TlsVersion<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1670,
+        "line_end": 1684,
+        "summary": "枚举，TLS版本号。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communicatio"
+      },
+      {
+        "section_id": "section-26",
+        "title": "TlsOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1685,
+        "line_end": 1699,
+        "summary": "type TlsOptions = 'system' | TlsConfig\n\nTLS配置。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**"
+      },
+      {
+        "section_id": "section-27",
+        "title": "RemoteValidation<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1700,
+        "line_end": 1714,
+        "summary": "type RemoteValidation = 'system' | 'skip'\n\n验证远程服务器身份的方式。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化"
+      },
+      {
+        "section_id": "section-28",
+        "title": "AuthenticationType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1715,
+        "line_end": 1730,
+        "summary": "type AuthenticationType = 'basic' | 'ntlm' | 'digest'\n\n在会话中的服务器身份验证时可以设置使用不同的身份验证机制。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-29",
+        "title": "CipherSuite<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1731,
+        "line_end": 1744,
+        "summary": "type CipherSuite = TlsV13CipherSuite\n\n加密套件声明函数。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n*"
+      },
+      {
+        "section_id": "section-30",
+        "title": "TlsV13CipherSuite<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1745,
+        "line_end": 1759,
+        "summary": "type TlsV13CipherSuite = TlsV12CipherSuite | TlsV13SpecificCipherSuite\n\nTLS1.3的加密套件声明函数，支持TLS1.3版本，"
+      },
+      {
+        "section_id": "section-31",
+        "title": "TlsV12CipherSuite<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1760,
+        "line_end": 1774,
+        "summary": "type TlsV12CipherSuite = TlsV11CipherSuite | TlsV12SpecificCipherSuite\n\nTLS1.2的加密套件声明函数，支持TLS1.2版本，"
+      },
+      {
+        "section_id": "section-32",
+        "title": "TlsV11CipherSuite<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1775,
+        "line_end": 1788,
+        "summary": "type TlsV11CipherSuite = TlsV10CipherSuite\n\nTLS1.1的加密套件声明函数，与TLS1.0的加密套件相同。\n\n**原子化服务API：** 从API ver"
+      },
+      {
+        "section_id": "section-33",
+        "title": "TlsV10CipherSuite<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1789,
+        "line_end": 1802,
+        "summary": "type TlsV10CipherSuite = TlsV10SpecificCipherSuite\n\nTLS1.0的加密套件声明函数。\n\n**原子化服务API：** 从API version 18"
+      },
+      {
+        "section_id": "section-34",
+        "title": "TlsV13SpecificCipherSuite<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1803,
+        "line_end": 1818,
+        "summary": "type TlsV13SpecificCipherSuite = 'TLS_AES_128_GCM_SHA256' | 'TLS_AES_256_GCM_SHA384' | 'TLS_CHACHA2"
+      },
+      {
+        "section_id": "section-35",
+        "title": "TlsV12SpecificCipherSuite<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1819,
+        "line_end": 1842,
+        "summary": "type TlsV12SpecificCipherSuite = 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256' | 'TLS_ECDHE_RSA_WITH_AE"
+      },
+      {
+        "section_id": "section-36",
+        "title": "TlsV10SpecificCipherSuite<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1843,
+        "line_end": 1864,
+        "summary": "type TlsV10SpecificCipherSuite = 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA' | 'TLS_ECDHE_RSA_WITH_AES_1"
+      },
+      {
+        "section_id": "section-37",
+        "title": "SslType<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1865,
+        "line_end": 1879,
+        "summary": "type SslType = 'TLS' | 'TLCP'\n\n安全通信协议。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力**：S"
+      },
+      {
+        "section_id": "section-38",
+        "title": "InterceptorType<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1880,
+        "line_end": 1895,
+        "summary": "HTTP拦截器的类型枚举。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communica"
+      },
+      {
+        "section_id": "section-39",
+        "title": "HttpRequestContext<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1896,
+        "line_end": 1911,
+        "summary": "HTTP请求上下文数据。该对象实例在拦截器的[interceptorHandle](#interceptorhandle22)方法中作为参数传入，开发者可以通过该对象获取和修改HTTP请求的相关信息"
+      },
+      {
+        "section_id": "section-40",
+        "title": "ChainContinue<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1912,
+        "line_end": 1925,
+        "summary": "type ChainContinue = boolean\n\n是否继续处理拦截器链。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力*"
+      },
+      {
+        "section_id": "section-41",
+        "title": "HttpInterceptor<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1926,
+        "line_end": 1983,
+        "summary": "HTTP拦截器接口。用户可以实现此接口来定义拦截处理函数。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapa"
+      },
+      {
+        "section_id": "section-42",
+        "title": "HttpInterceptorChain<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1984,
+        "line_end": 2233,
+        "summary": "HTTP拦截器链。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communication"
+      },
+      {
+        "section_id": "section-43",
+        "title": "PathPreference<sup>23+</sup>",
+        "level": 2,
+        "line_start": 2234,
+        "line_end": 2257,
+        "summary": "type PathPreference = 'auto' | 'primaryCellular' | 'secondaryCellular'\n\nHTTP请求指定特定网络的类型枚举。\n\n> **说明："
+      }
+    ]
+  }
+}

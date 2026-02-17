@@ -1,0 +1,452 @@
+{
+  "doc_id": "js-apis-wifiManager-sys",
+  "title": "@ohos.wifiManager (WLAN)（系统接口）",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-wifiManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-wifiManager-sys.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@qq_43802146",
+    "designer": "@qq_43802146",
+    "tester": "@furryfurry123",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 @ohos.wifiManager (WLAN)（系统接口），提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.wifiManager (WLAN)（系统接口）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { wifiManager } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "wifiManager.enableSemiWifi<sup>12+</sup>",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 56,
+        "summary": "enableSemiWifi(): void\n\n使能WLAN半关闭（STA关闭、其他P2p、Hml可用），异步接口，需要通过注册\"wifiStateChange\"事件的回调来监听是否使能成功。\n\n*"
+      },
+      {
+        "section_id": "section-3",
+        "title": "wifiManager.setScanAlwaysAllowed<sup>10+</sup>",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 101,
+        "summary": "setScanAlwaysAllowed(isScanAlwaysAllowed: boolean): void\n\n设置是否始终允许扫描。\n\n- 该接口控制设备是否可以在WLAN开关关闭时支持热点扫"
+      },
+      {
+        "section_id": "section-4",
+        "title": "wifiManager.getScanAlwaysAllowed<sup>10+</sup>",
+        "level": 2,
+        "line_start": 102,
+        "line_end": 143,
+        "summary": "getScanAlwaysAllowed(): boolean\n\n获取是否始终允许扫描。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.GET_WI"
+      },
+      {
+        "section_id": "section-5",
+        "title": "WifiDeviceConfig<sup>9+</sup>",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 164,
+        "summary": "WLAN配置信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| -------"
+      },
+      {
+        "section_id": "section-6",
+        "title": "IpType<sup>9+</sup>",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 180,
+        "summary": "表示IP类型的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n\n| 名称 | 值 | 说明"
+      },
+      {
+        "section_id": "section-7",
+        "title": "IpConfig<sup>9+</sup>",
+        "level": 2,
+        "line_start": 181,
+        "line_end": 197,
+        "summary": "IP配置信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 类型 | 只读 | 可"
+      },
+      {
+        "section_id": "section-8",
+        "title": "WifiProxyConfig<sup>10+</sup>",
+        "level": 2,
+        "line_start": 198,
+        "line_end": 213,
+        "summary": "Wifi 代理配置。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 类型 | 只读"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ProxyMethod<sup>10+</sup>",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 227,
+        "summary": "表示WiFi代理方法的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 值 |"
+      },
+      {
+        "section_id": "section-10",
+        "title": "wifiManager.connectToDevice<sup>9+</sup>",
+        "level": 2,
+        "line_start": 228,
+        "line_end": 276,
+        "summary": "connectToDevice(config: WifiDeviceConfig): void\n\n连接到指定网络（如果当前已经连接到热点，请先使用disconnect（）接口断开连接）。\n\n**系统"
+      },
+      {
+        "section_id": "section-11",
+        "title": "WifiLinkedInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 277,
+        "line_end": 292,
+        "summary": "提供WLAN连接的相关信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ---"
+      },
+      {
+        "section_id": "section-12",
+        "title": "SuppState<sup>9+</sup>",
+        "level": 2,
+        "line_start": 293,
+        "line_end": 316,
+        "summary": "表示请求状态的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 值 | 说明 |"
+      },
+      {
+        "section_id": "section-13",
+        "title": "wifiManager.getSupportedFeatures<sup>9+</sup>",
+        "level": 2,
+        "line_start": 317,
+        "line_end": 374,
+        "summary": "getSupportedFeatures(): number\n\n查询设备支持的特性。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.GET_WIFI"
+      },
+      {
+        "section_id": "section-14",
+        "title": "wifiManager.getWifiDetailState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 375,
+        "line_end": 416,
+        "summary": "getWifiDetailState(): WifiDetailState\n\n获取Wifi开关详细状态。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permissio"
+      },
+      {
+        "section_id": "section-15",
+        "title": "WifiDetailState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 435,
+        "summary": "表示Wifi开关状态的枚举。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 值 |"
+      },
+      {
+        "section_id": "section-16",
+        "title": "wifiManager.reassociate<sup>9+</sup>",
+        "level": 2,
+        "line_start": 436,
+        "line_end": 470,
+        "summary": "reassociate(): void\n\n重新关联网络。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SET_WIFI_INFO 和 ohos.p"
+      },
+      {
+        "section_id": "section-17",
+        "title": "wifiManager.reconnect<sup>9+</sup>",
+        "level": 2,
+        "line_start": 471,
+        "line_end": 505,
+        "summary": "reconnect(): void\n\n重新连接网络。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SET_WIFI_INFO 和 ohos.per"
+      },
+      {
+        "section_id": "section-18",
+        "title": "wifiManager.updateNetwork<sup>9+</sup>",
+        "level": 2,
+        "line_start": 506,
+        "line_end": 559,
+        "summary": "updateNetwork(config: WifiDeviceConfig): number\n\n更新网络配置。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permi"
+      },
+      {
+        "section_id": "section-19",
+        "title": "wifiManager.disableNetwork<sup>9+</sup>",
+        "level": 2,
+        "line_start": 560,
+        "line_end": 602,
+        "summary": "disableNetwork(netId: number): void\n\n去使能网络配置。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SET_W"
+      },
+      {
+        "section_id": "section-20",
+        "title": "wifiManager.disableNetwork<sup>23+</sup>",
+        "level": 2,
+        "line_start": 603,
+        "line_end": 646,
+        "summary": "disableNetwork(netId: int, blockDuration: int): void\n\n禁用网络连接，将已连接的网络断开，且在设置的时间范围内无法自动回连。\n\n**系统接口：**"
+      },
+      {
+        "section_id": "section-21",
+        "title": "wifiManager.removeAllNetwork<sup>9+</sup>",
+        "level": 2,
+        "line_start": 647,
+        "line_end": 681,
+        "summary": "removeAllNetwork(): void\n\n移除所有网络配置。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SET_WIFI_INFO 和"
+      },
+      {
+        "section_id": "section-22",
+        "title": "wifiManager.get5GChannelList<sup>10+</sup>",
+        "level": 2,
+        "line_start": 682,
+        "line_end": 721,
+        "summary": "get5GChannelList(): Array&lt;number&gt;\n\n获取当前设备支持的5G信道列表。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.perm"
+      },
+      {
+        "section_id": "section-23",
+        "title": "wifiManager.getDisconnectedReason<sup>10+</sup>",
+        "level": 2,
+        "line_start": 722,
+        "line_end": 761,
+        "summary": "getDisconnectedReason(): DisconnectedReason\n\n获取最近一次断连原因。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permi"
+      },
+      {
+        "section_id": "section-24",
+        "title": "DisconnectedReason <sup>10+</sup>",
+        "level": 2,
+        "line_start": 762,
+        "line_end": 775,
+        "summary": "表示WLAN断开原因的枚举，用于诊断网络连接问题和优化连接策略。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiF"
+      },
+      {
+        "section_id": "section-25",
+        "title": "wifiManager.startPortalCertification<sup>11+</sup>",
+        "level": 2,
+        "line_start": 776,
+        "line_end": 811,
+        "summary": "startPortalCertification(): void\n\n启动Portal认证流程，用于处理需要Web页面认证的公共WLAN网络（如酒店、机场、咖啡厅等场所的网络）。\n\n**系统接口：**"
+      },
+      {
+        "section_id": "section-26",
+        "title": "wifiManager.startWifiDetection<sup>21+</sup>",
+        "level": 2,
+        "line_start": 812,
+        "line_end": 846,
+        "summary": "startWifiDetection(): void\n\n发起WiFi网络探测。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SET_WIFI_IN"
+      },
+      {
+        "section_id": "section-27",
+        "title": "wifiManager.enableHiLinkHandshake<sup>12+</sup>",
+        "level": 2,
+        "line_start": 847,
+        "line_end": 899,
+        "summary": "enableHiLinkHandshake(isHiLinkEnable: boolean, bssid: string, config: WifiDeviceConfig): void\n\n设置是否"
+      },
+      {
+        "section_id": "section-28",
+        "title": "wifiManager.factoryReset<sup>11+</sup>",
+        "level": 2,
+        "line_start": 900,
+        "line_end": 933,
+        "summary": "factoryReset(): void\n\n**系统接口：** 此接口为系统接口。\n\n重置wifi相关配置。\n\n**需要权限：** ohos.permission.SET_WIFI_INFO 和oh"
+      },
+      {
+        "section_id": "section-29",
+        "title": "wifiManager.enableHotspot<sup>9+</sup>",
+        "level": 2,
+        "line_start": 934,
+        "line_end": 967,
+        "summary": "enableHotspot(): void\n\n使能热点，异步接口，是否打开成功需要注册并监听hotspotStateChange的回调。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：*"
+      },
+      {
+        "section_id": "section-30",
+        "title": "wifiManager.disableHotspot<sup>9+</sup>",
+        "level": 2,
+        "line_start": 968,
+        "line_end": 1001,
+        "summary": "disableHotspot(): void\n\n去使能热点 ，异步接口，是否关闭成功需要注册并监听hotspotStateChange的回调。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权"
+      },
+      {
+        "section_id": "section-31",
+        "title": "wifiManager.isHotspotDualBandSupported<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1002,
+        "line_end": 1042,
+        "summary": "isHotspotDualBandSupported(): boolean\n\n检查当前设备的WLAN热点功能是否支持双频段（同时支持2.4GHz和5GHz频段）。\n\n**系统接口：** 此接口为系统"
+      },
+      {
+        "section_id": "section-32",
+        "title": "wifiManager.isOpenSoftApAllowed<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1043,
+        "line_end": 1083,
+        "summary": "isOpenSoftApAllowed(): boolean\n\n检查在某些情况下是否能够操作WLAN热点。当飞行模式开启时，如果系统不支持SoftAP和STA共存，也不支持信号桥接，则无法操作热点开"
+      },
+      {
+        "section_id": "section-33",
+        "title": "wifiManager.setHotspotConfig<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1084,
+        "line_end": 1133,
+        "summary": "setHotspotConfig(config: HotspotConfig): void\n\n设置WLAN热点的配置信息，包括SSID、加密方式、密码、带宽、信道、最大连接STA数量等。\n\n**系统"
+      },
+      {
+        "section_id": "section-34",
+        "title": "HotspotConfig<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1134,
+        "line_end": 1151,
+        "summary": "热点配置信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.AP.Core\n\n| 名称 | 类型 | 只读"
+      },
+      {
+        "section_id": "section-35",
+        "title": "wifiManager.getHotspotConfig<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1152,
+        "line_end": 1192,
+        "summary": "getHotspotConfig(): HotspotConfig\n\n获取WLAN热点的配置信息，包括SSID、加密方式、密码、带宽、信道、最大连接STA数量等。\n\n**系统接口：** 此接口为系统"
+      },
+      {
+        "section_id": "section-36",
+        "title": "wifiManager.getStations<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1193,
+        "line_end": 1237,
+        "summary": "getStations(): &nbsp;Array&lt;StationInfo&gt;\n\n获取当前连接到本设备热点的所有设备信息列表。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限："
+      },
+      {
+        "section_id": "section-37",
+        "title": "StationInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1238,
+        "line_end": 1252,
+        "summary": "接入的设备信息。包含连接到WLAN网络的设备详细信息。\n\n**系统接口：** 此接口为系统接口。\n\n**系统能力：** SystemCapability.Communication.WiFi.AP."
+      },
+      {
+        "section_id": "section-38",
+        "title": "wifiManager.addHotspotBlockList<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1253,
+        "line_end": 1300,
+        "summary": "addHotspotBlockList(stationInfo: StationInfo): void\n\n将设备添加到热点的阻止连接设备列表中，列表中的设备将不能访问热点。\n\n**系统接口：** 此"
+      },
+      {
+        "section_id": "section-39",
+        "title": "wifiManager.delHotspotBlockList<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1301,
+        "line_end": 1347,
+        "summary": "delHotspotBlockList(stationInfo: StationInfo): void\n\n将设备从热点的阻止列表中删除。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：*"
+      },
+      {
+        "section_id": "section-40",
+        "title": "wifiManager.getHotspotBlockList<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1348,
+        "line_end": 1390,
+        "summary": "getHotspotBlockList(): Array&lt;StationInfo&gt;\n\n获取当前WLAN热点的黑名单设备列表。该接口返回被热点拉黑的设备信息列表，仅在设备作为热点(AP)模"
+      },
+      {
+        "section_id": "section-41",
+        "title": "wifiManager.deletePersistentGroup<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1391,
+        "line_end": 1436,
+        "summary": "deletePersistentGroup(netId: number): void\n\n删除指定网络ID的永久WLAN组配置。该接口用于清除已保存的WLAN网络配置信息，使其不再自动连接。\n\n- 根"
+      },
+      {
+        "section_id": "section-42",
+        "title": "wifiManager.getP2pGroups<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1437,
+        "line_end": 1489,
+        "summary": "getP2pGroups(): Promise&lt;Array&lt;WifiP2pGroupInfo&gt;&gt;\n\n获取创建的所有P2P群组信息，使用Promise异步回调。\n\n**系统接口"
+      },
+      {
+        "section_id": "section-43",
+        "title": "wifiManager.getP2pGroups<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1490,
+        "line_end": 1523,
+        "summary": "getP2pGroups(callback: AsyncCallback&lt;Array&lt;WifiP2pGroupInfo&gt;&gt;): void\n\n获取创建的所有P2P群组信息，使用"
+      },
+      {
+        "section_id": "section-44",
+        "title": "wifiManager.setDeviceName<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1524,
+        "line_end": 1567,
+        "summary": "setDeviceName(devName: string): void\n\n设置设备名称。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.SET_W"
+      },
+      {
+        "section_id": "section-45",
+        "title": "wifiManager.on('streamChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1568,
+        "line_end": 1598,
+        "summary": "on(type: 'streamChange', callback: Callback&lt;number&gt;): void\n\n注册WLAN流变更事件，在业务退出时，要调用off(type: '"
+      },
+      {
+        "section_id": "section-46",
+        "title": "wifiManager.off('streamChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1599,
+        "line_end": 1645,
+        "summary": "off(type: 'streamChange', callback?: Callback&lt;number&gt;): void\n\n取消注册WIFI流变更事件。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-47",
+        "title": "wifiManager.on('deviceConfigChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1646,
+        "line_end": 1676,
+        "summary": "on(type: 'deviceConfigChange', callback: Callback&lt;number&gt;): void\n\n注册WLAN设备配置更改事件，在业务退出时，要调用of"
+      },
+      {
+        "section_id": "section-48",
+        "title": "wifiManager.off('deviceConfigChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1677,
+        "line_end": 1723,
+        "summary": "off(type: 'deviceConfigChange', callback?: Callback&lt;number&gt;): void\n\n取消注册WLAN设备配置更改事件。使用callba"
+      },
+      {
+        "section_id": "section-49",
+        "title": "wifiManager.on('hotspotStaJoin')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1724,
+        "line_end": 1754,
+        "summary": "on(type: 'hotspotStaJoin', callback: Callback&lt;StationInfo&gt;): void\n\n注册WLAN热点STA加入事件，在业务退出时，要调用"
+      },
+      {
+        "section_id": "section-50",
+        "title": "wifiManager.off('hotspotStaJoin')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1755,
+        "line_end": 1801,
+        "summary": "off(type: 'hotspotStaJoin', callback?: Callback&lt;StationInfo&gt;): void\n\n取消注册WLAN热点的STA加入事件。使用cal"
+      },
+      {
+        "section_id": "section-51",
+        "title": "wifiManager.on('hotspotStaLeave')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1802,
+        "line_end": 1832,
+        "summary": "on(type: 'hotspotStaLeave', callback: Callback&lt;StationInfo&gt;): void\n\n注册WLAN热点STA离开事件，在业务退出时，要调"
+      },
+      {
+        "section_id": "section-52",
+        "title": "wifiManager.off('hotspotStaLeave')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1833,
+        "line_end": 1879,
+        "summary": "off(type: 'hotspotStaLeave', callback?: Callback&lt;StationInfo&gt;): void\n\n取消注册WLAN热点STA离开事件。使用cal"
+      },
+      {
+        "section_id": "section-53",
+        "title": "WifiScanInfo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1880,
+        "line_end": 1889,
+        "summary": "提供WLAN连接的相关信息。\n\n**系统能力：** SystemCapability.Communication.WiFi.STA\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ---"
+      },
+      {
+        "section_id": "section-54",
+        "title": "wifiManager.isRandomMacDisabled<sup>21+</sup>",
+        "level": 2,
+        "line_start": 1890,
+        "line_end": 1930,
+        "summary": "isRandomMacDisabled(): boolean\n\n随机MAC地址是否被禁用。\n\n**系统接口：** 此接口为系统接口。\n\n**需要权限：** ohos.permission.GET_W"
+      }
+    ]
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "doc_id": "js-apis-enterprise-networkManager-sys",
+  "title": "@ohos.enterprise.networkManager（网络管理）(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-networkManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-mdm-kit/js-apis-enterprise-networkManager-sys.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "MDM Kit Customization 模块的 @ohos.enterprise.networkManager（网络管理）(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.enterprise.networkManager（网络管理）(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { networkManager } from '@kit.MDMKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "networkManager.getAllNetworkInterfaces",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 80,
+        "summary": "getAllNetworkInterfaces(admin: Want, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;): void\n\n获取所"
+      },
+      {
+        "section_id": "section-3",
+        "title": "networkManager.getAllNetworkInterfaces",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 138,
+        "summary": "getAllNetworkInterfaces(admin: Want): Promise&lt;Array&lt;string&gt;&gt;\n\n获取所有激活的有线网络接口。使用Promise异步"
+      },
+      {
+        "section_id": "section-4",
+        "title": "networkManager.getIpAddress",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 194,
+        "summary": "getIpAddress(admin: Want, networkInterface: string, callback: AsyncCallback&lt;string&gt;): void\n\n根"
+      },
+      {
+        "section_id": "section-5",
+        "title": "networkManager.getIpAddress",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 254,
+        "summary": "getIpAddress(admin: Want, networkInterface: string): Promise&lt;string&gt;\n\n根据网络接口获取设备IP地址。使用Promis"
+      },
+      {
+        "section_id": "section-6",
+        "title": "networkManager.getMac",
+        "level": 2,
+        "line_start": 255,
+        "line_end": 310,
+        "summary": "getMac(admin: Want, networkInterface: string, callback: AsyncCallback&lt;string&gt;): void\n\n根据网络接口获"
+      },
+      {
+        "section_id": "section-7",
+        "title": "networkManager.getMac",
+        "level": 2,
+        "line_start": 311,
+        "line_end": 370,
+        "summary": "getMac(admin: Want, networkInterface: string): Promise\\<string>\n\n根据网络接口获取设备MAC地址。使用Promise异步回调。\n\n**"
+      },
+      {
+        "section_id": "section-8",
+        "title": "networkManager.isNetworkInterfaceDisabled",
+        "level": 2,
+        "line_start": 371,
+        "line_end": 426,
+        "summary": "isNetworkInterfaceDisabled(admin: Want, networkInterface: string, callback: AsyncCallback&lt;boolea"
+      },
+      {
+        "section_id": "section-9",
+        "title": "networkManager.isNetworkInterfaceDisabled",
+        "level": 2,
+        "line_start": 427,
+        "line_end": 486,
+        "summary": "isNetworkInterfaceDisabled(admin: Want, networkInterface: string): Promise&lt;boolean&gt;\n\n查询指定网络接口"
+      },
+      {
+        "section_id": "section-10",
+        "title": "networkManager.setNetworkInterfaceDisabled",
+        "level": 2,
+        "line_start": 487,
+        "line_end": 543,
+        "summary": "setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDisabled: boolean, callback: A"
+      },
+      {
+        "section_id": "section-11",
+        "title": "networkManager.setNetworkInterfaceDisabled",
+        "level": 2,
+        "line_start": 544,
+        "line_end": 604,
+        "summary": "setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDisabled: boolean): Promise&lt"
+      },
+      {
+        "section_id": "section-12",
+        "title": "networkManager.setGlobalProxy",
+        "level": 2,
+        "line_start": 605,
+        "line_end": 669,
+        "summary": "setGlobalProxy(admin: Want, httpProxy: connection.HttpProxy, callback: AsyncCallback\\<void>): void"
+      },
+      {
+        "section_id": "section-13",
+        "title": "networkManager.setGlobalProxy",
+        "level": 2,
+        "line_start": 670,
+        "line_end": 738,
+        "summary": "setGlobalProxy(admin: Want, httpProxy: connection.HttpProxy): Promise\\<void>\n\n设置网络全局代理，使用Promise异步回"
+      },
+      {
+        "section_id": "section-14",
+        "title": "networkManager.getGlobalProxy",
+        "level": 2,
+        "line_start": 739,
+        "line_end": 792,
+        "summary": "getGlobalProxy(admin: Want, callback: AsyncCallback\\<connection.HttpProxy>): void\n\n获取网络全局代理，使用callb"
+      },
+      {
+        "section_id": "section-15",
+        "title": "networkManager.getGlobalProxy",
+        "level": 2,
+        "line_start": 793,
+        "line_end": 850,
+        "summary": "getGlobalProxy(admin: Want): Promise\\<connection.HttpProxy>\n\n获取网络全局代理，使用Promise异步回调。\n\n**需要权限：** oho"
+      },
+      {
+        "section_id": "section-16",
+        "title": "networkManager.addIptablesFilterRule",
+        "level": 2,
+        "line_start": 851,
+        "line_end": 918,
+        "summary": "addIptablesFilterRule(admin: Want, filterRule: AddFilterRule, callback: AsyncCallback\\<void>): void"
+      },
+      {
+        "section_id": "section-17",
+        "title": "networkManager.addIptablesFilterRule",
+        "level": 2,
+        "line_start": 919,
+        "line_end": 990,
+        "summary": "addIptablesFilterRule(admin: Want, filterRule: AddFilterRule): Promise\\<void>\n\n为设备添加网络包过滤规则，仅支持IPv4"
+      },
+      {
+        "section_id": "section-18",
+        "title": "networkManager.removeIptablesFilterRule",
+        "level": 2,
+        "line_start": 991,
+        "line_end": 1056,
+        "summary": "removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule, callback: AsyncCallback\\<void>)"
+      },
+      {
+        "section_id": "section-19",
+        "title": "networkManager.removeIptablesFilterRule",
+        "level": 2,
+        "line_start": 1057,
+        "line_end": 1126,
+        "summary": "removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule): Promise\\<void>\n\n移除网络包过滤规则，仅支持I"
+      },
+      {
+        "section_id": "section-20",
+        "title": "networkManager.listIptablesFilterRules",
+        "level": 2,
+        "line_start": 1127,
+        "line_end": 1180,
+        "summary": "listIptablesFilterRules(admin: Want, callback: AsyncCallback\\<string>): void\n\n获取网络包过滤规则，仅支持IPv4。使用c"
+      },
+      {
+        "section_id": "section-21",
+        "title": "networkManager.listIptablesFilterRules",
+        "level": 2,
+        "line_start": 1181,
+        "line_end": 1238,
+        "summary": "listIptablesFilterRules(admin: Want): Promise\\<string>\n\n获取网络包过滤规则，仅支持IPv4。使用Promise异步回调。\n\n**需要权限：**"
+      },
+      {
+        "section_id": "section-22",
+        "title": "AddFilterRule",
+        "level": 2,
+        "line_start": 1239,
+        "line_end": 1259,
+        "summary": "添加网络包过滤规则。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-23",
+        "title": "RemoveFilterRule",
+        "level": 2,
+        "line_start": 1260,
+        "line_end": 1278,
+        "summary": "移除网络包过滤规则。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**系统接口：** 此接口为系统接口。"
+      },
+      {
+        "section_id": "section-24",
+        "title": "AddMethod",
+        "level": 2,
+        "line_start": 1279,
+        "line_end": 1291,
+        "summary": "添加网络包方法。\n\n**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager\n\n**系统接口：** 此接口为系统接口。\n\n|"
+      }
+    ]
+  }
+}

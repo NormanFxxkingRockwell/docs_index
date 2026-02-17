@@ -1,0 +1,108 @@
+{
+  "doc_id": "ohos-arkui-advanced-MultiNavigation",
+  "title": "MultiNavigation",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ohos-arkui-advanced-MultiNavigation.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ohos-arkui-advanced-MultiNavigation.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@mayaolll",
+    "designer": "@jiangdayuan",
+    "tester": "@Giacinta",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 MultiNavigation，提供相关接口和功能说明。",
+  "structure": {
+    "title": "MultiNavigation",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { MultiNavigation, MultiNavPathStack, SplitPolicy } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 28,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-3",
+        "title": "MultiNavigation",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 49,
+        "summary": "MultiNavigation({navDestination: NavDestinationBuildFunction, multiStack: MultiNavPathStack, onNavi"
+      },
+      {
+        "section_id": "section-4",
+        "title": "MultiNavPathStack",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 652,
+        "summary": "当前，MultiNavigation的路由栈仅支持由使用方自行创建，不支持通过回调方式获取。请勿使用NavDestination的onReady等类似事件或接口来获取NavPathStack并进行栈"
+      },
+      {
+        "section_id": "section-5",
+        "title": "SplitPolicy枚举说明",
+        "level": 2,
+        "line_start": 653,
+        "line_end": 666,
+        "summary": "表示MultiNavigation中页面的类型。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-6",
+        "title": "NavDestinationBuildFunction",
+        "level": 2,
+        "line_start": 667,
+        "line_end": 683,
+        "summary": "type NavDestinationBuildFunction = (name: string, param?: object) => void\n\nMultiNavigation用以加载NavDe"
+      },
+      {
+        "section_id": "section-7",
+        "title": "OnNavigationModeChangeCallback",
+        "level": 2,
+        "line_start": 684,
+        "line_end": 699,
+        "summary": "type OnNavigationModeChangeCallback = (mode: NavigationMode) => void\n\n当MultiNavigation的mode变化时触发的回调"
+      },
+      {
+        "section_id": "section-8",
+        "title": "OnHomeShowOnTopCallback",
+        "level": 2,
+        "line_start": 700,
+        "line_end": 715,
+        "summary": "type OnHomeShowOnTopCallback = (name: string) => void\n\n当主页在栈顶显示时触发的回调函数。\n\n**原子化服务API：** 从API versio"
+      },
+      {
+        "section_id": "section-9",
+        "title": "属性",
+        "level": 2,
+        "line_start": 716,
+        "line_end": 719,
+        "summary": "不支持[通用属性](ts-component-general-attributes.md)。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "事件",
+        "level": 2,
+        "line_start": 720,
+        "line_end": 723,
+        "summary": "不支持[通用事件](ts-component-general-events.md)。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "示例",
+        "level": 2,
+        "line_start": 724,
+        "line_end": 1593,
+        "summary": "本示例演示MultiNavigation的基本功能。\n\n<!--code_no_check-->\n```typescript\n// pages/Index.ets\nimport { MultiNav"
+      }
+    ]
+  }
+}

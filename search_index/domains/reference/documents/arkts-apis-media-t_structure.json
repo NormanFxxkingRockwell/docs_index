@@ -1,0 +1,172 @@
+{
+  "doc_id": "arkts-apis-media-t",
+  "title": "Types",
+  "path": "zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-t.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-t.md",
+  "metadata": {
+    "kit": "Media Kit",
+    "subsystem": "Multimedia",
+    "owner": "@wang-haizhou6",
+    "designer": "@HmQQQ",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Kit Multimedia 模块的 Types，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Types",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "SoundPool<sup>10+</sup>",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 24,
+        "summary": "type SoundPool = _SoundPool\n\n音频池，提供了系统声音的加载、播放、音量设置、循环设置、停止播放、资源卸载等功能。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-2",
+        "title": "PlayParameters<sup>10+</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 36,
+        "summary": "type PlayParameters = _PlayParameters\n\n表示音频池播放参数设置。\n\n**系统能力：** SystemCapability.Multimedia.Media.So"
+      },
+      {
+        "section_id": "section-3",
+        "title": "AVPlayerState<sup>9+</sup>",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 58,
+        "summary": "type AVPlayerState = 'idle' | 'initialized' | 'prepared' | 'playing' | 'paused' | 'completed' | 'st"
+      },
+      {
+        "section_id": "section-4",
+        "title": "OnTrackChangeHandler<sup>12+</sup>",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 75,
+        "summary": "type OnTrackChangeHandler = (index: number, isSelected: boolean) => void\n\ntrack变更事件回调方法。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-5",
+        "title": "OnAVPlayerStateChangeHandle<sup>12+</sup>",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 92,
+        "summary": "type OnAVPlayerStateChangeHandle = (state: AVPlayerState, reason: StateChangeReason) => void\n\n播放状态机"
+      },
+      {
+        "section_id": "section-6",
+        "title": "OnBufferingUpdateHandler<sup>12+</sup>",
+        "level": 2,
+        "line_start": 93,
+        "line_end": 109,
+        "summary": "type OnBufferingUpdateHandler = (infoType: BufferingInfoType, value: number) => void\n\n播放缓存事件回调方法。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "OnVideoSizeChangeHandler<sup>12+</sup>",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 126,
+        "summary": "type OnVideoSizeChangeHandler = (width: number, height: number) => void\n\n视频播放宽高变化事件回调方法。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-8",
+        "title": "OnSuperResolutionChanged <sup>18+</sup>",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 146,
+        "summary": "type OnSuperResolutionChanged = (enabled: boolean) => void\n\n视频超分开关事件回调方法。若通过[PlaybackStrategy](arkt"
+      },
+      {
+        "section_id": "section-9",
+        "title": "OnSeiMessageHandle<sup>18+</sup>",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 163,
+        "summary": "type OnSeiMessageHandle = (messages: Array\\<SeiMessage>, playbackPosition?: number) => void\n\n获取SEI信"
+      },
+      {
+        "section_id": "section-10",
+        "title": "OnPlaybackRateDone<sup>20+</sup>",
+        "level": 2,
+        "line_start": 164,
+        "line_end": 179,
+        "summary": "type OnPlaybackRateDone = (rate: number) => void\n\n播放速率设置完成事件回调方法。\n\n**原子化服务API：** 从API version 20开始，"
+      },
+      {
+        "section_id": "section-11",
+        "title": "OnFrameFetched<sup>23+</sup>",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 196,
+        "summary": "type OnFrameFetched = (frameInfo: FrameInfo, err?: BusinessError\\<void>) => void\n\n批量获取缩略图回调函数。\n\n**模"
+      },
+      {
+        "section_id": "section-12",
+        "title": "AVRecorderState<sup>9+</sup>",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 216,
+        "summary": "type AVRecorderState = 'idle' | 'prepared' | 'started' | 'paused' | 'stopped' | 'released' | 'error"
+      },
+      {
+        "section_id": "section-13",
+        "title": "OnAVRecorderStateChangeHandler<sup>12+</sup>",
+        "level": 2,
+        "line_start": 217,
+        "line_end": 233,
+        "summary": "type OnAVRecorderStateChangeHandler = (state: AVRecorderState, reason: StateChangeReason) => void"
+      },
+      {
+        "section_id": "section-14",
+        "title": "SourceOpenCallback<sup>18+</sup>",
+        "level": 2,
+        "line_start": 234,
+        "line_end": 277,
+        "summary": "type SourceOpenCallback = (request: MediaSourceLoadingRequest) => number\n\n由应用实现此回调函数，应用需处理传入的资源打开请求"
+      },
+      {
+        "section_id": "section-15",
+        "title": "SourceReadCallback<sup>18+</sup>",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 308,
+        "summary": "type SourceReadCallback = (uuid: number, requestedOffset: number, requestedLength: number) => void"
+      },
+      {
+        "section_id": "section-16",
+        "title": "SourceCloseCallback<sup>18+</sup>",
+        "level": 2,
+        "line_start": 309,
+        "line_end": 342,
+        "summary": "type SourceCloseCallback = (uuid: number) => void\n\n由应用实现此回调函数，应用应释放相关资源。\n\n> **注意：**\n>\n> 客户端在处理完请求后应"
+      },
+      {
+        "section_id": "section-17",
+        "title": "PlaybackMetrics<sup>23+</sup>",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 354,
+        "summary": "type PlaybackMetrics = Record\\<PlaybackMetricsKey, Object>\n\n提供播放器指标信息键值对的容器定义。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-18",
+        "title": "AudioState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 355,
+        "line_end": 373,
+        "summary": "type AudioState = 'idle' | 'playing' | 'paused' | 'stopped' | 'error'\n\n音频播放的状态机。可通过state属性获取当前状态。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "VideoPlayState<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 374,
+        "line_end": 393,
+        "summary": "type VideoPlayState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'\n\n视频播放的状态机，可通"
+      }
+    ]
+  }
+}

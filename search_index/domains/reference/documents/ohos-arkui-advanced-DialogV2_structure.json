@@ -1,0 +1,148 @@
+{
+  "doc_id": "ohos-arkui-advanced-DialogV2",
+  "title": "DialogV2",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ohos-arkui-advanced-DialogV2.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ohos-arkui-advanced-DialogV2.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@fengluochenai",
+    "designer": "@YanSanzo",
+    "tester": "@ybhou1993",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 DialogV2，提供相关接口和功能说明。",
+  "structure": {
+    "title": "DialogV2",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 29,
+        "summary": "```ts\nimport { TipsDialogV2, SelectDialogV2, ConfirmDialogV2, AlertDialogV2, LoadingDialogV2, Custo"
+      },
+      {
+        "section_id": "section-2",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 33,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-3",
+        "title": "TipsDialogV2",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 59,
+        "summary": "TipsDialogV2({imageRes: ResourceStr | PixelMap, imageSize?: SizeOptions, imageBorderColor: ColorMet"
+      },
+      {
+        "section_id": "section-4",
+        "title": "AdvancedDialogV2OnCheckedChange",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 75,
+        "summary": "type AdvancedDialogV2OnCheckedChange = (checked: boolean) => void\n\n选择框选中状态改变事件。\n\n**原子化服务API：** 从API"
+      },
+      {
+        "section_id": "section-5",
+        "title": "SelectDialogV2",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 95,
+        "summary": "SelectDialogV2({title: ResourceStr, content?: ResourceStr, selectedIndex?: number, confirm?: Advanc"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ConfirmDialogV2",
+        "level": 2,
+        "line_start": 96,
+        "line_end": 117,
+        "summary": "ConfirmDialogV2({title: ResourceStr, content?: ResourceStr, checkTips?: ResourceStr, checked?: bool"
+      },
+      {
+        "section_id": "section-7",
+        "title": "AlertDialogV2",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 137,
+        "summary": "AlertDialogV2({primaryTitle?: ResourceStr, secondaryTitle?: ResourceStr, content: ResourceStr, prim"
+      },
+      {
+        "section_id": "section-8",
+        "title": "LoadingDialogV2",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 153,
+        "summary": "LoadingDialogV2({content?: ResourceStr})\n\n进度加载类弹出框，操作正在执行时的提示信息。\n\n**装饰器类型：**@ComponentV2\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-9",
+        "title": "CustomContentDialogV2",
+        "level": 2,
+        "line_start": 154,
+        "line_end": 173,
+        "summary": "CustomContentDialogV2({contentBuilder: () => void, primaryTitle?: ResourceStr, secondaryTitle?: Res"
+      },
+      {
+        "section_id": "section-10",
+        "title": "PopoverDialogV2OnVisibleChange",
+        "level": 2,
+        "line_start": 174,
+        "line_end": 189,
+        "summary": "type PopoverDialogV2OnVisibleChange = (visible: boolean) => void\n\n跟手弹出框显示状态改变事件。\n\n**原子化服务API：** 从AP"
+      },
+      {
+        "section_id": "section-11",
+        "title": "PopoverDialogV2",
+        "level": 2,
+        "line_start": 190,
+        "line_end": 208,
+        "summary": "PopoverDialogV2({visible: boolean, \\$visible: PopoverDialogV2OnVisibleChange, popover: PopoverDialo"
+      },
+      {
+        "section_id": "section-12",
+        "title": "PopoverDialogV2Options",
+        "level": 2,
+        "line_start": 209,
+        "line_end": 222,
+        "summary": "跟手弹出框参数，用于设置弹出框内容、位置属性等。\n\n继承自[CustomPopupOptions](../arkui-ts/ts-universal-attributes-popup.md#cust"
+      },
+      {
+        "section_id": "section-13",
+        "title": "AdvancedDialogV2ButtonAction",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 232,
+        "summary": "type AdvancedDialogV2ButtonAction = () => void\n\n弹出框操作区按钮的点击事件类型。\n\n**原子化服务API：** 从API version 18开始，该"
+      },
+      {
+        "section_id": "section-14",
+        "title": "AdvancedDialogV2Button",
+        "level": 2,
+        "line_start": 233,
+        "line_end": 275,
+        "summary": "弹出框操作区按钮。\n\n**装饰器类型：**@ObservedV2\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** System"
+      },
+      {
+        "section_id": "section-15",
+        "title": "AdvancedDialogV2ButtonOptions",
+        "level": 2,
+        "line_start": 276,
+        "line_end": 294,
+        "summary": "用于初始化AdvancedDialogV2Button对象。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCa"
+      },
+      {
+        "section_id": "section-16",
+        "title": "示例",
+        "level": 2,
+        "line_start": 295,
+        "line_end": 778,
+        "summary": "### 示例1（上图下文弹出框）\n\n上图下文弹出框，包含imageRes、content等内容。\n\n```ts\nimport { TipsDialogV2, AdvancedDialogV2Butt"
+      }
+    ]
+  }
+}

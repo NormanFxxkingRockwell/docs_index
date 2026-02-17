@@ -1,0 +1,148 @@
+{
+  "doc_id": "js-apis-data-sendableRelationalStore",
+  "title": "@ohos.data.sendableRelationalStore (共享关系型数据库)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/js-apis-data-sendableRelationalStore.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/js-apis-data-sendableRelationalStore.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 @ohos.data.sendableRelationalStore (共享关系型数据库)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.data.sendableRelationalStore (共享关系型数据库)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "在使用[taskpool](../../arkts-utils/taskpool-introduction.md)进行多线程计算时，因为对跨线程传递的数据类型限制，关系型数据库常规的ValuesBu"
+      },
+      {
+        "section_id": "section-2",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 26,
+        "summary": "```ts\nimport { sendableRelationalStore } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-3",
+        "title": "sendableRelationalStore.toSendableValuesBucket",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 89,
+        "summary": "toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket\n\n将不能用于跨线程传递的键值对数据，转换为可用于跨线程传递"
+      },
+      {
+        "section_id": "section-4",
+        "title": "sendableRelationalStore.fromSendableValuesBucket",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 152,
+        "summary": "fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket\n\n将可用于跨线程传递的键值对数据，转换为不能用于跨线程"
+      },
+      {
+        "section_id": "section-5",
+        "title": "sendableRelationalStore.toSendableAsset",
+        "level": 2,
+        "line_start": 153,
+        "line_end": 195,
+        "summary": "toSendableAsset(asset: NonSendableAsset): Asset\n\n将不可跨线程传递的附件数据，转换为可跨线程传递的附件数据。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-6",
+        "title": "sendableRelationalStore.fromSendableAsset",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 239,
+        "summary": "fromSendableAsset(asset: Asset): NonSendableAsset\n\n将可跨线程传递的附件数据，转换为不可跨线程传递的附件数据。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-7",
+        "title": "sendableRelationalStore.fromSendableValues<sup>20+</sup>",
+        "level": 2,
+        "line_start": 240,
+        "line_end": 280,
+        "summary": "fromSendableValues(values: collections.Array\\<ValueType>): NonSendableValues\n\n将可跨线程传递的数组数据，转换为不可跨线程"
+      },
+      {
+        "section_id": "section-8",
+        "title": "sendableRelationalStore.toSendableValues<sup>20+</sup>",
+        "level": 2,
+        "line_start": 281,
+        "line_end": 319,
+        "summary": "toSendableValues(values: NonSendableValues): collections.Array\\<ValueType>\n\n将不可跨线程传递的数组数据，转换为可跨线程传递"
+      },
+      {
+        "section_id": "section-9",
+        "title": "Asset",
+        "level": 2,
+        "line_start": 320,
+        "line_end": 336,
+        "summary": "记录资产附件（文件、图片、视频等类型文件）的相关信息。用于支持资产数据跨线程传递，继承自[lang.ISendable](../apis-arkts/js-apis-arkts-lang.md#la"
+      },
+      {
+        "section_id": "section-10",
+        "title": "Assets",
+        "level": 2,
+        "line_start": 337,
+        "line_end": 348,
+        "summary": "type Assets = collections.Array\\<Asset>\n\n表示[Asset](#asset)类型数据的集合。用于支持Asset数据集合跨线程传递。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ValueType",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 368,
+        "summary": "type ValueType = null | number | string | boolean | collections.Uint8Array | Asset | Assets | colle"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ValuesBucket",
+        "level": 2,
+        "line_start": 369,
+        "line_end": 380,
+        "summary": "type ValuesBucket = collections.Map<string, ValueType>\n\n表示[ValueType](#valuetype)数据的键值对存储，用于支持Value"
+      },
+      {
+        "section_id": "section-13",
+        "title": "NonSendableBucket",
+        "level": 2,
+        "line_start": 381,
+        "line_end": 392,
+        "summary": "type NonSendableBucket = relationalStore.ValuesBucket\n\n用于存储键值对的类型。不支持跨线程传递。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-14",
+        "title": "NonSendableValues<sup>20+</sup>",
+        "level": 2,
+        "line_start": 393,
+        "line_end": 404,
+        "summary": "type NonSendableValues = Array\\<relationalStore.ValueType>\n\n表示[ValueType](arkts-apis-data-relationa"
+      },
+      {
+        "section_id": "section-15",
+        "title": "NonSendableAsset",
+        "level": 2,
+        "line_start": 405,
+        "line_end": 416,
+        "summary": "type NonSendableAsset = relationalStore.Asset\n\n记录资产附件（文件、图片、视频等类型文件）的相关信息。不支持跨线程传递。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-16",
+        "title": "跨线程传递使用示例",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 517,
+        "summary": "调用taskpool执行数据插入时，主线程调用toSendableValuesBucket方法将数据转为跨线程传递类型，传入taskpool处理。\n\n调用taskpool执行数据查询时，调用Resu"
+      }
+    ]
+  }
+}

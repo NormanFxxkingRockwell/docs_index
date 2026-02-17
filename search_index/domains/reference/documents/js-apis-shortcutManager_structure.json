@@ -1,0 +1,68 @@
+{
+  "doc_id": "js-apis-shortcutManager",
+  "title": "@ohos.bundle.shortcutManager (shortcutManager模块)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-shortcutManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-shortcutManager.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Ability Kit BundleManager 模块的 @ohos.bundle.shortcutManager (shortcutManager模块)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.bundle.shortcutManager (shortcutManager模块)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { shortcutManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "shortcutManager.setShortcutVisibleForSelf",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 64,
+        "summary": "setShortcutVisibleForSelf(id: string, visible: boolean) : Promise\\<void>\n\n设置当前应用指定的快捷方式是否显示。使用Promi"
+      },
+      {
+        "section_id": "section-3",
+        "title": "shortcutManager.getAllShortcutInfoForSelf",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 91,
+        "summary": "getAllShortcutInfoForSelf(): Promise\\<Array\\<ShortcutInfo>>\n\n查询当前应用[配置文件](../../quick-start/module-"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ShortcutInfo",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 103,
+        "summary": "type ShortcutInfo = _ShortcutInfo\n\n应用[module.json5配置文件](../../quick-start/module-configuration-file"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ShortcutWant",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 115,
+        "summary": "type ShortcutWant = _ShortcutWant\n\n快捷方式内定义的目标[wants](../../quick-start/module-configuration-file.md"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ParameterItem",
+        "level": 2,
+        "line_start": 116,
+        "line_end": 127,
+        "summary": "type ParameterItem = _ParameterItem\n\n快捷方式配置信息中的自定义数据。\n\n**系统能力：** SystemCapability.BundleManager.Bun"
+      }
+    ]
+  }
+}

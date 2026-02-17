@@ -1,0 +1,340 @@
+{
+  "doc_id": "ohos-file-PhotoPickerComponent",
+  "title": "@ohos.file.PhotoPickerComponent (PhotoPicker组件)",
+  "path": "zh-cn/application-dev/reference/apis-media-library-kit/ohos-file-PhotoPickerComponent.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-library-kit/ohos-file-PhotoPickerComponent.md",
+  "metadata": {
+    "kit": "Media Library Kit",
+    "subsystem": "Multimedia",
+    "owner": "@xuchangda",
+    "designer": "@guxinggang",
+    "tester": "@wangbeibei",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Library Kit Multimedia 模块的 @ohos.file.PhotoPickerComponent (PhotoPicker组件)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.PhotoPickerComponent (PhotoPicker组件)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 30,
+        "summary": "```ts\nimport {\n  PhotoPickerComponent, PickerController, PickerOptions,\n  DataType, BaseItemInfo, I"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 34,
+        "summary": "支持[通用属性](../apis-arkui/arkui-ts/ts-component-general-attributes.md)。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "PhotoPickerComponent",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 74,
+        "summary": "PhotoPickerComponent({ pickerOptions?: PickerOptions, onSelect?: (uri: string) => void, onDeselect?"
+      },
+      {
+        "section_id": "section-4",
+        "title": "PickerOptions",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 107,
+        "summary": "Picker配置选项，继承自[photoAccessHelper.BaseSelectOptions](arkts-apis-photoAccessHelper-class.md#baseselec"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ItemsDeletedCallback<sup>13+</sup>",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 123,
+        "summary": "type ItemsDeletedCallback = (baseItemInfos: Array&lt;BaseItemInfo&gt;) => void\n\n已勾选的图片被删除时产生的回调事件。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ExceedMaxSelectedCallback<sup>13+</sup>",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 139,
+        "summary": "type ExceedMaxSelectedCallback = (exceedMaxCountType: MaxCountType) => void\n\n选择达到最大选择数量之后再次点击勾选时的回调"
+      },
+      {
+        "section_id": "section-7",
+        "title": "CurrentAlbumDeletedCallback<sup>13+</sup>",
+        "level": 2,
+        "line_start": 140,
+        "line_end": 149,
+        "summary": "type CurrentAlbumDeletedCallback = () => void\n\n当前相册被删除时的回调事件。\n\n**原子化服务API：** 从API version 13开始，该接口支"
+      },
+      {
+        "section_id": "section-8",
+        "title": "videoPlayStateChangedCallback<sup>14+</sup>",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 165,
+        "summary": "type videoPlayStateChangedCallback = (state: VideoPlayerState) => void\n\n大图页视频播放状态改变时的回调事件。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-9",
+        "title": "MovingPhotoBadgeStateChangedCallback<sup>22+</sup>",
+        "level": 2,
+        "line_start": 166,
+        "line_end": 182,
+        "summary": "type MovingPhotoBadgeStateChangedCallback = (uri: string, state: photoAccessHelper.MovingPhotoBadge"
+      },
+      {
+        "section_id": "section-10",
+        "title": "ScrollStopAtStartCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 194,
+        "summary": "type ScrollStopAtStartCallback = () => void\n\n表示用户滑动picker宫格页，当滚动停止并处于宫格内容开始位置时的回调事件类型。\n\n**模型约束**： 此"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ItemClickedNotifyCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 211,
+        "summary": "type ItemClickedNotifyCallback = (itemInfo: ItemInfo, clickType: ClickType) => void\n\n用户在picker组件中点击"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ScrollStopAtEndCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 212,
+        "line_end": 223,
+        "summary": "type ScrollStopAtEndCallback = () => void\n\n表示用户滑动picker宫格页，当滚动停止并处于宫格内容结束位置时的回调事件类型。\n\n**模型约束**： 此接口"
+      },
+      {
+        "section_id": "section-13",
+        "title": "PhotoBrowserChangeStartCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 224,
+        "line_end": 241,
+        "summary": "type PhotoBrowserChangeStartCallback = (targetPhotoInfo: BaseItemInfo) => void\n\n用户在Picker组件中打开/关"
+      },
+      {
+        "section_id": "section-14",
+        "title": "ErrorCallback<sup>23+</sup>",
+        "level": 2,
+        "line_start": 242,
+        "line_end": 259,
+        "summary": "type ErrorCallback = (pickerError: PickerError) => void\n\nPhotoPickerComponent产生错误时的回调。\n\n**模型约束：** 此"
+      },
+      {
+        "section_id": "section-15",
+        "title": "PickerController",
+        "level": 2,
+        "line_start": 260,
+        "line_end": 504,
+        "summary": "应用可通过PickerController向picker组件发送数据。\n\n**装饰器类型**：@Observed\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服"
+      },
+      {
+        "section_id": "section-16",
+        "title": "BaseItemInfo",
+        "level": 2,
+        "line_start": 505,
+        "line_end": 523,
+        "summary": "图片、视频相关信息。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper.Core\n\n| 名称     | 类型    | 只读"
+      },
+      {
+        "section_id": "section-17",
+        "title": "ItemInfo",
+        "level": 2,
+        "line_start": 524,
+        "line_end": 537,
+        "summary": "继承自[BaseItemInfo](#baseiteminfo)，增加私有参数itemType。\n\n图片、视频相关信息。\n\n**原子化服务API**：从API version 12开始，该接口支持在"
+      },
+      {
+        "section_id": "section-18",
+        "title": "PhotoBrowserInfo",
+        "level": 2,
+        "line_start": 538,
+        "line_end": 549,
+        "summary": "大图相关信息。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagement.P"
+      },
+      {
+        "section_id": "section-19",
+        "title": "AnimatorParams",
+        "level": 2,
+        "line_start": 550,
+        "line_end": 562,
+        "summary": "进退大图动效参数。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagement"
+      },
+      {
+        "section_id": "section-20",
+        "title": "MaxSelected",
+        "level": 2,
+        "line_start": 563,
+        "line_end": 574,
+        "summary": "最大选择数量。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagement.P"
+      },
+      {
+        "section_id": "section-21",
+        "title": "SingleLineConfig<sup>20+</sup>",
+        "level": 2,
+        "line_start": 575,
+        "line_end": 588,
+        "summary": "单行显示模式配置项。单行模式下，组件不提供打开大图浏览相关功能。组件不支持大图相关回调，PickerController不支持大图相关的接口，接口调用将无效。\n\n**原子化服务API**：从API"
+      },
+      {
+        "section_id": "section-22",
+        "title": "BadgeConfig<sup>21+</sup>",
+        "level": 2,
+        "line_start": 589,
+        "line_end": 601,
+        "summary": "特殊角标配置项。\n\n**原子化服务API**：从API version 21开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagement."
+      },
+      {
+        "section_id": "section-23",
+        "title": "ClickResult<sup>23+</sup>",
+        "level": 2,
+        "line_start": 602,
+        "line_end": 616,
+        "summary": "设置指定URI的资产是否被选中。\n\n**模型约束**：此接口仅可在Stage模型下使用。\n\n**原子化服务API**：从API version 23开始，该接口支持在原子化服务中使用。\n\n**系统能"
+      },
+      {
+        "section_id": "section-24",
+        "title": "PreselectedInfo<sup>21+</sup>",
+        "level": 2,
+        "line_start": 617,
+        "line_end": 629,
+        "summary": "预选中的文件以及文件对应的PhotoPickerComponent序号。\n\n**原子化服务API**：从API version 21开始，该接口支持在原子化服务中使用。\n\n**系统能力**：Syst"
+      },
+      {
+        "section_id": "section-25",
+        "title": "UpdatablePickerConfigs<sup>22+</sup>",
+        "level": 2,
+        "line_start": 630,
+        "line_end": 672,
+        "summary": "支持更新的PhotoPickerComponent属性，为[PickerOptions](#pickeroptions)的子集。\n\n**系统能力**：SystemCapability.FileMan"
+      },
+      {
+        "section_id": "section-26",
+        "title": "DataType",
+        "level": 2,
+        "line_start": 673,
+        "line_end": 686,
+        "summary": "枚举，PickerController向picker组件发送数据的数据类型。\n\n**系统能力**：SystemCapability.FileManagement.PhotoAccessHelper."
+      },
+      {
+        "section_id": "section-27",
+        "title": "ItemType",
+        "level": 2,
+        "line_start": 687,
+        "line_end": 699,
+        "summary": "被点击item的类型。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManageme"
+      },
+      {
+        "section_id": "section-28",
+        "title": "ClickType",
+        "level": 2,
+        "line_start": 700,
+        "line_end": 712,
+        "summary": "点击操作的类型。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagement."
+      },
+      {
+        "section_id": "section-29",
+        "title": "PickerOrientation",
+        "level": 2,
+        "line_start": 713,
+        "line_end": 727,
+        "summary": "Picker宫格页面滑动预览的方向。\n\n从API20开始，该能力支持配置；在API12-19，该能力设置不生效，默认为竖直方向。\n\n**原子化服务API**：从API version 12开始，该接"
+      },
+      {
+        "section_id": "section-30",
+        "title": "SelectMode",
+        "level": 2,
+        "line_start": 728,
+        "line_end": 740,
+        "summary": "选择模式。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagement.Pho"
+      },
+      {
+        "section_id": "section-31",
+        "title": "PickerColorMode",
+        "level": 2,
+        "line_start": 741,
+        "line_end": 754,
+        "summary": "Picker的颜色模式。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagem"
+      },
+      {
+        "section_id": "section-32",
+        "title": "ReminderMode",
+        "level": 2,
+        "line_start": 755,
+        "line_end": 768,
+        "summary": "最大选择数量提示方式。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManageme"
+      },
+      {
+        "section_id": "section-33",
+        "title": "MaxCountType",
+        "level": 2,
+        "line_start": 769,
+        "line_end": 782,
+        "summary": "最大选择数量的类型。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagemen"
+      },
+      {
+        "section_id": "section-34",
+        "title": "PhotoBrowserRange",
+        "level": 2,
+        "line_start": 783,
+        "line_end": 795,
+        "summary": "打开大图浏览模式后，左右滑动切换浏览图片的范围。\n\n**原子化服务API**：从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability"
+      },
+      {
+        "section_id": "section-35",
+        "title": "PhotoBrowserUIElement<sup>13+</sup>",
+        "level": 2,
+        "line_start": 796,
+        "line_end": 808,
+        "summary": "大图页大图预览组件外其他UI元素。\n\n**原子化服务API**：从API version 13开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileMa"
+      },
+      {
+        "section_id": "section-36",
+        "title": "SaveMode<sup>15+</sup>",
+        "level": 2,
+        "line_start": 809,
+        "line_end": 821,
+        "summary": "图片/视频保存模式。\n\n**原子化服务API**：从API version 15开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagemen"
+      },
+      {
+        "section_id": "section-37",
+        "title": "BadgeType<sup>21+</sup>",
+        "level": 2,
+        "line_start": 822,
+        "line_end": 833,
+        "summary": "表示特殊角标类型的枚举。\n\n**原子化服务API**：从API version 21开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagem"
+      },
+      {
+        "section_id": "section-38",
+        "title": "VideoPlayerState<sup>14+</sup>",
+        "level": 2,
+        "line_start": 834,
+        "line_end": 849,
+        "summary": "视频播放状态。\n\n**原子化服务API**：从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.FileManagement.P"
+      },
+      {
+        "section_id": "section-39",
+        "title": "ItemDisplayRatio<sup>20+</sup>",
+        "level": 2,
+        "line_start": 850,
+        "line_end": 862,
+        "summary": "单行布局宫格显示宽高比模式，包括1:1和原图宽高比两种模式。\n\n**原子化服务API**：从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapa"
+      },
+      {
+        "section_id": "section-40",
+        "title": "示例",
+        "level": 2,
+        "line_start": 863,
+        "line_end": 1083,
+        "summary": "```ts\n// xxx.ets\nimport {\n  PhotoPickerComponent,\n  PickerController,\n  PickerOptions,\n  DataType,"
+      }
+    ]
+  }
+}

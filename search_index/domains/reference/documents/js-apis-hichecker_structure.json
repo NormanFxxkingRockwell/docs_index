@@ -1,0 +1,92 @@
+{
+  "doc_id": "js-apis-hichecker",
+  "title": "@ohos.hichecker (检测模式)",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hichecker.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-hichecker.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@lu-tao",
+    "designer": "@martin-duan",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.hichecker (检测模式)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.hichecker (检测模式)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 22,
+        "summary": "```ts\nimport { hichecker } from '@kit.PerformanceAnalysisKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "常量",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 36,
+        "summary": "提供了所有规则类型的常量。\n\n**系统能力**：SystemCapability.HiviewDFX.HiChecker\n\n| 名称"
+      },
+      {
+        "section_id": "section-3",
+        "title": "hichecker.addCheckRule<sup>9+</sup>",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 72,
+        "summary": "addCheckRule(rule: bigint): void\n\n添加一条或多条规则到系统，系统根据添加的规则进行检测或反馈，当有相应规则触发时可在hilog中grep HiChecker查看运行"
+      },
+      {
+        "section_id": "section-4",
+        "title": "hichecker.removeCheckRule<sup>9+</sup>",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 108,
+        "summary": "removeCheckRule(rule: bigint): void\n\n删除一条或多条规则，删除的规则后续将不再生效。\n\n**系统能力**：SystemCapability.HiviewDFX.H"
+      },
+      {
+        "section_id": "section-5",
+        "title": "hichecker.containsCheckRule<sup>9+</sup>",
+        "level": 2,
+        "line_start": 109,
+        "line_end": 151,
+        "summary": "containsCheckRule(rule: bigint): boolean\n\n当前已添加的规则集中是否包含了某一个特定的规则。如果传入的规则级别为线程级别，则仅在当前线程中进行查询。\n\n**系"
+      },
+      {
+        "section_id": "section-6",
+        "title": "hichecker.addRule<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 180,
+        "summary": "addRule(rule: bigint): void\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使用[hichecker.add"
+      },
+      {
+        "section_id": "section-7",
+        "title": "hichecker.removeRule<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 181,
+        "line_end": 209,
+        "summary": "removeRule(rule: bigint): void\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使用[hichecker."
+      },
+      {
+        "section_id": "section-8",
+        "title": "hichecker.getRule",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 233,
+        "summary": "getRule(): bigint \n\n获取当前线程规则、进程规则、告警规则的合集。\n\n**系统能力**：SystemCapability.HiviewDFX.HiChecker\n\n**返回值：**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "hichecker.contains<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 234,
+        "line_end": 268,
+        "summary": "contains(rule: bigint): boolean\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建议使用[hichecker"
+      }
+    ]
+  }
+}

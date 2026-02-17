@@ -1,0 +1,132 @@
+{
+  "doc_id": "ts-basic-components-search",
+  "title": "Search",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-basic-components-search.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-basic-components-search.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@kangshihui",
+    "designer": "@xiangyuan6",
+    "tester": "@jiaoaozihao",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 Search，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Search",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 20,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 34,
+        "summary": "Search(options?: SearchOptions)\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemC"
+      },
+      {
+        "section_id": "section-3",
+        "title": "SearchOptions<sup>18+</sup>对象说明",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 53,
+        "summary": "Search初始化参数。\n\n> **说明：**\n>\n> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元"
+      },
+      {
+        "section_id": "section-4",
+        "title": "属性",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 884,
+        "summary": "除支持[通用属性](ts-component-general-attributes.md)外，还支持以下属性：\n\n### searchButton\n\nsearchButton(value: Reso"
+      },
+      {
+        "section_id": "section-5",
+        "title": "IconOptions<sup>10+</sup>对象说明",
+        "level": 2,
+        "line_start": 885,
+        "line_end": 896,
+        "summary": "**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称"
+      },
+      {
+        "section_id": "section-6",
+        "title": "SearchButtonOptions<sup>10+</sup>对象说明",
+        "level": 2,
+        "line_start": 897,
+        "line_end": 906,
+        "summary": "**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称    | 类型                                   | 只读 |"
+      },
+      {
+        "section_id": "section-7",
+        "title": "CancelButtonStyle<sup>10+</sup>枚举说明",
+        "level": 2,
+        "line_start": 907,
+        "line_end": 918,
+        "summary": "**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称"
+      },
+      {
+        "section_id": "section-8",
+        "title": "SearchType<sup>11+</sup>枚举说明",
+        "level": 2,
+        "line_start": 919,
+        "line_end": 934,
+        "summary": "搜索输入框类型。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称                 | 值            | 说明"
+      },
+      {
+        "section_id": "section-9",
+        "title": "CancelButtonOptions<sup>12+</sup>对象说明",
+        "level": 2,
+        "line_start": 935,
+        "line_end": 945,
+        "summary": "**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称"
+      },
+      {
+        "section_id": "section-10",
+        "title": "CancelButtonSymbolOptions<sup>12+</sup>对象说明",
+        "level": 2,
+        "line_start": 946,
+        "line_end": 956,
+        "summary": "**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称"
+      },
+      {
+        "section_id": "section-11",
+        "title": "事件",
+        "level": 2,
+        "line_start": 957,
+        "line_end": 1218,
+        "summary": "除支持[通用事件](ts-component-general-events.md)外，还支持以下事件：\n\n### onSubmit\n\nonSubmit(callback: Callback\\<str"
+      },
+      {
+        "section_id": "section-12",
+        "title": "SearchController",
+        "level": 2,
+        "line_start": 1219,
+        "line_end": 1289,
+        "summary": "Search组件的控制器继承自[TextContentControllerBase](ts-universal-attributes-text-style.md#textcontentcontrol"
+      },
+      {
+        "section_id": "section-13",
+        "title": "SearchSubmitCallback<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1290,
+        "line_end": 1306,
+        "summary": "type SearchSubmitCallback = (searchContent: string, event?: SubmitEvent) => void\n\n点击搜索图标、搜索按钮或者按下软键"
+      },
+      {
+        "section_id": "section-14",
+        "title": "示例",
+        "level": 2,
+        "line_start": 1307,
+        "line_end": 2693,
+        "summary": "### 示例1（设置与获取光标位置）\n\n从API version 8开始，该示例通过[controller](#searchcontroller)实现了光标位置的设置与获取的功能。\n\n```ts\n/"
+      }
+    ]
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "doc_id": "ohos-arkui-advanced-ChipGroup",
+  "title": "ChipGroup",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ChipGroup.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ChipGroup.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xieziang",
+    "designer": "@youzhi92",
+    "tester": "@TerryTsao",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 ChipGroup，提供相关接口和功能说明。",
+  "structure": {
+    "title": "ChipGroup",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```typescript\nimport { ChipSize, ChipGroup } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "子组件",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 25,
+        "summary": "子组件相关内容"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ChipGroup",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 67,
+        "summary": "```ts\nChipGroup({\n  items: ChipGroupItemOptions[],\n  itemStyle?: ChipItemStyle,\n  selectedIndexes?:"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ChipGroupItemOptions",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 94,
+        "summary": "ChipGroupItemOptions定义每个Chip的非通用属性。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**设备行为差异：** 该接口在W"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ChipItemStyle",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 118,
+        "summary": "ChipItemStyle定义了Chip的共通属性。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-6",
+        "title": "ChipGroupSpaceOptions",
+        "level": 2,
+        "line_start": 119,
+        "line_end": 132,
+        "summary": "ChipGroupSpaceOptions 定义了ChipGroup左右内边距，以及Chip与Chip之间的间距。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ChipGroupPaddingOptions",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 147,
+        "summary": "ChipGroupPaddingOptions定义了ChipGroup的上下内边距，用于控制其整体高度。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-8",
+        "title": "SuffixImageIconOptions<sup>14+</sup>",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 166,
+        "summary": "后缀图标选项的类型。\n\n继承自[IconOptions](#iconoptions)。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能"
+      },
+      {
+        "section_id": "section-9",
+        "title": "SymbolItemOptions<sup>14+</sup>",
+        "level": 2,
+        "line_start": 167,
+        "line_end": 184,
+        "summary": "ChipGroup的尾部图标选项类型。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Ar"
+      },
+      {
+        "section_id": "section-10",
+        "title": "IconGroupSuffix",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 203,
+        "summary": "**装饰器类型：**@Component\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.A"
+      },
+      {
+        "section_id": "section-11",
+        "title": "IconItemOptions",
+        "level": 2,
+        "line_start": 204,
+        "line_end": 219,
+        "summary": "定义了尾部builder接口，针对背板大小及颜色设置限制。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n**设备行为差异：** 该接口在Wearabl"
+      },
+      {
+        "section_id": "section-12",
+        "title": "IconOptions",
+        "level": 2,
+        "line_start": 220,
+        "line_end": 234,
+        "summary": "IconOptions定义图标的共通属性。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-13",
+        "title": "LabelOptions",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 248,
+        "summary": "Label定义图标属性。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.Ark"
+      },
+      {
+        "section_id": "section-14",
+        "title": "示例",
+        "level": 2,
+        "line_start": 249,
+        "line_end": 843,
+        "summary": "### 示例1（无最右侧的builder）\n\n该示例实现了在没有最右侧builder时的效果。\n\n```typescript\nimport { ChipSize, ChipGroup } from"
+      }
+    ]
+  }
+}

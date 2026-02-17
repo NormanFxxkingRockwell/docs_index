@@ -1,0 +1,52 @@
+{
+  "doc_id": "capi-log-h",
+  "title": "log.h",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/capi-log-h.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/capi-log-h.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@liuyifeifei; @buzhenwang",
+    "designer": "@shenchenkai",
+    "tester": "@liyang2235",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 log.h，提供相关接口和功能说明。",
+  "structure": {
+    "title": "log.h",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 23,
+        "summary": "HiLog模块日志接口定义，通过这些接口实现日志打印相关功能。用户输出日志时，先定义日志所属业务领域、日志TAG，然后按照类型、级别选择对应API，指定参数隐私标识输出日志内容。<br> 业务领域："
+      },
+      {
+        "section_id": "section-2",
+        "title": "汇总",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 65,
+        "summary": "### 枚举\n\n| 名称 | typedef关键字 | 描述 |\n| -- | -- | -- |\n| [LogType](#logtype) | LogType | 日志类型。该枚举类型用于定义应"
+      },
+      {
+        "section_id": "section-3",
+        "title": "枚举类型说明",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 121,
+        "summary": "### LogType\n\n```c\nenum LogType\n```\n\n**描述**\n\n日志类型。该枚举类型用于定义应用开发者可以使用的日志类型。当前有应用日志LOG_APP。<br>\n\n**起始版"
+      },
+      {
+        "section_id": "section-4",
+        "title": "函数说明",
+        "level": 2,
+        "line_start": 122,
+        "line_end": 477,
+        "summary": "### OH_LOG_Print()\n\n```c\nint OH_LOG_Print(LogType type, LogLevel level, unsigned int domain, const"
+      }
+    ]
+  }
+}

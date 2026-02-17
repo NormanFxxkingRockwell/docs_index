@@ -1,0 +1,236 @@
+{
+  "doc_id": "js-apis-asset",
+  "title": "@ohos.security.asset (关键资产存储服务)",
+  "path": "zh-cn/application-dev/reference/apis-asset-store-kit/js-apis-asset.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-asset-store-kit/js-apis-asset.md",
+  "metadata": {
+    "kit": "Asset Store Kit",
+    "subsystem": "Security",
+    "owner": "@JeremyXu",
+    "designer": "@skye_you",
+    "tester": "@nacyli",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Asset Store Kit Security 模块的 @ohos.security.asset (关键资产存储服务)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.security.asset (关键资产存储服务)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```typescript\nimport { asset } from '@kit.AssetStoreKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "asset.add",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 88,
+        "summary": "add(attributes: AssetMap): Promise\\<void>\n\n新增一条关键资产。使用Promise异步回调。\n\n设置[IS_PERSISTENT](#tag)属性时，需要申请"
+      },
+      {
+        "section_id": "section-3",
+        "title": "asset.addSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 89,
+        "line_end": 147,
+        "summary": "addSync(attributes: AssetMap): void\n\n新增一条关键资产，使用同步方式返回结果。\n\n如果要设置[IS_PERSISTENT](#tag)属性，需要申请ohos.pe"
+      },
+      {
+        "section_id": "section-4",
+        "title": "asset.remove",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 205,
+        "summary": "remove(query: AssetMap): Promise\\<void>\n\n删除符合条件的一条或多条关键资产。使用Promise异步回调。\n\n**原子化服务API：** 从API versio"
+      },
+      {
+        "section_id": "section-5",
+        "title": "asset.removeSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 206,
+        "line_end": 255,
+        "summary": "removeSync(query: AssetMap): void\n\n删除符合条件的一条或多条关键资产，使用同步方式。\n\n**原子化服务API：** 从API version 14开始，该接口支持在"
+      },
+      {
+        "section_id": "section-6",
+        "title": "asset.update",
+        "level": 2,
+        "line_start": 256,
+        "line_end": 318,
+        "summary": "update(query: AssetMap, attributesToUpdate: AssetMap): Promise\\<void>\n\n更新符合条件的一条关键资产。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "asset.updateSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 319,
+        "line_end": 373,
+        "summary": "updateSync(query: AssetMap, attributesToUpdate: AssetMap): void\n\n更新符合条件的一条关键资产，使用同步方式返回结果。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-8",
+        "title": "asset.preQuery",
+        "level": 2,
+        "line_start": 374,
+        "line_end": 434,
+        "summary": "preQuery(query: AssetMap): Promise\\<Uint8Array>\n\n查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.query]("
+      },
+      {
+        "section_id": "section-9",
+        "title": "asset.preQuerySync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 435,
+        "line_end": 494,
+        "summary": "preQuerySync(query: AssetMap): Uint8Array\n\n查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.querySync](#a"
+      },
+      {
+        "section_id": "section-10",
+        "title": "asset.query",
+        "level": 2,
+        "line_start": 495,
+        "line_end": 564,
+        "summary": "query(query: AssetMap): Promise\\<Array\\<AssetMap>>\n\n查询一条或多条符合条件的关键资产。若查询需要用户认证的关键资产，则需要在本函数前调用[asse"
+      },
+      {
+        "section_id": "section-11",
+        "title": "asset.querySync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 565,
+        "line_end": 633,
+        "summary": "querySync(query: AssetMap): Array\\<AssetMap>\n\n查询一条或多条符合条件的关键资产。若查询需要用户认证的关键资产，则需要在本函数前调用[asset.preQ"
+      },
+      {
+        "section_id": "section-12",
+        "title": "asset.postQuery",
+        "level": 2,
+        "line_start": 634,
+        "line_end": 682,
+        "summary": "postQuery(handle: AssetMap): Promise\\<void>\n\n查询的后置处理，用于需要用户认证的关键资产（与[asset.preQuery](#assetprequery"
+      },
+      {
+        "section_id": "section-13",
+        "title": "asset.postQuerySync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 683,
+        "line_end": 723,
+        "summary": "postQuerySync(handle: AssetMap): void\n\n查询的后置处理，用于需要用户认证的关键资产。需与[asset.preQuerySync](#assetprequerys"
+      },
+      {
+        "section_id": "section-14",
+        "title": "asset.querySyncResult<sup>20+</sup>",
+        "level": 2,
+        "line_start": 724,
+        "line_end": 769,
+        "summary": "querySyncResult(query: AssetMap): Promise\\<SyncResult>\n\n执行同步操作后，查询同步执行结果。使用Promise异步回调。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-15",
+        "title": "TagType",
+        "level": 2,
+        "line_start": 770,
+        "line_end": 783,
+        "summary": "枚举，关键资产属性支持的数据类型。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Secu"
+      },
+      {
+        "section_id": "section-16",
+        "title": "Tag",
+        "level": 2,
+        "line_start": 784,
+        "line_end": 828,
+        "summary": "枚举，关键资产支持的属性名称类型，用作[AssetMap](#assetmap)的键。\n\n**系统能力：** SystemCapability.Security.Asset\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-17",
+        "title": "Value",
+        "level": 2,
+        "line_start": 829,
+        "line_end": 844,
+        "summary": "type Value = boolean | number | Uint8Array\n\n关键资产属性的内容，用作[AssetMap](#assetmap)的值。\n\n**原子化服务API：** 从AP"
+      },
+      {
+        "section_id": "section-18",
+        "title": "AssetMap",
+        "level": 2,
+        "line_start": 845,
+        "line_end": 858,
+        "summary": "type AssetMap = Map\\<Tag, Value>\n\n关键资产属性的键-值对集合。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "Accessibility",
+        "level": 2,
+        "line_start": 859,
+        "line_end": 872,
+        "summary": "枚举，关键资产基于锁屏状态的访问控制类型。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-20",
+        "title": "AuthType",
+        "level": 2,
+        "line_start": 873,
+        "line_end": 885,
+        "summary": "枚举，关键资产支持的用户认证类型。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Secu"
+      },
+      {
+        "section_id": "section-21",
+        "title": "SyncType",
+        "level": 2,
+        "line_start": 886,
+        "line_end": 900,
+        "summary": "枚举，关键资产支持的同步类型。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Securi"
+      },
+      {
+        "section_id": "section-22",
+        "title": "ReturnType",
+        "level": 2,
+        "line_start": 901,
+        "line_end": 913,
+        "summary": "枚举，关键资产查询返回的结果类型。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Secu"
+      },
+      {
+        "section_id": "section-23",
+        "title": "ConflictResolution",
+        "level": 2,
+        "line_start": 914,
+        "line_end": 926,
+        "summary": "枚举，新增关键资产时的冲突（如：别名相同）处理策略。\n\n**原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabi"
+      },
+      {
+        "section_id": "section-24",
+        "title": "OperationType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 927,
+        "line_end": 937,
+        "summary": "枚举，附属的操作类型。\n\n**系统能力：** SystemCapability.Security.Asset\n\n| 名称        | 值   | 说明               |\n| --"
+      },
+      {
+        "section_id": "section-25",
+        "title": "WrapType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 938,
+        "line_end": 948,
+        "summary": "枚举，关键资产支持的加密导入导出类型。\n\n**系统能力：** SystemCapability.Security.Asset\n\n| 名称        | 值   | 说明"
+      },
+      {
+        "section_id": "section-26",
+        "title": "SyncResult<sup>20+</sup>",
+        "level": 2,
+        "line_start": 949,
+        "line_end": 960,
+        "summary": "关键资产同步的结果。\n\n**系统能力：** SystemCapability.Security.Asset\n\n| 名称        | 类型   | 只读 | 可选 |说明"
+      },
+      {
+        "section_id": "section-27",
+        "title": "ErrorCode",
+        "level": 2,
+        "line_start": 961,
+        "line_end": 989,
+        "summary": "表示错误码的枚举。\n\n**系统能力：** SystemCapability.Security.Asset\n\n| 名称                       | 值    | 说明 |\n| --"
+      }
+    ]
+  }
+}

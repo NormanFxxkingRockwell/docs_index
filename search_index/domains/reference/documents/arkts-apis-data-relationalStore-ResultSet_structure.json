@@ -1,0 +1,236 @@
+{
+  "doc_id": "arkts-apis-data-relationalStore-ResultSet",
+  "title": "Interface (ResultSet)",
+  "path": "zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-ResultSet.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-ResultSet.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkData DistributedDataManager 模块的 Interface (ResultSet)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (ResultSet)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { relationalStore } from '@kit.ArkData';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 40,
+        "summary": "**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getColumnNames<sup>23+</sup>",
+        "level": 2,
+        "line_start": 41,
+        "line_end": 87,
+        "summary": "getColumnNames(): Array\\<string>\n\n获取结果集中所有列的名称。\n\n列名以字符串数组的形式返回，数组中字符串的顺序与结果集中列的顺序一致。\n\n**模型约束：** 此接口"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getColumnIndex",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 145,
+        "summary": "getColumnIndex(columnName: string): number\n\n根据指定的列名获取列索引。\n\n**系统能力：** SystemCapability.DistributedDa"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getColumnName",
+        "level": 2,
+        "line_start": 146,
+        "line_end": 202,
+        "summary": "getColumnName(columnIndex: number): string\n\n根据指定的列索引获取列名。\n\n**系统能力：** SystemCapability.DistributedDa"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getColumnType<sup>18+</sup>",
+        "level": 2,
+        "line_start": 203,
+        "line_end": 266,
+        "summary": "getColumnType(columnIdentifier: number | string): Promise\\<ColumnType>\n\n根据指定的列索引或列名称获取列数据类型，使用Promi"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getColumnTypeSync<sup>18+</sup>",
+        "level": 2,
+        "line_start": 267,
+        "line_end": 330,
+        "summary": "getColumnTypeSync(columnIdentifier: number | string): ColumnType\n\n根据指定的列索引或列名称获取列数据类型。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-8",
+        "title": "goTo",
+        "level": 2,
+        "line_start": 331,
+        "line_end": 385,
+        "summary": "goTo(offset:number): boolean\n\n指定相对当前结果集指针位置的偏移量，以移动结果集的指针位置。\n\n**系统能力：** SystemCapability.Distribute"
+      },
+      {
+        "section_id": "section-9",
+        "title": "goToRow",
+        "level": 2,
+        "line_start": 386,
+        "line_end": 440,
+        "summary": "goToRow(position: number): boolean\n\n转到结果集的指定行。\n\n**系统能力：** SystemCapability.DistributedDataManager.R"
+      },
+      {
+        "section_id": "section-10",
+        "title": "goToFirstRow",
+        "level": 2,
+        "line_start": 441,
+        "line_end": 489,
+        "summary": "goToFirstRow(): boolean\n\n\n转到结果集的第一行。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalS"
+      },
+      {
+        "section_id": "section-11",
+        "title": "goToLastRow",
+        "level": 2,
+        "line_start": 490,
+        "line_end": 537,
+        "summary": "goToLastRow(): boolean\n\n转到结果集的最后一行。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalSt"
+      },
+      {
+        "section_id": "section-12",
+        "title": "goToNextRow",
+        "level": 2,
+        "line_start": 538,
+        "line_end": 585,
+        "summary": "goToNextRow(): boolean\n\n转到结果集的下一行。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalSto"
+      },
+      {
+        "section_id": "section-13",
+        "title": "goToPreviousRow",
+        "level": 2,
+        "line_start": 586,
+        "line_end": 633,
+        "summary": "goToPreviousRow(): boolean\n\n转到结果集的上一行。\n\n**系统能力：** SystemCapability.DistributedDataManager.Relationa"
+      },
+      {
+        "section_id": "section-14",
+        "title": "getValue<sup>12+</sup>",
+        "level": 2,
+        "line_start": 634,
+        "line_end": 694,
+        "summary": "getValue(columnIndex: number): ValueType\n\n获取当前行中指定列的值，如果值类型是ValueType中指定的任意类型，返回指定类型的值，否则返回14800000"
+      },
+      {
+        "section_id": "section-15",
+        "title": "getBlob",
+        "level": 2,
+        "line_start": 695,
+        "line_end": 750,
+        "summary": "getBlob(columnIndex: number): Uint8Array\n\n\n以字节数组的形式获取当前行中指定列的值，如果当前列的数据类型为INTEGER、DOUBLE、TEXT、BLOB类"
+      },
+      {
+        "section_id": "section-16",
+        "title": "getString",
+        "level": 2,
+        "line_start": 751,
+        "line_end": 805,
+        "summary": "getString(columnIndex: number): string\n\n以字符串形式获取当前行中指定列的值，如果当前列中的值为INTEGER、DOUBLE、TEXT、BLOB类型，会以字符串"
+      },
+      {
+        "section_id": "section-17",
+        "title": "getLong",
+        "level": 2,
+        "line_start": 806,
+        "line_end": 866,
+        "summary": "getLong(columnIndex: number): number\n\n以Long形式获取当前行中指定列的值，如果当前列的数据类型为INTEGER、DOUBLE、TEXT、BLOB类型，会转成L"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getDouble",
+        "level": 2,
+        "line_start": 867,
+        "line_end": 927,
+        "summary": "getDouble(columnIndex: number): number\n\n以double形式获取当前行中指定列的值，如果当前列的数据类型为INTEGER、DOUBLE、TEXT、BLOB类型，"
+      },
+      {
+        "section_id": "section-19",
+        "title": "getAsset<sup>10+</sup>",
+        "level": 2,
+        "line_start": 928,
+        "line_end": 982,
+        "summary": "getAsset(columnIndex: number): Asset\n\n以[Asset](arkts-apis-data-relationalStore-i.md#asset10)形式获取当前行"
+      },
+      {
+        "section_id": "section-20",
+        "title": "getAssets<sup>10+</sup>",
+        "level": 2,
+        "line_start": 983,
+        "line_end": 1037,
+        "summary": "getAssets(columnIndex: number): Assets\n\n以[Assets](arkts-apis-data-relationalStore-t.md#assets10)形式获"
+      },
+      {
+        "section_id": "section-21",
+        "title": "getRow<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1038,
+        "line_end": 1085,
+        "summary": "getRow(): ValuesBucket\n\n获取当前行。\n\n**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.C"
+      },
+      {
+        "section_id": "section-22",
+        "title": "getRows<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1086,
+        "line_end": 1159,
+        "summary": "getRows(maxCount: number, position?: number): Promise<Array\\<ValuesBucket>>\n\n从结果集中获取指定数量的数据，使用Promi"
+      },
+      {
+        "section_id": "section-23",
+        "title": "getCurrentRowData<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1160,
+        "line_end": 1206,
+        "summary": "getCurrentRowData(): RowData\n\n获取当前行所有列的值。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-24",
+        "title": "getRowsData<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1207,
+        "line_end": 1287,
+        "summary": "getRowsData(maxCount: number, position?: number): Promise\\<RowsData>\n\n从指定位置position开始，最多获取maxCount行"
+      },
+      {
+        "section_id": "section-25",
+        "title": "getSendableRow<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1288,
+        "line_end": 1375,
+        "summary": "getSendableRow(): sendableRelationalStore.ValuesBucket\n\n获取当前行数据的sendable形式，用于跨线程传递。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-26",
+        "title": "isColumnNull",
+        "level": 2,
+        "line_start": 1376,
+        "line_end": 1436,
+        "summary": "isColumnNull(columnIndex: number): boolean\n\n检查当前行中指定列的值是否为null。\n\n**系统能力：** SystemCapability.Distrib"
+      },
+      {
+        "section_id": "section-27",
+        "title": "close",
+        "level": 2,
+        "line_start": 1437,
+        "line_end": 1460,
+        "summary": "close(): void\n\n关闭结果集，若不关闭可能会引起fd泄露和内存泄露。\n\n**系统能力：** SystemCapability.DistributedDataManager.Relatio"
+      }
+    ]
+  }
+}

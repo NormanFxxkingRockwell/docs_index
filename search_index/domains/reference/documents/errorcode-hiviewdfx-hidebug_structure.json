@@ -1,0 +1,100 @@
+{
+  "doc_id": "errorcode-hiviewdfx-hidebug",
+  "title": "HiDebug错误码",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@hello_harmony; @leiguangyu",
+    "designer": "@kutcherzhou1",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 HiDebug错误码，提供相关接口和功能说明。",
+  "structure": {
+    "title": "HiDebug错误码",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "11400101 系统服务获取失败",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 31,
+        "summary": "**错误信息**\n\nServiceId invalid. The system ability does not exist.\n\n**错误描述**\n\n当前serviceId未查询到对应的系统服务。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "11400104 远程服务异常",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 53,
+        "summary": "**错误信息**\n\nThe interface call failed due to a remote exception.\n\n> **说明**：\n>\n> 错误信息请以接口实际返回内容为准。\n\n**"
+      },
+      {
+        "section_id": "section-3",
+        "title": "11400107 dump子进程fork失败",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 71,
+        "summary": "**错误信息**\n\nFork operation failed.\n\n**错误描述**\n\ndump子进程fork失败。\n\n**可能原因**\n\n系统资源不足，建议检查系统负载。\n\n**处理步骤**\n\n建"
+      },
+      {
+        "section_id": "section-4",
+        "title": "11400108 等待dump子进程结束失败",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 89,
+        "summary": "**错误信息**\n\nFailed to wait for the child process to finish.\n\n**错误描述**\n\n等待dump子进程结束失败。\n\n**可能原因**\n\n系统资源"
+      },
+      {
+        "section_id": "section-5",
+        "title": "11400109 等待dump子进程超时",
+        "level": 2,
+        "line_start": 90,
+        "line_end": 107,
+        "summary": "**错误信息**\n\nTimeout while waiting for the child process to finish.\n\n**错误描述**\n\n等待dump子进程结束超时。\n\n**可能原因*"
+      },
+      {
+        "section_id": "section-6",
+        "title": "11400110 磁盘空间不足",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 125,
+        "summary": "**错误信息**\n\nFailed to create dump file.\n\n**错误描述**\n\n磁盘空间不足。\n\n**可能原因**\n\n磁盘可用空间少于30GB。\n\n**处理步骤**\n\n释放磁盘空间"
+      },
+      {
+        "section_id": "section-7",
+        "title": "11400111 Napi接口调用失败",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 143,
+        "summary": "**错误信息**\n\nNapi interface call exception.\n\n**错误描述**\n\nNapi接口调用时出现异常。\n\n**可能原因**\n\n虚拟机发生异常。\n\n**处理步骤**\n\n建"
+      },
+      {
+        "section_id": "section-8",
+        "title": "11400112 重复dump采集",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 161,
+        "summary": "**错误信息**\n\nRepeated data dump.\n\n**错误描述**\n\n重复进行dump数据采集。\n\n**可能原因**\n\n该接口已被调用，在调用未结束时发生了重复调用。\n\n**处理步骤**"
+      },
+      {
+        "section_id": "section-9",
+        "title": "11400113 创建dump文件失败",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 181,
+        "summary": "**错误信息**\n\nFailed to create dump file.\n\n**错误描述**\n\n创建dump文件时出现失败。\n\n**可能原因**\n\n1、进程目录下存在同名文件。\n\n2、系统资源不足"
+      },
+      {
+        "section_id": "section-10",
+        "title": "11400114 使能GWP-ASan失败",
+        "level": 2,
+        "line_start": 182,
+        "line_end": 198,
+        "summary": "**错误信息**\n\nThe number of GWP-ASAN applications of this device overflowed after last boot.\n\n**错误描述**"
+      }
+    ]
+  }
+}

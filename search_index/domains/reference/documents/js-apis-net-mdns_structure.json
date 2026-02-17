@@ -1,0 +1,132 @@
+{
+  "doc_id": "js-apis-net-mdns",
+  "title": "@ohos.net.mdns (MDNS管理)",
+  "path": "zh-cn/application-dev/reference/apis-network-kit/js-apis-net-mdns.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-net-mdns.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Network Kit Communication 模块的 @ohos.net.mdns (MDNS管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.net.mdns (MDNS管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { mdns } from '@kit.NetworkKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "mdns.addLocalService",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 84,
+        "summary": "addLocalService(context: Context, serviceInfo: LocalServiceInfo, callback: AsyncCallback\\<LocalServ"
+      },
+      {
+        "section_id": "section-3",
+        "title": "mdns.addLocalService",
+        "level": 2,
+        "line_start": 85,
+        "line_end": 153,
+        "summary": "addLocalService(context: Context, serviceInfo: LocalServiceInfo): Promise\\<LocalServiceInfo>\n\n添加一个M"
+      },
+      {
+        "section_id": "section-4",
+        "title": "mdns.removeLocalService",
+        "level": 2,
+        "line_start": 154,
+        "line_end": 218,
+        "summary": "removeLocalService(context: Context, serviceInfo: LocalServiceInfo, callback: AsyncCallback\\<LocalS"
+      },
+      {
+        "section_id": "section-5",
+        "title": "mdns.removeLocalService",
+        "level": 2,
+        "line_start": 219,
+        "line_end": 285,
+        "summary": "removeLocalService(context: Context, serviceInfo: LocalServiceInfo): Promise\\<LocalServiceInfo>\n\n移除"
+      },
+      {
+        "section_id": "section-6",
+        "title": "mdns.createDiscoveryService",
+        "level": 2,
+        "line_start": 286,
+        "line_end": 337,
+        "summary": "createDiscoveryService(context: Context, serviceType: string): DiscoveryService\n\n返回一个DiscoveryServi"
+      },
+      {
+        "section_id": "section-7",
+        "title": "mdns.resolveLocalService",
+        "level": 2,
+        "line_start": 338,
+        "line_end": 402,
+        "summary": "resolveLocalService(context: Context, serviceInfo: LocalServiceInfo, callback: AsyncCallback\\<Local"
+      },
+      {
+        "section_id": "section-8",
+        "title": "mdns.resolveLocalService",
+        "level": 2,
+        "line_start": 403,
+        "line_end": 469,
+        "summary": "resolveLocalService(context: Context, serviceInfo: LocalServiceInfo): Promise\\<LocalServiceInfo>\n\n解"
+      },
+      {
+        "section_id": "section-9",
+        "title": "DiscoveryService",
+        "level": 2,
+        "line_start": 470,
+        "line_end": 893,
+        "summary": "指定服务类型的发现服务对象。\n\n### startSearchingMDNS\n\nstartSearchingMDNS(): void\n\n开始搜索局域网内的MDNS服务。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-10",
+        "title": "LocalServiceInfo",
+        "level": 2,
+        "line_start": 894,
+        "line_end": 909,
+        "summary": "MDNS服务信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communication"
+      },
+      {
+        "section_id": "section-11",
+        "title": "ServiceAttribute",
+        "level": 2,
+        "line_start": 910,
+        "line_end": 922,
+        "summary": "MDNS服务属性信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communicati"
+      },
+      {
+        "section_id": "section-12",
+        "title": "DiscoveryEventInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 923,
+        "line_end": 935,
+        "summary": "监听到的MDNS服务事件信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communi"
+      },
+      {
+        "section_id": "section-13",
+        "title": "MdnsError",
+        "level": 2,
+        "line_start": 936,
+        "line_end": 949,
+        "summary": "MDNS错误信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力**：SystemCapability.Communication"
+      },
+      {
+        "section_id": "section-14",
+        "title": "NetAddress",
+        "level": 2,
+        "line_start": 950,
+        "line_end": 963,
+        "summary": "type NetAddress = connection.NetAddress\n\n获取网络地址。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。"
+      }
+    ]
+  }
+}

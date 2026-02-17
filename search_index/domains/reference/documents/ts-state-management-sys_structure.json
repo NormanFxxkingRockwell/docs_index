@@ -1,0 +1,92 @@
+{
+  "doc_id": "ts-state-management-sys",
+  "title": "应用级变量的状态管理（系统接口）",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-state-management-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-state-management-sys.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zzq212050299",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 应用级变量的状态管理（系统接口），提供相关接口和功能说明。",
+  "structure": {
+    "title": "应用级变量的状态管理（系统接口）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "SubscribedAbstractProperty\\<T\\>",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 177,
+        "summary": "**卡片能力：** 从API version 9开始，支持在ArkTS卡片中使用。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-2",
+        "title": "IPropertySubscriber",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 209,
+        "summary": "**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n### id\n\nid(): number;\n\n获取id时调用。\n\n**系统能力：** SystemCapab"
+      },
+      {
+        "section_id": "section-3",
+        "title": "SyncedPropertyTwoWay\\<T\\>",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 295,
+        "summary": "继承自[SubscribedAbstractProperty\\<T\\>](#subscribedabstractpropertyt)。用来定义变量状态的值。\n\n**系统能力：** SystemCap"
+      },
+      {
+        "section_id": "section-4",
+        "title": "SyncedPropertyOneWay\\<T\\>",
+        "level": 2,
+        "line_start": 296,
+        "line_end": 389,
+        "summary": "继承自[SubscribedAbstractProperty\\<T\\>](#subscribedabstractpropertyt)。用来定义父组件的状态值。\n\n**系统能力：** SystemCa"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ISinglePropertyChangeSubscriber\\<T\\>",
+        "level": 2,
+        "line_start": 390,
+        "line_end": 409,
+        "summary": "继承自[IPropertySubscriber](#ipropertysubscriber)。用来定义变量。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full"
+      },
+      {
+        "section_id": "section-6",
+        "title": "SubscribaleAbstract",
+        "level": 2,
+        "line_start": 410,
+        "line_end": 492,
+        "summary": "**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n### owningProperties\\_\n\nprivate owningProperties_: Set"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Environment",
+        "level": 2,
+        "line_start": 493,
+        "line_end": 504,
+        "summary": "**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n### constructor\n\nconstructor();\n\n构造函数。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-8",
+        "title": "PersistentStorage",
+        "level": 2,
+        "line_start": 505,
+        "line_end": 525,
+        "summary": "**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n### c"
+      },
+      {
+        "section_id": "section-9",
+        "title": "appStorage",
+        "level": 2,
+        "line_start": 526,
+        "line_end": 536,
+        "summary": "declare const appStorage: AppStorage;\n\n应用存储。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n|类型    |"
+      }
+    ]
+  }
+}

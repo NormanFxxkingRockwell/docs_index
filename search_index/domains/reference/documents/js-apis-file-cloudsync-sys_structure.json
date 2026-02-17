@@ -1,0 +1,140 @@
+{
+  "doc_id": "js-apis-file-cloudsync-sys",
+  "title": "@ohos.file.cloudSync (端云同步能力)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-cloudsync-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-cloudsync-sys.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@Hermits; @reminder2352",
+    "designer": "@oh_create_jiawei",
+    "tester": "@liuhonggang123",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Core File Kit FileManagement 模块的 @ohos.file.cloudSync (端云同步能力)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.file.cloudSync (端云同步能力)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { cloudSync } from '@kit.CoreFileKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "GallerySync",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 356,
+        "summary": "云图同步对象，用来支撑图库应用媒体资源端云同步流程。在使用前，需要先创建GallerySync实例。\n\n### constructor\n\nconstructor()\n\n端云同步流程的构造函数，用于获"
+      },
+      {
+        "section_id": "section-3",
+        "title": "Download",
+        "level": 2,
+        "line_start": 357,
+        "line_end": 707,
+        "summary": "云文件下载对象，用来支撑图库应用原图文件下载流程。在使用前，需要先创建Download实例。\n\n### constructor\n\nconstructor()\n\n云文件下载流程的构造函数，用于获取Do"
+      },
+      {
+        "section_id": "section-4",
+        "title": "FileSync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 708,
+        "line_end": 742,
+        "summary": "云盘同步对象，用于支撑文件管理器应用完成云盘文件的端云同步流程。在使用前，需要先创建FileSync实例。\n\n### constructor<sup>12+</sup>\n\nconstructor(b"
+      },
+      {
+        "section_id": "section-5",
+        "title": "CloudFileCache<sup>11+</sup>",
+        "level": 2,
+        "line_start": 743,
+        "line_end": 798,
+        "summary": "云盘文件缓存对象，用来支撑文件管理应用原文件下载流程。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudS"
+      },
+      {
+        "section_id": "section-6",
+        "title": "cloudSync.getFileSyncState<sup>11+</sup>",
+        "level": 2,
+        "line_start": 799,
+        "line_end": 851,
+        "summary": "getFileSyncState(uri: Array&lt;string&gt;): Promise&lt;Array&lt;FileSyncState&gt;&gt;\n\n异步方法获取文件同步状态"
+      },
+      {
+        "section_id": "section-7",
+        "title": "cloudSync.getFileSyncState<sup>11+</sup>",
+        "level": 2,
+        "line_start": 852,
+        "line_end": 900,
+        "summary": "getFileSyncState(uri: Array&lt;string&gt;, callback: AsyncCallback&lt;Array&lt;FileSyncState&gt;&gt"
+      },
+      {
+        "section_id": "section-8",
+        "title": "cloudSync.getFileSyncState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 901,
+        "line_end": 954,
+        "summary": "getFileSyncState(uri: string): FileSyncState\n\n获取文件同步状态。\n\n**系统能力**：SystemCapability.FileManagement.D"
+      },
+      {
+        "section_id": "section-9",
+        "title": "FileSyncState<sup>11+</sup>",
+        "level": 2,
+        "line_start": 955,
+        "line_end": 972,
+        "summary": "端云文件同步状态，为枚举类型。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync.Core\n\n**"
+      },
+      {
+        "section_id": "section-10",
+        "title": "cloudSync.optimizeStorage<sup>17+</sup>",
+        "level": 2,
+        "line_start": 973,
+        "line_end": 1013,
+        "summary": "optimizeStorage(): Promise&lt;void&gt;\n\n优化图库已同步云空间的本地资源，按照本地剩余空间执行自动老化策略。使用Promise异步回调。\n\n**需要权限**：o"
+      },
+      {
+        "section_id": "section-11",
+        "title": "cloudSync.startOptimizeSpace<sup>17+</sup>",
+        "level": 2,
+        "line_start": 1014,
+        "line_end": 1075,
+        "summary": "startOptimizeSpace(optimizePara: OptimizeSpaceParam, callback?: Callback\\<OptimizeSpaceProgress>):"
+      },
+      {
+        "section_id": "section-12",
+        "title": "cloudSync.stopOptimizeSpace<sup>17+</sup>",
+        "level": 2,
+        "line_start": 1076,
+        "line_end": 1115,
+        "summary": "stopOptimizeSpace(): void\n\n同步方法停止图库云图资源空间优化，和startOptimizeSpace配对使用。\n\n**需要权限**：ohos.permission.CLOU"
+      },
+      {
+        "section_id": "section-13",
+        "title": "OptimizeState<sup>17+</sup>",
+        "level": 2,
+        "line_start": 1116,
+        "line_end": 1130,
+        "summary": "优化空间状态，为枚举类型。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync.Core\n\n**系统"
+      },
+      {
+        "section_id": "section-14",
+        "title": "OptimizeSpaceProgress<sup>17+</sup>",
+        "level": 2,
+        "line_start": 1131,
+        "line_end": 1143,
+        "summary": "立即优化空间状态和当前进度。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync.Core\n\n**系"
+      },
+      {
+        "section_id": "section-15",
+        "title": "OptimizeSpaceParam<sup>17+</sup>",
+        "level": 2,
+        "line_start": 1144,
+        "line_end": 1155,
+        "summary": "立即优化空间设置参数，设置优化总空间和老化天数。\n\n**系统能力**：SystemCapability.FileManagement.DistributedFileService.CloudSync"
+      }
+    ]
+  }
+}

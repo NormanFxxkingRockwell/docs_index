@@ -1,0 +1,356 @@
+{
+  "doc_id": "arkts-apis-camera-CaptureSession",
+  "title": "废弃的Interface (CaptureSession, deprecated)",
+  "path": "zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-CaptureSession.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-CaptureSession.md",
+  "metadata": {
+    "kit": "Camera Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qano",
+    "designer": "@leo_ysl",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Camera Kit Multimedia 模块的 废弃的Interface (CaptureSession, deprecated)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "废弃的Interface (CaptureSession, deprecated)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { camera } from '@kit.CameraKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "beginConfig<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 55,
+        "summary": "beginConfig(): void\n\n开始配置会话。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始废弃。建议使用[Session.begi"
+      },
+      {
+        "section_id": "section-3",
+        "title": "commitConfig<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 97,
+        "summary": "commitConfig(callback: AsyncCallback\\<void\\>): void\n\n提交配置信息，通过注册回调函数获取结果。使用callback异步回调。\n\n> **说明：**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "commitConfig<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 138,
+        "summary": "commitConfig(): Promise\\<void\\>\n\n提交配置信息。使用Promise异步回调。\n\n> **说明：**\n>从 API version 10开始支持，从API versio"
+      },
+      {
+        "section_id": "section-5",
+        "title": "addInput<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 180,
+        "summary": "addInput(cameraInput: CameraInput): void\n\n把[CameraInput](arkts-apis-camera-CameraInput.md)加入到会话。\n\n>"
+      },
+      {
+        "section_id": "section-6",
+        "title": "removeInput<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 181,
+        "line_end": 222,
+        "summary": "removeInput(cameraInput: CameraInput): void\n\n移除[CameraInput](arkts-apis-camera-CameraInput.md)。\n\n>"
+      },
+      {
+        "section_id": "section-7",
+        "title": "addOutput<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 223,
+        "line_end": 264,
+        "summary": "addOutput(cameraOutput: CameraOutput): void\n\n把[CameraOutput](arkts-apis-camera-CameraOutput.md)加入到会"
+      },
+      {
+        "section_id": "section-8",
+        "title": "removeOutput<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 265,
+        "line_end": 306,
+        "summary": "removeOutput(cameraOutput: CameraOutput): void\n\n从会话中移除[CameraOutput](arkts-apis-camera-CameraOutput"
+      },
+      {
+        "section_id": "section-9",
+        "title": "start<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 307,
+        "line_end": 348,
+        "summary": "start(callback: AsyncCallback\\<void\\>): void\n\n开始会话工作，通过注册回调函数获取结果。使用callback异步回调。\n\n> **说明：**\n>从 API"
+      },
+      {
+        "section_id": "section-10",
+        "title": "start<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 349,
+        "line_end": 388,
+        "summary": "start(): Promise\\<void\\>\n\n开始会话工作。使用Promise异步回调。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始废"
+      },
+      {
+        "section_id": "section-11",
+        "title": "stop<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 389,
+        "line_end": 429,
+        "summary": "stop(callback: AsyncCallback\\<void\\>): void\n\n停止会话工作，通过注册回调函数获取结果。使用callback异步回调。\n\n> **说明：**\n>从 API"
+      },
+      {
+        "section_id": "section-12",
+        "title": "stop<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 430,
+        "line_end": 468,
+        "summary": "stop(): Promise\\<void\\>\n\n停止会话工作。使用Promise异步回调。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始废弃"
+      },
+      {
+        "section_id": "section-13",
+        "title": "release<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 469,
+        "line_end": 509,
+        "summary": "release(callback: AsyncCallback\\<void\\>): void\n\n释放会话资源，通过注册回调函数获取结果。使用callback异步回调。\n\n> **说明：**\n>从 A"
+      },
+      {
+        "section_id": "section-14",
+        "title": "release<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 510,
+        "line_end": 548,
+        "summary": "release(): Promise\\<void\\>\n\n释放会话资源。使用Promise异步回调。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开"
+      },
+      {
+        "section_id": "section-15",
+        "title": "hasFlash<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 549,
+        "line_end": 591,
+        "summary": "hasFlash(): boolean\n\n检测是否有闪光灯。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始废弃。建议使用[Flash.hasF"
+      },
+      {
+        "section_id": "section-16",
+        "title": "isFlashModeSupported<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 592,
+        "line_end": 640,
+        "summary": "isFlashModeSupported(flashMode: FlashMode): boolean\n\n检测闪光灯模式是否支持。\n\n> **说明：**\n>从 API version 10开始支持，"
+      },
+      {
+        "section_id": "section-17",
+        "title": "setFlashMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 641,
+        "line_end": 686,
+        "summary": "setFlashMode(flashMode: FlashMode): void\n\n设置闪光灯模式。\n\n进行设置之前，需要先检查：\n\n1. 设备是否支持闪光灯，可使用方法[hasFlash](#ha"
+      },
+      {
+        "section_id": "section-18",
+        "title": "getFlashMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 687,
+        "line_end": 729,
+        "summary": "getFlashMode(): FlashMode\n\n获取当前设备的闪光灯模式。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始废弃。建议使用["
+      },
+      {
+        "section_id": "section-19",
+        "title": "isExposureModeSupported<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 730,
+        "line_end": 778,
+        "summary": "isExposureModeSupported(aeMode: ExposureMode): boolean\n\n查询曝光模式是否支持。\n\n> **说明：**\n>从 API version 10开始支"
+      },
+      {
+        "section_id": "section-20",
+        "title": "getExposureMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 779,
+        "line_end": 821,
+        "summary": "getExposureMode(): ExposureMode\n\n获取当前曝光模式。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始废弃。建议使"
+      },
+      {
+        "section_id": "section-21",
+        "title": "setExposureMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 822,
+        "line_end": 862,
+        "summary": "setExposureMode(aeMode: ExposureMode): void\n\n设置曝光模式。进行设置之前，需要先检查设备是否支持指定的曝光模式，可使用方法[isExposureModeS"
+      },
+      {
+        "section_id": "section-22",
+        "title": "getMeteringPoint<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 863,
+        "line_end": 905,
+        "summary": "getMeteringPoint(): Point\n\n查询曝光区域中心点。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始废弃。建议使用[Aut"
+      },
+      {
+        "section_id": "section-23",
+        "title": "setMeteringPoint<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 906,
+        "line_end": 949,
+        "summary": "setMeteringPoint(point: Point): void\n\n设置曝光区域中心点，曝光点应位于0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。\n\n此坐标系是以设备充电口"
+      },
+      {
+        "section_id": "section-24",
+        "title": "getExposureBiasRange<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 950,
+        "line_end": 992,
+        "summary": "getExposureBiasRange(): Array\\<number\\>\n\n查询曝光补偿范围。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11"
+      },
+      {
+        "section_id": "section-25",
+        "title": "setExposureBias<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 993,
+        "line_end": 1038,
+        "summary": "setExposureBias(exposureBias: number): void\n\n设置曝光补偿，曝光补偿值（EV）。\n\n进行设置之前，建议先通过方法[getExposureBiasRange"
+      },
+      {
+        "section_id": "section-26",
+        "title": "getExposureValue<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1039,
+        "line_end": 1082,
+        "summary": "getExposureValue(): number\n\n查询当前的曝光值。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始废弃。建议使用[Aut"
+      },
+      {
+        "section_id": "section-27",
+        "title": "isFocusModeSupported<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1083,
+        "line_end": 1131,
+        "summary": "isFocusModeSupported(afMode: FocusMode): boolean\n\n查询对焦模式是否支持。\n\n> **说明：**\n>从 API version 10开始支持，从API"
+      },
+      {
+        "section_id": "section-28",
+        "title": "setFocusMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1132,
+        "line_end": 1174,
+        "summary": "setFocusMode(afMode: FocusMode): void\n\n设置对焦模式。\n\n进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupporte"
+      },
+      {
+        "section_id": "section-29",
+        "title": "getFocusMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1175,
+        "line_end": 1217,
+        "summary": "getFocusMode(): FocusMode\n\n获取当前的对焦模式。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始废弃。建议使用[Foc"
+      },
+      {
+        "section_id": "section-30",
+        "title": "setFocusPoint<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1218,
+        "line_end": 1261,
+        "summary": "setFocusPoint(point: Point): void\n\n设置焦点，焦点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。\n\n此坐标系是以设备充电口在右侧时的横向设备方"
+      },
+      {
+        "section_id": "section-31",
+        "title": "getFocusPoint<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1262,
+        "line_end": 1304,
+        "summary": "getFocusPoint(): Point\n\n查询焦点。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始废弃。建议使用[Focus.getFo"
+      },
+      {
+        "section_id": "section-32",
+        "title": "getFocalLength<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1305,
+        "line_end": 1348,
+        "summary": "getFocalLength(): number\n\n查询焦距值。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始废弃。建议使用[Focus.ge"
+      },
+      {
+        "section_id": "section-33",
+        "title": "getZoomRatioRange<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1349,
+        "line_end": 1391,
+        "summary": "getZoomRatioRange(): Array\\<number\\>\n\n获取支持的变焦范围。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始"
+      },
+      {
+        "section_id": "section-34",
+        "title": "setZoomRatio<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1392,
+        "line_end": 1436,
+        "summary": "setZoomRatio(zoomRatio: number): void\n\n设置变焦比，变焦精度最高为小数点后两位，如果设置超过支持的精度范围，则只保留精度范围内数值。\n\n> **说明：**\n>从"
+      },
+      {
+        "section_id": "section-35",
+        "title": "getZoomRatio<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1437,
+        "line_end": 1480,
+        "summary": "getZoomRatio(): number\n\n获取当前的变焦比。\n\n> **说明：**\n>从 API version 10开始支持，从API version 11开始废弃。建议使用[Zoom.ge"
+      },
+      {
+        "section_id": "section-36",
+        "title": "isVideoStabilizationModeSupported<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1481,
+        "line_end": 1529,
+        "summary": "isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean\n\n查询是否支持指定的视频防抖模式。\n\n> **说"
+      },
+      {
+        "section_id": "section-37",
+        "title": "getActiveVideoStabilizationMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1530,
+        "line_end": 1572,
+        "summary": "getActiveVideoStabilizationMode(): VideoStabilizationMode\n\n查询当前正在使用的视频防抖模式。\n\n> **说明：**\n>从 API versi"
+      },
+      {
+        "section_id": "section-38",
+        "title": "setVideoStabilizationMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1573,
+        "line_end": 1613,
+        "summary": "setVideoStabilizationMode(mode: VideoStabilizationMode): void\n\n设置视频防抖模式。需要先检查设备是否支持对应的防抖模式，可以通过[isV"
+      },
+      {
+        "section_id": "section-39",
+        "title": "on('focusStateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1614,
+        "line_end": 1649,
+        "summary": "on(type: 'focusStateChange', callback: AsyncCallback\\<FocusState\\>): void\n\n监听相机聚焦的状态变化，通过注册回调函数获取结果"
+      },
+      {
+        "section_id": "section-40",
+        "title": "off('focusStateChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1650,
+        "line_end": 1675,
+        "summary": "off(type: 'focusStateChange', callback?: AsyncCallback\\<FocusState\\>): void\n\n注销监听相机聚焦的状态变化。\n\n> **说明"
+      },
+      {
+        "section_id": "section-41",
+        "title": "on('error')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1676,
+        "line_end": 1709,
+        "summary": "on(type: 'error', callback: ErrorCallback): void\n\n监听拍照会话的错误事件，通过注册回调函数获取结果。使用callback异步回调。\n\n> **说明："
+      },
+      {
+        "section_id": "section-42",
+        "title": "off('error')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1710,
+        "line_end": 1735,
+        "summary": "off(type: 'error', callback?: ErrorCallback): void\n\n注销监听拍照会话的错误事件，通过注册回调函数获取结果。\n\n> **说明：**\n>从 API v"
+      }
+    ]
+  }
+}

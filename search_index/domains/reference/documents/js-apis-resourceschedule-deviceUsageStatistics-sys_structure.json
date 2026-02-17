@@ -1,0 +1,372 @@
+{
+  "doc_id": "js-apis-resourceschedule-deviceUsageStatistics-sys",
+  "title": "@ohos.resourceschedule.usageStatistics (设备使用信息统计)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-backgroundtasks-kit/js-apis-resourceschedule-deviceUsageStatistics-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-backgroundtasks-kit/js-apis-resourceschedule-deviceUsageStatistics-sys.md",
+  "metadata": {
+    "kit": "Background Tasks Kit",
+    "subsystem": "ResourceSchedule",
+    "owner": "@cheng-shichang",
+    "designer": "@zhouben25",
+    "tester": "@leetestnady",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Background Tasks Kit ResourceSchedule 模块的 @ohos.resourceschedule.usageStatistics (设备使用信息统计)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.resourceschedule.usageStatistics (设备使用信息统计)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { usageStatistics } from '@kit.BackgroundTasksKit'\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "usageStatistics.isIdleState",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 68,
+        "summary": "isIdleState(bundleName: string, callback: AsyncCallback&lt;boolean&gt;): void\n\n查询指定的应用是否为常用应用（Group"
+      },
+      {
+        "section_id": "section-3",
+        "title": "usageStatistics.isIdleState",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 117,
+        "summary": "isIdleState(bundleName: string): Promise&lt;boolean&gt;\n\n查询指定的应用是否为常用应用（GroupType值≤30），使用Promise异步回"
+      },
+      {
+        "section_id": "section-4",
+        "title": "usageStatistics.isIdleStateSync<sup>10+<sup>",
+        "level": 2,
+        "line_start": 118,
+        "line_end": 160,
+        "summary": "isIdleStateSync(bundleName: string): boolean\n\n查询指定的应用是否为常用应用（GroupType值≤30），使用同步方式返回。\n\n**需要权限**：oho"
+      },
+      {
+        "section_id": "section-5",
+        "title": "usageStatistics.queryAppGroup",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 205,
+        "summary": "queryAppGroup(): Promise&lt;number&gt;\n\n查询当前应用的优先级分组，使用Promise异步回调。\n\n**需要权限**：ohos.permission.BUNDL"
+      },
+      {
+        "section_id": "section-6",
+        "title": "usageStatistics.queryAppGroup",
+        "level": 2,
+        "line_start": 206,
+        "line_end": 253,
+        "summary": "queryAppGroup(callback: AsyncCallback&lt;number&gt;): void\n\n查询当前应用的优先级分组，使用Callback异步回调。\n\n**需要权限**："
+      },
+      {
+        "section_id": "section-7",
+        "title": "usageStatistics.queryAppGroupSync<sup>10+<sup>",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 292,
+        "summary": "queryAppGroupSync(): number\n\n查询当前应用的优先级分组，使用同步方式返回。\n\n**需要权限**：ohos.permission.BUNDLE_ACTIVE_INFO\n\n*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "usageStatistics.queryAppGroup",
+        "level": 2,
+        "line_start": 293,
+        "line_end": 346,
+        "summary": "queryAppGroup(bundleName : string): Promise&lt;number&gt;\n\n查询指定bundleName应用的优先级分组，使用Promise异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-9",
+        "title": "usageStatistics.queryAppGroup",
+        "level": 2,
+        "line_start": 347,
+        "line_end": 396,
+        "summary": "queryAppGroup(bundleName : string, callback: AsyncCallback&lt;number&gt;): void\n\n查询指定bundleName应用的优"
+      },
+      {
+        "section_id": "section-10",
+        "title": "usageStatistics.queryAppGroupSync<sup>10+<sup>",
+        "level": 2,
+        "line_start": 397,
+        "line_end": 442,
+        "summary": "queryAppGroupSync(bundleName: string): number\n\n查询指定bundleName应用的优先级分组，使用同步方式返回。\n\n**需要权限**：ohos.perm"
+      },
+      {
+        "section_id": "section-11",
+        "title": "usageStatistics.setAppGroup",
+        "level": 2,
+        "line_start": 443,
+        "line_end": 497,
+        "summary": "setAppGroup(bundleName: string, newGroup: GroupType): Promise&lt;void&gt;\n\n将指定bundleName应用的分组设置为new"
+      },
+      {
+        "section_id": "section-12",
+        "title": "usageStatistics.setAppGroup",
+        "level": 2,
+        "line_start": 498,
+        "line_end": 549,
+        "summary": "setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCallback&lt;void&gt;): void\n\n将指"
+      },
+      {
+        "section_id": "section-13",
+        "title": "usageStatistics.queryBundleStatsInfos",
+        "level": 2,
+        "line_start": 550,
+        "line_end": 599,
+        "summary": "queryBundleStatsInfos(begin: number, end: number, callback: AsyncCallback&lt;BundleStatsMap&gt;): v"
+      },
+      {
+        "section_id": "section-14",
+        "title": "usageStatistics.queryBundleStatsInfos",
+        "level": 2,
+        "line_start": 600,
+        "line_end": 652,
+        "summary": "queryBundleStatsInfos(begin: number, end: number): Promise&lt;BundleStatsMap&gt;\n\n通过指定起始和结束时间，查询应用使"
+      },
+      {
+        "section_id": "section-15",
+        "title": "usageStatistics.queryAppStatsInfos<sup>15+</sup>",
+        "level": 2,
+        "line_start": 653,
+        "line_end": 705,
+        "summary": "queryAppStatsInfos(begin: number, end: number): Promise&lt;AppStatsMap&gt;\n\n通过指定起始和结束时间，查询应用使用时长的具体"
+      },
+      {
+        "section_id": "section-16",
+        "title": "usageStatistics.queryLastUseTime<sup>15+</sup>",
+        "level": 2,
+        "line_start": 706,
+        "line_end": 758,
+        "summary": "queryLastUseTime(appInfo: Record&lt;string, Array&lt;number&gt;&gt;): Promise&lt;AppStatsMap&gt;\n\n通"
+      },
+      {
+        "section_id": "section-17",
+        "title": "usageStatistics.queryBundleStatsInfoByInterval",
+        "level": 2,
+        "line_start": 759,
+        "line_end": 812,
+        "summary": "queryBundleStatsInfoByInterval(byInterval: IntervalType, begin: number, end: number, callback: Asyn"
+      },
+      {
+        "section_id": "section-18",
+        "title": "usageStatistics.queryBundleStatsInfoByInterval",
+        "level": 2,
+        "line_start": 813,
+        "line_end": 869,
+        "summary": "queryBundleStatsInfoByInterval(byInterval: IntervalType, begin: number, end: number): Promise&lt;Ar"
+      },
+      {
+        "section_id": "section-19",
+        "title": "usageStatistics.queryBundleEvents",
+        "level": 2,
+        "line_start": 870,
+        "line_end": 922,
+        "summary": "queryBundleEvents(begin: number, end: number, callback: AsyncCallback&lt;Array&lt;BundleEvents&gt;&"
+      },
+      {
+        "section_id": "section-20",
+        "title": "usageStatistics.queryBundleEvents",
+        "level": 2,
+        "line_start": 923,
+        "line_end": 978,
+        "summary": "queryBundleEvents(begin: number, end: number): Promise&lt;Array&lt;BundleEvents&gt;&gt;\n\n通过指定起始和结束时"
+      },
+      {
+        "section_id": "section-21",
+        "title": "usageStatistics.queryCurrentBundleEvents",
+        "level": 2,
+        "line_start": 979,
+        "line_end": 1028,
+        "summary": "queryCurrentBundleEvents(begin: number, end: number, callback: AsyncCallback&lt;Array&lt;BundleEven"
+      },
+      {
+        "section_id": "section-22",
+        "title": "usageStatistics.queryCurrentBundleEvents",
+        "level": 2,
+        "line_start": 1029,
+        "line_end": 1081,
+        "summary": "queryCurrentBundleEvents(begin: number, end: number): Promise&lt;Array&lt;BundleEvents&gt;&gt;\n\n通过指"
+      },
+      {
+        "section_id": "section-23",
+        "title": "usageStatistics.queryDeviceEventStats",
+        "level": 2,
+        "line_start": 1082,
+        "line_end": 1134,
+        "summary": "queryDeviceEventStats(begin: number, end: number): Promise&lt;Array&lt;DeviceEventStats&gt;&gt;\n\n通过"
+      },
+      {
+        "section_id": "section-24",
+        "title": "usageStatistics.queryDeviceEventStats",
+        "level": 2,
+        "line_start": 1135,
+        "line_end": 1184,
+        "summary": "queryDeviceEventStats(begin: number, end: number, callback: AsyncCallback&lt;Array&lt;DeviceEventSt"
+      },
+      {
+        "section_id": "section-25",
+        "title": "usageStatistics.queryNotificationEventStats",
+        "level": 2,
+        "line_start": 1185,
+        "line_end": 1237,
+        "summary": "queryNotificationEventStats(begin: number, end: number): Promise&lt;Array&lt;DeviceEventStats&gt;&g"
+      },
+      {
+        "section_id": "section-26",
+        "title": "usageStatistics.queryNotificationEventStats",
+        "level": 2,
+        "line_start": 1238,
+        "line_end": 1287,
+        "summary": "queryNotificationEventStats(begin: number, end: number, callback: AsyncCallback&lt;Array&lt;DeviceE"
+      },
+      {
+        "section_id": "section-27",
+        "title": "usageStatistics.queryModuleUsageRecords",
+        "level": 2,
+        "line_start": 1288,
+        "line_end": 1339,
+        "summary": "queryModuleUsageRecords(): Promise&lt;Array&lt;HapModuleInfo&gt;&gt;\n\n查询FA模型下各应用不用Hap包的使用记录（不超过1000"
+      },
+      {
+        "section_id": "section-28",
+        "title": "usageStatistics.queryModuleUsageRecords",
+        "level": 2,
+        "line_start": 1340,
+        "line_end": 1390,
+        "summary": "queryModuleUsageRecords(callback: AsyncCallback&lt;Array&lt;HapModuleInfo&gt;&gt;): void\n\n查询FA模型下各应"
+      },
+      {
+        "section_id": "section-29",
+        "title": "usageStatistics.queryModuleUsageRecords",
+        "level": 2,
+        "line_start": 1391,
+        "line_end": 1445,
+        "summary": "queryModuleUsageRecords(maxNum: number): Promise&lt;Array&lt;HapModuleInfo&gt;&gt;\n\n根据设置的maxNum，查询F"
+      },
+      {
+        "section_id": "section-30",
+        "title": "usageStatistics.queryModuleUsageRecords",
+        "level": 2,
+        "line_start": 1446,
+        "line_end": 1497,
+        "summary": "queryModuleUsageRecords(maxNum: number, callback: AsyncCallback&lt;Array&lt;HapModuleInfo&gt;&gt;):"
+      },
+      {
+        "section_id": "section-31",
+        "title": "usageStatistics.registerAppGroupCallBack",
+        "level": 2,
+        "line_start": 1498,
+        "line_end": 1556,
+        "summary": "registerAppGroupCallBack(groupCallback: Callback&lt;AppGroupCallbackInfo&gt;): Promise&lt;void&gt;"
+      },
+      {
+        "section_id": "section-32",
+        "title": "usageStatistics.registerAppGroupCallBack",
+        "level": 2,
+        "line_start": 1557,
+        "line_end": 1612,
+        "summary": "registerAppGroupCallBack(groupCallback: Callback&lt;AppGroupCallbackInfo&gt;, callback: AsyncCallba"
+      },
+      {
+        "section_id": "section-33",
+        "title": "usageStatistics.unregisterAppGroupCallBack",
+        "level": 2,
+        "line_start": 1613,
+        "line_end": 1656,
+        "summary": "unregisterAppGroupCallBack(): Promise&lt;void&gt;\n\n应用解除分组变化监听。使用Promise异步回调。\n\n**需要权限**：ohos.permiss"
+      },
+      {
+        "section_id": "section-34",
+        "title": "usageStatistics.unregisterAppGroupCallBack",
+        "level": 2,
+        "line_start": 1657,
+        "line_end": 1702,
+        "summary": "unregisterAppGroupCallBack(callback: AsyncCallback&lt;void&gt;): void;\n\n应用解除分组变化监听。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-35",
+        "title": "HapModuleInfo",
+        "level": 2,
+        "line_start": 1703,
+        "line_end": 1724,
+        "summary": "FA模型的使用信息属性集合。\n\n**系统能力**：以下各项对应的系统能力均为SystemCapability.ResourceSchedule.UsageStatistics.App\n\n| 名称"
+      },
+      {
+        "section_id": "section-36",
+        "title": "HapFormInfo",
+        "level": 2,
+        "line_start": 1725,
+        "line_end": 1738,
+        "summary": "FA卡片的使用信息属性集合。\n\n**系统能力**：以下各项对应的系统能力均为SystemCapability.ResourceSchedule.UsageStatistics.App\n\n| 名称"
+      },
+      {
+        "section_id": "section-37",
+        "title": "AppGroupCallbackInfo",
+        "level": 2,
+        "line_start": 1739,
+        "line_end": 1752,
+        "summary": "应用分组变化回调返回的属性集合\n\n**系统能力**：以下各项对应的系统能力均为SystemCapability.ResourceSchedule.UsageStatistics.AppGroup"
+      },
+      {
+        "section_id": "section-38",
+        "title": "BundleStatsInfo",
+        "level": 2,
+        "line_start": 1753,
+        "line_end": 1772,
+        "summary": "应用使用时长的具体信息。\n\n**系统能力**：以下各项对应的系统能力均为SystemCapability.ResourceSchedule.UsageStatistics.App\n\n| 名称"
+      },
+      {
+        "section_id": "section-39",
+        "title": "BundleEvents",
+        "level": 2,
+        "line_start": 1773,
+        "line_end": 1787,
+        "summary": "应用事件的具体信息。\n\n**系统能力**：以下各项对应的系统能力均为SystemCapability.ResourceSchedule.UsageStatistics.App\n\n| 名称"
+      },
+      {
+        "section_id": "section-40",
+        "title": "BundleStatsMap",
+        "level": 2,
+        "line_start": 1788,
+        "line_end": 1797,
+        "summary": "应用使用时长的具体信息。\n\n**系统能力**：SystemCapability.ResourceSchedule.UsageStatistics.App\n\n|名称"
+      },
+      {
+        "section_id": "section-41",
+        "title": "AppStatsMap<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1798,
+        "line_end": 1807,
+        "summary": "应用使用的具体信息(包含分身应用)。\n\n**系统能力**：SystemCapability.ResourceSchedule.UsageStatistics.App\n\n|名称"
+      },
+      {
+        "section_id": "section-42",
+        "title": "DeviceEventStats",
+        "level": 2,
+        "line_start": 1808,
+        "line_end": 1819,
+        "summary": "提供通知、系统事件的统计信息。\n\n**系统能力**：以下各项对应的系统能力均为SystemCapability.ResourceSchedule.UsageStatistics.App\n\n| 名称"
+      },
+      {
+        "section_id": "section-43",
+        "title": "IntervalType",
+        "level": 2,
+        "line_start": 1820,
+        "line_end": 1833,
+        "summary": "应用使用时长的查询类型。\n\n**系统能力**：以下各项对应的系统能力均为SystemCapability.ResourceSchedule.UsageStatistics.App\n\n| 名称"
+      },
+      {
+        "section_id": "section-44",
+        "title": "GroupType",
+        "level": 2,
+        "line_start": 1834,
+        "line_end": 1847,
+        "summary": "应用分组的设置类型。\n\n**系统能力**：以下各项对应的系统能力均为SystemCapability.ResourceSchedule.UsageStatistics.AppGroup\n\n| 名称"
+      }
+    ]
+  }
+}

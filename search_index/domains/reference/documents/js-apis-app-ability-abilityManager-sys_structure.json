@@ -1,0 +1,284 @@
+{
+  "doc_id": "js-apis-app-ability-abilityManager-sys",
+  "title": "@ohos.app.ability.abilityManager (AbilityManager)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-abilityManager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-ability-kit/js-apis-app-ability-abilityManager-sys.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@dsz2025; @Luobniz21",
+    "designer": "@ccllee1",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Ability Kit Ability 模块的 @ohos.app.ability.abilityManager (AbilityManager)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.ability.abilityManager (AbilityManager)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { abilityManager } from '@kit.AbilityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "UserStatus<sup>12+</sup>",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 36,
+        "summary": "用户操作的断言调试结果，该类型为枚举。\n\n**系统接口**：该接口为系统接口。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Core\n\n| 名"
+      },
+      {
+        "section_id": "section-3",
+        "title": "updateConfiguration",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 96,
+        "summary": "updateConfiguration(config: Configuration, callback: AsyncCallback\\<void>): void\n\n通过传入修改的配置项来更新配置。使"
+      },
+      {
+        "section_id": "section-4",
+        "title": "updateConfiguration",
+        "level": 2,
+        "line_start": 97,
+        "line_end": 159,
+        "summary": "updateConfiguration(config: Configuration): Promise\\<void>\n\n通过修改配置来更新配置。使用Promise异步回调。\n\n**系统接口**：此接"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getAbilityRunningInfos",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 212,
+        "summary": "getAbilityRunningInfos(callback: AsyncCallback\\<Array\\<AbilityRunningInfo>>): void\n\n获取UIAbility运行相关"
+      },
+      {
+        "section_id": "section-6",
+        "title": "getExtensionRunningInfos",
+        "level": 2,
+        "line_start": 213,
+        "line_end": 264,
+        "summary": "getExtensionRunningInfos(upperLimit: number, callback: AsyncCallback\\<Array\\<ExtensionRunningInfo>>"
+      },
+      {
+        "section_id": "section-7",
+        "title": "getExtensionRunningInfos",
+        "level": 2,
+        "line_start": 265,
+        "line_end": 319,
+        "summary": "getExtensionRunningInfos(upperLimit: number): Promise\\<Array\\<ExtensionRunningInfo>>\n\n获取关于运行扩展能力的信息"
+      },
+      {
+        "section_id": "section-8",
+        "title": "getTopAbility",
+        "level": 2,
+        "line_start": 320,
+        "line_end": 360,
+        "summary": "getTopAbility(callback: AsyncCallback\\<ElementName>): void\n\n获取窗口焦点所在的Ability。使用callback异步回调。\n\n**系统接"
+      },
+      {
+        "section_id": "section-9",
+        "title": "getTopAbility",
+        "level": 2,
+        "line_start": 361,
+        "line_end": 398,
+        "summary": "getTopAbility(): Promise\\<ElementName>\n\n获取窗口焦点所在的Ability。使用Promise异步回调。\n\n**系统接口**：此接口为系统接口。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-10",
+        "title": "acquireShareData<sup>10+</sup>",
+        "level": 2,
+        "line_start": 399,
+        "line_end": 446,
+        "summary": "acquireShareData(missionId: number, callback: AsyncCallback\\<Record\\<string, Object>>): void\n\n系统弹框通"
+      },
+      {
+        "section_id": "section-11",
+        "title": "acquireShareData<sup>10+</sup>",
+        "level": 2,
+        "line_start": 447,
+        "line_end": 497,
+        "summary": "acquireShareData(missionId: number): Promise\\<Record\\<string, Object>>\n\n系统弹框通过该接口发起原子化服务分享，触发目标UIAb"
+      },
+      {
+        "section_id": "section-12",
+        "title": "notifySaveAsResult<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 498,
+        "line_end": 564,
+        "summary": "notifySaveAsResult(parameter: AbilityResult, requestCode: number, callback: AsyncCallback\\<void>):"
+      },
+      {
+        "section_id": "section-13",
+        "title": "notifySaveAsResult<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 565,
+        "line_end": 634,
+        "summary": "notifySaveAsResult(parameter: AbilityResult, requestCode: number): Promise\\<void>\n\n该接口仅供[DLP](../ap"
+      },
+      {
+        "section_id": "section-14",
+        "title": "abilityManager.on('abilityForegroundState')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 635,
+        "line_end": 684,
+        "summary": "on(type: 'abilityForegroundState', observer: AbilityForegroundStateObserver): void\n\n注册Ability的启动和退出"
+      },
+      {
+        "section_id": "section-15",
+        "title": "abilityManager.off('abilityForegroundState')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 685,
+        "line_end": 746,
+        "summary": "off(type: 'abilityForegroundState', observer?: AbilityForegroundStateObserver): void\n\n取消注册Ability启动"
+      },
+      {
+        "section_id": "section-16",
+        "title": "abilityManager.getForegroundUIAbilities<sup>11+</sup>",
+        "level": 2,
+        "line_start": 747,
+        "line_end": 790,
+        "summary": "getForegroundUIAbilities(callback: AsyncCallback\\<Array\\<AbilityStateData>>): void\n\n获取前台正在运行的应用Abil"
+      },
+      {
+        "section_id": "section-17",
+        "title": "abilityManager.getForegroundUIAbilities<sup>11+</sup>",
+        "level": 2,
+        "line_start": 791,
+        "line_end": 831,
+        "summary": "getForegroundUIAbilities(): Promise\\<Array\\<AbilityStateData>>\n\n获取前台正在运行的应用Ability的信息。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-18",
+        "title": "abilityManager.notifyDebugAssertResult<sup>12+</sup>",
+        "level": 2,
+        "line_start": 832,
+        "line_end": 889,
+        "summary": "notifyDebugAssertResult(sessionId: string, status: UserStatus): Promise\\<void>\n\n将断言调试结果通知应用程序。使用Pro"
+      },
+      {
+        "section_id": "section-19",
+        "title": "abilityManager.isEmbeddedOpenAllowed<sup>12+</sup>",
+        "level": 2,
+        "line_start": 890,
+        "line_end": 944,
+        "summary": "isEmbeddedOpenAllowed(context: Context, appId: string): Promise\\<boolean>\n\n判断是否允许嵌入式拉起[EmbeddableUI"
+      },
+      {
+        "section_id": "section-20",
+        "title": "abilityManager.setResidentProcessEnabled<sup>12+</sup>",
+        "level": 2,
+        "line_start": 945,
+        "line_end": 1001,
+        "summary": "setResidentProcessEnabled(bundleName: string, enable: boolean): Promise\\<void>\n\n常驻进程支持按需启停。\n\n**系统接口"
+      },
+      {
+        "section_id": "section-21",
+        "title": "abilityManager.preloadUIExtensionAbility<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1002,
+        "line_end": 1068,
+        "summary": "preloadUIExtensionAbility(want: Want): Promise\\<number>\n\n预加载指定的[UIExtensionAbility](./js-apis-app-a"
+      },
+      {
+        "section_id": "section-22",
+        "title": "abilityManager.clearPreloadedUIExtensionAbility<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1069,
+        "line_end": 1126,
+        "summary": "clearPreloadedUIExtensionAbility(preloadId: number): Promise\\<void>\n\n清除指定的[UIExtensionAbility](./js"
+      },
+      {
+        "section_id": "section-23",
+        "title": "abilityManager.clearPreloadedUIExtensionAbilities<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1127,
+        "line_end": 1175,
+        "summary": "clearPreloadedUIExtensionAbilities(): Promise\\<void>\n\n清除当前进程中所有已经预加载的[UIExtensionAbility](./js-apis"
+      },
+      {
+        "section_id": "section-24",
+        "title": "abilityManager.onPreloadedUIExtensionAbilityLoaded<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1176,
+        "line_end": 1223,
+        "summary": "onPreloadedUIExtensionAbilityLoaded(callback: PreloadedUIExtensionAbilityLoadedFn): void\n\n监听当前进程中预加"
+      },
+      {
+        "section_id": "section-25",
+        "title": "abilityManager.offPreloadedUIExtensionAbilityLoaded<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1224,
+        "line_end": 1271,
+        "summary": "offPreloadedUIExtensionAbilityLoaded(callback?: PreloadedUIExtensionAbilityLoadedFn): void\n\n注销当前进程中"
+      },
+      {
+        "section_id": "section-26",
+        "title": "abilityManager.onPreloadedUIExtensionAbilityDestroyed<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1272,
+        "line_end": 1319,
+        "summary": "onPreloadedUIExtensionAbilityDestroyed(callback: PreloadedUIExtensionAbilityDestroyedFn): void\n\n监听当"
+      },
+      {
+        "section_id": "section-27",
+        "title": "abilityManager.offPreloadedUIExtensionAbilityDestroyed<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1320,
+        "line_end": 1367,
+        "summary": "offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtensionAbilityDestroyedFn): void\n\n注"
+      },
+      {
+        "section_id": "section-28",
+        "title": "AtomicServiceStartupRule<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1368,
+        "line_end": 1380,
+        "summary": "嵌入式拉起原子化服务的规则。\n\n**系统接口**：该接口为系统接口。\n\n**系统能力**：SystemCapability.Ability.AbilityRuntime.Core\n\n| 名称 | 类"
+      },
+      {
+        "section_id": "section-29",
+        "title": "abilityManager.queryAtomicServiceStartupRule<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1381,
+        "line_end": 1438,
+        "summary": "queryAtomicServiceStartupRule(context: Context, appId: string): Promise\\<AtomicServiceStartupRule>"
+      },
+      {
+        "section_id": "section-30",
+        "title": "ExtensionRunningInfo",
+        "level": 2,
+        "line_start": 1439,
+        "line_end": 1452,
+        "summary": "type ExtensionRunningInfo = _ExtensionRunningInfo\n\nExtensionRunningInfo二级模块。\n\n**系统接口**：此接口为系统接口。\n\n*"
+      },
+      {
+        "section_id": "section-31",
+        "title": "AbilityForegroundStateObserver<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1453,
+        "line_end": 1466,
+        "summary": "type AbilityForegroundStateObserver = _AbilityForegroundStateObserver.default\n\nAbilityForegroundSta"
+      },
+      {
+        "section_id": "section-32",
+        "title": "PreloadedUIExtensionAbilityDestroyedFn<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1467,
+        "line_end": 1480,
+        "summary": "type PreloadedUIExtensionAbilityDestroyedFn = (preloadId: number) => void\n\n预加载[UIExtensionAbility]("
+      },
+      {
+        "section_id": "section-33",
+        "title": "PreloadedUIExtensionAbilityLoadedFn<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1481,
+        "line_end": 1494,
+        "summary": "type PreloadedUIExtensionAbilityLoadedFn = (preloadId: number) => void\n\n预加载[UIExtensionAbility](./j"
+      }
+    ]
+  }
+}

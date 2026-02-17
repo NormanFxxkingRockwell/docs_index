@@ -1,0 +1,260 @@
+{
+  "doc_id": "js-apis-inputmonitor-sys",
+  "title": "@ohos.multimodalInput.inputMonitor (输入监听)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-input-kit/js-apis-inputmonitor-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-input-kit/js-apis-inputmonitor-sys.md",
+  "metadata": {
+    "kit": "Input Kit",
+    "subsystem": "MultimodalInput",
+    "owner": "@zhaoxueyuan",
+    "designer": "@hanruofei",
+    "tester": "@Lyuxin",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Input Kit MultimodalInput 模块的 @ohos.multimodalInput.inputMonitor (输入监听)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.multimodalInput.inputMonitor (输入监听)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```js\nimport { inputMonitor } from '@kit.InputKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "inputMonitor.on('touch')",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 79,
+        "summary": "on(type: 'touch', receiver: TouchEventReceiver): void\n\n监听全局触屏输入事件。\n\n**需要权限：** ohos.permission.INPUT"
+      },
+      {
+        "section_id": "section-3",
+        "title": "inputMonitor.on('mouse')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 133,
+        "summary": "on(type: 'mouse', receiver: Callback&lt;MouseEvent&gt;): void\n\n监听全局鼠标事件。使用callback异步回调。\n\n**需要权限：**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "inputMonitor.on('mouse')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 212,
+        "summary": "on(type: 'mouse', rect: display.Rect[], receiver: Callback&lt;MouseEvent&gt;): void\n\n监听鼠标事件，当鼠标移动至指"
+      },
+      {
+        "section_id": "section-5",
+        "title": "inputMonitor.off('touch')",
+        "level": 2,
+        "line_start": 213,
+        "line_end": 299,
+        "summary": "off(type: 'touch', receiver?: TouchEventReceiver): void\n\n取消监听全局触屏输入事件。\n\n**需要权限：** ohos.permission.I"
+      },
+      {
+        "section_id": "section-6",
+        "title": "inputMonitor.off('mouse')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 300,
+        "line_end": 386,
+        "summary": "off(type: 'mouse', receiver?: Callback&lt;MouseEvent&gt;): void\n\n取消监听全局鼠标事件。使用callback异步回调。\n\n**需要权限"
+      },
+      {
+        "section_id": "section-7",
+        "title": "TouchEventReceiver",
+        "level": 2,
+        "line_start": 387,
+        "line_end": 436,
+        "summary": "type TouchEventReceiver = (touchEvent: TouchEvent) => boolean\n\n触屏输入事件的回调函数。\n\n**需要权限：** ohos.permiss"
+      },
+      {
+        "section_id": "section-8",
+        "title": "inputMonitor.on('pinch')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 437,
+        "line_end": 489,
+        "summary": "on(type: 'pinch', receiver: Callback&lt;[Pinch](js-apis-multimodalinput-gestureevent.md#pinch)&gt;)"
+      },
+      {
+        "section_id": "section-9",
+        "title": "inputMonitor.off('pinch')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 490,
+        "line_end": 576,
+        "summary": "off(type: 'pinch', receiver?: Callback&lt;[Pinch](js-apis-multimodalinput-gestureevent.md#pinch)&gt"
+      },
+      {
+        "section_id": "section-10",
+        "title": "inputMonitor.on('threeFingersSwipe')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 577,
+        "line_end": 629,
+        "summary": "on(type: 'threeFingersSwipe', receiver: Callback&lt;[ThreeFingersSwipe](js-apis-multimodalinput-ges"
+      },
+      {
+        "section_id": "section-11",
+        "title": "inputMonitor.off('threeFingersSwipe')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 630,
+        "line_end": 716,
+        "summary": "off(type: 'threeFingersSwipe', receiver?: Callback&lt;[ThreeFingersSwipe](js-apis-multimodalinput-g"
+      },
+      {
+        "section_id": "section-12",
+        "title": "inputMonitor.on('fourFingersSwipe')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 717,
+        "line_end": 769,
+        "summary": "on(type: 'fourFingersSwipe', receiver: Callback&lt;[FourFingersSwipe](js-apis-multimodalinput-gestu"
+      },
+      {
+        "section_id": "section-13",
+        "title": "inputMonitor.off('fourFingersSwipe')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 770,
+        "line_end": 856,
+        "summary": "off(type: 'fourFingersSwipe', receiver?: Callback&lt;[FourFingersSwipe](js-apis-multimodalinput-ges"
+      },
+      {
+        "section_id": "section-14",
+        "title": "inputMonitor.on('rotate')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 857,
+        "line_end": 911,
+        "summary": "on(type: 'rotate', fingers: number, receiver: Callback&lt;Rotate&gt;): void\n\n监听全局触控板的旋转事件。使用callbac"
+      },
+      {
+        "section_id": "section-15",
+        "title": "inputMonitor.off('rotate')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 912,
+        "line_end": 999,
+        "summary": "off(type: 'rotate', fingers: number, receiver?: Callback&lt;Rotate&gt;): void\n\n取消监听全局触控板的旋转事件。使用cal"
+      },
+      {
+        "section_id": "section-16",
+        "title": "inputMonitor.on('pinch')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1000,
+        "line_end": 1054,
+        "summary": "on(type: 'pinch', fingers: number, receiver: Callback&lt;Pinch&gt;): void\n\n监听全局触控板的捏合事件。使用callback异"
+      },
+      {
+        "section_id": "section-17",
+        "title": "inputMonitor.off('pinch')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1055,
+        "line_end": 1142,
+        "summary": "off(type: 'pinch', fingers: number, receiver?: Callback&lt;Pinch&gt;): void\n\n取消监听全局触控板的捏合事件。使用callb"
+      },
+      {
+        "section_id": "section-18",
+        "title": "inputMonitor.on('threeFingersTap')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1143,
+        "line_end": 1195,
+        "summary": "on(type: 'threeFingersTap', receiver: Callback&lt;[ThreeFingersTap](js-apis-multimodalinput-gesture"
+      },
+      {
+        "section_id": "section-19",
+        "title": "inputMonitor.off('threeFingersTap')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1196,
+        "line_end": 1282,
+        "summary": "off(type: 'threeFingersTap', receiver?: Callback&lt;[ThreeFingersTap](js-apis-multimodalinput-gestu"
+      },
+      {
+        "section_id": "section-20",
+        "title": "inputMonitor.on('touchscreenSwipe')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1283,
+        "line_end": 1337,
+        "summary": "on(type: 'touchscreenSwipe', fingers: number, receiver: Callback&lt;TouchGestureEvent&gt;): void\n\n监"
+      },
+      {
+        "section_id": "section-21",
+        "title": "inputMonitor.off('touchscreenSwipe')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1338,
+        "line_end": 1422,
+        "summary": "off(type: 'touchscreenSwipe', fingers: number, receiver?: Callback&lt;TouchGestureEvent&gt;): void"
+      },
+      {
+        "section_id": "section-22",
+        "title": "inputMonitor.on('touchscreenPinch')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1423,
+        "line_end": 1477,
+        "summary": "on(type: 'touchscreenPinch', fingers: number, receiver: Callback&lt;TouchGestureEvent&gt;): void\n\n监"
+      },
+      {
+        "section_id": "section-23",
+        "title": "inputMonitor.off('touchscreenPinch')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1478,
+        "line_end": 1562,
+        "summary": "off(type: 'touchscreenPinch', fingers: number, receiver?: Callback&lt;TouchGestureEvent&gt;): void"
+      },
+      {
+        "section_id": "section-24",
+        "title": "inputMonitor.on('keyPressed')<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1563,
+        "line_end": 1617,
+        "summary": "on(type: 'keyPressed', keys: Array&lt;KeyCode&gt;, receiver: Callback&lt;KeyEvent&gt;): void\n\n监听指定按"
+      },
+      {
+        "section_id": "section-25",
+        "title": "inputMonitor.off('keyPressed')<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1618,
+        "line_end": 1699,
+        "summary": "off(type: 'keyPressed', receiver?: Callback&lt;KeyEvent&gt;): void\n\n取消监听按键按下抬起事件。支持取消监听META_LEFT键、M"
+      },
+      {
+        "section_id": "section-26",
+        "title": "inputMonitor.queryTouchEvents()<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1700,
+        "line_end": 1751,
+        "summary": "queryTouchEvents(count: number): Promise&lt;Array&lt;TouchEvent&gt;&gt;\n\n查询最近的触屏输入事件，最多支持查询 100 条事件"
+      },
+      {
+        "section_id": "section-27",
+        "title": "inputMonitor.on('swipeInward')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1752,
+        "line_end": 1804,
+        "summary": "on(type: 'swipeInward', receiver: Callback&lt;SwipeInward&gt;): void\n\n监听向内滑动事件。使用callback异步回调。\n\n**需"
+      },
+      {
+        "section_id": "section-28",
+        "title": "inputMonitor.off('swipeInward')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1805,
+        "line_end": 1889,
+        "summary": "off(type: 'swipeInward', receiver?: Callback&lt;SwipeInward&gt;): void\n\n取消监听向内滑动事件。使用callback异步回调。"
+      },
+      {
+        "section_id": "section-29",
+        "title": "inputMonitor.on('fingerprint')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1890,
+        "line_end": 1942,
+        "summary": "on(type: 'fingerprint', receiver: Callback&lt;FingerprintEvent&gt;): void\n\n监听指纹手势输入事件。使用callback异步回"
+      },
+      {
+        "section_id": "section-30",
+        "title": "inputMonitor.off('fingerprint')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1943,
+        "line_end": 2028,
+        "summary": "off(type: 'fingerprint', receiver?: Callback&lt;FingerprintEvent&gt;): void\n\n取消监听指纹手势输入事件。使用callbac"
+      }
+    ]
+  }
+}

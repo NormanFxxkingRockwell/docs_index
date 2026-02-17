@@ -1,0 +1,2020 @@
+{
+  "doc_id": "arkts-apis-window-Window",
+  "title": "Interface (Window)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/arkts-apis-window-Window.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/arkts-apis-window-Window.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "Window",
+    "owner": "@waterwin",
+    "designer": "@nyankomiya",
+    "tester": "@qinliwen0417",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkUI Window 模块的 Interface (Window)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (Window)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { window } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "showWindow<sup>9+</sup>",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 104,
+        "summary": "showWindow(callback: AsyncCallback&lt;void&gt;): void\n\n显示当前窗口，使用callback异步回调，支持系统窗口、应用子窗口、模态窗和全局悬浮窗"
+      },
+      {
+        "section_id": "section-3",
+        "title": "showWindow<sup>9+</sup>",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 183,
+        "summary": "showWindow(): Promise&lt;void&gt;\n\n显示当前窗口，使用Promise异步回调，支持系统窗口、应用子窗口、模态窗和全局悬浮窗，或将已显示的应用主窗口层级提升至顶部。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "showWindow<sup>20+</sup>",
+        "level": 2,
+        "line_start": 184,
+        "line_end": 274,
+        "summary": "showWindow(options: ShowWindowOptions): Promise&lt;void&gt;\n\n显示当前窗口或将已显示的应用主窗口的层级提升至顶部，支持传入参数来控制窗口显"
+      },
+      {
+        "section_id": "section-5",
+        "title": "destroyWindow<sup>9+</sup>",
+        "level": 2,
+        "line_start": 275,
+        "line_end": 313,
+        "summary": "destroyWindow(callback: AsyncCallback&lt;void&gt;): void\n\n销毁当前窗口，使用callback异步回调，支持系统窗口及应用子窗口，全局悬浮窗和"
+      },
+      {
+        "section_id": "section-6",
+        "title": "destroyWindow<sup>9+</sup>",
+        "level": 2,
+        "line_start": 314,
+        "line_end": 350,
+        "summary": "destroyWindow(): Promise&lt;void&gt;\n\n销毁当前窗口，使用Promise异步回调，支持系统窗口及应用子窗口，全局悬浮窗和模态窗。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-7",
+        "title": "moveWindowTo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 351,
+        "line_end": 407,
+        "summary": "moveWindowTo(x: number, y: number, callback: AsyncCallback&lt;void&gt;): void\n\n移动窗口位置，使用callback异步回"
+      },
+      {
+        "section_id": "section-8",
+        "title": "moveWindowTo<sup>9+</sup>",
+        "level": 2,
+        "line_start": 408,
+        "line_end": 467,
+        "summary": "moveWindowTo(x: number, y: number): Promise&lt;void&gt;\n\n移动窗口位置，使用Promise异步回调。调用成功即返回，但返回后无法立即获取最终生"
+      },
+      {
+        "section_id": "section-9",
+        "title": "moveWindowToAsync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 468,
+        "line_end": 528,
+        "summary": "moveWindowToAsync(x: number, y: number): Promise&lt;void&gt;\n\n移动窗口位置，使用Promise异步回调。调用生效后返回，回调中可使用[g"
+      },
+      {
+        "section_id": "section-10",
+        "title": "moveWindowToAsync<sup>15+</sup>",
+        "level": 2,
+        "line_start": 529,
+        "line_end": 594,
+        "summary": "moveWindowToAsync(x: number, y: number, moveConfiguration?: MoveConfiguration): Promise&lt;void&gt;"
+      },
+      {
+        "section_id": "section-11",
+        "title": "moveWindowToGlobal<sup>13+</sup>",
+        "level": 2,
+        "line_start": 595,
+        "line_end": 654,
+        "summary": "moveWindowToGlobal(x: number, y: number): Promise&lt;void&gt;\n\n基于屏幕坐标移动窗口位置，使用Promise异步回调。调用生效后返回，回"
+      },
+      {
+        "section_id": "section-12",
+        "title": "moveWindowToGlobal<sup>15+</sup>",
+        "level": 2,
+        "line_start": 655,
+        "line_end": 718,
+        "summary": "moveWindowToGlobal(x: number, y: number, moveConfiguration?: MoveConfiguration): Promise&lt;void&gt"
+      },
+      {
+        "section_id": "section-13",
+        "title": "moveWindowToGlobalDisplay<sup>20+</sup>",
+        "level": 2,
+        "line_start": 719,
+        "line_end": 774,
+        "summary": "moveWindowToGlobalDisplay(x: number, y: number): Promise&lt;void&gt;\n\n基于[全局坐标系](../../windowmanager"
+      },
+      {
+        "section_id": "section-14",
+        "title": "clientToGlobalDisplay<sup>20+</sup>",
+        "level": 2,
+        "line_start": 775,
+        "line_end": 819,
+        "summary": "clientToGlobalDisplay(winX: number, winY: number): Position\n\n将相对于当前窗口左上角的坐标转换为相对于主屏幕左上角的全局坐标。\n\n不支持在"
+      },
+      {
+        "section_id": "section-15",
+        "title": "globalDisplayToClient<sup>20+</sup>",
+        "level": 2,
+        "line_start": 820,
+        "line_end": 864,
+        "summary": "globalDisplayToClient(globalDisplayX: number, globalDisplayY: number): Position\n\n将相对于主屏幕左上角的全局坐标转换为"
+      },
+      {
+        "section_id": "section-16",
+        "title": "resize<sup>9+</sup>",
+        "level": 2,
+        "line_start": 865,
+        "line_end": 927,
+        "summary": "resize(width: number, height: number, callback: AsyncCallback&lt;void&gt;): void\n\n基于窗口左上角顶点改变当前窗口大小"
+      },
+      {
+        "section_id": "section-17",
+        "title": "resize<sup>9+</sup>",
+        "level": 2,
+        "line_start": 928,
+        "line_end": 993,
+        "summary": "resize(width: number, height: number): Promise&lt;void&gt;\n\n基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。\n\n调用成功即"
+      },
+      {
+        "section_id": "section-18",
+        "title": "resizeAsync<sup>12+</sup>",
+        "level": 2,
+        "line_start": 994,
+        "line_end": 1063,
+        "summary": "resizeAsync(width: number, height: number): Promise&lt;void&gt;\n\n基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "getWindowProperties<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1064,
+        "line_end": 1097,
+        "summary": "getWindowProperties(): WindowProperties\n\n获取当前窗口的属性。\n\n**系统能力：** SystemCapability.WindowManager.Windo"
+      },
+      {
+        "section_id": "section-20",
+        "title": "getWindowDensityInfo<sup>15+</sup>",
+        "level": 2,
+        "line_start": 1098,
+        "line_end": 1132,
+        "summary": "getWindowDensityInfo(): WindowDensityInfo\n\n获取当前窗口所在屏幕的系统显示大小缩放系数、系统默认显示大小缩放系数和自定义显示大小缩放系数信息。\n\n**系统能"
+      },
+      {
+        "section_id": "section-21",
+        "title": "setWindowContainerColor<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1133,
+        "line_end": 1204,
+        "summary": "setWindowContainerColor(activeColor: string, inactiveColor: string): void\n\n设置主窗口容器在焦点态和非焦点态时的背景色。在S"
+      },
+      {
+        "section_id": "section-22",
+        "title": "getGlobalRect<sup>13+</sup>",
+        "level": 2,
+        "line_start": 1205,
+        "line_end": 1243,
+        "summary": "getGlobalRect(): Rect\n\n获取窗口在其所在物理屏幕上的真实显示区域，同步接口。\n\n在某些设备上，窗口显示时可能经过了缩放，此接口可以获取缩放后窗口在屏幕上的真实位置和大小。\n\n*"
+      },
+      {
+        "section_id": "section-23",
+        "title": "getWindowAvoidArea<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1244,
+        "line_end": 1298,
+        "summary": "getWindowAvoidArea(type: AvoidAreaType): AvoidArea\n\n获取当前窗口避让区域。\n\n主窗口/子窗口：\n- [自由窗口](../../windowmana"
+      },
+      {
+        "section_id": "section-24",
+        "title": "getWindowAvoidAreaIgnoringVisibility<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1299,
+        "line_end": 1348,
+        "summary": "getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea\n\n获取当前应用窗口的避让区域，即使避让区域当前处于不可见状态"
+      },
+      {
+        "section_id": "section-25",
+        "title": "setSystemAvoidAreaEnabled<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1349,
+        "line_end": 1432,
+        "summary": "setSystemAvoidAreaEnabled(enabled: boolean): Promise&lt;void&gt;\n\n创建全局悬浮窗、模态窗或WindowType窗口类型为系统窗口时，"
+      },
+      {
+        "section_id": "section-26",
+        "title": "isSystemAvoidAreaEnabled<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1433,
+        "line_end": 1493,
+        "summary": "isSystemAvoidAreaEnabled(): boolean\n\n获取悬浮窗、模态窗或WindowType为系统类型的窗口是否可以获取窗口内容的避让区[AvoidArea](arkts-ap"
+      },
+      {
+        "section_id": "section-27",
+        "title": "setTitleAndDockHoverShown<sup>14+</sup>",
+        "level": 2,
+        "line_start": 1494,
+        "line_end": 1566,
+        "summary": "setTitleAndDockHoverShown(isTitleHoverShown?: boolean, isDockHoverShown?: boolean): Promise&lt;void"
+      },
+      {
+        "section_id": "section-28",
+        "title": "setWindowLayoutFullScreen<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1567,
+        "line_end": 1644,
+        "summary": "setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise&lt;void&gt;\n\n设置应用主窗口或应用子窗口的布局是否为沉浸式"
+      },
+      {
+        "section_id": "section-29",
+        "title": "setImmersiveModeEnabledState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1645,
+        "line_end": 1688,
+        "summary": "setImmersiveModeEnabledState(enabled: boolean): void\n\n设置当前窗口是否开启沉浸式布局，该调用不会改变窗口模式和窗口大小。仅主窗口和子窗口可调用。"
+      },
+      {
+        "section_id": "section-30",
+        "title": "getImmersiveModeEnabledState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1689,
+        "line_end": 1726,
+        "summary": "getImmersiveModeEnabledState(): boolean\n\n查询当前窗口是否开启沉浸式布局。\n\n仅支持主窗和子窗调用。\n\n返回值与[setImmersiveModeEnable"
+      },
+      {
+        "section_id": "section-31",
+        "title": "isImmersiveLayout<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1727,
+        "line_end": 1758,
+        "summary": "isImmersiveLayout(): boolean\n\n查询当前窗口是否处于沉浸式布局状态。\n\n**系统能力**：SystemCapability.Window.SessionManager"
+      },
+      {
+        "section_id": "section-32",
+        "title": "setWindowDelayRaiseOnDrag<sup>19+</sup>",
+        "level": 2,
+        "line_start": 1759,
+        "line_end": 1799,
+        "summary": "setWindowDelayRaiseOnDrag(isEnabled: boolean): void\n\n设置窗口是否使能延迟抬升，仅主窗和子窗可设置。\n\n不调用此接口或传入false，主窗和子窗在"
+      },
+      {
+        "section_id": "section-33",
+        "title": "setDragKeyFramePolicy<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1800,
+        "line_end": 1875,
+        "summary": "setDragKeyFramePolicy(keyFramePolicy: KeyFramePolicy): Promise&lt;KeyFramePolicy&gt;\n\n设置主窗口拖拽的关键帧策略"
+      },
+      {
+        "section_id": "section-34",
+        "title": "setWindowSystemBarEnable<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1876,
+        "line_end": 1952,
+        "summary": "setWindowSystemBarEnable(names: Array<'status' | 'navigation'>): Promise&lt;void&gt;\n\n<!--RP14-->设置"
+      },
+      {
+        "section_id": "section-35",
+        "title": "setSpecificSystemBarEnabled<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1953,
+        "line_end": 2031,
+        "summary": "setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnimation?: boolean): P"
+      },
+      {
+        "section_id": "section-36",
+        "title": "setWindowSystemBarProperties<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2032,
+        "line_end": 2109,
+        "summary": "setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise&lt;void&gt;\n\n设置主窗口<"
+      },
+      {
+        "section_id": "section-37",
+        "title": "getWindowSystemBarProperties<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2110,
+        "line_end": 2167,
+        "summary": "getWindowSystemBarProperties(): SystemBarProperties\n\n获取主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。\n\n**系"
+      },
+      {
+        "section_id": "section-38",
+        "title": "setStatusBarColor<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2168,
+        "line_end": 2239,
+        "summary": "setStatusBarColor(color: ColorMetrics): Promise&lt;void&gt;\n\n设置主窗口状态栏的文字颜色，使用Promise异步回调。\n\n子窗口不支持设置"
+      },
+      {
+        "section_id": "section-39",
+        "title": "getStatusBarProperty<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2240,
+        "line_end": 2296,
+        "summary": "getStatusBarProperty(): StatusBarProperty\n\n获取主窗口状态栏的属性，如状态栏文字颜色。\n\n子窗口不支持查询，调用会返回错误码1300004。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-40",
+        "title": "setPreferredOrientation<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2297,
+        "line_end": 2366,
+        "summary": "setPreferredOrientation(orientation: Orientation, callback: AsyncCallback&lt;void&gt;): void\n\n设置窗口的"
+      },
+      {
+        "section_id": "section-41",
+        "title": "setPreferredOrientation<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2367,
+        "line_end": 2439,
+        "summary": "setPreferredOrientation(orientation: Orientation): Promise&lt;void&gt;\n\n设置主窗口的显示方向属性，使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-42",
+        "title": "getPreferredOrientation<sup>12+</sup>",
+        "level": 2,
+        "line_start": 2440,
+        "line_end": 2494,
+        "summary": "getPreferredOrientation(): Orientation\n\n获取窗口的显示方向属性。未指定方向时，返回window.Orientation.UNSPECIFIED。\n\n**系统能"
+      },
+      {
+        "section_id": "section-43",
+        "title": "getUIContext<sup>10+</sup>",
+        "level": 2,
+        "line_start": 2495,
+        "line_end": 2557,
+        "summary": "getUIContext(): UIContext\n\n获取UIContext实例。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** SystemCapability."
+      },
+      {
+        "section_id": "section-44",
+        "title": "setUIContent<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2558,
+        "line_end": 2602,
+        "summary": "setUIContent(path: string, callback: AsyncCallback&lt;void&gt;): void\n\n根据当前工程中指定的某个页面路径为窗口加载具体页面内容，"
+      },
+      {
+        "section_id": "section-45",
+        "title": "setUIContent<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2603,
+        "line_end": 2650,
+        "summary": "setUIContent(path: string): Promise&lt;void&gt;\n\n根据当前工程中指定的某个页面路径为窗口加载具体页面内容，使用Promise异步回调。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-46",
+        "title": "loadContent<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2651,
+        "line_end": 2696,
+        "summary": "loadContent(path: string, storage: LocalStorage, callback: AsyncCallback&lt;void&gt;): void\n\n根据当前工程"
+      },
+      {
+        "section_id": "section-47",
+        "title": "loadContent<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2697,
+        "line_end": 2745,
+        "summary": "loadContent(path: string, storage: LocalStorage): Promise&lt;void&gt;\n\n根据当前工程中指定的页面路径为窗口加载具体页面内容，通过"
+      },
+      {
+        "section_id": "section-48",
+        "title": "loadContentByName<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2746,
+        "line_end": 2834,
+        "summary": "loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback&lt;void&gt;): void"
+      },
+      {
+        "section_id": "section-49",
+        "title": "loadContentByName<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2835,
+        "line_end": 2904,
+        "summary": "loadContentByName(name: string, callback: AsyncCallback&lt;void&gt;): void\n\n根据指定路由页面名称为当前窗口加载[命名路由]"
+      },
+      {
+        "section_id": "section-50",
+        "title": "loadContentByName<sup>11+</sup>",
+        "level": 2,
+        "line_start": 2905,
+        "line_end": 2981,
+        "summary": "loadContentByName(name: string, storage?: LocalStorage): Promise&lt;void&gt;\n\n根据指定路由页面名称为当前窗口加载[命名路"
+      },
+      {
+        "section_id": "section-51",
+        "title": "isWindowShowing<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2982,
+        "line_end": 3016,
+        "summary": "isWindowShowing(): boolean\n\n判断当前窗口是否已显示。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Co"
+      },
+      {
+        "section_id": "section-52",
+        "title": "on('windowSizeChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 3017,
+        "line_end": 3053,
+        "summary": "on(type:  'windowSizeChange', callback: Callback&lt;Size&gt;): void\n\n开启窗口尺寸变化的监听。仅在主线程调用。\n\n**系统能力：*"
+      },
+      {
+        "section_id": "section-53",
+        "title": "off('windowSizeChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 3054,
+        "line_end": 3096,
+        "summary": "off(type: 'windowSizeChange', callback?: Callback&lt;Size&gt;): void\n\n关闭窗口尺寸变化的监听。仅在主线程调用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-54",
+        "title": "on('avoidAreaChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 3097,
+        "line_end": 3145,
+        "summary": "on(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;): void\n\n开启当前应用窗口系统规避区变化的监听。"
+      },
+      {
+        "section_id": "section-55",
+        "title": "off('avoidAreaChange')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 3146,
+        "line_end": 3191,
+        "summary": "off(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;): void\n\n关闭当前窗口系统规避区变化的监听。"
+      },
+      {
+        "section_id": "section-56",
+        "title": "on('keyboardHeightChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 3192,
+        "line_end": 3230,
+        "summary": "on(type: 'keyboardHeightChange', callback: Callback&lt;number&gt;): void\n\n开启固定态软键盘高度变化的监听。当软键盘从本窗口唤"
+      },
+      {
+        "section_id": "section-57",
+        "title": "off('keyboardHeightChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 3231,
+        "line_end": 3274,
+        "summary": "off(type: 'keyboardHeightChange', callback?: Callback&lt;number&gt;): void\n\n关闭固定态软键盘高度变化的监听，使应用程序不再"
+      },
+      {
+        "section_id": "section-58",
+        "title": "on('keyboardWillShow')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3275,
+        "line_end": 3318,
+        "summary": "on(type: 'keyboardWillShow', callback: Callback&lt;KeyboardInfo&gt;): void\n\n开启固定态软键盘即将开始显示的监听。此监听在固"
+      },
+      {
+        "section_id": "section-59",
+        "title": "off('keyboardWillShow')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3319,
+        "line_end": 3363,
+        "summary": "off(type: 'keyboardWillShow', callback?: Callback&lt;KeyboardInfo&gt;): void\n\n关闭固定态软键盘即将开始显示的监听。改变输"
+      },
+      {
+        "section_id": "section-60",
+        "title": "on('keyboardWillHide')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3364,
+        "line_end": 3407,
+        "summary": "on(type: 'keyboardWillHide', callback: Callback&lt;KeyboardInfo&gt;): void\n\n开启固定态软键盘即将开始隐藏的监听。此监听在固"
+      },
+      {
+        "section_id": "section-61",
+        "title": "off('keyboardWillHide')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3408,
+        "line_end": 3452,
+        "summary": "off(type: 'keyboardWillHide', callback?: Callback&lt;KeyboardInfo&gt;): void\n\n关闭固定态软键盘即将开始隐藏的监听。改变输"
+      },
+      {
+        "section_id": "section-62",
+        "title": "on('keyboardDidShow')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3453,
+        "line_end": 3494,
+        "summary": "on(type: 'keyboardDidShow', callback: Callback&lt;KeyboardInfo&gt;): void\n\n开启固定态软键盘显示动画完成的监听。此监听在固定"
+      },
+      {
+        "section_id": "section-63",
+        "title": "off('keyboardDidShow')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3495,
+        "line_end": 3538,
+        "summary": "off(type: 'keyboardDidShow', callback?: Callback&lt;KeyboardInfo&gt;): void\n\n关闭固定态软键盘显示动画完成的监听。改变输入"
+      },
+      {
+        "section_id": "section-64",
+        "title": "on('keyboardDidHide')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3539,
+        "line_end": 3580,
+        "summary": "on(type: 'keyboardDidHide', callback: Callback&lt;KeyboardInfo&gt;): void\n\n开启固定态软键盘隐藏动画完成的监听。此监听在固定"
+      },
+      {
+        "section_id": "section-65",
+        "title": "off('keyboardDidHide')<sup>18+</sup>",
+        "level": 2,
+        "line_start": 3581,
+        "line_end": 3624,
+        "summary": "off(type: 'keyboardDidHide', callback?: Callback&lt;KeyboardInfo&gt;): void\n\n关闭固定态软键盘隐藏动画完成的监听。改变输入"
+      },
+      {
+        "section_id": "section-66",
+        "title": "on('touchOutside')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3625,
+        "line_end": 3661,
+        "summary": "on(type: 'touchOutside', callback: Callback&lt;void&gt;): void\n\n开启本窗口区域范围外的点击事件的监听。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-67",
+        "title": "off('touchOutside')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 3662,
+        "line_end": 3702,
+        "summary": "off(type: 'touchOutside', callback?: Callback&lt;void&gt;): void\n\n关闭本窗口区域范围外的点击事件的监听。\n\n**系统能力：** Sy"
+      },
+      {
+        "section_id": "section-68",
+        "title": "on('screenshot')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 3703,
+        "line_end": 3739,
+        "summary": "on(type: 'screenshot', callback: Callback&lt;void&gt;): void\n\n开启截屏事件的监听。\n\n**原子化服务API：** 从API versio"
+      },
+      {
+        "section_id": "section-69",
+        "title": "off('screenshot')<sup>9+</sup>",
+        "level": 2,
+        "line_start": 3740,
+        "line_end": 3780,
+        "summary": "off(type: 'screenshot', callback?: Callback&lt;void&gt;): void\n\n关闭截屏事件的监听。\n\n**原子化服务API：** 从API vers"
+      },
+      {
+        "section_id": "section-70",
+        "title": "on('screenshotAppEvent')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3781,
+        "line_end": 3817,
+        "summary": "on(type: 'screenshotAppEvent', callback: Callback&lt;ScreenshotEventType&gt;): void\n\n开启屏幕截屏事件类型的监听。"
+      },
+      {
+        "section_id": "section-71",
+        "title": "off('screenshotAppEvent')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 3818,
+        "line_end": 3859,
+        "summary": "off(type: 'screenshotAppEvent', callback?: Callback&lt;ScreenshotEventType&gt;): void\n\n关闭屏幕截屏事件类型的监"
+      },
+      {
+        "section_id": "section-72",
+        "title": "on('dialogTargetTouch')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3860,
+        "line_end": 3896,
+        "summary": "on(type: 'dialogTargetTouch', callback: Callback&lt;void&gt;): void\n\n开启模态窗口所遮盖窗口的点击或触摸事件的监听，除模态窗口以外"
+      },
+      {
+        "section_id": "section-73",
+        "title": "off('dialogTargetTouch')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3897,
+        "line_end": 3937,
+        "summary": "off(type: 'dialogTargetTouch', callback?: Callback&lt;void&gt;): void\n\n关闭模态窗口目标窗口的点击事件的监听。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-74",
+        "title": "on('windowEvent')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3938,
+        "line_end": 3974,
+        "summary": "on(type: 'windowEvent', callback: Callback&lt;WindowEventType&gt;): void\n\n开启窗口生命周期变化的监听。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-75",
+        "title": "off('windowEvent')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 3975,
+        "line_end": 4017,
+        "summary": "off(type: 'windowEvent', callback?: Callback&lt;WindowEventType&gt;): void\n\n关闭窗口生命周期变化的监听。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-76",
+        "title": "on('displayIdChange')<sup>14+</sup>",
+        "level": 2,
+        "line_start": 4018,
+        "line_end": 4055,
+        "summary": "on(type: 'displayIdChange', callback: Callback&lt;number&gt;): void\n\n开启本窗口所处屏幕变化事件的监听。比如，当前窗口移动到其他屏"
+      },
+      {
+        "section_id": "section-77",
+        "title": "off('displayIdChange')<sup>14+</sup>",
+        "level": 2,
+        "line_start": 4056,
+        "line_end": 4100,
+        "summary": "off(type: 'displayIdChange', callback?: Callback&lt;number&gt;): void\n\n关闭本窗口所处屏幕变化事件的监听。\n\n**原子化服务AP"
+      },
+      {
+        "section_id": "section-78",
+        "title": "on('windowVisibilityChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4101,
+        "line_end": 4143,
+        "summary": "on(type: 'windowVisibilityChange', callback: Callback&lt;boolean&gt;): void\n\n开启本窗口可见状态变化事件的监听。本接口返回"
+      },
+      {
+        "section_id": "section-79",
+        "title": "off('windowVisibilityChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4144,
+        "line_end": 4189,
+        "summary": "off(type: 'windowVisibilityChange', callback?: Callback&lt;boolean&gt;): void\n\n关闭本窗口可见状态变化事件的监听。\n\n*"
+      },
+      {
+        "section_id": "section-80",
+        "title": "on('occlusionStateChanged')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 4190,
+        "line_end": 4230,
+        "summary": "on(type: 'occlusionStateChanged', callback: Callback&lt;OcclusionState&gt;): void\n\n开启窗口可见性状态变化事件的监听"
+      },
+      {
+        "section_id": "section-81",
+        "title": "off('occlusionStateChanged')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 4231,
+        "line_end": 4273,
+        "summary": "off(type: 'occlusionStateChanged', callback?: Callback&lt;OcclusionState&gt;): void\n\n关闭窗口可见性状态变化事件的"
+      },
+      {
+        "section_id": "section-82",
+        "title": "on('frameMetricsMeasured')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 4274,
+        "line_end": 4312,
+        "summary": "on(type: 'frameMetricsMeasured', callback: Callback&lt;FrameMetrics&gt;): void\n\n开启窗口帧率指标变化事件的监听。该接口"
+      },
+      {
+        "section_id": "section-83",
+        "title": "off('frameMetricsMeasured')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 4313,
+        "line_end": 4354,
+        "summary": "off(type: 'frameMetricsMeasured', callback?: Callback&lt;FrameMetrics&gt;): void\n\n关闭窗口帧率指标变化事件的监听。该"
+      },
+      {
+        "section_id": "section-84",
+        "title": "on('systemDensityChange')<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4355,
+        "line_end": 4399,
+        "summary": "on(type: 'systemDensityChange', callback: Callback&lt;number&gt;): void\n\n开启本窗口所处屏幕的系统显示大小缩放系数变化事件的监"
+      },
+      {
+        "section_id": "section-85",
+        "title": "off('systemDensityChange')<sup>15+</sup>",
+        "level": 2,
+        "line_start": 4400,
+        "line_end": 4446,
+        "summary": "off(type: 'systemDensityChange', callback?: Callback&lt;number&gt;): void\n\n关闭本窗口所处屏幕的系统显示大小缩放系数变化事件"
+      },
+      {
+        "section_id": "section-86",
+        "title": "on('noInteractionDetected')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4447,
+        "line_end": 4487,
+        "summary": "on(type: 'noInteractionDetected', timeout: number, callback: Callback&lt;void&gt;): void\n\n开启本窗口在指定超"
+      },
+      {
+        "section_id": "section-87",
+        "title": "off('noInteractionDetected')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4488,
+        "line_end": 4531,
+        "summary": "off(type: 'noInteractionDetected', callback?: Callback&lt;void&gt;): void\n\n关闭本窗口在指定超时时间内无交互事件的监听，交互"
+      },
+      {
+        "section_id": "section-88",
+        "title": "on('windowStatusChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4532,
+        "line_end": 4575,
+        "summary": "on(type:  'windowStatusChange', callback: Callback&lt;WindowStatusType&gt;): void\n\n开启窗口模式变化的监听，当窗口w"
+      },
+      {
+        "section_id": "section-89",
+        "title": "off('windowStatusChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4576,
+        "line_end": 4617,
+        "summary": "off(type: 'windowStatusChange', callback?: Callback&lt;WindowStatusType&gt;): void\n\n关闭窗口模式变化的监听。\n\n*"
+      },
+      {
+        "section_id": "section-90",
+        "title": "on('windowStatusDidChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 4618,
+        "line_end": 4653,
+        "summary": "on(type: 'windowStatusDidChange', callback: Callback&lt;WindowStatusType&gt;): void\n\n开启窗口模式变化的监听，当窗"
+      },
+      {
+        "section_id": "section-91",
+        "title": "off('windowStatusDidChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 4654,
+        "line_end": 4693,
+        "summary": "off(type: 'windowStatusDidChange', callback?: Callback&lt;WindowStatusType&gt;): void\n\n关闭窗口模式变化的监听。"
+      },
+      {
+        "section_id": "section-92",
+        "title": "setWindowGrayScale<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4694,
+        "line_end": 4753,
+        "summary": "setWindowGrayScale(grayScale: number): Promise&lt;void&gt;\n\n设置窗口灰阶，使用Promise异步回调。该接口需要在调用[loadConte"
+      },
+      {
+        "section_id": "section-93",
+        "title": "on('windowTitleButtonRectChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4754,
+        "line_end": 4794,
+        "summary": "on(type: 'windowTitleButtonRectChange', callback: Callback&lt;TitleButtonRect&gt;): void\n\n开启窗口标题栏上的"
+      },
+      {
+        "section_id": "section-94",
+        "title": "off('windowTitleButtonRectChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 4795,
+        "line_end": 4841,
+        "summary": "off(type: 'windowTitleButtonRectChange', callback?: Callback&lt;TitleButtonRect&gt;): void\n\n关闭窗口标题栏"
+      },
+      {
+        "section_id": "section-95",
+        "title": "on('windowRectChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4842,
+        "line_end": 4881,
+        "summary": "on(type:  'windowRectChange', callback: Callback&lt;RectChangeOptions&gt;): void\n\n开启窗口矩形（窗口位置及窗口大小）"
+      },
+      {
+        "section_id": "section-96",
+        "title": "off('windowRectChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 4882,
+        "line_end": 4926,
+        "summary": "off(type: 'windowRectChange', callback?: Callback&lt;RectChangeOptions&gt;): void\n\n关闭窗口矩形（窗口位置及窗口大小"
+      },
+      {
+        "section_id": "section-97",
+        "title": "on('rectChangeInGlobalDisplay')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 4927,
+        "line_end": 4965,
+        "summary": "on(type: 'rectChangeInGlobalDisplay', callback: Callback&lt;RectChangeOptions&gt;): void\n\n开启[全局坐标系]"
+      },
+      {
+        "section_id": "section-98",
+        "title": "off('rectChangeInGlobalDisplay')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 4966,
+        "line_end": 5007,
+        "summary": "off(type: 'rectChangeInGlobalDisplay', callback?: Callback&lt;RectChangeOptions&gt;): void\n\n关闭[全局坐标"
+      },
+      {
+        "section_id": "section-99",
+        "title": "on('subWindowClose')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5008,
+        "line_end": 5055,
+        "summary": "on(type:  'subWindowClose', callback: Callback&lt;void&gt;): void\n\n开启子窗口关闭事件的监听。此监听仅在点击系统提供的右上角关闭按钮"
+      },
+      {
+        "section_id": "section-100",
+        "title": "off('subWindowClose')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 5056,
+        "line_end": 5100,
+        "summary": "off(type: 'subWindowClose', callback?: Callback&lt;void&gt;): void\n\n关闭子窗口关闭事件的监听。\n\n**原子化服务API：** 从A"
+      },
+      {
+        "section_id": "section-101",
+        "title": "on('windowWillClose')<sup>15+</sup>",
+        "level": 2,
+        "line_start": 5101,
+        "line_end": 5165,
+        "summary": "on(type: 'windowWillClose', callback: Callback&lt;void, Promise&lt;boolean&gt;&gt;): void\n\n开启主窗口或子窗"
+      },
+      {
+        "section_id": "section-102",
+        "title": "off('windowWillClose')<sup>15+</sup>",
+        "level": 2,
+        "line_start": 5166,
+        "line_end": 5231,
+        "summary": "off(type: 'windowWillClose', callback?: Callback&lt;void, Promise&lt;boolean&gt;&gt;): void\n\n用于关闭主窗"
+      },
+      {
+        "section_id": "section-103",
+        "title": "on('windowHighlightChange')<sup>15+</sup>",
+        "level": 2,
+        "line_start": 5232,
+        "line_end": 5271,
+        "summary": "on(type: 'windowHighlightChange', callback: Callback&lt;boolean&gt;): void\n\n开启窗口激活态变化事件的监听。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-104",
+        "title": "off('windowHighlightChange')<sup>15+</sup>",
+        "level": 2,
+        "line_start": 5272,
+        "line_end": 5317,
+        "summary": "off(type: 'windowHighlightChange', callback?: Callback&lt;boolean&gt;): void\n\n关闭窗口激活态变化事件的监听。\n\n**原子"
+      },
+      {
+        "section_id": "section-105",
+        "title": "on('rotationChange')<sup>19+</sup>",
+        "level": 2,
+        "line_start": 5318,
+        "line_end": 5389,
+        "summary": "on(type: 'rotationChange', callback: RotationChangeCallback&lt;RotationChangeInfo, RotationChangeRe"
+      },
+      {
+        "section_id": "section-106",
+        "title": "off('rotationChange')<sup>19+</sup>",
+        "level": 2,
+        "line_start": 5390,
+        "line_end": 5434,
+        "summary": "off(type: 'rotationChange', callback?: RotationChangeCallback&lt;RotationChangeInfo, RotationChange"
+      },
+      {
+        "section_id": "section-107",
+        "title": "on('uiExtensionSecureLimitChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5435,
+        "line_end": 5473,
+        "summary": "on(eventType: 'uiExtensionSecureLimitChange', callback: Callback&lt;boolean&gt;): void\n\n开启窗口内uiExte"
+      },
+      {
+        "section_id": "section-108",
+        "title": "off('uiExtensionSecureLimitChange')<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5474,
+        "line_end": 5518,
+        "summary": "off(eventType: 'uiExtensionSecureLimitChange', callback?: Callback&lt;boolean&gt;): void\n\n关闭窗口内uiex"
+      },
+      {
+        "section_id": "section-109",
+        "title": "isWindowSupportWideGamut<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5519,
+        "line_end": 5557,
+        "summary": "isWindowSupportWideGamut(callback: AsyncCallback&lt;boolean&gt;): void\n\n判断当前窗口是否支持广色域模式，使用callback异"
+      },
+      {
+        "section_id": "section-110",
+        "title": "isWindowSupportWideGamut<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5558,
+        "line_end": 5594,
+        "summary": "isWindowSupportWideGamut(): Promise&lt;boolean&gt;\n\n判断当前窗口是否支持广色域模式，使用Promise异步回调。\n\n**原子化服务API：** 从"
+      },
+      {
+        "section_id": "section-111",
+        "title": "setWindowColorSpace<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5595,
+        "line_end": 5639,
+        "summary": "setWindowColorSpace(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;): void\n\n设置当前窗口为广色域模式"
+      },
+      {
+        "section_id": "section-112",
+        "title": "setWindowColorSpace<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5640,
+        "line_end": 5687,
+        "summary": "setWindowColorSpace(colorSpace:ColorSpace): Promise&lt;void&gt;\n\n设置当前窗口为广色域模式或默认色域模式，使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-113",
+        "title": "getWindowColorSpace<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5688,
+        "line_end": 5724,
+        "summary": "getWindowColorSpace(): ColorSpace\n\n获取当前窗口色域模式。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**"
+      },
+      {
+        "section_id": "section-114",
+        "title": "setWindowBackgroundColor<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5725,
+        "line_end": 5778,
+        "summary": "setWindowBackgroundColor(color: string | ColorMetrics): void\n\n设置窗口的背景色。\n\n未调用该接口时，窗口在浅色模式默认背景色为`'#FF"
+      },
+      {
+        "section_id": "section-115",
+        "title": "setWindowShadowEnabled<sup>20+</sup>",
+        "level": 2,
+        "line_start": 5779,
+        "line_end": 5853,
+        "summary": "setWindowShadowEnabled(enable: boolean): Promise&lt;void&gt;\n\n设置主窗口是否显示阴影，使用Promise异步回调。未调用该接口时，主窗口"
+      },
+      {
+        "section_id": "section-116",
+        "title": "setWindowBrightness<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5854,
+        "line_end": 5938,
+        "summary": "setWindowBrightness(brightness: number, callback: AsyncCallback&lt;void&gt;): void\n\n主窗口设置窗口亮度。当窗口处于"
+      },
+      {
+        "section_id": "section-117",
+        "title": "setWindowBrightness<sup>9+</sup>",
+        "level": 2,
+        "line_start": 5939,
+        "line_end": 6026,
+        "summary": "setWindowBrightness(brightness: number): Promise&lt;void&gt;\n\n主窗口设置窗口亮度。当窗口处于前台且获焦时，窗口亮度生效。使用Promis"
+      },
+      {
+        "section_id": "section-118",
+        "title": "setWindowFocusable<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6027,
+        "line_end": 6075,
+        "summary": "setWindowFocusable(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置窗口是否具有获得焦点的能"
+      },
+      {
+        "section_id": "section-119",
+        "title": "setWindowFocusable<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6076,
+        "line_end": 6127,
+        "summary": "setWindowFocusable(isFocusable: boolean): Promise&lt;void&gt;\n\n设置窗口是否具有获得焦点的能力，使用Promise异步回调。\n\n从API"
+      },
+      {
+        "section_id": "section-120",
+        "title": "setWindowKeepScreenOn<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6128,
+        "line_end": 6176,
+        "summary": "setWindowKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置屏幕是否为常"
+      },
+      {
+        "section_id": "section-121",
+        "title": "setWindowKeepScreenOn<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6177,
+        "line_end": 6228,
+        "summary": "setWindowKeepScreenOn(isKeepScreenOn: boolean): Promise&lt;void&gt;\n\n设置屏幕是否为常亮状态，使用Promise异步回调。\n\n规范"
+      },
+      {
+        "section_id": "section-122",
+        "title": "setWindowPrivacyMode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6229,
+        "line_end": 6282,
+        "summary": "setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置窗口是否为隐私模"
+      },
+      {
+        "section_id": "section-123",
+        "title": "setWindowPrivacyMode<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6283,
+        "line_end": 6339,
+        "summary": "setWindowPrivacyMode(isPrivacyMode: boolean): Promise&lt;void&gt;\n\n设置窗口是否为隐私模式，使用Promise异步回调。\n\n设置为隐"
+      },
+      {
+        "section_id": "section-124",
+        "title": "setWindowTouchable<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6340,
+        "line_end": 6386,
+        "summary": "setWindowTouchable(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置窗口是否为可触状态，使用"
+      },
+      {
+        "section_id": "section-125",
+        "title": "setWindowTouchable<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6387,
+        "line_end": 6436,
+        "summary": "setWindowTouchable(isTouchable: boolean): Promise&lt;void&gt;\n\n设置窗口是否为可触状态，使用Promise异步回调。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-126",
+        "title": "snapshot<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6437,
+        "line_end": 6477,
+        "summary": "snapshot(callback: AsyncCallback&lt;image.PixelMap&gt;): void\n\n获取窗口截图，使用callback异步回调。若当前窗口设置为隐私模式（可"
+      },
+      {
+        "section_id": "section-127",
+        "title": "snapshot<sup>9+</sup>",
+        "level": 2,
+        "line_start": 6478,
+        "line_end": 6516,
+        "summary": "snapshot(): Promise&lt;image.PixelMap&gt;\n\n获取当前窗口截图。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](#setwind"
+      },
+      {
+        "section_id": "section-128",
+        "title": "snapshotSync<sup>20+</sup>",
+        "level": 2,
+        "line_start": 6517,
+        "line_end": 6557,
+        "summary": "snapshotSync(): image.PixelMap\n\n获取当前窗口截图，此接口为同步接口。若当前窗口设置为隐私模式（[setWindowPrivacyMode](#setwindowpri"
+      },
+      {
+        "section_id": "section-129",
+        "title": "snapshotIgnorePrivacy<sup>18+</sup>",
+        "level": 2,
+        "line_start": 6558,
+        "line_end": 6597,
+        "summary": "snapshotIgnorePrivacy(): Promise&lt;image.PixelMap&gt;\n\n获取当前窗口截图。即使当前窗口设置为隐私模式（可通过[setWindowPrivacy"
+      },
+      {
+        "section_id": "section-130",
+        "title": "setAspectRatio<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6598,
+        "line_end": 6669,
+        "summary": "setAspectRatio(ratio: number): Promise&lt;void&gt;\n\n设置窗口内容布局（不含边框和标题栏等装饰）的比例，使用Promise异步回调。\n\n> **说明"
+      },
+      {
+        "section_id": "section-131",
+        "title": "setAspectRatio<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6670,
+        "line_end": 6739,
+        "summary": "setAspectRatio(ratio: number, callback: AsyncCallback&lt;void&gt;): void\n\n设置窗口内容布局（不含边框和标题栏等装饰）的比例，"
+      },
+      {
+        "section_id": "section-132",
+        "title": "setContentAspectRatio<sup>21+</sup>",
+        "level": 2,
+        "line_start": 6740,
+        "line_end": 6810,
+        "summary": "setContentAspectRatio(ratio: number, isPersistent?: boolean, needUpdateRect?: boolean): Promise&lt;"
+      },
+      {
+        "section_id": "section-133",
+        "title": "resetAspectRatio<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6811,
+        "line_end": 6868,
+        "summary": "resetAspectRatio(): Promise&lt;void&gt;\n\n取消设置窗口内容布局的比例，使用Promise异步回调。\n\n仅主窗可设置，调用后将清除持久化储存的比例信息。\n\n**"
+      },
+      {
+        "section_id": "section-134",
+        "title": "resetAspectRatio<sup>10+</sup>",
+        "level": 2,
+        "line_start": 6869,
+        "line_end": 6928,
+        "summary": "resetAspectRatio(callback: AsyncCallback&lt;void&gt;): void\n\n取消设置窗口内容布局的比例，使用callback异步回调。\n\n仅主窗可设置，"
+      },
+      {
+        "section_id": "section-135",
+        "title": "minimize<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6929,
+        "line_end": 6975,
+        "summary": "minimize(callback: AsyncCallback&lt;void&gt;): void\n\n此接口根据调用对象不同，实现不同的功能：\n\n- 当调用对象为主窗口时，实现最小化功能，可在D"
+      },
+      {
+        "section_id": "section-136",
+        "title": "minimize<sup>11+</sup>",
+        "level": 2,
+        "line_start": 6976,
+        "line_end": 7020,
+        "summary": "minimize(): Promise&lt;void&gt;\n\n此接口根据调用对象不同，实现不同的功能：\n\n- 当调用对象为主窗口时，实现最小化功能，可在Dock栏中还原，2in1 设备上可以使用"
+      },
+      {
+        "section_id": "section-137",
+        "title": "maximize<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7021,
+        "line_end": 7087,
+        "summary": "maximize(presentation?: MaximizePresentation): Promise&lt;void&gt;\n\n实现最大化功能。主窗口可调用此接口实现最大化功能；子窗口需在创建"
+      },
+      {
+        "section_id": "section-138",
+        "title": "maximize<sup>22+</sup>",
+        "level": 2,
+        "line_start": 7088,
+        "line_end": 7150,
+        "summary": "maximize(presentation?: MaximizePresentation, acrossDisplay?: boolean): Promise&lt;void&gt;\n\n实现最大化功"
+      },
+      {
+        "section_id": "section-139",
+        "title": "setResizeByDragEnabled<sup>14+</sup>",
+        "level": 2,
+        "line_start": 7151,
+        "line_end": 7194,
+        "summary": "setResizeByDragEnabled(enable: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n禁止/使能通过拖拽方式缩放主窗口"
+      },
+      {
+        "section_id": "section-140",
+        "title": "setResizeByDragEnabled<sup>14+</sup>",
+        "level": 2,
+        "line_start": 7195,
+        "line_end": 7244,
+        "summary": "setResizeByDragEnabled(enable: boolean): Promise&lt;void&gt;\n\n禁止/使能通过拖拽方式缩放主窗口或启用装饰的子窗口的功能。使用Promise"
+      },
+      {
+        "section_id": "section-141",
+        "title": "recover<sup>11+</sup>",
+        "level": 2,
+        "line_start": 7245,
+        "line_end": 7303,
+        "summary": "recover(): Promise&lt;void&gt;\n\n将主窗口从全屏、最大化、分屏模式下还原为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING"
+      },
+      {
+        "section_id": "section-142",
+        "title": "restore<sup>14+</sup>",
+        "level": 2,
+        "line_start": 7304,
+        "line_end": 7363,
+        "summary": "restore(): Promise&lt;void&gt;\n\n主窗口为最小化状态且UIAbility生命周期为onForeground时，将主窗口从最小化状态，恢复到前台显示，并恢复到进入最小化状"
+      },
+      {
+        "section_id": "section-143",
+        "title": "restoreMainWindow<sup>23+</sup>",
+        "level": 2,
+        "line_start": 7364,
+        "line_end": 7506,
+        "summary": "restoreMainWindow(wantParameters?: Record<string, Object>): Promise&lt;void&gt;\n\n将当前窗口的主窗口恢复到前台显示，如"
+      },
+      {
+        "section_id": "section-144",
+        "title": "getWindowLimits<sup>11+</sup>",
+        "level": 2,
+        "line_start": 7507,
+        "line_end": 7541,
+        "summary": "getWindowLimits(): WindowLimits\n\n获取当前应用窗口的尺寸限制，单位为物理像素px。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子"
+      },
+      {
+        "section_id": "section-145",
+        "title": "getWindowLimitsVP<sup>22+</sup>",
+        "level": 2,
+        "line_start": 7542,
+        "line_end": 7576,
+        "summary": "getWindowLimitsVP(): WindowLimits\n\n获取当前应用窗口的尺寸限制，单位为虚拟像素vp。\n\n对于系统窗口和全局悬浮窗，默认窗口宽高的系统限制最小值为1px，通过此接口获"
+      },
+      {
+        "section_id": "section-146",
+        "title": "setWindowLimits<sup>11+</sup>",
+        "level": 2,
+        "line_start": 7577,
+        "line_end": 7636,
+        "summary": "setWindowLimits(windowLimits: WindowLimits): Promise&lt;WindowLimits&gt;\n\n设置当前窗口的尺寸限制，使用Promise异步回调"
+      },
+      {
+        "section_id": "section-147",
+        "title": "setWindowLimits<sup>15+</sup>",
+        "level": 2,
+        "line_start": 7637,
+        "line_end": 7705,
+        "summary": "setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise&lt;WindowLimits&gt;\n\n设置当前"
+      },
+      {
+        "section_id": "section-148",
+        "title": "setWindowMask<sup>12+</sup>",
+        "level": 2,
+        "line_start": 7706,
+        "line_end": 7768,
+        "summary": "setWindowMask(windowMask: Array&lt;Array&lt;number&gt;&gt;): Promise&lt;void&gt;\n\n设置异形窗口的掩码，使用Promi"
+      },
+      {
+        "section_id": "section-149",
+        "title": "clearWindowMask<sup>24+</sup>",
+        "level": 2,
+        "line_start": 7769,
+        "line_end": 7826,
+        "summary": "clearWindowMask(): Promise&lt;void&gt;\n\n清除异形窗口的掩码使其恢复为矩形窗口，使用Promise异步回调。异形窗口为非常规形状的窗口，掩码用于描述异形窗口的形"
+      },
+      {
+        "section_id": "section-150",
+        "title": "keepKeyboardOnFocus<sup>11+</sup>",
+        "level": 2,
+        "line_start": 7827,
+        "line_end": 7863,
+        "summary": "keepKeyboardOnFocus(keepKeyboardFlag: boolean): void\n\n窗口获焦时是否保留由其他窗口创建的软键盘，仅支持系统窗口与应用子窗口。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-151",
+        "title": "setWindowDecorVisible<sup>11+</sup>",
+        "level": 2,
+        "line_start": 7864,
+        "line_end": 7914,
+        "summary": "setWindowDecorVisible(isVisible: boolean): void\n\n设置窗口标题栏是否可见，对存在标题栏和三键区的窗口形态生效。Stage模型下，该接口需要在[load"
+      },
+      {
+        "section_id": "section-152",
+        "title": "getWindowDecorVisible<sup>18+</sup>",
+        "level": 2,
+        "line_start": 7915,
+        "line_end": 7958,
+        "summary": "getWindowDecorVisible(): boolean\n\n查询窗口标题栏是否可见。如果使用Stage模型，该接口需要在[loadContent()](#loadcontent9)或[set"
+      },
+      {
+        "section_id": "section-153",
+        "title": "setWindowTitle<sup>15+</sup>",
+        "level": 2,
+        "line_start": 7959,
+        "line_end": 8013,
+        "summary": "setWindowTitle(titleName: string): Promise&lt;void&gt;\n\n设置窗口标题，使用Promise异步回调。如果使用Stage模型，该接口需要在[loa"
+      },
+      {
+        "section_id": "section-154",
+        "title": "setWindowTitleMoveEnabled<sup>14+</sup>",
+        "level": 2,
+        "line_start": 8014,
+        "line_end": 8069,
+        "summary": "setWindowTitleMoveEnabled(enabled: boolean): void\n\n禁止/使能主窗或子窗标题栏默认移动窗口和双击最大化的功能，当禁用标题栏默认移动窗口和双击最大化的"
+      },
+      {
+        "section_id": "section-155",
+        "title": "setSubWindowModal<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8070,
+        "line_end": 8144,
+        "summary": "setSubWindowModal(isModal: boolean): Promise&lt;void&gt;\n\n设置子窗的模态属性是否启用，使用Promise异步回调。\n\n子窗口调用该接口时，设"
+      },
+      {
+        "section_id": "section-156",
+        "title": "setSubWindowModal<sup>14+</sup>",
+        "level": 2,
+        "line_start": 8145,
+        "line_end": 8223,
+        "summary": "setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise&lt;void&gt;\n\n设置子窗的模态类型，使用P"
+      },
+      {
+        "section_id": "section-157",
+        "title": "setWindowDecorHeight<sup>11+</sup>",
+        "level": 2,
+        "line_start": 8224,
+        "line_end": 8269,
+        "summary": "setWindowDecorHeight(height: number): void\n\n设置窗口的标题栏高度，对存在标题栏和三键区的窗口形态生效。如果使用Stage模型，该接口需要在[loadCon"
+      },
+      {
+        "section_id": "section-158",
+        "title": "setDecorButtonStyle<sup>14+</sup>",
+        "level": 2,
+        "line_start": 8270,
+        "line_end": 8336,
+        "summary": "setDecorButtonStyle(dectorStyle: DecorButtonStyle): void\n\n设置装饰栏按钮样式，仅对主窗和子窗生效。如果使用Stage模型，该接口需要在[lo"
+      },
+      {
+        "section_id": "section-159",
+        "title": "getDecorButtonStyle<sup>14+</sup>",
+        "level": 2,
+        "line_start": 8337,
+        "line_end": 8382,
+        "summary": "getDecorButtonStyle(): DecorButtonStyle\n\n获取装饰栏按钮样式，仅对主窗和子窗生效。\n\n**原子化服务API：** 从API version 14开始，该接口支"
+      },
+      {
+        "section_id": "section-160",
+        "title": "getWindowDecorHeight<sup>11+</sup>",
+        "level": 2,
+        "line_start": 8383,
+        "line_end": 8422,
+        "summary": "getWindowDecorHeight(): number\n\n对存在标题栏和三键区的窗口形态生效，用于获取窗口的标题栏高度。如果使用Stage模型，该接口需要在[loadContent()](#l"
+      },
+      {
+        "section_id": "section-161",
+        "title": "getTitleButtonRect<sup>11+</sup>",
+        "level": 2,
+        "line_start": 8423,
+        "line_end": 8478,
+        "summary": "getTitleButtonRect(): TitleButtonRect\n\n获取主窗口或启用装饰的子窗口的标题栏上的最小化、最大化、关闭按钮矩形区域。\n\n**原子化服务API：** 从API ve"
+      },
+      {
+        "section_id": "section-162",
+        "title": "getWindowStatus<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8479,
+        "line_end": 8517,
+        "summary": "getWindowStatus(): WindowStatusType\n\n获取当前应用窗口的模式。\n\n> **说明：**\n>\n> 在[自由窗口](../../windowmanager/window"
+      },
+      {
+        "section_id": "section-163",
+        "title": "isFocused<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8518,
+        "line_end": 8552,
+        "summary": "isFocused(): boolean\n\n判断当前窗口是否已获焦。\n\n**系统能力：** SystemCapability.WindowManager.WindowManager.Core\n\n**"
+      },
+      {
+        "section_id": "section-164",
+        "title": "createSubWindowWithOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 8553,
+        "line_end": 8613,
+        "summary": "createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise&lt;Window&gt;\n\n创建主窗口、子"
+      },
+      {
+        "section_id": "section-165",
+        "title": "setParentWindow<sup>19+</sup>",
+        "level": 2,
+        "line_start": 8614,
+        "line_end": 8677,
+        "summary": "setParentWindow(windowId: number): Promise&lt;void&gt;\n\n更改子窗口的父窗口，该父窗口仅支持同进程下的主窗口、子窗口或悬浮窗，使用Promise"
+      },
+      {
+        "section_id": "section-166",
+        "title": "getParentWindow<sup>19+</sup>",
+        "level": 2,
+        "line_start": 8678,
+        "line_end": 8723,
+        "summary": "getParentWindow(): Window\n\n获取子窗口的父窗口。\n\n**系统能力：** SystemCapability.Window.SessionManager\n\n**设备行为差异：*"
+      },
+      {
+        "section_id": "section-167",
+        "title": "setWindowTitleButtonVisible<sup>14+</sup>",
+        "level": 2,
+        "line_start": 8724,
+        "line_end": 8793,
+        "summary": "setWindowTitleButtonVisible(isMaximizeButtonVisible: boolean, isMinimizeButtonVisible: boolean, isC"
+      },
+      {
+        "section_id": "section-168",
+        "title": "setWindowTopmost<sup>14+</sup>",
+        "level": 2,
+        "line_start": 8794,
+        "line_end": 8890,
+        "summary": "setWindowTopmost(isWindowTopmost: boolean): Promise&lt;void&gt;\n\n应用主窗口调用，用于实现将窗口置于其他应用窗口之上不被遮挡，使用Pr"
+      },
+      {
+        "section_id": "section-169",
+        "title": "raiseToAppTop<sup>14+</sup>",
+        "level": 2,
+        "line_start": 8891,
+        "line_end": 8947,
+        "summary": "raiseToAppTop(): Promise&lt;void&gt;\n\n应用子窗口调用，提升应用子窗口到顶层，只在当前应用同一个父窗口下的相同类型子窗范围内生效，对于自定义了zLevel属性的子"
+      },
+      {
+        "section_id": "section-170",
+        "title": "setRaiseByClickEnabled<sup>14+</sup>",
+        "level": 2,
+        "line_start": 8948,
+        "line_end": 9019,
+        "summary": "setRaiseByClickEnabled(enable: boolean): Promise&lt;void&gt;\n\n禁止/使能子窗点击抬升功能。使用Promise异步回调。\n\n通常来说，点击"
+      },
+      {
+        "section_id": "section-171",
+        "title": "enableLandscapeMultiWindow<sup>12+</sup>",
+        "level": 2,
+        "line_start": 9020,
+        "line_end": 9077,
+        "summary": "enableLandscapeMultiWindow(): Promise&lt;void&gt;\n\n应用部分界面支持横向布局时，在进入该界面时使能，使能后可支持进入横向多窗。不建议竖向布局界面使用"
+      },
+      {
+        "section_id": "section-172",
+        "title": "disableLandscapeMultiWindow<sup>12+</sup>",
+        "level": 2,
+        "line_start": 9078,
+        "line_end": 9135,
+        "summary": "disableLandscapeMultiWindow(): Promise&lt;void&gt;\n\n应用部分界面支持横向布局时，在退出该界面时去使能，去使能后不支持进入横向多窗。\n\n此接口只对应"
+      },
+      {
+        "section_id": "section-173",
+        "title": "setDialogBackGestureEnabled<sup>12+</sup>",
+        "level": 2,
+        "line_start": 9136,
+        "line_end": 9234,
+        "summary": "setDialogBackGestureEnabled(enabled: boolean): Promise&lt;void&gt;\n\n设置模态窗口是否响应手势返回事件，非模态窗口调用返回错误码。"
+      },
+      {
+        "section_id": "section-174",
+        "title": "enableDrag<sup>20+</sup>",
+        "level": 2,
+        "line_start": 9235,
+        "line_end": 9285,
+        "summary": "enableDrag(enable: boolean): Promise&lt;void&gt;\n\n使能/禁止拖拽窗口，仅对系统窗口、应用子窗口、全局悬浮窗和模态窗口生效。使用Promise异步回调"
+      },
+      {
+        "section_id": "section-175",
+        "title": "startMoving<sup>14+</sup>",
+        "level": 2,
+        "line_start": 9286,
+        "line_end": 9370,
+        "summary": "startMoving(): Promise&lt;void&gt;\n\n[自由窗口](../../windowmanager/window-terminology.md#自由窗口)状态下，对系统窗口"
+      },
+      {
+        "section_id": "section-176",
+        "title": "startMoving<sup>15+</sup>",
+        "level": 2,
+        "line_start": 9371,
+        "line_end": 9461,
+        "summary": "startMoving(offsetX: number, offsetY: number): Promise&lt;void&gt;\n\n指定鼠标在窗口内的位置并移动窗口，使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-177",
+        "title": "stopMoving<sup>15+</sup>",
+        "level": 2,
+        "line_start": 9462,
+        "line_end": 9519,
+        "summary": "stopMoving(): Promise&lt;void&gt;\n\n在窗口拖拽移动过程中，通过此接口来停止窗口移动，使用Promise异步回调。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-178",
+        "title": "setGestureBackEnabled<sup>13+<sup>",
+        "level": 2,
+        "line_start": 9520,
+        "line_end": 9597,
+        "summary": "setGestureBackEnabled(enabled: boolean): Promise&lt;void&gt;\n\n设置当前窗口是否启用手势侧滑返回功能，仅主窗可以调用成功，其他类型的窗口调"
+      },
+      {
+        "section_id": "section-179",
+        "title": "isGestureBackEnabled<sup>13+<sup>",
+        "level": 2,
+        "line_start": 9598,
+        "line_end": 9658,
+        "summary": "isGestureBackEnabled(): boolean\n\n获取当前窗口是否启用返回手势功能，仅主窗可以调用成功，其他类型的窗口调用返回1300004错误码。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-180",
+        "title": "setSeparationTouchEnabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 9659,
+        "line_end": 9718,
+        "summary": "setSeparationTouchEnabled(enabled: boolean): Promise&lt;void&gt;\n\n设置当前窗口是否支持事件分离状态，使用Promise异步回调。默认"
+      },
+      {
+        "section_id": "section-181",
+        "title": "isSeparationTouchEnabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 9719,
+        "line_end": 9758,
+        "summary": "isSeparationTouchEnabled():boolean\n\n获取当前窗口是否支持事件分离的状态。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力：** Syst"
+      },
+      {
+        "section_id": "section-182",
+        "title": "setReceiveDragEventEnabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 9759,
+        "line_end": 9812,
+        "summary": "setReceiveDragEventEnabled(enabled: boolean): Promise&lt;void&gt;\n\n设置当前窗口是否能接收[拖拽事件](./arkui-ts/ts-"
+      },
+      {
+        "section_id": "section-183",
+        "title": "isReceiveDragEventEnabled<sup>23+</sup>",
+        "level": 2,
+        "line_start": 9813,
+        "line_end": 9852,
+        "summary": "isReceiveDragEventEnabled():boolean\n\n获取当前窗口是否能接收[拖拽事件](./arkui-ts/ts-universal-events-drag-drop.md#"
+      },
+      {
+        "section_id": "section-184",
+        "title": "setWindowShadowRadius<sup>17+</sup>",
+        "level": 2,
+        "line_start": 9853,
+        "line_end": 9895,
+        "summary": "setWindowShadowRadius(radius: number): void\n\n设置子窗或悬浮窗窗口边缘阴影的模糊半径。\n\n**系统能力：** SystemCapability.Windo"
+      },
+      {
+        "section_id": "section-185",
+        "title": "setWindowCornerRadius<sup>17+</sup>",
+        "level": 2,
+        "line_start": 9896,
+        "line_end": 9957,
+        "summary": "setWindowCornerRadius(cornerRadius: number): Promise&lt;void&gt;\n\n设置子窗或悬浮窗的圆角半径值，使用Promise异步回调。\n\n圆角"
+      },
+      {
+        "section_id": "section-186",
+        "title": "getWindowCornerRadius<sup>17+</sup>",
+        "level": 2,
+        "line_start": 9958,
+        "line_end": 9999,
+        "summary": "getWindowCornerRadius(): number\n\n该接口用于获取子窗或悬浮窗的圆角半径值，在未调用[setWindowCornerRadius()](#setwindowcorner"
+      },
+      {
+        "section_id": "section-187",
+        "title": "setExclusivelyHighlighted<sup>15+<sup>",
+        "level": 2,
+        "line_start": 10000,
+        "line_end": 10053,
+        "summary": "setExclusivelyHighlighted(exclusivelyHighlighted: boolean): Promise&lt;void&gt;\n\n设置窗口独占激活态属性。独占激活态表"
+      },
+      {
+        "section_id": "section-188",
+        "title": "isWindowHighlighted<sup>18+<sup>",
+        "level": 2,
+        "line_start": 10054,
+        "line_end": 10093,
+        "summary": "isWindowHighlighted(): boolean\n\n获取当前窗口是否为激活态。为准确获取激活态，需要在[WindowEventType](arkts-apis-window-e.md#w"
+      },
+      {
+        "section_id": "section-189",
+        "title": "setFollowParentMultiScreenPolicy<sup>17+<sup>",
+        "level": 2,
+        "line_start": 10094,
+        "line_end": 10156,
+        "summary": "setFollowParentMultiScreenPolicy(enabled: boolean): Promise&lt;void&gt;\n\n设置子窗口在其父窗口处于拖拽移动或拖拽缩放过程时，该"
+      },
+      {
+        "section_id": "section-190",
+        "title": "setFollowParentWindowLayoutEnabled<sup>17+</sup>",
+        "level": 2,
+        "line_start": 10157,
+        "line_end": 10236,
+        "summary": "setFollowParentWindowLayoutEnabled(enabled: boolean): Promise&lt;void&gt;\n\n设置子窗或模态窗口（即WindowType为TY"
+      },
+      {
+        "section_id": "section-191",
+        "title": "setRelativePositionToParentWindowEnabled<sup>20+<sup>",
+        "level": 2,
+        "line_start": 10237,
+        "line_end": 10316,
+        "summary": "setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor, offsetX?: number,"
+      },
+      {
+        "section_id": "section-192",
+        "title": "setWindowTransitionAnimation<sup>20+</sup>",
+        "level": 2,
+        "line_start": 10317,
+        "line_end": 10400,
+        "summary": "setWindowTransitionAnimation(transitionType: WindowTransitionType, animation: TransitionAnimation):"
+      },
+      {
+        "section_id": "section-193",
+        "title": "getWindowTransitionAnimation<sup>20+</sup>",
+        "level": 2,
+        "line_start": 10401,
+        "line_end": 10471,
+        "summary": "getWindowTransitionAnimation(transitionType: WindowTransitionType): TransitionAnimation | undefined"
+      },
+      {
+        "section_id": "section-194",
+        "title": "setSubWindowZLevel<sup>18+</sup>",
+        "level": 2,
+        "line_start": 10472,
+        "line_end": 10543,
+        "summary": "setSubWindowZLevel(zLevel: number): Promise&lt;void&gt;\n\n设置当前子窗口层级级别，设置了模态属性的子窗不支持。使用Promise异步回调。"
+      },
+      {
+        "section_id": "section-195",
+        "title": "getSubWindowZLevel<sup>18+</sup>",
+        "level": 2,
+        "line_start": 10544,
+        "line_end": 10600,
+        "summary": "getSubWindowZLevel(): number\n\n获取当前子窗口层级级别。不支持主窗、系统窗调用。\n\n**系统能力：** SystemCapability.Window.SessionMa"
+      },
+      {
+        "section_id": "section-196",
+        "title": "isInFreeWindowMode<sup>22+</sup>",
+        "level": 2,
+        "line_start": 10601,
+        "line_end": 10632,
+        "summary": "isInFreeWindowMode(): boolean\n\n查询当前窗口是否为[自由窗口](../../windowmanager/window-terminology.md#自由窗口)模式。"
+      },
+      {
+        "section_id": "section-197",
+        "title": "on('freeWindowModeChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 10633,
+        "line_end": 10670,
+        "summary": "on(type: 'freeWindowModeChange', callback: Callback&lt;boolean&gt;): void\n\n开启自由窗口模式变化事件的监听。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-198",
+        "title": "off('freeWindowModeChange')<sup>22+</sup>",
+        "level": 2,
+        "line_start": 10671,
+        "line_end": 10714,
+        "summary": "off(type: 'freeWindowModeChange', callback?: Callback&lt;boolean&gt;): void\n\n关闭自由窗口模式变化事件的监听。\n\n**系统"
+      },
+      {
+        "section_id": "section-199",
+        "title": "convertOrientationAndRotation<sup>23+</sup>",
+        "level": 2,
+        "line_start": 10715,
+        "line_end": 10764,
+        "summary": "convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, value: number): number"
+      },
+      {
+        "section_id": "section-200",
+        "title": "setWindowSystemBarProperties<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 10765,
+        "line_end": 10842,
+        "summary": "setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback&lt;v"
+      },
+      {
+        "section_id": "section-201",
+        "title": "setWindowSystemBarEnable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 10843,
+        "line_end": 10914,
+        "summary": "setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback&lt;void&gt;"
+      },
+      {
+        "section_id": "section-202",
+        "title": "setWindowLayoutFullScreen<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 10915,
+        "line_end": 10993,
+        "summary": "setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback&lt;void&gt;): void"
+      },
+      {
+        "section_id": "section-203",
+        "title": "show<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 10994,
+        "line_end": 11026,
+        "summary": "show(callback: AsyncCallback&lt;void&gt;): void\n\n显示当前窗口，使用callback异步回调。\n\n> **说明：**\n>\n> 从API version"
+      },
+      {
+        "section_id": "section-204",
+        "title": "show<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11027,
+        "line_end": 11057,
+        "summary": "show(): Promise&lt;void&gt;\n\n显示当前窗口，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API version 7开始支持，从API version 9"
+      },
+      {
+        "section_id": "section-205",
+        "title": "destroy<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11058,
+        "line_end": 11090,
+        "summary": "destroy(callback: AsyncCallback&lt;void&gt;): void\n\n销毁当前窗口，使用callback异步回调。\n\n> **说明：**\n>\n> 从API vers"
+      },
+      {
+        "section_id": "section-206",
+        "title": "destroy<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11091,
+        "line_end": 11121,
+        "summary": "destroy(): Promise&lt;void&gt;\n\n销毁当前窗口，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API version 7开始支持，从API versio"
+      },
+      {
+        "section_id": "section-207",
+        "title": "moveTo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11122,
+        "line_end": 11158,
+        "summary": "moveTo(x: number, y: number, callback: AsyncCallback&lt;void&gt;): void\n\n移动窗口位置，使用callback异步回调。\n\n全屏"
+      },
+      {
+        "section_id": "section-208",
+        "title": "moveTo<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11159,
+        "line_end": 11198,
+        "summary": "moveTo(x: number, y: number): Promise&lt;void&gt;\n\n移动窗口位置，使用Promise异步回调。\n\n全屏模式窗口不支持该操作。\n\n> **说明：**"
+      },
+      {
+        "section_id": "section-209",
+        "title": "resetSize<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11199,
+        "line_end": 11247,
+        "summary": "resetSize(width: number, height: number, callback: AsyncCallback&lt;void&gt;): void\n\n基于窗口左上角顶点改变当前窗"
+      },
+      {
+        "section_id": "section-210",
+        "title": "resetSize<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11248,
+        "line_end": 11299,
+        "summary": "resetSize(width: number, height: number): Promise&lt;void&gt;\n\n基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。\n\n应用"
+      },
+      {
+        "section_id": "section-211",
+        "title": "getProperties<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11300,
+        "line_end": 11332,
+        "summary": "getProperties(callback: AsyncCallback&lt;WindowProperties&gt;): void\n\n获取当前窗口的属性，使用callback异步回调，返回Wi"
+      },
+      {
+        "section_id": "section-212",
+        "title": "getProperties<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11333,
+        "line_end": 11363,
+        "summary": "getProperties(): Promise&lt;WindowProperties&gt;\n\n获取当前窗口的属性，使用Promise异步回调，返回WindowProperties。\n\n> **"
+      },
+      {
+        "section_id": "section-213",
+        "title": "getAvoidArea<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11364,
+        "line_end": 11407,
+        "summary": "getAvoidArea(type: [AvoidAreaType](arkts-apis-window-e.md#avoidareatype7), callback: AsyncCallback&"
+      },
+      {
+        "section_id": "section-214",
+        "title": "getAvoidArea<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11408,
+        "line_end": 11454,
+        "summary": "getAvoidArea(type: [AvoidAreaType](arkts-apis-window-e.md#avoidareatype7)): Promise&lt;[AvoidArea]("
+      },
+      {
+        "section_id": "section-215",
+        "title": "setFullScreen<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11455,
+        "line_end": 11511,
+        "summary": "setFullScreen(isFullScreen: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置主窗口或子窗口的布局是否为全屏布"
+      },
+      {
+        "section_id": "section-216",
+        "title": "setFullScreen<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11512,
+        "line_end": 11571,
+        "summary": "setFullScreen(isFullScreen: boolean): Promise&lt;void&gt;\n\n设置主窗口或子窗口的布局是否为全屏布局，使用Promise异步回调。\n\n全屏布局"
+      },
+      {
+        "section_id": "section-217",
+        "title": "setLayoutFullScreen<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11572,
+        "line_end": 11628,
+        "summary": "setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置主窗口或"
+      },
+      {
+        "section_id": "section-218",
+        "title": "setLayoutFullScreen<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11629,
+        "line_end": 11688,
+        "summary": "setLayoutFullScreen(isLayoutFullScreen: boolean): Promise&lt;void&gt;\n\n设置主窗口或子窗口的布局是否为沉浸式布局，使用Promi"
+      },
+      {
+        "section_id": "section-219",
+        "title": "setSystemBarEnable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11689,
+        "line_end": 11745,
+        "summary": "setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback&lt;void&gt;): voi"
+      },
+      {
+        "section_id": "section-220",
+        "title": "setSystemBarEnable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11746,
+        "line_end": 11805,
+        "summary": "setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise&lt;void&gt;\n\n<!--RP14-->设置主窗口状态栏"
+      },
+      {
+        "section_id": "section-221",
+        "title": "setSystemBarProperties<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11806,
+        "line_end": 11866,
+        "summary": "setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback&lt;void&gt"
+      },
+      {
+        "section_id": "section-222",
+        "title": "setSystemBarProperties<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11867,
+        "line_end": 11930,
+        "summary": "setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise&lt;void&gt;\n\n设置主窗口<!--Del"
+      },
+      {
+        "section_id": "section-223",
+        "title": "loadContent<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11931,
+        "line_end": 11964,
+        "summary": "loadContent(path: string, callback: AsyncCallback&lt;void&gt;): void\n\n为当前窗口加载具体页面内容，使用callback异步回调。"
+      },
+      {
+        "section_id": "section-224",
+        "title": "loadContent<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 11965,
+        "line_end": 12001,
+        "summary": "loadContent(path: string): Promise&lt;void&gt;\n\n为当前窗口加载具体页面内容，使用Promise异步回调。建议在UIAbility启动过程中使用该接口，"
+      },
+      {
+        "section_id": "section-225",
+        "title": "isShowing<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12002,
+        "line_end": 12034,
+        "summary": "isShowing(callback: AsyncCallback&lt;boolean&gt;): void\n\n判断当前窗口是否已显示，使用callback异步回调。\n\n> **说明：**\n>\n>"
+      },
+      {
+        "section_id": "section-226",
+        "title": "isShowing<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12035,
+        "line_end": 12065,
+        "summary": "isShowing(): Promise&lt;boolean&gt;\n\n判断当前窗口是否已显示，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API version 7开始支持，从"
+      },
+      {
+        "section_id": "section-227",
+        "title": "on('systemAvoidAreaChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12066,
+        "line_end": 12093,
+        "summary": "on(type: 'systemAvoidAreaChange', callback: Callback&lt;AvoidArea&gt;): void\n\n开启当前窗口系统规避区变化的监听。\n\n>"
+      },
+      {
+        "section_id": "section-228",
+        "title": "off('systemAvoidAreaChange')<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12094,
+        "line_end": 12124,
+        "summary": "off(type: 'systemAvoidAreaChange', callback?: Callback&lt;AvoidArea&gt;): void\n\n关闭当前窗口系统规避区变化的监听。"
+      },
+      {
+        "section_id": "section-229",
+        "title": "isSupportWideGamut<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12125,
+        "line_end": 12157,
+        "summary": "isSupportWideGamut(callback: AsyncCallback&lt;boolean&gt;): void\n\n判断当前窗口是否支持广色域模式，使用callback异步回调。"
+      },
+      {
+        "section_id": "section-230",
+        "title": "isSupportWideGamut<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12158,
+        "line_end": 12188,
+        "summary": "isSupportWideGamut(): Promise&lt;boolean&gt;\n\n判断当前窗口是否支持广色域模式，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API ve"
+      },
+      {
+        "section_id": "section-231",
+        "title": "setColorSpace<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12189,
+        "line_end": 12223,
+        "summary": "setColorSpace(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;): void\n\n设置当前窗口为广色域模式或默认色域模"
+      },
+      {
+        "section_id": "section-232",
+        "title": "setColorSpace<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12224,
+        "line_end": 12261,
+        "summary": "setColorSpace(colorSpace:ColorSpace): Promise&lt;void&gt;\n\n设置当前窗口为广色域模式或默认色域模式，使用Promise异步回调。\n\n> **"
+      },
+      {
+        "section_id": "section-233",
+        "title": "getColorSpace<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12262,
+        "line_end": 12294,
+        "summary": "getColorSpace(callback: AsyncCallback&lt;ColorSpace&gt;): void\n\n获取当前窗口色域模式，使用callback异步回调。\n\n> **说明："
+      },
+      {
+        "section_id": "section-234",
+        "title": "getColorSpace<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12295,
+        "line_end": 12325,
+        "summary": "getColorSpace(): Promise&lt;ColorSpace&gt;\n\n获取当前窗口色域模式，使用Promise异步回调。\n\n> **说明：**\n>\n> 从API version 8"
+      },
+      {
+        "section_id": "section-235",
+        "title": "setBackgroundColor<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12326,
+        "line_end": 12361,
+        "summary": "setBackgroundColor(color: string, callback: AsyncCallback&lt;void&gt;): void\n\n设置窗口的背景色，使用callback异步"
+      },
+      {
+        "section_id": "section-236",
+        "title": "setBackgroundColor<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12362,
+        "line_end": 12400,
+        "summary": "setBackgroundColor(color: string): Promise&lt;void&gt;\n\n设置窗口的背景色，使用Promise异步回调。Stage模型下，该接口需要在[load"
+      },
+      {
+        "section_id": "section-237",
+        "title": "setBrightness<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12401,
+        "line_end": 12438,
+        "summary": "setBrightness(brightness: number, callback: AsyncCallback&lt;void&gt;): void\n\n允许应用窗口设置屏幕亮度值，使用callb"
+      },
+      {
+        "section_id": "section-238",
+        "title": "setBrightness<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12439,
+        "line_end": 12479,
+        "summary": "setBrightness(brightness: number): Promise&lt;void&gt;\n\n允许应用窗口设置屏幕亮度值，使用Promise异步回调。\n\n当前屏幕亮度规格：窗口设置"
+      },
+      {
+        "section_id": "section-239",
+        "title": "setDimBehind<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12480,
+        "line_end": 12513,
+        "summary": "setDimBehind(dimBehindValue: number, callback: AsyncCallback&lt;void&gt;): void\n\n窗口叠加时，设备有子窗口的情况下设置"
+      },
+      {
+        "section_id": "section-240",
+        "title": "setDimBehind<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12514,
+        "line_end": 12550,
+        "summary": "setDimBehind(dimBehindValue: number): Promise&lt;void&gt;\n\n窗口叠加时，设备有子窗口的情况下设置靠后的窗口的暗度值，使用Promise异步回"
+      },
+      {
+        "section_id": "section-241",
+        "title": "setFocusable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12551,
+        "line_end": 12586,
+        "summary": "setFocusable(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置使用点击或其他方式使该窗口获焦的场景"
+      },
+      {
+        "section_id": "section-242",
+        "title": "setFocusable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12587,
+        "line_end": 12625,
+        "summary": "setFocusable(isFocusable: boolean): Promise&lt;void&gt;\n\n设置使用点击或其他方式使该窗口获焦的场景时，该窗口是否支持窗口焦点从点击前的获焦窗口"
+      },
+      {
+        "section_id": "section-243",
+        "title": "setKeepScreenOn<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12626,
+        "line_end": 12661,
+        "summary": "setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置屏幕是否为常亮状态，使用"
+      },
+      {
+        "section_id": "section-244",
+        "title": "setKeepScreenOn<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12662,
+        "line_end": 12699,
+        "summary": "setKeepScreenOn(isKeepScreenOn: boolean): Promise&lt;void&gt;\n\n设置屏幕是否为常亮状态，使用Promise异步回调。\n\n> **说明：*"
+      },
+      {
+        "section_id": "section-245",
+        "title": "setOutsideTouchable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12700,
+        "line_end": 12735,
+        "summary": "setOutsideTouchable(touchable: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置是否允许可点击子窗口之外的"
+      },
+      {
+        "section_id": "section-246",
+        "title": "setOutsideTouchable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12736,
+        "line_end": 12774,
+        "summary": "setOutsideTouchable(touchable: boolean): Promise&lt;void&gt;\n\n设置是否允许可点击子窗口之外的区域，使用Promise异步回调。\n\n> *"
+      },
+      {
+        "section_id": "section-247",
+        "title": "setPrivacyMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12775,
+        "line_end": 12809,
+        "summary": "setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置窗口是否为隐私模式，使用ca"
+      },
+      {
+        "section_id": "section-248",
+        "title": "setPrivacyMode<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12810,
+        "line_end": 12847,
+        "summary": "setPrivacyMode(isPrivacyMode: boolean): Promise&lt;void&gt;\n\n设置窗口是否为隐私模式，使用Promise异步回调。设置为隐私模式的窗口，窗"
+      },
+      {
+        "section_id": "section-249",
+        "title": "setTouchable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12848,
+        "line_end": 12883,
+        "summary": "setTouchable(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;): void\n\n设置窗口是否为可触状态，使用callba"
+      },
+      {
+        "section_id": "section-250",
+        "title": "setTouchable<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 12884,
+        "line_end": 12921,
+        "summary": "setTouchable(isTouchable: boolean): Promise&lt;void&gt;\n\n设置窗口是否为可触状态，使用Promise异步回调。\n\n> **说明：**\n>\n>"
+      }
+    ]
+  }
+}

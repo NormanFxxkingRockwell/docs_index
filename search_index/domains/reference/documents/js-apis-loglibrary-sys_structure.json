@@ -1,0 +1,84 @@
+{
+  "doc_id": "js-apis-loglibrary-sys",
+  "title": "@ohos.logLibrary (维测日志获取)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-loglibrary-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-performance-analysis-kit/js-apis-loglibrary-sys.md",
+  "metadata": {
+    "kit": "Performance Analysis Kit",
+    "subsystem": "HiviewDFX",
+    "owner": "@BruceZong",
+    "designer": "@gcw_qzKyUhyU",
+    "tester": "@gcw_KuLfPSbe",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "Performance Analysis Kit HiviewDFX 模块的 @ohos.logLibrary (维测日志获取)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.logLibrary (维测日志获取)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "```ts\nimport { logLibrary } from '@kit.PerformanceAnalysisKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "LogEntry",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 34,
+        "summary": "日志文件对象接口。\n\n**系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary\n\n| 名称 | 类型 | 只读 | 可选 | 说明 |\n| ---"
+      },
+      {
+        "section_id": "section-3",
+        "title": "logLibrary.list",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 79,
+        "summary": "list(logType: string): LogEntry[]\n\n以同步方法查询指定类型的日志文件列表，接收string类型的对象作为参数，返回指定类型日志的文件列表信息。\n\n**需要权限：**"
+      },
+      {
+        "section_id": "section-4",
+        "title": "logLibrary.copy",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 136,
+        "summary": "copy(logType: string, logName: string, dest: string): Promise&lt;void&gt;\n\n拷贝指定日志类型的指定文件到目标应用目录下。使用"
+      },
+      {
+        "section_id": "section-5",
+        "title": "logLibrary.copy",
+        "level": 2,
+        "line_start": 137,
+        "line_end": 184,
+        "summary": "copy(logType: string, logName: string, dest: string, callback: AsyncCallback&lt;void&gt;): void\n\n拷贝"
+      },
+      {
+        "section_id": "section-6",
+        "title": "logLibrary.move",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 241,
+        "summary": "move(logType: string, logName: string, dest: string): Promise&lt;void&gt;\n\n移动指定日志类型的指定文件到目标应用目录下。使用"
+      },
+      {
+        "section_id": "section-7",
+        "title": "logLibrary.move",
+        "level": 2,
+        "line_start": 242,
+        "line_end": 289,
+        "summary": "move(logType: string, logName: string, dest: string, callback: AsyncCallback&lt;void&gt;): void\n\n移动"
+      },
+      {
+        "section_id": "section-8",
+        "title": "logLibrary.remove",
+        "level": 2,
+        "line_start": 290,
+        "line_end": 328,
+        "summary": "remove(logType: string, logName: string): void\n\n以同步方法删除指定日志类型的指定文件。\n\n**需要权限：** ohos.permission.WRIT"
+      }
+    ]
+  }
+}

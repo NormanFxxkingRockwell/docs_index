@@ -1,0 +1,340 @@
+{
+  "doc_id": "js-apis-arkui-observer",
+  "title": "@ohos.arkui.observer (无感监听)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-observer.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-arkui-observer.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@piggyguy; @lushi871202; @CCFFWW",
+    "designer": "@piggyguy; @lushi871202; @CCFFWW",
+    "tester": "@fredyuan912",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 @ohos.arkui.observer (无感监听)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.arkui.observer (无感监听)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 24,
+        "summary": "```ts\nimport { uiObserver } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "NavDestinationState",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 44,
+        "summary": "NavDestination组件状态。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称      | 值  | 说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "ScrollEventType<sup>12+</sup>",
+        "level": 2,
+        "line_start": 45,
+        "line_end": 57,
+        "summary": "滚动事件的类型。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.F"
+      },
+      {
+        "section_id": "section-4",
+        "title": "RouterPageState",
+        "level": 2,
+        "line_start": 58,
+        "line_end": 73,
+        "summary": "routerPage生命周期触发时对应的状态。RouterPageState用于[RouterPageInfo](#routerpageinfo)中，作为[routerPageUpdate](#ui"
+      },
+      {
+        "section_id": "section-5",
+        "title": "TabContentState<sup>12+</sup>",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 86,
+        "summary": "TabContent组件的状态。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-6",
+        "title": "NavDestinationInfo",
+        "level": 2,
+        "line_start": 87,
+        "line_end": 104,
+        "summary": "NavDestination组件信息，由系统返回给开发者。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-7",
+        "title": "NavigationInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 116,
+        "summary": "Navigation组件信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-8",
+        "title": "ScrollEventInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 117,
+        "line_end": 131,
+        "summary": "ScrollEvent滚动信息。\n\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ObserverOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 132,
+        "line_end": 143,
+        "summary": "Observer选项。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkU"
+      },
+      {
+        "section_id": "section-10",
+        "title": "RouterPageInfo",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 159,
+        "summary": "RouterPageInfo包含的信息，由系统返回给开发者。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称                 |"
+      },
+      {
+        "section_id": "section-11",
+        "title": "DensityInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 172,
+        "summary": "屏幕像素密度变化回调包含的信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-12",
+        "title": "NavDestinationSwitchInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 173,
+        "line_end": 187,
+        "summary": "Navigation组件页面切换的信息。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.A"
+      },
+      {
+        "section_id": "section-13",
+        "title": "NavDestinationSwitchObserverOptions<sup>12+</sup>",
+        "level": 2,
+        "line_start": 188,
+        "line_end": 199,
+        "summary": "Navigation组件页面切换事件的监听选项。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-14",
+        "title": "TextChangeEventInfo<sup>22+</sup>",
+        "level": 2,
+        "line_start": 200,
+        "line_end": 212,
+        "summary": "输入框文本变化的信息。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI"
+      },
+      {
+        "section_id": "section-15",
+        "title": "TabContentInfo<sup>12+</sup>",
+        "level": 2,
+        "line_start": 213,
+        "line_end": 228,
+        "summary": "TabContent页面的切换信息。\n\n**系统能力：** SystemCapability.ArkUI.ArkUI.Full\n\n| 名称         | 类型"
+      },
+      {
+        "section_id": "section-16",
+        "title": "WindowSizeLayoutBreakpointInfo<sup>22+</sup>",
+        "level": 2,
+        "line_start": 229,
+        "line_end": 242,
+        "summary": "窗口尺寸布局断点变化回调的信息。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.ArkUI"
+      },
+      {
+        "section_id": "section-17",
+        "title": "uiObserver.on('navDestinationUpdate')",
+        "level": 2,
+        "line_start": 243,
+        "line_end": 314,
+        "summary": "on(type: 'navDestinationUpdate', callback: Callback\\<NavDestinationInfo\\>): void\n\n监听NavDestination组"
+      },
+      {
+        "section_id": "section-18",
+        "title": "uiObserver.off('navDestinationUpdate')",
+        "level": 2,
+        "line_start": 315,
+        "line_end": 335,
+        "summary": "off(type: 'navDestinationUpdate', callback?: Callback\\<NavDestinationInfo\\>): void\n\n取消监听NavDestinat"
+      },
+      {
+        "section_id": "section-19",
+        "title": "uiObserver.on('navDestinationUpdate')",
+        "level": 2,
+        "line_start": 336,
+        "line_end": 409,
+        "summary": "on(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback: Callback\\<NavDes"
+      },
+      {
+        "section_id": "section-20",
+        "title": "uiObserver.off('navDestinationUpdate')",
+        "level": 2,
+        "line_start": 410,
+        "line_end": 431,
+        "summary": "off(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback?: Callback\\<NavD"
+      },
+      {
+        "section_id": "section-21",
+        "title": "uiObserver.on('scrollEvent')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 432,
+        "line_end": 452,
+        "summary": "on(type: 'scrollEvent', callback: Callback\\<ScrollEventInfo\\>): void\n\n监听所有滚动组件滚动事件的开始和结束。滚动组件包括[Lis"
+      },
+      {
+        "section_id": "section-22",
+        "title": "uiObserver.off('scrollEvent')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 453,
+        "line_end": 473,
+        "summary": "off(type: 'scrollEvent', callback?: Callback\\<ScrollEventInfo\\>): void\n\n取消监听所有滚动组件滚动事件的开始和结束。滚动组件包括"
+      },
+      {
+        "section_id": "section-23",
+        "title": "uiObserver.on('scrollEvent')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 474,
+        "line_end": 495,
+        "summary": "on(type: 'scrollEvent', options: ObserverOptions, callback: Callback\\<ScrollEventInfo\\>): void\n\n监听指"
+      },
+      {
+        "section_id": "section-24",
+        "title": "uiObserver.off('scrollEvent')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 496,
+        "line_end": 582,
+        "summary": "off(type: 'scrollEvent', options: ObserverOptions, callback?: Callback\\<ScrollEventInfo\\>): void\n\n取"
+      },
+      {
+        "section_id": "section-25",
+        "title": "uiObserver.on('routerPageUpdate')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 583,
+        "line_end": 636,
+        "summary": "on(type: 'routerPageUpdate', context: UIAbilityContext | UIContext, callback: Callback\\<RouterPageI"
+      },
+      {
+        "section_id": "section-26",
+        "title": "uiObserver.off('routerPageUpdate')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 637,
+        "line_end": 681,
+        "summary": "off(type: 'routerPageUpdate', context: UIAbilityContext | UIContext, callback?: Callback\\<RouterPag"
+      },
+      {
+        "section_id": "section-27",
+        "title": "uiObserver.on('densityUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 682,
+        "line_end": 730,
+        "summary": "on(type: 'densityUpdate', context: UIContext, callback: Callback\\<DensityInfo\\>): void\n\n监听屏幕像素密度变化。"
+      },
+      {
+        "section_id": "section-28",
+        "title": "uiObserver.off('densityUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 731,
+        "line_end": 783,
+        "summary": "off(type: 'densityUpdate', context: UIContext, callback?: Callback\\<DensityInfo\\>): void\n\n取消监听屏幕像素密"
+      },
+      {
+        "section_id": "section-29",
+        "title": "uiObserver.on('willDraw')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 784,
+        "line_end": 823,
+        "summary": "on(type: 'willDraw', context: UIContext, callback: Callback\\<void\\>): void\n\n监听每一帧绘制指令下发情况。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-30",
+        "title": "uiObserver.off('willDraw')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 824,
+        "line_end": 867,
+        "summary": "off(type: 'willDraw', context: UIContext, callback?: Callback\\<void\\>): void\n\n取消监听每一帧绘制指令下发情况。\n\n**原"
+      },
+      {
+        "section_id": "section-31",
+        "title": "uiObserver.on('didLayout')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 868,
+        "line_end": 907,
+        "summary": "on(type: 'didLayout', context: UIContext, callback: Callback\\<void\\>): void\n\n监听每一帧布局完成情况。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-32",
+        "title": "uiObserver.off('didLayout')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 908,
+        "line_end": 951,
+        "summary": "off(type: 'didLayout', context: UIContext, callback?: Callback\\<void\\>): void\n\n取消监听每一帧布局完成情况。\n\n**原子"
+      },
+      {
+        "section_id": "section-33",
+        "title": "uiObserver.on('navDestinationSwitch')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 952,
+        "line_end": 1077,
+        "summary": "on(type: 'navDestinationSwitch', context: UIAbilityContext | UIContext, callback: Callback\\<NavDest"
+      },
+      {
+        "section_id": "section-34",
+        "title": "uiObserver.off('navDestinationSwitch')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1078,
+        "line_end": 1099,
+        "summary": "off(type: 'navDestinationSwitch', context: UIAbilityContext | UIContext, callback?: Callback\\<NavDe"
+      },
+      {
+        "section_id": "section-35",
+        "title": "uiObserver.on('navDestinationSwitch')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1100,
+        "line_end": 1231,
+        "summary": "on(type: 'navDestinationSwitch', context: UIAbilityContext | UIContext, observerOptions: NavDestina"
+      },
+      {
+        "section_id": "section-36",
+        "title": "uiObserver.off('navDestinationSwitch')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1232,
+        "line_end": 1254,
+        "summary": "off(type: 'navDestinationSwitch', context: UIAbilityContext | UIContext, observerOptions: NavDestin"
+      },
+      {
+        "section_id": "section-37",
+        "title": "uiObserver.on('tabContentUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1255,
+        "line_end": 1322,
+        "summary": "on(type: 'tabContentUpdate', callback: Callback\\<TabContentInfo\\>): void\n\n监听TabContent页面的切换事件。相比[on"
+      },
+      {
+        "section_id": "section-38",
+        "title": "uiObserver.off('tabContentUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1323,
+        "line_end": 1343,
+        "summary": "off(type: 'tabContentUpdate', callback?: Callback\\<TabContentInfo\\>): void\n\n取消监听TabContent页面的切换事件。"
+      },
+      {
+        "section_id": "section-39",
+        "title": "uiObserver.on('tabContentUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1344,
+        "line_end": 1412,
+        "summary": "on(type: 'tabContentUpdate', options: ObserverOptions, callback: Callback\\<TabContentInfo\\>): void"
+      },
+      {
+        "section_id": "section-40",
+        "title": "uiObserver.off('tabContentUpdate')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 1413,
+        "line_end": 1434,
+        "summary": "off(type: 'tabContentUpdate', options: ObserverOptions, callback?: Callback\\<TabContentInfo\\>): voi"
+      }
+    ]
+  }
+}

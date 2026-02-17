@@ -1,0 +1,132 @@
+{
+  "doc_id": "js-apis-driver-deviceManager",
+  "title": "@ohos.driver.deviceManager (外设管理)",
+  "path": "zh-cn/application-dev/reference/apis-driverdevelopment-kit/js-apis-driver-deviceManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-driverdevelopment-kit/js-apis-driver-deviceManager.md",
+  "metadata": {
+    "kit": "Driver Development Kit",
+    "subsystem": "Driver",
+    "owner": "@lixinsheng2",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Driver Development Kit Driver 模块的 @ohos.driver.deviceManager (外设管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.driver.deviceManager (外设管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { deviceManager } from '@kit.DriverDevelopmentKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "deviceManager.queryDevices",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 67,
+        "summary": "queryDevices(busType?: number): Array&lt;Readonly&lt;Device&gt;&gt;\n\n获取接入主设备的外部设备列表。如果没有设备接入，那么将会返回"
+      },
+      {
+        "section_id": "section-3",
+        "title": "deviceManager.bindDriverWithDeviceId<sup>19+</sup>",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 123,
+        "summary": "bindDriverWithDeviceId(deviceId: number, onDisconnect: AsyncCallback&lt;number&gt;): Promise&lt;Rem"
+      },
+      {
+        "section_id": "section-4",
+        "title": "deviceManager.unbindDriverWithDeviceId<sup>19+</sup>",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 173,
+        "summary": "unbindDriverWithDeviceId(deviceId: number): Promise&lt;number&gt;\n\n解除设备绑定。使用Promise异步回调。\n\n**需要权限**："
+      },
+      {
+        "section_id": "section-5",
+        "title": "deviceManager.bindDevice<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 174,
+        "line_end": 234,
+        "summary": "bindDevice(deviceId: number, onDisconnect: AsyncCallback&lt;number&gt;, callback: AsyncCallback&lt;"
+      },
+      {
+        "section_id": "section-6",
+        "title": "deviceManager.bindDeviceDriver<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 289,
+        "summary": "bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback&lt;number&gt;, callback: AsyncCallbac"
+      },
+      {
+        "section_id": "section-7",
+        "title": "deviceManager.bindDevice<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 290,
+        "line_end": 347,
+        "summary": "bindDevice(deviceId: number, onDisconnect: AsyncCallback&lt;number&gt;): Promise&lt;{deviceId: numb"
+      },
+      {
+        "section_id": "section-8",
+        "title": "deviceManager.bindDeviceDriver<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 348,
+        "line_end": 406,
+        "summary": "bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback&lt;number&gt;): Promise&lt;RemoteDev"
+      },
+      {
+        "section_id": "section-9",
+        "title": "deviceManager.unbindDevice<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 407,
+        "line_end": 455,
+        "summary": "unbindDevice(deviceId: number, callback: AsyncCallback&lt;number&gt;): void\n\n解除设备绑定。\n\n> **说明**\n> 从"
+      },
+      {
+        "section_id": "section-10",
+        "title": "deviceManager.unbindDevice<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 456,
+        "line_end": 508,
+        "summary": "unbindDevice(deviceId: number): Promise&lt;number&gt;\n\n解除设备绑定。\n\n> **说明**\n> 从 API version 10开始支持，从AP"
+      },
+      {
+        "section_id": "section-11",
+        "title": "Device",
+        "level": 2,
+        "line_start": 509,
+        "line_end": 520,
+        "summary": "外设信息。\n\n**系统能力：** SystemCapability.Driver.ExternalDevice\n\n| 名称        | 类型                | 只读 | 可选"
+      },
+      {
+        "section_id": "section-12",
+        "title": "USBDevice",
+        "level": 2,
+        "line_start": 521,
+        "line_end": 531,
+        "summary": "USB设备信息，继承自[Device](#device)。\n\n**系统能力：** SystemCapability.Driver.ExternalDevice\n\n| 名称      | 类型   |"
+      },
+      {
+        "section_id": "section-13",
+        "title": "BusType",
+        "level": 2,
+        "line_start": 532,
+        "line_end": 541,
+        "summary": "设备总线类型。\n\n**系统能力：** SystemCapability.Driver.ExternalDevice\n\n| 名称 | 值  | 说明          |\n| ---- | --- |"
+      },
+      {
+        "section_id": "section-14",
+        "title": "RemoteDeviceDriver<sup>11+</sup>",
+        "level": 2,
+        "line_start": 542,
+        "line_end": 551,
+        "summary": "远程设备驱动。\n\n**系统能力：** SystemCapability.Driver.ExternalDevice\n\n| 名称      | 类型   | 只读 | 可选 | 说明"
+      }
+    ]
+  }
+}

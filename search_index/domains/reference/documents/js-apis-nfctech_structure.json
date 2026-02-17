@@ -1,0 +1,116 @@
+{
+  "doc_id": "js-apis-nfctech",
+  "title": "nfctech (标准NFC-Tag Nfc 技术)",
+  "path": "zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-nfctech.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-connectivity-kit/js-apis-nfctech.md",
+  "metadata": {
+    "kit": "Connectivity Kit",
+    "subsystem": "Communication",
+    "owner": "@amunra03",
+    "designer": "@wenxiaolin",
+    "tester": "@zs_111",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Connectivity Kit Communication 模块的 nfctech (标准NFC-Tag Nfc 技术)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "nfctech (标准NFC-Tag Nfc 技术)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "```js\nimport { tag } from '@kit.ConnectivityKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "NfcATag",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 87,
+        "summary": "NfcATag 提供 NFC-A(ISO 14443-3A)技术的属性和I/O操作的访问，继承自[TagSession](js-apis-tagSession.md)。\n\nTagSession是所有"
+      },
+      {
+        "section_id": "section-3",
+        "title": "NfcBTag",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 149,
+        "summary": "NfcBTag 提供对NFC-B(ISO 14443-3B)技术的属性和I/O操作的访问，继承自TagSession。\n\nTagSession是所有NFC Tag技术类型的基类，提供建立连接和发送数"
+      },
+      {
+        "section_id": "section-4",
+        "title": "NfcFTag",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 211,
+        "summary": "NfcFTag 提供对NFC-F(JIS 6319-4)技术的属性和I/O操作的访问，继承自TagSession。\n\nTagSession是所有NFC Tag技术类型的基类， 提供建立连接和发送数据"
+      },
+      {
+        "section_id": "section-5",
+        "title": "NfcVTag",
+        "level": 2,
+        "line_start": 212,
+        "line_end": 273,
+        "summary": "NfcVTag 提供对NFC-V(ISO 15693)技术的属性和I/O操作的访问，继承自TagSession。\n\nTagSession是所有NFC Tag技术类型的基类， 提供建立连接和发送数据等"
+      },
+      {
+        "section_id": "section-6",
+        "title": "IsoDepTag<sup>9+</sup>",
+        "level": 2,
+        "line_start": 274,
+        "line_end": 453,
+        "summary": "IsoDepTag 提供对ISO-DEP(ISO 14443-4)技术的属性和I/O操作的访问，继承自TagSession。\n\nTagSession是所有NFC Tag技术类型的基类， 提供建立连接"
+      },
+      {
+        "section_id": "section-7",
+        "title": "NdefMessage<sup>9+</sup>",
+        "level": 2,
+        "line_start": 454,
+        "line_end": 484,
+        "summary": "### NdefMessage.getNdefRecords<sup>9+</sup>\n\ngetNdefRecords(): [tag.NdefRecord](js-apis-nfcTag.md#n"
+      },
+      {
+        "section_id": "section-8",
+        "title": "NdefTag<sup>9+</sup>",
+        "level": 2,
+        "line_start": 485,
+        "line_end": 1023,
+        "summary": "提供对已格式化为NDEF的NFC标签的数据和操作的访问，继承自TagSession。\n\nTagSession是所有NFC Tag技术类型的基类，提供建立连接和发送数据等共同接口。具体请参见[TagS"
+      },
+      {
+        "section_id": "section-9",
+        "title": "MifareClassicTag<sup>9+</sup>",
+        "level": 2,
+        "line_start": 1024,
+        "line_end": 2190,
+        "summary": "MifareClassicTag提供对MIFARE Classic属性和I/O操作的访问，继承自[TagSession](js-apis-tagSession.md)。\n\nTagSession是所有"
+      },
+      {
+        "section_id": "section-10",
+        "title": "MifareUltralightTag<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2191,
+        "line_end": 2485,
+        "summary": "MifareUltralightTag 提供对MIFARE Ultralight属性和I/O操作的访问，继承自TagSession。\n\nTagSession是所有NFC Tag技术类型的基类， 提供"
+      },
+      {
+        "section_id": "section-11",
+        "title": "NdefFormatableTag<sup>9+</sup>",
+        "level": 2,
+        "line_start": 2486,
+        "line_end": 2764,
+        "summary": "NdefFormatableTag为NDEF Formattable的标签提供格式化操作，继承自TagSession。\n\nTagSession是所有NFC Tag 技术类型的基类， 提供建立连接和发"
+      },
+      {
+        "section_id": "section-12",
+        "title": "BarcodeTag<sup>18+</sup>",
+        "level": 2,
+        "line_start": 2765,
+        "line_end": 2803,
+        "summary": "BarcodeTag提供读取条形码标签的属性和访问I/O操作的能力，继承自TagSession。\n\nTagSession是所有NFC Tag 技术类型的基类， 提供建立连接和发送数据等共同接口。具体"
+      }
+    ]
+  }
+}

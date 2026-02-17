@@ -1,0 +1,156 @@
+{
+  "doc_id": "js-apis-process",
+  "title": "@ohos.process (获取进程相关的信息)",
+  "path": "zh-cn/application-dev/reference/apis-arkts/js-apis-process.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkts/js-apis-process.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "CommonLibrary",
+    "owner": "@xliu-huanwei; @shilei123; @huanghello",
+    "designer": "@yuanyao14",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "ArkTS CommonLibrary 模块的 @ohos.process (获取进程相关的信息)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.process (获取进程相关的信息)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 22,
+        "summary": "```ts\nimport { process } from '@kit.ArkTS';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 35,
+        "summary": "**系统能力：** SystemCapability.Utils.Lang\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n| 名称"
+      },
+      {
+        "section_id": "section-3",
+        "title": "EventListener",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 51,
+        "summary": "type EventListener = (evt: Object) => void\n\n用户存储的事件信息。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-4",
+        "title": "process.isIsolatedProcess<sup>8+</sup>",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 74,
+        "summary": "isIsolatedProcess(): boolean\n\n检查进程是否已被隔离。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-5",
+        "title": "process.is64Bit<sup>8+</sup>",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 97,
+        "summary": "is64Bit(): boolean\n\n检查运行环境是否为64位。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：** Syste"
+      },
+      {
+        "section_id": "section-6",
+        "title": "process.getStartRealtime<sup>8+</sup>",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 119,
+        "summary": "getStartRealtime(): number\n\n获取系统启动到进程启动的实时时间（以毫秒为单位，不包含系统休眠时间）。\n\n**原子化服务API：** 从API version 11开始，该接"
+      },
+      {
+        "section_id": "section-7",
+        "title": "process.getPastCpuTime<sup>8+</sup>",
+        "level": 2,
+        "line_start": 120,
+        "line_end": 142,
+        "summary": "getPastCpuTime(): number\n\n获取进程启动到当前时间的CPU时间（以毫秒为单位）。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使"
+      },
+      {
+        "section_id": "section-8",
+        "title": "process.abort",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 159,
+        "summary": "abort(): void\n\n该方法会导致进程立即退出并生成一个核心文件，谨慎使用。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-9",
+        "title": "process.uptime",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 182,
+        "summary": "uptime(): number\n\n获取当前系统已运行的时间（以秒为单位）。\n\n**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-10",
+        "title": "process.kill<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 183,
+        "line_end": 215,
+        "summary": "kill(signal: number, pid: number): boolean\n\n发送信号到指定进程，结束该进程。\n\n> **说明：**\n>\n> 从API version 7开始支持，从API"
+      },
+      {
+        "section_id": "section-11",
+        "title": "process.exit<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 216,
+        "line_end": 242,
+        "summary": "exit(code: number): void\n\n终止程序。\n\n请谨慎使用此接口。调用此接口后应用将退出。如果输入参数非0，可能会导致数据丢失或出现异常。\n\n> **说明：**\n>\n> 从API"
+      },
+      {
+        "section_id": "section-12",
+        "title": "process.getUidForName<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 243,
+        "line_end": 273,
+        "summary": "getUidForName(v: string): number\n\n根据指定的用户名，从系统的用户数据库中获取该用户的uid。\n\n> **说明：**\n>\n> 从API version 8开始支持，从"
+      },
+      {
+        "section_id": "section-13",
+        "title": "process.getThreadPriority<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 274,
+        "line_end": 305,
+        "summary": "getThreadPriority(v: number): number\n\n根据指定的tid获取线程优先级。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API versi"
+      },
+      {
+        "section_id": "section-14",
+        "title": "process.isAppUid<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 336,
+        "summary": "isAppUid(v: number): boolean\n\n判断uid是否属于应用程序。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始废弃，建"
+      },
+      {
+        "section_id": "section-15",
+        "title": "process.getSystemConfig<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 337,
+        "line_end": 368,
+        "summary": "getSystemConfig(name: number): number\n\n获取系统配置信息。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API version 9开始"
+      },
+      {
+        "section_id": "section-16",
+        "title": "process.getEnvironmentVar<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 369,
+        "line_end": 399,
+        "summary": "getEnvironmentVar(name: string): string\n\n获取环境变量名对应的值。\n\n> **说明：**\n>\n> 从API version 8开始支持，从API versio"
+      },
+      {
+        "section_id": "section-17",
+        "title": "ProcessManager<sup>9+</sup>",
+        "level": 2,
+        "line_start": 400,
+        "line_end": 676,
+        "summary": "提供用于新增进程的抛异常接口。\n\n构造ProcessManager对象。\n\n### isAppUid<sup>9+</sup>\n\nisAppUid(v: number): boolean\n\n判断ui"
+      }
+    ]
+  }
+}

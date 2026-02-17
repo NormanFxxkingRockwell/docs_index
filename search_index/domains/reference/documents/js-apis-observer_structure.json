@@ -1,0 +1,348 @@
+{
+  "doc_id": "js-apis-observer",
+  "title": "@ohos.telephony.observer (observer)",
+  "path": "zh-cn/application-dev/reference/apis-telephony-kit/js-apis-observer.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-telephony-kit/js-apis-observer.md",
+  "metadata": {
+    "kit": "Telephony Kit",
+    "subsystem": "Telephony",
+    "owner": "@shao-yikai",
+    "designer": "@wnazgul",
+    "tester": "@jiang_99",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Telephony Kit Telephony 模块的 @ohos.telephony.observer (observer)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.telephony.observer (observer)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { observer } from '@kit.TelephonyKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "NetworkState",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 33,
+        "summary": "type NetworkState = radio.NetworkState\n\n网络注册状态。\n\n**系统能力**：SystemCapability.Telephony.StateRegistry"
+      },
+      {
+        "section_id": "section-3",
+        "title": "SignalInformation",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 46,
+        "summary": "type SignalInformation = radio.SignalInformation\n\n网络信号强度信息对象。\n\n**系统能力**：SystemCapability.Telephony."
+      },
+      {
+        "section_id": "section-4",
+        "title": "DataConnectState",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 59,
+        "summary": "type DataConnectState = data.DataConnectState\n\n描述蜂窝数据链路连接状态。\n\n**系统能力**：SystemCapability.Telephony.S"
+      },
+      {
+        "section_id": "section-5",
+        "title": "RatType",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 72,
+        "summary": "type RatType = radio.RadioTechnology\n\n无线接入技术。\n\n**系统能力**：SystemCapability.Telephony.StateRegistry\n\n|"
+      },
+      {
+        "section_id": "section-6",
+        "title": "DataFlowType",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 85,
+        "summary": "type DataFlowType = data.DataFlowType\n\n描述蜂窝数据流类型。\n\n**系统能力**：SystemCapability.Telephony.StateRegistr"
+      },
+      {
+        "section_id": "section-7",
+        "title": "CallState",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 98,
+        "summary": "type CallState = call.CallState\n\n通话状态码。\n\n**系统能力**：SystemCapability.Telephony.StateRegistry\n\n|"
+      },
+      {
+        "section_id": "section-8",
+        "title": "CardType",
+        "level": 2,
+        "line_start": 99,
+        "line_end": 111,
+        "summary": "type CardType = sim.CardType\n\n卡类型。\n\n**系统能力**：SystemCapability.Telephony.StateRegistry\n\n|       类型"
+      },
+      {
+        "section_id": "section-9",
+        "title": "SimState",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 123,
+        "summary": "type SimState = sim.SimState\n\nSIM卡状态。\n\n**系统能力**：SystemCapability.Telephony.StateRegistry\n\n|       类"
+      },
+      {
+        "section_id": "section-10",
+        "title": "TelCallState<sup>21+</sup>",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 136,
+        "summary": "type TelCallState = call.TelCallState\n\n通话状态码。\n\n**系统能力**：SystemCapability.Telephony.StateRegistry\n\n|"
+      },
+      {
+        "section_id": "section-11",
+        "title": "observer.on('networkStateChange')",
+        "level": 2,
+        "line_start": 137,
+        "line_end": 175,
+        "summary": "on\\(type: \\'networkStateChange\\', callback: Callback\\<NetworkState\\>\\): void\n\n订阅网络状态变化事件，使用callback"
+      },
+      {
+        "section_id": "section-12",
+        "title": "observer.on('networkStateChange')",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 218,
+        "summary": "on\\(type: \\'networkStateChange\\', options: ObserverOptions, callback: Callback\\<NetworkState\\>\\): v"
+      },
+      {
+        "section_id": "section-13",
+        "title": "observer.off('networkStateChange')",
+        "level": 2,
+        "line_start": 219,
+        "line_end": 261,
+        "summary": "off\\(type: \\'networkStateChange\\', callback?: Callback\\<NetworkState\\>\\): void\n\n取消订阅网络状态变化事件，使用call"
+      },
+      {
+        "section_id": "section-14",
+        "title": "observer.on('signalInfoChange')",
+        "level": 2,
+        "line_start": 262,
+        "line_end": 299,
+        "summary": "on\\(type: \\'signalInfoChange\\', callback: Callback\\<Array\\<SignalInformation\\>\\>): void\n\n订阅信号状态变化事件"
+      },
+      {
+        "section_id": "section-15",
+        "title": "observer.on('signalInfoChange')",
+        "level": 2,
+        "line_start": 300,
+        "line_end": 341,
+        "summary": "on\\(type: \\'signalInfoChange\\', options: ObserverOptions, callback: Callback\\<Array\\<SignalInformat"
+      },
+      {
+        "section_id": "section-16",
+        "title": "observer.off('signalInfoChange')",
+        "level": 2,
+        "line_start": 342,
+        "line_end": 387,
+        "summary": "off\\(type: \\'signalInfoChange\\', callback?: Callback\\<Array\\<SignalInformation\\>\\>): void\n\n取消订阅信号状态"
+      },
+      {
+        "section_id": "section-17",
+        "title": "observer.on('callStateChange')",
+        "level": 2,
+        "line_start": 388,
+        "line_end": 423,
+        "summary": "on(type: 'callStateChange', callback: Callback\\<CallStateInfo\\>): void\n\n订阅通话状态变化事件，使用callback方式作为异步"
+      },
+      {
+        "section_id": "section-18",
+        "title": "observer.on('callStateChange')",
+        "level": 2,
+        "line_start": 424,
+        "line_end": 463,
+        "summary": "on(type: 'callStateChange', options: ObserverOptions, callback: Callback\\<CallStateInfo\\>): void\n\n订"
+      },
+      {
+        "section_id": "section-19",
+        "title": "observer.off('callStateChange')",
+        "level": 2,
+        "line_start": 464,
+        "line_end": 507,
+        "summary": "off(type: 'callStateChange', callback?: Callback\\<CallStateInfo\\>): void\n\n取消订阅通话状态变化事件，使用callback方式"
+      },
+      {
+        "section_id": "section-20",
+        "title": "observer.on('callStateChangeEx')<sup>21+</sup>",
+        "level": 2,
+        "line_start": 508,
+        "line_end": 551,
+        "summary": "on(type: 'callStateChangeEx', callback: Callback\\<TelCallState\\>, options?: ObserverOptions): void"
+      },
+      {
+        "section_id": "section-21",
+        "title": "observer.off('callStateChangeEx')<sup>21+</sup>",
+        "level": 2,
+        "line_start": 552,
+        "line_end": 595,
+        "summary": "off(type: 'callStateChangeEx', callback?: Callback\\<TelCallState\\>): void\n\n取消订阅通话状态变化拓展事件，使用callbac"
+      },
+      {
+        "section_id": "section-22",
+        "title": "observer.on('cellularDataConnectionStateChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 596,
+        "line_end": 631,
+        "summary": "on\\(type: 'cellularDataConnectionStateChange', callback: Callback\\<DataConnectionStateInfo\\>\\): voi"
+      },
+      {
+        "section_id": "section-23",
+        "title": "observer.on('cellularDataConnectionStateChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 632,
+        "line_end": 671,
+        "summary": "on\\(type: 'cellularDataConnectionStateChange', options: ObserverOptions, callback: Callback\\<DataCo"
+      },
+      {
+        "section_id": "section-24",
+        "title": "observer.off('cellularDataConnectionStateChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 672,
+        "line_end": 715,
+        "summary": "off\\(type: 'cellularDataConnectionStateChange',  callback?: Callback\\<DataConnectionStateInfo\\>\\):"
+      },
+      {
+        "section_id": "section-25",
+        "title": "observer.on('cellularDataFlowChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 716,
+        "line_end": 753,
+        "summary": "on\\(type: 'cellularDataFlowChange', callback: Callback\\<DataFlowType\\>\\): void\n\n订阅蜂窝数据业务的上下行数据流状态，使"
+      },
+      {
+        "section_id": "section-26",
+        "title": "observer.on('cellularDataFlowChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 754,
+        "line_end": 795,
+        "summary": "on\\(type: 'cellularDataFlowChange', options: ObserverOptions,  callback: Callback\\<DataFlowType\\>\\)"
+      },
+      {
+        "section_id": "section-27",
+        "title": "observer.off('cellularDataFlowChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 796,
+        "line_end": 841,
+        "summary": "off\\(type: 'cellularDataFlowChange', callback?: Callback\\<DataFlowType\\>\\): void\n\n移除订阅蜂窝数据业务的上下行数据流"
+      },
+      {
+        "section_id": "section-28",
+        "title": "observer.on('simStateChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 842,
+        "line_end": 881,
+        "summary": "on\\(type: 'simStateChange', callback: Callback\\<SimStateData\\>\\): void\n\n订阅sim状态更改事件，使用callback方式作为异"
+      },
+      {
+        "section_id": "section-29",
+        "title": "observer.on('simStateChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 882,
+        "line_end": 921,
+        "summary": "on\\(type: 'simStateChange', options: ObserverOptions, callback: Callback\\<SimStateData\\>\\): void\n\n订"
+      },
+      {
+        "section_id": "section-30",
+        "title": "observer.off('simStateChange')<sup>7+</sup>",
+        "level": 2,
+        "line_start": 922,
+        "line_end": 964,
+        "summary": "off\\(type: 'simStateChange', callback?: Callback\\<SimStateData\\>\\): void\n\n移除订阅sim状态更改事件，使用callback方"
+      },
+      {
+        "section_id": "section-31",
+        "title": "observer.on('iccAccountInfoChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 965,
+        "line_end": 1000,
+        "summary": "on\\(type: 'iccAccountInfoChange', callback: Callback\\<void\\>\\): void\n\n订阅卡帐户变化事件，使用callback方式作为异步方法。"
+      },
+      {
+        "section_id": "section-32",
+        "title": "observer.off('iccAccountInfoChange')<sup>10+</sup>",
+        "level": 2,
+        "line_start": 1001,
+        "line_end": 1044,
+        "summary": "off\\(type: 'iccAccountInfoChange', callback?: Callback\\<void\\>\\): void\n\n移除订阅卡帐户变化事件，使用callback方式作为异"
+      },
+      {
+        "section_id": "section-33",
+        "title": "observer.onGetSimActiveState<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1045,
+        "line_end": 1086,
+        "summary": "onGetSimActiveState\\(slotId: number, callback: Callback\\<boolean\\>\\): void\n\nSIM卡激活状态变化的监听，使用callbac"
+      },
+      {
+        "section_id": "section-34",
+        "title": "observer.offGetSimActiveState<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1087,
+        "line_end": 1126,
+        "summary": "offGetSimActiveState\\(callback?: Callback\\<boolean\\>\\): void\n\n取消SIM卡激活状态变化的监听，使用callback方式作为异步方法。"
+      },
+      {
+        "section_id": "section-35",
+        "title": "observer.onCCallStateChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1127,
+        "line_end": 1169,
+        "summary": "onCCallStateChange\\(callback: Callback\\<CCallStateInfo\\>, options?: ObserverOptions): void\n\n三方应用监听运"
+      },
+      {
+        "section_id": "section-36",
+        "title": "observer.offCCallStateChange<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1170,
+        "line_end": 1207,
+        "summary": "offCCallStateChange\\(callback: Callback\\<CCallStateInfo\\>\\): void\n\n取消三方应用监听运营商通话状态并获取通话号码，使用callbac"
+      },
+      {
+        "section_id": "section-37",
+        "title": "LockReason<sup>8+</sup>",
+        "level": 2,
+        "line_start": 1208,
+        "line_end": 1230,
+        "summary": "SIM卡锁类型。\n\n**系统能力**：SystemCapability.Telephony.StateRegistry\n\n| 名称        | 值   | 说明              |"
+      },
+      {
+        "section_id": "section-38",
+        "title": "SimStateData<sup>7+</sup>",
+        "level": 2,
+        "line_start": 1231,
+        "line_end": 1243,
+        "summary": "SIM卡类型和状态。\n\n**系统能力**：SystemCapability.Telephony.StateRegistry\n\n|     名称            |"
+      },
+      {
+        "section_id": "section-39",
+        "title": "CallStateInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1244,
+        "line_end": 1255,
+        "summary": "通话状态相关信息。\n\n**系统能力**：SystemCapability.Telephony.StateRegistry\n\n|     名称            |"
+      },
+      {
+        "section_id": "section-40",
+        "title": "DataConnectionStateInfo<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1256,
+        "line_end": 1267,
+        "summary": "数据连接状态相关信息。\n\n**系统能力**：SystemCapability.Telephony.StateRegistry\n\n\n| 名称 | 类型"
+      },
+      {
+        "section_id": "section-41",
+        "title": "ObserverOptions<sup>11+</sup>",
+        "level": 2,
+        "line_start": 1268,
+        "line_end": 1278,
+        "summary": "电话相关事件订阅参数可选项。\n\n**系统能力**：SystemCapability.Telephony.StateRegistry\n\n|     名称            |         类型"
+      }
+    ]
+  }
+}

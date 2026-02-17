@@ -1,0 +1,60 @@
+{
+  "doc_id": "arkts-apis-media-MediaSourceLoadingRequest",
+  "title": "Interface (MediaSourceLoadingRequest)",
+  "path": "zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-MediaSourceLoadingRequest.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-media-kit/arkts-apis-media-MediaSourceLoadingRequest.md",
+  "metadata": {
+    "kit": "Media Kit",
+    "subsystem": "Multimedia",
+    "owner": "@wang-haizhou6",
+    "designer": "@HmQQQ",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Media Kit Multimedia 模块的 Interface (MediaSourceLoadingRequest)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (MediaSourceLoadingRequest)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 21,
+        "summary": "```ts\nimport { media } from '@kit.MediaKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "属性",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 30,
+        "summary": "**系统能力：** SystemCapability.Multimedia.Media.Core\n\n| 名称   | 类型    | 只读   | 可选   | 说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "respondData<sup>18+</sup>",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 67,
+        "summary": "respondData(uuid: number, offset: number, buffer: ArrayBuffer): number\n\n用于应用程序向播放器发送数据。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-4",
+        "title": "respondHeader<sup>18+</sup>",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 106,
+        "summary": "respondHeader(uuid: number, header?: Record<string, string>, redirectUrl?: string): void\n\n用于应用程序向播放"
+      },
+      {
+        "section_id": "section-5",
+        "title": "finishLoading<sup>18+</sup>",
+        "level": 2,
+        "line_start": 107,
+        "line_end": 135,
+        "summary": "finishLoading(uuid: number, state: LoadingRequestError): void\n\n应用程序用于通知播放器当前请求状态的接口。针对服务侧请求的单个资源，推送"
+      }
+    ]
+  }
+}

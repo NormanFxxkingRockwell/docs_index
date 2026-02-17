@@ -1,0 +1,196 @@
+{
+  "doc_id": "js-apis-stateManagement",
+  "title": "@ohos.arkui.StateManagement (状态管理)",
+  "path": "zh-cn/application-dev/reference/apis-arkui/js-apis-stateManagement.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/js-apis-stateManagement.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926; @liwenzhen3; @zzq212050299",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI ArkUI 模块的 @ohos.arkui.StateManagement (状态管理)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.arkui.StateManagement (状态管理)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 30,
+        "summary": "```ts\nimport { AppStorageV2, PersistenceV2, UIUtils } from '@kit.ArkUI';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "AppStorageV2",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 156,
+        "summary": "AppStorageV2具体UI使用说明，详见[AppStorageV2(应用全局的UI状态存储)](../../ui/state-management/arkts-new-appstoragev2"
+      },
+      {
+        "section_id": "section-3",
+        "title": "PersistenceV2",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 401,
+        "summary": "继承自[AppStorageV2](#appstoragev2)，PersistenceV2具体UI使用说明，详见[PersistenceV2(持久化存储UI状态)](../../ui/state-"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ConnectOptions<sup>18+</sup>",
+        "level": 2,
+        "line_start": 402,
+        "line_end": 416,
+        "summary": "globalConnect参数类型。\n\n**原子化服务API：** 从API version 18开始，该接口支持在原子化服务中使用。\n\n**系统能力：** SystemCapability.Ark"
+      },
+      {
+        "section_id": "section-5",
+        "title": "ConnectOptionsCollections<sup>23+</sup>",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 514,
+        "summary": "[globalConnect](#globalconnect23)接口参数类型，ConnectOptionsCollections继承自[ConnectOptions](#connectoption"
+      },
+      {
+        "section_id": "section-6",
+        "title": "CollectionType<sup>23+</sup>",
+        "level": 2,
+        "line_start": 515,
+        "line_end": 536,
+        "summary": "type CollectionType\\<S\\> = Array\\<S\\> | Map\\<string | number, S\\> |\nSet\\<S\\> | collections.Array\\<S"
+      },
+      {
+        "section_id": "section-7",
+        "title": "ObservedResult<sup>23+</sup>",
+        "level": 2,
+        "line_start": 537,
+        "line_end": 552,
+        "summary": "对象是否可被观察的结果。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-8",
+        "title": "DecoratorInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 553,
+        "line_end": 570,
+        "summary": "可被观察对象关联的装饰器和组件信息。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**模型约束：** 此接口仅可在Stage模型下使用。\n\n*"
+      },
+      {
+        "section_id": "section-9",
+        "title": "ElementInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 571,
+        "line_end": 585,
+        "summary": "可被观察对象关联的组件信息，包含系统组件和自定义组件。\n\n**原子化服务API：** 从API version 23开始，该接口支持在原子化服务中使用。\n\n**模型约束：** 此接口仅可在Stage"
+      },
+      {
+        "section_id": "section-10",
+        "title": "UIUtils",
+        "level": 2,
+        "line_start": 586,
+        "line_end": 1497,
+        "summary": "UIUtils提供一些方法，用于处理状态管理相关的数据转换。\n\n### getTarget\n\nstatic getTarget\\<T extends object\\>(source: T): T"
+      },
+      {
+        "section_id": "section-11",
+        "title": "TaskCallback<sup>22+</sup>",
+        "level": 2,
+        "line_start": 1498,
+        "line_end": 1513,
+        "summary": "type TaskCallback = () => T\n\n同步执行的回调方法。\n\n**原子化服务API：** 从API version 22开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-12",
+        "title": "MonitorOptions<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1514,
+        "line_end": 1525,
+        "summary": "[addMonitor](#addmonitor20)的可选参数，用于配置回调类型。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-13",
+        "title": "MonitorCallback<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1526,
+        "line_end": 1540,
+        "summary": "type MonitorCallback = (monitorValue: IMonitor) => void\n\n参数为[IMonitor](./arkui-ts/ts-state-managemen"
+      },
+      {
+        "section_id": "section-14",
+        "title": "StorageDefaultCreator\\<T\\>",
+        "level": 2,
+        "line_start": 1541,
+        "line_end": 1589,
+        "summary": "type StorageDefaultCreator\\<T\\> = () => T\n\n返回默认构造器的函数。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务"
+      },
+      {
+        "section_id": "section-15",
+        "title": "TypeConstructorWithArgs\\<T\\>",
+        "level": 2,
+        "line_start": 1590,
+        "line_end": 1648,
+        "summary": "含有任意入参的类构造器。\n\n### new\n\nnew(...args: any): T\n\n创建并返回一个指定类型T的实例。\n\n**原子化服务API：** 从API version 12开始，该接口支"
+      },
+      {
+        "section_id": "section-16",
+        "title": "PersistenceErrorCallback",
+        "level": 2,
+        "line_start": 1649,
+        "line_end": 1708,
+        "summary": "type PersistenceErrorCallback = (key: string, reason: 'quota' | 'serialization' | 'unknown', messag"
+      },
+      {
+        "section_id": "section-17",
+        "title": "TypeConstructor\\<T\\>",
+        "level": 2,
+        "line_start": 1709,
+        "line_end": 1764,
+        "summary": "类构造函数。\n\n### new\n\nnew(): T\n\n创建并返回一个指定类型T的实例。\n\n**原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。\n\n**系统能"
+      },
+      {
+        "section_id": "section-18",
+        "title": "TypeDecorator",
+        "level": 2,
+        "line_start": 1765,
+        "line_end": 1843,
+        "summary": "type TypeDecorator = \\<T\\>(type: TypeConstructor\\<T\\>) => PropertyDecorator\n\n属性装饰器，用于装饰嵌套类中属于自定义cla"
+      },
+      {
+        "section_id": "section-19",
+        "title": "GetterCallback<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1844,
+        "line_end": 1895,
+        "summary": "type GetterCallback\\<T\\> = () => T\n\n获取值的回调方法。\n\n**原子化服务API：** 从API version 20开始，该接口支持在原子化服务中使用。\n\n**系"
+      },
+      {
+        "section_id": "section-20",
+        "title": "SetterCallback<sup>20+</sup>",
+        "level": 2,
+        "line_start": 1896,
+        "line_end": 1950,
+        "summary": "type SetterCallback\\<T\\> = (newValue: T) => void\n\n设置值的回调方法。\n\n**原子化服务API：** 从API version 20开始，该接口支持在"
+      },
+      {
+        "section_id": "section-21",
+        "title": "Binding\\<T\\><sup>20+</sup>",
+        "level": 2,
+        "line_start": 1951,
+        "line_end": 2006,
+        "summary": "只读数据绑定的泛型类，可以绑定任意类型的数据。\n\n### value<sup>20+</sup>\nget value(): T\n\n提供get访问器，用于获取绑定的值。\n\n**原子化服务API：**"
+      },
+      {
+        "section_id": "section-22",
+        "title": "MutableBinding\\<T\\><sup>20+</sup>",
+        "level": 2,
+        "line_start": 2007,
+        "line_end": 2078,
+        "summary": "可变数据绑定的泛型类，允许对绑定值进行读写操作，提供完整的get和set访问器。\n\n### value<sup>20+</sup>\nset value(newValue: T)\n\n提供set访问器，"
+      }
+    ]
+  }
+}

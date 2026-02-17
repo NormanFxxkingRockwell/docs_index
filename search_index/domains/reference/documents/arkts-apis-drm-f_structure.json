@@ -1,0 +1,76 @@
+{
+  "doc_id": "arkts-apis-drm-f",
+  "title": "Functions",
+  "path": "zh-cn/application-dev/reference/apis-drm-kit/arkts-apis-drm-f.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-drm-kit/arkts-apis-drm-f.md",
+  "metadata": {
+    "kit": "Drm Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qin_wei_jie",
+    "designer": "@chris2981",
+    "tester": "@xdlinc",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Drm Kit Multimedia 模块的 Functions，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Functions",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 12,
+        "line_end": 17,
+        "summary": "```ts\nimport { drm } from '@kit.DrmKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "drm.createMediaKeySystem",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 63,
+        "summary": "createMediaKeySystem(name: string): MediaKeySystem\n\n创建MediaKeySystem实例。\n\n**原子化服务API：** 从API version"
+      },
+      {
+        "section_id": "section-3",
+        "title": "drm.isMediaKeySystemSupported",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 110,
+        "summary": "isMediaKeySystemSupported(name: string): boolean\n\n判断设备是否支持指定的DRM解决方案。\n\n**原子化服务API：** 从API version 1"
+      },
+      {
+        "section_id": "section-4",
+        "title": "drm.isMediaKeySystemSupported",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 158,
+        "summary": "isMediaKeySystemSupported(name: string, mimeType: string): boolean\n\n判断设备是否支持指定DRM解决方案及媒体类型。\n\n**原子化服"
+      },
+      {
+        "section_id": "section-5",
+        "title": "drm.isMediaKeySystemSupported",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 207,
+        "summary": "isMediaKeySystemSupported(name: string, mimeType: string, level: ContentProtectionLevel): boolean"
+      },
+      {
+        "section_id": "section-6",
+        "title": "drm.getMediaKeySystemUuid<sup>12+</sup>",
+        "level": 2,
+        "line_start": 208,
+        "line_end": 253,
+        "summary": "getMediaKeySystemUuid(name: string): string;\n\n获取DRM解决方案支持的DRM内容保护系统唯一标识。\n\n**原子化服务API：** 从API versio"
+      },
+      {
+        "section_id": "section-7",
+        "title": "drm.getMediaKeySystems<sup>12+</sup>",
+        "level": 2,
+        "line_start": 254,
+        "line_end": 291,
+        "summary": "getMediaKeySystems(): MediaKeySystemDescription[]\n\n获取设备支持的插件信息列表。\n\n**原子化服务API：** 从API version 14开始，"
+      }
+    ]
+  }
+}

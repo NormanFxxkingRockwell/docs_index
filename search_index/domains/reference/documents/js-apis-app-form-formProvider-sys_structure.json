@@ -1,0 +1,108 @@
+{
+  "doc_id": "js-apis-app-form-formProvider-sys",
+  "title": "@ohos.app.form.formProvider (formProvider)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-form-kit/js-apis-app-form-formProvider-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-form-kit/js-apis-app-form-formProvider-sys.md",
+  "metadata": {
+    "kit": "Form Kit",
+    "subsystem": "Ability",
+    "owner": "@cx983299475",
+    "designer": "@xueyulong",
+    "tester": "@yangyuecheng",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "Form Kit Ability 模块的 @ohos.app.form.formProvider (formProvider)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.app.form.formProvider (formProvider)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 22,
+        "summary": "```ts\nimport { formProvider } from '@kit.FormKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "requestPublishForm",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 85,
+        "summary": "requestPublishForm(want: Want, formBindingData: formBindingData.FormBindingData, callback: AsyncCal"
+      },
+      {
+        "section_id": "section-3",
+        "title": "requestPublishForm",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 142,
+        "summary": "requestPublishForm(want: Want, callback: AsyncCallback&lt;string&gt;): void\n\n请求发布一张卡片到使用方。使用方通常为桌面，"
+      },
+      {
+        "section_id": "section-4",
+        "title": "requestPublishForm",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 203,
+        "summary": "requestPublishForm(want: Want, formBindingData?: formBindingData.FormBindingData): Promise&lt;strin"
+      },
+      {
+        "section_id": "section-5",
+        "title": "isRequestPublishFormSupported",
+        "level": 2,
+        "line_start": 204,
+        "line_end": 270,
+        "summary": "isRequestPublishFormSupported(callback: AsyncCallback&lt;boolean&gt;): void\n\n查询是否可以添加卡片到卡片使用方，使用cal"
+      },
+      {
+        "section_id": "section-6",
+        "title": "isRequestPublishFormSupported",
+        "level": 2,
+        "line_start": 271,
+        "line_end": 332,
+        "summary": "isRequestPublishFormSupported(): Promise&lt;boolean&gt;\n\n查询是否可以添加卡片到卡片使用方，使用Promise异步回调。\n\n**系统接口：**"
+      },
+      {
+        "section_id": "section-7",
+        "title": "activateSceneAnimation<sup>20+</sup>",
+        "level": 2,
+        "line_start": 333,
+        "line_end": 389,
+        "summary": "activateSceneAnimation(formId: string): Promise&lt;void&gt;\n\n互动卡片请求状态切换到激活态，只针对[场景动效类型互动卡片](../../f"
+      },
+      {
+        "section_id": "section-8",
+        "title": "deactivateSceneAnimation<sup>20+</sup>",
+        "level": 2,
+        "line_start": 390,
+        "line_end": 446,
+        "summary": "deactivateSceneAnimation(formId: string): Promise&lt;void&gt;\n\n互动卡片请求切换到非激活态，只针对[场景动效类型互动卡片](../../"
+      },
+      {
+        "section_id": "section-9",
+        "title": "updateTemplateFormDetailInfo<sup>23+</sup>",
+        "level": 2,
+        "line_start": 447,
+        "line_end": 507,
+        "summary": "updateTemplateFormDetailInfo(templateFormInfo: Array&lt;formInfo.TemplateFormDetailInfo&gt;): Promi"
+      },
+      {
+        "section_id": "section-10",
+        "title": "onPublishFormCrossBundleControl<sup>23+</sup>",
+        "level": 2,
+        "line_start": 508,
+        "line_end": 554,
+        "summary": "onPublishFormCrossBundleControl(callback: formInfo.PublishFormCrossBundleControlCallback): void\n\n订阅"
+      },
+      {
+        "section_id": "section-11",
+        "title": "offPublishFormCrossBundleControl<sup>23+</sup>",
+        "level": 2,
+        "line_start": 555,
+        "line_end": 598,
+        "summary": "offPublishFormCrossBundleControl(callback?: formInfo.PublishFormCrossBundleControlCallback): void"
+      }
+    ]
+  }
+}

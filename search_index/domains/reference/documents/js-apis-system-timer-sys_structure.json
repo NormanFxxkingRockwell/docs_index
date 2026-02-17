@@ -1,0 +1,100 @@
+{
+  "doc_id": "js-apis-system-timer-sys",
+  "title": "@ohos.systemTimer (系统定时器)(系统接口)",
+  "path": "zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-system-timer-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-basic-services-kit/js-apis-system-timer-sys.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Time",
+    "owner": "@huaxin05",
+    "designer": "@hu-kai45",
+    "tester": "@liuhaonan2",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit Time 模块的 @ohos.systemTimer (系统定时器)(系统接口)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "@ohos.systemTimer (系统定时器)(系统接口)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 22,
+        "summary": "```ts\nimport { systemTimer } from '@kit.BasicServicesKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "常量",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 52,
+        "summary": "支持创建的定时器类型。\n\n**系统能力：** SystemCapability.MiscServices.Time\n\n| 名称                | 类型   | 值   | 说明"
+      },
+      {
+        "section_id": "section-3",
+        "title": "systemTimer.createTimer",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 103,
+        "summary": "createTimer(options: TimerOptions, callback: AsyncCallback&lt;number&gt;): void\n\n创建定时器，使用callback异步"
+      },
+      {
+        "section_id": "section-4",
+        "title": "systemTimer.createTimer",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 157,
+        "summary": "createTimer(options: TimerOptions): Promise&lt;number&gt;\n\n创建定时器，使用Promise异步回调返回定时器的ID。\n\n> **注意：**"
+      },
+      {
+        "section_id": "section-5",
+        "title": "systemTimer.startTimer",
+        "level": 2,
+        "line_start": 158,
+        "line_end": 213,
+        "summary": "startTimer(timer: number, triggerTime: number, callback: AsyncCallback&lt;void&gt;): void\n\n开启定时器，使用"
+      },
+      {
+        "section_id": "section-6",
+        "title": "systemTimer.startTimer",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 272,
+        "summary": "startTimer(timer: number, triggerTime: number): Promise&lt;void&gt;\n\n开启定时器，使用Promise进行异步回调。\n\n**系统能力"
+      },
+      {
+        "section_id": "section-7",
+        "title": "systemTimer.stopTimer",
+        "level": 2,
+        "line_start": 273,
+        "line_end": 328,
+        "summary": "stopTimer(timer: number, callback: AsyncCallback&lt;void&gt;): void\n\n该方法停止定时器，并使用callback进行异步回调。\n\n*"
+      },
+      {
+        "section_id": "section-8",
+        "title": "systemTimer.stopTimer",
+        "level": 2,
+        "line_start": 329,
+        "line_end": 387,
+        "summary": "stopTimer(timer: number): Promise&lt;void&gt;\n\n此方法用于停止定时器，并使用Promise异步回调。\n\n**系统能力：** SystemCapabili"
+      },
+      {
+        "section_id": "section-9",
+        "title": "systemTimer.destroyTimer",
+        "level": 2,
+        "line_start": 388,
+        "line_end": 444,
+        "summary": "destroyTimer(timer: number, callback: AsyncCallback&lt;void&gt;): void\n\n销毁定时器，使用callback异步回调。\n\n**系统"
+      },
+      {
+        "section_id": "section-10",
+        "title": "systemTimer.destroyTimer",
+        "level": 2,
+        "line_start": 445,
+        "line_end": 503,
+        "summary": "destroyTimer(timer: number): Promise&lt;void&gt;\n\n销毁定时器，使用Promise进行异步回调。\n\n**系统能力：** SystemCapabilit"
+      }
+    ]
+  }
+}

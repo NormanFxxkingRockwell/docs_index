@@ -1,0 +1,268 @@
+{
+  "doc_id": "arkts-apis-camera-CameraManager",
+  "title": "Interface (CameraManager)",
+  "path": "zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-CameraManager.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-camera-kit/arkts-apis-camera-CameraManager.md",
+  "metadata": {
+    "kit": "Camera Kit",
+    "subsystem": "Multimedia",
+    "owner": "@qano",
+    "designer": "@leo_ysl",
+    "tester": "@xchaosioda",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "Camera Kit Multimedia 模块的 Interface (CameraManager)，提供相关接口和功能说明。",
+  "structure": {
+    "title": "Interface (CameraManager)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "导入模块",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 20,
+        "summary": "```ts\nimport { camera } from '@kit.CameraKit';\n```"
+      },
+      {
+        "section_id": "section-2",
+        "title": "getSupportedCameras",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 53,
+        "summary": "getSupportedCameras(): Array\\<CameraDevice\\>\n\n获取支持的相机设备对象，同步返回结果。\n\n**原子化服务API：** 从API version 19开始，"
+      },
+      {
+        "section_id": "section-3",
+        "title": "getSupportedSceneModes<sup>11+</sup>",
+        "level": 2,
+        "line_start": 54,
+        "line_end": 92,
+        "summary": "getSupportedSceneModes(camera: CameraDevice): Array\\<SceneMode\\>\n\n获取指定的相机设备对象支持的模式，同步返回结果。\n\n**原子化服务"
+      },
+      {
+        "section_id": "section-4",
+        "title": "getSupportedOutputCapability<sup>11+</sup>",
+        "level": 2,
+        "line_start": 93,
+        "line_end": 124,
+        "summary": "getSupportedOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability\n\n查询相机设备"
+      },
+      {
+        "section_id": "section-5",
+        "title": "getSupportedFullOutputCapability<sup>23+</sup>",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 164,
+        "summary": "getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability\n\n查询"
+      },
+      {
+        "section_id": "section-6",
+        "title": "isCameraMuted",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 189,
+        "summary": "isCameraMuted(): boolean\n\n查询当前相机是否禁用。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力：** S"
+      },
+      {
+        "section_id": "section-7",
+        "title": "createCameraInput",
+        "level": 2,
+        "line_start": 190,
+        "line_end": 243,
+        "summary": "createCameraInput(camera: CameraDevice): CameraInput\n\n使用CameraDevice对象创建CameraInput实例，同步返回结果。\n\n该接口使"
+      },
+      {
+        "section_id": "section-8",
+        "title": "createCameraInput",
+        "level": 2,
+        "line_start": 244,
+        "line_end": 300,
+        "summary": "createCameraInput(position: CameraPosition, type: CameraType): CameraInput\n\n根据相机位置和类型创建CameraInput实"
+      },
+      {
+        "section_id": "section-9",
+        "title": "createPreviewOutput",
+        "level": 2,
+        "line_start": 301,
+        "line_end": 351,
+        "summary": "createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput\n\n创建预览输出对象，同步返回结果。\n\n**原子化服务A"
+      },
+      {
+        "section_id": "section-10",
+        "title": "createPreviewOutput<sup>12+</sup>",
+        "level": 2,
+        "line_start": 352,
+        "line_end": 400,
+        "summary": "createPreviewOutput(surfaceId: string): PreviewOutput\n\n创建无配置信息的预览输出对象，同步返回结果。该接口需配合[preconfig](arkt"
+      },
+      {
+        "section_id": "section-11",
+        "title": "createPhotoOutput<sup>11+</sup>",
+        "level": 2,
+        "line_start": 401,
+        "line_end": 450,
+        "summary": "createPhotoOutput(profile?: Profile): PhotoOutput\n\n创建拍照输出对象，同步返回结果。\n\n**原子化服务API：** 从API version 19开"
+      },
+      {
+        "section_id": "section-12",
+        "title": "createVideoOutput",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 508,
+        "summary": "createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput\n\n创建录像输出对象，同步返回结果。\n\n在录像模式下，"
+      },
+      {
+        "section_id": "section-13",
+        "title": "createVideoOutput<sup>12+</sup>",
+        "level": 2,
+        "line_start": 509,
+        "line_end": 557,
+        "summary": "createVideoOutput(surfaceId: string): VideoOutput\n\n创建无配置信息的录像输出对象，同步返回结果。该接口需配合[preconfig](arkts-ap"
+      },
+      {
+        "section_id": "section-14",
+        "title": "createMetadataOutput",
+        "level": 2,
+        "line_start": 558,
+        "line_end": 606,
+        "summary": "createMetadataOutput(metadataObjectTypes: Array\\<MetadataObjectType\\>): MetadataOutput\n\n创建metadata流"
+      },
+      {
+        "section_id": "section-15",
+        "title": "createSession<sup>11+</sup>",
+        "level": 2,
+        "line_start": 607,
+        "line_end": 655,
+        "summary": "createSession\\<T extends Session\\>(mode: SceneMode): T\n\n创建指定SceneMode的Session实例，同步返回结果。\n\n**原子化服务API"
+      },
+      {
+        "section_id": "section-16",
+        "title": "on('cameraStatus')",
+        "level": 2,
+        "line_start": 656,
+        "line_end": 695,
+        "summary": "on(type: 'cameraStatus', callback: AsyncCallback\\<CameraStatusInfo\\>): void\n\n相机设备状态回调，通过注册回调函数获取相机的"
+      },
+      {
+        "section_id": "section-17",
+        "title": "off('cameraStatus')",
+        "level": 2,
+        "line_start": 696,
+        "line_end": 720,
+        "summary": "off(type: 'cameraStatus', callback?: AsyncCallback\\<CameraStatusInfo\\>): void\n\n相机设备状态注销回调，通过注销回调函数取"
+      },
+      {
+        "section_id": "section-18",
+        "title": "on('foldStatusChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 721,
+        "line_end": 760,
+        "summary": "on(type: 'foldStatusChange', callback: AsyncCallback\\<FoldStatusInfo\\>): void\n\n注册折叠设备折叠状态变化的监听。使用ca"
+      },
+      {
+        "section_id": "section-19",
+        "title": "off('foldStatusChange')<sup>12+</sup>",
+        "level": 2,
+        "line_start": 761,
+        "line_end": 785,
+        "summary": "off(type: 'foldStatusChange', callback?: AsyncCallback\\<FoldStatusInfo\\>): void\n\n关闭折叠设备折叠状态变化的监听。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "isTorchSupported<sup>11+</sup>",
+        "level": 2,
+        "line_start": 786,
+        "line_end": 810,
+        "summary": "isTorchSupported(): boolean\n\n检测设备是否支持手电筒。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力："
+      },
+      {
+        "section_id": "section-21",
+        "title": "isTorchModeSupported<sup>11+</sup>",
+        "level": 2,
+        "line_start": 811,
+        "line_end": 841,
+        "summary": "isTorchModeSupported(mode: TorchMode): boolean\n\n检测是否支持设置的手电筒模式。\n\n**原子化服务API：** 从API version 19开始，该接"
+      },
+      {
+        "section_id": "section-22",
+        "title": "getTorchMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 842,
+        "line_end": 867,
+        "summary": "getTorchMode(): TorchMode\n\n获取当前设备手电筒模式。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n**系统能力：**"
+      },
+      {
+        "section_id": "section-23",
+        "title": "setTorchMode<sup>11+</sup>",
+        "level": 2,
+        "line_start": 868,
+        "line_end": 908,
+        "summary": "setTorchMode(mode: TorchMode): void\n\n设置设备手电筒模式。\n\n**原子化服务API：** 从API version 19开始，该接口支持在原子化服务中使用。\n\n*"
+      },
+      {
+        "section_id": "section-24",
+        "title": "on('torchStatusChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 909,
+        "line_end": 947,
+        "summary": "on(type: 'torchStatusChange', callback: AsyncCallback\\<TorchStatusInfo\\>): void\n\n手电筒状态变化回调，通过注册回调函数"
+      },
+      {
+        "section_id": "section-25",
+        "title": "off('torchStatusChange')<sup>11+</sup>",
+        "level": 2,
+        "line_start": 948,
+        "line_end": 972,
+        "summary": "off(type: 'torchStatusChange', callback?: AsyncCallback\\<TorchStatusInfo\\>): void\n\n手电筒状态变化注销回调，通过注销"
+      },
+      {
+        "section_id": "section-26",
+        "title": "getCameraDevice<sup>18+</sup>",
+        "level": 2,
+        "line_start": 973,
+        "line_end": 1023,
+        "summary": "getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice\n\n根据相机位置和相机类型查询对应相机。\n\n获取指定"
+      },
+      {
+        "section_id": "section-27",
+        "title": "getCameraDevices<sup>23+</sup>",
+        "level": 2,
+        "line_start": 1024,
+        "line_end": 1073,
+        "summary": "getCameraDevices(position: CameraPosition, types: Array\\<CameraType>, connectType: ConnectionType):"
+      },
+      {
+        "section_id": "section-28",
+        "title": "getCameraConcurrentInfos<sup>18+</sup>",
+        "level": 2,
+        "line_start": 1074,
+        "line_end": 1123,
+        "summary": "getCameraConcurrentInfos(cameras: Array\\<CameraDevice\\>): Array\\<CameraConcurrentInfo\\>\n\n获取指定相机设备的并"
+      },
+      {
+        "section_id": "section-29",
+        "title": "getSupportedOutputCapability<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1124,
+        "line_end": 1155,
+        "summary": "getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability\n\n查询相机设备支持的输出能力，同步返回结果。"
+      },
+      {
+        "section_id": "section-30",
+        "title": "createPhotoOutput<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1156,
+        "line_end": 1206,
+        "summary": "createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput\n\n创建拍照输出对象，同步返回结果。\n\n> **说明：**\n>"
+      },
+      {
+        "section_id": "section-31",
+        "title": "createCaptureSession<sup>(deprecated)</sup>",
+        "level": 2,
+        "line_start": 1207,
+        "line_end": 1249,
+        "summary": "createCaptureSession(): CaptureSession\n\n创建CaptureSession实例，同步返回结果。\n\n> **说明：**\n>从 API version 10开始支持"
+      }
+    ]
+  }
+}
