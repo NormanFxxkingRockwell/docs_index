@@ -2,480 +2,480 @@
   "domain": "DFX",
   "domain_summary": "Performance Analysis Kit（性能分析服务）为开发者提供应用事件、日志、跟踪分析工具，可观测应用运行时状态，用于行为分析、故障分析、安全分析、统计分析，帮助开发者持续改进应用体验。提供故障检测、功耗检测、性能检测、日志打印、事件订阅、性能跟踪、分布式调用链跟踪、检测模式、系统调试信息获取、业务线程超时检测、错误管理及应用恢复等能力。",
   "core_concepts": [
+    "HiAppEvent事件订阅",
+    "HiTraceMeter性能跟踪",
+    "任务超时检测",
     "故障检测",
-    "日志打印",
-    "事件订阅",
-    "性能跟踪",
-    "分布式调用链跟踪",
-    "检测模式",
-    "系统调试信息获取",
-    "业务线程超时检测",
-    "错误管理",
+    "应用冻屏检测",
+    "HiDebug系统调试信息获取",
+    "HiTraceChain分布式调用链跟踪",
+    "HiCollie业务线程超时检测",
+    "HiLog日志打印",
     "应用恢复"
   ],
   "document_count": 66,
   "documents": [
     {
       "doc_id": "Readme-CN",
-      "title": "Performance Analysis Kit（性能分析服务）",
-      "path": "../../docs/zh-cn/application-dev/dfx/Readme-CN.md",
-      "summary": "Performance Analysis Kit（性能分析服务）的总体介绍，包含故障检测、日志打印、事件订阅、性能跟踪、分布式调用链跟踪、检测模式、系统调试信息获取、业务线程超时检测、错误管理及应用恢复等功能模块的导航。",
-      "key_topics": ["Performance Analysis Kit", "性能分析服务"]
-    },
-    {
-      "doc_id": "performance-analysis-kit-overview",
-      "title": "Performance Analysis Kit简介",
-      "path": "../../docs/zh-cn/application-dev/dfx/performance-analysis-kit-overview.md",
-      "summary": "Performance Analysis Kit（性能分析服务）为开发者提供应用事件、日志、跟踪分析工具，可观测应用运行时状态，用于行为分析、故障分析、安全分析、统计分析，帮助开发者持续改进应用体验。提供故障检测、功耗检测、性能检测、日志打印、事件订阅、性能跟踪、分布式调用链跟踪、检测模式、系统调试信息获取、业务线程超时检测、错误管理及应用恢复等能力。",
-      "key_topics": ["Performance Analysis Kit", "性能分析", "故障检测", "日志", "事件订阅"]
-    },
-    {
-      "doc_id": "fault-detection-overview",
-      "title": "简介",
-      "path": "../../docs/zh-cn/application-dev/dfx/fault-detection-overview.md",
-      "summary": "故障检测模块简介，为开发者提供完善的故障检测、异常处理等能力。介绍进程崩溃、地址越界、应用冻屏、资源泄漏、任务执行超时、应用终止等故障的检测原理、日志规格、日志获取方法、约束限制等内容。",
-      "key_topics": ["故障检测", "崩溃检测", "应用冻屏", "资源泄漏"]
-    },
-    {
-      "doc_id": "jscrash-guidelines",
-      "title": "JS Crash（进程崩溃）检测",
-      "path": "../../docs/zh-cn/application-dev/dfx/jscrash-guidelines.md",
-      "summary": "介绍JS Crash（进程崩溃）检测功能，当JS/ArkTS代码未处理异常时会生成JsCrash日志。包含检测原理、日志规格、日志获取方法、约束限制等内容。",
-      "key_topics": ["JS Crash", "进程崩溃", "故障检测"]
-    },
-    {
-      "doc_id": "cppcrash-guidelines",
-      "title": "Cpp Crash（进程崩溃）检测",
-      "path": "../../docs/zh-cn/application-dev/dfx/cppcrash-guidelines.md",
-      "summary": "介绍Cpp Crash（进程崩溃）检测功能，当Native代码未处理崩溃异常信号时会生成CppCrash日志。包含检测原理、日志规格、日志获取方法、约束限制等内容。",
-      "key_topics": ["Cpp Crash", "进程崩溃", "故障检测"]
+      "title": "Performance Analysis Kit（性能分析服务）<!--performance-analysis-kit-->",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/Readme-CN.md",
+      "summary": "Performance Analysis Kit相关文档，Performance Analysis Kit（性能分析服务）<!--performance-analysis-kit-->。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
     },
     {
       "doc_id": "address-sanitizer-guidelines",
       "title": "AddrSanitizer（地址越界）检测",
-      "path": "../../docs/zh-cn/application-dev/dfx/address-sanitizer-guidelines.md",
-      "summary": "介绍AddrSanitizer（地址越界）检测功能，用于检测Native代码中的内存越界、释放后使用、等内存错误。包含检测原理、日志规格、日志获取方法、约束限制等内容。",
-      "key_topics": ["AddrSanitizer", "地址越界", "内存检测"]
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/address-sanitizer-guidelines.md",
+      "summary": "Performance Analysis Kit相关文档，AddrSanitizer（地址越界）检测。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
     },
     {
       "doc_id": "appfreeze-guidelines",
       "title": "AppFreeze（应用冻屏）检测",
-      "path": "../../docs/zh-cn/application-dev/dfx/appfreeze-guidelines.md",
-      "summary": "介绍AppFreeze（应用冻屏）检测功能，当应用卡死后生成AppFreeze日志并被强制终止退出。包含检测原理、日志规格、日志获取方法、约束限制等内容。",
-      "key_topics": ["AppFreeze", "应用冻屏", "故障检测"]
-    },
-    {
-      "doc_id": "apptask-timeout-guidelines",
-      "title": "任务超时检测",
-      "path": "../../docs/zh-cn/application-dev/dfx/apptask-timeout-guidelines.md",
-      "summary": "介绍任务超时检测功能，用于检测应用任务执行超时问题。包含检测原理、日志规格、日志获取方法、约束限制等内容。",
-      "key_topics": ["任务超时", "性能检测"]
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/appfreeze-guidelines.md",
+      "summary": "Performance Analysis Kit相关文档，AppFreeze（应用冻屏）检测。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
     },
     {
       "doc_id": "appkilled-guidelines",
-      "title": "应用终止检测",
-      "path": "../../docs/zh-cn/application-dev/dfx/appkilled-guidelines.md",
-      "summary": "介绍App Killed（应用终止）检测功能，当应用进程被系统终止造成其非预期退出时进行检测。包含检测原理、日志规格、日志获取方法、约束限制等内容。",
-      "key_topics": ["App Killed", "应用终止", "故障检测"]
-    },
-    {
-      "doc_id": "hilog-guidelines-arkts",
-      "title": "使用HiLog打印日志（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hilog-guidelines-arkts.md",
-      "summary": "介绍如何在ArkTS应用中使用HiLog接口打印日志，包括日志级别设置、日志格式、日志输出等功能。",
-      "key_topics": ["HiLog", "日志打印", "ArkTS"]
-    },
-    {
-      "doc_id": "hilog-guidelines-ndk",
-      "title": "使用HiLog打印日志（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hilog-guidelines-ndk.md",
-      "summary": "介绍如何在C/C++应用中使用HiLog接口打印日志，包括日志级别设置、日志格式、日志输出等功能。",
-      "key_topics": ["HiLog", "日志打印", "C/C++"]
-    },
-    {
-      "doc_id": "hiappevent-intro",
-      "title": "HiAppEvent介绍",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-intro.md",
-      "summary": "HiAppEvent是系统为应用开发者提供的事件打点机制，支持记录应用运行过程中的故障、统计、安全和行为事件，帮助开发者定位问题、分析应用运行情况。包含打点、事件订阅、系统事件订阅机制、应用事件订阅机制、约束与限制等内容。",
-      "key_topics": ["HiAppEvent", "事件打点", "事件订阅"]
-    },
-    {
-      "doc_id": "event-subscription-overview",
-      "title": "Event Subscription 简介",
-      "path": "../../docs/zh-cn/application-dev/dfx/event-subscription-overview.md",
-      "summary": "介绍HiAppEvent事件订阅功能，包括系统事件和应用事件的订阅机制、事件类型、事件规格等内容。",
-      "key_topics": ["事件订阅", "HiAppEvent"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-app-events-arkts",
-      "title": "事件订阅（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-events-arkts.md",
-      "summary": "介绍如何在ArkTS应用中使用HiAppEvent订阅应用事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["事件订阅", "HiAppEvent", "ArkTS"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-app-events-ndk",
-      "title": "事件订阅（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-events-ndk.md",
-      "summary": "介绍如何在C/C++应用中使用HiAppEvent订阅应用事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["事件订阅", "HiAppEvent", "C/C++"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-crash-events",
-      "title": "崩溃事件介绍",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-crash-events.md",
-      "summary": "介绍崩溃事件的内容和订阅方法，包括JS Crash和Cpp Crash事件的详细信息、事件参数、日志规格等。",
-      "key_topics": ["崩溃事件", "HiAppEvent"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-crash-events-arkts",
-            "title": "订阅崩溃事件（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-crash-events-arkts.md",
-      "summary": "介绍如何在ArkTS应用中订阅崩溃事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["崩溃事件", "HiAppEvent", "ArkTS"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-crash-events-ndk",
-      "title": "订阅崩溃事件（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-crash-events-ndk.md",
-      "summary": "介绍如何在C/C++应用中订阅崩溃事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["崩溃事件", "HiAppEvent", "C/C++"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-freeze-events",
-      "title": "应用冻屏事件介绍",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-freeze-events.md",
-      "summary": "介绍应用冻屏事件的内容和订阅方法，包括AppFreeze事件的详细信息、事件参数、日志规格等。",
-      "key_topics": ["应用冻屏事件", "HiAppEvent"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-freeze-events-arkts",
-      "title": "订阅应用冻屏事件（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-freeze-events-arkts.md",
-      "summary": "介绍如何在ArkTS应用中订阅应用冻屏事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["应用冻屏事件", "HiAppEvent", "ArkTS"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-freeze-events-ndk",
-      "title": "订阅应用冻屏事件（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-freeze-events-ndk.md",
-      "summary": "介绍如何在C/C++应用中订阅应用冻屏事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["应用冻屏事件", "HiAppEvent", "C/C++"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-resourceleak-events",
-      "title": "资源泄漏事件介绍",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-resourceleak-events.md",
-      "summary": "介绍资源泄漏事件的内容和订阅方法，包括资源泄漏事件的详细信息、事件参数、日志规格等。",
-      "key_topics": ["资源泄漏事件", "HiAppEvent"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-resourceleak-events-arkts",
-      "title": "订阅资源泄漏事件（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-resourceleak-events-arkts.md",
-      "summary": "介绍如何在ArkTS应用中订阅资源泄漏事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["资源泄漏事件", "HiAppEvent", "ArkTS"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-resourceleak-events-ndk",
-      "title": "订阅资源泄漏事件（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-resourceleak-events-ndk.md",
-      "summary": "介绍如何在C/C++应用中订阅资源泄漏事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["资源泄漏事件", "HiAppEvent", "C/C++"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-address-sanitizer-events",
-      "title": "地址越界事件介绍",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-address-sanitizer-events.md",
-      "summary": "介绍地址越界事件的内容和订阅方法，包括地址越界事件的详细信息、事件参数、日志规格等。",
-      "key_topics": ["地址越界事件", "HiAppEvent"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-address-sanitizer-events-arkts",
-      "title": "订阅地址越界事件（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-address-sanitizer-events-arkts.md",
-      "summary": "介绍如何在ArkTS应用中订阅地址越界事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["地址越界事件", "HiAppEvent", "ArkTS"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-address-sanitizer-events-ndk",
-      "title": "订阅地址越界事件（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-address-sanitizer-events-ndk.md",
-      "summary": "介绍如何在C/C++应用中订阅地址越界事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["地址越界事件", "HiAppEvent", "C/C++"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-mainthreadjank-events",
-      "title": "主线程超时事件介绍",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-mainthreadjank-events.md",
-      "summary": "介绍主线程超时事件的内容和订阅方法，包括主线程超时事件的详细信息、事件参数、日志规格等。",
-      "key_topics": ["主线程超时事件", "HiAppEvent"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-mainthreadjank-events-arkts",
-      "title": "订阅主线程超时事件（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-mainthreadjank-events-arkts.md",
-      "summary": "介绍如何在ArkTS应用中订阅主线程超时事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["主线程超时事件", "HiAppEvent", "ArkTS"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-mainthreadjank-events-ndk",
-      "title": "订阅主线程超时事件（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-mainthreadjank-events-ndk.md",
-      "summary": "介绍如何在C/C++应用中订阅主线程超时事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["主线程超时事件", "HiAppEvent", "C/C++"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-apphicollie-events",
-      "title": "任务执行超时事件介绍",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-apphicollie-events.md",
-      "summary": "介绍任务执行超时事件的内容和订阅方法，包括任务执行超时事件的详细信息、事件参数、日志规格等。",
-      "key_topics": ["任务执行超时事件", "HiAppEvent"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-apphicollie-events-arkts",
-      "title": "订阅任务执行超时事件（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-apphicollie-events-arkts.md",
-      "summary": "介绍如何在ArkTS应用中订阅任务执行超时事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["任务执行超时事件", "HiAppEvent", "ArkTS"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-apphicollie-events-ndk",
-      "title": "订阅任务执行超时事件（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-apphicollie-events-ndk.md",
-      "summary": "介绍如何在C/C++应用中订阅任务执行超时事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["任务执行超时事件", "HiAppEvent", "C/C++"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-app-killed-events",
-      "title": "应用终止事件介绍",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-killed-events.md",
-      "summary": "介绍应用终止事件的内容和订阅方法，包括应用终止事件的详细信息、事件参数、日志规格等。",
-      "key_topics": ["应用终止事件", "HiAppEvent"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-app-killed-events-arkts",
-      "title": "订阅应用终止事件（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-killed-events-arkts.md",
-      "summary": "介绍如何在ArkTS应用中订阅应用终止事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["应用终止事件", "HiAppEvent", "ArkTS"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-app-killed-events-ndk",
-      "title": "订阅应用终止事件（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-killed-events-ndk.md",
-      "summary": "介绍如何在C/C++应用中订阅应用终止事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["应用终止事件", "HiAppEvent", "C/C++"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-web-fling-jank-events",
-      "title": "ArkWeb抛滑丢帧事件介绍",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-web-fling-jank-events.md",
-      "summary": "介绍ArkWeb抛滑丢帧事件的内容和订阅方法，包括ArkWeb抛滑丢帧事件的详细信息、事件参数、日志规格等。",
-      "key_topics": ["ArkWeb抛滑丢帧事件", "HiAppEvent"]
-    },
-    {
-      "doc_id": "hiappevent-watcher-web-fling-jank-events-arkts",
-      "title": "订阅ArkWeb抛滑丢帧事件（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-web-fling-jank-events-arkts.md",
-      "summary": "介绍如何在ArkTS应用中订阅ArkWeb抛滑丢帧事件，包括订阅接口、事件回调、数据处理等内容。",
-      "key_topics": ["ArkWeb抛滑丢帧事件", "HiAppEvent", "ArkTS"]
-    },
-    {
-      "doc_id": "hiappevent-event-reporting",
-      "title": "事件上报",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-event-reporting.md",
-      "summary": "介绍如何使用HiAppEvent接口上报应用事件，包括事件打点、事件参数设置、事件类型等内容。",
-      "key_topics": ["事件上报", "HiAppEvent"]
-    },
-    {
-      "doc_id": "hiappevent-faq",
-      "title": "HiAppEvent常见问题",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiappevent-faq.md",
-      "summary": "HiAppEvent使用过程中的常见问题解答和注意事项。",
-      "key_topics": ["HiAppEvent", "常见问题"]
-    },
-    {
-      "doc_id": "fault-log-extension-app-events-arkts",
-      "title": "使用FaultLogExtensionAbility订阅事件",
-      "path": "../../docs/zh-cn/application-dev/dfx/fault-log-extension-app-events-arkts.md",
-      "summary": "介绍如何使用FaultLogExtensionAbility订阅应用事件，包括Ability创建、事件订阅、事件回调、数据处理等内容。",
-      "key_topics": ["FaultLogExtensionAbility", "事件订阅", "ArkTS"]
-    },
-    {
-      "doc_id": "hitracemeter-intro",
-      "title": "HiTraceMeter介绍",
-      "path": "../../docs/zh-cn/application-dev/dfx/hitracemeter-intro.md",
-      "summary": "HiTraceMeter接口的使用方法介绍。开发者可以在代码中调用HiTraceMeter接口进行trace打点，然后使用hitrace命令行工具或hidebug提供的trace采集接口，获取程序运行时产生的打点信息，了解程序运行的进程、线程、时间戳、CPU等信息，以帮助开发者进行问题分析和性能调优。提供ArkTS和C/C++两种接口。",
-      "key_topics": ["HiTraceMeter", "性能跟踪", "trace打点"]
-    },
-    {
-      "doc_id": "hitracemeter-guidelines-arkts",
-      "title": "使用HiTraceMeter跟踪性能（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hitracemeter-guidelines-arkts.md",
-      "summary": "介绍如何在ArkTS应用中使用HiTraceMeter接口进行性能跟踪，包括trace打点、标记开始结束、异步跟踪等功能。",
-      "key_topics": ["HiTraceMeter", "性能跟踪", "ArkTS"]
-    },
-    {
-      "doc_id": "hitracemeter-guidelines-ndk",
-      "title": "使用HiTraceMeter跟踪性能（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hitracemeter-guidelines-ndk.md",
-      "summary": "介绍如何在C/C++应用中使用HiTraceMeter接口进行性能跟踪，包括trace打点、标记开始结束、异步跟踪等功能。",
-      "key_topics": ["HiTraceMeter", "性能跟踪", "C/C++"]
-    },
-    {
-      "doc_id": "hitracemeter-view",
-      "title": "查看HiTraceMeter日志",
-      "path": "../../docs/zh-cn/application-dev/dfx/hitracemeter-view.md",
-      "summary": "介绍如何查看HiTraceMeter生成的trace日志，包括日志格式、日志解析、日志分析等内容。",
-      "key_topics": ["HiTraceMeter", "日志查看"]
-    },
-    {
-      "doc_id": "hitracechain-intro",
-      "title": "HiTraceChain介绍",
-      "path": "../../docs/zh-cn/application-dev/dfx/hitracechain-intro.md",
-      "summary": "HiTraceChain是基于分布式跟踪调用链思想，在端侧业务流程（涉及跨线程、跨进程、跨设备）中的一种轻量级分布式跟踪的实现。HiTraceChain在业务流程中生成和传递唯一跟踪标识，在业务流程输出的各类信息中记录该跟踪标识。为开发者提供业务流程调用链跟踪的维测接口，帮助开发者迅速获取指定业务流程调用链的运行日志，定位跨设备/跨进程/跨线程的故障问题。",
-      "key_topics": ["HiTraceChain", "分布式调用链跟踪", "调用链"]
-    },
-    {
-      "doc_id": "hitracechain-guidelines-arkts",
-      "title": "使用HiTraceChain打点（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hitracechain-guidelines-arkts.md",
-      "summary": "介绍如何在ArkTS应用中使用HiTraceChain接口进行分布式调用链跟踪，包括创建跟踪标识、传递跟踪标识、打点等功能。",
-      "key_topics": ["HiTraceChain", "分布式调用链跟踪", "ArkTS"]
-    },
-    {
-      "doc_id": "hitracechain-guidelines-ndk",
-      "title": "使用HiTraceChain打点（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hitracechain-guidelines-ndk.md",
-      "summary": "介绍如何在C/C++应用中使用HiTraceChain接口进行分布式调用链跟踪，包括创建跟踪标识、传递跟踪标识、打点等功能。",
-      "key_topics": ["HiTraceChain", "分布式调用链跟踪", "C/C++"]
-    },
-    {
-      "doc_id": "hichecker-guidelines-arkts",
-      "title": "使用HiChecker检测问题（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hichecker-guidelines-arkts.md",
-      "summary": "介绍如何在ArkTS应用中使用HiChecker检测问题，包括检测线程耗时调用、检测元能力资源泄漏等功能。",
-      "key_topics": ["HiChecker", "检测模式"]
-    },
-    {
-      "doc_id": "hidebug-guidelines",
-      "title": "HiDebug能力概述",
-      "path": "../../docs/zh-cn/application-dev/dfx/hidebug-guidelines.md",
-      "summary": "HiDebug能力概述，提供开发者获取应用和系统资源使用情况的能力，包括CPU使用率、内存使用情况、进程信息、网络信息、存储信息等。",
-      "key_topics": ["HiDebug", "系统调试信息获取"]
-    },
-    {
-      "doc_id": "hidebug-guidelines-arkts",
-      "title": "HiDebug接口使用示例(ArkTS)",
-      "path": "../../docs/zh-cn/application-dev/dfx/hidebug-guidelines-arkts.md",
-      "summary": "介绍如何在ArkTS应用中使用HiDebug接口获取系统调试信息，包括CPU使用率、内存使用情况、进程信息等。",
-      "key_topics": ["HiDebug", "系统调试信息获取", "ArkTS"]
-    },
-    {
-      "doc_id": "hidebug-guidelines-ndk",
-      "title": "HiDebug接口使用示例(C/C++)",
-      "path": "../../docs/zh-cn/application-dev/dfx/hidebug-guidelines-ndk.md",
-      "summary": "介绍如何在C/C++应用中使用HiDebug接口获取系统调试信息，包括CPU使用率、内存使用情况、进程信息等。",
-      "key_topics": ["HiDebug", "系统调试信息获取", "C/C++"]
-    },
-    {
-      "doc_id": "hicollie-guidelines-ndk",
-      "title": "使用HiCollie检测业务线程卡死卡顿问题（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hicollie-guidelines-ndk.md",
-      "summary": "介绍如何在C/C++应用中使用HiCollie检测业务线程卡死卡顿问题，包括设置检测超时时间、回调处理等内容。",
-      "key_topics": ["HiCollie", "业务线程超时检测", "C/C++"]
-    },
-    {
-      "doc_id": "hicollie-settimer-guidelines-ndk",
-      "title": "使用HiCollie监控函数执行时间超长问题（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hicollie-settimer-guidelines-ndk.md",
-      "summary": "介绍如何在C/C++应用中使用HiCollie监控函数执行时间超长问题，包括设置检测超时时间、回调处理等内容。",
-      "key_topics": ["HiCollie", "业务线程超时检测", "C/C++"]
-    },
-    {
-      "doc_id": "errormanager-guidelines",
-      "title": "错误管理开发指导",
-      "path": "../../docs/zh-cn/application-dev/dfx/errormanager-guidelines.md",
-      "summary": "介绍错误管理功能，提供开发者捕获应用运行时异常能力，包括错误类型、错误处理、错误上报等内容。",
-      "key_topics": ["错误管理", "异常处理"]
+      "title": "App Killed（应用终止）检测",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/appkilled-guidelines.md",
+      "summary": "Performance Analysis Kit相关文档，App Killed（应用终止）检测。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
     },
     {
       "doc_id": "apprecovery-guidelines",
       "title": "应用恢复开发指导",
-      "path": "../../docs/zh-cn/application-dev/dfx/apprecovery-guidelines.md",
-      "summary": "介绍应用恢复功能，提供应用非预期退出后启动状态和数据的自恢复能力，包括恢复机制、恢复策略、恢复数据管理等内容。",
-      "key_topics": ["应用恢复", "自恢复"]
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/apprecovery-guidelines.md",
+      "summary": "Performance Analysis Kit相关文档，应用恢复开发指导。提供详细的开发指导和代码示例。",
+      "key_topics": []
     },
     {
-      "doc_id": "performance-analysis-kit-terminology",
-      "title": "Performance Analysis Kit术语",
-      "path": "../../docs/zh-cn/application-dev/dfx/performance-analysis-kit-terminology.md",
-      "summary": "Performance Analysis Kit相关术语解释，包括debug版本应用、release版本应用、日志级别、事件类型等定义。",
-      "key_topics": ["术语", "Performance Analysis Kit"]
+      "doc_id": "apptask-timeout-guidelines",
+      "title": "任务超时检测",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/apptask-timeout-guidelines.md",
+      "summary": "Performance Analysis Kit相关文档，任务超时检测。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "cppcrash-guidelines",
+      "title": "Cpp Crash（进程崩溃）检测",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/cppcrash-guidelines.md",
+      "summary": "Performance Analysis Kit相关文档，Cpp Crash（进程崩溃）检测。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "errormanager-guidelines",
+      "title": "错误管理开发指导",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/errormanager-guidelines.md",
+      "summary": "Performance Analysis Kit相关文档，错误管理开发指导。提供详细的开发指导和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "event-subscription-overview",
+      "title": "事件订阅简介",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/event-subscription-overview.md",
+      "summary": "Performance Analysis Kit相关文档，事件订阅简介。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "fault-detection-overview",
+      "title": "简介",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/fault-detection-overview.md",
+      "summary": "Performance Analysis Kit相关文档，简介。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "fault-log-extension-app-events-arkts",
+      "title": "使用FaultLogExtensionAbility订阅事件",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/fault-log-extension-app-events-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，使用FaultLogExtensionAbility订阅事件。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
     },
     {
       "doc_id": "hdc",
       "title": "hdc",
-      "path": "../../docs/zh-cn/application-dev/dfx/hdc.md",
-      "summary": "hdc命令行工具，用于连接HarmonyOS设备进行调试，包括文件传输、shell命令执行、应用安装卸载等功能。",
-      "key_topics": ["hdc", "命令行工具"]
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hdc.md",
+      "summary": "Performance Analysis Kit相关文档，hdc。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
     },
     {
-      "doc_id": "hilog",
-      "title": "hilog",
-      "path": "../../docs/zh-cn/application-dev/dfx/hilog.md",
-      "summary": "HiLog日志系统命令行工具，提供给系统框架、服务、以及应用，用于打印日志，记录用户操作、系统运行状态等。开发者可以通过hilog命令行查询相关日志信息。支持查看帮助、非阻塞读日志、查看指定级别日志、查看指定类型日志、查看指定domain日志、查看指定TAG日志、查看缓冲区前n行日志、查看缓冲区后n行日志、查看指定进程日志、查看符合正则匹配关键字的日志、查看不同显示格式的日志、查看和设置落盘任务、查看和设置日志级别、查看日志缓冲区大小、修改日志缓冲区大小、清除缓冲区日志、内核日志读取开关控制、查询统计信息、清除统计信息、进程超限开关、domain超限开关等功能。",
-      "key_topics": ["hlog", "命令行工具", "日志"]
+      "doc_id": "hiappevent-event-reporting",
+      "title": "事件上报",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-event-reporting.md",
+      "summary": "Performance Analysis Kit相关文档，事件上报。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
     },
     {
-      "doc_id": "hidumper",
-      "title": "hidumper",
-      "path": "../../docs/zh-cn/application-dev/dfx/hidumper.md",
-      "summary": "HiDumper是用于统一系统信息导出的命令行工具，支持分析CPU、内存、存储等系统资源使用情况，查询系统服务运行情况，定位资源使用异常、通信等相关问题。提供查询内存信息、查询CPU使用情况、查询系统能力、查询进程信息、查询存储信息、查询系统信息、获取系统故障日志、获取异常退出记录列表、获取异常退出故障日志、查询网络信息、导出信息压缩存储、获取进程间通信信息、查询进程内存、查询虚拟机堆内存等能力。",
-      "key_topics": ["hidumper", "命令行工具", "系统信息导出"]
+      "doc_id": "hiappevent-faq",
+      "title": "HiAppEvent常见问题",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-faq.md",
+      "summary": "Performance Analysis Kit相关文档，HiAppEvent常见问题。解答常见问题和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-intro",
+      "title": "HiAppEvent介绍",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-intro.md",
+      "summary": "Performance Analysis Kit相关文档，HiAppEvent介绍。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-address-sanitizer-events-arkts",
+      "title": "订阅地址越界事件（ArkTS）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-address-sanitizer-events-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，订阅地址越界事件（ArkTS）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-address-sanitizer-events-ndk",
+      "title": "订阅地址越界事件（C/C++）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-address-sanitizer-events-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，订阅地址越界事件（C/C++）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-address-sanitizer-events",
+      "title": "地址越界事件介绍",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-address-sanitizer-events.md",
+      "summary": "Performance Analysis Kit相关文档，地址越界事件介绍。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-app-events-arkts",
+      "title": "事件订阅（ArkTS）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-events-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，事件订阅（ArkTS）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-app-events-ndk",
+      "title": "事件订阅（C/C++）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-events-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，事件订阅（C/C++）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-app-killed-events-arkts",
+      "title": "订阅应用终止事件（ArkTS）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-killed-events-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，订阅应用终止事件（ArkTS）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-app-killed-events-ndk",
+      "title": "订阅应用终止事件（C/C++）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-killed-events-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，订阅应用终止事件（C/C++）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-app-killed-events",
+      "title": "应用终止事件介绍",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-killed-events.md",
+      "summary": "Performance Analysis Kit相关文档，应用终止事件介绍。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-apphicollie-events-arkts",
+      "title": "订阅任务执行超时事件（ArkTS）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-apphicollie-events-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，订阅任务执行超时事件（ArkTS）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-apphicollie-events-ndk",
+      "title": "订阅任务执行超时事件（C/C++）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-apphicollie-events-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，订阅任务执行超时事件（C/C++）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-apphicollie-events",
+      "title": "任务执行超时事件介绍",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-apphicollie-events.md",
+      "summary": "Performance Analysis Kit相关文档，任务执行超时事件介绍。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-crash-events-arkts",
+      "title": "订阅崩溃事件（ArkTS）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-crash-events-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，订阅崩溃事件（ArkTS）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-crash-events-ndk",
+      "title": "订阅崩溃事件（C/C++）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-crash-events-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，订阅崩溃事件（C/C++）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-crash-events",
+      "title": "崩溃事件介绍",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-crash-events.md",
+      "summary": "Performance Analysis Kit相关文档，崩溃事件介绍。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-freeze-events-arkts",
+      "title": "订阅应用冻屏事件（ArkTS）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-freeze-events-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，订阅应用冻屏事件（ArkTS）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-freeze-events-ndk",
+      "title": "订阅应用冻屏事件（C/C++）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-freeze-events-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，订阅应用冻屏事件（C/C++）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-freeze-events",
+      "title": "应用冻屏事件介绍",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-freeze-events.md",
+      "summary": "Performance Analysis Kit相关文档，应用冻屏事件介绍。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-mainthreadjank-events-arkts",
+      "title": "订阅主线程超时事件（ArkTS）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-mainthreadjank-events-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，订阅主线程超时事件（ArkTS）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-mainthreadjank-events-ndk",
+      "title": "订阅主线程超时事件（C/C++）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-mainthreadjank-events-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，订阅主线程超时事件（C/C++）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-mainthreadjank-events",
+      "title": "主线程超时事件介绍",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-mainthreadjank-events.md",
+      "summary": "Performance Analysis Kit相关文档，主线程超时事件介绍。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-resourceleak-events-arkts",
+      "title": "订阅资源泄漏事件（ArkTS）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-resourceleak-events-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，订阅资源泄漏事件（ArkTS）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-resourceleak-events-ndk",
+      "title": "订阅资源泄漏事件（C/C++）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-resourceleak-events-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，订阅资源泄漏事件（C/C++）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-resourceleak-events",
+      "title": "资源泄漏事件介绍",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-resourceleak-events.md",
+      "summary": "Performance Analysis Kit相关文档，资源泄漏事件介绍。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-web-fling-jank-events-arkts",
+      "title": "订阅ArkWeb抛滑丢帧事件（ArkTS）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-web-fling-jank-events-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，订阅ArkWeb抛滑丢帧事件（ArkTS）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hiappevent-watcher-web-fling-jank-events",
+      "title": "ArkWeb抛滑丢帧事件介绍",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-web-fling-jank-events.md",
+      "summary": "Performance Analysis Kit相关文档，ArkWeb抛滑丢帧事件介绍。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hichecker-guidelines-arkts",
+      "title": "使用HiChecker检测问题（ArkTS）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hichecker-guidelines-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，使用HiChecker检测问题（ArkTS）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hicollie-guidelines-ndk",
+      "title": "使用HiCollie检测业务线程卡死卡顿问题（C/C++）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hicollie-guidelines-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，使用HiCollie检测业务线程卡死卡顿问题（C/C++）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hicollie-settimer-guidelines-ndk",
+      "title": "使用HiCollie监控函数执行时间超长问题（C/C++）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hicollie-settimer-guidelines-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，使用HiCollie监控函数执行时间超长问题（C/C++）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hidebug-guidelines-arkts",
+      "title": "HiDebug接口使用示例(ArkTS)",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hidebug-guidelines-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，HiDebug接口使用示例(ArkTS)。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hidebug-guidelines-ndk",
+      "title": "HiDebug接口使用示例(C/C++)",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hidebug-guidelines-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，HiDebug接口使用示例(C/C++)。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hidebug-guidelines",
+      "title": "HiDebug能力概述",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hidebug-guidelines.md",
+      "summary": "Performance Analysis Kit相关文档，HiDebug能力概述。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
     },
     {
       "doc_id": "hidumper-PrivacyManagerService",
       "title": "PrivacyManagerService",
-      "path": "../../docs/zh-cn/application-dev/dfx/hidumper-PrivacyManagerService.md",
-      "summary": "PrivacyManagerService的hidumper使用说明，提供隐私管理服务的系统信息导出能力。",
-      "key_topics": ["hidumper", "PrivacyManagerService"]
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hidumper-PrivacyManagerService.md",
+      "summary": "Ability Kit相关文档，PrivacyManagerService。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
     },
     {
-      "doc_id": "hitrace",
-      "title": "hitrace",
-      "path": "../../docs/zh-cn/application-dev/dfx/hitrace.md",
-      "summary": "hitrace命令行工具提供trace信息采集能力，支持采集系统提供的打点和开发者使用HiTraceMeter接口在应用中设置的打点。该工具支持多种方式采集文本格式或二进制格式的trace信息，帮助开发者观测程序运行情况和定位故障问题。提供查看帮助、查看hitrace包含的tag、捕获指定时长文本格式trace、捕获指定时长二进制格式trace、快照模式捕获文本格式trace、快照模式捕获二进制格式trace、录制模式捕获trace、捕获trace后进行压缩、设置和查询trace输出级别阈值等功能。",
-      "key_topics": ["hitrace", "命令行工具", "trace采集"]
+      "doc_id": "hidumper",
+      "title": "hidumper",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hidumper.md",
+      "summary": "Performance Analysis Kit相关文档，hidumper。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hilog-guidelines-arkts",
+      "title": "使用HiLog打印日志（ArkTS）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hilog-guidelines-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，使用HiLog打印日志（ArkTS）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hilog-guidelines-ndk",
+      "title": "使用HiLog打印日志（C/C++）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hilog-guidelines-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，使用HiLog打印日志（C/C++）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hilog",
+      "title": "hilog",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hilog.md",
+      "summary": "Performance Analysis Kit相关文档，hilog。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
     },
     {
       "doc_id": "hiperf",
       "title": "hiperf",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiperf.md",
-      "summary": "hiperf命令行工具，用于性能分析，提供CPU性能分析、内存性能分析、IO性能分析等功能。",
-      "key_topics": ["hiperf", "命令行工具", "性能分析"]
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiperf.md",
+      "summary": "Performance Analysis Kit相关文档，hiperf。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
     },
     {
       "doc_id": "hiprofiler",
       "title": "hiprofiler",
-      "path": "../../docs/zh-cn/application-dev/dfx/hiprofiler.md",
-      "summary": "hiprofiler命令行工具，用于性能分析，提供函数调用栈分析、内存分析、CPU分析等功能。",
-      "key_topics": ["hiprofiler", "命令行工具", "性能分析"]
-    },
-    {
-      "doc_id": "uinput",
-      "title": "uinput",
-      "path": "../../docs/zh-cn/application-dev/dfx/uinput.md",
-      "summary": "uinput命令行工具，用于模拟输入设备事件，支持模拟按键、触摸、鼠标等输入事件。",
-      "key_topics": ["uinput", "命令行工具", "输入模拟"]
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hiprofiler.md",
+      "summary": "Performance Analysis Kit相关文档，hiprofiler。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
     },
     {
       "doc_id": "hisysevent-sys",
       "title": "hisysevent（仅对系统应用开放）",
-      "path": "../../docs/zh-cn/application-dev/dfx/hisysevent-sys.md",
-      "summary": "hisysevent是系统的预置工具，主要用来帮助开发者订阅实时系统事件，查询历史系统事件。提供订阅实时系统事件、查询历史事件、合法性检查模式等功能。仅对系统应用开放。",
-      "key_topics": ["hisysevent", "命令行工具", "系统事件"]
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hisysevent-sys.md",
+      "summary": "Performance Analysis Kit相关文档，hisysevent（仅对系统应用开放）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hitrace",
+      "title": "hitrace",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hitrace.md",
+      "summary": "Performance Analysis Kit相关文档，hitrace。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hitracechain-guidelines-arkts",
+      "title": "使用HiTraceChain打点（ArkTS）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hitracechain-guidelines-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，使用HiTraceChain打点（ArkTS）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hitracechain-guidelines-ndk",
+      "title": "使用HiTraceChain打点（C/C++）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hitracechain-guidelines-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，使用HiTraceChain打点（C/C++）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hitracechain-intro",
+      "title": "HiTraceChain介绍",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hitracechain-intro.md",
+      "summary": "Performance Analysis Kit相关文档，HiTraceChain介绍。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hitracemeter-guidelines-arkts",
+      "title": "使用HiTraceMeter跟踪性能（ArkTS）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hitracemeter-guidelines-arkts.md",
+      "summary": "Performance Analysis Kit相关文档，使用HiTraceMeter跟踪性能（ArkTS）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hitracemeter-guidelines-ndk",
+      "title": "使用HiTraceMeter跟踪性能（C/C++）",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hitracemeter-guidelines-ndk.md",
+      "summary": "Performance Analysis Kit相关文档，使用HiTraceMeter跟踪性能（C/C++）。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hitracemeter-intro",
+      "title": "HiTraceMeter介绍",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hitracemeter-intro.md",
+      "summary": "Performance Analysis Kit相关文档，HiTraceMeter介绍。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "hitracemeter-view",
+      "title": "查看HiTraceMeter日志",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/hitracemeter-view.md",
+      "summary": "Performance Analysis Kit相关文档，查看HiTraceMeter日志。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "jscrash-guidelines",
+      "title": "JS Crash（进程崩溃）检测",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/jscrash-guidelines.md",
+      "summary": "Performance Analysis Kit相关文档，JS Crash（进程崩溃）检测。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "performance-analysis-kit-overview",
+      "title": "Performance Analysis Kit简介",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/performance-analysis-kit-overview.md",
+      "summary": "Performance Analysis Kit相关文档，Performance Analysis Kit简介。介绍相关功能、使用方法和注意事项。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "performance-analysis-kit-terminology",
+      "title": "Performance Analysis Kit术语",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/performance-analysis-kit-terminology.md",
+      "summary": "Performance Analysis Kit相关文档，Performance Analysis Kit术语。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
+    },
+    {
+      "doc_id": "uinput",
+      "title": "uinput",
+      "path": "../../docs/docs/zh-cn/application-dev/dfx/uinput.md",
+      "summary": "Input Kit相关文档，uinput。包含功能说明、使用方法和代码示例。",
+      "key_topics": []
     }
   ]
 }

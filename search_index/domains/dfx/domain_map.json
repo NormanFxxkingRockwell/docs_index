@@ -1,68 +1,345 @@
 {
   "domain": "DFX",
-  "overview": "Performance Analysis Kit（性能分析服务）为开发者提供应用事件、日志、跟踪分析工具，可观测应用运行时状态，用于行为分析、故障分析、安全分析、统计分析，帮助开发者持续改进应用体验。提供故障检测、功耗检测、性能检测、日志打印、事件订阅、性能跟踪部调用链跟踪、检测模式、系统调试信息获取、业务线程超时检测、错误管理及应用恢复等能力。支持 ArkTS 和 C/C++ 两种开发语言。",
+  "overview": "Performance Analysis Kit（性能分析服务）为开发者提供应用事件、日志、跟踪分析工具，可观测应用运行时状态，用于行为分析、故障分析、安全分析、统计分析，帮助开发者持续改进应用体验。提供故障检测、功耗检测、性能检测、日志打印、事件订阅、性能跟踪、分布式调用链跟踪、检测模式、系统调试信息获取、业务线程超时检测、错误管理及应用恢复等能力。",
   "core_concepts": [
+    "HiAppEvent事件订阅",
+    "HiTraceMeter性能跟踪",
+    "任务超时检测",
     "故障检测",
-    "日志打印",
-    "事件订阅",
-    "性能跟踪",
-    "分布式调用链跟踪",
-    "检测模式",
-    "系统调试信息获取",
-    "业务线程超时检测",
-    "错误管理",
+    "应用冻屏检测",
+    "HiDebug系统调试信息获取",
+    "HiTraceChain分布式调用链跟踪",
+    "HiCollie业务线程超时检测",
+    "HiLog日志打印",
     "应用恢复"
   ],
   "learning_path": [
-    "../../docs/zh-cn/application-dev/dfx/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/dfx/performance-analysis-kit-overview.md",
-    "../../docs/zh-cn/application-dev/dfx/fault-detection-overview.md",
-    "../../docs/zh-cn/application-dev/dfx/jscrash-guidelines.md",
-    "../../docs/zh-cn/application-dev/dfx/cppcrash-guidelines.md",
-    "../../docs/zh-cn/application-dev/dfx/address-sanitizer-guidelines.md",
-    "../../docs/zh-cn/application-dev/dfx/appfreeze-guidelines.md",
-    "../../docs/zh-cn/application-dev/dfx/apptask-timeout-guidelines.md",
-    "../../docs/zh-cn/application-dev/dfx/appkilled-guidelines.md",
-    "../../docs/zh-cn/application-dev/dfx/hilog-guidelines-arkts.md",
-    "../../docs/zh-cn/application-dev/dfx/hilog-guidelines-ndk.md",
-    "../../docs/zh-cn/application-dev/dfx/hiappevent-intro.md",
-    "../../docs/zh-cn/application-dev/dfx/event-subscription-overview.md",
-    "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-events-arkts.md",
-    "../../docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-events-ndk.md",
-    "../../docs/zh-cn/application-dev/dfx/hitracemeter-intro.md",
-    "../../docs/zh-cn/application-dev/dfx/hitracemeter-guidelines-arkts.md",
-    "../../docs/zh-cn/application-dev/dfx/hitracemeter-guidelines-ndk.md",
-    "../../docs/zh-cn/application-dev/dfx/hitracechain-intro.md",
-    "../../docs/zh-cn/application-dev/dfx/hitracechain-guidelines-arkts.md",
-    "../../docs/zh-cn/application-dev/dfx/hitracechain-guidelines-ndk.md",
-    "../../docs/zh-cn/application-dev/dfx/hichecker-guidelines-arkts.md",
-    "../../docs/zh-cn/application-dev/dfx/hidebug-guidelines.md",
-    "../../docs/zh-cn/application-dev/dfx/hicollie-guidelines-ndk.md",
-    "../../docs/zh-cn/application-dev/dfx/errormanager-guidelines.md",
-    "../../docs/zh-cn/application-dev/dfx/apprecovery-guidelines.md",
-    "../../docs/zh-cn/application-dev/dfx/hilog.md",
-    "../../docs/zh-cn/application-dev/dfx/hidumper.md",
-    "../../docs/zh-cn/application-dev/dfx/hitrace.md"
+    {
+      "doc_id": "Readme-CN",
+      "title": "Performance Analysis Kit（性能分析服务）<!--performance-analysis-kit-->",
+      "order": 1,
+      "category": "基础"
+    },
+    {
+      "doc_id": "performance-analysis-kit-overview",
+      "title": "Performance Analysis Kit简介",
+      "order": 2,
+      "category": "基础"
+    },
+    {
+      "doc_id": "performance-analysis-kit-terminology",
+      "title": "Performance Analysis Kit术语",
+      "order": 3,
+      "category": "基础"
+    },
+    {
+      "doc_id": "fault-detection-overview",
+      "title": "简介",
+      "order": 4,
+      "category": "基础"
+    },
+    {
+      "doc_id": "event-subscription-overview",
+      "title": "事件订阅简介",
+      "order": 5,
+      "category": "基础"
+    },
+    {
+      "doc_id": "jscrash-guidelines",
+      "title": "JS Crash（进程崩溃）检测",
+      "order": 6,
+      "category": "故障检测"
+    },
+    {
+      "doc_id": "cppcrash-guidelines",
+      "title": "Cpp Crash（进程崩溃）检测",
+      "order": 7,
+      "category": "故障检测"
+    },
+    {
+      "doc_id": "address-sanitizer-guidelines",
+      "title": "AddrSanitizer（地址越界）检测",
+      "order": 8,
+      "category": "故障检测"
+    },
+    {
+      "doc_id": "appfreeze-guidelines",
+      "title": "AppFreeze（应用冻屏）检测",
+      "order": 9,
+      "category": "故障检测"
+    },
+    {
+      "doc_id": "apptask-timeout-guidelines",
+      "title": "任务超时检测",
+      "order": 10,
+      "category": "故障检测"
+    },
+    {
+      "doc_id": "appkilled-guidelines",
+      "title": "App Killed（应用终止）检测",
+      "order": 11,
+      "category": "故障检测"
+    },
+    {
+      "doc_id": "hilog-guidelines-arkts",
+      "title": "使用HiLog打印日志（ArkTS）",
+      "order": 12,
+      "category": "日志打印"
+    },
+    {
+      "doc_id": "hilog-guidelines-ndk",
+      "title": "使用HiLog打印日志（C/C++）",
+      "order": 13,
+      "category": "日志打印"
+    },
+    {
+      "doc_id": "hilog",
+      "title": "hilog",
+      "order": 14,
+      "category": "日志打印"
+    },
+    {
+      "doc_id": "hiappevent-intro",
+      "title": "HiAppEvent介绍",
+      "order": 15,
+      "category": "事件订阅"
+    },
+    {
+      "doc_id": "hiappevent-event-reporting",
+      "title": "事件上报",
+      "order": 16,
+      "category": "事件订阅"
+    },
+    {
+      "doc_id": "hiappevent-watcher-app-events-arkts",
+      "title": "事件订阅（ArkTS）",
+      "order": 17,
+      "category": "事件订阅"
+    },
+    {
+      "doc_id": "hiappevent-watcher-app-events-ndk",
+      "title": "事件订阅（C/C++）",
+      "order": 18,
+      "category": "事件订阅"
+    },
+    {
+      "doc_id": "fault-log-extension-app-events-arkts",
+      "title": "使用FaultLogExtensionAbility订阅事件",
+      "order": 19,
+      "category": "事件订阅"
+    },
+    {
+      "doc_id": "hiappevent-faq",
+      "title": "HiAppEvent常见问题",
+      "order": 20,
+      "category": "事件订阅"
+    },
+    {
+      "doc_id": "hitracemeter-intro",
+      "title": "HiTraceMeter介绍",
+      "order": 21,
+      "category": "性能跟踪"
+    },
+    {
+      "doc_id": "hitracemeter-guidelines-arkts",
+      "title": "使用HiTraceMeter跟踪性能（ArkTS）",
+      "order": 22,
+      "category": "性能跟踪"
+    },
+    {
+      "doc_id": "hitracemeter-guidelines-ndk",
+      "title": "使用HiTraceMeter跟踪性能（C/C++）",
+      "order": 23,
+      "category": "性能跟踪"
+    },
+    {
+      "doc_id": "hitracemeter-view",
+      "title": "查看HiTraceMeter日志",
+      "order": 24,
+      "category": "性能跟踪"
+    },
+    {
+      "doc_id": "hitracechain-intro",
+      "title": "HiTraceChain介绍",
+      "order": 25,
+      "category": "性能跟踪"
+    },
+    {
+      "doc_id": "hitracechain-guidelines-arkts",
+      "title": "使用HiTraceChain打点（ArkTS）",
+      "order": 26,
+      "category": "性能跟踪"
+    },
+    {
+      "doc_id": "hitracechain-guidelines-ndk",
+      "title": "使用HiTraceChain打点（C/C++）",
+      "order": 27,
+      "category": "性能跟踪"
+    },
+    {
+      "doc_id": "hichecker-guidelines-arkts",
+      "title": "使用HiChecker检测问题（ArkTS）",
+      "order": 28,
+      "category": "检测模式"
+    },
+    {
+      "doc_id": "hidebug-guidelines",
+      "title": "HiDebug能力概述",
+      "order": 29,
+      "category": "系统调试信息获取"
+    },
+    {
+      "doc_id": "hidebug-guidelines-arkts",
+      "title": "HiDebug接口使用示例(ArkTS)",
+      "order": 30,
+      "category": "系统调试信息获取"
+    },
+    {
+      "doc_id": "hidebug-guidelines-ndk",
+      "title": "HiDebug接口使用示例(C/C++)",
+      "order": 31,
+      "category": "系统调试信息获取"
+    },
+    {
+      "doc_id": "hidumper",
+      "title": "hidumper",
+      "order": 32,
+      "category": "系统调试信息获取"
+    },
+    {
+      "doc_id": "hidumper-PrivacyManagerService",
+      "title": "PrivacyManagerService",
+      "order": 33,
+      "category": "系统调试信息获取"
+    },
+    {
+      "doc_id": "hicollie-guidelines-ndk",
+      "title": "使用HiCollie检测业务线程卡死卡顿问题（C/C++）",
+      "order": 34,
+      "category": "业务线程超时检测"
+    },
+    {
+      "doc_id": "hicollie-settimer-guidelines-ndk",
+      "title": "使用HiCollie监控函数执行时间超长问题（C/C++）",
+      "order": 35,
+      "category": "业务线程超时检测"
+    },
+    {
+      "doc_id": "errormanager-guidelines",
+      "title": "错误管理开发指导",
+      "order": 36,
+      "category": "错误管理和应用恢复"
+    },
+    {
+      "doc_id": "apprecovery-guidelines",
+      "title": "应用恢复开发指导",
+      "order": 37,
+      "category": "错误管理和应用恢复"
+    },
+    {
+      "doc_id": "hdc",
+      "title": "hdc",
+      "order": 38,
+      "category": "命令行工具"
+    },
+    {
+      "doc_id": "hitrace",
+      "title": "hitrace",
+      "order": 39,
+      "category": "命令行工具"
+    },
+    {
+      "doc_id": "hiperf",
+      "title": "hiperf",
+      "order": 40,
+      "category": "命令行工具"
+    },
+    {
+      "doc_id": "hiprofiler",
+      "title": "hiprofiler",
+      "order": 41,
+      "category": "命令行工具"
+    },
+    {
+      "doc_id": "uinput",
+      "title": "uinput",
+      "order": 42,
+      "category": "命令行工具"
+    },
+    {
+      "doc_id": "hisysevent-sys",
+      "title": "hisysevent（仅对系统应用开放）",
+      "order": 43,
+      "category": "命令行工具"
+    }
   ],
   "quick_reference": {
-    "故障检测": "../../docs/zh-cn/application-dev/dfx/fault-detection-overview.md",
-    "JS崩溃检测": "../../docs/zh-cn/application-dev/dfx/jscrash-guidelines.md",
-    "CPP崩溃检测": "../../docs/zh-cn/application-dev/dfx/cppcrash-guidelines.md",
-    "应用冻屏检测": "../../docs/zh-cn/application-dev/dfx/appfreeze-guidelines.md",
-    "地址越界检测": "../../docs/zh-cn/application-dev/dfx/address-sanitizer-guidelines.md",
-    "HiLog日志": "../../docs/zh-cn/application-dev/dfx/hilog-guidelines-arkts.md",
-    "HiAppEvent事件": "../../docs/zh-cn/application-dev/dfx/hiappevent-intro.md",
-    "HiTraceMeter性能跟踪": "../../docs/zh-cn/application-dev/dfx/hitracemeter-intro.md",
-    "HiTraceChain调用链": "../../docs/zh-cn/application-dev/dfx/hitracechain-intro.md",
-    "HiChecker检测": "../../docs/zh-cn/application-dev/dfx/hichecker-guidelines-arkts.md",
-    "HiDebug调试信息": "../../docs/zh-cn/application-dev/dfx/hidebug-guidelines.md",
-    "HiCollie超时检测": "../../docs/zh-cn/application-dev/dfx/hicollie-guidelines-ndk.md",
-    "错误管理": "../../docs/zh-cn/application-dev/dfx/errormanager-guidelines.md",
-    "应用恢复": "../../docs/zh-cn/application-dev/dfx/apprecovery-guidelines.md",
-    "hilog命令": "../../docs/zh-cn/application-dev/dfx/hilog.md",
-    "hidumper命令": "../../docs/zh-cn/application-dev/dfx/hidumper.md",
-    "hitrace命令": "../../docs/zh-cn/application-dev/dfx/hitrace.md",
-    "术语": "../../docs/zh-cn/application-dev/dfx/performance-analysis-kit-terminology.md"
+    "Performance Analysis Kit（性能分析服务）<!--performance-analysis-kit-->": "../../docs/docs/zh-cn/application-dev/dfx/Readme-CN.md",
+    "AddrSanitizer（地址越界）检测": "../../docs/docs/zh-cn/application-dev/dfx/address-sanitizer-guidelines.md",
+    "AppFreeze（应用冻屏）检测": "../../docs/docs/zh-cn/application-dev/dfx/appfreeze-guidelines.md",
+    "App Killed（应用终止）检测": "../../docs/docs/zh-cn/application-dev/dfx/appkilled-guidelines.md",
+    "应用恢复开发指导": "../../docs/docs/zh-cn/application-dev/dfx/apprecovery-guidelines.md",
+    "任务超时检测": "../../docs/docs/zh-cn/application-dev/dfx/apptask-timeout-guidelines.md",
+    "Cpp Crash（进程崩溃）检测": "../../docs/docs/zh-cn/application-dev/dfx/cppcrash-guidelines.md",
+    "错误管理开发指导": "../../docs/docs/zh-cn/application-dev/dfx/errormanager-guidelines.md",
+    "事件订阅简介": "../../docs/docs/zh-cn/application-dev/dfx/event-subscription-overview.md",
+    "简介": "../../docs/docs/zh-cn/application-dev/dfx/fault-detection-overview.md",
+    "使用FaultLogExtensionAbility订阅事件": "../../docs/docs/zh-cn/application-dev/dfx/fault-log-extension-app-events-arkts.md",
+    "hdc": "../../docs/docs/zh-cn/application-dev/dfx/hdc.md",
+    "事件上报": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-event-reporting.md",
+    "HiAppEvent常见问题": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-faq.md",
+    "HiAppEvent介绍": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-intro.md",
+    "订阅地址越界事件（ArkTS）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-address-sanitizer-events-arkts.md",
+    "订阅地址越界事件（C/C++）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-address-sanitizer-events-ndk.md",
+    "地址越界事件介绍": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-address-sanitizer-events.md",
+    "事件订阅（ArkTS）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-events-arkts.md",
+    "事件订阅（C/C++）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-events-ndk.md",
+    "订阅应用终止事件（ArkTS）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-killed-events-arkts.md",
+    "订阅应用终止事件（C/C++）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-killed-events-ndk.md",
+    "应用终止事件介绍": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-app-killed-events.md",
+    "订阅任务执行超时事件（ArkTS）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-apphicollie-events-arkts.md",
+    "订阅任务执行超时事件（C/C++）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-apphicollie-events-ndk.md",
+    "任务执行超时事件介绍": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-apphicollie-events.md",
+    "订阅崩溃事件（ArkTS）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-crash-events-arkts.md",
+    "订阅崩溃事件（C/C++）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-crash-events-ndk.md",
+    "崩溃事件介绍": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-crash-events.md",
+    "订阅应用冻屏事件（ArkTS）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-freeze-events-arkts.md",
+    "订阅应用冻屏事件（C/C++）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-freeze-events-ndk.md",
+    "应用冻屏事件介绍": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-freeze-events.md",
+    "订阅主线程超时事件（ArkTS）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-mainthreadjank-events-arkts.md",
+    "订阅主线程超时事件（C/C++）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-mainthreadjank-events-ndk.md",
+    "主线程超时事件介绍": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-mainthreadjank-events.md",
+    "订阅资源泄漏事件（ArkTS）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-resourceleak-events-arkts.md",
+    "订阅资源泄漏事件（C/C++）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-resourceleak-events-ndk.md",
+    "资源泄漏事件介绍": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-resourceleak-events.md",
+    "订阅ArkWeb抛滑丢帧事件（ArkTS）": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-web-fling-jank-events-arkts.md",
+    "ArkWeb抛滑丢帧事件介绍": "../../docs/docs/zh-cn/application-dev/dfx/hiappevent-watcher-web-fling-jank-events.md",
+    "使用HiChecker检测问题（ArkTS）": "../../docs/docs/zh-cn/application-dev/dfx/hichecker-guidelines-arkts.md",
+    "使用HiCollie检测业务线程卡死卡顿问题（C/C++）": "../../docs/docs/zh-cn/application-dev/dfx/hicollie-guidelines-ndk.md",
+    "使用HiCollie监控函数执行时间超长问题（C/C++）": "../../docs/docs/zh-cn/application-dev/dfx/hicollie-settimer-guidelines-ndk.md",
+    "HiDebug接口使用示例(ArkTS)": "../../docs/docs/zh-cn/application-dev/dfx/hidebug-guidelines-arkts.md",
+    "HiDebug接口使用示例(C/C++)": "../../docs/docs/zh-cn/application-dev/dfx/hidebug-guidelines-ndk.md",
+    "HiDebug能力概述": "../../docs/docs/zh-cn/application-dev/dfx/hidebug-guidelines.md",
+    "PrivacyManagerService": "../../docs/docs/zh-cn/application-dev/dfx/hidumper-PrivacyManagerService.md",
+    "hidumper": "../../docs/docs/zh-cn/application-dev/dfx/hidumper.md",
+    "使用HiLog打印日志（ArkTS）": "../../docs/docs/zh-cn/application-dev/dfx/hilog-guidelines-arkts.md",
+    "使用HiLog打印日志（C/C++）": "../../docs/docs/zh-cn/application-dev/dfx/hilog-guidelines-ndk.md",
+    "hilog": "../../docs/docs/zh-cn/application-dev/dfx/hilog.md",
+    "hiperf": "../../docs/docs/zh-cn/application-dev/dfx/hiperf.md",
+    "hiprofiler": "../../docs/docs/zh-cn/application-dev/dfx/hiprofiler.md",
+    "hisysevent（仅对系统应用开放）": "../../docs/docs/zh-cn/application-dev/dfx/hisysevent-sys.md",
+    "hitrace": "../../docs/docs/zh-cn/application-dev/dfx/hitrace.md",
+    "使用HiTraceChain打点（ArkTS）": "../../docs/docs/zh-cn/application-dev/dfx/hitracechain-guidelines-arkts.md",
+    "使用HiTraceChain打点（C/C++）": "../../docs/docs/zh-cn/application-dev/dfx/hitracechain-guidelines-ndk.md",
+    "HiTraceChain介绍": "../../docs/docs/zh-cn/application-dev/dfx/hitracechain-intro.md",
+    "使用HiTraceMeter跟踪性能（ArkTS）": "../../docs/docs/zh-cn/application-dev/dfx/hitracemeter-guidelines-arkts.md",
+    "使用HiTraceMeter跟踪性能（C/C++）": "../../docs/docs/zh-cn/application-dev/dfx/hitracemeter-guidelines-ndk.md",
+    "HiTraceMeter介绍": "../../docs/docs/zh-cn/application-dev/dfx/hitracemeter-intro.md",
+    "查看HiTraceMeter日志": "../../docs/docs/zh-cn/application-dev/dfx/hitracemeter-view.md",
+    "JS Crash（进程崩溃）检测": "../../docs/docs/zh-cn/application-dev/dfx/jscrash-guidelines.md",
+    "Performance Analysis Kit简介": "../../docs/docs/zh-cn/application-dev/dfx/performance-analysis-kit-overview.md",
+    "Performance Analysis Kit术语": "../../docs/docs/zh-cn/application-dev/dfx/performance-analysis-kit-terminology.md",
+    "uinput": "../../docs/docs/zh-cn/application-dev/dfx/uinput.md"
   },
   "document_count": 66
 }
