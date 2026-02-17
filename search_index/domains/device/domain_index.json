@@ -1,324 +1,347 @@
 {
-  "domain": "Device",
-  "domain_summary": "Device Kit 是 OpenHarmony 提供的设备管理服务框架，涵盖传感器服务（加速度、陀螺仪、计步器、环境光、心率等）、振动器、位置服务（GNSS定位、基站定位、地理编码、地理围栏）、多模态融合感知（设备状态、用户动作、记忆链接）、多模输入服务（输入设备、鼠标光标、按键事件、事件注入、事件拦截）、驱动开发套件（USB、HID、SCSI、串口协议设备驱动）等多种设备相关功能。",
+  "domain": "device",
+  "domain_summary": "Device领域包含四个主要的Kit：Driver Development Kit（驱动开发套件）、Input Kit（多模输入服务）、Location Kit（位置服务）和Sensor Service Kit（传感器服务）。Driver Development Kit为外设驱动开发者提供高效、安全、丰富的扩展外设驱动开发解决方案；Input Kit为多种输入设备提供服务，如触控板、触摸屏、鼠标、键盘等；Location Kit提供位置相关功能，包括GNSS定位、基站定位、WLAN/蓝牙定位等；Sensor Service Kit使应用程序能够从传感器获取原始数据，并提供振感控制能力。",
   "core_concepts": [
-    "传感器",
-    "振动器",
+    "驱动开发",
+    "多模输入",
     "位置服务",
+    "传感器服务",
+    "扩展外设驱动",
+    "HID协议",
+    "USB协议",
+    "串口协议",
+    "SCSI协议",
+    "输入设备管理",
+    "鼠标光标",
+    "全局快捷键",
+    "事件注入",
+    "输入监听",
     "GNSS定位",
+    "基站定位",
     "地理编码",
     "地理围栏",
-    "多模态融合感知",
-    "多模输入服务",
-    "输入设备管理",
-    "驱动开发套件",
-    "USB驱动",
-    "HID驱动",
-    "SCSI驱动",
-    "串口驱动"
+    "加速度传感器",
+    "陀螺仪传感器",
+    "环境光传感器",
+    "振动器",
+    "多模态融合感知"
   ],
   "document_count": 45,
   "documents": [
     {
-      "doc_id": "stationary-Readme-CN",
-      "title": "Multimodal Awareness Kit（多模态融合感知服务）",
-      "path": "../../docs/zh-cn/application-dev/device/stationary/Readme-CN.md",
-      "summary": "Multimodal Awareness Kit（多模态融合感知服务）的总体介绍，包含Stationary开发指导、获取用户动作开发指导、设备状态感知开发指导、用户状态感知开发指导、记忆链接开发指导等功能模块的导航。",
-      "key_topics": ["Multimodal Awareness Kit", "多模态融合感知服务"]
-    },
-    {
-      "doc_id": "multimodalawareness-kit-intro",
-      "title": "Multimodal Awareness Kit简介",
-      "path": "../../docs/zh-cn/application-dev/device/stationary/multimodalawareness-kit-intro.md",
-      "summary": "多模态融合感知是利用设备上的多种传感器数据，如加速度计和陀螺仪等，来识别活动、状态和姿态等信息，例如判断设备是否处于静止状态。作为系统基础服务，需要应用主动发起订阅和取消订阅。",
-      "key_topics": ["多模态融合感知", "传感器数据", "Multimodal Awareness Kit"]
-    },
-    {
-      "doc_id": "stationary-guidelines",
-      "title": "Stationary开发指导",
-      "path": "../../docs/zh-cn/application-dev/device/stationary/stationary-guidelines.md",
-      "summary": "Stationary模块提供获取当前设备状态的能力，例如判断设备处于绝对静止状态或相对静止状态。支持订阅设备状态、查询设备状态和取消订阅设备状态。设备需要支持加速度传感器。",
-      "key_topics": ["设备状态感知", "绝对静止", "相对静止", "Stationary"]
-    },
-    {
-      "doc_id": "motion-guidelines",
-      "title": "获取用户动作开发指导",
-      "path": "../../docs/zh-cn/application-dev/device/stationary/motion-guidelines.md",
-      "summary": "Motion模块提供获取用户动作的能力，例如判断用户当前是用左手还是右手操作设备屏幕。支持获取操作手状态和握持手状态。从API version 15开始支持获取操作手状态，从API version 20开始支持获取握持手状态。",
-      "key_topics": ["用户动作感知", "操作手状态", "握持手状态", "Motion"]
-    },
-    {
-      "doc_id": "userStatus-guidelines",
-      "title": "用户状态感知开发指导",
-      "path": "../../docs/zh-cn/application-dev/device/stationary/userStatus-guidelines.md",
-      "summary": "UserStatus（用户状态感知）模块提供用户感知能力，可以感知到操作者特定状态，例如检测用户年龄组。支持订阅年龄群组检测功能，检测结果通过callback返回。从API version 20开始支持获取用户年龄组。",
-      "key_topics": ["用户状态感知", "年龄组检测", "Multimodal Awareness Kit"]
-    },
-    {
-      "doc_id": "metadataBinding-guidelines",
-      "title": "记忆链接开发指导",
-      "path": "../../docs/zh-cn/application-dev/device/stationary/metadataBinding-guidelines.md",
-      "summary": "MetadataBinding（记忆链接）指由第三方应用提供鸿蒙App Linking链接，系统将当前用户浏览的内容与鸿蒙App Linking链接进行关联并保存的功能。支持提交元数据、订阅系统事件和取消订阅。",
-      "key_topics": ["记忆链接", "App Linking", "MetadataBinding"]
-    },
-    {
-      "doc_id": "sensor-Readme-CN",
-      "title": "Sensor Service Kit（传感器服务）",
-      "path": "../../docs/zh-cn/application-dev/device/sensor/Readme-CN.md",
-      "summary": "Sensor Service Kit（传感器服务）的总体介绍，包含传感器开发概述、传感器开发指导(ArkTS)、传感器开发指导(C/C++)、振动开发概述、振动开发指导(ArkTS)、振动开发指导(C/C++)等功能模块的导航。",
-      "key_topics": ["Sensor Service", "传感器服务"]
-    },
-    {
-      "doc_id": "sensor-overview",
-      "title": "传感器开发概述",
-      "path": "../../docs/zh-cn/application-dev/device/sensor/sensor-overview.md",
-      "summary": "系统传感器是应用访问底层硬件传感器的一种设备抽象概念。支持加速度传感器、陀螺仪传感器、计步器传感器、环境温度传感器、磁场传感器、湿度传感器、气压计传感器、方向传感器、旋转矢量传感器、接近光传感器、环境光传感器、心率传感器、佩戴检测传感器、霍尔传感器等多种传感器类型。",
-      "key_topics": ["传感器", "加速度", "陀螺仪", "计步器", "磁场", "环境光"]
-    },
-    {
-      "doc_id": "sensor-guidelines",
-      "title": "传感器开发指导(ArkTS)",
-      "path": "../../docs/zh-cn/application-dev/device/sensor/sensor-guidelines.md",
-      "summary": "介绍如何使用sensor模块获取传感器数据，例如通过订阅方向传感器数据感知用户设备当前的朝向，通过订阅计步传感器数据统计用户的步数等。支持持续监听、获取一次数据、取消监听、获取传感器列表、动态传感器状态监听等。",
-      "key_topics": ["传感器", "ArkTS", "数据监听"]
-    },
-    {
-      "doc_id": "sensor-guidelines-capi",
-      "title": "传感器开发指导(C/C++)",
-      "path": "../../docs/zh-cn/application-dev/device/sensor/sensor-guidelines-capi.md",
-      "summary": "介绍如何使用sensor模块的C/C++接口获取传感器数据。支持获取设备上所有传感器的信息、订阅和取消订阅传感器数据。使用Native C++开发。",
-      "key_topics": ["传感器", "C/C++", "Native API"]
-    },
-    {
-      "doc_id": "vibrator-overview",
-      "title": "振动开发概述",
-      "path": "../../docs/zh-cn/application-dev/device/sensor/vibrator-overview.md",
-      "summary": "振动器模块服务拓展了马达服务，实现了振动与交互融合设计，从而打造出细腻精致的一体化振动体验和差异化体验。包含Vibrator API、Vibrator Framework、Vibrator Service和HDF层四个模块。",
-      "key_topics": ["振动器", "马达服务", "Vibrator"]
-    },
-    {
-      "doc_id": "vibrator-guidelines",
-      "title": "振动开发指导(ArkTS)",
-      "path": "../../docs/zh-cn/application-dev/device/sensor/vibrator-guidelines.md",
-      "summary": "介绍如何使用Vibrator模块设置不同的振动效果，例如按键、闹钟和来电可以设置不同强度和时长的单次或周期振动。支持固定时长振动、预置振动、自定义振动和Pattern类型振动，以及查询和停止振动。",
-      "key_topics": ["振动", "Vibrator", "ArkTS"]
-    },
-    {
-      "doc_id": "vibrator-guidelines-capi",
-      "title": "振动开发指导(C/C++)",
-      "path": "../../docs/zh-cn/application-dev/device/sensor/vibrator-guidelines-capi.md",
-      "summary": "介绍如何使用Vibrator模块的C/C++接口设置不同的振动效果。支持控制马达在指定时间内持续振动和播放自定义振动序列。使用Native C++开发。",
-      "key_topics": ["振动", "Vibrator", "C/C++", "Native API"]
-    },
-    {
-      "doc_id": "location-Readme-CN",
-      "title": "Location Kit（位置服务）",
-      "path": "../../docs/zh-cn/application-dev/device/location/Readme-CN.md",
-      "summary": "Location Kit（位置服务）的总体介绍，包含Location Kit简介、申请位置权限开发指导、获取设备的位置信息开发指导(ArkTS)、获取设备的位置信息开发指导(C/C++)、正地理编码与逆地理编码开发指导、基于设备自身定位的地理围栏开发指导、相关实例等功能模块的导航。",
-      "key_topics": ["Location Kit", "位置服务"]
-    },
-    {
-      "doc_id": "location-kit-intro",
-      "title": "Location Kit简介",
-      "path": "../../docs/zh-cn/application-dev/device/location/location-kit-intro.md",
-      "summary": "Location Kit提供位置能力，使用多种定位技术提供服务，如GNSS定位、基站定位、WLAN/蓝牙定位。通过这些定位技术，无论用户设备在室内或是户外，都可以准确地确定设备位置。支持1984年世界大地坐标系统。",
-      "key_topics": ["Location Kit", "GNSS定位", "基站定位", "WLAN定位", "蓝牙定位"]
-    },
-    {
-      "doc_id": "location-permission-guidelines",
-      "title": "申请位置权限开发指导",
-      "path": "../../docs/zh-cn/application-dev/device/location/location-permission-guidelines.md",
-      "summary": "介绍如何在使用Location Kit系统能力前检查是否已经获取用户授权访问设备位置信息。系统提供ohos.permission.LOCATION（精准位置）、ohos.permission.APPROXIMATELY_LOCATION（模糊位置）、ohos.permission.LOCATION_IN_BACKGROUND（后台定位）三种定位权限。",
-      "key_topics": ["位置权限", "精准位置", "模糊位置", "后台定位"]
-    },
-    {
-      "doc_id": "location-guidelines",
-      "title": "获取设备的位置信息开发指导(ArkTS)",
-      "path": "../../docs/zh-cn/application-dev/device/location/location-guidelines.md",
-      "summary": "介绍如何调用OpenHarmony位置相关接口获取设备实时位置、最近的历史位置以及监听设备的位置变化。支持单次获取当前位置、持续定位、获取最近一次定位结果、判断位置服务是否开启等功能。仅支持WGS-84坐标系。",
-      "key_topics": ["位置信息", "实时定位", "持续定位", "WGS-84坐标系"]
-    },
-    {
-      "doc_id": "location-guidelines-capi",
-      "title": "获取设备的位置信息开发指导(C/C++)",
-      "path": "../../docs/zh-cn/application-dev/device/location/location-guidelines-capi.md",
-      "summary": "介绍如何调用OpenHarmony位置相关接口监听设备的位置变化。支持查询位置开关是否开启、启动定位并订阅位置变化、停止定位并取消订阅位置变化、从定位结果中获取基本信息和附加信息。使用Native C++开发。",
-      "key_topics": ["位置信息", "C/C++", "Native API"]
-    },
-    {
-      "doc_id": "geocode-guidelines",
-      "title": "正地理编码与逆地理编码开发指导",
-      "path": "../../docs/zh-cn/application-dev/device/location/geocode-guidelines.md",
-      "summary": "介绍如何进行经纬度坐标和地理编码的相互转化。正地理编码将地理编码转化为具体经纬度坐标，逆地理编码将具体的经纬度坐标转化为地理编码。地理编码包含国家、行政区划、街道、门牌号、地址描述等属性。",
-      "key_topics": ["地理编码", "正地理编码", "逆地理编码", "坐标转换"]
-    },
-    {
-      "doc_id": "geofence-guidelines",
-      "title": "基于设备自身定位的地理围栏开发指导",
-      "path": "../../docs/zh-cn/application-dev/device/location/geofence-guidelines.md",
-      "summary": "介绍如何使用地理围栏功能，当设备进入、离开某个特定地理区域时接收自动通知和警告。目前仅支持圆形围栏，并且依赖GNSS芯片的地理围栏功能，仅在室外开阔区域才能准确识别用户进出围栏事件。",
-      "key_topics": ["地理围栏", "GNSS", "圆形围栏"]
-    },
-    {
-      "doc_id": "app-samples",
-      "title": "相关实例",
-      "path": "../../docs/zh-cn/application-dev/device/location/app-samples.md",
-      "summary": "针对位置开发，提供相关实例可供参考。",
-      "key_topics": ["实例", "示例代码"]
-    },
-    {
-      "doc_id": "input-Readme-CN",
-      "title": "Input Kit（多模输入服务）",
-      "path": "../../docs/zh-cn/application-dev/device/input/Readme-CN.md",
-      "summary": "Input Kit（多模输入服务）的总体介绍，包含Input Kit简介、输入设备开发指导、优先响应系统功能键开发指导、鼠标光标开发指导、输入监听开发指导、事件注入开发指导、全局快捷键开发指导、事件监听开发指导、事件拦截开发指导等功能模块的导航。",
-      "key_topics": ["Input Kit", "多模输入服务"]
-    },
-    {
-      "doc_id": "input-overview",
-      "title": "Input Kit简介",
-      "path": "../../docs/zh-cn/application-dev/device/input/input-overview.md",
-      "summary": "Input Kit（多模输入Kit）为多种输入设备提供服务，如触控板、触摸屏、鼠标、键盘等。通过对这些输入设备上报驱动事件的归一化处理，确保不同输入设备与用户交互体验统一和流畅。除了提供基础的输入事件服务之外，还提供了获取输入设备列表、改变鼠标光标样式等功能和接口。",
-      "key_topics": ["Input Kit", "多模输入", "输入设备"]
-    },
-    {
-      "doc_id": "inputdevice-guidelines",
-      "title": "输入设备开发指导",
-      "path": "../../docs/zh-cn/application-dev/device/input/inputdevice-guidelines.md",
-      "summary": "输入设备管理提供设备热插拔监听、查询指定设备的键盘类型等能力。使用场景例如当用户需要输入文本时，输入法会根据当前是否插入了物理键盘来决定是否弹出虚拟键盘，开发者可以通过监听设备热插拔判断是否有物理键盘插入。",
-      "key_topics": ["输入设备", "热插拔监听", "键盘类型", "Input Kit"]
-    },
-    {
-      "doc_id": "keypressed-guidelines",
-      "title": "优先响应系统功能键开发指导",
-      "path": "../../docs/zh-cn/application-dev/device/input/keypressed-guidelines.md",
-      "summary": "每个系统功能键均具有默认功能，但部分应用在特定场景下期望定制这部分按键的功能。支持功能键列表包括音量加按键、音量减按键、多媒体播放/暂停、多媒体下一首和多媒体上一首按键。常见使用场景包括包括阅读类型应用通过音量键翻页、相机应用通过音量键拍照。",
-      "key_topics": ["系统功能键", "音量键", "优先响应", "Input Kit"]
-    },
-    {
-      "doc_id": "pointerstyle-guidelines",
-      "title": "鼠标光标开发指导",
-      "path": "../../docs/zh-cn/application-dev/device/input/pointerstyle-guidelines.md",
-      "summary": "鼠标光标控制提供鼠标光标显示和隐藏、光标样式查询和设置的能力。使用场景例如用户在全屏观看视频时控制鼠标光标的显示隐藏，当用户执行取色时将鼠标光标样式切换为取色器样式。",
-      "key_topics": ["鼠标光标", "光标样式", "光标显示隐藏"]
-    },
-    {
-      "doc_id": "inputmonitor-guidelines-sys",
-      "title": "输入监听开发指导（仅对系统应用开放）",
-      "path": "../../docs/zh-cn/application-dev/device/input/inputmonitor-guidelines-sys.md",
-      "summary": "输入监听提供监听按键、触控板特殊手势等能力。使用场景例如当用户需要应用在触控板三指上划实现特定功能时，开发者可以通过监听三指上划判断特定功能是否启用。仅对系统应用开放。",
-      "key_topics": ["输入监听", "按键监听", "触控板手势", "系统应用"]
-    },
-    {
-      "doc_id": "inputeventclient-guidelines-sys",
-      "title": "事件注入开发指导（仅对系统应用开放）",
-      "path": "../../docs/zh-cn/application-dev/device/input/inputeventclient-guidelines-sys.md",
-      "summary": "事件注入提供注入输入事件功能，比如注入鼠标点击事件、键盘组合键等。使用场景例如当用户需要验证应用的组合键功能时，开发者可以通过注入组合键事件判断功能是否生效。仅对系统应用开放。",
-      "key_topics": ["事件注入", "按键注入", "鼠标事件注入", "系统应用"]
-    },
-    {
-      "doc_id": "inputconsumer-guidelines-sys",
-      "title": "全局快捷键开发指导（仅对系统应用开放）",
-      "path": "../../docs/zh-cn/application-dev/device/input/inputconsumer-guidelines-sys.md",
-      "summary": "全局快捷键功能提供订阅全局快捷键、设置屏蔽按键拦截状态等能力。使用场景例如当用户需要通过全局快捷键实现快捷功能时，开发者可以订阅全局快捷键，通过组合按键启用快捷功能。仅对系统应用开放。",
-      "key_topics": ["全局快捷键", "组合按键", "屏蔽按键", "系统应用"]
-    },
-    {
-      "doc_id": "shortkey-guidelines-sys",
-      "title": "系统预置全局快捷键开发指导（仅对系统应用开放）",
-      "path": "../../docs/zh-cn/application-dev/device/input/shortkey-guidelines-sys.md",
-      "summary": "系统预置全局快捷键提供设置快捷键拉起Ability延迟时间的能力。使用场景例如按下快捷键五秒后截屏。仅对系统应用开放。",
-      "key_topics": ["全局快捷键", "系统应用", "Input Kit"]
-    },
-    {
-      "doc_id": "monitor-guidelines",
-      "title": "事件监听开发指导（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/device/input/monitor-guidelines.md",
-      "summary": "从API version 12开始，多模为应用提供了按键、输入事件（鼠标、触屏和轴事件）监听能力，当前仅支持录屏类应用。使用场景例如用户在录屏应用开启录屏时监听设备的按键、鼠标、触摸和轴事件。",
-      "key_topics": ["事件监听", "按键事件", "鼠标事件", "触摸事件", "轴事件", "C/C++"]
-    },
-    {
-      "doc_id": "interceptor-guidelines",
-      "title": "事件拦截开发指导（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/device/input/interceptor-guidelines.md",
-      "summary": "从API version 12开始，多模为应用提供了创建和删除按键、输入事件（鼠标、触摸和轴事件）拦截的能力。使用场景例如云桌面应用需要拦截按键、鼠标、触摸和轴事件。",
-      "key_topics": ["事件拦截", "按键事件", "鼠标事件", "触摸事件", "轴事件", "C/C++"]
-    },
-    {
-      "doc_id": "driver-Readme-CN",
-      "title": "Driver Development Kit（驱动开发服务）",
-      "path": "../../docs/zh-cn/application-dev/device/driver/Readme-CN.md",
-      "summary": "Driver Development Kit（驱动开发服务）的总体介绍，包含Driver Development Kit简介、环境准备、扩展外设基础驱动开发、扩展外设专项驱动开发、常见问题、扩展外设驱动开发术语等功能模块的导航。",
-      "key_topics": ["Driver Development Kit", "驱动开发服务"]
-    },
-    {
       "doc_id": "driverdevelopment-overview",
       "title": "Driver Development Kit简介",
       "path": "../../docs/zh-cn/application-dev/device/driver/driverdevelopment-overview.md",
-      "summary": "Driver Development Kit（驱动开发套件）为外设驱动开发者提供高效、安全、丰富的扩展外设驱动开发解决方案ArkTs-API和C-API，支持外设驱动开发者为消费者带来外设即插即用的极致体验。支持面向专业专用办公外设驱动开发场景和面向非标外设扩展增强能力开放场景。",
-      "key_topics": ["Driver Development Kit", "驱动开发套件", "扩展外设", "DDK"]
-    },
-    {
-      "doc_id": "environmental-preparation",
-      "title": "环境准备",
-      "path": "../../docs/zh-cn/application-dev/device/driver/environmental-preparation.md",
-      "summary": "介绍扩展外设驱动开发的环境准备工作，包括开发工具及配置、SDK版本配置、检验环境是否搭建成功、HDC配置、开发设备等。需要使用DevEco Studio作为驱动开发工具，并配置相应的SDK版本。",
-      "key_topics": ["环境准备", "DevEco Studio", "SDK配置", "HDC"]
+      "summary": "Driver Development Kit（驱动开发套件）为外设驱动开发者提供高效、安全、丰富的扩展外设驱动开发解决方案ArkTs-API和C-API，支持外设驱动开发者为消费者带来外设即插即用的极致体验。",
+      "key_topics": ["驱动开发套件", "扩展外设驱动", "外设即插即用"]
     },
     {
       "doc_id": "driverextensionability",
       "title": "开发无UI界面基础驱动",
       "path": "../../docs/zh-cn/application-dev/device/driver/driverextensionability.md",
-      "summary": "介绍如何开发无UI界面的基础驱动，适用于不需要通过UI界面设置驱动能力的简单设备，例如鼠标、键盘等，保证设备的即插即用功能。开发者可以通过DriverExtensionAbility实现此类应用的开发。DriverExtensionAbility是Driver类型的ExtensionAbility组件，提供驱动相关扩展框架能力。",
-      "key_topics": ["无UI界面驱动", "DriverExtensionAbility", "扩展外设", "Driver Development Kit"]
+      "summary": "介绍如何开发无UI界面的基础驱动，适用于不需要通过UI界面设置驱动能力的简单设备，如鼠标、键盘等，保证设备的即插即用功能即可。",
+      "key_topics": ["无UI界面驱动", "DriverExtensionAbility", "鼠标", "键盘"]
     },
     {
-      "doc_id": "externaldevice-guidelines",
-      "title": "开发带UI界面基础驱动",
-      "path": "../../docs/zh-cn/application-dev/device/driver/externaldevice-guidelines.md",
-      "summary": "介绍如何开发带UI界面的基础驱动，适用于各种复合设备，需要通过UI界面设置对应的独特驱动能力或者通过UI界面展示从设备侧获取的信息，例如带有侧键的鼠标、手写板、身份证读卡器等设备。支持查询扩展外设列表、绑定设备的Promise形式和解绑设备的Promise形式。",
-      "key_topics": ["带UI界面驱动", "扩展外设", "Driver Development Kit"]
-    },
-    {
-      "doc_id": "usb-ddk-guidelines",
-      "title": "开发适用USB协议的设备驱动",
-      "path": "../../docs/zh-cn/application-dev/device/driver/usb-ddk-guidelines.md",
-      "summary": "UsbDdk是为开发者驱动提供的USB驱动程序开发套件，支持开发者基于用户态在应用层开发USB设备驱动。提供主机侧打开和关闭接口、管道同步异步读写通信、控制传输、中断传输等接口。凡是采用USB总线通过USB协议传输数据的设备都可以使用UsbDdk开发设备驱动。",
-      "key_topics": ["USB", "UsbDdk", "驱动开发", "Driver Development Kit"]
-    },
-    {
-      "doc_id": "hid-ddk-guidelines",
-      "title": "开发适用HID协议的设备驱动",
-      "path": "../../docs/zh-cn/application-dev/device/driver/hid-ddk-guidelines.md",
-      "summary": "HidDdk是为开发者提供的HID设备驱动程序开发套件，支持开发者基于用户态在应用层开发HID设备驱动。提供创建设备、向设备发送事件、销毁设备、打开关闭设备、读取写入报告、获取设备信息等接口。凡是采用USB总线通过HID协议传输数据的设备，或者通过扩展外设驱动创建虚拟设备，都可以使用HidDdk开发设备驱动。",
-      "key_topics": ["HID", "HidDdk", "驱动开发", "人机接口设备", "Driver Development Kit"]
-    },
-    {
-      "doc_id": "usb-serial-ddk-guidelines",
-      "title": "开发适用串口协议的设备驱动",
-      "path": "../../docs/zh-cn/application-dev/device/driver/usb-serial-ddk-guidelines.md",
-      "summary": "USBSerialDDK是为开发者提供的USB串口驱动程序开发套件，支持开发者基于用户态在应用层开发USB串口设备驱动。提供主机侧打开和关闭接口、串口读写通信等接口。适用于温湿度测量计、特殊身份读卡器等非标串口设备。",
-      "key_topics": ["USB串口", "USBSerialDDK", "驱动开发", "Driver Development Kit"]
-    },
-    {
-      "doc_id": "scsi-peripheral-ddk-guidelines",
-      "title": "开发使用SCSI协议的设备驱动",
-      "path": "../../docs/zh-cn/application-dev/device/driver/scsi-peripheral-ddk-guidelines.md",
-      "summary": "ScsiPeripheralDDK是为开发者提供的专门用于开发SCSI设备驱动程序的套件，支持开发者基于用户态在应用层进行SCSI设备驱动的开发。支持SPC、SBC和MMC三个命令集中的七个常用命令（INQUIRY、READ CAPACITY、TEST UNIT READY、REQUEST SENSE、READ、WRITE和VERIFY）。适用于磁盘阵列、磁带库以及特定类型的存储服务器等企业级存储解决方案和工业应用场景。",
-      "key_topics": ["SCSI", "ScsiPeripheralDDK", "驱动开发", "存储设备", "Driver Development Kit"]
+      "doc_id": "environmental-preparation",
+      "title": "环境准备",
+      "path": "../../docs/zh-cn/application-dev/device/driver/environmental-preparation.md",
+      "summary": "介绍驱动开发的环境准备工作，包括开发工具及配置、SDK版本配置、环境检验、HDC配置和开发设备要求等。",
+      "key_topics": ["DevEco Studio", "SDK版本", "HDC配置"]
     },
     {
       "doc_id": "externaldevice-faqs",
       "title": "常见问题",
       "path": "../../docs/zh-cn/application-dev/device/driver/externaldevice-faqs.md",
-      "summary": "扩展外设驱动开发常见问题及解决措施，包括编译或运行时无法找到头文件、安装HAP时提示版本不匹配、安装HAP时提示解析本地so文件失败等问题。",
-      "key_topics": ["常见问题", "FAQ", "驱动开发"]
+      "summary": "介绍驱动开发过程中常见问题的解决方法，包括编译或运行时无法找到头文件、安装HAP时提示版本不匹配、安装HAP时提示解析本地so文件失败等问题。",
+      "key_topics": ["编译错误", "版本不匹配", "so文件解析失败"]
+    },
+    {
+      "doc_id": "externaldevice-guidelines",
+      "title": "开发带UI界面基础驱动",
+      "path": "../../docs/zh-cn/application-dev/device/driver/externaldevice-guidelines.md",
+      "summary": "介绍如何开发带UI界面的基础驱动，适用于各种复合设备，需要通过UI界面设置对应的独特驱动能力或者通过UI界面展示从设备侧获取的信息，例如带有侧键的鼠标、手写板、身份证读卡器等设备。",
+      "key_topics": ["带UI界面驱动", "手写板", "身份证读卡器"]
+    },
+    {
+      "doc_id": "hid-ddk-guidelines",
+      "title": "开发适用HID协议的设备驱动",
+      "path": "../../docs/zh-cn/application-dev/device/driver/hid-ddk-guidelines.md",
+      "summary": "介绍如何使用HidDdk开发HID设备驱动，包括基本概念、实现原理、约束与限制、接口说明、HID基础驱动能力开发和HID报文通信驱动能力开发等内容。",
+      "key_topics": ["HID协议", "HidDdk", "HID设备驱动"]
+    },
+    {
+      "doc_id": "Readme-CN-driver",
+      "title": "Driver Development Kit（驱动开发服务）",
+      "path": "../../docs/zh-cn/application-dev/device/driver/Readme-CN.md",
+      "summary": "Driver Development Kit的目录索引文档，包含驱动开发套件简介、环境准备、扩展外设基础驱动开发、扩展外设专项驱动开发、常见问题、扩展外设驱动开发术语等内容的导航链接。",
+      "key_topics": ["驱动开发套件", "扩展外设驱动开发"]
+    },
+    {
+      "doc_id": "scsi-peripheral-ddk-guidelines",
+      "title": "开发使用SCSI协议的设备驱动",
+      "path": "../../docs/zh-cn/application-dev/device/driver/scsi-peripheral-ddk-guidelines.md",
+      "summary": "介绍如何使用ScsiPeripheralDDK开发SCSI设备驱动，包括基本概念、实现原理、约束与限制、环境搭建、接口说明、开发步骤和调测验证等内容。",
+      "key_topics": ["SCSI协议", "ScsiPeripheralDDK", "SCSI设备驱动"]
     },
     {
       "doc_id": "terms",
       "title": "扩展外设驱动开发术语",
       "path": "../../docs/zh-cn/application-dev/device/driver/terms.md",
-      "summary": "扩展外设驱动开发相关术语解释，包括AMS、BMS、CDB、DDK、HID设备、HID协议、Logical Block、SCSI、USB串口、非标外设、标准外设等基本概念。",
-      "key_topics": ["术语", "DDK", "HID", "SCSI", "USB串口"]
+      "summary": "扩展外设驱动开发术语表，按字母顺序列出AMS、BMS、CDB、DDK、HID设备、HID协议、Logical Block、SCSI、USB串口、非标外设、标准外设等术语的定义和说明。",
+      "key_topics": ["AMS", "BMS", "CDB", "DDK", "HID设备", "SCSI", "USB串口"]
+    },
+    {
+      "doc_id": "usb-ddk-guidelines",
+      "title": "开发适用USB协议的设备驱动",
+      "path": "../../docs/zh-cn/application-dev/device/driver/usb-ddk-guidelines.md",
+      "summary": "介绍如何使用UsbDdk开发USB设备驱动，包括基本概念、实现原理、约束与限制、环境搭建、接口说明和开发步骤等内容。",
+      "key_topics": ["USB协议", "UsbDdk", "USB设备驱动"]
+    },
+    {
+      "doc_id": "usb-serial-ddk-guidelines",
+      "title": "开发适用串口协议的设备驱动",
+      "path": "../../docs/zh-cn/application-dev/device/driver/usb-serial-ddk-guidelines.md",
+      "summary": "介绍如何使用USBSerialDDK开发USB串口设备驱动，包括基本概念、实现原理、约束与限制、环境搭建、接口说明、开发步骤和调测验证等内容。",
+      "key_topics": ["串口协议", "USBSerialDDK", "USB串口设备驱动"]
+    },
+    {
+      "doc_id": "input-overview",
+      "title": "Input Kit简介",
+      "path": "../../docs/zh-cn/application-dev/device/input/input-overview.md",
+      "summary": "Input Kit（多模输入Kit）为多种输入设备提供服务，如触控板、触摸屏、鼠标、键盘等。通过对这些输入设备上报驱动事件的归一化处理，确保不同输入设备与用户交互体验统一和流畅。",
+      "key_topics": ["多模输入", "输入设备", "触控板", "触摸屏", "鼠标", "键盘"]
+    },
+    {
+      "doc_id": "inputconsumer-guidelines-sys",
+      "title": "全局快捷键开发指导（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/device/input/inputconsumer-guidelines-sys.md",
+      "summary": "介绍全局快捷键功能，提供订阅全局快捷键、设置屏蔽按键拦截状态等能力。包括场景介绍、接口说明和开发步骤。",
+      "key_topics": ["全局快捷键", "系统快捷键", "应用快捷键"]
+    },
+    {
+      "doc_id": "inputdevice-guidelines",
+      "title": "输入设备开发指导",
+      "path": "../../docs/zh-cn/application-dev/device/input/inputdevice-guidelines.md",
+      "summary": "介绍输入设备管理功能，提供设备热插拔监听、查询指定设备的键盘类型等能力。使用场景例如当用户需要输入文本时，输入法会根据当前是否插入了物理键盘来决定是否弹出虚拟键盘。",
+      "key_topics": ["输入设备管理", "设备热插拔", "键盘类型", "虚拟键盘"]
+    },
+    {
+      "doc_id": "inputeventclient-guidelines-sys",
+      "title": "事件注入开发指导（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/device/input/inputeventclient-guidelines-sys.md",
+      "summary": "介绍事件注入功能，提供注入输入事件功能，比如注入鼠标点击事件、键盘组合键等。使用场景例如当用户需要验证应用的组合键功能时，开发者可以通过注入组合键事件判断功能是否生效。",
+      "key_topics": ["事件注入", "鼠标事件", "键盘组合键"]
+    },
+    {
+      "doc_id": "inputmonitor-guidelines-sys",
+      "title": "输入监听开发指导（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/device/input/inputmonitor-guidelines-sys.md",
+      "summary": "介绍输入监听功能，提供监听按键，触控板特殊手势等能力。使用场景例如当用户需要应用在触控板三指上划实现特定功能时，开发者可以通过监听三指上划判断特定功能是否启用。",
+      "key_topics": ["输入监听", "鼠标事件", "触控板手势", "三指上划"]
+    },
+    {
+      "doc_id": "interceptor-guidelines",
+      "title": "事件拦截开发指导（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/device/input/interceptor-guidelines.md",
+      "summary": "介绍从API version 12开始，多模为应用提供的创建和删除按键、输入事件（鼠标、触摸和轴事件）拦截的能力。",
+      "key_topics": ["事件拦截", "按键拦截", "鼠标拦截", "触摸拦截"]
+    },
+    {
+      "doc_id": "keypressed-guidelines",
+      "title": "优先响应系统功能键开发指导",
+      "path": "../../docs/zh-cn/application-dev/device/input/keypressed-guidelines.md",
+      "summary": "介绍每个系统功能键均具有默认功能，但部分应用在特定场景下期望定制这部分按键的功能。支持功能键列表包括音量加按键和音量减按键、多媒体播放/暂停、多媒体下一首和多媒体上一首按键。",
+      "key_topics": ["系统功能键", "音量键", "多媒体按键"]
+    },
+    {
+      "doc_id": "monitor-guidelines",
+      "title": "事件监听开发指导（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/device/input/monitor-guidelines.md",
+      "summary": "介绍从API version 12开始，多模为应用提供的按键、输入事件（鼠标、触屏和轴事件）监听能力，当前仅支持录屏类应用。",
+      "key_topics": ["事件监听", "按键监听", "鼠标监听", "触摸监听"]
+    },
+    {
+      "doc_id": "pointerstyle-guidelines",
+      "title": "鼠标光标开发指导",
+      "path": "../../docs/zh-cn/application-dev/device/input/pointerstyle-guidelines.md",
+      "summary": "介绍鼠标光标控制功能，提供鼠标光标显示和隐藏、光标样式查询和设置的能力。使用场景例如用户在全屏观看视频时控制鼠标光标的显示隐藏，当用户执行取色时将鼠标光标样式切换为取色器样式。",
+      "key_topics": ["鼠标光标", "光标样式", "光标显示隐藏"]
+    },
+    {
+      "doc_id": "Readme-CN-input",
+      "title": "Input Kit（多模输入服务）",
+      "path": "../../docs/zh-cn/application-dev/device/input/Readme-CN.md",
+      "summary": "Input Kit的目录索引文档，包含Input Kit简介、输入设备开发指导、优先响应系统功能键开发指导、鼠标光标开发指导、输入监听开发指导、事件注入开发指导、全局快捷键开发指导、系统预置全局快捷键开发指导、事件监听开发指导和事件拦截开发指导等内容的导航链接。",
+      "key_topics": ["多模输入服务", "输入设备", "快捷键", "光标控制"]
+    },
+    {
+      "doc_id": "shortkey-guidelines-sys",
+      "title": "系统预置全局快捷键开发指导（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/device/input/shortkey-guidelines-sys.md",
+      "summary": "介绍系统预置全局快捷键功能，提供设置快捷键拉起Ability延迟时间的能力。使用场景例如按下快捷键五秒后截屏。",
+      "key_topics": ["系统预置全局快捷键", "快捷键延迟"]
+    },
+    {
+      "doc_id": "app-samples",
+      "title": "相关实例",
+      "path": "../../docs/zh-cn/application-dev/device/location/app-samples.md",
+      "summary": "针对位置开发，有以下相关实例可供参考：位置服务（ArkTS）。",
+      "key_topics": ["位置服务", "位置实例"]
+    },
+    {
+      "doc_id": "geocode-guidelines",
+      "title": "正地理编码与逆地理编码开发指导",
+      "path": "../../docs/zh-cn/application-dev/device/location/geocode-guidelines.md",
+      "summary": "介绍经纬度坐标和地理编码的相互转化能力。正地理编码将地理编码转化为具体经纬度坐标，逆地理编码将具体的经纬度坐标转化为地理编码。",
+      "key_topics": ["正地理编码", "逆地理编码", "坐标转换地址"]
+    },
+    {
+      "doc_id": "geofence-guidelines",
+      "title": "基于设备自身定位的地理围栏开发指导",
+      "path": "../../docs/zh-cn/application-dev/device/location/geofence-guidelines.md",
+      "summary": "介绍基于设备自身定位的地理围栏功能，当设备进入、离开某个特定地理区域时，可以接收自动通知和警告。目前仅支持圆形围栏，并且依赖GNSS芯片的地理围栏功能。",
+      "key_topics": ["地理围栏", "GNSS围栏", "进入退出事件"]
+    },
+    {
+      "doc_id": "location-guidelines-capi",
+      "title": "获取设备的位置信息开发指导(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/device/location/location-guidelines-capi.md",
+      "summary": "介绍如何使用C/C++接口调用OpenHarmony位置相关接口，监听设备的位置变化。",
+      "key_topics": ["位置信息", "C/C++接口", "位置监听"]
+    },
+    {
+      "doc_id": "location-guidelines",
+      "title": "获取设备的位置信息开发指导(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/device/location/location-guidelines.md",
+      "summary": "介绍如何使用ArkTS接口调用OpenHarmony位置相关接口，获取设备实时位置，或者最近的历史位置，以及监听设备的位置变化。",
+      "key_topics": ["位置信息", "ArkTS接口", "实时位置", "历史位置"]
+    },
+    {
+      "doc_id": "location-kit-intro",
+      "title": "Location Kit简介",
+      "path": "../../docs/zh-cn/application-dev/device/location/location-kit-intro.md",
+      "summary": "Location Kit开发概述，介绍位置子系统使用多种定位技术提供服务，如GNSS定位、基站定位、WLAN/蓝牙定位等。",
+      "key_topics": ["位置子系统", "GNSS定位", "基站定位", "WLAN定位", "蓝牙定位"]
+    },
+    {
+      "doc_id": "location-permission-guidelines",
+      "title": "申请位置权限开发指导",
+      "path": "../../docs/zh-cn/application-dev/device/location/location-permission-guidelines.md",
+      "summary": "介绍应用在使用Location Kit系统能力前，需要检查是否已经获取用户授权访问设备位置信息。系统提供ohos.permission.LOCATION（精准位置）、ohos.permission.APPROXIMATELY_LOCATION（模糊位置）和ohos.permission.LOCATION_IN_BACKGROUND（后台定位）三种定位权限。",
+      "key_topics": ["位置权限", "精准位置", "模糊位置", "后台定位"]
+    },
+    {
+      "doc_id": "Readme-CN-location",
+      "title": "Location Kit（位置服务）",
+      "path": "../../docs/zh-cn/application-dev/device/location/Readme-CN.md",
+      "summary": "Location Kit的目录索引文档，包含Location Kit简介、开发准备、获取设备的位置信息开发指导、正地理编码与逆地理编码开发指导、基于设备自身定位的地理围栏开发指导和相关实例等内容的导航链接。",
+      "key_topics": ["位置服务", "位置获取", "地理编码", "地理围栏"]
+    },
+    {
+      "doc_id": "Readme-CN-sensor",
+      "title": "Sensor Service Kit（传感器服务）",
+      "path": "../../docs/zh-cn/application-dev/device/sensor/Readme-CN.md",
+      "summary": "Sensor Service Kit（传感器服务）的总体介绍，包含传感器开发概述、传感器开发指导（ArkTS和C/C++）、振动开发概述、振动开发指导（ArkTS和C/C++）等功能模块的导航链接。",
+      "key_topics": ["传感器服务", "传感器", "振动器"]
+    },
+    {
+      "doc_id": "sensor-guidelines-capi",
+      "title": "传感器开发指导(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/device/sensor/sensor-guidelines-capi.md",
+      "summary": "介绍如何使用C/C++接口获取传感器数据，例如通过订阅方向传感器数据感知用户设备当前的朝向，通过订阅计步传感器数据统计用户的步数等。",
+      "key_topics": ["传感器", "C/C++接口", "加速度传感器", "陀螺仪传感器"]
+    },
+    {
+      "doc_id": "sensor-guidelines",
+      "title": "传感器开发指导(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/device/sensor/sensor-guidelines.md",
+      "summary": "介绍如何使用ArkTS接口获取传感器数据，例如通过订阅方向传感器数据感知用户设备当前的朝向，通过订阅计步传感器数据统计用户的步数等。",
+      "key_topics": ["传感器", "ArkTS接口", "加速度传感器", "陀螺仪传感器"]
+    },
+    {
+      "doc_id": "sensor-overview",
+      "title": "传感器开发概述",
+      "path": "../../docs/zh-cn/application-dev/device/sensor/sensor-overview.md",
+      "summary": "介绍系统传感器的类型、坐标系、运作机制和约束与限制。系统传感器是应用访问底层硬件传感器的一种设备抽象概念，开发者可根据传感器提供的接口订阅传感器数据。",
+      "key_topics": ["传感器类型", "加速度传感器", "陀螺仪传感器", "环境光传感器", "计步器"]
+    },
+    {
+      "doc_id": "sensorservice-kit-intro",
+      "title": "Sensor Service Kit开发简介",
+      "path": "../../docs/zh-cn/application-dev/device/sensor/sensorservice-kit-intro.md",
+      "summary": "Sensor Service Kit（传感器服务）使应用程序能够从传感器获取原始数据，并提供振感控制能力。包括传感器模块和振动模块的使用场景和约束限制。",
+      "key_topics": ["传感器服务", "本地传感器", "动态传感器", "本地马达", "动态马达"]
+    },
+    {
+      "doc_id": "vibrator-guidelines-capi",
+      "title": "振动开发指导(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/device/sensor/vibrator-guidelines-capi.md",
+      "summary": "介绍如何使用C/C++接口设置不同的振动效果，例如设备的按键可以设置不同强度和不同时长的振动，闹钟和来电可以设置不同强度和时长的单次或周期振动。",
+      "key_topics": ["振动器", "C/C++接口", "固定时长振动", "自定义振动"]
+    },
+    {
+      "doc_id": "vibrator-guidelines",
+      "title": "振动开发指导(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/device/sensor/vibrator-guidelines.md",
+      "summary": "介绍如何使用ArkTS接口设置不同的振动效果，包括固定时长振动、预置振动和自定义振动等。",
+      "key_topics": ["振动器", "ArkTS接口", "预置振动", "自定义振动"]
+    },
+    {
+      "doc_id": "vibrator-overview",
+      "title": "振动开发概述",
+      "path": "../../docs/zh-cn/application-dev/device/sensor/vibrator-overview.md",
+      "summary": "介绍振动器的运作机制和约束与限制。振动器属于控制类小器件，主要包含Vibrator API、Vibrator Framework、Vibrator Service和HDF层四个模块。",
+      "key_topics": ["振动器", "马达器件", "振动与交互融合"]
+    },
+    {
+      "doc_id": "deviceStatus-guidelines",
+      "title": "设备状态感知开发指导",
+      "path": "../../docs/zh-cn/application-dev/device/stationary/deviceStatus-guidelines.md",
+      "summary": "介绍DeviceStatus（设备状态感知）模块提供的设备状态感知能力，可以获取到设备的信息，例如获取设备静止姿态感知状态（支架态）。",
+      "key_topics": ["设备状态感知", "支架态"]
+    },
+    {
+      "doc_id": "metadataBinding-guidelines",
+      "title": "记忆链接开发指导",
+      "path": "../../docs/zh-cn/application-dev/device/stationary/metadataBinding-guidelines.md",
+      "summary": "介绍MetadataBinding（记忆链接）功能，指由第三方应用提供鸿蒙App Linking链接，系统将当前用户浏览的内容与鸿蒙App Linking链接进行关联并保存的功能。",
+      "key_topics": ["记忆链接", "鸿蒙App Linking", "内容关联"]
+    },
+    {
+      "doc_id": "motion-guidelines",
+      "title": "获取用户动作开发指导",
+      "path": "../../docs/zh-cn/application-dev/device/stationary/motion-guidelines.md",
+      "summary": "介绍如何获取用户动作，例如判断用户当前是用左手还是右手操作设备屏幕。包括获取操作手状态和获取握持手状态。",
+      "key_topics": ["用户动作", "操作手状态", "握持手状态"]
+    },
+    {
+      "doc_id": "multimodalawareness-kit-intro",
+      "title": "Multimodal Awareness Kit简介",
+      "path": "../../docs/zh-cn/application-dev/device/stationary/multimodalawareness-kit-intro.md",
+      "summary": "Multimodal Awareness Kit简介，介绍多模态融合感知利用设备上的多种传感器数据，如加速度计和陀螺仪等，来识别活动、状态和姿态等信息。",
+      "key_topics": ["多模态融合感知", "传感器数据", "活动识别", "状态识别"]
+    },
+    {
+      "doc_id": "Readme-CN-stationary",
+      "title": "Multimodal Awareness Kit（多模态融合感知服务）",
+      "path": "../../docs/zh-cn/application-dev/device/stationary/Readme-CN.md",
+      "summary": "Multimodal Awareness Kit的目录索引文档，包含Multimodal Awareness Kit简介、Stationary开发指导、获取用户动作开发指导、设备状态感知开发指导、用户状态感知开发指导和记忆链接开发指导等内容的导航链接。",
+      "key_topics": ["多模态融合感知服务", "Stationary", "用户动作", "设备状态", "用户状态", "记忆链接"]
+    },
+    {
+      "doc_id": "stationary-guidelines",
+      "title": "Stationary开发指导",
+      "path": "../../docs/zh-cn/application-dev/device/stationary/stationary-guidelines.md",
+      "summary": "介绍如何获取当前设备状态，例如判断当前设备处于绝对静止状态或者相对静止状态。支持订阅设备状态、查询设备状态和取消订阅设备状态。",
+      "key_topics": ["Stationary", "绝对静止", "相对静止"]
+    },
+    {
+      "doc_id": "userStatus-guidelines",
+      "title": "用户状态感知开发指导",
+      "path": "../../docs/zh-cn/application-dev/device/stationary/userStatus-guidelines.md",
+      "summary": "介绍UserStatus（用户状态感知）模块提供的用户感知能力，可以感知到操作者特定状态，例如检测用户年龄组。",
+      "key_topics": ["用户状态感知", "年龄组检测"]
     }
   ]
 }
