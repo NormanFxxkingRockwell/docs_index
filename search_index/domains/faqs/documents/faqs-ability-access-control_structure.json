@@ -1,0 +1,68 @@
+{
+  "doc_id": "faqs-ability-access-control",
+  "title": "程序访问控制开发常见问题",
+  "path": "zh-cn/application-dev/faqs/faqs-ability-access-control.md",
+  "relative_path": "../../docs/zh-cn/application-dev/faqs/faqs-ability-access-control.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Security",
+    "owner": "@xia-bubai",
+    "designer": "@linshuqing; @hehehe-li",
+    "tester": "@leiyuqian",
+    "adviser": "@zengyawen"
+  },
+  "summary": "程序访问控制开发常见问题解答，包括权限变化监听、LOCATION权限申请、权限被拒绝后的处理、module.json5中extensionAbilities和requestPermissions的区别、自定义权限申请文本、SaveButton安全控件使用等权限管理相关问题。",
+  "structure": {
+    "title": "程序访问控制开发常见问题",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "在系统设置修改了应用权限，应用能否监听到权限变化(API 9)",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 13,
+        "summary": "在系统设置修改了应用权限，三方应用无法监听到权限变化的。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "应用申请LOCATION位置信息权限为什么没有弹窗(API 9)",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 24,
+        "summary": "使用API version 9以下版本的SDK开发的应用，可以直接申请ohos.permission.LOCATION权限。使用API version 9及API version 9以上版本的SDK开发的应用，需要先申请权限ohos.permission.APPROXIMATELY_LOCATION，才可申请此权限。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "向用户申请授予权限但被用户拒绝后，如何处理才能避免应用二次进入时崩溃(API 9)",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 45,
+        "summary": "应用在调用受权限保护的接口前，需要先校验应用是否已经获取该权限。如果用户拒绝授予某个权限时，需要确保与此权限无关的其他业务功能应能正常使用，不能影响应用的正常注册或登录。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "module.json5配置文件中extensionAbilities和requestPermissions的权限声明有何区别(API 9)",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 55,
+        "summary": "requestPermissions标识当前应用运行时需向系统申请的权限集合，应用申请的权限只有在此处配置的才会生效。extensionAbilitie.permissions标识当前ExtensionAbility组件自定义的权限信息，表示当其他应用访问该ExtensionAbility时，需要申请相应的权限信息，仅做权限校验使用。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "如何自定义申请权限时的选项文本，例如申请定位权限时，如何自定义弹出的选项文本(API 10)",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 65,
+        "summary": "只允许自定义reason，自定义reason在权限弹框时会显示，但不允许自定义弹出选项文本。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "如何使用安全控件SaveButton进行图片的快速保存，保存控件可以用于哪些场景，区别于使用filepicker方式有什么优势(API 10)",
+        "level": 2,
+        "line_start": 66,
+        "line_end": 78,
+        "summary": "应用集成SaveButton并注册onClick回调，当用户点击后，应用可以在回调中调用媒体库接口快速创建图片文件，此过程不需要弹窗授权、选择目录之类的操作。保存控件可用于需要快速存储图片、视频到媒体库的场景。"
+      }
+    ]
+  }
+}

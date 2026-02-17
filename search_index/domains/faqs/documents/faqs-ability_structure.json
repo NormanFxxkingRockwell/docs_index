@@ -1,0 +1,244 @@
+{
+  "doc_id": "faqs-ability",
+  "title": "应用模型常见问题",
+  "path": "zh-cn/application-dev/faqs/faqs-ability.md",
+  "relative_path": "../../docs/zh-cn/application-dev/faqs/faqs-ability.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@ccllee1",
+    "designer": "@ccllee1",
+    "tester": "@lixueqing513",
+    "adviser": "@huipeizi"
+  },
+  "summary": "应用模型开发常见问题解答，涵盖横竖屏状态变化监听、服务卡片跳转、Stage模型后台服务创建、多进程配置、进程内对象共享、AbilityStage生命周期、removeMissionAfterTerminate配置、this指向问题、startWindowIcon配置、globalThis使用、HAP部署错误、startAbilityForResult返回数据、系统时间戳获取、应用缓存目录获取、ServiceExtensionAbility和DataShareExtensionAbility使用限制等问题。",
+  "structure": {
+    "title": "应用模型常见问题",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "如何获取设备横竖屏的状态变化通知(API 9)",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 24,
+        "summary": "使用UIAbility.onConfigurationUpdate()回调方法订阅系统环境变量的变化（包括语言，颜色模式，屏幕方向等）。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "点击服务卡片如何跳转至指定的页面(API 9)",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 35,
+        "summary": "参考文档，配置卡片事件，指定需要跳转的目标Ability，然后在目标UIAbility的onWindowStageCreate()中调用loadContent跳转至指定的page页面。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "如何在Stage模型中创建后台服务(API 9)",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 50,
+        "summary": "Stage模型中的ServiceExtensionAbility是系统接口，第三方应用不支持调用。Stage模型可通过后台任务实现该功能。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "FA和Stage模型中，应用是否可以创建并指定UIAbility运行在哪个进程(API 9)",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 65,
+        "summary": "FA和Stage模型中，应用可以创建进程并指定UIAbility运行在某个进程。FA模型支持多进程，process子标签仅支持系统应用配置。Stage模型支持多进程，三方应用不能配置多进程。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "Stage模型与FA模型在进程内对象共享方面有哪些差异(API 9)",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 78,
+        "summary": "Stage模型中，多个应用组件共享同一个ArkTS引擎实例，因此在Stage模型中，应用组件之间可以方便的共享对象和状态。FA模型中，每个应用组件独享一个ArkTS引擎实例。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "如何使用AbilityStage的生命周期函数(API 9)",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 89,
+        "summary": "在module.json5里的module中加上srcEntry字段\"srcEntry\": \"./ets/myabilitystage/MyAbilityStage.ts\"。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "多实例场景下当前Ability调用terminateSelf后，桌面最近任务列表如何设置不保留快照(API 9)",
+        "level": 2,
+        "line_start": 91,
+        "line_end": 96,
+        "summary": "可在module.json5配置文件中配置removeMissionAfterTerminate为true。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "调用方法的时候，方法内部的this变成了undefined(API 9)",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 105,
+        "summary": "方式一：在调用方法的时候加上.bind(this)；方式二：使用箭头函数。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "启动UIAbility时报错：must have required property 'startWindowIcon'(API 9)",
+        "level": 2,
+        "line_start": 107,
+        "line_end": 131,
+        "summary": "UIAbility配置中缺少startWindowIcon属性配置，需要在module.json5中abilities中配置startWindowIcon。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "Stage模型是否推荐使用globalThis获取Context(API 9)",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 142,
+        "summary": "不推荐，Stage模型使用globalThis去获取Context是错误的使用方式。在Stage模型中，整个应用进程共用一个js虚拟机实例，其中可以运行多个Ability实例，共用一个global对象。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "部署HAP时上报安装内容过大错误(API 9)",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 155,
+        "summary": "将其拆分为多个HAP即可解决。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "调用方使用startAbilityForResult时，被调用方如何返回数据(API 9)",
+        "level": 2,
+        "line_start": 157,
+        "line_end": 166,
+        "summary": "被调用方使用AbilityContext.terminateSelfWithResult方法，销毁被调用方ability，传递参数给startAbilityForResult回调函数。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "如何获取系统时间戳(API 9)",
+        "level": 2,
+        "line_start": 168,
+        "line_end": 191,
+        "summary": "使用@ohos.systemDateTime的getCurrentTime来获取系统时间和时区。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "如何获取当前应用程序缓存目录(API 9)",
+        "level": 2,
+        "line_start": 192,
+        "line_end": 201,
+        "summary": "使用Context.cacheDir获取应用程序的缓存目录。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "服务卡片生命周期回调函数在哪个js文件中调用(API 9)",
+        "level": 2,
+        "line_start": 203,
+        "line_end": 212,
+        "summary": "新建卡片时会生成一个FormAblity.ts文件，其中包含卡片对应的生命周期。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "使用ServiceExtensionAbility和DataShareExtensionAbility的相关接口后DevEco Studio无法编译(API 9)",
+        "level": 2,
+        "line_start": 214,
+        "line_end": 233,
+        "summary": "三方应用不支持开发ServiceExtensionAbility和DataShareExtensionAbility。若开发系统应用，请下载full-sdk。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "如何获取应用级别的temp路径和files路径(API 9)",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 244,
+        "summary": "通过应用上下文context获取。如：this.context.getApplicationContext.tempDir来获取temp路径；this.context.getApplicationContext.filesDir来获取files路径。"
+      },
+      {
+        "section_id": "section-18",
+        "title": "terminateSelf方法销毁当前应用之后并没有在后台任务列表中删除(API 9)",
+        "level": 2,
+        "line_start": 246,
+        "line_end": 255,
+        "summary": "在当前应用对应UIAbility的module.json5配置文件中，配置abilities标签的removeMissionAfterTerminate字段，设置为true即为销毁应用的同时删除应用快照记录，缺省值为false。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "Stage模型下开发的应用如何拉起 FA 模型开发的应用(API 9)",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 285,
+        "summary": "该功能目前已支持，具体实现可参考代码示例。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "原子化服务是否可以全程使用js实现(API 9)",
+        "level": 2,
+        "line_start": 287,
+        "line_end": 292,
+        "summary": "目前新建的卡片的目录结构都是css+hml+json，不能完全靠js实现，事件的触发和参数的传递都可以在json文件里面处理。"
+      },
+      {
+        "section_id": "section-21",
+        "title": "FA卡片上架后在用户的服务中心展示时可否触发生命周期，从而实现用户没有打开过FA应用的情况下获取到用户的登录信息(API 9)",
+        "level": 2,
+        "line_start": 294,
+        "line_end": 303,
+        "summary": "服务卡片在添加卡片后就触发了onCreate()生命周期，在不启用app的情况下也可以显示相关的用户信息-静默登录，但服务卡片目前要在app安装之后手动添加。"
+      },
+      {
+        "section_id": "section-22",
+        "title": "JS/ArkTS跳转到其他应用时报错\"[c4d4d3492eb8531, 0, 0] ContextDeal::startAbility fetchAbilities failed\"(API 9)",
+        "level": 2,
+        "line_start": 305,
+        "line_end": 339,
+        "summary": "一般用startAbility，实现如下代码示例。"
+      },
+      {
+        "section_id": "section-23",
+        "title": "如何通过卡片点击实现业务登录场景(API 9)",
+        "level": 2,
+        "line_start": 341,
+        "line_end": 362,
+        "summary": "可以先创建FA模型的卡片，步骤如下：实现卡片生命周期接口、配置卡片配置文件、卡片信息的持久化、卡片数据交互、开发卡片页面、开发卡片事件。"
+      },
+      {
+        "section_id": "section-24",
+        "title": "如何跳转到设置中应用详情页面(API 9)",
+        "level": 2,
+        "line_start": 364,
+        "line_end": 377,
+        "summary": "参考如下代码实现，示例。"
+      },
+      {
+        "section_id": "section-25",
+        "title": "Stage模型，@Component组件内如何获取UIAbilityContext(API 9)",
+        "level": 2,
+        "line_start": 379,
+        "line_end": 418,
+        "summary": "可以通过UIAbility. Context获取。"
+      },
+      {
+        "section_id": "section-26",
+        "title": "后台长时任务启动失败(API 9)",
+        "level": 2,
+        "line_start": 420,
+        "line_end": 453,
+        "summary": "启动后台长时任务需要在module.json5文件中配置长时任务权限ohos.permission.KEEP_BACKGROUND_RUNNING、同时为需要使用长时任务的ability声明相应的后台模式类型。"
+      },
+      {
+        "section_id": "section-27",
+        "title": "FA卡片如何进行数据交互(API 9)",
+        "level": 2,
+        "line_start": 455,
+        "line_end": 462,
+        "summary": "卡片通过postCardAction接口触发和提供方的交互，在提供方中通过updateForm方法更新数据。"
+      },
+      {
+        "section_id": "section-28",
+        "title": "系统是否支持在桌面上创建应用的快捷入口，直接打开指定页面？(API 10)",
+        "level": 2,
+        "line_start": 463,
+        "line_end": 466,
+        "summary": "当前不支持。"
+      }
+    ]
+  }
+}
