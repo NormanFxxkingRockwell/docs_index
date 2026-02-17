@@ -1,90 +1,1421 @@
 {
-  "domain": "Media",
-  "overview": "Media Kit 是 OpenHarmony 提供的媒体服务框架，涵盖音频播放录制、音视频编解码、音视频播控、相机拍照录像、数字版权保护、图片处理、媒体播放录制、媒体文件管理等多种媒体相关功能。支持 ArkTS 和 C/C++ 两种开发语言，部分功能仅对系统应用开放。",
+  "domain": "media",
+  "overview": "Media Kit 提供音视频媒体处理能力，包括音频播放和录制、视频编解码、相机开发、图像处理、DRM数字版权保护、媒体会话管理、屏幕录制等功能，支持多种媒体格式和场景化应用。",
   "core_concepts": [
-    "音频播放录制",
+    "图像处理",
+    "媒体会话管理",
+    "相机开发",
+    "音频处理",
     "音视频编解码",
-    "音视频播控",
-    "相机拍照录像",
-    "数字版权保护",
-    "图片处理",
-    "媒体播放录制",
-    "媒体文件管理",
+    "视频处理",
+    "媒体录制",
+    "DRM数字版权",
     "屏幕录制",
-    "媒体转码"
+    "媒体播放"
   ],
   "learning_path": [
-    "../../docs/zh-cn/application-dev/media/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/media/audio/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/media/audio/audio-kit-intro.md",
-    "../../docs/zh-cn/application-dev/media/audio/using-right-streamusage-and-sourcetype.md",
-    "../../docs/zh-cn/application-dev/media/audio/audio-playback-concurrency.md",
-    "../../docs/zh-cn/application-dev/media/audio/audio-playback-overview.md",
-    "../../docs/zh-cn/application-dev/media/audio/using-ohaudio-for-playback.md",
-    "../../docs/zh-cn/application-dev/media/audio/using-audiorenderer-for-playback.md",
-    "../../docs/zh-cn/application-dev/media/audio/audio-recording-overview.md",
-    "../../docs/zh-cn/application-dev/media/audio/using-ohaudio-for-recording.md",
-    "../../docs/zh-cn/application-dev/media/audio/using-audiocapturer-for-recording.md",
-    "../../docs/zh-cn/application-dev/media/avcodec/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/media/avcodec/avcodec-kit-intro.md",
-    "../../docs/zh-cn/application-dev/media/avcodec/avcodec-support-formats.md",
-    "../../docs/zh-cn/application-dev/media/avcodec/audio-encoding.md",
-    "../../docs/zh-cn/application-dev/media/avcodec/audio-decoding.md",
-    "../../docs/zh-cn/application-dev/media/avcodec/video-encoding.md",
-    "../../docs/zh-cn/application-dev/media/avcodec/video-decoding.md",
-    "../../docs/zh-cn/application-dev/media/avcodec/audio-video-muxer.md",
-    "../../docs/zh-cn/application-dev/media/avcodec/audio-video-demuxer.md",
-    "../../docs/zh-cn/application-dev/media/avsession/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/media/avsession/avsession-overview.md",
-    "../../docs/zh-cn/application-dev/media/avsession/local-avsession-overview.md",
-    "../../docs/zh-cn/application-dev/media/avsession/using-avsession-developer.md",
-    "../../docs/zh-cn/application-dev/media/avsession/avsession-background-scene.md",
-    "../../docs/zh-cn/application-dev/media/camera/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/media/camera/camera-overview.md",
-    "../../docs/zh-cn/application-dev/media/camera/camera-preparation.md",
-    "../../docs/zh-cn/application-dev/media/camera/camera-device-management.md",
-    "../../docs/zh-cn/application-dev/media/camera/camera-session-management.md",
-    "../../docs/zh-cn/application-dev/media/camera/camera-preview.md",
-    "../../docs/zh-cn/application-dev/media/camera/camera-shooting.md",
-    "../../docs/zh-cn/application-dev/media/camera/camera-recording.md",
-    "../../docs/zh-cn/application-dev/media/drm/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/media/drm/drm-overview.md",
-    "../../docs/zh-cn/application-dev/media/drm/drm-arkts-dev-guide.md",
-    "../../docs/zh-cn/application-dev/media/image/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/media/image/image-overview.md",
-    "../../docs/zh-cn/application-dev/media/image/image-decoding.md",
-    "../../docs/zh-cn/application-dev/media/image/image-encoding.md",
-    "../../docs/zh-cn/application-dev/media/image/image-transformation.md",
-    "../../docs/zh-cn/application-dev/media/media/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/media/media/media-kit-intro.md",
-    "../../docs/zh-cn/application-dev/media/media/using-avplayer-for-playback.md",
-    "../../docs/zh-cn/application-dev/media/media/video-playback.md",
-    "../../docs/zh-cn/application-dev/media/media/using-avrecorder-for-recording.md",
-    "../../docs/zh-cn/application-dev/media/media/video-recording.md",
-    "../../docs/zh-cn/application-dev/media/media/using-avscreencapture-ArkTs.md",
-    "../../docs/zh-cn/application-dev/media/media/using-avtranscoder-for-transcodering.md",
-    "../../docs/zh-cn/application-dev/media/medialibrary/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/media/medialibrary/photoAccessHelper-overview.md",
-    "../../docs/zh-cn/application-dev/media/medialibrary/photoAccessHelper-photoviewpicker.md"
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-kit-intro",
+      "title": "Audio Kit简介",
+      "order": 1,
+      "category": "基础"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-avcodec-kit-intro",
+      "title": "AVCodec Kit简介",
+      "order": 2,
+      "category": "基础"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avsession-avsession-overview",
+      "title": "AVSession Kit简介",
+      "order": 3,
+      "category": "基础"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-overview",
+      "title": "Camera Kit简介",
+      "order": 4,
+      "category": "基础"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-drm-drm-overview",
+      "title": "DRM Kit 简介",
+      "order": 5,
+      "category": "基础"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-overview",
+      "title": "Image Kit简介",
+      "order": 6,
+      "category": "基础"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-media-kit-intro",
+      "title": "Media Kit简介",
+      "order": 7,
+      "category": "基础"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-medialibrary-photoAccessHelper-overview",
+      "title": "Media Library Kit 简介",
+      "order": 8,
+      "category": "基础"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-call-development",
+      "title": "开发音频通话功能",
+      "order": 9,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-call-overview",
+      "title": "音频通话开发概述",
+      "order": 10,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-ear-monitor-loopback",
+      "title": "实现音频低时延耳返",
+      "order": 11,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-ear-monitor",
+      "title": "实现音频耳返",
+      "order": 12,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-fast-playback",
+      "title": "低时延音频播放(C/C++)",
+      "order": 13,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-fast-recording",
+      "title": "低时延音频录制(C/C++)",
+      "order": 14,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-input-device-management",
+      "title": "查询和监听音频输入设备",
+      "order": 15,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-input-device-switcher",
+      "title": "实现音频输入设备路由切换",
+      "order": 16,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-latency",
+      "title": "音频时延管理",
+      "order": 17,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-output-device-management",
+      "title": "查询和监听音频输出设备",
+      "order": 18,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-output-device-switcher",
+      "title": "实现音频输出设备路由切换",
+      "order": 19,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-performance",
+      "title": "提升音频性能体验",
+      "order": 20,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-playback-concurrency",
+      "title": "音频焦点和音频会话介绍",
+      "order": 21,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-playback-overview",
+      "title": "音频播放开发概述",
+      "order": 22,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-playback-stream-management",
+      "title": "音频播放流管理",
+      "order": 23,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-recording-overview",
+      "title": "音频录制开发概述",
+      "order": 24,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-session-management",
+      "title": "使用AudioSession管理应用音频焦点(ArkTS)",
+      "order": 25,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-spatialization-management-sys",
+      "title": "空间音频管理（仅对系统应用开放）",
+      "order": 26,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-suite",
+      "title": "音频编创开发概述(C/C++)",
+      "order": 27,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-workgroup",
+      "title": "音频工作组管理",
+      "order": 28,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-distributed-audio-playback-sys",
+      "title": "分布式音频播放(仅对系统应用开放)",
+      "order": 29,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-power-saving-for-playback",
+      "title": "低功耗音频播放",
+      "order": 30,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-public-audio-spatialization-management",
+      "title": "空间音频能力查询和状态订阅",
+      "order": 31,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-Readme-CN",
+      "title": "Audio Kit（音频服务）",
+      "order": 32,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-replace-opensles-by-ohaudio",
+      "title": "从OpenSL ES切换到OHAudio(C/C++)",
+      "order": 33,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-using-audiocapturer-for-recording",
+      "title": "使用AudioCapturer开发音频录制功能(ArkTs)",
+      "order": 34,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-using-audiohaptic-for-playback",
+      "title": "使用AudioHaptic开发音振协同播放功能(ArkTs)",
+      "order": 35,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-using-audiorenderer-for-playback",
+      "title": "使用AudioRenderer开发音频播放功能(ArkTs)",
+      "order": 36,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-using-ohaudio-for-playback",
+      "title": "推荐使用OHAudio开发音频播放功能(C/C++)",
+      "order": 37,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-using-ohaudio-for-recording",
+      "title": "推荐使用OHAudio开发音频录制功能(C/C++)",
+      "order": 38,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-using-ohaudio-for-session",
+      "title": "使用AudioSession管理应用音频焦点(C/C++)",
+      "order": 39,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-using-opensl-es-for-playback",
+      "title": "使用OpenSL ES开发音频播放功能(C/C++)",
+      "order": 40,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-using-opensl-es-for-recording",
+      "title": "使用OpenSL ES开发音频录制功能(C/C++)",
+      "order": 41,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-using-right-streamusage-and-sourcetype",
+      "title": "使用合适的音频流类型",
+      "order": 42,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-using-toneplayer-for-playback-sys",
+      "title": "使用TonePlayer开发音频播放功能(仅对系统应用开放)",
+      "order": 43,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-audio-decoding",
+      "title": "音频解码",
+      "order": 44,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-audio-encoding",
+      "title": "音频编码",
+      "order": 45,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-synchronous-audio-decoding",
+      "title": "音频解码同步模式",
+      "order": 46,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-synchronous-audio-encoding",
+      "title": "音频编码同步模式",
+      "order": 47,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-avplayer-for-playback",
+      "title": "使用AVPlayer播放音频(ArkTS)",
+      "order": 48,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-avrecorder-for-recording",
+      "title": "使用AVRecorder录制音频(ArkTS)",
+      "order": 49,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-ndk-avplayer-for-playback",
+      "title": "使用AVPlayer播放音频(C/C++)",
+      "order": 50,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-ndk-avrecorder-for-audio-recording",
+      "title": "使用AVRecorder录制音频(C/C++)",
+      "order": 51,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-soundpool-for-playback",
+      "title": "使用SoundPool播放短音频(ArkTS)",
+      "order": 52,
+      "category": "音频"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-avcodec-support-formats",
+      "title": "AVCodec支持的格式",
+      "order": 53,
+      "category": "编解码"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-obtain-supported-codecs",
+      "title": "获取支持的编解码能力",
+      "order": 54,
+      "category": "编解码"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-Readme-CN",
+      "title": "AVCodec Kit（音视频编解码服务）",
+      "order": 55,
+      "category": "编解码"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-drm-drm-avcodec-integration",
+      "title": "基于AVCodec播放DRM节目(C/C++)",
+      "order": 56,
+      "category": "编解码"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-animation",
+      "title": "相机基础动效(ArkTS)",
+      "order": 57,
+      "category": "相机"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-background-recovery",
+      "title": "相机启动恢复实践(ArkTS)",
+      "order": 58,
+      "category": "相机"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-control-center",
+      "title": "相机控制器(ArkTS)",
+      "order": 59,
+      "category": "相机"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-device-management",
+      "title": "相机管理(ArkTS)",
+      "order": 60,
+      "category": "相机"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-picker",
+      "title": "通过系统相机拍照和录像(CameraPicker)",
+      "order": 61,
+      "category": "相机"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-preparation",
+      "title": "申请相机开发的权限",
+      "order": 62,
+      "category": "相机"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-worker",
+      "title": "在Worker线程中使用相机(ArkTS)",
+      "order": 63,
+      "category": "相机"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-device-management",
+      "title": "相机管理 (C/C++)",
+      "order": 64,
+      "category": "相机"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-Readme-CN",
+      "title": "Camera Kit（相机服务）",
+      "order": 65,
+      "category": "相机"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-decoding",
+      "title": "使用ImageSource完成图片解码",
+      "order": 66,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-effect-guidelines",
+      "title": "使用ImageEffect编辑图片",
+      "order": 67,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-encoding",
+      "title": "使用ImagePacker完成图片编码",
+      "order": 68,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-faqs-image-error-faq",
+      "title": "Image Kit异常处理",
+      "order": 69,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-packer-c",
+      "title": "使用Image_NativeModule完成图片编码",
+      "order": 70,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-packer-picture-c",
+      "title": "使用Image_NativeModule完成多图对象编码",
+      "order": 71,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-picture-decoding",
+      "title": "使用ImageSource完成多图对象解码",
+      "order": 72,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-picture-encoding",
+      "title": "使用ImagePacker完成多图对象编码",
+      "order": 73,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-receiver-c",
+      "title": "使用Image_NativeModule完成图片接收",
+      "order": 74,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-receiver",
+      "title": "使用ImageReceiver完成图片接收",
+      "order": 75,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-source-c",
+      "title": "使用Image_NativeModule完成图片解码",
+      "order": 76,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-source-picture-c",
+      "title": "使用Image_NativeModule完成多图对象解码",
+      "order": 77,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-tool-c",
+      "title": "使用Image_NativeModule编辑图片Exif信息",
+      "order": 78,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-transformation-native",
+      "title": "图像变换",
+      "order": 79,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-transformation",
+      "title": "使用PixelMap完成图像变换",
+      "order": 80,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-pixelmap-c",
+      "title": "使用Image_NativeModule完成位图操作",
+      "order": 81,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-Readme-CN",
+      "title": "Image Kit（图片处理服务）",
+      "order": 82,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-avimagegenerator",
+      "title": "使用AVImageGenerator提取视频指定时间图像(ArkTS)",
+      "order": 83,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-ndk-avimagegenerator-for-video",
+      "title": "使用AVImageGenerator获取视频帧(C/C++)",
+      "order": 84,
+      "category": "图像"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-collaborative-management-sys",
+      "title": "移动全景声管理（仅对系统应用开放）",
+      "order": 85,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-output-device-change",
+      "title": "响应输出设备变更时合理暂停",
+      "order": 86,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-recording-concurrency",
+      "title": "录音并发策略说明",
+      "order": 87,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-recording-stream-management",
+      "title": "查询和监听其他应用录制状态",
+      "order": 88,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-suite-manual-rendering",
+      "title": "离线编辑(C/C++)",
+      "order": 89,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-audio-suite-real-time-rendering",
+      "title": "实时渲染(C/C++)",
+      "order": 90,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-mic-management",
+      "title": "管理麦克风静音状态",
+      "order": 91,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-using-soundplayer-for-playback",
+      "title": "使用SoundPlayer开发系统音效播放功能",
+      "order": 92,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-audio-volume-management",
+      "title": "播放音量管理",
+      "order": 93,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-audio-video-demuxer",
+      "title": "媒体数据解析",
+      "order": 94,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-audio-video-muxer",
+      "title": "媒体数据封装",
+      "order": 95,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-parallel-decoding-nativeWindow",
+      "title": "创建视频解码器和NativeWindow初始化并行",
+      "order": 96,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-synchronous-video-decoding",
+      "title": "视频解码同步模式",
+      "order": 97,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-synchronous-video-encoding",
+      "title": "视频编码同步模式",
+      "order": 98,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-video-decoding",
+      "title": "视频解码",
+      "order": 99,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-video-encoding-b-frame",
+      "title": "B帧视频编码",
+      "order": 100,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-video-encoding-configuration-typical-scenarios",
+      "title": "典型场景的视频编码配置",
+      "order": 101,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-video-encoding-ROI",
+      "title": "ROI视频编码",
+      "order": 102,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-video-encoding-temporal-scalability",
+      "title": "时域可分层视频编码",
+      "order": 103,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-video-encoding",
+      "title": "视频编码",
+      "order": 104,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avcodec-video-variable-refreshrate",
+      "title": "视频可变帧率",
+      "order": 105,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avsession-avsession-access-scene",
+      "title": "应用接入AVSession场景介绍",
+      "order": 106,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avsession-avsession-background-scene",
+      "title": "后台播放",
+      "order": 107,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avsession-distributed-avsession-overview-sys",
+      "title": "分布式媒体会话概述(仅对系统应用开放)",
+      "order": 108,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avsession-local-avsession-overview",
+      "title": "本地媒体会话概述",
+      "order": 109,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avsession-Readme-CN",
+      "title": "AVSession Kit（音视频播控服务）",
+      "order": 110,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avsession-using-avsession-controller-sys",
+      "title": "媒体会话控制方(仅对系统应用开放)",
+      "order": 111,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avsession-using-avsession-developer",
+      "title": "媒体会话提供方",
+      "order": 112,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avsession-using-distributed-avsession-sys",
+      "title": "使用分布式媒体会话(仅对系统应用开放)",
+      "order": 113,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avsession-using-ohavsession-developer",
+      "title": "媒体会话提供方(C/C++)",
+      "order": 114,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-avsession-using-switch-call-devices",
+      "title": "使用通话设备切换组件",
+      "order": 115,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-auto-switch",
+      "title": "自动切换摄像头实践(ArkTS)",
+      "order": 116,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-concurrent-open",
+      "title": "多摄同开(ArkTS)",
+      "order": 117,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-deferred-capture-case",
+      "title": "分段式拍照实践(ArkTS)",
+      "order": 118,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-deferred-capture",
+      "title": "分段式拍照(ArkTS)",
+      "order": 119,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-deferred-photo-case-sys",
+      "title": "高性能拍照实践(仅对系统应用开放)(ArkTS)",
+      "order": 120,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-deferred-photo-sys",
+      "title": "高性能拍照(仅对系统应用开放)(ArkTS)",
+      "order": 121,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-depth-data-sys",
+      "title": "深度信息(仅对系统应用开放)(ArkTS)",
+      "order": 122,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-device-input",
+      "title": "设备输入(ArkTS)",
+      "order": 123,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-dual-channel-preview",
+      "title": "双路预览(ArkTS)",
+      "order": 124,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-foldable-display",
+      "title": "适配不同折叠状态的摄像头变更(ArkTS)",
+      "order": 125,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-macro",
+      "title": "微距能力设置(ArkTS)",
+      "order": 126,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-metadata",
+      "title": "元数据(ArkTS)",
+      "order": 127,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-moving-photo",
+      "title": "动态照片拍摄(ArkTS)",
+      "order": 128,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-performance-improvement-sys",
+      "title": "性能提升实践(仅对系统应用开放)(ArkTS)",
+      "order": 129,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-preview",
+      "title": "预览(ArkTS)",
+      "order": 130,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-recording-case",
+      "title": "录像实践(ArkTS)",
+      "order": 131,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-recording",
+      "title": "录像(ArkTS)",
+      "order": 132,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-session-management",
+      "title": "会话管理(ArkTS)",
+      "order": 133,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-shooting-case",
+      "title": "拍照实践(ArkTS)",
+      "order": 134,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-shooting",
+      "title": "拍照(ArkTS)",
+      "order": 135,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-system-pressure",
+      "title": "压力管控(ArkTS)",
+      "order": 136,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-torch-use",
+      "title": "手电筒使用(ArkTS)",
+      "order": 137,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-camera-whitebalance",
+      "title": "白平衡设置(ArkTS)",
+      "order": 138,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-concurrent-open",
+      "title": "多摄同开(C/C++)",
+      "order": 139,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-deferred-capture",
+      "title": "分段式拍照(C/C++)",
+      "order": 140,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-device-input",
+      "title": "设备输入(C/C++)",
+      "order": 141,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-macro",
+      "title": "微距能力设置(C/C++)",
+      "order": 142,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-metadata",
+      "title": "元数据(C/C++)",
+      "order": 143,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-preview-imageReceiver",
+      "title": "预览流二次处理(C/C++)",
+      "order": 144,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-preview",
+      "title": "预览(C/C++)",
+      "order": 145,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-recording-case",
+      "title": "录像实践(C/C++)",
+      "order": 146,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-recording",
+      "title": "录像(C/C++)",
+      "order": 147,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-session-management",
+      "title": "会话管理(C/C++)",
+      "order": 148,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-shooting-case",
+      "title": "拍照实践(C/C++)",
+      "order": 149,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-shooting",
+      "title": "拍照(C/C++)",
+      "order": 150,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-system-pressure",
+      "title": "压力管控(C/C++)",
+      "order": 151,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-camera-native-camera-torch-use",
+      "title": "手电筒使用(C++)",
+      "order": 152,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-drm-drm-arkts-dev-guide",
+      "title": "数字版权保护(ArkTS)",
+      "order": 153,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-drm-drm-avplayer-arkts-integration",
+      "title": "基于AVPlayer播放DRM节目(ArkTS)",
+      "order": 154,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-drm-drm-c-dev-guide",
+      "title": "数字版权保护(C/C++)",
+      "order": 155,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-drm-drm-solution-dev-guide",
+      "title": "DRM解决方案开发指导",
+      "order": 156,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-drm-Readme-CN",
+      "title": "DRM Kit（数字版权保护服务）",
+      "order": 157,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-allocator-type-c",
+      "title": "图片解码内存优化(C/C++)",
+      "order": 158,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-allocator-type",
+      "title": "图片解码内存优化(ArkTS)",
+      "order": 159,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-decoding-native",
+      "title": "图片解码",
+      "order": 160,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-encoding-native",
+      "title": "图片编码",
+      "order": 161,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-faqs-heif-adapter-faq",
+      "title": "如何处理HEIF图片",
+      "order": 162,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-faqs-image-rotate-faq",
+      "title": "如何获取图片的旋转角度信息",
+      "order": 163,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-pixelmap-operation-native",
+      "title": "位图操作",
+      "order": 164,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-pixelmap-operation",
+      "title": "使用PixelMap完成位图操作",
+      "order": 165,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-receiver-native",
+      "title": "图片接收",
+      "order": 166,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-image-image-tool",
+      "title": "编辑图片Exif信息",
+      "order": 167,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-avmetadataextractor",
+      "title": "使用AVMetadataExtractor提取音视频元数据信息(ArkTS)",
+      "order": 168,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-avscreencapture-c-basic-process",
+      "title": "AVScreenCapture录屏基础流程",
+      "order": 169,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-avscreencapture-c-custom-scenarios",
+      "title": "AVScreenCapture录屏自定义场景",
+      "order": 170,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-avscreencapture-faqs",
+      "title": "录屏常见问题",
+      "order": 171,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-avtranscoder-faq",
+      "title": "转码常见问题",
+      "order": 172,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-avtranscoder-practice",
+      "title": "创建异步线程执行AVTranscoder视频转码(ArkTS)",
+      "order": 173,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-playback-url-setting-method",
+      "title": "使用AVPlayer设置播放URL(ArkTS)",
+      "order": 174,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-Readme-CN",
+      "title": "Media Kit（媒体服务）",
+      "order": 175,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-streaming-media-playback-development-guide",
+      "title": "使用AVPlayer播放流媒体(ArkTS)",
+      "order": 176,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-avscreencapture-ArkTs",
+      "title": "使用AVScreenCaptureRecorder录屏写文件(ArkTS)",
+      "order": 177,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-avscreencapture-for-file",
+      "title": "使用AVScreenCapture录屏写文件(C/C++)",
+      "order": 178,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-avtranscoder-for-transcodering",
+      "title": "使用AVTranscoder实现视频转码(ArkTS)",
+      "order": 179,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-ndk-avmetadataextractor-for-media",
+      "title": "使用AVMetadataExtractor获取元数据(C/C++)",
+      "order": 180,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-ndk-avplayer-for-video-playback",
+      "title": "使用AVPlayer播放视频(C/C++)",
+      "order": 181,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-ndk-avrecorder-for-video-recording",
+      "title": "使用AVRecorder录制视频(C/C++)",
+      "order": 182,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-ndk-avtranscoder-for-transcodering",
+      "title": "使用AVTranscoder实现视频转码(C/C++)",
+      "order": 183,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-using-ndk-lpp-for-playback",
+      "title": "使用LPP播放器播放视频 (C/C++)",
+      "order": 184,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-video-playback",
+      "title": "使用AVPlayer播放视频(ArkTS)",
+      "order": 185,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-video-recording",
+      "title": "使用AVRecorder录制视频(ArkTS)",
+      "order": 186,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-video-subtitle",
+      "title": "使用AVPlayer添加视频外挂字幕(ArkTS)",
+      "order": 187,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-media-video-supports-rectangular-area-recording",
+      "title": "屏幕录制支持矩形区域录制",
+      "order": 188,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-medialibrary-movingphotoview-guidelines",
+      "title": "使用MovingPhotoView播放动态照片",
+      "order": 189,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-medialibrary-photoAccessHelper-movingphoto",
+      "title": "访问和管理动态照片资源",
+      "order": 190,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-medialibrary-photoAccessHelper-notify-guidelines",
+      "title": "媒体资源变更通知相关指导",
+      "order": 191,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-medialibrary-photoAccessHelper-photoviewpicker",
+      "title": "使用Picker选择媒体库资源",
+      "order": 192,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-medialibrary-photoAccessHelper-preparation",
+      "title": "开发准备",
+      "order": 193,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-medialibrary-photoAccessHelper-resource-guidelines",
+      "title": "媒体资源使用指导",
+      "order": 194,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-medialibrary-photoAccessHelper-savebutton",
+      "title": "保存媒体库资源",
+      "order": 195,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-medialibrary-photoAccessHelper-systemAlbum-guidelines",
+      "title": "系统相册资源使用指导",
+      "order": 196,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-medialibrary-photoAccessHelper-userAlbum-guidelines",
+      "title": "用户相册资源使用指导",
+      "order": 197,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-medialibrary-Readme-CN",
+      "title": "Media Library Kit（媒体文件管理服务）",
+      "order": 198,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-medialibrary-using-ndk-mediaassetmanager-for-request-resource",
+      "title": "使用MediaAssetManager请求媒体资源(C/C++)",
+      "order": 199,
+      "category": "其他"
+    },
+    {
+      "doc_id": "docs-zh-cn-application-dev-media-Readme-CN",
+      "title": "媒体",
+      "order": 200,
+      "category": "其他"
+    }
   ],
   "quick_reference": {
-    "音频播放": "../../docs/zh-cn/application-dev/media/audio/using-ohaudio-for-playback.md",
-    "音频录制": "../../docs/zh-cn/application-dev/media/audio/using-ohaudio-for-recording.md",
-    "音频会话": "../../docs/zh-cn/application-dev/media/audio/audio-session-management.md",
-    "音视频编解码": "../../docs/zh-cn/application-dev/media/avcodec/avcodec-kit-intro.md",
-    "媒体会话": "../../docs/zh-cn/application-dev/media/avsession/avsession-overview.md",
-    "相机预览": "../../docs/zh-cn/application-dev/media/camera/camera-preview.md",
-    "相机拍照": "../../docs/zh-cn/application-dev/media/camera/camera-shooting.md",
-    "相机录像": "../../docs/zh-cn/application-dev/media/camera/camera-recording.md",
-    "数字版权保护": "../../docs/zh-cn/application-dev/media/drm/drm-overview.md",
-    "图片解码": "../../docs/zh-cn/application-dev/media/image/image-decoding.md",
-    "图片编码": "../../docs/zh-cn/application-dev/media/image/image-encoding.md",
-    "图片编辑": "../../docs/zh-cn/application-dev/media/image/image-transformation.md",
-    "视频播放": "../../docs/zh-cn/application-dev/media/media/video-playback.md",
-    "视频录制": "../../docs/zh-cn/application-dev/media/media/video-recording.md",
-    "屏幕录制": "../../docs/zh-cn/application-dev/media/media/using-avscreencapture-ArkTs.md",
-    "视频转码": "../../docs/zh-cn/application-dev/media/media/using-avtranscoder-for-transcodering.md",
-    "媒体库": "../../docs/zh-cn/application-dev/media/medialibrary/photoAccessHelper-overview.md"
+    "开发音频通话功能": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-call-development.md",
+    "音频通话开发概述": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-call-overview.md",
+    "移动全景声管理（仅对系统应用开放）": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-collaborative-management-sys.md",
+    "实现音频低时延耳返": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-ear-monitor-loopback.md",
+    "实现音频耳返": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-ear-monitor.md",
+    "低时延音频播放(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-fast-playback.md",
+    "低时延音频录制(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-fast-recording.md",
+    "查询和监听音频输入设备": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-input-device-management.md",
+    "实现音频输入设备路由切换": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-input-device-switcher.md",
+    "Audio Kit简介": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-kit-intro.md",
+    "音频时延管理": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-latency.md",
+    "响应输出设备变更时合理暂停": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-output-device-change.md",
+    "查询和监听音频输出设备": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-output-device-management.md",
+    "实现音频输出设备路由切换": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-output-device-switcher.md",
+    "提升音频性能体验": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-performance.md",
+    "音频焦点和音频会话介绍": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-playback-concurrency.md",
+    "音频播放开发概述": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-playback-overview.md",
+    "音频播放流管理": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-playback-stream-management.md",
+    "录音并发策略说明": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-recording-concurrency.md",
+    "音频录制开发概述": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-recording-overview.md",
+    "查询和监听其他应用录制状态": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-recording-stream-management.md",
+    "使用AudioSession管理应用音频焦点(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-session-management.md",
+    "空间音频管理（仅对系统应用开放）": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-spatialization-management-sys.md",
+    "离线编辑(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-suite-manual-rendering.md",
+    "实时渲染(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-suite-real-time-rendering.md",
+    "音频编创开发概述(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-suite.md",
+    "音频工作组管理": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\audio-workgroup.md",
+    "分布式音频播放(仅对系统应用开放)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\distributed-audio-playback-sys.md",
+    "管理麦克风静音状态": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\mic-management.md",
+    "低功耗音频播放": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\power-saving-for-playback.md",
+    "空间音频能力查询和状态订阅": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\public-audio-spatialization-management.md",
+    "Audio Kit（音频服务）": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\Readme-CN.md",
+    "从OpenSL ES切换到OHAudio(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\replace-opensles-by-ohaudio.md",
+    "使用AudioCapturer开发音频录制功能(ArkTs)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\using-audiocapturer-for-recording.md",
+    "使用AudioHaptic开发音振协同播放功能(ArkTs)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\using-audiohaptic-for-playback.md",
+    "使用AudioRenderer开发音频播放功能(ArkTs)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\using-audiorenderer-for-playback.md",
+    "推荐使用OHAudio开发音频播放功能(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\using-ohaudio-for-playback.md",
+    "推荐使用OHAudio开发音频录制功能(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\using-ohaudio-for-recording.md",
+    "使用AudioSession管理应用音频焦点(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\using-ohaudio-for-session.md",
+    "使用OpenSL ES开发音频播放功能(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\using-opensl-es-for-playback.md",
+    "使用OpenSL ES开发音频录制功能(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\using-opensl-es-for-recording.md",
+    "使用合适的音频流类型": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\using-right-streamusage-and-sourcetype.md",
+    "使用SoundPlayer开发系统音效播放功能": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\using-soundplayer-for-playback.md",
+    "使用TonePlayer开发音频播放功能(仅对系统应用开放)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\using-toneplayer-for-playback-sys.md",
+    "播放音量管理": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\audio\\volume-management.md",
+    "音频解码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\audio-decoding.md",
+    "音频编码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\audio-encoding.md",
+    "媒体数据解析": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\audio-video-demuxer.md",
+    "媒体数据封装": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\audio-video-muxer.md",
+    "AVCodec Kit简介": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\avcodec-kit-intro.md",
+    "AVCodec支持的格式": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\avcodec-support-formats.md",
+    "获取支持的编解码能力": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\obtain-supported-codecs.md",
+    "创建视频解码器和NativeWindow初始化并行": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\parallel-decoding-nativeWindow.md",
+    "AVCodec Kit（音视频编解码服务）": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\Readme-CN.md",
+    "音频解码同步模式": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\synchronous-audio-decoding.md",
+    "音频编码同步模式": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\synchronous-audio-encoding.md",
+    "视频解码同步模式": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\synchronous-video-decoding.md",
+    "视频编码同步模式": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\synchronous-video-encoding.md",
+    "视频解码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\video-decoding.md",
+    "B帧视频编码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\video-encoding-b-frame.md",
+    "典型场景的视频编码配置": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\video-encoding-configuration-typical-scenarios.md",
+    "ROI视频编码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\video-encoding-ROI.md",
+    "时域可分层视频编码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\video-encoding-temporal-scalability.md",
+    "视频编码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\video-encoding.md",
+    "视频可变帧率": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avcodec\\video-variable-refreshrate.md",
+    "应用接入AVSession场景介绍": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avsession\\avsession-access-scene.md",
+    "后台播放": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avsession\\avsession-background-scene.md",
+    "AVSession Kit简介": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avsession\\avsession-overview.md",
+    "分布式媒体会话概述(仅对系统应用开放)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avsession\\distributed-avsession-overview-sys.md",
+    "本地媒体会话概述": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avsession\\local-avsession-overview.md",
+    "AVSession Kit（音视频播控服务）": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avsession\\Readme-CN.md",
+    "媒体会话控制方(仅对系统应用开放)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avsession\\using-avsession-controller-sys.md",
+    "媒体会话提供方": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avsession\\using-avsession-developer.md",
+    "使用分布式媒体会话(仅对系统应用开放)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avsession\\using-distributed-avsession-sys.md",
+    "媒体会话提供方(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avsession\\using-ohavsession-developer.md",
+    "使用通话设备切换组件": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\avsession\\using-switch-call-devices.md",
+    "相机基础动效(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-animation.md",
+    "自动切换摄像头实践(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-auto-switch.md",
+    "相机启动恢复实践(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-background-recovery.md",
+    "多摄同开(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-concurrent-open.md",
+    "相机控制器(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-control-center.md",
+    "分段式拍照实践(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-deferred-capture-case.md",
+    "分段式拍照(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-deferred-capture.md",
+    "高性能拍照实践(仅对系统应用开放)(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-deferred-photo-case-sys.md",
+    "高性能拍照(仅对系统应用开放)(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-deferred-photo-sys.md",
+    "深度信息(仅对系统应用开放)(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-depth-data-sys.md",
+    "设备输入(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-device-input.md",
+    "相机管理(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-device-management.md",
+    "双路预览(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-dual-channel-preview.md",
+    "适配不同折叠状态的摄像头变更(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-foldable-display.md",
+    "微距能力设置(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-macro.md",
+    "元数据(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-metadata.md",
+    "动态照片拍摄(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-moving-photo.md",
+    "Camera Kit简介": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-overview.md",
+    "性能提升实践(仅对系统应用开放)(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-performance-improvement-sys.md",
+    "通过系统相机拍照和录像(CameraPicker)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-picker.md",
+    "申请相机开发的权限": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-preparation.md",
+    "预览(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-preview.md",
+    "录像实践(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-recording-case.md",
+    "录像(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-recording.md",
+    "会话管理(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-session-management.md",
+    "拍照实践(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-shooting-case.md",
+    "拍照(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-shooting.md",
+    "压力管控(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-system-pressure.md",
+    "手电筒使用(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-torch-use.md",
+    "白平衡设置(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-whitebalance.md",
+    "在Worker线程中使用相机(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\camera-worker.md",
+    "多摄同开(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-concurrent-open.md",
+    "分段式拍照(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-deferred-capture.md",
+    "设备输入(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-device-input.md",
+    "相机管理 (C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-device-management.md",
+    "微距能力设置(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-macro.md",
+    "元数据(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-metadata.md",
+    "预览流二次处理(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-preview-imageReceiver.md",
+    "预览(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-preview.md",
+    "录像实践(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-recording-case.md",
+    "录像(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-recording.md",
+    "会话管理(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-session-management.md",
+    "拍照实践(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-shooting-case.md",
+    "拍照(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-shooting.md",
+    "压力管控(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-system-pressure.md",
+    "手电筒使用(C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\native-camera-torch-use.md",
+    "Camera Kit（相机服务）": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\camera\\Readme-CN.md",
+    "数字版权保护(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\drm\\drm-arkts-dev-guide.md",
+    "基于AVCodec播放DRM节目(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\drm\\drm-avcodec-integration.md",
+    "基于AVPlayer播放DRM节目(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\drm\\drm-avplayer-arkts-integration.md",
+    "数字版权保护(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\drm\\drm-c-dev-guide.md",
+    "DRM Kit 简介": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\drm\\drm-overview.md",
+    "DRM解决方案开发指导": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\drm\\drm-solution-dev-guide.md",
+    "DRM Kit（数字版权保护服务）": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\drm\\Readme-CN.md",
+    "图片解码内存优化(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-allocator-type-c.md",
+    "图片解码内存优化(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-allocator-type.md",
+    "图片解码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-decoding-native.md",
+    "使用ImageSource完成图片解码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-decoding.md",
+    "使用ImageEffect编辑图片": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-effect-guidelines.md",
+    "图片编码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-encoding-native.md",
+    "使用ImagePacker完成图片编码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-encoding.md",
+    "如何处理HEIF图片": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-faqs\\heif-adapter-faq.md",
+    "Image Kit异常处理": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-faqs\\image-error-faq.md",
+    "如何获取图片的旋转角度信息": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-faqs\\image-rotate-faq.md",
+    "Image Kit简介": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-overview.md",
+    "使用Image_NativeModule完成图片编码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-packer-c.md",
+    "使用Image_NativeModule完成多图对象编码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-packer-picture-c.md",
+    "使用ImageSource完成多图对象解码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-picture-decoding.md",
+    "使用ImagePacker完成多图对象编码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-picture-encoding.md",
+    "位图操作": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-pixelmap-operation-native.md",
+    "使用PixelMap完成位图操作": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-pixelmap-operation.md",
+    "使用Image_NativeModule完成图片接收": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-receiver-c.md",
+    "图片接收": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-receiver-native.md",
+    "使用ImageReceiver完成图片接收": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-receiver.md",
+    "使用Image_NativeModule完成图片解码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-source-c.md",
+    "使用Image_NativeModule完成多图对象解码": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-source-picture-c.md",
+    "使用Image_NativeModule编辑图片Exif信息": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-tool-c.md",
+    "编辑图片Exif信息": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-tool.md",
+    "图像变换": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-transformation-native.md",
+    "使用PixelMap完成图像变换": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\image-transformation.md",
+    "使用Image_NativeModule完成位图操作": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\pixelmap-c.md",
+    "Image Kit（图片处理服务）": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\image\\Readme-CN.md",
+    "使用AVImageGenerator提取视频指定时间图像(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\avimagegenerator.md",
+    "使用AVMetadataExtractor提取音视频元数据信息(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\avmetadataextractor.md",
+    "AVScreenCapture录屏基础流程": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\avscreencapture-c-basic-process.md",
+    "AVScreenCapture录屏自定义场景": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\avscreencapture-c-custom-scenarios.md",
+    "录屏常见问题": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\avscreencapture-faqs.md",
+    "转码常见问题": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\avtranscoder-faq.md",
+    "创建异步线程执行AVTranscoder视频转码(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\avtranscoder-practice.md",
+    "Media Kit简介": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\media-kit-intro.md",
+    "使用AVPlayer设置播放URL(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\playback-url-setting-method.md",
+    "Media Kit（媒体服务）": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\Readme-CN.md",
+    "使用AVPlayer播放流媒体(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\streaming-media-playback-development-guide.md",
+    "使用AVPlayer播放音频(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-avplayer-for-playback.md",
+    "使用AVRecorder录制音频(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-avrecorder-for-recording.md",
+    "使用AVScreenCaptureRecorder录屏写文件(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-avscreencapture-ArkTs.md",
+    "使用AVScreenCapture录屏写文件(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-avscreencapture-for-file.md",
+    "使用AVTranscoder实现视频转码(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-avtranscoder-for-transcodering.md",
+    "使用AVImageGenerator获取视频帧(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-ndk-avimagegenerator-for-video.md",
+    "使用AVMetadataExtractor获取元数据(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-ndk-avmetadataextractor-for-media.md",
+    "使用AVPlayer播放音频(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-ndk-avplayer-for-playback.md",
+    "使用AVPlayer播放视频(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-ndk-avplayer-for-video-playback.md",
+    "使用AVRecorder录制音频(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-ndk-avrecorder-for-audio-recording.md",
+    "使用AVRecorder录制视频(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-ndk-avrecorder-for-video-recording.md",
+    "使用AVTranscoder实现视频转码(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-ndk-avtranscoder-for-transcodering.md",
+    "使用LPP播放器播放视频 (C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-ndk-lpp-for-playback.md",
+    "使用SoundPool播放短音频(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\using-soundpool-for-playback.md",
+    "使用AVPlayer播放视频(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\video-playback.md",
+    "使用AVRecorder录制视频(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\video-recording.md",
+    "使用AVPlayer添加视频外挂字幕(ArkTS)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\video-subtitle.md",
+    "屏幕录制支持矩形区域录制": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\media\\video-supports-rectangular-area-recording.md",
+    "使用MovingPhotoView播放动态照片": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\medialibrary\\movingphotoview-guidelines.md",
+    "访问和管理动态照片资源": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\medialibrary\\photoAccessHelper-movingphoto.md",
+    "媒体资源变更通知相关指导": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\medialibrary\\photoAccessHelper-notify-guidelines.md",
+    "Media Library Kit 简介": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\medialibrary\\photoAccessHelper-overview.md",
+    "使用Picker选择媒体库资源": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\medialibrary\\photoAccessHelper-photoviewpicker.md",
+    "开发准备": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\medialibrary\\photoAccessHelper-preparation.md",
+    "媒体资源使用指导": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\medialibrary\\photoAccessHelper-resource-guidelines.md",
+    "保存媒体库资源": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\medialibrary\\photoAccessHelper-savebutton.md",
+    "系统相册资源使用指导": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\medialibrary\\photoAccessHelper-systemAlbum-guidelines.md",
+    "用户相册资源使用指导": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\medialibrary\\photoAccessHelper-userAlbum-guidelines.md",
+    "Media Library Kit（媒体文件管理服务）": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\medialibrary\\Readme-CN.md",
+    "使用MediaAssetManager请求媒体资源(C/C++)": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\medialibrary\\using-ndk-mediaassetmanager-for-request-resource.md",
+    "媒体": "../../docs/zh-cn/application-dev/media/docs/zh-cn/application-dev/media\\Readme-CN.md"
   },
   "document_count": 200
 }
