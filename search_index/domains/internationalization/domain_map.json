@@ -1,65 +1,195 @@
 {
-  "domain": "Internationalization",
-  "overview": "Localization Kit（本地化开发服务）是 OpenHarmony 提供的国际化与本地化框架，涵盖应用国际化（界面设计、区域ID与文化习惯、语言与用户偏好、时间日期、数字与度量衡、电话号码、日历和历法、时区与夏令时、多语言排序、字符处理、本地化名称）、应用本地化（多语言资源、可翻译性、单复数支持）以及本地化测试（伪本地化测试、语言测试）等功能。支持 ArkTS 开发语言。",
+  "domain": "internationalization",
+  "overview": "Localization Kit（本地化）服务）是 OpenHarmony 提供的国际化与本地化框架，涵盖应用国际化（界面设计、区域ID与文化习惯、语言与用户偏好、时间日期、数字与度量衡、电话号码、日历和历法、时区与夏令时、多语言排序、字符处理、本地化名称）、应用本地化（多语言资源、可翻译性、单复数支持）以及本地化测试（伪本地化测试、语言测试）等功能。",
   "core_concepts": [
     "国际化",
     "本地化",
     "区域ID",
-    "时区",
-    "夏令时",
+    "时间日期格式化",
+    "数字与度量衡格式化",
+    "时区与夏令时",
+    "多语言排序",
     "多语言资源",
-    "界面镜像",
-    "字符处理",
     "伪本地化测试",
     "语言测试"
   ],
   "learning_path": [
-    "../../docs/zh-cn/application-dev/internationalization/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-l10n.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-ui-design.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-locale-culture.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-system-language-region.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-preferred-language.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-user-preferences.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-time-date.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-numbers-weights-measures.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-phone-numbers.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-calendar.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-time-zone.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-dst-transition.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-sorting-overview.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-sorting-local.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-sorting-index.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-character-processing.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-display-overview.md",
-    "../../docs/zh-cn/application-dev/internationalization/i18n-language-region-display.md",
-    "../../docs/zh-cn/application-dev/internationalization/l10n-multilingual-resources.md",
-    "../../docs/zh-cn/application-dev/internationalization/l10n-hard-coding-concatenate.md",
-    "../../docs/zh-cn/application-dev/internationalization/l10n-translation-scene.md",
-    "../../docs/zh-cn/application-dev/internationalization/l10n-singular-plural.md",
-    "../../docs/zh-cn/application-dev/internationalization/pseudo-i18n-testing-overview.md",
-    "../../docs/zh-cn/application-dev/internationalization/pseudo-i18n-testing-translation.md",
-    "../../docs/zh-cn/application-dev/internationalization/pseudo-i18n-testing-mirror.md",
-    "../../docs/zh-cn/application-dev/internationalization/linguistic-testing.md"
+    {
+      "doc_id": "i18n-l10n",
+      "title": "国际化和本地化概述",
+      "order": 1,
+      "category": "基础"
+    },
+    {
+      "doc_id": "i18n-ui-design",
+      "title": "国际化界面设计",
+      "order": 2,
+      "category": "基础"
+    },
+    {
+      "doc_id": "i18n-locale-culture",
+      "title": "区域ID与文化习惯划分",
+      "order": 3,
+      "category": "基础"
+    },
+    {
+      "doc_id": "i18n-system-language-region",
+      "title": "系统语言与区域",
+      "order": 4,
+      "category": "核心"
+    },
+    {
+      "doc_id": "i18n-preferred-language",
+      "title": "应用偏好语言",
+      "order": 5,
+      "category": "核心"
+    },
+    {
+      "doc_id": "i18n-user-preferences",
+      "title": "用户偏好",
+      "order": 6,
+      "category": "核心"
+    },
+    {
+      "doc_id": "i18n-time-date",
+      "title": "时间日期国际化",
+      "order": 7,
+      "category": "核心"
+    },
+    {
+      "doc_id": "i18n-numbers-weights-measures",
+      "title": "数字与度量衡国际化",
+      "order": 8,
+      "category": "核心"
+    },
+    {
+      "doc_id": "i18n-phone-numbers",
+      "title": "电话号码格式化",
+      "order": 9,
+      "category": "核心"
+    },
+    {
+      "doc_id": "i18n-calendar",
+      "title": "设置日历和历法",
+      "order": 10,
+      "category": "核心"
+    },
+    {
+      "doc_id": "i18n-time-zone",
+      "title": "时区",
+      "order": 11,
+      "category": "核心"
+    },
+    {
+      "doc_id": "i18n-dst-transition",
+      "title": "夏令时跳变",
+      "order": 12,
+      "category": "高级"
+    },
+    {
+      "doc_id": "i18n-sorting-overview",
+      "title": "多语言排序概述",
+      "order": 13,
+      "category": "核心"
+    },
+    {
+      "doc_id": "i18n-sorting-local",
+      "title": "本地习惯排序",
+      "order": 14,
+      "category": "核心"
+    },
+    {
+      "doc_id": "i18n-sorting-index",
+      "title": "创建索引",
+      "order": 15,
+      "category": "核心"
+    },
+    {
+      "doc_id": "i18n-character-processing",
+      "title": "字符处理",
+      "order": 16,
+      "category": "高级"
+    },
+    {
+      "doc_id": "i18n-display-overview",
+      "title": "本地化名称概述",
+      "order": 17,
+      "category": "核心"
+    },
+    {
+      "doc_id": "i18n-language-region-display",
+      "title": "本地化语言与地区名称",
+      "order": 18,
+      "category": "核心"
+    },
+    {
+      "doc_id": "l10n-multilingual-resources",
+      "title": "提供多语言资源",
+      "order": 19,
+      "category": "核心"
+    },
+    {
+      "doc_id": "l10n-hard-coding-concatenate",
+      "title": "避免硬编码与拼接",
+      "order": 20,
+      "category": "核心"
+    },
+    {
+      "doc_id": "l10n-translation-scene",
+      "title": "提供翻译场景",
+      "order": 21,
+      "category": "核心"
+    },
+    {
+      "doc_id": "l10n-singular-plural",
+      "title": "支持单复数",
+      "order": 22,
+      "category": "核心"
+    },
+    {
+      "doc_id": "pseudo-i18n-testing-overview",
+      "title": "伪本地化测试概述",
+      "order": 23,
+      "category": "测试"
+    },
+    {
+      "doc_id": "pseudo-i18n-testing-translation",
+      "title": "翻译伪本地化测试",
+      "order": 24,
+      "category": "测试"
+    },
+    {
+      "doc_id": "pseudo-i18n-testing-mirror",
+      "title": "界面镜像伪本地化测试",
+      "order": 25,
+      "category": "测试"
+    },
+    {
+      "doc_id": "linguistic-testing",
+      "title": "语言测试",
+      "order": 26,
+      "category": "测试"
+    }
   ],
   "quick_reference": {
     "国际化概述": "../../docs/zh-cn/application-dev/internationalization/i18n-l10n.md",
     "界面设计": "../../docs/zh-cn/application-dev/internationalization/i18n-ui-design.md",
     "区域ID": "../../docs/zh-cn/application-dev/internationalization/i18n-locale-culture.md",
-    "系统语言": "../../docs/zh-cn/application-dev/internationalization/i18n-system-language-region.md",
+    "系统语言与区域": "../../docs/zh-cn/application-dev/internationalization/i18n-system-language-region.md",
     "应用偏好语言": "../../docs/zh-cn/application-dev/internationalization/i18n-preferred-language.md",
-    "时间日期": "../../docs/zh-cn/application-dev/internationalization/i18n-time-date.md",
-    "数字与度量衡": "../../docs/zh-cn/application-dev/internationalization/i18n-numbers-weights-measures.md",
-    "电话号码": "../../docs/zh-cn/application-dev/internationalization/i18n-phone-numbers.md",
+    "用户偏好": "../../docs/zh-cn/application-dev/internationalization/i18n-user-preferences.md",
+    "时间日期格式化": "../../docs/zh-cn/application-dev/internationalization/i18n-time-date.md",
+    "数字与度量衡格式化": "../../docs/zh-cn/application-dev/internationalization/i18n-numbers-weights-measures.md",
+    "电话号码格式化": "../../docs/zh-cn/application-dev/internationalization/i18n-phone-numbers.md",
     "日历和历法": "../../docs/zh-cn/application-dev/internationalization/i18n-calendar.md",
     "时区": "../../docs/zh-cn/application-dev/internationalization/i18n-time-zone.md",
-    "夏令时": "../../docs/zh-cn/application-dev/internationalization/i18n-dst-transition.md",
+    "夏令时跳变": "../../docs/zh-cn/application-dev/internationalization/i18n-dst-transition.md",
     "多语言排序": "../../docs/zh-cn/application-dev/internationalization/i18n-sorting-overview.md",
     "字符处理": "../../docs/zh-cn/application-dev/internationalization/i18n-character-processing.md",
     "本地化名称": "../../docs/zh-cn/application-dev/internationalization/i18n-display-overview.md",
     "多语言资源": "../../docs/zh-cn/application-dev/internationalization/l10n-multilingual-resources.md",
-    "避免硬编码": "../../docs/zh-cn/application-dev/internationalization/l10n-hard-coding-concatenate.md",
-    "单复数": "../../docs/zh-cn/application-dev/internationalization/l10n-singular-plural.md",
+    "避免硬编码与拼接": "../../docs/zh-cn/application-dev/internationalization/l10n-hard-coding-concatenate.md",
+    "支持单复数": "../../docs/zh-cn/application-dev/internationalization/l10n-singular-plural.md",
     "伪本地化测试": "../../docs/zh-cn/application-dev/internationalization/pseudo-i18n-testing-overview.md",
     "语言测试": "../../docs/zh-cn/application-dev/internationalization/linguistic-testing.md"
   },
