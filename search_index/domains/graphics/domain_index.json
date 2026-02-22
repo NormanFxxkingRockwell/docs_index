@@ -21,337 +21,787 @@
       "doc_id": "Readme-CN",
       "title": "ArkGraphics 2D（方舟2D图形服务）",
       "path": "../../docs/zh-cn/application-dev/graphics/Readme-CN.md",
-      "summary": "ArkGraphics 2D（方舟2D图形服务）的总体介绍，包含可变帧率能力、过度绘制调试、图形绘制与显示、文本开发、离线图像处理、Native API等多种功能模块的导航。",
-      "key_topics": ["ArkGraphics 2D", "图形服务", "绘制", "文本"]
+      "summary": "暂无摘要",
+      "sections": [],
+      "key_topics": []
     },
     {
       "doc_id": "arkgraphics2D-introduction",
       "title": "ArkGraphics 2D简介",
       "path": "../../docs/zh-cn/application-dev/graphics/arkgraphics2D-introduction.md",
-      "summary": "ArkGraphics 2D（方舟2D图形服务）主要提供图形绘制与显示相关的能力，包括图像处理、色域管理、可变帧率、自绘制、Native能力等。",
-      "key_topics": ["ArkGraphics 2D", "图形绘制", "可变帧率", "Native API"]
-    },
-    {
-      "doc_id": "displaysync-overview",
-      "title": "可变帧率简介",
-      "path": "../../docs/zh-cn/application-dev/graphics/displaysync-overview.md",
-      "summary": "介绍可变帧率能力，支持开发者自定义应用业务的帧率，包括动画帧率、UI帧率、自绘制内容帧率、非UI线程帧率等场景。",
-      "key_topics": ["可变帧率", "帧率控制", "LTPO屏幕", "功耗优化"]
-    },
-    {
-      "doc_id": "displaysync-animation",
-      "title": "请求动画绘制帧率",
-      "path": "../../docs/zh-cn/application-dev/graphics/displaysync-animation.md",
-      "summary": "介绍如何为属性动画和显式动画配置不同的期望绘制帧率，通过ExpectedFrameRateRange参数实现。",
-      "key_topics": ["可变帧率", "动画", "ExpectedFrameRateRange"]
-    },
-    {
-      "doc_id": "displaysync-ui",
-      "title": "请求UI绘制帧率",
-      "path": "../../docs/zh-cn/application-dev/graphics/displaysync-ui.md",
-      "summary": "介绍如何通过DisplaySync实现以独立帧率绘制更新操作UI界面，包括创建DisplaySync对象、设置帧率和注册订阅函数。",
-      "key_topics": ["可变帧率", "DisplaySync", "UI绘制"]
-    },
-    {
-      "doc_id": "displaysync-xcomponent",
-      "title": "请求自绘制内容绘制帧率",
-      "path": "../../docs/zh-cn/application-dev/graphics/displaysync-xcomponent.md",
-      "summary": "介绍如何基于XComponent在Native侧申请独立的绘制帧率进行内容开发，适用于游戏、自绘制UI框架对接等场景。",
-      "key_topics": ["可变帧率", "XComponent", "Native", "自绘制"]
-    },
-    {
-      "doc_id": "displaysoloist-native-guidelines",
-      "title": "NativeDisplaySoloist开发指导 (C/C++)",
-      "path": "../../docs/zh-cn/application-dev/graphics/displaysoloist-native-guidelines.md",
-      "summary": "介绍如何在独立线程中实现帧率控制的Native侧业务，通过DisplaySoloist实现，适用于游戏、自绘制UI框架对接等场景。",
-      "key_topics": ["可变帧率", "DisplaySoloist", "Native", "独立线程"]
-    },
-    {
-      "doc_id": "overdraw-dfx-guidelines",
-      "title": "过度绘制调试使用指导",
-      "path": "../../docs/zh-cn/application-dev/graphics/overdraw-dfx-guidelines.md",
-      "summary": "介绍过度绘制调试功能的使用方式，包括通过shell命令开启或/关闭，以及如何进行过度绘制的分析和优化。",
-      "key_topics": ["过度绘制", "调试", "性能优化"]
-    },
-    {
-      "doc_id": "graphic-drawing-overview",
-      "title": "图形绘制与显示开发概述",
-      "path": "../../docs/zh-cn/application-dev/graphics/graphic-drawing-overview.md",
-      "summary": "介绍图形绘制的主要能力范围及实现流程，包括画布操作、绘制效果、图元绘制，以及如何显示绘制结果。",
-      "key_topics": ["图形绘制", "Canvas", "绘制效果", "图元绘制"]
-    },
-    {
-      "doc_id": "canvas-get-result-draw-arkts",
-      "title": "画布的获取与绘制结果的显示（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/graphics/canvas-get-result-draw-arkts.md",
-      "summary": "介绍如何通过RenderNode获取可直接上屏显示的Canvas画布，以及如何获取离屏Canvas并进行绘制结果的显示。",
-      "key_topics": ["Canvas", "RenderNode", "ArkTS", "绘制"]
-    },
-    {
-      "doc_id": "canvas-get-result-draw-c",
-      "title": "画布的获取与绘制结果的显示（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/graphics/canvas-get-result-draw-c.md",
-      "summary": "介绍如何在Native侧获取Canvas画布，并进行绘制结果的显示，包括通过NativeWindow创建Canvas和将绘制结果拷贝到buffer。",
-      "key_topics": ["Canvas", "Native", "C/C++", "绘制"]
-    },
-    {
-      "doc_id": "canvas-operation-state-arkts",
-      "title": "画布操作及状态处理（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/graphics/canvas-operation-state-arkts.md",
-      "summary": "介绍画布的操作和状态处理，包括裁剪操作、矩阵变换（平移、缩放、旋转）、画布状态保存与恢复等。",
-      "key_topics": ["Canvas", "裁剪", "矩阵变换", "状态保存"]
-    },
-    {
-      "doc_id": "canvas-operation-state-c",
-      "title": "画布操作及状态处理（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/graphics/canvas-operation-state-c.md",
-      "summary": "介绍画布的操作和状态处理，包括裁剪操作、矩阵变换（平移、缩放、旋转）、画布状态保存与恢复等。",
-      "key_topics": ["Canvas", "裁剪", "矩阵变换", "状态保存"]
-    },
-    {
-      "doc_id": "drawing-effect-overview",
-      "title": "绘制效果概述",
-      "path": "../../docs/zh-cn/application-dev/graphics/drawing-effect-overview.md",
-      "summary": "介绍绘制效果的基础概念，包括画刷（Brush）用于填充效果、画笔（Pen）用于描边效果，以及混合模式、路径效果、着色器效果、滤波效果等复杂效果。",
-      "key_topics": ["绘制效果", "画刷", "画笔", "混合模式"]
+      "summary": "暂无摘要",
+      "sections": [
+        "能力范围",
+        "使用场景",
+        "亮点特征"
+      ],
+      "key_topics": [
+        "能力范围",
+        "使用场景",
+        "亮点特征"
+      ]
     },
     {
       "doc_id": "basic-drawing-effect-arkts",
       "title": "基础绘制效果（ArkTS）",
       "path": "../../docs/zh-cn/application-dev/graphics/basic-drawing-effect-arkts.md",
-      "summary": "介绍基础绘制效果的设置，包括通过画刷设置填充颜色和抗锯齿，通过画笔设置描边颜色、线宽、线帽样式、转角样式等。",
-      "key_topics": ["绘制效果", "画刷", "画笔", "填充", "描边"]
+      "summary": "在进行绘制时，可以进行一些基础效果的设置，比如设置填充颜色、设置抗锯齿、设置图形描边、设置图形线条连接样式等。",
+      "sections": [
+        "填充效果",
+        "描边效果"
+      ],
+      "key_topics": [
+        "基础绘制效果",
+        "画刷",
+        "画笔",
+        "填充",
+        "描边",
+        "抗锯齿",
+        "ArkTS",
+        "填充效果",
+        "描边效果"
+      ]
     },
     {
       "doc_id": "basic-drawing-effect-c",
       "title": "基础绘制效果（C/C++）",
       "path": "../../docs/zh-cn/application-dev/graphics/basic-drawing-effect-c.md",
-      "summary": "介绍基础绘制效果的设置，包括通过画刷设置填充颜色和抗锯齿，通过画笔设置描边颜色、线宽、线帽样式、转角样式等。",
-      "key_topics": ["绘制效果", "画刷", "画笔", "填充", "描边"]
+      "summary": "在进行绘制时，可以进行一些基础效果的设置，比如设置填充颜色、设置抗锯齿、设置图形描边、设置图形线条连接样式等。",
+      "sections": [
+        "填充效果",
+        "描边效果"
+      ],
+      "key_topics": [
+        "基础绘制效果",
+        "画刷",
+        "画笔",
+        "填充",
+        "描边",
+        "抗锯齿",
+        "C/C++",
+        "填充效果",
+        "描边效果"
+      ]
+    },
+    {
+      "doc_id": "canvas-get-result-draw-arkts",
+      "title": "画布的获取与绘制结果的显示（ArkTS）",
+      "path": "../../docs/zh-cn/application-dev/graphics/canvas-get-result-draw-arkts.md",
+      "summary": "Canvas即画布，提供绘制基本图形的能力，用于在屏幕上绘制图形和处理图形。开发者可以通过Canvas实现自定义的绘图效果，增强应用的用户体验。",
+      "sections": [
+        "获取可直接显示的Canvas画布",
+        "离屏Canvas画布的获取与显示"
+      ],
+      "key_topics": [
+        "Canvas",
+        "RenderNode",
+        "ArkTS",
+        "绘制",
+        "获取可直接显示的Canvas画布",
+        "离屏Canvas画布的获取与显示"
+      ]
+    },
+    {
+      "doc_id": "canvas-get-result-draw-c",
+      "title": "画布的获取与绘制结果的显示（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/graphics/canvas-get-result-draw-c.md",
+      "summary": "Canvas即画布，提供绘制基本图形的能力，用于在屏幕上绘制图形和处理图形。开发者可以通过Canvas实现自定义的绘图效果，增强应用的用户体验。",
+      "sections": [
+        "获取可直接显示的Canvas画布",
+        "离屏Canvas画布的获取与显示"
+      ],
+      "key_topics": [
+        "Canvas",
+        "Native",
+        "C/C++",
+        "绘制",
+        "获取可直接显示的Canvas画布",
+        "离屏Canvas画布的获取与显示"
+      ]
+    },
+    {
+      "doc_id": "canvas-operation-state-arkts",
+      "title": "画布操作及状态处理（ArkTS）",
+      "path": "../../docs/zh-cn/application-dev/graphics/canvas-operation-state-arkts.md",
+      "summary": "创建或获取Canvas画布之后，可以基于画布进一步地进行图形操作和状态处理。画布操作属于可选操作，开发者可以根据场景需要进行。需要先进行画布操作，再进行后续绘制，只有这样画布操作才有效果。",
+      "sections": [
+        "裁剪操作",
+        "矩阵变换操作",
+        "画布状态保存与恢复"
+      ],
+      "key_topics": [
+        "Canvas",
+        "裁剪",
+        "矩阵变换",
+        "状态保存",
+        "ArkTS",
+        "裁剪操作",
+        "矩阵变换操作",
+        "画布状态保存与恢复"
+      ]
+    },
+    {
+      "doc_id": "canvas-operation-state-c",
+      "title": "画布操作及状态处理（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/graphics/canvas-operation-state-c.md",
+      "summary": "创建或获取Canvas画布之后，可以基于画布进一步地进行图形操作和状态处理。画布操作属于可选操作，开发者可以根据场景需要进行。需要先进行画布操作，再进行后续绘制，只有这样画布操作才有效果。",
+      "sections": [
+        "裁剪操作",
+        "矩阵变换操作",
+        "画布状态保存与恢复"
+      ],
+      "key_topics": [
+        "Canvas",
+        "裁剪",
+        "矩阵变换",
+        "状态保存",
+        "C/C++",
+        "裁剪操作",
+        "矩阵变换操作",
+        "画布状态保存与恢复"
+      ]
     },
     {
       "doc_id": "complex-drawing-effect-arkts",
       "title": "复杂绘制效果（ArkTS）",
       "path": "../../docs/zh-cn/application-dev/graphics/complex-drawing-effect-arkts.md",
       "summary": "介绍复杂绘制效果，包括混合模式、路径效果（虚线效果）、着色器效果（线性渐变、径向渐变、扇形渐变）、滤波效果（颜色滤波器、图像滤波器、蒙版滤波器）等。",
-      "key_topics": ["绘制效果", "混合模式", "渐变", "滤波效果"]
+      "sections": [
+        "混合模式",
+        "路径效果",
+        "着色器效果",
+        "滤波器效果"
+      ],
+      "key_topics": [
+        "复杂绘制效果",
+        "混合模式",
+        "渐变",
+        "滤波效果",
+        "ArkTS",
+        "路径效果",
+        "着色器效果",
+        "滤波器效果"
+      ]
     },
     {
       "doc_id": "complex-drawing-effect-c",
       "title": "复杂绘制效果（C/C++）",
       "path": "../../docs/zh-cn/application-dev/graphics/complex-drawing-effect-c.md",
       "summary": "介绍复杂绘制效果，包括混合模式、路径效果（虚线效果）、着色器效果（线性渐变、径向渐变、扇形渐变）、滤波效果（颜色滤波器、图像滤波器、蒙版滤波器）等。",
-      "key_topics": ["绘制效果", "混合模式", "渐变", "滤波效果"]
-    },
-    {
-      "doc_id": "primitive-drawing-overview",
-      "title": "图元绘制概述",
-      "path": "../../docs/zh-cn/application-dev/graphics/primitive-drawing-overview.md",
-      "summary": "介绍图元绘制是图形绘制的最后一步，包括几何形状绘制、图片绘制和字块绘制。",
-      "key_topics": ["图元绘制", "几何形状", "图片绘制", "字块绘制"]
-    },
-    {
-      "doc_id": "geometric-shape-drawing-arkts",
-      "title": "几何形状绘制（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/graphics/geometric-shape-drawing-arkts.md",
-      "summary": "介绍几何形状的绘制，包括点、圆弧、圆、路径、区域、矩形、圆角矩形等。",
-      "key_topics": ["图元绘制", "几何形状", "点", "圆", "矩形", "路径"]
-    },
-    {
-      "doc_id": "geometric-shape-drawing-c",
-      "title": "几何形状绘制（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/graphics/geometric-shape-drawing-c.md",
-      "summary": "介绍几何形状的绘制，包括点、圆弧、圆、路径、区域、矩形、圆角矩形等。",
-      "key_topics": ["图元绘制", "几何形状", "点", "圆", "矩形", "路径"]
-    },
-    {
-      "doc_id": "pixelmap-drawing-arkts",
-      "title": "图片绘制（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/graphics/pixelmap-drawing-arkts.md",
-      "summary": "介绍位图的绘制，包括创建PixelMap、编辑PixelMap中的像素、绘制PixelMap到画布上。",
-      "key_topics": ["图元绘制", "图片绘制", "PixelMap", "位图"]
-    },
-    {
-      "doc_id": "pixelmap-drawing-c",
-      "title": "图片绘制（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/graphics/pixelmap-drawing-c.md",
-      "summary": "介绍位图的绘制，包括创建OH_PixelmapNative像素图对象、创建PixelMap、绘制PixelMap到画布上。",
-      "key_topics": ["图元绘制", "图片绘制", "PixelMap", "位图"]
-    },
-    {
-      "doc_id": "textblock-drawing-arkts",
-      "title": "字块绘制（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/graphics/textblock-drawing-arkts.md",
-      "summary": "介绍字块的绘制，包括基本字块绘制、文字描边、文字渐变、主题字体、单字绘制等。",
-      "key_topics": ["图元绘制", "字块绘制", "TextBlob", "文字描边", "文字渐变"]
-    },
-    {
-      "doc_id": "textblock-drawing-c",
-      "title": "字块绘制（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/graphics/textblock-drawing-c.md",
-      "summary": "介绍字块的绘制，包括基本字块绘制、文字描边、文字渐变、主题字体、单字绘制等。",
-      "key_topics": ["图元绘制", "字块绘制", "TextBlob", "文字描边", "文字渐变"]
-    },
-    {
-      "doc_id": "text-overview",
-      "title": "文本开发概述",
-      "path": "../../docs/zh-cn/application-dev/graphics/text-overview.md",
-      "summary": "介绍字体引擎开发框架支持的能力范围，包括字体管理、字体样式、文本排版、文本测量、文本绘制等。",
-      "key_topics": ["文本", "字体引擎", "字体管理", "文本排版", "文本测量"]
-    },
-    {
-      "doc_id": "theme-font-arkts",
-      "title": "使用主题字体（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/graphics/theme-font-arkts.md",
-      "summary": "介绍主题字体的使用，主题字体是系统主题应用中能使用的字体，通过FontCollection.getGlobalInstance()获取全局字体集对象。",
-      "key_topics": ["字体管理", "主题字体", "FontCollection"]
-    },
-    {
-      "doc_id": "theme-font-c",
-      "title": "使用主题字体（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/graphics/theme-font-c.md",
-      "summary": "介绍主题字体的使用，主题字体是系统主题应用中能使用的字体，通过OH_Drawing_GetFontCollectionGlobalInstance()获取全局字体集对象。",
-      "key_topics": ["字体管理", "主题字体", "FontCollection"]
-    },
-    {
-      "doc_id": "custom-font-arkts",
-      "title": "自定义字体的注册和使用（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/graphics/custom-font-arkts.md",
-      "summary": "介绍自定义字体的注册和使用，包括将字体文件注册到系统中，以及使用已注册的自定义字体进行文本渲染。",
-      "key_topics": ["字体管理", "自定义字体", "字体注册"]
-    },
-    {
-      "doc_id": "custom-font-c",
-      "title": "自定义字体的注册和使用（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/graphics/custom-font-c.md",
-      "summary": "介绍自定义字体的注册和使用，包括将字体文件注册到系统中，以及使用已注册的自定义字体进行文本渲染。",
-      "key_topics": ["字体管理", "自定义字体", "字体注册"]
-    },
-    {
-      "doc_id": "system-font-arkts",
-      "title": "系统字体的信息获取和使用（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/graphics/system-font-arkts.md",
-      "summary": "介绍系统字体的信息获取和使用，通过font.getUIFontConfig()获取系统字体配置信息，并根据字体家族名进行系统字体的切换和使用。",
-      "key_topics": ["字体管理", "系统字体", "字体配置"]
-    },
-    {
-      "doc_id": "system-font-c",
-      "title": "系统字体的信息获取和使用（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/graphics/system-font-c.md",
-      "summary": "介绍系统字体的信息获取和使用，包括获取系统字体配置信息、根据字体家族名进行系统字体的切换和使用、禁用系统字体。",
-      "key_topics": ["字体管理", "系统字体", "字体配置", "禁用系统字体"]
-    },
-    {
-      "doc_id": "text-measure-arkts",
-      "title": "文本测量（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/graphics/text-measure-arkts.md",
-      "summary": "介绍文本测量的能力，包括获取最长行宽度、获取文本行对象数组、获取行度量信息等。",
-      "key_topics": ["文本测量", "文本宽度", "行度量", "行数"]
-    },
-    {
-      "doc_id": "text-measure-c",
-      "title": "文本测量（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/graphics/text-measure-c.md",
-      "summary": "介绍文本测量的能力，包括获取最长行宽度、获取段落行数、获取行度量信息、获取字符间距等。",
-      "key_topics": ["文本测量", "文本宽度", "行度量", "行数"]
-    },
-    {
-      "doc_id": "simple-text-arkts",
-      "title": "简单文本绘制与显示（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/graphics/simple-text-arkts.md",
-      "summary": "介绍简单文本的绘制与显示，包括选择合适的字体、大小和颜色完成渲染。",
-      "key_topics": ["文本绘制", "简单文本", "字体样式"]
-    },
-    {
-      "doc_id": "simple-text-c",
-      "title": "简单文本绘制与显示（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/graphics/simple-text-c.md",
-      "summary": "介绍简单文本的绘制与显示，包括选择合适的字体、大小和颜色完成渲染。",
-      "key_topics": ["文本绘制", "简单文本", "字体样式"]
+      "sections": [
+        "混合模式",
+        "路径效果",
+        "着色器效果",
+        "滤波器效果"
+      ],
+      "key_topics": [
+        "复杂绘制效果",
+        "混合模式",
+        "渐变",
+        "滤波效果",
+        "C/C++",
+        "路径效果",
+        "着色器效果",
+        "滤波器效果"
+      ]
     },
     {
       "doc_id": "complex-text-arkts",
       "title": "复杂文本绘制与显示（ArkTS）",
       "path": "../../docs/zh-cn/application-dev/graphics/complex-text-arkts.md",
-      "summary": "介绍复杂文本的绘制与显示，包括多语言文本、多行文本、多样式文本（装饰线、字体特征、可变字体、文本阴影、占位符、自动间距、垂直对齐、上下标、高对比度、行高调整、行间距调整）。",
-      "key_topics": ["文本绘制", "复杂文本", "多语言", "多样式", "行高调整"]
+      "summary": "介绍复杂文本的绘制与显示，包括多语言文本、多行文本、多样式文本（装饰线、字体特征、可变字体、文本阴影、占位符、自动间距、垂直对齐、上下标、高对比度、行高调整、行间距调整）等。",
+      "sections": [
+        "多语言文本绘制与显示",
+        "多行文本绘制与显示",
+        "多样式文本绘制与显示"
+      ],
+      "key_topics": [
+        "复杂文本",
+        "多语言",
+        "多行文本",
+        "装饰线",
+        "字体特征",
+        "可变字体",
+        "文本阴影",
+        "占位符",
+        "ArkTS",
+        "多语言文本绘制与显示",
+        "多行文本绘制与显示",
+        "多样式文本绘制与显示"
+      ]
     },
     {
       "doc_id": "complex-text-c",
       "title": "复杂文本绘制与显示（C/C++）",
       "path": "../../docs/zh-cn/application-dev/graphics/complex-text-c.md",
       "summary": "介绍复杂文本的绘制与显示，包括多语言文本、多行文本、多样式文本（装饰线、字体特征、可变字体、文本阴影、占位符、自动间距、渐变色、垂直对齐、上下标、高对比度、行高调整、行间距调整）、样式拷贝。",
-      "key_topics": ["文本绘制", "复杂文本", "多语言", "多样式", "行高调整"]
+      "sections": [
+        "多语言文本绘制与显示",
+        "多行文本绘制与显示",
+        "多样式文本绘制与显示",
+        "样式的拷贝、绘制与显示"
+      ],
+      "key_topics": [
+        "复杂文本",
+        "多语言",
+        "多行文本",
+        "装饰线",
+        "字体特征",
+        "可变字体",
+        "文本阴影",
+        "占位符",
+        "C/C++",
+        "多语言文本绘制与显示",
+        "多行文本绘制与显示",
+        "多样式文本绘制与显示",
+        "样式的拷贝、绘制与显示"
+      ]
     },
     {
-      "doc_id": "text-custom-arkts",
-      "title": "自定义文本绘制与显示（ArkTS）",
-      "path": "../../docs/zh-cn/application-dev/graphics/text-custom-arkts.md",
-      "summary": "介绍自定义文本绘制与显示，包括文本塑形能力，获取文本的底层字形信息，实现完全自定义的排版逻辑和绘制操作。",
-      "key_topics": ["文本绘制", "文本塑形", "字形信息", "自定义排版"]
+      "doc_id": "custom-font-arkts",
+      "title": "自定义字体的注册和使用（ArkTS）",
+      "path": "../../docs/zh-cn/application-dev/graphics/custom-font-arkts.md",
+      "summary": "自定义字体是指开发者根据应用需求创建或选择的字体，通常用于实现特定的文字风格或满足独特的设计要求。当应用需要使用特定的文本样式和字符集时，可以注册并使用自定义字体进行文本渲染。",
+      "sections": [
+        "实现流程",
+        "效果展示"
+      ],
+      "key_topics": [
+        "字体管理",
+        "自定义字体",
+        "字体注册",
+        "ArkTS",
+        "实现流程",
+        "效果展示"
+      ]
     },
     {
-      "doc_id": "text-custom-c",
-      "title": "自定义文本绘制与显示（C/C++）",
-      "path": "../../docs/zh-cn/application-dev/graphics/text-custom-c.md",
-      "summary": "介绍自定义文本绘制与显示，包括文本塑形能力，获取文本的底层字形信息，实现完全自定义的排版逻辑和绘制操作。",
-      "key_topics": ["文本绘制", "文本塑形", "字形信息", "自定义排版"]
+      "doc_id": "custom-font-c",
+      "title": "自定义字体的注册和使用（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/graphics/custom-font-c.md",
+      "summary": "自定义字体是指开发者根据应用需求创建或选择的字体，通常用于实现特定的文字风格或满足独特的设计要求。当应用需要使用特定的文本样式和字符集时，可以注册并使用自定义字体进行文本渲染。",
+      "sections": [
+        "实现流程"
+      ],
+      "key_topics": [
+        "字体管理",
+        "自定义字体",
+        "字体注册",
+        "C/C++",
+        "实现流程"
+      ]
     },
     {
-      "doc_id": "text-faqs",
-      "title": "文本开发常见问题",
-      "path": "../../docs/zh-cn/application-dev/graphics/text-faqs.md",
-      "summary": "介绍文本开发的常见问题，包括如何对找不到字形的字符进行显示优化，通过开关开启后，未找到字形的字符会强制显示为豆腐块。",
-      "key_topics": ["文本", "常见问题", "字形", "豆腐块"]
+      "doc_id": "displaysoloist-native-guidelines",
+      "title": "NativeDisplaySoloist开发指导 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/graphics/displaysoloist-native-guidelines.md",
+      "summary": "暂无摘要",
+      "sections": [
+        "开发示例"
+      ],
+      "key_topics": [
+        "开发示例"
+      ]
+    },
+    {
+      "doc_id": "displaysync-animation",
+      "title": "请求动画绘制帧率",
+      "path": "../../docs/zh-cn/application-dev/graphics/displaysync-animation.md",
+      "summary": "暂无摘要",
+      "sections": [
+        "请求属性动画的绘制帧率",
+        "请求显式动画的绘制帧率"
+      ],
+      "key_topics": [
+        "请求属性动画的绘制帧率",
+        "请求显式动画的绘制帧率"
+      ]
+    },
+    {
+      "doc_id": "displaysync-overview",
+      "title": "可变帧率简介",
+      "path": "../../docs/zh-cn/application-dev/graphics/displaysync-overview.md",
+      "summary": "暂无摘要",
+      "sections": [
+        "使用场景",
+        "运作机制",
+        "约束与限制"
+      ],
+      "key_topics": [
+        "使用场景",
+        "运作机制",
+        "约束与限制"
+      ]
+    },
+    {
+      "doc_id": "displaysync-ui",
+      "title": "请求UI绘制帧率",
+      "path": "../../docs/zh-cn/application-dev/graphics/displaysync-ui.md",
+      "summary": "暂无摘要",
+      "sections": [],
+      "key_topics": []
+    },
+    {
+      "doc_id": "displaysync-xcomponent",
+      "title": "请求自绘制内容绘制帧率",
+      "path": "../../docs/zh-cn/application-dev/graphics/displaysync-xcomponent.md",
+      "summary": "暂无摘要",
+      "sections": [],
+      "key_topics": []
+    },
+    {
+      "doc_id": "drawing-effect-overview",
+      "title": "绘制效果概述",
+      "path": "../../docs/zh-cn/application-dev/graphics/drawing-effect-overview.md",
+      "summary": "暂无摘要",
+      "sections": [],
+      "key_topics": []
     },
     {
       "doc_id": "effectkit-filter-c",
       "title": "添加图像效果（C/C++）",
       "path": "../../docs/zh-cn/application-dev/graphics/effectkit-filter-c.md",
-      "summary": "介绍离线图像处理时的图像效果设置，包括模糊、提亮、灰度、反色等效果，通过Filter接口实现。",
-      "key_topics": ["图像处理", "图像效果", "模糊", "灰度", "反色"]
+      "summary": "在离线处理图像时，可以进行一些图像效果的设置以获取视觉上的不同呈现，比如设置图像模糊程度、调节图像亮度和灰度、设置图像反色等。",
+      "sections": [],
+      "key_topics": []
     },
     {
-      "doc_id": "native-buffer-guidelines",
-      "title": "NativeBuffer开发指导 (C/C++)",
-      "path": "../../docs/zh-cn/application-dev/graphics/native-buffer-guidelines.md",
-      "summary": "介绍NativeBuffer模块提供的共享内存功能，支持内存的申请、使用、查询和释放等操作。",
-      "key_topics": ["NativeBuffer", "共享内存", "ION内存"]
+      "doc_id": "geometric-shape-drawing-arkts",
+      "title": "几何形状绘制（ArkTS）",
+      "path": "../../docs/zh-cn/application-dev/graphics/geometric-shape-drawing-arkts.md",
+      "summary": "当前支持绘制的几何形状，主要包括以下几种：",
+      "sections": [
+        "绘制点",
+        "绘制圆弧",
+        "绘制圆",
+        "绘制路径",
+        "绘制区域",
+        "绘制矩形",
+        "绘制圆角矩形"
+      ],
+      "key_topics": [
+        "图元绘制",
+        "几何形状",
+        "点",
+        "圆",
+        "矩形",
+        "路径",
+        "ArkTS",
+        "绘制点",
+        "绘制圆弧",
+        "绘制圆",
+        "绘制路径",
+        "绘制区域",
+        "绘制矩形",
+        "绘制圆角矩形"
+      ]
     },
     {
-      "doc_id": "native-fence-guidelines",
-      "title": "GPU/CPU内存访问同步操作开发指南 (C/C++)",
-      "path": "../../docs/zh-cn/application-dev/graphics/native-fence-guidelines.md",
-      "summary": "介绍NativeFence模块管理fenceFd同步状态，包括设置阻塞时间、永久阻塞、关闭fenceFd以及检查其有效性。",
-      "key_topics": ["NativeFence", "同步", "fenceFd", "GPU/CPU同步"]
+      "doc_id": "geometric-shape-drawing-c",
+      "title": "几何形状绘制（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/graphics/geometric-shape-drawing-c.md",
+      "summary": "当前支持绘制的几何形状，主要包括以下几种：",
+      "sections": [
+        "绘制点",
+        "绘制圆弧",
+        "绘制圆",
+        "绘制路径",
+        "绘制区域",
+        "绘制矩形",
+        "绘制圆角矩形"
+      ],
+      "key_topics": [
+        "图元绘制",
+        "几何形状",
+        "点",
+        "圆",
+        "矩形",
+        "路径",
+        "C/C++",
+        "绘制点",
+        "绘制圆弧",
+        "绘制圆",
+        "绘制路径",
+        "绘制区域",
+        "绘制矩形",
+        "绘制圆角矩形"
+      ]
     },
     {
-      "doc_id": "native-image-guidelines",
-      "title": "NativeImage开发指导 (C/C++)",
-      "path": "../../docs/zh-cn/application-dev/graphics/native-image-guidelines.md",
-      "summary": "介绍NativeImage模块提供的Surface与OpenGL外部纹理相互绑定功能，表示图形队列的消费者端。",
-      "key_topics": ["NativeImage", "OpenGL", "纹理", "Surface"]
-    },
-    {
-      "doc_id": "native-vsync-guidelines",
-      "title": "NativeVSync开发指导 (C/C++)",
-      "path": "../../docs/zh-cn/application-dev/graphics/native-vsync-guidelines.md",
-      "summary": "介绍NativeVSync模块用于获取系统VSync信号，提供OH_NativeVsync实例的创建、销毁及设置VSync回调函数的功能。",
-      "key_topics": ["NativeVsync", "VSync信号", "回调函数"]
-    },
-    {
-      "doc_id": "native-window-guidelines",
-      "title": "NativeWindow开发指导 (C/C++)",
-      "path": "../../docs/zh-cn/application-dev/graphics/native-window-guidelines.md",
-      "summary": "介绍NativeWindow作为本地平台化窗口，表示图形队列的生产者端，支持申请和提交Buffer、配置Buffer属性信息。",
-      "key_topics": ["NativeWindow", "窗口", "Buffer", "图形队列"]
+      "doc_id": "graphic-drawing-overview",
+      "title": "图形绘制与显示开发概述",
+      "path": "../../docs/zh-cn/application-dev/graphics/graphic-drawing-overview.md",
+      "summary": "应用在开发中，经常需要针对不同的元素内容进行绘制，开发者通常可以选择直接使用ArkUI组件来绘制想要的元素或效果，但有些自定义图形或效果无法满足，此时可以选择使用Drawing来实现灵活的自定义绘制效果。另外，ArkUI组件具备直接上屏显示的能力，而Drawing更加关注绘制，需要依靠其他模块来完成绘制结果的上屏显示。",
+      "sections": [
+        "绘制能力范围及实现流程",
+        "如何显示绘制结果",
+        "与Canvas画布组件的关系",
+        "约束限制"
+      ],
+      "key_topics": [
+        "绘制能力范围及实现流程",
+        "如何显示绘制结果",
+        "与Canvas画布组件的关系",
+        "约束限制"
+      ]
     },
     {
       "doc_id": "graphic-term",
       "title": "图形开发术语",
       "path": "../../docs/zh-cn/application-dev/graphics/graphic-term.md",
-      "summary": "介绍图形开发相关术语，包括BlendMode、字块、字型、字体、字形、着色器、图像滤波等。",
-      "key_topics": ["术语", "BlendMode", "字块", "字体", "着色器"]
+      "summary": "暂无摘要",
+      "sections": [
+        "BlendMode",
+        "字块",
+        "字型",
+        "字体",
+        "字形",
+        "着色器",
+        "图像滤波"
+      ],
+      "key_topics": [
+        "BlendMode",
+        "字块",
+        "字型",
+        "字体",
+        "字形",
+        "着色器",
+        "图像滤波"
+      ]
+    },
+    {
+      "doc_id": "native-buffer-guidelines",
+      "title": "NativeBuffer开发指导 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/graphics/native-buffer-guidelines.md",
+      "summary": "NativeBuffer模块提供**共享内存**功能，支持内存的申请、使用、查询和释放等操作。",
+      "sections": [],
+      "key_topics": []
+    },
+    {
+      "doc_id": "native-fence-guidelines",
+      "title": "GPU/CPU内存访问同步操作开发指南 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/graphics/native-fence-guidelines.md",
+      "summary": "NativeFence是管理fenceFd同步状态的模块。开发者可通过其接口实现以下功能：设置阻塞时间、永久阻塞、关闭fenceFd以及检查其有效性。",
+      "sections": [],
+      "key_topics": []
+    },
+    {
+      "doc_id": "native-image-guidelines",
+      "title": "NativeImage开发指导 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/graphics/native-image-guidelines.md",
+      "summary": "NativeImage是提供**Surface与OpenGL外部纹理相互绑定**的模块，表示图形队列的消费者端。开发者可以通过`NativeImage`接口接收和使用`Buffer`，并将`Buffer`关联输出到绑定的OpenGL外部纹理。",
+      "sections": [],
+      "key_topics": []
+    },
+    {
+      "doc_id": "native-vsync-guidelines",
+      "title": "NativeVSync开发指导 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/graphics/native-vsync-guidelines.md",
+      "summary": "NativeVSync模块用于获取系统VSync信号，提供OH_NativeVSync实例的创建、销毁及设置VSync回调函数的功能。VSync信号触发时，将调用已设置的回调函数。",
+      "sections": [],
+      "key_topics": []
+    },
+    {
+      "doc_id": "native-window-guidelines",
+      "title": "NativeWindow开发指导 (C/C++)",
+      "path": "../../docs/zh-cn/application-dev/graphics/native-window-guidelines.md",
+      "summary": "NativeWindow是**本地平台化窗口**，表示图形队列的生产者端。开发者可以通过`NativeWindow`接口进行申请和提交`Buffer`，配置`Buffer`属性信息。",
+      "sections": [],
+      "key_topics": []
+    },
+    {
+      "doc_id": "overdraw-dfx-guidelines",
+      "title": "过度绘制调试使用指导",
+      "path": "../../docs/zh-cn/application-dev/graphics/overdraw-dfx-guidelines.md",
+      "summary": "暂无摘要",
+      "sections": [
+        "使用方式",
+        "过度绘制组件分析",
+        "如何减少过度绘制现象"
+      ],
+      "key_topics": [
+        "使用方式",
+        "过度绘制组件分析",
+        "如何减少过度绘制现象"
+      ]
+    },
+    {
+      "doc_id": "pixelmap-drawing-arkts",
+      "title": "图片绘制（ArkTS）",
+      "path": "../../docs/zh-cn/application-dev/graphics/pixelmap-drawing-arkts.md",
+      "summary": "介绍位图的绘制，包括创建PixelMap、编辑PixelMap中的像素、绘制PixelMap到画布上。",
+      "sections": [],
+      "key_topics": [
+        "图元绘制",
+        "图片绘制",
+        "PixelMap",
+        "位图",
+        "ArkTS"
+      ]
+    },
+    {
+      "doc_id": "pixelmap-drawing-c",
+      "title": "图片绘制（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/graphics/pixelmap-drawing-c.md",
+      "summary": "介绍位图的绘制，包括创建OH_PixelmapNative像素图对象、创建PixelMap、绘制PixelMap到画布上。",
+      "sections": [],
+      "key_topics": [
+        "图元绘制",
+        "图片绘制",
+        "PixelMap",
+        "位图",
+        "C/C++"
+      ]
+    },
+    {
+      "doc_id": "primitive-drawing-overview",
+      "title": "图元绘制概述",
+      "path": "../../docs/zh-cn/application-dev/graphics/primitive-drawing-overview.md",
+      "summary": "暂无摘要",
+      "sections": [],
+      "key_topics": []
+    },
+    {
+      "doc_id": "simple-text-arkts",
+      "title": "简单文本绘制与显示（ArkTS）",
+      "path": "../../docs/zh-cn/application-dev/graphics/simple-text-arkts.md",
+      "summary": "在一个简单的用户界面中，可能只需要展示几行静态文本，例如标签、按钮上的文字、菜单项或状态栏中的提示信息。此时，开发者只需要选择合适的字体、大小和颜色即可完成渲染。",
+      "sections": [
+        "相关属性",
+        "效果展示"
+      ],
+      "key_topics": [
+        "文本绘制",
+        "简单文本",
+        "字体样式",
+        "ArkTS",
+        "相关属性",
+        "效果展示"
+      ]
+    },
+    {
+      "doc_id": "simple-text-c",
+      "title": "简单文本绘制与显示（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/graphics/simple-text-c.md",
+      "summary": "在一个简单的用户界面中，可能只需要展示几行静态文本，例如标签、按钮上的文字、菜单项或状态栏中的提示信息。此时，开发者只需要选择合适的字体、大小和颜色即可完成渲染。",
+      "sections": [
+        "效果展示"
+      ],
+      "key_topics": [
+        "文本绘制",
+        "简单文本",
+        "字体样式",
+        "C/C++",
+        "效果展示"
+      ]
+    },
+    {
+      "doc_id": "system-font-arkts",
+      "title": "系统字体的信息获取和使用（ArkTS）",
+      "path": "../../docs/zh-cn/application-dev/graphics/system-font-arkts.md",
+      "summary": "系统字体是指操作系统预设的字体，用于在没有指定自定义字体时显示文本，确保文本的可读性和一致性。",
+      "sections": [
+        "获取系统字体信息",
+        "使用或切换系统字体"
+      ],
+      "key_topics": [
+        "字体管理",
+        "系统字体",
+        "字体配置",
+        "ArkTS",
+        "获取系统字体信息",
+        "使用或切换系统字体"
+      ]
+    },
+    {
+      "doc_id": "system-font-c",
+      "title": "系统字体的信息获取和使用（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/graphics/system-font-c.md",
+      "summary": "系统字体是指操作系统预设的字体，用于在没有指定自定义字体时显示文本，确保文本的可读性和一致性。默认的系统字体为“HarmonyOS Sans”。",
+      "sections": [
+        "获取系统字体信息",
+        "使用或切换系统字体",
+        "禁用系统字体"
+      ],
+      "key_topics": [
+        "字体管理",
+        "系统字体",
+        "字体配置",
+        "禁用系统字体",
+        "C/C++",
+        "获取系统字体信息",
+        "使用或切换系统字体"
+      ]
+    },
+    {
+      "doc_id": "text-custom-arkts",
+      "title": "自定义文本绘制与显示（ArkTS）",
+      "path": "../../docs/zh-cn/application-dev/graphics/text-custom-arkts.md",
+      "summary": "文本塑形是字体引擎提供的一项关键能力，它允许开发者不经过系统默认的文本排版流程，直接获取文本的底层字形信息（如宽度、方向等测量信息）。这使得开发者能够基于这些原始数据，实现完全自定义的排版逻辑、绘制操作以及断行策略。",
+      "sections": [
+        "文本塑形"
+      ],
+      "key_topics": [
+        "文本绘制",
+        "文本塑形",
+        "字形信息",
+        "自定义排版",
+        "ArkTS"
+      ]
+    },
+    {
+      "doc_id": "text-custom-c",
+      "title": "自定义文本绘制与显示（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/graphics/text-custom-c.md",
+      "summary": "文本塑形是字体引擎提供的一项关键能力，它允许开发者不经过系统默认的文本排版流程，直接获取文本的底层字形信息（如宽度、方向等测量信息）。这使得开发者能够基于这些原始数据，实现完全自定义的排版逻辑、绘制操作以及断行策略。",
+      "sections": [
+        "文本塑形"
+      ],
+      "key_topics": [
+        "文本绘制",
+        "文本塑形",
+        "字形信息",
+        "自定义排版",
+        "C/C++"
+      ]
+    },
+    {
+      "doc_id": "text-faqs",
+      "title": "文本开发常见问题",
+      "path": "../../docs/zh-cn/application-dev/graphics/text-faqs.md",
+      "summary": "暂无摘要",
+      "sections": [
+        "如何对找不到字形的字符进行显示优化"
+      ],
+      "key_topics": [
+        "如何对找不到字形的字符进行显示优化"
+      ]
+    },
+    {
+      "doc_id": "text-measure-arkts",
+      "title": "文本测量（ArkTS）",
+      "path": "../../docs/zh-cn/application-dev/graphics/text-measure-arkts.md",
+      "summary": "文本测量指的是在图形绘制中，对文本的尺寸和布局进行评估，计算文本在给定字体和样式下占用的空间（例如宽度、高度和其他相关信息）的过程。文本测量用于文本排版、布局、渲染以及调整文本显示的位置和大小等场景，便于更精准地控制与调整界面的布局和呈现，以达到设计预期。",
+      "sections": [],
+      "key_topics": [
+        "文本测量",
+        "文本宽度",
+        "行度量",
+        "行数",
+        "ArkTS"
+      ]
+    },
+    {
+      "doc_id": "text-measure-c",
+      "title": "文本测量（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/graphics/text-measure-c.md",
+      "summary": "文本测量指的是在图形绘制中，对文本的尺寸和布局进行评估，计算文本在给定字体和样式下占用的空间（例如宽度、高度和其他相关信息）的过程。文本测量用于文本排版、布局、渲染以及调整文本显示的位置和大小等场景，便于更精准地控制与调整界面的布局和呈现，以达到设计预期。",
+      "sections": [],
+      "key_topics": [
+        "文本测量",
+        "文本宽度",
+        "行度量",
+        "行数",
+        "C/C++"
+      ]
+    },
+    {
+      "doc_id": "text-overview",
+      "title": "文本开发概述",
+      "path": "../../docs/zh-cn/application-dev/graphics/text-overview.md",
+      "summary": "暂无摘要",
+      "sections": [
+        "能力范围",
+        "实现流程"
+      ],
+      "key_topics": [
+        "能力范围",
+        "实现流程"
+      ]
+    },
+    {
+      "doc_id": "textblock-drawing-arkts",
+      "title": "字块绘制（ArkTS）",
+      "path": "../../docs/zh-cn/application-dev/graphics/textblock-drawing-arkts.md",
+      "summary": "字块（TextBlob）是指文本的集合。无论是单个的文字还是大块的文本，都可以通过字块来绘制。",
+      "sections": [
+        "基本字块绘制",
+        "文字描边",
+        "文字渐变",
+        "主题字体",
+        "单字绘制"
+      ],
+      "key_topics": [
+        "图元绘制",
+        "字块绘制",
+        "TextBlob",
+        "文字描边",
+        "文字渐变",
+        "ArkTS",
+        "基本字块绘制",
+        "主题字体",
+        "单字绘制"
+      ]
+    },
+    {
+      "doc_id": "textblock-drawing-c",
+      "title": "字块绘制（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/graphics/textblock-drawing-c.md",
+      "summary": "字块（TextBlob）是指文本的集合。无论是单个的文字还是大块的文本，都可以通过字块来绘制。",
+      "sections": [
+        "基本字块绘制",
+        "文字描边",
+        "文字渐变",
+        "主题字体",
+        "单字绘制"
+      ],
+      "key_topics": [
+        "图元绘制",
+        "字块绘制",
+        "TextBlob",
+        "文字描边",
+        "文字渐变",
+        "C/C++",
+        "基本字块绘制",
+        "主题字体",
+        "单字绘制"
+      ]
+    },
+    {
+      "doc_id": "theme-font-arkts",
+      "title": "使用主题字体（ArkTS）",
+      "path": "../../docs/zh-cn/application-dev/graphics/theme-font-arkts.md",
+      "summary": "主题字体，特指系统**主题应用**中能使用的字体，属于一种特殊的自定义字体，可以通过相关接口调用使能主题应用中的主题字体。",
+      "sections": [
+        "实现机制",
+        "效果展示"
+      ],
+      "key_topics": [
+        "字体管理",
+        "主题字体",
+        "FontCollection",
+        "ArkTS",
+        "实现机制",
+        "效果展示"
+      ]
+    },
+    {
+      "doc_id": "theme-font-c",
+      "title": "使用主题字体（C/C++）",
+      "path": "../../docs/zh-cn/application-dev/graphics/theme-font-c.md",
+      "summary": "主题字体，特指系统**主题应用**中能使用的字体，属于一种特殊的自定义字体。可以通过相关接口调用使能主题应用中的主题字体。",
+      "sections": [
+        "实现机制",
+        "效果展示"
+      ],
+      "key_topics": [
+        "字体管理",
+        "主题字体",
+        "FontCollection",
+        "C/C++",
+        "实现机制",
+        "效果展示"
+      ]
     }
   ]
 }
