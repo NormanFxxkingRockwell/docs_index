@@ -1,0 +1,740 @@
+{
+  "domain": "napi",
+  "overview": "napi领域提供Node-API和JSVM-API能力，支持ArkTS/JS与C/C++的交互，包括113个文档，涵盖NDK开发、异步任务、线程安全、内存管理、数据类型操作等核心功能。",
+  "core_concepts": [
+    "Node-API",
+    "JSVM-API",
+    "NDK",
+    "异步",
+    "线程",
+    "内存",
+    "生命周期",
+    "数据类型",
+    "接口",
+    "模块"
+  ],
+  "learning_path": [
+    {
+      "doc_id": "build-with-ndk-overview",
+      "title": "NDK工程构建概述",
+      "order": 1,
+      "category": "基础"
+    },
+    {
+      "doc_id": "c-cpp-overview",
+      "title": "C/C++标准库机制概述",
+      "order": 2,
+      "category": "基础"
+    },
+    {
+      "doc_id": "debug-performance-profiling-overview",
+      "title": "调试和性能分析概述",
+      "order": 3,
+      "category": "基础"
+    },
+    {
+      "doc_id": "develop-code-overview",
+      "title": "代码开发概述",
+      "order": 4,
+      "category": "基础"
+    },
+    {
+      "doc_id": "hw-guide",
+      "title": "硬件兼容性简介",
+      "order": 5,
+      "category": "基础"
+    },
+    {
+      "doc_id": "jsvm-introduction",
+      "title": "JSVM-API简介",
+      "order": 6,
+      "category": "基础"
+    },
+    {
+      "doc_id": "napi-introduction",
+      "title": "Node-API简介",
+      "order": 7,
+      "category": "基础"
+    },
+    {
+      "doc_id": "napi_status_introduction",
+      "title": "Node-API接口返回状态码介绍",
+      "order": 8,
+      "category": "基础"
+    },
+    {
+      "doc_id": "ndk-development-overview",
+      "title": "NDK开发导读",
+      "order": 9,
+      "category": "基础"
+    },
+    {
+      "doc_id": "openmp-overview",
+      "title": "OpenMP简介",
+      "order": 10,
+      "category": "基础"
+    },
+    {
+      "doc_id": "develop-code-overview",
+      "title": "代码开发概述",
+      "order": 11,
+      "category": "核心"
+    },
+    {
+      "doc_id": "gewu-ndk-api-guidelines",
+      "title": "格物开发指导",
+      "order": 12,
+      "category": "核心"
+    },
+    {
+      "doc_id": "jsvm-data-types-interfaces",
+      "title": "JSVM-API 支持的数据类型和接口",
+      "order": 13,
+      "category": "核心"
+    },
+    {
+      "doc_id": "napi-data-types-interfaces",
+      "title": "Node-API支持的数据类型和接口",
+      "order": 14,
+      "category": "核心"
+    },
+    {
+      "doc_id": "napi-guidelines",
+      "title": "Node-API开发规范",
+      "order": 15,
+      "category": "核心"
+    },
+    {
+      "doc_id": "napi_status_introduction",
+      "title": "Node-API接口返回状态码介绍",
+      "order": 16,
+      "category": "核心"
+    },
+    {
+      "doc_id": "native-bundle-guidelines",
+      "title": "NativeBundle开发指导",
+      "order": 17,
+      "category": "核心"
+    },
+    {
+      "doc_id": "ndk-development-overview",
+      "title": "NDK开发导读",
+      "order": 18,
+      "category": "核心"
+    },
+    {
+      "doc_id": "purgeable-memory-guidelines",
+      "title": "内存管理purgeable内存开发指导",
+      "order": 19,
+      "category": "核心"
+    },
+    {
+      "doc_id": "qos-guidelines",
+      "title": "QoS 开发指导",
+      "order": 20,
+      "category": "核心"
+    },
+    {
+      "doc_id": "rawfile-guidelines",
+      "title": "Rawfile开发指导",
+      "order": 21,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-call-threadsafe-function-with-priority",
+      "title": "使用Node-API接口从异步线程向ArkTS线程投递指定优先级和入队方式的任务",
+      "order": 22,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-array",
+      "title": "使用JSVM-API接口进行array相关开发",
+      "order": 23,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-arraybuffer",
+      "title": "使用JSVM-API接口进行ArrayBuffer相关开发",
+      "order": 24,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-bigint",
+      "title": "使用JSVM-API接口操作bigint类型值",
+      "order": 25,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-class",
+      "title": "使用JSVM-API接口进行class相关开发",
+      "order": 26,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-date",
+      "title": "使用JSVM-API接口进行Date相关开发",
+      "order": 27,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-debug-option",
+      "title": "使用JSVM-API接口进行debug操作",
+      "order": 28,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-external-string",
+      "title": "使用JSVM-API接口提供Latin1/UTF16格式字符串相关开发",
+      "order": 29,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-JSON",
+      "title": "使用JSVM-API接口进行JSON操作",
+      "order": 30,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-object",
+      "title": "使用JSVM-API接口进行object相关开发",
+      "order": 31,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-primitive",
+      "title": "使用JSVM-API接口进行primitive类相关开发",
+      "order": 32,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-private",
+      "title": "使用JSVM-API接口进行private相关开发",
+      "order": 33,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-promise",
+      "title": "使用JSVM-API接口处理异步操作",
+      "order": 34,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-property",
+      "title": "使用JSVM-API接口设置JavaScript对象的属性",
+      "order": 35,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-proxy",
+      "title": "使用JSVM-API提供的proxy接口",
+      "order": 36,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-string",
+      "title": "使用JSVM-API接口创建和获取string值",
+      "order": 37,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-trace",
+      "title": "使用JSVM-API接口进行Trace相关开发",
+      "order": 38,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-version",
+      "title": "使用JSVM-API接口获取JSVM API的版本号",
+      "order": 39,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-wasm",
+      "title": "使用JSVM-API接口进行WebAssembly模块相关开发",
+      "order": 40,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-well-known-symbols",
+      "title": "使用JSVM-API接口进行Well-known symbols相关开发",
+      "order": 41,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-about-wrapper-object",
+      "title": "使用JSVM-API接口进行Wrapper object相关开发",
+      "order": 42,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-basic-data-types",
+      "title": "使用JSVM-API接口创建和获取数值",
+      "order": 43,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-create-snapshot",
+      "title": "使用JSVM-API接口进行虚拟机快照相关开发",
+      "order": 44,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-error",
+      "title": "使用JSVM-API接口进行错误处理开发",
+      "order": 45,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-execute_tasks",
+      "title": "使用JSVM-API接口进行任务队列相关开发",
+      "order": 46,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-function-call",
+      "title": "使用JSVM-API接口进行函数创建和调用",
+      "order": 47,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-heapstatistics-debugger-cpuprofiler-heapsnapshot",
+      "title": "使用JSVM-API接口进行JavaScript代码调试调优",
+      "order": 48,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-life-cycle",
+      "title": "使用JSVM-API接口进行生命周期相关开发",
+      "order": 49,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-process",
+      "title": "使用JSVM-API实现JS与C/C++语言交互开发流程",
+      "order": 50,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-jsvm-runtime-task",
+      "title": "使用JSVM-API接口创建多个引擎执行JS代码并销毁",
+      "order": 51,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-array",
+      "title": "使用Node-API接口进行array相关开发",
+      "order": 52,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-arraybuffer",
+      "title": "使用Node-API接口进行ArrayBuffer相关开发",
+      "order": 53,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-bigint",
+      "title": "使用Node-API接口操作bigint类型值",
+      "order": 54,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-buffer",
+      "title": "使用Node-API接口进行buffer相关开发",
+      "order": 55,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-class",
+      "title": "使用Node-API进行class相关开发",
+      "order": 56,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-cleanuphook",
+      "title": "使用Node-API接口注册和使用环境清理钩子",
+      "order": 57,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-context",
+      "title": "使用扩展的Node-API接口在当前线程中创建、切换和销毁上下文环境",
+      "order": 58,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-crash",
+      "title": "使用Node-API接口产生的异常日志/崩溃分析",
+      "order": 59,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-critical",
+      "title": "使用扩展的Node-API接口创建和销毁临界区作用域及访问字符串内容",
+      "order": 60,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-custom-asynchronous-operations",
+      "title": "使用Node-API进行自定义异步操作相关开发",
+      "order": 61,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-date",
+      "title": "使用Node-API接口进行Date相关开发",
+      "order": 62,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-environmental-life-cycle",
+      "title": "使用Node-API接口关联数据，使其生命周期与当前环境的生命周期相关联",
+      "order": 63,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-error",
+      "title": "使用Node-API接口进行错误处理开发",
+      "order": 64,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-extension",
+      "title": "使用Node-API进行扩展能力功能开发",
+      "order": 65,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-function",
+      "title": "使用Node-API接口进行函数创建和调用",
+      "order": 66,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-object",
+      "title": "使用Node-API接口进行object相关开发",
+      "order": 67,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-other-practical-tools",
+      "title": "使用Node-API其他实用接口",
+      "order": 68,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-primitive",
+      "title": "使用Node-API接口进行primitive类相关开发",
+      "order": 69,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-promise",
+      "title": "使用Node-API接口处理异步操作",
+      "order": 70,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-property",
+      "title": "使用Node-API接口设置ArkTS对象的属性",
+      "order": 71,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-sendable-reference",
+      "title": "使用扩展的Node-API接口创建对ArkTS对象的Sendable强引用",
+      "order": 72,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-string",
+      "title": "使用Node-API接口创建和获取string值",
+      "order": 73,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-about-strong-reference",
+      "title": "使用扩展的Node-API接口创建对ArkTS对象的强引用",
+      "order": 74,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-ark-runtime",
+      "title": "使用Node-API接口创建ArkTS运行时环境",
+      "order": 75,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-asynchronous-task",
+      "title": "使用Node-API接口进行异步任务开发",
+      "order": 76,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-basic-data-types",
+      "title": "使用Node-API接口创建基本数据类型",
+      "order": 77,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-event-loop",
+      "title": "使用扩展的Node-API接口在异步线程中运行和停止事件循环",
+      "order": 78,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-life-cycle",
+      "title": "使用Node-API接口进行生命周期相关开发",
+      "order": 79,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-load-module-with-info",
+      "title": "使用Node-API接口进行模块加载",
+      "order": 80,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-load-module",
+      "title": "使用Node-API接口在主线程中进行模块加载",
+      "order": 81,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-process",
+      "title": "使用Node-API实现跨语言交互开发流程",
+      "order": 82,
+      "category": "核心"
+    },
+    {
+      "doc_id": "use-napi-thread-safety",
+      "title": "使用Node-API接口进行线程安全开发",
+      "order": 83,
+      "category": "核心"
+    },
+    {
+      "doc_id": "debug-asan",
+      "title": "C/C++内存错误检测",
+      "order": 84,
+      "category": "高级"
+    },
+    {
+      "doc_id": "debug-performance-profiling-overview",
+      "title": "调试和性能分析概述",
+      "order": 85,
+      "category": "高级"
+    },
+    {
+      "doc_id": "jsvm-debugger-cpuprofiler-heapsnapshot",
+      "title": "JSVM-API调试&定位",
+      "order": 86,
+      "category": "高级"
+    },
+    {
+      "doc_id": "jsvm-locate-memory-leak",
+      "title": "JSVM-API 内存泄漏问题定位指导",
+      "order": 87,
+      "category": "高级"
+    },
+    {
+      "doc_id": "napi-faq-about-memory-leak",
+      "title": "内存泄漏相关问题汇总",
+      "order": 88,
+      "category": "高级"
+    },
+    {
+      "doc_id": "purgeable-memory-guidelines",
+      "title": "内存管理purgeable内存开发指导",
+      "order": 89,
+      "category": "高级"
+    },
+    {
+      "doc_id": "use-call-threadsafe-function-with-priority",
+      "title": "使用Node-API接口从异步线程向ArkTS线程投递指定优先级和入队方式的任务",
+      "order": 90,
+      "category": "高级"
+    },
+    {
+      "doc_id": "use-jsvm-about-analyze-memory-usage",
+      "title": "使用DevTools进行网页内存分析",
+      "order": 91,
+      "category": "高级"
+    },
+    {
+      "doc_id": "use-jsvm-about-promise",
+      "title": "使用JSVM-API接口处理异步操作",
+      "order": 92,
+      "category": "高级"
+    },
+    {
+      "doc_id": "use-jsvm-heapstatistics-debugger-cpuprofiler-heapsnapshot",
+      "title": "使用JSVM-API接口进行JavaScript代码调试调优",
+      "order": 93,
+      "category": "高级"
+    },
+    {
+      "doc_id": "use-jsvm-memory-management",
+      "title": "使用JSVM-API进行内存管理",
+      "order": 94,
+      "category": "高级"
+    },
+    {
+      "doc_id": "use-napi-about-context",
+      "title": "使用扩展的Node-API接口在当前线程中创建、切换和销毁上下文环境",
+      "order": 95,
+      "category": "高级"
+    },
+    {
+      "doc_id": "use-napi-about-custom-asynchronous-operations",
+      "title": "使用Node-API进行自定义异步操作相关开发",
+      "order": 96,
+      "category": "高级"
+    },
+    {
+      "doc_id": "use-napi-about-promise",
+      "title": "使用Node-API接口处理异步操作",
+      "order": 97,
+      "category": "高级"
+    },
+    {
+      "doc_id": "use-napi-asynchronous-task",
+      "title": "使用Node-API接口进行异步任务开发",
+      "order": 98,
+      "category": "高级"
+    },
+    {
+      "doc_id": "use-napi-event-loop",
+      "title": "使用扩展的Node-API接口在异步线程中运行和停止事件循环",
+      "order": 99,
+      "category": "高级"
+    },
+    {
+      "doc_id": "use-napi-load-module",
+      "title": "使用Node-API接口在主线程中进行模块加载",
+      "order": 100,
+      "category": "高级"
+    },
+    {
+      "doc_id": "use-napi-thread-safety",
+      "title": "使用Node-API接口进行线程安全开发",
+      "order": 101,
+      "category": "高级"
+    }
+  ],
+  "quick_reference": {
+    "使用命令行CMake构建NDK工程": "../../docs/docs/zh-cn/application-dev/napi\\build-with-ndk-cmake.md",
+    "使用DevEco Studio模板构建NDK工程": "../../docs/docs/zh-cn/application-dev/napi\\build-with-ndk-ide.md",
+    "NDK工程构建概述": "../../docs/docs/zh-cn/application-dev/napi\\build-with-ndk-overview.md",
+    "在NDK工程中使用预构建库": "../../docs/docs/zh-cn/application-dev/napi\\build-with-ndk-prebuilts.md",
+    "C/C++标准库机制概述": "../../docs/docs/zh-cn/application-dev/napi\\c-cpp-overview.md",
+    "CPU特性": "../../docs/docs/zh-cn/application-dev/napi\\cpu-features.md",
+    "创建NDK工程": "../../docs/docs/zh-cn/application-dev/napi\\create-with-ndk.md",
+    "C/C++内存错误检测": "../../docs/docs/zh-cn/application-dev/napi\\debug-asan.md",
+    "调试和性能分析概述": "../../docs/docs/zh-cn/application-dev/napi\\debug-performance-profiling-overview.md",
+    "代码开发概述": "../../docs/docs/zh-cn/application-dev/napi\\develop-code-overview.md",
+    "fdsan使用指导": "../../docs/docs/zh-cn/application-dev/napi\\fdsan.md",
+    "格物开发指导": "../../docs/docs/zh-cn/application-dev/napi\\gewu-ndk-api-guidelines.md",
+    "硬件兼容性简介": "../../docs/docs/zh-cn/application-dev/napi\\hw-guide.md",
+    "JSVM-API 申请JIT权限指导": "../../docs/docs/zh-cn/application-dev/napi\\jsvm-apply-jit-profile.md",
+    "JSVM-API 支持的数据类型和接口": "../../docs/docs/zh-cn/application-dev/napi\\jsvm-data-types-interfaces.md",
+    "JSVM-API调试&定位": "../../docs/docs/zh-cn/application-dev/napi\\jsvm-debugger-cpuprofiler-heapsnapshot.md",
+    "JSVM-API常见问题": "../../docs/docs/zh-cn/application-dev/napi\\jsvm-frequently-questions.md",
+    "JSVM-API使用规范": "../../docs/docs/zh-cn/application-dev/napi\\jsvm-guidelines.md",
+    "JSVM-API简介": "../../docs/docs/zh-cn/application-dev/napi\\jsvm-introduction.md",
+    "JSVM-API 内存泄漏问题定位指导": "../../docs/docs/zh-cn/application-dev/napi\\jsvm-locate-memory-leak.md",
+    "JSVM通用调优实践": "../../docs/docs/zh-cn/application-dev/napi\\jsvm-optimizations.md",
+    "JSVM-API 坚盾守护模式": "../../docs/docs/zh-cn/application-dev/napi\\jsvm-secure-shield-mode.md",
+    "Node-API支持的数据类型和接口": "../../docs/docs/zh-cn/application-dev/napi\\napi-data-types-interfaces.md",
+    "常见基本功能问题汇总": "../../docs/docs/zh-cn/application-dev/napi\\napi-faq-about-common-basic.md",
+    "内存泄漏相关问题汇总": "../../docs/docs/zh-cn/application-dev/napi\\napi-faq-about-memory-leak.md",
+    "稳定性相关问题汇总": "../../docs/docs/zh-cn/application-dev/napi\\napi-faq-about-stability.md",
+    "Node-API开发规范": "../../docs/docs/zh-cn/application-dev/napi\\napi-guidelines.md",
+    "Node-API简介": "../../docs/docs/zh-cn/application-dev/napi\\napi-introduction.md",
+    "Node-API接口返回状态码介绍": "../../docs/docs/zh-cn/application-dev/napi\\napi_status_introduction.md",
+    "NativeBundle开发指导": "../../docs/docs/zh-cn/application-dev/napi\\native-bundle-guidelines.md",
+    "NDK开发导读": "../../docs/docs/zh-cn/application-dev/napi\\ndk-development-overview.md",
+    "使用Neon指令扩展": "../../docs/docs/zh-cn/application-dev/napi\\neon-guide.md",
+    "OpenHarmony ABI": "../../docs/docs/zh-cn/application-dev/napi\\ohos-abi.md",
+    "OpenMP应用构建和运行指南": "../../docs/docs/zh-cn/application-dev/napi\\openmp-guideline.md",
+    "OpenMP简介": "../../docs/docs/zh-cn/application-dev/napi\\openmp-overview.md",
+    "内存管理purgeable内存开发指导": "../../docs/docs/zh-cn/application-dev/napi\\purgeable-memory-guidelines.md",
+    "QoS 开发指导": "../../docs/docs/zh-cn/application-dev/napi\\qos-guidelines.md",
+    "Rawfile开发指导": "../../docs/docs/zh-cn/application-dev/napi\\rawfile-guidelines.md",
+    "napi": "../../docs/docs/zh-cn/application-dev/napi\\Readme-CN.md",
+    "使用Node-API接口从异步线程向ArkTS线程投递指定优先级和入队方式的任务": "../../docs/docs/zh-cn/application-dev/napi\\use-call-threadsafe-function-with-priority.md",
+    "使用DevTools进行网页内存分析": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-analyze-memory-usage.md",
+    "使用JSVM-API接口进行array相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-array.md",
+    "使用JSVM-API接口进行ArrayBuffer相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-arraybuffer.md",
+    "使用JSVM-API接口操作bigint类型值": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-bigint.md",
+    "使用JSVM-API接口进行class相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-class.md",
+    "使用code cache加速编译": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-code-cache.md",
+    "使用JSVM-API接口进行Date相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-date.md",
+    "使用JSVM-API接口进行debug操作": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-debug-option.md",
+    "使用JSVM-API接口提供Latin1/UTF16格式字符串相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-external-string.md",
+    "使用JSVM-API接口进行JSON操作": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-JSON.md",
+    "使用JSVM-API接口进行object相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-object.md",
+    "使用JSVM-API接口进行primitive类相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-primitive.md",
+    "使用JSVM-API接口进行private相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-private.md",
+    "使用JSVM-API接口处理异步操作": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-promise.md",
+    "使用JSVM-API接口设置JavaScript对象的属性": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-property.md",
+    "使用JSVM-API提供的proxy接口": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-proxy.md",
+    "使用JSVM-API接口创建和获取string值": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-string.md",
+    "使用JSVM-API接口进行Trace相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-trace.md",
+    "使用HiSmartPerf采集jsvm trace": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-v8-trace.md",
+    "使用JSVM-API接口获取JSVM API的版本号": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-version.md",
+    "使用JSVM-API接口进行WebAssembly模块相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-wasm.md",
+    "使用JSVM-API接口进行Well-known symbols相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-well-known-symbols.md",
+    "使用JSVM-API接口进行Wrapper object相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-about-wrapper-object.md",
+    "使用JSVM-API接口创建和获取数值": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-basic-data-types.md",
+    "使用JSVM-API接口进行虚拟机快照相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-create-snapshot.md",
+    "使用JSVM-API接口进行错误处理开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-error.md",
+    "使用JSVM-API接口进行任务队列相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-execute_tasks.md",
+    "使用JSVM-API接口进行函数创建和调用": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-function-call.md",
+    "使用JSVM-API接口进行JavaScript代码调试调优": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-heapstatistics-debugger-cpuprofiler-heapsnapshot.md",
+    "使用JSVM-API接口进行生命周期相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-life-cycle.md",
+    "使用JSVM-API进行内存管理": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-memory-management.md",
+    "使用JSVM-API实现JS与C/C++语言交互开发流程": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-process.md",
+    "使用JSVM-API接口创建多个引擎执行JS代码并销毁": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-runtime-task.md",
+    "使用JSVM-API判断给定的两个JS value是否严格相等": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-strict-equals.md",
+    "使用JSVM-API进行异常的定制化处理": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-trigger-exceptions.md",
+    "使用JSVM-API感知JSVM引擎生命周期管理": "../../docs/docs/zh-cn/application-dev/napi\\use-jsvm-trigger-gc.md",
+    "Longque-JS-API使用指导": "../../docs/docs/zh-cn/application-dev/napi\\use-longque-js-api.md",
+    "使用Node-API接口进行array相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-array.md",
+    "使用Node-API接口进行ArrayBuffer相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-arraybuffer.md",
+    "使用Node-API接口操作bigint类型值": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-bigint.md",
+    "使用Node-API接口进行buffer相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-buffer.md",
+    "使用Node-API进行class相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-class.md",
+    "使用Node-API接口注册和使用环境清理钩子": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-cleanuphook.md",
+    "使用扩展的Node-API接口在当前线程中创建、切换和销毁上下文环境": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-context.md",
+    "使用Node-API接口产生的异常日志/崩溃分析": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-crash.md",
+    "使用扩展的Node-API接口创建和销毁临界区作用域及访问字符串内容": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-critical.md",
+    "使用Node-API进行自定义异步操作相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-custom-asynchronous-operations.md",
+    "使用Node-API接口进行Date相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-date.md",
+    "使用Node-API接口关联数据，使其生命周期与当前环境的生命周期相关联": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-environmental-life-cycle.md",
+    "使用Node-API接口进行错误处理开发": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-error.md",
+    "使用Node-API进行扩展能力功能开发": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-extension.md",
+    "使用Node-API接口进行函数创建和调用": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-function.md",
+    "使用Node-API接口进行object相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-object.md",
+    "使用Node-API其他实用接口": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-other-practical-tools.md",
+    "使用Node-API接口进行primitive类相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-primitive.md",
+    "使用Node-API接口处理异步操作": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-promise.md",
+    "使用Node-API接口设置ArkTS对象的属性": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-property.md",
+    "使用扩展的Node-API接口创建对ArkTS对象的Sendable强引用": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-sendable-reference.md",
+    "使用Node-API接口创建和获取string值": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-string.md",
+    "使用扩展的Node-API接口创建对ArkTS对象的强引用": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-about-strong-reference.md",
+    "使用Node-API接口创建ArkTS运行时环境": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-ark-runtime.md",
+    "使用Node-API接口进行异步任务开发": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-asynchronous-task.md",
+    "使用Node-API接口创建基本数据类型": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-basic-data-types.md",
+    "使用扩展的Node-API接口在异步线程中运行和停止事件循环": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-event-loop.md",
+    "Node-API常见问题": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-faqs.md",
+    "使用Node-API接口进行生命周期相关开发": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-life-cycle.md",
+    "使用Node-API接口进行模块加载": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-load-module-with-info.md",
+    "使用Node-API接口在主线程中进行模块加载": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-load-module.md",
+    "使用Node-API调用返回值为promise的ArkTS方法": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-method-promise.md",
+    "Native与ArkTS对象绑定": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-object-wrap.md",
+    "使用Node-API实现跨语言交互开发流程": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-process.md",
+    "使用Node-API接口进行线程安全开发": "../../docs/docs/zh-cn/application-dev/napi\\use-napi-thread-safety.md",
+    "Native与Sendable ArkTS对象绑定": "../../docs/docs/zh-cn/application-dev/napi\\use-sendable-napi.md"
+  },
+  "document_count": 113
+}

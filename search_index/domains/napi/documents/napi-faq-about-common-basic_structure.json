@@ -1,0 +1,164 @@
+{
+  "doc_id": "napi-faq-about-common-basic",
+  "title": "常见基本功能问题汇总",
+  "path": "docs/zh-cn/application-dev/napi/napi-faq-about-common-basic.md",
+  "relative_path": "../../docs/zh-cn/application-dev/napi/napi-faq-about-common-basic.md",
+  "metadata": {
+    "kit": "NDK",
+    "subsystem": "arkcompiler",
+    "owner": "@xliu-huanwei; @shilei123; @huanghello",
+    "designer": "@shilei123",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "本文档介绍常见基本功能问题汇总的相关内容，属于NDK模块，包含18个主要章节。",
+  "structure": {
+    "title": "常见基本功能问题汇总",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "模块加载失败，报错信息显示`Error message: is not callable`.",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 43,
+        "summary": "本章节介绍模块加载失败，报错信息显示`Error message: is not callable`.的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-2",
+        "title": "在大量需要调用ArkTS方法进行通信的场景中如何保证异步任务的有序性",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 67,
+        "summary": "本章节介绍在大量需要调用ArkTS方法进行通信的场景中如何保证异步任务的有序性的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-3",
+        "title": "是否存在便捷的回调ArkTS的方式",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 79,
+        "summary": "本章节介绍是否存在便捷的回调ArkTS的方式的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-4",
+        "title": "如何在C++代码中回调ArkTS方法",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 85,
+        "summary": "本章节介绍如何在C++代码中回调ArkTS方法的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-5",
+        "title": "如何确保数据类型的正确映射与内存管理的安全性",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 101,
+        "summary": "本章节介绍如何确保数据类型的正确映射与内存管理的安全性的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-6",
+        "title": "napi_get_uv_event_loop接口错误码说明",
+        "level": 2,
+        "line_start": 102,
+        "line_end": 151,
+        "summary": "本章节介绍napi_get_uv_event_loop接口错误码说明的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Native层调用ArkTS层对象方法必须传入一个function给Native层吗",
+        "level": 2,
+        "line_start": 152,
+        "line_end": 163,
+        "summary": "本章节介绍Native层调用ArkTS层对象方法必须传入一个function给Native层吗的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-8",
+        "title": "是否能调用ArkTS的方法并获取到结果",
+        "level": 2,
+        "line_start": 164,
+        "line_end": 179,
+        "summary": "本章节介绍是否能调用ArkTS的方法并获取到结果的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-9",
+        "title": "是否有不拷贝的napi_get_value_string_utf8接口或者能力",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 188,
+        "summary": "本章节介绍是否有不拷贝的napi_get_value_string_utf8接口或者能力的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-10",
+        "title": "多线程下napi_env的使用注意事项",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 210,
+        "summary": "本章节介绍多线程下napi_env的使用注意事项的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-11",
+        "title": "napi_call_threadsafe_function执行顺序不符合预期",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 234,
+        "summary": "本章节介绍napi_call_threadsafe_function执行顺序不符合预期的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-12",
+        "title": "ArkTS侧报错显示undefined",
+        "level": 2,
+        "line_start": 235,
+        "line_end": 269,
+        "summary": "本章节介绍ArkTS侧报错显示undefined的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-13",
+        "title": "接口执行结果非预期",
+        "level": 2,
+        "line_start": 270,
+        "line_end": 285,
+        "summary": "本章节介绍接口执行结果非预期的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-14",
+        "title": "napi_value和napi_ref的生命周期有何区别",
+        "level": 2,
+        "line_start": 286,
+        "line_end": 291,
+        "summary": "本章节介绍napi_value和napi_ref的生命周期有何区别的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-15",
+        "title": "Node-API接口返回值不是napi_ok时如何排查定位",
+        "level": 2,
+        "line_start": 292,
+        "line_end": 320,
+        "summary": "本章节介绍Node-API接口返回值不是napi_ok时如何排查定位的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-16",
+        "title": "napi_wrap如何保证被wrap的对象按期望顺序析构",
+        "level": 2,
+        "line_start": 321,
+        "line_end": 368,
+        "summary": "本章节介绍napi_wrap如何保证被wrap的对象按期望顺序析构的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-17",
+        "title": "napi_call_threadsafe_function回调任务不执行",
+        "level": 2,
+        "line_start": 369,
+        "line_end": 378,
+        "summary": "本章节介绍napi_call_threadsafe_function回调任务不执行的相关内容和使用方法"
+      },
+      {
+        "section_id": "section-18",
+        "title": "使用开发工具支撑C/C++代码快速进行Node-API开发",
+        "level": 2,
+        "line_start": 379,
+        "line_end": 384,
+        "summary": "本章节介绍使用开发工具支撑C/C++代码快速进行Node-API开发的相关内容和使用方法"
+      }
+    ]
+  }
+}
