@@ -125,6 +125,40 @@ reference: 3295
 
 ---
 
+#### 步骤 2.3：检查并清理重复文件（重要！）
+**目的**：检查 documents/ 目录下是否有非 _structure.json 文件，删除重复文件
+
+**操作**：
+- 检查 documents/ 目录下是否有非 _structure.json 文件
+- 如果存在，检查是否有对应的 _structure.json 文件
+- 如果有对应的 _structure.json 文件，删除非 _structure.json 文件
+- 统计清理的文件数量
+
+**使用的工具**：
+- `bash`：检查和删除重复文件
+```bash
+cd search_index/domains/{domain}/documents
+for f in *.json; do
+  if [[ ! "$f" =~ "_structure.json" ]]; then
+    base=$(echo "$f" | sed 's/.json//')
+    if [ -f "${base}_structure.json" ]; then
+      echo "Duplicate: $f and ${base}_structure.json"
+      rm -f "$f"
+    fi
+  fi
+done
+```
+
+**检查点**：
+- [ ] 已检查 documents/ 目录
+- [ ] 重复文件已删除
+- [ ] 只保留 _structure.json 文件
+
+**错误处理**：
+- 如果文件删除失败，记录错误并继续
+
+---
+
 ### 阶段 3：文档处理（核心）
 
 #### 步骤 3.1：读取文档内容

@@ -69,12 +69,26 @@
    done
    ```
 
-5. 检查是否有旧的 docs/ 目录，如果有则删除
+5. 检查 documents/ 目录下是否有非 _structure.json 文件，删除重复文件
+   ```bash
+   cd search_index/domains/{domain}/documents
+   for f in *.json; do
+     if [[ ! "$f" =~ "_structure.json" ]]; then
+       base=$(echo "$f" | sed 's/.json//')
+       if [ -f "${base}_structure.json" ]; then
+         echo "Duplicate: $f and ${base}_structure.json"
+         rm -f "$f"
+       fi
+     fi
+   done
+   ```
+
+6. 检查是否有旧的 docs/ 目录，如果有则删除
    ```bash
    rm -rf search_index/domains/{domain}/docs/
    ```
 
-6. 检查修复后的文件数量
+7. 检查修复后的文件数量
    ```bash
    find search_index/domains/{domain}/documents -name "*_structure.json" | wc -l
    ```
