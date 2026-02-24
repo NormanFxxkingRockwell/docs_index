@@ -1,398 +1,176 @@
 {
   "domain": "onlyfortest",
-  "total_documents": 22,
-  "total_sections": 109,
-  "total_code_blocks": 58,
+  "domain_name": "OnlyForTest",
+  "summary": "OnlyForTest领域是一个专门的测试领域，用于验证文档系统的各种功能和边界情况。该领域包含22个测试文档，涵盖了代码段检测（JavaScript/serTypeScript）、API信息版本测试、多线程并发编程（TaskPool/Worker）、异步并发（Promise/async/await）、示例代码同源验证（正常和异常场景）、原子化服务测试、废弃文档检测、尖括号转义处理等多个测试场景。这些文档用于确保文档系统在不同场景下能够正确解析、处理和展示内容。",
+  "core_concepts": [
+    "代码段检测",
+    "API信息测试",
+    "并发编程",
+    "TaskPool",
+    "Worker",
+    "示例代码同源验证",
+    "原子化服务",
+    "Promise",
+    "async/await",
+    "尖括号转义"
+  ],
+  "document_count": 22,
   "documents": [
     {
-      "doc_id": "e4ab103532c7",
-      "title": "尖括号转义正常场景-系统",
-      "path": "8Release\\angle-brackets-sys.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/8Release\\angle-brackets-sys.md",
-      "sections": 4,
-      "code_blocks": 1,
-      "concepts": [
-        "尖括号存在转义字符",
-        "尖括号内容包含在行内code中",
-        "尖括号内容包含在code块中",
-        "尖括号内容为html中的标签，验证门禁检查功能"
-      ]
-    },
-    {
-      "doc_id": "3dbe7ca116dc",
-      "title": "尖括号转义正常场景",
-      "path": "8Release\\angle-brackets.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/8Release\\angle-brackets.md",
-      "sections": 4,
-      "code_blocks": 1,
-      "concepts": [
-        "尖括号存在转义字符",
-        "尖括号内容包含在行内code中",
-        "尖括号内容包含在code块中",
-        "尖括号内容为html中的标签，验证门禁检查功能"
-      ]
-    },
-    {
-      "doc_id": "9a0dfbee539e",
-      "title": "验证废弃文档中的代码段检测",
-      "path": "9Release\\check-deprecated-doc.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/9Release\\check-deprecated-doc.md",
-      "sections": 9,
-      "code_blocks": 9,
-      "concepts": [
-        "js代码段",
-        "ts代码段",
-        "JavaScript代码段",
-        "javascript代码段",
-        "TypeScript代码段",
-        "typescript代码段",
-        "无标注代码段",
-        "代码段标注 nocheck",
-        "废弃接口<sup>(deprecated)</sup>"
-      ]
-    },
-    {
-      "doc_id": "ed183585b820",
-      "title": "验证代码段检测---不检测",
-      "path": "9Release\\check-illegal-code.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/9Release\\check-illegal-code.md",
-      "sections": 7,
-      "code_blocks": 6,
-      "concepts": [
-        "C++代码段",
-        "json代码段",
-        "java代码段",
-        "html代码段",
-        "text代码段",
-        "shell代码段",
-        "代码段nocheck-fa"
-      ]
-    },
-    {
-      "doc_id": "5c1911feb55b",
+      "doc_id": "check-legal-code",
       "title": "验证代码段检测---需检测",
-      "path": "9Release\\check-legal-code.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/9Release\\check-legal-code.md",
-      "sections": 9,
-      "code_blocks": 9,
-      "concepts": [
-        "js代码段",
-        "ts代码段",
-        "JavaScript代码段",
-        "javascript代码段",
-        "TypeScript代码段",
-        "typescript代码段",
-        "无标注代码段",
-        "代码段标注 nocheck",
-        "废弃接口<sup>(deprecated)</sup>"
-      ]
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/9Release/check-legal-code.md",
+      "summary": "本文档检测 js、ts、JavaScript、javascript、TypeScript、typescript 代码段，包含多种代码段的示例和验证规则。",
+      "key_topics": ["代码段检测", "JavaScript", "TypeScript", "验证规则"]
     },
     {
-      "doc_id": "495e5edcde2d",
-      "title": "验证示例代码同源--异常场景1",
-      "path": "arkts-utils\\ason-parsing-generation-Abnormal-1.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils\\ason-parsing-generation-Abnormal-1.md",
-      "sections": 4,
-      "code_blocks": 4,
-      "concepts": [
-        "ID无嵌套，存在空行",
-        "docs文档中的ID在Sample中不存在(不匹配)",
-        "引用部分代码（Exclude字段）",
-        "嵌套的ID，docs中不含嵌套部分(修改4的部分，是否因为空行导致的报错，此文档中，已经取消了空行)"
-      ]
-    },
-    {
-      "doc_id": "4998784a4978",
-      "title": "验证示例代码同源--异常场景2",
-      "path": "arkts-utils\\ason-parsing-generation-Abnormal-2.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils\\ason-parsing-generation-Abnormal-2.md",
-      "sections": 3,
-      "code_blocks": 4,
-      "concepts": [
-        "ID无嵌套，代码不一致",
-        "引用部分代码（Exclude字段）",
-        "文档代码块中，id重复（但是引用的内容一致),验证扫描结果"
-      ]
-    },
-    {
-      "doc_id": "3383709cbb66",
-      "title": "验证示例代码同源--异常场景3",
-      "path": "arkts-utils\\ason-parsing-generation-Abnormal-3.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils\\ason-parsing-generation-Abnormal-3.md",
-      "sections": 1,
-      "code_blocks": 1,
-      "concepts": [
-        "ID无嵌套，代码不一致"
-      ]
-    },
-    {
-      "doc_id": "06489dde2acd",
-      "title": "验证示例代码同源--异常场景4",
-      "path": "arkts-utils\\ason-parsing-generation-Abnormal-4.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils\\ason-parsing-generation-Abnormal-4.md",
-      "sections": 3,
-      "code_blocks": 2,
-      "concepts": [
-        "ID无嵌套，代码不一致",
-        "嵌套的ID，docs中不含嵌套部分",
-        "注释不一致（docs：行上 vs Sample:行），代码内容一致"
-      ]
-    },
-    {
-      "doc_id": "ef622fdd938e",
-      "title": "验证示例代码同源--异常场景5",
-      "path": "arkts-utils\\ason-parsing-generation-Abnormal-5.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils\\ason-parsing-generation-Abnormal-5.md",
-      "sections": 2,
-      "code_blocks": 3,
-      "concepts": [
-        "文档代码块中，id重复（但是引用的内容一致),验证扫描结果",
-        "嵌套的ID，docs中不含嵌套部分"
-      ]
-    },
-    {
-      "doc_id": "c5bbca81eebf",
-      "title": "验证示例代码同源--正常场景",
-      "path": "arkts-utils\\ason-parsing-generation-normal.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils\\ason-parsing-generation-normal.md",
-      "sections": 2,
-      "code_blocks": 4,
-      "concepts": [
-        "引用全量代码",
-        "引用部分代码（Exclude字段）"
-      ]
-    },
-    {
-      "doc_id": "67f8bfba0f85",
-      "title": "异步并发 (Promise和async/await)",
-      "path": "arkts-utils\\async-concurrency-overview.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils\\async-concurrency-overview.md",
-      "sections": 8,
-      "code_blocks": 8,
-      "concepts": [
-        "验证代码拼接",
-        "验证代码嵌套",
-        "docs代码和sample中不一致（空行），验证扫描结果",
-        "docs代码和sample中不一致（单行缩进不一致），验证扫描结果",
-        "docs代码和sample中不一致（整段代码缩进不一致），验证扫描结果",
-        "Promise",
-        "async/await",
-        "验证注释格式不同"
-      ]
-    },
-    {
-      "doc_id": "15f88148bf08",
-      "title": "多线程并发概述",
-      "path": "arkts-utils\\multi-thread-concurrency-overview.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils\\multi-thread-concurrency-overview.md",
-      "sections": 2,
-      "code_blocks": 1,
-      "concepts": [
-        "多线程并发模型",
-        "TaskPool和Worker"
-      ]
-    },
-    {
-      "doc_id": "296d8e7ecc9f",
-      "title": "TaskPool简介",
-      "path": "arkts-utils\\taskpool-introduction.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils\\taskpool-introduction.md",
-      "sections": 3,
-      "code_blocks": 5,
-      "concepts": [
-        "TaskPool运作机制",
-        "TaskPool注意事项",
-        "\\@Concurrent装饰器"
-      ]
-    },
-    {
-      "doc_id": "038ae760ef95",
-      "title": "API Info 测试场景1",
-      "path": "media\\api-info-TC-one-dev.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/media\\api-info-TC-one-dev.md",
-      "sections": 5,
-      "code_blocks": 0,
-      "concepts": [
-        "Test0-Section<sup>7</sup>",
-        "Test1-Section",
-        "Test2-Section<sup>(deprecated)</sup>",
-        "Test8-Section<sup>abc</sup>",
-        "中文下测试"
-      ]
-    },
-    {
-      "doc_id": "2e44296e7f86",
-      "title": "API Info 测试场景2",
-      "path": "media\\api-info-TC-two-dev.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/media\\api-info-TC-two-dev.md",
-      "sections": 6,
-      "code_blocks": 0,
-      "concepts": [
-        "Test11-Section",
-        "Test12-Section<sup>(deprecated)</sup>",
-        "Test0-Section<sup>7</sup>",
-        "Test1-Section",
-        "Test2-Section<sup>(deprecated)</sup>",
-        "Test8-Section<sup>abc</sup>"
-      ]
-    },
-    {
-      "doc_id": "c8838df30034",
-      "title": "原子化服务添加属性测试",
-      "path": "media\\auto-service-test-dev.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/media\\auto-service-test-dev.md",
-      "sections": 6,
-      "code_blocks": 0,
-      "concepts": [
-        "Test1-H2",
-        "Test2-H2",
-        "Test3",
-        "Test6",
-        "Test8-H2",
-        "Test10"
-      ]
-    },
-    {
-      "doc_id": "e0c0ec4bc6f3",
-      "title": "相关实例测试",
-      "path": "media\\sample-test-dev.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/media\\sample-test-dev.md",
-      "sections": 7,
-      "code_blocks": 0,
-      "concepts": [
-        "相关实例",
-        "Not-相关实例",
-        "相关实例",
-        "相关实例",
-        "Section",
-        "Section",
-        "Samples"
-      ]
-    },
-    {
-      "doc_id": "d4d37a73e5fb",
-      "title": "原子化服务添加属性测试（reference文件夹下）",
-      "path": "reference\\auto-service-test.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/reference\\auto-service-test.md",
-      "sections": 6,
-      "code_blocks": 0,
-      "concepts": [
-        "Test1-H2",
-        "Test2-H2",
-        "Test3",
-        "Test6",
-        "Test8-H2",
-        "Test10"
-      ]
-    },
-    {
-      "doc_id": "c840a33c5d44",
+      "doc_id": "sample-test",
       "title": "reference文件夹下相关实例",
-      "path": "reference\\sample-test.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/reference\\sample-test.md",
-      "sections": 7,
-      "code_blocks": 0,
-      "concepts": [
-        "相关实例",
-        "Not-相关实例",
-        "相关实例",
-        "相关实例",
-        "Section",
-        "Section",
-        "Samples"
-      ]
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/reference/sample/sample-test.md",
+      "summary": "本文档包含多个相关实例的参考示例，展示了不同章节结构和内部标记的使用方法。",
+      "key_topics": ["相关实例", "章节结构", "内部标记"]
     },
     {
-      "doc_id": "c8bdd7712e00",
-      "title": "API Info 测试场景1（reference文件夹下）",
-      "path": "reference\\api-info-test-kit\\api-info-TC-one.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/reference\\api-info-test-kit\\api-info-TC-one.md",
-      "sections": 5,
-      "code_blocks": 0,
-      "concepts": [
-        "Test0-Section<sup>7</sup>",
-        "Test1-Section",
-        "Test2-Section<sup>(deprecated)</sup>",
-        "Test8-Section<sup>abc</sup>",
-        "中文下测试"
-      ]
+      "doc_id": "auto-service-test",
+      "title": "原子化服务添加属性测试（reference文件夹下）",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/reference/auto-service-test.md",
+      "summary": "原子化服务添加属性测试文档，包含多个测试用例，展示Swiper组件在不同场景下的参数定义和原子化服务API支持情况。",
+      "key_topics": ["原子化服务", "Swiper", "API", "参数测试"]
     },
     {
-      "doc_id": "48de98e7aec9",
+      "doc_id": "api-info-TC-two",
       "title": "API Info 测试场景2（reference文件夹下）",
-      "path": "reference\\api-info-test-kit\\api-info-TC-two.md",
-      "reference_path": "../../docs/zh-cn/application-dev/onlyfortest/reference\\api-info-test-kit\\api-info-TC-two.md",
-      "sections": 6,
-      "code_blocks": 0,
-      "concepts": [
-        "Test11-Section",
-        "Test12-Section<sup>(deprecated)</sup>",
-        "Test0-Section<sup>7</sup>",
-        "Test1-Section",
-        "Test2-Section<sup>(deprecated)</sup>",
-        "Test8-Section<sup>abc</sup>"
-      ]
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/reference/api-info-test-kit/api-info-TC-two.md",
+      "summary": "本模块首批接口从API version 4开始支持。包含多个测试章节：Test11-Section、Test12-Section(deprecated)、Test0-Section、Test1-Section、Test2-Section(deprecated)、Test8-Section等。",
+      "key_topics": ["API信息", "版本支持", "废弃接口", "继承机制"]
+    },
+    {
+      "doc_id": "api-info-TC-one",
+      "title": "API Info 测试场景1（reference文件夹下）",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/reference/api-info-test-kit/api-info-TC-one.md",
+      "summary": "本模块首批接口从API version 3开始支持。文档包含多个测试场景，涵盖Test0-Section、Test1-Section、Test2-Section、Test8-Section和中文下测试等章节，测试api-info的继承和版本支持情况。",
+      "key_topics": ["API信息", "版本支持", "继承机制", "中文测试"]
+    },
+    {
+      "doc_id": "api-info-TC-two-dev",
+      "title": "API Info 测试场景2",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/media/api-info-TC-two-dev.md",
+      "summary": "API Info 测试场景2，包含多个测试章节和子章节，用于测试 API 信息提取功能。本模块首批接口从 API version 4 开始支持。",
+      "key_topics": ["API信息", "版本支持", "废弃接口", "子章节"]
+    },
+    {
+      "doc_id": "sample-test-dev",
+      "title": "相关实例测试",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/media/sample-test-dev.md",
+      "summary": "本文档包含多个章节，主要介绍相关实例、Section 和 Samples 等内容，包含二级和三级标题结构。",
+      "key_topics": ["相关实例", "章节结构", "二级标题", "三级标题"]
+    },
+    {
+      "doc_id": "auto-service-test-dev",
+      "title": "原子化服务添加属性测试",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/media/auto-service-test-dev.md",
+      "summary": "文档包含多个测试章节，主要涉及原子化服务API的使用说明，包括Swiper组件及其参数定义。文档测试了原子化服务API在不同场景下的应用，从API version 8开始支持。",
+      "key_topics": ["原子化服务", "Swiper", "API", "参数定义"]
+    },
+    {
+      "doc_id": "api-info-TC-one-dev",
+      "title": "API Info 测试场景1",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/media/api-info-TC-one-dev.md",
+      "summary": "The result(api-info) of Topic is 3.",
+      "key_topics": ["API信息", "版本支持", "继承机制"]
+    },
+    {
+      "doc_id": "multi-thread-concurrency-overview",
+      "title": "多线程并发概述",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/multi-thread-concurrency-overview.md",
+      "summary": "并发模型是用来实现不同应用场景中并发任务的编程模型，常见的并发模型分为基于内存共享的并发模型和基于消息通信的。Actor并发模型作为基于消息通信并发模型的典型代表，不需要开发者去面对锁带来的一系列复杂偶发的问题，同时并发度也相对较高，因此得到了广泛的支持和使用。当前ArkTS提供了TaskPool和Worker两种并发能力，TaskPool和Worker都基于Actor并发模型实现。",
+      "key_topics": ["并发模型", "Actor模型", "TaskPool", "Worker", "多线程"]
+    },
+    {
+      "doc_id": "taskpool-introduction",
+      "title": "TaskPool简介",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/taskpool-introduction.md",
+      "summary": "任务池（TaskPool）作用是为应用程序提供一个多线程的运行环境，降低整体资源的消耗、提高系统的整体性能，且您无需关心线程实例的生命周期。具体接口信息及使用方法详情请见TaskPool。",
+      "key_topics": ["TaskPool", "多线程", "@Concurrent装饰器", "线程管理"]
+    },
+    {
+      "doc_id": "async-concurrency-overview",
+      "title": "异步并发",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/async-concurrency-overview.md",
+      "summary": "本文档介绍Promise和async/await异步并发能力，包括Promise的三种状态、基本用法、then/catch方法，以及async/await语法糖的使用和异常处理。",
+      "key_topics": ["Promise", "async/await", "异步编程", "异常处理"]
+    },
+    {
+      "doc_id": "ason-parsing-generation-normal",
+      "title": "验证示例代码同源--正常场景",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-normal.md",
+      "summary": "本文档展示了验证示例代码同源的正常场景，包括引用全量代码和引用部分代码两种情况。",
+      "key_topics": ["示例代码同源", "正常场景", "代码引用", "Exclude字段"]
+    },
+    {
+      "doc_id": "ason-parsing-generation-Abnormal-5",
+      "title": "验证示例代码同源--异常场景5",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-5.md",
+      "summary": "本文档用于验证示例代码同源异常场景，包括文档代码块中ID重复（但引用内容一致）的验证扫描结果，以及嵌套ID在docs中不含嵌套部分的场景测试。",
+      "key_topics": ["示例代码同源", "异常场景", "ID重复", "嵌套ID"]
+    },
+    {
+      "doc_id": "ason-parsing-generation-Abnormal-4",
+      "title": "验证示例代码同源--异常场景4",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-4.md",
+      "summary": "验证示例代码同源的异常场景测试，包括ID无嵌套代码不一致、嵌套ID在docs中不含嵌套部分、注释不一致等场景的测试用例。",
+      "key_topics": ["示例代码同源", "异常场景", "代码不一致", "注释不一致"]
+    },
+    {
+      "doc_id": "ason-parsing-generation-Abnormal-3",
+      "title": "验证示例代码同源--异常场景3",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-3.md",
+      "summary": "验证示例代码同源的异常场景3，展示ID无嵌套时代码不一致的情况（空格不一致，1000关键字对应行）。",
+      "key_topics": ["示例代码同源", "异常场景", "代码不一致", "空格不一致"]
+    },
+    {
+      "doc_id": "ason-parsing-generation-Abnormal-2",
+      "title": "验证示例代码同源--异常场景2",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-2.md",
+      "summary": "本文档包含三个异常场景测试：1) ID无嵌套但代码不一致的情况；2) 引用部分代码时的Exclude字段处理，包括注释不一致但代码内容一致的场景；3) 文档代码块中ID重复但引用内容一致的情况。文档通过多个TypeScript代码示例展示了这些异常场景的处理方式。",
+      "key_topics": ["示例代码同源", "异常场景", "代码不一致", "ID重复", "Exclude字段"]
+    },
+    {
+      "doc_id": "ason-parsing-generation-Abnormal-1",
+      "title": "验证示例代码同源--异常场景1",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-1.md",
+      "summary": "本文档展示了多个异常场景下的代码示例验证，包括ID无嵌套存在空行、文档ID在Sample中不存在、引用部分代码时的Exclude字段处理、以及嵌套ID的处理情况。",
+      "key_topics": ["示例代码同源", "异常场景", "空行", "ID不存在", "嵌套ID"]
+    },
+    {
+      "doc_id": "check-deprecated-doc",
+      "title": "验证废弃文档中的代码段检测",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/9Release/check-deprecated-doc.md",
+      "summary": "本文档用于验证废弃文档中的代码段检测功能，包含多种语言类型的代码段示例，从API version 9开始不再维护。",
+      "key_topics": ["废弃文档", "代码段检测", "JavaScript", "TypeScript"]
+    },
+    {
+      "doc_id": "check-illegal-code",
+      "title": "验证代码段检测---不检测",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/9Release/check-illegal-code.md",
+      "summary": "本文档检测非 js、ts、JavaScript、javascript、TypeScript、typescript 代码段",
+      "key_topics": ["代码段检测", "非JavaScript/TypeScript", "C++", "Java", "HTML"]
+    },
+    {
+      "doc_id": "angle-brackets",
+      "title": "尖括号转义正常场景",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/9Release/angle-brackets.md",
+      "summary": "本文档测试了尖括号在各种场景下的转义和显示情况，包括：尖括号存在转义字符的多种场景、尖括号内容包含在行内code中、尖括号内容包含在code块中、尖括号内容为html标签时的门禁检查功能。",
+      "key_topics": ["尖括号转义", "转义字符", "行内代码", "代码块", "HTML标签"]
+    },
+    {
+      "doc_id": "angle-brackets-sys",
+      "title": "尖括号转义正常场景-系统",
+      "path": "../../docs/zh-cn/application-dev/onlyfortest/9Release/angle-brackets-sys.md",
+      "summary": "本文档测试尖括号在不同场景下的转义处理，包括转义字符、行内代码、代码块和HTML标签等情况。",
+      "key_topics": ["尖括号转义", "转义字符", "行内代码", "代码块", "HTML标签"]
     }
   ],
-  "core_concepts": [
-    "C++代码段",
-    "ID无嵌套，代码不一致",
-    "ID无嵌套，存在空行",
-    "JavaScript代码段",
-    "Not-相关实例",
-    "Promise",
-    "Samples",
-    "Section",
-    "TaskPool和Worker",
-    "TaskPool注意事项",
-    "TaskPool运作机制",
-    "Test0-Section<sup>7</sup>",
-    "Test1-H2",
-    "Test1-Section",
-    "Test10",
-    "Test11-Section",
-    "Test12-Section<sup>(deprecated)</sup>",
-    "Test2-H2",
-    "Test2-Section<sup>(deprecated)</sup>",
-    "Test3",
-    "Test6",
-    "Test8-H2",
-    "Test8-Section<sup>abc</sup>",
-    "TypeScript代码段",
-    "\\@Concurrent装饰器",
-    "async/await",
-    "docs代码和sample中不一致（单行缩进不一致），验证扫描结果",
-    "docs代码和sample中不一致（整段代码缩进不一致），验证扫描结果",
-    "docs代码和sample中不一致（空行），验证扫描结果",
-    "docs文档中的ID在Sample中不存在(不匹配)",
-    "html代码段",
-    "javascript代码段",
-    "java代码段",
-    "json代码段",
-    "js代码段",
-    "shell代码段",
-    "text代码段",
-    "ts代码段",
-    "typescript代码段",
-    "中文下测试",
-    "代码段nocheck-fa",
-    "代码段标注 nocheck",
-    "多线程并发模型",
-    "尖括号内容为html中的标签，验证门禁检查功能",
-    "尖括号内容包含在code块中",
-    "尖括号内容包含在行内code中",
-    "尖括号存在转义字符",
-    "嵌套的ID，docs中不含嵌套部分",
-    "嵌套的ID，docs中不含嵌套部分(修改4的部分，是否因为空行导致的报错，此文档中，已经取消了空行)",
-    "废弃接口<sup>(deprecated)</sup>",
-    "引用全量代码",
-    "引用部分代码（Exclude字段）",
-    "文档代码块中，id重复（但是引用的内容一致),验证扫描结果",
-    "无标注代码段",
-    "注释不一致（docs：行上 vs Sample:行），代码内容一致",
-    "相关实例",
-    "验证代码嵌套",
-    "验证代码拼接",
-    "验证注释格式不同"
-  ]
+  "created_at": "2026-02-24",
+  "updated_at": "2026-02-24"
 }
