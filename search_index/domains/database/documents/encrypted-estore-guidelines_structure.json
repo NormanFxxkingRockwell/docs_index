@@ -1,0 +1,60 @@
+{
+  "doc_id": "encrypted-estore-guidelines",
+  "title": "E类加密数据库的使用 (ArkTS)",
+  "path": "zh-cn/application-dev/database/encrypted-estore-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/encrypted-estore-guidelines.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997; @dboy190",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了E类加密数据库的使用方法，包括场景介绍、实现机制、权限配置，以及键值型数据库和关系型数据库的E类加密实现。通过封装Mover、Store、SecretKeyObserver和ECStoreManager类，实现应用数据库密钥加锁和解锁状态下E类数据库和C类数据库的切换和操作，提高锁屏下数据的安全性。",
+  "structure": {
+    "title": "E类加密数据库的使用 (ArkTS)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 16,
+        "summary": "介绍了E类加密数据库的应用场景，通过在EL5路径下创建E类数据库，在锁屏时触发文件密钥销毁，解锁后密钥恢复，有效防止用户数据泄露。同时提供了锁屏期间数据存储在C类数据库，解锁后迁移到E类数据库的方案。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "实现机制",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 28,
+        "summary": "说明了通过封装Mover类、Store类、SecretKeyObserver类和ECStoreManager类实现应用数据库密钥加锁和解锁状态下E类数据库和C类数据库的切换和操作。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "配置权限",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 41,
+        "summary": "说明了使用EL5路径下的数据库需要配置ohos.permission.PROTECT_SCREEN_LOCK_DATA权限，并提供了module.json5配置示例。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "键值型数据库E类加密",
+        "level": 2,
+        "line_start": 43,
+        "line_end": 552,
+        "summary": "提供了键值型数据库的E类加密数据库使用方式，包括Mover、Store、SecretKeyObserver和ECStoreManager类的具体实现，以及在EntryAbility和Index按键事件中的使用示例。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "关系型数据库E类加密",
+        "level": 2,
+        "line_start": 554,
+        "line_end": 1034,
+        "summary": "提供了关系型数据库的E类加密数据库使用方式，包括Mover、Store、SecretKeyObserver和ECStoreManager类的具体实现，以及在EntryAbility和Index按键事件中的使用示例。"
+      }
+    ]
+  }
+}

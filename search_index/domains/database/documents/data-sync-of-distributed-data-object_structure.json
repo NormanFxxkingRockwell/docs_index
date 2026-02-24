@@ -1,0 +1,76 @@
+{
+  "doc_id": "data-sync-of-distributed-data-object",
+  "title": "分布式数据对象跨设备数据同步 (ArkTS)",
+  "path": "zh-cn/application-dev/database/data-sync-of-distributed-data-object.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/data-sync-of-distributed-data-object.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@lvcong_oh",
+    "designer": "@hollokin; @yuchaozhng",
+    "tester": "@lj_liujing; @yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍分布式数据对象跨设备数据同步功能，提供在分布式应用场景下实现多设备间同应用数据协同的简单易用JS接口。文档涵盖场景介绍、基本概念、运作机制、约束限制、接口说明、开发步骤等内容，包括在跨端迁移和多端协同中使用分布式数据对象的具体实现方法。",
+  "structure": {
+    "title": "分布式数据对象跨设备数据同步 (ArkTS)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 18,
+        "summary": "介绍传统设备间数据同步的复杂性和分布式数据对象的优势，说明其通过实现变量的全局访问，使开发者能够像操作本地变量一样跨设备访问变量，自动高效地实现数据多端同步。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 31,
+        "summary": "定义分布式内存数据库和分布式数据对象的基本概念，说明分布式数据对象是JS对象型的封装，每个实例会创建内存数据库中的数据表，并描述其生命周期状态。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "运作机制",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 113,
+        "summary": "详细说明分布式数据对象的运作机制，包括JS对象型存储与封装机制、跨设备同步和数据变更通知机制、同步的最小单位、对象持久化缓存机制和资产同步机制。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 114,
+        "line_end": 133,
+        "summary": "列出分布式数据对象的使用约束和限制，包括使用场景、数据同步条件、性能要求、实例数量限制、设备数量限制等。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 159,
+        "summary": "提供分布式对象跨设备数据同步功能的相关接口列表，包括创建对象、生成sessionId、设置sessionId、监听数据变更和状态变更、保存和撤回保存、绑定融合资产、设置资产等接口。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 161,
+        "line_end": 532,
+        "summary": "详细说明在跨端迁移和多端协同中使用分布式数据对象的开发步骤，包括迁移发起端和接收端的操作流程、代码示例以及注意事项。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 534,
+        "line_end": 540,
+        "summary": "提供分布式数据对象开发的相关实例参考，包括设备管理和分布式备忘录的示例链接。"
+      }
+    ]
+  }
+}

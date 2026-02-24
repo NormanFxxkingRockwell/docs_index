@@ -1,0 +1,84 @@
+{
+  "doc_id": "aip-data-intelligence-embedding",
+  "title": "应用数据向量化 (ArkTS)",
+  "path": "zh-cn/application-dev/database/aip-data-intelligence-embedding.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/aip-data-intelligence-embedding.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@my-2024; @cuile44; @pancodax",
+    "designer": "@fysun17; @AnruiWang; @xd_94",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍应用数据向量化功能，通过ArkData智慧数据平台（AIP）将非结构化的文本、图像等多模态数据转换成具有语义的向量。文档涵盖向量化基本概念、多模态嵌入模型、文本分块、实现机制、运作机制、约束限制、接口说明，以及文本向量和图像向量的详细开发步骤，包括获取模型、加载模型、获取嵌入向量和释放模型等操作。",
+  "structure": {
+    "title": "应用数据向量化 (ArkTS)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 16,
+        "summary": "介绍在数字化向智能化演进阶段，构建智慧化服务的必要性。ArkData智慧数据平台提供端侧数据智慧化构建，使应用数据向量化，通过嵌入模型将非结构化的文本、图像等多模态数据转换成具有语义的向量。从API version 15开始支持此功能。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 29,
+        "summary": "解释智慧化数据构建过程中的基本概念，包括向量化（通过嵌入模型将高维非结构化数据映射为低维连续向量）、多模态嵌入模型（将文本和图像转换到同一向量空间，支持单模态和跨模态语义表征）、文本分块（通过AIP分块接口切分文本以高效实现数据向量化）。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "实现机制",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 33,
+        "summary": "说明应用可借助智慧数据平台能力实现智慧化数据的构建，将应用数据转化为可计算的向量。相关能力均运行在应用进程内，数据不出应用，保证隐私安全。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "运作机制",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 36,
+        "summary": "描述应用数据向量化将应用原数据向量化并存储在向量数据库中的运作方式。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 42,
+        "summary": "列出应用数据向量化的约束条件：当前仅支持在2in1设备上使用；嵌入模型推理过程可使用NPU加速；模型推理单次可处理的文本长度上限为512个字符，支持中英文；模型推理单次可处理的图像大小小于20MB。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 43,
+        "line_end": 59,
+        "summary": "列出智慧数据向量化功能的相关接口，包括文本嵌入模型接口（getTextEmbeddingModel、loadModel、splitText、getEmbedding、releaseModel）和图像嵌入模型接口（getImageEmbeddingModel、loadModel、getEmbedding、releaseModel）。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "文本向量化开发步骤",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 189,
+        "summary": "详细说明文本向量化的开发步骤：导入模块、获取文本嵌入模型、加载文本嵌入模型、获取文本的分块（当数据长度超过限定时使用splitText接口）、获取给定文本的嵌入向量（支持单个文本或文本集合）、释放文本嵌入模型。每个步骤都包含示例代码。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "图像向量化开发步骤",
+        "level": 2,
+        "line_start": 190,
+        "line_end": 284,
+        "summary": "详细说明图像向量化的开发步骤：导入模块、获取图像嵌入模型、加载图像嵌入模型、获取给定图像的嵌入向量、释放图像嵌入模型。每个步骤都包含示例代码和错误处理。"
+      }
+    ]
+  }
+}

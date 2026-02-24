@@ -1,0 +1,84 @@
+{
+  "doc_id": "data-sync-of-kv-store",
+  "title": "键值型数据库跨设备数据同步 (ArkTS)",
+  "path": "zh-cn/application-dev/database/data-sync-of-kv-store.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/data-sync-of-kv-store.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@ding_dong_dong",
+    "designer": "@ding_dong_dong",
+    "tester": "@logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍键值型数据库跨设备数据同步功能，包括单版本数据库和多设备协同数据库的基本概念、手动同步和自动同步两种端端同步方式、数据跨设备端端同步机制、数据变化通知机制、约束限制、相关接口说明以及详细的开发步骤。适用于需要实现分布式数据同步的应用场景，如联系人、天气、图库缩略图等应用存储。",
+  "structure": {
+    "title": "键值型数据库跨设备数据同步 (ArkTS)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 14,
+        "summary": "介绍键值型数据库的特点和适用场景，包括比SQL数据库更好的读写性能、在分布式场景中降低版本兼容问题和冲突解决复杂度的优势，被广泛应用于不涉及过多数据关系和业务关系的业务数据存储。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 34,
+        "summary": "介绍单版本数据库和多设备协同数据库的概念。单版本数据库以单个条目为单位保存数据，全局只保留一份数据，适用于联系人、天气等场景。多设备协同数据库在Key前拼接DeviceID标识符，保证各设备数据严格隔离，支持按设备维度查询，适用于图库缩略图存储场景。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "端端同步方式",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 48,
+        "summary": "介绍两种同步方式：手动同步由应用调用sync接口触发，支持PULL_ONLY、PUSH_ONLY和PUSH_PULL三种模式；自动同步在跨设备Call调用场景中，由分布式数据库自动完成数据同步，应用无需主动调用sync接口。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "运作机制",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 71,
+        "summary": "说明底层通信组件完成设备发现和认证，建立加密数据传输通道进行数据端端同步。介绍数据跨设备端端同步机制，通过put、delete接口触发自动同步，或手动调用sync接口触发同步。同时说明数据变化通知机制，包括本地数据变化通知和分布式数据变化通知。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 84,
+        "summary": "列出键值型数据库的约束限制，包括Key和Value的长度限制、不支持自定义冲突解决策略、每个应用最多打开16个数据库、单个数据库最多注册8个订阅回调等限制条件。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 98,
+        "summary": "列出单版本键值型分布式数据库跨设备数据端端同步功能的相关接口，包括createKVManager、getKVStore、put、on、get、sync等接口，并提供接口描述。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 100,
+        "line_end": 365,
+        "summary": "提供单版本键值型数据库跨设备数据端端同步的完整开发流程，包括导入模块获取context、请求权限、创建KVManager实例、获取KVStore数据库、订阅数据变化、写入数据、查询数据、同步数据到其他设备等8个详细步骤，每个步骤都包含完整的代码示例。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 367,
+        "line_end": 385,
+        "summary": "提供键值型数据库开发的相关实例参考，包括分布式组网认证、分布式数据管理、分布式音乐播放、分布式计算器、分布式五子棋、分布式手写板等示例项目链接。"
+      }
+    ]
+  }
+}

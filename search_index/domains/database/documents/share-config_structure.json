@@ -1,0 +1,68 @@
+{
+  "doc_id": "share-config",
+  "title": "应用间配置共享 (ArkTS)",
+  "path": "zh-cn/application-dev/database/share-config.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/share-config.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@woodenarow",
+    "designer": "@woodenarow; @xuelei3",
+    "tester": "@chenwan188; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了应用间配置共享功能，通过集中管理公共配置信息在不同应用间共享配置，提升协作效率。从API version 20开始支持。文档包含场景介绍、运作机制、约束与限制、接口说明、配置发布方和配置访问方等内容，详细说明了如何使用静态配置和动态配置两种方式发布和访问共享配置项。",
+  "structure": {
+    "title": "应用间配置共享 (ArkTS) (ArkTS)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 13,
+        "summary": "介绍应用间配置共享的基本概念，通过集中管理公共配置信息在不同应用间共享配置，提升协作效率。从API version 20开始支持应用间配置共享。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "运作机制",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 22,
+        "summary": "说明应用间配置共享的运作机制，包括配置发布方（数据提供方）和配置访问方（数据访问方）的职责。配置发布方负责提供默认共享配置项并动态修改配置项信息，支持静态配置和动态配置两种方式。配置访问方可通过调用接口获取配置信息或监听配置变化。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "约束与限制",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 26,
+        "summary": "说明应用间配置共享的约束与限制，一个应用最多可以发布32个配置项，这个数量是静态配置与动态配置的总和。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 51,
+        "summary": "列出应用间配置共享的相关接口，包括公共接口（createDataProxyHandle）、配置发布方接口（publish、delete）和配置访问方接口（get、on、off），并提供了接口描述和参数说明。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "配置发布方",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 170,
+        "summary": "详细介绍配置发布方的配置和使用方法，包括module.json5配置、静态配置和动态配置。说明了crossAppSharedConfig字段的配置要求，包括uri、value和allowList属性的定义和限制，以及如何使用publish和delete接口动态新增、删除或修改配置项。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "配置访问方",
+        "level": 2,
+        "line_start": 174,
+        "line_end": 250,
+        "summary": "介绍配置访问方如何获取配置信息和监听配置变化，包括使用get接口获取配置信息、使用on接口监听配置变化、使用off接口取消监听配置变化。提供了完整的代码示例和接口调用说明。"
+      }
+    ]
+  }
+}

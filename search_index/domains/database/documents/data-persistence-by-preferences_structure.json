@@ -1,0 +1,76 @@
+{
+  "doc_id": "data-persistence-by-preferences",
+  "title": "通过用户首选项实现数据持久化 (ArkTS)",
+  "path": "zh-cn/application-dev/database/data-persistence-by-preferences.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/data-persistence-by-preferences.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@ding_dong_dong",
+    "designer": "@ding_dong_dong",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍如何通过用户首选项(Preferences)实现数据持久化。用户首选项为应用提供Key-Value键值型的数据处理能力，支持应用持久化轻量级数据，适用于保存用户的个性化设置。文档详细说明了两种存储模式（XML和GSKV）的特点、约束限制、接口说明以及完整的开发步骤，包括获取实例、读写数据、订阅变更等操作。",
+  "structure": {
+    "title": "通过用户首选项实现数据持久化 (ArkTS)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 13,
+        "summary": "介绍用户首选项(Preferences)的基本概念和适用场景，为应用提供Key-Value键值型的数据处理能力，支持应用持久化轻量级数据，适用于保存用户的个性化设置。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "运作机制",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 24,
+        "summary": "说明用户首选项的运作机制，包括ArkTS接口调用、Preferences实例管理、持久化文件存储位置等。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "存储模式说明",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 33,
+        "summary": "介绍两种存储模式：XML存储模式（通用性强，支持跨平台）和GSKV存储模式（支持多进程并发读写，实时落盘）。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 60,
+        "summary": "详细说明首选项的通用限制、XML模式约束限制和GSKV模式约束限制，包括键值长度限制、并发限制、数据量限制等。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 78,
+        "summary": "列出用户首选项持久化功能的相关接口，包括获取实例、读写数据、删除数据、订阅变更等接口及其描述。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 340,
+        "summary": "提供完整的开发步骤，包括导入模块、选择存储模式、获取Preferences实例、写入数据、读取数据、删除数据、数据持久化、订阅数据变更、删除指定文件等操作的详细代码示例。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 341,
+        "line_end": 360,
+        "summary": "提供多个相关实例参考，包括游戏2048、图案密码锁、首选项示例、备忘录、应用首次启动、应用内字体大小调节等应用示例。"
+      }
+    ]
+  }
+}

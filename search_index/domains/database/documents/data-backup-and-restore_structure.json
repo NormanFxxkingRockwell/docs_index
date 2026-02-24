@@ -1,0 +1,92 @@
+{
+  "doc_id": "data-backup-and-restore",
+  "title": "数据库备份与恢复 (ArkTS)",
+  "path": "zh-cn/application-dev/database/data-backup-and-restore.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/data-backup-and-restore.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997; @dboy190",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了HarmonyOS应用开发中数据库备份与恢复的完整流程，包括键值型数据库和关系型数据库的备份、恢复及异常处理。文档详细说明了在数据库被篡改、删除或设备断电等场景下，如何通过备份恢复能力将数据库恢复至可用状态。键值型数据库支持backup、restore和deletebackup接口；关系型数据库支持手动备份和自动备份（仅系统应用），并提供异常重建功能。文档包含完整的代码示例和操作步骤。",
+  "structure": {
+    "title": "数据库备份与恢复 (ArkTS)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 16,
+        "summary": "介绍了数据库备份与恢复的应用场景，包括操作或存储过程中出现问题时的恢复需求，以及数据库被篡改、删除或设备断电等场景下的数据保护需求。说明键值型数据库和关系型数据库均支持备份恢复，键值型数据库还支持删除备份功能。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "键值型数据库备份、恢复与删除",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 264,
+        "summary": "详细介绍了键值型数据库的备份、恢复和删除备份功能。包含创建数据库、插入数据、使用backup()方法备份数据、使用delete()方法删除数据（模拟意外场景）、使用restore()方法恢复数据、使用deleteBackup()方法删除备份释放空间的完整代码示例和操作步骤。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "关系型数据库备份",
+        "level": 2,
+        "line_start": 266,
+        "line_end": 360,
+        "summary": "介绍了关系型数据库的备份能力，包括手动备份和自动备份两种方式。手动备份通过调用backup接口实现，提供了完整的代码示例；自动备份通过在StoreConfig中配置haMode参数为MAIN_REPLICA实现，仅支持系统应用。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "手动备份",
+        "level": 3,
+        "line_start": 272,
+        "line_end": 323,
+        "summary": "详细说明了关系型数据库手动备份的实现方法，通过调用backup接口实现。提供了完整的代码示例，包括导入模块、创建数据库、执行建表SQL语句、调用backup方法进行备份等步骤。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "自动备份（仅系统应用可用）",
+        "level": 3,
+        "line_start": 327,
+        "line_end": 358,
+        "summary": "介绍了关系型数据库的自动备份功能，通过在StoreConfig中配置haMode参数为MAIN_REPLICA实现数据库双写备份。该功能仅支持系统应用，提供了在UIAbility的onCreate方法中配置自动备份的完整代码示例。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "关系型数据库异常重建",
+        "level": 2,
+        "line_start": 362,
+        "line_end": 391,
+        "summary": "说明了关系型数据库异常重建的处理方式。当抛出14800011异常错误码时，说明数据库出现异常，需要删除数据库后恢复数据。通过配置allowRebuild参数为true可以设置数据库在出现异常时自动删库，重建成功后为空库，需要重新建表并使用备份数据进行恢复。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "关系型数据库数据恢复",
+        "level": 2,
+        "line_start": 396,
+        "line_end": 546,
+        "summary": "介绍了关系型数据库异常后的数据恢复方式，包括恢复手动备份数据和恢复自动备份数据（仅系统应用）。详细说明了恢复过程：抛出数据库异常错误码、关闭所有打开的结果集、调用restore接口恢复数据。提供了完整的代码示例和操作步骤。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "恢复手动备份数据",
+        "level": 3,
+        "line_start": 402,
+        "line_end": 504,
+        "summary": "详细说明了恢复手动备份数据的完整流程。包括三个关键步骤：1. 捕获数据库异常错误码14800011；2. 关闭所有打开的结果集；3. 调用restore接口恢复数据。提供了每个步骤的详细代码示例，包括检查备份文件是否存在、获取RdbStore、调用restore方法等。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "恢复自动备份数据（仅系统应用可用）",
+        "level": 3,
+        "line_start": 508,
+        "line_end": 544,
+        "summary": "介绍了恢复自动备份数据的方法，仅支持系统应用。通过restore接口恢复自动备份的数据，提供了完整的代码示例，包括捕获异常错误码14800011、关闭所有打开的结果集、调用restore方法进行数据恢复等步骤。"
+      }
+    ]
+  }
+}

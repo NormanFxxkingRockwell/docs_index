@@ -1,0 +1,60 @@
+{
+  "doc_id": "access-control-by-device-and-data-level",
+  "title": "基于设备分类和数据分级的访问控制 (ArkTS)",
+  "path": "zh-cn/application-dev/database/access-control-by-device-and-data-level.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/access-control-by-device-and-data-level.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了基于设备分类和数据分级的访问控制机制，包括数据安全标签（S1-S4）和设备安全等级（SL1-S5）的定义，以及跨设备同步时的访问控制规则。文档详细说明了如何使用键值型数据库和关系型数据库实现数据分级，提供了完整的代码示例。",
+  "structure": {
+    "title": "基于设备分类和数据分级的访问控制 (ArkTS)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 35,
+        "summary": "介绍了分布式数据管理的数据分类分级保护机制，包括数据安全标签（S1-S4）的定义和风险等级说明，以及设备安全等级（SL1-SL5）的分类标准。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "跨设备同步访问控制机制",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 50,
+        "summary": "说明了数据跨设备同步时的访问控制规则，基于数据安全标签和设备安全等级进行匹配，提供了详细的访问控制矩阵。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 55,
+        "summary": "介绍了分布式数据库访问控制机制的应用场景，强调在创建数据库时应合理设置安全标签。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "使用键值型数据库实现数据分级",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 166,
+        "summary": "提供了使用键值型数据库实现数据分级的完整代码示例，包括创建KVManager、获取KVStore以及设置securityLevel参数为S3的方法。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "使用关系型数据库实现数据分级",
+        "level": 2,
+        "line_start": 167,
+        "line_end": 199,
+        "summary": "提供了使用关系型数据库实现数据分级的代码示例，展示如何通过securityLevel参数设置数据库的安全级别为S3。"
+      }
+    ]
+  }
+}

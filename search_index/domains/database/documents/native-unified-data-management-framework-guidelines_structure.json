@@ -1,0 +1,100 @@
+{
+  "doc_id": "native-unified-data-management-framework-guidelines",
+  "title": "UDMF开发指导 (C/C++)",
+  "path": "zh-cn/application-dev/database/native-unified-data-management-framework-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/native-unified-data-management-framework-guidelines.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@jcwen",
+    "designer": "@junathuawei1; @zph000",
+    "tester": "@lj_liujing; @yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "统一数据管理框架（UDMF）C/C++开发指导文档。UDMF提供了数据跨应用、跨设备交互标准，定义了跨应用、跨设备数据交互过程中的数据语言，提升数据交互效率。文档介绍了UDMF的基本概念（UTD、UDS、Unified Record、Unified Data、Unified Data Provider）、约束限制、接口说明，以及如何通过不同方式获取纯文本类型数据、使用UDMF发送和接收UDS数据、使用UDMF延迟发送UDS数据等开发实践。",
+  "structure": {
+    "title": "UDMF开发指导 (C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 13,
+        "summary": "介绍统一数据管理框架（UDMF）的核心功能：提供数据跨应用、跨设备交互标准，定义数据交互语言，提升数据交互效率，支持安全、标准化数据流通通路和不同级别的数据访问权限与生命周期管理策略。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 26,
+        "summary": "定义UDMF的五个核心概念：标准化数据类型（UTD）用于解决类型模糊问题；标准化数据结构（UDS）定义统一数据内容结构；统一数据记录（Unified Record）抽象定义数据内容；统一数据对象（Unified Data）封装一组数据记录；统一数据提供者（Unified Data Provider）用于延迟发送场景。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 33,
+        "summary": "说明UDMF的使用约束：批量数据记录分组大小不超过200MB，PlainText、Hyperlink、HTML单属性值上限20MB；用户自定义数据大小不超过100MB；唯一标识符内存大小不小于512字节。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 71,
+        "summary": "提供UDMF的C/C++接口列表，包括UTD创建销毁、类型获取、比较等接口；UDS Hyperlink创建销毁、属性设置获取接口；Unified Data和Unified Record的创建销毁、数据添加获取接口；UDMF数据库读写接口；以及Unified Data Provider相关接口。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "添加动态链接库",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 80,
+        "summary": "说明在CMakeLists.txt中添加libudmf.so动态链接库的配置方法。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "引用头文件",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 91,
+        "summary": "列出UDMF开发需要引用的头文件，包括标准C库头文件和UDMF相关头文件（utd.h、uds.h、udmf.h、udmf_meta.h、udmf_err_code.h）。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "通过不同方式获取纯文本类型数据",
+        "level": 2,
+        "line_start": 92,
+        "line_end": 125,
+        "summary": "演示如何使用UTD获取纯文本类型数据的完整流程：通过文件后缀名和MIME类型分别获取typeId，创建UTD实例对象，比较UTD对象是否相等，最后销毁所有指针。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "使用UDMF发送UDS数据",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 167,
+        "summary": "演示使用UDMF发送超链接类型UDS数据的完整流程：创建hyperlink数据结构，设置URL和描述信息，将hyperlink放入数据记录，将数据记录添加到统一数据对象，保存数据至数据库获取key值，最后销毁指针。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "使用UDMF接收UDS数据",
+        "level": 2,
+        "line_start": 169,
+        "line_end": 222,
+        "summary": "演示使用UDMF接收超链接类型UDS数据的完整流程：创建统一数据对象，通过key从数据库获取数据，判断数据类型，获取数据记录和hyperlink数据，读取hyperlink各项信息，最后销毁指针。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "使用UDMF延迟发送UDS数据",
+        "level": 2,
+        "line_start": 224,
+        "line_end": 286,
+        "summary": "演示使用UDMF延迟发送UDS数据的实现，包含两个子部分：定义UDS数据提供函数（GetDataCallback和ProviderFinalizeCallback回调函数）和延迟发送UDS数据（创建Provider并配置回调，创建Record和Data，写入数据库获取key）。"
+      }
+    ]
+  }
+}

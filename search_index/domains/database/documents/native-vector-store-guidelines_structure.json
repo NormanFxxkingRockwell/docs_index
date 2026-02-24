@@ -1,0 +1,68 @@
+{
+  "doc_id": "native-vector-store-guidelines",
+  "title": "通过向量数据库实现数据持久化 (C/C++)",
+  "path": "zh-cn/application-dev/database/native-vector-store-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/native-vector-store-guidelines.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@htt1997",
+    "designer": "@widecode",
+    "tester": "@logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了如何通过向量数据库实现数据持久化，包括场景介绍、基本概念、约束限制、规格限制、接口说明和详细的开发步骤。文档涵盖了向量数据库的基本概念（结果集、floatvector数据类型）、系统约束（WAL日志模式、连接限制、并发写操作等）、C/C++ API接口说明，以及完整的开发流程，包括判断系统支持、获取数据库实例、建表插入数据、修改删除数据、查询数据（普通查询、参数绑定查询、子查询、聚合查询、多表查询）、创建视图、使用向量索引提升查询效率、配置数据老化功能和数据压缩功能，最后删除数据库。",
+  "structure": {
+    "title": "通过向量数据库实现数据持久化 (C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 14,
+        "summary": "介绍向量数据库的概念和用途，向量数据库支持存储、管理和检索向量数据以及标量的关系型数据处理。floatvector数据类型用于存储数据向量化结果，实现快速检索和相似性搜索。从API version 18开始支持通过向量数据库实现数据持久化。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 19,
+        "summary": "定义向量数据库的基本概念，包括结果集（用户查询后的结果集合，提供灵活的数据访问方式）和floatvector数据类型（表示向量数据，例如[1.0, 3.0, 2.4, 5.1, 6.2, 11.7]）。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 31,
+        "summary": "列出向量数据库的约束限制：系统默认使用WAL日志模式和FULL落盘模式；默认有4个读连接和1个写连接；同一时间只能支持一个写操作，并发写操作会串行执行；应用卸载后数据库文件自动清除；建议单条数据不超过2M以保证插入读取成功。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "规格限制",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 35,
+        "summary": "规格限制的详细说明，指向data-persistence-by-vector-store.md文档中的规格限制章节。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 51,
+        "summary": "提供向量数据库的C/C++接口说明，包括设置数据库类型、创建或打开数据库实例、执行SQL语句（有返回值和无返回值）、查询数据、删除数据库、获取浮点数数组大小和值等接口。详细接口说明参考RDB文档。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 52,
+        "line_end": 434,
+        "summary": "详细的开发步骤指南，包括：添加动态链接库libnative_rdb_ndk.z.so、引入头文件、判断系统是否支持向量数据库、获取OH_Rdb_Store实例、建表并插入数据、修改或删除数据、查询数据（普通查询、参数绑定查询、子查询、聚合查询、多表查询）、创建视图、使用向量索引进行查询提升效率、配置数据老化功能（按时间或空间清理数据）、配置数据压缩功能（压缩text类型列数据）、删除数据库。每个步骤都提供了完整的示例代码。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "doc_id": "native-access-control-by-device-and-data-level",
+  "title": "基于设备分类和数据分级的访问控制 (C/C++)",
+  "path": "zh-cn/application-dev/database/native-access-control-by-device-and-data-level.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/native-access-control-by-device-and-data-level.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍基于设备分类和数据分级的访问控制机制，包括数据安全标签（S1-S4）和设备安全等级（SL1-S5）的定义及跨设备同步访问控制规则，提供关系型数据库安全等级设置的开发步骤示例。",
+  "structure": {
+    "title": "基于设备分类和数据分级的访问控制 (C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 14,
+        "summary": "介绍分布式数据库访问控制机制的作用，说明需基于数据分类分级规范设置数据库安全标签，当前仅支持关系型数据库（C/C++）进行分级访问控制。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 42,
+        "summary": "阐述数据安全标签（S1-S4）和设备安全等级（SL1-SL5）的概念，提供风险等级定义表格和设备安全等级查询方法。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "跨设备同步访问控制机制",
+        "level": 2,
+        "line_start": 43,
+        "line_end": 57,
+        "summary": "说明数据跨设备同步时的访问控制规则，提供设备安全级别与可同步数据安全标签的对应矩阵表。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 58,
+        "line_end": 103,
+        "summary": "提供关系型数据库设置安全等级的完整开发步骤，包括添加依赖库、导入头文件和调用OH_Rdb_SetSecurityLevel接口的代码示例。"
+      }
+    ]
+  }
+}

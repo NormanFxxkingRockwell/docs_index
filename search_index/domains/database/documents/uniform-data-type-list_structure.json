@@ -1,0 +1,44 @@
+{
+  "doc_id": "uniform-data-type-list",
+  "title": "UTD预置列表",
+  "path": "zh-cn/application-dev/database/uniform-data-type-list.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/uniform-data-type-list.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@jcwen",
+    "designer": "@junathuawei1; @zph000",
+    "tester": "@lj_liujing; @yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档详细介绍了OpenHarmony系统中的UTD（Uniform Type Descriptor，统一类型描述符）预置类型列表。UTD用于解决系统中的类型模糊问题，统一MIME Type、文件扩展名等不同的类型描述方式。文档从通用性、场景和归属角度将预置类型分为三类：基础类型（general.xxx，通用数据类型，可跨应用、跨设备、跨平台识别）、系统关联类型（os-name.xxx，与具体平台/操作系统深度关联，支持系统内跨应用交互）和应用定义类型（com.company-name.xxx或org.organization-name.xxx，由具体应用或组织定义维护）。文档提供了详细的UTD-ID、BelongingTo类型、后缀名、MIMEType类型和说明对照表，涵盖了文件、目录、图片、视频、音频、文本、压缩包、字体、数据库、证书、电子书、办公文档等多种数据类型。",
+  "structure": {
+    "title": "UTD预置列表",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "基础类型",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 220,
+        "summary": "基础类型表示通用数据类型，进行跨应用、跨设备、跨平台交互时能够被绝大多数应用、设备以及平台识别，标识UTD-ID为general.xxx。本章节详细列出了系统预定义的通用类型，包括基础类型（entity、object）、文件类型（file、directory、folder、symlink）、内容类型（composite-object、media、content-form）、图片类型（image、png、jpeg、tiff、gif、svg等，包含数十种图片格式）、视频类型（video、avi、mpeg、mp4、3gpp、flv、webm等）、音频类型（audio、mp3、aac、flac、ogg、midi等）、压缩包类型（archive、tar、zip、bz2、7z、rar等）、文本类型（text、html、xml、markdown、json、yaml等）、源代码类型（source-code、c、java、python、javascript等）、脚本类型（script、shell、php、powershell等）、字体类型（font、ttf、otf、woff等）、数据库类型（database、sqlite）、证书类型（certificate）、电子书类型（ebook、epub、mobi、azw）、CAD类型（cad、dwg、dxf）以及其他各种数据类型。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "系统关联类型",
+        "level": 2,
+        "line_start": 221,
+        "line_end": 245,
+        "summary": "系统定义数据类型与具体的平台/操作系统有较为深入的关联，支持系统/平台内的跨应用交互，标识UTD-ID为os-name.xxx。本章节列出了OpenHarmony系统定义的类型（form、app-item、want、atomic-service、package、hap、app、hsp、har、hdoc、hinote、styled-string、moving-photo、pixel-map、dlp）、MacOS系统类型（dmg）、Debian系统类型（deb）、Android系统类型（apk）、RedHat系统类型（rpm）、HarmonyOS系统类型（hmoswifi）等系统关联类型。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "应用定义类型",
+        "level": 2,
+        "line_start": 246,
+        "line_end": 505,
+        "summary": "应用定义类型表示该类型由具体的应用或者组织进行定义与维护，数据的交互依赖特定的应用进行识别，标识UTD-ID为com.company-name.xxx或org.organization-name.xxx。本章节详细列出了Microsoft类型（bmp、ico、wav、wmv、wma、exe、msi、doc、xls、ppt、docx、xlsx、pptx等Office文档格式）、Adobe类型（pdf、psd、ai、swf、flash等）、Apple类型（keynote、numbers、pages、dmg、webarchive、m4v、mov等）、OpenOffice/OpenDocument类型（odt、ods、odp等）、Kingsoft类型（wps、et、dps等）、Amazon类型（mobi、azw、kfx等电子书）、Autodesk类型（dwg、dxf、dwf等CAD格式）、Google类型（webp等）、GNU类型（tar、gzip、texinfo等）、Java类型（class、jar等）、Matroska类型（mkv、mka等）、SQLite数据库类型、7-zip、WinRAR等压缩格式，以及各种专业软件的文件格式类型。"
+      }
+    ]
+  }
+}

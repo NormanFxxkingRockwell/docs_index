@@ -1,0 +1,52 @@
+{
+  "doc_id": "data-persistence-by-kv-store",
+  "title": "通过键值型数据库实现数据持久化 (ArkTS)",
+  "path": "zh-cn/application-dev/database/data-persistence-by-kv-store.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/data-persistence-by-kv-store.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@ding_dong_dong",
+    "designer": "@ding_dong_dong",
+    "tester": "@logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍如何使用键值型数据库实现数据持久化。键值型数据库适用于存储没有复杂关系模型的数据，如商品名称及对应价格、员工工号及今日是否已出勤等。文档详细说明了键值型数据库的约束限制、相关接口说明，以及完整的开发步骤，包括创建KVManager实例、获取键值数据库、订阅数据变化、插入数据、获取数据、删除数据、关闭数据库和删除数据库等操作。",
+  "structure": {
+    "title": "通过键值型数据库实现数据持久化 (ArkTS)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 14,
+        "summary": "介绍键值型数据库的适用场景，适用于存储没有复杂关系模型的数据，如商品名称及对应价格、员工工号及今日是否已出勤等，数据复杂度低，更容易兼容不同数据库版本和设备类型。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 24,
+        "summary": "说明键值型数据库的约束限制，包括Key和Value的长度限制、应用程序最多支持同时打开16个键值型分布式数据库、事件回调方法中不允许进行阻塞操作等。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 39,
+        "summary": "列出键值型数据库持久化功能的相关接口，包括createKVManager、getKVStore、put、get、delete、closeKVStore、deleteKVStore等接口及其描述。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 41,
+        "line_end": 319,
+        "summary": "详细介绍使用键值型数据库的完整开发步骤，包括创建KVManager实例、获取键值数据库、订阅数据变化、插入数据、获取数据、删除数据、关闭数据库和删除数据库等操作，每个步骤都提供了完整的示例代码。"
+      }
+    ]
+  }
+}

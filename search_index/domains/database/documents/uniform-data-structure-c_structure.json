@@ -1,0 +1,76 @@
+{
+  "doc_id": "uniform-data-structure-c",
+  "title": "标准化数据结构 (C/C++)",
+  "path": "zh-cn/application-dev/database/uniform-data-structure-c.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/uniform-data-structure-c.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@jcwen",
+    "designer": "@junathuawei1; @zph000",
+    "tester": "@lj_liujing; @yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了标准化数据结构（UDS）在C/C++中的使用方法，包括基本概念、接口说明、纯文本类型和fileUri类型数据结构的使用示例，以及如何添加动态链接库和引用头文件。",
+  "structure": {
+    "title": "标准化数据结构 (C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 15,
+        "summary": "介绍了标准化数据结构的应用场景，特别是跨应用拖拽场景下的数据交互，以及如何通过标准化数据结构减少跨应用数据交互的开发工作量。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 19,
+        "summary": "定义了标准化数据结构（UDS）的概念，说明了其针对标准化数据类型定义统一数据内容结构的作用，主要用于跨应用跨设备间的数据交互。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 41,
+        "summary": "提供了标准化数据结构相关接口的详细说明，包括创建、设置、获取和销毁各种数据类型对象的接口函数列表。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "添加动态链接库",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 49,
+        "summary": "说明了在CMakeLists.txt中需要添加的动态链接库，包括libudmf.so和libhilog_ndk.z.so。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "引用头文件",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 62,
+        "summary": "提供了需要引用的头文件列表，包括uds.h、udmf.h、udmf_meta.h和hilog/log.h，以及日志标签的定义。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "纯文本类型数据结构的使用",
+        "level": 2,
+        "line_start": 63,
+        "line_end": 93,
+        "summary": "详细说明了纯文本类型数据结构的使用步骤，包括创建PlainText对象、添加内容、获取数据和销毁指针的完整代码示例。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "fileUri类型的数据结构的使用",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 123,
+        "summary": "详细说明了fileUri类型数据结构的使用步骤，包括创建fileUri对象、设置URL和描述信息、获取数据和销毁指针的完整代码示例。"
+      }
+    ]
+  }
+}

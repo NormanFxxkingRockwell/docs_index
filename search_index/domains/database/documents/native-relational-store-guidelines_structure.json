@@ -1,0 +1,60 @@
+{
+  "doc_id": "native-relational-store-guidelines",
+  "title": "通过关系型数据库实现数据持久化 (C/C++)",
+  "path": "zh-cn/application-dev/database/native-relational-store-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/native-relational-store-guidelines.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍如何使用RelationalStore在C/C++中实现本地关系型数据库的数据持久化，包括数据库创建、表操作、增删改查、事务处理、数据库附加、资产类型数据处理等功能。",
+  "structure": {
+    "title": "通过关系型数据库实现数据持久化 (C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 12,
+        "summary": "介绍RelationalStore提供的本地数据库管理机制，包括增删改查接口和SQL语句执行功能。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 18,
+        "summary": "定义谓词和结果集等基本概念，谓词用于定义数据库操作条件，结果集提供灵活的数据访问方式。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 29,
+        "summary": "说明数据库的日志模式、连接池限制、写操作只支持单个、应用卸载自动清除文件等约束条件。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 97,
+        "summary": "列出RelationalStore的C/C++接口，包括配置创建、数据库操作、谓词设置、事务管理、资产处理等接口。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 99,
+        "line_end": 887,
+        "summary": "详细说明关系型数据库开发的10个步骤，包括添加动态链接库、创建数据库、插入数据、修改删除数据、查询数据、事务处理、附加数据库、资产数据操作、查询修改时间、删除数据库。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "doc_id": "unified-data-channels",
+  "title": "通过标准化数据通路实现数据共享 (ArkTS)",
+  "path": "zh-cn/application-dev/database/unified-data-channels.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/unified-data-channels.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@jcjcwen",
+    "designer": "@junathuawei1; @zph000",
+    "tester": "@lj_liujing; @yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了UDMF（统一数据管理框架）提供的标准化数据通路，用于实现多对多跨应用数据共享。文档详细说明了标准化数据通路的定义、实现原理、统一数据对象URI标识格式，以及公共数据通路的特性。提供了insertData、updateData、queryData、deleteData等异步接口的使用方法，并以PlainText、HTML、PixelMap三种数据类型为例，展示了数据提供方如何插入、更新、删除数据，以及数据访问方如何查询数据的完整开发步骤。",
+  "structure": {
+    "title": "通过标准化数据通路实现数据共享 (ArkTS)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 14,
+        "summary": "介绍了多对多跨应用数据共享场景的需求，说明UDMF针对不同业务场景提供了标准化的数据通路，包含标准化的数据写入与读取接口。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "标准化数据通路的定义和实现",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 36,
+        "summary": "详细定义了标准化数据通路的含义和实现方式，说明了统一数据对象UnifiedData的URI标识格式（udmf://intention/bundleName/groupId），并重点介绍了公共数据通路的特性和使用场景。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 47,
+        "summary": "列出了UDMF标准化数据通路的四个核心异步接口：insertData（插入数据）、updateData（更新数据）、queryData（查询数据）、deleteData（删除数据），均为callback和Promise两种返回形式。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 265,
+        "summary": "以PlainText、HTML、PixelMap三种数据类型为例，详细说明了多对多数据共享的完整开发流程。包含数据提供方的导入模块、创建统一数据对象并插入、更新数据、删除数据四个步骤，以及数据访问方的导入模块和查询数据两个步骤，每个步骤都配有完整的TypeScript代码示例。"
+      }
+    ]
+  }
+}

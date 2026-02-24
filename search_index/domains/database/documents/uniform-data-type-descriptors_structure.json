@@ -1,0 +1,100 @@
+{
+  "doc_id": "uniform-data-type-descriptors",
+  "title": "标准化数据类型",
+  "path": "zh-cn/application-dev/database/uniform-data-type-descriptors.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/uniform-data-type-descriptors.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@jcwen",
+    "designer": "@junathuawei1; @zph000",
+    "tester": "@lj_liujing; @yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了OpenHarmony的标准化数据类型（UTD）功能，旨在解决数据类型描述的歧义问题。UTD通过统一类型标识，确保数据能被准确、高效地解析和处理。文档详细说明了UTD的设计原则、分类体系（物理分类和逻辑分类）、类型定义结构，以及预置数据类型和应用自定义数据类型的使用方法。此外，还提供了UTD常用接口说明和多个开发示例，包括如何查询媒体类文件归属类型、通过文件后缀获取MIMEType列表、通过MIMEType获取后缀列表等。",
+  "structure": {
+    "title": "标准化数据类型",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 17,
+        "summary": "介绍了标准化数据类型（UTD）的概念和目的，解决数据类型描述的歧义问题。UTD分为预置数据类型和应用自定义数据类型，支持从文件扩展名和MIME type转换为UTD标准类型。典型应用场景包括文件管理中的图片预览和系统分享。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "标准化数据类型的设计和分类原则",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 47,
+        "summary": "阐述了UTD的设计原则，包括层级结构构建和分类原则。UTD按物理分类（根节点为general.entity）和逻辑分类（根节点为general.object）两个维度进行描述，支持类型间的兼容与继承关系，便于系统和应用实现数据类型的分层、分类管理。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "标准化数据类型的定义",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 59,
+        "summary": "详细说明了标准化数据类型的定义结构，包括typeId（唯一标识ID）、belongingToTypes（归属关系）、description（简要说明）、referenceURL（参考链接）、iconFile（默认图标）、filenameExtensions（文件名后缀列表）和mimeTypes（MIME类型列表）等属性。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "预置数据类型",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 64,
+        "summary": "介绍了基于常用数据类型预先定义的预置数据类型，如general.audio（音频文件）、general.video（视频文件）等，更多预置数据类型可参考UTD预置列表。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "应用自定义数据类型",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 171,
+        "summary": "说明了应用自定义数据类型的支持，允许应用声明自定义数据类型并继承已有标准类型。详细介绍了工作原理、约束限制（包括TypeId、BelongingToTypes、FilenameExtensions、MIMETypes、Description、ReferenceURL等字段的要求）和开发步骤，包括如何创建utd.json5配置文件、如何引用其他应用的自定义数据类型等。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 172,
+        "line_end": 184,
+        "summary": "列出了UTD的常用接口，包括UniformDataType枚举定义、belongsTo()判断归属关系、isLowerLevelType()判断低层级类型、isHigherLevelType()判断高层级类型、getUniformDataTypesByFilenameExtension()根据文件后缀查询类型、getUniformDataTypesByMIMEType()根据MIME类型查询类型等。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "如何查询媒体类文件归属类型",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 255,
+        "summary": "提供了查询媒体类文件归属类型的完整示例代码，包括导入uniformTypeDescriptor模块、根据文件扩展名查询UTD数据类型、根据MIMEType查询UTD数据类型、比较数据类型是否相等、查询归属关系等步骤。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "如何通过文件后缀获取对应的MIMEType列表",
+        "level": 2,
+        "line_start": 256,
+        "line_end": 289,
+        "summary": "演示了如何通过文件后缀获取对应的MIMEType列表，以.ts文件后缀为例，使用getUniformDataTypesByFilenameExtension()方法获取UTD数据类型，再通过getTypeDescriptor()方法查询对应的MIMEType列表。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "如何通过MIMEType获取对应的后缀列表",
+        "level": 2,
+        "line_start": 291,
+        "line_end": 324,
+        "summary": "演示了如何通过MIMEType获取对应的后缀列表，以text/plain MIMEType为例，使用getUniformDataTypesByMIMEType()方法获取UTD数据类型，再通过getTypeDescriptor()方法查询对应的文件后缀列表。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 326,
+        "line_end": 331,
+        "summary": "提供了标准化数据定义开发的相关实例参考链接，包括标准化数据定义与描述（ArkTS）（API11）的示例代码。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "doc_id": "data-share-overview",
+  "title": "跨应用数据共享概述",
+  "path": "zh-cn/application-dev/database/data-share-overview.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/data-share-overview.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@woodenarow",
+    "designer": "@woodenarow; @xuelei3",
+    "tester": "@chenwan188; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了跨应用数据共享的功能和实现方式。主要内容包括：功能简介、基本概念（数据提供方、数据访问方、数据集、结果集、谓词）、一对多跨应用数据共享（通过DataShare实现，包括DataShareExtensionAbility、静默访问和配置共享三种方式）以及多对多跨应用数据共享（通过UDMF统一数据管理框架实现）。文档还说明了相关的约束限制和适用场景。",
+  "structure": {
+    "title": "跨应用数据共享概述",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "功能简介",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 16,
+        "summary": "介绍跨应用数据共享的功能，支持不同应用之间的数据协同。说明数据共享的应用场景（如电话簿、短信、媒体库等）以及数据隐私保护的必要性。当前支持一对多和多对多跨应用数据共享能力。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 30,
+        "summary": "定义跨应用数据共享开发中的核心概念：数据提供方（生产者/服务端）、数据访问方（消费者/客户端）、数据集（键值对形式的数据集合）、结果集（查询结果的集合）、谓词（数据访问的筛选条件）。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "一对多跨应用数据共享",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 67,
+        "summary": "介绍基于DataShare实现一对多跨应用数据共享的方式。包括三种具体实现：使用DataShareExtensionAbility实现数据共享（适用于有业务操作的场景）、通过数据管理服务实现静默访问（适用于仅数据库增删改查的场景）、应用间配置共享（适用于共享公共配置信息）。同时说明了约束限制，如仅支持Stage模型同设备跨应用数据共享。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "多对多跨应用数据共享",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 77,
+        "summary": "介绍通过统一数据管理框架（UDMF）实现多对多跨应用数据共享。应用可以通过标准化数据通路提供的数据接入与读取接口，将符合标准化数据定义的数据写入UDMF不同的数据共享通路，并提供多应用进行读取。数据权限管理和生命周期管理遵循应用、数据通路和框架定义的逻辑。"
+      }
+    ]
+  }
+}

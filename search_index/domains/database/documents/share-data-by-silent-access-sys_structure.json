@@ -1,0 +1,76 @@
+{
+  "doc_id": "share-data-by-silent-access-sys",
+  "title": "通过数据管理服务实现数据共享静默访问 (ArkTS)(仅对系统应用开放)",
+  "path": "zh-cn/application-dev/database/share-data-by-silent-access-sys.md",
+  "relative_path": "../../docs/zh-cn-cn/application-dev/database/share-data-by-silent-access-sys.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@woodenarow",
+    "designer": "@woodenarow; @xuelei3",
+    "tester": "@chenwan188; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍如何通过数据管理服务实现数据共享静默访问，这是一种不拉起数据提供方直接访问数据库的方式，支持持久化数据（关系型数据库）和过程数据（json或byte数据）两种类型。文档包含场景介绍、运作机制、约束与限制、接口说明，以及持久化数据、过程数据和动态开关静默访问的详细实现步骤。",
+  "structure": {
+    "title": "通过数据管理服务实现数据共享静默访问 (ArkTS)(仅对系统应用开放)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 21,
+        "summary": "介绍静默数据访问的场景和优势，通过数据管理服务进行数据访问和修改，无需拉起数据提供方，适用于跨应用访问数据的场景，可降低数据提供方拉起次数并提高访问速度。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "运作机制",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 63,
+        "summary": "说明静默数据访问的运作机制，包括持久化数据（存储于数据提供方沙箱的数据库表）和过程数据（托管在数据管理服务上的json或byte数据，无人订阅10天后自动删除）两种类型，以及URI格式要求和参数配置。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "约束与限制",
+        "level": 2,
+        "line_start": 64,
+        "line_end": 72,
+        "summary": "列出静默数据访问的约束与限制，包括仅关系型数据库支持、并发查询限制、流量控制机制、权限要求等。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 110,
+        "summary": "介绍静默数据访问的相关接口，包括通用接口（createDataShareHelper）、持久化数据接口（insert、delete、query、update、addTemplate、on）、过程数据接口（publish、on）以及静默访问开关接口（enableSilentProxy、disableSilentProxy）。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "持久化数据实现说明",
+        "level": 2,
+        "line_start": 111,
+        "line_end": 287,
+        "summary": "详细说明如何实现持久化数据的静默访问，包括数据提供方应用的配置（module.json5中的proxyData节点配置）和数据访问方应用的开发步骤（导入依赖、定义URI、创建DataShareHelper、数据操作和订阅）。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "过程数据实现说明",
+        "level": 2,
+        "line_start": 288,
+        "line_end": 387,
+        "summary": "详细说明如何实现过程数据的托管和访问，包括数据提供方应用的可选配置（proxyData节点）和数据访问方应用的开发步骤（导入依赖、定义URI、创建DataShareHelper、发布数据和订阅）。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "动态开关静默访问实现说明",
+        "level": 2,
+        "line_start": 388,
+        "line_end": 431,
+        "summary": "说明如何动态开启或关闭静默访问功能，仅针对数据提供方，通过调用enableSilentProxy或disableSilentProxy接口实现，可与data_share_config.json文件中的isSilentProxyEnable字段配合使用。"
+      }
+    ]
+  }
+}

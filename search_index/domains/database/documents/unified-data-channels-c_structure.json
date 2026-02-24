@@ -1,0 +1,100 @@
+{
+  "doc_id": "unified-data-channels-c",
+  "title": "通过标准化数据通路实现数据共享 (C/C++)",
+  "path": "zh-cn/application-dev/database/unified-data-channels-c.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/unified-data-channels-c.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@jcwen",
+    "designer": "@junathuawei1; @zph000",
+    "tester": "@lj_liujing; @yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了如何在C/C++中使用UDMF（统一数据管理框架）通过标准化数据通路实现跨应用数据共享。文档包含场景介绍、标准化数据通路的定义和实现、接口说明、添加动态链接库、引用头文件、使用UDMF写入/获取/更新/删除UDS数据以及延迟写入UDS数据的完整示例代码。",
+  "structure": {
+    "title": "通过标准化数据通路实现数据共享 (C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 14,
+        "summary": "介绍多对多跨应用数据共享场景，UDMF提供标准化数据通路和数据写入与读取接口。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "标准化数据通路的定义和实现",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 36,
+        "summary": "定义标准化数据通路为跨应用数据写入与读取通路，通过UDMF系统服务实现，包含统一数据对象URI格式说明和公共数据通路特性。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 66,
+        "summary": "列出UDMF相关C接口，包括创建、设置、获取、更新、删除统一数据对象的各种函数。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "添加动态链接库",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 74,
+        "summary": "说明在CMakeLists.txt中需要添加libudmf.so和libhilog_ndk.z.so库。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "引用头文件",
+        "level": 2,
+        "line_start": 76,
+        "line_end": 92,
+        "summary": "提供需要引用的头文件列表，包括UDMF相关头文件和日志头文件。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "使用UDMF写入UDS数据",
+        "level": 2,
+        "line_start": 94,
+        "line_end": 180,
+        "summary": "演示如何使用UDMF写入超链接类型数据，包含创建数据结构、设置信息、构建数据操作选项、写入数据库和销毁指针的完整代码示例。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "使用UDMF获取UDS数据",
+        "level": 2,
+        "line_start": 182,
+        "line_end": 286,
+        "summary": "演示如何使用UDMF获取超链接类型数据，包含构建数据操作选项、获取数据、判断类型、处理数据记录和销毁指针的完整代码示例。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "使用UDMF更新UDS数据",
+        "level": 2,
+        "line_start": 288,
+        "line_end": 376,
+        "summary": "演示如何使用UDMF更新超链接类型数据，包含创建数据结构、设置信息、构建数据操作选项、更新数据库和销毁指针的完整代码示例。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "使用UDMF删除UDS数据",
+        "level": 2,
+        "line_start": 378,
+        "line_end": 488,
+        "summary": "演示如何使用UDMF删除超链接类型数据，包含构建数据操作选项、删除数据、处理删除结果和销毁指针的完整代码示例。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "使用UDMF延迟写入UDS数据",
+        "level": 2,
+        "line_start": 490,
+        "line_end": 569,
+        "summary": "介绍延迟写入UDS数据的方法，包含定义UDS数据提供函数和延迟写入数据的完整代码示例，数据仅在被获取时才真正写入。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "doc_id": "data-persistence-by-vector-store",
+  "title": "通过向量数据库实现数据持久化",
+  "path": "zh-cn/application-dev/database/data-persistence-by-vector-store.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/data-persistence-by-vector-store.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@htt1997",
+    "designer": "@widecode",
+    "tester": "@logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍如何通过向量数据库实现数据持久化，包括向量数据库的基本概念、约束限制、规格限制、接口说明以及详细的开发步骤。文档涵盖了向量数据类型floatvector的使用、向量索引创建、数据查询、数据老化配置、数据压缩等功能，适用于需要存储和检索向量数据的应用场景。",
+  "structure": {
+    "title": "通过向量数据库实现数据持久化",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 13,
+        "summary": "介绍向量数据库的定义和功能，向量数据库支持存储、管理和检索向量数据，同时支持标量的关系型数据处理。从API version 18开始支持通过向量数据库实现数据持久化。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 18,
+        "summary": "定义结果集和floatvector数据类型。结果集用于访问查询结果，floatvector用于存储数据向量化的结果，例如[1.0, 3.0, 2.4, 5.1, 6.2, 11.7]。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 32,
+        "summary": "列出向量数据库的约束限制，包括默认日志方式WAL模式、默认落盘方式FULL模式、读写连接数量限制、并发写操作串行执行、应用卸载自动清除数据库文件、支持的数据类型以及单条数据大小限制。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "规格限制",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 125,
+        "summary": "详细说明向量数据库的规格限制，包括支持的数据类型（NULL、INTEGER、DOUBLE、TEXT、BLOB、FLOATVECTOR）、字段约束、查询子句、集合语句、运算符、时间日期函数以及SQL函数。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 139,
+        "summary": "列出向量数据库持久化功能的相关接口，包括getRdbStore、execute、querySql、beginTrans、commit、rollback、deleteRdbStore和isVectorSupported等接口及其功能描述。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 508,
+        "summary": "提供11个详细的开发步骤，包括判断系统是否支持向量数据库、获取RdbStore、插入数据、修改删除数据、查询数据、创建视图、使用向量索引、手动回收磁盘碎片、配置数据老化功能、配置数据压缩功能以及删除数据库，每个步骤都包含示例代码和说明。"
+      }
+    ]
+  }
+}

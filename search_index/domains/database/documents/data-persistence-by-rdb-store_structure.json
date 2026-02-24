@@ -1,0 +1,76 @@
+{
+  "doc_id": "data-persistence-by-rdb-store",
+  "title": "通过关系型数据库实现数据持久化",
+  "path": "zh-cn/application-dev/database/data-persistence-by-rdb-store.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/data-persistence-by-rdb-store.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍如何使用关系型数据库（基于SQLite）在HarmonyOS应用中实现数据持久化。文档涵盖了场景介绍、基本概念、运作机制、约束限制、接口说明和详细的开发步骤，包括获取数据库、创建表、插入数据、修改删除数据、查询数据、使用事务、备份恢复和删除数据库等操作，适用于需要存储包含复杂关系数据的应用场景。",
+  "structure": {
+    "title": "通过关系型数据库实现数据持久化",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 19,
+        "summary": "介绍关系型数据库的适用场景，包括存储包含复杂关系数据的情况（如学生信息、雇员信息等），以及大数据量场景下的查询建议，包括单次查询数据量限制、使用TaskPool查询、SQL语句优化和分批次查询等最佳实践。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 25,
+        "summary": "定义关系型数据库的基本概念，包括谓词（用于定义数据库操作条件的词项）和结果集（用户查询后的结果集合，提供灵活的数据访问方式）。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "运作机制",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 34,
+        "summary": "说明关系型数据库的运作机制，底层使用SQLite作为持久化存储引擎，支持事务、索引、视图、触发器、外键、参数化查询和预编译SQL语句等SQLite特性。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 49,
+        "summary": "列出关系型数据库的约束限制，包括默认日志方式为WAL模式、默认落盘方式为FULL模式、连接数限制、写操作并发限制、数据类型支持、数据大小限制等。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 66,
+        "summary": "提供关系型数据库持久化功能的相关接口列表，包括getRdbStore、createTransaction、execute、querySql、insert、update、delete、query、deleteRdbStore和isTokenizerSupported等核心接口及其功能描述。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 523,
+        "summary": "详细说明关系型数据库开发的完整步骤，包括获取RdbStore并创建表、插入数据、修改删除数据、查询数据（包括FTS全文检索）、使用事务执行数据操作、备份数据库、恢复数据和删除数据库，提供Stage模型和FA模型的完整示例代码。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 524,
+        "line_end": 529,
+        "summary": "提供关系型数据库开发的相关实例参考，包括Rdb关系型数据库（ArkTS）（API9）的代码示例链接。"
+      }
+    ]
+  }
+}
