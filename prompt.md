@@ -140,58 +140,121 @@ search_index/domains/{domain}/
 ### 1. 使用子 Agent（重要！）
 - **避免上下文过长**：大任务必须拆分成小任务，使用 Task 工具调用子 agent
 - **每次只处理一个领域**：不要在一个任务中处理多个领域
-- **分批处理文档**：对于文档数量多的领域（>50个），分批处理
+- **每次只处理 1 个文档**：为避免上下文过长，每批只处理 1 个文档
 - **独立任务**：每个领域的索引、验证、提交都作为独立任务
 
-### 2. 子 Agent 任务模板
-```
-任务：完成 {domain} 领域索引
+### 2. 子 Agent 任务模板（处理单个文档）
+
+任务：处理单个文档
 
 提示词模板：
-完成 {domain} 领域的索引构建。
+处理单个文档并生成索引文件。
 
-领域信息：
+文档信息：
+- 文档路径：{doc_path}
 - 领域名称：{domain}
-- 文档数量：{N} 个
-- 文档路径：docs/zh-cn/application-dev/{domain}/
-- 输出路径：search_index/domains/{domain}/
+- 输出路径：{output_path}
 
-重要提示：
-1. 索引库建立在 search_index/ 下，没有其他目录
-2. 章节使用 ##（二级标题）
-3. 引用路径转换为 ../../docs/...
-4. 验证所有 JSON 文件格式正确
-5. 验证核心概念无重复
-6. 完成后提交到 Git 并推送
+处理步骤：
+1. 读取文档完整内容
+2. 提取元数据（在整个文档中搜索）
+   - 一级标题（#）作为文档标题
+   - `<!--Kit: -->` 注释
+   - `<!--Subsystem: -->` 注释
+   - `<!--Owner: -->` 注释
+   - `<!--Designer: -->` 注释
+   - `<!--Tester: -->` 注释
+   - `<!--Adviser: -->` 注释
+3. 解析章节结构（## 标题）
+   - 提取每个章节的 `section_id`, `title`, `level`, `line_start`, `line_end`
+   - 为每个章节生成摘要
+4. 生成文档摘要
+5. **构建 JSON 索引**：严格按照必须包含以下所有字段：
+   ```json
+   {
+     "doc_id": "xxx",
+     "title": "文档标题",
+     "path": "zh-cn/application-dev/{domain}/{doc_id}.md",
+     "relative_path": "../../docs/zh-cn/application-dev/{domain}/{doc_id}.md",
+     "metadata": {
+       "kit": "...",
+       "subsystem": "...",
+       "owner": "...",
+       "designer": "...",
+       "tester": "...",
+       "adviser": "..."
+     },
+     "summary": "文档摘要",
+     "structure": {
+       "title": "文档标题",
+       "sections": [
+         {
+           "section_id": "section-1",
+           "title": "章节标题",
+           "level": 2,
+           "line_start": 10,
+           "line_end": 50,
+           "summary": "章节摘要"
+         }
+       ]
+     }
+   }
+   ```
+6. 写入文件到 documents/ 目录
+7. **验证文件**：使用 bash 工具验证 JSON 格式
+   ```bash
+   python -m json.tool {file_path} > /dev/null 2>&1 && echo "OK" || echo "ERROR"
+   ```
+   如果验证失败，修复 JSON 格式或返回错误
 
-请按照 harmonyos-doc-indexer.md 的完整流程执行：
-1. 阶段 1：环境准备
-2. 阶段 2：文档扫描
-3. 阶段 3：文档处理（核心）
-4. 阶段 4：领域索引构建
-5. 阶段 5：领域地图生成
-6. 阶段 7：提交到 Git
+返回结果（JSON 格式）：
+```json
+{
+  "status": "success",
+  "doc_id": "xxx",
+  "file_path": "search_index/domains/{domain}/documents/xxx_structure.json"
+}
 ```
 
+重要提示：
+1. 必须使用 read、write 工具实际执行操作
+2. 必须读取文档完整内容，不能只读部分
+3. 元数据可能在文档的任何位置，要在整个文档中搜索
+4. 文件必须保存在 documents/ 目录下
+5. 文件命名格式：{doc_id}_structure.json
+6. **严格按照 harmonyos-doc-indexer.md 中定义的格式生成索引**
+7. 确保包含所有必要字段：doc_id, title, path, relative_path, metadata, summary, structure
+8. 返回简洁的结果，不包含文件内容
+
 ### 3. 大领域拆分策略
-对于文档数量超过 50 个的领域，建议拆分为以下子任务：
+对于文档数量超过 20 个的领域，建议拆分为以下子任务：
 - **任务 1**：扫描文档 + 创建输出目录（阶段 1-2）
-- **任务 2**：处理前 1-50 个文档（阶段 3，部分）
-- **任务 3**：处理剩余文档（阶段 3，剩余）
-- **任务 4**：构建领域索引和地图（阶段 4-5）
-- **任务 5**：验证和提交（阶段 6-7）
+- **任务 2-任务 N**：每次处理 1 个文档（阶段 3，循环调用）
+- **任务 N+1**：构建领域索引和地图（阶段 4-5）
+- **任务 N+2**：验证和提交（阶段 6-7）
+
+注意：每次 Task 调用只处理 1 个文档，避免上下文过长
 
 ### 4. 错误处理
 - 遇到错误记录到 error_report.json
 - 继续处理下一个文档
 - 不中断整个任务
 
-### 5. Git 提交
+### 5. 上下文管理策略
+**重要**：为避免子 agent 上下文过长，必须遵循以下规则：
+
+1. **单文档处理**：每次 Task 调用只处理 1 个文档
+2. **完整读取**：必须读取文档完整内容，不能只读部分
+3. **精简提示词**：给子 agent 的提示词要简洁要明了
+4. **工作目录**：D:/codeBase/ai-learning/doc_index_project/docs_index
+
+### 6. Git 提交和推送
 - 每完成一个领域提交一次
 - 提交信息格式：index: add {domain} domain index (N documents)
-- 立即推送到远程仓库
+- **提交后立即推送到远程仓库**
+- 使用 `git push` 命令推送
 
-### 6. 领域目录结构检查和修复（重要！）
+### 7. 领域目录结构检查和修复（重要！）
 
 在开始索引一个未完成的领域前，必须先检查并修复领域目录结构：
 
