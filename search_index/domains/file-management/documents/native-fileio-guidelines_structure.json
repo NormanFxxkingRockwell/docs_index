@@ -1,0 +1,52 @@
+{
+  "doc_id": "native-fileio-guidelines",
+  "title": "应用文件访问(C/C++)",
+  "path": "zh-cn/application-dev/file-management/native-fileio-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/native-fileio-guidelines.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@wangke25; @gsl_1234; @wuchengjun5",
+    "designer": "@gsl_1234; @wangke25",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "介绍如何在C/C++中使用FileIO模块进行文件基础操作，包括OH_FileIO_GetFileLocation接口的使用方法和文件存储位置枚举值。",
+  "structure": {
+    "title": "应用文件访问(C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 11,
+        "summary": "说明FileIO模块提供了部分文件基础操作能力，其他能力请参考libc标准库或标准C++库。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 15,
+        "summary": "说明进行文件操作之前，必须保证传入正确有效的URI或path。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 26,
+        "summary": "介绍FileIO模块的接口名称和描述。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 64,
+        "summary": "介绍在C/C++中使用FileIO模块的开发步骤，包括在CMake脚本中链接动态库、添加头文件、调用OH_FileIO_GetFileLocation接口获取文件存储位置。"
+      }
+    ]
+  }
+}

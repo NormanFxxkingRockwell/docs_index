@@ -1,0 +1,52 @@
+{
+  "doc_id": "native-environment-guidelines",
+  "title": "获取用户目录环境(C/C++)",
+  "path": "zh-cn/application-dev/file-management/native-environment-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/native-environment-guidelines.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@wangke25; @gsl_1234; @wuchengjun5",
+    "designer": "@gsl_1234; @wangke25",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "介绍如何在C/C++中获取公共文件用户目录路径，包括OH_Environment_GetUserDownloadDir、OH_Environment_GetUserDesktopDir、OH_Environment_GetUserDocumentDir等接口的使用方法。",
+  "structure": {
+    "title": "获取用户目录环境(C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 11,
+        "summary": "说明Environment提供了获取公共文件用户目录路径的能力，以支持三方应用在公共文件用户目录下进行文件访问操作。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 17,
+        "summary": "说明使用此接口的约束限制，包括系统能力确认和权限申请。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 27,
+        "summary": "介绍获取用户目录环境相关接口的描述。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 132,
+        "summary": "介绍获取用户目录环境的开发步骤，包括在CMake脚本中链接动态库、添加头文件、调用接口获取用户目录路径等。"
+      }
+    ]
+  }
+}

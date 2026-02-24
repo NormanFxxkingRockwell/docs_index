@@ -1,0 +1,60 @@
+{
+  "doc_id": "native-fileuri-guidelines",
+  "title": "FileUri开发指导(C/C++)",
+  "path": "zh-cn/application-dev/file-management/native-fileuri-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/native-fileuri-guidelines.md",
+  "metadata": {
+    "kit": "Core File Kit",
+    "subsystem": "FileManagement",
+    "owner": "@lvzhenjie",
+    "designer": "@wang_zhangjun; @chenxi0605",
+    "tester": "@liuhonggang123",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "介绍如何在C/C++中使用FileUri模块进行文件URI的基本操作，包括OH_FileUri_GetUriFromPath、OH_FileUri_GetPathFromUri、OH_FileUri_GetFullDirectoryUri、OH_FileUri_IsValidUri、OH_FileUri_GetFileName等接口的使用方法。",
+  "structure": {
+    "title": "FileUri开发指导(C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 11,
+        "summary": "说明FileUri提供了关于文件URI的基本操作，将URI转换成对应的沙箱路径、将应用沙箱路径转换成对应应用自己的URI、获取URI所在目录路径的URI等接口能力。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 15,
+        "summary": "说明结果集的概念，即满足使用场景的路径或URI。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 22,
+        "summary": "说明使用FileUri模块的约束限制，包括URI来源建议和单对象处理要求。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 34,
+        "summary": "介绍FileUri模块的接口名称和描述。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 221,
+        "summary": "介绍在C/C++中使用FileUri模块的开发步骤，包括在CMake脚本中链接动态库、添加头文件、调用各接口进行URI操作。"
+      }
+    ]
+  }
+}
