@@ -1,22 +1,28 @@
 {
   "doc_id": "share-app-file-configuration",
-  "title":": "应用共享目录配置",
+  "title": "应用共享目录配置",
+  "path": "zh-cn/application-dev/file-management/share-app-file-configuration.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/share-app-file-configuration.md",
   "metadata": {
-    "Kit": "Core File Kit",
-    "Subsystem": "Security",
-    "Owner": "@renzehua",
-    "Designer": "@renzehua; @huangjieliang; @zhanganxiang",
-    "Tester": "@leiyuqian",
-    "Adviser": "@zengyawen"
+    "kit": "Core File Kit",
+    "subsystem": "Security",
+    "owner": "@renzehua",
+    "designer": "@renzehua; @huangjieliang; @zhanganxiang",
+    "tester": "@leiyuqian",
+    "adviser": "@zengyawen"
   },
-  "summary": "从API version 23开始，系统新增支持共享目录配置功能。在应用文件分享场景中，开发者可配置共享目录范围，防止应用敏感数据泄露。",
-  "sections": [
-    {
-      "level": 2,
-      "title": "开发步骤",
-      "line_number": 11
-    }
-  ],
-  "domain": "file-management",
-  "file_path": "docs/zh-cn/application-dev/file-management/share-app-file-configuration.md"
+  "summary": "从API version 23开始，系统新增支持共享目录配置功能。在应用文件分享场景中，开发者可配置共享目录范围，防止应用敏感数据泄露。开发者可在应用模块级配置文件src/main/module.json5的module标签中添加shareFiles标签，以实现对沙箱共享目录权限的限制。若未配置共享目录，则默认允许应用共享其自身沙箱内的文件。",
+  "structure": {
+    "title": "应用共享目录配置",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 62,
+        "summary": "介绍如何在应用模块级配置文件中添加shareFiles标签，并在resources/base/profile下面定义配置文件share_files.json，以标识当前模块所有共享路径的权限信息。"
+      }
+    ]
+  }
 }
