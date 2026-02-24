@@ -39,6 +39,46 @@
    done | sort -t: -k2 -n
    ```
 
+### 领域目录结构检查和修复（重要！）
+
+在开始索引一个未完成的领域前，必须先检查并修复领域目录结构：
+
+1. 检查领域目录结构
+   ```bash
+   ls search_index/domains/{domain}/
+   ```
+
+2. 检查并创建 documents/ 目录
+   ```bash
+   mkdir -p search_index/domains/{domain}/documents/
+   ```
+
+3. 检查领域目录下是否有直接放置的 JSON 文件（不在 documents/ 下）
+   ```bash
+   find search_index/domains/{domain} -maxdepth 1 -name "*.json" -not -path "*/documents/*"
+   ```
+
+4. 如果有直接放置的 JSON 文件，移动到 documents/ 目录并转换为 _structure.json 格式
+   ```bash
+   cd search_index/domains/{domain}
+   for f in *.json; do
+     if [[ ! "$f" =~ "_structure.json" ]]; then
+       doc_id=$(echo "$f" | sed 's/.json//')
+       mv "$f" "documents/${doc_id}_structure.json"
+     fi
+   done
+   ```
+
+5. 检查是否有旧的 docs/ 目录，如果有则删除
+   ```bash
+   rm -rf search_index/domains/{domain}/docs/
+   ```
+
+6. 检查修复后的文件数量
+   ```bash
+   find search_index/domains/{domain}/documents -name "*_structure.json" | wc -l
+   ```
+
 ### 对比并判断状态
 - 已完成：索引和文档数量一致的领域
 - 未完成：索引文件少于文档的领域
@@ -97,6 +137,46 @@ search_index/domains/{domain}/
 - 每完成一个领域提交一次
 - 提交信息格式：index: add {domain} domain index (N documents)
 - 立即推送到远程仓库
+
+### 4. 领域目录结构检查和修复（重要！）
+
+在开始索引一个未完成的领域前，必须先检查并修复领域目录结构：
+
+1. 检查领域目录结构
+   ```bash
+   ls search_index/domains/{domain}/
+   ```
+
+2. 检查并创建 documents/ 目录
+   ```bash
+   mkdir -p search_index/domains/{domain}/documents/
+   ```
+
+3. 检查领域目录下是否有直接放置的 JSON 文件（不在 documents/ 下）
+   ```bash
+   find search_index/domains/{domain} -maxdepth 1 -name "*.json" -not -path "*/documents/*"
+   ```
+
+4. 如果有直接放置的 JSON 文件，移动到 documents/ 目录并转换为 _structure.json 格式
+   ```bash
+   cd search_index/domains/{domain}
+   for f in *.json; do
+     if [[ ! "$f" =~ "_structure.json" ]]; then
+       doc_id=$(echo "$f" | sed 's/.json//')
+       mv "$f" "documents/${doc_id}_structure.json"
+     fi
+   done
+   ```
+
+5. 检查是否有旧的 docs/ 目录，如果有则删除
+   ```bash
+   rm -rf search_index/domains/{domain}/docs/
+   ```
+
+6. 检查修复后的文件数量
+   ```bash
+   find search_index/domains/{domain}/documents -name "*_structure.json" | wc -l
+   ```
 
 ## 验证索引完整性
 
