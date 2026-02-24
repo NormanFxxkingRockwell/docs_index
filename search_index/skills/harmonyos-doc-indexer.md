@@ -3,8 +3,14 @@
 ## 概述
 本 Skill 用于指导 AI Agent 处理 HarmonyOS 官方文档，生成四层索引结构，支持 RAG/Agent 快速检索。
 
+## 重要提示
+- **索引库位置**：search_index/domains/（唯一索引库）
+- **输出目录**：search_index/domains/{domain}/documents/
+- **不使用其他目录**：所有索引文件必须保存在 documents/ 目录下
+- **文件命名**：{doc_id}_structure.json
+
 ## 四层索引结构
-- **第1层 - 章节（Section）**：文档内的二级标题（##））作为章节节点
+- **第1层 - 章节（Section）**：文档内的二级标题（##）作为章节节点
 - **第2层 - 文档（Document）**：单个 md 文件的完整文件索引树结构
 - **第3层 - 领域文档（Domain Documents）**：领域内所有文档的索引集合
 - **第4层 - 领域地图（Domain Map）**：整个领域的概览地图
@@ -35,6 +41,11 @@
 **错误处理**：
 - 如果 docs 目录不存在，报错并退出
 - 如果 search_index 目录不存在，创建该目录
+
+**重要**：
+- 索引库位置：search_index/domains/（唯一索引库）
+- 输出目录：search_index/domains/{domain}/documents/
+- 文件命名：{doc_id}_structure.json
 
 ---
 
@@ -107,6 +118,10 @@ reference: 3295
 
 **错误处理**：
 - 如果目录创建失败，报错并退出
+
+**重要**：
+- 所有索引文件必须保存在 documents/ 目录下
+- 不使用其他目录（如 docs/）
 
 ---
 
@@ -331,7 +346,8 @@ reference: 3295
 
 **检查点**：
 - [ ] 文档索引已保存
-- [ ] 文件路径正确
+- [ ] 文件路径正确（必须在 documents/ 目录下）
+- [ ] 文件命名正确（{doc_id}_structure.json）
 - [ ] 文件内容正确
 - [ ] JSON 格式有效
 - [ ] summary 字段不为空且长度 > 10
@@ -345,6 +361,7 @@ reference: 3295
 1. 确保 metadata 对象后没有多余的逗号或括号
 2. 确保 summary 字段存在且有效
 3. 确保 structure 对象格式正确
+4. **重要**：文件必须保存在 documents/ 目录下，不能保存在领域根目录
 
 ---
 
