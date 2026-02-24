@@ -1,8 +1,6 @@
 {
   "doc_id": "native-fileshare-guidelines",
   "title": "授权持久化(C/C++)",
-  "path": "zh-cn/application-dev/file-management/native-fileshare-guidelines.md",
-  "relative_path": "../../docs/zh-cn/application-dev/file-management/native-fileshare-guidelines.md",
   "metadata": {
     "kit": "Core File Kit",
     "subsystem": "FileManagement",
@@ -11,42 +9,41 @@
     "tester": "@leiyuqian",
     "adviser": "@jinqiuheng"
   },
-  "summary": "介绍如何在C/C++中使用FileShare模块进行授权持久化，包括OH_FileShare_PersistPermission、OH_FileShare_RevokePermission、OH_FileShare_ActivatePermission、OH_FileShare_DeactivatePermission、OH_FileShare_CheckPersistentPermission等接口的使用方法。",
-  "structure": {
-    "title": "授权持久化(C/C++)",
-    "sections": [
-      {
-        "section_id": "section-1",
-        "title": "场景介绍",
-        "level": 2,
-        "line_start": 9,
-        "line_end": 11,
-        "summary": "说明应用通过Picker获取临时授权，临时授权在应用退出后或者设备重启后会清除，如果应用重启或者设备重启后需要直接访问之前已访问过的文件，则对文件进行持久化授权。"
-      },
-      {
-        "section_id": "section-2",
-        "title": "接口说明",
-        "level": 2,
-        "line_start": 13,
-        "line_end": 25,
-        "summary": "介绍FileShare模块的接口名称和描述。"
-      },
-      {
-        "section_id": "section-3",
-        "title": "约束与限制",
-        "level": 2,
-        "line_start": 26,
-        "line_end": 31,
-        "summary": "说明使用文件分享相关接口的约束与限制，包括系统能力确认和权限申请。"
-      },
-      {
-        "section_id": "section-4",
-        "title": "开发步骤",
-        "level": 2,
-        "line_start": 32,
-        "line_end": 150,
-        "summary": "介绍在C/C++中使用FileShare模块的开发步骤，包括添加动态链接库、头文件、调用持久化授权、激活授权、去激活授权、撤销授权、检查持久化权限等接口。"
-      }
-    ]
-  }
+  "summary": "本文档介绍如何使用FileShare提供的Native API接口对文件及目录进行持久化授权、权限激活、权限查询等操作。文档包含场景介绍、接口说明、约束与限制和开发步骤，详细说明了OH_FileShare_PersistPermission、OH_FileShare_ActivatePermission、OH_FileShare_DeactivatePermission、OH_FileShare_RevokePermission和OH_FileShare_CheckPersistentPermission等接口的使用方法。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 9
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 13
+    },
+    {
+      "level": 2,
+      "title": "约束与限制",
+      "line": 26
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 32
+    }
+  ],
+  "api_references": [
+    "OH_FileShare_PersistPermission",
+    "OH_FileShare_RevokePermission",
+    "OH_FileShare_ActivatePermission",
+    "OH_FileShare_DeactivatePermission",
+    "OH_FileShare_CheckPersistentPermission",
+    "OH_FileShare_ReleasePolicyErrorResult"
+  ],
+  "tags": [
+    "file-share",
+    "persistent-permission",
+    "native-api",
+    "c++"
+  ]
 }

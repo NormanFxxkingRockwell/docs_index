@@ -1,55 +1,189 @@
 {
-  "domain": "File Management",
-  "overview": "Core File Kit（文件基础服务）为开发者提供一套访问和管理应用文件和用户文件的能力。涵盖应用文件访问与管理、应用文件分享、应用数据备份恢复、用户文件选择与保存、授权持久化、分布式文件系统、跨设备文件访问与拷贝等多种文件管理功能。支持ArkTS和C/C++两种开发语言，部分功能仅对系统应用开放。",
+  "domain": "file-management",
+  "domain_name": "文件管理",
+  "overview": "Core File Kit提供完整的文件管理能力，包括应用文件和用户文件的访问、管理、分享与备份。应用文件在沙箱隔离机制下进行安全存储和访问，支持文件读写、目录操作、空间统计等基础功能。用户文件通过FilePicker选择器实现安全访问，支持图片、视频、音频、文档等多种类型。分布式文件系统提供跨设备文件访问和拷贝能力，实现设备间数据无缝流转。文件分享机制支持应用间文件共享和持久化授权管理。备份恢复框架确保应用数据安全，支持应用接入数据备份与恢复功能。",
   "core_concepts": [
-    "应用沙箱",
-    "应用文件访问",
-    "用户文件访问",
-    "文件分享",
-    "数据备份恢复",
-    "授权持久化",
+    "应用文件",
+    "用户文件",
+    "文件URI",
+    "文件权限",
     "分布式文件系统",
-    "跨设备文件访问",
+    "应用沙箱",
+    "文件备份恢复",
+    "文件分享",
     "FilePicker",
-    "文件URI"
+    "文件访问"
   ],
   "learning_path": [
-    "../../docs/zh-cn/application-dev/file-management/Readme-CN.md",
     "../../docs/zh-cn/application-dev/file-management/core-file-kit-intro.md",
     "../../docs/zh-cn/application-dev/file-management/app-file-overview.md",
     "../../docs/zh-cn/application-dev/file-management/app-sandbox-directory.md",
     "../../docs/zh-cn/application-dev/file-management/app-file-access.md",
-    "../../docs/zh-cn/application-dev/file-management/app-fs-space-statistics.md",
-    "../../docs/zh-cn/application-dev/file-management/share-app-file.md",
-    "../../docs/zh-cn/application-dev/file-management/share-app-file-configuration.md",
-    "../../docs/zh-cn/application-dev/file-management/app-file-backup-overview.md",
-    "../../docs/zh-cn/application-dev/file-management/app-file-backup-extension.md",
     "../../docs/zh-cn/application-dev/file-management/user-file-overview.md",
     "../../docs/zh-cn/application-dev/file-management/user-file-uri-intro.md",
     "../../docs/zh-cn/application-dev/file-management/select-user-file.md",
     "../../docs/zh-cn/application-dev/file-management/save-user-file.md",
+    "../../docs/zh-cn/application-dev/file-management/share-app-file.md",
     "../../docs/zh-cn/application-dev/file-management/file-persistPermission.md",
     "../../docs/zh-cn/application-dev/file-management/distributed-fs-overview.md",
     "../../docs/zh-cn/application-dev/file-management/file-access-across-devices.md",
     "../../docs/zh-cn/application-dev/file-management/file-copy-across-devices.md",
-    "../../docs/zh-cn/application-dev/file-management/set-security-label.md"
+    "../../docs/zh-cn/application-dev/file-management/app-file-backup-overview.md",
+    "../../docs/zh-cn/application-dev/file-management/app-file-backup-extension.md"
   ],
   "quick_reference": {
-    "应用文件访问": "../../docs/zh-cn/application-dev/file-management/app-file-access.md",
+    "Core File Kit简介": "../../docs/zh-cn/application-dev/file-management/core-file-kit-intro.md",
+    "应用文件概述": "../../docs/zh-cn/application-dev/file-management/app-file-overview.md",
     "应用沙箱目录": "../../docs/zh-cn/application-dev/file-management/app-sandbox-directory.md",
-    "空间统计": "../../docs/zh-cn/application-dev/file-management/app-fs-space-statistics.md",
-    "应用文件分享": "../../docs/zh-cn/application-dev/file-management/share-app-file.md",
-    "数据备份恢复": "../../docs/zh-cn/application-dev/file-management/app-file-backup-extension.md",
+    "应用文件访问": "../../docs/zh-cn/application-dev/file-management/app-file-access.md",
+    "应用文件访问(C/C++)": "../../docs/zh-cn/application-dev/file-management/native-fileio-guidelines.md",
+    "应用及文件系统空间统计": "../../docs/zh-cn/application-dev/file-management/app-fs-space-statistics.md",
+    "应用数据备份恢复概述": "../../docs/zh-cn/application-dev/file-management/app-file-backup-overview.md",
+    "应用接入数据备份恢复": "../../docs/zh-cn/application-dev/file-management/app-file-backup-extension.md",
+    "应用触发数据备份恢复（仅对系统应用开放）": "../../docs/zh-cn/application-dev/file-management/app-file-backup-sys.md",
+    "用户文件概述": "../../docs/zh-cn/application-dev/file-management/user-file-overview.md",
+    "用户文件URI介绍": "../../docs/zh-cn/application-dev/file-management/user-file-uri-intro.md",
     "选择用户文件": "../../docs/zh-cn/application-dev/file-management/select-user-file.md",
     "保存用户文件": "../../docs/zh-cn/application-dev/file-management/save-user-file.md",
+    "获取并使用公共目录": "../../docs/zh-cn/application-dev/file-management/request-dir-permission.md",
+    "获取用户目录环境(C/C++)": "../../docs/zh-cn/application-dev/file-management-native-environment-guidelines.md",
+    "应用文件分享": "../../docs/zh-cn/application-dev/file-management/share-app-file.md",
+    "应用共享目录配置": "../../docs/zh-cn/application-dev/file-management/share-app-file-configuration.md",
     "授权持久化": "../../docs/zh-cn/application-dev/file-management/file-persistPermission.md",
-    "分布式文件系统": "../../docs/zh-cn/application-dev/file-management/distributed-fs-overview.md",
-    "跨设备文件访问": "../../docs/zh-cn/application-dev/file-management/file-access-across-devices.md",
+    "授权持久化(C/C++)": "../../docs/zh-cn/application-dev/file-management/native-fileshare-guidelines.md",
+    "FileUri开发指导(C/C++)": "../../docs/zh-cn/application-dev/file-management/native-fileuri-guidelines.md",
+    "分布式文件系统概述": "../../docs/zh-cn/application-dev/file-management/distributed-fs-overview.md",
+    "跨设备文件共享和访问": "../../docs/zh-cn/application-dev/file-management/file-access-across-devices.md",
     "跨设备文件拷贝": "../../docs/zh-cn/application-dev/file-management/file-copy-across-devices.md",
-    "用户文件URI": "../../docs/zh-cn/application-dev/file-management/user-file-uri-intro.md",
-    "公共目录": "../../docs/zh-cn/application-dev/file-management/request-dir-permission.md",
-    "C/C++文件访问": "../../docs/zh-cn/application-dev/file-management/native-fileio-guidelines.md",
-    "C/C++FileUri": "../../docs/zh-cn/application-dev/file-management/native-fileuri-guidelines.md"
+    "设置分布式文件数据等级": "../../docs/zh-cn/application-dev/file-management/set-security-label.md",
+    "管理外置存储设备（仅对系统应用开放）": "../../docs/zh-cn/application-dev/file-management/manage-external-storage-sys.md",
+    "开发用户文件管理器（仅对系统应用开放）": "../../docs/zh-cn/application-dev/file-management/dev-user-file-manager-sys.md",
+    "向应用沙箱推送文件（仅对系统应用开放）": "../../docs/zh-cn/application-dev/file-management/send-file-to-app-sandbox-sys.md",
+    "Core File Kit（文件基础服务）": "../../docs/zh-cn/application-dev/file-management/Readme-CN.md"
+  },
+  "categories": {
+    "应用文件": [
+      {
+        "title": "应用文件概述",
+        "path": "../../docs/zh-cn/application-dev/file-management/app-file-overview.md"
+      },
+      {
+        "title": "应用沙箱目录",
+        "path": "../../docs/zh-cn/application-dev/file-management/app-sandbox-directory.md"
+      },
+      {
+        "title": "应用文件访问",
+        "path": "../../docs/zh-cn/application-dev/file-management/app-file-access.md"
+      },
+      {
+        "title": "应用文件访问(C/C++)",
+        "path": "../../docs/zh-cn/application-dev/file-management/native-fileio-guidelines.md"
+      },
+      {
+        "title": "应用及文件系统空间统计",
+        "path": "../../docs/zh-cn/application-dev/file-management/app-fs-space-statistics.md"
+      },
+      {
+        "title": "应用数据备份恢复概述",
+        "path": "../../docs/zh-cn/application-dev/file-management/app-file-backup-overview.md"
+      },
+      {
+        "title": "应用接入数据备份恢复",
+        "path": "../../docs/zh-cn/application-dev/file-management/app-file-backup-extension.md"
+      },
+      {
+        "title": "应用触发数据备份恢复（仅对系统应用开放）",
+        "path": "../../docs/zh-cn/application-dev/file-management/app-file-backup-sys.md"
+      }
+    ],
+    "用户文件": [
+      {
+        "title": "用户文件概述",
+        "path": "../../docs/zh-cn/application-dev/file-management/user-file-overview.md"
+      },
+      {
+        "title": "用户文件URI介绍",
+        "path": "../../docs/zh-cn/application-dev/file-management/user-file-uri-intro.md"
+      },
+      {
+        "title": "选择用户文件",
+        "path": "../../docs/zh-cn/application-dev/file-management/select-user-file.md"
+      },
+      {
+        "title": "保存用户文件",
+        "path": "../../docs/zh-cn/application-dev/file-management/save-user-file.md"
+      },
+      {
+        "title": "获取并使用公共目录",
+        "path": "../../docs/zh-cn/application-dev/file-management/request-dir-permission.md"
+      },
+      {
+        "title": "获取用户目录环境(C/C++)",
+        "path": "../../docs/zh-cn/application-dev/file-management/native-environment-guidelines.md"
+      },
+      {
+        "title": "应用文件分享",
+        "path": "../../docs/zh-cn/application-dev/file-management/share-app-file.md"
+      },
+      {
+        "title": "应用共享目录配置",
+        "path": "../../docs/zh-cn/application-dev/file-management/share-app-file-configuration.md"
+      },
+      {
+        "title": "授权持久化",
+        "path": "../../docs/zh-cn/application-dev/file-management/file-persistPermission.md"
+      },
+      {
+        "title": "授权持久化(C/C++)",
+        "path": "../../docs/zh-cn/application-dev/file-management/native-fileshare-guidelines.md"
+      },
+      {
+        "title": "FileUri开发指导(C/C++)",
+        "path": "../../docs/zh-cn/application-dev/file-management/native-fileuri-guidelines.md"
+      }
+    ],
+    "分布式文件系统": [
+      {
+        "title": "分布式文件系统概述",
+        "path": "../../docs/zh-cn/application-dev/file-management/distributed-fs-overview.md"
+      },
+      {
+        "title": "跨设备文件共享和访问",
+        "path": "../../docs/zh-cn/application-dev/file-management/file-access-across-devices.md"
+      },
+      {
+        "title": "跨设备文件拷贝",
+        "path": "../../docs/zh-cn/application-dev/file-management/file-copy-across-devices.md"
+      },
+      {
+        "title": "设置分布式文件数据等级",
+        "path": "../../docs/zh-cn/application-dev/file-management/set-security-label.md"
+      }
+    ],
+    "系统应用": [
+      {
+        "title": "管理外置存储设备（仅对系统应用开放）",
+        "path": "../../docs/zh-cn/application-dev/file-management/manage-external-storage-sys.md"
+      },
+      {
+        "title": "开发用户文件管理器（仅对系统应用开放）",
+        "path": "../../docs/zh-cn/application-dev/file-management/dev-user-file-manager-sys.md"
+      },
+      {
+        "title": "向应用沙箱推送文件（仅对系统应用开放）",
+        "path": "../../docs/zh-cn/application-dev/file-management/send-file-to-app-sandbox-sys.md"
+      }
+    ],
+    "概述": [
+      {
+        "title": "Core File Kit简介",
+        "path": "../../docs/zh-cn/application-dev/file-management/core-file-kit-intro.md"
+      },
+      {
+        "title": "Core File Kit（文件基础服务）",
+        "path": "../../docs/zh-cn/application-dev/file-management/Readme-CN.md"
+      }
+    ]
   },
   "document_count": 28
 }

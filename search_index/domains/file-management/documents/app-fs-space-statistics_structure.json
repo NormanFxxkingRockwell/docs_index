@@ -1,8 +1,7 @@
 {
   "doc_id": "app-fs-space-statistics",
   "title": "应用及文件系统空间统计",
-  "path": "zh-cn/application-dev/file-management/app-fs-space-statistics.md",
-  "relative_path": "../../docs/zh-cn/application-dev/file-management/app-fs-space-statistics.md",
+  "domain": "file-management",
   "metadata": {
     "kit": "Core File Kit",
     "subsystem": "FileManagement",
@@ -11,26 +10,33 @@
     "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
     "adviser": "@jinqiuheng"
   },
-  "summary": "介绍如何获取文件系统数据分区剩余空间大小、当前应用的存储空间大小、内置存储的总空间大小和可用空间大小，以及BundleStats属性的含义和统计路径。",
-  "structure": {
-    "title": "应用及文件系统空间统计",
-    "sections": [
-      {
-        "section_id": "section-1",
-        "title": "接口说明",
-        "level": 2,
-        "line_start": 11,
-        "line_end": 41,
-        "summary": "介绍文件系统空间和应用空间统计的接口，包括getCurrentBundleStats、getFreeSize、getTotalSize等接口，以及BundleStats属性的含义和统计路径。"
-      },
-      {
-        "section_id": "section-2",
-        "title": "开发示例",
-        "level": 2,
-        "line_start": 42,
-        "line_end": 157,
-        "summary": "提供获取文件系统数据分区剩余空间大小、当前应用的存储空间大小、内置存储的总空间大小和可用空间大小的开发示例。"
-      }
-    ]
-  }
+  "summary": "介绍如何获取文件系统空间统计和应用空间统计信息，包括获取当前应用的存储空间大小、内置存储的可用空间和总空间大小，以及指定文件系统的剩余空间和总空间大小。提供了多个API接口的详细说明和开发示例。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "接口说明",
+      "content": "API的详细介绍请参见ohos.file.statvfs、ohos.file.storageStatistics。包含文件系统空间和应用空间统计的接口说明表格。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "开发示例",
+      "content": "提供多个代码示例，包括获取文件系统数据分区剩余空间大小、获取当前应用的存储空间大小、异步和同步获取内置存储的总空间大小、异步和同步获取内置存储的可用空间大小。",
+      "subsections": []
+    }
+  ],
+  "api_references": [
+    "ohos.file.statvfs",
+    "ohos.file.storageStatistics"
+  ],
+  "keywords": [
+    "文件系统空间统计",
+    "应用空间统计",
+    "存储空间",
+    "statvfs",
+    "storageStatistics",
+    "getFreeSize",
+    "getTotalSize",
+    "getCurrentBundleStats"
+  ]
 }
