@@ -1,0 +1,119 @@
+{
+  "doc_id": "stationary-deviceStatus-guidelines",
+  "title": "设备状态感知开发指导",
+  "path": "docs/zh-cn/application-dev/device/stationary/deviceStatus-guidelines.md",
+  "domain": "device",
+  "metadata": {
+    "kit": "Multimodal Awareness Kit",
+    "subsystem": "MultimodalAwareness",
+    "owner": "@dilligencer",
+    "designer": "@zou_ye",
+    "tester": "@judan",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "DeviceStatus（设备状态感知）模块提供设备状态感知能力，可以获取到设备的信息，例如：获取设备静止姿态感知状态（支架态）。本文档介绍了设备状态感知的基本概念、支架态的定义，以及如何订阅和取消订阅设备静止姿态感知事件的开发步骤。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "设备状态感知开发指导",
+      "line": 1
+    },
+    {
+      "level": 2,
+      "title": "基本概念",
+      "line": 13
+    },
+    {
+      "level": 3,
+      "title": "支架态",
+      "line": 17
+    },
+    {
+      "level": 2,
+      "title": "获取设备静止姿态感知状态（支架态）开发指导",
+      "line": 21
+    },
+    {
+      "level": 3,
+      "title": "场景介绍",
+      "line": 23
+    },
+    {
+      "level": 3,
+      "title": "约束与限制",
+      "line": 29
+    },
+    {
+      "level": 3,
+      "title": "接口说明",
+      "line": 33
+    },
+    {
+      "level": 3,
+      "title": "开发步骤",
+      "line": 40
+    }
+  ],
+  "content": {
+    "description": "DeviceStatus（设备状态感知）模块提供设备状态感知能力，可以获取到设备的信息，例如：获取设备静止姿态感知状态（支架态）。",
+    "api_reference": "deviceStatus接口",
+    "api_reference_path": "../../reference/apis-multimodalawareness-kit/js-apis-awareness-deviceStatus.md",
+    "concepts": [
+      {
+        "name": "支架态",
+        "description": "设备进入支架态指设备静止，且屏幕与水平面角度处于45度-135度。折叠屏手机需处于折叠状态或者完全展开状态。"
+      }
+    ],
+    "development_guide": {
+      "title": "获取设备静止姿态感知状态（支架态）开发指导",
+      "scenario": "开发过程中，需要订阅设备静止姿态（支架态）感知，并且通过订阅时传入的回调函数来获取到当前的状态值。",
+      "api_version": "18",
+      "constraints": [
+        "设备需要支持加速度计"
+      ],
+      "interfaces": [
+        {
+          "name": "on",
+          "description": "订阅设备静止姿态（支架态）感知，结果通过callback返回。",
+          "signature": "on(type: 'steadyStandingDetect', callback: Callback<SteadyStandingStatus>): void;"
+        },
+        {
+          "name": "off",
+          "description": "取消订阅设备静止姿态（支架态）感知。",
+          "signature": "off(type: 'steadyStandingDetect', callback: Callback<SteadyStandingStatus>): void;"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "导入模块",
+          "code": "import { deviceStatus } from '@kit.MultimodalAwarenessKit';"
+        },
+        {
+          "step": 2,
+          "title": "订阅设备静止姿态（支架态）感知事件",
+          "code": "try {\n   deviceStatus.on('steadyStandingDetect', (data:deviceStatus.SteadyStandingStatus) => {\n      console.info('succeed to get status, now status = ' + data);\n   });\n} catch (err) {\n   console.error('on failed, err = ' + err);\n}"
+        },
+        {
+          "step": 3,
+          "title": "取消本客户端订阅的所有设备静止姿态（支架态）感知事件",
+          "code": "try {\nserStatus.off('steadyStandingDetect');\n} catch (err) {\n   console.error('off failed, err = ' + err);\n}"
+        },
+        {
+          "step": 4,
+          "title": "取消订阅设备静止姿态（支架态）感知事件的特定回调",
+          "code": "let callback : Callback<deviceStatus.SteadyStandingStatus> = (data : deviceStatus. SteadyStandingStatus) => {\n   console.info('succeed to get status, now status = ' + data);\n};\ntry {\n   deviceStatus.on('steadyStandingDetect', callback);\n} catch (err) {\n   console.error('on failed, err = ' + err);\n}\ntry {\n   deviceStatus.off('steadyStandingDetect', callback);\n} catch (err) {\n   console.error('off failed, err = ' + err);\n}"
+        }
+      ]
+    }
+  },
+  "tags": [
+    "device",
+    "deviceStatus",
+    "设备状态感知",
+    "支架态",
+    "MultimodalAwarenessKit",
+    "steadyStandingDetect"
+  ],
+  "line_count": 93
+}

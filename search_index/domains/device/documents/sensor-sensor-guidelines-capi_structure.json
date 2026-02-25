@@ -1,0 +1,347 @@
+{
+  "doc_id": "sensor-sensor-guidelines-capi",
+  "title": "传感器开发指导(C/C++)",
+  "path": "docs/zh-cn/application-dev/device/sensor/sensor-guidelines-capi.md",
+  "domain": "device",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "Sensor Service Kit",
+    "subsystem": "Sensors",
+    "owner": "@dilligencer",
+    "designer": "@butterls",
+    "tester": "@murphy84",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "本文档介绍如何使用sensor模块获取传感器数据，包括订阅方向传感器、计步传感器等。文档提供了完整的C/C++开发步骤，涵盖权限配置、依赖库引入、传感器信息获取、数据订阅与取消订阅等功能实现。以加速度传感器为例，详细说明了从创建工程到编写代码的完整流程。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "传感器开发指导(C/C++)",
+      "line_start": 1,
+      "line_end": 365,
+      "children": [
+        {
+          "level": 2,
+          "title": "场景介绍",
+          "line_start": 9,
+          "line_end": 13,
+          "content": "当设备需要获取传感器数据时，可以使用sensor模块，例如：通过订阅方向传感器数据感知用户设备当前的朝向，通过订阅计步传感器数据统计用户的步数等。"
+        },
+        {
+          "level": 2,
+          "title": "函数说明",
+          "line_start": 15,
+          "line_end": 42,
+          "functions": [
+            {
+              "name": "OH_Sensor_GetInfos",
+              "description": "获取设备上所有传感器的信息"
+            },
+            {
+              "name": "OH_Sensor_Subscribe",
+              "description": "订阅传感器数据。系统将以指定的频率向用户上报传感器数据。订阅加速度传感器需要申请ohos.permission.ACCELEROMETER权限；订阅陀螺仪传感器需要申请ohos.permission.GYROSCOPE权限；订阅计步器相关传感器时需要申请ohos.permission.ACTIVITY_MOTION权限；订阅与健康相关的传感器时需要申请ohos.permission.READ_HEALTH_DATA权限；订阅其余传感器不需要申请权限"
+            },
+            {
+              "name": "OH_Sensor_Unsubscribe",
+              "description": "取消订阅传感器数据。取消订阅加速度计传感器需要申请ohos.permission.ACCELEROMETER权限；取消订阅陀螺仪传感器需要申请ohos.permission.GYROSCOPE权限；取消订阅计步器相关传感器时需要申请ohos.permission.ACTIVITY_MOTION权限；取消订阅与健康相关的传感器时需要申请ohos.permission.READ_HEALTH_DATA权限；取消订阅其余传感器不需要申请权限"
+            },
+            {
+              "name": "OH_Sensor_CreateInfos",
+              "description": "用给定的数字创建一个实例数组"
+            },
+            {
+              "name": "OH_Sensor_DestroyInfos",
+              "description": "销毁实例数组并回收内存"
+            },
+            {
+              "name": "OH_SensorInfo_GetName",
+              "description": "获取传感器名称"
+            },
+            {
+              "name": "OH_SensorInfo_GetVendorName",
+              "description": "获取传感器的厂商名称"
+            },
+            {
+              "name": "OH_SensorInfo_GetType",
+              "description": "获取传感器类型"
+            },
+            {
+              "name": "OH_SensorInfo_GetResolution",
+              "description": "获取传感器分辨率"
+            },
+            {
+              "name": "OH_SensorInfo_GetMinSamplingInterval",
+              "description": "获取传感器的最小数据上报间隔"
+            },
+            {
+              "name": "OH_SensorInfo_GetMaxSamplingInterval",
+              "description": "获取传感器的最大数据上报间隔时间"
+            },
+            {
+              "name": "OH_SensorEvent_GetType",
+              "description": "获取传感器类型"
+            },
+            {
+              "name": "OH_SensorEvent_GetTimestamp",
+              "description": "获取传感器数据的时间戳"
+            },
+            {
+              "name": "OH_SensorEvent_GetAccuracy",
+              "description": "获取传感器数据的精度"
+            },
+            {
+              "name": "OH_SensorEvent_GetData",
+              "description": "获取传感器数据。数据的长度和内容依赖于监听的传感器类型，支持13种传感器类型的数据格式"
+            },
+            {
+              "name": "OH_Sensor_CreateSubscriptionId",
+              "description": "创建一个Sensor_SubscriptionId实例"
+            },
+            {
+              "name": "OH_Sensor_DestroySubscriptionId",
+              "description": "销毁Sensor_SubscriptionId实例并回收内存"
+            },
+            {
+              "name": "OH_SensorSubscriptionId_SetType",
+              "description": "设置传感器类型"
+            },
+            {
+              "name": "OH_Sensor_CreateSubscriptionAttribute",
+              "description": "创建Sensor_SubscriptionAttribute实例"
+            },
+            {
+              "name": "OH_Sensor_DestroySubscriptionAttribute",
+              "description": "销毁Sensor_SubscriptionAttribute实例并回收内存"
+            },
+            {
+              "name": "OH_SensorSubscriptionAttribute_SetSamplingInterval",
+              "description": "设置传感器数据上报间隔"
+            },
+            {
+              "name": "OH_Sensor_CreateSubscriber",
+              "description": "创建一个Sensor_Subscriber实例"
+            },
+            {
+              "name": "OH_Sensor_DestroySubscriber",
+              "description": "销毁Sensor_Subscriber实例并回收内存"
+            },
+            {
+              "name": "OH_SensorSubscriber_SetCallback",
+              "description": "设置一个回调函数来上报传感器数据"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "title": "开发步骤",
+          "line_start": 45,
+          "line_end": 365,
+          "steps": [
+            {
+              "step": 1,
+              "title": "新建一个Native C++工程",
+              "line_start": 49,
+              "line_end": 51
+            },
+            {
+              "step": 2,
+              "title": "配置加速度传感器权限",
+              "line_start": 53,
+              "line_end": 63,
+              "details": "需要在module.json5中声明ohos.permission.ACCELEROMETER权限"
+            },
+            {
+              "step": 3,
+              "title": "CMakeLists.txt文件中引入动态依赖库",
+              "line_start": 65,
+              "line_end": 71,
+              "libraries": [
+                "libace_napi.z.so",
+                "libhilog_ndk.z.so",
+                "libohsensor.so"
+              ]
+              },
+            {
+              "step": 4,
+              "title": "在oh_sensor_capi.cpp文件中编码，首先导入模块",
+              "line_start": 73,
+              "line_end": 82,
+              "includes": [
+                "sensors/oh_sensor.h",
+                "napi/native_api.h",
+                "hilog/log.h",
+                "thread"
+              ]
+            },
+            {
+              "step": 5,
+              "title": "定义常量",
+              "line_start": 84,
+              "line_end": 98
+            },
+            {
+              "step": 6,
+              "title": "定义一个回调函数用来接收传感器数据",
+              "line_start": 100,
+              "line_end": 151,
+              "function": "SensorDataCallbackImpl"
+            },
+            {
+              "step": 7,
+              "title": "获取设备上所有传感器的信息",
+              "line_start": 153,
+              "line_end": 244,
+              "functions": [
+                "GetSensorInfo",
+                "GetSensorInfos"
+              ]
+            },
+            {
+              "step": 8,
+              "title": "订阅和取消订阅传感器数据",
+              "line_start": 246,
+              "line_end": 309,
+              "function": "Subscriber"
+            },
+            {
+              "step": 9,
+              "title": "在Init函数中补充接口",
+              "line_start": 311,
+              "line_end": 327,
+              "function": "Init"
+            },
+            {
+              "step": 10,
+              "title": "在types/libentry路径下index.d.ts文件中引入Napi接口",
+              "line_start": 329,
+              "line_end": 336
+            },
+            {
+              "step": 11,
+              "title": "编写程序入口调用代码",
+              "line_start": 338,
+              "line_end": 364
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "api_references": [
+    {
+      "name": "Sensor",
+      "path": "../../reference/apis-sensor-service-kit/capi-sensor.md"
+    },
+    {
+      "name": "Sensor_Info",
+      "path": "../../reference/apis-sensor-service-kit/capi-sensor-sensor-info.md"
+    }
+  ],
+  "sensor_types": [
+    "SENSOR_TYPE_ACCELEROMETER",
+    "SENSOR_TYPE_GYROSCOPE",
+    "SENSOR_TYPE_AMBIENT_LIGHT",
+    "SENSOR_TYPE_MAGNETIC_FIELD",
+    "SENSOR_TYPE_BAROMETER",
+    "SENSOR_TYPE_HALL",
+    "SENSOR_TYPE_PROXIMITY",
+    "SENSOR_TYPE_ORIENTATION",
+    "SENSOR_TYPE_GRAVITY",
+    "SENSOR_TYPE_ROTATION_VECTOR",
+    "SENSOR_TYPE_PEDOMETER_DETECTION",
+    "SENSOR_TYPE_PEDOMETER",
+    "SENSOR_TYPE_HEART_RATE"
+  ],
+  "permissions": [
+    "ohos.permission.ACCELEROMETER",
+    "ohos.permission.GYROSCOPE",
+    "ohos.permission.ACTIVITY_MOTION",
+    "ohos.permission.READ_HEALTH_DATA"
+  ],
+  "keywords": [
+    "传感器",
+    "C/C++",
+    "Native API",
+    "加速度传感器",
+    "陀螺仪",
+    "计步器",
+    "环境光",
+    "地磁",
+    "气压",
+    "霍尔",
+    "接近",
+    "方向",
+    "重力",
+    "旋转向量",
+    "心率",
+    "Sensor Service Kit"
+  ],
+  "code_examples": [
+    {
+      "language": "C++",
+      "type": "permission_config",
+      "line_start": 57,
+      "line_end": 63
+    },
+    {
+      "language": "C",
+      "type": "cmake_config",
+      "line_start": 67,
+      "line_end": 71
+    },
+    {
+      "language": "C++",
+      "type": "module_import",
+      "line_start": 77,
+      "line_end": 82
+    },
+    {
+      "language": "C++",
+      "type": "constants_definition",
+      "line_start": 88,
+      "line_end": 98
+    },
+    {
+      "language": "C++",
+      "type": "callback_function",
+      "function": "SensorDataCallbackImpl",
+      "line_start": 104,
+      "line_end": 151
+    },
+    {
+      "language": "C++",
+      "type": "sensor_info_retrieval",
+      "functions": ["GetSensorInfo", "GetSensorInfos"],
+      "line_start": 157,
+      "line_end": 244
+    },
+    {
+      "language": "C++",
+      "type": "subscription_management",
+      "function": "Subscriber",
+      "line_start": 250,
+      "line_end": 309
+    },
+    {
+      "language": "C++",
+      "type": "init_function",
+      "function": "Init",
+      "line_start": 315,
+      "line_end": 327
+    },
+    {
+      "language": "TypeScript",
+      "type": "napi_interface",
+      "line_start": 333,
+      "line_end": 336
+    },
+    {
+      "language": "TypeScript",
+      "type": "entry_point",
+      "line_start": 342,
+      "line_end": 364
+    }
+  ],
+  "total_lines": 365,
+  "generated_at": "2026-02-25"
+}

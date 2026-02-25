@@ -1,0 +1,108 @@
+{
+  "doc_id": "sensor-sensor-overview",
+  "title": "传感器开发概述",
+  "path": "docs/zh-cn/application-dev/device/sensor/sensor-overview.md",
+  "domain": "device",
+  "metadata": {
+    "kit": "Sensor Service Kit",
+    "subsystem": "Sensors",
+    "owner": "@dilligencer",
+    "designer": "@butterls",
+    "tester": "@murphy84",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "本文档介绍了传感器开发概述，包括传感器类型、运作机制和约束与限制。开发者可以根据传感器提供的API查询设备上的传感器，订阅传感器数据，并根据传感器数据定制相应的算法开发各类应用。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "传感器类型",
+      "line_start": 9,
+      "line_end": 38,
+      "content": "系统传感器是应用访问底层硬件传感器的一种设备抽象概念。开发者根据传感器提供的[@ohos.sensor (传感器)](../../reference/apis-sensor-service-kit/js-apis-sensor.md)，可以查询设备上的传感器，订阅传感器数据，并根据传感器数据定制相应的算法开发各类应用，比如指南针、运动健康、游戏等。\n\n支持的传感器类型包括：加速度传感器、未校准加速度传感器、线性加速度传感器、重力传感器、陀螺仪传感器、未校准陀螺仪传感器、大幅度动作传感器、计步器检测传感器、计步器传感器、环境温度传感器、磁场传感器、未校准磁场传感器、湿度传感器、气压计传感器、方向传感器、旋转矢量传感器、接近光传感器、环境光传感器、心率传感器、佩戴检测传感器、霍尔传感器等。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "运作机制",
+      "line_start": 40,
+      "line_end": 55,
+      "content": "传感器包含如下四个模块：Sensor API、Sensor Framework、Sensor Service和HDF层。\n\n- Sensor API：提供传感器的基础API，主要包含查询传感器列表，订阅/取消传感器的数据、执行控制命令等，简化应用开发。\n- Sensor Framework：主要实现传感器的订阅管理，数据通道的创建、销毁、订阅与取消订阅，实现与SensorService的通信。\n- Sensor Service：主要实现HD_IDL层数据接收、解析、分发，前后台的策略管控，对该设备Sensor的管理，Sensor权限管控等。\n- HDF层：对不同的FIFO、频率进行策略选择，以及适配不同设备。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "约束与限制",
+      "line_start": 57,
+      "line_end": 68,
+      "content": "1. 针对部分传感器，开发者需要请求相应的权限，才能获取到相应传感器的数据。需要权限的传感器包括：加速度传感器（ohos.permission.ACCELEROMETER）、陀螺仪传感器（ohos.permission.GYROSCOPE）、计步器（ohos.permission.ACTIVITY_MOTION）、心率计（ohos.permission.READ_HEALTH_DATA）。\n\n2. 传感器数据订阅和取消订阅接口成对调用，当不再需要订阅传感器数据时，开发者需要调用取消订阅接口停止数据上报。",
+      "subsections": []
+    }
+  ],
+  "keywords": [
+    "传感器",
+    "加速度传感器",
+    "陀螺仪传感器",
+    "计步器",
+    "心率传感器",
+    "Sensor Service Kit",
+    "Sensors",
+    "传感器API",
+    "传感器权限"
+  ],
+  "api_references": [
+    {
+      "name": "@ohos.sensor",
+      "path": "../../reference/apis-sensor-service-kit/js-apis-sensor.md"
+    },
+    {
+      "name": "Display",
+      "path": "../../reference/apis-arkui/js-apis-display.md#display"
+    }
+  ],
+  "permissions": [
+    "ohos.permission.ACCELEROMETER",
+    "ohos.permission.GYROSCOPE",
+    "ohos.permission.ACTIVITY_MOTION",
+    "ohos.permission.READ_HEALTH_DATA"
+  ],
+  "sensor_types": [
+    "ACCELEROMETER",
+    "ACCELEROMETER_UNCALIBRATED",
+    "LINEAR_ACCELEROMETER",
+    "GRAVITY",
+    "GYROSCOPE",
+    "GYROSCOPE_UNCALIBRATED",
+    "SIGNIFICANT_MOTION",
+    "PEDOMETER_DETECTION",
+    "PEDOMETER",
+    "AMBIENT_TEMPERATURE",
+    "MAGNETIC_FIELD",
+    "MAGNETIC_FIELD_UNCALIBRATED",
+    "HUMIDITY",
+    "BAROMETER",
+    "ORIENTATION",
+    "ROTATION_VECTOR",
+    "PROXIMITY",
+    "AMBIENT_LIGHT",
+    "HEART_RATE",
+    "WEAR_DETECTION",
+    "HALL"
+  ],
+  "figures": [
+    {
+      "id": "fad1a124-a90e-460f-84fc-e87d6caebb21",
+      "title": "传感器",
+      "path": "figures/fad1a124-a90e-460f-84fc-e87d6caebb21.png"
+    }
+  ],
+  "statistics": {
+    "total_lines": 68,
+    "section_count": 3,
+    "sensor_type_count": 21,
+    "permission_count": 4,
+    "api_reference_count": 2,
+    "figure_count": 1
+  },
+  "created_at": "2026-02-25",
+  "updated_at": "2026-02-25"
+}

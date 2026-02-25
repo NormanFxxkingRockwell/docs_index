@@ -1,0 +1,73 @@
+{
+  "doc_id": "driver-environmental-preparation",
+  "title": "环境准备",
+  "domain": "device",
+  "path": "docs/zh-cn/application-dev/device/driver/environmental-preparation.md",
+  "metadata": {
+    "Kit": "Driver Development Kit",
+    "Subsystem": "Driver",
+    "Owner": "@lixinsheng2",
+    "Designer": "@w00373942",
+    "Tester": "@dong-dongzhen",
+    "Adviser": "@w_Machine_cc"
+  },
+  "summary": "本文档介绍驱动开发的环境准备工作，包括开发工具DevEco Studio的安装配置、SDK版本要求、环境检验、HDC配置以及开发设备说明。重点说明了扩展外设管理模块的ArkTs接口需要API10及以上版本，并提供了不同NDK接口的SDK版本要求表。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "开发工具及配置",
+      "content": "DevEco Studio作为驱动开发工具，是进行驱动开发的必备条件之一，我们可以使用该工具进行开发、调试、打包等操作。请下载安装该工具，并参考工具概述中的创建一个新的工程进行基本的操作验证，保证DevEco Studio可正常运行。请使用华为账号-登录下载安装该工具，并参考工具概述中的创建一个新的工程进行基本的操作验证，保证DevEco Studio可正常运行。"
+    },
+    {
+      "level": 2,
+      "title": "SDK版本配置",
+      "content": "扩展外设管理模块提供的ArkTs接口，所需SDK版本为API10及以上版本才可使用，更新SDK的具体操作可参见更新指南。基于DDK能力开发专业专用扩展外设驱动或扩展外设增强驱动时，对SDK版本的要求如下：UsbDdk需要API10及以上，HidDdk需要API11及以上，USBSerialDDK需要API18及以上，ScsiPeripheralDDK需要API18及以上。"
+    },
+    {
+      "level": 2,
+      "title": "检验环境是否搭建成功",
+      "content": "检查DevEco Studio是否已连接上OpenHarmony设备。"
+    },
+    {
+      "level": 2,
+      "title": "HDC配置",
+      "content": "HDC（HarmonyOS Device Connector）是为开发人员提供的用于调试的命令行工具，通过该工具可以在Windows/Linux/Mac系统上与真实设备或者模拟器进行交互，详细参考hdc配置。注意：配置环境变量hdc_server_port和全局环境变量为必须操作。"
+    },
+    {
+      "level": 2,
+      "title": "开发设备",
+      "content": "当前开发调试及验证，以RK3568作为开发设备进行说明。关于RK3568的编译、烧录操作等方法，可参考快速入门。开发扩展外设驱动客户端和扩展外设驱动时，需要一个外接USB设备进行调试，当前仅支持USB总线的外接设备。需要知道外接USB设备的ProductId和VendorId，用于定义驱动以及IPC通信。"
+    }
+  ],
+  "keywords": [
+    "环境准备",
+    "DevEco Studio",
+    "SDK版本",
+    "API10",
+    "HDC配置",
+    "RK3568",
+    "USB设备",
+    "驱动开发"
+  ],
+  "links": [
+    "https://developer.huawei.com/consumer/cn/download/",
+    "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-tools-overview",
+    "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-create-new-project",
+    "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hdc"
+  ],
+  "figures": [
+    "figures/device-connected.png"
+  ],
+  "tables": [
+    {
+      "name": "NDK接口SDK版本要求",
+      "headers": ["NDK接口", "SDK版本"],
+      "rows": [
+        ["UsbDdk", "API10及以上"],
+        ["HidDdk", "API11及以上"],
+        ["USBSerialDDK", "API18及以上"],
+        ["ScsiPeripheralDDK", "API18及以上"]
+      ]
+    }
+  ]
+}

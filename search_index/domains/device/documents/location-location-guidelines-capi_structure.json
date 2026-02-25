@@ -1,0 +1,169 @@
+{
+  "doc_id": "location-location-guidelines-capi",
+  "title": "获取设备的位置信息开发指导(C/C++)",
+  "path": "docs/zh-cn/application-dev/device/location/location-guidelines-capi.md",
+  "language": "zh-cn",
+  "domain": "device",
+  "subsystem": "Location",
+  "kit": "Location Kit",
+  "metadata": {
+    "owner": "@xxthadsl",
+    "designer": "@liu-binjun",
+    "tester": "@gcw_MslijYkf",
+    "adviser": "@RayShih"
+  },
+  "summary": "本文档介绍了如何在OpenHarmony中使用C/C++接口获取设备位置信息。主要内容包括：查询位置开关状态、启动和停止定位、设置定位参数、接收位置回调等。开发者需要申请位置权限，并在CMakeLists.txt中引入liblocation_ndk.so依赖库。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "获取设备的位置信息开发指导(C/C++)",
+      "line": 1
+    },
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 10,
+      "content": "开发者可以调用OpenHarmony位置相关接口，监听设备的位置变化。"
+    },
+    {
+      "level": 2,
+      "title": "函数说明",
+      "line": 14,
+      "functions": [
+        {
+          "name": "OH_Location_IsLocatingEnabled",
+          "description": "查询位置开关是否开启。",
+          "signature": "OH_Location_IsLocatingEnabled(bool* enabled)"
+        },
+        {
+          "name": "OH_Location_StartLocating",
+          "description": "启动定位并订阅位置变化。",
+          "signature": "OH_Location_StartLocating(const Location_RequestConfig* requestConfig)"
+        },
+        {
+          "name": "OH_Location_StopLocating",
+          "description": "停止定位并取消订阅位置变化。",
+          "signature": "Location_ResultCode OH_Location_StopLocating(const Location_RequestConfig* requestConfig)"
+        },
+        {
+          "name": "OH_LocationInfo_GetBasicInfo",
+          "description": "从定位结果中获取基本信息，如经纬度、海拔、速度等信息。",
+          "signature": "OH_LocationInfo_GetBasicInfo(Location_Info* location)"
+        },
+        {
+          "name": "OH_LocationInfo_GetAdditionalInfo",
+          "description": "从定位结果中获取附加信息。附加信息是一个JSON格式的字符串。",
+          "signature": "OH_LocationInfo_GetAdditionalInfo(Location_Info* location, char* additionalInfo, uint32_t length)"
+        },
+        {
+          "name": "OH_Location_CreateRequestConfig",
+          "description": "创建一个位置请求参数结构体实例。",
+          "signature": "OH_Location_CreateRequestConfig(void)"
+        },
+        {
+          "name": "OH_Location_DestroyRequestConfig",
+          "description": "销毁位置请求参数实例并回收内存。",
+          "signature": "OH_Location_DestroyRequestConfig(Location_RequestConfig* requestConfig)"
+        },
+        {
+          "name": "OH_LocationRequestConfig_SetUseScene",
+          "description": "设置发起定位时的用户活动场景。如果设置了useScene，则powerConsumptionScene无效。如果未设置useScene，且设置了powerConsumptionScene，则该参数生效。如果两个参数都不设置，则默认useScene为LOCATION_USE_SCENE_DAILY_LIFE_SERVICE,powerConsumptionScene参数无效。",
+          "signature": "OH_LocationRequestConfig_SetUseScene(Location_RequestConfig*{ requestConfig, Location_UseScene useScene)"
+        },
+        {
+          "name": "OH_LocationRequestConfig_SetPowerConsumptionScene",
+          "description": "设置发起定位时的功耗场景。",
+          "signature": "OH_LocationRequestConfig_SetPowerConsumptionScene(Location_RequestConfig* requestConfig, Location_PowerConsumptionScene powerConsumptionScene)"
+        },
+        {
+          "name": "OH_LocationRequestConfig_SetInterval",
+          "description": "设置定位结果上报时间间隔。",
+          "signature": "OH_LocationRequestConfig_SetInterval(Location_RequestConfig* requestConfig, int interval)"
+        },
+        {
+          "name": "OH_LocationRequestConfig_SetCallback",
+          "description": "设置用于接收位置上报的回调函数。",
+          "signature": "OH_LocationRequestConfig_SetCallback(Location_RequestConfig* requestConfig, Location_InfoCallback callback, void* userData)"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 31,
+      "steps": [
+        "新建一个Native C++工程。",
+        "获取设备的位置信息，需要有位置权限，位置权限申请的方法和步骤见[申请位置权限开发指导](location-permission-guidelines.md)。",
+        "CMakeLists.txt文件中引入动态依赖库。",
+        "在napi_init.cpp文件中编码，首先导入模块。",
+        "调用获取位置接口之前需要先判断位置开关是否打开。",
+        "定位位置变化。",
+        "在types/libentry路径下index.d.ts文件中引入Napi接口。",
+        "删除Index.ets中的已废弃函数。"
+      ]
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "c",
+      "line_start": 41,
+      "line_end": 45,
+      "context": "CMakeLists.txt依赖库配置"
+    },
+    {
+      "language": "c",
+      "line_start": 49,
+      "line_end": 55,
+      "context": "头文件导入"
+    },
+    {
+      "language": "c",
+      "line_start": 62,
+      "line_end": 81,
+      "context": "查询位置开关状态"
+    },
+    {
+      "language": "c",
+      "line_start": 86,
+      "line_end": 147,
+      "context": "定位位置变化和回调处理"
+    },
+    {
+      "language": "c",
+      "line_start": 152,
+      "line_end": 155,
+      "context": "Napi接口声明"
+    },
+    {
+      "language": "js",
+      "line_start": 160,
+      "line_end": 163,
+      "context": "废弃函数删除示例"
+    }
+  ],
+  "api_references": [
+    "OH_Location_IsLocatingEnabled",
+    "OH_Location_StartLocating",
+    "OH_Location_StopLocating",
+    "OH_LocationInfo_GetBasicInfo",
+    "OH_LocationInfo_GetAdditionalInfo",
+    "OH_Location_CreateRequestConfig",
+    "OH_Location_DestroyRequestConfig",
+    "OH_LocationRequestConfig_SetUseScene",
+    "OH_LocationRequestConfig_SetPowerConsumptionScene",
+    "OH_LocationRequestConfig_SetInterval",
+    "OH_LocationRequestConfig_SetCallback"
+  ],
+  "related_docs": [
+    "location-permission-guid-guidelines.md"
+  ],
+  "tags": [
+    "location",
+    "capi",
+    "c++",
+    "native",
+    "positioning",
+    "device"
+  ],
+  "last_updated": "2026-02-25"
+}

@@ -1,0 +1,159 @@
+{
+  "doc_id": "input-monitor-guidelines",
+  "title": "事件监听开发指导（C/C++）",
+  "path": "docs/zh-cn/application-dev/device/input/monitor-guidelines.md",
+  "domain": "device",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "Input Kit",
+    "subsystem": "MultimodalInput",
+    "owner": "@zhaoxueyuan",
+    "designer": "@hanruofei",
+    "tester": "@Lyuxin",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档介绍了从API version 12开始，多模为应用提供的按键、输入事件（鼠标、触屏和轴事件）监听能力，当前仅支持录屏类应用。文档详细说明了创建和删除事件监听的相关接口，包括按键事件、鼠标事件、触摸事件和轴事件的监听方法，以及开发步骤中的动态库链接、权限申请和事件监听创建。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "功能介绍",
+      "line": 10,
+      "content": "从API version 12开始，多模为应用提供了按键、输入事件（鼠标、触屏和轴事件）监听能力，当前仅支持录屏类应用。使用场景例如：用户在录屏应用开启录屏时，监听设备的按键、鼠标、触摸和轴事件。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 14,
+      "content": "创建和删除事件监听相关接口包括：OH_Input_AddKeyEventMonitor、OH_Input_AddMouseEventMonitor、OH_Input_AddTouchEventMonitor、OH_Input_AddAxisEventMonitorForAll、OH_Input_AddAxisEventMonitor、OH_Input_RemoveKeyEventMonitor、OH_Input_RemoveMouseEventMonitor、OH_Input_RemoveTouchEventMonitor、OH_Input_RemoveAxisEventMonitorForAll、OH_Input_RemoveAxisEventMonitor。",
+      "interfaces": [
+        "OH_Input_AddKeyEventMonitor",
+        "OH_Input_AddMouseEventMonitor",
+        "OH_Input_AddTouchEventMonitor",
+        "OH_Input_AddAxisEventMonitorForAll",
+        "OH_Input_AddAxisEventMonitor",
+        "OH_Input_RemoveKeyEventMonitor",
+        "OH_Input_RemoveMouseEventMonitor",
+        "OH_Input_RemoveTouchEventMonitor",
+        "OH_Input_RemoveAxisEventMonitorForAll",
+        "OH_Input_RemoveAxisEventMonitor"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 31,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "链接动态库",
+          "line": 33,
+          "content": "在CMakeList.txt文件中新增配置：target_link_libraries(entry PUBLIC libohinput.so)"
+        },
+        {
+          "level": 3,
+          "title": "申请所需权限",
+          "line": 41,
+          "content": "在module.json5中添加权限配置：ohos.permission.INPUT_MONITORING"
+        },
+        {
+          "level": 3,
+          "title": "创建事件监听",
+          "line": 53,
+          "subsections": [
+            {
+              "level": 4,
+              "title": "按键事件",
+              "line": 55,
+              "content": "使用OH_Input_AddKeyEventMonitor创建按键事件监听，OH_Input_RemoveKeyEventMonitor删除监听。回调函数中可获取按键动作、按键码和动作时间。",
+              "interfaces": [
+                "OH_Input_AddKeyEventMonitor",
+                "OH_Input_RemoveKeyEventMonitor",
+                "OH_Input_GetKeyEventAction",
+                "OH_Input_GetKeyEventKeyCode",
+                "OH_Input_GetKeyEventActionTime"
+              ]
+            },
+            {
+              "level": 4,
+              "title": "鼠标事件",
+              "line": 91,
+              "content": "使用OH_Input_AddMouseEventMonitor创建鼠标事件监听，OH_Input_RemoveMouseEventMonitor删除监听。回调函数中可获取鼠标动作、显示坐标、按钮、轴类型、轴值和动作时间。",
+              "interfaces": [
+                "OH_Input_AddMouseEventMonitor",
+                "OH_Input_RemoveMouseEventMonitor",
+                "OH_Input_GetMouseEventAction",
+                "OH_Input_GetMouseEventDisplayX",
+                "OH_Input_GetMouseEventDisplayY",
+                "OH_Input_GetMouseEventButton",
+                "OH_Input_GetMouseEventAxisType",
+                "OH_Input_GetMouseEventAxisValue",
+                "OH_Input_GetMouseEventActionTime"
+              ]
+            },
+            {
+              "level": 4,
+              "title": "触摸事件",
+              "line": 135,
+              "content": "使用OH_Input_AddTouchEventMonitor创建触摸事件监听，OH_Input_RemoveTouchEventMonitor删除监听。回调函数中可获取触摸动作、手指ID、显示坐标和动作时间。",
+              "interfaces": [
+                "OH_Input_AddTouchEventMonitor",
+                "OH_Input_RemoveTouchEventMonitor",
+                "OH_Input_GetTouchEventAction",
+                "OH_Input_GetTouchEventFingerId",
+                "OH_Input_GetTouchEventDisplayX",
+                "OH_Input_GetTouchEventDisplayY",
+                "OH_Input_GetTouchEventActionTime"
+              ]
+            },
+            {
+              "level": 4,
+              "title": "轴事件",
+              "line": 174,
+              "content": "使用OH_Input_AddAxisEventMonitorForAll创建所有类型轴事件监听，OH_Input_AddAxisEventMonitor创建指定类型轴事件监听。支持捏合（PINCH）和滚动（SCROLL）类型轴事件。回调函数中可获取轴动作、显示坐标、轴值、动作时间、源类型和轴事件类型。",
+              "interfaces": [
+                "OH_Input_AddAxisEventMonitorForAll",
+                "OH_Input_RemoveAxisEventMonitorForAll",
+                "OH_Input_AddAxisEventMonitor",
+                "OH_Input_RemoveAxisEventMonitor",
+                "OH_Input_GetAxisEventAction",
+                "OH_Input_GetAxisEventDisplayX",
+                "OH_Input_GetAxisEventDisplayY",
+                "OH_Input_GetAxisEventActionTime",
+                "OH_Input_GetAxisEventSourceType",
+                "OH_Input_GetAxisEventType",
+                "OH_Input_GetAxisEventAxisValue"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "api_version": "12",
+  "permissions": [
+    "ohos.permission.INPUT_MONITORING"
+  ],
+  "libraries": [
+    "libohinput.so"
+  ],
+  "tags": [
+    "事件监听",
+    "按键事件",
+    "鼠标事件",
+    "触摸事件",
+    "轴事件",
+    "录屏应用",
+    "Input Kit",
+    "MultimodalInput"
+  ],
+  "related_docs": [
+    "../../reference/apis-input-kit/capi-input.md",
+    "../../security/AccessToken/declare-permissions.md"
+  ],
+  "code_samples": [
+    "key_event_monitor",
+    "mouse_event_monitor",
+    "touch_event_monitor",
+    "axis_event_monitor"
+  ]
+}

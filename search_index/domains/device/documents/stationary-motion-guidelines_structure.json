@@ -1,0 +1,192 @@
+{
+  "doc_id": "stationary-motion-guidelines",
+  "title": "获取用户动作开发指导",
+  "path": "docs/zh-cn/application-dev/device/stationary/motion-guidelines.md",
+  "domain": "device",
+  "metadata": {
+    "kit": "Multimodal Awareness Kit",
+    "subsystem": "MultimodalAwareness",
+    "owner": "@dilligencer",
+    "designer": "@zou_ye",
+    "tester": "@judan",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "本文档介绍如何使用motion模块获取用户动作状态，包括获取操作手状态和握持手状态的开发指导。从API version 15开始支持获取操作手状态，从API version 20开始支持获取握持手状态。文档详细说明了接口使用方法、所需权限、约束限制以及完整的开发步骤。",
+  "structure": {
+    "sections": [
+      {
+        "id": "scene-introduction",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 16,
+        "content": "当应用需要获取用户动作时，可以调用motion模块，例如判断用户当前是用左手还是右手操作设备屏幕。详细的接口介绍请参考Motion接口。从API version 15开始，支持获取操作手状态。从API version 20开始，支持获取握持手状态。"
+      },
+      {
+        "id": "operating-hand-status",
+        "title": "获取操作手状态开发指导",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 111,
+        "subsections": [
+          {
+            "id": "operating-hand-interface",
+            "title": "接口说明",
+            "level": 3,
+            "line_start": 19,
+            "line_end": 25,
+            "content": "提供三个接口：on用于订阅操作手感知，off用于取消订阅操作手感知，getRecentOperatingHandStatus用于获取最新的操作手状态。"
+          },
+          {
+            "id": "operating-hand-permissions",
+            "title": "需要权限",
+            "level": 3,
+            "line_start": 27,
+            "line_end": 40,
+            "content": "使用motion模块获取用户操作手时，需要权限：ohos.permission.ACTIVITY_MOTION 或 ohos.permission.DETECT_GESTURE。"
+          },
+          {
+            "id": "operating-hand-constraints",
+            "title": "约束与限制",
+            "level": 3,
+            "line_start": 42,
+            "line_end": 52,
+            "content": "功能不支持时返回801错误码。指关节操作不属于使用手操作场景。窗口旋转场景，多指同时操作场景不支持。能力有效范围：不包含距离屏幕边缘8mm内区域。结果上报条件：首次订阅或切换操作手后，连续点数次触发。"
+          },
+          {
+            "id": "operating-hand-steps",
+            "title": "开发步骤",
+            "level": 3,
+            "line_start": 54,
+            "line_end": 110,
+            "content": "包含5个步骤：1.导入模块 2.定义回调函数接收操作手结果 3.订阅操作手感知 4.取消订阅操作手感知 5.获取最新操作手状态"
+          }
+        ]
+      },
+      {
+        "id": "holding-hand-status",
+        "title": "获取握持手状态开发指导",
+        "level": 2,
+        "line_start": 113,
+        "line_end": 191,
+        "subsections": [
+          {
+            "id": "holding-hand-interface",
+            "title": "接口说明",
+            "level": 3,
+            "line_start": 115,
+            "line_end": 120,
+            "content": "提供两个接口：on用于订阅握持手感知，off用于取消订阅握持手感知。"
+          },
+          {
+            "id": "holding-hand-permissions",
+            "title": "需要权限",
+            "level": 3,
+            "line_start": 122,
+            "line_end": 132,
+            "content": "使用motion模块获取用户握持手时，需要权限：ohos.permission.DETECT_GESTURE。"
+          },
+          {
+            "id": "holding-hand-constraints",
+            "title": "约束与限制",
+            "level": 3,
+            "line_start": 134,
+            "line_end": 146,
+            "content": "功能当前支持部分机型，若设置菜单中存在智感握姿开关则表明该设备支持此功能。设备屏幕需处于亮屏且解锁状态。设备保护壳厚度不得超过3毫米。需以五指自然握持设备。佩戴手套会显著降低识别准确率。竖屏握持时摄像头需朝上。握持时屏幕需朝向握持人。握持时不得同时接触其他物体。未握持的识别依赖设备状态。"
+          },
+          {
+            "id": "holding-hand-steps",
+            "title": "开发步骤",
+            "level": 3,
+            "line_start": 148,
+            "line_end": 191,
+            "content": "包含4个步骤：1.导入模块 2.定义回调函数接收握持手结果 3.订阅握持手感知 4.取消订阅握持手感知"
+          }
+        ]
+      }
+    ]
+  },
+  "api_references": [
+    {
+      "name": "Motion接口",
+      "path": "../../reference/apis-multimodalawareness-kit/js-apis-awareness-motion.md"
+    },
+    {
+      "name": "声明权限",
+      "path": "../../security/AccessToken/declare-permissions.md"
+    }
+  ],
+  "code_samples": [
+    {
+      "id": "import_the_motion_module",
+      "language": "ts",
+      "line_start": 58,
+      "line_end": 60
+    },
+    {
+      "id": "motion_subscribe_operating_parameter",
+      "language": "ts",
+      "line_start": 67,
+      "line_end": 69
+    },
+    {
+      "id": "motion_subscribe_operating",
+      "language": "ts",
+      "line_start": 76,
+      "line_end": 82
+    },
+    {
+      "id": "motion_unsubscribe_operating",
+      "language": "ts",
+      "line_start": 90,
+      "line_end": 94
+    },
+    {
+      "id": "motion_get_operating",
+      "language": "ts",
+      "line_start": 103,
+      "line_end": 107
+    },
+    {
+      "id": "motion_subscribe_holding_parameter",
+      "language": "ts",
+      "line_start": 161,
+      "line_end": 163
+    },
+    {
+      "id": "motion_subscribe_holding",
+      "language": "ts",
+      "line_start": 171,
+      "line_end": 175
+    },
+    {
+      "id": "motion_unsubscribe_holding",
+      "language": "ts",
+      "line_start": 184,
+      "line_end": 188
+    }
+  ],
+  "permissions": [
+    "ohos.permission.ACTIVITY_MOTION",
+    "ohos.permission.DETECT_GESTURE"
+  ],
+  "api_versions": [
+    15,
+    20
+  ],
+  "keywords": [
+    "motion",
+    "操作手",
+    "握持手",
+    "MultimodalAwarenessKit",
+    "用户动作",
+    "手势识别"
+  ],
+  "statistics": {
+    "total_lines": 192,
+    "code_blocks": 8,
+    "sections": 3,
+    "subsections": 8,
+    "api_references": 2
+  }
+}

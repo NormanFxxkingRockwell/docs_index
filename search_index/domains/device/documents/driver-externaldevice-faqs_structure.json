@@ -1,0 +1,87 @@
+{
+  "doc_id": "driver-externaldevice-faqs",
+  "title": "常见问题",
+  "domain": "device",
+  "path": "docs/zh-cn/application-dev/device/driver/externaldevice-faqs.md",
+  "metadata": {
+    "kit": "Driver Development Kit",
+    "subsystem": "Driver",
+    "owner": "@lixinsheng2",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "本文档提供了外设驱动开发过程中的常见问题及解决方案，包括编译或运行时无法找到头文件、安装HAP时提示版本不匹配、安装HAP时提示解析本地so文件失败等问题。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "编译或运行时无法找到头文件",
+      "content": "编译或运行时提示\"usb/usb_ddk_api.h not found\"、\"hid/hid_ddk_api.h not found\" 等。解决措施：编译时报错：请确认OpenHarmony版本，是否为最新版本。运行时报错：请确认设备的版本是否为4.1 Release及以上。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "问题现象",
+          "content": "编译或运行时提示\"usb/usb_ddk_api.h not found\"、\"hid/hid_ddk_api.h not found\" 等。"
+        },
+        {
+          "level": 3,
+          "title": "解决措施",
+          "content": "编译时报错：请确认OpenHarmony版本，是否为最新版本。运行时报错：请确认设备的版本是否为4.1 Release及以上。"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "安装HAP时提示版本不匹配",
+      "content": "安装HAP时提示 \"compileSdkVersion and releaseType of the app do not match the apiVersion and releaseType on the device\"。解决措施：请根据参考信息提供的对应关系，检查设备系统版本是否匹配。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "问题现象",
+          "content": "安装HAP时提示 \"compileSdkVersion and releaseType of the app do not match the apiVersion and releaseType on the device\"。"
+        },
+        {
+          "level": 3,
+          "title": "解决措施",
+          "content": "请根据参考信息提供的对应关系，检查设备系统版本是否匹配。"
+        },
+        {
+          "level": 3,
+          "title": "参考信息",
+          "content": "接口类型对应关系：应用开发接口（ArkTS接口）支持API10，对应OpenHarmony 4.0 Release及以上；UsbDdk接口支持API10，对应OpenHarmony 4.0 Release及以上；HidDdk接口支持API11，对应OpenHarmony 4.1 Release及以上；USBSerialDDK接口支持API18，对应OpenHarmony 5.1 Release及以上；ScsiPeripheralDDK接口支持API18，对应OpenHarmony 5.1 Release及以上。"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "安装HAP时提示解析本地so文件失败",
+      "content": "安装HAP时提示\"code:9568347 error: install parse native so failed\"。解决措施：根据应用调试中安装HAP时提示\"code:9568347 error: install parse native so failed\"错误，或者运行时候提示\"TypeError：Cannot read property xxx of undefined\"错误提供的解决方法，在`build-profile.json5`中的`buildOption/externalNativeOptions`内手动配置`abiFilters`的值。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "问题现象",
+          "content": "安装HAP时提示\"code:9568347 error: install parse native so failed\"。"
+        },
+        {
+          "level": 3,
+          "title": "解决措施",
+          "content": "根据应用调试中安装HAP时提示\"code:9568347 error: install parse native so failed\"错误，或者运行时候提示\"TypeError：Cannot read property xxx of undefined\"错误提供的解决方法，在`build-profile.json5`中的`buildOption/externalNativeOptions`内手动配置`abiFilters`的值。"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "头文件",
+    "编译",
+    "运行时",
+    "HAP",
+    "版本不匹配",
+    "so文件",
+    "解析失败",
+    "UsbDdk",
+    "HidDdk",
+    "USBSerialDDK",
+    "ScsiPeripheralDDK",
+    "abiFilters"
+  ]
+}

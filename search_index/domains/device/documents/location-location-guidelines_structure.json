@@ -1,0 +1,141 @@
+{
+  "doc_id": "location-location-guidelines",
+  "title": "获取设备的位置信息开发指导(ArkTS)",
+  "path": "docs/zh-cn/application-dev/device/location/location-guidelines.md",
+  "domain": "device",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "Location Kit",
+    "subsystem": "Location",
+    "owner": "@xxthadsl",
+    "designer": "@liu-binjun",
+    "tester": "@gcw_MslijYkf",
+    "adviser": "@RayShih"
+  },
+  "summary": "本文档介绍了如何使用OpenHarmony位置相关接口获取设备实时位置、历史位置以及监听位置变化。文档涵盖了位置权限申请、位置开关状态检查、单次定位（获取缓存位置或当前位置）和持续定位等开发步骤，适用于位置敏感应用如导航、运动轨迹、签到打卡等场景。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "获取设备的位置信息开发指导(ArkTS)",
+      "line": 1,
+      "type": "heading"
+    },
+    {
+      "level": 2,
+      "title": "场景概述",
+      "line": 9,
+      "type": "heading",
+      "content": "开发者可以调用OpenHarmony位置相关接口，获取设备实时位置，或者最近的历史位置，以及监听设备的位置变化。对于位置敏感的应用业务，建议获取设备实时位置信息。如果不需要设备实时位置信息，并且希望尽可能的节省耗电，开发者可以考虑获取最近的历史位置。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 15,
+      "type": "heading",
+      "content": "获取设备的位置信息所使用的接口包括：on（开启位置变化订阅）、off（关闭位置变化订阅）、getCurrentLocation（获取当前位置）、getLastLocation（获取最近一次定位结果）、isLocationEnabled（判断位置服务是否已经开启）。本模块能力仅支持WGS-84坐标系。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 30,
+      "type": "heading",
+      "content": "1. 获取设备的位置信息，需要有位置权限。2. 导入geoLocationManager模块。3. 调用获取位置接口之前需要先判断位置开关是否打开。4. 单次获取当前设备位置（获取系统缓存的最新位置或获取当前位置）。5. 持续定位（用于导航、运动轨迹、出行等场景）。"
+    }
+  ],
+  "apis": [
+    {
+      "name": "on",
+      "type": "method",
+      "description": "开启位置变化订阅，并发起定位请求",
+      "line": 23
+    },
+    {
+      "name": "off",
+      "type": "method",
+      "description": "关闭位置变化订阅，并删除对应的定位请求",
+      "line": 24
+    },
+    {
+      "name": "getCurrentLocation",
+      "type": "method",
+      "description": "获取当前位置，使用callback回调异步返回结果",
+      "line": 25
+    },
+    {
+      "name": "getCurrentLocation",
+      "type": "method",
+      "description": "获取当前位置，使用Promise方式异步返回结果",
+      "line": 26
+    },
+    {
+      "name": "getLastLocation",
+      "type": "method",
+      "description": "获取最近一次定位结果",
+      "line": 27
+    },
+    {
+      "name": "isLocationEnabled",
+      "type": "method",
+      "description": "判断位置服务是否已经开启",
+      "line": 28
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "ts",
+      "line_start": 36,
+      "line_end": 38,
+      "description": "导入geoLocationManager模块"
+    },
+    {
+      "language": "ts",
+      "line_start": 42,
+      "line_end": 49,
+      "description": "查询当前位置开关状态"
+    },
+    {
+      "language": "ts",
+      "line_start": 58,
+      "line_end": 66,
+      "description": "获取系统缓存的最新位置"
+    },
+    {
+      "language": "ts",
+      "line_start": 79,
+      "line_end": 96,
+      "description": "使用快速定位策略获取当前位置"
+    },
+    {
+      "language": "ts",
+      "line_start": 110,
+      "line_end": 124,
+      "description": "地图导航场景持续定位"
+    },
+    {
+      "language": "ts",
+      "line_start": 126,
+      "line_end": 129,
+      "description": "结束持续定位"
+    }
+  ],
+  "keywords": [
+    "位置信息",
+    "实时位置",
+    "历史位置",
+    "位置变化",
+    "定位",
+    "导航",
+    "WGS-84",
+    "geoLocationManager",
+    "单次定位",
+    "持续定位",
+    "位置权限",
+    "位置开关"
+  ],
+  "related_docs": [
+    "location-permission-guidelines.md",
+    "js-apis-geoLocationManager.md",
+    "js-apis-abilityAccessCtrl.md"
+  ],
+  "total_lines": 129
+}

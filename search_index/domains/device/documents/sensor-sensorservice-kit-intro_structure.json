@@ -1,0 +1,111 @@
+{
+  "doc_id": "sensor-sensorservice-kit-intro",
+  "title": "Sensor Service Kit开发简介",
+  "domain": "device",
+  "metadata": {
+    "kit": "Sensor Service Kit",
+    "subsystem": "Sensors",
+    "owner": "@dilligencer",
+    "designer": "@butterls",
+    "tester": "@murphy84",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Sensor Service Kit（传感器服务）使应用程序能够从传感器获取原始数据，并提供振感控制能力。包含Sensor（传感器）模块和Vibrator（振动）模块，支持本地和动态设备管理。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "使用场景",
+      "content": "Sensor Service Kit（传感器服务）使应用程序能够从传感器获取原始数据，并提供振感控制能力。",
+      "line_start": 9,
+      "line_end": 20,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "Sensor（传感器）模块",
+          "content": "Sensor（传感器）模块是应用访问底层硬件传感器的一种设备抽象概念。开发者可根据传感器提供的相关接口订阅传感器数据，并根据传感器数据定制相应的算法开发各类应用，比如指南针、运动健康、游戏等。",
+          "line_start": 13,
+          "line_end": 15,
+          "subsections": [
+            {
+              "level": 4,
+              "title": "本地传感器",
+              "content": "设备内置的传感器，常用的包括加速度传感器、陀螺仪、温度传感器等。",
+              "line_start": 14,
+              "line_end": 14
+            },
+            {
+              "level": 4,
+              "title": "动态传感器",
+              "content": "指外置的动态传感器，模块能力可以更细化的控制每个动态传感器。为了管理这些动态接入的设备，应使用 sensor.on('sensorStatusChange', callback) 来监听设备上下线事件。在收到下线通知时，务必调用 sensor.off(...) 来释放之前监听的动态传感器资源，避免内存泄漏或异常调用。",
+              "line_start": 15,
+              "line_end": 15
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "title": "Vibrator（振动）模块",
+          "content": "Vibrator（振动）模块最大化开放马达器件能力，通过拓展马达服务实现振动与交互融合设计，打造细腻精致的一体化振动体验和差异化体验，提升用户交互效率和易用性、提升用户体验、增强品牌竞争力。",
+          "line_start": 17,
+          "line_end": 19,
+          "subsections": [
+            {
+              "level": 4,
+              "title": "本地马达",
+              "content": "设备内置的马达，常用的包括转子马达、线性马达等。",
+              "line_start": 18,
+              "line_end": 18
+            },
+            {
+              "level": 4,
+              "title": "动态马达",
+              "content": "设备外置的多个马达支持独立控制，且可以根据设备的连接、马达的状态等信息进行灵活的管理。动态马达广泛应用于外接设备，包括手柄、遥控器、外接振动器等, 为了管理这些动态接入的设备，应使用 vibrator.on('vibratorStateChange', callback) 来监听设备上下线事件。",
+              "line_start": 19,
+              "line_end": 19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "约束限制",
+      "content": "",
+      "line_start": 22,
+      "line_end": 38,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "Sensor",
+          "content": "",
+          "line_start": 24,
+          "line_end": 33,
+          "subsections": []
+        },
+        {
+          "level": 3,
+          "title": "Vibrator",
+          "content": "",
+          "line_start": 34,
+          "line_end": 38,
+          "subsections": []
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "Sensor Service Kit",
+    "传感器",
+    "Vibrator",
+    "振动",
+    "本地传感器",
+    "动态传感器",
+    "本地马达",
+    "动态马达",
+    "加速度传感器",
+    "陀螺仪",
+    "温度传感器"
+  ],
+  "total_lines": 38,
+  "created_at": "2026-02-25"
+}

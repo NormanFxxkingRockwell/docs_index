@@ -1,0 +1,108 @@
+{
+  "doc_id": "location-geocode-guidelines",
+  "title": "正地理编码与逆地理编码开发指导",
+  "path": "docs/zh-cn/application-dev/device/location/geocode-guidelines.md",
+  "domain": "device",
+  "metadata": {
+    "kit": "Location Kit",
+    "subsystem": "Location",
+    "owner": "@xxthadsl",
+    "designer": "@liu-binjun",
+    "tester": "@gcw_MslijYkf",
+    "adviser": "@RayShih"
+  },
+  "summary": "本文档介绍了正地理编码与逆地理编码的开发指导。正地理编码将地理编码转化为具体经纬度坐标，逆地理编码将具体的经纬度坐标转化为地理编码。文档包含场景概述、接口说明和开发步骤三个主要部分，详细说明了如何使用geoLocationManager模块提供的isGeocoderAvailable、getAddressesFromLocation和getAddressesFromLocationName接口进行地理编码转换。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景概述",
+      "line_start": 9,
+      "line_end": 18,
+      "content": "使用经纬度坐标描述一个位置，非常准确，但是并不直观，面向面向用户表达并不友好。系统向开发者提供了以下两种转化能力：正地理编码（将地理编码转化为具体经纬度坐标）和逆地理编码（将具体的经纬度坐标转化为地理编码）。地理编码包含多个属性来描述位置信息，包括国家、行政区划、街道、门牌号、地址描述等等。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line_start": 19,
+      "line_end": 28,
+      "content": "进行经纬度坐标和地理编码的相互转化，所使用的接口包括：isGeocoderAvailable()用于判断地理编码与逆地理编码服务是否可用；getAddressesFromLocation用于调用逆地理编码服务，将坐标转换为地理描述；getAddressesFromLocationName用于调用地理编码服务，将地理描述转换为具体坐标。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line_start": 29,
+      "line_end": 89,
+      "content": "开发步骤包括：1. 导入geoLocationManager模块；2. 查询正地理编码与逆地理编码服务是否可用；3. 获取转化结果，包括调用getAddressesFromLocation把经纬度坐标转化为地理编码，以及调用getAddressesFromLocationName把地理编码转化为经纬度坐标。正地理编码与逆地理编码功能需要访问后端服务，需要确保设备联网。",
+      "subsections": []
+    }
+  ],
+  "code_blocks": [
+    {
+      "type": "typescript",
+      "line_start": 36,
+      "line_end": 38,
+      "content": "import { geoLocationManager } from '@kit.LocationKit';"
+    },
+    {
+      "type": "typescript",
+      "line_start": 43,
+      "line_end": 50,
+      "content": "import { geoLocationManager } from '@kit.LocationKit';\ntry {\n    let isAvailable = geoLocationManager.isGeocoderAvailable();\n} catch (err) {\n    console.error(\"errCode:\" + JSON.stringify(err));\n}"
+    },
+    {
+      "type": "typescript",
+      "line_start": 55,
+      "line_end": 68,
+      "content": "let reverseGeocodeRequest:geoLocationManager.ReverseGeoCodeRequest = {\"latitude\": 31.12, \"longitude\": 121.11, \"maxItems\": 1};\ntry {\n    geoLocationManager.getAddressesFromLocation(reverseGeocodeRequest, (err, data) => {\n        if (err) {\n            console.error('getAddressesFromLocation err: ' + JSON.stringify(err));\n        } else {\n            console.info('getAddressesFromLocation data: ' + JSON.stringify(data));\n        }\n    });\n} catch (err) {\n    console.error(\"errCode:\" + JSON.stringify(err));\n}"
+    },
+    {
+      "type": "typescript",
+      "line_start": 72,
+      "line_end": 85,
+      "content": "let geocodeRequest:geoLocationManager.GeoCodeRequest = {\"description\": \"上海市浦东新区xx路xx号\", \"maxItems\": 1};\ntry {\n    geoLocationManager.getAddressesFromLocationName(geocodeRequest, (err, data) => {\n        if (err) {\n            console.error('getAddressesFromLocationName err: ' + JSON.stringify(err));\n        } else {\n            console.info('getAddressesFromLocationName data: ' + JSON.stringify(data));\n        }\n    });\n} catch (err) {\n    console.error(\"errCode:\" + JSON.stringify(err));\n}"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "isGeocoderAvailable",
+      "type": "method",
+      "line": 25
+    },
+    {
+      "name": "getAddressesFromLocation",
+      "type": "method",
+      "line": 26
+    },
+    {
+      "name": "getAddressesFromLocationName",
+      "type": "method",
+      "line": 27
+    },
+    {
+      "name": "ReverseGeoCodeRequest",
+      "type": "type",
+      "line": 56
+    },
+    {
+      "name": "GeoCodeRequest",
+      "type": "type",
+      "line": 73
+    },
+    {
+      "name": "GeoAddress",
+      "type": "type",
+      "line": 53
+    }
+  ],
+  "tags": [
+    "地理编码",
+    "逆地理编码",
+    "经纬度",
+    "Location Kit",
+    "geoLocationManager"
+  ],
+  "line_count": 89,
+  "created_at": "2026-02-25T00:00:00Z"
+}

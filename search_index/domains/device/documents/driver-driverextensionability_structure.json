@@ -1,0 +1,68 @@
+{
+  "doc_id": "driver-driverextensionability",
+  "title": "开发无UI界面基础驱动",
+  "path": "zh-cn/application-dev/device/driver/driverextensionability.md",
+  "relative_path": "../../docs/zh-cn/application-dev/device/driver/driverextensionability.md",
+  "metadata": {
+    "kit": "Driver Development Kit",
+    "subsystem": "Driver",
+    "owner": "@lixinsheng2",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "本文档介绍如何使用DriverExtensionAbility开发无UI界面的基础驱动，适用于不需要通过UI界面设置驱动能力的简单设备（如鼠标、键盘等）。文档涵盖了场景介绍、基本概念、环境搭建、开发步骤、扩展设备能力和应用签名等内容。开发者可以学习如何创建DriverExtensionAbility、实现生命周期回调、注册配置以及配置权限和签名。",
+  "structure": {
+    "title": "开发无UI界面基础驱动",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 11,
+        "summary": "介绍无UI界面基础驱动的应用场景，适用于不需要通过UI界面设置驱动能力的简单设备（如鼠标、键盘等），保证设备的即插即用功能。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 19,
+        "summary": "介绍DriverExtensionAbility组件的基本概念，它是Driver类型的ExtensionAbility组件，提供驱动相关扩展框架能力，支持通过DriverExtensionManager被应用绑定。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "环境搭建",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 23,
+        "summary": "指导开发者参考环境准备文档完成开发前的准备工作。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 187,
+        "summary": "详细说明开发无UI界面基础驱动的8个步骤：创建工程、新建目录、新建文件、导入Kit并定义请求Code、重载onRemoteMessageRequest方法、实现生命周期回调、注册DriverExtensionAbility配置、运行应用验证。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "扩展设备能力",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 196,
+        "summary": "介绍扩展外设管理提供的四种能力：HidDdk、UsbDdk、USBSerialDDK和ScsiPeripheralDDK，用于扩展外设专项驱动的开发，并提供相关文档链接。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "应用签名",
+        "level": 2,
+        "line_start": 199,
+        "line_end": 225,
+        "summary": "说明应用签名配置的注意事项，包括权限配置顺序、ACCESS_EXTENSIONAL_DEVICE_DRIVER和ACCESS_DDK_DRIVERS权限的申请方法，以及自动签名方法的参考链接。"
+      }
+    ]
+  }
+}

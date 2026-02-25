@@ -1,0 +1,124 @@
+{
+  "doc_id": "stationary-stationary-guidelines",
+  "title": "Stationary开发指导",
+  "path": "docs/zh-cn/application-dev/device/stationary/stationary-guidelines.md",
+  "domain": "device",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "Multimodal Awareness Kit",
+    "subsystem": "MultimodalAwareness",
+    "owner": "@dilligencer",
+    "designer": "@zou_ye",
+    "tester": "@judan",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "Stationary开发指导文档，介绍了如何使用Stationary模块获取设备状态（绝对静止或相对静止状态）。文档包含场景介绍、参数说明、接口说明、约束与限制以及开发步骤示例。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line_start": 10,
+    "line_end": 14,
+      "content": "当应用需要获取当前设备状态时，可以调用Stationary模块，例如：需要判断当前设备处于绝对静止状态或者相对静止状态。详细的接口介绍请参考Stationary接口。"
+    },
+    {
+      "level": 2,
+      "title": "设备状态类型参数说明",
+      "line_start": 16,
+      "line_end": 21,
+      "content": "设备状态类型包括still（绝对静止）和relativeStill（相对静止）。"
+    },
+    {
+      "level": 2,
+      "title": "订阅设备状态事件参数说明",
+      "line_start": 23,
+      "line_end": 29,
+      "content": "订阅设备状态事件包括ENTER（订阅进入事件）、EXIT（订阅退出事件）、ENTER_EXIT（订阅进入和退出事件）。"
+    },
+    {
+      "level": 2,
+      "title": "返回设备状态参数说明",
+      "line_start": 31,
+      "line_end": 36,
+      "content": "返回设备状态包括ENTER（返回进入状态）和EXIT（返回退出状态）。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line_start": 38,
+      "line_end": 44,
+      "content": "主要接口包括on（订阅设备状态）、once（查询设备状态）、off（取消订阅设备状态）。"
+    },
+    {
+      "level": 2,
+      "title": "约束与限制",
+      "line_start": 46,
+      "line_end": 73,
+      "content": "设备需要支持加速度传感器。目前只提供了算法框架，具体算法需要开发者自己在device_status/libs/src/algorithm实现。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line_start": 75,
+      "line_end": 134,
+      "content": "开发步骤包括：1. 订阅绝对静止的进入事件；2. 查询绝对静止状态的进入事件；3. 取消订阅绝对静止状态的进入事件。"
+    }
+  ],
+  "keywords": [
+    "Stationary",
+    "设备状态",
+    "绝对静止",
+    "相对静止",
+    "Multimodal Awareness Kit",
+    "加速度传感器",
+    "订阅",
+    "查询"
+  ],
+  "api_references": [
+    "Stationary接口"
+  ],
+  "code_examples": [
+    {
+      "type": "ts",
+      "description": "订阅绝对静止的进入事件",
+      "line_start": 79,
+      "line_end": 92
+    },
+    {
+      "type": "ts",
+      "description": "查询绝对静止状态的进入事件",
+      "line_start": 99,
+      "line_end": 111
+    },
+    {
+      "type": "ts",
+      "description": "取消订阅绝对静止状态的进入事件",
+      "line_start": 118,
+      "line_end": 130
+    }
+  ],
+  "tables": [
+    {
+      "title": "设备状态类型参数说明",
+      "line_start": 18,
+      "line_end": 21
+    },
+    {
+      "title": "订阅设备状态事件参数说明",
+      "line_start": 25,
+      "line_end": 29
+    },
+    {
+      "title": "返回设备状态参数说明",
+      "line_start": 33,
+      "line_end": 36
+    },
+    {
+      "title": "接口说明",
+      "line_start": 40,
+      "line_end": 44
+    }
+  ],
+  "total_lines": 134,
+  "last_modified": "2026-02-25"
+}

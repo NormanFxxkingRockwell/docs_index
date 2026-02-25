@@ -1,0 +1,209 @@
+{
+  "doc_id": "sensor-vibrator-guidelines-capi",
+  "title": "振动开发指导(C/C++)",
+  "path": "docs/zh-cn/application-dev/device/sensor/vibrator-guidelines-capi.md",
+  "domain": "device",
+  "metadata": {
+    "kit": "Sensor Service Kit",
+    "subsystem": "Sensors",
+    "owner": "@dilligencer",
+    "designer": "@butterls",
+    "tester": "@murphy84",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "本文档介绍了如何使用Vibrator模块在C/C++中设置不同的振动效果，包括固定时长振动和自定义振动。文档提供了完整的开发步骤，包括权限申请、依赖库配置、模块导入、常量定义、振动控制函数实现以及Napi接口调用等。",
+  "sections": [
+    {
+      "title": "场景介绍",
+      "level": 2,
+      "line_start": 9,
+      "line_end": 13,
+      "content": "当设备需要设置不同的振动效果时，可以调用Vibrator模块，例如：设备的按键可以设置不同强度和不同时长的振动，闹钟和来电可以设置不同强度和时长的单次或周期振动。"
+    },
+    {
+      "title": "函数说明",
+      "level": 2,
+      "line_start": 16,
+      "line_end": 22,
+      "functions": [
+        {
+          "name": "OHOS::Sensors::OH_Vibrator_PlayVibration",
+          "description": "控制马达在指定时间内持续振动"
+        },
+        {
+          "name": "OHOS::Sensors::OH_Vibrator_PlayVibrationCustom",
+          "description": "播放自定义振动序列"
+        },
+        {
+          "name": "OHOS::Sensors::OH_Vibrator_Cancel",
+          "description": "停止马达振动"
+        }
+      ]
+    },
+    {
+      "title": "振动效果说明",
+      "level": 2,
+      "line_start": 24,
+      "line_end": 35,
+      "subsections": [
+        {
+          "title": "固定时长振动",
+          "level": 3,
+          "line_start": 28,
+          "line_end": 30,
+          "content": "传入一个固定时长，马达按照默认强度和频率触发振动。"
+        },
+        {
+          "title": "自定义振动",
+          "level": 3,
+          "line_start": 32,
+          "line_end": 34,
+          "content": "自定义振动提供给用户设计自己所需振动效果的能力，用户可通过自定义振动配置文件，并遵循相应规则编排所需振动形式，使能更加开放的振感交互体验。"
+        }
+      ]
+    },
+    {
+      "title": "开发步骤",
+      "level": 2,
+      "line_start": 37,
+      "line_end": 225,
+      "steps": [
+        {
+          "step": 1,
+          "title": "新建一个Native C++工程",
+          "line_start": 39,
+          "line_end": 41
+        },
+        {
+          "step": 2,
+          "title": "申请权限ohos.permission.VIBRATE",
+          "line_start": 43,
+          "line_end": 53
+        },
+        {
+          "step": 3,
+          "title": "CMakeLists.txt文件中引入动态依赖库",
+          "line_start": 55,
+          "line_end": 62
+        },
+        {
+          "step": 4,
+          "title": "导入模块",
+          "line_start": 64,
+          "line_end": 77
+        },
+        {
+          "step": 5,
+          "title": "定义常量",
+          "line_start": 79,
+          "line_end": 87
+        },
+        {
+          "step": 6,
+          "title": "控制马达在指定时间内持续振动和停止马达振动",
+          "line_start": 89,
+          "line_end": 114
+        },
+        {
+          "step": 7,
+          "title": "播放自定义振动序列",
+          "line_start": 116,
+          "line_end": 169
+        },
+        {
+          "step": 8,
+          "title": "在Init函数中补充接口",
+          "line_start": 171,
+          "line_end": 187
+        },
+        {
+          "step": 9,
+          "title": "在types/libentry路径下index.d.ts文件中引入Napi接口",
+          "line_start": 189,
+          "line_end": 196
+        },
+        {
+          "step": 10,
+          "title": "编写程序入口调用代码",
+          "line_start": 198,
+          "line_end": 225
+        }
+      ]
+    }
+  ],
+  "api_references": [
+    "../../reference/apis-sensor-service-kit/capi-vibrator.md"
+  ],
+  "permissions": [
+    "ohos.permission.VIBRATE"
+  ],
+  "code_examples": [
+    {
+      "type": "JSON5",
+      "description": "权限声明配置",
+      "line_start": 47,
+      "line_end": 53
+    },
+    {
+      "type": "C",
+      "description": "CMakeLists.txt依赖库配置",
+      "line_start": 57,
+      "line_end": 62
+    },
+    {
+      "type": "C++",
+      "description": "模块导入",
+      "line_start": 68,
+      "line_end": 77
+    },
+    {
+      "type": "C++",
+      "description": "常量定义",
+      "line_start": 83,
+      "line_end": 87
+    },
+    {
+      "type": "C++",
+      "description": "固定时长振动函数实现",
+      "line_start": 93,
+      "line_end": 114
+    },
+    {
+      "type": "C++",
+      "description": "自定义振动函数实现",
+      "line_start": 120,
+      "line_end": 169
+    },
+    {
+      "type": "C++",
+      "description": "Init函数实现",
+      "line_start": 175,
+      "line_end": 187
+    },
+    {
+      "type": "TypeScript",
+      "description": "Napi接口声明",
+      "line_start": 193,
+      "line_end": 196
+    },
+    {
+      "type": "TypeScript",
+      "description": "程序入口调用代码",
+      "line_start": 202,
+      "line_end": 225
+    }
+  ],
+  "keywords": [
+    "振动",
+    "Vibrator",
+    "C/C++",
+    "Native",
+    "传感器",
+    "设备管理",
+    "固定时长振动",
+    "自定义振动"
+  ],
+  "language": "zh-cn",
+  "programming_language": "C/C++",
+  "last_updated": "2026-02-25"
+}

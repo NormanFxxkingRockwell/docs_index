@@ -1,0 +1,80 @@
+{
+  "doc_id": "input-input-overview",
+  "title": "Input Kit简介",
+  "path": "docs/zh-cn/application-dev/device/input/input-overview.md",
+  "domain": "device",
+  "metadata": {
+    "kit": "Input Kit",
+    "subsystem": "MultimodalInput",
+    "owner": "@zhaoxueyuan",
+    "designer": "@hanruofei",
+    "tester": "@Lyuxin",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Input Kit（多模输入Kit）为多种输入设备提供服务，如触控板、触摸屏、鼠标、键盘等。通过对这些输入设备上报驱动事件的归一化处理，确保不同输入设备与用户交互体验统一和流畅。Input Kit除了提供基础的输入事件服务之外，还提供了获取输入设备列表、改变鼠标光标样式等功能和接口。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "Input Kit简介",
+      "line": 1,
+      "type": "title"
+    },
+    {
+      "level": 2,
+      "title": "功能介绍",
+      "line": 10,
+      "type": "section",
+      "content": "Input Kit（多模输入Kit）为多种输入设备提供服务，如触控板、触摸屏、鼠标、键盘等。通过对这些输入设备上报驱动事件的归一化处理，确保不同输入设备与用户交互体验统一和流畅。Input Kit除了提供基础的输入事件服务之外，还提供了获取输入设备列表、改变鼠标光标样式等功能和接口。"
+    },
+    {
+      "level": 2,
+      "title": "运作机制",
+      "line": 16,
+      "type": "section",
+      "content": "多模输入能力作为系统为应用提供的一种基础服务，通过处理上报的输入设备驱动事件，完成输入事件管理、接收、预处理、分发，通过inner SDK与JSkit上报应用，具体运行机制如下。"
+    },
+    {
+      "level": 2,
+      "title": "约束与限制",
+      "line": 22,
+      "type": "section",
+      "content": "在使用下列函数时，开发者需要请求相应的权限。组合按键、事件注入、输入监听、快捷键模块接口为系统接口，其中输入监听模块接口需要ohos.permission.INPUT_MONITORING权限。"
+    }
+  ],
+  "permissions": [
+    "ohos.permission.INPUT_CONTROL_DISPATCHING",
+    "ohos.permission.INPUT_MONITORING"
+  ],
+  "references": [
+    "inputconsumer-guidelines-sys.md",
+    "inputeventclient-guidelines-sys.md",
+    "inputmonitor-guidelines-sys.md",
+    "shortkey-guidelines-sys.md"
+  ],
+  "images": [
+    "figures/MMI-operation-new.png"
+  ],
+  "keywords": [
+    "Input Kit",
+    "多模输入",
+    "触控板",
+    "触摸屏",
+    "鼠标",
+    "键盘",
+    "输入设备",
+    "驱动事件",
+    "归一化处理",
+    "输入事件",
+    "快捷键",
+    "组合按键",
+    "事件注入",
+    "输入监听"
+  ],
+  "stats": {
+    "total_lines": 33,
+    "total_sections": 4,
+    "total_permissions": 2,
+    "total_references": 4,
+    "total_images": 1
+  }
+}

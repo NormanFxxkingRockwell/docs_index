@@ -1,0 +1,93 @@
+{
+  "doc_id": "input-shortkey-guidelines-sys",
+  "title": "系统预置全局快捷键开发指导（仅对系统应用开放）",
+  "path": "docs/zh-cn/application-dev/device/input/shortkey-guidelines-sys.md",
+  "domain": "device",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "Input Kit",
+    "subsystem": "MultimodalInput",
+    "owner": "@zhaoxueyuan",
+    "designer": "@hanruofei",
+    "tester": "@Lyuxin",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档介绍系统预置全局快捷键的开发指导，提供设置快捷键拉起Ability延迟时间的能力。主要包含场景介绍、导入模块、接口说明和开发步骤，以按下快捷键五秒后截屏为例进行说明。",
+  "structure": {
+    "sections": [
+      {
+        "level": 2,
+        "title": "场景介绍",
+        "content": "系统预置全局快捷键提供设置快捷键拉起Ability延迟时间的能力。使用场景例如：按下快捷键五秒后截屏。",
+        "line_start": 10,
+        "line_end": 12
+      },
+      {
+        "level": 2,
+        "title": "导入模块",
+        "content": "import { shortKey } from '@kit.InputKit';",
+        "line_start": 14,
+        "line_end": 18
+      },
+      {
+        "level": 2,
+        "title": "接口说明",
+        "content": "事件注入常用接口如下表所示，接口详细介绍请参考ohos.multimodalInput.shortKey文档。",
+        "line_start": 20,
+        "line_end": 27,
+        "table": {
+          "headers": ["接口名称", "描述"],
+          "rows": [
+            ["setKeyDownDuration(businessKey: string, delay: number, callback: AsyncCallback<void>): void", "设置快捷键拉起Ability的延迟时间。"]
+          ]
+        }
+      },
+      {
+        "level": 2,
+        "title": "开发步骤",
+        "content": "开发步骤以按下快捷键五秒后截屏为例。",
+        "line_start": 28,
+        "line_end": 61,
+        "code_example": {
+          "language": "js",
+          "imports": [
+            "import { shortKey } from '@kit.InputKit';",
+            "import { BusinessError } from '@kit.BasicServicesKit';"
+          ],
+          "apis": [
+            "shortKey.setKeyDownDuration"
+          ],
+          "line_start": 32,
+          "line_end": 58
+        }
+      }
+    ]
+  },
+  "apis": [
+    {
+      "name": "shortKey.setKeyDownDuration",
+      "module": "@kit.InputKit",
+      "signature": "setKeyDownDuration(businessKey: string, delay: number, callback: AsyncCallback<void>): void",
+      "description": "设置快捷键拉起Ability的延迟时间",
+      "section": "接口说明"
+    }
+  ],
+  "code_examples": [
+    {
+      "language": "js",
+      "line_start": 32,
+      "line_end": 58,
+      "apis": ["shortKey.setKeyDownDuration"],
+      "description": "按下快捷键五秒后截屏示例"
+    }
+  ],
+  "tags": [
+    "快捷键",
+    "系统应用",
+    "Input Kit",
+    "MultimodalInput",
+    "setKeyDownDuration"
+  ],
+  "word_count": 61,
+  "last_updated": "2026-02-25"
+}

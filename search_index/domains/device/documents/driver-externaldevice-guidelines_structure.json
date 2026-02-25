@@ -1,0 +1,104 @@
+{
+  "doc_id": "driver-externaldevice-guidelines",
+  "title": "开发带UI界面基础驱动",
+  "path": "docs/zh-cn/application-dev/device/driver/externaldevice-guidelines.md",
+  "domain": "device",
+  "metadata": {
+    "kit": "Driver Development Kit",
+    "subsystem": "Driver",
+    "owner": "@lixinsheng2",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "本文档介绍如何开发带UI界面的基础驱动，适用于各种复合设备，如带有侧键的鼠标、手写板、身份证读卡器等设备。文档详细说明了通过UI界面设置驱动能力或展示设备信息的开发流程，包括环境搭建、接口说明、开发步骤和应用签名配置。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 9,
+      "content": "开发者开发带UI界面的基础驱动，适用于各种复合设备，需要通过UI界面设置对应的独特驱动能力或者通过UI界面展示从设备侧获取的信息，例如带有侧键的鼠标，手写板，身份证读卡器等设备。"
+    },
+    {
+      "level": 2,
+      "title": "环境搭建",
+      "line": 13,
+      "content": "请参考环境准备完成开发前的准备工作。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 17,
+      "content": "扩展外设管理基本能力接口包括：queryDevices（查询扩展外设列表）、bindDriverWithDeviceId（绑定设备的Promise形式，API18开始支持）、unbindDriverWithDeviceId（解绑设备的Promise形式，API18开始支持）。扩展外设管理系统接口包括：queryDeviceInfo（查询扩展外设详细信息列表）、queryDriverInfo（查询扩展外设驱动详细信息列表）。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 40,
+      "content": "应用可通过查询绑定扩展外设，从而使用扩展外设的定制驱动能力。开发步骤包括：1. 创建新工程（选择Native C++模板）；2. 导入相关Kit并声明USB设备的productId、vendorId以及通信Code；3. 定义message变量和远程对象变量；4. 定义查询设备接口；5. 定义获取对应驱动远程对象的接口；6. 定义与远程对象通信接口；7. 渲染UI界面；8. 参考开发无UI界面基础驱动进行对应驱动的示例代码开发。"
+    },
+    {
+      "level": 2,
+      "title": "应用签名",
+      "line": 195,
+      "content": "应用需要配置签名文件才能在设备上运行，并且扩展外设管理客户端开发，需要配置扩展外设的权限：ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER及ohos.permission.ACCESS_D_D_K_DRIVERS。权限配置包括在module.json5配置文件中声明权限，以及在HarmonyAppProvision配置文件中修改acls字段和配置app-services-capabilities节点。"
+    }
+  ],
+  "api_references": [
+    "@ohos.driver.deviceManager",
+    "@ohos.driver.deviceManager-sys"
+  ],
+  "code_examples": [
+    {
+      "language": "TypeScript",
+      "description": "导入相关Kit并声明USB设备参数",
+      "line": 62
+    },
+    {
+      "language": "TypeScript",
+      "description": "定义message变量和远程对象变量",
+      "line": 82
+    },
+    {
+      "language": "TypeScript",
+      "description": "查询设备接口",
+      "line": 91
+    },
+    {
+      "language": "TypeScript",
+      "description": "获取对应驱动远程对象的接口",
+      "line": 118
+    },
+    {
+      "language": "TypeScript",
+      "description": "与远程对象通信接口",
+      "line": 137
+    },
+    {
+      "language": "TypeScript",
+      "description": "渲染UI界面",
+      "line": 174
+    },
+    {
+      "language": "json",
+      "description": "HarmonyAppProvision配置文件格式",
+      "line": 215
+    }
+  ],
+  "key_concepts": [
+    "带UI界面基础驱动",
+    "扩展外设管理",
+    "USB设备绑定",
+    "IPC通信",
+    "驱动客户端",
+    "驱动服务端",
+    "远程对象",
+    "权限配置"
+  ],
+  "related_docs": [
+    "environmental-preparation.md",
+    "driverextensionability.md"
+  ],
+  "total_lines": 222,
+  "last_updated": "2026-02-25"
+}

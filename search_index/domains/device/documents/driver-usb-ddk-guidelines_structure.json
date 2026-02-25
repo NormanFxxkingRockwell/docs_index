@@ -1,0 +1,190 @@
+{
+  "doc_id": "driver-usb-ddk-guidelines",
+  "title": "USB DDK Development",
+  "path": "docs/en/application-dev/device/driver/usb-ddk-guidelines.md",
+  "domain": "device",
+  "language": "en",
+  "metadata": {
+    "kit": "Driver Development Kit",
+    "subsystem": "Driver",
+    "owner": "@lixinsheng2",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "The USB Driver Development Kit (UsbDdk) is a toolset for developing USB device drivers at the application layer based on user mode. It provides APIs for opening and closing USB interfaces, performing non-isochronous transfer, isochronous transfer, control transfer, and interrupt transfer over USB pipes. UsbDdk can be used to develop device drivers for all devices using USB protocol to transfer data over USB bus, particularly for peripherals not supported by standard kernel drivers.",
+  "structure": {
+    "sections": [
+      {
+        "id": "overview",
+        "title": "Overview",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 33,
+        "content": "The USB Driver Development Kit (UsbDdk) is a toolset that helps you develop USB device drivers at the application layer based on the user mode. It provides a series of device access APIs, for example, opening and closing USB interfaces, and performing non-isochronous transfer, isochronous transfer, control transfer, and interrupt transfer over USB pipes. The UsbDdk can be used to develop device drivers for all devices that use the USB protocol to transfer data over a USB bus. For the peripherals that are not supported by standard kernel drivers, you can use the peripheral driver application developed based on the UsbDdk to implement unique device capabilities."
+      },
+      {
+        "id": "basic-concepts",
+        "title": "Basic Concepts",
+        "level": 3,
+        "line_start": 15,
+        "line_end": 26,
+        "content": "Before you get started, understand the following concepts: USB - Universal Serial Bus (USB) is a widely used interface technology that connects a computer to various external devices, such as a keyboard, mouse, printer, storage device, and smartphone. The USB is designed to provide a standardized, efficient, and easy-to-use connection mode that replaces the traditional serial and parallel interface communication. DDK - DDK is a tool package provided by OpenHarmony for developing drivers for non-standard USB serial port devices based on the peripheral framework."
+      },
+      {
+        "id": "implementation-principles",
+        "title": "Implementation Principles",
+        "level": 3,
+        "line_start": 27,
+        "line_end": 33,
+        "content": "A non-standard peripheral application obtains the USB device ID by using the peripheral management service, and delivers the ID and the action to the USB driver application through RPC. The USB driver application can obtain or set the device descriptor and initiate a control transfer or interrupt transfer request by calling the UsbDdk API. Then, the DDK API uses the HDI service to deliver instructions to the kernel driver, and the kernel driver uses instructions to communicate with the device."
+      },
+      {
+        "id": "constraints",
+        "title": "Constraints",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 42,
+        "content": "The open APIs of the UsbDdk can be used to develop drivers of non-standard USB peripherals. The open APIs of the UsbDdk can be used only within the lifecycle of DriverExtensionAbility. To use the open APIs of the UsbDdk, you need to declare the matching ACL permissions in module.json5, for example, ohos.permission.ACCESS_DDK_USB."
+      },
+      {
+        "id": "environment-setup",
+        "title": "Environment Setup",
+        "level": 2,
+        "line_start": 43,
+        "line_end": 46,
+        "content": "Before you get started, make necessary preparations by following instructions in Environment Preparation."
+      },
+      {
+        "id": "how-to-develop",
+        "title": "How to Develop",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 251,
+        "content": "To develop a USB driver using the UsbDdk, perform the following steps: 1. Obtain the device descriptor of a USB device. 2. Obtain a configuration descriptor, and declare the USB interface. 3. (Optional) Obtain the activated alternate setting of a USB interface. 4. (Optional) Send control read requests and control write requests. 5. (Optional) Create a buffer, and send a request. 6. Release resources. 7. (Optional) Obtain the USB device list."
+      },
+      {
+        "id": "available-apis",
+        "title": "Available APIs",
+        "level": 3,
+        "line_start": 49,
+        "line_end": 69,
+        "content": "Available APIs include: OH_Usb_Init, OH_Usb_Release, OH_Usb_GetDeviceDescriptor, OH_Usb_GetConfigDescriptor, OH_Usb_FreeConfigDescriptor, OH_Usb_ClaimInterface, OH_Usb_SelectInterfaceSetting, OH_Usb_GetCurrentInterfaceSetting, OH_Usb_SendControlReadRequest, OH_Usb_SendControlWriteRequest, OH_Usb_ReleaseInterface, OH_Usb_SendPipeRequest, OH_Usb_CreateDeviceMemMap, OH_Usb_DestroyDeviceMemMap, OH_Usb_GetDevices."
+      }
+    ],
+    "code_blocks": [
+      {
+        "type": "cmake",
+        "line_start": 78,
+        "line_end": 80,
+        "description": "Adding Dynamic Link Libraries to CMakeLists.txt"
+      },
+      {
+        "type": "cpp",
+        "line_start": 83,
+        "line_end": 86,
+        "description": "Including Header Files"
+      },
+      {
+        "type": "cpp",
+        "line_start": 94,
+        "line_end": 102,
+        "description": "Initialize UsbDdk and obtain device descriptor"
+      },
+      {
+        "type": "cpp",
+        "line_start": 110,
+        "line_end": 133,
+        "description": "Obtain configuration descriptor and claim USB interface"
+      },
+      {
+        "type": "cpp",
+        "line_start": 141,
+        "line_end": 154,
+        "description": "Obtain and activate alternate setting of USB interface"
+      },
+      {
+        "type": "cpp",
+        "line_start": 162,
+        "line_end": 173,
+        "description": "Send control read request to obtain product string descriptor"
+      },
+      {
+        "type": "cpp",
+        "line_start": 178,
+        "line_end": 190,
+        "description": "Send control write request to set feature"
+      },
+      {
+        "type": "cpp",
+        "line_start": 198,
+        "line_end": 202,
+        "description": "Create buffer for storing data"
+      },
+      {
+        "type": "cpp",
+        "line_start": 207,
+        "line_end": 215,
+        "description": "Send pipe request for interrupt transfer"
+      },
+      {
+        "type": "cpp",
+        "line_start": 223,
+        "line_end": 233,
+        "description": "Release resources: destroy buffer, release interface, release UsbDdk"
+      },
+      {
+        "type": "cpp",
+        "line_start": 241,
+        "line_end": 250,
+        "description": "Obtain USB device list"
+      }
+    ],
+    "tables": [
+      {
+        "line_start": 51,
+        "line_end": 67,
+        "description": "Available APIs table with function names and descriptions"
+      }
+    ],
+    "images": [
+      {
+        "line": 33,
+        "path": "figures/ddk-schematic-diagram.png",
+        "description": "USB_DDK schematic diagram"
+      }
+    ]
+  },
+  "keywords": [
+    "USB DDK",
+    "UsbDdk",
+    "USB Driver Development Kit",
+    "USB device driver",
+    "user mode",
+    "non-isochronous transfer",
+    "isochronous transfer",
+    "control transfer",
+    "interrupt transfer",
+    "USB pipe",
+    "peripheral driver",
+    "DriverExtensionAbility",
+    "OH_Usb_Init",
+    "OH_Usb_Release",
+    "OH_Usb_GetDeviceDescriptor",
+    "OH_Usb_ClaimInterface",
+    "OH_Usb_SendControlReadRequest",
+    "OH_Usb_SendControlWriteRequest",
+    "OH_Usb_SendPipeRequest"
+  ],
+  "related_docs": [
+    "../../reference/apis-driverdevelopment-kit/capi-usbddk.md",
+    "environmental-preparation.md"
+  ],
+  "stats": {
+    "total_lines": 251,
+    "code_blocks": 11,
+    "tables": 1,
+    "images": 1,
+    "sections": 7
+  }
+}

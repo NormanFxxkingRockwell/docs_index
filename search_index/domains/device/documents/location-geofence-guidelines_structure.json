@@ -1,0 +1,117 @@
+{
+  "doc_id": "location-geofence-guidelines",
+  "title": "基于设备自身定位的地理围栏开发指导",
+  "path": "docs/zh-cn/application-dev/device/location/geofence-guidelines.md",
+  "locale": "zh-cn",
+  "domain": "device",
+  "subdomain": "location",
+  "metadata": {
+    "kit": "Location Kit",
+    "subsystem": "Location",
+    "owner": "@xxthadsl",
+    "designer": "@liu-binjun",
+    "tester": "@gcw_MslijYkf",
+    "adviser": "@RayShih"
+  },
+  "summary": "本文档介绍基于设备自身定位的地理围栏开发指导。地理围栏是虚拟地理边界，当设备进入、离开特定地理区域时可接收自动通知和警告。目前仅支持圆形围栏，依赖GNSS芯片的地理围栏功能，仅在室外开阔区域才能准确识别用户进出围栏事件。文档包含场景概述、接口说明和开发步骤，提供添加和删除GNSS地理围栏的完整代码示例。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "基于设备自身定位的地理围栏开发指导",
+      "line": 1,
+      "type": "title"
+    },
+    {
+      "level": 2,
+      "title": "场景概述",
+      "line": 9,
+      "type": "section",
+      "content": "地理围栏就是虚拟地理边界，当设备进入、离开某个特定地理区域时，可以接收自动通知和警告。目前仅支持圆形围栏，并且依赖GNSS芯片的地理围栏功能，仅在室外开阔区域才能准确识别用户进出围栏事件。应用场景举例：开发者可以使用地理围栏，在企业周围创建一个区域进行广告定位，在不同的地点，在移动设备上进行有针对性的促销优惠。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 17,
+      "type": "section",
+      "content": "地理围栏所使用的接口包括 addGnssGeofence 和 removeGnssGeofence。addGnssGeofence 用于添加一个GNSS地理围栏并订阅地理围栏事件；removeGnssGeofence 用于删除一个GNSS地理围栏并取消订阅该地理围栏事件。两个接口均使用Promise异步回调。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 26,
+      "type": "section",
+      "content": "开发步骤包括：1. 申请位置权限 ohos.permission.APPROXIMATELY_LOCATION；2. 导入geoLocationManager模块、wantAgent模块和BusinessError模块；3. 创建围栏对象；4. 指定APP需要监听的地理围栏事件类型；5. 创建事件对应的通知对象；6. 添加围栏；7. 删除围栏。"
+    }
+  ],
+  "apis": [
+    {
+      "name": "addGnssGeofence",
+      "signature": "addGnssGeofence(fenceRequest: GnssGeofenceRequest): Promise<number>",
+      "description": "添加一个GNSS地理围栏，并订阅地理围栏事件。使用Promise异步回调。",
+      "line": 23,
+      "reference": "../../reference/apis-location-kit/js-apis-geoLocationManager.md#geolocationmanageraddgeofence12"
+    },
+    {
+      "name": "removeGnssGeofence",
+      "signature": "removeGnssGeofence(geofenceId: number): Promise<void>",
+      "description": "删除一个GNSS地理围栏，并取消订阅该地理围栏事件。使用Promise异步回调。",
+      "line": 24,
+      "reference": "../../reference/apis-location-kit/js-apis-geoLocationManager.md#geolocationmanagerremovegeofence12"
+    }
+  ],
+  "permissions": [
+    "ohos.permission.APPROXIMATELY_LOCATION"
+  ],
+  "kits": [
+    "Location Kit"
+  ],
+  "subsystems": [
+    "Location"
+  ],
+  "code_examples": [
+    {
+      "language": "typescript",
+      "start_line": 32,
+      "end_line": 36,
+      "description": "导入geoLocationManager模块、wantAgent模块和BusinessError模块"
+    },
+    {
+      "language": "typescript",
+      "start_line": 40,
+      "end_line": 45,
+      "description": "创建围栏对象"
+    },
+    {
+      "language": "typescript",
+      "start_line": 49,
+      "end_line": 54,
+      "description": "指定APP需要监听的地理围栏事件类型"
+    },
+    {
+      "language": "typescript",
+      "start_line": 58,
+      "end_line": 83,
+      "description": "创建GEOFENCE_TRANSITION_EVENT_ENTER、GEOFENCE_TRANSITION_EVENT_EXIT事件对应的通知对象"
+    },
+    {
+      "language": "typescript",
+      "start_line": 87,
+      "end_line": 122,
+      "description": "添加围栏"
+    }
+  ],
+  "tags": [
+    "geofence",
+    "location",
+    "gnss",
+    "device",
+    "notification"
+  ],
+  "related_docs": [
+    "location-permission-guidelines.md",
+    "js-apis-geoLocationManager.md"
+  ],
+  "word_count": 458,
+  "line_count": 138,
+  "last_updated": "2026-02-25"
+}

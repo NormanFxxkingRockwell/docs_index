@@ -1,0 +1,89 @@
+{
+  "doc_id": "sensor-vibrator-guidelines",
+  "title": "振动开发指导",
+  "path": "docs/zh-cn/application-dev/device/sensor/vibrator-guidelines.md",
+  "domain": "device",
+  "metadata": {
+    "kit": "Sensor Service Kit",
+    "subsystem": "Sensors",
+    "owner": "@dilligencer",
+    "designer": "@butterls",
+    "tester": "@murphy84",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "本文档介绍振动开发指导，包括场景介绍、接口说明、振动效果说明、开发步骤和相关实例。文档详细介绍了Vibrator模块的各种接口，包括startVibration、stopVibration、isSupportEffect、getEffectInfoSync、getVibratorInfoSync等，以及固定时长振动、预置振动、自定义振动等三种振动效果。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "content": "当设备需要设置不同的振动效果时，可以调用Vibrator模块，例如：设备的按键可以设置不同强度和不同时长的振动，闹钟和来电可以设置不同强度和时长的单次或周期振动。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "content": "包含startVibration、stopVibration、isSupportEffect、getEffectInfoSync、getVibratorInfoSync、on、off等接口说明"
+    },
+    {
+      "level": 2,
+      "title": "振动效果说明",
+      "content": "介绍固定时长振动、预置振动、自定义振动三类振动效果，以及自定义振动配置文件的Json格式说明"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "content": "包括新建工程、配置权限、导入模块、定义常量、振动器查询、触发马达振动、停止马达振动、动态马达状态变化监听、获取预置振动效果信息、查询是否支持高清振动等10个步骤"
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "content": "提供振动（ArkTS）（API9）和自定义振动（ArkTS）(Full SDK)（API10）相关实例参考"
+    }
+  ],
+  "api_references": [
+    "startVibration",
+    "stopVibration",
+    "isSupportEffect",
+    "getEffectInfoSync",
+    "getVibratorInfoSync",
+    "on",
+    "off",
+    "isHdHapticSupported"
+  ],
+  "keywords": [
+    "振动",
+    "Vibrator",
+    "马达",
+    "振动效果",
+    "固定时长振动",
+    "预置振动",
+    "自定义振动",
+    "振动配置文件",
+    "振动监听",
+    "高清振动"
+  ],
+  "code_examples": [
+    "配置权限",
+    "导入模块",
+    "定义常量",
+    "查询所有马达信息",
+    "查询指定设备马达信息",
+    "按持续时间触发振动",
+    "按预置振动效果触发振动",
+    "按自定义振动配置文件触发振动",
+    "Pattern类型振动",
+    "停止振动",
+    "马达状态变化监听",
+    "获取预置振动效果信息",
+    "查询是否支持高清振动"
+  ],
+  "related_docs": [
+    "../../reference/apis-sensor-service-kit/js-apis-vibrator.md",
+    "../../security/AccessToken/declare-permissions.md"
+  ],
+  "related_samples": [
+    "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/DeviceManagement/Vibrator/BasicVibration",
+    "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/DeviceManagement/Vibrator/CustomHaptic"
+  ],
+  "file_size": 599,
+  "last_modified": "2026-02-25"
+}

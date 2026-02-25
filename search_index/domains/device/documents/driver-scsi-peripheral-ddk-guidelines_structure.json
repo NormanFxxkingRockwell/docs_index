@@ -1,0 +1,236 @@
+{
+  "doc_id": "driver-scsi-peripheral-ddk-guidelines",
+  "title": "开发使用SCSI协议的设备驱动",
+  "domain": "device",
+  "path": "docs/zh-cn/application-dev/device/driver/scsi-peripheral-ddk-guidelines.md",
+  "metadata": {
+    "kit": "Driver Development Kit",
+    "subsystem": "Driver",
+    "owner": "@lixinsheng2",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "本文档介绍了ScsiPeripheralDDK（SCSI Peripheral Driver Development Kit），它是用于开发SCSI设备驱动程序的套件。文档详细说明了基本概念、实现原理、约束与限制、环境搭建、接口说明、开发步骤以及调测验证方法。",
+  "structure": {
+    "sections": [
+      {
+        "id": "section-1",
+        "title": "简介",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 66,
+        "subsections": [
+          {
+            "id": "section-1-1",
+            "title": "基本概念",
+            "level": 3,
+            "line_start": 15,
+            "line_end": 50,
+            "content": "在进行ScsiPeripheralDDK开发前，开发者应了解以下基本概念：SCSI、AMS、BMS、DDK、非标外设、标准外设、逻辑块、CDB。"
+          },
+          {
+            "id": "section-1-2",
+            "title": "实现原理",
+            "level": 3,
+            "line_start": 51,
+            "line_end": 58,
+            "content": "非标外设应用通过扩展外设管理服务获取SCSI设备的ID，通过RPC将ID和要操作部下发给SCSI驱动应用，SCSI驱动应用通过调用ScsiPeripheralDDK接口可获取SCSI设备基本信息，读写数据，DDK接口使用HDI服务将指令下发至内核驱动，内核驱动使用指令与设备通信。"
+          },
+          {
+            "id": "section-1-3",
+            "title": "约束与限制",
+            "level": 3,
+            "line_start": 59,
+            "line_end": 66,
+            "content": "ScsiPeripheralDDK开放API支持标准SCSI类外设扩展驱动开发场景；仅允许在DriverExtensionAbility生命周期内使用；需要在module.json5中声明对应的ACL权限：ohos.permission.ACCESS_DDK_SCSI_PERIPHERAL。"
+          }
+        ]
+      },
+      {
+        "id": "section-2",
+        "title": "环境搭建",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 70,
+        "content": "请参考环境准备完成开发前的准备工作。"
+      },
+      {
+        "id": "section-3",
+        "title": "开发指导",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 273,
+        "subsections": [
+          {
+            "id": "section-3-1",
+            "title": "接口说明",
+            "level": 3,
+            "line_start": 73,
+            "line_end": 93,
+            "content": "提供了13个主要接口，包括初始化、释放、打开/关闭设备、检查逻辑单元状态、查询设备信息、获取容量信息、读写数据、校验、发送CDB命令、创建/销毁缓冲区、解析sense data等。"
+          },
+          {
+            "id": "section-3-2",
+            "title": "开发步骤",
+            "level": 3,
+            "line_start": 95,
+            "line_end": 263,
+            "content": "详细描述了15个开发步骤：初始化DDK、打开设备、创建缓冲区、检查逻辑单元、查询设备信息、获取容量信息、获取sense data、解析sense data、读取数据、写入数据、校验逻辑块、发送CDB命令、销毁缓冲区、关闭设备、释放DDK。"
+          },
+          {
+            "id": "section-3-3",
+            "title": "调测验证",
+            "level": 3,
+            "line_start": 265,
+            "line_end": 273,
+            "content": "驱动应用侧开发完成后，可在OpenHarmony设备上安装应用进行测试，包括读取SCSI设备基础信息、执行SCSI命令等。"
+          }
+        ]
+      }
+    ]
+  },
+  "api_list": [
+    "OH_ScsiPeripheral_Init",
+    "OH_ScsiPeripheral_Release",
+    "OH_ScsiPeripheral_Open",
+    "OH_ScsiPeripheral_Close",
+    "OH_ScsiPeripheral_TestUnitReady",
+    "OH_ScsiPeripheral_Inquiry",
+    "OH_ScsiPeripheral_ReadCapacity10",
+    "OH_ScsiPeripheral_RequestSense",
+    "OH_ScsiPeripheral_Read10",
+    "OH_ScsiPeripheral_Write10",
+    "OH_ScsiPeripheral_Verify10",
+    "OH_ScsiPeripheral_SendRequestByCdb",
+    "OH_ScsiPeripheral_CreateDeviceMemMap",
+    "OH_ScsiPeripheral_DestroyDeviceMemMap",
+    "OH_ScsiPeripheral_ParseBasicSenseInfo"
+  ],
+  "concepts": [
+    "SCSI",
+    "AMS",
+    "BMS",
+    "DDK",
+    "非标外设",
+    "标准外设",
+    "逻辑块",
+    "CDB",
+    "ScsiPeripheralDDK",
+    "SPC",
+    "SBC",
+    "MMC"
+  ],
+  "keywords": [
+    "SCSI",
+    "驱动开发",
+    "DDK",
+    "设备驱动",
+    "用户态驱动",
+    "INQUIRY",
+    "READ CAPACITY",
+    "TEST UNIT READY",
+    "REQUEST SENSE",
+    "READ",
+    "WRITE",
+    "VERIFY"
+  ],
+  "related_docs": [
+    "environmental-preparation.md",
+    "capi-scsiperipheralddk.md"
+  ],
+  "code_samples": [
+    {
+      "language": "c++",
+      "description": "初始化SCSI Peripheral DDK",
+      "line_start": 119,
+      "line_end": 121
+    },
+    {
+      "language": "c++",
+      "description": "打开SCSI设备",
+      "line_start": 130,
+      "line_end": 131
+    },
+    {
+      "language": "c++",
+      "description": "创建内存缓冲区",
+      "line_start": 140,
+      "line_end": 141
+    },
+    {
+      "language": "c++",
+      "description": "检查逻辑单元是否准备好",
+      "line_start": 150,
+      "line_end": 151
+    },
+    {
+      "language": "c++",
+      "description": "查询SCSI设备基本信息",
+      "line_start": 160,
+      "line_end": 161
+    },
+    {
+      "language": "c++",
+      "description": "获取SCSI设备容量信息",
+      "line_start": 170,
+      "line_end": 171
+    },
+    {
+      "language": "c++",
+      "description": "获取sense data",
+      "line_start": 180,
+      "line_end": 181
+    },
+    {
+      "language": "c++",
+      "description": "解析sense data",
+      "line_start": 190,
+      "line_end": 192
+    },
+    {
+      "language": "c++",
+      "description": "读取数据",
+      "line_start": 201,
+      "line_end": 202
+    },
+    {
+      "language": "c++",
+      "description": "写入数据",
+      "line_start": 211,
+      "line_end": 212
+    },
+    {
+      "language": "c++",
+      "description": "校验指定逻辑块",
+      "line_start": 221,
+      "line_end": 222
+    },
+    {
+      "language": "c++",
+      "description": "以CDB方式发送SCSI命令",
+      "line_start": 231,
+      "line_end": 232
+    },
+    {
+      "language": "c++",
+      "description": "销毁缓冲区",
+      "line_start": 241,
+      "line_end": 242
+    },
+    {
+      "language": "c++",
+      "description": "关闭设备",
+      "line_start": 251,
+      "line_end": 252
+    },
+    {
+      "language": "c++",
+      "description": "释放DDK",
+      "line_start": 261,
+      "line_end": 262
+    }
+  ],
+  "total_lines": 273,
+  "created_at": "2026-02-25"
+}

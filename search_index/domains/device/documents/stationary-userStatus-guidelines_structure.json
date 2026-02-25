@@ -1,0 +1,95 @@
+{
+  "doc_id": "stationary-userStatus-guidelines",
+  "title": "用户状态感知开发指导",
+  "description": "UserStatus（用户状态感知）模块提供用户感知能力，可以感知到操作者特定状态，例如：检测用户年龄组。本文档提供感知用户年龄组的开发指导，包括场景介绍、接口说明、约束与限制和开发步骤。",
+  "path": "docs/zh-cn/application-dev/device/stationary/userStatus-guidelines.md",
+  "domain": "device",
+  "metadata": {
+    "kit": "Multimodal Awareness Kit",
+    "subsystem": "MultimodalAwareness",
+    "owner": "@dilligencer",
+    "designer": "@zou_ye",
+    "tester": "@judan",
+    "adviser": "@hu-zhiqiong"
+  },
+  "sections": [
+    {
+      "id": "section-1",
+      "level": 2,
+      "title": "感知用户年龄组开发指导",
+      "line": 13,
+      "children": [
+        {
+          "id": "section-1-1",
+          "level": 3,
+          "title": "场景介绍",
+          "line": 14,
+          "content": "当应用需要获取用户年龄分类时，可以调用userStatus模块，例如判断设备具体操作者是儿童还是成年人。从API version 20开始，支持获取用户年龄组。"
+        },
+        {
+          "id": "section-1-2",
+          "level": 3,
+          "title": "接口说明",
+          "line": 19,
+          "content": "提供两个主要接口：on(type:'userAgeGroupDetected',callback:Callback<UserClassification>):void 用于订阅年龄群组检测功能；off(type: 'userAgeGroupDetected', callback?: Callback<UserClassification>): void 用于取消年龄群组检测功能。"
+        },
+        {
+          "id": "section-1-3",
+          "level": 3,
+          "title": "约束与限制",
+          "line": 26,
+          "content": "此功能如果设备不支持，将返回801错误码。"
+        },
+        {
+          "id": "section-1-4",
+          "level": 3,
+          "title": "开发步骤",
+          "line": 31,
+          "content": "开发步骤包括：1. 导入模块；2. 定义回调函数，监听年龄群组检测结果变化；3. 订阅年龄群组检测功能；4. 取消订阅年龄群组检测功能。"
+        }
+      ]
+    }
+  ],
+  "api_references": [
+    {
+      "name": "userStatus接口",
+      "path": "../../reference/apis-multimodalawareness-kit/js-apis-awareness-userStatus.md"
+    }
+  ],
+  "code_samples": [
+    {
+      "id": "import_the_user_status_module",
+      "language": "ts",
+      "line": 35,
+      "description": "导入userStatus模块"
+    },
+    {
+      "id": "user_status_parameter",
+      "language": "",
+      "line": 44,
+      "description": "定义回调函数，监听年龄群组检测结果变化"
+    },
+    {
+      "id": "user_status_subscribe",
+      "language": "",
+      "line": 53,
+      "description": "订阅年龄群组检测功能"
+    },
+    {
+      "id": "user_status_unsubscribe",
+      "language": "",
+      "line": 66,
+      "description": "取消订阅年龄群组检测功能"
+    }
+  ],
+  "keywords": [
+    "用户状态感知",
+    "UserStatus",
+    "年龄组",
+    "Multimodal Awareness Kit",
+    "userAgeGroupDetected",
+    "UserClassification"
+  ],
+  "api_version": "20",
+  "total_lines": 75
+}

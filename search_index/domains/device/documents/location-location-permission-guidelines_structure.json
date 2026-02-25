@@ -1,0 +1,56 @@
+{
+  "doc_id": "location-location-permission-guidelines",
+  "title": "申请位置权限开发指导",
+  "domain": "device",
+  "file_path": "docs/zh-cn/application-dev/device/location/location-permission-guidelines.md",
+  "metadata": {
+    "kit": "Location Kit",
+    "subsystem": "Location",
+    "owner": "@xxthadsl",
+    "designer": "@liu-binjun",
+    "tester": "@gcw_MslijYkf",
+    "adviser": "@RayShih"
+  },
+  "summary": "本文档介绍申请位置权限的开发指导，包括场景概述、定位权限类型（精准位置、模糊位置、后台位置权限）以及开发步骤。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "申请位置权限开发指导",
+      "line": 1
+    },
+    {
+      "level": 2,
+      "title": "场景概述",
+      "line": 9,
+      "content": "应用在使用Location Kit系统能力前，需要检查是否已经获取用户授权访问设备位置信息。如未获得授权，可以向用户申请需要的位置权限。系统提供的定位权限有：ohos.permission.LOCATION（精准位置）、ohos.permission.APPROXIMATELY_LOCATION（模糊位置）、ohos.permission.LOCATION_IN_BACKGROUND（后台位置权限）。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 23,
+      "content": "1. 在应用配置文件中声明所需要的权限并向用户申请授权。2. 当APP运行在前台时，可以申请模糊位置或同时申请模糊位置和精准位置。3. 当APP运行在后台时，除了申请位置权限外，还需要申请LOCATION类型的长时任务。"
+    }
+  ],
+  "keywords": [
+    "位置权限",
+    "Location Kit",
+    "精准位置",
+    "模糊位置",
+    "后台位置",
+    "权限申请",
+    "ohos.permission.LOCATION",
+    "ohos.permission.APPROXIMATELY_LOCATION",
+    "ohos.permission.LOCATION_IN_BACKGROUND"
+  ],
+  "permissions": [
+    "ohos.permission.LOCATION",
+    "ohos.permission.APPROXIMATELY_LOCATION",
+    "ohos.permission.LOCATION_IN_BACKGROUND"
+  ],
+  "related_docs": [
+    "../../reference/apis-location-kit/js-apis-geoLocationManager.md",
+    "../../security/AccessToken/request-user-authorization.md",
+    "../../task-management/continuous-task.md"
+  ],
+  "last_updated": "2026-02-25"
+}

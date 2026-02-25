@@ -1,0 +1,255 @@
+{
+  "doc_id": "sensor-sensor-guidelines",
+  "title": "传感器开发指导",
+  "language": "zh-cn",
+  "domain": "device",
+  "subcategory": "sensor",
+  "metadata": {
+    "kit": "Sensor Service Kit",
+    "subsystem": "Sensors",
+    "owner": "@dilligencer",
+    "designer": "@butterls",
+    "tester": "@murphy84",
+    "adviser": "@hu-zhiqiong"
+  },
+  "summary": "本文档介绍如何使用sensor模块获取传感器数据，包括订阅方向传感器数据感知设备朝向、订阅计步传感器数据统计步数等功能。文档详细说明了传感器接口的使用方法、开发步骤以及18个具体的开发场景示例。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "传感器开发指导",
+      "line_start": 1,
+      "line_end": 758
+    },
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line_start": 9,
+      "line_end": 13,
+      "content": "当设备需要获取传感器数据时，可以使用sensor模块，例如：通过订阅方向传感器数据感知用户设备当前的朝向，通过订阅计步传感器数据统计用户的步数等。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line_start": 16,
+      "line_end": 26,
+      "interfaces": [
+        "sensor.on(sensorId, callback, options?)",
+        "sensor.on('sensorStatusChange', callback)",
+        "sensor.once(sensorId, callback)",
+        "sensor.off(sensorId, callback?)",
+        "sensor.off(sensorId, sensorInfoParam?, callback?)",
+        "sensor.off('sensorStatusChange', callback?)",
+        "sensor.getSensorList(callback)"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line_start": 29,
+      "line_end": 758,
+      "description": "开发步骤以加速度传感器ACCELEROMETER为例",
+      "steps": [
+        {
+          "step": 1,
+          "title": "新建一个工程",
+          "line_start": 33,
+          "line_end": 36
+        },
+        {
+          "step": 2,
+          "title": "配置加速度传感器权限",
+          "line_start": 38,
+          "line_end": 47,
+          "permission": "ohos.permission.ACCELEROMETER"
+        },
+        {
+          "step": 3,
+          "title": "导入模块",
+          "line_start": 49,
+          "line_end": 57,
+          "imports": [
+            "@kit.SensorServiceKit",
+            "@kit.BasicServicesKit",
+            "@kit.PerformanceAnalysisKit"
+          ]
+        },
+        {
+          "step": 4,
+          "title": "定义常量",
+          "line_start": 59,
+          "line_end": 65
+        },
+        {
+          "step": 5,
+          "title": "查询设备支持的所有传感器的参数",
+          "line_start": 67,
+          "line_end": 128,
+          "methods": [
+            "getSensorList",
+            "getSensorListByDeviceSync",
+            "getSingleSensorByDeviceSync"
+          ]
+        },
+        {
+          "step": 6,
+          "title": "注册监听",
+          "line_start": 130,
+          "line_end": 182,
+          "methods": [
+            "sensor.on()",
+            "sensor.once()"
+          ]
+        },
+        {
+          "step": 7,
+          "title": "取消持续监听",
+          "line_start": 184,
+          "line_end": 210,
+          "methods": [
+            "sensor.off()"
+          ]
+        },
+        {
+          "step": 8,
+          "title": "动态传感器状态的监听",
+          "line_start": 212,
+          "line_end": 244,
+          "methods": [
+            "sensor.on('sensorStatusChange')",
+            "sensor.off('sensorStatusChange')"
+          ]
+        },
+        {
+          "step": 9,
+          "title": "获取某时刻地球上特定位置的地磁场信息",
+          "line_start": 246,
+          "line_end": 296,
+          "methods": [
+            "getGeomagneticInfo"
+          ]
+        },
+        {
+          "step": 10,
+          "title": "根据气压值获取海拔高度",
+          "line_start": 298,
+          "line_end": 339,
+          "methods": [
+            "getDeviceAltitude"
+          ]
+        },
+        {
+          "step": 11,
+          "title": "根据倾斜矩阵计算地磁倾角",
+          "line_start": 341,
+          "line_end": 390,
+          "methods": [
+            "getInclination"
+          ]
+        },
+        {
+          "step": 12,
+          "title": "计算两个旋转矩阵之间的角度变化",
+          "line_start": 392,
+          "line_end": 463,
+          "methods": [
+            "getAngleVariation"
+          ]
+        },
+        {
+          "step": 13,
+          "title": "根据旋转矢量获取旋转矩阵",
+          "line_start": 465,
+          "line_end": 508,
+          "methods": [
+            "getRotationMatrix"
+          ]
+        },
+        {
+          "step": 14,
+          "title": "根据指定坐标系映射旋转矩阵",
+          "line_start": 510,
+          "line_end": 561,
+          "methods": [
+            "transformRotationMatrix"
+          ]
+        },
+        {
+          "step": 15,
+          "title": "根据旋转向量计算归一化四元数",
+          "line_start": 563,
+          "line_end": 606,
+          "methods": [
+            "getQuaternion"
+          ]
+        },
+        {
+          "step": 16,
+          "title": "根据旋转矩阵计算设备方向",
+          "line_start": 608,
+          "line_end": 662,
+          "methods": [
+            "getOrientation"
+          ]
+        },
+        {
+          "step": 17,
+          "title": "根据重力矢量和地磁矢量计算旋转矩阵",
+          "line_start": 664,
+          "line_end": 705,
+          "methods": [
+            "getRotationMatrix(gravity, geomagnetic)"
+          ]
+        },
+        {
+          "step": 18,
+          "title": "获取指定传感器类型的属性信息",
+          "line_start": 707,
+          "line_end": 757,
+          "methods": [
+            "getSingleSensor",
+            "getSingleSensorSync"
+          ]
+        }
+      ],
+      "summary": "共有18个开发步骤，涵盖传感器数据获取、监听注册、计算功能等各个方面。"
+    }
+  ],
+  "tags": [
+    "sensor",
+    "传感器",
+    "ArkTS",
+    "Sensor Service Kit",
+    "加速度传感器",
+    "设备朝向",
+    "计步",
+    "传感器监听",
+    "地磁场",
+    "海拔高度",
+    "旋转矩阵",
+    "四元数",
+    "设备方向"
+  ],
+  "code_examples": [
+    "sensor.on(sensor.SensorId.ACCELEROMETER, callback, options)",
+    "sensor.once(sensor.SensorId.ACCELEROMETER, callback)",
+    "sensor.off(sensor.SensorId.ACCELEROMETER)",
+    "sensor.getSensorList(callback)",
+    "sensor.getGeomagneticInfo(location, timestamp, callback)",
+    "sensor.getDeviceAltitude(seaPressure, currentPressure, callback)",
+    "sensor.getInclination(inclinationMatrix, callback)",
+    "sensor.getAngleVariation(currentRotationMatrix, preRotationMatrix, callback)",
+    "sensor.getRotationMatrix(rotationVector, callback)",
+    "sensor.transformRotationMatrix(rotationMatrix, coordinate, callback)",
+    "sensor.getQuaternion(rotationVector, callback)",
+    "sensor.getOrientation(rotationMatrix, callback)",
+    "sensor.getSingleSensor(sensorId, callback)",
+    "sensor.getSingleSensorSync(sensorId)"
+  ],
+  "references": [
+    "../../reference/apis-sensor-service-kit/js-apis-sensor.md",
+    "../../security/AccessToken/declare-permissions.md"
+  ],
+  "file_path": "docs/zh-cn/application-dev/device/sensor/sensor-guidelines.md",
+  "total_lines": 758,
+  "created_at": "2026-02-25"
+}

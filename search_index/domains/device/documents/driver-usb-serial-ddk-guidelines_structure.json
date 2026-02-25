@@ -1,0 +1,198 @@
+{
+  "doc_id": "driver-usb-serial-ddk-guidelines",
+  "title": "开发适用串口协议的设备驱动",
+  "path": "docs/zh-cn/application-dev/device/driver/usb-serial-ddk-guidelines.md",
+  "language": "zh-cn",
+  "domain": "device",
+  "metadata": {
+    "kit": "Driver Development Kit",
+    "subsystem": "Driver",
+    "owner": "@lixinsheng2",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "USBSerialDDK（USB Serial Driver Development Kit）是为开发者提供的USB串口驱动程序开发套件，支持开发者基于用户态，在应用层开发USB串口设备驱动。该文档介绍了USBSerialDDK的基本概念、实现原理、环境搭建、开发步骤和调测验证方法，包括初始化DDK、打开设备、设置串口参数、读写数据等完整开发流程。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "开发适用串口协议的设备驱动",
+      "line": 1,
+      "children": [
+        {
+          "level": 2,
+          "title": "简介",
+          "line": 9,
+          "children": [
+            {
+              "level": 3,
+              "title": "基本概念",
+              "line": 13,
+              "children": [
+                {
+                  "level": 4,
+                  "title": "USB 串口",
+                  "line": 17
+                },
+                {
+                  "level": 4,
+                  "title": "AMS",
+                  "line": 21
+                },
+                {
+                  "level": 4,
+                  "title": "BMS",
+                  "line": 25
+                },
+                {
+                  "level": 4,
+                  "title": "DDK",
+                  "line": 29
+                },
+                {
+                  "level": 4,
+                  "title": "非标外设",
+                  "line": 33
+                },
+                {
+                  "level": 4,
+                  "title": "标准外设",
+                  "line": 37
+                }
+              ]
+            },
+            {
+              "level": 3,
+              "title": "实现原理",
+              "line": 41
+            },
+            {
+              "level": 3,
+              "title": "约束与限制",
+              "line": 49
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "title": "环境搭建",
+          "line": 57
+        },
+        {
+          "level": 2,
+          "title": "开发指导",
+          "line": 61,
+          "children": [
+            {
+              "level": 3,
+              "title": "接口说明",
+              "line": 63
+            },
+            {
+              "level": 3,
+              "title": "开发步骤",
+              "line": 83
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "title": "调测验证",
+          "line": 212
+        }
+      ]
+    }
+  ],
+  "api_references": [
+    "OH_UsbSerial_Init",
+    "OH_UsbSerial_Release",
+    "OH_UsbSerial_Open",
+    "OH_UsbSerial_Close",
+    "OH_UsbSerial_Read",
+    "OH_UsbSerial_Write",
+    "OH_UsbSerial_SetBaudRate",
+    "OH_UsbSerial_SetParams",
+    "OH_UsbSerial_SetTimeout",
+    "OH_UsbSerial_SetFlowControl",
+    "OH_UsbSerial_Flush",
+    "OH_UsbSerial_FlushInput",
+    "OH_UsbSerial_FlushOutput"
+  ],
+  "code_samples": [
+    {
+      "type": "cmake",
+      "line": 90,
+      "description": "添加动态链接库"
+    },
+    {
+      "type": "cpp",
+      "line": 95,
+      "description": "头文件引入"
+    },
+    {
+      "type": "cpp",
+      "line": 106,
+      "description": "初始化USB Serial DDK"
+    },
+    {
+      "type": "cpp",
+      "line": 117,
+      "description": "打开USB串口设备"
+    },
+    {
+      "type": "cpp",
+      "line": 131,
+      "description": "设置USB串口设备参数"
+    },
+    {
+      "type": "cpp",
+      "line": 155,
+      "description": "设置流控、清空缓冲区"
+    },
+    {
+      "type": "cpp",
+      "line": 175,
+      "description": "向USB串口设备写入/读取数据"
+    },
+    {
+      "type": "cpp",
+      "line": 194,
+      "description": "关闭USB串口设备"
+    },
+    {
+      "type": "cpp",
+      "line": 205,
+      "description": "释放USB Serial DDK"
+    }
+  ],
+  "keywords": [
+    "USB串口",
+    "USBSerialDDK",
+    "驱动开发",
+    "非标外设",
+    "串口通信",
+    "DriverExtensionAbility",
+    "HDI服务",
+    "波特率",
+    "数据位",
+    "校验位",
+    "流控"
+  ],
+  "related_docs": [
+    "environmental-preparation.md",
+    "capi-serialddk.md"
+  ],
+  "figures": [
+    {
+      "title": "USBSerial_DDK原理图",
+      "line": 47,
+      "path": "figures/ddk-schematic-diagram.png"
+    }
+  ],
+  "statistics": {
+    "total_lines": 219,
+    "code_blocks": 9,
+    "api_count": 13,
+    "section_count": 17
+  }
+}

@@ -1,73 +1,156 @@
 {
-  "domain": "Device",
-  "overview": "Device 领域涵盖设备管理相关的五大服务：Driver Development Kit 提供扩展外设驱动开发能力；Input Kit 提供多模输入服务；Location Kit 提供位置服务；Sensor Service Kit 提供传感器与振动服务；Multimodal Awareness Kit 提供多模态融合感知服务。支持 ArkTS 和 C/C++ 两种开发语言，部分功能仅对系统应用开放。",
+  "domain": "device",
+  "overview": "Device Kit 是 OpenHarmony 提供的设备访问服务框架，包含四个主要Kit：Driver Development Kit（驱动开发套件）、Input Kit（多模输入服务）、Location Kit（位置服务）和Sensor Service Kit（传感器服务）。Driver Development Kit为外设驱动开发者提供高效、安全、丰富的扩展外设驱动开发解决方案，支持USB、HID、SCSI等协议的驱动开发；Input Kit为多种输入设备提供服务，如触控板、触摸屏、鼠标、键盘等，提供输入设备管理、鼠标光标控制、快捷键、事件监听和拦截等功能；Location Kit提供位置相关功能，包括GNSS定位、基站定位、WLAN/蓝牙定位、地理编码、地理围栏等；Sensor Service Kit使应用程序能够从传感器获取原始数据，并提供振感控制能力，支持加速度计、陀螺仪、振动器等多种传感器；Multimodal Awareness Kit提供多模态融合感知能力，包括设备静止状态、用户动作、设备状态感知、用户状态感知和记忆链接等功能。",
   "core_concepts": [
-    "Driver Development Kit",
-    "Input Kit",
-    "Location Kit",
-    "Sensor Service Kit",
-    "Multimodal Awareness Kit",
-    "扩展外设驱动",
-    "输入设备管理",
-    "定位与地理编码",
-    "传感器与振动",
-    "用户动作与状态感知"
+    "驱动开发",
+    "输入设备",
+    "位置服务",
+    "传感器",
+    "多模态融合感知",
+    "USB驱动",
+    "HID驱动",
+    "地理编码",
+    "地理围栏",
+    "事件监听"
   ],
   "learning_path": [
-    "../../docs/zh-cn/application-dev/device/driver/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/device/driver/driverdevelopment-overview.md",
-    "../../docs/zh-cn/application-dev/device/driver/environmental-preparation.md",
-    "../../docs/zh-cn/application-dev/device/driver/driverextensionability.md",
-    "../../docs/zh-cn/application-dev/device/driver/externaldevice-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/driver/usb-ddk-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/driver/hid-ddk-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/driver/usb-serial-ddk-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/driver/scsi-peripheral-ddk-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/input/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/device/input/input-overview.md",
-    "../../docs/zh-cn/application-dev/device/input/inputdevice-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/input/keypressed-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/input/pointerstyle-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/location/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/device/location/location-kit-intro.md",
-    "../../docs/zh-cn/application-dev/device/location/location-permission-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/location/location-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/location/geocode-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/location/geofence-guidedines.md",
-    "../../docs/zh-cn/application-dev/device/sensor/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/device/sensor/sensorservice-kit-intro.md",
-    "../../docs/zh-cn/application-dev/device/sensor/sensor-overview.md",
-    "../../docs/zh-cn/application-dev/device/sensor/sensor-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/sensor/vibrator-overview.md",
-    "../../docs/zh-cn/application-dev/device/sensor/vibrator-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/stationary/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/device/stationary/multimodalawareness-kit-intro.md",
-    "../../docs/zh-cn/application-dev/device/stationary/motion-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/stationary/deviceStatus-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/stationary/userStatus-guidelines.md",
-    "../../docs/zh-cn/application-dev/device/stationary/metadataBinding-guidelines.md"
+    {
+      "step": 1,
+      "title": "了解Device Kit整体架构",
+      "doc_id": "driver-Readme-CN",
+      "description": "首先了解Device Kit包含的四个主要Kit及其功能"
+    },
+    {
+      "step": 2,
+      "title": "Driver Development Kit基础",
+      "doc_id": "driver-driverdevelopment-overview",
+      "description": "学习驱动开发开发套件的基本概念和使用场景"
+    },
+    {
+      "step": 3,
+      "title": "环境准备",
+      "doc_id": "driver-environmental-preparation",
+      "description": "配置开发环境、SDK版本和HDC工具"
+    },
+    {
+      "step": 4,
+      "title": "开发基础驱动",
+      "doc_id": "driver-driverextensionability",
+      "description": "学习开发无UI界面的基础驱动"
+    },
+    {
+      "step": 5,
+      "title": "Input Kit基础",
+      "doc_id": "input-input-overview",
+      "description": "了解多模输入服务的功能和运作机制"
+    },
+    {
+      "step": 6,
+      "title": "输入设备管理",
+      "doc_id": "input-inputdevice-guidelines",
+      "description": "学习输入设备热插拔监听和键盘类型查询"
+    },
+    {
+      "step": 7,
+      "title": "Location Kit基础",
+      "doc_id": "location-location-kit-intro",
+      "description": "了解位置服务的定位技术和坐标系统"
+    },
+    {
+      "step": 8,
+      "title": "位置权限申请",
+      "doc_id": "location-location-permission-guidelines",
+      "description": "学习如何申请位置相关权限"
+    },
+    {
+      "step": 9,
+      "title": "获取位置信息",
+      "doc_id": "location-location-guidelines",
+      "description": "学习实时定位、历史位置和位置变化监听"
+    },
+    {
+      "step": 10,
+      "title": "Sensor Service Kit基础",
+      "doc_id": "sensor-sensorservice-kit-intro",
+      "description": "了解传感器服务和振动模块的功能"
+    },
+    {
+      "step": 11,
+      "title": "传感器数据获取",
+      "doc_id": "sensor-sensor-guidelines",
+      "description": "学习如何订阅和获取传感器数据"
+    },
+    {
+      "step": 12,
+      "title": "振动控制",
+      "doc_id": "sensor-vibrator-guidelines",
+      "description": "学习如何设置不同的振动效果"
+    },
+    {
+      "step": 13,
+      "title": "Multimodal Awareness Kit基础",
+      "doc_id": "stationary-multimodalawareness-kit-intro",
+      "description": "了解多模态融合感知的基本概念"
+    },
+    {
+      "step": 14,
+      "title": "设备状态感知",
+      "doc_id": "stationary-stationary-guidelines",
+      "description": "学习如何获取设备静止状态"
+    },
+    {
+      "step": 15,
+      "title": "用户动作感知",
+      "doc_id": "stationary-motion-guidelines",
+      "description": "学习如何获取用户操作手和握持手状态"
+    }
   ],
   "quick_reference": {
-    "Driver Development Kit": "../../docs/zh-cn/application-dev/device/driver/Readme-CN.md",
-    "Input Kit": "../../docs/zh-cn/application-dev/device/input/Readme-CN.md",
-    "Location Kit": "../../docs/zh-cn/application-dev/device/location/Readme-CN.md",
-    "Sensor Service Kit": "../../docs/zh-cn/application-dev/device/sensor/Readme-CN.md",
-    "Multimodal Awareness Kit": "../../docs/zh-cn/application-dev/device/stationary/Readme-CN.md",
-    "扩展外设驱动开发": "../../docs/zh-cn/application-dev/device/driver/driverdevelopment-overview.md",
-    "USB驱动": "../../docs/zh-cn/application-dev/device/driver/usb-ddk-guidelines.md",
-    "HID驱动": "../../docs/zh-cn/application-dev/device/driver/hid-ddk-guidelines.md",
-    "输入设备管理": "../../docs/zh-cn/application-dev/device/input/inputdevice-guidelines.md",
-    "系统功能键": "../../docs/zh-cn/application-dev/device/input/keypressed-guidelines.md",
-    "鼠标光标": "../../docs/zh-cn/application-dev/device/input/pointerstyle-guidelines.md",
-    "位置服务": "../../docs/zh-cn/application-dev/device/location/location-kit-intro.md",
-    "定位": "../../docs/zh-cn/application-dev/device/location/location-guidelines.md",
-    "地理编码": "../../docs/zh-cn/application-dev/device/location/geocode-guidelines.md",
-    "地理围栏": "../../docs/zh-cn/application-dev/device/location/geofence-guidelines.md",
-    "传感器": "../../docs/zh-cn/application-dev/device/sensor/sensor-overview.md",
-    "振动": "../../docs/zh-cn/application-dev/device/sensor/vibrator-overview.md",
-    "用户动作感知": "../../docs/zh-cn/application-dev/device/stationary/motion-guidelines.md",
-    "设备状态感知": "../../docs/zh-cn/application-dev/device/stationary/deviceStatus-guidelines.md",
-    "用户状态感知": "../../docs/zh-cn/application-dev/device/stationary/userStatus-guidelines.md"
+    "Driver Development Kit（驱动开发服务）": "docs/zh-cn/application-dev/device/driver/Readme-CN.md",
+    "Driver Development Kit简介": "zh-cn/application-dev/device/driver/driverdevelopment-overview.md",
+    "环境准备": "docs/zh-cn/application-dev/device/driver/environmental-preparation.md",
+    "开发无UI界面基础驱动": "zh-cn/application-dev/device/driver/driverextensionability.md",
+    "开发带UI界面基础驱动": "docs/zh-cn/application-dev/device/driver/externaldevice-guidelines.md",
+    "常见问题": "docs/zh-cn/application-dev/device/driver/externaldevice-faqs.md",
+    "USB DDKser Development": "docs/en/application-dev/device/driver/usb-ddk-guidelines.md",
+    "开发适用串口协议的设备驱动": "docs/zh-cn/application-dev/device/driver/usb-serial-ddk-guidelines.md",
+    "开发适用HID协议的设备驱动": "docs/zh-cn/application-dev/device/driver/hid-ddk-guidelines.md",
+    "开发使用SCSI协议的设备驱动": "docs/zh-cn/application-dev/device/driver/scsi-peripheral-ddk-guidelines.md",
+    "扩展外设驱动开发术语": "docs/zh-cn/application-dev/device/driver/terms.md",
+    "Input Kit（多模输入服务）": "../../docs/zh-cn/application-dev/device/input/Readme-CN.md",
+    "Input Kit简介": "docs/zh-cn/application-dev/device/input/input-overview.md",
+    "输入设备开发指导": "docs/zh-cn/application-dev/device/input/inputdevice-guidelines.md",
+    "优先响应系统功能键开发指导": "docs/zh-cn/application-dev/device/input/keypressed-guidelines.md",
+    "鼠标光标开发指导": "docs/zh-cn/application-dev/device/input/pointerstyle-guidelines.md",
+    "事件拦截开发指导（C/C++）": "docs/zh-cn/application-dev/device/input/interceptor-guidelines.md",
+    "事件监听开发指导（C/C++）": "docs/zh-cn/application-dev/device/input/monitor-guidelines.md",
+    "事件注入开发指导（仅对系统应用开放）": "docs/zh-cn/application-dev/device/input/inputeventclient-guidelines-sys.md",
+    "输入监听开发指导（仅对系统应用开放）": "docs/zh-cn/application-dev/device/input/inputmonitor-guidelines-sys.md",
+    "全局快捷键开发指导（仅对系统应用开放）": "docs/zh-cn/application-dev/device/input/inputconsumer-guidelines-sys.md",
+    "系统预置全局快捷键开发指导（仅对系统应用开放）": "docs/zh-cn/application-dev/device/input/shortkey-guidelines-sys.md",
+    "Location Kit（位置服务）": "../../docs/zh-cn/application-dev/device/location/Readme-CN.md",
+    "Location Kit简介": "docs/zh-cn/application-dev/device/location/location-kit-intro.md",
+    "申请位置权限开发指导": "docs/zh-cn/application-dev/device/location/location-permission-guidelines.md",
+    "获取设备的位置信息开发指导(ArkTS)": "docs/zh-cn/application-dev/device/location/location-guidelines.md",
+    "获取设备的位置信息开发指导(C/C++)": "docs/zh-cn/application-dev/device/location/location-guidelines-capi.md",
+    "正地理编码与逆地理编码开发指导": "docs/zh-cn/application-dev/device/location/geocode-guidelines.md",
+    "基于设备自身定位的地理围栏开发指导": "docs/zh-cn/application-dev/device/location/geofence-guidelines.md",
+    "相关实例": "docs/zh-cn/application-dev/device/location/app-samples.md",
+    "Sensor Service Kit（传感器服务）": "../../docs/zh-cn/application-dev/device/sensor/Readme-CN.md",
+    "Sensor Service Kit开发简介": "docs/zh-cn/application-dev/device/sensor/sensorservice-kit-intro.md",
+    "传感器开发概述": "docs/zh-cn/application-dev/device/sensor/sensor-overview.md",
+    "传感器开发指导": "docs/zh-cn/application-dev/device/sensor/sensor-guidelines.md",
+    "传感器开发指导(C/C++)": "docs/zh-cn/application-dev/device/sensor/sensor-guidelines-capi.md",
+    "振动开发概述": "docs/zh-cn/application-dev/device/sensor/vibrator-overview.md",
+    "振动开发指导": "docs/zh-cn/application-dev/device/sensor/vibrator-guidelines.md",
+    "振动开发指导(C/C++)": "docs/zh-cn/application-dev/device/sensor/vibrator-guidelines-capi.md",
+    "Multimodal Awareness Kit（多模态融合感知服务）": "docs/zh-cn/application-dev/device/stationary/Readme-CN.md",
+    "Multimodal Awareness Kit简介": "docs/zh-cn/application-dev/device/stationary/multimodalawareness-kit-intro.md",
+    "Stationary开发指导": "docs/zh-cn/application-dev/device/stationary/stationary-guidelines.md",
+    "获取用户动作开发指导": "docs/zh-cn/application-dev/device/stationary/motion-guidelines.md",
+    "设备状态感知开发指导": "docs/zh-cn/application-dev/device/stationary/deviceStatus-guidelines.md",
+    "用户状态感知开发指导": "docs/zh-cn/application-dev/device/stationary/userStatus-guidelines.md",
+    "记忆链接开发指导": "docs/zh-cn/application-dev/device/stationary/metadataBinding-guidelines.md"
   },
-  "document_count": 45
+  "document_count": 39
 }
