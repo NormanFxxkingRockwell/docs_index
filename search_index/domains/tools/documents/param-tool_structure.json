@@ -1,7 +1,84 @@
 {
   "doc_id": "param-tool",
   "title": "param工具",
-  "path": "../../docs/zh-cn/application-dev/tools/param-tool.md",
-  "summary": "param是为开发人员提供用于操作系统参数的工具，该工具只支持标准系统。支持help、ls、get、set、wait、save等命令，用于显示匹配name的系统参数信息、获取指定name系统参数的值、设置指定name系统参数的值、同步等待指定name系统参数与指定值匹配、保存persist参数到工作空间。",
-  "key_topics": ["param工具", "系统参数", "参数查询", "参数设置"]
+  "path": "zh-cn/application-dev/tools/param-tool.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/param-tool.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Startup",
+    "owner": "@chenjinxiang3",
+    "designer": "@liveery",
+    "tester": "@liuhaonan2",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "param是为开发人员提供用于操作系统参数的工具，该工具只支持标准系统。提供了查看、获取、设置、等待系统参数值以及保存持久化参数等功能。",
+  "structure": {
+    "title": "param工具",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "环境要求",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 15,
+        "summary": "使用param工具需要获取hdc工具并执行hdc shell，以及正常连接设备。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "param工具命令列表",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 26,
+        "summary": "param工具支持多种命令：-h获取帮助、ls显示参数信息、get获取参数值、set设置参数值、wait等待参数值匹配、save保存持久化参数。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "获取param支持的命令",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 34,
+        "summary": "使用param -h命令可以获取param工具支持的所有命令列表。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "获取系统参数信息",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 48,
+        "summary": "使用param ls [-r] [name]命令显示匹配name的系统参数信息，带-r选项则根据参数权限获取信息。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "获取系统参数的值",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 58,
+        "summary": "使用param get [name]命令获取指定name系统参数的值，若不指定name则返回所有系统参数。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "设置系统参数的值",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 68,
+        "summary": "使用param set name value命令设置指定name系统参数的值为value。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "等待系统参数值匹配",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 78,
+        "summary": "使用param wait name [value] [timeout]命令同步等待指定name系统参数与指定值value匹配，支持模糊匹配和超时设置。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "保存persist(可持久化)参数",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 88,
+        "summary": "使用param save命令保存persist(可持久化)参数到工作空间。"
+      }
+    ]
+  }
 }

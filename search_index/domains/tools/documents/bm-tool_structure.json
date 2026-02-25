@@ -1,7 +1,188 @@
 {
   "doc_id": "bm-tool",
   "title": "bm工具",
-  "path": "../../docs/zh-cn/application-dev/tools/bm-tool.md",
-  "summary": "Bundle Manager是实现应用安装、卸载、更新、查询等功能的工具，提供基本的应用安装包的调试能力。支持install、uninstall、dump、clean、get、quickfix、compile、copy-ap、dump-dependencies、dump-shared、dump-overlay、dump-target-overlay、install-plugin、uninstall-plugin等命令。",
-  "key_topics": ["bm工具", "Bundle Manager", "应用安装", "应用卸载", "应用查询"]
+  "path": "zh-cn/application-dev/tools/bm-tool.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/bm-tool.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Bundle Manager（包管理工具，简称bm）是实现应用安装、卸载、更新、查询等功能的工具，bm为开发者提供基本的应用安装包的调试能力。本文档详细介绍了bm工具的各种命令，包括安装、卸载、查询、清理、快速修复、共享库查询、编译、拷贝ap文件、overlay应用查询、插件管理等命令的使用方法和参数说明，以及bm工具的错误码和常见问题处理方法。",
+  "structure": {
+    "title": "bm工具",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "环境要求（hdc工具）",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 14,
+        "summary": "介绍使用bm工具前需要先获取hdc工具，执行hdc shell命令。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "bm工具命令列表",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 36,
+        "summary": "列出bm工具支持的所有命令，包括help、install、uninstall、dump、clean、enable、disable、get、quickfix、compile、copy-ap、dump-dependencies、dump-shared、dump-overlay、dump-target-overlay、install-plugin、uninstall-plugin等命令及其描述。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "帮助命令（help）",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 43,
+        "summary": "介绍bm help命令的使用，用于查询bm支持的命令信息。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "参数说明",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 56,
+        "summary": "说明userId参数的含义，包括100、102、0三种常见系统账号的含义和用途。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "安装命令（install）",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 95,
+        "summary": "详细介绍bm install命令的语法、参数列表（-h、-p、-r、-s、-w、-u、-d）及使用示例，包括安装HAP/HSP、覆盖安装、指定用户安装、应用间HSP安装、降级安装等场景。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "卸载命令（uninstall）",
+        "level": 2,
+        "line_start": 97,
+        "line_end": 131,
+        "summary": "详细介绍bm uninstall命令的语法、参数列表（-h、-n、-m、-k、-s、-v、-u）及使用示例，包括卸载应用、卸载模块、卸载共享库、保留用户数据等场景。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "查询应用信息命令（dump）",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 173,
+        "summary": "详细介绍bm dump命令的语法、参数列表（-h、-a、-g、-n、-s、-d、-l、-u）及使用示例，包括查询所有应用、查询调试类型应用、查询指定应用信息、查询快捷方式、查询跨设备应用、查询label值等场景。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "清理命令（clean）",
+        "level": 2,
+        "line_start": 175,
+        "line_end": 202,
+        "summary": "详细介绍bm clean命令的语法、参数列表（-h、-c、-n、-d、-i、-u）及使用示例，包括清理应用缓存数据、清理应用数据目录等场景。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "使能命令（enable）",
+        "level": 2,
+        "line_start": 205,
+        "line_end": 231,
+        "summary": "介绍bm enable命令的语法、参数列表（-h、-n、-a、-u）及使用示例，用于使能应用或元能力模块，使能后应用可以继续使用。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "禁用命令（disable）",
+        "level": 2,
+        "line_start": 234,
+        "line_end": 260,
+        "summary": "介绍bm disable命令的语法、参数列表（-h、-n、-a、-u）及使用示例，用于禁用应用或元能力模块，禁用后应用无法使用。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "获取udid命令（get）",
+        "level": 2,
+        "line_start": 264,
+        "line_end": 286,
+        "summary": "介绍bm get命令的语法、参数列表（-h、-u）及使用示例，用于获取设备的udid。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "快速修复命令（quickfix）",
+        "level": 2,
+        "line_start": 289,
+        "line_end": 335,
+        "summary": "详细介绍bm quickfix命令的语法、参数列表（-h、-a、-f、-t、-d、-o、-q、-b、-r）及使用示例，包括快速修复补丁安装、查询补丁信息、卸载补丁等操作。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "共享库查询命令（dump-shared）",
+        "level": 2,
+        "line_start": 337,
+        "line_end": 359,
+        "summary": "介绍bm dump-shared命令的语法、参数列表（-h、-a、-n）及使用示例，用于查询系统中所有已安装的共享库或指定包名的共享库详细信息。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "共享库依赖关系查询命令（dump-dependencies）",
+        "level": 2,
+        "line_start": 361,
+        "line_end": 378,
+        "summary": "介绍bm dump-dependencies命令的语法、参数列表（-h、-n、-m）及使用示例，用于查询指定应用依赖的共享库信息。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "应用执行编译AOT命令（compile）",
+        "level": 2,
+        "line_start": 381,
+        "line_end": 400,
+        "summary": "介绍bm compile命令的语法、参数列表（-h、-m、-r、-a）及使用示例，用于应用执行编译AOT操作。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "拷贝ap文件命令（copy-ap）",
+        "level": 2,
+        "line_start": 402,
+        "line_end": 423,
+        "summary": "介绍bm copy-ap命令的语法、参数列表（-h、-a、-n）及使用示例，用于把应用的ap文件拷贝到/data/local/pgo目录下。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "查询overlay应用信息命令（dump-overlay）",
+        "level": 2,
+        "line_start": 425,
+        "line_end": 454,
+        "summary": "介绍bm dump-overlay命令的语法、参数列表（-h、-b、-m、-t、-u）及使用示例，用于打印overlay应用的overlayModuleInfo信息。"
+      },
+      {
+        "section_id": "section-18",
+        "title": "查询应用的overlay相关信息命令（dump-target-overlay）",
+        "level": 2,
+        "line_start": 456,
+        "line_end": 483,
+        "summary": "介绍bm dump-target-overlay命令的语法、参数列表（-h、-b、-m、-u）及使用示例，用于打印目标应用的所有关联overlay应用的overlayModuleInfo信息。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "安装插件命令（install-plugin）",
+        "level": 2,
+        "line_start": 485,
+        "line_end": 509,
+        "summary": "介绍bm install-plugin命令的语法、参数列表（-h、-n、-p）及使用示例，用于安装插件，并说明插件版本更新和注意事项。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "卸载插件命令（uninstall-plugin）",
+        "level": 2,
+        "line_start": 511,
+        "line_end": 529,
+        "summary": "介绍bm uninstall-plugin命令的语法、参数列表（-h、-n、-p）及使用示例，用于卸载插件。"
+      },
+      {
+        "section_id": "section-21",
+        "title": "bm工具错误码",
+        "level": 2,
+        "line_start": 532,
+        "line_end": 3425,
+        "summary": "详细列出bm工具的各种错误码，包括错误信息、错误描述、可能原因和处理步骤。涵盖系统账号不存在、签名相关错误、安装失败、卸载失败、配置文件错误、权限错误、版本不匹配、设备类型不支持等多种错误场景。"
+      }
+    ]
+  }
 }

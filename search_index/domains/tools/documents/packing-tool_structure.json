@@ -1,7 +1,132 @@
 {
   "doc_id": "packing-tool",
   "title": "打包工具",
-  "path": "../../docs/zh-cn/application-dev/tools/packing-tool.md",
-  "summary": "打包工具用于在程序编译完成后，对编译出的文件等进行打包，以供安装发布。支持生成HAP、HSP、App、HQF、APPQF等包类型。提供HAP打包、HSP打包、App打包、多工程打包、HQF打包、APPQF打包、版本归一、包名归一、通用归一、res模式打包、fastApp模式打包等指令。",
-  "key_topics": ["打包工具", "HAP打包", "HSP打包", "App打包", "版本归一"]
+  "path": "zh-cn/application-dev/tools/packing-tool.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/packing-tool.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@jsjzju",
+    "designer": "@jsjzju",
+    "tester": "@lixueqing513",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "打包工具用于在程序编译完成后，对编译出的文件等进行打包，以供安装发布。开发者可以使用DevEco Studio进行打包，也可使用打包工具的JAR包进行打包。打包工具支持生成：Ability类型的模块包（HAP）、动态共享包（HSP）、应用程序包（App）、快速修复模块包（HQF）、快速修复包（APPQF）。文档详细介绍了各种打包指令、参数说明、合法性校验规则、错误码处理等内容。",
+  "structure": {
+    "title": "打包工具",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "约束与限制",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 41,
+        "summary": "介绍了打包工具的使用约束与限制，包括需要运行在Java8及以上环境，以及打包指令中参数和参数值需成对出现的要求。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "HAP打包指令",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 96,
+        "summary": "详细说明了如何使用打包工具的JAR包对模块进行打包生成HAP包，包括HAP打包时的合法性校验、压缩规则、Stage模型和FA模型的示例命令，以及所有参数的详细说明。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "HSP打包指令",
+        "level": 2,
+        "line_start": 97,
+        "line_end": 131,
+        "summary": "介绍了HSP包的打包方法，HSP包实现了多个HAP对文件的共享，包括打包时的压缩规则、示例命令和所有参数的详细说明。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "App打包指令",
+        "level": 2,
+        "line_start": 132,
+        "line_end": 186,
+        "summary": "说明了如何使用打包工具生成App包，App包用于上架应用市场，包括合法性校验规则、压缩规则、示例命令和所有参数的详细说明。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "多工程打包指令",
+        "level": 2,
+        "line_start": 189,
+        "line_end": 232,
+        "summary": "介绍了多工程打包指令，适用于多个团队开发同一个应用但不方便共享代码的情况，可以将多个包打成一个最终的App包，包括合法性校验规则、示例命令和参数说明。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "HQF打包指令",
+        "level": 2,
+        "line_start": 236,
+        "line_end": 261,
+        "summary": "说明了HQF包的打包方法，HQF包适用于增量调试场景，不支持上架应用市场，仅用于增量调试，包括示例命令和参数说明。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "APPQF打包指令",
+        "level": 2,
+        "line_start": 262,
+        "line_end": 286,
+        "summary": "介绍了APPQF包的打包方法，APPQF包由一个或多个HQF文件组成，包括合法性校验规则、示例命令和参数说明。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "版本归一指令（versionNormalize）",
+        "level": 2,
+        "line_start": 287,
+        "line_end": 305,
+        "summary": "说明了版本归一指令的作用和用法，用于将多个HAP、HSP的版本统一，包括示例命令和参数说明。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "包名归一指令（packageNormalize）",
+        "level": 2,
+        "line_start": 306,
+        "line_end": 324,
+        "summary": "介绍了包名归一指令，用于修改传入的HSP的包名和版本号，包括示例命令和参数说明。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "通用归一指令（generalNormalize）",
+        "level": 2,
+        "line_start": 325,
+        "line_end": 359,
+        "summary": "说明了通用归一指令，可以修改传入的HAP或HSP的多个参数，包括deviceType、bundleName、versionName、versionCode等，并生成修改后的同名HAP或HSP。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "res模式打包指令",
+        "level": 2,
+        "line_start": 360,
+        "line_end": 379,
+        "summary": "介绍了res模式打包指令，用于打包元服务快照资源，包括示例命令和参数说明。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "fastApp模式打包指令",
+        "level": 2,
+        "line_start": 380,
+        "line_end": 432,
+        "summary": "说明了fastApp模式打包指令，通过传入打包选项、HAP、HSP包文件目录路径生成所需的App包，包括合法性校验规则、压缩规则、示例命令和参数说明。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "扫描重复so文件",
+        "level": 2,
+        "line_start": 433,
+        "line_end": 469,
+        "summary": "介绍了扫描重复so文件的功能，通过设置--stat-duplicate为true开启扫描，系统将在打包成功后生成扫描报告，帮助开发者识别重复so以减小包大小。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "打包工具错误码",
+        "level": 2,
+        "line_start": 470,
+        "line_end": 2829,
+        "summary": "详细列出了打包工具的所有错误码，包括错误信息、错误描述、可能原因和处理步骤，涵盖了执行打包工具失败、参数解析失败、各模式参数校验失败、压缩操作失败、文件I/O异常等各种错误情况。"
+      }
+    ]
+  }
 }

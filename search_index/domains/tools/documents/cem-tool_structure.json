@@ -1,7 +1,60 @@
 {
   "doc_id": "cem-tool",
   "title": "cem工具",
-  "path": "../../docs/zh-cn/application-dev/tools/cem-tool.md",
-  "summary": "Common Event Manager是实现公共事件信息打印、发布公共事件等功能的工具，提供基本的公共事件调试和测试能力。支持help、publish、dump等命令，用于发布公共事件、打印所有公共事件订阅者、已发送公共事件和接收者等。",
-  "key_topics": ["cem工具", "公共事件管理", "事件发布", "事件打印"]
+  "path": "zh-cn/application-dev/tools/cem-tool.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/cem-tool.md",
+  "metadata": {
+    "kit": "Notification Kit",
+    "subsystem": "Notification",
+    "owner": "@peixu",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Common Event Manager（公共事件管理工具， 简称cem）是实现公共事件信息打印、发布公共事件等功能的工具，为开发者提供基本的公共事件调试和测试能力，例如打印所有公共事件订阅者、已发送公共事件和接收者、模拟发布公共事件等。",
+  "structure": {
+    "title": "cem工具",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "环境要求",
+        "level": 2,
+        "line_start": 12,
+        "line_end": 15,
+        "summary": "在使用本工具前，开发者需要先获取hdc工具，执行hdc shell。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "cem工具命令列表",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 23,
+        "summary": "列出cem工具的三个主要命令：help（帮助命令）、publish（发布命令）、dump（打印命令）。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "帮助命令（help）",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 30,
+        "summary": "帮助命令用于显示cem相关的帮助信息。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "发布命令（publish）",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 59,
+        "summary": "发布命令用于发布公共事件，支持设置事件名称、有序事件、结果码和携带数据等参数。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "打印命令（dump）",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 85,
+        "summary": "打印命令用于打印公共事件相关信息，包括所有已发送的公共事件或查询特定名称事件的具体信息。注意dump命令仅支持在eng版本中使用。"
+      }
+    ]
+  }
 }

@@ -1,7 +1,76 @@
 {
   "doc_id": "acm-tool",
   "title": "acm工具",
-  "path": "../../docs/zh-cn/application-dev/tools/acm-tool.md",
-  "summary": "Account Manager是实现账号创建、删除、查询等功能的工具，为开发者提供基本的管理本地账号的能力。支持help、create、delete、dump、switch、deactivate、set等命令，用于创建账号、删除账号、查询账号信息、切换账号、注销账号、设置账号约束等操作。",
-  "key_topics": ["acm工具", "账号管理", "本地账号", "账号创建", "账号删除"]
+  "path": "zh-cn/application-dev/tools/acm-tool.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/acm-tool.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Account",
+    "owner": "@steven-q",
+    "designer": "@JiDong-CS1",
+    "tester": "@zhaimengchao",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Account Manager（账号管理工具，简称acm）是实现账号创建、删除、查询等功能的工具，acm为开发者提供基本的管理本地账号的能力。支持help、create、delete、dump、switch、deactivate、set等命令，用于账号的创建、删除、查询、切换、注销和约束设置。",
+  "structure": {
+    "title": "acm工具",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "help",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 41,
+        "summary": "帮助命令，用于显示acm支持的命令信息。使用方法：acm help"
+      },
+      {
+        "section_id": "section-2",
+        "title": "create",
+        "level": 2,
+        "line_start": 43,
+        "line_end": 68,
+        "summary": "创建命令，用于创建账号。支持指定账号名称、类型、短名、禁止和允许的预置应用列表等参数。账号类型包括admin、normal、guest、private。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "delete",
+        "level": 2,
+        "line_start": 70,
+        "line_end": 91,
+        "summary": "删除命令，用于删除账号。需要通过-i参数指定要删除的账号id。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "dump",
+        "level": 2,
+        "line_start": 93,
+        "line_end": 117,
+        "summary": "查询命令，用于查询账号的相关信息。支持查询所有账号信息（-a参数）或查询指定账号id的信息（-i参数）。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "switch",
+        "level": 2,
+        "line_start": 119,
+        "line_end": 141,
+        "summary": "切换命令，用于切换账号。需要通过-i参数指定要切换到的账号id，可选-d参数指定目标屏幕ID。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "deactivate",
+        "level": 2,
+        "line_start": 143,
+        "line_end": 167,
+        "summary": "注销命令，用于注销账号。支持注销所有账号（-a参数）或注销指定账号id的账号（-i参数）。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "set",
+        "level": 2,
+        "line_start": 169,
+        "line_end": 192,
+        "summary": "设置约束命令，用于设置账号的约束。需要通过-i参数指定账号id，-c参数指定约束集合，-e参数表示添加或删除约束。"
+      }
+    ]
+  }
 }

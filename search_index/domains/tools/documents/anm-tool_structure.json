@@ -1,7 +1,60 @@
 {
   "doc_id": "anm-tool",
   "title": "anm工具",
-  "path": "../../docs/zh-cn/application-dev/tools/anm-tool.md",
-  "summary": "Advanced Notification Manager是实现通知打印、设置通知参数等功能的工具，提供基本的通知调试和测试能力。支持help、dump、setting等命令，用于打印已发布通知详细信息、设置通知缓存个数、使能通知、设置通知跨设备协同开关等配置。",
-  "key_topics": ["anm工具", "通知管理", "通知打印", "通知参数设置"]
+  "path": "zh-cn/application-dev/tools/anm-tool.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/anm-tool.md",
+  "metadata": {
+    "kit": "Notification Kit",
+    "subsystem": "Notification",
+    "owner": "@michael_woo888",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@huipeizi"
+  },
+  "summary": "Advanced Notification Manager（通知管理工具，简称anm）是实现通知打印、设置通知参数等功能的工具，为开发者提供基本的通知调试和测试能力，例如打印已发布通知详细信息、设置通知缓存个数、使能通知等。",
+  "structure": {
+    "title": "anm工具",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "环境要求",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 16,
+        "summary": "在使用本工具前，开发者需要先获取hdc工具，执行hdc shell。当前工具仅支持在eng版本中使用，在user版本中使用会出现报错。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "anm工具命令列表",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 24,
+        "summary": "anm工具包含三个主要命令：help（帮助命令）、dump（打印命令）、setting（设置命令）。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "帮助命令（help）",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 31,
+        "summary": "帮助命令用于显示anm相关的帮助信息。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "打印命令（dump）",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 56,
+        "summary": "打印命令用于打印通知相关信息，支持多个参数：-A/--active打印所有活跃的通知信息，-R/--recent打印最近的通知信息，-D/--distributed打印来自其他设备的分布式通知信息，-b/--bundle设置指定的Bundle名称打印，-u/--user-id设置指定的用户ID打印。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "设置命令（setting）",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 90,
+        "summary": "设置命令用于设置通知参数，支持多个参数：-c/--recent-count设置保存在内存中的最近通知的最大个数，-e/--enable-notification设置通知使能开关，-k/--collaboration-switch设置通知是否支持跨设备协同至指定类型设备，-b/--collaboration-switch-bundle设置指定应用的通知是否支持跨设备协同至指定类型设备，-o/--collaboration-switch-slot设置指定渠道的通知是否支持通知跨设备协同至指定类型设备。"
+      }
+    ]
+  }
 }

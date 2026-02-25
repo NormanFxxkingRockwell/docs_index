@@ -1,67 +1,180 @@
 {
-  "domain": "Tools",
-  "overview": "Tools 领域包含 OpenHarmony 开发过程中使用的各种命令行工具和调试工具，涵盖应用调试、包管理、资源编译、网络配置、系统参数操作、电源管理、媒体资源访问、通知管理、账号管理、访问控制管理、企业设备管理、SDK 升级辅助、二进制签名、堆快照分析等多种开发辅助工具。",
+  "domain": "tools",
+  "domain_summary": "Tools领域涵盖了OpenHarmony应用开发过程中的各种命令行工具和调试工具，包括应用打包拆包、安装管理、调试测试、权限管理、账号管理、通知管理、资源编译、媒体库操作、网络配置、电源管理、系统参数管理、企业设备管理、、二进制签名、SDK升级助手等23个工具，为开发者提供从应用构建到调试测试的全流程支持。",
   "core_concepts": [
-    "应用调试工具",
-    "包管理工具",
-    "资源编译工具",
-    "命令行工具集合",
-    "系统参数操作",
-    "电源状态管理",
-    "媒体资源访问",
-    "通知管理工具",
-    "账号管理工具",
-    "访问了制管理",
-    "企业设备管理",
-    "SDK 升级辅助"
+    "应用打包拆包",
+    "应用安装管理",
+    "应用调试",
+    "权限管理",
+    "账号管理",
+    "通知管理",
+    "资源编译",
+    "媒体库操作",
+    "网络配置",
+    "电源管理"
   ],
-  "learning_path": [
-    "../../docs/zh-cn/application-dev/tools/command-line-tools-overview.md",
-    "../../docs/zh-cn/application-dev/tools/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/tools/aa-tool.md",
-    "../../docs/zh-cn/application-dev/tools/bm-tool.md",
-    "../../docs/zh-cn/application-dev/tools/packing-tool.md",
-    "../../docs/zh-cn/application-dev/tools/unpacking-tool.md",
-    "../../docs/zh-cn/application-dev/tools/app-check-tool.md",
-    "../../docs/zh-cn/application-dev/tools/atm-tool.md",
-    "../../docs/zh-cn/application-dev/tools/cem-tool.md",
-    "../../docs/zh-cn/application-dev/tools/anm-tool.md",
-    "../../docs/zh-cn/application-dev/tools/restool.md",
-    "../../docs/zh-cn/application-dev/tools/param-tool.md",
-    "../../docs/zh-cn/application-dev/tools/power-shell.md",
-    "../../docs/zh-cn/application-dev/tools/mediatool.md",
-    "../../docs/zh-cn/application-dev/tools/network-cfg.md",
-    "../../docs/zh-cn/application-dev/tools/acm-tool.md",
-    "../../docs/zh-cn/application-dev/tools/toybox.md",
-    "../../docs/zh-cn/application-dev/tools/edm-tool.md",
-    "../../docs/zh-cn/application-dev/tools/lldb-tool-sys.md",
-    "../../docs/zh-cn/application-dev/tools/rawheap-translator.md",
-    "../../docs/zh-cn/application-dev/tools/binary-sign-tool.md",
-    "../../docs/zh-cn/application-dev/tools/openharmony_sdk_upgrade_assistant.md",
-    "../../docs/zh-cn/application-dev/tools/devicedebug-tool.md"
-  ],
-  "quick_reference": {
-    "aa 工具": "../../docs/zh-cn/application-dev/tools/aa-tool.md",
-    "bm 工具": "../../docs/zh-cn/application-dev/tools/bm-tool.md",
-    "打包工具": "../../docs/zh-cn/application-dev/tools/packing-tool.md",
-    "拆包工具": "../../docs/zh-cn/application-dev/tools/unpacking-tool.md",
-    "扫描工具": "../../docs/zh-cn/application-dev/tools/app-check-tool.md",
-    "atm 工具": "../../docs/zh-cn/application-dev/tools/atm-tool.md",
-    "cem 工具": "../../docs/zh-cn/application-dev/tools/cem-tool.md",
-    "anm 工具": "../../docs/zh-cn/application-dev/tools/anm-tool.md",
-    "restool 工具": "../../docs/zh-cn/application-dev/tools/restool.md",
-    "param 工具": "../../docs/zh-cn/application-dev/tools/param-tool.md",
-    "power-shell 工具": "../../docs/zh-cn/application-dev/tools/power-shell.md",
-    "mediatool 工具": "../../docs/zh-cn/application-dev/tools/mediatool.md",
-    "network-cfg 工具": "../../docs/zh-cn/application-dev/tools/network-cfg.md",
-    "acm 工具": "../../docs/zh-cn/application-dev/tools/acm-tool.md",
-    "edm 工具": "../../docs/zh-cn/application-dev/tools/edm-tool.md",
-    "LLDB 工具": "../../docs/zh-cn/application-dev/tools/lldb-tool-sys.md",
-    "rawheap-translator 工具": "../../docs/zh-cn/application-dev/tools/rawheap-translator.md",
-    "toybox 工具": "../../docs/zh-cn/application-dev/tools/toybox.md",
-    "devicedebug 工具": "../../docs/zh-cn/application-dev/tools/devicedebug-tool.md",
-    "二进制签名工具": "../../docs/zh-cn/application-dev/tools/binary-sign-tool.md",
-    "SDK 升级助手": "../../docs/zh-cn/application-dev/tools/openharmony_sdk_upgrade_assistant.md"
-  },
-  "document_count": 23
+  "document_count": 23,
+  "documents": [
+    {
+      "doc_id": "unpacking-tool",
+      "title": "拆包工具",
+      "path": "../../docs/zh-cn/application-dev/tools/unpacking-tool.md",
+      "summary": "拆包工具是OpenHarmony提供的一种调测工具，支持通过命令行方式将HAP、HSP、App等文件解压成文件夹，并且提供Java接口对HAP、HSP、App等文件进行解析。工具需要运行在Java8及其以上环境，支持多种拆包模式包括HAP包模式、App包模式、HSP包模式、APPQF模式等，还提供包解析接口用于应用市场对打好的HAP、HSP、App等包进行解析，获取其中配置文件等信息。",
+      "key_topics": ["拆包工具", "HAP", "HSP", "App", "Java接口", "包解析"]
+    },
+    {
+      "doc_id": "toybox",
+      "title": "toybox",
+      "path": "../../docs/zh-cn/application-dev/tools/toybox.md",
+      "summary": "toybox是一个轻量级的Linux命令行工具集合，它将常用的Linux命令行工具合并到一个单独的可执行文件中。本文档介绍了toybox的使用方法、命令行说明、帮助命令、以及涵盖数学与计算机基础函数、终端操作、sh逻辑命令、系统操作、时间日期、登录用户操作、进程操作、设备节点操作、网络操作、文件操作等类别的各种命令。文档还包含了常见问题解答，如报错处理和权限问题。",
+      "key_topics": ["toybox", "Linux命令行", "命令集合", "文件操作", "网络操作"]
+    },
+    {
+      "doc_id": "restool",
+      "title": "restool工具",
+      "path": "../../docs/zh-cn/application-dev/tools/restool.md",
+      "summary": "restool是一种应用工程资源编译工具，通过编译资源文件创建资源索引、解析资源，开发者可以调用资源管理接口获取到对应资源。文档介绍了restool工具的命令选项、子命令、使用实例以及各种错误码的详细信息。",
+      "key_topics": ["restool", "资源编译", "资源索引", "资源解析", "错误码"]
+    },
+    {
+      "doc_id": "packing-tool",
+      "title": "打包工具",
+      "path": "../../docs/zh-cn/application-dev/tools/packing-tool.md",
+      "summary": "打包工具用于在程序编译完成后，对编译出的文件等进行打包，以供安装发布。开发者可以使用DevEco Studio进行打包，也可使用打包工具的JAR包进行打包。打包工具支持生成：Ability类型的模块包（HAP）、动态共享包（HSP）、应用程序包（App）、快速修复模块包（HQF）、快速修复包（APPQF）。文档详细介绍了各种打包指令、参数说明、合法性校验规则、错误码处理等内容。",
+      "key_topics": ["打包工具", "HAP", "HSP", "App", "HQF", "APPQF", "合法性校验"]
+    },
+    {
+      "doc_id": "param-tool",
+      "title": "param工具",
+      "path": "../../docs/zh-cn/application-dev/tools/param-tool.md",
+      "summary": "param是为开发人员提供用于操作系统参数的工具，该工具只支持标准系统。提供了查看、获取、设置、等待系统参数值以及保存持久化参数等功能。",
+      "key_topics": ["param工具", "系统参数", "参数查看", "参数设置", "持久化参数"]
+    },
+    {
+      "doc_id": "raw rawheap-translator",
+      "title": "rawheap-translator工具",
+      "path": "../../docs/zh-cn/application-dev/tools/rawheap-translator.md",
+      "summary": "rawheap-translator工具用于解析ArkTS应用OOM时生成的.rawheap二进制文件，将其转换为.heapsnapshot文件，以便在DevEco Studio或Chrome浏览器中查看堆内存信息。文档详细介绍了工具的使用场景、获取方式、环境配置、使用方法、命令参数、解析示例、文件规格说明以及常见问题解决方案。",
+      "key_topics": ["rawheap-translator", "堆内存", "OOM", "二进制文件", "内存分析"]
+    },
+    {
+      "doc_id": "power-shell",
+      "title": "power-shell工具",
+      "path": "../../docs/zh-cn/application-dev/tools/power-shell.md",
+      "summary": "power-shell是实现设备电源状态转换等功能的工具，为开发者提供基本的设备电源状态调试能力，例如：熄屏、唤醒、设置电源模式等。",
+      "key_topics": ["power-shell", "电源管理", "熄屏", "唤醒", "电源模式"]
+    },
+    {
+      "doc_id": "mediatool",
+      "title": "媒体库资源访问工具",
+      "path": "../../docs/zh-cn/application-dev/tools/mediatool.md",
+      "summary": "媒体库资源访问工具，为开发者提供mediatool工具和hdc命令两种方式操作媒体库资源。mediatool工具是一个轻量级命令行工具集合，提供导入、打印、导出、删除、查询、列举等媒体库资源操作功能。hdc命令从API version 21开始支持，可以访问媒体库文件路径，包含文件查询、导出、导入、删除等功能。",
+      "key_topics": ["mediatool", "媒体库", "资源导入", "资源导出", "文件查询"]
+    },
+    {
+      "doc_id": "openharmony_sdk_upgrade_assistant",
+      "title": "OpenHarmony SDK 升级助手",
+      "path": "../../docs/zh-cn/application-dev/tools/openharmony_sdk_upgrade_assistant.md",
+      "summary": "OpenHarmony SDK 升级助手是用于帮助开发者快速解决OpenHarmony应用SDK升级导致的API不兼容问题的工具。由于OpenHarmony SDK Beta版本不承诺API稳定性，在SDK升级后可能存在API不兼容问题，该工具可以帮助开发者快速了解升级适配全貌，并通过工具提示快速适配升级，显著提高SDK升级效率。",
+      "key_topics": ["SDK升级助手", "API不兼容", "SDK升级", "DevEco Studio", "升级适配"]
+    },
+    {
+      "doc_id": "network-cfg",
+      "title": "network-cfg工具",
+      "path": "../../docs/zh-cn/application-dev/tools/network-cfg.md",
+      "summary": "network-cfg是为开发人员提供的用于设置网络相关参数的工具（其中\"cfg\"为\"config\"的缩写），例如给Wi-Fi设置代理等。该工具从API version 20开始支持，主要功能包括显示帮助信息和设置网络相关参数（如Wi-Fi代理）。",
+      "key_topics": ["network-cfg", "网络配置", "Wi-Fi代理", "网络参数"]
+    },
+    {
+      "doc_id": "lldb-tool-sys",
+      "title": "LLDB工具（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/tools/lldb-tool-sys.md",
+      "summary": "本文档介绍了LLDB调试工具的使用方法，包括功能特点、工具获取、环境准备、本地调试和远程调试的使用指导，以及常见问题解答。LLDB是基于llvm15.0.4适配的高性能调试器，支持断点设置、变量查看、内存操作、线程控制等功能，适用于Windows、Linux x86_64、ohos和Mac平台。",
+      "key_topics": ["LLDB", "调试器", "断点", "变量查看", "内存操作", "远程调试"]
+    },
+    {
+      "doc_id": "edm-tool",
+      "title": "edm工具",
+      "path": "../../docs/zh-cn/application-dev/tools/edm-tool.md",
+      "summary": "Enterprise Device Manager（企业设备管理工具，简称为edm），为设备管理应用提供调试和测试能力，例如激活企业设备管理拓展能力、解除激活企业设备管理拓展能力。",
+      "key_topics": ["edm工具", "企业设备管理", "激活", "解除激活"]
+    },
+    {
+      "doc_id": "bm-tool",
+      "title": "bm工具",
+      "path": "../../docs/zh-cn/application-dev/tools/bm-tool.md",
+      "summary": "Bundle Manager（包管理工具，简称bm）是实现应用安装、卸载、更新、查询等功能的工具，bm为开发者提供基本的应用安装包的调试能力。本文档详细介绍了bm工具的各种命令，包括安装、卸载、查询、清理、快速修复、共享库查询、编译、拷贝ap文件、overlay应用查询、插件管理等命令的使用方法和参数说明，以及bm工具的错误码和常见问题处理方法。",
+      "key_topics": ["bm工具", "应用安装", "应用卸载", "应用查询", "快速修复", "插件管理"]
+    },
+    {
+      "doc_id": "devicedebug-tool",
+      "title": "devicedebug工具",
+      "path": "../../docs/zh-cn/application-dev/tools/devicedebug-tool.md",
+      "summary": "devicedebug工具向开发者提供对调试应用发送信号的能力，目前仅支持向AMS管理的debug类型的应用进程的pid发送signal信号，达到终止对应pid进程的能力。工具支持help和kill两个命令，用于显示帮助信息和终止指定进程。",
+      "key_topics": ["devicedebug工具", "进程终止", "信号发送", "应用调试"]
+    },
+    {
+      "doc_id": "cem-tool",
+      "title": "cem工具",
+      "path": "../../docs/zh-cn/application-dev/tools/cem-tool.md",
+      "summary": "Common Event Manager（公共事件管理工具， 简称cem）是实现公共事件信息打印、发布公共事件等功能的工具，为开发者提供基本的公共事件调试和测试能力，例如打印所有公共事件订阅者、已发送公共事件和接收者、模拟发布公共事件等。",
+      "key_topics": ["cem工具", "公共事件", "事件发布", "事件订阅", "事件调试"]
+    },
+    {
+      "doc_id": "binary-sign-tool",
+      "title": "二进制签名工具",
+      "path": "../../docs/zh-cn/application-dev/tools/binary-sign-tool.md",
+      "summary": "Binary Sign Tool（二进制签名工具）用于对二进制文件进行代码签名，支持通过命令行的方式对标准ELF文件进行代码签名或打印已签名ELF的权限、证书信息。工具提供help、sign、display-sign三个主要命令，支持Linux平台和OpenHarmony PC/2in1平台，可进行证书签名和自签名两种模式。",
+      "key_topics": ["二进制签名工具", "代码签名", "ELF文件", "证书", "自签名"]
+    },
+    {
+      "doc_id": "aa-tool",
+      "title": "aa工具",
+      "path": "../../docs/zh-cn/application-dev/tools/aa-tool.md",
+      "summary": "Ability assistant（Ability助手，简称为aa），是用于启动应用和启动测试用例的工具，为开发者提供基本的应用调试和测试能力，例如启动应用组件、强制停止进程、打印应用组件相关信息等。文档详细介绍了aa工具的各个命令，包括start、stop-service、dump、force-stop、test、attach、detach、appdebug、process、send-memory-level等命令的使用方法、参数说明、返回值、错误码及示例。",
+      "key_topics": ["aa工具", "应用启动", "测试用例", "应用调试", "进程控制"]
+    },
+    {
+      "doc_id": "atm-tool",
+      "title": "atm工具",
+      "path": "../../docs/zh-cn/application-dev/tools/atm-tool.md",
+      "summary": "Access Token Manager (atm工具)是用于查询或设置应用进程的权限、使用类型等信息的工具，为开发者提供了根据tokenid、包名、进程名等信息进行访问控制管理的能力。主要功能包括帮助命令、查询命令，支持查询权限定义、应用进程信息、权限信息等。",
+      "key_topics": ["atm工具", "权限管理", "访问控制", "tokenid", "权限查询"]
+    },
+    {
+      "doc_id": "anm-tool",
+      "title": "anm工具",
+      "path": "../../docs/zh-cn/application-dev/tools/anm-tool.md",
+      "summary": "Advanced Notification Manager（通知管理工具，简称anm）是实现通知打印、设置通知参数等功能的工具，为开发者提供基本的通知调试和测试能力，例如打印已发布通知详细信息、设置通知缓存个数、使能通知等。",
+      "key_topics": ["anm工具", "通知管理", "通知打印", "通知参数", "通知调试"]
+    },
+    {
+      "doc_id": "app-check-tool",
+      "title": "扫描工具",
+      "path": "../../docs/zh-cn-cn/application-dev/tools/app-check-tool.md",
+      "summary": "扫描工具是用于分析检测应用安装包的工具，支持扫描重复文件、扫描超出指定大小的文件、统计分析各类型文件的总大小和占比。工具结果以JSON和HTML两种格式输出，需要Java8及以上环境运行。",
+      "key_topics": ["扫描工具", "应用包分析", "重复文件", "文件大小统计"]
+    },
+    {
+      "doc_id": "acm-tool",
+      "title": "acm工具",
+      "path": "../../docs/zh-cn/application-dev/tools/acm-tool.md",
+      "summary": "Account Manager（账号管理工具，简称acm）是实现账号创建、删除、查询等功能的工具，acm为开发者提供基本的管理本地账号的能力。支持help、create、delete、dump、switch、deactivate、set等命令，用于账号的创建、删除、查询、切换、注销和约束设置。",
+      "key_topics": ["acm工具", "账号管理", "账号创建", "账号删除", "账号切换"]
+    },
+    {
+      "doc_id": "Readme-CN",
+      "title": "调试工具",
+      "path": "../../docs/zh-cn/application-dev/tools/Readme-CN.md",
+      "summary": "调试工具文档，提供了多种开发调试工具的索引，包括SDK命令行工具、aa工具、bm工具、打包拆包工具、扫描工具、cem工具、anm工具、edm工具、restool工具、LLDB工具、param工具、power-shell工具、OpenHarmony SDK升级助手、atm工具、network-cfg工具、acm工具以及命令行工具集合（toybox、mediatool、devicedebug、rawheap-translator）和二进制签名工具等。",
+      "key_topics": ["调试工具", "工具索引", "开发调试"]
+    },
+    {
+      "doc_id": "command-line-tools-overview",
+      "title": "SDK命令行工具简介",
+      "path": "../../docs/zh-cn/application-dev/tools/command-line-tools-overview.md",
+      "summary": "SDK命令行工具的总体介绍，包含hdc、aa、bm、hilog、打包工具、拆包工具等常用工具列表及其功能说明。",
+      "key_topics": ["SDK命令行工具", "工具列表", "hdc", "aa", "bm"]
+    }
+  ]
 }

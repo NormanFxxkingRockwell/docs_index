@@ -1,7 +1,36 @@
 {
   "doc_id": "devicedebug-tool",
   "title": "devicedebug工具",
-  "path": "../../docs/zh-cn/application-dev/tools/devicedebug-tool.md",
-  "summary": "devicedebug工具向开发者提供对调试应用发送信号的能力，目前仅支持向AMS管理的debug类型的应用进程的pid发送signal信号，达到终止对应pid进程的能力。支持help、kill等命令，用于向debug类型的应用进程发送信号终止进程。",
-  "key_topics": ["devicedebug工具", "进程终止", "信号发送", "调试应用"]
+  "path": "zh-cn/application-dev/tools/devicedebug-tool.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/devicedebug-tool.md",
+  "metadata": {
+    "kit": "",
+    "subsystem": "",
+    "owner": "",
+    "designer": "",
+    "tester": "",
+    "adviser": ""
+  },
+  "summary": "devicedebug工具向开发者提供对调试应用发送信号的能力，目前仅支持向AMS管理的debug类型的应用进程的pid发送signal信号，达到终止对应pid进程的能力。工具支持help和kill两个命令，用于显示帮助信息和终止指定进程。",
+  "structure": {
+    "title": "devicedebug工具",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "帮助命令",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 36,
+        "summary": "帮助命令用于显示devicedebug支持的命令信息，通过devicedebug help命令执行。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "终止进程命令",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 60,
+        "summary": "终止进程命令用于向debug类型的应用进程发送signal（1-64）信号，应用终止对应pid进程。支持help/-h参数显示帮助信息，使用-signal pid格式终止指定进程。"
+      }
+    ]
+  }
 }

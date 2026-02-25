@@ -1,7 +1,84 @@
 {
   "doc_id": "lldb-tool-sys",
   "title": "LLDB工具（仅对系统应用开放）",
-  "path": "../../docs/zh-cn/application-dev/tools/lldb-tool-sys.md",
-  "summary": "LLDB是新一代高性能调试器，具备断点设置、变量查看与修改、内存操作、线程控制、表达式计算、堆栈回溯等功能，并支持跨平台和插件扩展。是HUAWEI DevEco Studio工具链的默认调试器，支持调试C和C++应用程序。",
-  "key_topics": ["LLDB工具", "调试器", "断点设置", "变量查看", "内存操作"]
+  "path": "zh-cn/application-dev/tools/lldb-tool-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/lldb-tool-sys.md",
+  "metadata": {
+    "kit": "NDK",
+    "subsystem": "arkcompiler",
+    "owner": "@Maxi_241437",
+    "designer": "@da_wei_li11",
+    "tester": "@chenhliang",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "本文档介绍了LLDB调试工具的使用方法，包括功能特点、工具获取、环境准备、本地调试和远程调试的使用指导，以及常见问题解答。LLDB是基于llvm15.0.4适配的高性能调试器，支持断点设置、变量查看、内存操作、线程控制等功能，适用于Windows、Linux x86_64、ohos和Mac平台。",
+  "structure": {
+    "title": "LLDB工具（仅对系统应用开放）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 16,
+        "summary": "LLDB是新一代高性能调试器，具备断点设置、变量查看与修改、内存操作、线程控制、表达式计算、堆栈回溯等功能，并支持跨平台和插件扩展。当前OpenHarmony中的LLDB工具基于llvm15.0.4适配演进，是HUAWEI DevEco Studio工具链的默认调试器，支持调试C和C++应用程序。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "功能特点",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 23,
+        "summary": "LLDB调试器具备强大的调试功能（断点设置、变量查看与修改、内存操作、线程控制、表达式计算、堆栈回溯等）、跨平台支持（Windows、Linux x86_64、ohos和Mac平台）和插件扩展性，方便开发者根据需求进行定制。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "工具获取路径",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 33,
+        "summary": "通过OpenHarmony的SDK获取LLDB工具，获取路径为http://ci.openharmony.cn/workbench/cicd/dailybuild。lldb工具在SDK中的路径为\\ohos-sdk\\[system]\\native\\llvm，其中system可选windows/linux/darwin。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "功能列表",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 148,
+        "summary": "列举了LLDB调试器支持的功能，包括记录日志、断点管理、观察点管理、表达式处理、查看变量、进程/线程管理、汇编处理、源码信息获取、信号处理和attach进程等功能的详细命令示例。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "环境准备",
+        "level": 2,
+        "line_start": 149,
+        "line_end": 173,
+        "summary": "介绍了本地调试和远程调试的环境准备。本地调试无需使用DevEco IDE，可以直接在设备端进行调试。远程调试包括一键调试（通过DevEco Studio）和手动调试（需要保证设备上有lldb-server，PC上有lldb）。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "使用指导-本地调试",
+        "level": 2,
+        "line_start": 174,
+        "line_end": 317,
+        "summary": "详细介绍了使用LLDB工具启动并调试应用的步骤，以及调试已经启动的应用的步骤。包括获取可执行文件、运行LLDB工具、设置断点、运行应用、继续运行、列出断点、显示变量等操作。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "使用指导-远程调试",
+        "level": 2,
+        "line_start": 318,
+        "line_end": 416,
+        "summary": "详细介绍了远程调试的步骤，以Windows平台连接arm架构OpenHarmony设备为例。包括关闭SELinux、推送lldb-server和可执行文件到设备、运行lldb-server、运行lldb、选择远端平台并连接、创建目标、设置断点、启动应用等操作。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "FAQ",
+        "level": 2,
+        "line_start": 417,
+        "line_end": 428,
+        "summary": "解答了常见问题：当执行run命令时返回'A' packet returned an error: 8错误，通常表明调试器无法创建调试进程，主要原因是权限不足；运行lldb-server报错Permission denied，一般是由于lldb-server无可执行权限导致的。"
+      }
+    ]
+  }
 }

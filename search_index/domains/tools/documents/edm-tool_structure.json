@@ -1,7 +1,68 @@
 {
   "doc_id": "edm-tool",
   "title": "edm工具",
-  "path": "../../docs/zh-cn/application-dev/tools/edm-tool.md",
-  "summary": "Enterprise Device Manager为设备管理应用提供调试和测试能力，例如激活企业设备管理拓展能力、解除激活企业设备管理拓展能力。支持help、enable-admin、disable-admin等命令，用于激活或解除激活enterpriseAdmin类型的ExtensionAbility。",
-  "key_topics": ["edm工具", "企业设备管理", "EDM", "设备管理"]
+  "path": "zh-cn/application-dev/tools/edm-tool.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/edm-tool.md",
+  "metadata": {
+    "kit": "MDM Kit",
+    "subsystem": "Customization",
+    "owner": "@huanleima",
+    "designer": "@liuzuming",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Enterprise Device Manager（企业设备管理工具，简称为edm），为设备管理应用提供调试和测试能力，例如激活企业设备管理拓展能力、解除激活企业设备管理拓展能力。",
+  "structure": {
+    "title": "edm工具",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "环境要求",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 14,
+        "summary": "在使用本工具前，开发者需要先获取hdc工具，执行hdc shell。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "edm工具命令列表",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 22,
+        "summary": "列出edm工具支持的命令，包括help帮助命令、enable-admin激活命令、disable-admin解除激活命令。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "帮助命令（help）",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 30,
+        "summary": "显示edm工具的帮助信息，用于查询edm支持的命令信息。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "激活命令（enable-admin）",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 59,
+        "summary": "用于激活企业设备管理拓展能力，目标组件必须为enterpriseAdmin类型的ExtensionAbility。支持指定bundleName、abilityName和adminType参数。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "解除激活命令（disable-admin）",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 85,
+        "summary": "用于解除激活企业设备管理拓展能力，需要指定bundleName参数。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "edm工具错误信息",
+        "level": 2,
+        "line_start": 86,
+        "line_end": 228,
+        "summary": "列出edm工具可能遇到的错误信息，包括错误描述、可能原因和处理步骤，涵盖参数错误、激活失败、解除激活失败等场景。"
+      }
+    ]
+  }
 }

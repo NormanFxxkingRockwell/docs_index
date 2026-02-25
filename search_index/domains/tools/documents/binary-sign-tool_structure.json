@@ -1,7 +1,68 @@
 {
   "doc_id": "binary-sign-tool",
   "title": "二进制签名工具",
-  "path": "../../docs/zh-cn/application-dev/tools/binary-sign-tool.md",
-  "summary": "Binary Sign Tool用于对二进制文件进行代码签名，支持通过命令行的方式对标准ELF文件进行代码签名或打印已签名ELF的权限、证书信息。支持help、sign、display-sign等命令，用于二进制文件签名、打印文件签名证书信息等。",
-  "key_topics": ["binary-sign-tool工具", "代码签名", "ELF签名文件", "证书信息"]
+  "path": "zh-cn/application-dev/tools/binary-sign-tool.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/binary-sign-tool.md",
+  "metadata": {
+    "kit": "Common",
+    "subsystem": "Security",
+    "owner": "@zhanganxiang",
+    "designer": "@renzehua; @huangjieliang; @zhanganxiang",
+    "tester": "@rongwei",
+    "adviser": "@zengyawen"
+  },
+  "summary": "Binary Sign Tool（二进制签名工具）用于对二进制文件进行代码签名，支持通过命令行的方式对标准ELF文件进行代码签名或打印已签名ELF的权限、证书信息。工具提供help、sign、display-sign三个主要命令，支持Linux平台和OpenHarmony PC/2in1平台，可进行证书签名和自签名两种模式。",
+  "structure": {
+    "title": "二进制签名工具",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "命令行工具获取",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 16,
+        "summary": "介绍如何获取二进制签名工具。支持运行在Linux平台的工具，可从SDK库openHarmony/toolchains/lib中找到；支持运行在OpenHarmony PC/2in1平台的工具，从应用商店下载安装DevBox软件即可使用。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "二进制签名工具命令列表",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 24,
+        "summary": "列出二进制签名工具支持的所有命令，包括help（帮助命令）、sign（二进制文件签名）、display-sign（打印文件签名证书信息）。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "帮助命令（help）",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 30,
+        "summary": "帮助命令用于查询工具支持的命令信息，使用binary-sign-tool -help显示帮助信息。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "签名命令（sign）",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 60,
+        "summary": "签名命令用于对二进制文件进行签名，支持证书签名和自签名两种模式。主要参数包括keyAlias、keyPwd、appCertCertFile、profileFile、signAlg、keystoreFile、inFile、outFile等，提供使用证书签名和自签名的示例。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "打印签名证书信息命令（display-sign）",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 86,
+        "summary": "display-sign命令用于打印二进制文件的签名证书信息，包括权限信息和签名信息。通过-inFile参数指定输入的elf文件，可输出无权限信息、权限信息、无代码签名、自签名模式或签名证书等多种状态。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "错误信息",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 175,
+        "summary": "详细列出二进制签名工具可能出现的各种错误信息及处理方法，包括FILE_NOT_FOUND（文件不存在或路径不正确）、COMMAND_PARAM_ERROR（命令参数错误）、KEY_PASSWORD_ERROR（密钥对密码错误）、NOT_SUPPORT_ERROR（不支持的文件类型）、KEY_ALIAS_ERROR（密钥别名已存在）、SIGN_ERROR（签名密钥与证书不匹配）等错误的描述、可能原因和处理步骤。"
+      }
+    ]
+  }
 }

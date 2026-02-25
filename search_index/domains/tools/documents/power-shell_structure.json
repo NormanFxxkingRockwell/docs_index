@@ -1,7 +1,76 @@
 {
   "doc_id": "power-shell",
   "title": "power-shell工具",
-  "path": "../../docs/zh-cn/application-dev/tools/power-shell.md",
-  "summary": "power-shell是实现设备电源状态转换等功能的工具，为开发者提供基本的设备电源状态调试能力。支持help、setmode、wakeup、suspend、timeout等命令，用于设置电源模式（正常模式、省电模式、性能模式、超级省电模式）、亮屏、熄屏、设置自动熄屏时间等。",
-  "key_topics": ["power-shell工具", "电源管理", "电源模式", "亮屏", "熄屏"]
+  "path": "zh-cn/application-dev/tools/power-shell.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/power-shell.md",
+  "metadata": {
+    "kit": "",
+    "subsystem": "",
+    "owner": "",
+    "designer": "",
+    "tester": "",
+    "adviser": ""
+  },
+  "summary": "power-shell是实现设备电源状态转换等功能的工具，为开发者提供基本的设备电源状态调试能力，例如：熄屏、唤醒、设置电源模式等。",
+  "structure": {
+    "title": "power-shell工具",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "环境要求",
+        "level": 2,
+        "line_start": 6,
+        "line_end": 10,
+        "summary": "在使用本工具前，开发者需要先获取hdc工具，执行hdc shell。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "power-shell命令工具列表",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 20,
+        "summary": "列出power-shell支持的命令：help帮助命令、setmode设置电源模式、wakeup亮屏、suspend熄屏、timeout自动熄屏。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "帮助命令",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 28,
+        "summary": "显示power-shell支持的命令信息。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "设置电源模式命令",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 57,
+        "summary": "设置当前设备的电源模式，支持正常模式(600)、省电模式(601)、性能模式(602)、超级省电模式(603)。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "亮屏命令",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 78,
+        "summary": "唤醒系统并亮屏。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "熄屏命令",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 100,
+        "summary": "暂停系统并熄屏。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "自动熄屏命令",
+        "level": 2,
+        "line_start": 101,
+        "line_end": 122,
+        "summary": "覆盖或恢复系统设置中自动熄屏时间，支持-o参数设置时间（毫秒）和-r参数恢复系统设置。"
+      }
+    ]
+  }
 }

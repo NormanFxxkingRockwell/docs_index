@@ -1,7 +1,132 @@
 {
   "doc_id": "aa-tool",
   "title": "aa工具",
-  "path": "../../docs/zh-cn/application-dev/tools/aa-tool.md",
-  "summary": "Ability助手是用于启动应用和启动测试用例的工具，提供应用调试和测试能力。支持启动组件、强制停止进程、打印组件信息、停止服务、启动测试框架、进入/退出调试模式、等待调试、应用调试/调优、触发onMemoryLevel回调等命令。",
-  "key_topics": ["aa工具", "Ability助手", "应用启动", "测试框架", "调试模式"]
+  "path": "zh-cn/application-dev/tools/aa-tool.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/aa-tool.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "Ability",
+    "owner": "@lidongrui",
+    "designer": "@ccllee1",
+    "tester": "@lixueqing513",
+    "adadviser": "@huipeizi"
+  },
+  "summary": "Ability assistant（Ability助手，简称为aa），是用于启动应用和启动测试用例的工具，为开发者提供基本的应用调试和测试能力，例如启动应用组件、强制停止进程、打印应用组件相关信息等。文档详细介绍了aa工具的各个命令，包括start、stop-service、dump、force-stop、test、attach、detach、appdebug、process、send-memory-level等命令的使用方法、参数说明、返回值、错误码及示例。",
+  "structure": {
+    "title": "aa工具",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "环境要求",
+        "level": 2,
+        "line_start": 12,
+        "line_end": 25,
+        "summary": "介绍使用aa工具前的环境准备，需要先获取hdc工具并执行hdc shell。文档说明了交互式命令环境和直接执行命令的区别，提供了启动命令和应用调试/调优命令的示例。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "aa工具命令列表",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 41,
+        "summary": "列出aa工具支持的所有命令，包括help、start、stop-service、dump、force-stop、test、attach、detach、appdebug、process、send-memory-level等，并提供每个命令的简要描述。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "帮助命令（help）",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 48,
+        "summary": "介绍帮助命令的使用方法，用于查询aa支持的命令信息。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "启动命令（start）",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 193,
+        "summary": "详细介绍start命令的使用，包括显式启动和隐式启动Ability的语法、参数列表、返回值、错误码及示例。支持启动FA模型的PageAbility和ServiceAbility组件，以及Stage模型的UIAbility和ServiceExtensionAbility组件。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "停止命令（stop-service）",
+        "level": 2,
+        "line_start": 194,
+        "line_end": 231,
+        "summary": "介绍stop-service命令的使用，用于停止FA模型的ServiceAbility组件或Stage模型的ExtensionAbility组件。包含参数列表、返回值、错误码及示例。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "打印命令（dump<sup>(deprecated)</sup>）",
+        "level": 2,
+        "line_start": 232,
+        "line_end": 289,
+        "summary": "介绍dump命令的使用，用于打印应用组件的相关信息。该命令从API version 7开始支持，从API version 9废弃，替换命令为hidumper。包含参数列表、错误码及示例。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "强制停止进程命令（force-stop）",
+        "level": 2,
+        "line_start": 289,
+        "line_end": 324,
+        "summary": "介绍force-stop命令的使用，通过bundleName强制停止一个进程。包含参数列表、返回值、错误码及示例。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "启动测试框架命令（test）",
+        "level": 2,
+        "line_start": 324,
+        "line_end": 377,
+        "summary": "介绍test命令的使用，根据所携带的参数启动测试框架。包含参数列表、返回值、错误码及示例。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "进入调试模式命令（attach）",
+        "level": 2,
+        "line_start": 377,
+        "line_end": 412,
+        "summary": "介绍attach命令的使用，通过bundleName使指定应用进入调试模式。包含参数列表、返回值、错误码及示例。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "退出调试模式命令（detach）",
+        "level": 2,
+        "line_start": 412,
+        "line_end": 447,
+        "summary": "介绍detach命令的使用，通过bundleName使指定应用退出调试模式。包含参数列表、返回值、错误码及示例。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "等待调试命令（appdebug）",
+        "level": 2,
+        "line_start": 447,
+        "line_end": 493,
+        "summary": "介绍appdebug命令的使用，用于设置、取消设置应用等待调试状态，以及获取处于等待调试状态的应用包名和持久化信息。等待调试状态只对debug类型应用生效。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "应用调试/调优命令（process）",
+        "level": 2,
+        "line_start": 493,
+        "line_end": 536,
+        "summary": "介绍process命令的使用，对应用进行调试或调优，IDE用该命令集成调试和调优工具。包含调试应用和调优应用两种使用方式，以及参数列表、返回值、错误码及示例。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "onMemoryLevel回调命令（send-memory-level）",
+        "level": 2,
+        "line_start": 536,
+        "line_end": 569,
+        "summary": "介绍send-memory-level命令的使用，从API version 13开始，开发者可以通过该命令来调试应用的onMemoryLevel生命周期。通过指定进程的pid和内存使用级别来触发该进程的onMemoryLevel生命周期回调。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "aa工具错误码",
+        "level": 2,
+        "line_start": 569,
+        "line_end": 1136,
+        "summary": "详细列出aa工具所有错误码，包括错误码ID、错误信息、错误描述、可能原因及处理步骤。涵盖从10103001到10106701等各类错误，帮助开发者快速定位和解决问题。"
+      }
+    ]
+  }
 }

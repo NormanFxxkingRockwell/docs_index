@@ -1,7 +1,68 @@
 {
   "doc_id": "rawheap-translator",
   "title": "rawheap-translator工具",
-  "path": "../../docs/zh-cn/application-dev/tools/rawheap-translator.md",
-  "summary": "rawheap-translator工具用于解析应用在ArkTS内存OOM时自动生成的.rawheap文件，生成.heapsnapshot文件。该文件可通过DevEco Studio的Heap Snapshot离线导入或Chrome浏览器的开发者工具中的内存工具导入并查看。支持OHOS、Windows、Linux和MacOS平台。",
-  "key_topics": ["rawheap-translator工具", "内存分析", "Heap Dump", "OOM", "heapsnapshot"]
+  "path": "zh-cn/application-dev/tools/rawheap-translator.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/rawheap-translator.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "ArkCompiler",
+    "owner": "@wanghuan2025",
+    "designer": "@wanghuan2025",
+    "tester": "@kir175; @zsw_zhushiwei",
+    "adviser": "@jinqiuheng"
+  },
+  "summary": "rawheap-translator工具用于解析ArkTS应用OOM时生成的.rawheap二进制文件，将其转换为.heapsnapshot文件，以便在DevEco Studio或Chrome浏览器中查看堆内存信息。文档详细介绍了工具的使用场景、获取方式、环境配置、使用方法、命令参数、解析示例、文件规格说明以及常见问题解决方案。",
+  "structure": {
+    "title": "rawheap-translator工具",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 11,
+        "summary": "介绍rawheap-translator工具的主要用途：解析ArkTS应用OOM时自动生成的.rawheap二进制文件，生成可通过DevEco Studio或Chrome开发者工具导入查看的.heapsnapshot文件。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用指导",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 63,
+        "summary": "详细说明工具的获取方式（OHOS设备内置、SDK获取）和环境配置方法，包括OHOS平台直接使用，以及Windows、MacOS等非OHOS平台的环境变量配置步骤。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "使用方法",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 76,
+        "summary": "提供解析命令格式和参数列表说明，包括rawheap_file必选参数和heapsnapshot_file可选参数的详细描述及使用注意事项。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "解析命令示例",
+        "level": 2,
+        "line_start": 78,
+        "line_end": 124,
+        "summary": "展示OHOS、Windows、Linux、MacOS四个平台的具体解析命令示例，包括工具路径、文件路径设置和参考输出信息。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "文件参考规格",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 146,
+        "summary": "说明rawheap文件大小和生成耗时与堆内存大小的关系，介绍TRIM_LEVEL_1和TRIM_LEVEL_2两种规格的特点，并提供不同堆大小下的文件大小、生成耗时和解析耗时参考数据。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "常见问题",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 190,
+        "summary": "提供工具版本不匹配和文件无法打开两个常见问题的现象描述、原因分析和解决措施，帮助开发者快速定位和解决问题。"
+      }
+    ]
+  }
 }

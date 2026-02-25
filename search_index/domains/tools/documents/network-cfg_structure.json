@@ -1,7 +1,52 @@
 {
   "doc_id": "network-cfg",
   "title": "network-cfg工具",
-  "path": "../../docs/zh-cn/application-dev/tools/network-cfg.md",
-  "summary": "network-cfg是为开发人员提供的用于设置网络相关参数的工具，例如给WiFi设置代理等。从API version 20开始支持。支持help、set等命令，用于设置或取消当前WiFi代理。",
-  "key_topics": ["network-cfg工具", "网络配置", "WiFi代理", "网络参数"]
+  "path": "zh-cn/application-dev/tools/network-cfg.md",
+  "relative_path": "../../docs/zh-cn/application-dev/tools/network-cfg.md",
+  "metadata": {
+    "kit": "Network Kit",
+    "subsystem": "Communication",
+    "owner": "@wmyao_mm",
+    "designer": "@guo-min_net",
+    "tester": "@tongxilin",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "network-cfg是为开发人员提供的用于设置网络相关参数的工具（其中\"cfg\"为\"config\"的缩写），例如给Wi-Fi设置代理等。该工具从API version 20开始支持，主要功能包括显示帮助信息和设置网络相关参数（如Wi-Fi代理）。",
+  "structure": {
+    "title": "network-cfg工具",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "环境要求",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 20,
+        "summary": "在使用本工具前，开发者需要先获取hdc工具，执行hdc shell。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "network-cfg命令工具列表",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 27,
+        "summary": "列出network-cfg支持的命令，包括help帮助命令和set设置网络相关参数命令。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "帮助命令",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 35,
+        "summary": "显示帮助信息，使用network-cfg help或network-cfg -h命令。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "设置网络相关参数命令",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 66,
+        "summary": "设置网络相关参数，包括显示set支持的命令信息和设置或取消当前Wi-Fi代理。当前Wi-Fi处于连接状态时才可设置代理，端口号取值范围为[1, 65535]，仅对当前连接的Wi-Fi生效。"
+      }
+    ]
+  }
 }
