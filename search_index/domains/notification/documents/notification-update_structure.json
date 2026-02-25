@@ -11,7 +11,7 @@
     "tester": "@wanghong1997",
     "adviser": "@fang-jinxu"
   },
-  "summary": "介绍如何更新已发布的通知，主要用于上传下载进度更新、IM会话消息更新等场景，通过updateOnly字段控制更新行为。",
+  "summary": "本文档介绍如何更新已发布的通知，主要用于上传下载进度更新、IM会话消息更新等场景。详细说明了通知发布更新接口的使用方法，包括updateOnly参数的作用，以及通过完整的代码示例展示如何发布进度条通知并更新进度。",
   "structure": {
     "title": "更新通知",
     "sections": [
@@ -20,8 +20,8 @@
         "title": "接口说明",
         "level": 2,
         "line_start": 12,
-        "line_end": 23,
-        "summary": "介绍通知更新接口的使用方法，包括updateOnly字段的作用和publish接口的使用。"
+        "line_end": 24,
+        "summary": "介绍通知发布更新接口的详细说明，包括publish接口的使用方法。详细解释了updateOnly参数的作用：当为true时仅更新相同ID的通知，不存在则失败；当为false时若相同ID通知不存在则创建新通知。"
       },
       {
         "section_id": "section-2",
@@ -29,7 +29,7 @@
         "level": 2,
         "line_start": 25,
         "line_end": 108,
-        "summary": "提供更新通知的完整开发步骤，包括导入模块、发布进度条通知、通过updateOnly字段更新进度条通知。"
+        "summary": "以进度条通知发布更新为例，提供完整的开发步骤。包括：1. 导入notificationManager、BusinessError和hilog模块；2. 发布初始进度条通知，使用downloadTemplate模板；3. 通过updateOnly字段更新进度条通知的进度值。"
       }
     ]
   }

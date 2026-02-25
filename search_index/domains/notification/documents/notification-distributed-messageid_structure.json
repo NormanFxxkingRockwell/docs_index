@@ -11,7 +11,7 @@
     "tester": "@wanghong1997",
     "adviser": "@fang-jinxu"
   },
-  "summary": "介绍如何使用通知去重功能清除跨设备场景下的重复通知，通过在NotificationRequest中携带appMessageId字段实现通知去重，避免不同渠道发布的通知重复打扰用户。",
+  "summary": "从API version 20开始，为了避免不同渠道发布的通知重复打扰用户（例如，手机协同到当前设备的通知与Push推送服务发布的通知重复），可以使用通知去重功能，清除跨设备场景下的重复通知。",
   "structure": {
     "title": "清除跨设备场景下的重复通知",
     "sections": [
@@ -20,8 +20,8 @@
         "title": "实现原理",
         "level": 2,
         "line_start": 12,
-        "line_end": 17,
-        "summary": "介绍通知去重的实现原理，通过appMessageId字段进行判断，设备只展示第一条通知。"
+        "line_end": 21,
+        "summary": "应用发送通知时携带唯一标识字段appMessageId，分布式通知接收到多渠道发布的通知后，会根据该字段进行判断，从而实现通知去重。设备只会展示第一条通知，后续收到的重复通知会被静默去重，不展示、不提醒。"
       },
       {
         "section_id": "section-2",
@@ -29,7 +29,7 @@
         "level": 2,
         "line_start": 22,
         "line_end": 26,
-        "summary": "介绍通知去重功能的约束条件，包括appMessageId字段的唯一性和有效期限制。"
+        "summary": "appMessageId字段的唯一性需由开发者保证，同一条通知在各个设备形态上需保证字段相同。appMessageId字段仅在发布通知的24小时内有效，超过24小时或者设备重启时该字段会失效。"
       },
       {
         "section_id": "section-3",
@@ -37,7 +37,7 @@
         "level": 2,
         "line_start": 27,
         "line_end": 32,
-        "summary": "介绍通知去重相关的接口，包括publish接口的使用方法。"
+        "summary": "提供publish接口用于发布通知，使用方法见对象NotificationRequest中appMessageId字段说明。"
       },
       {
         "section_id": "section-4",
@@ -45,7 +45,7 @@
         "level": 2,
         "line_start": 33,
         "line_end": 72,
-        "summary": "提供通知去重的完整开发步骤，包括导入模块、发布包含appMessageId字段的通知消息。"
+        "summary": "包括导入模块和发布通知消息两个步骤，通知消息中需包含appMessageId字段以实现去重功能。"
       }
     ]
   }

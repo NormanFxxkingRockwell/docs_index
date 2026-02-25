@@ -1,7 +1,7 @@
 {
   "doc_id": "notification-enable",
   "title": "请求通知授权",
-  "path": "zh-cn/application-dev/notification/notification-enable.md",
+  "path": "zh-cn/application-dev/notification/notification-enable.md.md",
   "relative_path": "../../docs/zh-cn/application-dev/notification/notification-enable.md",
   "metadata": {
     "kit": "Notification Kit",
@@ -11,7 +11,7 @@
     "tester": "@wanghong1997",
     "adviser": "@fang-jinxu"
   },
-  "summary": "介绍如何请求通知授权，应用需要获取用户授权才能发送通知，包括查询通知授权状态、请求通知授权、拉起通知管理弹窗等接口的使用方法。",
+  "summary": "本文档介绍了如何请求通知授权。应用需要获取用户授权才能发送通知，通过调用requestEnableNotification()接口弹窗让用户选择是否允许发送通知。当用户拒绝授权后，无法通过该接口再次拉起弹窗，可以使用openNotificationSettings接口拉起通知管理半模态弹窗再次申请授权。文档提供了接口说明和完整的开发步骤，包括导入模块、拉起通知弹窗请求授权以及可选的拉起通知管理半模态弹窗。",
   "structure": {
     "title": "请求通知授权",
     "sections": [
@@ -20,16 +20,16 @@
         "title": "接口说明",
         "level": 2,
         "line_start": 12,
-        "line_end": 24,
-        "summary": "介绍通知授权相关的接口，包括isNotificationEnabled、requestEnableNotification和openNotificationSettings接口。"
+        "line_end": 23,
+        "summary": "介绍了通知授权相关的三个接口：isNotificationEnabled()用于查询通知是否授权，requestEnableNotification()用于请求发送通知的许可，openNotificationSettings()用于拉起通知管理弹窗。"
       },
       {
         "section_id": "section-2",
         "title": "开发步骤",
         "level": 2,
         "line_start": 25,
-        "line_end": 94,
-        "summary": "提供请求通知授权的完整开发步骤，包括导入模块、拉起通知弹窗请求授权、拉起通知管理半模态弹窗再次申请授权。"
+        "line_end": 90,
+        "summary": "提供了三个开发步骤：1. 导入NotificationManager模块及相关依赖；2. 拉起通知弹窗向用户请求通知授权，可通过错误码判断用户是否授权；3. 可选步骤，拉起通知管理半模态弹窗向用户再次申请通知授权。每个步骤都包含完整的代码示例。"
       }
     ]
   }

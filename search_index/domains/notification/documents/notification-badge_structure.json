@@ -11,7 +11,7 @@
     "tester": "@wanghong1997",
     "adviser": "@fang-jinxu"
   },
-  "summary": "介绍如何管理通知角标，包括增加和减少角标数量的方法，支持通过发布通知时携带badgeNumber字段或调用setBadgeNumber接口设置角标数量。",
+  "summary": "本文档介绍了如何管理通知角标，包括在桌面图标右上角显示未读通知个数。文档详细说明了角标的增加和减少机制，介绍了setBadgeNumber接口的使用方法，提供了完整的开发步骤和代码示例，包括导入模块、增加角标个数、减少角标个数等操作。此外，还解答了关于异步接口调用顺序的常见问题，提供了反例和正例代码对比。",
   "structure": {
     "title": "管理通知角标",
     "sections": [
@@ -21,23 +21,23 @@
         "level": 2,
         "line_start": 17,
         "line_end": 32,
-        "summary": "介绍通知角标管理的接口，包括setBadgeNumber接口的功能和使用方法。"
+        "summary": "说明了角标设定个数的取值规则：小于等于0时清除角标，大于99时显示99+。介绍了增加角标数的两种方法：通过NotificationRequest的badgeNumber字段携带或调用setBadgeNumber()接口设置。减少角标数仅支持通过setBadgeNumber()接口设置。提供了setBadgeNumber接口的详细描述。"
       },
       {
         "section_id": "section-2",
         "title": "开发步骤",
         "level": 2,
         "line_start": 34,
-        "line_end": 82,
-        "summary": "提供通知角标管理的完整开发步骤，包括导入模块、增加角标个数、减少角标个数的操作。"
+        "line_end": 81,
+        "summary": "提供了完整的开发步骤，包括：1. 导入NotificationManager模块及相关依赖；2. 增加角标个数，提供了调用setBadgeNumber接口的完整代码示例；3. 减少角标个数，说明了通知被查看后需要调用接口设置剩余未读通知个数，并提供了相应的代码示例。"
       },
       {
         "section_id": "section-3",
         "title": "常见问题",
         "level": 2,
         "line_start": 83,
-        "line_end": 136,
-        "summary": "介绍使用setBadgeNumber接口时的常见问题和注意事项，包括异步接口调用顺序的保证方法。"
+        "line_end": 135,
+        "summary": "解答了关于setBadgeNumber异步接口连续调用时的顺序问题。说明了由于接口是异步的，连续调用时需要确保上一次设置完成后才能进行下一次设置。提供了反例代码（相互独立的调用，无法保证顺序）和正例代码（存在依赖关系的链式调用）进行对比说明。"
       }
     ]
   }

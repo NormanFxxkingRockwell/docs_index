@@ -2,7 +2,7 @@
   "doc_id": "live-view-notification-sys",
   "title": "发布实况窗类型通知（仅对系统应用开放）",
   "path": "zh-cn/application-dev/notification/live-view-notification-sys.md",
-  "relative_path": "../../docs/zhzh-cn/application-dev/notification/live-view-notification-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/notification/live-view-notification-sys.md",
   "metadata": {
     "kit": "Notification Kit",
     "subsystem": "Notification",
@@ -11,7 +11,7 @@
     "tester": "@wanghong1997",
     "adviser": "@fang-jinxu"
   },
-  "summary": "介绍如何发布实况窗类型通知，该类型通知可以让用户实时感知当前任务的进度，主要用于展示录音、录屏、音视频播放、计时、通话等长时任务的实时进展，支持按钮、胶囊、进度、时间等元素配置。",
+  "summary": "本文档介绍如何发布实况窗类型通知（仅对系统应用开放）。实况窗类型通知可以让用户实时感知当前任务的进度，主要用于展示录音、录屏、音视频播放、计时、通话等长时任务的实时进展。此类通知不会进行持久化存储，其生命周期与通知发布方的生命周期一致。文档包含基础类型通知内容分类表、接口说明（publish和cancel接口）以及完整的开发步骤示例代码。",
   "structure": {
     "title": "发布实况窗类型通知（仅对系统应用开放）",
     "sections": [
@@ -21,7 +21,7 @@
         "level": 2,
         "line_start": 18,
         "line_end": 27,
-        "summary": "介绍实实况窗类型通知的发布和取消接口，包括publish和cancel接口的使用方法。"
+        "summary": "介绍通知发布接口，包括publish（发布通知）和cancel（取消指定的通知）两个接口，说明通过NotificationRequest入参来指定通知发布的详情，包括通知内容、通知ID、通知的通道类型和通知发送时间等信息。"
       },
       {
         "section_id": "section-2",
@@ -29,7 +29,7 @@
         "level": 2,
         "line_start": 28,
         "line_end": 112,
-        "summary": "提供实况窗类型通知的完整开发步骤，包括导入模块、发布通知、配置按钮、胶囊、进度、时间等元素。"
+        "summary": "提供完整的开发步骤示例代码，包括导入模块和发布通知两个步骤。系统实况窗类型通知继承了普通文本类型的字段，新增了类型标识符、胶囊、按钮、时间和进度等字段。示例展示了如何创建NotificationRequest对象，配置实况窗类型、内容、按钮、胶囊、进度和时间等参数，以及如何订阅系统实况窗和发布通知。"
       }
     ]
   }

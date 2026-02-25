@@ -11,7 +11,7 @@
     "tester": "@wanghong1997",
     "adviser": "@fang-jinxu"
   },
-  "summary": "介绍系统应用如何订阅通知，包括订阅所有应用发布的通知和订阅某些应用发布的通知，提供NotificationSubscriber对象用于接收通知变化回调。",
+  "summary": "本文档介绍通知订阅功能，该功能仅对系统应用开放。文档阐述了通知订阅原理、业务流程（通知发送端、通知订阅端、通知子系统）、主要接口（subscribe订阅接口、NotificationSubscriber回调接口）以及完整的开发步骤，包括权限申请、模块导入、订阅者对象创建和订阅发起等操作。",
   "structure": {
     "title": "订阅通知（仅对系统应用开放）",
     "sections": [
@@ -20,16 +20,16 @@
         "title": "通知订阅原理",
         "level": 2,
         "line_start": 15,
-        "line_end": 26,
-        "summary": "介绍通知订阅的业务流程和原理，包括通知子系统、通知发送端、通知订阅端的组成。"
+        "line_end": 27,
+        "summary": "介绍通知订阅的业务流程，由通知子系统、通知发送端、通知订阅端组成。通知从发送端通过IPC通信发送到通知子系统，再分发给订阅端。通知发送端可以是三方应用或系统应用，订阅端只能为系统应用（如通知中心）。"
       },
       {
         "section_id": "section-2",
         "title": "接口说明",
         "level": 2,
         "line_start": 28,
-        "line_end": 55,
-        "summary": "介绍通知订阅的主要接口和回调接口，包括subscribe接口和各种回调接口。"
+        "line_end": 56,
+        "summary": "列出通知订阅的主要接口，包括subscribe订阅接口（订阅指定应用通知和订阅所有通知）和NotificationSubscriber回调接口（ononConsume通知回调、onCancel通知取消回调、onUpdate排序更新回调、onConnect订阅成功回调、onDisconnect取消订阅回调、onDestroy断开回调、onDoNotDisturbChanged免打扰时间变更回调、onEnabledNotificationChanged通知开关变更回调、onBadgeChanged角标个数变化回调）。"
       },
       {
         "section_id": "section-3",
@@ -37,7 +37,7 @@
         "level": 2,
         "line_start": 57,
         "line_end": 109,
-        "summary": "提供订阅通知的完整开发步骤，包括申请权限、导入模块、创建订阅者对象、发起通知订阅。"
+        "summary": "提供完整的开发步骤：1. 申请ohos.permission.NOTIFICATION_CONTROLLER权限；2. 导入通知订阅模块（notificationSubscribe、notificationManager等）；3. 创建订阅者对象，配置各种回调函数；4. 发起通知订阅，使用callback形式调用异步接口。"
       }
     ]
   }

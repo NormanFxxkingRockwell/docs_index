@@ -11,7 +11,7 @@
     "tester": "@wanghong1997",
     "adviser": "@fang-jinxu"
   },
-  "summary": "介绍Notification Kit（用户通知服务）的功能和特点，为开发者提供本地通知发布通道，支持多种通知类型和样式，包括文本、进度条、角标等。",
+  "summary": "Notification Kit（用户通知服务）为开发者提供本地通知发布通道，支持文本、进度条等多种通知类型，提供通知数字角标、取消通知、查询通知列表等功能。应用可请求用户授权发布通知，通知会在客户端本地推送给用户，产生铃声、震动、横幅、锁屏、息屏、通知栏提醒和显示。",
   "structure": {
     "title": "Notification Kit简介",
     "sections": [
@@ -20,8 +20,8 @@
         "title": "使用场景",
         "level": 2,
         "line_start": 12,
-        "line_end": 16,
-        "summary": "介绍Notification Kit的使用场景，包括同步上传下载进度、发布即时客服支付通知、更新运动步数等。"
+        "line_end": 15,
+        "summary": "当应用进程处于运行时，开发者可以使用Notification Kit向用户发布通知。可在多种场景中运用本地通知能力，如同步用户的上传下载进度、发布即时的客服支付通知、更新运动步数等。"
       },
       {
         "section_id": "section-2",
@@ -29,7 +29,7 @@
         "level": 2,
         "line_start": 17,
         "line_end": 26,
-        "summary": "介绍Notification Kit支持的能力范围，包括发布通知、管理角标、取消通知、查询通知列表、查询授权状态等。"
+        "summary": "Notification Kit支持发布文本、进度条等类型通知，携带或更新应用通知数字角标，取消曾经发布的某条或全部通知，查询已发布的通知列表，查询应用自身通知开关状态，以及拉起授权框请求用户授权发布通知。"
       },
       {
         "section_id": "section-3",
@@ -37,31 +37,31 @@
         "level": 2,
         "line_start": 28,
         "line_end": 38,
-        "summary": "介绍使用Notification Kit的主要业务流程，包括请求通知授权、发布通知、展示通知到通知中心。"
+        "summary": "使用Notification Kit的主要业务流程包括：请求通知授权，应用发布通知到通知服务，将通知展示到通知中心。"
       },
       {
         "section_id": "section-4",
         "title": "通知样式",
         "level": 2,
         "line_start": 40,
-        "line_end": 53,
-        "summary": "介绍Notification Kit中常用的通知样式，包括文本、多行文本、通知角标、进度条等类型。"
+        "line_end": 52,
+        "summary": "Notification Kit中常用的通知样式包括文本通知、多行文本通知、通知角标、进度条通知等。实际显示效果依赖设备能力和通知中心UI设计样式。"
       },
       {
         "section_id": "section-5",
         "title": "约束限制",
         "level": 2,
         "line_start": 54,
-        "line_end": 66,
-        "summary": "介绍Notification Kit的约束限制，包括通知留存数量、通知长度限制、发布频次限制等。"
+        "line_end": 65,
+        "summary": "单个应用已发布的通知在通知中心等系统入口的留存数量有限（当前规格最多24条）。通知的长度不能超过200KB。通知的发布频次和更新频次有严格限制，单个应用发布新通知频次累计不能超过每秒10条，更新通知频次累计不能超过每秒20条。"
       },
       {
         "section_id": "section-6",
         "title": "与相关Kit的关系",
         "level": 2,
         "line_start": 67,
-        "line_end": 71,
-        "summary": "介绍Notification Kit与相关Kit的关系，包括Background Tasks Kit和Ability Kit的配合使用。"
+        "line_end": 70,
+        "summary": "Notification Kit创建的通知会即时显示在通知中心等系统入口。可通过Background Tasks Kit创建定时类通知提醒功能。可通过Ability Kit的getWantAgent接口设置用户点击通知后的行为意图。"
       }
     ]
   }

@@ -11,7 +11,7 @@
     "tester": "@wanghong1997",
     "adviser": "@fang-jinxu"
   },
-  "summary": "介绍如何开发通知订阅扩展能力，让三方应用接收系统通知并实现手机与穿戴设备之间的数据传输，包括实现NotificationSubscriberExtensionAbility的详细步骤和蓝牙通信示例。",
+  "summary": "本文档介绍了通知订阅扩展能力的开发步骤，包括接口说明、前提条件和详细的开发步骤。开发者需要实现NotificationSubscriberExtensionAbility，通过蓝牙连接将本机通知同步到穿戴设备，并配置相应的权限和模块文件。",
   "structure": {
     "title": "通知订阅扩展能力开发步骤",
     "sections": [
@@ -20,16 +20,16 @@
         "title": "接口说明",
         "level": 2,
         "line_start": 8,
-        "line_end": 14,
-        "summary": "介绍通知订阅扩展能力的接口，包括onDestroy、onReceiveMessage、onCancelMessages回调接口。"
+        "line_end": 13,
+        "summary": "列出了NotificationSubscriberExtensionAbility的三个核心接口：onDestroy（（销毁回调）、onReceiveMessage（接收通知回调）和onCancelMessages（取消通知回调）。"
       },
       {
         "section_id": "section-2",
         "title": "前提条件",
         "level": 2,
         "line_start": 15,
-        "line_end": 17,
-        "summary": "介绍开发通知订阅扩展能力的前提条件，包括申请SUBSCRIBE_NOTIFICATION权限。"
+        "line_end": 16,
+        "summary": "申请ohos.permission.SUBSCRIBE_NOTIFICATION权限。"
       },
       {
         "section_id": "section-3",
@@ -37,7 +37,7 @@
         "level": 2,
         "line_start": 18,
         "line_end": 273,
-        "summary": "提供通知订阅扩展能力的完整开发步骤，包括创建NotificationSubscriberExtensionAbility、配置extensionAbilities、实现蓝牙通信等。"
+        "summary": "详细说明了11个开发步骤：创建目录和NotificationSubscriberExtAbility.ets文件、实现三个回调方法、连接穿戴设备并订阅通知、调用OpenSubscriptionSettings接口引导用户授权、配置module.json5和string.json文件、处理蓝牙连接和消息发送、申请蓝牙权限。提供了完整的TypeScript代码示例，包括SppClientManager类用于管理蓝牙连接和数据传输。"
       }
     ]
   }
