@@ -1,0 +1,87 @@
+{
+  "doc_id": "arkts-utils/ason-parsing-generation-Abnormal-2",
+  "title": "验证示例代码同源--异常场景2",
+  "domain": "onlyfortest",
+  "path": "docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-2.md",
+  "summary": "本文档包含三个异常场景验证：ID无嵌套但代码不一致的场景、引用部分代码时注释不一致但代码内容一致的场景、以及文档代码块中ID重复但引用内容一致的场景。主要用于验证代码同源检查工具在不同异常情况下的处理能力。",
+  "metadata": {
+    "author": "",
+    "date": "",
+    "version": "",
+    "category": "测试验证"
+  },
+  "sections": [
+    {
+      "level": 2,
+      "title": "ID无嵌套，代码不一致",
+      "line_start": 3,
+      "line_end": 17,
+      "content": "代码不一致（缩进不一致,resolve关键字行缩进不一致）"
+    },
+    {
+      "level": 2,
+      "title": "引用部分代码（Exclude字段）",
+      "line_start": 20,
+      "line_end": 78,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "注释不一致（docs：多行注释 vs Sample:单行注释），代码内容一致",
+          "line_start": 22,
+          "line_end": 77
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "文档代码块中，id重复（但是引用的内容一致),验证扫描结果",
+      "line_start": 81,
+      "line_end": 133,
+      "content": "不应该报错"
+    }
+  ],
+  "code_blocks": [
+    {
+      "id": "promise_async_operation",
+      "language": "ts",
+      "line_start": 6,
+      "line_end": 16,
+      "reference_url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets",
+      "occurrence": 1
+    },
+    {
+      "id": "actor_model",
+      "language": "ts",
+      "line_start": 24,
+      "line_end": 76,
+      "reference_url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/MultithreadedConcurrency/MultiThreadConcurrencyOverview/entry/src/main/ets/pages/Index.ets",
+      "occurrence": 1
+    },
+    {
+      "id": "promise_async_operation",
+      "language": "ts",
+      "line_start": 85,
+      "line_end": 95,
+      "reference_url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets",
+      "occurrence": 2
+    },
+    {
+      "id": "async_await_sync_operation",
+      "language": "ts",
+      "line_start": 100,
+      "line_end": 132,
+      "reference_url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets",
+      "occurrence": 1
+    }
+  ],
+  "tags": [
+    "测试",
+    "异常场景",
+    "代码验证",
+    "Promise",
+    "Async",
+    "TaskPool"
+  ],
+  "language": "zh-CN",
+  "last_updated": "2026-02-25"
+}

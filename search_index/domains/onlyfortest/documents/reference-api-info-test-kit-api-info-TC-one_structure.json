@@ -1,0 +1,56 @@
+{
+  "doc_id": "reference/api-info-test-kit/api-info-TC-one",
+  "title": "API Info 测试场景1（reference文件夹下）",
+  "path": "zh-cn/application-dev/onlyfortest/reference/api-info-test-kit/api-info-TC-one.md",
+  "relative_path": "../../docs/zh-cn/application-dev/onlyfortest/reference/api-info-test-kit/api-info-TC-one.md",
+  "metadata": {
+    "api_version": 3,
+    "description": "本模块首批接口从API version 3开始支持"
+  },
+  "summary": "本文档为API Info测试场景1，位于reference文件夹下，用于测试API version信息的继承和废弃标记功能。文档包含。测试场景包括Test0-Section（api-info=7）、Test1-Section（api-info=3继承topic）、Test2-Section（已废弃，api-info=6）、Test8-Section（api-info=3）以及中文测试章节。",
+  "structure": {
+    "title": "API Info 测试场景1（reference文件夹下）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "Test0-Section",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 24,
+        "summary": "测试章节0，api-info值为7。包含两个子章节：Test4-subSection（已废弃，从API version 9开始支持，从API version 11开始废弃）和Test5-subSection（继承Test0-Section的api-info值7）。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Test1-Section",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 37,
+        "summary": "测试章节1，api-info值为3，继承自topic。包含两个子章节：Test3-subSection（api-info=8）和Test6-subSection（继承Test1-Section的api-info值3）。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "Test2-Section",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 50,
+        "summary": "测试章节2，已废弃，api-info值为6。从API version 6开始支持，从API version 9开始废弃。包含一个子章节Test7-subSection（已废弃，继承Test2-Section的api-info值6）。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "Test8-Section",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 57,
+        "summary": "测试章节8，api-info值为3，继承自topic。包含一个子章节Test9-subSection（继承Test8-Section的api-info值3）。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "中文下测试",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 65,
+        "summary": "中文测试章节，结果为3，继承topic下的api-info值。从API version 7开始支持，从API version 9开始废弃。"
+      }
+    ]
+  }
+}

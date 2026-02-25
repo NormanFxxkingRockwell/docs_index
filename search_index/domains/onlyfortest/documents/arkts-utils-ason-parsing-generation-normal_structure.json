@@ -1,0 +1,84 @@
+{
+  "doc_id": "arkts-utils/ason-parsing-generation-normal",
+  "domain": "onlyfortest",
+  "title": "验证示例代码同源--正常场景",
+  "description": "同一文档中，如果出现多次引用同一段代码，则引用代码必须完全相同。文档包含引用全量代码和引用部分代码（Exclude字段）的示例场景。",
+  "language": "zh-cn",
+  "path": "docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-normal.md",
+  "file_name": "ason-parsing-generation-normal.md",
+  "sections": [
+    {
+      "level": 1,
+      "title": "验证示例代码同源--正常场景",
+      "content": "前提：同一文档中，如果出现多次引用同一段代码，则引用代码必须完全相同",
+      "line_start": 1,
+      "line_end": 4
+    },
+    {
+      "level": 2,
+      "title": "引用全量代码",
+      "content": "",
+      "line_start": 5,
+      "line_end": 66
+    },
+    {
+      "level": 3,
+      "title": "ID无嵌套，代码完全一致",
+      "content": "```ts\nconst promise: Promise<number> = new Promise((resolve: Function, reject: Function) => {\n  setTimeout(() => {\n    const randomNumber: number = Math.random();\n    if (randomNumber > 0.5) {\n      resolve(randomNumber);\n    } else {\n      reject(new Error('Random number is too small'));\n    }\n  }, 1000);\n})\n```\n<!--@[promise_async_operation](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets)-->",
+      "line_start": 7,
+      "line_end": 21
+    },
+    {
+      "level": 3,
+      "title": "ID无嵌套，整段代码缩进不一致",
+      "content": "* list 1\n* list 2\n    ```ts\n    const promise: Promise<number> = new Promise((resolve: Function, reject: Function) => {\n    setTimeout(() => {\n        const randomNumber: number = Math.random();\n        if (randomNumber > 0.5) {\n        resolve(randomNumber);\n        } else {\n        reject(new Error('Random number is too small'));\n        }\n    }, 1000);\n    })\n    ```\n    <!--@[promise_async_operation](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets)-->\n* list 3",
+      "line_start": 24,
+      "line_end": 41
+    },
+    {
+      "level": 3,
+      "title": "ID存在嵌套",
+      "content": "```ts\nimport { BusinessError } from '@kit.BasicServicesKit';\n\nconst promise: Promise<number> = new Promise((resolve: Function, reject: Function) => {\n  setTimeout(() => {\n    const randomNumber: number = Math.random();\n    if (randomNumber > 0.5) {\n      resolve(randomNumber);\n    } else {\n      reject(new Error('Random number is too small'));\n    }\n  }, 1000);\n})\n\npromise.then((result: number) => {\n  console.info(`Random number is ${result}`);\n}).catch((error: BusinessError) => {\n  console.error(error.message);\n});\n```\n<!--@[promise_then_catch_handling](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets)-->",
+      "line_start": 43,
+      "line_end": 65
+    },
+    {
+      "level": 2,
+      "title": "引用部分代码（Exclude字段）",
+      "content": "",
+      "line_start": 68,
+      "line_end": 124
+    },
+    {
+      "level": 3,
+      "title": "内容完全一致",
+      "content": "```ts\nimport { taskpool } from '@kit.ArkTS';\n\n// 跨线程并发任务\n@Concurrent\nasync function produce(): Promise<number> {\n  // 添加生产相关逻辑\n  console.info('producing...');\n  return Math.random();\n}\n\nclass Consumer {\n  public consume(value: Object) {\n    // 添加消费相关逻辑\n    console.info('consuming value: ' + value);\n  }\n}\n\n@Entry\n@Component\nstruct Index {\n  @State message: string = 'Hello World';\n\n  build() {\n    Row() {\n      Column() {\n        Text(this.message)\n          .fontSize(50)\n          .fontWeight(FontWeight.Bold)\n        Button() {\n          Text('start')\n        }.onClick(() => {\n          let produceTask: taskpool.Task = new taskpool.Task(produce);\n          let consumer: Consumer = new Consumer();\n          for (let index: number = 0; index < 10; index++) {\n            // 执行生产异步并发任务\n            taskpool.execute(produceTask).then((res: Object) => {\n              consumer.consume(res);\n            }).catch((e: Error) => {\n              console.error(e.message);\n            })\n          }\n        })\n        .width('20%')\n        .height('20%')\n      }\n      .width('100%')\n    }\n    .height('100%')\n  }\n}\n```\n<!--@[actor_model](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/MultithreadedConcurrency/MultiThreadConcurrencyOverview/entry/src/main/ets/pages/Index.ets)-->",
+      "line_start": 70,
+      "line_end": 124
+    }
+  ],
+  "metadata": {
+    "code_references": [
+      "promise_async_operation",
+      "promise_then_catch_handling",
+      "actor_model"
+    ],
+    "code_blocks": 4,
+    "total_lines": 124
+  },
+  "summary": "本文档用于验证示例代码同源的正常场景，前提是同一文档中如果出现多次引用同一段代码，则引用代码必须完全相同。文档包含两个主要部分：引用全量代码和引用部分代码（Exclude字段）。引用全量代码部分展示了三种场景：ID无嵌套且代码完全一致、ID无嵌套但整段代码缩进不一致、ID存在嵌套。引用部分代码部分展示了内容完全一致的示例。文档共包含4个代码块，涉及Promise异步操作、then/catch处理以及Actor模型等并发编程概念。",
+  "keywords": [
+    "验证",
+    "示例代码",
+    "同源",
+    "正常场景",
+    "引用全量代码",
+    "引用部分代码",
+    "Exclude字段",
+    "Promise",
+    "异步操作",
+    "Actor模型"
+  ],
+  "created_at": "2026-02-25",
+  "updated_at": "2026-02-25"
+}

@@ -1,151 +1,167 @@
 {
   "domain": "onlyfortest",
-  "domain_name": "OnlyForTest",
+  "overview": "onlyfortest领域是专门用于测试文档索引和搜索功能的测试领域。该领域包含了多种测试场景，涵盖API版本信息提取与继承、代码段检测、异步并发编程、多线程并发、示例代码同源验证、原子化服务API支持、文档结构解析、尖括号转义处理、废弃接口处理以及内部链接标记等功能。这些测试文档主要用于验证文档解析工具和索引系统的正确性和完整性。",
+  "core_concepts": [
+    "API版本管理",
+    "代码段检测",
+    "异步并发编程",
+    "多线程并发",
+    "示例代码验证",
+    "原子化服务",
+    "文档结构解析",
+    "尖括号转义",
+    "废弃接口处理",
+    "内部链接标记"
+  ],
   "learning_path": [
     {
-      "phase": 1,
-      "name": "并发编程基础",
-      "description": "学习多线程并发、TaskPool和异步并发的基础知识",
-      "documents": [
-        "multi-thread-concurrency-overview",
-        "taskpool-introduction",
-        "async-concurrency-overview"
-      ]
+      "step": 1,
+      "title": "异步并发 (Promise和async/await)",
+      "doc_id": "arkts-utils/async-concurrency-overview",
+      "category": "基础",
+      "description": "学习Promise和async/await的异步并发能力"
     },
     {
-      "phase": 2,
-      "name": "API信息测试",
-      "description": "了解API Info测试场景和版本支持",
-      "documents": [
-        "api-info-TC-one",
-        "api-info-TC-two",
-        "api-info-TC-one-dev",
-        "api-info-TC-two-dev"
-      ]
+      "step": 2,
+      "title": "多线程并发概述",
+      "doc_id": "arkts-utils/multi-thread-concurrency-overview",
+      "category": "基础",
+      "description": "了解ArkTS的多线程并发能力，包括TaskPool和Worker"
     },
     {
-      "phase": 3,
-      "name": "示例代码同源验证",
-      "description": "掌握示例代码同源的正常和异常场景",
-      "documents": [
-        "ason-parsing-generation-normal",
-        "ason-parsing-generation-Abnormal-1",
-        "ason-parsing-generation-Abnormal-2",
-        "ason-parsing-generation-Abnormal-3",
-        "ason-parsing-generation-Abnormal-4",
-        "ason-parsing-generation-Abnormal-5"
-      ]
+      "step": 3,
+      "title": "TaskPool简介",
+      "doc_id": "arkts-utils/taskpool-introduction",
+      "category": "基础",
+      "description": "掌握任务池的使用方法和多线程运行环境"
     },
     {
-      "phase": 4,
-      "name": "代码段检测",
-      "description": "学习代码段检测和废弃文档处理",
-      "documents": [
-        "check-legal-code",
-        "check-deprecated-doc",
-        "check-illegal-code"
-      ]
+      "step": 4,
+      "title": "API Info 测试场景1",
+      "doc_id": "media/api-info-TC-one-dev",
+      "category": "核心",
+      "description": "测试API version信息的继承和废弃标记功能"
     },
     {
-      "phase": 5,
-      "name": "尖括号转义测试",
-      "description": "了解尖括号在不同场景下的转义处理",
-      "documents": [
-        "angle-brackets",
-        "angle-brackets-sys"
-      ]
+      "step": 5,
+      "title": "API Info 测试场景2",
+      "doc_id": "media/api-info-TC-two-dev",
+      "category": "核心",
+      "description": "测试API version信息的继承和废弃标记功能"
     },
     {
-      "phase": 6,
-      "name": "原子化服务测试",
-      "description": "学习原子化服务的属性测试",
-      "documents": [
-        "auto-service-test",
-        "auto-service-test-dev"
-      ]
+      "step": 6,
+      "title": "验证示例代码同源--正常场景",
+      "doc_id": "arkts-utils/ason-parsing-generation-normal",
+      "category": "核心",
+      "description": "验证示例代码同源的正常场景"
     },
     {
-      "phase": 7,
-      "name": "相关实例参考",
-      "description": "查看相关实例的参考示例",
-      "documents": [
-        "sample-test",
-        "sample-test-dev"
-      ]
+      "step": 7,
+      "title": "验证代码段检测---需检测",
+      "doc_id": "9Release/check-legal-code",
+      "category": "核心",
+      "description": "测试和验证不同类型代码段的检测功能"
+    },
+    {
+      "step": 8,
+      "title": "验证代码段检测---不检测",
+      "doc_id": "9Release/check-illegal-code",
+      "category": "核心",
+      "description": "验证非 JavaScript/TypeScript 相关的代码段检测"
+    },
+    {
+      "step": 9,
+      "title": "原子化服务添加属性测试",
+      "doc_id": "media/auto-service-test-dev",
+      "category": "高级",
+      "description": "学习原子化服务中 Swiper 组件的使用方法"
+    },
+    {
+      "step": 10,
+      "title": "尖括号转义正常场景",
+      "doc_id": "8Release/angle-brackets",
+      "category": "高级",
+      "description": "测试尖括号在Markdown中的各种场景"
+    },
+    {
+      "step": 11,
+      "title": "验证废弃文档中的代码段检测",
+      "doc_id": "9Release/check-deprecated-doc",
+      "category": "高级",
+      "description": "测试废弃文档中各种代码段的检测功能"
+    },
+    {
+      "step": 12,
+      "title": "相关实例测试",
+      "doc_id": "media/sample-test-dev",
+      "category": "高级",
+      "description": "测试相关实例的内部链接标记"
+    },
+    {
+      "step": 13,
+      "title": "reference文件夹下相关实例",
+      "doc_id": "reference/sample-test",
+      "category": "高级",
+      "description": "测试文档索引和搜索功能"
     }
   ],
   "quick_reference": {
-    "多线程并发概述": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/multi-thread-concurrency-overview.md",
-    "TaskPool简介": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/taskpool-introduction.md",
-    "异步并发": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/async-concurrency-overview.md",
-    "验证示例代码同源--正常场景": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-normal.md",
-    "验证示例代码同源--异常场景1": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-1.md",
-    "验证示例代码同源--异常场景2": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-2.md",
-    "验证示例代码同源--异常场景3": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-3.md",
-    "验证示例代码同源--异常场景4": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-4.md",
-    "验证示例代码同源--异常场景5": "../../docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-5.md",
-    "验证代码段检测---需检测": "../../docs/zh-cn/application-dev/onlyfortest/9Release/check-legal-code.md",
-    "验证废弃文档中的代码段检测": "../../docs/zh-cn/application-dev/onlyfortest/9Release/check-deprecated-doc.md",
-    "验证代码段检测---不检测": "../../docs/zh-cn/application-dev/onlyfortest/9Release/check-illegal-code.md",
-    "尖括号转义正常场景": "../../docs/zh-cn/application-dev/onlyfortest/9Release/angle-brackets.md",
-    "尖括号转义正常场景-系统": "../../docs/zh-cn/application-dev/onlyfortest/9Release/angle-brackets-sys.md",
-    "API Info 测试场景1（reference文件夹下）": "../../docs/zh-cn/application-dev/onlyfortest/reference/api-info-test-kit/api-info-TC-one.md",
-    "API Info 测试场景2（reference文件夹下）": "../../docs/zh-cn/application-dev/onlyfortest/reference/api-info-test-kit/api-info-TC-two.md",
-    "原子化服务添加属性测试（reference文件夹下）": "../../docs/zh-cn/application-dev/onlyfortest/reference/auto-service-test.md",
-    "reference文件夹下相关实例": "../../docs/zh-cn/application-dev/onlyfortest/reference/sample-test.md",
-    "API Info 测试场景1": "../../docs/zh-cn/application-dev/onlyfortest/media/api-info-TC-one-dev.md",
-    "API Info 测试场景2": "../../docs/zh-cn/application-dev/onlyfortest/media/api-info-TC-two-dev.md",
-    "原子化服务添加属性测试": "../../docs/zh-cn/application-dev/onlyfortest/media/auto-service-test-dev.md",
-    "相关实例测试": "../../docs/zh-cn/application-dev/onlyfortest/media/sample-test-dev.md"
+    "API Info 测试场景2": "docs/zh-cn/application-dev/onlyfortest/media/api-info-TC-two-dev.md",
+    "相关实例测试": "docs/zh-cn/application-dev/onlyfortest/media/sample-test-dev.md",
+    "reference文件夹下相关实例": "docs/zh-cn/application-dev/onlyfortest/reference/sample-test.md",
+    "API Info 测试场景1（reference文件夹下）": "zh-cn/application-dev/onlyfortest/reference/api-info-test-kit/api-info-TC-one.md",
+    "验证代码段检测---不检测": "docs/zh-cn/application-dev/onlyfortest/9Release/check-illegal-code.md",
+    "API Info 测试场景2（reference文件夹下）": "docs/zh-cn/application-dev/onlyfortest/reference/api-info-test-kit/api-info-TC-two.md",
+    "原子化服务添加属性测试": "docs/zh-cn/application-dev/onlyfortest/media/auto-service-test-dev.md",
+    "API Info 测试场景1": "docs/zh-cn/application-dev/onlyfortest/media/api-info-TC-one-dev.md",
+    "TaskPool简介": "docs/zh-cn/application-dev/onlyfortest/arkts-utils/taskpool-introduction.md",
+    "异步并发 (Promise和async/await)": "docs/zh-cn/application-dev/onlyfortest/arkts-utils/async-concurrency-overview.md",
+    "验证示例代码同源--正常场景": "docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-normal.md",
+    "多线程并发概述": "docs/zh-cn/application-dev/onlyfortest/arkts-utils/multi-thread-concurrency-overview.md",
+    "验证示例代码同源--异常场景5": "docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-5.md",
+    "验证示例代码同源--异常场景4": "docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-4.md",
+    "验证示例代码同源--异常场景3": "docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-3.md",
+    "验证示例代码同源--异常场景2": "docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-2.md",
+    "验证示例代码同源--异常场景1": "docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-1.md",
+    "验证代码段检测---需检测": "docs/zh-cn/application-dev/onlyfortest/9Release/check-legal-code.md",
+    "验证废弃文档中的代码段检测": "docs/zh-cn/application-dev/onlyfortest/9Release/check-deprecated-doc.md",
+    "尖括号转义正常场景": "docs/zh-cn/application-dev/onlyfortest/8Release/angle-brackets.md",
+    "尖括号转义正常场景-系统": "zh-cn/application-dev/onlyfortest/8Release/angle-brackets-sys.md"
   },
-  "subdomains": {
-    "arkts-utils": {
-      "name": "ArkTS工具",
-      "description": "ArkTS相关的工具和并发编程文档",
-      "documents": [
-        "multi-thread-concurrency-overview",
-        "taskpool-introduction",
-        "async-concurrency-overview",
-        "ason-parsing-generation-normal",
-        "ason-parsing-generation-Abnormal-1",
-        "ason-parsing-generation-Abnormal-2",
-        "ason-parsing-generation-Abnormal-3",
-        "ason-parsing-generation-Abnormal-4",
-        "ason-parsing-generation-Abnormal-5"
-      ]
-    },
-    "9Release": {
-      "name": "9版本发布",
-      "description": "9版本相关的测试和验证文档",
-      "documents": [
-        "check-legal-code",
-        "check-deprecated-doc",
-        "check-illegal-code",
-        "angle-brackets",
-        "angle-brackets-sys"
-      ]
-    },
-    "reference": {
-      "name": "参考文档",
-      "description": "reference文件夹下的参考示例文档",
-      "documents": [
-        "api-info-TC-one",
-        "api-info-TC-two",
-        "auto-service-test",
-        "sample-test"
-      ]
-    },
-    "media": {
-      "name": "媒体文档",
-      "description": "media文件夹下的测试文档",
-      "documents": [
-        "api-info-TC-one-dev",
-        "api-info-TC-two-dev",
-        "auto-service-test-dev",
-        "sample-test-dev"
-      ]
-    }
-  },
-  "created_at": "2026-02-24",
-  "updated_at": "2026-02-24"
+  "document_count": 21,
+  "categories": {
+    "基础": [
+      "arkts-utils/async-concurrency-overview",
+      "arkts-utils/multi-thread-concurrency-overview",
+      "arkts-utils/taskpool-introduction"
+    ],
+    "核心": [
+      "media/api-info-TC-one-dev",
+      "media/api-info-TC-two-dev",
+      "arkts-utils/ason-parsing-generation-normal",
+      "9Release/check-legal-code",
+      "9Release/check-illegal-code"
+    ],
+    "高级": [
+      "media/auto-service-test-dev",
+      "8Release/angle-brackets",
+      "9Release/check-deprecated-doc",
+      "media/sample-test-dev",
+      "reference/sample-test"
+    ],
+    "异常测试": [
+      "arkts-utils/ason-parsing-generation-Abnormal-1",
+      "arkts-utils/ason-parsing-generation-Abnormal-2",
+      "arkts-utils/ason-parsing-generation-Abnormal-3",
+      "arkts-utils/ason-parsing-generation-Abnormal-4",
+      "arkts-utils/ason-parsing-generation-Abnormal-5"
+    ],
+    "reference": [
+      "reference/api-info-test-kit/api-info-TC-one",
+      "reference/api-info-test-kit/api-info-TC-two",
+      "reference/sample-test",
+      "8Release/angle-brackets-sys"
+    ]
+  }
 }

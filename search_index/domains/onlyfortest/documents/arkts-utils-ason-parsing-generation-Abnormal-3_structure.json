@@ -1,0 +1,31 @@
+{
+  "doc_id": "arkts-utils/ason-parsing-generation-Abnormal-3",
+  "title": "验证示例代码同源--异常场景3",
+  "domain": "onlyfortest",
+  "language": "zh-cn",
+  "path": "docs/zh-cn/application-dev/onlyfortest/arkts-utils/ason-parsing-generation-Abnormal-3.md",
+  "summary": "本文档展示了一个异常场景的示例代码，用于验证示例代码同源。该场景描述了ID无嵌套但代码不一致的情况，具体表现为空格不一致，1000关键字对应行的代码示例。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "ID无嵌套，代码不一致",
+      "line_start": 3,
+      "line_end": 18,
+      "content": "代码不一致（空格不一致，1000关键字对应行）\n```ts\nconst promise: Promise<number> = new Promise((resolve: Function, reject: Function) => {\n  setTimeout(() => {\n    const randomNumber: number = Math.random();\n    if (randomNumber > 0.5) {\n      resolve(randomNumber);\n    } else {\n      reject(new Error('Random number is too small'));\n    }\n  },  1000);\n})\n```\n<!--@[promise_async_operation](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets)-->"
+    }
+  ],
+  "metadata": {
+    "total_lines": 18,
+    "code_blocks": 1,
+    "has_examples": true,
+    "source_reference": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/main/ets/pages/Index.ets"
+  },
+  "keywords": [
+    "验证示例代码同源",
+    "异常场景",
+    "ID无嵌套",
+    "代码不一致",
+    "Promise",
+    "异步操作"
+  ]
+}

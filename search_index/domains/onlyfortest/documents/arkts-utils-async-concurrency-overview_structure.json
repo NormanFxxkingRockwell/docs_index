@@ -1,0 +1,145 @@
+{
+  "doc_id": "arkts-utils/async-concurrency-overview",
+  "title": "异步并发 (Promise和async/await)",
+  "summary": "本文档介绍了Promise和async/await的异步并发能力，包括Promise的基本用法、状态管理（pending、fulfilled、rejected）、then/catch方法的使用，以及async/await语法糖的用法和异常处理。",
+  "domain": "onlyfortest",
+  "file_path": "docs/zh-cn/application-dev/onlyfortest/arkts-utils/async-concurrency-overview.md",
+  "sections": [
+    {
+      "level": 2,
+      "title": "验证代码拼接",
+      "line": 8,
+      "content": "代码拼接"
+    },
+    {
+      "level": 2,
+      "title": "验证代码嵌套",
+      "line": 38,
+      "content": "代码嵌套"
+    },
+    {
+      "level": 2,
+      "title": "docs代码和sample中不一致（空行），验证扫描结果",
+      "line": 45,
+      "content": "docs代码和sample中不一致（空行），验证扫描结果"
+    },
+    {
+      "level": 2,
+      "title": "docs代码和sample中不一致（单行缩进不一致），验证扫描结果",
+      "line": 64,
+      "content": "docs代码和sample中不一致（单行缩进不一致），验证扫描结果"
+    },
+    {
+      "level": 2,
+      "title": "docs代码和sample中不一致（整段代码缩进不一致），验证扫描结果",
+      "line": 93,
+      "content": "docs代码和sample中不一致（整段代码缩进不一致），验证扫描结果"
+    },
+    {
+      "level": 2,
+      "title": "Promise",
+      "line": 135,
+      "content": "Promise是一种用于处理异步操作的对象，可以将异步操作转换为类似于同步操作的风格，以方便代码编写和维护。Promise提供了一个状态机制来管理异步操作的不同阶段，并提供了一些方法来注册回调函数以处理异步操作的成功或失败的结果。Promise有三种状态：pending（进行中）、fulfilled（已完成）和rejected（已拒绝）。Promise对象创建后处于pending状态，并在异步操作完成后转换为fulfilled或rejected状态。"
+    },
+    {
+      "level": 2,
+      "title": "async/await",
+      "line": 178,
+      "content": "async/await是一种用于处理异步操作的Promise语法糖，使得编写异步代码变得更加简单和易读。通过使用async关键字声明一个函数为异步函数，并使用await关键字等待Promise的解析（完成或拒绝），以同步的方式编写异步操作的代码。async函数是一个返回Promise对象的函数，用于表示一个异步操作。在async函数内部，可以使用await关键字等待一个Promise对象的解析，并返回其解析值。"
+    },
+    {
+      "level": 2,
+      "title": "验证注释格式不同",
+      "line": 242,
+      "content": "验证注释格式不同"
+    }
+  ],
+  "metadata": {
+    "language": "zh-cn",
+    "category": "application-dev",
+    "sub_category": "onlyfortest",
+    "module": "arkts-utils",
+    "doc_type": "overview"
+  },
+  "code_blocks": [
+    {
+      "id": "promise_then_catch_handling",
+      "language": "ts",
+      "line": 12,
+      "sample_link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets"
+    },
+    {
+      "id": "promise_async_operation",
+      "language": "ts",
+      "line": 16,
+      "sample_link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets"
+    },
+    {
+      "id": "promise_async_operation",
+      "language": "ts",
+      "line": 49,
+      "sample_link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets"
+    },
+    {
+      "id": "promise_async_operation",
+      "language": "ts",
+      "line": 71,
+      "sample_link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets"
+    },
+    {
+      "id": "promise_then_catch_handling",
+      "language": "ts",
+      "line": 71,
+      "sample_link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets"
+    },
+    {
+      "id": "async_await_sync_operation",
+      "language": "ts",
+      "line": 98,
+      "sample_link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets"
+    },
+    {
+      "id": "promise_async_operation",
+      "language": "ts",
+      "line": 143,
+      "sample_link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets"
+    },
+    {
+      "id": "promise_then_catch_handling",
+      "language": "ts",
+      "line": 161,
+      "sample_link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets"
+    },
+    {
+      "id": "async_await_sync_operation",
+      "language": "ts",
+      "line": 186,
+      "sample_link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets"
+    },
+    {
+      "id": "async_operation_error_handling_with_try_catch",
+      "language": "ts",
+      "line": 227,
+      "sample_link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/AsyncConcurrencyOverview/entry/src/main/ets/pages/Index.ets"
+    },
+    {
+      "id": "actor_model",
+      "language": "ts",
+      "line": 245,
+      "sample_link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkTs/ArkTsConcurrent/MultithreadedConcurrency/MultiThreadConcurrencyOverview/entry/src/main/ets/pages/Index.ets"
+    }
+  ],
+  "keywords": [
+    "Promise",
+    "async/await",
+    "异步并发",
+    "then",
+    "catch",
+    "try/catch",
+    "pending",
+    "fulfilled",
+    "rejected"
+  ],
+  "total_lines": 298,
+  "last_updated": "2026-02-25"
+}

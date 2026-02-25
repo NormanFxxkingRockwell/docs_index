@@ -1,0 +1,123 @@
+{
+  "doc_id": "reference/api-info-test-kit/api-info-TC-two",
+  "title": "API Info 测试场景2（reference文件夹下）",
+  "domain": "onlyfortest",
+  "api_version": {
+    "min": 4,
+    "description": "本模块首批接口从API version 4开始支持"
+  },
+  "sections": [
+    {
+      "level": 2,
+      "title": "Test11-Section",
+      "content": "The result(api-info) of Section(Test11-Section) is none.",
+      "deprecated": false,
+      "api_version": null,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "Test13-subSection",
+          "content": "The result(api-info) of Section(Test13-Section) is none.",
+          "deprecated": false,
+          "api_version": null
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Test12-Section",
+      "content": "The result(api-info) of Section(Test12-Section) is 8??????.",
+      "deprecated": true,
+      "api_version": {
+        "since": 8,
+        "deprecated_since": 11
+      },
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "Test0-Section",
+      "content": "The result(api-info) of Section(Test0-Section) is 7???.",
+      "deprecated": false,
+      "api_version": 7,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "Test4-subSection",
+          "content": "The result(api-info) of subSection(Test4-subSection) is 9???.",
+          "deprecated": true,
+          "api_version": {
+            "since": 9,
+            "deprecated_since": 11
+          }
+        },
+        {
+          "level": 3,
+          "title": "Test5-subSection",
+          "content": "The result(api-info) of subSection(Test5-subSection) is 7???,(extend the result of Test0-Section).",
+          "deprecated": false,
+          "api_version": null
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Test1-Section",
+      "content": "The result(api-info) of Section(Test1-Section) is none",
+      "deprecated": false,
+      "api_version": null,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "Test3-subSection",
+          "content": "The result(api-info) of subSection(Test3-subSection) is 8????.",
+          "deprecated": false,
+          "api_version": 8
+        },
+        {
+          "level": 3,
+          "title": "Test6-subSection",
+          "content": "The result(api-info) of subSection(Test6-subSection) is none,(extend the result of Test1-Section).",
+          "deprecated": false,
+          "api_version": null
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Test2-Section",
+      "content": "The result(api-info) of Section(Test2-Section) is 6????.",
+      "deprecated": true,
+      "api_version": {
+        "since": 6,
+        "deprecated_since": 9
+      },
+      "subsections": [
+        {
+          "level": 3,
+          "title": "Test7-subSection",
+          "content": "The result(api-info) of subSection(Test7-subSection) is 6????,(extend the result of Test2-Section)",
+          "deprecated": true,
+          "api_version": null
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Test8-Section",
+      "content": "The result(api-info) of Section(Test8-Section) is none, (extend the result of topic).",
+      "deprecated": false,
+      "api_version": "abc",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "Test9-subSection",
+          "content": "The result(api-info) of Section(Test9-subSection) is none, (extend the result of Test8-Section).",
+          "deprecated": false,
+          "api_version": "abc"
+        }
+      ]
+    }
+  ],
+  "summary": "API Info 测试场景2文档，包含多个测试章节和子章节，用于测试API version信息提取和废弃标记识别。文档从API version 4开始支持，包含Test11-Section、Test12-Section(已废弃)、Test0-Section、Test1-Section、Test2-Section(已废弃)、Test8-Section等主要章节，每个章节下包含不同数量的子章节。"
+}
