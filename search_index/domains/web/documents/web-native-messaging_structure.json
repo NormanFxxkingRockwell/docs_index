@@ -1,0 +1,189 @@
+{
+  "doc_id": "web-native-messaging",
+  "title": "使用WebNativeMessagingExtensionAbility组件实现浏览器扩展和应用通信场景",
+  "url": "docs/zh-cn/application-dev/web/web-native-messaging.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@libing23232323",
+    "designer": "@libing23232323",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍如何使用WebNativeMessagingExtensionAbility组件实现浏览器扩展与原生应用之间的消息通信。从API version 21开始支持，允许浏览器扩展程序与系统上安装的应用交换消息，应用向扩展提供服务。适用于密码管理器等场景，应用负责存储和加密密码信息，浏览器扩展自动填充网页表单。文档涵盖运作机制、约束限制、配置方式、扩展实现、应用端实现以及浏览器端实现等内容。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "概述",
+      "line": 9,
+      "content": "浏览器的扩展程序支持与系统上安装的应用交换消息，应用向扩展提供服务，帮助扩展实现一些应用才具备的能力，常见的例子是密码管理器：应用负责存储和加密你的密码信息，以便浏览器扩展程序自动填充网页中的表单字段。从API version 21开始，支持开发者在应用中使用WebNativeMessagingExtensionAbility组件，为浏览器扩展提供后台服务能力。浏览器扩展通过WebExtensions runtime API连接WebNativeMessagingExtensionAbility，双方通信是通过共享pipe文件描述符后调用IO接口实现。"
+    },
+    {
+      "level": 2,
+      "title": "约束与限制",
+      "line": 28,
+      "content": "WebNativeMessagingExtensionAbility组件当前仅支持2in1设备。组件无需额外权限，允许任意三方应用集成使用，但拉起方（浏览器）需申请ACL权限（ohos.permission.WEB_NATIVE_MESSAGING）。组件内不支持调用Window相关API。仅支持拉起本应用的UIAbility，不支持拉起其他应用UIAbility或者其他类型ExtensionAbility。仅用于浏览器扩展与应用通信场景，不支持如后台服务等其他场景使用。"
+    },
+    {
+      "level": 3,
+      "title": "设备限制",
+      "line": 30,
+      "content": "WebNativeMessagingExtensionAbility组件当前仅支持2in1设备。"
+    },
+    {
+      "level": 3,
+      "title": "规格限制",
+      "line": 34,
+      "content": "WebNativeMessagingExtensionAbility组件无需额外权限，允许任意三方应用集成使用，但拉起方（浏览器）需申请ACL权限（ohos.permission.WEB_NATIVE_MESSAGING）。此权限仅对浏览器类应用开放。WebNativeMessagingExtensionAbility组件内不支持调用Window相关API。WebNativeMessagingExtensionAbility仅支持拉起本应用的UIAbility，不支持拉起其他应用UIAbility或者其他类型ExtensionAbility。WebNativeMessagingExtensionAbility仅用于浏览器扩展与应用通信场景，不支持如后台服务等其他场景使用。"
+    },
+    {
+      "level": 2,
+      "title": "运作机制",
+      "line": 44,
+      "content": "介绍浏览器扩展、浏览器应用、应用三方之间的通信流程，包括连接创建、pipe通道建立、消息传输等过程。"
+    },
+    {
+      "level": 3,
+      "title": "整体流程",
+      "line": 46,
+      "content": "浏览器扩展调用runtime.connectNative接口传入应用包名，来创建NativeMessaging连接。浏览器应用调用dataShare获取应用配置信息，包括WebNativeMessagingExtension的名称，和限制访问规则（是否允许某个扩展访问该WebNativeMessagingExtension）。浏览器应用创建两组pipe作为收发双向通道，调用WebNativeMessagingExtensionManager.connectNative接口，拉起WebNativeMessagingExtension并创建一条NativeMessaging连接，并将pipe的收发文件描述符作为参数传输过去。应用WebNativeMessagingExtensionAbility被拉起，WebNativeMessagingExtensionAbility.onConnectNative生命周期回调触发，获取pipe的文件描述符。应用监听读端的文件描述符，获取浏览器扩展发过来的消息指令，并通过写端的文件描述符发送回去。应用使用WebNativeMessagingExtensionContext.startAbility拉起本应用的UIAbility图形界面。"
+    },
+    {
+      "level": 3,
+      "title": "dataShare存放应用extension配置信息",
+      "line": 62,
+      "content": "应用集成WebNativeMessagingExtensionAbility时，需要通过dataShare能力向浏览器应用提供extension配置。该配置用于浏览器应用判断允许访问的扩展及指定要拉起的WebNativeMessagingExtensionAbility名称。extension配置采用json字符串格式，包含abilityName属性（WebNativeMessagingExtensionAbility名称）和allowed_origins属性（允许访问该WebNativeMessagingExtensionAbility的浏览器扩展url信息）。extension配置存放在dataShare配置项，uri为固定格式：datashareproxy://[包名]/browserNativeMessagingHosts。"
+    },
+    {
+      "level": 3,
+      "title": "WebNativeMessagingExtensionAbility生命周期管理",
+      "line": 91,
+      "content": "onConnectNative：当浏览器扩展调用一次runtime.connectNative时触发，如果WebNativeMessagingExtensionAbility尚未运行，调用runtime.connectNative会拉起WebNativeMessagingExtensionAbility，并触发该回调。onDisconnectNative：当浏览器扩展销毁runtime.port时，会触发一次该回调，每条nativeMessaging连接的断开，都会触发一次该回调，当全部连接都断开时，会触发onDestroy的回调后关闭WebNativeMessagingExtensionAbility。onDestroy：当WebNativeMessagingExtensionAbility销毁前触发该回调，全部NativeMessaging连接断开会触发WebNativeMessagingExtensionAbility的销毁。stopNativeConnection：WebNativeMessagingExtensionAbility可以主动断开一条NativeMessaging连接，如果断开的是最后一条连接，则会触发WebNativeMessagingExtensionAbility的销毁。terminateSelf：WebNativeMessagingExtensionAbility可以主动退出，触发后会销毁所有NativeMessaging连接。"
+    },
+    {
+      "level": 3,
+      "title": "消息格式和限制",
+      "line": 98,
+      "content": "NativeMessaging连接使用的具体格式，每个消息都使用 JSON 进行序列化，编码为 UTF-8，并在前面附加 32 位消息长度（采用原生字节顺序）。来自WebNativeMessagingExtensionAbility的单个消息的大小上限为 1 MB，这主要是为了保护浏览器免受行为异常的应用影响。发送到WebNativeMessagingExtensionAbility的消息大小上限为 64 MB。"
+    },
+    {
+      "level": 3,
+      "title": "实现一个connectNative的扩展（应用开发者）",
+      "line": 101,
+      "content": "需按w3c标准配置manifest.json和background.js实现通信。支持使用chrome.runtime.connectNative或chrome.runtime.sendNativeMessage进行连接。配置插件内容，发送ping字符串并接收pong响应。"
+    },
+    {
+      "level": 3,
+      "title": "实现一个WebNativeMessagingExtensionAbility（应用开发者）",
+      "line": 194,
+      "content": "在DevEco Studio工程中手动新建一个WebNativeMessagingExtensionAbility组件，包括创建目录结构、实现生命周期回调、注册组件、配置crossAppSharedConfig以及添加extension配置。"
+    },
+    {
+      "level": 3,
+      "title": "实现拉起WebNativeMessagingExtensionAbility（浏览器开发者）",
+      "line": 312,
+      "content": "浏览器负责实现扩展runtime接口，拉起WebNativeMessagingExtensionAbility，建立和管理NativeMessaging连接。需要申请权限：ohos.permission.WEB_NATIVE_MESSAGING。包括获取应用extension配置、调用connectNative创建连接、调用disconnectNative销毁连接等步骤。"
+    }
+  ],
+  "keywords": [
+    "WebNativeMessagingExtensionAbility",
+    "浏览器扩展",
+    "消息通信",
+    "runtime.connectNative",
+    "dataShare",
+    "pipe",
+    "nativeMessaging",
+    "onConnectNative",
+    "onDisconnectNative",
+    "manifest.json",
+    "background.js",
+    "密码管理器"
+  ],
+  "api_references": [
+    {
+      "name": "WebNativeMessagingExtensionAbility",
+      "url": "../reference/apis-arkweb/arkts-apis-web-webNativeMessagingExtensionAbility.md"
+    },
+    {
+      "name": "WebNativeMessagingExtensionManager",
+      "url": "../reference/apis-arkweb/arkts-apis-web-webNativeMessagingExtensionManager.md"
+    },
+    {
+      "name": "WebNativeMessagingExtensionContext",
+      "url": "../reference/apis-arkweb/arkts-apis-web-webNativeMessagingExtensionContext.md"
+    },
+    {
+      "name": "Window",
+      "url": "../reference/apis-arkui/arkts-apis-window.md"
+    },
+    {
+      "name": "dataShare",
+      "url": "../database/share-config.md"
+    },
+    {
+      "name": "WebExtensions runtime API",
+      "url": "https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime"
+    }
+  ],
+  "examples": [
+    {
+      "title": "extension配置格式",
+      "type": "json",
+      "line": 70
+    },
+    {
+      "title": "manifest.json配置",
+      "type": "json",
+      "line": 112
+    },
+    {
+      "title": "main.js实现",
+      "type": "javascript",
+      "line": 136
+    },
+    {
+      "title": "background.js使用connectNative连接",
+      "type": "typescript",
+      "line": 149
+    },
+    {
+      "title": "background.js使用sendNativeMessage连接",
+      "type": "typescript",
+      "line": 179
+    },
+    {
+      "title": "WebNativeMessagingExtensionAbility实现",
+      "type": "typescript",
+      "line": 209
+    },
+    {
+      "title": "module.json5配置",
+      "type": "json",
+      "line": 268
+    },
+    {
+      "title": "shared_config.json配置",
+      "type": "json",
+      "line": 295
+    },
+    {
+      "title": "浏览器获取应用配置",
+      "type": "typescript",
+      "line": 316
+    },
+    {
+      "title": "浏览器connectNative实现",
+      "type": "typescript",
+      "line": 370
+    },
+    {
+      "title": "浏览器disconnectNative实现",
+      "type": "typescript",
+      "line": 411
+    }
+  ],
+  "related_docs": [],
+  "last_updated": "2026-02-25",
+  "word_count": 419,
+  "language": "zh-cn"
+}

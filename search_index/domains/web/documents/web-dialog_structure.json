@@ -1,0 +1,144 @@
+{
+  "doc_id": "web-dialog",
+  "title": "使用Web组件显示网页弹框",
+  "domain": "web",
+  "language": "zh-cn",
+  "path": "docs/zh-cn/application-dev/web/web-dialog.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zourongchun",
+    "designer": "@zhufenghao",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍如何在ArkWeb中实现网页弹框功能，包括Alert警告框、Confirm确认框和Prompt提示框。由于ArkWeb暂未提供默认的应用弹框，应用需要通过onAlert、onConfirm和onPrompt接口自定义弹框功能。文档提供了使用AlertDialog、CustomDialog-AlertDialog、CustomDialog-ConfirmDialog和CustomDialog-CustomContentDialog等多种方式创建弹框的完整代码示例。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "使用Web组件显示网页弹框",
+      "line_start": 1,
+      "line_end": 11
+    },
+    {
+      "level": 2,
+      "title": "实现Alert弹框",
+      "line_start": 13,
+      "line_end": 174,
+      "description": "使用window.alert()显示包含可选信息的对话框。通过onAlert事件事件监听网页alert方法，并创建合适的弹框。提供了使用AlertDialog和CustomDialog-AlertDialog两种实现方式的完整代码示例。",
+      "code_examples": [
+        {
+          "language": "TypeScript",
+          "line_start": 24,
+          "line_end": 61,
+          "description": "使用AlertDialog创建Alert弹框"
+        },
+        {
+          "language": "html",
+          "line_start": 63,
+          "line_end": 90,
+          "description": "测试HTML页面"
+        },
+        {
+          "language": "TypeScript",
+          "line_start": 95,
+          "line_end": 143,
+          "description": "使用CustomDialog-AlertDialog创建Alert弹框"
+        },
+        {
+          "language": "html",
+          "line_start": 145,
+          "line_end": 172,
+          "description": "测试HTML页面"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "实现Confirm弹框",
+      "line_start": 176,
+      "line_end": 370,
+      "description": "使用window.confirm()显示包含可选消息的对话框，并等待用户确认或取消。通过onConfirm事件监听网页confirm方法。提供了使用AlertDialog和CustomDialog-ConfirmDialog两种实现方式的完整代码示例。",
+      "code_examples": [
+        {
+          "language": "TypeScript",
+          "line_start": 189,
+          "line_end": 231,
+          "description": "使用AlertDialog创建Confirm弹框"
+        },
+        {
+          "language": "html",
+          "line_start": 234,
+          "line_end": 264,
+          "description": "测试HTML页面"
+        },
+        {
+          "language": "TypeScript",
+          "line_start": 269,
+          "line_end": 336,
+          "description": "使用CustomDialog-ConfirmDialog创建Confirm弹框"
+        },
+        {
+          "language": "html",
+          "line_start": 338,
+          "line_end": 368,
+          "description": "测试HTML页面"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "实现Prompt弹框",
+      "line_start": 372,
+      "line_end": 526,
+      "description": "使用window.prompt()显示对话框，并等待用户提交文本或取消对话框。通过onPrompt事件监听网页prompt方法。提供了使用CustomDialog-CustomContentDialog实现方式的完整代码示例和string.json资源配置。",
+      "code_examples": [
+        {
+          "language": "TypeScript",
+          "line_start": 386,
+          "line_end": 461,
+          "description": "使用CustomDialog-CustomContentDialog创建Prompt弹框"
+        },
+        {
+          "language": "html",
+          "line_start": 463,
+          "line_end": 495,
+          "description": "测试HTML页面"
+        },
+        {
+          "language": "json",
+          "line_start": 499,
+          "line_end": 524,
+          "description": "string.json资源配置"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "ArkWeb",
+    "Web组件",
+    "弹框",
+    "Alert",
+    "Confirm",
+    "Prompt",
+    "AlertDialog",
+    "CustomDialog",
+    "onAlert",
+    "onConfirm",
+    "onPrompt",
+    "WebviewController"
+  ],
+  "apis": [
+    "onAlert",
+    "onConfirm",
+    "onPrompt",
+    "AlertDialog",
+    "CustomDialog-AlertDialog",
+    "CustomDialog-ConfirmDialog",
+    "CustomDialog-CustomContentDialog",
+    "WebviewController",
+    "UIContext.showAlertDialog"
+  ],
+  "total_lines": 526,
+  "last_updated": "2026-02-25"
+}

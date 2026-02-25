@@ -1,0 +1,212 @@
+{
+  "doc_id": "web-pdf-preview",
+  "title": "使用Web组件的PDF文档预览能力",
+  "domain": "web",
+  "file_path": "docs/zh-cn/application-dev/web/web-pdf-preview.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@Yuan_ss",
+    "designer": "@qiu-gongkai",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍了Web组件的PDF文档预览能力，包括通过不同方式加载PDF文档（网络PDF、应用沙箱内PDF、本地PDF）、配置PDF预览参数控制页面状态（如页码、缩放、工具栏、导航窗格、背景色等），以及PDF文档预览的回调功能（加载成功/失败回调、滚动到底回调）。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "使用Web组件的PDF文档预览能力",
+      "line": 1,
+      "content": "Web组件支持在网页中预览PDF。应用通过WebOptions的src参数和loadUrl()接口加载PDF文档。具体场景包括：网络PDF文档、应用沙箱内PDF文档和本地PDF文档。若涉及网络文档获取，需在module.json5中配置网络访问权限。"
+    },
+    {
+      "level": 2,
+      "title": "通过不同的方式加载PDF文档",
+      "line": 23,
+      "content": "包含三种PDF文档加载预览场景：预览加载网络PDF文档、预览加载应用沙箱内PDF文档（需开启fileAccess权限）、预览加载本地PDF文档。PDF预览页面会根据用户操作使用window.localStorage记录侧导航栏的展开状态，因此需要开启domStorageAccess权限。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "方式一：加载网络PDF文档",
+          "line": 41,
+          "content": "使用网络URL加载PDF文档，例如：https://www.example.com/test.pdf"
+        },
+        {
+          "level": 3,
+          "title": "方式二：加载本地应用沙箱内PDF文档",
+          "line": 42,
+          "content": "使用应用沙箱路径加载PDF文档，需要开启fileAccess权限，例如：this.getUIContext().getHostContext()!.filesDir + '/test.pdf'"
+        },
+        {
+          "level": 3,
+          "title": "方式三：本地PDF文档",
+          "line": 43,
+          "content": "使用resource://rawfile/或$rawfile()格式加载本地PDF文档，例如：resource://rawfile/test.pdf或$rawfile('test.pdf')"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "通过配置PDF文件预览参数，控制打开预览时页面状态",
+      "line": 92,
+      "content": "支持通过URL参数配置PDF预览时的页面状态，包括：nameddest（指定命名目标）、page（指定页码）、zoom（设置缩放和滚动系数）、toolbar（控制工具栏显示）、navpanes（控制侧边导航窗格）、pdfbackgroundcolor（指定背景色，从OpenHarmony 6.0开始支持）。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "nameddest参数",
+          "line": 98,
+          "content": "指定PDF文档中的命名目标，格式：#nameddest=destination"
+        },
+        {
+          "level": 3,
+          "title": "page参数",
+          "line": 99,
+          "content": "使用整数指定文档中的页码，文档第一页的pagenum值为1，格式：#page=pagenum"
+        },
+        {
+          "level": 3,
+          "title": "zoom参数",
+          "line": 100,
+          "content": "使用浮点或整数值设置缩放和滚动系数，格式：#zoom=scale 或 #zoom=scale,left,top"
+        },
+        {
+          "level": 3,
+          "title": "toolbar参数",
+          "line": 101,
+          "content": "打开或关闭顶部工具栏，格式：#toolbar=1或#toolbar=0"
+        },
+        {
+          "level": 3,
+          "title": "navpanes参数",
+          "line": 102,
+          "content": "打开或关闭侧边导航窗格，格式：#navpanes=1或#navpanes=0"
+        },
+        {
+          "level": 3,
+          "title": "pdfbackgroundcolor参数",
+          "line": 103,
+          "content": "指定PDF文档背景色，color为标准的六位十六进制RGB（取值范围为000000~ffffff），从OpenHarmony 6.0系统版本开始支持，格式：#pdfbackgroundcolor=color"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "PDF文档预览回调功能",
+      "line": 117,
+      "content": "从API version 20开始，PDF文档预览支持两种回调功能：加载成功/失败回调和滚动预览到底回调。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "加载成功/失败回调",
+          "line": 123,
+          "content": "通过onPdfLoadEvent回调监听PDF加载成功或失败事件，回调参数包含url和result信息"
+        },
+        {
+          "level": 3,
+          "title": "滚动预览到底回调",
+          "line": 136,
+          "content": "通过onPdfScrollAtBottom回调监听PDF滚动到底部事件，回调参数包含url信息"
+        }
+      ]
+    }
+  ],
+  "key_concepts": [
+    "Web组件",
+    "PDF预览",
+    "loadUrl",
+    "WebOptions",
+    "domStorageAccess",
+    "fileAccess",
+    "onPdfLoadEvent",
+    "onPdfScrollAtBottom",
+    "nameddest",
+    "page",
+    "zoom",
+    "toolbar",
+    "navpanes",
+    "pdfbackgroundcolor"
+  ],
+  "api_references": [
+    {
+      "name": "Web组件",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web.md"
+    },
+    {
+      "name": "WebOptions",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-i.md#weboptions"
+    },
+    {
+      "name": "loadUrl",
+      "path": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#loadurl"
+    },
+    {
+      "name": "domStorageAccess",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#domstorageaccess"
+    },
+    {
+      "name": "fileAccess",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#fileaccess"
+    }
+  ],
+  "code_examples": [
+    {
+      "language": "TypeScript",
+      "line_start": 29,
+      "line_end": 51,
+      "description": "Web组件加载PDF文档示例"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 64,
+      "line_end": 70,
+      "description": "加载网络PDF文档示例"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 73,
+      "line_end": 80,
+      "description": "加载应用沙箱内PDF文档示例"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 83,
+      "line_end": 90,
+      "description": "加载本地PDF文档示例"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 124,
+      "line_end": 134,
+      "description": "PDF加载成功/失败回调示例"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 137,
+      "line_end": 147,
+      "description": "PDF滚动到底回调示例"
+    }
+  ],
+  "permissions": [
+    {
+      "name": "ohos.permission.INTERNET",
+      "description": "网络访问权限，用于加载网络PDF文档"
+    }
+  ],
+  "related_links": [
+    {
+      "title": "在配置文件中声明权限",
+      "path": "../security/AccessToken/declare-permissions.md#在配置文件中声明权限"
+    }
+  ],
+  "tags": [
+    "Web",
+    "PDF",
+    "预览",
+    "ArkWeb",
+    "网络文档",
+    "本地文档",
+    "回调"
+  ],
+  "word_count": 149,
+  "created_at": "2026-02-25"
+}

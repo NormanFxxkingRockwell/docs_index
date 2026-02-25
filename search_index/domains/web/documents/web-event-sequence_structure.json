@@ -1,0 +1,125 @@
+{
+  "doc_id": "web-event-sequence",
+  "title": "Web组件的生命周期",
+  "path": "docs/zh-cn/application-dev/web/web-event-sequence.md",
+  "domain": "web",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@weixin_41848015",
+    "designer": "@libing23232323",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "介绍了Web组件的生命周期回调接口，包括正常加载过程和异常加载过程中的各种状态事件。开发者可以使用Web组件加载本地或在线网页，通过生命周期回调接口感知状态变化和处理业务。文档详细说明了aboutToAppear、onControllerAttached、onLoadIntercept、onInterceptRequest、onPageBegin、onProgressChange、onPageEnd等正常加载事件，以及onOverrideUrlLoading、onPageVisible、onRenderExited、onDisAppear等异常加载事件。还提供了网页加载性能指标（FCP、FMP、LCP）的监控接口，以及如何避免Web组件渲染子进程异常退出导致页面卡死问题的解决方案和实践案例。",
+  "structure": {
+    "sections": [
+      {
+        "level": 1,
+        "title": "Web组件的生命周期",
+        "line_start": 1,
+        "line_end": 252
+      },
+      {
+        "level": 2,
+        "title": "概述",
+        "line_start": 9,
+        "line_end": 24
+      },
+      {
+        "level": 2,
+        "title": "Web组件网页正常加载过程所涉及的状态说明",
+        "line_start": 25,
+        "line_end": 40
+      },
+      {
+        "level": 2,
+        "title": "Web组件网页异常加载过程所涉及的状态说明",
+        "line_start": 41,
+        "line_end": 170
+      },
+      {
+        "level": 2,
+        "title": "Web组件网页加载的性能指标",
+        "line_start": 173,
+        "line_end": 182
+      },
+      {
+        "level": 2,
+        "title": "应用如何避免Web组件渲染子进程异常退出导致的页面卡死问题",
+        "line_start": 183,
+        "line_end": 252
+      }
+    ],
+    "code_blocks": [
+      {
+        "language": "ts",
+        "line_start": 52,
+        "line_end": 170,
+        "description": "Web组件生命周期回调示例代码"
+      },
+      {
+        "language": "ts",
+        "line_start": 190,
+        "line_end": 251,
+        "description": "避免Web组件渲染子进程异常退出导致页面卡死问题的实践案例"
+      }
+    ],
+    "images": [
+      {
+        "path": "figures/web-event-sequence.png",
+        "line": 23,
+        "alt": "Web组件网页正常加载过程中的回调事件"
+      }
+    ],
+    "tables": []
+  },
+  "content": {
+    "total_lines": 252,
+    "has_code": true,
+    "has_images": true,
+    "has_tables": false
+  },
+  "keywords": [
+    "Web组件",
+    "生命周期",
+    "onControllerAttached",
+    "onPageBegin",
+    "onPageEnd",
+    "onRenderExited",
+    "WebviewController",
+    "性能指标",
+    "FCP",
+    "FMP",
+    "LCP"
+  ],
+  "related_docs": [
+    "../web/web-offline-mode.md",
+    "../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md",
+    "../reference/apis-arkweb/arkts-basic-components-web-events.md",
+    "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md"
+  ],
+  "api_references": [
+    "aboutToAppear",
+    "aboutToDisappear",
+    "onControllerAttached",
+    "onLoadIntercept",
+    "onInterceptRequest",
+    "onPageBegin",
+    "onProgressChange",
+    "onPageEnd",
+    "onOverrideUrlLoading",
+    "onPageVisible",
+    "onRenderExited",
+    "onDisAppear",
+    "onFirstContentfulPaint",
+    "onFirstMeaningfulPaint",
+    "onLargestContentfulPaint",
+    "WebviewController",
+    "loadUrl",
+    "zoomIn",
+    "zoomOut",
+    "RenderExitReason"
+  ]
+}

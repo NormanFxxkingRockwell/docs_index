@@ -1,0 +1,151 @@
+{
+  "doc_id": "web-content-scrolling",
+  "title": "Web页面显示内容滚动",
+  "path": "docs/zh-cn/application-dev/web/web-content-scrolling.md",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zourongchun",
+    "designer": "@zhufenghao",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "介绍了Web页面内容滚动的多种实现方式，包括使用外接设备（触屏、触摸板、鼠标滚轮）、调用ArkTS侧接口（scrollTo、scrollBy、pageUp、pageDown）、调用js侧接口（scrollBy、scrollTo）以及通过点击状态栏回顶（backToTop）等方法控制Web页面滚动。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "使用外接设备控制Web页面滚动",
+      "line": 11,
+      "content": "可以使用以下方式，通过触屏、触摸板和鼠标滚动控制Web页面滚动。+ 通过触屏控制Web页面滚动：支持在触摸屏上单指上下左右滑动可以控制页面滚动。+ 通过触摸板控制Web页面滚动：支持在笔记本触摸板或者外接触摸板双指上下左右滑动，可以控制页面滚动。+ 通过鼠标滚轮控制Web页面滚动：支持用鼠标滚轮上下滑动来控制页面滚动。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "调用ArkTS侧接口控制Web页面滚动",
+      "line": 18,
+      "content": "+ [scrollTo](../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#scrollto)：在指定时间内，将页面滚动到指定的绝对位置。返回页面顶部。+ [scrollBy](../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#scrollby)：在指定时间内将页面滚动指定的偏移量。可以作为Web组件嵌套滚动中，控制Web组件滚动的接口，详见[滚动偏移量由滚动父组件统一派发](web-nested-scrolling.md#滚动偏移量由滚动父组件统一派发)。+ [pageUp](../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#pageup)：将Webview的内容向上滚动半个视框大小或者跳转到页面最顶部，通过top入参控制。+ [pageDown](../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#pagedown)：将Webview的内容向下滚动半个视框大小或者跳转到页面最底部，通过bottom入参控制。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "调用js侧接口控制Web页面滚动",
+      "line": 34,
+      "content": "+ scrollBy：相对当前滚动位置滚动一定距离（正数向下/右，负向上/左）。渐进式滚动（如阅读更多按钮）。+ scrollTo：将页面滚动到绝对坐标位置。(1) 返回页面顶部。(2) 跳转到页面特定位置。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "点击状态栏回顶",
+      "line": 59,
+      "content": "当网页处于非顶部状态或向下抛滑时，此时若需返回网页顶部，可以使用[backToTop](../reference/apis-arkweb/arkts-basic-components-web-attributes.md#backtotop22)方法，开启后通过点击状态栏，打断抛滑并将网页滚动到网页顶部。",
+      "subsections": []
+    }
+  ],
+  "code_blocks": [
+    {
+      "type": "TypeScript",
+      "line": 25,
+      "content": "this.webController.scrollTo(0, 0);",
+      "context": "调用ArkTS侧接口scrollTo返回页面顶部"
+    },
+    {
+      "type": "javascript",
+      "line": 37,
+      "content": "window.scrollBy(deltaX, deltaY);//deltaX是元素要在横轴上滚动的距离，deltaY是元素要在纵轴上滚动的距离。",
+      "context": "js侧接口scrollBy相对滚动"
+    },
+    {
+      "type": "javascript",
+      "line": 41,
+      "content": "document.getElementById(\"read-more\").addEventListener(\"click\", ()=>{\n  window.scrollBy(0, 300);\n})",
+      "context": "渐进式滚动示例"
+    },
+    {
+      "type": "javascript",
+      "line": 48,
+      "content": "window.scrollTo(x, y);//X是你想要显示在左上角的元素沿水平轴的像素，Y是你想要显示在左上角的元素沿垂直轴的像素。",
+      "context": "js侧接口scrollTo绝对坐标滚动"
+    },
+    {
+      "type": "javascript",
+      "line": 52,
+      "content": "window.scrollTo(0, 0);",
+      "context": "返回页面顶部"
+    },
+    {
+      "type": "javascript",
+      "line": 56,
+      "content": "window.scrollTo(0, 500); //滚动到某个固定像素位置（如：500px)",
+      "context": "跳转到页面特定位置"
+    },
+    {
+      "type": "ts",
+      "line": 64,
+      "content": "// xxx.ets\nimport { webview } from '@kit.ArkWeb';\n\n@Entry\n@Component\nstruct WebComponent {\n  controller: webview.WebviewController = new webview.WebviewController();\n\n  build() {\n    Column() {\n      Web({ src: $rawfile(\"index.html\"), controller: this.controller })\n        .backToTop(true)\n    }\n  }\n}",
+      "context": "backToTop方法示例代码"
+    },
+    {
+      "type": "html",
+      "line": 83,
+      "content": "<!-- index.html -->\n<!DOCTYPE html>\n<html>\n<head>\n    <meta name=\"viewport\" id=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <style>\n        .blue {\n          background-color: lightblue;\n        }\n        .green {\n          background-color: lightgreen;\n        }\n        .blue, .green {\n         font-size:16px;\n         height:200px;\n         text-align: center;       /* 水平居中 */\n         line-height: 200px;       /* 垂直居中（值等于容器高度） */\n        }\n    </style>\n</head>\n<body>\n<div class=\"blue\" >webArea</div>\n<div class=\"green\">webArea</div>\n<div class=\"blue\">webArea</div>\n<div class=\"green\">webArea</div>\n<div class=\"blue\">webArea</div>\n<div class=\"green\">webArea</div>\n<div class=\"blue\">webArea</div>\n<div class=\"green\">webArea</div>\n<div class=\"blue\">webArea</div>\n</body>\n</html>",
+      "context": "backToTop示例HTML文件"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "scrollTo",
+      "type": "ArkTS",
+      "url": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#scrollto",
+      "description": "在指定时间内，将页面滚动到指定的绝对位置"
+    },
+    {
+      "name": "scrollBy",
+      "type": "ArkTS",
+      "url": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#scrollby",
+      "description": "在指定时间内将页面滚动指定的偏移量"
+    },
+    {
+      "name": "pageUp",
+      "type": "ArkTS",
+      "url": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#pageup",
+      "description": "将Webview的内容向上滚动半个视框大小或者跳转到页面最顶部"
+    },
+    {
+      "name": "pageDown",
+      "type": "ArkTS",
+      "url": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#pagedown",
+      "description": "将Webview的内容向下滚动半个视框大小或者跳转到页面最底部"
+    },
+    {
+      "name": "backToTop",
+      "type": "ArkTS",
+      "url": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#backtotop22",
+      "description": "开启后通过点击状态栏，打断抛滑并将网页滚动到网页顶部"
+    }
+  ],
+  "keywords": [
+    "Web页面滚动",
+    "触屏滚动",
+    "触摸板滚动",
+    "鼠标滚轮",
+    "scrollTo",
+    "scrollBy",
+    "pageUp",
+    "pageDown",
+    "backToTop",
+    "ArkTS接口",
+    "js接口",
+    "ArkWeb"
+  ],
+  "related_docs": [
+    "web-nested-scrolling.md"
+  ],
+  "figures": [
+    {
+      "name": "backToTop",
+      "path": "figures/backToTop.gif",
+      "line": 119
+    }
+  ]
+}

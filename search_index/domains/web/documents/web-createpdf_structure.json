@@ -1,0 +1,94 @@
+{
+  "doc_id": "web-createpdf",
+  "title": "使用Web组件保存前端页面为PDF",
+  "domain": "web",
+  "file_path": "docs/zh-cn/application-dev/web/web-createpdf.md",
+  "summary": "从API version 14开始，支持使用Web组件的createPdf方法，为应用提供了保存前端页面为PDF的功能。使用createPdf生成实例后，调用pdfArrayBuffer方法获取二进制数据流，再使用fileIo方法将二进制数据流保存为PDF文件。用户可以将前端页面内容保存为PDF以便分享或保存，例如生成报告、发票等。",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zhang-yinglie",
+    "designer": "@handyohos",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "sections": [
+    {
+      "level": 1,
+      "title": "使用Web组件保存前端页面为PDF",
+      "line_start": 1,
+      "line_end": 15,
+      "content": "从API version 14开始，支持使用Web组件的createPdf方法，为应用提供了保存前端页面为PDF的功能。使用createPdf生成实例后，调用pdfArrayBuffer方法获取二进制数据流，再使用fileIo方法将二进制数据流保存为PDF文件。用户可以将前端页面内容保存为PDF以便分享或保存。例如，生成报告、发票等，方便用户保存和传输。通过pdfconfiguration的配置，可调整PDF每页大小、前端页面缩放比例等；推荐使用前端页面适配策略，通过CSS媒体查询(@media print)优化PDF排版。"
+    },
+    {
+      "level": 2,
+      "title": "需要权限",
+      "line_start": 16,
+      "line_end": 27,
+      "content": "若涉及网络文档获取，需在module.json5中配置网络访问权限。具体添加方法请参考在配置文件中声明权限。"
+    },
+    {
+      "level": 2,
+      "title": "callback方式保存PDF",
+      "line_start": 29,
+      "line_end": 86,
+      "content": "通过callback方式调用createPdf接口，获取到的result通过pdfArrayBuffer接口取得PDF二进制数据流，最后使用fileIo方法将二进制数据流保存为PDF文件。"
+    },
+    {
+      "level": 2,
+      "title": "Promise方式保存PDF",
+      "line_start": 88,
+      "line_end": 144,
+      "content": "通过Promise方式调用createPdf接口，获取到的result通过pdfArrayBuffer接口取得PDF二进制数据流，最后使用fileIo方法将二进制数据流保存为PDF文件。"
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "JSON5",
+      "line_start": 21,
+      "line_end": 27,
+      "section": "需要权限",
+      "purpose": "配置网络访问权限"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 34,
+      "line_end": 85,
+      "section": "callback方式保存PDF",
+      "purpose": "使用callback方式保存PDF的完整示例代码"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 93,
+      "line_end": 143,
+      "section": "Promise方式保存PDF",
+      "purpose": "使用Promise方式保存PDF的完整示例代码"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "createPdf",
+      "path": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#createpdf14",
+      "description": "Web组件的方法，用于保存前端页面为PDF"
+    },
+    {
+      "name": "pdfArrayBuffer",
+      "description": "获取PDF二进制数据流的方法"
+    },
+    {
+      "name": "pdfconfiguration",
+      "path": "../reference/apis-arkweb/arkts-apis-webview-i.md#pdfconfiguration14",
+      "description": "PDF配置对象，可调整PDF每页大小、前端页面缩放比例等"
+    }
+  ],
+  "tags": [
+    "Web组件",
+    "PDF",
+    "createPdf",
+    "文件保存",
+    "前端页面",
+    "ArkWeb"
+  ],
+  "total_lines": 145,
+  "created_at": "2026-02-25"
+}

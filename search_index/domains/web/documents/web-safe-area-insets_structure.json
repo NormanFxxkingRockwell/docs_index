@@ -1,0 +1,141 @@
+{
+  "doc_id": "web-safe-area-insets",
+  "title": "网页中安全区域计算和避让适配",
+  "path": "docs/zh-cn/application-dev/web/web-safe-area-insets.md",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@KeeGitee",
+    "designer": "@LongLie",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍了Web组件在异形屏幕设备上实现安全区域计算和避让适配的能力。随着全面屏、刘海屏等异形屏幕的普及，屏幕边缘可能出现圆角、摄像头或系统导航条，导致界面部分被遮挡。安全区域是指屏幕中未被设备硬件或系统UI遮挡的区域。Web组件提供利用W3C CSS进行安全区域计算和避让适配的能力，支持异形屏幕设备在沉浸式效果下网页的正常显示。",
+  "structure": {
+    "sections": [
+      {
+        "level": 2,
+        "title": "开启Web组件沉浸式效果",
+        "line_start": 17,
+        "line_end": 78,
+        "description": "介绍如何通过setWindowLayoutFullScreen和expandSafeArea两种方式启用Web组件的沉浸式效果，使Web网页扩展至状态栏和导航栏，最大化利用屏幕可视区域。",
+        "key_points": [
+          "通过setWindowLayoutFullScreen设置应用窗口全屏",
+          "通过expandSafeArea设置Web组件扩展安全区域",
+          "可自定义扩展类型和方向"
+        ],
+        "code_blocks": [
+          {
+            "language": "ts",
+            "description": "EntryAbility.ets中设置窗口全屏",
+            "line_start": 23,
+            "line_end": 37
+          },
+          {
+            "language": "ts",
+            "description": "Web组件基本使用",
+            "line_start": 39,
+            "line_end": 55
+          },
+          {
+            "language": "TypeScript",
+            "description": "使用expandSafeArea扩展至状态栏和导航栏",
+            "line_start": 61,
+            "line_end": 78
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "设置网页在可视窗口中的布局方式",
+        "line_start": 80,
+        "line_end": 101,
+        "description": "介绍viewport-fit属性用于设置网页在可视窗口中的布局方式，包括auto、contain和cover三种取值及其适用场景。",
+        "key_points": [
+          "viewport-fit是<meta name=\"viewport\">标签的属性",
+          "auto默认值，与contain表现一致",
+          "contain表示网页内容被严格限制在安全区域内",
+          "cover表示网页内容完全覆盖可视窗口",
+          "设置viewport-fit=contain时，表现与cover一致"
+        ],
+        "tables": [
+          {
+            "title": "viewport-fit属性取值说明",
+            "line_start": 90,
+            "line_end": 97
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "网页元素避让适配",
+        "line_start": 102,
+        "line_end": 137,
+        "description": "介绍safe-area-inset-* CSS环境变量和env()函数的使用，用于定义网页内容在top、right、bottom和left四个方向上需要避让的距离。",
+        "key_points": [
+          "safe-area-inset-*是一组CSS环境变量",
+          "定义了安全区域与Web可视窗口边缘的距离",
+          "使用env()函数获取环境变量值",
+          "支持fallback回退值",
+          "可与calc()、min()、max()函数组合计算",
+          "需要设置viewport-fit=cover"
+        ],
+        "code_blocks": [
+          {
+            "language": "css",
+            "description": "env()函数使用示例",
+            "line_start": 114,
+            "line_end": 132
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "网页元素避让非安全区域最佳实践",
+        "line_start": 138,
+        "line_end": 227,
+        "description": "提供完整的网页避让适配实践示例，展示如何使用env(safe-area-inset-*)定义CSS样式，确保网页主要内容避让非安全区域。",
+        "key_points": [
+          "非安全区域包括顶部状态栏、屏幕挖孔区和底部导航条",
+          "通过padding-top避让上方非安全区域",
+          "通过calc()函数同步调整相关元素高度",
+          "可结合padding和height属性实现避让"
+        ],
+        "code_blocks": [
+          {
+            "language": "html",
+            "description": "未适配的index.html示例",
+            "line_start": 146,
+            "line_end": 201
+          },
+          {
+            "language": "css",
+            "description": "使用safe-area-inset进行避让适配的CSS样式",
+            "line_start": 205,
+            "line_end": 222
+          }
+        ]
+      }
+    ]
+  },
+  "keywords": [
+    "安全区域",
+    "避让适配",
+    "沉浸式效果",
+    "Web组件",
+    "viewport-fit",
+    "safe-area-inset",
+    "env()",
+    "异形屏幕",
+    "全面屏",
+    "刘海屏"
+  ],
+  "related_apis": [
+    "setWindowLayoutFullScreen",
+    "expandSafeArea",
+    "SafeAreaType",
+    "SafeAreaEdge"
+  ],
+  "total_lines": 227
+}

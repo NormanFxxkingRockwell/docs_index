@@ -1,0 +1,139 @@
+{
+  "doc_id": "web-data-detector",
+  "title": "使用Web组件的智能分词能力",
+  "path": "docs/zh-cn/application-dev/web/web-data-detector.md",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zourongchun",
+    "designer": "@zhufenghao",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo",
+    "api_version": "20",
+    "description": "ArkWeb提供了H5页面内的文本分词识别功能，支持文本分词高亮、分词长按预览及文本选择菜单扩展等"
+  },
+  "summary": "本文档介绍ArkWeb组件的智能分词能力，包括文本分词高亮、分词长按预览和文本选择菜单扩展功能。该功能从API version 20开始提供，支持自动识别H5页面中的电话号码、网址、邮箱、地址和时间等实体类型，并提供便捷的交互操作。通过enableDataDetector属性启用，可以提升用户体验，让用户直接与识别的实体交互。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "使用Web组件的智能分词能力",
+      "line": 1,
+      "content": "从API version 20开始，ArkWeb提供了H5页面内的文本分词识别功能，支持文本分词高亮、分词长按预览及文本选择菜单扩展等。这些功能需将enableDataDetector设置为true，默认为false。此功能主要用于单页H5页面内容的实体识别，能够自动识别页面中的电话号码、网址等信息，并提供便捷的交互操作。启用此功能后，用户可以直接在页面中与识别的实体交互，如点击电话号码进行呼叫，点击地址在地图中查看，从而提升用户体验。可识别的实体类型包括电话、链接、邮箱、地址和时间。"
+    },
+    {
+      "level": 2,
+      "title": "文本分词高亮",
+      "line": 15,
+      "content": "Web组件内的H5页面加载完成后，自动识别并高亮标注页面内的特殊实体。页面变化后新出现的实体不会被高亮标注。特殊实体的高亮过滤规则：不处理输入框内、可编辑区域内的文本实体；不处理<a></a>标签内的文本实体；不处理跨域iframe内、两层及以上嵌套iframe内的文本实体；跨节点的实体不会被高亮。页面中文本实体高亮后，将转变为超链接形式。触摸点击或鼠标左键点击实体，会根据实体类型弹出操作菜单。"
+    },
+    {
+      "level": 2,
+      "title": "分词长按预览",
+      "line": 93,
+      "content": "使用分词长按预览功能时，需要额外配置dataDetectorConfig，设置enablePreviewMenu为true。在copyOptions不为CopyOptions.None时，长按被高亮的实体文本，会弹出预览菜单。通过bindSelectionMenu绑定的自定义菜单与分词长按预览菜单互不影响。"
+    },
+    {
+      "level": 2,
+      "title": "文本选择菜单扩展",
+      "line": 118,
+      "content": "从API version 22开始，支持通过enableSelectedDataDetector单独配置文本选择AI菜单的启用情况。在非编辑区域中，选中的文本满足以下条件时，文本选择菜单将展示对应的AI菜单选项：选中文本经过UTF-8编码转换后，其字节长度不超过255字节；选中文本中仅包含一个匹配识别类型的实体词；不处于全选操作状态下的文本。AI菜单项的出现与是否选中高亮的实体文本无关，只要满足上述条件，AI菜单项就会显示。"
+    }
+  ],
+  "key_concepts": [
+    "智能分词",
+    "文本分词高亮",
+    "分词长按预览",
+    "文本选择菜单扩展",
+    "实体识别",
+    "enableDataDetector",
+    "dataDetectorConfig",
+    "ArkWeb组件"
+  ],
+  "apis": [
+    {
+      "name": "enableDataDetector",
+      "version": "20",
+      "description": "启用H5页面内的文本分词识别功能"
+    },
+    {
+      "name": "dataDetectorConfig",
+      "version": "20",
+      "description": "配置分词长按预览功能"
+    },
+    {
+      "name": "enableSelectedDataDetector",
+      "version": "22",
+      "description": "单独配置文本选择AI菜单的启用情况"
+    },
+    {
+      "name": "TextDataDetectorType",
+      "version": "11",
+      "description": "实体识别类型枚举"
+    },
+    {
+      "name": "TextDataDetectorConfig",
+      "version": "11",
+      "description": "文本数据检测器配置对象"
+    },
+    {
+      "name": "bindSelectionMenu",
+      "version": "13",
+      "description": "绑定自定义菜单"
+    },
+    {
+      "name": "copyOptions",
+      "version": "11",
+      "description": "复制选项配置"
+    }
+  ],
+  "entity_types": [
+    "电话",
+    "链接",
+    "邮箱",
+    "地址",
+    "时间"
+  ],
+  "code_examples": [
+    {
+      "type": "TypeScript",
+      "line": 29,
+      "description": "启用文本分词高亮功能的示例代码"
+    },
+    {
+      "type": "HTML",
+      "line": 63,
+      "description": "测试HTML文件示例"
+    },
+    {
+      "type": "TypeScript",
+      "line": 99,
+      "description": "配置分词长按预览功能的示例代码"
+    }
+  ],
+  "figures": [
+    "web-data-detector-menu.gif",
+    "web-data-detector-normal-drag.gif",
+    "web-data-detector-preview-drag.gif",
+    "web-data-detector-selection-menu.gif"
+  ],
+  "references": [
+    "../reference/apis-arkweb/arkts-basic-components-web-attributes.md",
+    "../reference/apis-arkui/arkui-ts/ts-text-common.md",
+    "web_menu.md"
+  ],
+  "samples": [
+    "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/ArkWebDataDetector/entry/src/main/ets/pages/WebDataDetectorHighlighting.ets",
+    "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/ArkWebDataDetector/entry/src/main/ets/pages/WebDataDetectorLongPress.ets"
+  ],
+  "tags": [
+    "Web组件",
+    "智能分词",
+    "实体识别",
+    "文本高亮",
+    "长按预览",
+    "菜单扩展",
+    "H5",
+    "ArkWeb"
+  ]
+}

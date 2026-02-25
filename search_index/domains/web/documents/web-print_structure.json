@@ -1,0 +1,169 @@
+{
+  "doc_id": "web-print",
+  "title": "使用Web组件打印前端页面",
+  "path": "docs/zh-cn/application-dev/web/web-print.md",
+  "locale": "zh-cn",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zhang-yinglie",
+    "designer": "@handyohos",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍了Web组件打印HTML页面的两种实现方式：W3C标准协议接口和应用侧接口。使用打印功能前需要在module.json5中配置ohos.permission.PRINT权限。W3C方式通过window.print()方法打印当前页面，可通过CSS样式控制打印内容；应用侧方式通过createWebPrintDocumentAdapter创建打印适配器，传入print接口调起打印。",
+  "structure": [
+    {
+      "level": 1,
+      "title": "使用Web组件打印前端页面",
+      "line": 1,
+      "content_type": "introduction",
+      "description": "文档概述，介绍Web组件打印HTML页面的两种实现方式"
+    },
+    {
+      "level": 2,
+      "title": "使用W3C标准协议接口拉起打印",
+      "line": 21,
+      "content_type": "section",
+      "description": "通过window.print()方法拉起打印应用，渲染Web页面内容并生成PDF文件",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "print.html页面代码",
+          "line": 26,
+          "content_type": "code_example",
+          "description": "包含两个示例：基础打印页面和iframe嵌套页面打印"
+        },
+        {
+          "level": 3,
+          "title": "应用侧代码",
+          "line": 113,
+          "content_type": "code_example",
+          "description": "使用Web组件加载print.html页面的TypeScript代码示例"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "通过调用应用侧接口拉起打印",
+      "line": 138,
+      "content_type": "section",
+      "description": "通过createWebPrintDocumentAdapter创建打印适配器并调起打印",
+      "subsections": []
+    }
+  ],
+  "code_examples": [
+    {
+      "language": "json",
+      "title": "权限配置",
+      "line_start": 13,
+      "line_end": 19,
+      "description": "在module.json5中配置打印权限"
+    },
+    {
+      "language": "html",
+      "title": "print.html页面代码示例一",
+      "line_start": 30,
+      "line_end": 79,
+      "description": "基础打印页面HTML代码，包含@media print样式控制"
+    },
+    {
+      "language": "html",
+      "title": "print.html页面代码示例二",
+      "line_start": 84,
+      "line_end": 111,
+      "description": "iframe嵌套页面打印HTML代码"
+    },
+    {
+      "language": "typescript",
+      "title": "W3C打印应用侧代码",
+      "line_start": 117,
+      "line_end": 136,
+      "description": "使用Web组件加载print.html页面的TypeScript代码"
+    },
+    {
+      "language": "typescript",
+      "title": "应用侧接口打印代码",
+      "line_start": 142,
+      "line_end": 166,
+      "description": "通过createWebPrintDocumentAdapter创建打印适配器的完整示例"
+    }
+  ],
+  "key_concepts": [
+    {
+      "name": "Web组件打印",
+      "description": "Web组件支持通过W3C标准协议接口和应用接口两种方式打印HTML页面"
+    },
+    {
+      "name": "window.print()",
+      "description": "W3C标准协议接口，用于打印当前页面或弹出打印对话框"
+    },
+    {
+      "name": "createWebPrintDocumentAdapter",
+      "description": "应用侧接口，创建打印适配器用于拉起打印应用"
+    },
+    {
+      "name": "ohos.permission.PRINT",
+      "description": "打印功能所需的权限配置"
+    },
+    {
+      "name": "@media print",
+      "description": "CSS媒体查询，用于控制打印时的样式显示"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "window.print()",
+      "type": "W3C API",
+      "description": "W3C标准打印接口"
+    },
+    {
+      "name": "createWebPrintDocumentAdapter",
+      "type": "ArkWeb API",
+      "path": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#createwebprintdocumentadapter11",
+      "description": "创建Web打印文档适配器"
+    },
+    {
+      "name": "print.print()",
+      "type": "Print API",
+      "description": "打印接口，接收打印适配器参数"
+    }
+  ],
+  "permissions": [
+    {
+      "name": "ohos.permission.PRINT",
+      "required": true,
+      "description": "打印功能权限"
+    }
+  ],
+  "related_links": [
+    {
+      "title": "在配置文件中声明权限",
+      "path": "../security/AccessToken/declare-permissions.md#在配置文件中声明权限",
+      "description": "权限配置参考文档"
+    },
+    {
+      "title": "WebviewController API参考",
+      "path": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md",
+      "description": "WebviewController接口文档"
+    }
+  ],
+  "tags": [
+    "Web",
+    "打印",
+    "W3C",
+    "ArkWeb",
+    "PDF",
+    "window.print",
+    "createWebPrintDocumentAdapter"
+  ],
+  "statistics": {
+    "total_lines": 167,
+    "code_blocks": 5,
+    "sections": 2,
+    "subsections": 2,
+    "api_count": 3,
+    "permission_count": 1
+  }
+}

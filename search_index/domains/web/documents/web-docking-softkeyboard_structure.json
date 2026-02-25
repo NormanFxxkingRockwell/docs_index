@@ -1,0 +1,252 @@
+{
+  "doc_id": "web-docking-softkeyboard",
+  "title": "Web组件对接软键盘",
+  "url": "docs/zh-cn/application-dev/web/web-docking-softkeyboard.md",
+  "domain": "web",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@weixin_41848015",
+    "designer": "@libing23232323",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍了Web组件对接软键盘的功能，包括Web页面输入框输入与软键盘交互的W3C标准支持（type、inputmode、enterkeyhint属性）、软键盘自动弹出功能、设置软键盘避让模式（Resize和Offset模式）、拦截系统软键盘与自定义软键盘输入等场景。",
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "Web页面输入框输入与软键盘交互的W3C标准支持",
+      "level": 2,
+      "line_start": 18,
+      "line_end": 78,
+      "content": "为支持Web页面与系统软键盘、自定义软键盘等的良好交互，ArkWeb遵循并实现了W3C规范中的以下输入控制属性：type属性、inputmode属性、enterkeyhint属性。type属性定义了input元素的类型，影响输入的验证、显示方式和键盘类型。inputmode属性用于配置输入法类型，默认值：text。enterkeyhint属性用于指定移动设备虚拟键盘上回车键的显示方式。",
+      "keywords": ["type", "inputmode", "enterkeyhint", "W3C", "输入控制", "软键盘交互"]
+    },
+    {
+      "id": "section-2",
+      "title": "软键盘自动弹出",
+      "level": 2,
+      "line_start": 80,
+      "line_end": 119,
+      "content": "为提升用户体验，可以在页面完成加载后，输入框自动获焦并弹出软键盘。通过调用showTextInput()()设置软键盘自动弹出功能。",
+      "keywords": ["自动弹出", "showTextInput", "软键盘", "用户体验"]
+    },
+    {
+      "id": "section-3",
+      "title": "设置软键盘避让模式",
+      "level": 2,
+      "line_start": 121,
+      "line_end": 273,
+      "content": "在移动设备上，支持设置Web页面的软键盘避让模式。在应用代码中设置UIContext的软键盘避让模式setKeyboardAvoidMode()。ArkWeb组件支持Resize和Offset两种模式。Resize模式下，应用窗口高度可缩小避开软键盘，ArkWeb组件跟随ArkUI重新布局。Offset模式下（以及默认模式），应用窗口高度不变，ArkWeb组件根据自身的避让模式进行避让。在UIContext的键盘避让模式为Offset模式时，应用可通过WebKeyboardAvoidMode()设置ArkWeb组件的键盘避让模式，包括RESIZE_VISUAL、RESIZE_CONTENT、OVERLAYS_CONTENT。",
+      "keywords": ["避让模式", "KeyboardAvoidMode", "Resize", "Offset", "UIContext", "RESIZE_VISUAL", "RESIZE_CONTENT", "OVERLAYS_CONTENT"]
+    },
+    {
+      "id": "section-4",
+      "title": "拦截系统软键盘与自定义软键盘输入",
+      "level": 2,
+      "line_start": 277,
+      "line_end": 458,
+      "content": "应用可以通过监听onInterceptKeyboardAttach回调，在软键盘拉起前，控制软键盘的显示，包括系统默认软键盘、带有特定Enter键的软键盘，或完全自定义软键盘。支持使用系统默认软键盘、使用带有定制Enter键的系统软键盘、使用完全由应用程序自定义的软键盘。",
+      "keywords": ["onInterceptKeyboardAttach", "自定义软键盘", "系统软键盘", "WebKeyboardController", "拦截"]
+    }
+  ],
+  "keywords": [
+    "Web组件",
+    "软键盘",
+    "对接",
+    "W3C标准",
+    "type属性",
+    "inputmode属性",
+    "enterkeyhint属性",
+    "自动弹出",
+    "避让模式",
+    "自定义软键盘",
+    "onInterceptKeyboardAttach",
+    "WebKeyboardController"
+  ],
+  "code_blocks": [
+    {
+      "id": "code-1",
+      "language": "html",
+      "line_start": 83,
+      "line_end": 95,
+      "description": "测试网页HTML示例"
+    },
+    {
+      "id": "code-2",
+      "language": "typescript",
+      "line_start": 97,
+      "line_end": 119,
+      "description": "软键盘自动弹出示例"
+    },
+    {
+      "id": "code-3",
+      "language": "typescript",
+      "line_start": 134,
+      "line_end": 153,
+      "description": "设置UIContext软键盘避让模式"
+    },
+    {
+      "id": "code-4",
+      "language": "html",
+      "line_start": 156,
+      "line_end": 168,
+      "description": "测试网页HTML示例"
+    },
+    {
+      "id": "code-5",
+      "language": "typescript",
+      "line_start": 171,
+      "line_end": 187,
+      "description": "Web组件调起软键盘示例"
+    },
+    {
+      "id": "code-6",
+      "language": "typescript",
+      "line_start": 214,
+      "line_end": 235,
+      "description": "设置ArkWeb软键盘避让模式"
+    },
+    {
+      "id": "code-7",
+      "language": "typescript",
+      "line_start": 244,
+      "line_end": 261,
+      "description": "设置Web组件扩展安全区域"
+    },
+    {
+      "id": "code-8",
+      "language": "typescript",
+      "line_start": 285,
+      "line_end": 392,
+      "description": "拦截系统软键盘与自定义软键盘输入示例"
+    },
+    {
+      "id": "code-9",
+      "language": "html",
+      "line_start": 394,
+      "line_end": 444,
+      "description": "测试网页HTML示例"
+    }
+  ],
+  "tables": [
+    {
+      "id": "table-1",
+      "line_start": 25,
+      "line_end": 40,
+      "title": "type属性值说明"
+    },
+    {
+      "id": "table-2",
+      "line_start": 46,
+      "line_end": 55,
+      "title": "inputmode属性值说明"
+    },
+    {
+      "id": "table-3",
+      "line_start": 61,
+      "line_end": 69,
+      "title": "enterkeyhint属性值说明"
+    },
+    {
+      "id": "table-4",
+      "line_start": 266,
+      "line_end": 273,
+      "title": "软键盘避让与其他Web组件行为的交互场景"
+    }
+  ],
+  "images": [
+    {
+      "id": "image-1",
+      "line": 192,
+      "alt": "Web组件网页默认软键盘避让模式",
+      "src": "figures/default-keyboardavoid.png"
+    },
+    {
+      "id": "image-2",
+      "line": 196,
+      "alt": "Web组件网页跟随Arkui软键盘避让模式",
+      "src": "figures/arkui-keyboardavoid.png"
+    },
+    {
+      "id": "image-3",
+      "line": 240,
+      "alt": "Web组件网页自身软键盘避让模式",
+      "src": "figures/web-keyboardavoid.png"
+    },
+    {
+      "id": "image-4",
+      "line": 450,
+      "alt": "ArkWeb自定义键盘数字键盘",
+      "src": "figures/web-customkeyboardnumber.png"
+    },
+    {
+      "id": "image-5",
+      "line": 454,
+      "alt": "ArkWeb自定义键盘字母键盘",
+      "src": "figures/web-customkeyboardletter.png"
+    },
+    {
+      "id": "image-6",
+      "line": 458,
+      "alt": "ArkWeb自定义键盘符号键盘",
+      "src": "figures/web-customkeyboardsymbol.png"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "showTextInput",
+      "module": "inputMethod",
+      "line": 81
+    },
+    {
+      "name": "setKeyboardAvoidMode",
+      "module": "UIContext",
+      "line": 125
+    },
+    {
+      "name": "KeyboardAvoidMode",
+      "module": "ArkUI",
+      "line": 135
+    },
+    {
+      "name": "WebKeyboardAvoidMode",
+      "module": "ArkWeb",
+      "line": 198
+    },
+    {
+      "name": "expandSafeArea",
+      "module": "ArkUI",
+      "line": 242
+    },
+    {
+      "name": "onInterceptKeyboardAttach",
+      "module": "ArkWeb",
+      "line": 279
+    },
+    {
+      "name": "WebKeyboardController",
+      "module": "ArkWeb",
+      "line": 294
+    }
+  ],
+  "related_docs": [
+    {
+      "title": "网页中安全区域计算和避让适配",
+      "url": "../web/web-safe-area-insets.md"
+    }
+  ],
+  "tags": [
+    "Web组件",
+    "软键盘",
+    "输入法",
+    "W3C标准",
+    "移动设备",
+    "自定义功能"
+  ],
+  "difficulty": "intermediate",
+  "estimated_reading_time": 15,
+  "last_updated": "2026-02-25",
+  "version": "1.0"
+}

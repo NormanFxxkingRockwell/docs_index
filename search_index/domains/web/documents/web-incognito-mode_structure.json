@@ -1,0 +1,202 @@
+{
+  "doc_id": "web-incognito-mode",
+  "title": "使用隐私模式",
+  "description": "开发者在创建Web组件时，可以将可选参数incognitoMode设置为true，来开启Web组件的隐私模式。当使用隐私模式时，浏览网页时的Cookie、Cache Data等数据不会保存在本地的持久化文件，当隐私模式的Web组件被销毁时，Cookie、Cache Data等数据将不被记录下来。",
+  "language": "zh-cn",
+  "domain": "web",
+  "file_path": "docs/zh-cn/application-dev/web/web-incognito-mode.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "sections": [
+    {
+      "level": 1,
+      "title": "使用隐私模式",
+      "line_start": 1,
+      "line_end": 347,
+      "content": "开发者在创建Web组件时，可以将可选参数incognitoMode设置为true，来开启Web组件的隐私模式。当使用隐私模式时，浏览网页时的Cookie、Cache Data等数据不会保存在本地的持久化文件，当隐私模式的Web组件被销毁时，Cookie、Cache Data等数据将不被记录下来。\n\n- 创建隐私模式的Web组件。\n- 通过isIncognitoMode 判断当前Web组件是否是隐私模式。\n\n隐私模式提供了一系列接口，用于操作地理位置、Cookie以及Cache Data。\n\n- 通过allowGeolocation设置隐私模式下的Web组件允许指定来源使用地理位置。\n- 通过deleteGeolocation清除隐私模式下指定来源的地理位置权限状态。\n- 通过getAccessibleGeolocation以回调方式异步获取隐私模式下指定源的地理位置权限状态。\n- 通过deleteAllData清除隐私模式下Web SQL当前使用的所有存储。\n- 通过fetchCookieSync获取隐私模式下指定url对应cookie的值。\n- 通过configCookieSync设置隐私模式下指定url的单个cookie的值。\n- 通过existCookie查询隐私模式下是否存在cookie。\n- 通过clearAllCookiesSync清除隐私模式下所有cookie。"
+    }
+  ],
+  "apis": [
+    {
+      "name": "incognitoMode",
+      "type": "parameter",
+      "description": "开启Web组件的隐私模式",
+      "line": 10,
+      "reference": "../reference/apis-arkweb/arkts-basic-components-web-i.md#weboptions"
+    },
+    {
+      "name": "Web组件",
+      "type": "component",
+      "description": "创建隐私模式的Web组件",
+      "line": 12,
+      "reference": "../reference/apis-arkweb/arkts-basic-components-web.md"
+    },
+    {
+      "name": "isIncognitoMode",
+      "type": "method",
+      "description": "判断当前Web组件是否是隐私模式",
+      "line": 31,
+      "reference": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#isincognitomode11"
+    },
+    {
+      "name": "allowGeolocation",
+      "type": "method",
+      "description": "设置隐私模式下的Web组件允许指定来源使用地理位置",
+      "line": 63,
+      "reference": "../reference/apis-arkweb/arkts-apis-webview-GeolocationPermissions.md#allowgeolocation"
+    },
+    {
+      "name": "deleteGeolocation",
+      "type": "method",
+      "description": "清除隐私模式下指定来源的地理位置权限状态",
+      "line": 94,
+      "reference": "../reference/apis-arkweb/arkts-apis-webview-GeolocationPermissions.md#deletegeolocation"
+    },
+    {
+      "name": "getAccessibleGeolocation",
+      "type": "method",
+      "description": "以回调方式异步获取隐私模式下指定源的地理位置权限状态",
+      "line": 125,
+      "reference": "../reference/apis-arkweb/arkts-apis-webview-GeolocationPermissions.md#getaccessiblegeolocation"
+    },
+    {
+      "name": "deleteAllData",
+      "type": "method",
+      "description": "清除隐私模式下Web SQL当前使用的所有存储",
+      "line": 163,
+      "reference": "../reference/apis-arkweb/arkts-apis-webview-WebStorage.md#deletealldata"
+    },
+    {
+      "name": "fetchCookieSync",
+      "type": "method",
+      "description": "获取隐私模式下指定url对应cookie的值",
+      "line": 238,
+      "reference": "../reference/apis-arkweb/arkts-apis-webview-WebCookieManager.md#fetchcookiesync11"
+    },
+    {
+      "name": "configCookieSync",
+      "type": "method",
+      "description": "设置隐私模式下指定url的单个cookie的值",
+      "line": 269,
+      "reference": "../reference/apis-arkweb/arkts-apis-webview-WebCookieManager.md#configcookiesync11"
+    },
+    {
+      "name": "existCookie",
+      "type": "method",
+      "description": "查询隐私模式下是否存在cookie",
+      "line": 299,
+      "reference": "../reference/apis-arkweb/arkts-apis-webview-WebCookieManager.md#existcookie"
+    },
+    {
+      "name": "clearAllCookiesSync",
+      "type": "method",
+      "description": "清除隐私模式下所有cookie",
+      "line": 324,
+      "reference": "../reference/apis-arkweb/arkts-apis-webview-WebCookieManager.md#clearallcookiessync11"
+    }
+  ],
+  "code_samples": [
+    {
+      "title": "创建隐私模式的Web组件",
+      "language": "TypeScript",
+      "line_start": 15,
+      "line_end": 29,
+      "sample_id": "create_a_web_component_in_privacy_mode",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/SetBasicAttrsEvts/SetBasicAttrsEvtsOne/entry/src/main/ets/pages/IncognitoMode_one.ets"
+    },
+    {
+      "title": "判断当前Web组件是否是隐私模式",
+      "language": "TypeScript",
+      "line_start": 34,
+      "line_end": 59,
+      "sample_id": "determine_whether_the_current_web_component_is_in_privacy_mode",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/SetBasicAttrsEvts/SetBasicAttrsEvtsOne/entry/src/main/ets/pages/IncognitoMode_two.ets"
+    },
+    {
+      "title": "设置隐私模式下的Web组件允许指定来源使用地理位置",
+      "language": "TypeScript",
+      "line_start": 66,
+      "line_end": 92,
+      "sample_id": "setting_the_web_component_in_privacy_mode_allows_specifying_the_geolocation_of_the_source_used",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/SetBasicAttrsEvts/SetBasicAttrsEvtsOne/entry/src/main/ets/pages/AllowGeolocation.ets"
+    },
+    {
+      "title": "清除隐私模式下指定来源的地理位置权限状态",
+      "language": "TypeScript",
+      "line_start": 97,
+      "line_end": 123,
+      "sample_id": "clear_the_geolocation_permission_status_of_the_specified_source_in_privacy_mode",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/SetBasicAttrsEvts/SetBasicAttrsEvtsOne/entry/src/main/ets/pages/DeleteGeolocation.ets"
+    },
+    {
+      "title": "异步获取隐私模式下指定源的地理位置权限状态",
+      "language": "TypeScript",
+      "line_start": 128,
+      "line_end": 161,
+      "sample_id": "asynchronously_obtains_the_geolocation_permission_status_of_the_specified_source_in_privacy_mode",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/SetBasicAttrsEvts/SetBasicAttrsEvtsOne/entry/src/main/ets/pages/GetAccessibleGeolocation.ets"
+    },
+    {
+      "title": "清除隐私模式下Web SQL当前使用的所有存储",
+      "language": "TypeScript",
+      "line_start": 166,
+      "line_end": 192,
+      "sample_id": "clear_all_storage_currently_used_by_web_sql_in_privacy_mode",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/SetBasicAttrsEvts/SetBasicAttrsEvtsOne/entry/src/main/ets/pages/DeleteAllData.ets"
+    },
+    {
+      "title": "获取隐私模式下指定url对应cookie的值",
+      "language": "TypeScript",
+      "line_start": 241,
+      "line_end": 267,
+      "sample_id": "obtain_the_value_of_the_cookie_corresponding_to_the_specified_url_in_privacy_mode",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/SetBasicAttrsEvts/SetBasicAttrsEvtsOne/entry/src/main/ets/pages/pages/FetchCookieSync.ets"
+    },
+    {
+      "title": "设置隐私模式下指定url的单个cookie的值",
+      "language": "TypeScript",
+      "line_start": 272,
+      "line_end": 297,
+      "sample_id": "set_the_value_of_a_single_cookie_for_a_specified_url_in_privacy_mode",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/SetBasicAttrsEvts/SetBasicAttrsEvtsOne/entry/src/main/ets/pages/ConfigCookieSync.ets"
+    },
+    {
+      "title": "查询隐私模式下是否存在cookie",
+      "language": "TypeScript",
+      "line_start": 302,
+      "line_end": 322,
+      "sample_id": "check_whether_cookies_exist_in_mode",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/SetBasicAttrsEvts/SetBasicAttrsEvtsOne/entry/src/main/ets/pages/ExistCookie.ets"
+    },
+    {
+      "title": "清除隐私模式下所有cookie",
+      "language": "TypeScript",
+      "line_start": 327,
+      "line_end": 346,
+      "sample_id": "clear_all_cookies_in_privacy_mode",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/SetBasicAttrsEvts/SetBasicAttrsEvtsOne/entry/src/main/ets/pages/ClearAllCookiesSync.ets"
+    }
+  ],
+  "keywords": [
+    "隐私模式",
+    "incognitoMode",
+    "Web组件",
+    "Cookie",
+    "Cache Data",
+    "地理位置",
+    "Geolocation",
+    "Web SQL",
+    "WebStorage",
+    "WebCookieManager"
+  ],
+  "summary": "本文档介绍了如何在HarmonyOS应用中使用Web组件的隐私模式。隐私模式通过设置incognitoMode参数为true来启用，在此模式下浏览网页时的Cookie、Cache Data等数据不会保存在本地持久化文件中。文档详细说明了创建隐私模式Web组件的方法，以及如何使用isIncognitoMode判断当前模式。此外，隐私模式提供了一系列接口用于操作地理位置（allowGeolocation、deleteGeolocation、getAccessibleGeolocation）、Web SQL存储（deleteAllData）和Cookie管理（fetchCookieSync、configCookieSync、existCookie、clearAllCookiesSync）。每个接口都配有完整的TypeScript代码示例和示例代码链接。",
+  "total_lines": 347,
+  "created_at": "2026-02-25",
+  "updated_at": "2026-02-25"
+}

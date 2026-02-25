@@ -1,0 +1,104 @@
+{
+  "doc_id": "web-geolocation-permission",
+  "title": "管理位置权限",
+  "domain": "web",
+  "file_path": "docs/zh-cn/application-dev/web/web-geolocation-permission.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zhang-yinglie",
+    "designer": "@handyohos",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍如何管理Web组件的位置权限。从API version 9开始，支持GeolocationPermissions类和onGeolocationShow方法对网页进行位置权限管理。文档详细说明了在module.json5中配置位置权限、申请位置权限以及通过GeolocationPermissions类管理网页位置权限的方法，包括allowGeolocation、getAccessibleGeolocation和deleteGeolocation等操作。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "需要权限",
+      "line_start": 13,
+      "line_end": 28,
+      "content": "使用获取位置功能，需在module.json5中配置位置权限。具体添加方法请参考在配置文件中声明权限。需要配置的权限包括：ohos.permission.LOCATION（精准定位）、ohos.permission.APPROXIMATELY_LOCATION（模糊定位）、ohos.permission.LOCATION_IN_BACKGROUND（后台定位）。"
+    },
+    {
+      "level": 2,
+      "title": "申请位置权限",
+      "line_start": 30,
+      "line_end": 139,
+      "content": "介绍如何申请位置权限。示例展示了前端页面代码和应用代码的实现方式。前端页面使用navigator.geolocation.getCurrentPosition获取位置信息，应用端通过atManager.requestPermissionsFromUser请求位置权限，并使用Web组件的onGeolocationShow方法处理位置权限请求通知。"
+    },
+    {
+      "level": 2,
+      "title": "管理位置权限",
+      "line_start": 141,
+      "line_end": 197,
+      "content": "通过Web组件的GeolocationPermissions类管理网页的位置权限，提供了新增（allowGeolocation）、查看（getAccessibleGeolocation）和删除（deleteGeolocation）网页位置权限的方法。示例代码展示了如何使用这些方法管理指定源的位置权限。"
+    }
+  ],
+  "keywords": [
+    "位置权限",
+    "GeolocationPermissions",
+    "onGeolocationShow",
+    "Web组件",
+    "ArkWeb",
+    "地理位置",
+    "权限管理",
+    "navigator.geolocation"
+  ],
+  "api_references": [
+    "GeolocationPermissions",
+    "onGeolocationShow",
+    "allowGeolocation",
+    "getAccessibleGeolocation",
+    "deleteGeolocation",
+    "deleteAllGeolocation"
+  ],
+  "permissions": [
+    "ohos.permission.LOCATION",
+    "ohos.permission.APPROXIMATELY_LOCATION",
+    "ohos.permission.LOCATION_IN_BACKGROUND"
+  ],
+  "code_blocks": [
+    {
+      "type": "json",
+      "line_start": 16,
+      "line_end": 28,
+      "description": "module.json5中配置位置权限"
+    },
+    {
+      "type": "html",
+      "line_start": 36,
+      "line_end": 62,
+      "description": "前端页面代码"
+    },
+    {
+      "type": "typescript",
+      "line_start": 67,
+      "line_end": 139,
+      "description": "申请位置权限的应用代码"
+    },
+    {
+      "type": "typescript",
+      "line_start": 145,
+      "line_end": 197,
+      "description": "管理位置权限的应用代码"
+    }
+  ],
+  "related_links": [
+    {
+      "text": "隐私保护说明",
+      "path": "../../device-dev/security/security-privacy-protection.md"
+    },
+    {
+      "text": "在配置文件中声明权限",
+      "path": "../security/AccessToken/declare-permissions.md"
+    }
+  ],
+  "statistics": {
+    "total_lines": 198,
+    "code_blocks": 4,
+    "sections": 3,
+    "api_references": 6,
+    "permissions": 3
+  }
+}

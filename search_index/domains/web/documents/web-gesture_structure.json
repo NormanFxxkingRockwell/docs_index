@@ -1,0 +1,147 @@
+{
+  "doc_id": "web-gesture",
+  "title": "使用Web组件的手势与应用交互",
+  "path": "docs/zh-cn/application-dev/web/web-gesture.md",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zourongchun",
+    "designer": "@zhufenghao",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "介绍Web组件的手势识别机制，包括ArkWeb手势和ArkUI手势的区别、手势拦截方案以及常见问题解决方案。文档详细说明了Tap、LongPress、Scroll、Fling、Pinch等手势事件的触发条件，并提供了三指捏合缩放、禁用缩放手势、滑动返回页面、设置User-Agent等实用示例代码。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "使用Web组件的手势与应用交互",
+      "line": 1,
+      "content": "在移动端或支持触控的Web应用中，用户通过触摸触摸屏与页面交互，Web组件支持了常见的手势识别，例如长按、滑动、点击等，以支持丰富的用户交互体验。"
+    },
+    {
+      "level": 2,
+      "title": "ArkWeb手势识别",
+      "line": 9,
+      "content": "ArkWeb接收ArkUI的触摸事件，并识别出手势。ArkWeb手势符合W3C标准：Touch Events、UI Events、Pointer Events。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "常见事件识别说明",
+          "line": 12,
+          "content": "包括Tap、LongPress、ScrollBegin、ScrollUpdate、ScrollEnd、FlingStart、FlingCancel、PinchBegin、PinchUpdate、PinchEnd等手势事件及其触发条件。"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "ArkWeb手势与ArkUI手势",
+      "line": 26,
+      "content": "区分ArkWeb手势（作用于网页上）和ArkUI手势（作用于Web组件上）。以缩放为例说明两种手势的区别。",
+      "code_examples": [
+        {
+          "title": "三指捏合缩放Web组件示例",
+          "language": "TypeScript",
+          "start_line": 40,
+          "end_line": 77
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Web组件的手势拦截",
+      "line": 80,
+      "content": "介绍ArkUI手势和ArkWeb手势的拦截方案，包括完全禁止触摸事件和发送TouchCancel触摸事件。"
+    },
+    {
+      "level": 2,
+      "title": "常见问题",
+      "line": 92,
+      "content": "解答关于Web组件手势的常见问题。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "如何禁用缩放手势",
+          "line": 94,
+          "content": "使用zoomAccess接口控制是否可以缩放，网页上的user-scalable属性也会影响缩放。"
+        },
+        {
+          "level": 3,
+          "title": "Web组件中如何通过手势滑动返回上一个Web页面",
+          "line": 96,
+          "content": "通过重写onBackPress函数来自定义返回逻辑，使用WebviewController判断是否返回上一个Web页面。",
+          "code_examples": [
+            {
+              "title": "滑动返回上一个Web页面示例",
+              "language": "TypeScript",
+              "start_line": 106,
+              "end_line": 132
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "title": "为什么Web加载后网页无法交互？",
+          "line": 134,
+          "content": "网页可能基于其他平台的User-Agent进行判断，可以在Web组件中设置自定义User-Agent解决。",
+          "code_examples": [
+            {
+              "title": "设置自定义User-Agent示例",
+              "language": "TypeScript",
+              "start_line": 140,
+              "end_line": 160
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "Web组件",
+    "手势识别",
+    "ArkWeb",
+    "ArkUI",
+    "触摸事件",
+    "Tap",
+    "LongPress",
+    "Scroll",
+    "Fling",
+    "Pinch",
+    "捏合",
+    "缩放",
+    "手势拦截",
+    "User-Agent"
+  ],
+  "code_blocks": [
+    {
+      "language": "TypeScript",
+      "start_line": 40,
+      "end_line": 77,
+      "purpose": "三指捏合缩放Web组件示例"
+    },
+    {
+      "language": "TypeScript",
+      "start_line": 106,
+      "end_line": 132,
+      "purpose": "滑动返回上一个Web页面示例"
+    },
+    {
+      "language": "TypeScript",
+      "start_line": 140,
+      "end_line": 160,
+      "purpose": "设置自定义User-Agent示例"
+    }
+  ],
+  "references": [
+    "../ui/arkts-interaction-development-guide-touch-screen.md",
+    "../ui/arkts-interaction-basic-principles.md",
+    "../ui/arkts-gesture-events-binding.md",
+    "../ui/arkts-gesture-events-single-gesture.md",
+    "../ui/arkts-gesture-events-gesture-judge.md",
+    "../reference/apis-arkui/capi-native-gesture-h.md",
+    "../reference/apis-arkweb/arkts-basic-components-web-attributes.md",
+    "web-scale-zoom.md"
+  ],
+  "total_lines": 160,
+  "last_updated": "2026-02-25"
+}

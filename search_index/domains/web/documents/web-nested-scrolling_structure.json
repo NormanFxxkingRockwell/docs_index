@@ -1,0 +1,150 @@
+{
+  "doc_id": "web-nested-scrolling",
+  "title": "Web组件嵌套滚动",
+  "description": "Web组件嵌套滚动的典型应用场景为，在页面中，多个独立区域需进行滚动，当用户滚动Web区域内容时，可联动其他滚动区域，实现上下左右全方位滑动页面的嵌套滚动体验。",
+  "path": "docs/zh-cn/application-dev/web/web-nested-scrolling.md",
+  "language": "zh-cn",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zourongchun",
+    "designer": "@zhufenghao",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍了Web组件嵌套滚动的两种实现方案：方案1使用nestedScroll属性实现嵌套滚动，方案2通过滚动父组件统一派发滚动偏移量。文档包含完整的代码示例和实现思路，适用于需要Web组件与ArkUI可滚动容器（Grid、List、Scroll、Swiper、Tabs、WaterFlow、Refresh、bindSheet）实现嵌套滚动的场景。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "Web组件嵌套滚动",
+      "line": 1,
+      "content": "Web组件嵌套滚动的典型应用场景为，在页面中，多个独立区域需进行滚动，当用户滚动Web区域内容时，可联动其他滚动区域，实现上下左右全方位滑动页面的嵌套滚动体验。内嵌于可滚动容器（Grid、List、Scroll、Swiper、Tabs、WaterFlow、Refresh、bindSheet）中的Web组件，接需要设置ArkUI的NestedScrollMode枚举属性，实现Web组件与ArkUI可滚动容器的嵌套滚动。"
+    },
+    {
+      "level": 2,
+      "title": "使用nestedScroll属性实现嵌套滚动",
+      "line": 17,
+      "content": "使用Web组件nestedScroll属性来设置上下左右四个方向，或者设置向前、向后两个方向的嵌套滚动模式，实现与父组件的滚动联动，同时也允许在过程中动态改变嵌套滚动的模式。"
+    },
+    {
+      "level": 2,
+      "title": "滚动偏移量由滚动父组件统一派发",
+      "line": 109,
+      "content": "介绍了通过滚动父组件统一派发滚动偏移量的实现思路和关键实现方法，包括禁用Web组件滚动手势、禁止List组件手势、检测滚动边界、控制Scroll组件滚动、派发滚动偏移量等。"
+    }
+  ],
+  "keywords": [
+    "Web组件",
+    "嵌套滚动",
+    "nestedScroll",
+    "Scroll组件",
+    "List组件",
+    "滚动联动",
+    "NestedScrollMode",
+    "WebviewController",
+    "滚动偏移量",
+    "手势控制"
+  ],
+  "code_blocks": [
+    {
+      "language": "TypeScript",
+      "start_line": 25,
+      "end_line": 63,
+      "description": "使用nestedScroll属性实现嵌套滚动的完整代码示例"
+    },
+    {
+      "language": "html",
+      "start_line": 67,
+      "end_line": 106,
+      "description": "加载的HTML文件示例"
+    },
+    {
+      "language": "TypeScript",
+      "start_line": 188,
+      "end_line": 289,
+      "description": "滚动偏移量由滚动父组件统一派发的完整代码示例"
+    },
+    {
+      "language": "html",
+      "start_line": 293,
+      "end_line": 324,
+      "description": "加载的HTML文件示例"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "nestedScroll",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#nestedscroll11"
+    },
+    {
+      "name": "NestedScrollMode",
+      "path": "../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#nestedscrollmode10"
+    },
+    {
+      "name": "setScrollable",
+      "path": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#setscrollable12"
+    },
+    {
+      "name": "onGestureRecognizerJudgeBegin",
+      "path": "../reference/apis-arkui/arkui-ts/ts-gesture-blocking-enhancement.md#ongesturerecognizerjudgebegin13"
+    },
+    {
+      "name": "onScrollFrameBegin",
+      "path": "../reference/apis-arkui/arkui-ts/ts-container-scroll.md#onscrollframebegin9"
+    },
+    {
+      "name": "getPageHeight",
+      "path": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#getpageheight"
+    },
+    {
+      "name": "runJavaScriptExt",
+      "path": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#runjavascriptext10"
+    },
+    {
+      "name": "getPageOffset",
+      "path": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#getpageoffset20"
+    },
+    {
+      "name": "bypassVsyncCondition",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#bypassvsynccondition20"
+    },
+    {
+      "name": "layoutMode",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#layoutmode11"
+    }
+  ],
+  "related_components": [
+    "Web",
+    "Scroll",
+    "List",
+    "Grid",
+    "Swiper",
+    "Tabs",
+    "WaterFlow",
+    "Refresh"
+  ],
+  "figures": [
+    "figures/web-nested-scrolling2.gif",
+    "figures/web-gesture-scrolling.gif"
+  ],
+  "implementation_approaches": [
+    {
+      "name": "方案1：使用nestedScroll属性实现嵌套滚动",
+      "description": "使用Web组件nestedScroll属性来设置上下左右四个方向，或者设置向前、向后两个方向的嵌套滚动模式，实现与父组件的滚动联动",
+      "suitable_for": "简单的Web组件与其他父组件联动滚动场景"
+    },
+    {
+      "name": "方案2：滚动偏移量由滚动父组件统一派发",
+      "description": "通过滚动父组件统一派发滚动偏移量，实现自定义控制Web组件和其他滚动组件滚动",
+      "suitable_for": "需要自定义控制Web组件和其他滚动组件滚动，以及一些复杂场景"
+    }
+  ],
+  "key_points": [
+    "Web组件嵌套滚动需要设置NestedScrollMode枚举属性",
+    "支持的可滚动容器包括Grid、List、Scroll、Swiper、Tabs、WaterFlow、Refresh、bindSheet",
+    "全量展开场景（layoutMode为WebLayoutMode.FIT_CONTENT）需要显式指明渲染模式(RenderMode.SYNC_RENDER)",
+    "方案1适合简单场景，方案2适合复杂自定义控制场景"
+  ],
+  "total_lines": 326
+}

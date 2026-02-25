@@ -1,0 +1,209 @@
+{
+  "doc_id": "web-scheme-handler",
+  "title": "拦截Web组件发起的网络请求",
+  "file_path": "docs/zh-cn/application-dev/web/web-scheme-handler.md",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "介绍如何通过onInterceptRequest接口和SchemeHandler机制拦截Web组件发起的网络请求。SchemeHandler提供了ArkTS与NDK两套接口，支持拦截HTTP(s)及自定义协议的请求，获取请求信息（包括Post Data），并为被拦截的请求提供自定义响应信息。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "网络请求拦截处理 (onInterceptRequest接口)",
+      "line": 15,
+      "content": "通过onInterceptRequest接口拦截Web组件发起的网络请求可参考自定义页面请求响应。"
+    },
+    {
+      "level": 2,
+      "title": "网络请求拦截处理 (SchemeHandler机制)",
+      "line": 19,
+      "content": "通过SchemeHandler机制来拦截Web组件发起的网络请求。"
+    },
+    {
+      "level": 3,
+      "title": "为Web组件设置SchemeHandler",
+      "line": 23,
+      "content": "ArkWeb支持通过SchemeHandler拦截Web组件或者Service发出的HTTP(s)及自定义协议的请求。当Web内核发出相应scheme请求时，会触发为该scheme设置的SchemeHandler的回调。SchemeHandler包含请求开始与请求结束两个回调，应用需要在请求开始的回调中告知Web内核是否进行拦截，在请求结束后清理相关的资源，避免内存泄漏。"
+    },
+    {
+      "level": 3,
+      "title": "设置自定义scheme需要遵循的规则",
+      "line": 76,
+      "content": "如果要拦截自定义scheme的请求，需要在Web组件初始化之前将自定义scheme注册到Web内核，初始化后再注册会失败。Web组件的创建会触发Web内核的初始化。另外ArkWeb还提供了initializeWebEngine接口，用于单独进行Web初始化。"
+    },
+    {
+      "level": 3,
+      "title": "获取被拦截请求的信息",
+      "line": 151,
+      "content": "在请求开始的回调中，应用可以获取请求的基本信息包括url、method、referrer、request headers、resource type、post data等。支持获取PUT/POST类请求的上传数据，数据类型支持BYTES、FILE、BLOB和CHUNKED。"
+    },
+    {
+      "level": 3,
+      "title": "拦截Web内核的请求，并为被拦截的请求提供自定义的响应信息",
+      "line": 209,
+      "content": "网络拦截支持在worker线程以流方式为被拦截的请求提供自定义的响应信息。也可用特定的网络错误码结束当前被拦截的请求。"
+    },
+    {
+      "level": 2,
+      "title": "完整示例",
+      "line": 306,
+      "content": "拦截Web组件发起的网络请求的完整示例代码。"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "onInterceptRequest",
+      "type": "event",
+      "link": "../reference/apis-arkweb/arkts-basic-components-web-events.md#oninterceptrequest9"
+    },
+    {
+      "name": "ArkWeb_OnRequestStart",
+      "type": "function",
+      "link": "../reference/apis-arkweb/capi-arkweb-scheme-handler-h.md#arkweb_onrequeststart"
+    },
+    {
+      "name": "onRequestStart",
+      "type": "function",
+      "link": "../reference/apis-arkweb/arkts-apis-webview-WebSchemeHandler.md#onrequeststart12"
+    },
+    {
+      "name": "ArkWeb_OnRequestStop",
+      "type": "function",
+      "link": "../reference/apis-arkweb/capi-arkweb-scheme-handler-h.md#arkweb_onrequeststop"
+    },
+    {
+      "name": "onRequestStop",
+      "type": "function",
+      "link": "../reference/apis-arkweb/arkts-apis-webview-WebSchemeHandler.md#onrequeststop12"
+    },
+    {
+      "name": "initializeWebEngine",
+      "type": "function",
+      "link": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#initializewebengine"
+    },
+    {
+      "name": "OH_ArkWebResourceHandler_DidFailWithError",
+      "type": "function",
+      "link": "../reference/apis-arkweb/capi-arkweb-scheme-handler-h.md#oh_arkwebresourcehandler_didfailwitherror"
+    },
+    {
+      "name": "didFail",
+      "type": "function",
+      "link": "../reference/apis-arkweb/arkts-apis-webview-WebResourceHandler.md#didfail12"
+    },
+    {
+      "name": "OH_ArkWebResourceHandler_DidReceiveResponse",
+      "type": "function",
+      "link": "../reference/apis-arkweb/capi-arkweb-scheme-handler-h.md#oh_arkwebresourcehandler_didreceiveresponse"
+    },
+    {
+      "name": "didReceiveResponse",
+      "type": "function",
+      "link": "../reference/apis-arkweb/arkts-apis-webview-WebResourceHandler.md#didreceiveresponse12"
+    },
+    {
+      "name": "OH_ArkWebResourceHandler_DidFailWithErrorV2",
+      "type": "function",
+      "link": "../reference/apis-arkweb/capi-arkweb-scheme-handler-h.md#oh_arkwebresourcehandler_didfailwitherrorv2"
+    },
+    {
+      "name": "didFail",
+      "type": "function",
+      "link": "../reference/apis-arkweb/arkts-apis-webview-WebResourceHandler.md#didfail20"
+    }
+  ],
+  "code_samples": [
+    {
+      "language": "c++",
+      "line_start": 48,
+      "line_end": 64,
+      "description": "在C++中通过NDK接口为Web组件设置SchemeHandler"
+    },
+    {
+      "language": "typescript",
+      "line_start": 68,
+      "line_end": 74,
+      "description": "在ArkTS中为Web组件设置SchemeHandler"
+    },
+    {
+      "language": "typescript",
+      "line_start": 86,
+      "line_end": 96,
+      "description": "在NDK中注册自定义协议并初始化Web内核"
+    },
+    {
+      "language": "c++",
+      "line_start": 102,
+      "line_end": 111,
+      "description": "注册自定义scheme的C++实现"
+    },
+    {
+      "language": "typescript",
+      "line_start": 115,
+      "line_end": 149,
+      "description": "在ArkTS中通过customizeSchemes注册自定义协议"
+    },
+    {
+      "language": "c++",
+      "line_start": 157,
+      "line_end": 178,
+      "description": "在NDK中获取被拦截请求的信息"
+    },
+    {
+      "language": "typescript",
+      "line_start": 181,
+      "line_end": 207,
+      "description": "在ArkTS中获取被拦截请求的信息"
+    },
+    {
+      "language": "c++",
+      "line_start": 225,
+      "line_end": 245,
+      "description": "在NDK中为被拦截的请求提供自定义的响应信息"
+    },
+    {
+      "language": "typescript",
+      "line_start": 249,
+      "line_end": 284,
+      "description": "在ArkTS中为被拦截的请求提供自定义的响应信息"
+    },
+    {
+      "language": "c++",
+      "line_start": 291,
+      "line_end": 296,
+      "description": "NDK示例：直接返回网络错误码结束请求"
+    },
+    {
+      "language": "typescript",
+      "line_start": 298,
+      "line_end": 304,
+      "description": "ArkTS示例：直接调用didFail结束网络请求"
+    }
+  ],
+  "key_concepts": [
+    "SchemeHandler",
+    "onInterceptRequest",
+    "网络请求拦截",
+    "Post Data",
+    "自定义scheme",
+    "WebResourceHandler",
+    "WebSchemeHandlerRequest",
+    "WebSchemeHandlerResponse"
+  ],
+  "notes": [
+    "onInterceptRequest接口中无法获取Post Data，如果想要获取Post Data需使用SchemeHandler机制来进行拦截。",
+    "需要在Web组件初始化之后设置SchemeHandler，否则会设置失败。",
+    "若想要拦截Web组件发出的第一个请求，可以通过initializeWebEngine方法提前进行Web组件初始化，再设置SchemeHandler实现拦截。",
+    "如果要拦截自定义scheme的请求，需要在Web组件初始化之前将自定义scheme注册到Web内核，初始化后再注册会失败。",
+    "ArkWeb不支持自定义错误码，请使用ArkWeb提供的错误码来结束请求。",
+    "从API version 20开始，可以直接通过DidFailWithErrorV2或didFail结束网络请求，不再依赖必须通过DidReceiveResponse返回给Web内核一个响应头。"
+  ],
+  "total_lines": 310,
+  "last_updated": "2026-02-25"
+}

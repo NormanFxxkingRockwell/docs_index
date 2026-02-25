@@ -1,0 +1,166 @@
+{
+  "doc_id": "web-focus",
+  "title": "Web组件焦点管理",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zourongchun",
+    "designer": "@zhufenghao",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "开发者可利用Web组件的焦点管理功能，有效管理Web组件的聚焦与失焦，同时利用H5侧的W3C标准接口，管理网页界面上唯一可交互的元素聚焦与失焦。文档介绍了Web组件与ArkUI组件焦点控制的常用接口、Web组件内H5元素焦点控制的常用接口、基础概念、走焦规范以及相关示例代码。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "基础概念",
+      "line_start": 22,
+      "line_end": 30,
+      "content": "Web组件焦点、焦点链和走焦的详情说明请参考ArkUI焦点基础概念。焦点包括组件焦点和网页内元素焦点。走焦包括组件走焦和网页内元素走焦。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "Web组件走焦规范",
+      "line_start": 32,
+      "line_end": 67,
+      "content": "根据走焦的触发方式，可以分为主动走焦和被动走焦。主动走焦指开发者或用户主观行为导致的焦点移动，包括requestFocus、按键走焦、点击申请获焦。被动走焦指焦点因系统或其他操作而转移，包括组件删除、属性变更、Web组件不可见、Web组件加载网页、autofocus样式、菜单弹出等场景。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "主动走焦",
+          "line_start": 35,
+          "line_end": 49,
+          "content": "指开发者或用户主观行为导致的焦点移动。包括：使用requestFocus申请焦点、外接键盘的按键走焦（Tab键/Shift+Tab键）、点击申请焦点（手势/鼠标/触摸板）等导致的焦点转移。",
+          "subsections": []
+        },
+        {
+          "level": 3,
+          "title": "被动走焦",
+          "line_start": 51,
+          "line_end": 67,
+          "content": "被动走焦指焦点因系统或其他操作而转移，无需开发者直接干预，是焦点系统的默认行为。场景包括：组件删除、属性变更、Web组件不可见、Web组件加载网页、autofocus样式、菜单弹出等。",
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Web组件与ArkUI组件焦点控制",
+      "line_start": 69,
+      "line_end": 146,
+      "content": "介绍了应用侧通用获焦回调接口onFocus、应用侧通用失焦回调接口onBlur、应用侧主动申请获焦接口requestFocus、设置组件是否可获焦的focusable属性。包含完整的TypeScript示例代码，演示如何通过requestFocus接口主动请求获焦，并监听onFocus和onBlur事件改变Web组件边框颜色。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "Web组件内H5元素焦点控制",
+      "line_start": 148,
+      "line_end": 228,
+      "content": "介绍了W3C标准事件focus、blur以及autofocus属性的使用方法。包含完整的TypeScript和HTML示例代码，演示如何通过监听W3C接口focus和blur事件改变输入背景色。",
+      "subsections": []
+    }
+  ],
+  "key_concepts": [
+    "焦点管理",
+    "Web组件焦点",
+    "H5元素焦点",
+    "requestFocus",
+    "onFocus",
+    "onBlur",
+    "主动走焦",
+    "被动走焦",
+    "tabindex",
+    "autofocus",
+    "W3C焦点事件"
+  ],
+  "api_references": [
+    {
+      "name": "requestFocus",
+      "path": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#requestfocus",
+      "description": "组件主动申请获焦"
+    },
+    {
+      "name": "onFocus",
+      "path": "../reference/apis-arkui/arkui-ts/ts-universal-focus-event.md#onfocus",
+      "description": "获焦事件回调"
+    },
+    {
+      "name": "onBlur",
+      "path": "../reference/apis-arkui/arkui-ts/ts-universal-focus-event.md#onblur",
+      "description": "失焦事件回调"
+    },
+    {
+      "name": "focusable",
+      "path": "../reference/apis-arkui/arkui-ts/ts-universal-attributes-focus.md#focusable",
+      "description": "设置组件是否可获焦"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Web组件焦点管理示例",
+      "description": "通过requestFocus接口主动请求获焦，并监听通用接口onFocus和onBlur事件，改变Web组件边框颜色",
+      "code_block": true,
+      "line_start": 82,
+      "line_end": 141
+    },
+    {
+      "title": "H5元素焦点控制示例",
+      "description": "通过监听W3C接口focus和blur事件，改变输入背景色",
+      "code_block": true,
+      "line_start": 171,
+      "line_end": 222
+    }
+  ],
+  "related_docs": [
+    {
+      "title": "ArkUI焦点基础概念",
+      "path": "../ui/arkts-common-events-focus-event.md#基础概念"
+    },
+    {
+      "title": "ArkUI走焦规范",
+      "path": "../ui/arkts-common-events-focus-event.md#走焦规范"
+    },
+    {
+      "title": "软键盘自动弹出",
+      "path": "web-docking-softkeyboard.md#软键盘自动弹出"
+    },
+    {
+      "title": "Menu",
+      "path": "../reference/apis-arkui/arkui-ts/ts-basic-components-menu.md"
+    },
+    {
+      "title": "DatePicker",
+      "path": "../reference/apis-arkui/arkui-ts/ts-basic-components-datepicker.md"
+    },
+    {
+      "title": "TimePicker",
+      "path": "../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md"
+    }
+  ],
+  "figures": [
+    {
+      "caption": "组件焦点获焦/失焦事件",
+      "path": "figures/web-focus1.gif",
+      "line": 146
+    },
+    {
+      "caption": "Web组件内元素焦点获焦/失焦事件",
+      "path": "figures/web-focus2.gif",
+      "line": 228
+    }
+  ],
+  "tags": [
+    "Web组件",
+    "焦点管理",
+    "ArkUI",
+    "H5",
+    "W3C",
+    "交互",
+    "事件监听"
+  ],
+  "language": "zh-cn",
+  "total_lines": 228,
+  "file_path": "docs/zh-cn/application-dev/web/web-focus.md",
+  "domain": "web"
+}

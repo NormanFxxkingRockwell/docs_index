@@ -1,0 +1,198 @@
+{
+  "doc_id": "web_drag",
+  "title": "使用Web组件的拖拽功能与网页交互",
+  "description": "ArkWeb的拖拽功能使应用能够在网页中实现元素的拖放，用户可以长按可拖拽的元素，将其拖至可放置的元素上，然后松手完成放置。ArkWeb在网页内容中的拖拽功能满足H5标准。",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zourongchun",
+    "designer": "@zhufenghao",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "sections": [
+    {
+      "level": 2,
+      "title": "将网页内容拖拽至其他应用",
+      "line_start": 11,
+      "line_end": 20,
+      "content": "ArkWeb目前支持以下四种数据格式。应用按照 H5 标准设置这些格式的拖拽数据，即可将内容拖拽到其他应用中。| 数据格式      | 说明     || ------------- | -------- || text/plain    | 文本     || text/uri-list | 链接     || text/html     | HTML格式 || Files         | 文件     |"
+    },
+    {
+      "level": 2,
+      "title": "拖拽事件通知",
+      "line_start": 22,
+      "line_end": 32,
+      "content": "ArkWeb拖拽不同于ArkUI的组件级拖拽，主要针对网页内容的拖拽，因此仅支持部分拖拽事件的监听方法。| 监听方法    | 说明                                                  || ----------- | ----------------------------------------------------- || [onDragStart](../reference/apis-arkui/arkui-ts/ts-universal-events-drag-drop.md#ondragstart)  | 不建议使用此方法，否则会影响Web组件的拖拽行为，造成拖拽逻辑不符合预期，如无法触发html拖拽事件监听，预览图无法创建或预览图错误，拖拽数据无法预置等。||  [onDragEnter](../reference/apis-arkui/arkui-ts/ts-universal-events-drag-drop.md#ondragenter) | 拖拽的元素进入Web区域。 || [onDragMove](../reference/apis-arkui/arkui-ts/ts-universal-events-drag-drop.md#ondragmove)  | 拖拽的元素在Web区域移动。  || [onDragLeave](../reference/apis-arkui/arkui-ts/ts-universal-events-drag-drop.md#ondragleave) | 拖拽的元素离开Web区域。          || [onDragEnd](../reference/apis-arkui/arkui-ts/ts-universal-events-drag-drop.md#ondragend10) | 由Web发起的拖拽元素结束拖拽。         |"
+    },
+    {
+      "level": 2,
+      "title": "在ArkTS侧实现拖拽相关逻辑",
+      "line_start": 34,
+      "line_end": 206,
+      "content": "在多数情况下，应用在H5端实现的拖拽功能能够满足需求。如有需要，请参考以下案例，实现在ArkTS侧进行拖拽数据读取等操作。1. [建立应用侧与前端页面数据通道](web-app-page-data-channel.md)。2. 在onDrop方法中，做简单逻辑，例如暂存一些关键数据。3. 在ArkTS侧接受消息的方法中，添加应用处理逻辑，可以进行耗时任务。由于ArkTS侧的onDrop方法会早于H5中放置事件的处理方法（html示例中的droppable.addEventListener('drop')）执行，若在onDrop方法中进行页面跳转等操作，将导致H5中的drop方法无法正确执行，产生不符合预期的结果。因此，应建立双向通信机制，在H5中的drop方法执行完毕后，通知ArkTS侧执行相应的业务逻辑，以确保业务逻辑的预期执行。"
+    },
+    {
+      "level": 2,
+      "title": "常见问题",
+      "line_start": 212,
+      "line_end": 408,
+      "content": "### 为什么H5设置的拖拽事件没有触发？请检查相关CSS资源是否正常设置，因为有些网页UA做了判断，针对特定设备的UA才会才会进行CSS样式设置。可以考虑在Web组件设置自定义UA解决这种问题。### 如何禁用web组件拖拽能力在未进行特殊配置的情况下，web组件默认支持拖拽功能。如果不需要拖拽功能，可以参考以下示例禁用拖拽。禁用拖拽方式主要分为两类：1. 网页侧通过w3c css、js进行拦截/禁用。2. 应用侧通过Web组件runJavascriptExt接口注入js进行拦截/禁用。"
+    }
+  ],
+  "subsections": [
+    {
+      "level": 3,
+      "title": "为什么H5设置的拖拽事件没有触发？",
+      "line_start": 214,
+      "line_end": 239,
+      "parent_section": "常见问题"
+    },
+    {
+      "level": 3,
+      "title": "如何禁用web组件拖拽能力",
+      "line_start": 241,
+      "line_end": 408,
+      "parent_section": "常见问题"
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "TypeScript",
+      "line_start": 45,
+      "line_end": 98,
+      "description": "拖拽相关逻辑实现示例"
+    },
+    {
+      "language": "html",
+      "line_start": 102,
+      "line_end": 206,
+      "description": "H5拖拽示例"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 219,
+      "line_end": 239,
+      "description": "设置自定义UA示例"
+    },
+    {
+      "language": "HTML",
+      "line_start": 253,
+      "line_end": 313,
+      "description": "w3c通用属性/方法禁用拖拽示例"
+    },
+    {
+      "language": "HTML",
+      "line_start": 321,
+      "line_end": 352,
+      "description": "runJavascriptExt注入js禁用拖拽示例"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 360,
+      "line_end": 408,
+      "description": "禁用拖拽功能示例"
+    }
+  ],
+  "tables": [
+    {
+      "line_start": 15,
+      "line_end": 20,
+      "headers": ["数据格式", "说明"],
+      "rows": [
+        ["text/plain", "文本"],
+        ["text/uri-list", "链接"],
+        ["text/html", "HTML格式"],
+        ["Files", "文件"]
+      ]
+    },
+    {
+      "line_start": 26,
+      "line_end": 32,
+      "headers": ["监听方法", "说明"],
+      "rows": [
+        ["onDragStart", "不建议使用此方法，否则会影响Web组件的拖拽行为，造成拖拽逻辑不符合预期，如无法触发html拖拽事件监听，预览图无法创建或预览图错误，拖拽数据无法预置等。"],
+        ["onDragEnter", "拖拽的元素进入Web区域。"],
+        ["onDragMove", "拖拽的元素在Web区域移动。"],
+        ["onDragLeave", "拖拽的元素离开Web区域。"],
+        ["onDragEnd", "由Web发起的拖拽元素结束拖拽。"]
+      ]
+    }
+  ],
+  "images": [
+    {
+      "path": "figures/web-dragdrop.gif",
+      "line": 207,
+      "description": "拖拽演示"
+    },
+    {
+      "path": "figures/web-drag-log.png",
+      "line": 210,
+      "description": "日志打印"
+    },
+    {
+      "path": "figures/w3c-forbid-drag.gif",
+      "line": 315,
+      "description": "w3c禁用拖拽演示"
+    },
+    {
+      "path": "figures/runJs-forbid-drag.gif",
+      "line": 354,
+      "description": "runJs禁用拖拽演示"
+    }
+  ],
+  "links": [
+    {
+      "text": "建立应用侧与前端页面数据通道",
+      "url": "web-app-page-data-channel.md",
+      "line": 37
+    },
+    {
+      "text": "onDragStart",
+      "url": "../reference/apis-arkui/arkui-ts/ts-universal-events-drag-drop.md#ondragstart",
+      "line": 28
+    },
+    {
+      "text": "onDragEnter",
+      "url": "../reference/apis-arkui/arkui-ts/ts-universal-events-drag-drop.md#ondragenter",
+      "line": 29
+    },
+    {
+      "text": "onDragMove",
+      "url": "../reference/apis-arkui/arkui-ts/ts-universal-events-drag-drop.md#ondragmove",
+      "line": 30
+    },
+    {
+      "text": "onDragLeave",
+      "url": "../reference/apis-arkui/arkui-ts/ts-universal-events-drag-drop.md#ondragleave",
+      "line": 31
+    },
+    {
+      "text": "onDragEnd",
+      "url": "../reference/apis-arkui/arkui-ts/ts-universal-events-drag-drop.md#ondragend10",
+      "line": 32
+    }
+  ],
+  "keywords": [
+    "拖拽",
+    "Web组件",
+    "ArkWeb",
+    "拖放",
+    "H5",
+    "onDrop",
+    "onDragStart",
+    "onDragEnter",
+    "onDragMove",
+    "onDragLeave",
+    "onDragEnd",
+    "数据通道",
+    "双向通信",
+    "自定义UA",
+    "禁用拖拽"
+  ],
+  "summary": "本文档介绍了ArkWeb组件的拖拽功能，包括将网页内容拖拽至其他应用、拖拽事件通知、在ArkTS侧实现拖拽相关逻辑，以及常见问题的解决方案。文档详细说明了支持的数据格式、拖拽事件监听方法、ArkTS与H5的双向通信机制，以及如何设置自定义UA和禁用拖拽功能。",
+  "file_path": "docs/zh-cn/application-dev/web/web_drag.md",
+  "total_lines": 408,
+  "language": "zh-cn",
+  "last_updated": "2026-02-25"
+}

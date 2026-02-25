@@ -1,0 +1,147 @@
+{
+  "doc_id": "web-in-page-app-function-invoking",
+  "title": "前端页面调用应用侧函数",
+  "description": "开发者使用Web组件将应用侧代码注册到前端页面中，注册完成之后，前端页面中使用注册的对象名称就可以调用应用侧的方法，实现在前端页面中调用应用侧方法。",
+  "summary": "本文档介绍如何使用 Web 组件将应用侧代码注册到前端页面中，实现在前端页面中调用应用侧方法。包括建立应用侧与 H5 侧的交互通道、复杂类型使用方法以及验证通道是否建立成功。",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "structure": {
+    "sections": [
+      {
+        "id": "section-1",
+        "title": "如何建立应用侧与H5侧的交互通道",
+        "level": 2,
+        "content": "注册应用侧代码有两种方式，一种在Web组件初始化调用，使用javaScriptProxy()接口。另外一种在Web组件初始化完成后调用，使用registerJavaScriptProxy()接口。两种方式都需要和deleteJavaScriptRegister接口配合使用，防止内存泄漏。",
+        "subsections": [
+          {
+            "id": "section-1-1",
+            "title": "应用侧使用 javaScriptProxy() 接口注册示例",
+            "level": 3,
+            "content": "在下面的示例中，将test()方法注册在前端页面中， 该函数可以在前端页面触发运行。"
+          },
+          {
+            "id": "section-1-2",
+            "title": "应用侧使用 registerJavaScriptProxy() 接口注册",
+            "level": 3,
+            "content": "使用registerJavaScriptProxy()方法注册后，在下次加载或者重新加载后生效。",
+            "subsections": [
+              {
+                "id": "section-1-2-1",
+                "title": "示例1：Register_before_loaded",
+                "level": 4,
+                "content": "在Web组件加载前注册JavaScript代理"
+              },
+              {
+                "id": "section-1-2-2",
+                "title": "示例2：Register_after_loaded",
+                "level": 4,
+                "content": "在Web组件加载后注册JavaScript代理"
+              }
+            ]
+          },
+          {
+            "id": "section-1-3",
+            "title": "可选参数permission",
+            "level": 3,
+            "content": "permission是一个json字符串，用于配置JavaScript代理的权限控制"
+          },
+          {
+            "id": "section-1-4",
+            "title": "index1.html前端页面触发应用侧代码",
+            "level": 3,
+            "content": "前端页面通过注册的对象名称调用应用侧方法"
+          }
+        ]
+      },
+      {
+        "id": "section-2",
+        "title": "复杂类型使用方法",
+        "level": 2,
+        "content": "介绍如何在应用侧和前端页面之间传递复杂类型数据",
+        "subsections": [
+          {
+            "id": "section-2-1",
+            "title": "应用侧和前端页面之间传递Array",
+            "level": 3,
+            "content": "Array可以作为注册对象方法的参数或返回值，在应用侧和前端页面之间传递。"
+          },
+          {
+            "id": "section-2-2",
+            "title": "非Function等复杂类型使用",
+            "level": 3,
+            "content": "非Function等复杂类型作为注册对象方法的参数或返回值，在应用侧和前端页面之间传递。"
+          },
+          {
+            "id": "section-2-3",
+            "title": "应用侧调用前端页面的Callback",
+            "level": 3,
+            "content": "Callback可以作为注册对象方法的参数或返回值，在应用侧和前端页面之间传递。"
+          },
+          {
+            "id": "section-2-4",
+            "title": "应用侧调用前端页面Object里的Function",
+            "level": 3,
+            "content": "前端页面Object里的Function可以作为注册对象方法的参数或返回值，在应用侧和前端页面之间传递。"
+          },
+          {
+            "id": "section-2-5",
+            "title": "前端页面调用应用侧Object里的Function",
+            "level": 3,
+            "content": "应用侧Object里的Function可以作为注册对象方法的参数或返回值，在应用侧和前端页面之间传递。"
+          },
+          {
+            "id": "section-2-6",
+            "title": "Promise场景",
+            "level": 3,
+            "content": "介绍两种Promise使用方法：在应用侧new Promise和在前端页面new Promise"
+          }
+        ]
+      },
+      {
+        "id": "section-3",
+        "title": "验证通道是否建立成功",
+        "level": 2,
+        "content": "介绍如何验证应用侧与H5侧的交互通道是否建立成功，包括打开web调试和举例说明通道是否建立成功。"
+      }
+    ]
+  },
+  "api_references": [
+    "javaScriptProxy()",
+    "registerJavaScriptProxy()",
+    "deleteJavaScriptRegister"
+  ],
+  "examples": [
+    "functions_that_trigger_a_run_on_the_front_end_page_are_registered_in_the_front_end_page",
+    "Register_before_loaded",
+    "Register_after_loaded"
+  ],
+  "keywords": [
+    "Web组件",
+    "JavaScript代理",
+    "应用侧",
+    "前端页面",
+    "交互通道",
+    "javaScriptProxy",
+    "registerJavaScriptProxy",
+    "deleteJavaScriptRegister",
+    "Array",
+    "Callback",
+    "Promise",
+    "复杂类型"
+  ],
+  "related_docs": [
+    "web-debugging-with-devtools"
+  ],
+  "figures": [
+    "webtoolstest.png"
+  ],
+  "file_path": "docs/zh-cn/application-dev/web/web-in-page-app-function-invoking.md",
+  "generated_at": "2026-02-25T00:00:00Z"
+}

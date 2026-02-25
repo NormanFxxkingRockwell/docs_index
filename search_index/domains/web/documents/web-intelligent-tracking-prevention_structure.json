@@ -1,0 +1,127 @@
+{
+  "doc_id": "web-intelligent-tracking-prevention",
+  "title": "使用智能防跟踪功能",
+  "file_path": "docs/zh-cn/application-dev/web/web-intelligent-tracking-prevention.md",
+  "language": "zh-cn",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "Web组件支持智能防跟踪功能，即当跟踪型网站作为第三方插入到其他网页时，其发送的网络请求将禁止携带cookie。文档介绍了如何启用/关闭智能防跟踪功能、检查功能状态、获取被拦截的跟踪域名回调，以及如何管理绕过该功能的域名列表。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "使用智能防跟踪功能",
+      "line_start": 1,
+      "line_end": 189,
+      "content": "Web组件支持智能防跟踪功能，即当跟踪型网站作为第三方插入到其他网页时，其发送的网络请求将禁止携带cookie。"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "enableIntelligentTrackingPrevention",
+      "description": "启用或关闭Web组件的智能防跟踪功能。默认情况下，该功能未启用。",
+      "line_start": 12,
+      "line_end": 40,
+      "code_example": true
+    },
+    {
+      "name": "isIntelligentTrackingPreventionEnabled",
+      "description": "判断Web组件是否开启了智能防跟踪功能。",
+      "line_start": 42,
+      "line_end": 70,
+      "code_example": true
+    },
+    {
+      "name": "onIntelligentTrackingPreventionResult",
+      "description": "将被拦截的跟踪型域名及其触发网站的域名回调给应用。",
+      "line_start": 72,
+      "line_end": 104,
+      "code_example": true
+    },
+    {
+      "name": "addIntelligentTrackingPreventionBypassingList",
+      "description": "设置绕过域名列表。这些接口设置的域名列表适用于整个应用，而非特定的Web组件。",
+      "line_start": 108,
+      "line_end": 136,
+      "code_example": true
+    },
+    {
+      "name": "removeIntelligentTrackingPreventionBypassingList",
+      "description": "删除部分绕过域名列表。",
+      "line_start": 138,
+      "line_end": 166,
+      "code_example": true
+    },
+    {
+      "name": "clearIntelligentTrackingPreventionBypassingList",
+      "description": "清除所有绕过域名列表。",
+      "line_start": 168,
+      "line_end": 189,
+      "code_example": true
+    }
+  ],
+  "code_examples": [
+    {
+      "type": "TypeScript",
+      "description": "启用智能防跟踪功能",
+      "line_start": 15,
+      "line_end": 40
+    },
+    {
+      "type": "TypeScript",
+      "description": "检查智能防跟踪功能是否启用",
+      "line_start": 45,
+      "line_end": 70
+    },
+    {
+      "type": "TypeScript",
+      "description": "获取被拦截的跟踪域名回调",
+      "line_start": 75,
+      "line_end": 104
+    },
+    {
+      "type": "TypeScript",
+      "description": "设置绕过域名列表",
+      "line_start": 111,
+      "line_end": 136
+    },
+    {
+      "type": "TypeScript",
+      "description": "删除部分绕过域名列表",
+      "line_start": 141,
+      "line_end": 166
+    },
+    {
+      "type": "TypeScript",
+      "description": "清除所有绕过域名列表",
+      "line_start": 171,
+      "line_end": 189
+    }
+  ],
+  "keywords": [
+    "智能防跟踪",
+    "Web组件",
+    "cookie",
+    "跟踪型网站",
+    "绕过域名列表",
+    "enableIntelligentTrackingPrevention",
+    "isIntelligentTrackingPreventionEnabled",
+    "onIntelligentTrackingPreventionResult",
+    "addIntelligentTrackingPreventionBypassingList",
+    "removeIntelligentTrackingPreventionBypassingList",
+    "clearIntelligentTrackingPreventionBypassingList"
+  ],
+  "statistics": {
+    "total_lines": 190,
+    "code_blocks": 6,
+    "api_count": 6,
+    "word_count": 823
+  },
+  "last_updated": "2026-02-25"
+}

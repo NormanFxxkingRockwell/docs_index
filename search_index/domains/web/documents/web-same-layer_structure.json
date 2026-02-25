@@ -1,0 +1,343 @@
+{
+  "doc_id": "web-same-layer",
+  "title": "同层渲染",
+  "path": "docs/zh-cn/application-dev/web/web-same-layer.md",
+  "domain": "web",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@ding-xin88",
+    "designer": "@LongLie",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "在系统中，应用可以使用Web组件加载Web网页。当非系统框架的UI组件功能或性能不如系统组件时，可使用同层渲染技术，通过ArkUI组件渲染这些组件（简称为同层组件）。本文档详细介绍了同层渲染的使用场景、整体架构、规格约束、实现示例以及常见问题。",
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "使用场景",
+      "level": 1,
+      "line": 11,
+      "children": [
+        {
+          "id": "section-1-1",
+          "title": "Web网页",
+          "level": 2,
+          "line": 12,
+          "content": "小程序的地图组件，可以使用ArkUI的XComponent组件渲染来提升性能。小程序的输入框组件，可以使用ArkUI的TextInput组件渲染，达到与系统应用一致的输入体验。在网页侧，应用开发者可将<embed>、<object>的网页UI组件（简称为同层标签），按一定规则进行同层渲染。在应用侧，应用开发者可以通过Web组件的同层渲染事件上报接口，感知到H5同层标签的生命周期以及输入事件，进行同层渲染组件的相应业务逻辑处理。可支持同层渲染的ArkUI常用组件包括TextInput、XComponent、Canvas、Video、Web等。"
+        },
+        {
+          "id": "section-1-2",
+          "title": "三方UI框架",
+          "level": 2,
+          "line": 20,
+          "content": "Flutter提供了PlatformView与Texture抽象组件，这些组件可使用系统组件渲染，用于支持Flutter组件功能不足的部分。Weex2.0框架的Camera、Video和Canvas组件可以使用系统组件渲染，以增强功能和性能。在应用侧，应用开发者可以使用ArkUI的NodeContainer等接口，构建三方框架同层标签对应的同层渲染组件。"
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "整体架构",
+      "level": 1,
+      "line": 27,
+      "content": "ArkWeb同层渲染特性主要提供两种能力：同层标签生命周期和事件命中转发处理。同层标签生命周期主要关联前端标签（<embed>/<object>），同时命中到同层标签的事件会被上报到开发者侧，由开发者分发到对应组件树。"
+    },
+    {
+      "id": "section-3",
+      "title": "规格约束",
+      "level": 1,
+      "line": 36,
+      "children": [
+        {
+          "id": "section-3-1",
+          "title": "可被同层渲染的ArkUI组件",
+          "level": 2,
+          "line": 37,
+          "content": "支持的组件范围包括基础组件、容器类组件、自绘制类组件和命令式自定义绘制节点。支持的组件通用属性与事件中，不支持的通用属性包括分布式迁移标识和特效绘制合并，其他未明确标注不支持的属性与事件及组件能力均默认支持。"
+        },
+        {
+          "id": "section-3-2",
+          "title": "Web网页的同层渲染标签",
+          "level": 2,
+          "line": 57,
+          "content": "支持的H5标签包括<embed>标签和<object>标签。同层标签支持的css属性包括display、position、z-index、visibility、opacity、background-color、width、height、padding、margin、border、border-radius、transition、transform等。同层标签的生命周期管理支持创建、销毁、位置宽高变化，以及同层组件所在Web页面进入前进后退缓存。同层标签的输入事件分发处理支持触摸事件TouchEvent的DOWN/UP/MOVE/CANCEL。约束限制包括Web页面内同层标签数量应控制在5个以内，同层标签最大高度不超过8000px，最大纹理大小为8000px等。"
+        }
+      ]
+    },
+    {
+      "id": "section-4",
+      "title": "Web页面中同层渲染输入框",
+      "level": 1,
+      "line": 133,
+      "content": "在Web页面中，可以使用ArkUI系统的TextInput组件进行同层渲染。实现步骤包括：1.在Web页面中标记需要同层渲染的HTML标签；2.在应用侧开启同层渲染功能；3.创建自定义组件；4.创建节点控制器；5.监听同层渲染的生命周期变化；6.处理同层渲染手势事件；7.处理同层渲染鼠标事件。"
+    },
+    {
+      "id": "section-5",
+      "title": "绘制XComponent+AVPlayer和Button组件",
+      "level": 1,
+      "line": 756,
+      "content": "展示如何在同层渲染中使用XComponent、AVPlayer和Button组件，包括应用侧代码组件使用示例、视频播放示例和前端页面示例。"
+    },
+    {
+      "id": "section-6",
+      "title": "同层标签设置为最高层级",
+      "level": 1,
+      "line": 1112,
+      "content": "同层渲染支持私有属性arkwebnativestyle，该属性仅在开启同层渲染后的<embed>和<object>中生效，该属性的display属性用于控制同层标签的显示层级，使其高于其他Web元素。display属性取值包括overlay（设置同层标签层级高于其他Web元素）和overlay-infinity（设置同层标签层级高于其他Web元素和设置overlay的同层标签）。"
+    },
+    {
+      "id": "section-7",
+      "title": "同层渲染纹理贴图对齐方式",
+      "level": 1,
+      "line": 1405,
+      "content": "ArkWeb同层渲染场景下的私有属性arkwebnativestyle，从API version 23开始，增加属性object-fit:stretch（默认值，纹理按同层标签bounds尺寸拉伸对齐）和object-fit:none（纹理不拉伸，左顶角对齐）两种配置，用于控制单个同层标签的纹理对齐方式以实现灵活展示效果，适用于同层标签宽高动态变化的场景。"
+    },
+    {
+      "id": "section-8",
+      "title": "常见问题",
+      "level": 1,
+      "line": 1626,
+      "children": [
+        {
+          "id": "section-8-1",
+          "title": "同层渲染组件被拉伸该如何解决？",
+          "level": 2,
+          "line": 1627,
+          "content": "可能原因包括组件高度过大（受GPU限制，同层标签存在8000px的高度限制）和自定义组件宽高未指定为同层渲染标签的宽高。"
+        },
+        {
+          "id": "section-8-2",
+          "title": "如何将同层渲染组件捕获到的事件透传到web前端？",
+          "level": 2,
+          "line": 1654,
+          "content": "同层渲染手势事件通过setGestureEventResult()设置手势事件消费结果，可以选择系统组件侧或ArkWeb侧消费手势事件。如果要实现系统组件侧和ArkWeb侧同时消费手势事件，可以在setGestureEventResult()中将stopPropagation设置为false。"
+        },
+        {
+          "id": "section-8-3",
+          "title": "同层渲染页面显示该插件不支持该如何解决？",
+          "level": 2,
+          "line": 1657,
+          "content": "可能原因包括同层渲染开关enableNativeEmbedMode未开启和同层标签使用有误。"
+        },
+        {
+          "id": "section-8-4",
+          "title": "涉及界面交互的ArkUI组件（如TextInput等）光标与输入框错位该如何解决？",
+          "level": 2,
+          "line": 1672,
+          "content": "首先，需使用Stack包裹同层组件容器和BuilderNode。其次，同层组件容器NodeContainer应与同层标签的位置绑定。"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "同层渲染",
+    "ArkWeb",
+    "Web组件",
+    "ArkUI",
+    "NodeContainer",
+    "TextInput",
+    "XComponent",
+    "Canvas",
+    "Video",
+    "生命周期",
+    "手势事件",
+    "鼠标事件",
+    "embed",
+    "object",
+    "arkwebnativestyle",
+    "object-fit"
+  ],
+  "code_blocks": [
+    {
+      "language": "html",
+      "title": "使用embed标签的HTML示例",
+      "line": 148
+    },
+    {
+      "language": "html",
+      "title": "使用object标签的HTML示例",
+      "line": 182
+    },
+    {
+      "language": "typescript",
+      "title": "开启同层渲染功能",
+      "line": 207
+    },
+    {
+      "language": "typescript",
+      "title": "创建自定义组件",
+      "line": 229
+    },
+    {
+      "language": "typescript",
+      "title": "创建节点控制器",
+      "line": 267
+    },
+    {
+      "language": "typescript",
+      "title": "监听同层渲染的生命周期变化",
+      "line": 332
+    },
+    {
+      "language": "typescript",
+      "title": "同层渲染手势事件",
+      "line": 407
+    },
+    {
+      "language": "typescript",
+      "title": "同层渲染鼠标事件",
+      "line": 460
+    },
+    {
+      "language": "typescript",
+      "title": "完整示例代码",
+      "line": 522
+    },
+    {
+      "language": "typescript",
+      "title": "XComponent+AVPlayer和Button组件应用侧代码",
+      "line": 760
+    },
+    {
+      "language": "typescript",
+      "title": "AVPlayer视频播放示例",
+      "line": 998
+    },
+    {
+      "language": "html",
+      "title": "XComponent+AVPlayer前端页面示例",
+      "line": 1090
+    },
+    {
+      "language": "typescript",
+      "title": "同层标签设置为最高层级应用侧代码",
+      "line": 1121
+    },
+    {
+      "language": "html",
+      "title": "同层标签设置为最高层级前端页面示例",
+      "line": 1373
+    },
+    {
+      "language": "typescript",
+      "title": "同层渲染纹理贴图对齐方式应用侧代码",
+      "line": 1416
+    },
+    {
+      "language": "html",
+      "title": "同层渲染纹理贴图对齐方式前端页面示例",
+      "line": 1608
+    }
+  ],
+  "images": [
+    {
+      "path": "figures/web-same-layer-develop-architecture.png",
+      "title": "同层渲染整体架构",
+      "line": 34
+    },
+    {
+      "path": "figures/web-same-layer-develop-textinput1.png",
+      "title": "未使用Stack包裹，TextInput的位置错位",
+      "line": 127
+    },
+    {
+      "path": "figures/web-same-layer-develop-textinput2.png",
+      "title": "使用Stack包裹，TextInput的位置正常",
+      "line": 131
+    },
+    {
+      "path": "figures/web-same-layer-develop-input.png",
+      "title": "同层渲染输入框",
+      "line": 138
+    },
+    {
+      "path": "figures/web-same-layer.png",
+      "title": "XComponent+AVPlayer和Button组件实现效果",
+      "line": 1110
+    },
+    {
+      "path": "figures/web-same-layer-nativeEmbedOverlay1.png",
+      "title": "未设置arkwebnativestyle的display属性",
+      "line": 1399
+    },
+    {
+      "path": "figures/web-same-layer-nativeEmbedOverlay2.png",
+      "title": "设置arkwebnativestyle的display属性",
+      "line": 1403
+    }
+  ],
+  "api_references": [
+    {
+      "name": "enableNativeEmbedMode",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativeembedmode11",
+      "description": "开启同层渲染功能"
+    },
+    {
+      "name": "onNativeEmbedLifecycleChange",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-events.md#onnativeembedlifecyclechange11",
+      "description": "监听同层渲染标签的生命周期变化"
+    },
+    {
+      "name": "onNativeEmbedGestureEvent",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-events.md#onnativeembedgestureevent11",
+      "description": "监听同层渲染区域的手势事件"
+    },
+    {
+      "name": "onNativeEmbedMouseEvent",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-events.md#onnativeembedmouseevent20",
+      "description": "监听同层渲染区域的鼠标事件"
+    },
+    {
+      "name": "onNativeEmbedVisibilityChange",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-events.md#onnativeembedvisibilitychange12",
+      "description": "监听同层标签可见状态变化"
+    },
+    {
+      "name": "onNativeEmbedObjectParamChange",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-events.md#onnativeembedobjectparamchange21",
+      "description": "监听同层渲染<object>标签内嵌param元素状态变化"
+    },
+    {
+      "name": "NodeContainer",
+      "path": "../reference/apis-arkui/arkui-ts/ts-basic-components-nodecontainer.md",
+      "description": "用于构建H5同层标签对应的同层渲染组件"
+    },
+    {
+      "name": "TextInput",
+      "path": "../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md",
+      "description": "支持同层渲染的ArkUI组件"
+    },
+    {
+      "name": "XComponent",
+      "path": "../reference/apis-arkui/arkui-ts/ts-basic-components-xcomponent.md",
+      "description": "支持同层渲染的ArkUI组件"
+    },
+    {
+      "name": "Canvas",
+      "path": "../reference/apis-arkui/arkui-ts/ts-components-canvas-canvas.md",
+      "description": "支持同层渲染的ArkUI组件"
+    },
+    {
+      "name": "Video",
+      "path": "../reference/apis-arkui/arkui-ts/ts-media-components-video.md",
+      "description": "支持同层渲染的ArkUI组件"
+    },
+    {
+      "name": "Web",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web.md",
+      "description": "支持同层渲染的ArkUI组件"
+    }
+  ],
+  "related_docs": [],
+  "tags": [
+    "web",
+    "arkweb",
+    "同层渲染",
+    "ui组件",
+    "生命周期管理",
+    "事件处理"
+  ],
+  "last_modified": "2025-02-25",
+  "word_count": 1682
+}

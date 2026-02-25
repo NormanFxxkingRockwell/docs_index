@@ -1,0 +1,70 @@
+{
+  "doc_id": "web-app-page-data-channel",
+  "title": "建立应用侧与前端页面数据通道",
+  "path": "docs/zh-cn/application-dev/web/web-app-page-data-channel.md",
+  "domain": "web",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "介绍如何使用createWebMessagePorts()接口创建消息端口，实现前端页面和应用侧之间的双向通信。包含应用侧和前端页面的代码示例，以及常见问题解答。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "建立应用侧与前端页面数据通道",
+      "line_start": 1,
+      "line_end": 169
+    },
+    {
+      "level": 2,
+      "title": "常见问题",
+      "line_start": 170,
+      "line_end": 189
+    },
+    {
+      "level": 3,
+      "title": "为什么H5向应用侧发送消息接收不到？",
+      "line_start": 172,
+      "line_end": 186
+    },
+    {
+      "level": 3,
+      "title": "onControllerAttached与javaScriptOnDocumentStart的执行顺序是什么？",
+      "line_start": 188,
+      "line_end": 189
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "ts",
+      "line_start": 18,
+      "line_end": 108,
+      "description": "应用侧代码示例"
+    },
+    {
+      "language": "html",
+      "line_start": 112,
+      "line_end": 168,
+      "description": "前端页面代码示例"
+    },
+    {
+      "language": "ts",
+      "line_start": 177,
+      "line_end": 186,
+      "description": "对象类型传递示例"
+    }
+  ],
+  "api_references": [
+    "createWebMessagePorts()",
+    "postMessage()",
+    "close",
+    "javaScriptOnDocumentStart",
+    "onControllerAttached"
+  ],
+  "total_lines": 189
+}

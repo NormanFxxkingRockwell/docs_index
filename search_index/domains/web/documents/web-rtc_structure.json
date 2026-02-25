@@ -1,0 +1,113 @@
+{
+  "doc_id": "web-rtc",
+  "title": "在Web中打开摄像头和麦克风",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@qq_42700029",
+    "designer": "@qiu-gongkai",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍如何在Web组件中使用WebRTC技术打开摄像头和麦克风，包括权限配置、应用侧代码和前端页面代码的实现。WebRTC是一项实时通讯技术，允许网络应用建立浏览器之间的点对点连接，实现视频流、音频流或其他任意数据的传输。",
+  "chapters": [
+    {
+      "level": 1,
+      "title": "WebRTC技术简介",
+      "line_start": 9,
+      "line_end": 11,
+      "content": "WebRTC（Web Real-Time Communications）是一项实时通讯技术，它允许网络应用或站点在无需中间媒介的情况下建立浏览器之间的点对点（Peer-to-Peer）连接，实现视频流、音频流或其他任意数据的传输。Web组件可以通过W3C标准协议接口拉起摄像头和麦克风，通过onPermissionRequest接口接收权限请求通知，需在配置文件中声明相应的音频权限。"
+    },
+    {
+      "level": 1,
+      "title": "权限配置",
+      "line_start": 13,
+      "line_end": 51,
+      "content": "使用摄像头和麦克风功能前需要在module.json5中添加音频相关权限，包括CAMERA和MICROPHONE权限，并在string.json中配置权限说明。"
+    },
+    {
+      "level": 1,
+      "title": "代码实现",
+      "line_start": 53,
+      "line_end": 153,
+      "children": [
+        {
+          "level": 2,
+          "title": "应用侧代码",
+          "line_start": 57,
+          "line_end": 115,
+          "content": "应用侧代码使用Web组件，通过onPermissionRequest接口处理权限请求，点击onConfirm按钮后拉起摄像头和麦克风。需要先请求CAMERA和MICROPHONE权限。"
+        },
+        {
+          "level": 2,
+          "title": "前端页面代码",
+          "line_start": 117,
+          "line_end": 153,
+          "content": "前端页面使用HTML5的video和canvas元素，通过navigator.mediaDevices.getUserMedia()接口拉起摄像头和麦克风，constraints参数包含video和audio配置。"
+        }
+      ]
+    }
+  ],
+  "key_concepts": [
+    "WebRTC",
+    "实时通讯",
+    "点对点连接",
+    "摄像头",
+    "麦克风",
+    "权限请求",
+    "onPermissionRequest",
+    "getUserMedia",
+    "MediaStreamConstraints"
+  ],
+  "apis": [
+    {
+      "name": "onPermissionRequest",
+      "type": "event",
+      "description": "接收权限请求通知"
+    },
+    {
+      "name": "navigator.mediaDevices.getUserMedia",
+      "type": "method",
+      "description": "拉起摄像头和麦克风"
+    },
+    {
+      "name": "requestPermissionsFromUser",
+      "type": "method",
+      "description": "请求用户权限"
+    },
+    {
+      "name": "showAlertDialog",
+      "type": "method",
+      "description": "显示权限请求对话框"
+    }
+  ],
+  "code_samples": [
+    {
+      "type": "TypeScript",
+      "description": "应用侧代码示例",
+      "line_start": 60,
+      "line_end": 115
+    },
+    {
+      "type": "html",
+      "description": "前端页面代码示例",
+      "line_start": 119,
+      "line_end": 153
+    }
+  ],
+  "references": [
+    "../reference/apis-arkweb/arkts-basic-components-web-events.md#onpermissionrequest9",
+    "../security/AccessToken/declare-permissions.md#在配置文件中声明权限"
+  ],
+  "tags": [
+    "WebRTC",
+    "摄像头",
+    "麦克风",
+    "权限",
+    "多媒体"
+  ],
+  "total_lines": 154,
+  "language": "zh-cn",
+  "last_updated": "2026-02-25"
+}

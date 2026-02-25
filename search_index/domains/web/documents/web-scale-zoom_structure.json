@@ -1,0 +1,223 @@
+{
+  "doc_id": "web-scale-zoom",
+  "title": "使用Web组件管理网页缩放",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zourongchun",
+    "designer": "@zhufenghao",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "Web组件支持手势缩放、鼠标滚轮、键盘缩放，以方便用户调整到舒适的显示大小。并对应用提供监听、控制页面缩放比例的功能，以便应用实现个性化的视觉效果。",
+  "sections": [
+    {
+      "id": "enable-disable-zoom",
+      "title": "启用/禁用网页缩放",
+      "level": 2,
+      "content": "启用/禁用网页缩放",
+      "line_start": 11,
+      "line_end": 106,
+      "subsections": [
+        {
+          "id": "enable-disable-gesture-zoom",
+          "title": "启用/禁用网页手势缩放",
+          "level": 3,
+          "content": "通过属性zoomAccess控制网页缩放功能，当设置为false时，网页不允许手势缩放行为。当html网页设置<meta name=\"viewport\" id=\"viewport\" content=\"user-scalable=no\">时，网页不允许手势缩放。仅当zoomAccess和viewport标签都设置为允许缩放时，才允许手势缩放。",
+          "line_start": 13,
+          "line_end": 46,
+          "keywords": ["zoomAccess", "viewport", "user-scalable", "手势缩放"]
+        },
+        {
+          "id": "enable-disable-force-zoom",
+          "title": "启用/禁用手势强制缩放",
+          "level": 3,
+          "content": "通过属性forceEnableZoom控制网页强制缩放功能，当设置为true时，手势缩放行为不受minimum-scale和maximum-scale以及user-scalable=no的限制。",
+          "line_start": 48,
+          "line_end": 50,
+          "keywords": ["forceEnableZoom", "强制缩放", "minimum-scale", "maximum-scale"]
+        },
+        {
+          "id": "enable-disable-keyboard-mouse-zoom",
+          "title": "启用/禁用网页键盘鼠标缩放",
+          "level": 3,
+          "content": "ArkWeb默认支持通过Ctrl+按键'-'/'+' 或者 Ctrl+鼠标滚轮进行缩放。应用可以通过拦截键盘事件来阻止按键缩放。或者通过属性zoomControlAccess设置是否允许通过组合按键（Ctrl+'-/+'或Ctrl+鼠标滚轮/触摸板）进行缩放。",
+          "line_start": 52,
+          "line_end": 106,
+          "keywords": ["zoomControlAccess", "键盘缩放", "鼠标滚轮", "onKeyPreIme"]
+        }
+      ],
+      "keywords": ["手势缩放", "强制缩放", "键盘缩放", "鼠标缩放", "zoomAccess", "forceEnableZoom", "zoomControlAccess"]
+    },
+    {
+      "id": "monitor-scale-change",
+      "title": "监听页面缩放比例变化",
+      "level": 2,
+      "content": "应用可以通过onScaleChange接口监听页面缩放比例的变化。该接口事件对应手势事件(双指缩放)，event.newScale对应网页属性visualViewport.scale。",
+      "line_start": 108,
+      "line_end": 131,
+      "subsections": [],
+      "keywords": ["onScaleChange", "缩放比例", "监听", "visualViewport.scale"]
+    },
+    {
+      "id": "control-zoom-ratio",
+      "title": "控制网页的缩放比例",
+      "level": 2,
+      "content": "应用可以通过设置initialScale属性设置页面初始缩放比例。应用可以通过zoom、zoomIn、zoomOut接口控制页面缩放。使用以上接口控制页面缩放时，必须设置属性zoomAccess为true。zoomAccess为false时，zoom类接口会抛出异常17100004。",
+      "line_start": 133,
+      "line_end": 271,
+      "subsections": [
+        {
+          "id": "fixed-ratio-zoom",
+          "title": "以固定比例缩放页面",
+          "level": 3,
+          "content": "zoomIn将当前网页进行放大，比例为25%；zoomOut将当前网页进行缩小，比例为20%。",
+          "line_start": 143,
+          "line_end": 180,
+          "keywords": ["zoomIn", "zoomOut", "固定比例", "放大", "缩小"]
+        },
+        {
+          "id": "input-value-zoom",
+          "title": "根据输入值控制页面缩放比例",
+          "level": 3,
+          "content": "zoom基于当前网页比例进行缩放，入参要求大于0，当入参为1时为默认加载网页的缩放比例，入参小于1为缩小，入参大于1为放大。",
+          "line_start": 182,
+          "line_end": 218,
+          "keywords": ["zoom", "输入值", "缩放比例"]
+        },
+        {
+          "id": "target-ratio-zoom",
+          "title": "缩放页面到目标比例",
+          "level": 3,
+          "content": "通过onScaleChange接口，应用可以得知当前网页的缩放比例，配合zoom接口即可实现将页面缩放至指定比例的功能。根据当前页面缩放比例pageFactor和目标比例targetFactor计算zoom入参的公式为：factor = 100 * targetFactor / pageFactor",
+          "line_start": 221,
+          "line_end": 271,
+          "keywords": ["onScaleChange", "zoom", "目标比例", "pageFactor", "targetFactor"]
+        }
+      ],
+      "keywords": ["initialScale", "zoom", "zoomIn", "zoomOut", "缩放比例", "zoomAccess"]
+    }
+  ],
+  "api_references": [
+    {
+      "name": "zoomAccess",
+      "type": "attribute",
+      "description": "控制网页缩放功能",
+      "link": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#zoomaccess"
+    },
+    {
+      "name": "forceEnableZoom",
+      "type": "attribute",
+      "description": "控制网页强制缩放功能",
+      "link": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#forceenablezoom21"
+    },
+    {
+      "name": "zoomControlAccess",
+      "type": "attribute",
+      "description": "设置是否允许通过组合按键进行缩放",
+      "link": "../reference/apis-arkweb/arkts-basicari-components-web-attributes.md#zoomcontrolaccess22"
+    },
+    {
+      "name": "onScaleChange",
+      "type": "event",
+      "description": "监听页面缩放比例的变化",
+      "link": "../reference/apis-arkweb/arkts-basic-components-web-events.md#onscalechange9"
+    },
+    {
+      "name": "initialScale",
+      "type": "attribute",
+      "description": "设置页面初始缩放比例",
+      "link": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#initialscale9"
+    },
+    {
+      "name": "zoom",
+      "type": "method",
+      "description": "基于当前网页比例进行缩放",
+      "link": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#zoom"
+    },
+    {
+      "name": "zoomIn",
+      "type": "method",
+      "description": "将当前网页进行放大",
+      "link": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#zoomin"
+    },
+    {
+      "name": "zoomOut",
+      "type": "method",
+      "description": "将当前网页进行缩小",
+      "link": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#zoomout"
+    }
+  ],
+  "code_samples": [
+    {
+      "title": "ControlWebGestureZooming",
+      "description": "控制Web组件手势缩放",
+      "link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/WebManagementZooming/entry/src/main/ets/pages/ControlWebGestureZooming.ets"
+    },
+    {
+      "title": "ControlMouseAndKeyBoardZooming",
+      "description": "控制鼠标和键盘缩放",
+      "link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/WebManagementZooming/entry/src/main/ets/pages/ControlMouseAndKeyBoardZooming.ets"
+    },
+    {
+      "title": "MonitorZoomRatio",
+      "description": "监听缩放比例变化",
+      "link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/WebManagementZooming/entry/src/main/ets/pages/MonitorZoomRatio.ets"
+    },
+    {
+      "title": "ControlZoomByFixedRatio",
+      "description": "以固定比例控制缩放",
+      "link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/WebManagementZooming/entry/src/main/ets/pages/ControlZoomByFixedRatio.ets"
+    },
+    {
+      "title": "ControlZoomByInput",
+      "description": "根据输入值控制缩放",
+      "link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/WebManagementZooming/entry/src/main/ets/pages/ControlZoomByInput.ets"
+    },
+    {
+      "title": "ControlZoomToFixedRatio",
+      "description": "缩放到固定比例",
+      "link": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkWeb/WebManagementZooming/entry/src/main/ets/pages/ControlZoomToFixedRatio.ets"
+    }
+  ],
+  "figures": [
+    {
+      "name": "zoom-by-step",
+      "path": "./figures/zoom-by-step.gif",
+      "description": "按步骤缩放演示"
+    },
+    {
+      "name": "zoom-to-target",
+      "path": "./figures/zoom-to-target.gif",
+      "description": "缩放到目标比例演示"
+    }
+  ],
+  "keywords": [
+    "Web组件",
+    "网页缩放",
+    "手势缩放",
+    "键盘缩放",
+    "鼠标缩放",
+    "zoomAccess",
+    "forceEnableZoom",
+    "zoomControlAccess",
+    "onScaleChange",
+    "zoom",
+    "zoomIn",
+    "zoomOut",
+    "initialScale",
+    "ArkWeb"
+  ],
+  "stats": {
+    "total_lines": 272,
+    "total_sections": 3,
+    "total_subsections": 6,
+    "total_api_references": 8,
+    "total_code_samples": 6,
+    "total_figures": 2
+  },
+  "file_path": "docs/zh-cn/application-dev/web/web-scale-zoom.md",
+  "domain": "web",
+  "language": "zh-cn",
+  "last_updated": "2026-02-25"
+}

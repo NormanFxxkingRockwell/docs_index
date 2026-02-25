@@ -1,0 +1,443 @@
+{
+  "doc_id": "web-white-screen",
+  "title": "定位与解决Web白屏问题",
+  "path": "docs/zh-cn/application-dev/web/web-white-screen.md",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@yp99ustc",
+    "designer": "@LongLie",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档详细介绍了Web页面出现白屏问题的排查步骤和解决方案。主要内容包括：检查权限和网络状态、使用DevTools工具进行页面内容验证、处理复杂布局与渲染模式问题、处理H5代码兼容性、监控内存与生命周期、以及解决设备WebView默认加载进程不一致导致的白屏问题。文档提供了具体的代码示例和配置方法，帮助开发者快速定位和解决常见的Web白屏问题。",
+  "structure": {
+    "sections": [
+      {
+        "level": 1,
+        "title": "定位与解决Web白屏问题",
+        "line": 1,
+        "content_start": 9,
+        "content_end": 16,
+        "children": [
+          {
+            "level": 2,
+            "title": "检查权限和网络状态",
+            "line": 18,
+            "content_start": 19,
+            "content_end": 96,
+            "key_points": [
+              "验证设备网络状态",
+              "添加网络权限ohos.permission.INTERNET",
+              "开启DOM Storage API权限",
+              "开启文件读写权限",
+              "开启图片资源加载权限",
+              "开启JavaScript执行权限",
+              "修改UserAgent"
+            ]
+          },
+          {
+          "level": 2,
+            "title": "使用DevTools工具进行页面内容验证",
+            "line": 97,
+            "content_start": 98,
+            "content_end": 323,
+            "key_points": [
+              "查阅控制台错误信息",
+              "检查MixedContent策略或CORS策略",
+              "解决本地资源跨域问题",
+              "使用http或https协议替代file或resource协议",
+              "使用onInterceptRequest方法拦截资源",
+              "使用setPathAllowingUniversalAccess设置路径列表",
+              "监听错误上报接口"
+            ]
+          },
+          {
+            "level": 2,
+            "title": "复杂的布局与渲染模式导致白屏",
+            "line": 325,
+            "content_start": 326,
+            "content_end": 365,
+            "key_points": [
+              "异步渲染模式下Web组件宽高不能超过7,680px",
+              "配置同步渲染模式",
+              "关闭滚动效果",
+              "避免动态调整组件高度",
+              "避免启用键盘避让属性RESIZE_CONTENT",
+              "检查css样式height vh与FIT_CONTENT模式的冲突"
+            ]
+          },
+          {
+            "level": 2,
+            "title": "处理H5代码兼容性",
+            "line": 366,
+            "content_start": 367,
+            "content_end": 379,
+            "key_points": [
+              "特殊协议拦截",
+              "拦截tel:、mailto:等协议",
+              "调用系统拨号能力"
+            ]
+          },
+          {
+            "level": 2,
+            "title": "监控内存与生命周期",
+            "line": 380,
+            "content_start": 381,
+            "content_end": 413,
+            "key_points": [
+              "检查内存泄漏",
+              "检查渲染进程启动状态",
+              "查看日志关键字MEMORY_PRESSURE_LEVEL_CRITICAL",
+              "查看日志关键字StartRenderProcess failed",
+              "查看日志关键字crashpad SandboxedHandler",
+              "监控网络加载过程关键日志"
+            ]
+          },
+          {
+            "level": 2,
+            "title": "设备的WebView默认加载进程不一致导致加载H5页面白屏",
+            "line": 414,
+            "content_start": 415,
+            "content_end": 429,
+            "key_points": [
+              "Table/PC/2in1默认采用多进程加载",
+              "通过setRenderProcessMode设置为单进程加载"
+            ]
+          }
+        ]
+      }
+    ],
+    "code_blocks": [
+      {
+        "type": "json5",
+        "language": "json5",
+        "line_start": 25,
+        "line_end": 31,
+        "description": "网络权限配置"
+      },
+      {
+        "type": "typescript",
+        "language": "typescript",
+        "line_start": 44,
+        "line_end": 63,
+        "description": "开启Web组件权限"
+      },
+      {
+        "type": "typescript",
+        "language": "typescript",
+        "line_start": 70,
+        "line_end": 95,
+        "description": "修改UserAgent"
+      },
+      {
+        "type": "typescript",
+        "language": "typescript",
+        "line_start": 115,
+        "line_end": 175,
+        "description": "使用onInterceptRequest解决跨域问题"
+      },
+      {
+        "type": "html",
+        "language": "html",
+        "line_start": 177,
+        "line_end": 188,
+        "description": "index.html示例"
+      },
+      {
+        "type": "javascript",
+        "language": "javascript",
+        "line_start": 190,
+        "line_end": 196,
+        "description": "script.js示例"
+      },
+      {
+        "type": "typescript",
+        "language": "typescript",
+        "line_start": 227,
+        "line_end": 258,
+        "description": "使用setPathAllowingUniversalAccess设置路径"
+      },
+      {
+        "type": "html",
+        "language": "html",
+        "line_start": 261,
+        "line_end": 304,
+        "description": "HTML示例代码"
+      },
+      {
+        "type": "javascript",
+        "language": "javascript",
+        "line_start": 306,
+        "line_end": 312,
+        "description": "script.js示例"
+      },
+      {
+        "type": "html",
+        "language": "html",
+        "line_start": 338,
+        "line_end": 345,
+        "description": "vh样式冲突示例"
+      },
+      {
+        "type": "html",
+        "language": "html",
+        "line_start": 348,
+        "line_end": 355,
+        "description": "解决方案1：子dom使用具体高度"
+      },
+      {
+        "type": "html",
+        "language": "html",
+        "line_start": 357,
+        "line_end": 364,
+        "description": "解决方案2：父元素使用实际高度"
+      },
+      {
+        "type": "c",
+        "language": "c",
+        "line_start": 370,
+        "line_end": 379,
+        "description": "拦截tel协议"
+      },
+      {
+        "type": "typescript",
+        "language": "typescript",
+        "line_start": 427,
+        "line_end": 429,
+        "description": "设置单进程加载"
+      }
+    ],
+    "tables": [
+      {
+        "title": "Web组件权限配置",
+        "line_start": 34,
+        "line_end": 41,
+        "columns": ["名称", "说明"],
+        "rows": [
+          ["domStorageAccess", "DOM Storage API权限"],
+          ["fileAccess", "文件读写功能"],
+          ["imageAccess", "自动加载图片资源"],
+          ["onlineImageAccess", "从网络加载图片资源"],
+          ["javaScriptAccess", "执行JavaScript脚本"]
+        ]
+      },
+      {
+        "title": "错误上报接口",
+        "line_start": 316,
+        "line_end": 322,
+        "columns": ["名称", "说明"],
+        "rows": [
+          ["onErrorReceive", "资源加载失败回调"],
+          ["onHttpErrorReceive", "HTTP错误码回调"],
+          ["onHttpAuthRequest", "407认证请求"],
+          ["onClientAuthenticationRequest", "证书请求"],
+          ["onSslErrorEvent", "证书错误"]
+        ]
+      },
+      {
+        "title": "日志关键字和说明",
+        "line_start": 385,
+        "line_end": 393,
+        "columns": ["日志关键字", "说明"],
+        "rows": [
+          ["StartRenderProcess failed", "渲染进程启动失败"],
+          ["MEMORY_PRESSURE_LEVEL_CRITICAL", "内存压力达到阈值"],
+          ["crashpad SandboxedHandler", "渲染进程crash"],
+          ["SharedContextState context lost", "共享内存不足"],
+          ["CreateNativeViewGLSurfaceEGLOhos", "创建egl surface成功"],
+          ["INFO: request had no response", "网络超时"],
+          ["final url: error_code", "主资源加载报错"]
+        ]
+      },
+      {
+        "title": "网络加载关键日志",
+        "line_start": 399,
+        "line_end": 412,
+        "columns": ["日志关键字", "说明"],
+        "rows": [
+          ["NWebRenderMain start", "子进程启动"],
+          ["RendererMain startup", "子进程初始化开始"],
+          ["WillProcessNavigationResponse", "收到主资源response"],
+          ["commit navigation", "Commit到子进程"],
+          ["RenderFrameImpl::CommitNavigation", "子进程收到commit"],
+          ["NWebHandlerDelegate::OnNavigationEntryCommitted", "主进程收到DidCommitNavigation"],
+          ["load_timing_info", "主资源加载完成"],
+          ["MarkFirstContentfulPaint", "标记解析到有可显示内容的元素"],
+          ["NWebHandlerDelegate::OnPageVisible", "第一帧展示"],
+          ["NWebHandlerDelegate::OnFirstContentfulPaint", "第一帧有内容展示"],
+          ["content load finished", "页面解析完成"],
+          ["page load finished", "页面及子资源加载完成"]
+        ]
+      }
+    ],
+    "images": [
+      {
+        "path": "figures/web-white-devtools.PNG",
+        "line": 102,
+        "description": "DevTools调试界面"
+      },
+      {
+        "path": "figures/web-white-page-load.PNG",
+        "line": 397,
+        "description": "Web组件网络加载过程"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "domStorageAccess",
+        "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#domstorageaccess",
+        "line": 36
+      },
+      {
+        "name": "fileAccess",
+        "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#fileaccess",
+        "line": 37
+      },
+      {
+        "name": "imageAccess",
+        "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#imageaccess",
+        "line": 38
+      },
+      {
+        "name": "onlineImageAccess",
+        "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#onlineimageaccess",
+        "line": 39
+      },
+      {
+        "name": "javaScriptAccess",
+        "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#javascriptaccess",
+        "line": 40
+      },
+      {
+        "name": "setCustomUserAgent",
+        "path": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#setcustomuseragent10",
+        "line": 66
+      },
+      {
+        "name": "onInterceptRequest",
+        "path": "../reference/apis-arkweb/arkts-basic-components-web-events.md#oninterceptrequest9",
+        "line": 112
+      },
+      {
+        "name": "setPathAllowingUniversalAccess",
+        "path": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#setpathallowinguniversalaccess12",
+        "line": 200
+      },
+      {
+        "name": "Context.filesDir",
+        "path": "../reference/apis/ability-kit/js-apis-inner-application-context.md#context",
+        "line": 202
+      },
+      {
+        "name": "Context.resourceDir",
+        "path": "../reference/apis/ability-kit/js-apis-inner-application-context.md#context",
+        "line": 207
+      },
+      {
+        "name": "Context.cacheDir",
+        "path": "../reference/apis/ability-kit/js-apis-inner-application-context.md#context",
+        "line": 212
+      },
+      {
+        "name": "Context.tempDir",
+        "path": "../reference/apis/ability-kit/js-apis-inner-application-context.md#context",
+        "line": 218
+      },
+      {
+        "name": "onErrorReceive",
+        "path": "../reference/apis-arkweb/arkts-basic-components-web-events.md#onerrorreceive",
+        "line": 318
+      },
+      {
+        "name": "onHttpErrorReceive",
+        "path": "../reference/apis-arkweb/arkts-basic-components-web-events.md#onhttperrorreceive",
+        "line": 319
+      },
+      {
+        "name": "onHttpAuthRequest",
+        "path": "../reference/apis-arkweb/arkts-basic-components-web-events.md#onhttpauthrequest9",
+        "line": 320
+      },
+      {
+        "name": "onClientAuthenticationRequest",
+        "path": "../reference/apis-arkweb/arkts-basic-components-web-events.md#onclientauthenticationrequest9",
+        "line": 321
+      },
+      {
+        "name": "onSslErrorEvent",
+        "path": "../reference/apis-arkweb/arkts-basic-components-web-events.md#onsslerrorevent12",
+        "line": 322
+      },
+      {
+        "name": "RenderMode",
+        "path": "../reference/apis-arkweb/arkts-basic-components-web-e.md#rendermode12",
+        "line": 329
+      }
+    ],
+    "related_docs": [
+      {
+        "title": "使用DevTools工具调试前端页面",
+        "path": "web-debugging-with-devtools.md",
+        "line": 12
+      },
+      {
+        "title": "坚盾守护模式",
+        "path": "./web-secure-shield-mode.md",
+        "line": 16
+      },
+      {
+        "title": "ArkWeb限制的HTML5特性",
+        "path": "./web-secure-shield-mode.md#arkweb限制的html5特性",
+        "line": 16
+      },
+      {
+        "title": "解决Web组件本地资源跨域问题",
+        "path": "web-cross-origin.md",
+        "line": 104
+      },
+      {
+        "title": "网络协议栈错误列表",
+        "path": "../reference/apis-arkweb/arkts-apis-netErrorList.md",
+        "line": 314
+      },
+      {
+        "title": "Web组件渲染模式",
+        "path": "web-render-mode.md",
+        "line": 328
+      },
+      {
+        "title": "Web组件大小自适应页面内容布局",
+        "path": "web-fit-content.md",
+        "line": 331
+      }
+    ]
+  },
+  "keywords": [
+    "白屏",
+    "Web组件",
+    "权限",
+    "网络状态",
+    "DevTools",
+    "跨域",
+    "CORS",
+    "渲染模式",
+    "H5兼容性",
+    "内存",
+    "生命周期",
+    "多进程",
+    "单进程"
+  ],
+  "tags": [
+    "troubleshooting",
+    "debugging",
+    "web",
+    "performance",
+    "compatibility"
+  ],
+  "difficulty": "intermediate",
+  "estimated_reading_time": 15,
+  "last_updated": "2026-02-25",
+  "total_lines": 429
+}

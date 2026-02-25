@@ -1,0 +1,107 @@
+{
+  "doc_id": "web-cookie-and-data-storage-mgmt",
+  "title": "管理Cookie及数据存储",
+  "domain": "web",
+  "path": "docs/zh-cn/application-dev/web/web-cookie-and-data-storage-mgmt.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍了如何在HarmonyOS Web组件中管理Cookie和数据存储。内容包括Cookie的配置和使用（WebCookieManager类、configCookieSync接口、setLazyInitializeWebEngine接口），以及缓存管理（cacheMode配置、removeCache清除缓存）和Dom Storage（Session Storage和Local Storage）的使能配置。",
+  "sections": [
+    {
+      "id": "cookie-management",
+      "title": "Cookie管理",
+      "level": 2,
+      "content": "Web组件提供WebCookieManager类来管理Cookie信息。Cookie信息存储在应用沙箱路径下/proc/{pid}/root/data/storage/el2/base/cache/web/Cookies的文件中。从API version 22开始，开发者可以通过setLazyInitializeWebEngine()跳过初始化ArkWeb内核以节省configCookieSync()接口耗时。Cookie每30s周期性保存到磁盘中，也可以使用接口saveCookieAsync进行强制落盘。",
+      "line_start": 13,
+      "line_end": 82
+    },
+    {
+      "id": "cache-and-storage-management",
+      "title": "缓存与存储管理",
+      "level": 2,
+      "content": "在访问网站时，网络资源请求通常需要较长的时间。开发者可以通过Cache和Dom Storage等手段将资源保存到本地，以提高访问同一网站的速度。",
+      "line_start": 83,
+      "line_end": 86
+    },
+    {
+      "id": "cache",
+      "title": "Cache",
+      "level": 3,
+      "content": "使用cacheMode()配置页面资源的缓存模式，Web组件为开发者提供四种缓存模式：Default（优先使用未过期的缓存）、None（加载资源使用缓存）、Online（加载资源不使用缓存）、Only（只从缓存中加载资源）。开发者可以通过removeCache()接口清除已经缓存的资源。",
+      "line_start": 88,
+      "line_end": 153
+    },
+    {
+      "id": "dom-storage",
+      "title": "Dom Storage",
+      "level": 3,
+      "content": "Dom Storage包含了Session Storage和Local Storage两类。Session Storage为临时数据，其存储与释放跟随会话生命周期；Local Storage为持久化数据，保存在应用目录下。两者的数据均通过Key-Value的形式存储，在访问需要客户端存储的页面时使用。开发者可以通过Web组件的属性接口domStorageAccess()进行使能配置。",
+      "line_start": 155,
+      "line_end": 178
+    }
+  ],
+  "code_examples": [
+    {
+      "id": "set_the_value_of_a_single_cookie",
+      "title": "设置单个Cookie的值",
+      "language": "TypeScript",
+      "line_start": 21,
+      "line_end": 45
+    },
+    {
+      "id": "set_lazy_initialize_web_engine",
+      "title": "设置延迟初始化Web引擎",
+      "language": "TypeScript",
+      "line_start": 51,
+      "line_end": 77
+    },
+    {
+      "id": "configure_the_caching_mode_for_page_resources",
+      "title": "配置页面资源的缓存模式",
+      "language": "TypeScript",
+      "line_start": 104,
+      "line_end": 120
+    },
+    {
+      "id": "clear_the_cached_resources_that_have_been_stored",
+      "title": "清除已缓存的资源",
+      "language": "TypeScript",
+      "line_start": 126,
+      "line_end": 152
+    },
+    {
+      "id": "enable_configuration",
+      "title": "使能配置",
+      "language": "TypeScript",
+      "line_start": 162,
+      "line_end": 177
+    }
+  ],
+  "api_references": [
+    "WebCookieManager",
+    "configCookieSync",
+    "setLazyInitializeWebEngine",
+    "saveCookieAsync",
+    "cacheMode",
+    "removeCache",
+    "domStorageAccess"
+  ],
+  "tags": [
+    "Cookie",
+    "WebCookieManager",
+    "缓存",
+    "Cache",
+    "Dom Storage",
+    "Session Storage",
+    "Local Storage",
+    "数据存储"
+  ],
+  "total_lines": 178,
+  "created_at": "2026-02-25"
+}

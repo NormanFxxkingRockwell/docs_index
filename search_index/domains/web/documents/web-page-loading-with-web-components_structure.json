@@ -1,0 +1,185 @@
+{
+  "doc_id": "web-page-loading-with-web-components",
+  "title": "使用Web组件加载页面",
+  "path": "docs/zh-cn/application-dev/web/web-page-loading-with-web-components.md",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍了Web组件的基本功能：页面加载。根据页面加载数据来源分为三种常用场景：加载网络页面、加载本地页面、加载HTML格式的富文本数据。文档详细说明了每种场景的实现方法、代码示例以及相关的配置要求，包括网络权限配置、本地资源引用、沙箱路径访问等内容。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "使用Web组件加载页面",
+      "line": 1,
+      "content": "页面加载是Web组件的基本功能。根据页面加载数据来源可以分为三种常用场景，包括加载网络页面、加载本地页面、加载HTML格式的富文本数据。页面加载过程中，若涉及网络资源获取，请在module.json5中配置网络访问权限。",
+      "children": []
+    },
+    {
+      "level": 2,
+      "title": "加载网络页面",
+      "line": 23,
+      "content": "开发者可以在Web组件创建时，指定默认加载的网络页面。在默认页面加载完成后，如果需要变更此Web组件显示的网络页面，可以通过调用loadUrl()接口加载指定的网页。Web组件的第一个参数变量src不能通过状态变量（例如：@State）动态更改地址，如需更改，请通过loadUrl()重新加载。",
+      "children": []
+    },
+    {
+      "level": 2,
+      "title": "加载本地页面",
+      "line": 60,
+      "content": "为了在启动、跳转、弱网等场景下减少用户等待感知，同时为动态内容加载争取时间，可以加载本地页面优化用户体验。将本地页面文件放在应用的rawfile目录下，开发者可以在Web组件创建的时候指定默认加载的本地页面，并且加载完成后可通过调用loadUrl()接口变更当前Web组件的页面。",
+      "children": []
+    },
+    {
+      "level": 2,
+      "title": "加载HTML格式的文本数据",
+      "line": 222,
+      "content": "Web组件可以通过loadData()接口实现加载HTML格式的文本数据。当开发者不需要加载整个页面，只需要显示一些页面片段时，可通过此功能来快速加载页面，当加载大量html文件时，需设置第四个参数baseUrl为\"data\"。Web组件也可以通过data url方式直接加载HTML字符串。",
+      "children": []
+    },
+    {
+      "level": 2,
+      "title": "resource协议加载本地资源",
+      "line": 280,
+      "content": "resource协议允许访问应用资源目录中的文件。可以通过resource加载resources/rawfile目录下的html文件，也可以在组件创建时直接使用resource协议加载资源。",
+      "children": []
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line": 335,
+      "content": "针对Web组件开发，有以下相关实例可供参考：浏览器（ArkTS）（Full SDK）(API9)。",
+      "children": []
+    }
+  ],
+  "keywords": [
+    "Web组件",
+    "页面加载",
+    "loadUrl",
+    "loadData",
+    "网络页面",
+    "本地页面",
+    "HTML富文本",
+    "resource协议",
+    "沙箱路径",
+    "rawfile",
+    "ArkWeb"
+  ],
+  "code_blocks": [
+    {
+      "language": "JSON5",
+      "line": 15,
+      "description": "网络访问权限配置"
+    },
+    {
+      "language": "TypeScript",
+      "line": 32,
+      "description": "加载网络页面示例"
+    },
+    {
+      "language": "html",
+      "line": 70,
+      "description": "本地CSS样式文件引用"
+    },
+    {
+      "language": "TypeScript",
+      "line": 85,
+      "description": "加载本地页面示例"
+    },
+    {
+      "language": "html",
+      "line": 115,
+      "description": "local.html页面代码"
+    },
+    {
+      "language": "html",
+      "line": 127,
+      "description": "local1.html页面代码"
+    },
+    {
+      "language": "TypeScript",
+      "line": 142,
+      "description": "GlobalContext单例类"
+    },
+    {
+      "language": "TypeScript",
+      "line": 168,
+      "description": "加载沙箱路径下的本地页面文件"
+    },
+    {
+      "language": "ts",
+      "line": 194,
+      "description": "EntryAbility.ets文件修改"
+    },
+    {
+      "language": "html",
+      "line": 211,
+      "description": "index.html页面代码"
+    },
+    {
+      "language": "TypeScript",
+      "line": 227,
+      "description": "loadData加载HTML文本数据示例"
+    },
+    {
+      "language": "TypeScript",
+      "line": 261,
+      "description": "data url方式加载HTML字符串"
+    },
+    {
+      "language": "TypeScript",
+      "line": 285,
+      "description": "resource协议加载本地资源示例"
+    },
+    {
+      "language": "html",
+      "line": 313,
+      "description": "index.html资源文件"
+    },
+    {
+      "language": "html",
+      "line": 325,
+      "description": "index1.html资源文件"
+    }
+  ],
+  "links": [
+    {
+      "text": "在配置文件中声明权限",
+      "path": "../security/AccessToken/declare-permissions.md#在配置文件中声明权限"
+    },
+    {
+      "text": "loadUrl()",
+      "path": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#loadurl"
+    },
+    {
+      "text": "Web组件",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web.md"
+    },
+    {
+      "text": "fileAccess",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#fileaccess"
+    },
+    {
+      "text": "应用文件路径",
+      "path": "../application-models/application-context-stage.md#获取应用文件路径"
+    },
+    {
+      "text": "loadData()",
+      "path": "../reference/apis-arkweb/arkts-apis-webview-WebviewController.md#loaddata"
+    },
+    {
+      "text": "浏览器（ArkTS）（Full SDK）(API9)",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/Web/Browser"
+    }
+  ],
+  "stats": {
+    "total_lines": 340,
+    "code_blocks": 15,
+    "sections": 6,
+    "links": 7
+  }
+}

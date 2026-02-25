@@ -1,0 +1,83 @@
+{
+  "doc_id": "web-resource-interception-request-mgmt",
+  "title": "自定义页面请求响应",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "Web组件支持在应用拦截到页面请求后自定义响应请求能力。开发者通过onInterceptRequest()接口来实现自定义资源请求响应。自定义请求能力可以用于开发者自定义Web页面响应、自定义文件资源响应等场景。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "自定义页面请求响应",
+      "line_start": 1,
+      "line_end": 179
+    }
+  ],
+  "examples": [
+    {
+      "type": "html",
+      "title": "前端页面index1.html代码",
+      "line_start": 21,
+      "line_end": 32,
+      "description": "演示页面资源请求的HTML示例"
+    },
+    {
+      "type": "typescript",
+      "title": "应用侧代码 - 自定义页面响应",
+      "line_start": 37,
+      "line_end": 78,
+      "description": "演示如何拦截页面请求并构建自定义响应",
+      "api": "onInterceptRequest"
+    },
+    {
+      "type": "html",
+      "title": "前端页面index2.html代码",
+      "line_start": 90,
+      "line_end": 113,
+      "description": "演示JavaScript资源请求的HTML示例"
+    },
+    {
+      "type": "typescript",
+      "title": "应用侧代码 - JavaScript CodeCache",
+      "line_start": 118,
+      "line_end": 175,
+      "description": "演示如何为JavaScript请求响应生成CodeCache",
+      "api": "onInterceptRequest"
+    }
+  ],
+  "apis": [
+    {
+      "name": "onInterceptRequest",
+      "description": "用于拦截页面请求并自定义响应的接口",
+      "reference": "../reference/apis-arkweb/arkts-basic-components-web-events.md#oninterceptrequest9"
+    }
+  ],
+  "images": [
+    {
+      "path": "figures/web-resource-interception-request-1.PNG",
+      "description": "被拦截后的页面示例",
+      "line": 82
+    },
+    {
+      "path": "figures/web-resource-intercption-request-2.PNG",
+      "description": "JavaScript拦截后的页面示例",
+      "line": 179
+    }
+  ],
+  "keywords": [
+    "Web组件",
+    "onInterceptRequest",
+    "自定义响应",
+    "资源拦截",
+    "CodeCache",
+    "WebResourceResponse"
+  ],
+  "content_length": 179,
+  "language": "zh-cn",
+  "domain": "web"
+}

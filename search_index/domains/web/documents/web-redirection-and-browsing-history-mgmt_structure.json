@@ -1,0 +1,120 @@
+{
+  "doc_id": "web-redirection-and-browsing-history-mgmt",
+  "title": "管理页面跳转及浏览记录导航",
+  "path": "docs/zh-cn/application-dev/web/web-redirection-and-browsing-history-mgmt.md",
+  "domain": "web",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍了Web组件中页面跳转和浏览记录导航的管理功能。主要包括历史记录导航（通过forward()和backward()接口实现前进后退功能）、应用内页面跳转（使用onLoadIntercept()接口拦截链接跳转）以及跨应用跳转（通过超链接跳转到其他应用如电话拨号界面）的实现方法。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "历史记录导航",
+      "line_start": 11,
+      "line_end": 50,
+      "content": "在前端页面点击网页中的链接时，Web组件默认会自动打开并加载目标网址。当前端页面替换为新的加载链接时，会自动记录已经访问的网页地址。可以通过forward()和backward()接口向前/向后浏览上一个/下一个历史记录。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "页面跳转",
+      "line_start": 52,
+      "line_end": 121,
+      "content": "当点击页面中的链接需要跳转到应用内其他页面时，可以通过使用Web组件的onLoadIntercept()接口来实现。在下面的示例中，应用首页Index.ets加载前端页面route.html，在route.html页面点击'个人中心'超链接，可跳转到应用的ProfilePage.ets页面。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "跨应用跳转",
+      "line_start": 123,
+      "line_end": 180,
+      "content": "Web组件可以实现点击前端页面超链接跳转到其他应用。在下面的示例代码中，点击call.html前端页面中的超链接，可以跳转到电话应用的拨号界面。",
+      "subsections": []
+    }
+  ],
+  "apis": [
+    {
+      "name": "forward()",
+      "module": "WebviewController",
+      "description": "向前浏览下一个历史记录"
+    },
+    {
+      "name": "backward()",
+      "module": "WebviewController",
+      "description": "向后浏览上一个历史记录"
+    },
+    {
+      "name": "accessBackward()",
+      "module": "WebviewController",
+      "description": "检查是否存在后退的历史记录"
+    },
+    {
+      "name": "accessForward()",
+      "module": "WebviewController",
+      "description": "检查是否存在前进的历史记录"
+    },
+    {
+      "name": "onLoadIntercept()",
+      "module": "Web",
+      "description": "拦截页面加载事件，实现页面跳转"
+    }
+  ],
+  "code_examples": [
+    {
+      "type": "TypeScript",
+      "description": "通过点击应用按钮触发前端页面的后退操作",
+      "line_start": 28,
+      "line_end": 46
+    },
+    {
+      "type": "TypeScript",
+      "description": "应用首页Index.ets页面代码，实现应用内页面跳转",
+      "line_start": 61,
+      "line_end": 88
+    },
+    {
+      "type": "html",
+      "description": "route.html前端页面代码",
+      "line_start": 92,
+      "line_end": 102
+    },
+    {
+      "type": "TypeScript",
+      "description": "跳转页面ProfilePage.ets代码",
+      "line_start": 107,
+      "line_end": 120
+    },
+    {
+      "type": "TypeScript",
+      "description": "应用侧代码，实现跨应用跳转到电话拨号界面",
+      "line_start": 132,
+      "line_end": 165
+    },
+    {
+      "type": "html",
+      "description": "call.html前端页面代码",
+      "line_start": 169,
+      "line_end": 179
+    }
+  ],
+  "permissions": [
+    {
+      "name": "ohos.permission.INTERNET",
+      "description": "网络访问权限"
+    }
+  ],
+  "kits": [
+    "ArkWeb",
+    "ArkUI",
+    "TelephonyKit"
+  ],
+  "total_lines": 180,
+  "created_at": "2026-02-25"
+}

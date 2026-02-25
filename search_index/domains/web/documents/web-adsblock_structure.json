@@ -1,0 +1,111 @@
+{
+  "doc_id": "web-adsblock",
+  "title": "使用Web组件的广告过滤功能",
+  "domain": "web",
+  "file_path": "docs/zh-cn/application-dev/web/web-adsblock.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "文档介绍了ArkWeb为应用提供的广告过滤功能，支持通过云端推送默认的easylist规则或自定义规则文件。包括常用easylist语法规则、约束与限制说明，以及开启广告过滤、关闭特定域名页面广告过滤、收集广告过滤信息等使用场景。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "常用easylist语法规则",
+      "line_start": 13,
+      "line_end": 26,
+      "content": "介绍了URL拦截规则、例外规则、元素隐藏规则、元素隐藏例外规则等常用easylist语法规则，并提供示例表格。"
+    },
+    {
+      "level": 2,
+      "title": "约束与限制",
+      "line_start": 28,
+      "line_end": 46,
+      "content": "说明了广告过滤功能的约束与限制，包括WebviewController的enableAdsBlock()接口、AdsBlockManager全局单例类、onAdsBlocked()回调通知等接口的使用规则和持久化策略。"
+    },
+    {
+      "level": 2,
+      "title": "使用场景",
+      "line_start": 48,
+      "line_end": 254,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "开启广告过滤",
+          "line_start": 50,
+          "line_end": 104,
+          "content": "演示如何通过AdsBlockManager的setAdsBlockRules()接口设置自定义easylist过滤规则，并通过Web组件的enableAdsBlock()接口使能广告过滤特性。"
+        },
+        {
+          "level": 3,
+          "title": "关闭特定域名页面的广告过滤",
+          "line_start": 106,
+          "line_end": 221,
+          "content": "演示如何使用AdsBlockManager的addAdsBlockDisallowedList()和addAdsBlockAllowedList()接口控制特定域名页面的广告过滤开关，包括DisallowedList和AllowList的优先级规则。"
+        },
+        {
+          "level": 3,
+          "title": "收集广告过滤的信息",
+          "line_start": 223,
+          "line_end": 254,
+          "content": "演示如何通过Web组件的onAdsBlocked()回调接口收集和统计广告过滤信息，包括通知频次控制机制。"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "广告过滤",
+    "ArkWeb",
+    "easylist",
+    "WebviewController",
+    "AdsBlockManager",
+    "enableAdsBlock",
+    "setAdsBlockRules",
+    "onAdsBlocked",
+    "URL拦截",
+    "元素隐藏"
+  ],
+  "api_references": [
+    "enableAdsBlock",
+    "setAdsBlockRules",
+    "addAdsBlockDisallowedList",
+    "removeAdsBlockDisallowedList",
+    "clearAdsBlockDisallowedList",
+    "addAdsBlockAllowedList",
+    "removeAdsBlockAllowedList",
+    "clearAdsBlockAllowedList",
+    "onAdsBlocked"
+  ],
+  "code_examples": [
+    {
+      "language": "TypeScript",
+      "title": "开启广告过滤示例",
+      "line_start": 56,
+      "line_end": 100
+    },
+    {
+      "language": "TypeScript",
+      "title": "关闭特定域名页面的广告过滤示例",
+      "line_start": 110,
+      "line_end": 157
+    },
+    {
+      "language": "TypeScript",
+      "title": "设置页面级广告过滤开关示例",
+      "line_start": 166,
+      "line_end": 216
+    },
+    {
+      "language": "TypeScript",
+      "title": "收集广告过滤信息示例",
+      "line_start": 227,
+      "line_end": 251
+    }
+  ],
+  "total_lines": 254,
+  "last_updated": "2026-02-25"
+}

@@ -1,0 +1,194 @@
+{
+  "doc_id": "web-debugging-with-devtools",
+  "title": "使用DevTools工具调试前端页面",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文主要介绍如何使用DevTools工具调试Web组件的前端页面，支持无线调试和USB连接调试两种方式。文档详细说明了如何在应用代码中开启Web调试开关、配置Chrome浏览器调试工具、进行端口转发等操作步骤，并提供了便捷脚本以简化调试流程。最后还列举了常见问题及其解决方法。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "使用DevTools工具调试前端页面",
+      "line": 1,
+      "children": [
+        {
+          "level": 2,
+          "title": "无线调试",
+          "line": 12,
+          "children": [
+            {
+              "level": 3,
+              "title": "应用代码开启Web调试开关",
+              "line": 15
+            },
+            {
+              "level": 3,
+              "title": "在Chrome浏览器上打开调试工具页面",
+              "line": 65
+            },
+            {
+              "level": 3,
+              "title": "等待发现被调试页面",
+              "line": 77
+            },
+            {
+              "level": 3,
+              "title": "开始网页调试",
+              "line": 82
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "title": "USB连接调试",
+          "line": 86,
+          "children": [
+            {
+              "level": 3,
+              "title": "应用代码开启Web调试开关",
+              "line": 88
+            },
+            {
+              "level": 3,
+              "title": "将设备连接至电脑",
+              "line": 132
+            },
+            {
+              "level": 3,
+              "title": "端口转发",
+              "line": 160
+            },
+            {
+              "level": 3,
+              "title": "便捷脚本",
+              "line": 207
+            },
+            {
+              "level": 3,
+              "title": "在Chrome浏览器上打开调试工具页面",
+              "line": 348
+            },
+            {
+              "level": 3,
+              "title": "等待发现被调试页面",
+              "line": 361
+            },
+            {
+              "level": 3,
+              "title": "开始网页调试",
+              "line": 366
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "title": "常见问题与解决方法",
+          "line": 370,
+          "children": [
+            {
+              "level": 3,
+              "title": "可以调试系统浏览器打开的网页吗？",
+              "line": 372
+            },
+            {
+              "level": 3,
+              "title": "hdc无法发现设备",
+              "line": 377
+            },
+            {
+              "level": 3,
+              "title": "hdc的命令显示设备\"未授权\"或\"unauthorized\"",
+              "line": 390
+            },
+            {
+              "level": 3,
+              "title": "找不到DevTools的domain socket",
+              "line": 403
+            },
+            {
+              "level": 3,
+              "title": "端口转发不成功",
+              "line": 416
+            },
+            {
+              "level": 3,
+              "title": "端口转发成功后，电脑端Chrome无法发现被调试网页",
+              "line": 431
+            },
+            {
+              "level": 3,
+              "title": "开启了无线调试模式后，电脑端Chrome无法发现被调试网页",
+              "line": 463
+            },
+            {
+              "level": 3,
+              "title": "Web组件无法使用DevTools工具进行调试",
+              "line": 478
+            },
+            {
+              "level": 3,
+              "title": "使用DevTools工具进行调试出现404报错",
+              "line": 490
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "api_references": [
+    "setWebDebuggingAccess",
+    "setWebDebuggingAccess20"
+  ],
+  "code_blocks": [
+    {
+      "language": "TypeScript",
+      "line": 24,
+      "context": "无线调试应用代码示例"
+    },
+    {
+      "language": "JSON5",
+      "line": 58,
+      "context": "权限配置"
+    },
+    {
+      "language": "TypeScript",
+      "line": 98,
+      "context": "USB连接调试应用代码示例"
+    },
+    {
+      "language": "JSON5",
+      "line": 123,
+      "context": "权限配置"
+    },
+    {
+      "language": "bat",
+      "line": 210,
+      "context": "Windows平台便捷脚本"
+    },
+    {
+      "language": "bash",
+      "line": 288,
+      "context": "Linux或Mac平台便捷脚本"
+    }
+  ],
+  "figures": [
+    "devtools_resources_chrome_inspect.jpg",
+    "debug-effect.png",
+    "devtools_resources_hdc_list_targets_success.png",
+    "devtools_resources_hdc_list_targets_empty.jpg",
+    "devtools_resources_hdc_grep_devtools_38532.jpg",
+    "devtools_resources_hdc_fport_38532_success.jpg",
+    "devtools_resources_hdc_fport_ls_38532.png",
+    "devtools_resources_hdc_fport_ls_empty.jpg",
+    "devtools_resources_chrome_configure.jpg",
+    "debug-domains.png",
+    "devtools_resources_chrome_localhost.jpg",
+    "devtools_resources_chrome_localhost_refused.jpg"
+  ],
+  "total_lines": 504
+}

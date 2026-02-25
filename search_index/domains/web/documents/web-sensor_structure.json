@@ -1,0 +1,132 @@
+{
+  "doc_id": "web-sensor",
+  "title": "使用运动和方向传感器监测设备状态",
+  "path": "docs/zh-cn/application-dev/web/web-sensor.md",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zhang-yinglie",
+    "designer": "@handyohos",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍如何通过W3C标准协议接口在Web组件中访问运动和方向传感器（加速度计、陀螺仪、绝对定位、相对定位、设备运动事件、设备方向事件）的数据，实现丰富的用户交互功能。文档包含权限配置说明和完整的开发步骤示例。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "使用运动和方向传感器监测设备状态",
+      "line": 1,
+      "content": "运动和方向传感器，如加速度计、陀螺仪等，能够监测设备的运动状态和方向变化，例如设备的旋转、倾斜等。通过W3C标准协议接口，Web组件能够访问这些传感器的数据，进而实现更加丰富的用户交互功能。"
+    },
+    {
+      "level": 2,
+      "title": "概述",
+      "line": 9,
+      "content": "运动和方向传感器，如加速度计、陀螺仪等，能够监测设备的运动状态和方向变化，例如设备的旋转、倾斜等。通过W3C标准协议接口，Web组件能够访问这些传感器的数据，进而实现更加丰富的用户交互功能。例如，开发者在网页应用中可以利用加速度计识别运动模式，指导用户进行健身运动，利用陀螺仪捕获玩家手中设备的倾斜和旋转动作，实现无按钮操控的游戏体验。通过在JavaScript中调用以下支持的W3C标准协议接口，可以访问运动和方向传感器。"
+    },
+    {
+      "level": 2,
+      "title": "需要权限",
+      "line": 26,
+      "content": "使用加速度、陀螺仪及设备运动事件接口时，需在配置文件module.json5中声明相应的传感器权限。具体配置方法请参考在配置文件中声明权限。Web组件在对接运动和方向传感器时，需配置onPermissionRequest接口，通过该接口接收权限请求通知。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 44,
+      "content": "1. 应用侧代码中，Web组件配置onPermissionRequest接口，可通过PermissionRequest的getAccessibleResource接口获取请求权限的资源类型，当资源类型为TYPE_SENSOR时，进行传感器授权处理。2. 在前端页面代码中，利用JavaScript调用传感器相关的W3C标准协议接口。"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "Accelerometer",
+      "type": "interface",
+      "description": "加速度 - 可获取设备X、Y、Z轴方向的加速度数据"
+    },
+    {
+      "name": "Gyroscope",
+      "type": "interface",
+      "description": "陀螺仪 - 可获取设备X、Y、Z轴方向的角速度数据"
+    },
+    {
+      "name": "AbsoluteOrientationSensor",
+      "type": "interface",
+      "description": "绝对定位 - 可获取表示设备绝对定位方向的四元数，包含X、Y、Z和W分量"
+    },
+    {
+      "name": "RelativeOrientationSensor",
+      "type": "interface",
+      "description": "相对定位 - 可获取表示设备相对定位方向的四元数，包含X、Y、Z和W分量"
+    },
+    {
+      "name": "DeviceMotionEvent",
+      "type": "interface",
+      "description": "设备运动事件 - 通过监听该事件，可获取设备在X、Y、Z轴方向上的加速度数据，设备在X、Y、Z轴方向上包含重力的加速度数据，以及设备在alpha、beta、gamma轴方向上旋转的速率数据"
+    },
+    {
+      "name": "DeviceOrientationEvent",
+      "type": "interface",
+      "description": "设备方向事件 - 通过监听该事件，可获取设备绕X、Y、Z轴的角度"
+    },
+    {
+      "name": "onPermissionRequest",
+      "type": "interface",
+      "description": "Web组件配置接口，用于接收权限请求通知"
+    },
+    {
+      "name": "PermissionRequest",
+      "type": "interface",
+      "description": "权限请求对象，提供getAccessibleResource接口获取请求权限的资源类型"
+    },
+    {
+      "name": "getAccessibleResource",
+      "type": "method",
+      "description": "获取请求权限的资源类型"
+    }
+  ],
+  "permissions": [
+    "ohos.permission.ACCELEROMETER",
+    "ohos.permission.GYROSCOPE"
+  ],
+  "code_examples": [
+    {
+      "language": "json",
+      "title": "权限配置",
+      "line_start": 31,
+      "line_end": 40
+    },
+    {
+      "language": "typescript",
+      "title": "应用侧代码示例",
+      "line_start": 48,
+      "line_end": 110
+    },
+    {
+      "language": "html",
+      "title": "前端页面代码示例",
+      "line_start": 114,
+      "line_end": 248
+    }
+  ],
+  "keywords": [
+    "运动传感器",
+    "方向传感器",
+    "加速度计",
+    "陀螺仪",
+    "Web组件",
+    "W3C标准",
+    "设备监测",
+    "权限配置",
+    "onPermissionRequest",
+    "DeviceMotionEvent",
+    "DeviceOrientationEvent"
+  ],
+  "related_docs": [
+    "../security/AccessToken/declare-permissions.md",
+    "../reference/apis-arkweb/arkts-basic-components-web-events.md",
+    "../reference/apis-arkweb/arkts-basic-components-web-PermissionRequest.md"
+  ],
+  "total_lines": 249,
+  "last_updated": "2026-02-25"
+}

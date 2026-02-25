@@ -1,0 +1,115 @@
+{
+  "doc_id": "web-getpage-height",
+  "title": "获取网页内容高度",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zhou-ke13",
+    "designer": "@LongLie",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍了如何通过调用getPageHeight方法获取当前网页内容的实际高度。文档详细说明了不同场景下的使用方法：普通静态展示页面可以在onPageEnd等Web组件生命周期回调中获取高度；复杂动态网页可以通过JSBridge传递特定回调来通知应用侧调用；在无法使用JSBridge的场景下，可以通过setTimeout等函数延迟获取页面高度。文档包含了应用侧代码和前端HTML代码示例，涵盖了普通网页、加载大图片的网页、加载大量图片的网页等多种情况。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "使用场景",
+      "line_start": 11,
+      "line_end": 15,
+      "content": "在网页加载过程中，获取的高度可能不够精确，特别是在网页还未渲染完成时。因为动态内容加载后会更新这个值。网页内容可能需要长时间加载。现在网站为了优化首次加载速度，会使用动态网页加载技术，用户在看到网页首帧时，网页后台还在动态加载页面，特别是包含图片、动态内容的页面。\n\n非静态网页不建议在onPageEnd、onPageVisible、onFirstContentfulPaint、onFirstMeaningfulPaint事件等Web组件生命周期回调和Web性能指标回调中获取。需要根据当前网页的特点，通过JSBridge或延迟等方案，在前端特定的回调通知里获取当前网页内容的实际高度。"
+    },
+    {
+      "level": 2,
+      "title": "普通静态展示页面",
+      "line_start": 17,
+      "line_end": 45,
+      "content": "普通静态网页，可以在onPageEnd等Web组件生命周期回调和Web性能指标回调中通过getPageHeight获取网页内容的高度。\n\n应用侧代码\n```ts\n// xxx.ets\nimport { webview } from '@kit.ArkWeb';\n\n@Entry\n@Component\nstruct Index {\n  controller: webview.WebviewController = new webview.WebviewController();\n\n  build() {\n    Row() {\n      Column() {\n        Web({ src: $rawfile('index.html'), controller: this.controller })\n          .onPageEnd(() => {\n            console.info(\"page height: onPageEnd: \" + this.controller.getPageHeight());\n          })\n      }\n      .width('100%')\n      .height('100%')\n    }\n    .height('100%')\n  }\n}\n```"
+    },
+    {
+      "level": 2,
+      "title": "复杂动态网页使用JSBridge传递特定回调",
+      "line_start": 47,
+      "line_end": 92,
+      "content": "动态网页可以通过JSBridge传递特定回调，通知到应用侧调用。\n\n应用侧代码\n```ts\n// xxx.ets\nimport { webview } from '@kit.ArkWeb';\n\nclass TestClass {\n  testController: webview.WebviewController;\n\n  constructor(controller: webview.WebviewController) {\n    this.testController = controller;\n  }\n\n  notifyToGet(): void {\n    console.info(\"page height:\" + this.testController.getPageHeight());\n  }\n}\n\n@Entry\n@Component\nstruct Index {\n  controller: webview.WebviewController = new webview.WebviewController();\n  @State jsbObj: TestClass = new TestClass(this.controller);\n\n  build() {\n    Row() {\n      Column() {\n        Web({ src: $rawfile('index.html'), controller: this.controller })\n          .javaScriptAccess(true)\n          .javaScriptProxy({\n            object: this.jsbObj,\n            name: \"jsbObj\",\n            methodList: [\"notifyToGet\"],\n            controller: this.controller\n          })\n      }\n      .width('100%')\n      .height('100%')\n    }\n    .height('100%')\n  }\n}\n```"
+    },
+    {
+      "level": 3,
+      "title": "加载普通网页",
+      "line_start": 94,
+      "line_end": 119,
+      "content": "普通网页可以通过load事件，在网页的所有资源都完全加载完成后触发。\n\n前端代码\n```html\n<!--index.html-->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Title</title>\n</head>\n<body>\n<script>\n    window.addEventListener(\"load\", function() {\n        if (typeof jsbObj !== 'undefined') {\n            jsbObj.notifyToGet();\n        } else {\n            console.info(\"jsbObj is error\");\n        }\n    })\n</script>\n</body>\n</html>\n```"
+    },
+    {
+      "level": 3,
+      "title": "加载大图片的网页",
+      "line_start": 121,
+      "line_end": 149,
+      "content": "当网页含有大图片时，可使用图片加载完成回调触发。\n\n在前端代码中，请替换图片为真实图片。\n```html\n<!--index.html-->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Title</title>\n</head>\n<body>\n<img src=\"example.jpg\" id=\"largeImage\" alt=\"Large Image\">\n<script>\n    var img = document.getElementById('largeImage');\n\n    img.addEventListener('load', function() {\n        if (typeof jsbObj !== 'undefined') {\n            jsbObj.notifyToGet();\n        } else {\n            console.info(\"jsbObj is error\");\n        }\n    });\n</script>\n</body>\n</html>\n```"
+    },
+    {
+      "level": 3,
+      "title": "加载大量图片的网页",
+      "line_start": 151,
+      "line_end": 189,
+      "content": "针对图片密集网页，在所有图片加载完成后触发。\n\n在前端代码中，请替换图片为真实图片。\n```html\n<!--index.html-->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Title</title>\n</head>\n<body>\n    <img src=\"example1.jpg\" >\n    <img src=\"example2.jpg\" >\n<script>\n    function waitForImages() {\n        const images = Array.from(document.images);\n        const promises = images.map(img => {\n            if (img.complete) return Promise.resolve();\n            return new Promise(resolve => {\n                img.onload = img.onerror = resolve;\n            });\n        });\n\n        return Promise.all(promises).then(() => {\n            if (typeof jsbObj !== 'undefined') {\n                jsbObj.notifyToGet();\n            } else {\n                console.info(\"jsbObj is error\");\n            }\n        })\n    }\n    document.addEventListener(\"DOMContentLoaded\", waitForImages);\n</script>\n</body>\n</html>\n```"
+    },
+    {
+      "level": 2,
+      "title": "无法使用JSBridge场景",
+      "line_start": 191,
+      "line_end": 221,
+      "content": "在无法使用JSBridge的场景下，可以通过添加setTimeout等函数来延迟获取当前页面的高度。具体的延迟时间可以根据网页的复杂度来确定。\n\n应用侧代码\n```ts\n// xxx.ets\nimport { webview } from '@kit.ArkWeb';\n\n@Entry\n@Component\nstruct Index {\n  controller: webview.WebviewController = new webview.WebviewController();\n\n  build() {\n    Row() {\n      Column() {\n        Web({ src: $rawfile('index.html'), controller: this.controller })\n          .onPageEnd(() => {\n            setTimeout(()=>{\n                console.info(\"page height: onPageEnd: setTimeout: \" + this.controller.getPageHeight());\n            },2000)\n          })\n      }\n      .width('100%')\n      .height('100%')\n    }\n    .height('100%')\n  }\n}\n```"
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "ts",
+      "line_start": 22,
+      "line_end": 45,
+      "type": "application"
+    },
+    {
+      "language": "ts",
+      "line_start": 52,
+      "line_end": 92,
+      "type": "application"
+    },
+    {
+      "language": "html",
+      "line_start": 99,
+      "line_end": 119,
+      "type": "frontend"
+    },
+    {
+      "language": "html",
+      "line_start": 127,
+      "line_end": 149,
+      "type": "frontend"
+    },
+    {
+      "language": "html",
+      "line_start": 157,
+      "line_end": 189,
+      "type": "frontend"
+    },
+    {
+      "language": "ts",
+      "line_start": 196,
+      "line_end": 221,
+      "type": "application"
+    }
+  ],
+  "keywords": [
+    "getPageHeight",
+    "网页高度",
+    "JSBridge",
+    "onPageEnd",
+    "javaScriptProxy",
+    "动态网页",
+    "静态网页",
+    "setTimeout"
+  ],
+  "total_lines": 221,
+  "file_path": "docs/zh-cn/application-dev/web/web-getpage-height.md"
+}

@@ -1,0 +1,147 @@
+{
+  "doc_id": "web-picture-in-picture",
+  "title": "Web组件支持画中画",
+  "domain": "web",
+  "file_path": "docs/zh-cn/application-dev/web/web-picture-in-picture.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@gzweioh",
+    "designer": "@qiu-gongkai",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "Web组件提供画中画功能支持，应用可利用W3C标准的Picture-in-Picture API在网页中创建浮动窗口以播放视频，使用户在浏览其他网页或与其他应用交互时，可通过该画中画窗口继续观看视频。支持H264/H265/HLS格式的视频播放，提供进入画中画、退出画中画、监听画中画事件等API接口。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "Web组件支持画中画",
+      "line_start": 1,
+      "line_end": 201
+    },
+    {
+      "level": 2,
+      "title": "约束与限制",
+      "line_start": 22,
+      "line_end": 25
+    },
+    {
+      "level": 2,
+      "title": "进入画中画",
+      "line_start": 26,
+      "line_end": 48
+    },
+    {
+      "level": 2,
+      "title": "退出画中画",
+      "line_start": 50,
+      "line_end": 64
+    },
+    {
+      "level": 2,
+      "title": "监听画中画事件",
+      "line_start": 66,
+      "line_end": 83
+    },
+    {
+      "level": 2,
+      "title": "画中画窗口交互",
+      "line_start": 85,
+      "line_end": 96
+    },
+    {
+      "level": 2,
+      "title": "完整示例",
+      "line_start": 99,
+      "line_end": 201
+    }
+  ],
+  "apis": [
+    {
+      "name": "requestPictureInPicture",
+      "type": "method",
+      "interface": "HTMLVideoElement",
+      "description": "请求启动画中画，如果系统支持画中画能力，则会以画中画模式显示视频"
+    },
+    {
+      "name": "exitPictureInPicture",
+      "type": "method",
+      "interface": "Document",
+      "description": "请求退出画中画模式，视频将重新在原始标签页中显示"
+    },
+    {
+      "name": "enterpictureinpicture",
+      "type": "event",
+      "interface": "HTMLVideoElement",
+      "description": "在HTMLVideoElement成功进入画中画模式时触发"
+    },
+    {
+      "name": "leavepictureinpicture",
+      "type": "event",
+      "interface": "HTMLVideoElement",
+      "description": "在HTMLVideoElement成功退出画中画模式时触发"
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "JSON5",
+      "line_start": 14,
+      "line_end": 20,
+      "context": "权限配置"
+    },
+    {
+      "language": "html",
+      "line_start": 30,
+      "line_end": 34,
+      "context": "HTML示例"
+    },
+    {
+      "language": "js",
+      "line_start": 38,
+      "line_end": 48,
+      "context": "进入画中画代码"
+    },
+    {
+      "language": "js",
+      "line_start": 54,
+      "line_end": 64,
+      "context": "退出画中画代码"
+    },
+    {
+      "language": "js",
+      "line_start": 75,
+      "line_end": 83,
+      "context": "监听画中画事件代码"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 107,
+      "line_end": 122,
+      "context": "应用侧ets代码"
+    },
+    {
+      "language": "html",
+      "line_start": 126,
+      "line_end": 200,
+      "context": "前端页面html代码"
+    }
+  ],
+  "keywords": [
+    "画中画",
+    "Picture-in-Picture",
+    "Web组件",
+    "视频播放",
+    "浮动窗口",
+    "HTMLVideoElement",
+    "requestPictureInPicture",
+    "exitPictureInPicture",
+    "enterpictureinpicture",
+    "leavepictureinpicture",
+    "H264",
+    "H265",
+    "HLS",
+    "ArkWeb"
+  ],
+  "total_lines": 201,
+  "last_updated": "2026-02-25"
+}

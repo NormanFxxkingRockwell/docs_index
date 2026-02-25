@@ -1,0 +1,224 @@
+{
+  "doc_id": "web-set-dark-mode",
+  "title": "Web深色模式适配",
+  "domain": "web",
+  "path": "docs/zh-cn/application-dev/web/web-set-dark-mode.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@KeeGitee",
+    "designer": "@LongLie",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "介绍ArkWeb组件的深色模式适配功能，包括网页使用color-scheme和prefers-color-scheme进行深色模式适配、Web深色模式设置（darkMode和forceDarkMode接口）、Web组件背景色适配方法，以及常见问题解决方案。",
+  "structure": {
+    "sections": [
+      {
+        "level": 1,
+        "title": "Web深色模式适配",
+        "line_start": 1,
+        "line_end": 302,
+        "content_preview": "系统提供浅色和深色的主题模式供用户选择。深色模式在低光环境下能够降低屏幕亮度，减少光线刺激，改善阅读体验。Web组件根据网页样式进行渲染。若网页未适配深色模式，会造成与系统主题的割裂感。网页开发者应考虑用户的主题偏好，适配深色模式，以保证用户体验的一致性。"
+      },
+      {
+        "level": 2,
+        "title": "网页深色模式适配",
+        "line_start": 13,
+        "line_end": 102,
+        "content_preview": "在网页开发过程中，可以使用color-scheme和prefers-color-scheme属性进行深色模式适配。color-scheme是一个CSS属性，用于表示网页支持的配色方案，可以影响表单、滚动条和CSS系统颜色。prefers-color-scheme是CSS中的一个媒体查询功能，可以检测系统的主题颜色。",
+        "subsections": [
+          {
+            "level": 3,
+            "title": "color-scheme属性",
+            "line_start": 16,
+            "line_end": 66,
+            "content_preview": "当声明支持深色配色方案时，Web组件可以将网页内的表单、滚动条以及使用CSS系统颜色的元素切换为深色样式。如果元素自定义了颜色样式，则不受color-scheme的影响，保持自定义的颜色样式。"
+          },
+          {
+            "level": 3,
+            "title": "prefers-color-scheme属性",
+            "line_start": 67,
+            "line_end": 102,
+            "content_preview": "prefers-color-scheme是CSS中的一个媒体查询功能，可以检测系统的主题颜色。网页开发者可以通过该特性，为不同的系统主题颜色定义不同的网页CSS样式，以适应用户的主题偏好。"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Web深色模式设置",
+        "line_start": 104,
+        "line_end": 180,
+        "content_preview": "通过darkMode()接口可以配置Web深色模式，默认状态为关闭。应用可设置WebDarkMode.Auto，表示Web深色模式跟随系统设置。也可以手动设置WebDarkMode.On或WebDarkMode.Off来控制深色模式的开启与关闭。",
+        "subsections": [
+          {
+            "level": 3,
+            "title": "darkMode()接口",
+            "line_start": 106,
+            "line_end": 110,
+            "content_preview": "设置WebDarkMode.On，或设置WebDarkMode.Auto并启用系统深色模式时，Web将进入深色模式。在深色模式下，Web会应用媒体查询@media(prefers-color-scheme: dark)中定义的深色样式。"
+          },
+          {
+            "level": 3,
+            "title": "forceDarkAccess()接口",
+            "line_start": 110,
+            "line_end": 127,
+            "content_preview": "若要使未适配深色模式的网页强制转换为深色样式，可以使用forceDarkAccess()接口开启强制深色模式。强制深色模式可以覆盖网页默认样式，转换网页背景和文字的颜色，以适应在深色模式下显示。"
+          },
+          {
+            "level": 3,
+            "title": "示例代码",
+            "line_start": 131,
+            "line_end": 180,
+            "content_preview": "演示如何设置Web深色模式跟随系统，系统开启深色模式时，Web进入强制深色模式。"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Web组件背景色适配",
+        "line_start": 181,
+        "line_end": 265,
+        "content_preview": "Web组件发生旋转或大小改变等事件时，Web网页尺寸改变，变化过程中可能会漏出Web组件的背景色。深色模式下，建议将Web组件背景色置为黑色，与网页背景保持一致，以提升用户体验。",
+        "subsections": [
+          {
+            "level": 3,
+            "title": "手动控制深色模式时设置背景色",
+            "line_start": 187,
+            "line_end": 208,
+            "content_preview": "应用侧设置WebDarkMode.On和WebDarkMode.Off控制深色模式开启和关闭时，背景色跟随深色模式开启和关闭状态改变。"
+          },
+          {
+            "level": 3,
+            "title": "跟随系统深色模式时设置背景色",
+            "line_start": 209,
+            "line_end": 265,
+            "content_preview": "应用侧设置WebDarkMode.Auto跟随系统深色模式时，监听系统设置，背景色跟随系统改变。"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "常见问题",
+        "line_start": 266,
+        "line_end": 302,
+        "content_preview": "提供Web深色模式适配过程中的常见问题及解决措施。",
+        "subsections": [
+          {
+            "level": 3,
+            "title": "网页未切换为深色样式",
+            "line_start": 268,
+            "line_end": 283,
+            "content_preview": "问题现象：网页未切换为深色样式。解决措施：检查Web是否开启深色模式、网页是否定义深色样式、网页是否声明支持深色配色方案。"
+          },
+          {
+            "level": 3,
+            "title": "强制深色模式开启后，网页样式异常",
+            "line_start": 284,
+            "line_end": 293,
+            "content_preview": "问题现象：强制深色模式开启，网页样式转换显示异常。解决措施：建议网页开发者自定义深色样式。"
+          },
+          {
+            "level": 3,
+            "title": "未开启深色模式，但Web网页背景变深",
+            "line_start": 294,
+            "line_end": 302,
+            "content_preview": "问题现象：Web组件未开启深色模式，但Web网页背景变深。解决措施：排查Web组件是否设置了深色的backgroundColor()。"
+          }
+        ]
+      }
+    ]
+  },
+  "keywords": [
+    "Web深色模式",
+    "color-scheme",
+    "prefers-color-scheme",
+    "darkMode",
+    "forceDarkAccess",
+    "WebDarkMode",
+    "ArkWeb",
+    "深色模式适配",
+    "backgroundColor",
+    "CSS属性",
+    "媒体查询"
+  ],
+  "api_references": [
+    {
+      "name": "darkMode()",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#darkmode9",
+      "description": "配置Web深色模式接口"
+    },
+    {
+      "name": "forceDarkAccess()",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#forcedarkaccess9",
+      "description": "开启强制深色模式接口"
+    },
+    {
+      "name": "WebDarkMode",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-e.md#webdarkmode9",
+      "description": "Web深色模式枚举值"
+    },
+    {
+      "name": "backgroundColor()",
+      "path": "../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor",
+      "description": "设置Web组件背景色接口"
+    }
+  ],
+  "code_examples": [
+    {
+      "language": "html",
+      "title": "color-scheme使用示例",
+      "line_start": 22,
+      "line_end": 35
+    },
+    {
+      "language": "html",
+      "title": "prefers-color-scheme使用示例",
+      "line_start": 69,
+      "line_end": 84
+    },
+    {
+      "language": "TypeScript",
+      "title": "Web深色模式设置示例",
+      "line_start": 131,
+      "line_end": 149
+    },
+    {
+      "language": "TypeScript",
+      "title": "手动控制深色模式背景色示例",
+      "line_start": 190,
+      "line_end": 207
+    },
+    {
+      "language": "TypeScript",
+      "title": "跟随系统深色模式背景色示例",
+      "line_start": 212,
+      "line_end": 264
+    }
+  ],
+  "figures": [
+    {
+      "title": "color-scheme效果图",
+      "path": "figures/arkweb_color_scheme.png",
+      "line": 65
+    },
+    {
+      "title": "prefers-color-scheme效果图",
+      "path": "figures/arkweb_prefers_color_scheme.png",
+      "line": 101
+    },
+    {
+      "title": "Web深色模式和强制深色模式效果图",
+      "path": "figures/arkweb_dark_mode.png",
+      "line": 179
+    }
+  ],
+  "tables": [
+    {
+      "title": "深色模式/强制深色模式/color-scheme三者关系",
+      "line": 118
+    }
+  ],
+  "total_lines": 302,
+  "created_at": "2026-02-25"
+}

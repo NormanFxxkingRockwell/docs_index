@@ -1,0 +1,297 @@
+{
+  "doc_id": "web_menu",
+  "title": "使用Web组件菜单处理网页内容",
+  "description": "菜单作为用户交互的关键组件，其作用是构建清晰的导航体系，通过结构化布局展示功能入口，使用户能够迅速找到目标内容或执行操作。作为人机交互的重要枢纽，它显著提升了Web组件的可访问性和用户体验，是应用设计中必不可少的部分。Web组件菜单类型包括文本选中菜单、上下文菜单和自定义菜单，应用可根据具体需求灵活选择。",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zourongchun",
+    "designer": "@zhufenghao",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "sections": [
+    {
+      "id": "text_selection_menu",
+      "title": "文本选中菜单",
+      "level": 2,
+      "line": 14,
+      "description": "Web组件的文本选中菜单是一种通过自定义元素实现的上下文交互组件，当用户选中文本时会动态显示，提供复制、分享、标注等语义化操作，具备标准化功能与可扩展性，是移动端文本操作的核心功能。文本选中菜单在用户长按选中文本或编辑状态下长按出现单手柄时弹出，菜单项横向排列。系统提供默认的菜单实现。应用可通过editMenuOptions接口对文本选中菜单进行自定义操作。",
+      "keywords": [
+        "文本选中菜单",
+        "editMenuOptions",
+        "onCreateMenu",
+        "onMenuItemClick",
+        "TextMenuItem",
+        "EditMenuOptions"
+      ],
+      "apis": [
+        "editMenuOptions",
+        "onCreateMenu",
+        "onMenuItemClick",
+        "TextMenuItem",
+        "EditMenuOptions"
+      ],
+      "subsections": []
+    },
+    {
+      "id": "context_menu",
+      "title": "上下文菜单",
+      "level": 2,
+      "line": 104,
+      "description": "上下文菜单是用户通过特定操作（如右键点击或长按富文本）触发的快捷菜单，用于提供与当前操作对象或界面元素相关的功能选项。菜单项纵向排列。系统未提供默认实现，若应用未实现，则不显示上下文菜单。应用需要创建一个Menu组件并与Web绑定，在菜单弹出时可通过Web组件的onContextMenuShow回调接口获取上下文菜单的详细信息，包括点击位置的HTML元素信息及点击位置信息。",
+      "keywords": [
+        "上下文菜单",
+        "Menu",
+        "bindPopup",
+        "onContextMenuShow",
+        "WebContextMenuParam",
+        "WebContextMenuResult"
+      ],
+      "apis": [
+        "Menu",
+        "bindPopup",
+        "onContextMenuShow",
+        "WebContextMenuParam",
+        "WebContextMenuResult"
+      ],
+      "subsections": []
+    },
+    {
+      "id": "custom_menu",
+      "title": "自定义菜单",
+      "level": 2,
+      "line": 248,
+      "description": "自定义菜单赋予开发者灵活控制菜单触发时机与视觉呈现的能力，使应用能够根据用户操作场景动态匹配功能入口，显著简化开发过程中的界面适配工作，同时让交互体验更贴近用户直觉。开发者可通过bindSelectionMenu接口实现自定义菜单功能。目前，已额外支持通过长按图片、链接和文本，触发自定义菜单及自定义文本菜单。",
+      "keywords": [
+        "自定义菜单",
+        "bindSelectionMenu",
+        "WebElementType",
+        "WebResponseType",
+        "MenuType"
+      ],
+      "apis": [
+        "bindSelectionMenu",
+        "WebElementType",
+        "WebResponseType",
+        "MenuType"
+      ],
+      "subsections": []
+    },
+    {
+      "id": "web_menu_save_image",
+      "title": "Web菜单保存图片",
+      "level": 2,
+      "line": 545,
+      "description": "创建MenuBuilder组件作为菜单弹窗，使用SaveButton组件实现图片保存，通过bindContextMenu将MenuBuilder与Web绑定。在onContextMenuShow中获取图片url，通过copyLocalPicToDir或copyUrlPicToDir将图片保存至应用沙箱。通过photoAccessHelper将应用沙箱中的图片保存至图库。",
+      "keywords": [
+        "保存图片",
+        "SaveButton",
+        "bindContextMenu",
+        "copyLocalPicToDir",
+        "copyUrlPicToDir",
+        "photoAccessHelper"
+      ],
+      "apis": [
+        "SaveButton",
+        "bindContextMenu",
+        "photoAccessHelper"
+      ],
+      "subsections": []
+    },
+    {
+      "id": "web_menu_get_selected_text",
+      "title": "Web菜单获取选中文本",
+      "level": 2,
+      "line": 687,
+      "description": "Web组件的editMenuOptions接口中没有提供获取选中文本的方式。开发者可通过javaScriptProxy获取到JavaScript的选中文本，实现自定义菜单的逻辑。创建SelectClass类，通过javaScriptProxy将SelectClass对象注册到Web组件中。在Html侧注册选区变更监听器，在选区变更时通过SelectClass对象将选区设置到ArkTS侧。",
+      "keywords": [
+        "获取选中文本",
+        "javaScriptProxy",
+        "selectionchange",
+        "window.getSelection"
+      ],
+      "apis": [
+        "javaScriptProxy"
+      ],
+      "subsections": []
+    },
+    {
+      "id": "common_issues",
+      "title": "常见问题",
+      "level": 2,
+      "line": 782,
+      "description": "Web菜单开发中的常见问题解答，包括如何禁用长按选择时弹出菜单、出现选区时手柄菜单不显示、如何修改文本选中菜单的样式等。",
+      "keywords": [
+        "常见问题",
+        "禁用菜单",
+        "手柄菜单",
+        "菜单样式"
+      ],
+      "apis": [],
+      "subsections": [
+        {
+          "id": "disable_long_press_menu",
+          "title": "如何禁用长按选择时弹出菜单",
+          "level": 3,
+          "line": 783,
+          "description": "可通过editMenuOptions接口将系统默认菜单全部过滤，此时无菜单项，则不会显示菜单。",
+          "keywords": [
+            "禁用菜单",
+            "editMenuOptions"
+          ],
+          "apis": [
+            "editMenuOptions"
+          ]
+        },
+        {
+          "id": "handle_menu_not_show",
+          "title": "出现选区时手柄菜单不显示",
+          "level": 3,
+          "line": 830,
+          "description": "可排查是否通过JS的selection-api对选区进行了操作，目前通过这种方式改变选区会导致手柄菜单不显示。",
+          "keywords": [
+            "手柄菜单",
+            "selection-api"
+          ],
+          "apis": []
+        },
+        {
+          "id": "modify_text_menu_style",
+          "title": "如何修改文本选中菜单的样式",
+          "level": 3,
+          "line": 833,
+          "description": "从API version 21开始，应用可通过bindSelectionMenu接口，实现自定义文本菜单。",
+          "keywords": [
+            "菜单样式",
+            "bindSelectionMenu"
+          ],
+          "apis": [
+            "bindSelectionMenu"
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_sections": 6,
+    "total_subsections": 3,
+    "total_apis": 14,
+    "has_code_examples": true,
+    "main_topics": [
+      "文本选中菜单",
+      "上下文菜单",
+      "自定义菜单",
+      "图片保存",
+      "选中文本获取",
+      "常见问题"
+    ]
+  },
+  "menu_types": [
+    {
+      "type": "文本选中菜单",
+      "target_element": "文本",
+      "response_type": "手势长按",
+      "customizable": "可增减菜单项，菜单样式不可自定义"
+    },
+    {
+      "type": "上下文菜单",
+      "target_element": "超链接、图片、文字",
+      "response_type": "手势长按、鼠标右键",
+      "customizable": "支持通过菜单组件自定义"
+    },
+    {
+      "type": "自定义菜单",
+      "target_element": "图片",
+      "response_type": "手势长按",
+      "customizable": "支持通过菜单组件自定义"
+    }
+  ],
+  "code_examples": [
+    {
+      "type": "文本选中菜单",
+      "language": "typescript",
+      "line": 20
+    },
+    {
+      "type": "上下文菜单",
+      "language": "typescript",
+      "line": 111
+    },
+    {
+      "type": "自定义菜单",
+      "language": "typescript",
+      "line": 254
+    },
+    {
+      "type": "保存图片",
+      "language": "typescript",
+      "line": 552
+    },
+    {
+      "type": "获取选中文本",
+      "language": "typescript",
+      "line": 691
+    },
+    {
+      "type": "禁用菜单",
+      "language": "typescript",
+      "line": 785
+    },
+    {
+      "type": "自定义文本菜单",
+      "language": "typescript",
+      "line": 840
+    }
+  ],
+  "references": [
+    {
+      "name": "editMenuOptions",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#editmenuoptions12"
+    },
+    {
+      "name": "TextMenuItem",
+      "path": "../reference/apis-arkui/arkui-ts/ts-text-common.md#textmenuitem12对象说明"
+    },
+    {
+      "name": "EditMenuOptions",
+      "path": "../reference/apis-arkui/arkui-ts/ts-text-common.md#editmenuoptions"
+    },
+    {
+      "name": "Menu",
+      "path": "../reference/apis-arkui/arkui-ts/ts-basic-components-menu.md"
+    },
+    {
+      "name": "onContextMenuShow",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-events.md#oncontextmenushow9"
+    },
+    {
+      "name": "WebContextMenuParam",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-WebContextMenuParam.md"
+    },
+    {
+      "name": "WebContextMenuResult",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-WebContextMenuResult.md"
+    },
+    {
+      "name": "bindSelectionMenu",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#bindselectionmenu13"
+    },
+    {
+      "name": "WebElementType",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-e.md#webelementtype13"
+    },
+    {
+      "name": "WebResponseType",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-e.md#webresponsetype13"
+    },
+    {
+      "name": "SaveButton",
+      "path": "../reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md"
+    },
+    {
+      "name": "javascriptProxy",
+      "path": "../reference/apis-arkweb/arkts-basic-components-web-attributes.md#javascriptproxy"
+    }
+  ]
+}

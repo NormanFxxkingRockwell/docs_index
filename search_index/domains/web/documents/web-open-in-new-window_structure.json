@@ -1,0 +1,144 @@
+{
+  "doc_id": "web-open-in-new-window",
+  "title": "在新窗口中打开页面",
+  "domain": "web",
+  "file_path": "docs/zh-cn/application-dev/web/web-open-in-new-window.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@weixin_41848015",
+    "designer": "@libing23232323",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "Web组件提供了在新窗口打开页面的能力，开发者可以通过multiWindowAccess()接口来设置是否允许网页在新窗口打开。当有新窗口打开时，应用侧会在onWindowNew()接口或onWindowNewExt()接口中收到Web组件新窗口事件。开发者需要在此接口事件中新建窗口来处理Web组件的窗口请求。",
+  "sections": [
+    {
+      "title": "概述",
+      "level": 1,
+      "content_start": 10,
+      "content_end": 10,
+      "description": "Web组件新窗口打开能力概述"
+    },
+    {
+      "title": "说明",
+      "level": 2,
+      "content_start": 13,
+      "content_end": 24,
+      "description": "新窗口打开相关接口说明和注意事项"
+    },
+    {
+      "title": "示例",
+      "level": 2,
+      "content_start": 26,
+      "content_end": 120,
+      "description": "新窗口打开应用示例代码"
+    },
+    {
+      "title": "相关实例",
+      "level": 2,
+      "content_start": 127,
+      "content_end": 131,
+      "description": "相关实例参考"
+    }
+  ],
+  "code_blocks": [
+    {
+      "type": "TypeScript",
+      "start_line": 35,
+      "end_line": 96,
+      "language": "typescript",
+      "description": "应用侧代码示例"
+    },
+    {
+      "type": "HTML",
+      "start_line": 100,
+      "end_line": 120,
+      "language": "html",
+      "description": "window.html页面代码"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "multiWindowAccess",
+      "type": "method",
+      "line": 10
+    },
+    {
+      "name": "onWindowNew",
+      "type": "method",
+      "line": 10
+    },
+    {
+      "name": "onWindowNewExt",
+      "type": "method",
+      "line": 10
+    },
+    {
+      "name": "NavigationPolicy",
+      "type": "enum",
+      "line": 15
+    },
+    {
+      "name": "WindowFeatures",
+      "type": "interface",
+      "line": 15
+    },
+    {
+      "name": "allowWindowOpenMethod",
+      "type": "method",
+      "line": 17
+    },
+    {
+      "name": "onActivateContent",
+      "type": "method",
+      "line": 19
+    },
+    {
+      "name": "ControllerHandler.setWebController",
+      "type": "method",
+      "line": 21
+    },
+    {
+      "name": "OnWindowNewEvent",
+      "type": "interface",
+      "line": 28
+    }
+  ],
+  "key_concepts": [
+    "Web组件",
+    "新窗口打开",
+    "multiWindowAccess",
+    "onWindowNew",
+    "onWindowNewExt",
+    "WebviewController",
+    "CustomDialog"
+  ],
+  "examples": [
+    {
+      "title": "应用侧代码示例",
+      "type": "TypeScript",
+      "line": 35
+    },
+    {
+      "title": "window.html页面代码",
+      "type": "HTML",
+      "line": 100
+    }
+  ],
+  "references": [
+    {
+      "title": "浏览器（ArkTS）（Full SDK）（API9）",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/Web/Browser"
+    }
+  ],
+  "figures": [
+    {
+      "id": "web-open-in-new-window",
+      "caption": "新窗口中打开页面效果图",
+      "line": 124
+    }
+  ],
+  "total_lines": 131,
+  "last_updated": "2026-02-25"
+}

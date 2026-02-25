@@ -1,0 +1,229 @@
+{
+  "doc_id": "web-offline-mode",
+  "title": "使用离线Web组件",
+  "domain": "web",
+  "path": "docs/zh-cn/application-dev/web/web-offline-mode.md",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@wang-yanhan",
+    "designer": "@qianlf",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "本文档介绍了HarmonyOS中离线Web组件的使用方法，包括创建离线Web组件、预启动渲染进程、预渲染Web页面、复用和释放离线Web组件等性能优化技术。离线Web组件基于NodeContainer和NodeController实现，可以预先创建Web组件并在需要时动态挂载，从而优化页面加载性能。",
+  "sections": [
+    {
+      "id": "section-1",
+      "level": 1,
+      "title": "使用离线Web组件",
+      "line_start": 1,
+      "line_end": 17,
+      "content": "Web组件能够实现在不同窗口的组件树上进行挂载或移除操作，这一能力使得开发者可以预先创建Web组件，从而实现性能优化。例如，Tab页为Web组件时，页面预先渲染，便于即时显示。\n\n离线Web组件基于自定义占位组件NodeContainer实现。基本原理是构建支持命令式创建的Web组件，此类组件创建后不会立即挂载到组件树中，状态为Hidden和Inactive，因此不会立即对用户呈现。开发者可以在后续使用中按需动态挂载这些组件，以实现更灵活的使用方式。\n\n使用离线Web组件可以预启动渲染进程和预渲染Web页面。\n\n- 预启动渲染进程：在未进入Web页面时，提前创建空Web组件，启动Web的渲染进程，为后续使用做好准备。\n- 预渲染Web页面：在Web页面启动或跳转的场景下，预先在后台创建Web组件，加载数据并完成渲染，从而在Web页面启动或跳转时实现快速显示。"
+    },
+    {
+      "id": "section-2",
+      "level": 2,
+      "title": "整体架构",
+      "line_start": 18,
+      "line_end": 23,
+      "content": "如下图所示，在需要离屏创建Web组件时，定义一个自定义组件以封装Web组件，此Web组件在离线状态下被创建，封装于无状态的NodeContainer节点中，并与相应的NodeController组件绑定。Web组件在后台预渲染完毕后，当需要展示时，通过NodeController将其挂载到ViewTree的NodeContainer中，即与对应的NodeContainer组件绑定，即可挂载上树并显示。"
+    },
+    {
+      "id": "section-3",
+      "level": 2,
+      "title": "创建离线Web组件",
+      "line_start": 24,
+      "line_end": 161,
+      "content": "本示例展示了如何预先创建离线Web组件，并在需要的时候进行挂载和显示。在后续内容中，预启动渲染进程和预渲染Web页面作为性能优化措施，均利用离线Web组件实现。\n\n> **说明：**\n>\n> 创建Web组件将占用内存（每个Web组件大约200MB）和计算资源，建议避免一次性创建大量离线Web组件，以减少资源消耗。",
+      "code_blocks": [
+        {
+          "type": "TypeScript",
+          "language": "typescript",
+          "line_start": 34,
+          "line_end": 44,
+          "description": "在onWindowStageCreate中创建Web动态组件"
+        },
+        {
+          "type": "TypeScript",
+          "language": "typescript",
+          "line_start": 48,
+          "line_end": 136,
+          "description": "创建NodeController和Web组件的核心代码"
+        },
+        {
+          "type": "TypeScript",
+          "language": "typescript",
+          "line_start": 141,
+          "line_end": 160,
+          "description": "使用NodeContainer绑定NodeController显示动态页面"
+        }
+      ]
+    },
+    {
+      "id": "section-4",
+      "level": 2,
+      "title": "预启动渲染进程",
+      "line_start": 163,
+      "line_end": 329,
+      "content": "在后台预先创建一个Web组件，以启动用于渲染的Web渲染进程，这样可以节省后续Web组件加载时启动Web渲染进程所需的时间。\n\n> **说明：**\n>\n> 仅在采用单渲染进程模式的应用中，即全局共享一个Web渲染进程时，优化效果显著。Web渲染进程仅在所有Web组件都被销毁后才会终止。因此，建议应用至少保持一个Web组件处于活动状态。\n> 创建额外的Web组件会产生内存开销。\n\n示例在onWindowStageCreate时预创建Web组件加载blank页面，提前启动Render进程，从index跳转到index2时，优化了Web渲染进程启动和初始化的耗时。",
+      "code_blocks": [
+        {
+          "type": "TypeScript",
+          "language": "typescript",
+          "line_start": 176,
+          "line_end": 186,
+          "description": "预创建空Web组件启动渲染进程"
+        },
+        {
+          "type": "TypeScript",
+          "language": "typescript",
+          "line_start": 190,
+          "line_end": 278,
+          "description": "NodeController和Web组件管理代码"
+        },
+        {
+          "type": "TypeScript",
+          "language": "typescript",
+          "line_start": 283,
+          "line_end": 303,
+          "description": "Index页面跳转到Web页面"
+        },
+        {
+          "type": "TypeScript",
+          "language": "typescript",
+          "line_start": 308,
+          "line_end": 328,
+          "description": "Web页面显示组件"
+        }
+      ]
+    },
+    {
+      "id": "section-5",
+      "level": 2,
+      "title": "预渲染Web页面",
+      "line_start": 331,
+      "line_end": 490,
+      "content": "预渲染Web页面优化方案适用于Web页面启动和跳转场景，例如，进入首页后，跳跳转到其他子页。建议在高命中率的页面使用该方案。\n\n预渲染Web页面的实现是提前创建离线Web组件，设置Web为Active状态来开启渲染引擎，进行后台渲染。\n\n> **说明：**\n>\n> 1. 预渲染Web页面时，需要明确加载的资源。\n> 2. 由于该方案会将不可见的后台Web设置为Active状态，建议不要预渲染包含自动播放音视频的页面。应用开发者请自行检查和管理页面行为。\n> 3. 预渲染的网页会在后台不断进行渲染，建议在预渲染完成后立即停止渲染，以防止发热和功耗问题。可以参考以下示例，使用 onFirstMeaningfulPaint 来确定停止时机，该接口适用于http和https网页。",
+      "code_blocks": [
+        {
+          "type": "TypeScript",
+          "language": "typescript",
+          "line_start": 345,
+          "line_end": 355,
+          "description": "创建Web动态组件"
+        },
+        {
+          "type": "TypeScript",
+          "language": "typescript",
+          "line_start": 359,
+          "line_end": 465,
+          "description": "离线Web组件Builder和渲染控制器"
+        },
+        {
+          "type": "TypeScript",
+          "language": "typescript",
+          "line_start": 470,
+          "line_end": 489,
+          "description": "NodeContainer绑定Controller显示页面"
+        }
+      ]
+    },
+    {
+      "id": "section-6",
+      "level": 2,
+      "title": "复用和释放离线Web组件",
+      "line_start": 492,
+      "line_end": 590,
+      "content": "通过复用和释放离线Web组件，可以优化内存占用，降低应用因内存占用过高被系统查杀的概率。\n\n> **说明：**\n> - 每个窗口推荐只使用一个Web组件。\n> - 建议复用离线Web组件。\n> - 建议释放不需要的离线Web组件。",
+      "subsections": [
+        {
+          "id": "section-6-1",
+          "level": 3,
+          "title": "复用离线Web组件",
+          "line_start": 501,
+          "line_end": 508,
+          "content": "应用有多个UI页面都需要显示Web内容时，建议复用离线Web组件，减少组件创建和销毁的性能消耗以及创建多个Web组件的内存占用。\n\n**复用方法**：\n1. 离线Web组件不再被使用时，调用WebController的loadUrl方法加载about:blank空页面，为下次其他UI页面复用这个离线Web组件做准备。\n2. 新UI页面复用这个离线Web组件时，再调用WebController的loadUrl方法加载需要的Web页面。"
+        },
+        {
+          "id": "section-6-2",
+          "level": 3,
+          "title": "释放离线Web组件",
+          "line_start": 509,
+          "line_end": 590,
+          "content": "应用退至后台，或者明确在特定时间段内不再需要使用离线Web组件时，建议释放该组件以减少应用的内存占用。\n\n> **说明：**\n> - 仅当离线Web组件未绑定到UI页面时，才能释放该组件，否则可能导致`NodeContainer`组件显示空白。\n> - 可以通过`NodeController`的`onBind`和`onUnbind`回调来跟踪离线Web组件的绑定状态。",
+          "code_blocks": [
+            {
+              "type": "TypeScript",
+              "language": "typescript",
+              "line_start": 521,
+              "line_end": 589,
+              "description": "复用和释放离线Web组件的核心函数"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-7",
+      "level": 3,
+      "title": "复用和释放离线Web组件完整示例",
+      "line_start": 592,
+      "line_end": 653,
+      "content": "**示例功能说明**\n\n本示例演示了如何复用和释放离线Web组件，以及如何执行预渲染。需要注意的是，示例中使用了多个离线Web组件，这仅用于完整演示相关功能和离线Web组件的使用方法，原则上每个窗口推荐只使用一个Web组件。示例主要演示了以下功能：\n\n1. 对比离线Web组件执行预渲染和不执行预渲染的效果。\n2. 在应用退后台时，释放离线Web组件的具体实现步骤。\n3. 复用离线Web组件的具体实现步骤。\n\n示例演示了如何让应用退后台释放离线Web组件以及切前台恢复离线Web组件，在UIAbility的onBackground和onForeground回调中分别进行了离线Web组件的释放和恢复。",
+      "code_blocks": [
+        {
+          "type": "TypeScript",
+          "language": "typescript",
+          "line_start": 606,
+          "line_end": 618,
+          "description": "onForeground和onBackground回调中释放和恢复离线Web组件"
+        }
+      ]
+    },
+    {
+      "id": "section-8",
+      "level": 2,
+      "title": "常见白屏问题排查",
+      "line_start": 654,
+      "line_end": 688,
+      "content": "1.排查应用上网权限配置。\n\n检查是否已在module.json5中添加网络权限，添加方法请参考[在配置文件中声明权限](../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。\n\n2.排查NodeContainer与节点绑定的逻辑。\n\n检查节点是否已上组件树，建议在已有的Web组件上方加上Text（请参考以下例子），如果白屏的时候没有出现Text，建议检查NodeContainer与节点绑定的情况。\n\n3.排查Web可见性状态。\n\n如果整个节点已上树，可通过日志WebPattern::OnVisibleAreaChange查看Web组件可见性状态是否正确，不可见的Web组件可能会造成白屏。",
+      "code_blocks": [
+        {
+          "type": "JSON5",
+          "language": "json",
+          "line_start": 662,
+          "line_end": 669,
+          "description": "添加网络权限配置"
+        },
+        {
+          "type": "TypeScript",
+          "language": "typescript",
+          "line_start": 674,
+          "line_end": 684,
+          "description": "WebBuilder示例代码"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "离线Web组件",
+    "NodeContainer",
+    "NodeController",
+    "预启动渲染进程",
+    "预渲染",
+    "Web组件",
+    "性能优化",
+    "BuilderNode",
+    "FrameNode",
+    "UIContext",
+    "WebviewController",
+    "复用",
+    "释放",
+    "白屏问题"
+  ],
+  "code_blocks_count": 12,
+  "total_lines": 688,
+  "created_at": "2026-02-25"
+}

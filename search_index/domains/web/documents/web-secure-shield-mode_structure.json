@@ -1,0 +1,70 @@
+{
+  "doc_id": "web-secure-shield-mode",
+  "title": "坚盾守护模式",
+  "path": "docs/zh-cn/application-dev/web/web-secure-shield-mode.md",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@weixin_41848015",
+    "designer": "@libing23232323",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "坚盾守护模式提供给高安全需求用户的系统级别安全模式。该模式通过限制设备基础功能，增强安全性，有效抵御远程攻击面的针对性攻击。在坚盾守护模式下，ArkWeb限制多种HTML5特性，包括WebAssembly、WebGL、PDF Viewer、MathML、Web Speech API、RTCDataChannel、MediaDevices.getUserMedia、Service Worker、非代理UDP流量和即时编译（JIT）能力。",
+  "structure": {
+    "level_0": {
+      "title": "坚盾守护模式",
+      "sections": [
+        {
+          "title": "ArkWeb限制的HTML5特性",
+          "level": 1,
+          "line_start": 11,
+          "line_end": 34,
+          "content": "坚盾守护模式开启时，ArkWeb通过限制以下HTML5特性减少攻击面：禁止使用WebAssembly能力、WebGL/WebGL2能力、PDF Viewer预览功能、MathML能力、Web Speech API语音识别能力、RTCDataChannel接口、MediaDevices.getUserMedia接口、Service Worker能力、非代理UDP流量、即时编译（JIT）能力。"
+        },
+        {
+          "title": "评估对应用的影响",
+          "level": 1,
+          "line_start": 35,
+          "line_end": 66,
+          "content": "要评估应用在坚盾守护模式下的受影响程度及兼容性，可前往\"设置 > 隐私和安全 > 坚盾守护模式\"开启。可通过排查前端代码中的WebAssembly、WebGL、PDF显示、MathML、Speech API、RTCDataChannel、getUserMedia、ServiceWorker等接口调用，以及验证WebRTC网络功能和JS性能来确认是否受影响。"
+        }
+      ]
+    }
+  },
+  "features": [
+    "WebAssembly限制",
+    "WebGL/WebGL2限制",
+    "PDF Viewer限制",
+    "MathML限制",
+    "Web Speech API限制",
+    "RTCDataChannel限制",
+    "MediaDevices.getUserMedia限制",
+    "Service Worker限制",
+    "非代理UDP流量限制",
+    "即时编译（JIT）限制"
+  ],
+  "api_references": [
+    "WebAssembly",
+    "WebGL",
+    "WebGL2",
+    "PDF Viewer",
+    "MathML",
+    "SpeechRecognition",
+    "SpeechSynthesis",
+    "RTCDataChannel",
+    "createDataChannel",
+    "MediaDevices.getUserMedia",
+    "Service Worker",
+    "WebRTC"
+  ],
+  "code_examples": [],
+  "notes": [
+    "如果需要评估调试版本（未上架应用市场）应用的兼容性，先开启开发者选项，然后开启坚盾守护模式。",
+    "可以采用Device Security Kit提供的查询设备安全模式(C/C++)能力，判断坚盾守护模式是否开启。",
+    "在坚盾守护模式下，MediaDevices.getUserMedia接口调用会抛出异常：\"can't use getUserMedia on advancedSecurityMode!\""
+  ],
+  "line_count": 66,
+  "created_at": "2026-02-25"
+}

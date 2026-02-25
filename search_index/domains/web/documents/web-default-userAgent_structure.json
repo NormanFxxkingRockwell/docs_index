@@ -1,0 +1,168 @@
+{
+  "doc_id": "web-default-userAgent",
+  "title": "User-Agent开发指导",
+  "path": "docs/zh-cn/application-dev/web/web-default-userAgent.md",
+  "language": "zh-cn",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@aohui",
+    "designer": "@yaomingliu",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo",
+    "rp": "RP1"
+  },
+  "summary": "本文档介绍OpenHarmony中User-Agent的开发指导，包括默认User-Agent结构、自定义User-Agent设置方法、相关接口优先级以及常见问题解决方案。User-Agent是包含设备类型、操作系统及版本等关键信息的特殊字符串，使服务器能够识别请求来源设备及其特性。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "默认User-Agent结构",
+      "line_start": 11,
+      "line_end": 46,
+      "content": "默认User-Agent定义格式为：Mozilla/5.0 ({DeviceType}; {OSName} {OSVersion}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{ChromeCompatibleVersion}.0.0.0 Safari/537.36  ArkWeb/{ArkWeb VersionCode} {DeviceCompat} {扩展区}。示例：Mozilla/5.0 (Phone; OpenHarmony 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36  ArkWeb/4.1.6.1 Mobile。包含DeviceType（设备类型）、OSName（操作系统名称）、OSVersion（操作系统版本）、ChromeCompatibleVersion（Chrome兼容版本）、ArkWeb（Web内核名称）、ArkWeb VersionCode（版本号）、DeviceCompat（兼容字段）和扩展区等字段。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "自定义User-Agent结构",
+      "line_start": 48,
+      "line_end": 185,
+      "content": "介绍如何通过getUserAgent()接口获取当前默认User-Agent字符串，通过setCustomUserAgent()接口设置自定义用户代理（会覆盖系统用户代理），通过setAppCustomUserAgent()接口设置应用级自定义用户代理，通过setUserAgentForHosts()对特定网站设置应用级自定义用户代理。建议将扩展字段追加在默认User-Agent末尾，在onControllerAttached回调事件中设置User-Agent。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "相关User-Agent接口优先级",
+      "line_start": 187,
+      "line_end": 194,
+      "content": "接口优先级从高到低为：setCustomUserAgent（最高，对调用的Web组件生效）、setUserAgentForHosts（对应用了所有Web组件访问指定网站生效）、setAppCustomUserAgent（对应用中所有Web组件生效）、ArkWeb默认UA（最低，只读，通过getDefaultUserAgent获取）。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "常见问题",
+      "line_start": 196,
+      "line_end": 258,
+      "content": "包含四个常见问题及解决方案：如何通过User-Agent识别OpenHarmony操作系统中不同设备（通过系统、系统版本和设备类型三个维度判断）、如何模拟OpenHarmony操作系统的User-Agent进行前端调试、如何在OpenHarmony中自定义User-Agent以实现H5兼容性、如何解决H5页面的UA兼容性问题（包括样式展示问题、网页打不开问题、页面循环跳转问题、下载链接不匹配问题）。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "如何通过User-Agent来识别OpenHarmony操作系统中不同设备",
+          "line_start": 198,
+          "line_end": 232,
+          "content": "通过User-Agent中的系统、系统版本和设备类型三个维度来判断。系统识别通过{OSName}字段识别OpenHarmony系统，系统版本识别通过{OSName}和{OSVersion}字段识别OpenHarmony系统及系统版本，设备类型识别通过deviceType字段来识别不同设备类型（Phone、Tablet、PC）。"
+        },
+        {
+          "level": 3,
+          "title": "如何模拟OpenHarmony操作系统的User-Agent进行前端调试",
+          "line_start": 234,
+          "line_end": 236,
+          "content": "在Windows/Mac/Linux等操作系统中，可以通过Chrome/Edge/Firefox等浏览器DevTools提供的User-Agent复写能力，模拟OpenHarmony User-Agent。"
+        },
+        {
+          "level": 3,
+          "title": "如何在OpenHarmony中自定义User-Agent以实现H5兼容性",
+          "line_start": 238,
+          "line_end": 240,
+          "content": "通过getDefaultUserAgent接口获取系统默认User-Agent字符串，随后将H5兼容所需的自定义标识字段追加至该字符串末尾，最后调用setCustomUserAgent接口设置修改后的完整UA字符串。"
+        },
+        {
+          "level": 3,
+          "title": "如何解决H5页面的UA兼容性问题",
+          "line_start": 242,
+          "line_end": 258,
+          "content": "包含四个问题及解决方案：移动设备上网页呈现电脑版样式或电脑设备上网页呈现移动样式展示（需要正确设置DeviceCompat和DeviceType）、部分网页打不开或显示不支持的浏览器（网页未适配OpenHarmony UA）、页面循环跳转（应用端对存在跳转关系的两个页面设置了冲突的UA标识）、网页提供的下载链接与设备平台不匹配（UA中的兼容性字段干扰了服务端识别）。"
+        }
+      ]
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "ts",
+      "line_start": 15,
+      "line_end": 16,
+      "content": "Mozilla/5.0 ({DeviceType}; {OSName} {OSVersion}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{ChromeCompatibleVersion}.0.0.0 Safari/537.36  ArkWeb/{ArkWeb VersionCode} {DeviceCompat} {扩展区}"
+    },
+    {
+      "language": "ts",
+      "line_start": 21,
+      "line_end": 22,
+      "content": "Mozilla/5.0 (Phone; OpenHarmony 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36  ArkWeb/4.1.6.1 Mobile"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 53,
+      "line_end": 78,
+      "content": "import { webview } from '@kit.ArkWeb';\nimport { BusinessError } from '@kit.BasicServicesKit';\n\n@Entry\n@Component\nstruct WebComponent {\n  controller: webview.WebviewController = new webview.WebviewController();\n\n  build() {\n    Column() {\n      Button('getUserAgent')\n        .onClick(() => {\n          try {\n            let userAgent = this.controller.getUserAgent();\n            console.info('userAgent: ' + userAgent);\n          } catch (error) {\n            console.error(\n              `ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);\n          }\n        })\n      Web({ src: 'www.example.com', controller: this.controller })\n    }\n  }\n}"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 87,
+      "line_end": 114,
+      "content": "import { webview } from '@kit.ArkWeb';\nimport { BusinessError } from '@kit.BasicServicesKit';\n\n@Entry\n@Component\nstruct WebComponent {\n  controller: webview.WebviewController = new webview.WebviewController();\n  // 三方应用相关信息标识\n  @State customUserAgent: string = ' DemoApp';\n\n  build() {\n    Column() {\n      Web({ src: 'www.example.com', controller: this.controller })\n        .onControllerAttached(() => {\n          console.info('onControllerAttached');\n          try {\n            let userAgent = this.controller.getUserAgent() + this.customUserAgent;\n            this.controller.setCustomUserAgent(userAgent);\n          } catch (error) {\n            console.error(\n              `ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);\n          }\n        })\n    }\n  }\n}"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 121,
+      "line_end": 154,
+      "content": "import { webview } from '@kit.ArkWeb';    \nimport { BusinessError } from '@kit.BasicServicesKit';    \n\n@Entry    \n@Component    \nstruct WebComponent {    \n  controller: webview.WebviewController = new webview.WebviewController();    \n\n  aboutToAppear(): void {    \n    try {    \n      webview.WebviewController.initializeWebEngine();    \n      let defaultUserAgent = webview.WebviewController.getDefaultUserAgent();    \n      let appUA = defaultUserAgent + ' appUA';    \n      webview.WebviewController.setAppCustomUserAgent(appUA);    \n      webview.WebviewController.setUserAgentForHosts(    \n        appUA,    \n[    \n          'www.example.com',    \n          'www.baidu.com'    \n        ]    \n      );    \n    } catch (error) {    \n      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);    \n    }    \n  }    \n\n  build() {    \n    Column() {    \n      Web({ src: 'www.example.com', controller: this.controller })    \n    }    \n  }\n}"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 159,
+      "line_end": 184,
+      "content": "import { webview } from '@kit.ArkWeb';\nimport { BusinessError } from '@kit.BasicServicesKit';\n\n@Entry\n@Component\nstruct WebComponent {\n  controller: webview.WebviewController = new webview.WebviewController();\n  @State userAgent: string = '';\n\n  build() {\n    Column() {\n      Button('getCustomUserAgent')\n        .onClick(() => {\n          try {\n            this.userAgent = this.controller.getCustomUserAgent();\n            console.info('userAgent: ' + this.userAgent);\n          } catch (error) {\n            console.error(\n              `ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);\n          }\n        })\n      Web({ src: 'www.example.com', controller: this.controller })\n    }\n  }\n}"
+    },
+    {
+      "language": "ts",
+      "line_start": 206,
+      "line_end": 207,
+      "content": "const isOpenHarmony = () => /OpenHarmony/i.test(navigator.userAgent);"
+    },
+    {
+      "language": "ts",
+      "line_start": 214,
+      "line_end": 216,
+      "content": "const matches = navigator.userAgent.match(/OpenHarmony (\\d+\\.?\\d*)/);  \nmatches?.length && Number(matches[1]) > 0;"
+    },
+    {
+      "language": "ts",
+      "line_start": 223,
+      "line_end": 231,
+      "content": "// 检测是否为手机设备\nconst isPhone = () => /Phone/i.test(navigator.userAgent);\n\n// 检测是否为平板设备  \nconst isTablet = () => /Tablet/i.test(navigator.userAgent);\n\n// 检测是否为2in1设备  \nconst is2in1 = () => /PC/i.test(navigator.userAgent);"
+    }
+  ],
+  "api_references": [
+    "getUserAgent",
+    "setCustomUserAgent",
+    "setAppCustomUserAgent",
+    "setUserAgentForHosts",
+    "getCustomUserAgent",
+    "getDefaultUserAgent",
+    "metaViewport"
+  ],
+  "keywords": [
+    "User-Agent",
+    "UA",
+    "ArkWeb",
+    "OpenHarmony",
+    "设备类型",
+    "DeviceType",
+    "DeviceCompat",
+    "自定义User-Agent",
+    "H5兼容性",
+    "移动设备",
+    "平板设备",
+    "2in1设备"
+  ],
+  "tags": [
+    "web",
+    "arkweb",
+    "user-agent",
+    "开发指导",
+    "兼容性"
+  ],
+  "total_lines": 259,
+  "created_at": "2026-02-25"
+}

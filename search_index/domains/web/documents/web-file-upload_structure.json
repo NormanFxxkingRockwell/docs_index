@@ -1,0 +1,150 @@
+{
+  "doc_id": "web-file-upload",
+  "title": "使用Web组件上传文件",
+  "path": "docs/zh-cn/application-dev/web/web-file-upload.md",
+  "domain": "web",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": ["@zourongchun"],
+    "designer": ["@zhufenghao"],
+    "tester": ["@ghiker"],
+    "adviser": ["@HelloShuo"]
+  },
+  "summary": "Web组件支持前端页面选择文件上传功能，应用开发者可以使用onShowFileSelector()接口处理前端页面文件上传请求。支持拉起文件管理器、图库、相机等不同场景。从API version 23开始，支持自定义处理js接口拉起的文件请求，包括showSaveFilePicker、showOpenFilePicker、showDirectoryPicker等方法。开发者可以自定义拉起picker或使用ArkWeb默认行为处理文件上传请求。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "使用Web组件上传文件",
+      "line": 1,
+      "content": "Web组件支持前端页面选择文件上传功能，应用开发者可以使用onShowFileSelector()接口来处理前端页面文件上传的请求，如果应用开发者不做任何处理，Web会提供默认行为来处理前端页面文件上传的请求。应用开发者也可以通过获取到的前端数据，自定义拉起picker。"
+    },
+    {
+      "level": 2,
+      "title": "使用onShowFileSelector拉起文件管理器",
+      "line": 11,
+      "content": "当用户在前端页面点击文件上传按钮，应用侧在onShowFileSelector()接口中收到文件上传请求，在此接口中开发者将上传的本地文件路径设置给前端页面。使用picker.DocumentViewPicker拉起文件管理器选择文件。"
+    },
+    {
+      "level": 2,
+      "title": "使用onShowFileSelector拉起图库",
+      "line": 73,
+      "content": "当用户在前端页面点击文件上传按钮，应用侧在onShowFileSelector()接口中收到文件上传请求，在此接口中开发者将上传的本地图片路径设置给前端页面。使用photoAccessHelper.PhotoViewPicker拉起图库选择图片或视频。"
+    },
+    {
+      "level": 2,
+      "title": "使用onShowFileSelector拉起相机",
+      "line": 136,
+      "content": "Web组件支持前端页面上传图片文件时调用相机即时拍照，应用开发者可以使用onShowFileSelector()接口来处理前端页面文件上传的请求并自行拉起相机，如果应用开发者不做任何处理，Web会提供默认行为来处理前端页面调用相机的请求。通过监听onShowFileSelector事件并返回true拦截ArkWeb默认弹窗，并调用系统CameraPicker拉起相机。"
+    },
+    {
+      "level": 2,
+      "title": "使用ArkWeb默认的方式处理文件上传请求",
+      "line": 232,
+      "content": "accept属性定义文件input应该接受的文件类型，capture属性指定使用哪个摄像头去获取数据，multiple属性允许用户选择多个文件。根据accept和capture属性的不同组合，文件选择器会有不同的行为。ArkWeb默认仅拉起相机后置摄像头。"
+    },
+    {
+      "level": 2,
+      "title": "自定义处理js接口拉起的文件请求",
+      "line": 323,
+      "content": "从API version 23开始，在OnShowFileSelectorEvent的FileSelectorParam中新增接口getSuggestedName()、getDefaultPath()、getDescriptions()、isAcceptAllOptionExcluded()。新增接口对上传保存文件能力进行了增强，用于支持用户获取到HTML前端通过showSaveFilePicker、showOpenFilePicker、showDirectoryPicker等方法传递的option参数里的数据。"
+    },
+    {
+      "level": 2,
+      "title": "常见问题",
+      "line": 480,
+      "content": "包含onShowFileSelector配合ArkWeb默认弹窗使用、回调中getAcceptType和getMimeTypes的区别、ArkWeb默认弹窗的说明、handleFileList的使用说明等常见问题解答。"
+    }
+  ],
+  "tags": [
+    "ArkWeb",
+    "Web组件",
+    "文件上传",
+    "onShowFileSelector",
+    "文件管理器",
+    "图库",
+    "相机",
+    "picker",
+    "DocumentViewPicker",
+    "PhotoViewPicker",
+    "CameraPicker",
+    "showSaveFilePicker",
+    "showOpenFilePicker",
+    "showDirectoryPicker"
+  ],
+  "permissions": [],
+  "api_level": 23,
+  "related_docs": [
+    "../reference/apis-arkweb/arkts-basic-components-web-events.md",
+    "../reference/apis-arkweb/arkts-basic-components-web-FileSelectorParam.md",
+    "../file-management/app-sandbox-directory.md"
+  ],
+  "code_examples": [
+    {
+      "language": "TypeScript",
+      "line_start": 20,
+      "line_end": 52,
+      "description": "使用onShowFileSelector拉起文件管理器的应用侧代码"
+    },
+    {
+      "language": "html",
+      "line_start": 56,
+      "line_end": 70,
+      "description": "local.html页面代码"
+    },
+    {
+      "language": "ts",
+      "line_start": 80,
+      "line_end": 114,
+      "description": "使用onShowFileSelector拉起图库的应用侧代码"
+    },
+    {
+      "language": "html",
+      "line_start": 119,
+      "line_end": 133,
+      "description": "local.html页面代码"
+    },
+    {
+      "language": "ts",
+      "line_start": 142,
+      "line_end": 190,
+      "description": "使用onShowFileSelector拉起相机的应用侧代码"
+    },
+    {
+      "language": "html",
+      "line_start": 193,
+      "line_end": 229,
+      "description": "html页面代码"
+    },
+    {
+      "language": "html",
+      "line_start": 264,
+      "line_end": 300,
+      "description": "使用ArkWeb默认方式处理文件上传的html页面代码"
+    },
+    {
+      "language": "ts",
+      "line_start": 303,
+      "line_end": 320,
+      "description": "使用ArkWeb默认方式处理文件上传的应用侧代码"
+    },
+    {
+      "language": "html",
+      "line_start": 342,
+      "line_end": 383,
+      "description": "自定义处理js接口拉起文件请求的index.html代码"
+    },
+    {
+      "language": "ts",
+      "line_start": 386,
+      "line_end": 469,
+      "description": "自定义处理js接口拉起文件请求的应用侧代码"
+    }
+  ],
+  "statistics": {
+    "total_lines": 501,
+    "total_sections": 7,
+    "total_code_blocks": 10,
+    "has_metadata": true
+  }
+}

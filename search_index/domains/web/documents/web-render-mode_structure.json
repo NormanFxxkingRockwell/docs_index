@@ -1,0 +1,87 @@
+{
+  "doc_id": "web-render-mode",
+  "title": "Web组件渲染模式",
+  "domain": "web",
+  "language": "zh-cn",
+  "file_path": "docs/zh-cn/application-dev/web/web-render-mode.md",
+  "metadata": {
+    "kit": "ArkWeb",
+    "subsystem": "Web",
+    "owner": "@zhou-ke13",
+    "designer": "@LongLie",
+    "tester": "@ghiker",
+    "adviser": "@HelloShuo"
+  },
+  "summary": "Web组件提供了两种可配置的渲染模式（异步渲染模式和同步渲染模式），能够根据不同的容器大小进行适配，满足使用场景中对容器尺寸的需求。",
+  "sections": [
+    {
+      "id": "async-render-mode",
+      "title": "异步渲染模式（默认）",
+      "level": 2,
+      "content": "异步渲染模式下（renderMode: RenderMode.ASYNC_RENDER），Web组件作为图形surface节点，独立送显。建议在仅由Web组件构成的应用页面中使用此模式，以提高性能并降低功耗。Web组件的宽高不能超过7,680px（物理像素），超过会导致白屏。不支持动态切换模式。开发者预期Web组件作为主体显示应用页面，在此场景下，Web组件高度正好为一屏或接近一屏（内嵌在navigation中）。加载的H5页面高度大于Web组件高度，Web内部将产生滚动条，用户可以通过在Web内部滑动来浏览H5页面的信息。只需使用Web组件即可实现应用业务主体内容，建议采用异步渲染模式以提升性能。",
+      "key_points": [
+        "Web组件作为图形surface节点，独立送显",
+        "适用于仅由Web组件构成的应用页面",
+        "提高性能并降低功耗",
+        "宽高不能超过7,680px（物理像素）",
+        "不支持动态切换模式",
+        "Web内部产生滚动条"
+      ]
+    },
+    {
+      "id": "sync-render-mode",
+      "title": "同步渲染模式",
+      "level": 2,
+      "content": "同步渲染模式下（renderMode: RenderMode.SYNC_RENDER），Web组件作为图形canvas节点，Web渲染跟随系统组件一起送显，可以渲染更长Web组件内容，但会增加性能消耗。不支持DSS合成。不支持动态切换模式。开发者预期Web组件作为富文本显示的载体，成为应用页面的一部分，与其他ArkUI组件共同滑动交互。H5页面与Web组件高度一致，Web内部不生成滚动条，作为一个超长组件展示，通过Scroll组件实现应用内部的滚动，确保用户能够平滑浏览Web内容及其他ArkUI组件的内容。需要Web作为业务内容的一部分渲染超长组件，不允许Web内部生成滚动条，与其余ArkUI组件协同完成页面布局，建议采用同步渲染模式，支持超长页面的渲染。",
+      "key_points": [
+        "Web组件作为图形canvas节点",
+        "Web渲染跟随系统组件一起送显",
+        "可以渲染更长Web组件内容",
+        "增加性能消耗",
+        "不支持DSS合成",
+        "不支持动态切换模式",
+        "与ArkUI组件共同滑动交互",
+        "通过Scroll组件实现应用内部滚动"
+      ]
+    },
+    {
+      "id": "example-code",
+      "title": "示例代码",
+      "level": 2,
+      "content": "展示了如何设置Web组件的渲染模式，使用RenderMode.ASYNC_RENDER设置异步渲染模式。",
+      "code_examples": [
+        {
+          "language": "TypeScript",
+          "description": "设置Web组件渲染模式",
+          "code": "import { webview } from '@kit.ArkWeb';\n\n@Entry\n@Component\nstruct WebHeightPage {\n  private webviewController: WebviewController = new webview.WebviewController()\n\n  build() {\n    Column() {\n      Web({\n        src: 'www.example.com',\n        controller: this.webviewController,\n        renderMode: RenderMode.ASYNC_RENDER // 设置渲染模式\n      })\n    }\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "Web组件",
+    "渲染模式",
+    "异步渲染",
+    "同步渲染",
+    "RenderMode",
+    "ASYNC_RENDER",
+    "SYNC_RENDER",
+    "ArkUI"
+  ],
+  "api_references": [
+    {
+      "name": "RenderMode",
+      "type": "enum",
+      "values": [
+        "ASYNC_RENDER",
+        "SYNC_RENDER"
+      ]
+    }
+  ],
+  "related_topics": [
+    "Web组件",
+    "ArkUI",
+    "WebView"
+  ],
+  "created_at": "2026-02-25"
+}
