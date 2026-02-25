@@ -1,0 +1,147 @@
+{
+  "doc_id": "effectkit-filter-c",
+  "title": "添加图像效果（C/C++）",
+  "domain": "graphics",
+  "language": "zh-cn",
+  "file_path": "docs/zh-cn/application-dev/graphics/effectkit-filter-c.md",
+  "metadata": {
+    "Kit": "ArkGraphics 2D",
+    "Subsystem": "Multimedia",
+    "Owner": "@hanamaru",
+    "Designer": "@chensiyi_CE",
+    "Tester": "@zhzhaoxiaoguang2",
+    "Adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍如何在离线处理图像时使用滤镜（Filter）设置不同的图像效果，包括模糊、提亮、灰度和反色效果。文档提供了完整的C/C++开发步骤，包括配置链接库、导入头文件、创建像素图对象、初始化滤镜对象、添加图像效果以及释放资源等操作。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 10,
+      "content": "在离线处理图像时，可以进行一些图像效果的设置以获取视觉上的不同呈现，比如设置图像模糊程度、调节图像亮度和灰度、设置图像反色等。主要基于滤镜（Filter）设置不同的图像效果。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 16,
+      "content": "使用滤镜（Filter）设置图像效果的常用接口如下表所示，详细使用和参数请见effect_filter。",
+      "apis": [
+        "OH_Filter_CreateEffect",
+        "OH_Filter_Blur",
+        "OH_Filter_Brighten",
+        "OH_Filter_GrayScale",
+        "OH_Filter_Invert",
+        "OH_Filter_GetEffectPixelMap",
+        "OH_Filter_Release"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 30,
+      "content": "详细的开发步骤包括：1. 在Native工程的CMakeLists.txt中添加链接库 2. 导入依赖的相关头文件 3. 创建OH_PixelmapNative像素图对象 4. 使用OH_Filter_CreateEffect()接口初始化OH_Filter对象 5. 按需给滤镜添加不同的图像效果（模糊、提亮、灰度、反色） 6. 获取经过滤镜处理后的OH_PixelmapNative像素图对象 7. 使用OH_Filter_Release()销毁OH_Filter对象"
+    }
+  ],
+  "apis": [
+    {
+      "name": "OH_Filter_CreateEffect",
+      "description": "用于创建一个基于像素图对象的滤镜对象。",
+      "section": "接口说明"
+    },
+    {
+      "name": "OH_Filter_Blur",
+      "description": "创建一个模糊效果并且添加到滤镜中。",
+      "section": "接口说明"
+    },
+    {
+      "name": "OH_Filter_Brighten",
+      "description": "创建一个提亮效果并且添加到滤镜中。",
+      "section": "接口说明"
+    },
+    {
+      "name": "OH_Filter_GrayScale",
+      "description": "创建一个灰度效果并且添加到滤镜中。",
+      "section": "接口说明"
+    },
+    {
+      "name": "OH_Filter_Invert",
+      "description": "创建一个反色效果并且添加到滤镜中。",
+      "section": "接口说明"
+    },
+    {
+      "name": "OH_Filter_GetEffectPixelMap",
+      "description": "获取滤镜处理后生成的像素图对象。",
+      "section": "接口说明"
+    },
+    {
+      "name": "OH_Filter_Release",
+      "description": "释放滤镜对象。",
+      "section": "接口说明"
+    }
+  ],
+  "keywords": [
+    "滤镜",
+    "图像效果",
+    "模糊",
+    "提亮",
+    "灰度",
+    "反色",
+    "像素图",
+    "OH_PixelmapNative",
+    "OH_Filter",
+    "C/C++",
+    "ArkGraphics 2D",
+    "离线图像处理"
+  ],
+  "related_docs": [
+    "../reference/apis-arkgraphics2d/capi-effect-filter-h.md"
+  ],
+  "code_samples": [
+    {
+      "language": "C++",
+      "context": "CMakeLists.txt配置",
+      "line": 33
+    },
+    {
+      "language": "C++",
+      "context": "创建像素图对象",
+      "line": 53
+    },
+    {
+      "language": "C++",
+      "context": "初始化滤镜对象",
+      "line": 92
+    },
+    {
+      "language": "C++",
+      "context": "添加模糊效果",
+      "line": 100
+    },
+    {
+      "language": "C++",
+      "context": "添加提亮效果",
+      "line": 107
+    },
+    {
+      "language": "C++",
+      "context": "添加灰度效果",
+      "line": 114
+    },
+    {
+      "language": "C++",
+      "context": "添加反色效果",
+      "line": 120
+    },
+    {
+      "language": "C++",
+      "context": "获取处理结果",
+      "line": 126
+    },
+    {
+      "language": "C++",
+      "context": "释放滤镜对象",
+      "line": 133
+    }
+  ],
+  "total_lines": 144
+}

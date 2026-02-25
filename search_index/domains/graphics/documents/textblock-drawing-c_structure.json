@@ -1,0 +1,190 @@
+{
+  "doc_id": "textblock-drawing-c",
+  "title": "字块绘制（C/C++）",
+  "language": "zh-cn",
+  "domain": "graphics",
+  "file_path": "docs/zh-cn/application-dev/graphics/textblock-drawing-c.md",
+  "metadata": {
+    "Kit": "ArkGraphics 2D",
+    "Subsystem": "Graphics",
+    "Owner": "@hangmengxin",
+    "Designer": "@wangyanglan",
+    "Tester": "@nobuggers",
+    "Adviser": "@ge-yafang"
+  },
+  "summary": "介绍如何使用C/C++接口进行字块（TextBlob）绘制，包括基本字块绘制、文字描边（英文和中文）、文字渐变、主题字体设置以及单字绘制等功能。涵盖了OH_Drawing_CanvasDrawTextBlob、OH_Drawing_TextBlobCreateFromString等核心API的使用方法和示例代码。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line_start": 10,
+      "line_end": 17,
+      "content": "字块（TextBlob）是指文本的集合。无论是单个的文字还是大块的块文本，都可以通过字块来绘制。除了基本的字块绘制之外，还可以给文字添加各种绘制效果。常见的字块绘制场景包括文字描边、文字渐变等，更多效果请见绘制效果。本节不涉及文本测量和布局排版相关内容，如需在开发中处理此类文本绘制需求，可参考文本开发概述，该文档系统讲解了排版策略与相关使用指导。"
+    },
+    {
+      "level": 2,
+      "title": "基本字块绘制",
+      "line_start": 18,
+      "line_end": 57,
+      "content": "使用OH_Drawing_CanvasDrawTextBlob()接口绘制字块，接口接受4个参数，分别为：画布Canvas对象、字块对象、文字基线左端点的x坐标和y坐标。画布Canvas对象具体可见画布的获取与绘制结果的显示（C/C++）。字块对象可以通过多种方式创建得到，详细的字块创建方式请参考drawing_text_blob.h。此处以使用OH_Drawing_TextBlobCreateFromString()接口创建字块为例，接口接受3个参数，分别为：需要显示的文本字符串内容、指向OH_Drawing_Font字体对象的指针、文本编码方式。"
+    },
+    {
+      "level": 2,
+      "title": "文字描边",
+      "line_start": 58,
+      "line_end": 150,
+      "content": "基于基本的字块绘制，还可以通过画笔实现文字描边效果，描边效果的更多介绍请参考描边效果。以下以英文文字描边和中文文字描边给出示例和指导。"
+    },
+    {
+      "level": 3,
+      "title": "英文文字描边",
+      "line_start": 64,
+      "line_end": 100,
+      "content": "英文文字描边的简要示例和示意图如下："
+    },
+    {
+      "level": 3,
+      "title": "中文文字描边",
+      "line_start": 101,
+      "line_end": 150,
+      "content": "首先需要通过画笔描边，然后需要调用画刷填充内部颜色，去除字体中间的杂质和重叠部分，实现中文文字描边效果。中文文字描边的简要示例和示意图如下："
+    },
+    {
+      "level": 2,
+      "title": "文字渐变",
+      "line_start": 151,
+      "line_end": 196,
+      "content": "基于基本字块绘制，还可以通过着色器实现文字渐变的效果，着色器的更多介绍请参考着色器效果。以下为文字添加了线性渐变着色器效果的简要示例和示意图："
+    },
+    {
+      "level": 2,
+      "title": "主题字体",
+      "line_start": 197,
+      "line_end": 232,
+      "content": "主题字体，特指系统主题应用中能使用的字体，属于一种特殊的自定义字体。如需涉及文本测量和布局排版相关内容，可参考使用主题字体（C/C++）。设置跟随主题字体的示例代码和效果图如下："
+    },
+    {
+      "level": 2,
+      "title": "单字绘制",
+      "line_start": 233,
+      "line_end": 303,
+      "content": "单字绘制是图形渲染中针对文本渲染的一种精细化控制技术。相比字块绘制，其核心优势在于能够利用字体退化机制，在当前字体无法显示某字符时，自动退化到使用系统字体绘制字符，提升对特殊字符的兼容性，避免字符缺失。同时，单字绘制支持逐字符配置字体特征（如连字、替代字形），满足复杂排版需求，增强用户体验。详细API说明请见drawing_canvas.h。"
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line_start": 305,
+      "line_end": 310,
+      "content": "针对Drawing(C/C++)的开发，有以下相关实例可供参考：NDKGraphicsDraw (API20)"
+    }
+  ],
+  "api_references": [
+    "OH_Drawing_CanvasDrawTextBlob",
+    "OH_Drawing_TextBlobCreateFromString",
+    "OH_Drawing_TextBlobDestroy",
+    "OH_Drawing_FontCreate",
+    "OH_Drawing_FontDestroy",
+    "OH_Drawing_FontSetTextSize",
+    "OH_Drawing_FontSetThemeFontFollowed",
+    "OH_Drawing_PenCreate",
+    "OH_Drawing_PenDestroy",
+    "OH_Drawing_PenSetAntiAlias",
+    "OH_Drawing_PenSetColor",
+    "OH_Drawing_PenSetWidth",
+    "OH_Drawing_CanvasAttachPen",
+    "OH_Drawing_CanvasDetachPen",
+    "OH_Drawing_BrushCreate",
+    "OH_Drawing_BrushDestroy",
+    "OH_Drawing_BrushSetAntiAlias",
+    "OH_Drawing_BrushSetColor",
+    "OH_Drawing_BrushSetShaderEffect",
+    "OH_Drawing_CanvasAttachBrush",
+    "OH_Drawing_CanvasDetachBrush",
+    "OH_Drawing_PointCreate",
+    "OH_Drawing_ShaderEffectCreateLinearGradient",
+    "OH_Drawing_CanvasDrawSingleCharacter",
+    "OH_Drawing_FontMeasureSingleCharacter",
+    "OH_Drawing_CanvasDrawSingleCharacterWithFeatures",
+    "OH_Drawing_FontMeasureSingleCharacterWithFeatures",
+    "dOH_Drawing_FontFeaturesCreate",
+    "OH_Drawing_FontFeaturesAddFeature",
+    "OH_Drawing_FontFeaturesDestroy"
+  ],
+  "related_docs": [
+    "drawing-effect-overview.md",
+    "text-overview.md",
+    "canvas-get-result-draw-c.md",
+    "drawing_text_blob.h",
+    "basic-drawing-effect-c.md",
+    "complex-drawing-effect-c.md",
+    "theme-font-c.md",
+    "drawing_canvas.h"
+  ],
+  "code_samples": [
+    {
+      "language": "C++",
+      "description": "基本字块绘制示例",
+      "line_start": 38,
+      "line_end": 54
+    },
+    {
+      "language": "C++",
+      "description": "英文文字描边示例",
+      "line_start": 70,
+      "line_end": 97
+    },
+    {
+      "language": "C++",
+      "description": "中文文字描边示例",
+      "line_start": 109,
+      "line_end": 147
+    },
+    {
+      "language": "C++",
+      "description": "文字渐变示例",
+      "line_start": 159,
+      "line_end": 193
+    },
+    {
+      "language": "C++",
+      "description": "主题字体设置示例",
+      "line_start": 205,
+      "line_end": 223
+    },
+    {
+      "language": "C++",
+      "description": "单字绘制基础场景示例",
+      "line_start": 243,
+      "line_end": 262
+    },
+    {
+      "language": "C++",
+      "description": "单字绘制进阶场景示例",
+      "line_start": 272,
+      "line_end": 296
+    }
+  ],
+  "figures": [
+    "figures/Screenshot_20241225164926098.jpg",
+    "figures/Screenshot_20241225171259621.jpg",
+    "figures/chinese_stroke_text_c.png",
+    "figures/Screenshot_20241225173900576.jpg",
+    "figures/Snapshot_setThemeFontFollowed_sys.jpg",
+    "figures/Snapshot_setThemeFontFollowed.jpg",
+    "figures/Snapshot_drawSingleCharacter.jpg",
+    "figures/Snapshot_drawSingleCharacterWithFeatures.png"
+  ],
+  "tags": [
+    "字块绘制",
+    "TextBlob",
+    "文字描边",
+    "文字渐变",
+    "主题字体",
+    "单字绘制",
+    "C/C++",
+    "ArkGraphics 2D",
+    "Drawing"
+  ],
+  "total_lines": 310,
+  "last_updated": "2026-02-25"
+}

@@ -1,0 +1,138 @@
+{
+  "doc_id": "system-font-arkts",
+  "title": "系统字体的信息获取和使用（ArkTS）",
+  "file_path": "docs/zh-cn/application-dev/graphics/system-font-arkts.md",
+  "domain": "graphics",
+  "metadata": {
+    "Kit": "ArkGraphics 2D",
+    "Subsystem": "Graphics",
+    "Owner": "@oh_wangxk; @gmiao522; @Lem0nC",
+    "Designer": "@liumingxiang",
+    "Tester": "@yhl0101",
+    "Adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍如何在ArkTS中获取系统字体信息以及使用或切换系统字体。系统字体是操作系统预设的字体，用于在没有指定自定义字体时显示文本。文档提供了获取系统字体配置信息的方法，以及通过字体家族名进行系统字体切换的示例代码。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line_start": 8,
+      "line_end": 15,
+      "content": "系统字体是指操作系统预设的字体，用于在没有指定自定义字体时显示文本，确保文本的可读性和一致性。\n\n**使用系统字体**的情况通常是在应用未注册自定义字体，或在没有显式指定文本样式时，系统会使用默认的系统字体。另外，系统字体有多种，开发者可以先获取系统字体的配置信息，并根据信息中的字体家族名来进行系统字体的切换和使用。\n\n当前ArkTS侧暂不支持禁用系统字体，Native侧支持禁用系统字体。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line_start": 16,
+      "line_end": 23,
+      "content": "以下是系统字体相关的常用接口和结构体，ArkTS侧对外接口由ArkUI提供，详细接口说明请见[@ohos.font](../reference/apis-arkui/js-apis-font.md)。\n\n| 接口名 | 描述 | \n| -------- | -------- |\n| getUIFontConfig() : UIFontConfig | 获取系统字体配置。 |"
+    },
+    {
+      "level": 2,
+      "title": "获取系统字体信息",
+      "line_start": 24,
+      "line_end": 67,
+      "content": "1. 导入依赖的相关模块。\n\n   ```ts\n   import { font } from '@kit.ArkUI'\n   ```\n\n2. 获取系统字体信息。\n   ``` TypeScript\n   let fontConfig = font.getUIFontConfig();\n   ```\n\n3. 在获取系统字体信息之后通过日志打印字体信息。\n   ``` TypeScript\n   console.info('sysFontMfg::font-dir -----------' + String(fontConfig.fontDir.length));\n   for (let i = 0; i < fontConfig.fontDir.length; i++) {\n     console.info(fontConfig.fontDir[i]);\n   }\n   console.info('sysFontMfg::generic-------------' + String(fontConfig.generic.length));\n   for (let i = 0; i < fontConfig.generic.length; i++) {\n     console.info('sysFontMfg::family:' + fontConfig.generic[i].family);\n     for (let j = 0; j < fontConfig.generic[i].alias.length; j++) {\n       console.info(fontConfig.generic[i].alias[j].name + ' ' + fontConfig.generic[i].alias[j].weight)…"
+    },
+    {
+      "level": 2,
+      "title": "使用或切换系统字体",
+      "line_start": 68,
+      "line_end": 141,
+      "content": "系统字体可以有多种，可以先获取系统字体配置信息，再根据其中的字体家族名（即TextStyle中的fontFamilies）来进行系统字体的切换和使用。\n\n如果不指定使用任何字体时，会使用系统默认字体\"HarmonyOS Sans\"显示文本。\n1. 导入依赖的相关模块。\n\n   ```ts\n   import { text } from '@kit.ArkGraphics2D';\n   ```\n\n2. 创建textStyle1，指定fontFamilies为\"HarmonyOS Sans Sans SC\"，默认中文字体为\"HarmonyOS Sans SC\"。\n   ``` TypeScript\n   let textStyle1: text.TextStyle = {\n     color: { alpha: 255, red: 255, green: 0, blue: 0 },\n     fontSize: 100,\n     fontFamilies: ['HarmonyOS Sans SC']\n   };\n   ```\n\n3. 创建textStyle2，指定fontFamilies为\"HarmonyOS Sans TC\"（该两种字体易于观察同一文字字型差异）。\n   ``` TypeScript\n   let textStyle2: text.TextStyle = {\n     color: { alpha: 255, red: 255, green: 0, blue: 0 },\n     fontSize: 100,\n     fontFamilies: ['HarmonyOS Sans TC']\n   };\n   ```\n\n4. 创建段落生成器。\n   ``` TypeScript\n   // 创建一个段落样式对象，以设置排版风格\n   let myParagraphStyle: text.ParagraphStyle = {\n     textStyle: textStyle1,\n     align: 3,\n     wordBreak: text.WordBreak.NORMAL\n   };\n   // 获取全局字体集实例\n   let fontCollection = text.FontCollection.getGlobalInstance(); //获取Arkui全局FC\n   // 创建一个段落生成器\n   let ParagraphGraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);\n   ```\n\n5. 先后将textStyle1和textStyle2添加到段落样式中并添加文字。\n   ``` TypeScript\n   let str:string = '模块描述\\n';\n   // 添加第一种文本样式和对应文本内容\n   ParagraphGraphBuilder.pushStyle(textStyle1);\n   ParagraphGraphBuilder.addText(str);\n   // 添加第二种文本样式和对应文本内容\n   ParagraphGraphBuilder.pushStyle(textStyle2);\n   ParagraphGraphBuilder.addText(str);\n   ```\n\n6. 生成段落，用于后续绘制使用。\n   ``` TypeScript\n   let paragraph = ParagraphGraphBuilder.build();\n   ```"
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "ts",
+      "line_start": 28,
+      "line_end": 30,
+      "content": "import { font } from '@kit.ArkUI'"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 35,
+      "line_end": 37,
+      "content": "let fontConfig = font.getUIFontConfig();"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 42,
+      "line_end": 62,
+      "content": "console.info('sysFontMfg::font-dir -----------' + String(fontConfig.fontDir.length));\nfor (let i = 0; i < fontConfig.fontDir.length; i++) {\n  console.info(fontConfig.fontDir[i]);\n}\nconsole.info('sysFontMfg::generic-------------' + String(fontConfig.generic.length));\nfor (let i = 0; i < fontConfig.generic.length; i++) {\n  console.info('sysFontMfg::family:' + fontConfig.generic[i].family);\n  for (let j = 0; j < fontConfig.generic[i].alias.length; j++) {\n    console.info.info(fontConfig.generic[i].alias[j].name + ' ' + fontConfig.generic[i].alias[j].weight);\n  }\n}\nconsole.info('sysFontMfg::fallback------------' + String(fontConfig.fallbackGroups.length));\nfor (let i = 0; i < fontConfig.fallbackGroups.length; i++) {\n  console.info('sysFontMfg::fontSetName:' + fontConfig.fallbackGroups[i].fontSetName);\n  for (let j = 0; j < fontConfig.fallbackGroups[i].fallback.length; j++) {\n    console.info('sysFontMfg::language:' + fontConfig.fallbackGroups[i].fallback[j].language + ' ' +\n      fontConfig.fallbackGroups[i].fallback[j].family);\n  }\n}"
+    },
+    {
+      "language": "ts",
+      "line_start": 75,
+      "line_end": 77,
+      "content": "import { text } from '@kit.ArkGraphics2D';"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 82,
+      "line_end": 88,
+      "content": "let textStyle1: text.TextStyle = {\n  color: { alpha: 255, red: 255, green: 0, blue: 0 },\n  fontSize: 100,\n  fontFamilies: ['HarmonyOS Sans SC']\n};"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 93,
+      "line_end": 99,
+      "content": "let textStyle2: text.TextStyle = {\n  color: { alpha: 255, red: 255, green: 0, blue: 0 },\n  fontSize: 100,\n  fontFamilies: ['HarmonyOS Sans TC']\n};"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 104,
+      "line_end": 115,
+      "content": "// 创建一个段落样式对象，以设置排版风格\nlet myParagraphStyle: text.ParagraphStyle = {\n  textStyle: textStyle1,\n  align: 3,\n  wordBreak: text.WordBreak.NORMAL\n};\n// 获取全局字体集实例\nlet fontCollection = text.FontCollection.getGlobalInstance(); //获取Arkui全局FC\n// 创建一个段落生成器\nlet ParagraphGraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 120,
+      "line_end": 128,
+      "content": "let str:string = '模块描述\\n';\n// 添加第一种文本样式和对应文本内容\nParagraphGraphBuilder.pushStyle(textStyle1);\nParagraphGraphBuilder.addText(str);\n// 添加第二种文本样式和对应文本内容\nParagraphGraphBuilder.pushStyle(textStyle2);\nParagraphGraphBuilder.addText(str);"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 134,
+      "line_end": 136,
+      "content": "let paragraph = ParagraphGraphBuilder.build();"
+    }
+  ],
+  "images": [
+    {
+      "path": "figures/zh-cn_image_0000002211603664.png",
+      "line": 66,
+      "alt": "系统字体配置信息示例"
+    },
+    {
+      "path": "figures/zh-cn_image_0000002246563829.png",
+      "line": 140,
+      "alt": "系统字体切换效果展示"
+    }
+  ],
+  "references": [
+    {
+      "text": "@ohos.font",
+      "url": "../reference/apis-arkui/js-apis-font.md",
+      "line": 18
+    }
+  ],
+  "keywords": [
+    "系统字体",
+    "ArkTS",
+    "getUIFontConfig",
+    "字体配置",
+    "fontFamilies",
+    "HarmonyOS Sans",
+    "TextStyle",
+    "FontCollection",
+    "ParagraphBuilder"
+  ],
+  "stats": {
+    "total_lines": 141,
+    "total_sections": 4,
+    "total_code_blocks": 9,
+    "total_images": 2,
+    "total_references": 1
+  }
+}

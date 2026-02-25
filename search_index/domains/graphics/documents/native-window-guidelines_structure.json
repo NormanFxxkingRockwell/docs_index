@@ -1,0 +1,65 @@
+{
+  "doc_id": "native-window-guidelines",
+  "title": "NativeWindow开发指导 (C/C++)",
+  "path": "docs/zh-cn/application-dev/graphics/native-window-guidelines.md",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@Felix-fangyang; @BruceXu; @dingpy",
+    "designer": "@conan13234",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "NativeWindow是本地平台化窗口，表示图形队列的生产者端。开发者可以通过NativeWindow接口进行申请和提交Buffer，配置Buffer属性信息。常见开发场景包括通过Native API接口申请图形Buffer并将生成的图形内容写入图形Buffer，最终提交Buffer到图形队列，以及在适配EGL层的eglswapbuffer接口时进行申请和提交Buffer。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 8,
+      "content": "NativeWindow是本地平台化窗口，表示图形队列的生产者端。开发者可以通过NativeWindow接口进行申请和提交Buffer，配置Buffer属性信息。针对NativeWindow，常见的开发场景如下：通过NativeWindow提供的Native API接口申请图形Buffer，并将生成的图形内容写入图形Buffer，最终提交Buffer到图形队列；在适配EGL层的eglswapbuffer接口时，进行申请和提交Buffer。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 17,
+      "content": "提供了三个主要接口：OH_NativeWindow_NativeWindowRequestBuffer（通过OHNativeWindow对象申请一块OHNativeWindowBuffer，用以内容生产）、OH_NativeWindow_NativeWindowFlushBuffer（通过OHNativeWindow将生产好内容的OHNativeWindowBuffer放回到Buffer队列中，用以内容消费）、OH_NativeWindow_NativeWindowHandleOpt（设置/获取OHNativeWindow的属性，包括设置/获取宽高、内容格式等）。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 27,
+      "content": "开发步骤包括：添加动态链接库（libace_ndk.z.so和libnative_window.so）、包含必要的头文件、获取OHNativeWindow实例（通过OH_NativeXComponent_Callback接口）、设置OHNativeWindowBuffer的属性、从图形队列申请OHNativeWindowBuffer、内存映射mmap、将生产的内容写入OHNativeWindowBuffer（需要等待releaseFenceFd可用）、提交OHNativeWindowBuffer到图形队列、使用munmap取消内存映射。"
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line": 211,
+      "content": "针对NativeWindow的开发，有以下相关实例可供参考：NativeWindow（API11）。"
+    }
+  ],
+  "keywords": [
+    "NativeWindow",
+    "Buffer",
+    "图形队列",
+    "C/C++",
+    "OHNativeWindow",
+    "OHNativeWindowBuffer",
+    "mmap",
+    "XComponent",
+    "EGL"
+  ],
+  "api_references": [
+    "OH_NativeWindow_NativeWindowRequestBuffer",
+    "OH_NativeWindow_NativeWindowFlushBuffer",
+    "OH_NativeWindow_NativeWindowHandleOpt",
+    "OH NativeXComponent_Callback"
+  ],
+  "code_examples": 7,
+  "related_docs": [
+    "../reference/apis-arkgraphics2d/capi-nativewindow.md",
+    "../reference/apis-arkui/capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-callback.md",
+    "../ui/napi-xcomponent-guidelines.md"
+  ],
+  "last_updated": "2026-02-25"
+}

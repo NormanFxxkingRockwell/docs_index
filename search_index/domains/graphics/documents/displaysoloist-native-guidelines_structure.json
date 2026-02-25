@@ -1,0 +1,184 @@
+{
+  "doc_id": "displaysoloist-native-guidelines",
+  "title": "NativeDisplaySoloist开发指导 (C/C++)",
+  "file_path": "docs/zh-cn/application-dev/graphics/displaysoloist-native-guidelines.md",
+  "domain": "graphics",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hudi33",
+    "designer": "@hudi33",
+    "tester": "@zhaoxiaoguang2",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "NativeDisplaySoloist开发指导，介绍如何在独立线程中实现帧率控制的Native侧业务，适用于游戏、自绘制UI框架对接等场景。开发者可以选择多个DisplaySoloist实例共享一个线程，也可以选择每个DisplaySoloist实例独占一个线程。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "NativeDisplaySoloist开发指导 (C/C++)",
+      "line": 1,
+      "content": "如果开发者想在独立线程中实现帧率控制的Native侧业务，可以通过DisplaySoloist来实现，如游戏、自绘制UI框架对接等场景。开发者可以选择多个DisplaySoloist实例共享一个线程，也可以选择每个DisplaySoloist实例独占一个线程。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 13,
+      "content": "提供OH_DisplaySoloist_Create、OH_DisplaySoloist_Destroy、OH_DisplaySoloist_Start、OH_DisplaySoloist_Stop、OH_DisplaySoloist_SetExpectedFrameRateRange等接口函数。"
+    },
+    {
+    "level": 2,
+      "title": "开发示例",
+      "line": 25,
+      "content": "通过Drawing在Native侧实现图形的绘制，通过异步线程设置期望的帧率，再根据根据帧率进行图形的绘制并将其呈现在NativeWindow上。"
+    },
+    {
+      "level": 3,
+      "title": "添加开发依赖",
+      "line": 29,
+      "content": "添加动态链接库和头文件依赖，包括libnative_display_soloist.so和相关头文件。"
+    },
+    {
+      "level": 3,
+      "title": "开发步骤",
+      "line": 66,
+      "content": "包括定义ArkTS接口文件、创建演示页面、获取NativeXComponent、配置帧率和注册回调函数、TS层注册和取消注册等步骤。"
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line": 408,
+      "content": "提供DisplaySoloist分级管控实例参考。"
+    }
+  ],
+  "keywords": {
+    "primary": [
+      "NativeDisplaySoloist",
+      "帧率控制",
+      "DisplaySoloist",
+      "独立线程"
+    ],
+    "secondary": [
+      "OH_DisplaySoloist_Create",
+      "OH_DisplaySoloist_Destroy",
+      "OH_DisplaySoloist_Start",
+      "OH_DisplaySoloist_Stop",
+      "OH_DisplaySoloist_SetExpectedFrameRateRange",
+      "NativeWindow",
+      "Drawing",
+      "XComponent",
+      "VSync"
+    ],
+    "api": [
+      "OH_DisplaySoloist_Create",
+      "OH_DisplaySoloist_Destroy",
+      "OH_DisplaySoloist_Start",
+      "OH_DisplaySoloist_Stop",
+      "OH_DisplaySoloist_SetExpectedFrameRateRange",
+      "OH_NativeXComponent_GetXComponentId",
+      "OH_NativeXComponent_GetXComponentSize"
+    ]
+  },
+  "api_references": [
+    {
+      "name": "OH_DisplaySoloist_Create",
+      "description": "创建一个OH_DisplaySoloist实例",
+      "line": 17
+    },
+    {
+      "name": "OH_DisplaySoloist_Destroy",
+      "description": "销毁一个OH_DisplaySoloist实例",
+      "line": 18
+    },
+    {
+      "name": "OH_DisplaySoloist_Start",
+      "description": "设置每帧回调函数，每次VSync信号到来时启动每帧回调",
+      "line": 19
+    },
+    {
+      "name": "OH_DisplaySoloist_Stop",
+      "description": "停止请求下一次VSync信号，并停止调用回调函数callback",
+      "line": 20
+    },
+    {
+      "name": "OH_DisplaySoloist_SetExpectedFrameRateRange",
+      "description": "设置期望帧率范围",
+      "line": 21
+    }
+  ],
+  "code_examples": [
+    {
+      "language": "Text",
+      "title": "CMakeLists.txt配置",
+      "line": 36
+    },
+    {
+      "language": "C",
+      "title": "头文件引用",
+      "line": 43
+    },
+    {
+      "language": "C++",
+      "title": "DisplaySoloist头文件",
+      "line": 62
+    },
+    {
+      "language": "TypeScript",
+      "title": "XComponentContext接口定义",
+      "line": 71
+    },
+    {
+      "language": "TypeScript",
+      "title": "演示页面定义",
+      "line": 84
+    },
+    {
+      "language": "C",
+      "title": "PluginManager类定义",
+      "line": 137
+    },
+    {
+      "language": "C++",
+      "title": "Export函数实现",
+      "line": 157
+    },
+    {
+      "language": "C++",
+      "title": "帧回调函数TestCallback",
+      "line": 206
+    },
+    {
+      "language": "C++",
+      "title": "DisplaySoloist执行和NAPI注册",
+      "line": 255
+    },
+    {
+      "language": "TypeScript",
+      "title": "TS层回调注册和销毁",
+      "line": 355
+    }
+  ],
+  "related_docs": [
+    {
+      "title": "NativeDisplaySoloist",
+      "path": "../reference/apis-arkgraphics2d/capi-nativedisplaysoloist.md",
+      "type": "api_reference"
+    },
+    {
+      "title": "使用Drawing实现图形绘制与显示",
+      "path": "graphic-drawing-overview.md",
+      "type": "guide"
+    },
+    {
+      "title": "DisplaySoloist分级管控 (API14)",
+      "path": "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkGraphics2D/DisplaySoloist",
+      "type": "sample"
+    }
+  ],
+  "stats": {
+    "total_lines": 413,
+    "code_blocks": 10,
+    "api_count": 6,
+    "section_count": 6
+  },
+  "last_updated": "2026-02-25"
+}

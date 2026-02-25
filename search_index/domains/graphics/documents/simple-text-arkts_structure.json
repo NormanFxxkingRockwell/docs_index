@@ -1,0 +1,86 @@
+{
+  "doc_id": "simple-text-arkts",
+  "title": "简单文本绘制与显示（ArkTS）",
+  "file_path": "docs/zh-cn/application-dev/graphics/simple-text-arkts.md",
+  "domain": "graphics",
+  "metadata": {
+    "Kit": "ArkGraphics 2D",
+    "Subsystem": "Graphics",
+    "Owner": "@oh_wangxk; @gmiao522; @Lem0nC",
+    "Designer": "@liumingxiang",
+    "Tester": "@yhl0101",
+    "Adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了如何在简单的用户界面中绘制和显示静态文本，包括标签、按钮文字、菜单项或状态栏提示信息。开发者可以通过设置字体、大小和颜色来完成文本渲染。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 8,
+      "content": "在一个简单的用户界面中，可能只需要展示几行静态文本，例如标签、按钮上的文字、菜单项或状态栏中的提示信息。此时，开发者只需要选择合适的字体、大小和颜色即可完成渲染。"
+    },
+    {
+      "level": 2,
+      "title": "相关属性",
+      "line": 12,
+      "content": "此场景示例，涉及到的文本样式属性如下，具体及更多文本样式可参考[TextStyle](../reference/apis-arkgraphics2d/js-apis-graphics-text.md#textstyle)。\n\n- color：字体颜色，默认为白色。请注意与画布颜色进行区分，以保证文本的正常显示。\n\n- fontSize：字体大小，浮点数，默认为14.0，单位为物理像素px。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 21,
+      "content": "1. 通过context获取到Canvas画布对象。\n\n2. 初始化文本样式，此处设置字体颜色为红色，字体大小为50。\n\n3. 初始化段落样式。\n\n4. 初始化段落对象，并添加文本。\n\n5. 排版段落并进行文本绘制。"
+    },
+    {
+      "level": 2,
+      "title": "效果展示",
+      "line": 90,
+      "content": "![zh-cn_image_000000222246603717](figures/simpleText.PNG)"
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "TypeScript",
+      "line": 27,
+      "content": "let canvas = context.canvas;"
+    },
+    {
+      "language": "TypeScript",
+      "line": 36,
+      "content": "// 获取文本样式\nlet myTextStyle: text.TextStyle = {\n  // 文本颜色\n  color: {\n    alpha: 255,\n    red: 255,\n    green: 0,\n    blue: 0\n  },\n  // 文本大小\n  fontSize: 100\n};"
+    },
+    {
+      "language": "TypeScript",
+      "line": 56,
+      "content": "let myParagraphStyle: text.ParagraphStyle = {\n  textStyle: myTextStyle,\n};"
+    },
+    {
+    "language": "TypeScript",
+      "line": 67,
+      "content": "let fontCollection = text.FontCollection.getGlobalInstance();\nlet ParagraphGraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);\n// 更新文本样式\nParagraphGraphBuilder.pushStyle(myTextStyle);\n// 添加文本\nParagraphGraphBuilder.addText(\"Hello World\");"
+    },
+    {
+      "language": "TypeScript",
+      "line": 81,
+      "content": "// 生成段落\nlet paragraph = ParagraphGraphBuilder.build();\n// 布局\nparagraph.layoutSync(1250);\n// 绘制文本\nparagraph.paint(canvas, 0, 100);"
+    }
+  ],
+  "images": [
+    {
+      "path": "figures/simpleText.PNG",
+      "line": 92,
+      "alt": "zh-cn_image_0000002246603717"
+    }
+  ],
+  "keywords": [
+    "文本绘制",
+    "ArkTS",
+    "Canvas",
+    "TextStyle",
+    "ParagraphStyle",
+    "ParagraphBuilder",
+    "字体颜色",
+    "字体大小"
+  ],
+  "total_lines": 93
+}

@@ -1,0 +1,82 @@
+{
+  "doc_id": "native-fence-guidelines",
+  "title": "GPU/CPU内存访问同步操作开发指南 (C/C++)",
+  "file_path": "docs/zh-cn/application-dev/graphics/native-fence-guidelines.md",
+  "domain": "graphics",
+  "metadata": {
+    "Kit": "ArkGraphics 2D",
+    "Subsystem": "Graphics",
+    "Owner": "@Felix-fangyang; @BruceXu; @dingpy",
+    "Designer": "@conan13234",
+    "Tester": "@nobuggers",
+    "Adviser": "@ge-yafang"
+  },
+  "summary": "NativeFence是管理fenceFd同步状态的模块，提供设置阻塞时间、永久阻塞、关闭fenceFd以及检查其有效性等功能。本文档介绍了如何使用NativeFence的Native API接口实现GPU/CPU内存访问同步操作，包括添加动态链接库、包含头文件、创建fenceFd、检查有效性、等待fence完成、关闭fenceFd等开发步骤。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "GPU/CPU内存访问同步操作开发指南 (C/C++)",
+      "line": 1
+    },
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 8,
+      "content": "NativeFence是管理fenceFd同步状态的模块。开发者可通过其接口实现以下功能：设置阻塞时间、永久阻塞、关闭fenceFd以及检查其有效性。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 12,
+      "interfaces": [
+        {
+          "name": "OH_NativeFence_IsValid (int fenceFd)",
+          "description": "检查fenceFd是否有效。"
+        },
+        {
+          "name":":OH_NativeFence_Wait (int fenceFd, uint32_t timeout)",
+          "description": "阻塞传入的fenceFd，超时参数指定了允许等待的最长时间。"
+        },
+        {
+          "name": "OH_NativeFence_WaitForever (int fenceFd)",
+          "description": "永久阻塞传入的fenceFd。"
+        },
+        {
+          "name": "OH_NativeFence_Close (int fenceFd)",
+          "description": "关闭fenceFd。"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 23,
+      "content": "以下步骤描述了如何使用NativeFence提供的Native API接口。",
+      "steps": [
+        "添加动态链接库 libnative_fence.so",
+        "包含头文件 native_fence/native_fence.h",
+        "使用signalfd()接口创建fenceFd",
+        "判断传入的fenceFd是否合法",
+        "调用OH_NativeFence_Wait阻塞接口，等待fence完成后进行下一步操作",
+        "调用OH_NativeFence_WaitForever阻塞接口，等待fence完成后进行下一步操作",
+        "GPU或CPU发送同步信号(signal)，通知fenceFd解除阻塞",
+        "关闭fenceFd"
+      ]
+    }
+  ],
+  "keywords": [
+    "NativeFence",
+    "fenceFd",
+    "GPU/CPU同步",
+    "内存访问同步",
+    "ArkGraphics 2D",
+    "signalfd",
+    "OH_NativeFence_IsValid",
+    "OH_NativeFence_Wait",
+    "OH_NativeFence_WaitForever",
+    "OH_NativeFence_Close"
+  ],
+  "related_docs": [
+    "../reference/apis-arkgraphics2d/capi-nativefence.md"
+  ]
+}

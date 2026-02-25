@@ -1,0 +1,301 @@
+{
+  "doc_id": "Readme-CN",
+  "title": "ArkGraphics 2D（方舟2D图形服务）",
+  "file_path": "docs/zh-cn/application-dev/graphics/Readme-CN.md",
+  "domain": "graphics",
+  "language": "zh-cn",
+  "metadata": {
+    "Kit": "ArkGraphics 2D",
+    "Subsystem": "Graphics",
+    "Owner": "@oh_wangxk; @goumiao; @hangmengxin",
+    "Designer": "@liumingxiang; @wangyanglan",
+    "Tester": "@yhl0101; @nobuggers",
+    "Adviser": "@ge-yafang"
+  },
+  "summary": "ArkGraphics 2D（方舟2D图形服务）是HarmonyOS应用开发中的图形子系统，提供了完整的2D图形绘制、文本处理、图像处理等功能。文档涵盖了可变帧率能力定制、图形绘制与显示、文本处理、离线图像处理、Native API开发指导等多个方面的内容，支持ArkTS和C/C++两种开发语言。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "ArkGraphics 2D（方舟2D图形服务）",
+      "line": 1,
+      "content": "主文档标题，包含ArkGraphics 2D图形服务的完整导航目录"
+    }
+  ],
+  "subdocuments": [
+    {
+      "title": "ArkGraphics 2D简介",
+      "file": "arkgraphics2D-introduction.md"
+    },
+    {
+      "title": "可变帧率能力定制",
+      "comment": "displaysync",
+      "subdocuments": [
+        {
+          "title": "可变帧率简介",
+          "file": "displaysync-overview.md"
+        },
+        {
+          "title": "请求动画绘制帧率",
+          "file": "displaysync-animation.md"
+        },
+        {
+          "title": "请求UI绘制帧率",
+          "file": "displaysync-ui.md"
+        },
+        {
+          "title": "请求自绘制内容绘制帧率",
+          "file": "displaysync-xcomponent.md"
+        },
+        {
+          "title": "NativeDisplaySoloist开发指导 (C/C++)",
+          "file": "displaysoloist-native-guidelines.md"
+        }
+      ]
+    },
+    {
+      "title": "过度绘制调试使用指导",
+      "file": "overdraw-dfx-guidelines.md"
+    },
+    {
+      "title": "图形绘制与显示",
+      "comment": "graphic-drawing-and-display",
+      "subdocuments": [
+        {
+          "title": "图形绘制与显示开发概述",
+          "file": "graphic-drawing-overview.md"
+        },
+        {
+          "title": "画布的获取与绘制结果的显示",
+          "comment": "canvas-get-result-draw",
+          "subdocuments": [
+            {
+              "title": "画布的获取与绘制结果的显示（ArkTS）",
+              "file": "canvas-get-result-draw-arkts.md"
+            },
+            {
+              "title": "画布的获取与绘制结果的显示（C/C++）",
+              "file": "canvas-get-result-draw-c.md"
+            }
+          ]
+        },
+        {
+          "title": "画布操作及状态",
+          "comment": "canvas-operation-state",
+          "subdocuments": [
+            {
+              "title": "画布操作及状态处理（ArkTS）",
+              "file": "canvas-operation-state-arkts.md"
+            },
+            {
+              "title": "画布操作及状态处理（C/C++）",
+              "file": "canvas-operation-state-c.md"
+            }
+          ]
+        },
+        {
+          "title": "绘制效果",
+          "comment": "drawing-effect",
+          "subdocuments": [
+            {
+              "title": "绘制效果概述",
+              "file": "drawing-effect-overview.md"
+            },
+            {
+              "title": "基础绘制效果（ArkTS）",
+              "file": "basic-drawing-effect-arkts.md"
+            },
+            {
+              "title": "复杂绘制效果（ArkTS）",
+              "file": "complex-drawing-effect-arkts.md"
+            },
+            {
+              "title": "基础绘制效果（C/C++）",
+              "file": "basic-drawing-effect-c.md"
+            },
+            {
+              "title": "复杂绘制效果（C/C++）",
+              "file": "complex-drawing-effect-c.md"
+            }
+          ]
+        },
+        {
+          "title": "图元绘制",
+          "comment": "primitive-drawing",
+          "subdocuments": [
+            {
+              "title": "图元绘制概述",
+              "file": "primitive-drawing-overview.md"
+            },
+            {
+              "title": "几何形状绘制（ArkTS）",
+              "file": "geometric-shape-drawing-arkts.md"
+            },
+            {
+              "title": "图片绘制（ArkTS）",
+              "file": "pixelmap-drawing-arkts.md"
+            },
+            {
+              "title": "字块绘制（ArkTS）",
+              "file": "textblock-drawing-arkts.md"
+            },
+            {
+              "title": "几何形状绘制（C/C++）",
+              "file": "geometric-shape-drawing-c.md"
+            },
+            {
+              "title": "图片绘制（C/C++）",
+              "file": "pixelmap-drawing-c.md"
+            },
+            {
+              "title": "字块绘制（C/C++）",
+              "file": "textblock-drawing-c.md"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "文本",
+      "comment": "text",
+      "subdocuments": [
+        {
+          "title": "文本开发概述",
+          "file": "text-overview.md"
+        },
+        {
+          "title": "字体管理",
+          "comment": "font-manager",
+          "subdocuments": [
+            {
+              "title": "使用主题字体（ArkTS）",
+              "file": "theme-font-arkts.md"
+            },
+            {
+              "title": "自定义字体的注册和使用（ArkTS）",
+              "file": "custom-font-arkts.md"
+            },
+            {
+              "title": "系统字体的信息获取和使用（ArkTS）",
+              "file": "system-font-arkts.md"
+            },
+            {
+              "title": "使用主题字体（C/C++）",
+              "file": "theme-font-c.md"
+            },
+            {
+              "title": "自定义字体的注册和使用（C/C++）",
+              "file": "custom-font-c.md"
+            },
+            {
+              "title": "系统字体的信息获取和使用（C/C++）",
+              "file": "system-font-c.md"
+            }
+          ]
+        },
+        {
+          "title": "文本测量",
+          "comment": "text-measure",
+          "subdocuments": [
+            {
+              "title": "文本测量（ArkTS）",
+              "file": "text-measure-arkts.md"
+            },
+            {
+              "title": "文本测量（C/C++）",
+              "file": "text-measure-c.md"
+            }
+          ]
+        },
+        {
+          "title": "文本绘制与显示",
+          "comment": "draw-text-display",
+          "subdocuments": [
+            {
+              "title": "简单文本绘制与显示（ArkTS）",
+              "file": "simple-text-arkts.md"
+            },
+            {
+              "title": "复杂文本绘制与显示（ArkTS）",
+              "file": "complex-text-arkts.md"
+            },
+            {
+              "title": "自定义文本绘制与显示（ArkTS）",
+              "file": "text-custom-arkts.md"
+            },
+            {
+              "title": "简单文本绘制与显示（C/C++）",
+              "file": "simple-text-c.md"
+            },
+            {
+              "title": "复杂文本绘制与显示（C/C++）",
+              "file": "complex-text-c.md"
+            },
+            {
+              "title": "自定义文本绘制与显示（C/C++）",
+              "file": "text-custom-c.md"
+            }
+          ]
+        },
+        {
+          "title": "文本开发常见问题",
+          "file": "text-faqs.md"
+        }
+      ]
+    },
+    {
+      "title": "离线图像处理",
+      "comment": "offline-image-processing",
+      "subdocuments": [
+        {
+          "title": "添加图像效果（C/C++）",
+          "file": "effectkit-filter-c.md"
+        }
+      ]
+    },
+    {
+      "title": "NativeBuffer开发指导 (C/C++)",
+      "file": "native-buffer-guidelines.md"
+    },
+    {
+      "title": "NativeImage开发指导 (C/C++)",
+      "file": "native-image-guidelines.md"
+    },
+    {
+      "title": "NativeVsync开发指导 (C/C++)",
+      "file": "native-vsync-guidelines.md"
+    },
+    {
+      "title": "NativeWindow开发指导 (C/C++)",
+      "file": "native-window-guidelines.md"
+    },
+    {
+      "title": "GPU/CPU内存访问同步操作开发指南 (C/C++)",
+      "file": "native-fence-guidelines.md"
+    },
+    {
+      "title": "图形开发术语",
+      "file": "graphic-term.md"
+    }
+  ],
+  "keywords": [
+    "ArkGraphics 2D",
+    "方舟2D图形服务",
+    "可变帧率",
+    "图形绘制",
+    "画布",
+    "绘制效果",
+    "图元绘制",
+    "文本",
+    "字体管理",
+    "文本测量",
+    "离线图像处理",
+    "Native API",
+    "NativeBuffer",
+    "NativeImage",
+    "NativeVsync",
+    "NativeWindow",
+    "GPU/CPU内存同步"
+  ],
+  "total_lines": 68,
+  "last_updated": "2026-02-25"
+}

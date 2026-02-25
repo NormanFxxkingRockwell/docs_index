@@ -1,0 +1,50 @@
+{
+  "doc_id": "overdraw-dfx-guidelines",
+  "title": "过度绘制调试使用指导",
+  "description": "介绍过度绘制调试功能的使用方式，以及如何进行过度绘制的分析和优化",
+  "keywords": [
+    "过度绘制",
+    "Overdraw",
+    "调试",
+    "渲染",
+    "优化"
+  ],
+  "summary": "本文介绍过度绘制调试功能的使用方式，以及如何进行过度绘制的分析和优化。内容包括：使用方式（通过shell开启或关闭）、过度绘制组件分析（不同颜色代表不同级别的过度绘制）、如何减少过度绘制现象（通过显隐控制、减少冗余组件、采用扁平化布局等）。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "使用方式",
+      "line_start": 7,
+      "line_end": 38,
+      "content": "系统提供的过度绘制调试功能，可通过shell进行开启或者关闭。使用前提：需在系统设置中开启开发者模式。开启命令：param set debug.graphic.overdraw true；关闭命令：param set debug.graphic.overdraw false；查看命令：param get debug.graphic.overdraw"
+    },
+    {
+      "level": 2,
+      "title": "过度绘制组件分析",
+      "line_start": 40,
+      "line_end": 98,
+      "content": "开启了过度绘制调试功能后，存在过度绘制情况的像素会被代表着不同级别的颜色方框高亮出来。颜色对应关系：原色（无过度绘制）、蓝紫色（一次过度绘制）、绿色（两次过度绘制）、浅红色（三次过度绘制）、深红色（四次或更多次过度绘制）。文档还提供了一个存在冗余背景颜色嵌套问题的示例应用程序。"
+    },
+    {
+      "level": 2,
+      "title": "如何减少过度绘制现象",
+      "line_start": 99,
+      "line_end": 107,
+      "content": "建议采用如下方式减少过度绘制的现象：通过显隐控制或者if-else条件，减少页面上冗余的组件；减少被完全遮挡的组件上的绘制指令，如背景颜色、组件内容等；采用扁平化布局，减少组件嵌套深度，比如将大小相近、功能类似的布局组件合并为一个组件等。"
+    }
+  ],
+  "metadata": {
+    "domain": "graphics",
+    "category": "application-dev",
+    "language": "zh-cn",
+    "file_path": "docs/zh-cn/application-dev/graphics/overdraw-dfx-guidelines.md",
+    "total_lines": 107,
+    "has_code_examples": true,
+    "has_images": true,
+    "estimated_reading_time_minutes": 3
+  },
+  "indexing_info": {
+    "indexed_at": "2026-02-25",
+    "last_modified": "2026-02-25"
+  }
+}

@@ -1,66 +1,187 @@
 {
-  "domain": "Graphics",
-  "total_documents": 48,
-  "categories": {
-    "可变帧率": [
-      "displaysync-overview",
-      "displaysync-animation",
-      "displaysync-ui",
-      "displaysync-xcomponent",
-      "displaysoloist-native-guidelines"
-    ],
-    "图形绘制": [
-      "graphic-drawing-overview",
-      "canvas-get-result-draw-arkts",
-      "canvas-get-result-draw-c",
-      "canvas-operation-state-arkts",
-      "canvas-operation-state-c",
-      "drawing-effect-overview",
-      "basic-drawing-effect-arkts",
-      "basic-drawing-effect-c",
-      "complex-drawing-effect-arkts",
-      "complex-drawing-effect-c"
-    ],
-    "图元绘制": [
-      "primitive-drawing-overview",
-      "geometric-shape-drawing-arkts",
-      "geometric-shape-drawing-c",
-      "pixelmap-drawing-arkts",
-      "pixelmap-drawing-c",
-      "textblock-drawing-arkts",
-      "textblock-drawing-c"
-    ],
-    "文本开发": [
-      "text-overview",
-      "theme-font-arkts",
-      "theme-font-c",
-      "custom-font-arkts",
-      "custom-font-c",
-      "system-font-arkts",
-      "system-font-c",
-      "text-measure-arkts",
-      "text-measure-c",
-      "simple-text-arkts",
-      "simple-text-c",
-      "complex-text-arkts",
-      "complex-text-c",
-      "text-custom-arkts",
-      "text-custom-c",
-      "text-faqs"
-    ],
-    "Native API": [
-      "native-buffer-guidelines",
-      "native-fence-guidelines",
-      "native-image-guidelines",
-      "native-vsync-guidelines",
-      "native-window-guidelines",
-      "effectkit-filter-c"
-    ],
-    "其他": [
-      "Readme-CN",
-      "arkgraphics2D-introduction",
-      "overdraw-dfx-guidelines",
-      "graphic-term"
-    ]
-  }
+  "domain": "graphics",
+  "overview": "Graphics领域涵盖ArkGraphics 2D方舟2D图形服务的完整开发指南，提供2D图形绘制、文本处理、图像处理等核心能力。主要功能包括图形绘制与显示（Canvas画布操作、绘制效果、图元绘制）、文本开发（字体管理、文本测量、文本绘制）、可变帧率能力定制、离线图像处理、Native API开发指导（NativeWindow、NativeBuffer、NativeImage、NativeVsync、NativeFence）等。支持ArkTS和C/C++两种开发语言，适用于应用开发、游戏开发、自绘制UI框架对接等多种场景。",
+  "core_concepts": [
+    "图形绘制",
+    "Canvas画布",
+    "文本开发",
+    "字体管理",
+    "绘制效果",
+    "可变帧率",
+    "Native API",
+    "图像处理",
+    "图元绘制",
+    "文本测量"
+  ],
+  "learning_path": [
+    {
+      "phase": "基础入门",
+      "description": "了解Graphics领域的基本概念和核心能力",
+      "documents": [
+        "arkgraphics2D-introduction",
+        "Readme-CN",
+        "graphic-term"
+      ]
+    },
+    {
+      "phase": "图形绘制基础",
+      "description": "掌握Canvas画布操作和基础图形绘制",
+      "documents": [
+        "graphic-drawing-overview",
+        "canvas-get-result-draw-arkts",
+        "canvas-get-result-draw-c",
+        "canvas-operation-state-arkts",
+        "canvas-operation-state-c",
+        "primitive-drawing-overview"
+      ]
+    },
+    {
+      "phase": "基础图元绘制",
+      "description": "学习绘制各种几何形状和图片",
+      "documents": [
+        "geometric-shape-drawing-arkts",
+        "geometric-shape-drawing-c",
+        "pixelmap-drawing-arkts",
+        "pixelmap-drawing-c"
+      ]
+    },
+    {
+      "phase": "绘制效果",
+      "description": "掌握基础和复杂的绘制效果",
+      "documents": [
+        "drawing-effect-overview",
+        "basic-drawing-effect-arkts",
+        "basic-drawing-effect-c",
+        "complex-drawing-effect-arkts",
+        "complex-drawing-effect-c"
+      ]
+    },
+    {
+      "phase": "文本开发基础",
+      "description": "了解文本开发能力并进行简单文本绘制",
+      "documents": [
+        "text-overview",
+        "simple-text-arkts",
+        "simple-text-c"
+      ]
+    },
+    {
+      "phase": "字体管理",
+      "description": "学习系统字体、自定义字体和主题字体的使用",
+      "documents": [
+        "system-font-arkts",
+        "system-font-c",
+        "custom-font-arkts",
+        "custom-font-c",
+        "theme-font-arkts",
+        "theme-font-c"
+      ]
+    },
+    {
+      "phase": "文本测量与字块",
+      "description": "掌握文本测量和字块绘制技术",
+      "documents": [
+        "text-measure-arkts",
+        "text-measure-c",
+        "textblock-drawing-arkts",
+        "textblock-drawing-c"
+      ]
+    },
+    {
+      "phase": "复杂文本绘制",
+      "description": "学习多语言、多行、多样式等复杂文本绘制",
+      "documents": [
+        "complex-text-arkts",
+        "complex-text-c",
+        "text-custom-c"
+      ]
+    },
+    {
+      "phase": "可变帧率",
+      "description": "掌握可变帧率能力的使用",
+      "documents": [
+        "displaysync-overview",
+        "displaysync-ui",
+        "displaysync-animation",
+        "displaysync-xcomponent",
+        "disdisplaysoloist-native-guidelines"
+      ]
+    },
+    {
+      "phase": "Native API开发",
+      "description": "学习Native API进行底层图形开发",
+      "documents": [
+        "native-buffer-guidelines",
+        "native-window-guidelines",
+        "native-image-guidelines",
+        "native-vsync-guidelines",
+        "native-fence-guidelines"
+      ]
+    },
+    {
+      "phase": "图像处理与优化",
+      "description": "掌握离线图像处理和性能优化",
+      "documents": [
+        "effectkit-filter-c",
+        "overdraw-dfx-guidelines"
+      ]
+    },
+    {
+      "phase": "问题排查",
+      "description": "了解常见问题和解决方案",
+      "documents": [
+        "text-faqs"
+      ]
+    }
+  ],
+  "quick_reference": {
+    "ArkGraphics 2D简介": "docs/zh-cn/application-dev/graphics/arkgraphics2D-introduction.md",
+    "文本开发概述": "docs/zh-cn/application-dev/graphics/text-overview.md",
+    "字块绘制（C/C++）": "docs/zh-cn/application-dev/graphics/textblock-drawing-c.md",
+    "使用主题字体（ArkTS）": "docs/zh-cn/application-dev/graphics/theme-font-arkts.md",
+    "字块绘制（ArkTS）": "docs/zh-cn/application-dev/graphics/textblock-drawing-arkts.md",
+    "使用主题字体（C/C++）": "docs/zh-cn/application-dev/graphics/theme-font-c.md",
+    "文本测量（C/C++）": "docs/zh-cn/application-dev/graphics/text-measure-c.md",
+    "系统字体的信息获取和使用（C/C++）": "docs/zh-cn/application-dev/graphics/system-font-c.md",
+    "文本测量（ArkTS）": "docs/zh-cn/application-dev/graphics/text-measure-arkts.md",
+    "文本开发常见问题": "docs/zh-cn/application-dev/graphics/text-faqs.md",
+    "自定义文本绘制与显示（C/C++）": "docs/zh-cn/application-dev/graphics/text-custom-c.md",
+    "ArkGraphics 2D（方舟2D图形服务）": "docs/zh-cn/application-dev/graphics/Readme-CN.md",
+    "简单文本绘制与显示（C/C++）": "docs/zh-cn/application-dev/graphics/simple-text-c.md",
+    "简单文本绘制与显示（ArkTS）": "docs/zh-cn/application-dev/graphics/simple-text-arkts.md",
+    "图片绘制（C/C++）": "docs/zh-cn/application-dev/graphics/pixelmap-drawing-c.md",
+    "图元绘制概述": "docs/zh-cn/application-dev/graphics/primitive-drawing-overview.md",
+    "图片绘制（ArkTS）": "docs/zh-cn/application-dev/graphics/pixelmap-drawing-arkts.md",
+    "NativeWindow开发指导 (C/C++)": "docs/zh-cn/application-dev/graphics/native-window-guidelines.md",
+    "NativeImage开发指导 (C/C++)": "docs/zh-cn/application-dev/graphics/native-image-guidelines.md",
+    "过度绘制调试使用指导": "docs/zh-cn/application-dev/graphics/overdraw-dfx-guidelines.md",
+    "NativeVSync开发指导 (C/C++)": "docs/zh-cn/application-dev/graphics/native-vsync-guidelines.md",
+    "GPU/CPU内存访问同步操作开发指南 (C/C++)": "docs/zh-cn/application-dev/graphics/native-fence-guidelines.md",
+    "几何形状绘制（ArkTS）": "docs/zh-cn/application-dev/graphics/geometric-shape-drawing-arkts.md",
+    "几何形状绘制（C/C++）": "docs/zh-cn/application-dev/graphics/geometric-shape-drawing-c.md",
+    "图形开发术语": "docs/zh-cn/application-dev/graphics/graphic-term.md",
+    "图形绘制与显示开发概述": "docs/zh-cn/application-dev/graphics/graphic-drawing-overview.md",
+    "NativeBuffer开发指导 (C/C++)": "docs/zh-cn/application-dev/graphics/native-buffer-guidelines.md",
+    "添加图像效果（C/C++）": "docs/zh-cn/application-dev/graphics/effectkit-filter-c.md",
+    "请求自绘制内容绘制帧率": "docs/zh-cn/application-dev/graphics/displaysync-xcomponent.md",
+    "可变帧率简介": "docs/zh-cn/application-dev/graphics/displaysync-overview.md",
+    "请求UI绘制帧率": "docs/zh-cn/application-dev/graphics/displaysync-ui.md",
+    "复杂文本绘制与显示（C/C++）": "docs/zh-cn/application-dev/graphics/complex-text-c.md",
+    "自定义字体的注册和使用（ArkTS）": "docs/zh-cn/application-dev/graphics/custom-font-arkts.md",
+    "NativeDisplaySoloist开发指导 (C/C++)": "docs/zh-cn/application-dev/graphics/displaysoloist-native-guidelines.md",
+    "自定义字体的注册和使用（C/C++）": "docs/zh-cn/application-dev/graphics/custom-font-c.md",
+    "请求动画绘制帧率": "docs/zh-cn/application-dev/graphics/displaysync-animation.md",
+    "复杂绘制效果（C/C++）": "docs/zh-cn/application-dev/graphics/complex-drawing-effect-c.md",
+    "复杂文本绘制与显示（ArkTS）": "docs/zh-cn/application-dev/graphics/complex-text-arkts.md",
+    "复杂绘制效果（ArkTS）": "docs/zh-cn/application-dev/graphics/complex-drawing-effect-arkts.md",
+    "画布操作及状态处理（C/C++）": "docs/zh-cn/application-dev/graphics/canvas-operation-state-c.md",
+    "画布操作及状态处理（ArkTS）": "docs/zh-cn/application-dev/graphics/canvas-operation-state-arkts.md",
+    "画布的获取与绘制结果的显示（C/C++）": "docs/zh-cn/application-dev/graphics/canvas-get-result-draw-c.md",
+    "基础绘制效果（C/C++）": "docs/zh-cn/application-dev/graphics/basic-drawing-effect-c.md",
+    "画布的获取与绘制结果的显示（ArkTS）": "docs/zh-cn/application-dev/graphics/canvas-get-result-draw-arkts.md",
+    "基础绘制效果（ArkTS）": "docs/zh-cn/application-dev/graphics/basic-drawing-effect-arkts.md",
+    "绘制效果概述": "docs/zh-cn/application-dev/graphics/drawing-effect-overview.md",
+    "系统字体的信息获取和使用（ArkTS）": "docs/zh-cn/application-dev/graphics/system-font-arkts.md"
+  },
+  "document_count": 48
 }

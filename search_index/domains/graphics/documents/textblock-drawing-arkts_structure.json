@@ -1,0 +1,97 @@
+{
+  "doc_id": "textblock-drawing-arkts",
+  "title": "字块绘制（ArkTS）",
+  "domain": "graphics",
+  "file_path": "docs/zh-cn/application-dev/graphics/textblock-drawing-arkts.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍在ArkTS中使用字块（TextBlob）进行文本绘制的方法，包括基本字块绘制、文字描边、文字渐变、主题字体设置以及单字绘制等高级功能。文档详细说明了如何使用Canvas的drawTextBlob()方法绘制文本，以及如何通过画笔、画刷和着色器实现各种文字效果。同时介绍了单字绘制技术，包括无字体特征和带字体特征的字符绘制，以及相关的测量方法。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 10,
+      "content": "字块（TextBlob）是指文本的集合。无论是单个的文字还是大块的文本，都可以通过字块来绘制。除了基本的字块绘制之外，还可以给文字添加各种绘制效果。常见的字块绘制场景包括文字描边、文字渐变等，更多效果请见绘制效果。本节不涉及文本测量和布局排版相关内容，如需在开发中处理此类文本绘制需求，可参考文本开发概述，该文档系统讲解了排版策略与相关使用指导。"
+    },
+    {
+      "level": 2,
+      "title": "基本字块绘制",
+      "line": 18,
+      "content": "Canvas通过drawTextBlob()来绘制字块。函数接受三个参数：TextBlob字块对象，以及文字基线左端点的x坐标和y坐标。画布Canvas对象具体可见画布的获取与绘制结果的显示（ArkTS）。字块对象可以通过多种方式创建得到，详细的字块创建方式和接口使用请参考TextBlob。此处以使用makeFromString()接口创建字块为例，接口接受3个参数，分别为：需要显示的字符串text、font字型对象、文本编码方式。当前支持的文本编码方式包括TEXT_ENCODING_UTF8、TEXT_ENCODING_UTF16、TEXT_ENCODING_UTF32、TEXT_ENCODING_GLYPH_ID。"
+    },
+    {
+      "level": 2,
+      "title": "文字描边",
+      "line": 55,
+      "content": "基于基本的字块绘制，还可以通过画笔实现文字描边效果，描边效果的更多介绍请参考描边效果。以下以英文文字描边和中文文字描边给出示例和指导。"
+    },
+    {
+      "level": 3,
+      "title": "英文文字描边",
+      "line": 61,
+      "content": "英文文字描边的简要示例和示意图如下：通过创建画笔、设置抗锯齿、设置描边线宽、设置描边颜色、创建字型对象、设置字体大小、添加画笔描边效果、创建字块对象、绘制字块、去除描边效果等步骤实现。"
+    },
+    {
+           "level": 3,
+      "title": "中文文字描边",
+      "line": 92,
+      "content": "首先需要通过画笔描边，然后需要调用画刷填充内部颜色，去除字体中间的杂质和重叠部分，实现中文文字描边效果。中文文字描边的简要示例和示意图如下：通过创建画刷和画笔、设置抗锯齿、设置描边颜色、创建字型对象、设置字体大小、添加画笔描边效果、创建字块对象、绘制字块、去除描边效果等步骤实现。"
+    },
+    {
+      "level": 2,
+      "title": "文字渐变",
+      "line": 137,
+      "content": "基于基本字块绘制，还可以通过着色器实现文字渐变的效果，着色器的更多介绍请参考着色器效果。以下为文字添加了线性渐变着色器效果的简要示例和示意图：通过创建线性渐变着色器、创建画刷、设置着色器、添加画刷填充效果、创建字型、设置字体大小、创建字块、绘制字块、去除填充效果等步骤实现。"
+    },
+    {
+      "level": 2,
+      "title": "主题字体",
+      "line": 171,
+      "content": "主题字体，特指系统主题应用中能使用的字体，属于一种特殊的自定义字体。如需涉及文本测量和布局排版相关内容，可参考使用主题字体（ArkTS）。设置跟随主题字体的示例代码和效果图如下：通过创建线性渐变着色器、创建字型对象、设置文字大小、设置跟随主题字体、创建字块对象、绘制字块等步骤实现。需要在应用入口文件（默认工程中为EntryAbility.ets）中复写onConfigurationUpdate函数，以响应切换主题字体的操作，确保切换后页面能够及时刷新并生效。"
+    },
+    {
+      "level": 2,
+      "title": "单字绘制",
+      "line": 200,
+      "content": "单字绘制是图形渲染中针对文本渲染的一种精细化控制技术。相比字块绘制，其核心优势在于能够利用字体退化机制，在当前字体无法显示某字符时，自动退化到使用系统字体绘制字符，提升对特殊字符的兼容性，避免字符缺失。同时，单字绘制支持逐字符配置字体特征（如连字、替代字形），满足复杂排版需求，增强用户体验。详细API说明请见drawing.Canvas。"
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line": 261,
+      "content": "针对Drawing(ArkTS)的开发，有以下相关实例可供参考：ArkTSGraphicsDraw (API20)。"
+    }
+  ],
+  "keywords": [
+    "TextBlob",
+    "字块绘制",
+    "Canvas",
+    "drawTextBlob",
+    "文字描边",
+    "文字渐变",
+    "主题字体",
+    "单字绘制",
+    "Font",
+    "Pen",
+    "Brush",
+    "ShaderEffect",
+    "ArkTS",
+    "ArkGraphics 2D"
+  ],
+  "related_docs": [
+    "canvas-get-result-draw-arkts.md",
+    "drawing-effect-overview.md",
+    "text-overview.md",
+    "basic-drawing-effect-arkts.md",
+    "complex-drawing-effect-arkts.md",
+    "theme-font-arkts.md"
+  ],
+  "code_examples": 5,
+  "figures": 6
+}

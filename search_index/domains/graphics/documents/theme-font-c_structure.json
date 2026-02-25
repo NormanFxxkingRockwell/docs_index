@@ -1,0 +1,84 @@
+{
+  "doc_id": "theme-font-c",
+  "title": "使用主题字体（C/C++）",
+  "path": "docs/zh-cn/application-dev/graphics/theme-font-c.md",
+  "domain": "graphics",
+  "metadata": {
+    "Kit": "ArkGraphics 2D",
+    "Subsystem": "Graphics",
+    "Owner": "@oh_wangxk; @gmiao522; @Lem0nC",
+    "Designer": "@liumingxiang",
+    "Tester": "@yhl0101",
+    "Adviser": "@ge-yafang"
+  },
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "content": "主题字体，特指系统**主题应用**中能使用的字体，属于一种特殊的自定义字体。可以通过相关接口调用使能主题应用中的主题字体。"
+    },
+    {
+      "level": 2,
+      "title": "实现机制",
+      "content": "针对主题字的切换使用，应用方应确保订阅主题字变更事件，当接收字体变更事件后，由应用方主动调用页面刷新才能实现主题字的切换，否则主题字只能在重启应用后才生效；主题字的绘制需要使用OH_Drawing_GetFontCollectionGlobalInstance来获取全局字体集对象，仅该接口返回的对象拥有主题字体信息。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "content": "注册使用主题字体的常用接口如下表所示，详细接口说明请参考[Drawing](../reference/apis-arkgraphics2d/capi-drawing.md)。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "content": "1. 请确保在设备系统**主题应用**中，能成功应用一项主题字体。\n2. 在应用入口文件（默认工程中为EntryAbility.ets）中重写onConfigurationUpdate函数，以响应fontId变更，适配主题字体的切换和页面刷新，重写方式可参考[主题字变更事件](./theme-font-arkts.md#开发步骤)。\n3. 导入C++侧依赖，本步骤及之后均为主题字体在C++侧的使用\n4. 创建字体管理器。\n5. OH_Drawing_SetTextStyleFontFamilies()接口可以用来指定字体家族名，从而实现使用指定字体。但使用主题字体，不需要使用OH_Drawing_SetTextStyleFontFamilies()接口指定字体，否则行为变更为优先使用指定字体，而不是主题字体。\n6. 设置段落文本内容为\"Hello World. \\nThis is the theme font.\"，此时该段落文本将应用主题字体。"
+    },
+    {
+      "level": 2,
+      "title": "效果展示",
+      "content": "以下展示了在系统**主题应用**中切换使用不同主题字体后，对应的文字渲染效果。\n\n不同主题字体显示效果不同，此处仅示意。"
+    }
+  ],
+  "summary": "本文档介绍了如何在C/C++中使用主题字体。主题字体是系统主题应用中能使用的特殊自定义字体。文档包含场景介绍、实现机制、接口说明、开发步骤和效果展示。关键要点包括：需要订阅主题字变更事件并主动刷新页面；使用OH_Drawing_GetFontCollectionGlobalInstance获取全局字体集对象；不需要使用OH_Drawing_SetTextStyleFontFamilies()接口指定字体。",
+  "keywords": [
+    "主题字体",
+    "C/C++",
+    "ArkGraphics 2D",
+    "OH_Drawing_GetFontCollectionGlobalInstance",
+    "onConfigurationUpdate",
+    "字体集",
+    "字体管理器"
+  ],
+  "code_blocks": [
+    {
+      "language": "c++",
+      "content": "libnative_drawing.so"
+    },
+    {
+      "language": "c++",
+      "content": "#include <native_drawing/drawing_font_collection.h>\n#include <native_drawing/drawing_text_typography.h>\n#include <native_drawing/drawing_register_font.h>"
+    },
+    {
+      "language": "c++",
+      "content": "OH_Drawing_FontCollection *fontCollection = OH_Drawing_GetFontCollectionGlobalInstance();"
+    },
+    {
+      "language": "c++",
+      "content": "OH_Drawing_TextStyle *myTextStyle = OH_Drawing_CreateTextStyle();\n// const char* myFontFamilies[] = {\"otherFontFamilyName\"};\n// 注意不要使用此接口来指定字体\n// OH_Drawing_SetTextStyleFontFamilies(textStyle, 1, myFontFamilies);"
+    },
+    {
+      "language": "c++",
+      "content": "// 设置其他文本样式\nOH_Drawing_SetTextStyleColor(myTextStyle, OH_Drawing_ColorSetArgb(0xFF, 0x00, 0x00, 0x00));\n// 设置字体大小为100.0\nOH_Drawing_SetTextStyleFontSize(myTextStyle, 100.0);\n// 创建一个段落样式对象，以设置排版风格\nOH_Drawing_TypographyStyle *typographyStyle = OH_Drawing_CreateTypographyStyle();\nOH_Drawing_SetTypographyTextAlign(typographyStyle, TEXT_ALIGN_LEFT); // 设置段落样式为左对齐\n// 创建一个段落生成器\nOH_Drawing_TypographyCreate *handler = OH_Drawing_CreateDrawingHandler(typographyStyle, fontCollection);\n// 在段落生成器中设置文本样式\nOH_Drawing_TypographyHandlerPushTextStyle(handler, myTextStyle);\n// 在段落生成器中设置文本内容\nconst char *text = \"Hello World. \\nThis is the theme font.\";\nOH_Drawing_TypographyHandlerAddText(handler, text);\n// 通过段落生成器生成段落\nOH_Drawing_Typography *typography = OH_Drawing_CreateTypography(handler);"
+    }
+  ],
+  "images": [
+    "figures/themeText_native.jpg",
+    "figures/NdkThemeFont.PNG",
+    "figures/themeFont_native_02.png"
+  ],
+  "references": [
+    "../reference/apis-arkgraphics2d/capi-drawing.md",
+    "../reference/apis-ability-kit/js-apis-app-ability-ability.md#abilityonconfigurationupdate",
+    "./theme-font-arkts.md#开发步骤",
+    "../napi/napi-introduction.md"
+  ]
+}

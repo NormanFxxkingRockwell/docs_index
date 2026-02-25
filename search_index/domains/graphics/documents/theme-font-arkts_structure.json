@@ -1,0 +1,138 @@
+{
+  "doc_id": "theme-font-arkts",
+  "title": "使用主题字体（ArkTS）",
+  "path": "docs/zh-cn/application-dev/graphics/theme-font-arkts.md",
+  "domain": "graphics",
+  "metadata": {
+    "Kit": "ArkGraphics 2D",
+    "Subsystem": "Graphics",
+    "Owner": "@oh_wangxk; @gmiao522; @Lem0nC",
+    "Designer": "@liumingxiang",
+    "Tester": "@yhl0101",
+    "Adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了在ArkTS中使用主题字体的方法和步骤。主题字体是系统主题应用中能使用的特殊自定义字体，通过相关接口调用使能。文档详细说明了实现机制、接口说明、开发步骤以及效果展示。开发者需要订阅主题字体变更事件，并在接收到变更事件后主动调用页面刷新来实现主题字体的切换。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 8,
+      "content": "主题字体，特指系统主题应用中能使用的字体，属于一种特殊的自定义字体，可以通过相关接口调用使能主题应用中的主题字体。"
+    },
+    {
+      "level": 2,
+      "title": "实现机制",
+      "line": 12,
+      "content": "针对主题字的切换使用，应用方应确保订阅主题字体变更事件，当接收到字体变更事件后，由应用方主动调用页面刷新才能实现主题字的切换，否则主题字只能在重启应用后才生效。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 21,
+      "content": "注册使用主题字体的常用接口如下表所示，详细接口说明请见[@ohos.graphics.text (文本模块)](../reference/apis-arkgraphics2d/js-apis-graphics-text.md)。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 30,
+      "content": "包含8个开发步骤：1.确保在设备系统主题应用中能成功应用一项主题字体。2.导入依赖的相关模块。3.使用getGlobalInstance()接口获取全局字体集对象。4.创建段落样式，并使用字体管理器实例构造段落生成器ParagraphBuilder实例。5.设置文本样式，添加文本内容，并生成段落文本。6.创建渲染节点，并保存到数组。7.创建渲染节点更新函数，并导出函数。8.在EntryAbility.ets中接收主题字变更事件，并调用渲染节点更新函数。"
+    },
+    {
+      "level": 2,
+      "title": "效果展示",
+      "line": 178,
+      "content": "以下展示了在系统主题应用中切换使用不同主题字体后，对应的文字渲染效果。不同主题字体显示效果不同，此处仅示意。"
+    }
+  ],
+  "keywords": [
+    "主题字体",
+    "ArkTS",
+    "FontCollection",
+    "getGlobalInstance",
+    "ParagraphBuilder",
+    "文本渲染",
+    "主题应用",
+    "字体切换"
+  ],
+  "code_blocks": [
+    {
+      "language": "TypeScript",
+      "start_line": 38,
+      "end_line": 40,
+      "description": "导入依赖的相关模块"
+    },
+    {
+      "language": "TypeScript",
+      "start_line": 46,
+      "end_line": 49,
+      "description": "获取字体管理器全局FontCollection实例"
+    },
+    {
+      "language": "TypeScript",
+      "start_line": 60,
+      "end_line": 74,
+      "description": "创建段落样式和段落生成器"
+    },
+    {
+      "language": "TypeScript",
+      "start_line": 80,
+      "end_line": 87,
+      "description": "设置文本样式并生成段落"
+    },
+    {
+      "language": "TypeScript",
+      "start_line": 93,
+      "end_line": 134,
+      "description": "创建渲染节点和节点控制器"
+    },
+    {
+      "language": "TypeScript",
+      "start_line": 141,
+      "end_line": 148,
+      "description": "导出渲染节点更新函数"
+    },
+    {
+      "language": "TypeScript",
+      "start_line": 154,
+      "end_line": 175,
+      "description": "在EntryAbility.ets中接收主题字变更事件"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "text.FontCollection.getGlobalInstance",
+      "description": "获取应用全局字体集的实例"
+    },
+    {
+      "name": "text.ParagraphBuilder",
+      "description": "段落生成器，用于生成段落"
+    },
+    {
+      "name": "NodeController",
+      "description": "节点控制器，用于管理渲染节点"
+    },
+    {
+      "name": "UIAbility.onConfigurationUpdate",
+      "description": "接收配置更新事件，包括主题字变更事件"
+    }
+  ],
+  "figures": [
+    {
+      "title": "主题字体的切换和使用",
+      "file": "figures/themeText_native.jpg",
+      "line": 16
+    },
+    {
+      "title": "主题字体1的效果",
+      "file": "figures/themeFont.PNG",
+      "line": 186
+    },
+    {
+      "title": "主题字体2的效果",
+      "file": "figures/themeFont_ts_02.png",
+      "line": 190
+    }
+  ],
+  "total_lines": 191,
+  "last_updated": "2026-02-25"
+}

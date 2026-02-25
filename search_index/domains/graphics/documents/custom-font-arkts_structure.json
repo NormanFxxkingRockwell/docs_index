@@ -1,0 +1,102 @@
+{
+  "doc_id": "custom-font-arkts",
+  "title": "自定义字体的注册和使用（ArkTS）",
+  "file_path": "docs/zh-cn/application-dev/graphics/custom-font-arkts.md",
+  "domain": "graphics",
+  "metadata": {
+    "Kit": "ArkGraphics 2D",
+    "Subsystem": "Graphics",
+    "Owner": "@oh_wangxk; @gmiao522; @Lem0nC",
+    "Designer": "@liumingxiang",
+    "Tester": "@yhl0101",
+    "Adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了如何在ArkTS中注册和使用自定义字体。自定义字体是指开发者根据应用需求创建或选择的字体，用于实现特定的文字风格或满足独特的设计要求。文档详细说明了自定义字体的注册和使用流程，包括将字体文件从应用资源注册到系统字体库中，以及在应用中显式指定使用已注册的自定义字体进行文本渲染。文档还提供了相关的接口说明和完整的开发步骤示例。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 8,
+      "content": "自定义字体是指开发者根据应用需求创建或选择的字体，通常用于实现特定的文字风格或满足独特的设计要求。当应用需要使用特定的文本样式和字符集时，可以注册并使用自定义字体进行文本渲染。"
+    },
+    {
+      "level": 2,
+      "title": "实现流程",
+      "line": 12,
+      "content": "自定义字体的注册是指将字体文件（如ttf、otf文件等）从应用资源注册到系统中，使得应用能够使用这些字体进行文本渲染。注册过程是将字体文件通过字体管理接口注册到系统字体库中，以便在应用中进行调用。\n\n自定义字体的使用是指在应用中显式指定使用已注册的自定义字体进行文本渲染。开发者可以根据需要选择特定的文本样式（如常规、粗体、斜体等），并将其应用到UI元素、文本控件或其他文本展示区域，以满足设计要求并提供视觉效果的一致性。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 19,
+      "content": "自定义字体注册和使用的常用接口如下表所示，详细接口说明请见[@ohos.graphics.text (文本模块)](../reference/apis-arkgraphics2d/js-apis-graphics-text.md)。\n\n| 接口 | 描述 | \n| -------- | -------- |\n| loadFontSync(name: string, path: string \\| Resource): void | 同步接口，将路径对应的文件，以name作为使用的别名，注册自定义字体。<br/>**说明：**<br/>需保证使用自定义字体时，自定义字体已完成注册，非性能严格要求场景下，建议使用同步接口。 | \n| loadFont(name: string, path: string \\| Resource): Promise&lt;void&gt; | 使用指定的别名和文件路径注册对应字体，使用Promise异步回调。此接口从API version 14开始支持。 | \n| unloadFontSync(name: string): void | 同步接口，注销指定别名的字体。此接口从API version 20开始支持。 |\n| unloadFont(name: string): Promise\\<void\\> | 使用指定的别名注销对应字体，使用Promise异步回调。此接口从API version 20开始支持。 |"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 30,
+      "content": "1. 导入依赖的相关模块。\n\n   ``` TypeScript\n   import { NodeController, FrameNode, RenderNode, DrawContext } from '@kit.ArkUI'\n   import { UIContext } from '@kit.ArkUI'\n   import { text } from '@kit.ArkGraphics2D'\n   ```\n\n2. 注册自定义字体。有以下两种方式：\n\n   ``` TypeScript\n   // 注册自定义字体\n   // 方式一：/system/fonts/NotoSansMalayalamUI-SemiBold.ttf文件仅为示例路径，应用根据自身实际填写文件路径\n   fontCollection.loadFontSync(familyName, 'file:///system/fonts/NotoSansMalayalamUI-SemiBold.ttf')\n   // 方式二：确保已经将自定义字体myFontFile.ttf文件放在本应用工程的entry/src/main/resources/rawfile目录\n   // fontCollection.loadFontSync(familyName, $rawfile('myFontFile.ttf'))\n   ```\n\n3. 使用自定义字体。\n\n   ``` TypeScript\n   // 使用自定义字体\n   let myFontFamily: Array<string> = [familyName] // 如果已经注册自定义字体，填入自定义字体的字体家族名\n   // 设置文本样式\n   let myTextStyle: text.TextStyle = {\n     color: {\n       alpha: 255,\n       red: 255,\n       green: 0,\n       blue: 0\n     },\n     fontSize: 30,\n     // 在文本样式中加入可使用的自定义字体\n     fontFamilies: myFontFamily\n   };\n   ```\n\n4. 创建段落样式，并使用字体管理器实例构造段落生成器ParagraphBuilder实例。\n\n   ``` TypeScript\n   // 创建一个段落样式对象，以设置排版风格\n   let myParagraphStyle: text.ParagraphStyle = {\n     textStyle: myTextStyle,\n     align: 3,\n     wordBreak: text.WordBreak.NORMAL\n   };\n   // 创建一个段落生成器\n   let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection)\n   ```\n\n5. 生成段落。\n\n   ``` TypeScript\n   // 在段落生成器中设置文本样式\n   paragraphBuilder.pushStyle(myTextStyle);\n   // 在段落生成器中设置文本内容\n   paragraphBuilder.addText(\"Custom font test\");\n   // 通过段落生成器生成段落\n   let paragraph = paragraphBuilder.build();\n   ```\n\n6. 如果需要释放自定义字体，可以使用unloadFontSync接口。\n\n   ``` TypeScript\n   // 注销自定义字体\n   fontCollection.unloadFontSync(familyName)\n   // 注销之后需要刷新使用该fontCollection的节点\n   newNode.invalidate()\n   ```"
+    },
+    {
+      "level": 2,
+      "title": "效果展示",
+      "line": 114,
+      "content": "![zh-cn_image_load](figures/zh-cn_image_load.png)\n![zh-cn_image_unload](figures/zh-cn_image_unload.png)"
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "TypeScript",
+      "line": 36,
+      "content": "import { NodeController, FrameNode, RenderNode, DrawContext } from '@kit.ArkUI'\nimport { UIContext } from '@kit.ArkUI'\nimport { text } from '@kit.ArkGraphics2D'"
+    },
+    {
+      "language": "TypeScript",
+      "line": 46,
+      "content": "// 注册自定义字体\n// 方式一：/system/fonts/NotoSansMalayalamUI-SemiBold.ttf文件仅为示例路径，应用根据自身实际填写文件路径\nfontCollection.loadFontSync(familyName, 'file:///system/fonts/NotoSansMalayalamUI-SemiBold.ttf')\n// 方式二：确保已经将自定义字体myFontFile.ttf文件放在本应用工程的entry/src/main/resources/rawfile目录\n// fontCollection.loadFontSync(familyName, $rawfile('myFontFile.ttf'))"
+    },
+    {
+      "language": "TypeScript",
+      "line": 58,
+      "content": "// 使用自定义字体\nlet myFontFamily: Array<string> = [familyName] // 如果已经注册自定义字体，填入自定义字体的字体家族名\n// 设置文本样式\nlet myTextStyle: text.TextStyle = {\n  color: {\n    alpha: 255,\n    red: 255,\n    green: 0,\n    blue: 0\n  },\n  fontSize: 30,\n  // 在文本样式中加入可使用的自定义字体\n  fontFamilies: myFontFamily\n};"
+    },
+    {
+      "language": "TypeScript",
+      "line": 79,
+      "content": "// 创建一个段落样式对象，以设置排版风格\nlet myParagraphStyle: text.ParagraphStyle = {\n  textStyle: myTextStyle,\n  align: 3,\n  wordBreak: text.WordBreak.NORMAL\n};\n// 创建一个段落生成器\nlet paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection)"
+    },
+    {
+      "language": "TypeScript",
+      "line": 94,
+      "content": "// 在段落生成器中设置文本样式\nparagraphBuilder.pushStyle(myTextStyle);\n// 在段落生成器中设置文本内容\nparagraphBuilder.addText(\"Custom font test\");\n// 通过段落生成器生成段落\nlet paragraph = paragraphBuilder.build();"
+    },
+    {
+      "language": "TypeScript",
+      "line": 107,
+      "content": "// 注销自定义字体\nfontCollection.unloadFontSync(familyName)\n// 注销之后需要刷新使用该fontCollection的节点\nnewNode.invalidate()"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "@ohos.graphics.text",
+      "url": "../reference/apis-arkgraphics2d/js-apis-graphics-text.md",
+      "line": 21
+    }
+  ],
+  "keywords": [
+    "自定义字体",
+    "字体注册",
+    "字体使用",
+    "ArkTS",
+    "ArkGraphics 2D",
+    "loadFontSync",
+    "loadFont",
+    "unloadFontSync",
+    "unloadFont",
+    "text.TextStyle",
+    "text.ParagraphStyle",
+    "text.ParagraphBuilder"
+  ],
+  "total_lines": 118,
+  "generated_at": "2026-02-25"
+}

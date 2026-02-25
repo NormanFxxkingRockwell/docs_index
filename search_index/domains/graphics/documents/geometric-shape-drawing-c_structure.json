@@ -1,0 +1,162 @@
+{
+  "doc_id": "geometric-shape-drawing-c",
+  "title": "几何形状绘制（C/C++）",
+  "file_path": "docs/zh-cn/application-dev/graphics/geometric-shape-drawing-c.md",
+  "language": "zh-cn",
+  "domain": "graphics",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphic",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍如何在C/C++中使用ArkGraphics 2D绘制各种几何形状，包括点、圆弧、圆、路径、区域、矩形和圆角矩形。文档详细说明了每种形状的绘制接口、参数说明和代码示例，支持使用画笔或画刷进行绘制（点只能使用画笔）。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line_start": 10,
+      "line_end": 28,
+      "content": "当前支持绘制的几何形状，主要包括以下几种：点、圆弧、圆、路径、区域、矩形、圆角矩形。大部分的几何形状均可以选择使用画笔或者使用画刷来实现绘制，其中点的绘制只能使用画笔。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line_start": 31,
+      "line_end": 48,
+      "content": "几何形状绘制的常用接口包括：OH_Drawing_PointCreate、OH_Drawing_CanvasDrawPoint、OH_Drawing_RectCreate、OH_Drawing_CanvasDrawArc、OH_Drawing_CanvasDrawCircle、OH_Drawing_PathCreate、OH_Drawing_CanvasDrawPath、OH_Drawing_RegionCreate、OH_Drawing_CanvasDrawRegion、OH_Drawing_CanvasDrawRect、OH_Drawing_RoundRectCreate、OH_Drawing_CanvasDrawRoundRect。"
+    },
+    {
+      "level": 2,
+      "title": "绘制点",
+      "line_start": 51,
+      "line_end": 90,
+      "content": "点只能基于画笔在画布上进行绘制，通过使用OH_Drawing_CanvasDrawPoint()接口绘制点。接口接受两个参数，一个是画布对象Canvas，另一个是要绘制的点的指针。"
+    },
+    {
+      "level": 2,
+      "title": "绘制圆弧",
+      "line_start": 93,
+      "line_end": 131,
+      "content": "可以使用画笔或画刷在画布上进行圆弧的绘制，通过使用OH_Drawing_CanvasDrawArc()接口绘制圆弧。使用接口需要传入4个参数：画布对象Canvas、矩形、起始角度、扫描角度。"
+    },
+    {
+      "level": 2,
+      "title": "绘制圆",
+      "line_start": 134,
+      "line_end": 170,
+      "content": "可以使用画笔或画刷在画布上进行圆的绘制，通过使用OH_Drawing_CanvasDrawCircle()接口绘制圆。使用接口需要传入3个参数：画布对象Canvas、圆心点对象的指针、圆的半径。"
+    },
+    {
+      "level": 2,
+      "title": "绘制路径",
+      "line_start": 173,
+      "line_end": 240,
+      "content": "可以使用画笔或画刷在画布上进行路径的绘制，路径具体可以用于绘制直线、弧线、贝塞尔曲线等，也可以通过路径组合的方式组成其他复杂的形状。常用接口包括：OH_Drawing_PathCreate、OH_Drawing_PathMoveTo、OH_Drawing_PathLineTo。"
+    },
+    {
+      "level": 2,
+      "title": "绘制区域",
+      "line_start": 243,
+      "line_end": 283,
+      "content": "区域不是一个特定的形状，可以设置为指定的矩形或路径，也可以对两个区域进行组合操作。可以使用画笔或画刷在画布上进行区域的绘制。目前支持设置矩形区域和路径区域，分别通过OH_Drawing_RegionSetRect()接口和OH_Drawing_RegionSetPath()接口来设置。"
+    },
+    {
+      "level": 2,
+      "title": "绘制矩形",
+      "line_start": 286,
+      "line_end": 313,
+      "content": "可以使用画笔或画刷在画布上进行矩形的绘制。使用OH_Drawing_RectCreate()接口创建矩形。接口需要传入四个浮点数，分别表示矩形的左、上、右、下四个位置的坐标，连接这4个坐标形成一个矩形。"
+    },
+    {
+      "level": 2,
+      "title": "绘制圆角矩形",
+      "line_start": 316,
+      "line_end": 355,
+      "content": "可以使用画笔或画刷在画布上进行圆角矩形的绘制。使用OH_Drawing_RoundRectCreate()接口创建圆角矩形。接口需要传入3个参数：指向OH_Drawing_Rect矩形对象的指针、x轴上的圆角半径、y轴上的圆角半径。"
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line_start": 358,
+      "line_end": 363,
+      "content": "针对Drawing(C/C++)的开发，有以下相关实例可供参考：NDKGraphicsDraw (API20)。"
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "C++",
+      "line_start": 59,
+      "line_end": 84,
+      "context": "绘制点示例"
+    },
+    {
+      "language": "C++",
+      "line_start": 109,
+      "line_end": 127,
+      "context": "绘制圆弧示例"
+    },
+    {
+      "language": "C++",
+      "line_start": 148,
+      "line_end": 166,
+      "context": "绘制圆示例"
+    },
+    {
+      "language": "C++",
+      "line_start": 189,
+      "line_end": 236,
+      "context": "绘制路径（五角星）示例"
+    },
+    {
+      "language": "C++",
+      "line_start": 253,
+      "line_end": 279,
+      "context": "绘制区域示例"
+    },
+    {
+      "language": "C++",
+      "line_start": 294,
+      "line_end": 309,
+      "context": "绘制矩形示例"
+    },
+    {
+      "language": "C++",
+      "line_start": 330,
+      "line_end": 349,
+      "context": "绘制圆角矩形示例"
+    }
+  ],
+  "api_references": [
+    "drawing_canvas.h",
+    "drawing_path",
+    "drawing_region.h"
+  ],
+  "related_docs": [
+    "canvas-get-result-draw-c.md"
+  ],
+  "sample_references": [
+    "NDKGraphicsDraw (API20)"
+  ],
+  "tags": [
+    "graphics",
+    "drawing",
+    "C++",
+    "C",
+    "ArkGraphics 2D",
+    "geometric shapes",
+    "point",
+    "arc",
+    "circle",
+    "path",
+    "region",
+    "rectangle",
+    "round rectangle",
+    "canvas",
+    "pen",
+    "brush"
+  ],
+  "total_lines": 363
+}

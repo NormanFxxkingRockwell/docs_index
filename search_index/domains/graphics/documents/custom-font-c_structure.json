@@ -1,0 +1,128 @@
+{
+  "doc_id": "custom-font-c",
+  "title": "自定义字体的注册和使用（C/C++）",
+  "path": "docs/zh-cn/application-dev/graphics/custom-font-c.md",
+  "language": "zh-cn",
+  "domain": "graphics",
+  "metadata": {
+    "Kit": "ArkGraphics 2D",
+    "Subsystem": "Graphics",
+    "Owner": "@oh_wangxk; @gmiao522; @Lem0nC",
+    "Designer": "@liumingxiang",
+    "Tester": "@yhl0101",
+    "Adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍如何在HarmonyOS应用中使用C/C++注册和使用自定义字体。包括自定义字体的注册流程、使用方法、相关接口说明以及完整的开发步骤。开发者可以通过字体管理接口将ttf、otf等字体文件注册到系统字体库中，并在应用中指定使用这些自定义字体进行文本渲染。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line_start": 9,
+      "line_end": 12,
+      "content": "自定义字体是指开发者根据应用需求创建或选择的字体，通常用于实现特定的...注册并使用自定义字体进行文本渲染。"
+    },
+    {
+      "level": 2,
+      "title": "实现流程",
+      "line_start": 14,
+      "line_end": 19,
+      "content": "**自定义字体的注册**是指将字体文件（如ttf、otf文件等）从应用资源注册到系统中...确保符合设计要求并提供一致的视觉效果。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line_start": 21,
+      "line_end": 32,
+      "content": "注册使用自定义字体的相关接口如下所示，详细接口说明请参考[Drawing](../reference/apis-arkgraphics2d/capi-drawing.md)。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line_start": 33,
+      "line_end": 148,
+      "content": "1. 在工程的`src/main/cpp/CMakeLists.txt`文件中添加以下lib。...// 将文本绘制到画布(0,300)上\nOH_Drawing_TypographyPaint(typography1, cCanvas_, 0, 300);"
+    }
+  ],
+  "apis": [
+    "OH_Drawing_CreateSharedFontCollection",
+    "OH_Drawing_RegisterFont",
+    "OH_Drawing_CreateTextStyle",
+    "OH_Drawing_SetTextStyleFontFamilies",
+    "OH_Drawing_UnregisterFont",
+    "OH_Drawing_SetTextStyleColor",
+    "OH_Drawing_SetTextStyleFontSize",
+    "OH_Drawing_CreateTypographyStyle",
+    "OH_Drawing_SetTypographyTextAlign",
+    "OH_Drawing_CreateTypographyHandler",
+    "OH_Drawing_TypographyHandlerPushTextStyle",
+    "OH_Drawing_TypographyHandlerAddText",
+    "OH_Drawing_CreateTypography",
+    "OH_Drawing_TypographyLayout",
+    "OH_Drawing_TypographyPaint"
+  ],
+  "keywords": [
+    "自定义字体",
+    "字体注册",
+    "字体文件",
+    "ttf",
+    "otf",
+    "文本渲染",
+    "字体管理器",
+    "字体集",
+    "文本样式",
+    "字体家族",
+    "C/C++",
+    "ArkGraphics 2D"
+  ],
+  "code_samples": [
+    {
+      "language": "c++",
+      "line_start": 35,
+      "line_end": 37,
+      "description": "添加libnative_drawing.so依赖"
+    },
+    {
+      "language": "c++",
+      "line_start": 43,
+      "line_end": 47,
+      "description": "导入相关头文件"
+    },
+    {
+      "language": "c++",
+      "line_start": 57,
+      "line_end": 59,
+      "description": "创建可共享的字体集对象"
+    },
+    {
+      "language": "c++",
+      "line_start": 69,
+      "line_end": 74,
+      "description": "设置自定义字体的字体家族名和字体文件路径"
+    },
+    {
+      "language": "c++",
+      "line_start": 86,
+      "line_end": 89,
+      "description": "注册自定义字体"
+    },
+    {
+      "language": "c++",
+      "line_start": 95,
+      "line_end": 100,
+      "description": "创建文本样式对象并加入自定义字体"
+    },
+    {
+      "language": "c++",
+      "line_start": 106,
+      "line_end": 128,
+      "description": "生成段落文本并使用自定义字体绘制"
+    },
+    {
+      "language": "c++",
+      "line_start": 134,
+      "line_end": 148,
+      "description": "注销自定义字体"
+    }
+  ],
+  "total_lines": 148
+}

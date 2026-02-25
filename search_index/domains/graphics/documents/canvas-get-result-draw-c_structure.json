@@ -1,0 +1,258 @@
+{
+  "doc_id": "canvas-get-result-draw-c",
+  "title": "画布的获取与绘制结果的显示（C/C++）",
+  "path": "docs/zh-cn/application-dev/graphics/canvas-get-result-draw-c.md",
+  "domain": "graphics",
+  "language": "zh-cn",
+  "summary": "本文档介绍了C/C++中Canvas画布的获取与绘制结果的显示方法，包括获取可直接显示的Canvas画布、离屏Canvas画布的获取与显示（CPU后端和GPU后端）。",
+  "keywords": [
+    "Canvas",
+    "画布",
+    "XComponent",
+    "OH_Drawing_Canvas",
+    "CPU后端",
+    "GPU后端",
+    "Bitmap",
+    "PixelMap",
+    "离屏绘制",
+    "NativeWindow",
+    "EGL",
+    "OH_Drawing_Surface"
+  ],
+  "sections": [
+    {
+      "level": 1,
+      "title": "画布的获取与绘制结果的显示（C/C++）",
+      "line": 1,
+      "content_start": 1,
+      "content_end": 461
+    },
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 10,
+      "content_start": 10,
+      "content_end": 18
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 19,
+      "content_start": 19,
+      "content_end": 29
+    },
+    {
+      "level": 2,
+      "title": "获取可直接显示的Canvas画布",
+      "line": 30,
+      "content_start": 30,
+      "content_end": 112
+    },
+    {
+      "level": 2,
+      "title": "离屏Canvas画布的获取与显示",
+      "line": 114,
+      "content_start": 114,
+      "content_end": 454
+    },
+    {
+      "level": 3,
+      "title": "CPU后端Canvas的创建与显示",
+      "line": 119,
+      "content_start": 119,
+      "content_end": 274
+    },
+    {
+      "level": 3,
+      "title": "GPU后端Canvas的创建与显示",
+      "line": 276,
+      "content_start": 276,
+      "content_end": 454
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line": 456,
+      "content_start": 456,
+      "content_end": 461
+    }
+  ],
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "code_blocks": [
+    {
+      "language": "c++",
+      "line": 38,
+      "content": "target_link_libraries(entry PUBLIC libnative_drawing.so)"
+    },
+    {
+      "language": "c",
+      "line": 48,
+      "content": "#include <native_drawing/drawing_canvas.h>"
+    },
+    {
+      "language": "c++",
+      "line": 54,
+      "content": "#include <native_drawing/drawing_surface.h>"
+    },
+    {
+      "language": "c++",
+      "line": 63,
+      "content": "int ret = OH_NativeWindow_NativeWindowRequestBuffer(nativeWindow_, &buffer_, &fenceFd_);"
+    },
+    {
+      "language": "c++",
+      "line": 75,
+      "content": "mappedAddr_ = static_cast<uint32_t *>(mmap(bufferHandle_->virAddr, bufferHandle_->size, PROT_READ | PROT_WRITE, MAP_SHARED, bufferHandle_->fd, 0));"
+    },
+    {
+      "language": "c++",
+      "line": 88,
+      "content": "cScreenBitmap_ = OH_Drawing_BitmapCreate();"
+    },
+    {
+      "language": "c++",
+      "line": 95,
+      "content": "cScreenCanvas_ = OH_Drawing_CanvasCreate();"
+    },
+    {
+      "language": "c++",
+      "line": 110,
+      "content": "OH_NativeWindow_NativeWindowFlushBuffer(nativeWindow_, buffer_, fenceFd_, region);"
+    },
+    {
+      "language": "c",
+      "line": 130,
+      "content": "#include <native_drawing/drawing_bitmap.h>"
+    },
+    {
+      "language": "c++",
+      "line": 141,
+      "content": "cOffScreenBitmap_ = OH_Drawing_BitmapCreate();"
+    },
+    {
+      "language": "c++",
+      "line": 161,
+      "content": "OH_Drawing_CanvasClear(cCPUCanvas_, OH_Drawing_ColorSetArgb(RGBA_MAX, RGBA_MAX, RGBA_MAX, 0xFF));"
+    },
+    {
+      "language": "c++",
+      "line": 170,
+      "content": "OH_Drawing_CanvasDrawBitmap(cScreenCanvas_, cOffScreenBitmap_, 0, 0);"
+    },
+    {
+      "language": "c++",
+      "line": 185,
+      "content": "target_link_libraries(entry PUBLIC libhilog_ndk.z.so libpixelmap.so)"
+    },
+    {
+      "language": "c++",
+      "line": 193,
+      "content": "#include <multimedia/image_framework/image/pixelmap_native.h>"
+    },
+    {
+      "language": "c++",
+      "line": 199,
+      "content": "#include <native_drawing/drawing_pixel_map.h>"
+    },
+    {
+      "language": "c++",
+      "line": 209,
+      "content": "uint32_t width = 600;"
+    },
+    {
+      "language": "c++",
+      "line": 256,
+      "content": "OH_Drawing_CanvasClear(pixelmapCanvas, OH_Drawing_ColorSetArgb(0xFF, 0xFF, 0xFF, 0xFF));"
+    },
+    {
+      "language": "c++",
+      "line": 272,
+      "content": "OH_Drawing_CanvasDrawPixelMapRect(canvas, pixelMap, src, dst, samplingOptions);"
+    },
+    {
+      "language": "c++",
+      "line": 284,
+      "content": "libEGL.so"
+    },
+    {
+      "language": "c",
+      "line": 292,
+      "content": "#include <EGL/egl.h>"
+    },
+    {
+      "language": "c++",
+      "line": 299,
+      "content": "#include <native_drawing/drawing_gpu_context.h>"
+    },
+    {
+      "language": "c",
+      "line": 309,
+      "content": "EGLDisplay EGLDisplay_ = EGL_NO_DISPLAY;"
+    },
+    {
+      "language": "c++",
+      "line": 319,
+      "content": "EGLConfig getConfig(int version, EGLDisplay eglDisplay)"
+    },
+    {
+      "language": "c++",
+      "line": 345,
+      "content": "int32_t SampleGraphics::InitializeEglContext()"
+    },
+    {
+      "language": "c++",
+      "line": 399,
+      "content": "OH_Drawing_GpuContext *gpuContext = OH_Drawing_GpuContextCreateFromGL(options);"
+    },
+    {
+      "language": "c++",
+      "line": 412,
+      "content": "OH_Drawing_CanvasClear(cGPUCanvas_, OH_Drawing_ColorSetArgb(RGBA_MAX, RGBA_MAX, RGBA_MAX, 0xFF));"
+    },
+    {
+      "language": "c++",
+      "line": 421,
+      "content": "OH_Drawing_CanvasReadPixels(cGPUCanvas_, &imageInfo, dstPixels, RGBA_SIZE * cWidth, 0, 0);"
+    },
+    {
+      "language": "c++",
+      "line": 432,
+      "content": "void SampleGraphics::DeInitializeEglContext()"
+    }
+  ],
+  "api_references": [
+    "OH_Drawing_CanvasCreate",
+    "OH_Drawing_CanvasBind",
+    "OH_Drawing_SurfaceGetCanvas",
+    "OH_Drawing_BitmapCreate",
+    "OH_Drawing_BitmapBuild",
+    "OH_Drawing_CanvasClear",
+    "OH_Drawing_CanvasDrawBitmap",
+    "OH_Drawing_PixelMapGetFromOhPixelMapNative",
+    "OH_Drawing_CanvasCreateWithPixelMap",
+    "OH_Drawing_CanvasDrawPixelMapRect",
+    "OH_Drawing_GpuContextCreateFromGL",
+    "OH_Drawing_SurfaceCreateFromGpuContext",
+    "OH_Drawing_CanvasReadPixels",
+    "OH_NativeWindow_NativeWindowRequestBuffer",
+    "OH_NativeWindow_GetBufferHandleFromNative",
+    "OH_NativeWindow_NativeWindowFlushBuffer",
+    "OH_PixelmapNative_CreatePixelmap"
+  ],
+  "related_docs": [
+    "drawing_canvas.h",
+    "capi-drawing-canvas-h.md",
+    "capi-nativewindow.md",
+    "pixelmap-drawing-c.md",
+    "drawing_surface.h",
+    "capi-drawing-surface-h.md"
+  ],
+  "last_updated": "2026-02-25"
+}

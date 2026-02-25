@@ -1,0 +1,110 @@
+{
+  "doc_id": "displaysync-xcomponent",
+  "title": "请求自绘制内容绘制帧率",
+  "domain": "graphics",
+  "file_path": "docs/zh-cn/application-dev/graphics/displaysync-xcomponent.md",
+  "metadata": {
+    "Kit": "ArkGraphics 2D",
+    "Subsystem": "Graphics",
+    "Owner": "@hudi33",
+    "Designer": "@hudi33",
+    "Tester": "@zhaoxiaoguang2",
+    "Adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍如何基于XComponent进行Native开发时，请求独立的绘制帧率进行内容开发，适用于游戏、自绘制UI框架对接等场景。文档提供了接口说明、开发步骤以及相关实例。",
+  "chapters": [
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 11,
+      "content": "介绍了三个核心接口：OH_NativeXComponent_SetExpectedFrameRateRange（设置帧期望的帧率范围）、OH_NativeXComponent_RegisterOnFrameCallback（设置每帧回调函数）、OH_NativeXComponent_UnRegisterOnFrameCallback（取消注册的每帧回调函数）。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 21,
+      "content": "详细说明了5个开发步骤：1.添加开发依赖（CMakeLists.txt配置和头文件导入）；2.定义ArkTS接口文件XComponentContext.ts；3.定义演示页面，包含两个XComponent组件；4.Native层配置帧率和注册回调函数；5.TS层注册和取消注册每帧回调。"
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line": 227,
+      "content": "提供了DisplaySync (API14)实例的参考链接。"
+    }
+  ],
+  "interfaces": [
+    "OH_NativeXComponent_SetExpectedFrameRateRange",
+    "OH_NativeXComponent_RegisterOnFrameCallback",
+    "OH_NativeXComponent_UnRegisterOnFrameCallback"
+  ],
+  "keywords": [
+    "XComponent",
+    "Native开发",
+    "帧率",
+    "绘制",
+    "Drawing",
+    "NativeWindow",
+    "回调函数",
+    "游戏",
+    "自绘制UI"
+  ],
+  "related_docs": [
+    "../ui/napi-xcomponent-guidelines.md",
+    "../reference/apis-arkui/capi-oh-nativexcomponent-native-xcomponent.md",
+    "graphic-drawing-overview.md"
+  ],
+  "code_examples": [
+    {
+      "language": "Text",
+      "title": "CMakeLists.txt配置",
+      "line": 32
+    },
+    {
+      "language": "C",
+      "title": "头文件导入",
+      "line": 39
+    },
+    {
+      "language": "C++",
+      "title": "native_drawing头文件导入",
+      "line": 58
+    },
+    {
+      "language": "TypeScript",
+      "title": "XComponentContext接口定义",
+      "line": 65
+    },
+    {
+      "language": "TypeScript",
+      "title": "演示页面定义",
+      "line": 76
+    },
+    {
+      "language": "C++",
+      "title": "回调函数实现",
+      "line": 125
+    },
+    {
+      "language": "C++",
+      "title": "注册回调函数",
+      "line": 155
+    },
+    {
+      "language": "C++",
+      "title": "NAPI注册接口",
+      "line": 164
+    },
+    {
+      "language": "C++",
+      "title": "NAPI取消注册接口",
+      "line": 174
+    },
+    {
+      "language": "TypeScript",
+      "title": "TS层启动和停止回调",
+      "line": 186
+    }
+  ],
+  "total_lines": 230,
+  "last_updated": "2026-02-25"
+}

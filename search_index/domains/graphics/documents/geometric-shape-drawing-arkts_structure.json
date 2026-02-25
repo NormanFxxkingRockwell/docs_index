@@ -1,0 +1,250 @@
+{
+  "doc_id": "geometric-shape-drawing-arkts",
+  "title": "几何形状绘制（ArkTS）",
+  "file_path": "docs/zh-cn/application-dev/graphics/geometric-shape-drawing-arkts.md",
+  "domain": "graphics",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphic",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍在ArkTS中使用ArkGraphics 2D进行几何形状绘制的方法，包括点、圆弧、圆、路径、区域、矩形和圆角矩形的绘制。大部分几何形状可以使用画笔或画刷进行绘制，其中点的绘制只能使用画笔。文档提供了详细的接口说明和代码示例，帮助开发者快速掌握各种几何形状的绘制技巧。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line_start": 10,
+      "line_end": 28,
+      "content": "当前支持绘制的几何形状，主要包括以下几种：点、圆弧、圆、路径、区域、矩形、圆角矩形。大部分的几何形状均可以选择使用画笔或使用画刷来实现绘制，其中点的绘制只能使用画笔。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line_start": 31,
+      "line_end": 43,
+      "content": "几何形状绘制的常用接口包括：drawPoint()画点、drawArc()画弧、drawCircle()画圆、drawPath()画自定义路径、drawRegion()画区域、drawRect()画矩形、drawRoundRect()画圆角矩形。详细的使用和参数说明请见drawing.Canvas。"
+    },
+    {
+      "level": 2,
+      "title": "绘制点",
+      "line_start": 46,
+      "line_end": 75,
+      "content": "点只能基于画笔在画布上进行绘制，通过使用drawPoint()接口绘制点。绘制点需要接受两个参数，分别为需要绘制的点的x坐标和y坐标。"
+    },
+    {
+      "level": 2,
+      "title": "绘制圆弧",
+      "line_start": 78,
+      "line_end": 117,
+      "content": "可以使用画笔或画刷在画布上进行圆弧的绘制，通过使用drawArc()接口绘制圆弧。绘制圆弧需要一个矩形，以矩形的边为轮廓进行绘制，还需要两个参数，分别表示弧形的起始角度和扫描角度。"
+    },
+    {
+      "level": 2,
+      "title": "绘制圆",
+      "line_start": 120,
+      "line_end": 151,
+      "content": "可以使用画笔或画刷在画布上进行圆的绘制，通过使用drawCircle()接口绘制圆。绘制圆需要圆心点的x坐标和y坐标，以及圆半径。"
+    },
+    {
+      "level": 2,
+      "title": "绘制路径",
+      "line_start": 154,
+      "line_end": 223,
+      "content": "可以使用画笔或画刷在画布上进行路径的绘制，路径具体可以用于绘制直线、弧线、贝塞尔曲线等，也可以通过路径组合的方式组成其他复杂的形状。常用接口包括new drawing.Path()创建路径对象、moveTo()设置起始点位置、lineTo()添加线段。"
+    },
+    {
+      "level": 2,
+      "title": "绘制区域",
+      "line_start": 226,
+      "line_end": 259,
+      "content": "区域不是一个特定的形状，可以设置为指定的矩形或路径，也可以对两个区域进行组合操作。可以使用画笔或画刷对区域进行绘制。目前支持设置矩形区域和路径区域，分别通过setRect()接口和setPath()接口来设置。"
+    },
+    {
+      "level": 2,
+      "title": "绘制矩形",
+      "line_start": 262,
+      "line_end": 285,
+      "content": "可以使用画笔或画刷在画布上进行矩形的绘制。使用drawRect()接口绘制矩形。接口需要传入四个浮点数，分别表示矩形的左、上、右、下四个位置的坐标，连接这4个坐标形成一个矩形。"
+    },
+    {
+      "level": 2,
+      "title": "绘制圆角矩形",
+      "line_start": 288,
+      "line_end": 329,
+      "content": "可以使用画笔或画刷在画布上进行圆角矩形的绘制。使用drawRoundRect()接口绘制圆角矩形。接口接受1个入参roundRect，对应为圆角矩形对象。圆角矩形对象通过new drawing.RoundRect()接口构造，构造函数接受3个参数：common2D.Rect矩形对象、x轴上的圆角半径、y轴上的圆角半径。"
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line_start": 332,
+      "line_end": 337,
+      "content": "针对Drawing(ArkTS)的开发，有以下相关实例可供参考：ArkTSGraphicsDraw (API20)。"
+    }
+  ],
+  "code_blocks": [
+    {
+      "type": "TypeScript",
+      "line_start": 54,
+      "line_end": 71,
+      "description": "绘制点的示例代码"
+    },
+    {
+      "type": "TypeScript",
+      "line_start": 88,
+      "line_end": 113,
+      "description": "绘制圆弧的示例代码"
+    },
+    {
+      "type": "TypeScript",
+      "line_start": 129,
+      "line_end": 147,
+      "description": "绘制圆的示例代码"
+    },
+    {
+      "type": "TypeScript",
+      "line_start": 170,
+      "line_end": 219,
+      "description": "绘制路径（五角星）的示例代码"
+    },
+    {
+      "type": "TypeScript",
+      "line_start": 236,
+      "line_end": 255,
+      "description": "绘制区域的示例代码"
+    },
+    {
+      "type": "TypeScript",
+      "line_start": 270,
+      "line_end": 281,
+      "description": "绘制矩形的示例代码"
+    },
+    {
+      "type": "TypeScript",
+      "line_start": 304,
+      "line_end": 325,
+      "description": "绘制圆角矩形的示例代码"
+    }
+  ],
+  "images": [
+    {
+      "path": "figures/Screenshot_20241129174520171.jpg",
+      "line": 75,
+      "description": "绘制点的效果"
+    },
+    {
+      "path": "figures/zh-cn_image_0000002194025289.png",
+      "line": 117,
+      "description": "绘制圆弧的效果"
+    },
+    {
+      "path": "figures/Screenshot_20241129172555673.jpg",
+      "line": 151,
+      "description": "绘制圆的效果"
+    },
+    {
+      "path": "figures/Screenshot_20241129164326302.jpg",
+      "line": 223,
+      "description": "绘制路径（五角星）的效果"
+    },
+    {
+      "path": "figures/Screenshot_20241206112505234.jpg",
+      "line": 259,
+      "description": "绘制区域的效果"
+    },
+    {
+      "path": "figures/zh-cn_image_0000002194110921.png",
+      "line": 285,
+      "description": "绘制矩形的效果"
+    },
+    {
+      "path": "figures/zh-cn_image_0000002158584406.png",
+      "line": 329,
+      "description": "绘制圆角矩形的效果"
+    }
+  ],
+  "references": [
+    {
+      "text": "drawing.Canvas",
+      "path": "../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Canvas.md",
+      "line": 33
+    },
+    {
+      "text": "common2D.Rect",
+      "path": "../reference/apis-arkgraphics2d/js-apis-graphics-common2D.md#rect",
+      "line": 82
+    },
+    {
+      "text": "Path",
+      "path": "../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Path.md",
+      "line": 158
+    },
+    {
+      "text": "Region",
+      "path": "../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-Region.md",
+      "line": 228
+    }
+  ],
+  "sample_links": [
+    {
+      "name": "arkts_graphics_draw_point",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ShapeDrawing.ets",
+      "line": 52
+    },
+    {
+      "name": "arkts_graphics_draw_arc",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ShapeDrawing.ets",
+      "line": 86
+    },
+    {
+      "name": "arkts_graphics_draw_circle",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ShapeDrawing.ets",
+      "line": 127
+    },
+    {
+      "name": "arkts_graphics_draw_path",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ShapeDrawing.ets",
+      "line": 168
+    },
+    {
+      "name": "arkts_graphics_draw_region",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ShapeDrawing.ets",
+      "line": 234
+    },
+    {
+      "name": "arkts_graphics_draw_rect",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ShapeDrawing.ets",
+      "line": 268
+    },
+    {
+      "name": "arkts_graphics_draw_round_rect",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ShapeDrawing.ets",
+      "line": 302
+    },
+    {
+      "name": "ArkTSGraphicsDraw (API20)",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw",
+      "line": 336
+    }
+  ],
+  "tags": [
+    "几何形状",
+    "绘制",
+    "点",
+    "圆弧",
+    "圆",
+    "路径",
+    "区域",
+    "矩形",
+    "圆角矩形",
+    "画笔",
+    "画刷",
+    "ArkTS",
+    "ArkGraphics 2D"
+  ],
+  "total_lines": 337,
+  "created_at": "2026-02-25"
+}

@@ -1,0 +1,86 @@
+{
+  "doc_id": "displaysync-overview",
+  "domain": "graphics",
+  "file_path": "docs/zh-cn/application-dev/graphics/displaysync-overview.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hudi33",
+    "designer": "@hudi33",
+    "tester": "@zhaoxiaoguang2",
+    "adviser": "@ge-yafang"
+  },
+  "title": "可变帧率简介",
+  "summary": "OpenHarmony支持可变帧率能力，开发者通过使用可变帧率接口，进行相关业务开发，可以享受可变帧率特性带来的功耗收益。基于显示内容的可变帧率能力，在具备LTPO屏幕的设备上，可以达到性能体验和功耗间的平衡。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "使用场景",
+      "content": "可变帧率能力支持开发者自定义应用业务的帧率，其常见的使用场景：通过配置属性动画/显示动画的帧率属性参数，用于动画的绘制；通过申请一个独立的绘制帧率，用于UI的绘制；通过XComponent在Native侧申请独立的绘制帧率，用于游戏等自绘制内容的绘制；通过NativeVsync在Native侧申请独立的绘制帧率，用于非UI线程的绘制。",
+      "line_start": 20,
+      "line_end": 25
+    },
+    {
+      "level": 2,
+      "title": "运作机制",
+      "content": "可变帧率为应用开发中的动画组件、XComponent组件、UI绘制等提供一种基础帧率配置和能力。开发者通过设置有效的期望绘制帧率后，系统会收集设置的请求帧率，进行决策和分发，在渲染管线上进行分频，尽量能够满足开发者的期望帧率。",
+      "line_start": 27,
+      "line_end": 34
+    },
+    {
+      "level": 2,
+      "title": "约束与限制",
+      "content": "开发者设置的期望帧率值不能代表最终实际效果，会受限于系统功耗性能约束和屏幕刷新率硬件能力限制。",
+      "line_start": 36,
+      "line_end": 38
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "content": "针对可变帧率的开发，有以下相关实例可供参考：DisplaySync (API14)",
+      "line_start": 40,
+      "line_end": 44
+    }
+  ],
+  "keywords": [
+    "可变帧率",
+    "LTPO屏幕",
+    "帧率切换",
+    "功耗优化",
+    "DisplaySync",
+    "动画绘制",
+    "UI绘制",
+    "XComponent",
+    "NativeVsync"
+  ],
+  "links": [
+    {
+      "text": "请求动画绘制帧率",
+      "url": "displaysync-animation.md"
+    },
+    {
+      "text": "请求UI绘制帧率",
+      "url": "displaysync-ui.md"
+    },
+    {
+      "text": "请求自绘制内容绘制帧率",
+      "url": "displaysync-xcomponent.md"
+    },
+    {
+      "text": "NativeDisplaySoloist开发指导 (C/C++)",
+      "url": "displaysoloist-native-guidelines.md"
+    },
+    {
+      "text": "DisplaySync (API14)",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkGraphics2D/DisplaySync"
+    }
+  ],
+  "images": [
+    {
+      "alt": "可变帧率原理图",
+      "path": "./figures/displaysync-architecture.jpg"
+    }
+  ],
+  "total_lines": 44,
+  "created_at": "2026-02-25"
+}

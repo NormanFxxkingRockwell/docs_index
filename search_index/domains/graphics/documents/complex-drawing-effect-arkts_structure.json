@@ -1,0 +1,187 @@
+{
+  "doc_id": "complex-drawing-effect-arkts",
+  "title": "复杂绘制效果（ArkTS）",
+  "language": "zh-cn",
+  "domain": "graphics",
+  "path": "docs/zh-cn/application-dev/graphics/complex-drawing-effect-arkts.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了ArkTS中复杂的绘制效果，包括混合模式、路径效果（如虚线效果）、着色器效果（线性渐变、径向渐变、扇形渐变）以及滤波器效果（颜色滤波器、图像滤波器、蒙版滤波器）。通过setBlendMode()、createDashPathEffect()、setShaderEffect()等接口实现各种复杂的视觉效果。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "混合模式",
+      "line": 22,
+      "content": "混合模式可以用于画笔或画刷，它定义了如何将源像素（要绘制的内容）与目标像素（已存在于画布上的内容）进行组合。可以使用setBlendMode()接口将混合模式应用于画刷或画笔中，该接口需要接受一个参数BlendMode，即混合模式的类型。"
+    },
+    {
+      "level": 2,
+      "title": "路径效果",
+      "line": 67,
+      "content": "路径效果如虚线效果，只用于画笔。可使用createDashPathEffect()接口设置路径效果。接口接受2个参数，分别为浮点数数组intervals（表示虚线或者点线的间隔）和浮点数phase（表示在intervals数组中的偏移量）。"
+    },
+    {
+      "level": 2,
+      "title": "着色器效果",
+      "line": 113,
+      "content": "着色器效果基于画刷或画笔实现，可使用setShaderEffect()接口设置画刷或画笔的着色器效果。当前支持不同的着色器效果，如线性渐变着色器效果、径向渐变着色器效果、扇形渐变着色器效果。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "线性渐变着色器效果",
+          "line": 121,
+          "content": "可使用createLinearGradient()接口创建想要设置的线性渐变着色器效果。接口接受6个参数，分别是开始点、结束点、颜色数组、平铺模式、相对位置数组以及矩阵对象。"
+        },
+        {
+          "level": 3,
+          "title": "径向渐变着色器效果",
+          "line": 170,
+          "content": "可使用createRadialGradient()接口创建想要设置的径向渐变着色器效果。接口接受6个参数，分别是圆心坐标（centerPt）、半径（radius）、颜色数组（colors）、平铺模式（TileMode）、相对位置数组（pos）以及矩阵对象（matrix）。径向渐变是由圆心开始向外径向渐变的。"
+        },
+        {
+          "level": 3,
+          "title": "扇形渐变着色器效果",
+          "line": 206,
+          "content": "可使用createSweepGradient()接口创建想要设置的扇形渐变着色器效果。接口接受7个参数，分别是圆心坐标（centerPt）、颜色数组（colors）、平铺模式（TileMode）、扇形渐变的起始角度（startAngle）、扇形渐变的结束角度（endAngle）、相对位置数组（pos）以及矩阵对象（matrix）。扇形渐变是在围绕中心点旋转的过程中渐变的。"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "滤波器效果",
+      "line": 242,
+      "content": "滤波器效果可基于画刷或画笔实现。当前支持不同的滤波器效果，比如图像滤波器、颜色滤波器、蒙版滤波器。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "颜色滤波器效果",
+          "line": 249,
+          "content": "颜色滤波器可基于画笔或画刷实现。目前可实现多种颜色滤波器，包括具有混合模式的颜色滤波器、具有5x4颜色矩阵的颜色滤波器、将SRGB的伽玛曲线应用到RGB颜色通道的颜色滤波器等。可使用createMatrixColorFilter()接口创建具有5x4颜色矩阵的颜色滤波器。"
+        },
+        {
+          "level": 3,
+          "title": "图像滤波器效果",
+          "line": 328,
+          "content": "图像滤波器可基于画笔或画刷来实现。目前只支持两种图像滤波器：基于颜色滤波器的图像滤波器（可通过createFromColorFilter()接口实现）和具有模糊效果的图像滤波器（可通过createBlurImageFilter()接口实现）。"
+        },
+        {
+          "level": 3,
+          "title": "蒙版滤波器效果",
+          "line": 378,
+          "content": "蒙版滤波器的模糊效果仅对透明度和形状边缘进行模糊处理，相对于图像滤波器的模糊效果来说计算成本更低。可使用createBlurMaskFilter()接口创建想要设置具有模糊效果的蒙版滤波器。"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line": 424,
+      "content": "针对Drawing(ArkTS)的开发，有以下相关实例可供参考：ArkTSGraphicsDraw (API20)。"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "BlendMode",
+      "url": "../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-e.md#blendmode"
+    },
+    {
+      "name": "ShaderEffect",
+      "url": "../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-ShaderEffect.md"
+    },
+    {
+      "name": "ImageFilter",
+      "url": "../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-ImageFilter.md"
+    },
+    {
+      "name": "ColorFilter",
+      "url": "../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-ColorFilter.md"
+    },
+    {
+      "name": "MaskFilter",
+      "url": "../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-MaskFilter.md"
+    },
+    {
+      "name": "BlurType",
+      "url": "../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing-e.md#blurtype12"
+    }
+  ],
+  "key_apis": [
+    "setBlendMode",
+    "createDashPathEffect",
+    "setShaderEffect",
+    "createLinearGradient",
+    "createRadialGradient",
+    "createSweepGradient",
+    "createMatrixColorFilter",
+    "createFromColorFilter",
+    "createBlurImageFilter",
+    "createBlurMaskFilter"
+  ],
+  "tags": [
+    "graphics",
+    "drawing",
+    "blend-mode",
+    "path-effect",
+    "shader",
+    "gradient",
+    "filter",
+    "arkts"
+  ],
+  "examples": [
+    {
+      "title": "混合模式示例",
+      "file": "ComplexEffect.ets",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ComplexEffect.ets"
+    },
+    {
+      "title": "路径效果示例",
+      "file": "ComplexEffect.ets",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ComplexEffect.ets"
+    },
+    {
+      "title": "线性渐变示例",
+      "file": "ComplexEffect.ets",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ComplexEffect.ets"
+    },
+    {
+      "title": "径向渐变示例",
+      "file": "ComplexEffect.ets",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ComplexEffect.ets"
+    },
+    {
+      "title": "扇形渐变示例",
+      "file": "ComplexEffect.ets",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ComplexEffect.ets"
+    },
+    {
+      "title": "颜色滤波器示例",
+      "file": "ComplexEffect.ets",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ComplexEffect.ets"
+    },
+    {
+      "title": "图像滤波器示例",
+      "file": "ComplexEffect.ets",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ComplexEffect.ets"
+    },
+    {
+      "title": "蒙版滤波器示例",
+      "file": "ComplexEffect.ets",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw/entry/src/main/ets/drawing/pages/ComplexEffect.ets"
+    }
+  ],
+  "related_samples": [
+    {
+      "name": "ArkTSGraphicsDraw",
+      "version": "API20",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkGraphics2D/Drawing/ArkTSGraphicsDraw"
+    }
+  ],
+  "total_lines": 429,
+  "generated_at": "2026-02-25"
+}

@@ -1,0 +1,149 @@
+{
+  "doc_id": "native-image-guidelines",
+  "title": "NativeImage开发指导 (C/C++)",
+  "path": "docs/zh-cn/application-dev/graphics/native-image-guidelines.md",
+  "domain": "graphics",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@Felix-fangyang; @BruceXu; @dingpy",
+    "designer": "@conan13234",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "NativeImage开发指导，提供Surface与OpenGL外部纹理相互绑定的模块，表示图形队列的消费者端。开发者可以通过NativeImage接口接收和使用Buffer，并将Buffer关联输出到绑定的OpenGL外部纹理。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 8,
+      "content": "NativeImage是提供Surface与OpenGL外部纹理相互绑定的模块，表示图形队列的消费者端。开发者可以通过NativeImage接口接收和使用Buffer，并将Buffer关联输出到绑定的OpenGL外部纹理。NativeImage常见的开发场景如下：通过NativeImage提供的Native API接口创建NativeImage实例作为消费者端，获取与该实例对应的NativeWindow作为生产者端。NativeWindow相关接口可用于填充Buffer内容并提交，NativeImage将Buffer内容更新到OpenGL外部纹理上。本模块需要配合NativeWindow、NativeBuffer、EGL、GLES3模块一起使用。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 16,
+      "content": "提供了OH_NativeImage_Create、OH_NativeImage_AcquireNativeWindow、OH_NativeImage_AttachContext、OH_NativeImage_DetachContext、OH_NativeImage_UpdateSurfaceImage、OH_NativeImage_GetTimestamp、OH_NativeImage_GetTransformMatrixV2、OH_NativeImage_Destroy等接口，用于创建、管理和销毁NativeImage实例，以及与OpenGL ES纹理的交互。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 31,
+      "content": "描述了如何使用NativeImage提供的Native API接口，创建OH_NativeImage实例作为消费者端，将数据内容更新到OpenGL外部纹理上。包括：初始化EGL环境、创建OH_NativeImage实例、获取对应的数据生产者端NativeWindow、设置NativeWindow的宽高、将生产的内容写入OHNativeWindowBuffer、更新内容到OpenGL纹理、解绑OpenGL纹理绑定到新的外部纹理上、OH_NativeImage实例使用完需要销毁掉等步骤。"
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line": 408,
+      "content": "针对NativeImage的开发，有以下相关实例可供参考：Native Window（API11）、基于NdkNativeImage的平滑渐变动画效果（API12）。"
+    }
+  ],
+  "keywords": [
+    "NativeImage",
+    "OpenGL",
+    "Surface",
+    "Buffer",
+    "NativeWindow",
+    "EGL",
+    "GLES3",
+    "纹理",
+    "图形队列",
+    "消费者端"
+  ],
+  "api_references": [
+    "OH_NativeImage_Create",
+ "OH_NativeImage_AcquireNativeWindow",
+    "OH_NativeImage_AttachContext",
+    "OH_NativeImage_DetachContext",
+    "OH_NativeImage_UpdateSurfaceImage",
+    "OH_NativeImage_GetTimestamp",
+    "OH_NativeImage_GetTransformMatrixV2",
+    "OH_NativeImage_Destroy",
+    "OH_NativeWindow_NativeWindowHandleOpt",
+    "OH_NativeWindow_NativeWindowRequestBuffer",
+    "OH_NativeWindow_GetBufferHandleFromNative",
+    "OH_NativeWindow_NativeWindowFlushBuffer"
+  ],
+  "code_samples": [
+    {
+      "language": "cmake",
+      "description": "添加动态链接库",
+      "line": 39
+    },
+    {
+      "language": "cpp",
+      "description": "头文件",
+      "line": 49
+    },
+    {
+      "language": "cpp",
+      "description": "初始化EGL环境",
+      "line": 68
+    },
+    {
+      "language": "cpp",
+      "description": "创建OH_NativeImage实例",
+      "line": 225
+    },
+    {
+      "language": "cpp",
+      "description": "获取对应的数据生产者端NativeWindow",
+      "line": 234
+    },
+    {
+      "language": "cpp",
+      "description": "设置NativeWindow的宽高",
+      "line": 241
+    },
+    {
+      "language": "cpp",
+      "description": "从NativeWindow中获取OHNativeWindowBuffer",
+      "line": 255
+    },
+    {
+      "language": "cpp",
+      "description": "将生产的内容写入OHNativeImageBuffer",
+      "line": 272
+    },
+    {
+      "language": "cpp",
+      "description": "将OHNativeWindowBuffer提交到NativeWindow",
+      "line": 345
+    },
+    {
+      "language": "cpp",
+      "description": "更新内容到OpenGL纹理",
+      "line": 358
+    },
+    {
+      "language": "cpp",
+      "description": "解绑OpenGL纹理，绑定到新的外部纹理上",
+      "line": 391
+    },
+    {
+      "language": "cpp",
+      "description": "OH_NativeImage实例使用完需要销毁掉",
+      "line": 405
+    }
+  ],
+  "related_docs": [
+    "../reference/apis-arkgraphics2d/capi-oh-nativeimage.md",
+    "../ui/napi-xcomponent-guidelines.md"
+  ],
+  "external_links": [
+    {
+      "title": "Native Window（API11）",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/Native/NdkNativeWindow"
+    },
+    {
+      "title": "基于NdkNativeImage的平滑渐变动画效果（API12）",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/Native/NdkNativeImage"
+    }
+  ],
+  "statistics": {
+    "total_lines": 413,
+    "code_blocks": 12,
+    "sections": 4,
+    "api_count": 12
+  }
+}

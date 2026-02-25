@@ -1,0 +1,55 @@
+{
+  "doc_id": "canvas-get-result-draw-arkts",
+  "title": "画布的获取与绘制结果的显示（ArkTS）",
+  "domain": "graphics",
+  "path": "docs/zh-cn/application-dev/graphics/canvas-get-result-draw-arkts.md",
+  "summary": "本文档介绍了在ArkTS中获取Canvas画布的两种方式：通过RenderNode获取可直接显示的Canvas画布，以及获取离屏Canvas画布。文档详细说明了两种方式的实现步骤，包括导入依赖、自定义RenderNode和NodeController、重写draw()函数等，并提供了相关代码示例。",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 11,
+      "content": "Canvas即画布，提供绘制基本图形的能力，用于在屏幕上绘制图形和处理图形。开发者可以通过Canvas实现自定义的绘图效果，增强应用的用户体验。Canvas是图形绘制的核心，本章中提到的所有绘制操作（包括基本图形的绘制、文字的绘制、图片的绘制、图形变换等）都是基于Canvas的。目前ArkTS有两种获取Canvas的方式：获取可直接显示的Canvas画布、获取离屏的Canvas，前者在调用绘制接口之后无需进行额外的操作即可完成绘制结果的上屏显示，而后者需要依靠已有的显示手段来显示绘制结果。"
+    },
+    {
+      "level": 2,
+      "title": "获取可直接显示的Canvas画布",
+      "line": 22,
+      "content": "通过RenderNode获取可直接上屏显示的Canvas画布。包括导入依赖的相关文件、添加自定义RenderNode、添加自定义NodeController、重写自定义RenderNode的draw()函数获取Canvas进行自定义的绘制操作、将自定义NodeController进行显示等步骤。"
+    },
+    {
+      "level": 2,
+      "title": "离屏Canvas画布的获取与显示",
+      "line": 157,
+      "content": "包括导入依赖的相关文件、添加自定义RenderNode、添加自定义NodeController、在MyNodeController的aboutToAppear()函数中创建PixelMap、重写自定义RenderNode的draw()函数获取离屏Canvas进行绘制（利用PixelMap构造离屏Canvas、对离屏Canvas进行自定义的绘制操作、将离屏Canvas的绘制结果交给RenderNode）、将自定义NodeController进行显示等步骤。"
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line": 290,
+      "content": "针对Drawing(ArkTS)的开发，有以下相关实例可供参考：ArkTSGraphicsDraw (API20)"
+    }
+  ],
+  "keywords": [
+    "Canvas",
+    "画布",
+    "ArkTS",
+    "RenderNode",
+    "NodeController",
+    "DrawContext",
+    "离屏Canvas",
+    "PixelMap",
+    "绘制",
+    "图形"
+  ],
+  "created_at": "2026-02-25",
+  "updated_at": "2026-02-25"
+}

@@ -1,0 +1,189 @@
+{
+  "doc_id": "system-font-c",
+  "title": "系统字体的信息获取和使用（C/C++）",
+  "domain": "graphics",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@oh_wangxk; @gmiao522; @Lem0nC",
+    "designer": "@liumingxiang",
+    "tester": "@yhl0101",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了在HarmonyOS应用开发中如何获取系统字体信息、使用或切换系统字体以及禁用系统字体的方法。系统字体是指操作系统预设的字体，默认为HarmonyOS Sans。文档提供了C/C++接口说明和完整的代码示例，包括获取系统字体配置信息、创建字体管理器、设置文本样式以及禁用系统字体以确保仅使用自定义字体的场景。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 9,
+      "content": "系统字体是指操作系统预设的字体，用于在没有指定自定义字体时显示文本，确保文本的可读性和一致性。默认的系统字体为HarmonyOS Sans。使用系统字体的情况通常是在应用未注册自定义字体，或在没有显式指定文本样式时，系统会使用默认的系统字体。另外，系统字体有多种，开发者可以先获取系统字体的配置信息，并根据信息中的字体家族名来进行系统字体的切换和使用。禁用系统字体的情况通常发生在开发者希望确保应用中仅使用自定义字体，而不受操作系统默认字体影响的场景。当自定义字体不存在时，不禁用系统字体，系统则会自动回退到默认字体。通过禁用系统字体，开发者可以在任何场景避免字体回退为系统默认字体，确保文本渲染符合设计预期，从而统一应用的视觉风格。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 18,
+      "content": "以下是系统字体相关的常用接口和结构体，详细接口说明请参考Drawing。接口包括：OH_Drawing_GetSystemFontConfigInfo（获取系统字体配置信息）、OH_Drawing_DestroySystemFontConfigInfo（释放系统字体配置信息占用的内存）、OH_Drawing_CreateSharedFontCollection（创建可共享的字体集对象）、OH_Drawing_CreateTextStyle（创建指向OH_Drawing_TextStyle对象的指针，用于设置文本样式）、OH_Drawing_SetTextStyleFontFamilies（设置指定文本样式的字体家族类型）、OH_Drawing_DisableFontCollectionSystemFont（禁用系统字体）。结构体包括：OH_Drawing_FontConfigInfo（系统字体配置信息结构体）、OH_Drawing_FontGenericInfo（系统所支持的通用字体集信息结构体）、OH_Drawing_FontFallbackGroup（备用字体集信息结构体）。"
+    },
+    {
+      "level": 2,
+      "title": "获取系统字体信息",
+      "line": 38,
+      "content": "介绍了获取系统字体信息的完整步骤：1. 在工程的src/main/cpp/CMakeLists.txt文件中添加libnative_drawing.so库；2. 导入依赖的相关头文件；3. 调用OH_Drawing_GetSystemFontConfigInfo获取系统字体的配置信息，通过返回的状态码确定获取信息是否成功；4. 系统字体的配置信息包含字体文件路径数量、通用字体集列表数量、备用字体集列表数量、系统字体文件路径列表、通用字体集列表、备用字体集列表等信息；5. 如若后续不再需要系统字体的系统配置信息时，则调用OH_Drawing_DestroySystemFontConfigInfo释放其占用的内存。"
+    },
+    {
+      "level": 2,
+      "title": "使用或切换系统字体",
+      "line": 118,
+      "content": "系统字体可以有多种，可以先获取系统字体配置信息，再根据其中的字体家族名来进行系统字体的切换和使用。如果不指定使用任何字体时，会使用系统默认字体HarmonyOS Sans显示文本。步骤包括：1. 添加libnative_drawing.so库；2. 导入依赖头文件；3. 创建字体管理器，建议优先使用OH_Drawing_CreateSharedFontCollection创建可共享的字体集对象；4. 创建一个文本样式对象OH_Drawing_TextStyle；5. 获取系统字体信息，获取系统字体的字体家族名，并在文本样式中设置为该系统字体；6. 生成最终段落文本，以便实现最终的文本绘制和显示。"
+    },
+    {
+      "level": 2,
+      "title": "禁用系统字体",
+      "line": 199,
+      "content": "当自定义字体不存在时，不禁用系统字体，系统则会自动回退到默认字体。通过禁用系统字体，开发者可以在任何场景避免字体回退为系统默认字体，确保文本渲染符合设计预期，从而统一应用的视觉风格。在一些应用场景中，开发者可能希望只使用自定义字体来确保字体一致性或提供更具个性化的用户体验。步骤包括：1. 确保已成功注册自定义字体；2. 添加libnative_drawing.so库；3. 导入依赖头文件；4. 创建字体管理器；5. 调用OH_Drawing_DisableFontCollectionSystemFont禁用系统字体；6. 创建文本样式对象，使用注册成功的自定义字体；7. 生成最终的段落文本。禁用系统字体后，请确保注册使用自定义字体，否则文本将无法正常显示。"
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "c++",
+      "line": 42,
+      "content": "libnative_drawing.so"
+    },
+    {
+      "language": "c++",
+      "line": 47,
+      "content": "#include <native_drawing/drawing_font_collection.h>\n#include <native_drawing/drawing_text_typography.h>\n#include <native_drawing/drawing_register_font.h>\n#include <hilog/log.h>"
+    },
+    {
+      "language": "c++",
+      "line": 58,
+      "content": "OH_Drawing_FontConfigInfoErrorCode fontConfigInfoErrorCode;  // 用于接收错误代码\nOH_Drawing_FontConfigInfo* fontConfigInfo = OH_Drawing_GetSystemFontConfigInfo(&fontConfigInfoErrorCode);\nif(fontConfigInfoErrorCode != SUCCESS_FONT_CONFIG_INFO) {\n    OH_LOG_Print(LOG_APP, LOG_ERROR, LOG_DOMAIN, \"PrintSysFontMetrics\", \"获取系统信息失败，错误代码为： %{public}d\", fontConfigInfoErrorCode);\n}"
+    },
+    {
+      "language": "c++",
+      "line": 84,
+      "content": "// 获取系统字体配置信息示例\nif (fontConfigInfo != nullptr) {\n    // 获取字体文件路径数量，打印日志\n    size_t fontDirCount = fontConfigInfo->fontDirSize;\n    OH_LOG_Print(LOG_APP, LOG_INFO, LOG_DOMAIN, \"PrintSysFontMetrics\", \"字体文件路径数量为: %{public}zu\\n\", fontDirCount);\n    // 遍历字体文件路径列表，打印日志\n    for (size_t i = 0; i < fontDirCount; ++i) {\n        OH_LOG_Print(LOG_APP, LOG_INFO, LOG_DOMAIN, \"PrintSysFontMetrics\", \"字体文件路径为: %{public}s\\n\",\n                     fontConfigInfo->fontDirSet[i]);\n    }\n    // 获取通用字体集数量，打印日志\n    size_t genericCount = fontConfigInfo->fontGenericInfoSize;\n    OH_LOG_Print(LOG_APP, LOG_INFO, LOG_DOMAIN, \"PrintSysFontMetrics\", \"通用字体集数量为: %{public}zu\\n\", genericCount);\n    // 遍历获取每个通用字体集中的字体家族名（例如 HarmonyOS Sans），打印日志\n    for (size_t i = 0; i < genericCount; ++i) {\n        OH_Drawing_FontGenericInfo &genericInfo = fontConfigInfo->fontGenericInfoSet[i];\n        OH_LOG_Print(LOG_APP, LOG_INFO, LOG_DOMAIN, \"PrintSysFontMetrics\",\n                     \"获取第%{public}zu个通用字体集中的字体家族名为: %{public}s\", i, genericInfo.familyName);\n    }\n}"
+    },
+    {
+      "language": "c++",
+      "line": 113,
+      "content": "OH_Drawing_DestroySystemFontConfigInfo(fontConfigInfo);"
+    },
+    {
+      "language": "c++",
+      "line": 126,
+      "content": "libnative_drawing.so"
+    },
+    {
+      "language": "c++",
+      "line": 131,
+      "content": "#include <native_drawing/drawing_font_collection.h>\n#include <native_drawing/drawing_text_typography.h>\n#include <native_drawing/drawing_register_font.h>\n#include <hilog/log.h>"
+    },
+    {
+      "language": "c++",
+      "line": 146,
+      "content": "OH_Drawing_FontCollection *fontCollection = OH_Drawing_CreateSharedFontCollection();"
+    },
+    {
+      "language": "c++",
+      "line": 154,
+      "content": "OH_Drawing_TextStyle *textStyle = OH_Drawing_CreateTextStyle();"
+    },
+    {
+      "language": "c++",
+      "line": 161,
+      "content": "// 情况一：设置系统字体为\"HarmonyOS Sans Condensed\"\nconst char *myFontFamilies[] = {\"HarmonyOS Sans Condensed\"};\nOH_Drawing_SetTextStyleFontFamilies(textStyle, 1, myFontFamilies);\n\n// 情况二：不手动设置，此时使用的是系统默认字体\"HarmonyOS Sans\"\n// const char* myFontFamilies[] = {\"HarmonyOS Sans Condensed\"};\n// OH_Drawing_SetTextStyleFontFamilies(textStyle, 1, myFontFamilies);"
+    },
+    {
+      "language": "c++",
+      "line": 175,
+      "content": "// 设置其他文本样式\nOH_Drawing_SetTextStyleColor(textStyle, OH_Drawing_ColorSetArgb(0xFF, 0x00, 0x00, 0x00));\n// 设置字体大小为70.0\nOH_Drawing_SetTextStyleFontSize(textStyle, 70.0);\n// 创建一个段落样式对象，以设置排版风格\nOH_Drawing_TypographyStyle *typographyStyle = OH_Drawing_CreateTypographyStyle();\nOH_Drawing_SetTypographyTextAlign(typographyStyle, TEXT_ALIGN_LEFT); // 设置段落样式为左对齐\n// 创建一个段落生成器\nOH_Drawing_TypographyCreate *handler = OH_Drawing_CreateTypographyHandler(typographyStyle, fontCollection);\n// 在段落生成器中设置文本样式\nOH_Drawing_TypographyHandlerPushTextStyle(handler, textStyle);\n// 在段落生成器中设置文本内容\nconst char *text = \"Hello World. 你好世界。\\n以上文字使用了系统字体\";\nOH_Drawing_TypographyHandlerAddText(handler, text);\n// 通过段落生成器生成段落\nOH_Drawing_Typography *typography = OH_Drawing_CreateTypography(handler);\n// 设置页面最大宽度\ndouble maxWidth = width_;\nOH_Drawing_TypographyLayout(typography, maxWidth);\n// 将文本绘制到画布(0,height_/2.0)上\nOH_Drawing_TypographyPaint(typography, cCanvas_, 0, height_ / 2.0);"
+    },
+    {
+      "language": "c++",
+      "line": 212,
+      "content": "libnative_drawing.so"
+    },
+    {
+      "language": "c++",
+      "line": 218,
+      "content": "#include <native_drawing/drawing_font_collection.h>\n#include <native_drawing/drawing_text_typography.h>\n#include <native_drawing/drawing_register_font.h>\n#include <hilog/log.h>"
+    },
+    {
+      "language": "c++",
+      "line": 229,
+      "content": "OH_Drawing_FontCollection *fontCollection = OH_Drawing_CreateSharedFontCollection();"
+    },
+    {
+      "language": "c++",
+      "line": 237,
+      "content": "OH_Drawing_DisableFontCollectionSystemFont(fontCollection);"
+    },
+    {
+      "language": "c++",
+      "line": 249,
+      "content": "OH_Drawing_TextStyle *textStyle = OH_Drawing_CreateTextStyle();\n// 禁用系统字体后的几种情况如下：\n// 情况一：如果此时设置使用了自定义字体，文本会正常显示\n// 该路径是待注册的自定义字体文件在应用设备下的路径，确保该自定义字体文件已正确放置在该路径下\n// 后续使用自定义字体时，需使用到该字体家族名\nconst char* fontFamily = \"HarmonyOS_Sans\"; \nconst char* fontPath = \"/system/fonts/HarmonyOS_Sans.ttf\"; \n// 返回0为成功，1为文件不存在，2为打开文件失败，3为读取文件失败，4为寻找文件失败，5为获取大小失败，9文件损坏\nint errorCode = OH_Drawing_RegisterFont(fontCollection, fontFamily, fontPath);\nDRAWING_LOGI(\"errorCode = %{public}d\", errorCode);\nconst char *myFontFamilies[] = {\"HarmonyOS_Sans\"}; // 确保已成功注册自定义字体，填入自定义字体的字体家族名\nOH_Drawing_SetTextStyleFontFamilies(textStyle, 1, myFontFamilies);\n\n// 情况二：如果此时使用了系统字体，文本将无法显示\n// const char *myFontFamilies[] = {\"HarmonyOS_Sans\"};\n// OH_Drawing_SetTextStyleFontFamilies(textStyle, 1, myFontFamilies);\n\n// 情况三：如果此时不设置使用字体，文本会默认使用系统默认字体，而此时系统字体已被禁用，因此文本将无法显示\n// const char *myFontFamilies[] = {\"HarmonyOS_Sans\"};\n// OH_Drawing_SetTextStyleFontFamilies(textStyle, 1, myFontFamilies);"
+    },
+    {
+      "language": "c++",
+      "line": 276,
+      "content": "// 设置其他文本样式\nOH_Drawing_SetTextStyleColor(textStyle, OH_Drawing_ColorSetArgb(0xFF, 0x00, 0x00, 0x00));\n// 设置字体大小为30.0\nOH_Drawing_SetTextStyleFontSize(textStyle, 30.0);\n// 创建一个段落样式对象，以设置排版风格\nOH_Drawing_TypographyStyle *typographyStyle = OH_Drawing_CreateTypographyStyle();\nOH_Drawing_SetTypographyTextAlign(typographyStyle, TEXT_ALIGN_LEFT); // 设置段落样式为左对齐\n// 创建一个段落生成器\nOH_Drawing_TypographyCreate *handler = OH_Drawing_CreateTypographyHandler(typographyStyle, fontCollection);\n// 在段落生成器中设置文本样式\nOH_Drawing_TypographyHandlerPushTextStyle(handler, textStyle);\n// 在段落生成器中设置文本内容\nconst char *text = \"Hello World.\\n以上文字使用了自定义字体\";\nOH_Drawing_TypographyHandlerAddText(handler, text);\n// 通过段落生成器生成段落\nOH_Drawing_Typography *typography = OH_Drawing_CreateTypography(handler);\n    \n// 设置页面最大宽度\ndouble maxWidth = width_;\nOH_Drawing_TypographyLayout(typography, maxWidth);\n// 将文本绘制到画布(width_/5.0,height_/2.0)上\nOH_Drawing_TypographyPaint(typography, cCanvas_, width_ / 5.0, height_ / 2.0);"
+    }
+  ],
+  "images": [
+    {
+      "path": "figures/zh-cn_image_0000002211603636.png",
+      "line": 109,
+      "alt": "zh-cn_image_0000002211603636"
+    }
+  ],
+  "references": [
+    {
+      "text": "Drawing",
+      "url": "../reference/apis-arkgraphics2d/capi-drawing.md",
+      "line": 20
+    },
+    {
+      "text": "OH_Drawing_FontConfigInfoErrorCode",
+      "url": "../reference/apis-arkgraphics2d/capi-drawing-text-typography-h.md#oh_drawing_fontconfiginfoerrorcode",
+      "line": 54
+    },
+    {
+      "text": "OH_Drawing_FontConfigInfo",
+      "url": "../reference/apis-arkgraphics2d/capi-drawing-oh-drawing-fontconfiginfo.md",
+      "line": 66
+    },
+    {
+      "text": "OH_Drawing_FontGenericInfo",
+      "url": "../reference/apis-arkgraphics2d/capi-drawing-oh-drawing-fontgenericinfo.md",
+      "line": 76
+    },
+    {
+      "text": "OH_Drawing_FontFallbackGroup",
+      "url": "../../reference/apis-arkgraphics2d/capi-drawing-oh-drawing-fontfallbackgroup.md",
+      "line": 78
+    },
+    {
+      "text": "获取系统字体信息",
+      "url": "#获取系统字体信息",
+      "line": 158
+    },
+    {
+      "text": "自定义字体的注册和使用",
+      "url": "custom-font-c.md",
+      "line": 209
+    }
+  ],
+  "tags": [
+    "系统字体",
+    "C/C++",
+    "字体配置",
+    "字体管理",
+    "ArkGraphics 2D",
+    "Drawing",
+    "字体集",
+    "文本样式"
+  ],
+  "file_path": "docs/zh-cn/application-dev/graphics/system-font-c.md",
+  "total_lines": 301
+}

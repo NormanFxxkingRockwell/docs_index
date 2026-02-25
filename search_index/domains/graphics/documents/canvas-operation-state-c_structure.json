@@ -1,0 +1,167 @@
+{
+  "doc_id": "canvas-operation-state-c",
+  "title": "画布操作及状态处理（C/C++）",
+  "domain": "graphics",
+  "file_path": "docs/zh-cn/application-dev/graphics/canvas-operation-state-c.md",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@hangmengxin",
+    "designer": "@wangyanglan",
+    "tester": "@nobuggers",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了画布操作及状态处理（C/C++），包括裁剪操作、矩阵变换操作（平移、缩放、旋转、倾斜）、画布状态保存与恢复等功能。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "场景介绍",
+      "line": 10,
+      "content": "创建或获取Canvas画布之后，可以基于画布进一步地进行图形操作和状态处理。画布操作属于可选操作，开发者可以根据场景需要进行。需要先进行画布操作，再进行后续绘制，只有这样画布操作才有效果。常见的画布操作如下：裁剪、矩阵变换（如平移、缩放、旋转等）、状态保存与恢复。",
+      "subsections": []
+    },
+    {
+      "level": 1,
+      "title": "裁剪操作",
+      "line": 23,
+      "content": "裁剪是图形处理中的常见操作，裁剪针对的是画布本身，可以用于限制绘图区域，只在指定的区域内进行绘制。需要先进行裁剪操作，再进行绘制，才会有对应效果。当前支持的裁剪操作主要如下：裁剪矩形、裁剪圆角矩形、裁剪自定义路径、裁剪一个区域。",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "接口说明",
+          "line": 38,
+          "content": "裁剪操作常用接口包括：OH_Drawing_CanvasClipRect（裁剪矩形）、OH_Drawing_CanvasClipRoundRect（裁剪圆角矩形）、OH_Drawing_CanvasClipPath（裁剪自定义路径）、OH_Drawing_CanvasClipRegion（裁剪区域）。"
+        },
+        {
+          "level": 2,
+          "title": "开发示例",
+          "line": 50,
+          "content": "使用OH_Drawing_CanvasClipRect接口裁剪矩形的示例，包括创建画刷、设置颜色、裁剪矩形区域、绘制圆形等操作。"
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "title": "矩阵变换操作",
+      "line": 90,
+      "content": "矩阵变换也是常见的画布操作，是一种坐标系的转换，用于进行图形的变化。当前支持的矩阵变换主要如下：平移、缩放、旋转。",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "接口说明",
+          "line": 103,
+          "content": "矩阵变换操作常用接口包括：OH_Drawing_CanvasTranslate（平移画布）、OH_Drawing_CanvasScale（画布缩放）、OH_Drawing_CanvasRotate（画布旋转）、OH_Drawing_CanvasSkew（画布倾斜变换）。"
+        },
+        {
+          "level": 2,
+          "title": "平移",
+          "line": 115,
+          "content": "使用OH_Drawing_MatrixCreateTranslation()接口实现画布平移。接口接受2个参数，分别为水平方向和垂直方向的平移量，单位为px。"
+        },
+        {
+          "level": 2,
+          "title": "旋转",
+          "line": 148,
+          "content": "使用OH_Drawing_MatrixCreateRotation()接口实现画布旋转，接口接受3个参数，分别为：旋转角度、旋转中心的x坐标和y坐标。"
+        },
+        {
+          "level": 2,
+          "title": "缩放",
+          "line": 181,
+          "content": "使用OH_Drawing_MatrixCreateScale()接口进行画布缩放，接口接受4个参数，分别为沿x轴和y轴的缩放因子、旋转中心的x轴和y轴坐标。"
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "title": "画布状态保存与恢复",
+      "line": 213,
+      "content": "保存操作用于保存当前画布的状态到一个栈顶，恢复操作用于恢复保存在栈顶的画布状态，恢复操作一旦执行，保存和恢复操作中间一系列平移、缩放、剪裁等操作都会被清除。",
+      "subsections": [
+        {
+          "level": 2,
+          "title": "接口说明",
+          "line": 218,
+          "content": "画布状态保存与恢复使用的接口包括：OH_Drawing_CanvasSave（保存当前画布的状态到栈顶）、OH_Drawing_CanvasRestore（恢复栈顶的画布状态）、OH_Drawing_CanvasRestoreToCount（恢复到指定数量的画布状态）。"
+        },
+        {
+          "level": 2,
+          "title": "开发示例",
+          "line": 229,
+          "content": "展示如何使用OH_Drawing_CanvasSave和OH_Drawing_CanvasRestore进行画布状态保存和恢复，包括保存原始状态、执行放大操作、绘制图形、恢复状态等步骤。"
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "title": "相关实例",
+      "line": 265,
+      "content": "针对Drawing(C/C++)的开发，有以下相关实例可供参考：NDKGraphicsDraw (API20)。",
+      "subsections": []
+    }
+  ],
+  "keywords": [
+    "画布布操作",
+    "裁剪",
+    "矩阵变换",
+    "平移",
+    "缩放",
+    "旋转",
+    "倾斜",
+    "状态保存",
+    "状态恢复",
+    "Canvas",
+    "C/C++",
+    "ArkGraphics 2D"
+  ],
+  "api_references": [
+    "OH_Drawing_CanvasClipRect",
+    "OH_Drawing_CanvasClipRoundRect",
+    "OH_Drawing_CanvasClipPath",
+    "OH_Drawing_CanvasClipRegion",
+    "OH_Drawing_CanvasTranslate",
+    "OH_Drawing_CanvasScale",
+    "OH_Drawing_CanvasRotate",
+    "OH_Drawing_CanvasSkew",
+    "OH_Drawing_MatrixCreateTranslation",
+    "OH_Drawing_MatrixCreateRotation",
+    "OH_Drawing_MatrixCreateScale",
+    "OH_Drawing_CanvasConcatMatrix",
+    "OH_Drawing_CanvasSave",
+    "OH_Drawing_CanvasRestore",
+    "OH_Drawing_CanvasRestoreToCount"
+  ],
+  "related_docs": [
+    "canvas-get-result-draw-c.md"
+  ],
+  "code_samples": [
+    {
+      "language": "C++",
+      "description": "裁剪矩形示例",
+      "line": 66
+    },
+    {
+      "language": "C++",
+      "description": "平移示例",
+      "line": 123
+    },
+    {
+      "language": "C++",
+      "description": "旋转示例",
+      "line": 156
+    },
+    {
+      "language": "C++",
+      "description": "缩放示例",
+      "line": 189
+    },
+    {
+      "language": "C++",
+      "description": "状态保存与恢复示例",
+      "line": 233
+    }
+  ],
+  "total_lines": 270,
+  "created_at": "2026-02-25",
+  "last_updated": "2026-02-25"
+}

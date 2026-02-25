@@ -1,0 +1,77 @@
+{
+  "doc_id": "text-measure-arkts",
+  "title": "文本测量（ArkTS）",
+  "file_path": "docs/zh-cn/application-dev/graphics/text-measure-arkts.md",
+  "domain": "graphics",
+  "metadata": {
+    "kit": "ArkGraphics 2D",
+    "subsystem": "Graphics",
+    "owner": "@oh_wangxk; @gmiao522; @Lem0nC",
+    "designer": "@liumingxiang",
+    "tester": "@yhl0101",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了ArkTS中的文本测量功能，包括在图形绘制中对文本尺寸和布局进行评估，计算文本在给定字体和样式下占用的空间。主要支持文本宽度、文本高度、行间距和字符间距的测量能力，提供了多个接口用于获取段落文本的度量信息，如最长行宽度、文本行对象、行度量信息等。文档还提供了完整的开发步骤示例，展示如何使用ParagraphBuilder创建段落、设置样式并获取测量信息。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "文本测量（ArkTS）",
+      "line_start": 1,
+      "line_end": 8
+    },
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line_start": 9,
+      "line_end": 24
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line_start": 25,
+      "line_end": 36
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line_start": 37,
+      "line_end": 125
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "getLongestLine",
+      "description": "获取当前段落最长行的宽度，建议实际使用时将返回值向上取整"
+    },
+    {
+      "name": "getLongestLineWithIndent",
+      "description": "获取当前段落最长行的宽度（该宽度包含当前行缩进的宽度），建议实际使用时将返回值向上取整"
+    },
+    {
+      "name": "getTextLines",
+      "description": "获取当前段落文本行对象数组"
+    },
+    {
+      "name": "getLineMetrics",
+      "description": "获取段落所有行的度量信息。包含行的高度、宽度、起始坐标等信息"
+    },
+    {
+      "name": "getLineMetrics(lineNumber: number)",
+      "description": "获取段落指定行的度量信息。包含行的高度、宽度、起始坐标等信息。超出当前段落排版后最大行数后返回undefined"
+    }
+  ],
+  "keywords": [
+    "文本测量",
+    "ArkTS",
+    "ArkGraphics 2D",
+    "ParagraphBuilder",
+    "文本宽度",
+    "文本高度",
+    "行间距",
+    "字符间距",
+    "布局",
+    "渲染"
+  ],
+  "total_lines": 125,
+  "language": "zh-cn"
+}
