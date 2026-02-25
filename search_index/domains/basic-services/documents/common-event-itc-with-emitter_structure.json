@@ -1,0 +1,126 @@
+{
+  "doc_id": "common-event-itc-with-emitter",
+  "title": "使用Emitter进行线程间通信",
+  "domain": "basic-services",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Notification",
+    "owner": "@peixu",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Emitter是一种作用在进程内的事件处理机制，为应用程序提供订阅事件、发布事件、取消事件订阅的能力。用于同一进程内相同线程或不同线程间的事件处理，事件异步执行。主要接口包括on（持续订阅）、once（单次订阅）、emit（发布事件）和off（取消订阅）。",
+  "structure": {
+    "sections": [
+      {
+        "level": 1,
+        "title": "使用Emitter进行线程间通信",
+        "line_start": 1,
+        "line_end": 113,
+        "content_preview": "Emitter是一种作用在进程内的事件处理机制，为应用程序提供订阅事件、发布事件、取消事件订阅的能力。"
+      },
+      {
+        "level": 2,
+        "title": "场景介绍",
+        "line_start": 12,
+        "line_end": 14,
+        "content_preview": "Emitter用于同一进程内相同线程或不同线程间的事件处理，事件异步执行。使用时需要先订阅一个事件，然后发布该事件，发布完成后Emitter会将已发布的事件分发给订阅者，订阅者就会执行该事件订阅时设置的回调方法。"
+      },
+      {
+        "level": 2,
+        "title": "运作机制",
+        "line_start": 16,
+        "line_end": 19,
+        "content_preview": "Emitter通过维护一个内部事件队列，来进行任务分发。应用需要先订阅某个事件并设置好该事件的回调方法，当应用程序发布事件后，就会往队列里面插入一个事件。任务队列会串行执行队列里面的任务，执行任务时会调用该任务订阅者的回调方法进行事件处理。"
+      },
+      {
+        "level": 2,
+        "title": "接口说明",
+        "line_start": 21,
+        "line_end": 28,
+        "content_preview": "详细请参见Emitter接口文档。接口包括：on（订阅事件）、once（订阅事件一次）、emit（发布事件）、off（取消事件订阅）。"
+      },
+      {
+        "level": 2,
+        "title": "开发步骤",
+        "line_start": 30,
+        "line_end": 113,
+        "content_preview": "使用Emitter实现事件订阅、事件发送以及事件删除，开发步骤如下：1. 导入模块 2. 订阅事件 3. 发送事件 4. 取消事件订阅。"
+      }
+    ],
+    "code_blocks": [
+      {
+        "language": "TypeScript",
+        "line_start": 38,
+        "line_end": 40,
+        "description": "导入emitter模块"
+      },
+      {
+        "language": "TypeScript",
+        "line_start": 48,
+        "line_end": 61,
+        "description": "订阅事件示例"
+      },
+      {
+        "language": "TypeScript",
+        "line_start": 65,
+        "line_end": 69,
+        "description": "使用once订阅事件一次"
+      },
+      {
+        "language": "TypeScript",
+        "line_start": 81,
+        "line_end": 98,
+        "description": "发送事件示例"
+      },
+      {
+        "language": "TypeScript",
+        "line_start": 108,
+        "line_end": 111,
+        "description": "取消事件订阅"
+      }
+    ],
+    "images": [
+      {
+        "path": "figures/emitter.png",
+        "line": 19,
+        "alt": "emitter"
+      }
+    ],
+    "api_references": [
+      {
+        "api": "emitter.on",
+        "description": "订阅事件，持续订阅事件，直至该事件被取消订阅"
+      },
+      {
+        "api": "emitter.once",
+        "description": "订阅事件一次"
+      },
+      {
+        "api": "emitter.emit",
+        "description": "发布事件一次"
+      },
+      {
+        "api": "emitter.off",
+        "description": "取消事件订阅后，将不再接收该事件的消息"
+      }
+    ],
+    "key_concepts": [
+      "Emitter",
+      "线程间通信",
+      "事件订阅",
+      "事件发布",
+      "异步执行",
+      "事件队列",
+      "回调方法"
+    ]
+  },
+  "statistics": {
+    "total_lines": 113,
+    "code_blocks_count": 5,
+    "sections_count": 5,
+    "images_count": 1,
+    "api_references_count": 4
+  }
+}

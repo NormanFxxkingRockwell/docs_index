@@ -1,0 +1,199 @@
+{
+  "doc_id": "common-event-native-common-event-subscription",
+  "title": "订阅公共事件（C/C++）",
+  "path": "docs/zh-cn/application-dev/basic-services/common-event/native-common-event-subscription.md",
+  "domain": "basic-services",
+  "language": {
+    "code": "zh-cn",
+    "name": "中文"
+  },
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Notification",
+    "owner": "@peixu",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "本文档介绍如何在HarmonyOS中使用C/C++语言订阅公共事件。通过OH_CommonEvent_CreateSubscriber创建订阅者对公共事件进行订阅，当有订阅的事件发布时，订阅者将收到该事件及其传递的参数。文档详细说明了订阅者信息的创建、订阅者的创建、事件订阅以及有序公共事件的处理（包括中止事件、取消中止状态、修改事件内容）等开发步骤。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line_start": 10,
+      "line_end": 12,
+      "content": "通过OH_CommonEvent_CreateSubscriber创建的订阅者可以对某个公共事件进行订阅，如果有订阅的事件发布那么订阅了这个事件的订阅者将会收到该事件及其传递的参数，也可以通过订阅者对象进一步处理有序公共事件。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line_start": 14,
+      "line_end": 27,
+      "content": "详细的API说明请参考CommonEvent API参考。主要接口包括：OH_CommonEvent_CreateSubscribeInfo（创建订阅者信息）、OH_CommonEvent_DestroySubscribeInfo（销毁订阅者信息）、OH_CommonEvent_CreateSubscriber（创建订阅者）、OH_CommonEvent_DestroySubscriber（销毁订阅者）、OH_CommonEvent_Subscribe（订阅事件）、OH_CommonEvent_AbortCommonEvent（中止当前的有序公共事件）、OH_CommonEvent_ClearAbortCommonEvent（取消当前有序公共事件的中止状态）、OH_CommonEvent_FinishCommonEvent（结束对当前有序公共事件的处理）。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line_start": 29,
+      "line_end": 277,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "引用头文件",
+          "line_start": 31,
+          "line_end": 40,
+          "content": "需要包含cstdint、cstring、hilog/log.h和BasicServicesKit/oh_commonevent.h头文件。"
+        },
+        {
+          "level": 3,
+          "title": "在CMake脚本中添加动态链接库",
+          "line_start": 43,
+          "line_end": 51,
+          "content": "在CMake脚本中需要链接libace_napi.z.so、libhilog_ndk.z.so和libohcommonevent.so动态库。"
+        },
+        {
+          "level": 3,
+          "title": "创建订阅者信息",
+          "line_start": 53,
+          "line_end": 83,
+          "content": "通过OH_CommonEvent_CreateSubscribeInfo创建订阅者信息，并可以设置发布者权限和发布者包名称。同时提供了销毁订阅者信息的函数。"
+        },
+        {
+          "level": 3,
+          "title": "创建订阅者",
+          "line_start": 86,
+          "line_end": 160,
+          "content": "创建订阅者时需传入公共事件的回调函数CommonEvent_ReceiveCallback。待事件发布时，订阅者会接收到回调数据CommonEvent_RcvData。文档提供了OnReceive回调函数示例和GetParameters函数示例，展示如何获取回调公共事件的名称、结果代码、自定义结果数据、包名称以及附加信息内容。最后通过OH_CommonEvent_CreateSubscriber创建订阅者，并提供了销毁订阅者的函数。"
+        },
+        {
+        "level": 3,
+          "title": "订阅事件",
+          "line_start": 163,
+          "line_end": 176,
+          "content": "通过OH_CommonEvent_Subscribe订阅事件，需要传入订阅者对象。"
+        },
+        {
+          "level": 3,
+          "title": "（可选）当订阅的事件为有序公共事件时，可以选择进一步处理有序公共事件",
+          "line_start": 179,
+          "line_end": 277,
+          "content": "根据订阅者设置的优先级等级，优先将公共事件发送给优先级较高的订阅者，等待其成功接收该公共事件之后再将事件发送给优先级较低的订阅者。如果有多个订阅者具有相同的优先级，则他们将随机接收到公共事件。在订阅者收到公共事件之后，可以通过以下接口进一步处理有序公共事件：1）中止当前的有序公共事件（通过OH_CommonEvent_AbortCommonEvent与OH_CommonEvent_FinishCommonEvent配合使用）；2）取消当前有序公共事件的中止状态（通过OH_CommonEvent_ClearAbortCommonEvent与OH_CommonEvent_FinishCommonEvent配合使用）；3）修改有序公共事件的内容（通过OH_CommonEvent_SetCodeToSubscriber与OH_CommonEvent_SetDataToSubscriber设置有序公共事件的代码和数据）。"
+        }
+      ]
+    }
+  ],
+  "apis": [
+    "OH_CommonEvent_CreateSubscriber",
+    "OH_CommonEvent_CreateSubscribeInfo",
+    "OH_CommonEvent_DestroySubscribeInfo",
+    "OH_CommonEvent_DestroySubscriber",
+    "OH_CommonEvent_Subscribe",
+    "OH_CommonEvent_AbortCommonEvent",
+    "OH_CommonEvent_ClearAbortCommonEvent",
+    "OH_CommonEvent_FinishCommonEvent",
+    "CommonEvent_ReceiveCallback",
+    "CommonEvent_RcvData",
+    "CommonEvent_Parameters",
+    "OH_CommonEvent_GetEventFromRcvData",
+    "OH_CommonEvent_GetCodeFromRcvData",
+    "OH_CommonEvent_GetDataStrFromRcvData",
+    "OH_CommonEvent_GetBundleNameFromRcvData",
+    "OH_CommonEvent_GetParametersFromRcvData",
+    "OH_CommonEvent_HasKeyInParameters",
+    "OH_CommonEvent_GetIntFromParameters",
+    "OH_CommonEvent_SetPublisherPermission",
+    "OH_CommonEvent_SetPublisherBundleName",
+    "OH_CommonEvent_IsOrderedCommonEvent",
+    "OH_CommonEvent_GetAbortCommonEvent",
+    "OH_CommonEvent_SetCodeToSubscriber",
+    "OH_CommonEvent_SetDataToSubscriber",
+    "OH_CommonEvent_GetDataFromSubscriber",
+    "OH_CommonEvent_GetCodeFromSubscriber"
+  ],
+  "code_samples": [
+    {
+      "language": "C",
+      "line_start": 35,
+      "line_end": 40,
+      "description": "引用头文件"
+    },
+    {
+      "language": "txt",
+      "line_start": 45,
+      "line_end": 51,
+      "description": "在CMake脚本中添加动态链接库"
+    },
+    {
+      "language": "C++",
+      "line_start": 59,
+      "line_end": 83,
+      "description": "创建和销的订阅者信息"
+    },
+    {
+      "language": "C++",
+      "line_start": 92,
+      "line_end": 111,
+      "description": "公共事件回调函数OnReceive"
+    },
+    {
+      "language": "C++",
+      "line_start": 118,
+      "line_end": 140,
+      "description": "获取公共事件附加信息GetParameters"
+    },
+    {
+      "language": "C++",
+      "line_start": 147,
+      "line_end": 160,
+      "description": "创建和销毁订阅者"
+    },
+    {
+      "language": "C++",
+      "line_start": 169,
+      "line_end": 176,
+      "description": "订阅事件Subscribe"
+    },
+    {
+      "language": "C++",
+      "line_start": 193,
+      "line_end": 212,
+      "description": "中止当前的有序公共事件AbortCommonEvent"
+    },
+    {
+      "language": "C++",
+      "line_start": 221,
+      "line_end": 245,
+      "description": "取消当前有序公共事件的中止状态ClearAbortCommonEvent"
+    },
+    {
+      "language": "C++",
+      "line_start": 254,
+      "line_end": 277,
+      "description": "修改有序公共事件的内容SetToSubscriber和GetFromSubscriber"
+    }
+  ],
+  "keywords": [
+    "公共事件",
+    "订阅",
+    "C/C++",
+    "CommonEvent",
+    "订阅者",
+    "回调函数",
+    "有序公共事件",
+    "事件发布",
+    "事件订阅",
+    "HarmonyOS",
+    "Basic Services Kit",
+    "Notification"
+  ],
+  "related_docs": [
+    "../../reference/apis-basic-services-kit/capi-oh-commonevent-h.md"
+  ],
+  "statistics": {
+    "total_lines": 278,
+    "code_blocks": 10,
+    "api_count": 25,
+    "section_count": 3
+  },
+  "last_updated": "2026-02-25"
+}

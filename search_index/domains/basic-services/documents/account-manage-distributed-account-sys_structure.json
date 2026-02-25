@@ -1,0 +1,154 @@
+{
+  "doc_id": "account-manage-distributed-account-sys",
+  "title": "管理分布式账号（仅对系统应用开放）",
+  "path": "docs/zh-cn/application-dev/basic-services/account/manage-distributed-account-sys.md",
+  "domain": "basic-services",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Account",
+    "owner": "@steven-q",
+    "designer": "@JiDong-CS1",
+    "tester": "@zhaimengchao",
+    "adviser": "@zengyawen"
+  },
+  "summary": "本文档介绍如何通过分布式账号SDK将自有账号与本地系统账号建立关联关系，包括在当前系统账号和指定系统账号上登录绑定或登出解绑分布式账号的开发步骤和代码示例。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "管理分布式账号（仅对系统应用开放）",
+      "line_start": 1,
+      "line_end": 191
+    },
+    {
+      "level": 2,
+      "title": "开发准备",
+      "line_start": 12,
+      "line_end": 32
+    },
+    {
+      "level": 2,
+      "title": "在当前系统账号上登录绑定分布式账号",
+      "line_start": 34,
+      "line_end": 78
+    },
+    {
+      "level": 2,
+      "title": "在当前系统账号上登出解绑分布式账号",
+      "line_start": 80,
+      "line_end": 109
+    },
+    {
+      "level": 2,
+      "title": "在指定的系统账号上登录绑定分布式账号",
+      "line_start": 111,
+      "line_end": 157
+    },
+    {
+      "level": 2,
+      "title": "在指定系统账号上登出解绑分布式账号",
+      "line_start": 159,
+      "line_end": 191
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "TypeScript",
+      "line_start": 20,
+      "line_end": 22,
+      "context": "导入分布式账号模块"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 29,
+      "line_end": 31,
+      "context": "获取分布式账号的单实例对象"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 42,
+      "line_end": 48,
+      "context": "定义待登录的分布式账号信息"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 55,
+      "line_end": 62,
+      "context": "绑定当前系统账号与指定分布式账号"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 69,
+      "line_end": 77,
+      "context": "查看分布式账号的登录信息"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 88,
+      "line_end": 94,
+      "context": "定义待登出的分布式账号信息"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 100,
+      "line_end": 108,
+      "context": "解绑指定分布式账号与当前系统账号"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 119,
+      "line_end": 126,
+      "context": "确定目标系统账号并定义待登录的分布式账号信息"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 133,
+      "line_end": 140,
+      "context": "绑定指定分布式账号与当前系统账号"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 147,
+      "line_end": 156,
+      "context": "查看指定系统账号的分布式账号登录信息"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 167,
+      "line_end": 174,
+      "context": "确定目标系统账号并定义待登出的分布式账号信息"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 181,
+      "line_end": 189,
+      "context": "解绑指定分布式账号与目标系统账号"
+    }
+  ],
+  "api_references": [
+    {
+      "name": "setOsAccountDistributedInfo",
+      "path": "../../reference/apis-basic-services-kit/js-apis-distributed-account.md#setosaccountdistributedinfo9"
+    },
+    {
+      "name": "getOsAccountDistributedInfo",
+      "path": "../../reference/apis-basic-services-kit/js-apis-distributed-account.md#getosaccountdistributedinfo9"
+    },
+    {
+      "name": "setOsAccountDistributedInfoByLocalId",
+      "path": "../../reference/apis-basic-services-kit/js-apis-distributed-account-sys.md#setosaccountdistributedinfobylocalid10"
+    },
+    {
+      "name": "getOsAccountDistributedInfoByLocalId",
+      "path": "../../reference/apis-basic-services-kit/js-apis-distributed-account-sys.md#getosaccountdistributedinfobylocalid10"
+    }
+  ],
+  "tags": [
+    "分布式账号",
+    "账号绑定",
+    "账号解绑",
+    "系统应用",
+    "BasicServicesKit"
+  ],
+  "word_count": 191,
+  "created_at": "2026-02-25"
+}

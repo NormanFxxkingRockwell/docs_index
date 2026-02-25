@@ -1,0 +1,80 @@
+{
+  "doc_id": "account-manage-application-account",
+  "title": "管理应用账号",
+  "path": "docs/zh-cn/application-dev/basic-services/account/manage-application-account.md",
+  "domain": "basic-services",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Account",
+    "owner": "@steven-q",
+    "designer": "@JiDong-CS1",
+    "tester": "@zhaimengchao",
+    "adviser": "@zengyawen"
+  },
+  "summary": "本文档介绍如何使用应用账号SDK管理本应用的账号数据，包括创建、查询、删除应用账号，以及存取账号的凭据、自定义数据和授权令牌。能力限制：应用卸载场景下，被卸载应用的账号数据会被删除；本地账号删除场景下，被删除本地账号下的所有应用的账号数据会被删除。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "开发准备",
+      "line": 14,
+      "content": "导入应用账号模块并获取应用账号的实例对象。"
+    },
+    {
+      "level": 2,
+      "title": "创建创建应用账号",
+      "line": 34,
+      "content": "用户在应用中登录后，开发者可以在系统中创建一个关联的应用账号，后续可以基于此账号进行数据管理。"
+    },
+    {
+      "level": 2,
+      "title": "查询应用账号列表",
+      "line": 69,
+      "content": "调用getAllAccounts接口查询账号列表。"
+    },
+    {
+      "level": 2,
+      "title": "存取账号的凭据",
+      "line": 89,
+      "content": "调用getCredential和setCredential接口存取账号的凭据。"
+    },
+    {
+      "level": 2,
+      "title": "存取账号的自定义数据",
+      "line": 133,
+      "content": "调用setCustomData和getCustomData接口存取账号的自定义数据。"
+    },
+    {
+      "level": 2,
+      "title": "存取账号的授权令牌",
+      "line": 177,
+      "content": "调用setAuthToken和getAuthToken接口存取账号的授权令牌。"
+    },
+    {
+      "level": 2,
+      "title": "删除应用账号",
+      "line": 222,
+      "content": "用户退出登录后，应用需及时将相应的应用账号从系统中删除。调用removeAccount接口删除账号。"
+    }
+  ],
+  "apis": [
+    "createAccount",
+    "getAllAccounts",
+    "getCredential",
+    "setCredential",
+    "setCustomData",
+    "getCustomData",
+    "setAuthToken",
+    "getAuthToken",
+    "removeAccount"
+  ],
+  "tags": [
+    "appAccount",
+    "账号管理",
+    "BasicServicesKit",
+    "凭据",
+    "授权令牌"
+  ],
+  "word_count": 245,
+  "last_updated": "2026-02-25"
+}

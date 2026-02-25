@@ -1,0 +1,405 @@
+{
+  "doc_id": "usb-usbManager-usbHost-isochronousTransfer",
+  "title": "USB实时传输",
+  "domain": "basic-services",
+  "category": "usb",
+  "subcategory": "usbManager",
+  "topic": "usbHost",
+  "feature": "isochronousTransfer",
+  "language": "zh-cn",
+  "file_path": "docs/zh-cn/application-dev/basic-services/usb/usbManager/usbHost/isochronousTransfer.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "USB",
+    "owner": "@hwymlgitcode",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "本文档介绍USB实时传输（Isochronous Transfer）的开发方法。实时传输是通过USB协议在固定时间窗口内完成数据传输，确保数据流的时序稳定性和低延迟，但允许少量数据丢失的传输模式。适用于USB耳机、USB音响、视频会议设备等对连续性要求高、容错性强的场景。文档包含环境准备、开发指导、接口说明、开发步骤和调测验证等内容。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "content": "实时传输是通过USB协议在固定时间窗口内完成数据传输，确保数据流的时序稳定性和低延迟，但允许少量数据丢失（如视频丢帧、音频杂音）的传输模式。这种传输方式适用于USB耳机、USB音响、视频会议设备等对连续性要求高、容错性强的场景。",
+      "line_start": 10,
+      "line_end": 12
+    },
+    {
+      "level": 2,
+      "title": "环境准备",
+      "line_start": 14,
+      "line_end": 38,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "环境要求",
+          "line_start": 16,
+          "line_end": 30,
+          "content": "开发工具及配置：DevEco Studio作为驱动开发工具，是进行驱动开发必备条件之一。SDK版本配置：扩展外设管理提供的ArkTs接口，所需SDK版本为API16及以上才可使用。HDC配置：HDC（HarmonyOS Device Connector）是为开发人员提供的用于调试的命令行工具。"
+        },
+        {
+          "level": 3,
+          "title": "搭建环境",
+          "line_start": 32,
+          "line_end": 38,
+          "content": "在PC上安装DevEco Studio，要求版本在4.1及以上。将public-SDK更新到API 16或以上。PC安装HDC工具。用USB线缆将搭载OpenHarmony的设备连接到PC。"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "开发指导",
+      "line_start": 39,
+      "line_end": 289,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "接口说明",
+          "line_start": 41,
+          "line_end": 48,
+          "content": "主要接口包括：usbSubmitTransfer(transfer: UsbDataTransferParams): void - 异步传输接口（支持实时、批量、中断传输）；usbCancelTransfer(transfer: UsbDataTransferParams): void - 取消已提交的异步传输。"
+        },
+        {
+          "level": 3,
+          "title": "开发步骤",
+          "line_start": 50,
+          "line_end": 282,
+          "content": "主机（Host）连接设备（Device），通过usbSubmitTransfer接口进行数据传输。步骤包括：1. 导入模块；2. 获取设备列表；3. 获取设备操作权限；4. 获取通过实时传输读取数据的端点；5. 连接设备，注册通信接口；6. 传输数据；7. 取消传输，释放接口，关闭设备消息控制通道。",
+          "steps": [
+            {
+              "step": 1,
+              "title": "导入模块",
+              "line_start": 58,
+              "line_end": 67,
+              "description": "导入usbManager模块、BusinessError和JSON模块"
+            },
+            {
+              "step": 2,
+              "title": "获取设备列表",
+              "line_start": 70,
+              "line_end": 136,
+              "description": "使用usbManager.getDevices()获取设备列表，并检查设备列表是否为空"
+            },
+            {
+              "step": 3,
+              "title": "获取设备操作权限",
+              "line_start": 139,
+              "line_end": 159,
+              "description": "使用usbManager.requestRight()申请操作指定设备的权限"
+            },
+            {
+              "step": 4,
+              "title": "获取通过实时传输读取数据的端点",
+              "line_start": 162,
+              "line_end": 203,
+              "description": "遍历设备配置、接口和端点，查找方向为读取数据（direction为128）且类型为实时传输（TRANSFER_TYPE_ISOCHRONOUS）的端点"
+            },
+            {
+              "step": 5,
+              "title": "连接设备，注册通信接口",
+              "line_start": 206,
+              "line_end": 228,
+              "description": "使用usbManager.claimInterface()注册通信接口，对于实时传输类型需使用usbManager.setInterface()设置设备接口"
+            },
+            {
+              "step": 6,
+              "title": "传输数据",
+              "line_start": 231,
+              "line_end": 266,
+              "description": "构造UsbDataTransferParams参数，设置实时传输类型，使用usbManager.usbSubmitTransfer()提交传输请求"
+            },
+            {
+              "step": 7,
+              "title": "取消传输，释放接口，关闭设备消息控制通道",
+              "line_start": 269,
+              "line_end": 282,
+              "description": "使用usbManager.usbCancelTransfer()取消传输，usbManager.releaseInterface()释放接口，usbManager.closePipe()关闭设备消息控制通道"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "title": "调测验证",
+          "line_start": 285,
+          "line_end": 289,
+          "content": "1. 主机端通过USB接口连接支持实时传输的设备（USB耳机等）。2. 执行上述代码。3. log中搜索关键字transfer success，表示实时传输接口调用成功。"
+        }
+      ]
+    }
+  ],
+  "apis": [
+    {
+      "name": "usbSubmitTransfer",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "signature": "usbSubmitTransfer(transfer: UsbDataTransferParams): void",
+      "description": "异步传输接口（支持实时、批量、中断传输）",
+      "line": 45
+    },
+    {
+      "name": "usbCancelTransfer",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "signature": "usbCancelTransfer(transfer: UsbDataTransferParams): void",
+      "description": "取消已提交的异步传输",
+      "line": 46
+    },
+    {
+      "name": "getDevices",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "signature": "getDevices(): USBDevice[]",
+      "description": "获取设备列表",
+      "line": 76
+    },
+    {
+      "name": "requestRight",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "signature": "requestRight(deviceName: string): Promise<boolean>",
+      "description": "申请操作指定设备的权限",
+      "line": 152
+    },
+    {
+      "name": "hasRight",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "signature": "hasRight(deviceName: string): boolean",
+      "description": "检查是否有设备操作权限",
+      "line": 173
+    },
+    {
+      "name": "connectDevice",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "signature": "connectDevice(device: USBDevice): USBDevicePipe",
+      "description": "连接设备",
+      "line": 178
+    },
+    {
+      "name": "claimInterface",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "signature": "claimInterface(devicePipe: USBDevicePipe, usbInterface: USBInterface, force: boolean): number",
+      "description": "注册通信接口",
+      "line": 212
+    },
+    {
+      "name": "setInterface",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "signature": "setInterface(devicePipe: USBDevicePipe, usbInterface: USBInterface): number",
+      "description": "设置设备接口（实时传输时需要）",
+      "line": 221
+    },
+    {
+      "name": "usbSubmitTransfer",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "signature": "usbSubmitTransfer(transferParams: UsbDataTransferParams): void",
+      "description": "提交USB传输请求",
+      "line": 259
+    },
+    {
+      "name": "usbCancelTransfer",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "signature": "usbCancelTransfer(transferParams: UsbDataTransferParams): void",
+      "description": "取消USB传输",
+      "line": 275
+    },
+    {
+      "name": "releaseInterface",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "signature": "releaseInterface(devicePipe: USBDevicePipe, usbInterface: USBInterface): void",
+      "description": "释放接口",
+      "line": 276
+    },
+    {
+      "name": "closePipe",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "signature": "closePipe(devicePipe: USBDevicePipe): void",
+      "description": "关闭设备消息控制通道",
+      "line": 277
+    }
+  ],
+  "types": [
+    {
+      "name": "UsbDataTransferParams",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "description": "USB数据传输参数",
+      "line": 239
+    },
+    {
+      "name": "USBDevice",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "description": "USB设备信息",
+      "line": 76
+    },
+    {
+      "name": "USBDevicePipe",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "description": "USB设备管道",
+      "line": 178
+    },
+    {
+      "name": "USBConfiguration",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "description": "USB配置",
+      "line": 179
+    },
+    {
+      "name": "USBInterface",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "description": "USB接口",
+      "line": 181
+    },
+    {
+      "name": "USBEndpoint",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "description": "USB端点",
+      "line": 183
+    },
+    {
+      "name": "UsbEndpointTransferType",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "description": "USB端点传输类型枚举",
+      "line": 190
+    },
+    {
+      "name": "UsbTransferFlags",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "description": "USB传输标志枚举",
+      "line": 241
+    },
+    {
+      "name": "SubmitTransferCallback",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "description": "提交传输回调函数",
+      "line": 253
+    }
+  ],
+  "enums": [
+    {
+      "name": "UsbEndpointTransferType",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "values": [
+        "TRANSFER_TYPE_ISOCHRONOUS"
+      ],
+      "description": "USB端点传输类型",
+      "line": 190
+    },
+    {
+      "name": "UsbTransferFlags",
+      "module": "usbManager",
+      "kit": "BasicServicesKit",
+      "values": [
+        "USB_TRANSFER_SHORT_NOT_OK"
+      ],
+      "description": "USB传输标志",
+      "line": 241
+    }
+  ],
+  "code_samples": [
+    {
+      "title": "导入模块",
+      "language": "TypeScript",
+      "line_start": 62,
+      "line_end": 67
+    },
+    {
+      "title": "获取设备列表",
+      "language": "TypeScript",
+      "line_start": 74,
+      "line_end": 136
+    },
+    {
+      "title": "获取设备操作权限",
+      "language": "TypeScript",
+      "line_start": 143,
+      "line_end": 159
+    },
+    {
+      "title": "获取实时传输端点",
+      "language": "TypeScript",
+      "line_start": 166,
+      "line_end": 203
+    },
+    {
+      "title": "连接设备并注册接口",
+      "language": "TypeScript",
+      "line_start": 210,
+      "line_end": 228
+    },
+    {
+      "title": "传输数据",
+      "language": "TypeScript",
+      "line_start": 235,
+      "line_end": 266
+    },
+    {
+      "title": "释放资源",
+      "language": "TypeScript",
+      "line_start": 273,
+      "line_end": 282
+    }
+  ],
+  "keywords": [
+    "USB",
+    "实时传输",
+    "Isochronous Transfer",
+    "usbManager",
+    "BasicServicesKit",
+    "USB主机",
+    "USB Host",
+    "数据传输",
+    "端点",
+    "接口",
+    "USB耳机",
+    "USB音响",
+    "视频会议设备",
+    "低延迟",
+    "时序稳定性"
+  ],
+  "requirements": {
+    "dev_tools": [
+      {
+        "name": "DevEco Studio",
+        "version": "4.1+",
+        "description": "驱动开发工具"
+      }
+    ],
+    "sdk": {
+      "name": "public-SDK",
+      "version": "API 16+"
+    },
+    "tools": [
+      {
+        "name": "HDC",
+        "description": "HarmonyOS Device Connector，用于调试的命令行工具"
+      }
+    ]
+  },
+  "references": [
+    {
+      "title": "API参考文档",
+      "url": "../../../../reference/apis-basic-services-kit/js-apis-usbManager.md",
+      "line": 48
+    }
+  ],
+  "line_count": 289,
+  "created_at": "2026-02-25"
+}

@@ -1,0 +1,130 @@
+{
+  "doc_id": "pasteboard-use-pasteboard-to-copy-and-paste",
+  "title": "使用剪贴板进行复制粘贴",
+  "domain": "basic-services",
+  "file_path": "docs/zh-cn/application-dev/basic-services/pasteboard/use-pasteboard-to-copy-and-paste.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "MiscServices",
+    "owner": "@yangxiaodong41",
+    "designer": "@guo867",
+    "tester": "@maxiaorong",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "本文档介绍了如何在HarmonyOS应用中使用剪贴板进行复制粘贴操作。剪贴板提供数据的复制粘贴能力，支持在应用内或应用间共享数据。文档详细说明了剪贴板的接入原理、约束限制、基础数据类型和统一数据类型的使用方法，包括ArkTS接口和NDK接口的使用示例。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "content": "剪贴板为开发者提供数据的复制粘贴能力。当需要使用复制粘贴等功能时，例如：复制文字内容到备忘录中粘贴，复制图库照片到文件管理粘贴，就可以通过剪贴板来完成。",
+      "line_start": 9,
+      "line_end": 11
+    },
+    {
+      "level": 2,
+      "title": "约束限制",
+      "content": "剪贴板内容包含剪贴板系统服务元数据和应用设置的数据，总大小上限默认为128MB，PC/2in1设备可通过系统配置修改上限，有效范围为128MB~2GB。为保证剪贴板数据的准确性，同一时间只能支持一个复制操作。API version 12及之后，系统为提升用户隐私安全保护能力，剪贴板读取接口增加权限管控。",
+      "line_start": 13,
+      "line_end": 17
+    },
+    {
+      "level": 2,
+      "title": "剪贴板接入原理介绍",
+      "content": "剪贴板为应用提供应用数据的复制粘贴能力，支持在应用内或应用间共享复制或剪切的应用数据。剪贴板默认支持文本、HTML富文本、文件URI、PixelMap通用数据格式类型数据，同时也支持应用自定义扩展类型数据处理。剪贴板数据定义对应PasteData，复制应用通过向剪贴板服务写入PasteData实现数据复制，粘贴应用通过读取剪贴板服务的PasteData实现数据粘贴。",
+      "line_start": 19,
+      "line_end": 44
+    },
+    {
+      "level": 2,
+      "title": "使用基础数据类型进行复制粘贴",
+      "content": "剪贴板支持使用基础数据类型进行复制粘贴，当前支持的基础数据类型有文本、HTML、URI、Want、PixelMap。ArkTS接口与NDK接口支持数据类型不完全一致，使用时须匹配接口支持类型。新开发的应用建议使用本方案实现复制粘贴功能。",
+      "line_start": 46,
+      "line_end": 50
+    },
+    {
+      "level": 3,
+      "title": "ArkTS接口与NDK接口数据类型对应关系",
+      "content": "提供了ArkTS数据类型与NDK数据类型的对应关系表，包括MIMETYPE_PIXELMAP、MIMETYPE_TEXT_HTML、MIMETYPE_TEXT_PLAIN、MIMETYPE_TEXT_URI、MIMETYPE_TEXT_WANT等类型的映射关系。",
+      "line_start": 52,
+      "line_end": 61
+    },
+    {
+      "level": 3,
+      "title": "接口说明",
+      "content": "列出了剪贴板的主要接口，包括setData、getData、getDataSync等接口的详细说明，支持callback和Promise两种异步回调方式。",
+      "line_start": 63,
+      "line_end": 74
+    },
+    {
+      "level": 3,
+      "title": "示例代码",
+      "content": "提供了使用剪贴板进行文本复制粘贴的完整示例代码，包括setPlainData和getPlainData两个函数的实现。",
+      "line_start": 75,
+      "line_end": 103
+    },
+    {
+      "level": 2,
+      "title": "使用统一数据类型进行复制粘贴",
+      "content": "为了方便剪贴板与其他应用间进行数据交互，减少数据类型适配的工作量，剪贴板支持使用统一数据对象进行复制粘贴。详细的统一数据对象请见标准化数据通路文档介绍。剪贴板支持使用基础数据类型进行复制粘贴，当前支持的基础数据类型有文本、HTML。",
+      "line_start": 106,
+      "line_end": 110
+    },
+    {
+      "level": 3,
+      "title": "接口说明",
+      "content": "列出了统一数据类型相关的主要接口，包括setUnifiedData、setUnifiedDataSync、getUnifiedData、getUnifiedDataSync等接口的详细说明。",
+      "line_start": 112,
+      "line_end": 119
+    },
+    {
+      "level": 3,
+      "title": "示例代码",
+      "content": "提供了使用统一数据类型进行复制粘贴的完整示例代码，包括构造PlainText数据、向系统剪贴板存入数据、从系统剪贴板读取数据的完整流程。",
+      "line_start": 121,
+      "line_end": 164
+    }
+  ],
+  "keywords": [
+    "剪贴板",
+    "复制粘贴",
+    "PasteData",
+    "ArkTS",
+    "NDK",
+    "基础数据类型",
+    "统一数据类型",
+    "文本",
+    "HTML",
+    "URI",
+    "PixelMap",
+    "Want",
+    "setData",
+    "getData",
+    "UnifiedData"
+  ],
+  "api_references": [
+    "ohos.pasteboard",
+    "js-apis-pasteboard.md",
+    "js-apis-file-fs.md",
+    "js-apis-data-unifiedDataChannel.md",
+    "capi-udmf.md"
+  ],
+  "related_docs": [
+    "get-pastedata-permission-guidelines.md"
+  ],
+  "code_examples": [
+    {
+      "language": "TypeScript",
+      "description": "基础数据类型复制粘贴示例",
+      "line_start": 79,
+      "line_end": 103
+    },
+    {
+      "language": "TypeScript",
+      "description": "统一数据类型复制粘贴示例",
+      "line_start": 125,
+      "line_end": 164
+    }
+  ],
+  "total_lines": 168,
+  "last_modified": "2026-02-25"
+}

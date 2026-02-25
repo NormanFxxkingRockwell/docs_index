@@ -1,0 +1,74 @@
+{
+  "doc_id": "pasteboard-get-pastedata-permission-guidelines",
+  "title": "申请访问剪贴板权限",
+  "path": "docs/zh-cn/application-dev/basic-services/pasteboard/get-pastedata-permission-guidelines.md",
+  "domain": "basic-services",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "MiscServices",
+    "owner": "@yangxiaodong41",
+    "designer": "@guo867",
+    "tester": "@maxiaorong",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "API version 12及之后，系统为提升用户隐私安全保护能力，剪贴板读取接口增加权限管控。文档介绍了两种访问剪贴板内容的方式：使用安全控件（粘贴控件）无需申请权限，或申请ohos.permission.READ_PASTEBOARD权限。同时提供了剪贴板弹窗适配优化建议，通过hasData、hasDataType、getMimeTypes、getChangeCount、detectPatterns等接口提前判断剪贴板内容，避免无效弹框。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "申请访问剪贴板权限",
+      "line": 1,
+      "content": "API version 12及之后，系统为提升用户隐私安全保护能力，剪贴板读取接口增加权限管控。涉及接口包括getData、getDataSync、getUnifiedData、getUnifiedDataSync、OH_Pasteboard_GetData、getDataWithProgress、OH_Pasteboard_GetDataWithProgress等。"
+    },
+    {
+      "level": 2,
+      "title": "概述",
+      "line": 9,
+      "content": "API version 12及之后，系统为提升用户隐私安全保护能力，剪贴板读取接口增加权限管控。涉及接口包括getData、getDataSync、getUnifiedData、getUnifiedDataSync、getDataWithProgress等读取接口。申请访问剪贴板权限前，需提前判断剪贴板上的内容是否包含应用所需数据。"
+    },
+    {
+      "level": 2,
+      "title": "访问剪贴板内容",
+      "line": 30,
+      "content": "剪贴板为应用提供两种访问内容的方式：使用安全控件（粘贴控件）无需申请权限；申请ohos.permission.READ_PASTEBOARD权限，这是受限的user_grant（用户授权）权限。权限申请步骤包括通过ACL方式申请高级别权限、在module.json5配置文件中声明权限、通过弹窗向用户申请授权。"
+    },
+    {
+      "level": 2,
+      "title": "剪贴板弹窗适配优化",
+      "line": 53,
+      "content": "应用申请剪贴板权限需要提前判断剪贴板上的内容是否包含所需数据，避免出现无效弹框。优化方法包括：使用hasData判断剪贴板是否有数据；使用hasDataType/getMimeTypes判断是否包含应用当前场景支持处理的数据类型；使用getChangeCount获取剪贴板的内容变化次数；使用detectPatterns判断是否包含应用自身口令的格式。"
+    },
+    {
+      "level": 2,
+      "title": "示例代码",
+      "line": 65,
+      "content": "提供了完整的TypeScript示例代码，展示如何申请剪贴板权限。示例包括isNeedGetPermissionFromUser函数用于判断是否需要申请权限，通过hasData、getChangeCount、hasDataType、detectPatterns等接口进行预判断，以及通过requestPermissionsFromUser向用户申请权限的完整流程。"
+    }
+  ],
+  "apis": [
+    "getData",
+    "getDataSync",
+    "getUnifiedData",
+    "getUnifiedDataSync",
+    "OH_Pasteboard_GetData",
+    "getDataWithProgress",
+    "OH_Pasteboard_GetDataWithProgress",
+    "hasData",
+    "hasDataType",
+    "getMimeTypes",
+    "getChangeCount",
+    "detectPatterns",
+    "clearData"
+  ],
+  "permissions": [
+    "ohos.permission.READ_PASTEBOARD"
+  ],
+  "tags": [
+    "剪贴板",
+    "权限",
+    "READ_PASTEBOARD",
+    "粘贴控件",
+    "user_grant",
+    "隐私保护",
+    "弹窗适配"
+  ]
+}

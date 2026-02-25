@@ -1,0 +1,228 @@
+{
+  "doc_id": "usb-usbSerial-usbSerial-communication",
+  "title": "USB串口通信管理",
+  "path": "docs/zh-cn/application-dev/basic-services/usb/usbSerial/usbSerial-communication.md",
+  "domain": "basic-services",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "USB",
+    "owner": "@hwymlgitcode",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "USB串口通信服务通过Host设备的USB接口连接串口设备进行串行数据传输，实现设备间的高效、稳定数据传输与协同控制。主要应用场景包括工业自动化与远程监控、物联网设备互联、医疗设备管理等。文档提供了完整的开发指导，包括接口说明、开发步骤（导入模块、获取设备列表、获取设备操作权限、打开设备、读取数据、写入数据、关闭设备）以及调测验证方法。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "USB串口通信管理",
+      "line": 1
+    },
+    {
+      "level": 2,
+      "title": "简介",
+      "line": 10
+    },
+    {
+      "level": 2,
+      "title": "环境准备",
+      "line": 14
+    },
+    {
+      "level": 2,
+      "title": "开发指导",
+      "line": 18
+    },
+    {
+      "level": 3,
+      "title": "接口说明",
+      "line": 20
+    },
+    {
+      "level": 3,
+      "title": "开发步骤",
+      "line": 35
+    },
+    {
+      "level": 3,
+      "title": "调测验证",
+      "line": 193
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "getPortList",
+      "return_type": "Readonly<SerialPort>[]",
+      "description": "获取串口设备列表"
+    },
+    {
+      "name": "hasSerialRight",
+      "parameters": [
+        {
+          "name": "portId",
+          "type": "number"
+        }
+      ],
+      "return_type": "boolean",
+      "description": "检查应用程序是否具有访问串口设备的权限"
+    },
+    {
+      "name": "requestSerialRight",
+      "parameters": [
+        {
+          "name": "portId",
+          "type": "number"
+        }
+      ],
+      "return_type": "Promise<boolean>",
+      "description": "请求对串口设备的访问权限"
+    },
+    {
+      "name": "open",
+      "parameters": [
+        {
+          "name": "portId",
+          "type": "number"
+        }
+      ],
+      "return_type": "void",
+      "description": "打开串口设备"
+    },
+    {
+      "name": "close",
+      "parameters": [
+        {
+          "name": "portId",
+          "type": "number"
+        }
+      ],
+      "return_type": "void",
+      "description": "关闭串口设备"
+    },
+    {
+      "name": "read",
+      "parameters": [
+        {
+          "name": "portId",
+          "type": "number"
+        },
+        {
+          "name": "buffer",
+          "type": "Uint8Array"
+        },
+        {
+          "name": "timeout",
+          "type": "number"
+        }
+      ],
+      "return_type": "Promise<number>",
+      "description": "从串口设备读取数据，使用Promise异步返回"
+    },
+    {
+      "name": "readSync",
+      "parameters": [
+        {
+          "name": "portId",
+          "type": "number"
+        },
+        {
+          "name": "buffer",
+          "type": "Uint8Array"
+        },
+        {
+          "name": "timeout",
+          "type": "number"
+        }
+      ],
+      "return_type": "number",
+      "description": "以同步方法从串口设备读取数据"
+    },
+    {
+      "name": "write",
+      "parameters": [
+        {
+          "name": "portId",
+          "type": "number"
+        },
+        {
+          "name": "buffer",
+          "type": "Uint8Array"
+        },
+        {
+          "name": "timeout",
+          "type": "number"
+        }
+      ],
+      "return_type": "Promise<number>",
+      "description": "往串口设备写入数据，使用Promise异步返回"
+    },
+    {
+      "name": "writeSync",
+      "parameters": [
+        {
+          "name": "portId",
+          "type": "number"
+        },
+        {
+          "name": "buffer",
+          "type": "Uint8Array"
+        },
+        {
+          "name": "timeout",
+          "type": "number"
+        }
+      ],
+      "return_type": "number",
+      "description": "以同步方法往串口设备写入数据"
+    }
+  ],
+  "code_examples": [
+    {
+      "title": "导入模块",
+      "line": 47,
+      "language": "TypeScript"
+    },
+    {
+      "title": "获取设备列表",
+      "line": 60,
+      "language": "TypeScript"
+    },
+    {
+      "title": "获取设备操作权限",
+      "line": 78,
+      "language": "TypeScript"
+    },
+    {
+      "title": "根据串口打开设备",
+      "line": 106,
+      "language": "TypeScript"
+    },
+    {
+      "title": "通过串口读取数据",
+      "line": 123,
+      "language": "TypeScript"
+    },
+    {
+      "title": "通过串口写入数据",
+      "line": 152,
+      "language": "TypeScript"
+    },
+    {
+      "title": "关闭串口设备",
+      "line": 181,
+      "language": "TypeScript"
+    }
+  ],
+  "tags": [
+    "USB",
+    "串口",
+    "通信",
+    "serialManager",
+    "数据传输",
+    "异步",
+    "同步"
+  ],
+  "total_lines": 197,
+  "created_at": "2026-02-25"
+}

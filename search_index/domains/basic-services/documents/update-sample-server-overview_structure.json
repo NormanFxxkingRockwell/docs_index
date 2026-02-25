@@ -1,0 +1,77 @@
+{
+  "doc_id": "update-sample-server-overview",
+  "domain": "basic-services",
+  "title": "示例服务器开发概述",
+  "path": "docs/zh-cn/application-dev/basic-services/update/sample-server-overview.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Update",
+    "owner": ["@RainyDay_005", "@huangsiping3"],
+    "designer": ["@zhangzhengxue", "@jackd320"],
+    "tester": ["@mamba-ting"],
+    "adviser": ["@zhang_yixin13"]
+  },
+  "summary": "示例服务器提供一个简易的升级包部署的服务器实例参考，用于搭建升级服务子系统的辅助验证环境。支持升级包查询和下载功能，为升级服务的应用场景提供端到端环境搭建。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "示例服务器开发概述",
+      "line": 1,
+      "content": "示例服务器提供一个简易的升级包部署的服务器实例参考，用于搭建升级服务子系统的辅助验证环境。"
+    },
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 11,
+      "content": "开发者在实际应用中，需要服务器提供升级包的查询、下载等能力。示例服务器为开发者提供了如下能力：\n- 升级包的查询：服务器返回升级包的版本信息。\n- 升级包的下载：服务器返回升级包的下载链接。\n示例服务器支持测试升级服务和二次开发功能验证，为升级服务的应用场景提供尽可能完善的端到端环境搭建。"
+    },
+    {
+      "level": 2,
+      "title": "基本概念",
+      "line": 21,
+      "content": "- 搜包服务：升级服务（UpdateService）提供的服务能力之一，依赖支持TCP和SSL协议的服务器。\n- 搜包服务器：即支持搜包服务的通过TCP连接并支持SSL协议的服务器，本概述提及的升级服务示例服务器即是符合要求的搜包服务器之一。\n- 下载服务器：普通的HTTP服务器即可满足下载服务器的要求。\n- update.serverip.search：系统参数，指升级服务（UpdateService）侧配置的搜包服务器IP地址，默认值：127.0.0.1。"
+    },
+    {
+      "level": 2,
+      "title": "约束与限制",
+      "line": 31,
+      "content": "服务器返回报文格式json示例，注意verifyInfo字段是升级包的sha256值，size字段是升级包的大小，单位为字节。"
+    }
+  ],
+  "keywords": [
+    "示例服务器",
+    "升级包",
+    "部署",
+    "服务器实例",
+    "辅助验证环境",
+    "升级包查询",
+    "版本信息",
+    "升级包下载",
+    "下载链接",
+    "端到端环境",
+    "搜包服务",
+    "UpdateService",
+    "TCP",
+    "SSL",
+    "搜包服务器",
+    "下载服务器",
+    "HTTP服务器",
+    "update.serverip.search",
+    "系统参数",
+    "报文格式",
+    "json",
+    "verifyInfo",
+    "sha256",
+    "versionName",
+    "versionCode",
+    "packageType",
+    "url",
+    "descriptPackageId",
+    "descriptInfo"
+  ],
+  "stats": {
+    "total_lines": 55,
+    "total_sections": 4,
+    "total_code_blocks": 1
+  }
+}

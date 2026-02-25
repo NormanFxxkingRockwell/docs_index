@@ -1,0 +1,122 @@
+{
+  "doc_id": "selectionInput-selection-services-application-guide",
+  "title": "实现一个划词扩展能力",
+  "path": "docs/zh-cn/application-dev/basic-services/selectionInput/selection-services-application-guide.md",
+  "domain": "basic-services",
+  "subsystem": "SelectionInput",
+  "owner": "@no86",
+  "designer": "@mmwwbb",
+  "tester": "@dong-dongzhen",
+  "adviser": "@fang-jinxu",
+  "kit": "Basic Services Kit",
+  "summary": "本文档详细介绍了如何在HarmonyOS中实现一个划词扩展能力应用。内容包括划词服务的核心接口说明（订阅划词完成事件、获取选中文本、创建/显示/隐藏面板、移动面板等）、完整的开发步骤（创建工程、实现SelectionModel管理类、实现SelectionExtAbility扩展类、创建菜单面板和主面板、配置文件）、以及调测验证方法。文档提供了完整的代码示例和配置示例，帮助开发者快速上手开发划词应用。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "实现一个划词扩展能力",
+      "line": 1,
+      "children": [
+        {
+          "level": 2,
+          "title": "接口说明",
+          "line": 10,
+          "children": []
+        },
+        {
+          "level": 2,
+          "title": "开发步骤",
+          "line": 24,
+          "children": []
+        },
+        {
+          "level": 2,
+          "title": "调测验证",
+          "line": 438,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "api_references": [
+    "selectionInput.SelectionExtensionAbility",
+    "selectionInput-selectionExtensionAbility.md#onconnect",
+    "selectionInput-selectionExtensionAbility.md#ondisconnect",
+    "selectionInput-selectionManager.md#show",
+    "selectionInput-selectionManager.md#selectionmanageronselectioncompleted",
+    "selectionInput-selectionManager.md#selectioninfo",
+    "selectionInput-selectionManager.md#getselectioncontent"
+  ],
+  "code_samples": [
+    {
+      "language": "ts",
+      "title": "SelectionModel.ets - 划词模块管理类",
+      "start_line": 54,
+      "end_line": 118
+    },
+    {
+      "language": "ts",
+      "title": "SelectionExtAbility.ets - 扩展能力类基础实现",
+      "start_line": 122,
+      "end_line": 158
+    },
+    {
+      "language": "ts",
+      "title": "SelectionExtAbility.ets - 完整实现",
+      "start_line": 163,
+      "end_line": 264
+    },
+    {
+      "language": "ts",
+      "title": "MenuPanel.ets - 菜单面板实现",
+      "start_line": 268,
+      "end_line": 360
+    },
+    {
+      "language": "ts",
+      "title": "MainPanel.ets - 主面板实现",
+      "start_line": 364,
+      "end_line": 402
+    },
+    {
+      "language": "json5",
+      "title": "main_pages.json 配置",
+      "start_line": 408,
+      "end_line": 413
+    },
+    {
+      "language": "json",
+      "title": "module.json5 配置",
+      "start_line": 419,
+      "end_line": 432
+    }
+  ],
+  "key_topics": [
+    "划词扩展能力",
+    "SelectionExtensionAbility",
+    "SelectionModel",
+    "划词面板",
+    "菜单面板",
+    "主面板",
+    "selectionManager",
+    "划词事件监听",
+    "面板拖动",
+    "DevEco Studio"
+  ],
+  "related_links": [
+    {
+      "title": "SelectionAppSample",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/SelectionService/SelectionAppSample"
+    },
+    {
+      "title": "DevEco Studio",
+      "url": "https://developer.huawei.com/consumer/cn/deveco-studio/"
+    }
+  ],
+  "metadata": {
+    "total_lines": 455,
+    "has_code_samples": true,
+    "has_api_references": true,
+    "language": "zh-cn",
+    "category": "application-dev"
+  }
+}

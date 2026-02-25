@@ -1,0 +1,73 @@
+{
+  "doc_id": "basic-services-kit-overview",
+  "title": "Basic Services Kit简介",
+  "path": "docs/zh-cn/application-dev/basic-services/basic-services-kit-overview.md",
+  "domain": "basic-services",
+  "metadata": {
+    "kit": "Common",
+    "subsystem": "Common",
+    "owner": "@fang-jinxu",
+    "designer": "@lingminghw",
+    "tester": "@RayShih",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "Basic Services Kit（基础服务）作为基础服务套件，为应用开发者提供常用的基础能力。包括剪贴板读写、文件上传下载、文件压缩、文件打印、进程间/线程间通信、设备管理、应用账号管理等能力。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "Basic Services Kit简介",
+      "line": 1,
+      "content": "Basic Services Kit（基础服务）作为基础服务套件，为应用开发者提供常用的基础能力。比如常用的剪贴板读写、文件上传下载、文件压缩、文件打印、进程间/线程间通信、设备管理、应用账号管理等能力都由本Kit提供。"
+    },
+    {
+      "level": 2,
+      "title": "使用场景",
+      "line": 11,
+      "content": "Basic Services Kit为开发者提供了多种基础能力，满足开发者不同场景的开发需求。典型使用场景举例：剪贴板读写（本地复制粘贴、跨设备复制粘贴）、文件上传下载（小文件前台上传下载、大文件后台上传下载）、进程间/线程间通信（进程间通信、线程间通信）。"
+    },
+    {
+      "level": 2,
+      "title": "能力范围",
+      "line": 29,
+      "content": "根据不同使用场景分类，本Kit主要包含如下能力：数据文件处理（剪贴板、压缩、打印、上传下载、划词服务）、进程间/线程间通信（公共事件、Emitter）、设备管理（设备信息、设置数据项、电量信息查询、系统电源管理、RunningLock锁操作、热管理、USB管理）、其他（应用账号管理、公共回调、时间时区）。"
+    },
+    {
+      "level": 2,
+      "title": "与其他kit的关系",
+      "line": 58,
+      "content": "与ArkTS Kit的关系：ArkTS Kit中的多线程并发(Worker和Taskpool)需要使用本Kit中的Emitter进行线程间通信。与Ability Kit的关系：Ability Kit中的进程间通信需要使用本Kit中的公共事件。与Core File Kit的关系：Core File Kit主要提供访问和管理文件的能力，而涉及到文件压缩、文件上传下载、文件打印等场景时需要使用本Kit进行开发。"
+    }
+  ],
+  "capabilities": [
+    "剪贴板",
+    "压缩",
+    "打印",
+    "上传下载",
+    "划词服务",
+    "公共事件",
+    "Emitter",
+    "设备信息",
+    "设置数据项",
+    "电量信息查询",
+    "系统电源管理",
+    "RunningLock锁操作",
+    "热管理",
+    "USB管理",
+    "应用账号管理",
+    "公共回调",
+    "时间时区"
+  ],
+  "related_kits": [
+    "ArkTS Kit",
+    "Ability Kit",
+    "Core File Kit"
+  ],
+  "tags": [
+    "基础服务",
+    "剪贴",
+    "文件",
+    "通信",
+    "设备管理",
+    "账号管理"
+  ]
+}

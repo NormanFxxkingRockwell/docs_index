@@ -1,0 +1,178 @@
+{
+  "doc_id": "account-manage-domain-account-sys",
+  "title": "管理域账号（仅对系统应用开放）",
+  "domain": "basic-services",
+  "subsystem": "Account",
+  "owner": "@steven-q",
+  "designer": "@JiDong-CS1",
+  "tester": "@zhaimengchao",
+  "adviser": "@zengyawen",
+  "summary": "用户可以在系统中添加域账号，后续可以域账号身份登录、使用系统。本文档介绍了如何判断指定域账号是否存在、添加域账号、删除域账号以及查询域账号信息等操作。",
+  "file_path": "docs/zh-cn/application-dev/basic-services/account/manage-domain-account-sys.md",
+  "structure": {
+    "level_0": {
+      "title": "管理域账号（仅对系统应用开放）",
+      "line_start": 1,
+      "line_end": 194,
+      "sections": [
+        {
+          "title": "开发准备",
+          "level": 1,
+          "line_start": 12,
+          "line_end": 34,
+          "sections": []
+        },
+        {
+          "title": "判断指定域账号是否存在",
+          "level": 1,
+          "line_start": 36,
+          "line_end": 66,
+          "sections": []
+        },
+        {
+          "title": "添加域账号",
+          "level": 1,
+          "line_start": 68,
+          "line_end": 103,
+          "sections": []
+        },
+        {
+          "title": "删除域账号",
+          "level": 1,
+          "line_start": 105,
+          "line_end": 150,
+          "sections": []
+        },
+        {
+          "title": "查询域账号信息",
+          "level": 1,
+          "line_start": 153,
+          "line_end": 194,
+          "sections": []
+        }
+      ]
+    }
+  },
+  "api_references": [
+    {
+      "api": "hasAccount",
+      "line": 38,
+      "description": "判断指定域账号是否存在"
+    },
+    {
+      "api": "createOsAccountForDomain",
+      "line": 70,
+      "description": "在设备上创建一个域账号"
+    },
+    {
+      "api": "getOsAccountLocalIdForDomain",
+      "line": 111,
+      "description": "根据域账号信息获取系统账号ID"
+    },
+    {
+      "api": "removeOsAccount",
+      "line": 107,
+      "description": "删除与目标域账号绑定的系统账号"
+    },
+    {
+      "api": "getAccountInfo",
+      "line": 155,
+      "description": "查询域账号信息"
+    }
+  ],
+  "permissions": [
+    "ohos.permission.MANAGE_LOCAL_ACCOUNTS",
+    "ohos.permission.GET_DOMAIN_ACCOUNTS"
+  ],
+  "imports": [
+    {
+      "module": "@kit.BasicServicesKit",
+      "imports": [
+        "osAccount",
+        "BusinessError"
+      ],
+      "line": 23
+    }
+  ],
+  "code_blocks": [
+    {
+      "type": "import",
+      "language": "TypeScript",
+      "line_start": 22,
+      "line_end": 24
+    },
+    {
+      "type": "initialization",
+      "language": "TypeScript",
+      "line_start": 31,
+      "line_end": 33
+    },
+    {
+      "type": "example",
+      "language": "TypeScript",
+      "line_start": 46,
+      "line_end": 51
+    },
+    {
+      "type": "example",
+      "language": "TypeScript",
+      "line_start": 58,
+      "line_end": 65
+    },
+    {
+      "type": "example",
+      "language": "TypeScript",
+      "line_start": 78,
+      "line_end": 83
+    },
+    {
+      "type": "example",
+      "language": "TypeScript",
+      "line_start": 89,
+      "line_end": 103
+    },
+    {
+      "type": "example",
+      "language": "TypeScript",
+      "line_start": 115,
+      "line_end": 128
+    },
+    {
+      "type": "example",
+      "language": "TypeScript",
+      "line_start": 135,
+      "line_end": 150
+    },
+    {
+      "type": "example",
+      "language": "TypeScript",
+      "line_start": 163,
+      "line_end": 168
+    },
+    {
+      "type": "example",
+      "language": "TypeScript",
+      "line_start": 175,
+      "line_end": 192
+    }
+  ],
+  "keywords": [
+    "域账号",
+    "系统应用",
+    "权限申请",
+    "账号管理",
+    "hasAccount",
+    "createOsAccountForDomain",
+    "removeOsAccount",
+    "getOsAccountLocalIdForDomain",
+    "getAccountInfo"
+  ],
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Account",
+    "owner": "@steven-q",
+    "designer": "@JiDong-CS1",
+    "tester": "@zhaimengchao",
+    "adviser": "@zengyawen"
+  }
+}

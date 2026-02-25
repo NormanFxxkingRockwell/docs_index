@@ -1,0 +1,107 @@
+{
+  "doc_id": "usb-usb-guidelines",
+  "title": "USB服务开发指导",
+  "path": "docs/zh-cn/application-dev/basic-services/usb/usb-guidelines.md",
+  "domain": "basic-services",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "USB",
+    "owner": "@hwymlgitcode",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "本文档介绍USB服务开发指导，包括场景介绍、接口说明和开发步骤。Host模式下可以获取已连接的USB设备列表，进行设备打开关闭、权限控制和数据传输等操作。主要功能包括查询USB设备列表、批量数据传输、控制命令传输、权限控制等。开发步骤涵盖获取设备列表、获取设备操作权限、打开设备、数据传输（批量传输和控制传输）以及释放接口和关闭设备。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "USB服务开发指导",
+      "line": 1,
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 10,
+      "content": "Host模式下，可以获取到已经连接的USB设备列表，并根据需要打开和关闭设备、控制设备权限、进行数据传输等。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 15,
+      "content": "USB服务主要提供的功能有：查询USB设备列表、批量数据传输、控制命令传输、权限控制等。USB类开放能力如下，具体请查阅API参考文档。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 41,
+      "content": "USB设备可作为Host设备连接Device设备进行数据传输。开发示例如下：1. 获取设备列表。2. 获取设备操作权限。3. 打开Device设备。4. 数据传输。当前仅支持批量传输和控制传输。5. 释放接口，关闭设备。"
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line": 199,
+      "content": "针对USB管理开发，有以下相关实例可供参考：DeviceManagementCollection：设备管理合集（ArkTS）（API9）"
+    }
+  ],
+  "api_references": [
+    "hasRight",
+    "requestRight",
+    "removeRight",
+    "connectDevice",
+    "getDevices",
+    "setConfiguration",
+    "setInterface",
+    "claimInterface",
+    "bulkTransfer",
+    "closePipe",
+    "releaseInterface",
+    "getFileDescriptor",
+    "getRawDescriptor",
+    "usbControlTransfer"
+  ],
+  "code_examples": [
+    {
+      "type": "ts",
+      "line": 48,
+      "description": "获取设备列表"
+    },
+    {
+      "type": "ts",
+      "line": 108,
+      "description": "获取设备操作权限"
+    },
+    {
+      "type": "ts",
+      "line": 123,
+      "description": "打开Device设备"
+    },
+    {
+      "type": "ts",
+      "line": 138,
+      "description": "批量传输"
+    },
+    {
+      "type": "ts",
+      "line": 171,
+      "description": "控制传输"
+    },
+    {
+      "type": "ts",
+      "line": 194,
+      "description": "释放接口，关闭设备"
+    }
+  ],
+  "tags": [
+    "USB",
+    "Host模式",
+    "设备管理",
+    "数据传输",
+    "权限控制",
+    "批量传输",
+    "控制传输"
+  ],
+  "word_count": 203,
+  "last_updated": "2026-02-25"
+}

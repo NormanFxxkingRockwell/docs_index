@@ -1,0 +1,101 @@
+{
+  "doc_id": "account-manage-domain-plugin-plugin-sys",
+  "title": "管理域账号插件（仅对系统应用开放）",
+  "file_path": "docs/zh-cn/application-dev/basic-services/account/manage-domain-plugin-sys.md",
+  "relative_path": "application-dev/basic-services/account/manage-domain-plugin-sys.md",
+  "domain": "basic-services",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Account",
+    "owner": "@steven-q",
+    "designer": "@JiDong-CS1",
+    "tester": "@zhaimengchao",
+    "adviser": "@zengyawen"
+  },
+  "summary": "本文档介绍了如何通过插件方式定制化域账号管理能力。主要内容包括：申请必要权限（ohos.permission.MANAGE_LOCAL_ACCOUNTS、ohos.permission.GET_DOMAIN_ACCOUNTS）、导入系统账号模块、获取系统账号管理对象、注册和注销域账号插件。文档提供了完整的开发实例，包括定义DomainPlugin接口实现、调用registerPlugin和unregisterPlugin接口的代码示例。",
+  "structure": {
+    "sections": [
+      {
+        "level": 1,
+        "title": "管理域账号插件（仅对系统应用开放）",
+        "line": 1,
+        "content": "OEM厂商可以采用插件方式定制化域账号管理能力，系统提供了域账号插件注册和注销能力。"
+      },
+      {
+        "level": 2,
+        "title": "开发准备",
+        "line": 12,
+        "content": "1. 申请权限，申请流程请参考：[申请应用权限](../../security/AccessToken/determine-application-mode.md#system_basic等级应用申请权限的方式)。\n   - ohos.permission.MANAGE_LOCAL_ACCOUNTS\n   - ohos.permission.GET_DOMAIN_ACCOUNTS\n\n2. 导入系统账号模块。\n\n3. 获取系统账号管理对象。"
+      },
+      {
+        "level": 2,
+        "title": "注册插件",
+        "line": 33,
+        "content": "域插件原型为[DomainPlugin](../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#domainplugin9)，域插件开发者需要继承并实现插件原型中定义的接口。开发者可以使用[registerPlugin](../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#registerplugin9)接口完成插件注册操作。"
+      },
+      {
+        "level": 2,
+        "title": "注销插件",
+        "line": 182,
+        "content": "当插件不再使用时，开发者可以使用[unregisterPlugin](../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#unregisterplugin9)接口注销插件。"
+      }
+    ],
+    "code_blocks": [
+      {
+        "language": "TypeScript",
+        "line": 22,
+        "content": "import { osAccount, AsyncCallback, BusinessError } from '@kit.BasicServicesKit';"
+      },
+      {
+        "language": "ts",
+        "line": 29,
+        "content": "let accountMgr = osAccount.getAccountManager()"
+      },
+      {
+        "language": "TypeScript",
+        "line": 43,
+        "content": "let plugin: osAccount.DomainPlugin = {\n  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,\n    callback: osAccount.IUserAuthCallback) => {\n    console.info('plugin auth domain' + domainAccountInfo.domain);\n    console.info('plugin auth accountName' + domainAccountInfo.accountName);\n    console.info('plugin auth accountId' + domainAccountInfo.accountId);\n\n    let result: osAccount.AuthResult = {\n      token: new Uint8Array([0]),\n      remainTimes: 5,\n      freezingTime: 0\n    };\n    callback.onResult(0, result);\n  },\n  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,\n    callback: osAccount.IUserAuthCallback) => {\n    console.info('plugin authWithPopup domain' + domainAccountInfo.domain);\n    console.info('plugin authWithPopup accountName' + domainAccountInfo.accountName);\n    console.info('plugin authWithPopup accountId' + domainAccountInfo.accountId);\n\n    let result: osAccount.AuthResult = {\n      token: new Uint8Array([0]),\n      remainTimes: 5,\n      freezingTime: 0\n    };\n    callback.onResult(0, result);\n  },\n  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo,\n    token: Uint8Array, callback: osAccount.IUserAuthCallback) => {\n    console.info('plugin authWithToken domain' + domainAccountInfo.domain);\n    console.info('plugin authWithToken accountName' + domainAccountInfo.accountName);\n    console.info('plugin authWithToken accountId' + domainAccountInfo.accountId);\n    let result: osAccount.AuthResult = {\n      token: new Uint8Array([0]),\n      remainTimes: 5,\n      freezingTime: 0\n    };\n    callback.onResult(0, result);\n  },\n  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,\n    callback: AsyncCallback<osAccount.DomainAccountInfo>) => {\n    console.info('plugin getAccountInfo domain');\n    let domainAccountId = Date.now().toString();\n    let code: BusinessError = {\n      code: 0,\n      name: 'mock_name',\n      message: 'mock_message'\n    };\n    let domainStr: string = '';\n    if (options.domain != undefined) {\n      domainStr = options.domain\n    }\n    let accountInfo: osAccount.DomainAccountInfo = {\n      domain: domainStr,\n      accountName: options.accountName,\n      accountId: domainAccountId,\n      isAuthenticated: false\n    };\n    callback(code, accountInfo);\n  },\n  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,\n    callback: AsyncCallback<osAccount.AuthStatusInfo>) => {\n\n    console.info('plugin getAuthStatusInfo domain' + domainAccountInfo.domain);\n    console.info('plugin getAuthStatusInfo accountName' + domainAccountInfo.accountName);\n    console.info('plugin getAuthStatusInfo accountId' + domainAccountInfo.accountId);\n\n    let code: BusinessError = {\n      code: 0,\n      name: 'mock_name',\n      message: 'mock_message'\n    };\n    let statusInfo: osAccount.AuthStatusInfo = {\n      remainTimes: 5,\n      freezingTime: 0\n    };\n    callback(code, statusInfo);\n  },\n  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: number,\n    callback: AsyncCallback<void>) => {\n    console.info('plugin bindAccount domain' + domainAccountInfo.domain);\n    console.info('plugin bindAccount accountName' + domainAccountInfo.accountName);\n    console.info('plugin bindAccount accountId' + domainAccountInfo.accountId);\n    let code: BusinessError = {\n      code: 0,\n      name: 'mock_name',\n      message: 'mock_message'\n    };\n    callback(code);\n  },\n  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {\n    console.info('plugin unbindAccount domain' + domainAccountInfo.domain);\n    console.info('plugin unbindAccount accountName' + domainAccountInfo.accountName);\n    console.info('plugin unbindAccount accountId' + domainAccountInfo.accountId);\n  },\n  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,\n    callback: AsyncCallback<boolean>) => {\n    console.info('plugin isAccountTokenValid domain' + domainAccountInfo.domain);\n    console.info('plugin isAccountTokenValid accountName' + domainAccountInfo.accountName);\n    console.info('plugin isAccountTokenValid accountId' + domainAccountInfo.accountId);\n    let code: BusinessError = {\n      code: 0,\n      name: 'mock_name',\n      message: 'mock_message'\n    };\n    callback(code, true);\n  },\n  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {\n    console.info('plugin getAccessToken domain')\n    let code: BusinessError = {\n      code: 0,\n      name: 'mock_name',\n      message: 'mock_message'\n    };\n    let token: Uint8Array = new Uint8Array([0]);\n    callback(code, token);\n  }\n}"
+      },
+      {
+        "language": "TypeScript",
+        "line": 169,
+        "content": "    try {\n      osAccount.DomainAccountManager.registerPlugin(plugin)\n      console.info('registerPlugin success');\n\t// ···\n    } catch (e) {\n      const err = e as BusinessError;\n      console.error(`registerPlugin err: code is ${err.code}, message is ${err.message}`);\n\t// ···\n    }"
+      },
+      {
+        "language": "TypeScript",
+        "line": 190,
+        "content": "    try {\n      osAccount.DomainAccountManager.unregisterPlugin();\n      console.info('unregisterPlugin success.');\n\t// ···\n    } catch (e) {\n      const err = e as BusinessError;\n      console.error(`unregisterPlugin failed, code is ${err.code}, message is ${err.message}`);\n\t// ···\n    }"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "DomainPlugin",
+        "path": "../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#domainplugin9",
+        "line": 35
+      },
+      {
+        "name": "registerPlugin",
+        "path": "../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#registerplugin9",
+        "line": 35
+      },
+      {
+        "name": "unregisterPlugin",
+        "path": "../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#unregisterplugin9",
+        "line": 184
+      }
+    ],
+    "permissions": [
+      "ohos.permission.MANAGE_LOCAL_ACCOUNTS",
+      "ohos.permission.GET_DOMAIN_ACCOUNTS"
+    ]
+  },
+  "stats": {
+    "total_lines": 202,
+    "total_sections": 4,
+    "total_code_blocks": 5,
+    "total_api_references": 3,
+    "total_permissions": 2
+  },
+  "indexed_at": "2026-02-25T00:00:00.000Z"
+}

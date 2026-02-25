@@ -1,0 +1,149 @@
+{
+  "doc_id": "print-printExtensionAbilityGuide",
+  "metadata": {
+    "title": "打印扩展能力",
+    "kit": "Basic Services Kit",
+    "subsystem": "Print",
+    "owner": "@guoshengbang",
+    "designer": "@gcw_4D6e0BBd",
+    "tester": "@guoshengbang",
+    "adviser": "@fang-jinxu",
+    "api_version": 14,
+    "language": "zh-cn",
+    "domain": "basic-services"
+  },
+  "summary": "打印扩展能力从API version 14开始支持，是对系统打印功能的扩展，允许开发者以软件的方式模拟打印机行为。文档介绍了PrintExtensionAbility的回调方法（onCreate、onDestroy、onStartDiscoverPrinter、onStopDiscoverPrinter、onConnectPrinter、onDisconnectPrinter）以及开发步骤，包括实现打印扩展能力和功能验证。",
+  "structure": {
+    "sections": [
+      {
+        "level": 1,
+        "title": "打印扩展能力",
+        "line_start": 1,
+        "line_end": 99,
+        "type": "root"
+      },
+      {
+        "level": 2,
+        "title": "概述",
+        "line_start": 10,
+        "line_end": 11,
+        "type": "description"
+      },
+      {
+        "level": 2,
+        "title": "回调说明",
+        "line_start": 13,
+        "line_end": 21,
+        "type": "table",
+        "callbacks": [
+          {
+            "name": "onCreate",
+            "description": "初始化打印机能力",
+            "signature": "onCreate(want: Want): void",
+            "reference": "../../reference/apis-basic-services-kit/js-apis-app-ability-PrintExtensionAbility.md#oncreate"
+          },
+          {
+            "name": "onDestroy",
+            "description": "结束打印扩展",
+            "signature": "onDestroy(): void",
+            "reference": "../../reference/apis-basic-services-kit/js-apis-app-ability-PrintExtensionAbility.md#ondestroy"
+          },
+          {
+            "name": "onStartDiscoverPrinter",
+            "description": "开始发现打印机",
+            "signature": "onStartDiscoverPrinter(): void",
+            "reference": "../../reference/apis-basic-services-kit/js-apis-app-ability-PrintExtensionAbility.md#onstartdiscoverprinter"
+          },
+          {
+            "name": "onStopDiscoverPrinter",
+            "description": "停止发现打印机",
+            "signature": "onStopDiscoverPrinter(): void",
+            "reference": "../../reference/apis-basic-services-kit/js-apis-app-ability-PrintExtensionAbility.md#onstopdiscoverprinter"
+          },
+          {
+            "name": "onConnectPrinter",
+            "description": "连接打印机",
+            "signature": "onConnectPrinter(printerId: number): void",
+            "reference": "../../reference/apis-basic-services-kit/js-apis-app-ability-PrintExtensionAbility.md#onconnectprinter"
+          },
+          {
+            "name": "onDisconnectPrinter",
+            "description": "断开与打印机的连接",
+            "signature": "onDisconnectPrinter(printerId: number): void",
+            "reference": "../../reference/apis-basic-services-kit/js-apis-app-ability-PrintExtensionAbility.md#ondisconnectprinter"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "开发步骤",
+        "line_start": 23,
+        "line_end": 99,
+        "type": "tutorial",
+        "subsections": [
+          {
+            "level": 3,
+            "title": "实现打印扩展能力",
+            "line_start": 25,
+            "line_end": 96,
+            "type": "implementation",
+            "steps": [
+              {
+                "step": 1,
+                "description": "新建工程目录",
+                "details": "在工程entry Module对应的ets目录 (./entry/src/main/ets)下，新建目录及ArkTs文件。例如新建一个目录并命名为PrintExtensionAbility，在PrintExtensionAbility目录下，新建一个ArkTs文件并命名为MyPrintExtension.ets，用以实现打印扩展能力接口。"
+              },
+              {
+                "step": 2,
+                "description": "导入模块",
+                "code": "import { PrintExtensionAbility } from '@kit.BasicServicesKit';"
+              },
+              {
+                "step": 3,
+                "description": "实现PrintExtensionAbility提供的接口",
+                "details": "创建打印扩展能力类，继承PrintExtensionAbility，并实现打印扩展功能"
+              },
+              {
+                "step": 4,
+                "description": "注册PrintExtensionAbility",
+                "details": "在工程entry Module目录下的module.json5配置文件中(./entry/src/main/module.json5)注册PrintExtensionAbility并设置如下标签：type标签设置为\"print\"；srcEntry标签设置为当前ExtensionAbility组件所对应的代码路径。"
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "title": "功能验证",
+            "line_start": 98,
+            "line_end": 99,
+            "type": "verification",
+            "description": "确认打印扩展能力PrintExtensionAbility中的回调方法实现是否正确、是否可以成功回调。在成功推送HAP包到设备后，可以在设置-打印机和扫描仪-添加打印机和扫描仪，拉起打印扩展能力，执行相应的动作触发回调时机后，通过查找对应接口实现中的日志(由开发者实现的业务逻辑决定)来判断是否成功回调。"
+          }
+        ]
+      }
+    ]
+  },
+  "content": {
+    "total_lines": 99,
+    "code_blocks": 4,
+    "tables": 1,
+    "has_examples": true,
+    "has_code": true
+  },
+  "keywords": [
+    "PrintExtensionAbility",
+    "打印扩展能力",
+    "onCreate",
+    "onDestroy",
+    "onStartDiscoverPrinter",
+    "onStopDiscoverPrinter",
+    "onConnectPrinter",
+    "onDisconnectPrinter",
+    "API version 14",
+    "Basic Services Kit",
+    "Print"
+  ],
+  "related_apis": [
+    "js-apis-app-ability-PrintExtensionAbility"
+  ],
+  "source_file": "docs/zh-cn/application-dev/basic-services/print/printExtensionAbilityGuide.md"
+}

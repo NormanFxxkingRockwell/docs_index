@@ -1,0 +1,128 @@
+{
+  "doc_id": "usb-usbManager-usbHost-bulkTransfer",
+  "title": "USB批量传输",
+  "path": "docs/zh-cn/application-dev/basic-services/usb/usbManager/usbHost/bulkTransfer.md",
+  "language": "zh-cn",
+  "domain": "basic-services",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "USB",
+    "owner": "@hwymlgitcode",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "本文档介绍USB批量传输的开发指南，包括场景介绍、环境准备、开发指导等内容。批量传输主要应用在传输和接收大量数据同时又没有带宽和间隔时间要求的情况下，例如传输文件、图像等场景，打印机和扫描仪等设备属于这种类型的设备。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line_start": 10,
+      "line_end": 12,
+      "content": "批量传输主要应用在传输和接收大量数据同时又没有带宽和间隔时间要求的情况下，例如传输文件、图像等场景，打印机和扫描仪等设备属于这种类型的设备。"
+    },
+    {
+      "level": 2,
+      "title": "环境准备",
+      "line_start": 14,
+      "line_end": 38,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "环境要求",
+          "line_start": 16,
+          "line_end": 31,
+          "content": "开发工具及配置：DevEco Studio作为驱动开发工具，是进行驱动开发必备条件之一，开发者可以使用该工具进行开发、调试、打包等操作。SDK版本配置：扩展外设管理提供的ArkTs接口，所需SDK版本为API16及以上才可使用。HDC配置：HDC（HarmonyOS Device Connector）是为开发人员提供的用于调试的命令行工具。"
+        },
+        {
+          "level": 3,
+          "title": "搭建环境",
+          "line_start": 33,
+          "line_end": 38,
+          "content": "在PC上安装DevEco Studio，要求版本在4.1及以上。将public-SDK更新到API 16或以上。PC安装HDC工具。用USB线缆将搭载OpenHarmony的设备连接到PC。"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "开发指导",
+      "line_start": 40,
+      "line_end": 278,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "接口说明",
+          "line_start": 42,
+          "line_end": 47,
+          "content": "bulkTransfer(pipe: USBDevicePipe, endpoint: USBEndpoint, buffer: Uint8Array, timeout ?: number): Promise<number> - 批量传输。"
+        },
+        {
+          "level": 3,
+          "title": "开发步骤",
+          "line_start": 49,
+          "line_end": 278,
+          "content": "主机（Host）连接设备（Device），通过bulkTransfer接口进行数据传输。步骤包括：1. 导入模块 2. 获取设备列表 3. 获取设备操作权限 4. 打开设备 5. 数据传输 6. 释放接口，关闭设备。"
+        }
+      ]
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "TypeScript",
+      "line_start": 62,
+      "line_end": 66,
+      "description": "导入usbManager模块"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 78,
+      "line_end": 139,
+      "description": "获取设备列表"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 147,
+      "line_end": 162,
+      "description": "获取设备操作权限"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 170,
+      "line_end": 198,
+      "description": "打开设备"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 212,
+      "line_end": 256,
+      "description": "数据传输"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 264,
+      "line_end": 277,
+      "description": "释放接口，关闭设备"
+    }
+  ],
+  "keywords": [
+    "USB",
+    "批量传输",
+    "bulkTransfer",
+    "USBDevicePipe",
+    "USBEndpoint",
+    "数据传输",
+    "DevEco Studio",
+    "API16",
+    "HDC"
+  ],
+  "related_apis": [
+    "usbManager.bulkTransfer",
+    "usbManager.getDevices",
+    "usbManager.requestRight",
+    "usbManager.connectDevice",
+    "usbManager.claimInterface",
+    "usbManager.releaseInterface",
+    "usbManager.closePipe"
+  ],
+  "total_lines": 278
+}

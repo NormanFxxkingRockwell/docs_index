@@ -1,0 +1,101 @@
+{
+  "doc_id": "account-account-overview-sys",
+  "domain": "basic-services",
+  "file_path": "docs/zh-cn/application-dev/basic-services/account/account-overview-sys.md",
+  "metadata": {
+    "title": "账号管理概述（仅对系统应用开放）",
+    "kit": "Basic Services Kit",
+    "subsystem": "Account",
+    "owner": "@steven-q",
+    "designer": "@JiDong-CS1",
+    "tester": "@zhaimengchao",
+    "adviser": "@zengyawen"
+  },
+  "summary": "本文档介绍了账号管理模块的基本概念和架构。系统支持在一台设备上创建多个本地系统账号，允许多个用户使用同一台设备，不同用户数据按系统账号进行隔离。账号模块管理四类账号：系统账号、域账号、分布式账号和应用账号。文档详细说明了各类账号的定义、相互关系以及生命周期管理。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "账号管理概述（仅对系统应用开放）",
+      "line": 1
+    },
+    {
+      "level": 2,
+      "title": "简介",
+      "line": 10,
+      "content": "系统支持在一台设备上创建多个本地系统账号，以允许多个用户使用同一台设备。多个用户的数据按系统账号进行隔离，以保证不同用户数据的安全性。"
+    },
+    {
+      "level": 2,
+      "title": "基本概念",
+      "line": 14,
+      "content": "账号是用户身份的标识，不同场景下用户身份存在差异，同一用户往往存在多种账号。按照使用场景，账号模块负责管理以下类别的账号：系统账号、域账号、分布式账号、应用账号。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "系统账号",
+          "line": 18,
+          "content": "表示用户在端侧设备上的身份标识，该标识在每个端侧设备上唯一。"
+        },
+        {
+          "level": 3,
+          "title": "域账号",
+          "line": 20,
+          "content": "表示用户在特定域内（比如公司、学校等）的身份标识，该标识在特定域内唯一。"
+        },
+        {
+          "level": 3,
+          "title": "分布式账号",
+          "line": 22,
+          "content": "表示用户在分布式网络中的身份标识，由特定机构/组织发放、认证和维护，可用于设备之间的认证、组网和服务调用。"
+        },
+        {
+          "level": 3,
+          "title": "应用账号",
+          "line": 24,
+          "content": "表示应用自定义的用户身份标识，该标识在应用内唯一，由应用管理其生命周期。"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "各类账号间的关系",
+      "line": 26,
+      "content": "账号管理模块是以系统账号为核心，其他类型账号与系统账号存在关联关系。域账号与系统账号存在一对一关联关系；分布式账号与系统账号存在一对多关联关系；应用账号与系统账号存在多对多关联关系。删除系统账号后，与之关联的域账号、分布式账号和应用账号也随之删除。",
+      "image": "figures/account_er.png"
+    },
+    {
+      "level": 2,
+      "title": "相关实例",
+      "line": 39,
+      "content": "针对账号管理开发，有以下相关实例可供参考：应用账号管理、分布式账号管理（仅支持系统应用）。",
+      "links": [
+        {
+          "title": "应用账号管理",
+          "url": "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/Security/AppAccountManager"
+        },
+        {
+          "title": "分布式账号管理（仅支持系统应用）",
+          "url": "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/SystemFeature/DistributedAppDev/DistributedAccount"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "账号管理",
+    "系统账号",
+    "域账号",
+    "分布式账号",
+    "应用账号",
+    "用户身份",
+    "数据隔离",
+    "Basic Services Kit",
+    "Account"
+  ],
+  "statistics": {
+    "total_lines": 45,
+    "total_sections": 5,
+    "total_subsections": 4,
+    "total_images": 1,
+    "total_links": 2
+  }
+}

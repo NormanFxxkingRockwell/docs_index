@@ -1,0 +1,113 @@
+{
+  "doc_id": "powermgr-runningLock-runningLock-dev",
+  "title": "阻止系统闲时进入睡眠开发指南",
+  "path": "docs/zh-cn/application-dev/basic-services/powermgr/runningLock/runningLock-dev.md",
+  "domain": "basic-services",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "PowerManager",
+    "owner": "@zhang-yinglie; @volcano_wang",
+    "designer": "@wangyantian0",
+    "tester": "@alien0208",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "本文档介绍了如何使用RunningLockType.BACKGROUND_USER_IDLE运行锁来阻止系统在用户闲时时自动进入睡眠状态。文档详细说明了环境准备要求（DevEco Studio 4.1+、API version 23+、HDC工具）、接口使用约束（PC设备无权限管控，非PC设备需系统应用权限）、以及完整的开发步骤，包括权限申请、模块导入、公共事件监听、运行锁创建和释放等。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "阻止系统闲时进入睡眠开发指南",
+      "line": 1
+    },
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 10
+    },
+    {
+      "level": 2,
+      "title": "环境准备",
+      "line": 14
+    },
+    {
+      "level": 3,
+      "title": "环境要求",
+      "line": 16
+    },
+    {
+      "level": 3,
+      "title": "搭建环境",
+      "line": 31
+    },
+    {
+      "level": 2,
+      "title": "开发指导",
+      "line": 38
+    },
+    {
+      "level": 3,
+      "title": "接口说明",
+      "line": 40
+    },
+    {
+      "level": 3,
+      "title": "开发步骤",
+      "line": 60
+    }
+  ],
+  "keywords": [
+    "RunningLock",
+    "BACKGROUND_USER_IDLE",
+    "运行锁",
+    "系统睡眠",
+    "PowerManager",
+    "公共事件",
+    "DevEco Studio",
+    "API version 23",
+    "强制睡眠",
+    "自动睡眠"
+  ],
+  "code_blocks": [
+    {
+      "type": "TypeScript",
+      "description": "导入runningLock、commonEventManager模块",
+      "line": 68
+    },
+    {
+      "type": "TypeScript",
+      "description": "公共事件工具类CommonEventHelper",
+      "line": 78
+    },
+    {
+      "type": "TypeScript",
+      "description": "运行锁工具类RunningLockUtil",
+      "line": 132
+    },
+    {
+      "type": "TypeScript",
+      "description": "闲时任务类UserIdleTask",
+      "line": 196
+    }
+  ],
+  "api_references": [
+    "runningLock.create",
+    "runningLock.isSupported",
+    "runningLock.RunningLockType.BACKGROUND_USER_IDLE",
+    "commonEventManager.createSubscriber",
+    "commonEventManager.subscribe",
+    "commonEventManager.unsubscribe",
+    "COMMON_EVENT_ENTER_FORCE_SLEEP",
+    "COMMON_EVENT_EXIT_FORCE_SLEEP"
+  ],
+  "permissions": [
+    "ohos.permission.RUNNING_LOCK"
+  ],
+  "requirements": {
+    "dev_eco_studio_version": "4.1+",
+    "sdk_version": "API version 23+",
+    "tools": [
+      "DevEco Studio",
+      "HDC"
+    ]
+  },
+  "total_lines": 248
+}

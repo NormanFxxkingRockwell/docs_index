@@ -1,0 +1,69 @@
+{
+  "doc_id": "selectionInput-selection-services-intro",
+  "domain": "basic-services",
+  "file_path": "docs/zh-cn/application-dev/basic-services/selectionInput/selection-services-intro.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "SelectionInput",
+    "owner": "@no86",
+    "designer": "@mmwwbb",
+    "tester": "@dong-dongzhen",
+    "adviser": "@fang-jinxu"
+  },
+  "title": "划词服务概述",
+  "summary": "从API version 24开始，新增划词服务，该服务具有全局获取用户选中文本的能力。开发者可调用该服务提供的接口，实现划词弹窗功能。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "划词服务概述",
+      "line_number": 1,
+      "content": "从API version 24开始，新增划词服务，该服务具有全局获取用户选中文本的能力。开发者可调用该服务提供的接口，实现划词弹窗功能。"
+    },
+    {
+      "level": 2,
+      "title": "框架原理",
+      "line_number": 12,
+      "content": "划词服务的业务流程依赖于划词应用、被划词应用、系统设置应用、系统服务管理、多模输入以及剪贴板服务等模块的协同工作，这些模块的介绍及相关业务内容如下所述："
+    },
+    {
+      "level": 2,
+      "title": "能力范围",
+      "line_number": 32,
+      "content": "- 选词方式：仅支持鼠标及触控板左键按下滑动、左键双击、左键三击三种划词方式，不支持CTRL+A等键盘选中及触屏选中方式。\n- 触发方式：支持选中文本后直接触发划词面板、选中文本后按下ctrl触发划词面板两种方式，可在设置—>系统—>智慧划词界面切换。\n- 面板管理：支持创建和管理菜单面板与主面板，提供面板的创建、移动、隐藏、销毁等接口，并支持自定义面板内容。\n- 应用管理：支持多个应用实现划词扩展能力，但划词服务同一时间只可与一个划词应用进行通信，可以在设置—>系统—>智慧划词界面切换划词应用。"
+    },
+    {
+      "level": 2,
+      "title": "约束限制",
+      "line" : 50,
+      "content": "- 支持外接键盘和鼠标的2in1设备。\n- 支持获取文本类型的划词内容，最大长度限制为6000个字节。\n- 支持在扩展屏上使用，不支持跨设备使用。\n- 对于不支持复制或只能在当前应用内复制粘贴的被划词应用，划词功能会失效。因此，建议开发者在开发划词应用时配置相应的黑名单或白名单。"
+    }
+  ],
+  "keywords": [
+    "划词服务",
+    "选中文本",
+    "划词弹窗",
+    "框架原理",
+    "能力范围",
+    "约束限制",
+    "划词应用",
+    "被划词应用",
+    "多模输入",
+    "剪贴板服务"
+  ],
+  "api_references": [
+    "selectionCompleted",
+    "getSelectionContent",
+    "createPanel",
+    "show"
+  ],
+  "related_links": [
+    "../../reference/apis-basic-services-kit/js-apis-selectionInput-selectionManager.md",
+    "./selection-services-application-guide.md",
+    "https://gitcode.com/openharmony/systemabilitymgr_samgr",
+    "https://gitcode.com/openharmony/multimodalinput_input",
+    "https://gitcode.com/openharmony/distributeddatamgr_pasteboard"
+  ],
+  "total_lines": 59,
+  "language": "zh-cn",
+  "last_updated": "2026-02-25"
+}

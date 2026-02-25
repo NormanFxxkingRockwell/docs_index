@@ -1,0 +1,80 @@
+{
+  "doc_id": "common-event-common-event-unsubscription",
+  "title": "取消动态订阅公共事件",
+  "file_path": "docs/zh-cn/application-dev/basic-services/common-event/common-event-unsubscription.md",
+  "domain": "basic-services",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Notification",
+    "owner": "@peixu",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "本文档介绍了如何取消动态订阅公共事件。动态订阅者完成业务需求后，应主动取消订阅，通过调用unsubscribe()方法取消订阅事件。文档包含场景介绍、接口说明和开发步骤，提供了完整的TypeScript代码示例。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "取消动态订阅公共事件",
+      "line_start": 1,
+      "line_end": 56
+    },
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line_start": 10,
+      "line_end": 12,
+      "content": "动态订阅者完成业务需求后，应主动取消订阅。通过调用unsubscribe()方法，取消订阅事件。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line_start": 15,
+      "line_end": 20,
+      "content": "接口名：unsubscribe，接口描述：取消订阅公共事件。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line_start": 22,
+      "line_end": 56,
+      "steps": [
+        "导入模块",
+        "根据动态订阅公共事件章节的步骤来订阅某个事件",
+        "调用CommonEvent中的unsubscribe()方法取消订阅某事件"
+      ]
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "TypeScript",
+      "line_start": 28,
+      "line_end": 34,
+      "content": "import { BusinessError, commonEventManager } from '@kit.BasicServicesKit';\nimport { hilog } from '@kit.PerformanceAnalysisKit';\n\nconst TAG: string = 'ProcessModel';\nconst DOMAIN_NUMBER: number = 0xFF00;"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 42,
+      "line_end": 55,
+      "content": "// subscriber为订阅事件时创建的订阅者对象\nif (subscriberCustom !== null) {\n  commonEventManager.unsubscribe(subscriberCustom, (err: BusinessError) => {\n    if (err) {\n      hilog.error(DOMAIN_NUMBER, TAG,\n        `Failed to unsubscribe. code is ${err.code}, message is ${err.message}`);\n    } else {\n      hilog.info(DOMAIN_NUMBER, TAG, `Succeeded in unsubscribing.`);\n      subscriberCustom = null;\n    }\n  })\n}"
+    }
+  ],
+  "api_references": [
+    {
+      "api": "unsubscribe",
+      "url": "../../reference/apis-basic-services-kit/js-apis-commonEventManager.md#commoneventmanagerunsubscribe"
+    }
+  ],
+  "related_docs": [
+    "common-event-subscription.md"
+  ],
+  "keywords": [
+    "取消订阅",
+    "公共事件",
+    "unsubscribe",
+    "动态订阅",
+    "Basic Services Kit",
+    "Notification"
+  ],
+  "line_count": 56
+}

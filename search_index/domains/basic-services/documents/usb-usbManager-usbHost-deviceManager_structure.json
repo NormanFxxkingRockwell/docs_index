@@ -1,0 +1,113 @@
+{
+  "doc_id": "usb-usbManager-usbHost-deviceManager",
+  "title": "USB设备管理",
+  "domain": "basic-services",
+  "language": "zh-cn",
+  "path": "docs/zh-cn/application-dev/basic-services/usb/usbManager/usbHost/deviceManager.md",
+  "summary": "本文档介绍USB设备管理功能，包括通过usbManager获取USB设备基本信息、权限控制、设备配置和数据传输。主要功能包括查询USB设备列表、USB设备权限控制、设置USB设备配置等。提供了完整的开发步骤示例，涵盖导入模块、获取设备列表、获取设备操作权限、打开Device设备、释放接口和关闭设备等操作。",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "USB",
+    "owner": "@hwymlgitcode",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "sections": [
+    {
+      "level": 1,
+      "title": "USB设备管理",
+      "line": 1
+    },
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 10
+    },
+    {
+      "level": 2,
+      "title": "环境准备",
+      "line": 14
+    },
+    {
+      "level": 3,
+      "title": "环境要求",
+      "line": 16
+    },
+    {
+      "level": 3,
+      "title": "搭建环境",
+      "line": 32
+    },
+    {
+      "level": 2,
+      "title": "开发指导",
+      "line": 39
+    },
+    {
+      "level": 3,
+      "title": "接口说明",
+      "line": 41
+    },
+    {
+      "level": 3,
+      "title": "开发步骤",
+      "line": 64
+    },
+    {
+      "level": 3,
+      "title": "相关实例",
+      "line": 228
+    }
+  ],
+  "api_references": [
+    "hasRight",
+    "requestRight",
+    "removeRight",
+    "connectDevice",
+    "getDevices",
+    "setConfiguration",
+    "setInterface",
+    "claimInterface",
+    "closePipe",
+    "releaseInterface",
+    "getFileDescriptor",
+    "getRawDescriptor"
+  ],
+  "keywords": [
+    "USB",
+    "usbManager",
+    "设备管理",
+    "权限控制",
+    "设备配置",
+    "数据传输",
+    "USBDevice",
+    "USBDevicePipe",
+    "USBInterface",
+    "USBConfiguration"
+  ],
+  "sdk_requirements": {
+    "min_api_level": 16
+  },
+  "tools": [
+    "DevEco Studio",
+    "HDC"
+  ],
+  "sample_code": [
+    "导入usbManager模块",
+    "获取设备列表",
+    "获取设备操作权限",
+    "打开Device设备",
+    "释放接口，关闭设备"
+  ],
+  "references": [
+    {
+      "title": "API参考文档",
+      "url": "../../../../reference/apis-basic-services-kit/js-apis-usbManager.md"
+    },
+    {
+      "title": "DeviceManagementCollection：设备管理合集（ArkTS）（API9）",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/DeviceManagement/DeviceManagementCollection"
+    }
+  ]
+}

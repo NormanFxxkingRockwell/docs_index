@@ -1,0 +1,44 @@
+{
+  "doc_id": "usb-usb-overview",
+  "title": "USB服务开发概述",
+  "path": "docs/zh-cn/application-dev/basic-services/usb/usb-overview.md",
+  "domain": "basic-services",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "USB",
+    "owner": "@hwymlgitcode",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_M_Machine_cc"
+  },
+  "summary": "USB服务是应用访问底层的一种设备抽象概念。开发者根据提供的USB API，可以获取设备列表、控制设备访问权限以及与连接的设备进行数据传输、控制命令传输等。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "基本概念",
+      "content": "USB服务是应用访问底层的一种设备抽象概念。开发者根据提供的USB API，可以获取设备列表、控制设备访问权限以及与连接的设备进行数据传输、控制命令传输等。",
+      "line_start": 10,
+      "line_end": 12
+    },
+    {
+      "level": 2,
+      "title": "运作机制",
+      "content": "USB服务系统包含USB API、USB Service、USB HAL。\n\n- USB API：提供USB的基础API，主要包含查询USB设备列表、批量数据传输、控制命令传输、权限控制等。\n\n- USB Service：主要实现HAL层数据的接收、解析、分发以及对设备的管理等。\n\n- USB HAL层：提供给用户态可直接调用的驱动能力接口。",
+      "line_start": 15,
+      "line_end": 28,
+      "image": "figures/zh-cn_image_0000001237821727.png"
+    }
+  ],
+  "keywords": [
+    "USB",
+    "USB API",
+    "USB Service",
+    "USB HAL",
+    "设备抽象",
+    "数据传输",
+    "控制命令",
+    "权限控制"
+  ],
+  "total_lines": 28,
+  "created_at": "2026-02-25"
+}

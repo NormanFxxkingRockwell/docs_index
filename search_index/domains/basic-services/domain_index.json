@@ -1,341 +1,411 @@
 {
   "domain": "basic-services",
-  "domain_summary": "Basic Services Kit（基础服务）提供常用的基础能力，包括账号管理、公共事件、剪贴板、USB服务、压缩解压、上传下载、划词服务、电源管理、打印、升级服务等模块。",
+  "domain_summary": "Basic Services Kit提供OpenHarmony应用开发的基础服务能力，包括账号管理、进程线程通信、剪贴板、文件压缩、打印、USB管理、上传下载、划词服务、电源管理和升级服务等功能。支持系统账号、域账号、分布式账号和应用账号管理；提供公共事件订阅发布机制和Emitter线程间通信；支持剪贴板复制粘贴和权限管控；提供文件压缩解压和打印能力；支持USB Host和串口通信；提供文件上传下载和升级服务；支持划词扩展能力和电源运行锁管理。",
   "core_concepts": [
     "账号管理",
     "公共事件",
+    "压缩",
     "剪贴板",
-    "USB服务",
-    "压缩解压",
-    "上传下载",
-    "划词服务",
     "电源管理",
     "打印",
-    "升级服务"
+    "上传下载",
+    "划词服务",
+    "升级服务",
+    "USB"
   ],
-  "document_count": 46,
+  "document_count": 57,
   "documents": [
     {
-      "doc_id": "account_overview_sys",
-      "title": "账号管理概述（仅对系统应用开放）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\account\\account-overview-sys.md",
-      "summary": "账号管理概述（仅对系统应用开放）, contains 4 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "app_file_upload_download",
-      "title": "应用文件上传下载",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\request\\app-file-upload-download.md",
-      "summary": "应用文件上传下载, contains 6 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "auth_domain_account_sys",
-      "title": "认证域账号（仅对系统应用开放）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\account\\auth-domain-account-sys.md",
-      "summary": "认证域账号（仅对系统应用开放）, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "basic_services_kit_overview",
-      "title": "Basic Services Kit简介",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\basic-services-kit-overview.md",
-      "summary": "Basic Services Kit简介, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "bulkTransfer",
-      "title": "USB批量传输",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbManager\\usbHost\\bulkTransfer.md",
-      "summary": "USB批量传输, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "common_event_overview",
-      "title": "公共事件简介",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\common-event-overview.md",
-      "summary": "公共事件简介, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "common_event_publish",
-      "title": "发布公共事件",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\common-event-publish.md",
-      "summary": "发布公共事件, contains 4 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "common_event_remove_sticky_sys",
-      "title": "移除粘性公共事件（仅对系统应用开放）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\common-event-remove-sticky-sys.md",
-      "summary": "移除粘性公共事件（仅对系统应用开放）, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "common_event_static_subscription_sys",
-      "title": "静态订阅公共事件（仅对系统应用开放）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\common-event-static-subscription-sys.md",
-      "summary": "静态订阅公共事件（仅对系统应用开放）, contains 4 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "common_event_subscription",
-      "title": "动态订阅公共事件",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\common-event-subscription.md",
-      "summary": "动态订阅公共事件, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "common_event_unsubscription",
-      "title": "取消动态订阅公共事件",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\common-event-unsubscription.md",
-      "summary": "取消动态订阅公共事件, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "controlTransfer",
-      "title": "USB控制传输",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbManager\\usbHost\\controlTransfer.md",
-      "summary": "USB控制传输, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "control_os_account_by_constraints_sys",
-      "title": "使用约束管控系统账号（仅对系统应用开放）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\account\\control-os-account-by-constraints-sys.md",
-      "summary": "使用约束管控系统账号（仅对系统应用开放）, contains 4 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "deflate_and_inflate",
-      "title": "压缩与解压",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\compress\\deflate-and-inflate.md",
-      "summary": "压缩与解压, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "deviceManager",
-      "title": "USB设备管理",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbManager\\usbHost\\deviceManager.md",
-      "summary": "USB设备管理, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "faqs_usb",
-      "title": "常见问题",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\usb\\faqs-usb.md",
-      "summary": "常见问题, contains 4 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "get_pastedata_permission_guidelines",
-      "title": "申请访问剪贴板权限",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\pasteboard\\get-pastedata-permission-guidelines.md",
-      "summary": "申请访问剪贴板权限, contains 4 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "interruptTransfer",
-      "title": "USB中断传输",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbManager\\usbHost\\interruptTransfer.md",
-      "summary": "USB中断传输, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "isochronousTransfer",
-      "title": "USB实时传输",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbManager\\usbHost\\isochronousTransfer.md",
-      "summary": "USB实时传输, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "itc_with_emitter",
-      "title": "使用Emitter进行线程间通信",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\itc-with-emitter.md",
-      "summary": "使用Emitter进行线程间通信, contains 4 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "manage_application_account",
-      "title": "管理应用账号",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\account\\manage-application-account.md",
-      "summary": "管理应用账号, contains 7 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "manage_distributed_account_sys",
-      "title": "管理分布式账号（仅对系统应用开放）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\account\\manage-distributed-account-sys.md",
-      "summary": "管理分布式账号（仅对系统应用开放）, contains 5 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "manage_domain_account_sys",
-      "title": "管理域账号（仅对系统应用开放）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\account\\manage-domain-account-sys.md",
-      "summary": "管理域账号（仅对系统应用开放）, contains 5 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "manage_domain_plugin_sys",
-      "title": "管理域账号插件（仅对系统应用开放）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\account\\manage-domain-plugin-sys.md",
-      "summary": "管理域账号插件（仅对系统应用开放）, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "manage_os_account_credential_sys",
-      "title": "管理系统账号凭据（仅对系统应用开放）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\account\\manage-os-account-credential-sys.md",
-      "summary": "管理系统账号凭据（仅对系统应用开放）, contains 14 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "manage_os_account_sys",
-      "title": "管理系统账号（仅对系统应用开放）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\account\\manage-os-account-sys.md",
-      "summary": "管理系统账号（仅对系统应用开放）, contains 8 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "native_common_event_publish",
-      "title": "发布公共事件（C/C++）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\native-common-event-publish.md",
-      "summary": "发布公共事件（C/C++）, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "native_common_event_subscription",
-      "title": "订阅公共事件（C/C++）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\native-common-event-subscription.md",
-      "summary": "订阅公共事件（C/C++）, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "native_common_event_unsubscription",
-      "title": "取消订阅公共事件（C/C++）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\native-common-event-unsubscription.md",
-      "summary": "取消订阅公共事件（C/C++）, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "native_print_file",
-      "title": "文件打印（C/C++）",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\print\\native-print-file.md",
-      "summary": "文件打印（C/C++）, contains 1 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "native_use_pasteboard",
-      "title": "使用剪贴板进行复制粘贴 (C/C++)",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\pasteboard\\native-use-pasteboard.md",
-      "summary": "使用剪贴板进行复制粘贴 (C/C++), contains 5 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "pasteboard_time_lapse_copy_and_paste",
-      "title": "使用剪贴板进行延迟复制粘贴",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\pasteboard\\pasteboard-time-lapse-copy-and-paste.md",
-      "summary": "使用剪贴板进行延迟复制粘贴, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "printExtensionAbilityGuide",
-      "title": "打印扩展能力",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\print\\printExtensionAbilityGuide.md",
-      "summary": "打印扩展能力, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "runningLock_dev",
-      "title": "阻止系统闲时进入睡眠开发指南",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\powermgr\\runningLock\\runningLock-dev.md",
-      "summary": "阻止系统闲时进入睡眠开发指南, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "sample_server_guidelines",
-      "title": "示例服务器开发指导",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\update\\sample-server-guidelines.md",
-      "summary": "示例服务器开发指导, contains 1 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "sample_server_overview",
-      "title": "示例服务器开发概述",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\update\\sample-server-overview.md",
-      "summary": "示例服务器开发概述, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "selection_services_application_guide",
-      "title": "实现一个划词扩展能力",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\selectionInput\\selection-services-application-guide.md",
-      "summary": "实现一个划词扩展能力, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "selection_services_intro",
-      "title": "划词服务概述",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\selectionInput\\selection-services-intro.md",
-      "summary": "划词服务概述, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "usbHost_overview",
-      "title": "USB服务开发概述",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbManager\\usbHost-overview.md",
-      "summary": "USB服务开发概述, contains 2 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "usbSerial_communication",
-      "title": "USB串口通信管理",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbSerial\\usbSerial-communication.md",
-      "summary": "USB串口通信管理, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "usbSerial_configuration",
-      "title": "USB串口配置管理",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbSerial\\usbSerial-configuration.md",
-      "summary": "USB串口配置管理, contains 3 sections",
-      "key_topics": []
-    },
-    {
-      "doc_id": "usbSerial_overview",
+      "doc_id": "usb-usbSerial-usbSerial-overview",
       "title": "USB串口通信服务开发概述",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbSerial\\usbSerial-overview.md",
-      "summary": "USB串口通信服务开发概述, contains 2 sections",
-      "key_topics": []
+      "path": "docs/zh-cn/application-dev/basic-services/usb/usbSerial/overview.md",
+      "summary": "USB串口通信服务主要提供USB Host设备转串口协议通信的功能，它提供获取遵循USB Host转串口标准协议的已连接的端口列表，同时提供打开端口、关闭端口、设置参数、获取参数、读取数据、写入数据和设备权限管理这些基本功能。",
+      "key_topics": ["USB串口", "串口通信", "USB Host", "串口协议", "端口列表", "设备权限"]
     },
     {
-      "doc_id": "usb_glossary",
-      "title": "USB服务开发术语",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usb-glossary.md",
-      "summary": "USB服务开发术语, contains 9 sections",
-      "key_topics": []
+      "doc_id": "usb-usbSerial-usbSerial-configuration",
+      "title": "USB串口配置管理",
+      "path": "docs/zh-cn/application-dev/basic-services/usb/usbSerial/usbSerial-configuration.md",
+      "summary": "USB串口配置管理中，波特率、数据位、校验位和停止位是串口通信协议的核心参数，它们共同定义了数据传输的格式和规则。通过合理配置这些参数，可以显著提升串口通信的可靠性和效率。",
+      "key_topics": ["USB串口", "配置管理", "波特率", "数据位", "校验位", "停止位"]
     },
     {
-      "doc_id": "usb_guidelines",
-      "title": "USB服务开发指导",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usb-guidelines.md",
-      "summary": "USB服务开发指导, contains 4 sections",
-      "key_topics": []
+      "doc_id": "usb-usbSerial-usbSerial-communication",
+      "title": "USB串口通信管理",
+      "path": "docs/zh-cn/application-dev/basic-services/usb/usbSerial/usbSerial-communication.md",
+      "summary": "USB串口通信服务通过Host设备的USB接口连接串口设备进行串行数据传输，实现设备间的高效、稳定数据传输与协同控制。主要应用场景包括工业自动化与远程监控、物联网设备互联、医疗设备管理等。",
+      "key_topics": ["USB串口", "通信管理", "数据传输", "工业自动化", "物联网"]
     },
     {
-      "doc_id": "usb_overview",
+      "doc_id": "usb-usbManager-usbHost-overview",
       "title": "USB服务开发概述",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usb-overview.md",
-      "summary": "USB服务开发概述, contains 2 sections",
-      "key_topics": []
+      "path": "docs/zh-cn/application-dev/basic-services/usb/usbManager/usbHost-overview.md",
+      "summary": "USB服务是应用访问底层的一种设备抽象概念，分为主机和设备两种模式。在Host模式下，开发者可以通过USB API获取设备列表、控制设备访问权限、进行数据传输和控制命令传输。支持同步和异步传输模式，包括中断传输、实时传输、批量传输等类型。",
+      "key_topics": ["USB", "Host模式", "设备管理", "数据传输", "控制命令"]
     },
     {
-      "doc_id": "use_pasteboard_to_copy_and_paste",
+      "doc_id": "usb-usbManager-usbHost-isochronousTransfer",
+      "title": "USB实时传输",
+      "path": "docs/zh-cn/application-dev/basic-services/usb/usbManager/usbHost/isochronousTransfer.md",
+      "summary": "本文档介绍USB实时传输（Isochronous Transfer）的开发方法。实时传输是通过USB协议在固定时间窗口内完成数据传输，确保数据流的时序稳定性和低延迟，但允许少量数据丢失的传输模式。适用于USB耳机、USB音响、视频会议设备等对连续性要求高、容错性强的场景。",
+      "key_topics": ["USB", "实时传输", "Isochronous Transfer", "低延迟", "USB耳机", "USB音响"]
+    },
+    {
+      "doc_id": "usb-usbManager-usbHost-interruptTransfer",
+      "title": "USB中断传输",
+      "path": "docs/zh-cn/application-dev/basic-services/usb/usbManager/usbHost/interruptTransfer.md",
+      "summary": "USB中断传输主要用于主机接收设备发送的数据包，适用于少量、分散、不可预测的数据传输，如鼠标、键盘等设备。本文档介绍了中断传输的环境准备、开发步骤和调测验证方法，包括设备权限申请、端点获取、接口注册、数据传输和资源释放等完整流程。",
+      "key_topics": ["USB", "中断传输", "鼠标", "键盘", "数据传输"]
+    },
+    {
+      "doc_id": "usb-usbManager-usbHost-deviceManager",
+      "title": "USB设备管理",
+      "path": "docs/zh-cn/application-dev/basic-services/usb/usbManager/usbHost/deviceManager.md",
+      "summary": "本文档介绍USB设备管理功能，包括通过usbManager获取USB设备基本信息、权限控制、设备配置和数据传输。主要功能包括查询USB设备列表、USB设备权限控制、设置USB设备配置等。提供了完整的开发步骤示例，涵盖导入模块、获取设备列表、获取设备操作权限、打开Device设备、释放接口和关闭设备等操作。",
+      "key_topics": ["USB", "设备管理", "权限控制", "设备配置", "数据传输"]
+    },
+    {
+      "doc_id": "usb-usbManager-usbHost-controlTransfer",
+      "title": "USB控制传输",
+      "path": "docs/zh-cn/application-dev/basic-services/usb/usbManager/usbHost/controlTransfer.md",
+      "summary": "本文档介绍USB控制传输的开发流程，包括场景介绍、环境准备和开发指导。控制传输主要用于主机和设备进行设备状态的获取和设置，进行设备属性状态的控制。文档详细说明了如何使用usbControlTransfer接口进行数据传输，包括获取设备列表、申请操作权限、打开设备、数据传输和关闭设备的完整步骤。",
+      "key_topics": ["USB", "控制传输", "设备状态", "属性控制"]
+    },
+    {
+      "doc_id": "usb-usbManager-usbHost-bulkTransfer",
+      "title": "USB批量传输",
+      "path": "docs/zh-cn/application-dev/basic-services/usb/usbManager/usbHost/bulkTransfer.md",
+      "summary": "本文档介绍USB批量传输的开发指南，包括场景介绍、环境准备、开发指导等内容。批量传输主要应用在传输和接收大量数据同时又没有带宽和间隔时间要求的情况下，例如传输文件、图像等场景，打印机和扫描仪等设备属于这种类型的设备。",
+      "key_topics": ["USB", "批量传输", "文件传输", "打印机", "扫描仪"]
+    },
+    {
+      "doc_id": "usb-usb-guidelines",
+      "title": "USB服务开发指导",
+      "path": "docs/zh-cn/application-dev/basic-services/usb/usb-guidelines.md",
+      "summary": "本文档介绍USB服务开发指导，包括场景介绍、接口说明和开发步骤。Host模式下可以获取已连接的USB设备列表，进行设备打开关闭、权限控制和数据传输等操作。主要功能包括查询USB设备列表、批量数据传输、控制命令传输、权限控制等。",
+      "key_topics": ["USB", "Host模式", "设备管理", "数据传输", "权限控制"]
+    },
+    {
+      "doc_id": "usb-usb-overview",
+      "title": "USB服务开发概述",
+      "path": "docs/zh-cn/application-dev/basic-services/usb/usb-overview.md",
+      "summary": "USB服务是应用访问底层的一种设备抽象概念。开发者根据提供的USB API，可以获取设备列表、控制设备访问权限以及与连接的设备进行数据传输、控制命令传输等。",
+      "key_topics": ["USB", "USB API", "设备抽象", "数据传输", "控制命令"]
+    },
+    {
+      "doc_id": "usb-usb-glossary",
+      "title": "USB服务开发术语",
+      "path": "docs/zh-cn/application-dev/basic-services/usb/usb-glossary.md",
+      "summary": "本文档提供了USB服务开发中的关键术语定义，包括波特率、批量传输、控制传输、数据位、设备、端点、主机、接口、中断传输、实时传输、校验位、管道、停止位和USB配置等概念的解释，帮助开发者理解USB通信的基本原理和机制。",
+      "key_topics": ["USB", "术语", "波特率", "传输类型", "端点", "接口"]
+    },
+    {
+      "doc_id": "usb-faqs-usb",
+      "title": "常见问题",
+      "path": "docs/zh-cn/application-dev/basic-services/usb/faqs-usb.md",
+      "summary": "本文档提供了USB开发中的常见问题解答，包括设备列表获取为空、串口传输乱码、通信失败和丢包等问题的现象、原因和解决措施。",
+      "key_topics": ["USB", "常见问题", "设备列表", "串口传输", "乱码"]
+    },
+    {
+      "doc_id": "usb-Readme-CN",
+      "title": "USB服务",
+      "path": "docs/zh-cn/application-dev/basic-services/usb/Readme-CN.md",
+      "summary": "本文档提供了USB服务开发的相关文档索引，包括USB Host模式开发、USB串口通信服务开发、常见问题解答和术语说明。涵盖了USB设备管理、控制传输、中断传输、批量传输、实时传输等功能模块的详细开发指南。",
+      "key_topics": ["USB", "USB Host", "USB串口", "设备管理", "传输类型"]
+    },
+    {
+      "doc_id": "update-Readme-CN",
+      "title": "升级服务",
+      "path": "docs/zh-cn/application-dev/basic-services/update/Readme-CN.md",
+      "summary": "升级服务文档索引页面，包含示例服务器开发概述和示例服务器开发指导的链接。",
+      "key_topics": ["升级服务", "示例服务器", "开发概述", "开发指导"]
+    },
+    {
+      "doc_id": "update-sample-server-overview",
+      "title": "示例服务器开发概述",
+      "path": "docs/zh-cn/application-dev/basic-services/update/sample-server-overview.md",
+      "summary": "示例服务器提供一个简易的升级包部署的服务器实例参考，用于搭建升级服务子系统的辅助验证环境。支持升级包查询和下载功能，为升级服务的应用场景提供端到端环境搭建。",
+      "key_topics": ["示例服务器", "升级包", "部署", "搜包服务", "下载服务器"]
+    },
+    {
+      "doc_id": "update-sample-server-guidelines",
+      "title": "示例服务器开发指导",
+      "path": "docs/zh-cn/application-dev/basic-services/update/sample-server-guidelines.md",
+      "summary": "本文档提供了示例服务器开发的完整指导，包括SSL证书生成、bundle.json配置、代码目录建立、编译文件编写、头文件实现、服务器代码编写、编译输出、升级包制作和服务器启动等9个开发步骤。",
+      "key_topics": ["示例服务器", "SSL证书", "bundle.json", "BUILD.gn", "升级包"]
+    },
+    {
+      "doc_id": "selectionInput-selection-services-application-guide",
+      "title": "实现一个划词扩展能力",
+      "path": "docs/zh-cn/application-dev/basic-services/selectionInput/selection-services-application-guide.md",
+      "summary": "本文档详细介绍了如何在HarmonyOS中实现一个划词扩展能力应用。内容包括划词服务的核心接口说明（订阅划词完成事件、获取选中文本、创建/显示/隐藏面板、移动面板等）、完整的开发步骤（创建工程、实现SelectionModel管理类、实现SelectionExtAbility扩展类、创建菜单面板和主面板、配置文件）、以及调测验证方法。",
+      "key_topics": ["划词扩展能力", "SelectionExtensionAbility", "SelectionModel", "划词面板", "菜单面板"]
+    },
+    {
+      "doc_id": "selectionInput-selection-services-intro",
+      "title": "划词服务概述",
+      "path": "docs/zh-cn/application-dev/basic-services/selectionInput/selection-services-intro.md",
+      "summary": "从API version 24开始，新增划词服务，该服务具有全局获取用户选中文本的能力。开发者可调用该服务提供的接口，实现划词弹窗功能。",
+      "key_topics": ["划词服务", "选中文本", "划词弹窗", "框架原理", "能力范围"]
+    },
+    {
+      "doc_id": "selectionInput-Readme-CN",
+      "title": "划词服务",
+      "path": "docs/zh-cn/application-dev/basic-services/selectionInput/Readme-CN.md",
+      "summary": "划词服务（SelectionInput）属于Basic Services Kit，提供文本选择和输入相关的基础服务能力。该服务包含划词服务概述和扩展能力实现指南。",
+      "key_topics": ["划词服务", "SelectionInput", "文本选择", "扩展能力"]
+    },
+    {
+      "doc_id": "request-app-file-upload-download",
+      "title": "应用文件上传下载",
+      "path": "docs/zh-cn/application-dev/basic-services/request/app-file-upload-download.md",
+      "summary": "应用支持将文件上传到网络服务器，也支持从网络服务器下载资源文件到本地目录。开发者可以使用上传下载模块（ohos.request）的上传接口将本地文件上传上传，文件上传过程通过系统服务代理完成。在API version 12中，request.agent.create接口增加了设置代理地址的参数，支持设置自定义代理地址。",
+      "key_topics": ["上传下载", "文件上传", "文件下载", "request.agent", "代理"]
+    },
+    {
+      "doc_id": "print-native-print-file",
+      "title": "文件打印（C/C++）",
+      "path": "docs/zh-cn/application-dev/basic-services/print/native-print-file.md",
+      "summary": "介绍OpenHarmony提供的两种文件打印方式：通过接口拉起系统打印预览界面下发任务，以及通过打印接口自主进行打印设备的发现、连接和打印任务的下发。包含完整的C/C++开发步骤、代码示例和回调函数实现。",
+      "key_topics": ["打印", "C/C++", "文件打印", "打印预览", "打印任务"]
+    },
+    {
+      "doc_id": "print-printExtensionAbilityGuide",
+      "title": "打印扩展能力",
+      "path": "docs/zh-cn/application-dev/basic-services/print/printExtensionAbilityGuide.md",
+      "summary": "打印扩展能力从API version 14开始支持，是对系统打印功能的扩展，允许开发者以软件的方式模拟打印机行为。文档介绍了PrintExtensionAbility的回调方法（onCreate、onDestroy、onStartDiscoverPrinter、onStopDiscoverPrinter、onConnectPrinter、onDisconnectPrinter）以及开发步骤，包括实现打印扩展能力和功能验证。",
+      "key_topics": ["PrintExtensionAbility", "打印扩展能力", "onCreate", "onDestroy", "打印机"]
+    },
+    {
+      "doc_id": "request-Readme-CN",
+      "title": "上传下载",
+      "path": "docs/zh-cn/application-dev/basic-services/request/Readme-CN.md",
+      "summary": "上传下载文档导航页面，包含应用文件上传下载相关文档链接。",
+      "key_topics": ["上传下载", "应用文件上传下载"]
+    },
+    {
+      "doc_id": "powermgr-runningLock-runningLock-dev",
+      "title": "阻止系统闲时进入睡眠开发指南",
+      "path": "docs/zh-cn/application-dev/basic-services/powermgr/runningLock/runningLock-dev.md",
+      "summary": "本文档介绍了如何使用RunningLockType.BACKGROUND_USER_IDLE运行锁来阻止系统在用户闲时时自动进入睡眠状态。文档详细说明了环境准备要求（DevEco Studio 4.1+、API version 23+、HDC工具）、接口使用约束（PC设备无权限管控，非PC设备需系统应用权限）、以及完整的开发步骤，包括权限申请、模块导入、公共事件监听、运行锁创建和释放等。",
+      "key_topics": ["RunningLock", "BACKGROUND_USER_IDLE", "运行锁", "系统睡眠", "公共事件"]
+    },
+    {
+      "doc_id": "print-Readme-CN",
+      "title": "打印",
+      "path": "docs/zh-cn/application-dev/basic-services/print/Readme-CN.md",
+      "summary": "打印功能文档，包含文件打印（C/C++）和打印扩展能力相关内容。",
+      "key_topics": ["打印", "文件打印", "打印扩展能力"]
+    },
+    {
+      "doc_id": "powermgr-Readme-CN",
+      "title": "电源管理",
+      "path": "docs/zh-cn/application-dev/basic-services/powermgr/Readme-CN.md",
+      "summary": "本文档介绍OpenHarmony电源管理服务的使用指南，重点讲解如何使用运行锁（RunningLock）阻止系统闲时进入睡眠。包含场景介绍、环境准备、开发指导等内容，详细说明了RunningLockType.BACKGROUND_USER_IDLE类型运行锁的使用方法、约束条件和设备差异。",
+      "key_topics": ["电源管理", "运行锁", "RunningLock", "睡眠", "BACKGROUND_USER_IDLE"]
+    },
+    {
+      "doc_id": "pasteboard-native-use-pasteboard",
+      "title": "使用剪贴板进行复制粘贴 (C/C++)",
+      "path": "docs/zh-cn/application-dev/basic-services/pasteboard/native-use-pasteboard.md",
+      "summary": "本文档介绍如何在HarmonyOS中使用C/C++接口实现剪贴板的复制粘贴功能。剪贴板为开发者提供数据的复制粘贴能力，支持对纯文本、超文本、URI等内容的操作。文档包含场景介绍、基本概念、约束限制、接口说明和完整的开发步骤，包括添加动态链接库、引用头文件、定义回调函数、订阅剪贴板变化、写入数据和读取数据等操作。",
+      "key_topics": ["剪贴板", "复制粘贴", "C/C++", "OH_Pasteboard", "数据监听"]
+    },
+    {
+      "doc_id": "pasteboard-use-pasteboard-to-copy-and-paste",
       "title": "使用剪贴板进行复制粘贴",
-      "path": "docs\\zh-cn\\application-dev\\basic-services\\pasteboard\\use-pasteboard-to-copy-and-paste.md",
-      "summary": "使用剪贴板进行复制粘贴, contains 5 sections",
-      "key_topics": []
+      "path": "docs/zh-cn/application-dev/basic-services/pasteboard/use-pasteboard-to-copy-and-paste.md",
+      "summary": "本文档介绍了如何在HarmonyOS应用中使用剪贴板进行复制粘贴操作。剪贴板提供数据的复制粘贴能力，支持在应用内或应用间共享数据。文档详细说明了剪贴板的接入原理、约束限制、基础数据类型和统一数据类型的使用方法，包括ArkTS接口和NDK接口的使用示例。",
+      "key_topics": ["剪贴板", "复制粘贴", "PasteData", "ArkTS", "NDK"]
+    },
+    {
+      "doc_id": "pasteboard-pasteboard-time-lapse-copy-and-paste",
+      "title": "使用剪贴板进行延迟复制粘贴",
+      "path": "docs/zh-cn/application-dev/basic-services/pasteboard/pasteboard-time-lapse-copy-and-paste.md",
+      "summary": "本文档介绍了剪贴板服务的延迟复制粘贴功能。该功能优化了内存使用，避免反复复制时缓存中存储多余数据。用户复制数据时，真实数据不会立即写入剪贴板缓存，而是等需要粘贴时再从应用获取。文档详细说明了基于Record级别的延迟复制粘贴的使用方法、接口说明、开发步骤以及应用退出时的数据同步处理。",
+      "key_topics": ["剪贴板", "延迟复制", "延迟粘贴", "Record级别", "内存优化"]
+    },
+    {
+      "doc_id": "compress-deflate-and-inflate",
+      "title": "压缩与解压",
+      "path": "docs/zh-cn/application-dev/basic-services/compress/deflate-and-inflate.md",
+      "summary": "本文介绍HarmonyOS应用开发中常见的压缩与解压场景及相关函数的使用方法，包括Zip文件的压缩与解压、已知大小缓冲区的压缩与解压、未知大小缓冲区的压缩与解压（zlib格式和gzip格式）等多种开发场景的实现。",
+      "key_topics": ["压缩", "解压", "zlib", "deflate", "inflate", "zip", "gzip"]
+    },
+    {
+      "doc_id": "pasteboard-get-pastedata-permission-guidelines",
+      "title": "申请访问剪贴板权限",
+      "path": "docs/zh-cn/application-dev/basic-services/pasteboard/get-pastedata-permission-guidelines.md",
+      "summary": "API version 12及之后，系统为提升用户隐私安全保护能力，剪贴板读取接口增加权限管控。文档介绍了两种访问剪贴板内容的方式：使用安全控件（粘贴控件）无需申请权限，或申请ohos.permission.READ_PASTEBOARD权限。同时提供了剪贴板弹窗适配优化建议，通过hasData、hasDataType、getMimeTypes、getChangeCount、detectPatterns等接口提前判断剪贴板内容，避免无效弹框。",
+      "key_topics": ["剪贴板", "权限", "READ_PASTEBOARD", "粘贴控件", "弹窗适配"]
+    },
+    {
+      "doc_id": "pasteboard-Readme-CN",
+      "title": "剪贴板服务",
+      "path": "docs/zh-cn/application-dev/basic-services/pasteboard/Readme-CN.md",
+      "summary": "剪贴板服务文档，提供剪贴板权限申请、复制粘贴操作（包括JavaScript和C/C++实现）以及延迟复制粘贴等功能的使用指南。",
+      "key_topics": ["剪贴板", "复制粘贴", "权限申请", "C/C++", "延迟复制"]
+    },
+    {
+      "doc_id": "common-event-native-common-event-subscription",
+      "title": "订阅公共事件（C/C++）",
+      "path": "docs/zh-cn/application-dev/basic-services/common-event/native-common-event-subscription.md",
+      "summary": "本文档介绍如何在HarmonyOS中使用C/C++语言订阅公共事件。通过OH_CommonEvent_CreateSubscriber创建订阅者对公共事件进行订阅，当有订阅的事件发布时，订阅者将收到该事件及其传递的参数。文档详细说明了订阅者信息的创建、订阅者的创建、事件订阅以及有序公共事件的处理（包括中止事件、取消中止状态、修改事件内容）等开发步骤。",
+      "key_topics": ["公共事件", "订阅", "C/C++", "CommonEvent", "订阅者", "有序公共事件"]
+    },
+    {
+      "doc_id": "common-event-native-common-event-unsubscription",
+      "title": "取消订阅公共事件（C/C++）",
+      "path": "docs/zh-cn/application-dev/basic-services/common-event/native-common-event-unsubscription.md",
+      "summary": "订阅者在完成业务需求之后，需要取消订阅公共事件。本文档介绍了如何使用 OH_CommonEvent_UnSubscribe 接口取消订阅公共事件的开发步骤。",
+      "key_topics": ["公共事件", "取消订阅", "C/C++", "OH_CommonEvent_UnSubscribe"]
+    },
+    {
+      "doc_id": "compress-Readme-CN",
+      "title": "压缩与解压",
+      "path": "docs/zh-cn/application-dev/basic-services/compress/Readme-CN.md",
+      "summary": "压缩与解压模块，属于Common Kit的Common子系统。该模块提供压缩与解压相关功能。",
+      "key_topics": ["压缩", "解压", "Common", "deflate", "inflate"]
+    },
+    {
+      "doc_id": "common-event-itc-with-emitter",
+      "title": "使用Emitter进行线程间通信",
+      "path": "docs/zh-cn/application-dev/basic-services/common-event/itc-with-emitter.md",
+      "summary": "Emitter是一种作用在进程内的事件处理机制，为应用程序提供订阅事件、发布事件、取消事件订阅的能力。用于同一进程内相同线程或不同线程间的事件处理，事件异步执行。主要接口包括on（持续订阅）、once（单次订阅）、emit（发布事件）和off（取消订阅）。",
+      "key_topics": ["Emitter", "线程间通信", "事件订阅", "事件发布", "异步执行"]
+    },
+    {
+      "doc_id": "common-event-common-event-unsubscription",
+      "title": "取消动态订阅公共事件",
+      "path": "docs/zh-cn/application-dev/basic-services/common-event/common-event-unsubscription.md",
+      "summary": "本文档介绍了如何取消动态订阅公共事件。动态订阅者完成业务需求后，应主动取消订阅，通过调用unsubscribe()方法取消订阅事件。文档包含场景介绍、接口说明和开发步骤，提供了完整的TypeScript代码示例。",
+      "key_topics": ["取消订阅", "公共事件", "unsubscribe", "动态订阅"]
+    },
+    {
+      "doc_id": "common-event-common-event-static-subscription-sys",
+      "title": "静态订阅公共事件（仅对系统应用开放）",
+      "path": "docs/zh-cn/application-dev/basic-services/common-event/common-event-static-subscription-sys.md",
+      "summary": "本文档介绍如何在HarmonyOS中实现静态订阅公共事件功能，该功能仅对系统应用开放。静态订阅者在未接收订阅的目标事件时处于未拉起状态，当系统或应用发布指定的公共事件后，静态订阅者将被拉起并执行onReceiveEvent()回调。文档详细说明了StaticSubscriberExtensionAbility的生命周期（在onReceiveEvent()执行完15秒后销毁），以及完整的开发步骤。",
+      "key_topics": ["静态订阅", "公共事件", "StaticSubscriberExtensionAbility", "onReceiveEvent", "系统应用"]
+    },
+    {
+      "doc_id": "common-event-common-event-subscription",
+      "title": "动态订阅公共事件",
+      "path": "docs/zh-cn/application-dev/basic-services/common-event/common-event-subscription.md",
+      "summary": "本文档介绍了如何在应用运行时动态订阅公共事件，包括场景介绍、接口说明和开发步骤。主要讲解了如何创建订阅者、订阅自定义和系统公共事件，以及如何处理事件回调。",
+      "key_topics": ["动态订阅", "公共事件", "订阅者", "自定义公共事件", "系统公共事件"]
+    },
+    {
+      "doc_id": "common-event-common-event-remove-sticky-sys",
+      "title": "移除粘性公共事件（仅对系统应用开放）",
+      "path": "docs/zh-cn/application-dev/basic-services/common-event/common-event-remove-sticky-sys.md",
+      "summary": "本文档介绍了如何移除粘性公共事件的功能，该功能仅对系统应用开放。文档包含场景介绍、接口说明和开发步骤，详细说明了使用removeStickyCommonEvent()方法移除粘性公共事件的完整流程，包括权限申请、模块导入和接口调用。",
+      "key_topics": ["粘性公共事件", "removeStickyCommonEvent", "系统应用", "事件移除", "权限"]
+    },
+    {
+      "doc_id": "common-event-common-event-overview",
+      "title": "公共事件简介",
+      "path": "docs/zh-cn/application-dev/basic-services/common-event/common-event-overview.md",
+      "summary": "CES（Common Event Service，公共事件服务）为应用程序提供订阅、发布、退订公共事件的能力。公共事件从系统角度可分为系统公共事件和自定义公共事件；按发送方式可分为无序公共事件、有序公共事件和粘性公共事件。公共事件服务提供了动态订阅和静态订阅两种订阅方式。",
+      "key_topics": ["公共事件服务", "CES", "订阅", "发布", "系统公共事件", "自定义公共事件"]
+    },
+    {
+      "doc_id": "common-event-common-event-publish",
+      "title": "发布公共事件",
+      "path": "docs/zh-cn/application-dev/basic-services/common-event/common-event-publish.md",
+      "summary": "介绍如何通过publish()方法发布公共事件，包括发布不携带信息的公共事件和发布携带信息的公共事件。公共事件可以携带数据供订阅者解析处理，支持无序公共事件、有序公共事件和粘性事件。",
+      "key_topics": ["公共事件", "发布", "publish", "无序公共事件", "有序公共事件", "粘性事件"]
+    },
+    {
+      "doc_id": "common-event-Readme-CN",
+      "title": "进程线程通信",
+      "path": "docs/zh-cn/application-dev/basic-services/common-event/Readme-CN.md",
+      "summary": "本文档介绍了进程线程通信的两种方式：使用公共事件进行进程间通信和使用Emitter进行线程间通信。公共事件部分包含动态订阅、静态订阅、取消订阅、发布事件等功能模块，支持ArkTS和C/C++两种语言实现。",
+      "key_topics": ["进程间通信", "线程间通信", "公共事件", "Emitter", "动态订阅", "静态订阅"]
+    },
+    {
+      "doc_id": "account-manage-os-account-sys",
+      "title": "管理系统账号（仅对系统应用开放）",
+      "path": "docs/zh-cn/application-dev/basic-services/account/manage-os-account-sys.md",
+      "summary": "系统提供了用于管理系统账号的接口。系统应用开发者在申请对应的权限后，可以创建、激活、修改和删除系统账号，实现对系统账号的生命周期管理；三方应用开发者可以查询系统账号的基本信息，以完成与系统账号相关的业务逻辑开发。",
+      "key_topics": ["系统账号", "账号管理", "创建账号", "查询账号", "修改账号", "激活账号", "删除账号"]
+    },
+    {
+      "doc_id": "account-manage-os-account-credential-sys",
+      "title": "管理系统账号凭据（仅对系统应用开放）",
+      "path": "docs/zh-cn/application-dev/basic-services/account/manage-os-account-credential-sys.md",
+      "summary": "本文档介绍如何管理系统账号凭据（仅对系统应用开放），包括凭据类型（PIN、人脸、指纹）、开发准备、以及完整的凭据管理流程：注册输入器、打开会话、录入和认证PIN码、录入和认证生物识别凭据、更新凭据、查询凭据信息、删除凭据、注销输入器和关闭会话。",
+      "key_topics": ["凭据", "PIN码", "人脸识别", "指纹识别", "认证", "系统账号", "凭据管理"]
+    },
+    {
+      "doc_id": "basic-services-kit-overview",
+      "title": "Basic Services Kit简介",
+      "path": "docs/zh-cn/application-dev/basic-services/basic-services-kit-overview.md",
+      "summary": "Basic Services Kit（基础服务）作为基础服务套件，为应用开发者提供常用的基础能力。包括剪贴板读写、文件上传下载、文件压缩、文件打印、进程间/线程间通信、设备管理、应用账号管理等能力。",
+      "key_topics": ["Basic Services Kit", "基础服务", "剪贴板", "文件上传下载", "压缩", "打印", "通信", "账号管理"]
+    },
+    {
+      "doc_id": "account-manage-domain-plugin-sys",
+      "title": "管理域账号插件（仅对系统应用开放）",
+      "path": "docs/zh-cn/application-dev/basic-services/account/manage-domain-plugin-sys.md",
+      "summary": "本文档介绍了如何通过插件方式定制化域账号管理能力。主要内容包括：申请必要权限（ohos.permission.MANAGE_LOCAL_ACCOUNTS、ohos.permission.GET_DOMAIN_ACCOUNTS）、导入系统账号模块、获取系统账号管理对象、注册和注销域账号插件。文档提供了完整的开发实例，包括定义DomainPlugin接口实现、调用registerPlugin和unregisterPlugin接口的代码示例。",
+      "key_topics": ["域账号插件", "DomainPlugin", "registerPlugin", "unregisterPlugin", "系统应用"]
+    },
+    {
+      "doc_id": "account-manage-domain-account-sys",
+      "title": "管理域账号（仅对系统应用开放）",
+      "path": "docs/zh-cn/application-dev/basic-services/account/manage-domain-account-sys.md",
+      "summary": "用户可以在系统中添加域账号，后续可以域账号身份登录、使用系统。本文档介绍了如何判断指定域账号是否存在、添加域账号、删除域账号以及查询域账号信息等操作。",
+      "key_topics": ["域账号", "系统应用", "权限申请", "账号管理", "hasAccount", "createOsAccountForDomain"]
+    },
+    {
+      "doc_id": "account-manage-distributed-account-sys",
+      "title": "管理分布式账号（仅对系统应用开放）",
+      "path": "docs/zh-cn/application-dev/basic-services/account/manage-distributed-account-sys.md",
+      "summary": "本文档介绍如何通过分布式账号SDK将自有账号与本地系统账号建立关联关系，包括在当前系统账号和指定系统账号上登录绑定或登出解绑分布式账号的开发步骤和代码示例。",
+      "key_topics": ["分布式账号", "账号绑定", "账号解绑", "系统应用", "BasicServicesKit"]
+    },
+    {
+      "doc_id": "account-auth-domain-account-sys",
+      "title": "认证域账号（仅对系统应用开放）",
+      "path": "docs/zh-cn/application-dev/basic-services/account/auth-domain-account-sys.md",
+      "summary": "当需要验证域账号身份（比如屏幕解锁、登录会话失效等场景）时，可以使用系统提供的接口对域账号进行身份认证。文档介绍了使用密码认证域账号和弹窗认证域账号两种方式。",
+      "key_topics": ["认证", "域账号", "密码认证", "弹窗认证", "系统应用"]
+    },
+    {
+      "doc_id": "account-manage-application-account",
+      "title": "管理应用账号",
+      "path": "docs/zh-cn/application-dev/basic-services/account/manage-application-account.md",
+      "summary": "本文档介绍如何使用应用账号SDK管理本应用的账号数据，包括创建、查询、删除应用账号，以及存取账号的凭据、自定义数据和授权令牌。能力限制：应用卸载场景下，被卸载应用的账号数据会被删除；本地账号删除场景下，被删除本地账号下的所有应用的账号数据会被删除。",
+      "key_topics": ["应用账号", "账号管理", "凭据", "授权令牌", "appAccount"]
+    },
+    {
+      "doc_id": "account-control-os-account-by-constraints-sys",
+      "title": "使用约束管控系统账号（仅对系统应用开放）",
+      "path": "docs/zh-cn/application-dev/basic-services/account/control-os-account-by-constraints-sys.md",
+      "summary": "账号管理模块提供了基于角色的访问控制机制，用户可以为系统账号设置约束，以限制目标账号的行为。文档介绍了如何设置系统账号约束、判断约束是否使能等操作功能。",
+      "key_topics": ["系统账号", "约束", "访问控制", "setOsAccountConstraints", "isOsAccountConstraintEnabled"]
+    },
+    {
+      "doc_id": "account-Readme-CN",
+      "title": "账号管理",
+      "path": "docs/zh-cn/application-dev/basic-services/account/Readme-CN.md",
+      "summary": "账号管理模块，包含系统账号、域账号、分布式账号和应用账号的管理功能。系统账号、域账号和分布式账号仅对系统应用开放，应用账号面向普通应用。",
+      "key_topics": ["账号管理", "系统账号", "域账号", "分布式账号", "应用账号"]
+    },
+    {
+      "doc_id": "account-account-overview-sys",
+      "title": "账号管理概述（仅对系统应用开放）",
+      "path": "docs/zh-cn/application-dev/basic-services/account/account-overview-sys.md",
+      "summary": "本文档介绍了账号管理模块的基本概念和架构。系统支持在一台设备上创建多个本地系统账号，允许多个用户使用同一台设备，不同用户数据按系统账号进行隔离。账号模块管理四类账号：系统账号、域账号、分布式账号和应用账号。文档详细说明了各类账号的定义、相互关系以及生命周期管理。",
+      "key_topics": ["账号管理", "系统账号", "域账号", "分布式账号", "应用账号", "用户身份", "数据隔离"]
+    },
+    {
+      "doc_id": "Readme-CN",
+      "title": "Basic Services Kit（基础服务）",
+      "path": "docs/zh-cn/application-dev/basic-services/Readme-CN.md",
+      "summary": "Basic Services Kit 基础服务导航页面，提供进程线程通信、账号管理、USB服务、升级服务、剪贴板服务、上传下载、压缩与解压、划词服务、电源管理、打印等功能模块的索引。",
+      "key_topics": ["Basic Services Kit", "基础服务", "进程线程通信", "账号管理", "USB", "剪贴板", "上传下载", "压缩", "打印"]
     }
   ]
 }

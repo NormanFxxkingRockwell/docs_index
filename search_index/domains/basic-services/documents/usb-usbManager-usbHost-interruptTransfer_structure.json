@@ -1,0 +1,191 @@
+{
+  "doc_id": "usb-usbManager-usbHost-interruptTransfer",
+  "title": "USB中断传输",
+  "domain": "basic-services",
+  "category": "USB",
+  "subsystem": "USB",
+  "path": "docs/zh-cn/application-dev/basic-services/usb/usbManager/usbHost/interruptTransfer.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "USB",
+    "owner": "@hwymlgitcode",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc"
+  },
+  "summary": "USB中断传输主要用于主机接收设备发送的数据包，适用于少量、分散、不可预测的数据传输，如鼠标、键盘等设备。本文档介绍了中断传输的环境准备、开发步骤和调测验证方法，包括设备权限申请、端点获取、接口注册、数据传输和资源释放等完整流程。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "content": "中断传输主要用于主机（Host）接收设备（Device）发送的数据包。设备的端点模式决定了接口支持中断读或中断写，这种传输方式适用于少量的、分散的、不可预测的数据类型的传输，鼠标、键盘和操纵杆等设备均属于这种类型，且此类设备的端点一般只支持中断读操作。",
+      "line_start": 10,
+      "line_end": 12
+    },
+    {
+      "level": 2,
+      "title": "环境准备",
+      "content": "环境准备包括环境要求和搭建环境两部分。环境要求包括开发工具及配置（DevEco Studio）、SDK版本配置（API16及以上）和HDC配置。搭建环境需要安装DevEco Studio 4.1及以上版本、更新public-SDK到API 16或以上、安装HDC工具，并用USB线缆将搭载OpenHarmony的设备连接到PC。",
+      "line_start": 14,
+      "line_end": 38,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "环境要求",
+          "content": "开发工具及配置：DevEco Studio作为驱动开发工具，是进行驱动开发必备条件之一，开发者可以使用该工具进行开发、调试、打包等操作。SDK版本配置：扩展外设管理提供的ArkTs接口，所需SDK版本为API16及以上才可使用。HDC配置：HDC（HarmonyOS Device Connector）是为开发人员提供的用于调试的命令行工具，通过该工具可以在Windows/Linux/Mac系统上与真实设备或者模拟器进行交互。",
+          "line_start": 16,
+          "line_end": 31
+        },
+        {
+          "level": 3,
+          "title": "搭建环境",
+          "content": "在PC上安装DevEco Studio，要求版本在4.1及以上。将public-SDK更新到API 16或以上。PC安装HDC工具，通过该工具可以在Windows/Linux/Mac系统上与真实设备或者模拟器进行交互。用USB线缆将搭载OpenHarmony的设备连接到PC。",
+          "line_start": 32,
+          "line_end": 38
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "开发指导",
+      "content": "开发指导包括接口说明、开发步骤和调测验证。主要接口包括usbSubmitTransfer（异步传输接口）和usbCancelTransfer（取消已提交的异步传输）。开发步骤包括导入模块、获取设备列表、获取设备操作权限、获取中断传输端点、连接设备并注册通信接口、传输数据、取消传输并释放资源等7个步骤。",
+      "line_start": 39,
+      "line_end": 279,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "接口说明",
+          "content": "主要接口包括：usbSubmitTransfer(transfer: UsbDataTransferParams): void - 异步传输接口（支持实时、批量、中断传输）；usbCancelTransfer(transfer: UsbDataTransferParams): void - 取消已提交的异步传输。",
+          "line_start": 41,
+          "line_end": 48
+        },
+        {
+          "level": 3,
+          "title": "开发步骤",
+          "content": "主机（Host）连接设备（Device），通过usbSubmitTransfer接口进行数据传输。开发步骤包括：1. 导入usbManager模块；2. 获取设备列表；3. 获取设备操作权限；4. 获取通过中断传输读取数据的端点；5. 连接设备，注册通信接口；6. 传输数据；7. 取消传输，释放接口，关闭设备消息控制通道。",
+          "line_start": 50,
+          "line_end": 272
+        },
+        {
+          "level": 3,
+          "title": "调测验证",
+          "content": "调测验证步骤：1. 主机端通过USB接口连接支持中断传输的终端设备（鼠标、键盘等）；2. 执行上述代码；3. log中搜索关键字transfer success，表示中断传输接口调用成功。",
+          "line_start": 274,
+          "line_end": 279
+        }
+      ]
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "TypeScript",
+      "description": "导入usbManager模块",
+      "line_start": 62,
+      "line_end": 67
+    },
+    {
+      "language": "TypeScript",
+      "description": "获取设备列表",
+      "line_start": 74,
+      "line_end": 136
+    },
+    {
+      "language": "TypeScript",
+      "description": "获取设备操作权限",
+      "line_start": 143,
+      "line_end": 159
+    },
+    {
+      "language": "TypeScript",
+      "description": "获取通过中断传输读取数据的端点",
+      "line_start": 166,
+      "line_end": 202
+    },
+    {
+      "language": "TypeScript",
+      "description": "连接设备，注册通信接口",
+      "line_start": 209,
+      "line_end": 217
+    },
+    {
+      "language": "TypeScript",
+      "description": "传输数据",
+      "line_start": 224,
+      "line_end": 255
+    },
+    {
+      "language": "TypeScript",
+      "description": "取消传输，释放接口，关闭设备消息控制通道",
+      "line_start": 262,
+      "line_end": 271
+    }
+  ],
+  "api_references": [
+    {
+      "name": "usbSubmitTransfer",
+      "module": "usbManager",
+      "package": "@kit.BasicServicesKit",
+      "description": "异步传输接口（支持实时、批量、中断传输）"
+    },
+    {
+      "name": "usbCancelTransfer",
+      "module": "usbManager",
+      "package": "@kit.BasicServicesKit",
+      "description": "取消已提交的异步传输"
+    },
+    {
+      "name": "getDevices",
+      "module": "usbManager",
+      "package": "@kit.BasicServicesKit",
+      "description": "获取设备列表"
+    },
+    {
+      "name": "requestRight",
+      "module": "usbManager",
+      "package": "@kit.BasicServicesKit",
+      "description": "申请操作指定的device的操作权限"
+    },
+    {
+      "name": "hasRight",
+      "module": "usbManager",
+      "package": "@kit.BasicServicesKit",
+      "description": "检查设备权限"
+    },
+    {
+      "name": "connectDevice",
+      "module": "usbManager",
+      "package": "@kit.BasicServicesKit",
+      "description": "连接设备"
+    },
+    {
+      "name": "claimInterface",
+      "module": "usbManager",
+      "package": "@kit.BasicServicesKit",
+      "description": "注册通信接口"
+    },
+    {
+      "name": "releaseInterface",
+      "module": "usbManager",
+      "package": "@kit.BasicServicesKit",
+      "description": "释放接口"
+    },
+    {
+      "name": "closePipe",
+      "module": "usbManager",
+      "package": "@kit.BasicServicesKit",
+      "description": "关闭设备消息控制通道"
+    }
+  ],
+  "tags": [
+    "USB",
+    "中断传输",
+    "usbManager",
+    "BasicServicesKit",
+    "设备管理",
+    "数据传输"
+  ],
+  "related_docs": [],
+  "total_lines": 279,
+  "created_at": "2026-02-25",
+  "last_updated": "2026-02-25"
+}

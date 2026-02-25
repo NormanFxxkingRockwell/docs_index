@@ -1,0 +1,271 @@
+{
+  "doc_id": "pasteboard-native-use-pasteboard",
+  "title": "使用剪贴板进行复制粘贴 (C/C++)",
+  "domain": "basic-services",
+  "path": "docs/zh-cn/application-dev/basic-services/pasteboard/native-use-pasteboard.md",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "MiscServices",
+    "owner": "@yangxiaodong41",
+    "designer": "@guo867",
+    "tester": "@maxiaorong",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "本文档介绍如何在HarmonyOS中使用C/C++接口实现剪贴板的复制粘贴功能。剪贴板为开发者提供数据的复制粘贴能力，支持对纯文本、超文本、URI等内容的操作。文档包含场景介绍、基本概念、约束限制、接口说明和完整的开发步骤，包括添加动态链接库、引用头文件、定义回调函数、订阅剪贴板变化、写入数据和读取数据等操作。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "使用剪贴板进行复制粘贴 (C/C++)",
+      "line_start": 1,
+      "line_end": 8,
+      "content_type": "title"
+    },
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line_start": 9,
+      "line_end": 12,
+      "content_type": "text",
+      "summary": "剪贴板为开发者提供数据的复制粘贴能力。支持对纯文本、超文本、URI等内容的操作。"
+    },
+    {
+      "level": 2,
+      "title": "基本概念",
+      "line_start": 13,
+      "line_end": 18,
+      "content_type": "list",
+      "items": [
+        "OH_PasteboardObserver：剪贴板数据变更观察者对象，用以监听剪贴板数据变更事件。",
+        "OH_Pasteboard：剪贴板对象，用来进行查询、写入等操作。",
+        "OH_UdmfData：统一数据对象。"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "约束限制",
+      "line_start": 19,
+      "line_end": 27,
+      "content_type": "list",
+      "summary": "剪贴板内容总大小上限默认为128MB，PC/2in1设备可通过系统配置修改上限，有效范围为128MB~2GB。同一时间只能支持一个复制操作。支持多种数据类型包括纯文本、超文本、文件Uri、像素图片、超链接、桌面图标和自定义类型。API version 12及之后增加权限管控。",
+      "items": [
+        "剪贴板内容包含剪贴板系统服务元数据和应用设置的数据，总大小上限默认为128MB，PC/2in1设备可通过系统配置修改上限，有效范围为128MB~2GB。",
+        "为保证剪贴板数据的准确性，同一时间只能支持一个复制操作。",
+        "当前支持的数据类型：纯文本类型(OH_UdsPlainText)、超文本标记语言类型(OH_UdsHtml)、文件Uri类型(OH_UdsFileUri)、像素图片类型(OH_UdsPixelMap)、超链接类型(OH_UdsHyperlink)、桌面图标类型(OH_UdsAppItem)、自定义类型。",
+        "自定义类型数据在复制粘贴时，指定的类型名称不能和已有的类型名称重复。",
+        "API version 12及之后，系统为提升用户隐私安全保护能力，剪贴板读取接口增加权限管控。",
+        "API version 12中新增的复制、粘贴接口setUnifiedData/getUnifiedData与本文档中的复制、粘贴接口OH_Pasteboard_SetData/OH_Pasteboard_GetData当前相互独立。"
+      ]
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line_start": 28,
+      "line_end": 50,
+      "content_type": "table",
+      "summary": "详细接口见Pasteboard文档。提供了创建和销毁剪贴板实例、观察者对象、订阅和取消订阅数据变更、判断数据类型、获取和设置数据等功能的接口。",
+      "interfaces": [
+        {
+          "name": "OH_PasteboardObserver_Create",
+          "description": "创建一个剪贴板数据变更观察者对象。"
+        },
+        {
+          "name": "OH_PasteboardObserver_Destroy",
+          "description": "销毁剪贴板数据变更观察者对象。"
+        },
+        {
+          "name": "OH_PasteboardObserver_SetData",
+          "description": "将剪贴板变更回调函数设置到剪贴板数据变更观察者对象中。"
+        },
+        {
+          "name": "OH_Pasteboard_Create",
+          "description": "创建一个剪贴板实例。"
+        },
+        {
+          "name": "OH_Pasteboard_Destroy",
+          "description": "销毁剪贴板实例。"
+        },
+        {
+          "name": "OH_Pasteboard_Subscribe",
+          "description": "订阅剪贴板的数据变更。"
+        },
+        {
+          "name": "OH_Pasteboard_Unsubscribe",
+          "description": "取消对剪贴板数据变更的订阅。"
+        },
+        {
+          "name": "OH_Pasteboard_IsRemoteData",
+          "description": "判断剪贴板中的数据是否来自远端设备。"
+        },
+        {
+          "name": "OH_Pasteboard_GetDataSource",
+          "description": "获取剪贴板中数据的数据源。"
+        },
+        {
+          "name": "OH_Pasteboard_HasType",
+          "description": "判断剪贴板中是否有指定类型的数据。"
+        },
+        {
+          "name": "OH_Pasteboard_HasData",
+          "description": "检查剪贴板中是否有数据。"
+        },
+        {
+          "name": "OH_Pasteboard_GetData",
+          "description": "获取剪贴板中的数据。"
+        },
+        {
+          "name": "OH_Pasteboard_SetData",
+          "description": "向剪贴板中写入数据。"
+        },
+        {
+          "name": "OH_Pasteboard_ClearData",
+          "description": "清空剪贴板中的数据。"
+        },
+        {
+          "name": "Pasteboard_Notify",
+          "description": "剪贴板中数据变更回调函数。"
+        },
+        {
+          "name": "Pasteboard_Finalize",
+          "description": "剪贴板数据变更观察者对象销毁时，释放context上下文资源。"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line_start": 51,
+      "line_end": 204,
+      "content_type": "code",
+      "summary": "包含6个开发步骤：添加动态链接库、引用头文件、定义剪贴板变化监听的回调函数、订阅剪贴板变化、向剪贴板写入数据、从剪贴板读取数据。每个步骤都提供了完整的代码示例。",
+      "steps": [
+        {
+          "step": 1,
+          "title": "添加动态链接库",
+          "line_start": 53,
+          "line_end": 60,
+          "description": "在CMakeLists.txt中添加libudmf.so和libpasteboard.so库。",
+          "code_type": "cmake"
+        },
+        {
+          "step": 2,
+          "title": "引用头文件",
+          "line_start": 61,
+          "line_end": 73,
+          "description": "包含必要的头文件，包括cstdio、cstring、hilog/log.h、oh_pasteboard.h、udmf.h和uds.h。",
+          "code_type": "cpp"
+        },
+        {
+          "step": 3,
+          "title": "定义剪贴板变化监听的回调函数",
+          "line_start": 75,
+          "line_end": 91,
+          "description": "定义PasteboardNotifyImpl2回调函数处理数据变更通知，定义PasteboardFinalizeImpl2回调函数处理观察者对象销毁时的资源释放。",
+          "code_type": "cpp"
+        },
+        {
+          "step": 4,
+          "title": "订阅剪贴板变化",
+          "line_start": 93,
+          "line_end": 110,
+          "description": "创建剪贴板实例和观察者实例，设置回调函数，订阅本端数据变化。",
+          "code_type": "cpp"
+        },
+        {
+          "step": 5,
+          "title": "向剪贴板写入数据",
+          "line_start": 112,
+          "line_end": 153,
+          "description": "创建剪贴板实例，创建OH_UdmfRecord对象并添加文本和HTML类型数据，创建OH_UdmfData对象并添加记录，将数据写入剪贴板，最后销毁所有指针。",
+          "code_type": "cpp"
+        },
+        {
+          "step": 6,
+          "title": "从剪贴板读取数据",
+          "line_start": 155,
+          "line_end": 203,
+          "description": "创建剪贴板实例，判断是否有文本类型数据，从剪贴板获取统一类型数据OH_UdmfData，获取数据记录，从记录中获取文本数据内容，最后销毁指针并返回结果。",
+          "code_type": "cpp"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "剪贴板",
+    "复制粘贴",
+    "C/C++",
+    "OH_Pasteboard",
+    "OH_PasteboardObserver",
+    "OH_UdmfData",
+    "NDK",
+    "数据监听",
+    "回调函数",
+    "纯文本",
+    "超文本",
+    "URI"
+  ],
+  "code_blocks": [
+    {
+      "language": "cmake",
+      "line_start": 55,
+      "line_end": 59,
+      "context": "添加动态链接库"
+    },
+    {
+      "language": "cpp",
+      "line_start": 65,
+      "line_end": 72,
+      "context": "引用头文件"
+    },
+    {
+      "language": "cpp",
+      "line_start": 79,
+      "line_end": 90,
+      "context": "定义回调函数"
+    },
+    {
+      "language": "cpp",
+      "line_start": 97,
+      "line_end": 109,
+      "context": "订阅剪贴板变化"
+    },
+    {
+      "language": "cpp",
+      "line_start": 116,
+      "line_end": 152,
+      "context": "向剪贴板写入数据"
+    },
+    {
+      "language": "cpp",
+      "line_start": 159,
+      "line_end": 202,
+      "context": "从剪贴板读取数据"
+    }
+  ],
+  "related_apis": [
+    "OH_PasteboardObserver_Create",
+    "OH_PasteboardObserver_Destroy",
+    "OH_PasteboardObserver_SetData",
+    "OH_Pasteboard_Create",
+    "OH_Pasteboard_Destroy",
+    "OH_Pasteboard_Subscribe",
+    "OH_Pasteboard_Unsubscribe",
+    "OH_Pasteboard_IsRemoteData",
+    "OH_Pasteboard_GetDataSource",
+    "OH_Pasteboard_HasType",
+    "OH_Pasteboard_HasData",
+    "OH_Pasteboard_GetData",
+    "OH_Pasteboard_SetData",
+    "OH_Pasteboard_ClearData"
+  ],
+  "data_types": [
+    "OH_UdsPlainText",
+    "OH_UdsHtml",
+    "OH_UdsFileUri",
+    "OH_UdsPixelMap",
+    "OH_UdsHyperlink",
+    "OH_UdsAppItem"
+  ],
+  "api_version": "12",
+  "language": "cpp",
+  "total_lines": 204
+}

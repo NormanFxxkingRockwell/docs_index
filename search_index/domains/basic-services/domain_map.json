@@ -1,126 +1,185 @@
 {
   "domain": "basic-services",
-  "overview": "Basic Services Kit（基础服务）提供常用的基础能力，包括账号管理、公共事件、剪贴板、USB服务、压缩解压、上传下载、划词服务、电源管理、打印、升级服务等模块。",
+  "overview": "Basic Services Kit是OpenHarmony提供的基础服务框架，为应用开发者提供常用的基础能力。包括账号管理（系统账号、域账号、分布式账号、应用账号）、进程线程通信（公共事件、Emitter）、剪贴板服务、文件压缩解压、打印服务、USB管理、文件上传下载、划词服务、电源管理和升级服务等功能模块。账号管理支持多用户数据隔离和权限控制；公共事件提供进程间通信能力；剪贴板支持跨设备数据共享；压缩解压提供zlib和gzip格式支持；打印支持系统打印预览和扩展能力；USB支持Host模式和串口通信；上传下载支持代理和速度控制；划词服务提供全局文本选择能力；电源管理提供运行锁防止系统睡眠；升级服务提供升级包部署能力。",
   "core_concepts": [
     "账号管理",
     "公共事件",
+    "压缩",
     "剪贴板",
-    "USB服务",
-    "压缩解压",
-    "上传下载",
-    "划词服务",
     "电源管理",
     "打印",
-    "升级服务"
+    "上传下载",
+    "划词服务",
+    "升级服务",
+    "USB"
   ],
   "learning_path": [
     {
-      "doc_id": "account_overview_sys",
-      "title": "账号管理概述（仅对系统应用开放）",
-      "order": 1,
-      "category": "核心"
+      "step": 1,
+      "title": "基础概念了解",
+      "doc_id": "basic-services-kit-overview",
+      "description": "了解Basic Services Kit的整体架构和能力范围"
     },
     {
-      "doc_id": "app_file_upload_download",
-      "title": "应用文件上传下载",
-      "order": 2,
-      "category": "核心"
+      "step": 2,
+      "title": "账号管理基础",
+      "doc_id": "account-account-overview-sys",
+      "description": "理解账号管理的基本概念和四类账号的关系"
     },
     {
-      "doc_id": "auth_domain_account_sys",
-      "title": "认证域账号（仅对系统应用开放）",
-      "order": 3,
-      "category": "核心"
+      "step": 3,
+      "title": "应用账号管理",
+      "doc_id": "account-manage-application-account",
+      "description": "学习如何管理应用账号（面向普通应用）"
     },
     {
-      "doc_id": "basic_services_kit_overview",
-      "title": "Basic Services Kit简介",
-      "order": 4,
-      "category": "核心"
+      "step": 4,
+      "title": "公共事件通信",
+      "doc_id": "common-event-common-event-overview",
+      "description": "了解公共事件服务的分类和运作机制"
     },
     {
-      "doc_id": "bulkTransfer",
-      "title": "USB批量传输",
-      "order": 5,
-      "category": "核心"
-    },
-    {
-      "doc_id": "common_event_overview",
-      "title": "公共事件简介",
-      "order": 6,
-      "category": "进阶"
-    },
-    {
-      "doc_id": "common_event_publish",
-      "title": "发布公共事件",
-      "order": 7,
-      "category": "进阶"
-    },
-    {
-      "doc_id": "common_event_remove_sticky_sys",
-      "title": "移除粘性公共事件（仅对系统应用开放）",
-      "order": 8,
-      "category": "进阶"
-    },
-    {
-      "doc_id": "common_event_static_subscription_sys",
-      "title": "静态订阅公共事件（仅对系统应用开放）",
-      "order": 9,
-      "category": "进阶"
-    },
-    {
-      "doc_id": "common_event_subscription",
+      "step": 5,
       "title": "动态订阅公共事件",
-      "order": 10,
-      "category": "进阶"
+      "doc_id": "common-event-common-event-subscription",
+      "description": "学习如何在应用运行时动态订阅公共事件"
+    },
+    {
+      "step": 6,
+      "title": "发布公共事件",
+      "doc_id": "common-event-common-event-publish",
+      "description": "学习如何发布公共事件进行进程间通信"
+    },
+    {
+      "step": 7,
+      "title": "Emitter线程间通信",
+      "doc_id": "common-event-itc-with-emitter",
+      "description": "学习使用Emitter进行进程内线程间通信"
+    },
+    {
+      "step": 8,
+      "title": "剪贴板复制粘贴",
+      "doc_id": "pasteboard-use-pasteboard-to-copy-and-paste",
+      "description": "学习使用剪贴板进行复制粘贴操作"
+    },
+    {
+      "step": 9,
+      "title": "剪贴板权限管理",
+      "doc_id": "pasteboard-get-pastedata-permission-guidelines",
+      "description": "了解剪贴板权限管控和弹窗适配优化"
+    },
+    {
+      "step": 10,
+      "title": "文件压缩解压",
+      "doc_id": "compress-deflate-and-inflate",
+      "description": "学习使用zlib进行文件和缓冲区的压缩解压"
+    },
+    {
+      "step": 11,
+      "title": "文件上传下载",
+      "doc_id": "request-app-file-upload-download",
+      "description": "学习文件上传下载功能，包括代理和速度控制"
+    },
+    {
+      "step": 12,
+      "title": "USB服务概述",
+      "doc_id": "usb-usb-overview",
+      "description": "了解USB服务的基本概念和运作机制"
+    },
+    {
+      "step": 13,
+      "title": "USB设备管理",
+      "doc_id": "usb-usbManager-usbHost-deviceManager",
+      "description": "学习USB设备管理、权限控制和配置"
+    },
+    {
+      "step": 14,
+      "title": "USB串口通信",
+      "doc_id": "usb-usbSerial-usbSerial-overview",
+      "description": "了解USB串口通信服务的基本功能"
+    },
+    {
+      "step": 15,
+      "title": "划词服务概述",
+      "doc_id": "selectionInput-selection-services-intro",
+      "description": "了解划词服务的框架原理和能力范围"
+    },
+    {
+      "step": 16,
+      "title": "实现划词扩展能力",
+      "doc_id": "selectionInput-selection-services-application-guide",
+      "description": "学习如何实现划词扩展能力应用"
+    },
+    {
+      "step": 17,
+      "title": "电源运行锁",
+      "doc_id": "powermgr-runningLock-runningLock-dev",
+      "description": "学习使用运行锁阻止系统闲时进入睡眠"
+    },
+    {
+      "step": 18,
+      "title": "文件打印",
+      "doc_id": "print-native-print-file",
+      "description": "学习文件打印功能（C/C++实现）"
+    },
+    {
+      "step": 19,
+      "title": "升级服务",
+      "doc_id": "update-sample-server-overview",
+      "description": "了解升级服务的示例服务器功能"
+    },
+    {
+      "step": 20,
+      "title": "系统账号管理（高级）",
+      "doc_id": "account-manage-os-account-sys",
+      "description": "学习系统账号管理（仅对系统应用开放）"
     }
   ],
   "quick_reference": {
-    "账号管理概述（仅对系统应用开放）": "docs\\zh-cn\\application-dev\\basic-services\\account\\account-overview-sys.md",
-    "应用文件上传下载": "docs\\zh-cn\\application-dev\\basic-services\\request\\app-file-upload-download.md",
-    "认证域账号（仅对系统应用开放）": "docs\\zh-cn\\application-dev\\basic-services\\account\\auth-domain-account-sys.md",
-    "Basic Services Kit简介": "docs\\zh-cn\\application-dev\\basic-services\\basic-services-kit-overview.md",
-    "USB批量传输": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbManager\\usbHost\\bulkTransfer.md",
-    "公共事件简介": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\common-event-overview.md",
-    "发布公共事件": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\common-event-publish.md",
-    "移除粘性公共事件（仅对系统应用开放）": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\common-event-remove-sticky-sys.md",
-    "静态订阅公共事件（仅对系统应用开放）": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\common-event-static-subscription-sys.md",
-    "动态订阅公共事件": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\common-event-subscription.md",
-    "取消动态订阅公共事件": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\common-event-unsubscription.md",
-    "USB控制传输": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbManager\\usbHost\\controlTransfer.md",
-    "使用约束管控系统账号（仅对系统应用开放）": "docs\\zh-cn\\application-dev\\basic-services\\account\\control-os-account-by-constraints-sys.md",
-    "压缩与解压": "docs\\zh-cn\\application-dev\\basic-services\\compress\\deflate-and-inflate.md",
-    "USB设备管理": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbManager\\usbHost\\deviceManager.md",
-    "常见问题": "docs\\zh-cn\\application-dev\\basic-services\\usb\\faqs-usb.md",
-    "申请访问剪贴板权限": "docs\\zh-cn\\application-dev\\basic-services\\pasteboard\\get-pastedata-permission-guidelines.md",
-    "USB中断传输": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbManager\\usbHost\\interruptTransfer.md",
-    "USB实时传输": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbManager\\usbHost\\isochronousTransfer.md",
-    "使用Emitter进行线程间通信": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\itc-with-emitter.md",
-    "管理应用账号": "docs\\zh-cn\\application-dev\\basic-services\\account\\manage-application-account.md",
-    "管理分布式账号（仅对系统应用开放）": "docs\\zh-cn\\application-dev\\basic-services\\account\\manage-distributed-account-sys.md",
-    "管理域账号（仅对系统应用开放）": "docs\\zh-cn\\application-dev\\basic-services\\account\\manage-domain-account-sys.md",
-    "管理域账号插件（仅对系统应用开放）": "docs\\zh-cn\\application-dev\\basic-services\\account\\manage-domain-plugin-sys.md",
-    "管理系统账号凭据（仅对系统应用开放）": "docs\\zh-cn\\application-dev\\basic-services\\account\\manage-os-account-credential-sys.md",
-    "管理系统账号（仅对系统应用开放）": "docs\\zh-cn\\application-dev\\basic-services\\account\\manage-os-account-sys.md",
-    "发布公共事件（C/C++）": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\native-common-event-publish.md",
-    "订阅公共事件（C/C++）": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\native-common-event-subscription.md",
-    "取消订阅公共事件（C/C++）": "docs\\zh-cn\\application-dev\\basic-services\\common-event\\native-common-event-unsubscription.md",
-    "文件打印（C/C++）": "docs\\zh-cn\\application-dev\\basic-services\\print\\native-print-file.md",
-    "使用剪贴板进行复制粘贴 (C/C++)": "docs\\zh-cn\\application-dev\\basic-services\\pasteboard\\native-use-pasteboard.md",
-    "使用剪贴板进行延迟复制粘贴": "docs\\zh-cn\\application-dev\\basic-services\\pasteboard\\pasteboard-time-lapse-copy-and-paste.md",
-    "打印扩展能力": "docs\\zh-cn\\application-dev\\basic-services\\print\\printExtensionAbilityGuide.md",
-    "阻止系统闲时进入睡眠开发指南": "docs\\zh-cn\\application-dev\\basic-services\\powermgr\\runningLock\\runningLock-dev.md",
-    "示例服务器开发指导": "docs\\zh-cn\\application-dev\\basic-services\\update\\sample-server-guidelines.md",
-    "示例服务器开发概述": "docs\\zh-cn\\application-dev\\basic-services\\update\\sample-server-overview.md",
-    "实现一个划词扩展能力": "docs\\zh-cn\\application-dev\\basic-services\\selectionInput\\selection-services-application-guide.md",
-    "划词服务概述": "docs\\zh-cn\\application-dev\\basic-services\\selectionInput\\selection-services-intro.md",
-    "USB服务开发概述": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usb-overview.md",
-    "USB串口通信管理": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbSerial\\usbSerial-communication.md",
-    "USB串口配置管理": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbSerial\\usbSerial-configuration.md",
-    "USB串口通信服务开发概述": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usbSerial\\usbSerial-overview.md",
-    "USB服务开发术语": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usb-glossary.md",
-    "USB服务开发指导": "docs\\zh-cn\\application-dev\\basic-services\\usb\\usb-guidelines.md",
-    "使用剪贴板进行复制粘贴": "docs\\zh-cn\\application-dev\\basic-services\\pasteboard\\use-pasteboard-to-copy-and-paste.md"
+    "Basic Services Kit简介": "basic-services-kit-overview",
+    "账号管理概述": "account-account-overview-sys",
+    "管理系统账号": "account-manage-os-account-sys",
+    "管理系统账号凭据": "account-manage-os-account-credential-sys",
+    "使用约束管控系统账号": "account-control-os-account-by-constraints-sys",
+    "管理域账号": "account-manage-domain-account-sys",
+    "认证域账号": "account-auth-domain-account-sys",
+    "管理域账号插件": "account-manage-domain-plugin-sys",
+    "管理分布式账号": "account-manage-distributed-account-sys",
+    "管理应用账号": "account-manage-application-account",
+    "公共事件简介": "common-event-common-event-overview",
+    "动态订阅公共事件": "common-event-common-event-subscription",
+    "取消动态订阅公共事件": "common-event-common-event-unsubscription",
+    "发布公共事件": "common-event-common-event-publish",
+    "静态订阅公共事件": "common-event-common-event-static-subscription-sys",
+    "移除粘性公共事件": "common-event-common-event-remove-sticky-sys",
+    "订阅公共事件（C/C++）": "common-event-native-common-event-subscription",
+    "取消订阅公共事件（C/C++）": "common-event-native-common-event-unsubscription",
+    "使用Emitter进行线程间通信": "common-event-itc-with-emitter",
+    "申请访问剪贴板权限": "pasteboard-get-pastedata-permission-guidelines",
+    "使用剪贴板进行复制粘贴": "pasteboard-use-pasteboard-to-copy-and-paste",
+    "使用剪贴板进行复制粘贴（C/C++）": "pasteboard-native-use-pasteboard",
+    "使用剪贴板进行延迟复制粘贴": "pasteboard-pasteboard-time-lapse-copy-and-paste",
+    "压缩与解压": "compress-deflate-and-inflate",
+    "应用文件上传下载": "request-app-file-upload-download",
+    "USB服务开发概述": "usb-usb-overview",
+    "USB服务开发指导": "usb-usb-guidelines",
+    "USB服务开发术语": "usb-usb-glossary",
+    "USB设备管理": "usb-usbManager-usbHost-deviceManager",
+    "USB控制传输": "usb-usbManager-usbHost-controlTransfer",
+    "USB中断传输": "usb-usbManager-usbHost-interruptTransfer",
+    "USB批量传输": "usb-usbManager-usbHost-bulkTransfer",
+    "USB实时传输": "usb-usbManager-usbHost-isochronousTransfer",
+    "USB串口通信服务开发概述": "usb-usbSerial-usbSerial-overview",
+    "USB串口配置管理": "usb-usbSerial-usbSerial-configuration",
+    "USB串口通信管理": "usb-usbSerial-usbSerial-communication",
+    "USB常见问题": "usb-faqs-usb",
+    "划词服务概述": "selectionInput-selection-services-intro",
+    "实现一个划词扩展能力": "selectionInput-selection-services-application-guide",
+    "阻止系统闲时进入睡眠开发指南": "powermgr-runningLock-runningLock-dev",
+    "文件打印（C/C++）": "print-native-print-file",
+    "打印扩展能力": "print-printExtensionAbilityGuide",
+    "示例服务器开发概述": "update-sample-server-overview",
+    "示例服务器开发指导": "update-sample-server-guidelines"
   },
-  "document_count": 46
+  "document_count": 57
 }

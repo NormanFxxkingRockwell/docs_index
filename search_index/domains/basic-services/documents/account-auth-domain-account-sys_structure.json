@@ -1,0 +1,165 @@
+{
+  "doc_id": "account-auth-domain-account-sys",
+  "title": "认证域账号（仅对系统应用开放）",
+  "path": "docs/zh-cn/application-dev/basic-services/account/auth-domain-account-sys.md",
+  "domain": "basic-services",
+  "subsystem": "Account",
+  "owner": "@steven-q",
+  "designer": "@JiDong-CS1",
+  "tester": "@zhaimengchao",
+  "adviser": "@zengyawen",
+  "summary": "当需要验证域账号身份（比如屏幕解锁、登录会话失效等场景）时，可以使用系统提供的接口对域账号进行身份认证。文档介绍了使用密码认证域账号和弹窗认证域账号两种方式。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "认证域账号（仅对系统应用开放）",
+      "line": 1,
+      "content": "当需要验证域账号身份（比如屏幕解锁、登录会话失效等场景）时，可以使用系统提供的接口对域账号进行身份认证。"
+    },
+    {
+      "level": 2,
+      "title": "开发准备",
+      "line": 12,
+      "content": "导入系统账号模块。"
+    },
+    {
+      "level": 2,
+      "title": "使用密码认证域账号",
+      "line": 23,
+      "content": "用户可以使用密码认证域账号。开发者可以使用auth接口完成此操作。此外使用该接口，应用还需要申请ohos.permission.ACCESS_USER_AUTH_INTERNAL权限。"
+    },
+    {
+      "level": 2,
+      "title": "弹窗认证域账号",
+      "line": 74,
+      "content": "在无法获取用户密码的情况下，需要认证域账号时，可以请求系统弹窗验证域账号用户。开发者可以使用authWithPopup完成此操作。"
+    }
+  ],
+  "apis": [
+    {
+      "name": "auth",
+      "module": "osAccount.DomainAccountManager",
+      "line": 66,
+      "description": "密码认证域账号接口"
+    },
+    {
+      "name": "authWithPopup",
+      "module": "osAccount.DomainAccountManager",
+      "line": 101,
+      "description": "弹窗认证域账号接口"
+    }
+  ],
+  "permissions": [
+    "ohos.permission.ACCESS_USER_AUTH_INTERNAL"
+  ],
+  "imports": [
+    {
+      "module": "@kit.BasicServicesKit",
+      "line": 19,
+      "components": [
+        "osAccount",
+        "BusinessError"
+      ]
+    }
+  ],
+  "code_blocks": [
+    {
+      "type": "TypeScript",
+      "line": 18,
+      "description": "导入系统账号模块"
+    },
+    {
+      "type": "TypeScript",
+      "line": 35,
+      "description": "获取用户输入，包括域账号信息和域账号密码"
+    },
+    {
+      "type": "TypeScript",
+      "line": 48,
+      "description": "定义认证结果回调"
+    },
+    {
+      "type": "TypeScript",
+      "line": 64,
+      "description": "调用auth接口进行密码认证"
+    },
+    {
+      "type": "TypeScript",
+      "line": 84,
+      "description": "定义认证结果回调对象"
+    },
+    {
+      "type": "TypeScript",
+      "line": 99,
+      "description": "调用authWithPopup接口弹窗认证当前域账号"
+    }
+  ],
+  "references": [
+    {
+      "text": "auth",
+      "url": "../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#auth10",
+      "line": 25
+    },
+    {
+      "text": "申请应用权限",
+      "url": "../../security/AccessToken/determine-application-mode.md#system_basic等级应用申请权限的方式",
+      "line": 29
+    },
+    {
+      "text": "auth",
+      "url": "../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#auth10",
+      "line": 60
+    },
+    {
+      "text": "authWithPopup",
+      "url": "../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#authwithpopup10",
+      "line": 76
+    },
+    {
+      "text": "authWithPopup",
+      "url": "../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#authwithpopup10",
+      "line": 95
+    }
+  ],
+  "sample_links": [
+    {
+      "description": "导入系统账号模块",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Account/DomainAccount/entry/src/main/ets/pages/DomainAccount/AuthenticationDomainAccount.ets",
+      "line": 16
+    },
+    {
+      "description": "获取用户输入",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Account/DomainAccount/entry/src/main/ets/pages/DomainAccount/AuthenticationDomainAccount.ets",
+      "line": 33
+    },
+    {
+      "description": "定义认证结果回调",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Account/DomainAccount/entry/src/main/ets/pages/DomainAccount/AuthenticationDomainAccount.ets",
+      "line": 46
+    },
+    {
+      "description": "执行密码认证",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Account/DomainAccount/entry/src/main/ets/pages/DomainAccount/AuthenticationDomainAccount.ets",
+      "line": 62
+    },
+    {
+      "description": "定义认证结果回调对象",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Account/DomainAccount/entry/src/main/ets/pages/DomainAccount/AuthenticationDomainAccount.ets",
+      "line": 82
+    },
+    {
+      "description": "调用操作认证当前域账号",
+      "url": "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Account/DomainAccount/entry/src/main/ets/pages/DomainAccount/AuthenticationDomainAccount.ets",
+      "line": 97
+    }
+  ],
+  "tags": [
+    "认证",
+    "域账号",
+    "密码认证",
+    "弹窗认证",
+    "系统应用"
+  ],
+  "total_lines": 109,
+  "last_updated": "2026-02-25"
+}

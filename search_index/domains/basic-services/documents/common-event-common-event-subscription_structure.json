@@ -1,0 +1,181 @@
+{
+  "doc_id": "common-event-common-event-subscription",
+  "title": "动态订阅公共事件",
+  "path": "docs/zh-cn/application-dev/basic-services/common-event/common-event-subscription.md",
+  "domain": "basic-services",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Notification",
+    "owner": "@peixu",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "本文档介绍了如何在应用运行时动态订阅公共事件，包括场景介绍、接口说明和开发步骤。主要讲解了如何创建订阅者、订阅自定义和系统公共事件，以及如何处理事件回调。",
+  "structure": {
+    "sections": [
+      {
+        "level": 1,
+        "title": "动态订阅公共事件",
+        "line_start": 1,
+        "line_end": 118
+      },
+      {
+        "level": 2,
+        "title": "场景介绍",
+        "line_start": 10,
+        "line_end": 25
+      },
+      {
+        "level": 2,
+        "title": "接口说明",
+        "line_start": 26,
+        "line_end": 35
+      },
+      {
+        "level": 2,
+        "title": "开发步骤",
+        "line_start": 37,
+        "line_end": 118,
+        "subsections": [
+          {
+            "level": 3,
+            "title": "导入模块",
+            "line_start": 39,
+            "line_end": 49
+          },
+          {
+            "level": 3,
+            "title": "创建订阅者信息",
+            "line_start": 51,
+            "line_end": 76,
+            "subsections": [
+              {
+                "level": 4,
+                "title": "自定义公共事件",
+                "line_start": 52,
+                "line_end": 63
+              },
+              {
+                "level": 4,
+                "title": "系统公共事件",
+                "line_start": 65,
+                "line_end": 76
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "title": "创建订阅者",
+            "line_start": 78,
+            "line_end": 94
+          },
+          {
+            "level": 3,
+            "title": "创建订阅回调函数",
+            "line_start": 96,
+            "line_end": 115
+          }
+        ]
+      }
+    ],
+    "code_blocks": [
+      {
+        "language": "TypeScript",
+        "line_start": 43,
+        "line_end": 49,
+        "context": "导入模块"
+      },
+      {
+        "language": "TypeScript",
+        "line_start": 56,
+        "line_end": 63,
+        "context": "创建自定义公共事件订阅者信息"
+      },
+      {
+        "language": "TypeScript",
+        "line_start": 69,
+        "line_end": 76,
+        "context": "创建系统公共事件订阅者信息"
+      },
+      {
+        "language": "TypeScript",
+        "line_start": 82,
+        "line_end": 94,
+        "context": "创建订阅者回调"
+      },
+      {
+        "language": "TypeScript",
+        "line_start": 100,
+        "line_end": 115,
+        "context": "订阅公共事件回调"
+      }
+    ],
+    "tables": [
+      {
+        "line_start": 30,
+        "line_end": 34,
+        "headers": ["接口名", "接口描述"],
+        "context": "接口说明"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "createSubscriber",
+        "type": "function",
+        "line": 32
+      },
+      {
+        "name": "createSubscriber",
+        "type": "function",
+        "line": 33
+      },
+      {
+        "name": "subscribe",
+        "type": "function",
+        "line": 34
+      },
+      {
+        "name": "CommonEventSubscribeInfo",
+        "type": "interface",
+        "line": 51
+      },
+      {
+        "name": "CommonEventSubscriber",
+        "type": "interface",
+        "line": 58
+      },
+      {
+        "name": "CommonEventData",
+        "type": "interface",
+        "line": 96
+      }
+    ],
+    "key_concepts": [
+      {
+        "name": "动态订阅",
+        "line": 12,
+        "description": "应用在运行状态时对某个公共事件进行订阅"
+      },
+      {
+        "name": "自定义公共事件",
+        "line": 52,
+        "description": "应用定义的公共事件"
+      },
+      {
+        "name": "系统公共事件",
+        "line": 65,
+        "description": "CES内部定义的公共事件"
+      }
+    ]
+  },
+  "content_stats": {
+    "total_lines": 118,
+    "code_blocks": 5,
+    "tables": 1,
+    "sections": 4,
+    "api_references": 6,
+    "key_concepts": 3
+  }
+}

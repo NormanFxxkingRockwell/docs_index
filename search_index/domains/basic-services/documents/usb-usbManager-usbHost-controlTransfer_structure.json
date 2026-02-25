@@ -1,0 +1,214 @@
+{
+  "doc_id": "usb-usbManager-usbHost-controlTransfer",
+  "metadata": {
+    "title": "USB控制传输",
+    "kit": "Basic Services Kit",
+    "subsystem": "USB",
+    "owner": "@hwymlgitcode",
+    "designer": "@w00373942",
+    "tester": "@dong-dongzhen",
+    "adviser": "@w_Machine_cc",
+    "language": "zh-cn",
+    "path": "docs/zh-cn/application-dev/basic-services/usb/usbManager/usbHost/controlTransfer.md",
+    "domain": "basic-services"
+  },
+  "summary": "本文档介绍USB控制传输的开发流程，包括场景介绍、环境准备和开发指导。控制传输主要用于主机和设备进行设备状态的获取和设置，进行设备属性状态的控制。文档详细说明了如何使用usbControlTransfer接口进行数据传输，包括获取设备列表、申请操作权限、打开设备、数据传输和关闭设备的完整步骤。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line_start": 10,
+      "line_end": 12,
+      "content": "控制传输主要用于主机（Host）和设备（Device）进行设备状态的获取和设置，进行设备属性状态的控制。根据设备支持的端点类型支持控制传输读和写。"
+    },
+    {
+      "level": 2,
+      "title": "环境准备",
+      "line_start": 14,
+      "line_end": 38,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "环境要求",
+          "line_start": 16,
+          "line_end": 31,
+          "content": "开发工具及配置：DevEco Studio作为驱动开发工具，是进行驱动开发必备条件之一，开发者可以使用该工具进行开发、调试、打包等操作。请下载安装该工具，并参考DevEco Studio使用指南中的创建工程及运行进行基本的操作验证，保证DevEco Studio可正常运行。SDK版本配置：扩展外设管理提供的ArkTs接口，所需SDK版本为API16及以上才可使用。HDC配置：HDC（HarmonyOS Device Connector）是为开发人员提供的用于调试的命令行工具，通过该工具可以在Windows/Linux/Mac系统上与真实设备或者模拟器进行交互，详细参考HDC配置。"
+        },
+        {
+          "level": 3,
+          "title": "搭建环境",
+          "line_start": 32,
+          "line_end": 38,
+          "content": "在PC上安装DevEco Studio，要求版本在4.1及以上。将public-SDK更新到API 16或以上，更新SDK的具体操作可参见更新指南。PC安装HDC工具，通过该工具可以在Windows/Linux/Mac系统上与真实设备或者模拟器进行交互。用USB线缆将搭载OpenHarmony的设备连接到PC。"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "开发指导",
+      "line_start": 39,
+      "line_end": 244,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "接口说明",
+          "line_start": 41,
+          "line_end": 47,
+          "content": "usbControlTransfer(pipe: USBDevicePipe, requestparam: USBDeviceRequestParams, timeout?: number): Promise<number> - 控制传输。更多关于设备管理和传输模式的详细接口介绍，请查阅API参考文档。"
+        },
+        {
+          "level": 3,
+          "title": "开发步骤",
+          "line_start": 49,
+          "line_end": 244,
+          "content": "主机（Host）连接设备（Device），通过usbControlTransfer接口进行数据传输。以下步骤描述了如何使用控制传输方式来传输数据：1. 导入模块。2. 获取设备列表。3. 获取设备操作权限。4. 打开设备。5. 数据传输。6. 释放接口，关闭设备。",
+          "steps": [
+            {
+              "step": 1,
+              "title": "导入模块",
+              "line_start": 57,
+              "line_end": 66,
+              "content": "导入usbManager模块、BusinessError和JSON模块"
+            },
+            {
+              "step": 2,
+              "title": "获取设备列表",
+              "line_start": 69,
+              "line_end": 135,
+              "content": "使用usbManager.getDevices()获取设备列表，并检查设备列表是否为空"
+            },
+            {
+              "step": 3,
+              "title": "获取设备操作权限",
+              "line_start": 138,
+              "line_end": 158,
+              "content": "使用usbManager.requestRight(deviceName)申请操作指定设备的权限"
+            },
+            {
+              "step": 4,
+              "title": "打开设备",
+              "line_start": 161,
+              "line_end": 194,
+              "content": "使用usbManager.connectDevice()打开设备获取数据传输通道，并使用usbManager.claimInterface()打开对应接口"
+            },
+            {
+              "step": 5,
+              "title": "数据传输",
+              "line_start": 197,
+              "line_end": 224,
+              "content": "构造控制传输参数USBDeviceRequestParams，使用usbManager.usbControlTransfer()进行控制传输"
+            },
+            {
+              "step": 6,
+              "title": "释放接口，关闭设备",
+              "line_start": 226,
+              "line_end": 244,
+              "content": "使用usbManager.releaseInterface()释放接口，使用usbManager.closePipe()关闭设备"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "api_references": [
+    {
+      "name": "usbControlTransfer",
+      "signature": "usbControlTransfer(pipe: USBDevicePipe, requestparam: USBDeviceRequestParams, timeout?: number): Promise<number>",
+      "description": "控制传输"
+    },
+    {
+      "name": "getDevices",
+      "signature": "getDevices(): USBDevice[]",
+      "description": "获取设备列表"
+    },
+    {
+      "name": "requestRight",
+      "signature": "requestRight(deviceName: string): Promise<boolean>",
+      "description": "申请操作指定设备的权限"
+    },
+    {
+      "name": "hasRight",
+      "signature": "hasRight(deviceName: string): boolean",
+      "description": "检查是否有操作权限"
+    },
+    {
+      "name": "connectDevice",
+      "signature": "connectDevice(device: USBDevice): USBDevicePipe",
+      "description": "打开设备，获取数据传输通道"
+    },
+    {
+      "name": "claimInterface",
+      "signature": "claimInterface(pipe: USBDevicePipe, interface: USBInterface, force: boolean): void",
+      "description": "打开对应接口"
+    },
+    {
+      "name": "releaseInterface",
+      "signature": "releaseInterface(pipe: USBDevicePipe, interface: USBInterface): void",
+      "description": "释放接口"
+    },
+    {
+      "name": "closePipe",
+      "signature": "closePipe(pipe: USBDevicePipe): void",
+      "description": "关闭设备"
+    }
+  ],
+  "code_examples": [
+    {
+      "language": "TypeScript",
+      "line_start": 61,
+      "line_end": 66,
+      "title": "导入模块"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 73,
+      "line_end": 135,
+      "title": "获取设备列表"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 142,
+      "line_end": 158,
+      "title": "获取设备操作权限"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 165,
+      "line_end": 194,
+      "title": "打开设备"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 201,
+      "line_end": 224,
+      "title": "数据传输"
+    },
+    {
+      "language": "TypeScript",
+      "line_start": 230,
+      "line_end": 244,
+      "title": "释放接口，关闭设备"
+    }
+  ],
+  "keywords": [
+    "USB",
+    "控制传输",
+    "usbControlTransfer",
+    "USBDevicePipe",
+    "USBDeviceRequestParams",
+    "设备管理",
+    "数据传输",
+    "OpenHarmony",
+    "DevEco Studio",
+    "API16"
+  ],
+  "related_docs": [
+    "reference/apis-basic-services-kit/js-apis-usbManager.md"
+  ],
+  "stats": {
+    "total_lines": 244,
+    "code_blocks": 6,
+    "sections_count": 3,
+    "api_count": 8
+  }
+}

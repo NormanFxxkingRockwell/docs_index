@@ -1,0 +1,247 @@
+{
+  "doc_id": "request-app-file-upload-download",
+  "title": "应用文件上传下载",
+  "path": "docs/zh-cn/application-dev/basic-services/request/app-file-upload-download.md",
+  "domain": "basic-services",
+  "subsystem": "Request",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Request",
+    "owner": "@huaxin05",
+    "designer": "@hu-kai45",
+    "tester": "@murphy1984",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "应用支持将文件上传到网络服务器，也支持从网络服务器下载资源文件到本地目录。开发者可以使用上传下载模块（ohos.request）的上传接口将本地文件上传，文件上传过程通过系统服务代理完成。在API version 12中，request.agent.create接口增加了设置代理地址的参数，支持设置自定义代理地址。开发者可以使用上传下载模块的下载接口将网络资源文件下载到应用文件目录或用户文件目录。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "上传应用文件",
+      "line": 11,
+      "content": "开发者可以使用上传下载模块（ohos.request）的上传接口将本地文件上传。文件上传过程通过系统服务代理完成。在API version 12中，request.agent.create接口增加了设置代理地址的参数，支持设置自定义代理地址。当前上传应用文件功能。request.uploadFile方式仅支持上传应用缓存文件路径（cacheDir）下的文件，request.agent方式支持上传用户公共文件和应用缓存文件路径下的文件。使用上传下载模块，需声明权限：ohos.permission.INTERNET。上传下载模块不支持Charles、Fiddler等代理抓包工具。上传下载模块接口目前暂不支持子线程调用场景，如TaskPool等。"
+    },
+    {
+      "level": 2,
+      "title": "下载网络资源文件至应用文件目录",
+      "line": 144,
+      "content": "开发者可以使用上传下载模块（ohos.request）的下载接口将网络资源文件下载到应用文件目录。对已下载的网络资源应用文件，开发者可以使用基础文件IO接口（ohos.file.fs）对其进行访问，使用方式与应用文件访问一致。文件下载过程使用系统服务代理完成，在api12中request.agent.create接口增加了设置代理地址参数，支持用户设置自定义代理地址。当前网络资源文件仅支持下载至应用文件目录。使用上传下载模块，需声明权限：ohos.permission.INTERNET。"
+    },
+    {
+      "level": 2,
+      "title": "下载网络资源文件至用户文件",
+      "line": 231,
+      "content": "开发者可以使用ohos.request的request.agent接口下载网络资源文件到指定的用户文件目录。从API version 20开始支持下载网络资源文件至用户文件。"
+    },
+    {
+      "level": 3,
+      "title": "下载文档类文件",
+      "line": 238,
+      "content": "开发者可以通过调用DocumentViewPicker的save()接口保存文件并获得用户文件的uri，将此uri作为Config的saveas字段值进行下载。"
+    },
+    {
+      "level": 3,
+      "title": "下载音频类文件",
+      "line": 309,
+      "content": "开发者可以通过调用AudioViewPicker的save()接口保存文件并获得用户文件的uri，将此uri作为Config的saveas字段值进行下载。"
+    },
+    {
+      "level": 3,
+      "title": "下载图片或视频类文件",
+      "line": 374,
+      "content": "开发者可以通过调用PhotoAccessHelper模块描述的createAsset()接口创建媒体文件并获取用户文件的URI，将其作为Config的saveas字段值进行下载。需要权限：ohos.permission.WRITE_IMAGEVIDEO。权限ohos.permission.WRITE_IMAGEVIDEO是权限机制中的基本概念中system_basic(系统基础服务)级别的受限开放权限，normal等级的应用需要将自身的APL等级声明为system_basic及以上。授权方式为user_grant，需要向用户申请授权。"
+    },
+    {
+      "level": 2,
+      "title": "添加任务速度限制与超时限制",
+      "line": 481,
+      "content": "开发者可以使用ohos.request (上传下载)模块中的接口上传本地文件或下载网络资源文件。为方便对任务速度及时长进行限制，分别在API version 18中增加了setMaxSpeed接口，支持用户设置任务的最高速度限制；在API version 20的request.agent.create接口中增加了最低限速及超时参数，支持用户自定义最低速度限制以及超时时间。"
+    },
+    {
+      "level": 2,
+      "title": "添加网络配置",
+      "line": 560,
+      "content": "开发者可以通过设置配置文件实现HTTP拦截功能。上传下载模块在应用配置文件中禁用HTTP后，无法创建明文HTTP传输的上传下载任务。配置文件在APP中的路径是：src/main/resources/base/profile/network_config.json。"
+    },
+    {
+      "level": 3,
+      "title": "HTTP拦截",
+      "line": 562,
+      "content": "开发者可以通过设置配置文件实现HTTP拦截功能。上传下载模块在应用配置文件中禁用HTTP后，无法创建明文HTTP传输的上传下载任务。配置文件在APP中的路径是：src/main/resources/base/profile/network_config.json。请参考网络管理模块配置文件网络连接安全配置，了解需要配置的具体参数。"
+    },
+    {
+      "level": 2,
+      "title": "使用WantAgent实现通知栏跳转功能",
+      "line": 594,
+      "content": "从API version 22开始，开发者可以使用wantAgent接口与上传下载模块结合，实现点击任务通知后跳转至应用指定页面的功能。"
+    },
+    {
+      "level": 3,
+      "title": "功能介绍",
+      "line": 598,
+      "content": "通过在下载任务的配置request.agent.Notification中设置wantAgent参数，开发者可以指定用户点击通知后要跳转的应用页面及相关参数。当用户点击正在进行或已完成的下载任务通知时，系统会根据wantAgent参数启动指定的应用能力。"
+    },
+    {
+      "level": 3,
+      "title": "示例代码",
+      "line": 602,
+      "content": "以下示例代码展示了如何创建一个带有wantAgent功能的下载任务。"
+    },
+    {
+      "level": 3,
+      "title": "配置说明",
+      "line": 695,
+      "content": "在上面的示例代码中，我们主要通过以下几个步骤实现了通知栏跳转功能：1. 创建WantAgentInfo对象：定义点击通知后要执行的操作，包括目标应用的包名、ability名称和需要传递的具体参数。2. 获取WantAgent实例：通过wantAgent.getWantAgent()方法获取WantAgent实例。3. 配置下载任务：在request.agent.Config中设置notification属性，并将wantAgent参数设置为前面获取的WantAgent实例。4. 设置通知可见性：通过visibility参数可以控制通知显示的内容，例如进度、完成状态等。"
+    },
+    {
+      "level": 3,
+      "title": "注意事项",
+      "line": 707,
+      "content": "此功能仅支持API version 22及以上版本。确保在配置wantAgentInfo时，填写正确的应用包名和ability名称。wantAgent参数需要与notification参数配合使用，才能在通知中显示跳转功能。在实际应用中，建议根据业务需求调整通知的标题、描述、可见性以及其他相关参数。"
+    }
+  ],
+  "code_blocks": [
+    {
+      "type": "TypeScript",
+      "start_line": 29,
+      "end_line": 88,
+      "id": "request_upload_file",
+      "description": "requestUploadFile方法：使用request.uploadFile方式上传应用缓存文件"
+    },
+    {
+      "type": "TypeScript",
+      "start_line": 93,
+      "end_line": 142,
+      "id": "upload_agent_task",
+      "description": "requestAgentUpload方法：使用request.agent方式上传文件"
+    },
+    {
+      "type": "TypeScript",
+      "start_line": 158,
+      "end_line": 186,
+      "id": "request_download_file",
+      "description": "requestDownloadFile方法：下载网络资源文件至应用文件目录"
+    },
+    {
+      "type": "TypeScript",
+      "start_line": 190,
+      "end_line": 229,
+      "id": "download_agent_task",
+      "description": "requestAgentDownload方法：使用request.agent下载网络资源文件"
+    },
+    {
+      "type": "TypeScript",
+      "start_line": 244,
+      "end_line": 307,
+      "id": "doc_user_file_download",
+      "description": "docFileAgentTask方法：下载文档类文件至用户文件"
+    },
+    {
+      "type": "TypeScript",
+      "start_line": 315,
+      "end_line": 371,
+      "id": "audio_user_file_download",
+      "description": "audioFileAgentTask方法：下载音频类文件至用户文件"
+    },
+    {
+      "type": "TypeScript",
+      "start_line": 384,
+      "end_line": 478,
+      "id": "media_user_file_download",
+      "description": "mediaFileAgentTask方法：下载图片或视频类文件至用户文件"
+    },
+    {
+      "type": "TypeScript",
+      "start_line": 489,
+      "end_line": 557,
+      "id": "speed_limit_download",
+      "description": "speedLimitDownload方法：添加任务速度限制与超时限制"
+    },
+    {
+      "type": "ts",
+      "start_line": 568,
+      "end_line": 592,
+      "description": "网络配置文件示例：network_config.json"
+    },
+    {
+      "type": "TypeScript",
+      "start_line": 608,
+      "end_line": 692,
+      "id": "want_agent_download",
+      "description": "wantAgentDownload方法：使用WantAgent实现通知栏跳转功能"
+    }
+  ],
+  "api_references": [
+    "ohos.request",
+    "ohos.file.fs",
+    "ohos.permission.INTERNET",
+    "ohos.permission.WRITE_IMAGEVIDEO",
+    "request.agent.create",
+    "request.uploadFile",
+    "request.downloadFile",
+    "request.agent.Task",
+    "request.agent.Config",
+    "request.agent.Action",
+    "request.agent.Mode",
+    "request.agent.Network",
+    "request.agent.Notification",
+    "request.agent.VISIBILITY_COMPLETION",
+    "request.agent.VISIBILITY_PROGRESS",
+    "DocumentViewPicker",
+    "AudioViewPicker",
+    "PhotoAccessHelper",
+    "wantAgent",
+    "wantAgent.WantAgentInfo",
+    "wantAgent.OperationType",
+    "wantAgent.WantAgentFlags",
+    "bundleManager",
+    "abilityAccessCtrl"
+  ],
+  "permissions": [
+    "ohos.permission.INTERNET",
+    "ohos.permission.WRITE_IMAGEVIDEO"
+  ],
+  "api_versions": [
+    12,
+    18,
+    20,
+    22
+  ],
+  "tags": [
+    "upload",
+    "download",
+    "file",
+    "request",
+    "agent",
+    "network",
+    "proxy",
+    "cacheDir",
+    "user-file",
+    "speed-limit",
+    "timeout",
+    "wantAgent",
+    "notification"
+  ],
+  "related_docs": [
+    "../../reference/apis-basic-services-kit/js-apis-request.md",
+    "../../reference/apis-core-file-kit/js-apis-file-fs.md",
+    "../../file-management/app-file-access.md",
+    "../../security/AccessToken/declare-permissions.md",
+    "../../arkts-utils/taskpool-introduction.md",
+    "../../reference/apis-core-file-kit/js-apis-file-picker.md",
+    "../../reference/apis-media-library-kit/arkts-apis-photoAccessHelper.md",
+    "../../security/AccessToken/restricted-permissions.md",
+    "../../security/AccessToken/app-permission-mgmt-over-mview.md",
+    "../../security/AccessToken/request-user-authorization.md",
+    "../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md"
+  ],
+  "sample_links": [
+    "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Basic-Services-Kit/request/UploadDownloadGuide/features/uploadanddownload/src/main/ets/upload/RequestUpload.ets",
+    "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Basic-Services-Kit/request/UploadDownloadGuide/features/uploadanddownload/src/main/ets/download/RequestDownload.ets",
+    "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Basic-Services-Kit/request/UploadDownloadGuide/features/uploadanddownload/src/main/ets/download/userFile/DocumentDownload.ets",
+    "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Basic-Services-Kit/request/UploadDownloadGuide/features/uploadanddownload/src/main/ets/download/userFile/AudioDownload.ets",
+    "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Basic-Services-Kit/request/UploadDownloadGuide/features/uploadanddownload/src/main/ets/download/userFile/MediaDownload.ets",
+    "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Basic-Services-Kit/request/UploadDownloadGuide/features/uploadanddownload/src/main/ets/download/SpeedLimitDownload.ets",
+    "https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Basic-Services-Kit/request/UploadDownloadGuide/features/uploadanddownload/src/main/ets/download/WantAgentDownload.ets"
+  ],
+  "total_lines": 714
+}

@@ -1,0 +1,160 @@
+{
+  "doc_id": "common-event-native-common-event-publish",
+  "title": "发布公共事件（C/C++）",
+  "file_path": "docs/zh-cn/application-dev/basic-services/common-event/native-common-event-publish.md",
+  "domain": "basic-services",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Notification",
+    "owner": "@peixu",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "本文档介绍如何在C/C++中发布公共事件。提供了OH_CommonEvent_Publish和OH_CommonEvent_PublishWithInfo两个方法来发布事件，事件可以携带数据供订阅者解析。文档详细说明了开发步骤，包括引用头文件、添加动态链接库、创建公共事件属性对象、发布公共事件以及销毁公共事件对象。",
+  "sections": [
+    {
+      "level": 1,
+      "title": "发布公共事件（C/C++）",
+      "line": 1
+    },
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 10,
+      "content": "当需要发布某个公共事件时，可以通过OH_CommonEvent_Publish和OH_CommonEvent_PublishWithInfo方法发布事件。发布的公共事件可以携带数据，供订阅者解析并进行下一步处理。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 14,
+      "content": "详细的API说明请参考CommonEvent API参考。包含以下接口：struct CommonEvent_PublishInfo、OH_CommonEvent_Publish、OH_CommonEvent_PublishWithInfo、OH_CommonEvent_CreatePublishInfo、OH_CommonEvent_DestroyPublishInfo、OH_CommonEvent_CreateParameters、OH_CommonEvent_DestroyParameters。"
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 28,
+      "subsections": [
+        {
+          "level": 3,
+          "title": "步骤1：引用头文件",
+          "line": 30
+        },
+        {
+          "level": 3,
+          "title": "步骤2：在CMake脚本中添加动态链接库",
+          "line": 52
+        },
+        {
+          "level": 3,
+          "title": "步骤3：（可选）创建公共事件属性对象",
+          "line": 62
+        },
+        {
+          "level": 3,
+          "title": "步骤4：发布公共事件",
+          "line": 157
+        },
+        {
+          "level": 3,
+          "title": "步骤5：销毁公共事件对象",
+          "line": 189
+        }
+      ]
+    }
+  ],
+  "apis": [
+    {
+      "name": "OH_CommonEvent_Publish",
+      "type": "function",
+      "description": "发布公共事件"
+    },
+    {
+      "name": "OH_CommonEvent_PublishWithInfo",
+      "type": "function",
+      "description": "发布带有指定属性的公共事件"
+    },
+    {
+      "name": "OH_CommonEvent_CreatePublishInfo",
+      "type": "function",
+      "description": "创建公共事件属性对象"
+    },
+    {
+      "name": "OH_CommonEvent_DestroyPublishInfo",
+      "type": "function",
+      "description": "销毁公共事件属性对象"
+    },
+    {
+      "name": "OH_CommonEvent_CreateParameters",
+      "type": "function",
+      "description": "创建公共事件附加信息对象"
+    },
+    {
+      "name": "OH_CommonEvent_DestroyParameters",
+      "type": "function",
+      "description": "销毁公共事件附加信息对象"
+    },
+    {
+      "name": "CommonEvent_PublishInfo",
+      "type": "struct",
+      "description": "发布公共事件时使用的公共事件属性对象"
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "C",
+      "line_start": 34,
+      "line_end": 50,
+      "context": "引用头文件"
+    },
+    {
+      "language": "txt",
+      "line_start": 54,
+      "line_end": 60,
+      "context": "CMake脚本添加动态链接库"
+    },
+    {
+      "language": "C++",
+      "line_start": 68,
+      "line_end": 155,
+      "context": "创建并设置公共事件属性"
+    },
+    {
+      "language": "C++",
+      "line_start": 167,
+      "line_end": 173,
+      "context": "发布不携带信息的公共事件"
+    },
+    {
+      "language": "C++",
+      "line_start": 179,
+      "line_end": 186,
+      "context": "发布携带信息的公共事件"
+    },
+    {
+      "language": "C++",
+      "line_start": 195,
+      "line_end": 205,
+      "context": "销毁公共事件对象"
+    }
+  ],
+  "keywords": [
+    "公共事件",
+    "发布",
+    "C/C++",
+    "Basic Services Kit",
+    "Notification",
+    "OH_CommonEvent_Publish",
+    "OH_CommonEvent_PublishWithInfo",
+    "CommonEvent_PublishInfo",
+    "CommonEvent_Parameters"
+  ],
+  "related_topics": [
+    "common-event",
+    "notification",
+    "event-publish"
+  ],
+  "total_lines": 206,
+  "last_updated": "2026-02-25"
+}

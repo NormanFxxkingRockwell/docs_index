@@ -1,0 +1,85 @@
+{
+  "doc_id": "common-event-native-common-event-unsubscription",
+  "title": "取消订阅公共事件（C/C++）",
+  "file_path": "docs/zh-cn/application-dev/basic-services/common-event/native-common-event-unsubscription.md",
+  "language": "zh-cn",
+  "domain": "basic-services",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Notification",
+    "owner": "@peixu",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "订阅者在完成业务需求之后，需要取消订阅公共事件。本文档介绍了如何使用 OH_CommonEvent_UnSubscribe 接口取消订阅公共事件的开发步骤。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "content": "订阅者在完成业务需求之后，需要取消订阅公共事件。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "content": "详细的API说明请参考CommonEvent API参考。",
+      "api_reference": [
+        {
+          "name": "OH_CommonEvent_UnSubscribe",
+          "description": "取消订阅公共事件",
+          "link": "../../reference/apis-basic-services-kit/capi-oh-commonevent-h.md#oh_commonevent_unsubscribe"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "steps": [
+        {
+          "step": 1,
+          "title": "引用头文件",
+          "code_language": "C",
+          "code": "#include \"hilog/log.h\"\n#include \"BasicServicesKit/oh_commonevent.h\""
+        },
+        {
+          "step": 2,
+          "title": "在CMake脚本中添加动态链接库",
+          "code_language": "txt",
+          "code": "target_link_libraries(entry PUBLIC\n    libace_napi.z.so\n    libhilog_ndk.z.so\n    libohcommonevent.so\n)"
+        },
+        {
+          "step": 3,
+          "title": "取消订阅公共事件",
+          "description": "订阅者订阅公共事件并完成业务需求后，可以通过 OH_CommonEvent_UnSubscribe 主动取消订阅事件。",
+          "code_language": "C++",
+          "code": "void Unsubscribe(CommonEvent_Subscriber *subscriber)\n{\n    // 通过传入订阅者来退订事件\n    int32_t ret = OH_CommonEvent_UnSubscribe(subscriber);\n    OH_LOG_Print(LOG_APP, LOG_INFO, 1, \"CES_TEST\", \"OH_CommonEvent_UnSubscribe ret <%{public}d>.\", ret);\n}"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "公共事件",
+    "取消订阅",
+    "C/C++",
+    "OH_CommonEvent_UnSubscribe",
+    "CommonEvent",
+    "Basic Services Kit",
+    "Notification"
+  ],
+  "related_apis": [
+    "OH_CommonEvent_UnSubscribe"
+  ],
+  "code_samples": [
+    {
+      "language": "C",
+      "description": "引用头文件",
+      "code": "#include \"hilog/log.h\"\n#include \"BasicServicesKit/oh_commonevent.h\""
+    },
+    {
+      "language": "C++",
+      "description": "取消订阅公共事件",
+      "code": "void Unsubscribe(CommonEvent_Subscriber *subscriber)\n{\n    int32_t ret = OH_CommonEvent_UnSubscribe(subscriber);\n    OH_LOG_Print(LOG_APP, LOG_INFO, 1, \"CES_TEST\", \"OH_CommonEvent_UnSubscribe ret <%{public}d>.\", ret);\n}"
+    }
+  ],
+  "last_updated": "2026-02-25"
+}

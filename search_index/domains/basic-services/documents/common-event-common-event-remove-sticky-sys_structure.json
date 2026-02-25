@@ -1,0 +1,108 @@
+{
+  "doc_id": "common-event-common-event-remove-sticky-sys",
+  "title": "移除粘性公共事件（仅对系统应用开放）",
+  "domain": "basic-services",
+  "path": "docs/zh-cn/application-dev/basic-services/common-event/common-event-remove-sticky-sys.md",
+  "language": "zh-cn",
+  "metadata": {
+    "kit": "Basic Services Kit",
+    "subsystem": "Notification",
+    "owner": "@peixu",
+    "designer": "@dongqingran; @wulong158",
+    "tester": "@wanghong1997",
+    "adviser": "@fang-jinxu"
+  },
+  "summary": "本文档介绍了如何移除粘性公共事件的功能，该功能仅对系统应用开放。文档包含场景介绍、接口说明和开发步骤，详细说明了使用removeStickyCommonEvent()方法移除粘性公共事件的完整流程，包括权限申请、模块导入和接口调用。",
+  "structure": [
+    {
+      "level": 1,
+      "title": "移除粘性公共事件（仅对系统应用开放）",
+      "line": 1,
+      "type": "heading"
+    },
+    {
+      "level": 2,
+      "title": "场景介绍",
+      "line": 10,
+      "type": "heading",
+      "content": "已发出的粘性公共事件后来订阅者也可以接收到，如果这个事件不再转发，需要事件发布者进行移除。系统提供了粘性公共事件移除接口。"
+    },
+    {
+      "level": 2,
+      "title": "接口说明",
+      "line": 14,
+      "type": "heading",
+      "interfaces": [
+        {
+          "name": "removeStickyCommonEvent",
+          "description": "移除粘性公共事件。",
+          "signature": "removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): void"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "开发步骤",
+      "line": 23,
+      "type": "heading",
+      "steps": [
+        {
+          "step": 1,
+          "content": "需要申请ohos.permission.COMMONEVENT_STICKY权限，配置方式请参见声明权限。"
+        },
+        {
+          "step": 2,
+          "content": "导入模块。"
+        },
+        {
+          "step": 3,
+          "content": "调用removeStickyCommonEvent()方法移除对应的粘性公共事件。"
+        }
+      ],
+      "code_blocks": [
+        {
+          "language": "ts",
+          "line_start": 29,
+          "line_end": 35,
+          "description": "导入模块"
+        },
+        {
+          "language": "ts",
+          "line_start": 43,
+          "line_end": 54,
+          "description": "移除粘性公共事件示例代码"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "粘性公共事件",
+    "removeStickyCommonEvent",
+    "系统应用",
+    "事件移除",
+    "权限",
+    "COMMONEVENT_STICKY"
+  ],
+  "api_references": [
+    "removeStickyCommonEvent",
+    "AsyncCallback"
+  ],
+  "permissions": [
+    "ohos.permission.COMMONEVENT_STICKY"
+  ],
+  "kits": [
+    "BasicServicesKit",
+    "PerformanceAnalysisKit"
+  ],
+  "related_docs": [
+    "../../reference/apis-basic-services-kit/js-apis-commonEventManager-sys.md",
+    "../../security/AccessToken/declare-permissions.md",
+    "common-event-publish.md"
+  ],
+  "statistics": {
+    "total_lines": 56,
+    "code_blocks": 2,
+    "sections": 4,
+    "interfaces": 1
+  }
+}

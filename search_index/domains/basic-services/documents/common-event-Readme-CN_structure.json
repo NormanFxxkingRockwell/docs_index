@@ -1,0 +1,122 @@
+{
+  "doc_id": "common-event-Readme-CN",
+  "metadata": {
+    "title": "进程线程通信",
+    "kit": "Common",
+    "subsystem": "Common",
+    "owner": "@fang-jinxu",
+    "designer": "@lingminghw",
+    "tester": "@RayShih",
+    "adviser": "@fang-jinxu",
+    "domain": "basic-services",
+    "language": "zh-cn",
+    "path": "docs/zh-cn/application-dev/basic-services/common-event/Readme-CN.md"
+  },
+  "summary": "本文档介绍了进程线程通信的两种方式：使用公共事件进行进程间通信和使用Emitter进行线程间通信。公共事件部分包含动态订阅、静态订阅、取消订阅、发布事件等功能，支持ArkTS和C/C++两种语言实现。",
+  "structure": {
+    "type": "document",
+    "title": "进程线程通信",
+    "level": 0,
+    "sections": [
+      {
+        "type": "section",
+        "title": "使用公共事件进行进程间通信",
+        "level": 1,
+        "anchor": "common-event-communication",
+        "subsections": [
+          {
+            "type": "link",
+            "title": "公共事件简介",
+            "level": 2,
+            "path": "common-event-overview.md"
+          },
+          {
+            "type": "link",
+            "title": "动态订阅公共事件",
+            "level": 2,
+            "path": "common-event-subscription.md"
+          },
+          {
+            "type": "link",
+            "title": "静态订阅公共事件（仅对系统应用开放）",
+            "level": 2,
+            "path": "common-event-static-subscription-sys.md",
+            "deprecated": true
+          },
+          {
+            "type": "link",
+            "title": "取消动态订阅公共事件",
+            "level": 2,
+            "path": "common-event-unsubscription.md"
+          },
+          {
+            "type": "link",
+            "title": "发布公共事件",
+            "level": 2,
+            "path": "common-event-publish.md"
+          },
+          {
+            "type": "link",
+            "title": "移除粘性公共事件（仅对系统应用开放）",
+            "level": 2,
+            "path": "common-event-remove-sticky-sys.md",
+            "deprecated": true
+          },
+          {
+            "type": "link",
+            "title": "订阅公共事件（C/C++）",
+            "level": 2,
+            "path": "native-common-event-subscription.md"
+          },
+          {
+            "type": "link",
+            "title": "取消订阅公共事件（C/C++）",
+            "level": 2,
+            "path": "native-common-event-unsubscription.md"
+          },
+          {
+            "type": "link",
+            "title": "发布公共事件（C/C++）",
+            "level": 2,
+            "path": "native-common-event-publish.md"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "title": "使用Emitter进行线程间通信",
+        "level": 1,
+        "path": "itc-with-emitter.md"
+      }
+    ]
+  },
+  "keywords": [
+    "进程间通信",
+    "线程间通信",
+    "公共事件",
+    "Emitter",
+    "动态订阅",
+    "静态订阅",
+    "事件发布",
+    "C/C++",
+    "ArkTS"
+  ],
+  "related_docs": [
+    "common-event-overview.md",
+    "common-event-subscription.md",
+    "common-event-static-subscription-sys.md",
+    "common-event-unsubscription.md",
+    "common-event-publish.md",
+    "common-event-remove-sticky-sys.md",
+    "native-common-event-subscription.md",
+    "native-common-event-unsubscription.md",
+    "native-common-event-publish.md",
+    "itc-with-emitter.md"
+  ],
+  "stats": {
+    "total_sections": 2,
+    "total_subsections": 10,
+    "total_links": 10,
+    "deprecated_links": 2
+  }
+}
