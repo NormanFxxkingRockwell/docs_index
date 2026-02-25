@@ -1,19 +1,7 @@
 {
   "doc_id": "UserAuthenticationKit-obtain-enrolled-state-capabilities",
   "title": "查询用户注册凭据的状态",
-  "path": "zh-cn/application-dev/security/UserAuthenticationKit/obtain-enrolled-state-capabilities.md",
-  "relative_path": "../../docs/zh-cn/application-dev/security/UserAuthenticationKit/obtain-enrolled-state-capabilities.md",
-  "metadata":. {
-    "kit": "",
-    "subsystem": "",
-    "owner": "",
-    "designer": "",
-    "tester": "",
-    "adviser": ""
-  },
-  "summary": "# 查询用户注册凭据的状态 <!--Kit: User Authentication Kit--> <!--Subsystem: UserIAM--> <!--Owner: @WALL_EYE--> <!--Designer: @lichangting518--> <!--Tester: @jane_lz--> <!--Adviser: @zengyaw",
-  "structure": {
-    "title": "查询用户注册凭据的状态",
-    "sections": []
-  }
+  "path": "docs/zh-cn/application-dev/security\\UserAuthenticationKit\\obtain-enrolled-state-capabilities.md",
+  "summary": "调用者需感知用户注册凭据（人脸、指纹、口令）的变化，可使用该接口查询当前用户注册凭据的状态。 具体参数、返回值、错误码等描述，请参考对应的[API文档](../../reference/apis-user-authentication-kit/js-apis-useriam-userauth.md#userauthgetenrolledstate12)。 | 接口名称 | 功能描述 | | -------- | -------- | | getEnrolledState(authType : UserAuthType): EnrolledState | 根据指定的认证类型，查询用户注册凭据的状态，用于感知注册凭据变化。 | 1. [申请权限](prerequisites.md#申请权限)：ohos.permission.ACCESS_BIOMETRIC。 2. 指定认证类型（[UserAuthType](../../reference/apis-user-authentication-kit/js-apis-useriam-userauth.md#userauthtype8)），调用[",
+  "content": "# 查询用户注册凭据的状态\n\n<!--Kit: User Authentication Kit-->\n<!--Subsystem: UserIAM-->\n<!--Owner: @WALL_EYE-->\n<!--Designer: @lichangting518-->\n<!--Tester: @jane_lz-->\n<!--Adviser: @zengyawen-->\n\n调用者需感知用户注册凭据（人脸、指纹、口令）的变化，可使用该接口查询当前用户注册凭据的状态。\n\n## 接口说明\n\n具体参数、返回值、错误码等描述，请参考对应的[API文档](../../reference/apis-user-authentication-kit/js-apis-useriam-userauth.md#userauthgetenrolledstate12)。\n\n| 接口名称 | 功能描述 | \n| -------- | -------- |\n| getEnrolledState(authType : UserAuthType): EnrolledState | 根据指定的认证类型，查询用户注册凭据的状态，用于感知注册凭据变化。 | \n\n## 开发步骤\n\n1. [申请权限](prerequisites.md#申请权限)：ohos.permission.ACCESS_BIOMETRIC。\n\n2. 指定认证类型（[UserAuthType](../../reference/apis-user-authentication-kit/js-apis-useriam-userauth.md#userauthtype8)），调用[getEnrolledState](../../reference/apis-user-authentication-kit/js-apis-useriam-userauth.md#userauthgetenrolledstate12)接口查询用户注册凭据的状态。\n\n以查询用户人脸注册凭据的状态为例：\n\n<!-- @[obtain_enrolled_capabilities](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/UserAuthentication/entry/src/main/ets/pages/Index.ets) -->\n\n``` TypeScript\n  obtainingEnrolledCredentialInformation() {\n    try {\n      let enrolledState = userAuth.getEnrolledState(userAuth.UserAuthType.PIN);\n      Logger.info(`get current enrolled state success, enrolledState: ${JSON.stringify(enrolledState)}`);\n      return enrolledState.credentialDigest;\n    } catch (error) {\n      const err: BusinessError = error as BusinessError;\n      Logger.error(`get current enrolled state failed, Code is ${err?.code}, message is ${err?.message}`);\n      return false;\n    }\n  }\n\n```\n\n\n## 示例代码\n\n  - [查询用户注册凭据的状态](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/UserAuthentication)\n"
 }

@@ -1,19 +1,7 @@
 {
   "doc_id": "CryptoArchitectureKit-crypto-generate-random-number",
   "title": "安全随机数生成(ArkTS)",
-  "path": "zh-cn/application-dev/security/CryptoArchitectureKit/crypto-generate-random-number.md",
-  "relative_path": "../../docs/zh-cn/application-dev/security/CryptoArchitectureKit/crypto-generate-random-number.md",
-  "metadata": {
-    "kit": "",
-    "subsystem": "",
-    "owner": "",
-    "designer": "",
-    "tester": "",
-    "adviser": ""
-  },
-  "summary": "# 安全随机数生成(ArkTS) <!--Kit: Crypto Architecture Kit--> <!--Subsystem: Security--> <!--Owner: @zxz--3--> <!--Designer: @lanming--> <!--Tester: @PAFT--> <!--Adviser: @zengyawen--> > **说明",
-  "structure": {
-    "title": "安全随机数生成(ArkTS)",
-    "sections": []
-  }
+  "path": "docs/zh-cn/application-dev/security\\CryptoArchitectureKit\\crypto-generate-random-number.md",
+  "summary": "> **说明：** > > 从API version 12开始，轻量级智能穿戴设备支持获取随机数相关操作。 随机数主要用于临时会话密钥生成和非对称加密算法密钥生成等场景。在加解密场景中，安全随机数生成器需要具备随机性、不可预测性与不可重现性。当前系统生成的随机数满足密码学安全伪随机性要求。 开发者可以调用接口，完成以下功能： - 生成指定长度的安全随机数，并将其用于生成对应的密钥。 - 指定随机种子，生成一系列的随机序列。 在开发前，开发者应该先对加解密基础知识有一定了解，并熟知以下随机数相关的基本概念： - **内部状态** 代表随机数生成器内存中的数值，当内部状态相同时，随机数生成器会生成固定的随机数序列。 - **随机种子** 一个用来对伪随机数的内部状态进行初始化的数据，随机数生成器通过种子来生成一系列的随机序列。 当前OpenSSL实现方式，随机数生成器内部状态是不断变化的，即使设置相同的种子，生成的随机数序列也不会相同。 随机数生成算法使用OpenSSL的RAND_priv_bytes接口生成安全随机数。 | 算法 | 长度（Byte） | | -------- | ---",
+  "content": "# 安全随机数生成(ArkTS)\n\n<!--Kit: Crypto Architecture Kit-->\n<!--Subsystem: Security-->\n<!--Owner: @zxz--3-->\n<!--Designer: @lanming-->\n<!--Tester: @PAFT-->\n<!--Adviser: @zengyawen-->\n\n> **说明：**\n>\n> 从API version 12开始，轻量级智能穿戴设备支持获取随机数相关操作。\n\n随机数主要用于临时会话密钥生成和非对称加密算法密钥生成等场景。在加解密场景中，安全随机数生成器需要具备随机性、不可预测性与不可重现性。当前系统生成的随机数满足密码学安全伪随机性要求。\n\n开发者可以调用接口，完成以下功能：\n\n- 生成指定长度的安全随机数，并将其用于生成对应的密钥。\n\n- 指定随机种子，生成一系列的随机序列。\n\n在开发前，开发者应该先对加解密基础知识有一定了解，并熟知以下随机数相关的基本概念：\n\n- **内部状态**\n\n  代表随机数生成器内存中的数值，当内部状态相同时，随机数生成器会生成固定的随机数序列。\n\n- **随机种子**\n\n  一个用来对伪随机数的内部状态进行初始化的数据，随机数生成器通过种子来生成一系列的随机序列。\n\n  当前OpenSSL实现方式，随机数生成器内部状态是不断变化的，即使设置相同的种子，生成的随机数序列也不会相同。\n\n## 支持的算法与规格\n\n随机数生成算法使用OpenSSL的RAND_priv_bytes接口生成安全随机数。\n\n| 算法 | 长度（Byte） |\n| -------- | -------- |\n| CTR_DRBG | [1, INT_MAX] |\n\n## 开发步骤\n\n1. 调用[cryptoFramework.createRandom](../../reference/apis-crypto-architecture-kit/js-apis-cryptoFramework.md#cryptoframeworkcreaterandom)，生成随机数实例。\n\n2. （可选）设置DataBlob数据，调用[Random.setSeed](../../reference/apis-crypto-architecture-kit/js-apis-cryptoFramework.md#setseed)，为随机数生成池设置种子。\n\n3. 设置指定字节长度，调用[Random.generateRandom](../../reference/apis-crypto-architecture-kit/js-apis-cryptoFramework.md#generaterandom)或[Random.generateRandomSync](../../reference/apis-crypto-architecture-kit/js-apis-cryptoFramework.md#generaterandomsync10)，生成安全随机数。\n\n   指定字节长度范围为1~INT_MAX。\n\n- 通过await返回异步结果：\n  <!-- @[secure_hard_ware_random_number_generation_await](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Security/CryptoArchitectureKit/SecureRandomNumberGeneration/entry/src/main/ets/pages/Await.ets) -->\n  \n  ``` TypeScript\n  \n  import { cryptoFramework } from '@kit.CryptoArchitectureKit';\n  \n  async function doRand() {\n      let rand = cryptoFramework.createRandom();\n      let seed = new Uint8Array([1, 2, 3]);\n      rand.setSeed({ data: seed });\n      let len = 12;\n      let randOutput = await rand.generateRandom(len);\n      console.info('rand output: ' + randOutput.data);\n    }\n  ```\n\n\n- 同步返回结果：\n  <!-- @[secure_hard_ware_random_number_generation_sync](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/Security/CryptoArchitectureKit/SecureRandomNumberGeneration/entry/src/main/ets/pages/Sync.ets) -->\n  \n  ``` TypeScript\n  \n  import { cryptoFramework } from '@kit.CryptoArchitectureKit';\n  import { BusinessError } from '@kit.BasicServicesKit';\n  \n  function doRandBySync() {\n    let rand = cryptoFramework.createRandom();\n    let len = 24; // Generate a 24-byte random number.\n    try {\n      let randData = rand.generateRandomSync(len);\n      if (randData.data.length !== 0) {\n        console.info('[Sync]: rand result: ' + randData.data);\n      } else {\n        console.error('[Sync]: get rand result: fail!');\n      }\n    } catch (error) {\n      let e: BusinessError = error as BusinessError;\n      console.error(`do rand failed: errCode: ${e.code}, message: ${e.message}`);\n    }\n  }\n  ```\n\n"
 }

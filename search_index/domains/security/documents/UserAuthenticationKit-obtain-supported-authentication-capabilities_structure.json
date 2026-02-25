@@ -1,19 +1,7 @@
 {
   "doc_id": "UserAuthenticationKit-obtain-supported-authentication-capabilities",
   "title": "查询支持的认证能力",
-  "path": "zh-cn/application-dev/security/UserAuthenticationKit/obtain-supported-authentication-capabilities.md",
-  "relative_path": "../../docs/zh-cn/application-dev/security/UserAuthenticationKit/obtain-supported-authentication-capabilities.md",
-  "metadata":. {
-    "kit": "",
-    "subsystem": "",
-    "owner": "",
-    "designer": "",
-    "tester": "",
-    "adviser": ""
-  },
-  "summary": "# 查询支持的认证能力 <!--Kit: User Authentication Kit--> <!--Subsystem: UserIAM--> <!--Owner: @WALL_EYE--> <!--Designer: @lichangting518--> <!--Tester: @jane_lz--> <!--Adviser: @zengyawen--> ",
-  "structure": {
-    "title": "查询支持的认证能力",
-    "sections": []
-  }
+  "path": "docs/zh-cn/application-dev/security\\UserAuthenticationKit\\obtain-supported-authentication-capabilities.md",
+  "summary": "不同的设备对于认证能力（人脸、指纹、口令）的支持性各有差异，开发者在发起认证前应当先查询当前设备支持的用户认证能力。 具体参数、返回值、错误码等描述，请参考对应的[API文档](../../reference/apis-user-authentication-kit/js-apis-useriam-userauth.md#userauthgetavailablestatus9)。 | 接口名称 | 功能描述 | | -------- | -------- | | getAvailableStatus(authType : UserAuthType, authTrustLevel : AuthTrustLevel): void | 根据指定的认证类型、认证等级，检测当前设备是否支持相应的认证能力。 | 1. [申请权限](prerequisites.md#申请权限)：ohos.permission.ACCESS_BIOMETRIC。 2. 指定认证类型（[UserAuthType](../../reference/apis-user-authentication-kit/js-apis-",
+  "content": "# 查询支持的认证能力\n\n<!--Kit: User Authentication Kit-->\n<!--Subsystem: UserIAM-->\n<!--Owner: @WALL_EYE-->\n<!--Designer: @lichangting518-->\n<!--Tester: @jane_lz-->\n<!--Adviser: @zengyawen-->\n\n不同的设备对于认证能力（人脸、指纹、口令）的支持性各有差异，开发者在发起认证前应当先查询当前设备支持的用户认证能力。\n\n## 接口说明\n\n具体参数、返回值、错误码等描述，请参考对应的[API文档](../../reference/apis-user-authentication-kit/js-apis-useriam-userauth.md#userauthgetavailablestatus9)。\n\n| 接口名称 | 功能描述 | \n| -------- | -------- |\n| getAvailableStatus(authType : UserAuthType, authTrustLevel : AuthTrustLevel): void | 根据指定的认证类型、认证等级，检测当前设备是否支持相应的认证能力。 | \n\n## 开发步骤\n\n1. [申请权限](prerequisites.md#申请权限)：ohos.permission.ACCESS_BIOMETRIC。\n\n2. 指定认证类型（[UserAuthType](../../reference/apis-user-authentication-kit/js-apis-useriam-userauth.md#userauthtype8)）和认证等级（[AuthTrustLevel](../../reference/apis-user-authentication-kit/js-apis-useriam-userauth.md#authtrustlevel8)），调用[getAvailableStatus](../../reference/apis-user-authentication-kit/js-apis-useriam-userauth.md#userauthgetavailablestatus9)接口查询当前的设备是否支持相应的认证能力。\n\n   认证可信等级的详细介绍请参见[认证可信等级划分原则](../../security/UserAuthenticationKit/user-authentication-overview.md#生物认证可信等级划分原则)。\n\n以查询设备是否支持认证可信等级≥ATL3的人脸认证功能为例：\n\n<!-- @[obtain_supported_capabilities](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/UserAuthentication/entry/src/main/ets/pages/Index.ets) -->\n\n``` TypeScript\nobtainingSupported() {\n  try {\n    // 查询认证能力是否支持\n    userAuth.getAvailableStatus(userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL3);\n    Logger.info('current auth trust level is supported');\n    return true;\n  } catch (error) {\n    const err: BusinessError = error as BusinessError;\n    Logger.error(`current auth trust level is not supported, code is ${err?.code}, message is ${err?.message}`);\n    return false;\n  }\n}\n```\n\n\n## 示例代码\n\n  - [查询支持的认证能力](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/UserAuthentication)\n"
 }
