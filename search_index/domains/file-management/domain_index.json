@@ -1,303 +1,208 @@
 {
   "domain": "file-management",
-  "domain_name": "文件管理",
-  "summary": "Core File Kit提供完整的文件管理能力，包括应用文件和用户文件的访问、管理、分享与备份。应用文件在沙箱隔离机制下进行安全存储和访问，支持文件读写、目录操作、空间统计等基础功能。用户文件通过FilePicker选择器实现安全访问，支持图片、视频、音频、文档等多种类型。分布式文件系统提供跨设备文件访问和拷贝能力，实现设备间数据无缝流转。文件分享机制支持应用间文件共享和持久化授权管理。备份恢复框架确保应用数据安全，支持应用接入数据备份与恢复功能。",
+  "domain_summary": "Core File Kit（文件基础服务）为开发者提供一套完整的文件访问和管理能力，支持应用文件、用户文件和系统文件三种文件类型，以及本地文件系统和分布式文件系统。主要功能包括应用文件的查看、创建、读写、删除、移动等操作，用户文件的选择与保存，应用间文件分享，数据备份恢复，跨设备文件访问和拷贝，以及存储空间管理等。该领域采用沙箱隔离机制确保安全性，并通过URI和权限管理系统实现跨应用和跨设备的文件共享。",
   "core_concepts": [
-    "应用文件",
-    "用户文件",
-    "文件URI",
-    "文件权限",
-    "分布式文件系统",
-    "应用沙箱",
-    "文件备份恢复",
+    "应用文件访问",
+    "用户文件URI",
+    "文件选择与保存",
     "文件分享",
-    "FilePicker",
-    "文件访问"
+    "授权持久化",
+    "分布式文件系统",
+    "跨设备文件操作",
+    "应用数据备份恢复",
+    "应用沙箱目录",
+    "文件空间统计"
   ],
   "document_count": 28,
   "documents": [
     {
-      "doc_id": "core-file-kit-intro",
-      "title": "Core File Kit简介",
-      "path": "../../docs/zh-cn/application-dev/file-management/core-file-kit-intro.md",
-      "summary": "介绍Core File Kit（文件基础服务）的概述、使用场景、能力范围、亮点特征、框架原理以及与相关Kit的关系，包括应用文件访问框架和用户文件访问框架。",
-      "key_topics": ["Core File Kit", "文件分类", "框架原理", "能力范围"]
-    },
-    {
-      "doc_id": "app-file-overview",
-      "title": "应用文件概述",
-      "path": "../../docs/zh-cn/application-dev/file-management/app-file-overview.md",
-      "summary": "应用文件包括应用安装文件、应用资源文件和应用缓存文件，文件所有者是应用。应用文件目录位于应用沙箱目录内，系统文件对应用只读。",
-      "key_topics": ["应用文件", "应用沙箱", "文件目录结构"]
-    },
-    {
-      "doc_id": "app-sandbox-directory",
-      "title": "应用沙箱目录",
-      "path": "../../docs/zh-cn/application-dev/file-management/app-sandbox-directory.md",
-      "summary": "应用沙箱是一种以安全防护为目的的隔离机制，避免数据受到恶意路径穿越访问。介绍应用沙箱目录的概念、应用沙箱路径、应用文件目录结构以及应用沙箱路径与真实物理路径的对应关系。",
-      "key_topics": ["应用沙箱", "沙箱路径", "加密级别", "物理路径映射"]
-    },
-    {
-      "doc_id": "app-file-access",
-      "title": "应用文件访问",
-      "path": "../../docs/zh-cn/application-dev/file-management/app-file-access.md",
-      "summary": "介绍应用文件访问能力，包括文件查看、创建、读写、删除、移动、复制、获取属性等操作。通过ohos.file.fs基础文件操作接口实现，支持同步和异步两种方式。",
-      "key_topics": ["文件访问", "文件操作", "文件流", "哈希流", "ohos.file.fs"]
-    },
-    {
-      "doc_id": "native-fileio-guidelines",
-      "title": "应用文件访问(C/C++)",
-      "path": "../../docs/zh-cn/application-dev/file-management/native-fileio-guidelines.md",
-      "summary": "介绍了应用文件访问(C/C++)的相关内容，包括场景介绍、约束限制条件、接口说明以及详细的开发步骤。文档提供了FileIO模块的文件基础操作能力说明。",
-      "key_topics": ["C/C++", "FileIO", "文件操作", "Native API"]
-    },
-    {
-      "doc_id": "app-fs-space-statistics",
-      "title": "应用及文件系统空间统计",
-      "path": "../../docs/zh-cn/application-dev/file-management/app-fs-space-statistics.md",
-      "summary": "介绍如何获取文件系统空间统计和应用空间统计信息，包括获取当前应用的存储空间大小、内置存储的可用空间和总空间大小，以及指定文件系统的剩余空间和总空间大小。",
-      "key_topics": ["空间统计", "存储空间", "statvfs", "storageStatistics"]
-    },
-    {
-      "doc_id": "app-file-backup-overview",
-      "title": "应用数据备份恢复概述",
-      "path": "../../docs/zh-cn/application-dev/file-management/app-file-backup-overview.md",
-      "summary": "用户在使用应用的过程中，会产生对应的应用数据，如配置信息、业务数据等。为了保证用户数据不会因为应用升级、迁移等操作而丢失，应用需要接入数据备份恢复。",
-      "key_topics": ["数据备份", "数据恢复", "应用数据"]
-    },
-    {
-      "doc_id": "app-file-backup-extension",
-      "title": "应用接入数据备份恢复",
-      "path": "../../docs/zh-cn/application-dev/file-management/app-file-backup-extension.md",
-      "summary": "介绍如何通过BackupExtensionAbility实现应用接入数据的备份与恢复功能，包括接口说明、约束限制、开发步骤以及元数据资源配置文件的使用方法。",
-      "key_topics": ["BackupExtensionAbility", "备份恢复", "元数据配置"]
-    },
-    {
-      "doc_id": "app-file-backup-sys",
-      "title": "应用触发数据备份/恢复（仅对系统应用开放）",
-      "path": "../../docs/zh-cn/application-dev/file-management/app-file-backup-sys.md",
-      "summary": "备份恢复框架是为设备上的应用、服务提供自身数据备份和恢复的解决方案。系统应用开发者可以根据需求开发应用，以触发备份/恢复数据。",
-      "key_topics": ["系统应用", "备份恢复", "触发备份"]
-    },
-    {
-      "doc_id": "user-file-overview",
-      "title": "用户文件概述",
-      "path": "../../docs/zh-cn/application-dev/file-management/user-file-overview.md",
-      "summary": "用户文件是指登录到终端设备的用户所拥有的文件，包括图片、视频、音频、文档等。用户文件存放在用户目录下，存储位置分为内置存储和外置存储。",
-      "key_topics": ["用户文件", "内置存储", "外置存储", "媒体文件", "用户授权"]
-    },
-    {
       "doc_id": "user-file-uri-intro",
       "title": "用户文件URI介绍",
       "path": "../../docs/zh-cn/application-dev/file-management/user-file-uri-intro.md",
-      "summary": "用户文件URI是文件的唯一标识，在对用户文件进行访问与修改等操作时往往都会使用到URI，不建议开发者解析URI中的片段用于业务代码开发。",
-      "key_topics": ["文件URI", "URI类型", "文档类URI", "媒体文件URI"]
-    },
-    {
-      "doc_id": "select-user-file",
-      "title": "选择用户文件",
-      "path": "../../docs/zh-cn/application-dev/file-management/select-user-file.md",
-      "summary": "用户需要分享文件、保存图片、视频等用户文件时，开发者可以通过系统预置的文件选择器（FilePicker）实现该能力。Picker获取的URI只具有临时权限，获取持久化权限需要通过FilePicker设置永久授权方式获取。",
-      "key_topics": ["FilePicker", "PhotoViewPicker", "DocumentViewPicker", "AudioViewPicker", "文件选择器", "临时权限", "持久化权限"]
-    },
-    {
-      "doc_id": "save-user-file",
-      "title": "保存用户文件",
-      "path": "../../docs/zh-cn/application-dev/file-management/save-user-file.md",
-      "summary": "介绍如何使用FilePicker提供的保存用户文件的能力，包括保存图片或视频类文件、保存文档类文件、保存音频类文件、DOWNLOAD模式保存文件等操作。",
-      "key_topics": ["FilePicker", "保存文件", "DOWNLOAD模式", "图片视频", "文档", "音频"]
-    },
-    {
-      "doc_id": "request-dir-permission",
-      "title": "获取并使用公共目录",
-      "path": "../../docs/zh-cn/application-dev/file-management/request-dir-permission.md",
-      "summary": "本文档介绍如何通过 ArkTS 和 C/C++ 接口获取并使用公共目录（Download、Documents、Desktop）。文档包含详细的约束限制、权限申请要求以及多个代码示例。",
-      "key_topics": ["公共目录", "Download目录", "Documents目录", "Desktop目录", "环境能力接口", "权限申请"]
-    },
-    {
-      "doc_id": "native-environment-guidelines",
-      "title": "获取用户目录环境(C/C++)",
-      "path": "../../docs/zh-cn/application-dev/file-management/native-environment-guidelines.md",
-      "summary": "介绍如何在C/C++中获取公共文件用户目录路径，包括OH_Environment_GetUserDownloadDir、OH_Environment_GetUserDesktopDir、OH_Environment_GetUserDocumentDir等接口的使用方法。",
-      "key_topics": ["C/C++", "用户目录", "Environment", "公共目录"]
+      "summary": "本文档介绍用户文件URI的概念、类型和使用方式。用户文件URI是文件的唯一标识，用于访问和修改用户文件。文档详细说明了文档类类URI和媒体文件URI两种类型，包括它们的格式、获取方式和使用方法。",
+      "key_topics": [ "用户文件URI", "文档类URI", "媒体文件URI", "文件选择器", "权限管理" ]
     },
     {
       "doc_id": "share-app-file",
       "title": "应用文件分享",
       "path": "../../docs/zh-cn/application-dev/file-management/share-app-file.md",
-      "summary": "应用文件分享是应用之间通过分享URI（Uniform Resource Identifier）进行文件共享的过程。",
-      "key_topics": ["文件分享", "URI", "应用间与其他应用共享", "startAbility"]
+      "summary": "应用文件分享是应用之间通过分享URI（Uniform Resource Identifier）进行文件共享的过程。文档介绍了通过拉起文件处理类应用进行文件分享的方法、应用可分享的目录路径、文件URI规范以及相关实例参考。",
+      "key_topics": [ "文件分享", "URI", "startAbility", "沙箱路径", "权限授权" ]
     },
     {
       "doc_id": "share-app-file-configuration",
       "title": "应用共享目录配置",
       "path": "../../docs/zh-cn/application-dev/file-management/share-app-file-configuration.md",
-      "summary": "从API version 23开始，系统新增支持共享目录配置功能。在应用文件分享场景中，开发者可配置共享目录范围，防止应用敏感数据泄露。",
-      "key_topics": ["共享目录配置", "数据安全", "敏感数据保护"]
+      "summary": "本文档介绍从API version 23开始新增的共享目录配置功能，开发者可在应用模块级配置文件中添加了shareFiles标签，配置共享目录范围以防止应用敏感数据泄露。",
+      "key_topics": [ "共享目录配置", "shareFiles", "权限管理", "安全" ]
     },
     {
-      "doc_id": "file-persistPermission",
-      "title": "授权持久化",
-      "path": "../../docs/zh-cn/application-dev/file-management/file-persistPermission.md",
-      "summary": "介绍应用通过Picker获取临时授权后，如何对文件进行持久化授权，包括持久化授权、取消授权和激活已持久化权限的方法。",
-      "key_topics": ["持久化授权", "临时授权", "Picker", "权限管理", "persistPermission", "revokePermission", "activatePermission"]
+      "doc_id": "save-user-file",
+      "title": "保存用户文件",
+      "path": "../../docs/zh-cn/application-dev/file-management/save-user-file.md",
+      "summary": "本文档介绍如何使用FilePicker提供的保存用户文件能力，包括保存图片、视频、文档和音频类文件的方法，以及DOWNLOAD模式保存文件的特殊用法。",
+      "key_topics": [ "文件保存", "FilePicker", "MediaViewPicker", "DocumentViewPicker", "AudioViewPicker" ]
     },
     {
-      "doc_id": "native-fileshare-guidelines",
-      "title": "授权持久化(C/C++)",
-      "path": "../../docs/zh-cn/application-dev/file-management/native-fileshare-guidelines.md",
-      "summary": "本文档介绍如何使用FileShare提供的Native API接口对文件及目录进行持久化授权、权限激活、权限查询等操作。",
-      "key_topics": ["C/C++", "FileShare", "持久化授权", "权限激活", "Native API"]
+      "doc_id": "select-user-file",
+      "title": "选择用户文件",
+      "path": "../../docs/zh-cn/application-dev/file-management/select-user-file.md",
+      "summary": "本文档介绍如何使用系统预置的文件选择器（FilePicker）实现用户文件选择功能，包括选择图片或视频类文件、文档类文件和音频类文件。",
+      "key_topics": [ "文件选择", "PhotoViewPicker", "DocumentViewPicker", "AudioViewPicker", "权限管理" ]
+    },
+    {
+      "doc_id": "send-file-to-app-sandbox-sys",
+      "title": "向应用沙箱推送文件（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/file-management/send-file-to-app-sandbox-sys.md",
+      "summary": "本文档介绍了向应用沙箱推送文件的两种方式：通过DevEco Studio或使用hdc工具。主要内容包括使用hdc工具向设备应用沙箱路径推送文件的方法。",
+      "key_topics": [ "hdc工具", "沙箱推送", "系统应用", "调试" ]
     },
     {
       "doc_id": "native-fileuri-guidelines",
       "title": "FileUri开发指导(C/C++)",
       "path": "../../docs/zh-cn/application-dev/file-management/native-fileuri-guidelines.md",
-      "summary": "本文档介绍FileUri开发指导，提供关于文件URI的基本操作接口能力，包括URI与路径的相互转换、获取URI所在目录路径、判断URI格式有效性等。",
-      "key_topics": ["C/C++", "FileUri", "URI转换", "路径操作"]
+      "summary": "本文档介绍了FileUri的C/C++开发指导，包括场景介绍、基本概念、约束限制、接口说明和开发步骤。FileUri提供了关于文件URI的基本操作。",
+      "key_topics": [ "FileUri", "C/C++", "URI转换", "沙箱路径", "文件分享" ]
     },
     {
-      "doc_id": "distributed-fs-overview",
-      "title": "分布式文件系统概述",
-      "path": "../../docs/zh-cn/application-dev/file-management/distributed-fs-overview.md",
-      "summary": "分布式文件系统（hmdfs，OpenHarmony Distributed File System）提供跨设备的文件访问和拷贝能力，适用于两台设备组网、平板保存的音乐车载系统播放、户外拍摄的照片回家访问等场景。",
-      "key_topics": ["分布式文件系统", "hmdfs", "跨设备访问", "分布式软总线"]
+      "doc_id": "request-dir-permission",
+      "title": "获取并使用公共目录",
+      "path": "../../docs/zh-cn/application-dev/file-management/request-dir-permission.md",
+      "summary": "本文档介绍了如何通过ArkTS和C/C++接口获取并使用公共目录（Download、Documents、Desktop），包括目录路径获取、文件访问、权限申请等操作，适用于2in1设备。",
+      "key_topics": [ "公共目录", "Download", "Documents", "Desktop", "权限申请" ]
     },
     {
-      "doc_id": "file-access-across-devices",
-      "title": "跨设备文件共享和访问",
-      "path": "../../docs/zh-cn/application-dev/file-management/file-access-across-devices.md",
-      "summary": "分布式文件系统为应用提供了跨设备文件访问的能力，开发者在两个设备上安装同一应用时，通过基础文件接口，可跨设备读写另一个设备上该应用分布式目录下的文件。",
-      "key_topics": ["跨设备访问", "分布式文件", "分布式组网", "数据同步权限"]
+      "doc_id": "native-fileshare-guidelines",
+      "title": "授权持久化(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/file-management/native-fileshare-guidelines.md",
+      "summary": "本文档介绍如何使用FileShare提供的Native API接口对文件及目录进行持久化授权。主要内容包括场景介绍、接口说明、约束与限制和开发步骤。",
+      "key_topics": [ "授权持久化", "FileShare", "C/C++", "权限管理", "文件访问" ]
+    },
+    {
+      "doc_id": "native-fileio-guidelines",
+      "title": "应用文件访问(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/file-management/native-fileio-guidelines.md",
+      "summary": "本文档介绍了应用文件访问(C/C++)的开发指南，包括FileIO模块的基础操作能力、约束限制、接口说明和开发步骤。",
+      "key_topics": [ "应用文件访问", "FileIO", "C/C++", "文件操作", "存储位置" ]
+    },
+    {
+      "doc_id": "native-environment-guidelines",
+      "title": "获取用户目录环境(C/C++)",
+      "path": "../../docs/zh-cn/application-dev/file-management/native-environment-guidelines.md",
+      "summary": "本文档介绍如何使用Environment接口获取公共文件用户目录路径，支持三方应用在公共文件用户目录下进行文件访问操作。",
+      "key_topics": [ "Environment", "C/C++", "公共目录", "用户目录", "文件访问" ]
+    },
+    {
+      "doc_id": "manage-external-storage-sys",
+      "title": "管理外置存储存储（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/file-management/manage-external-storage-sys.md",
+      "summary": "本文介绍如何管理外置存储设备，包括设备插拔事件监听及挂载功能。外置存储设备的管理由StorageManager和StorageDaemon两个服务完成。",
+      "key_topics": [ "外置存储", "存储管理", "系统应用", "设备监听", "挂载" ]
     },
     {
       "doc_id": "file-copy-across-devices",
       "title": "跨设备文件拷贝",
       "path": "../../docs/zh-cn/application-dev/file-management/file-copy-across-devices.md",
-      "summary": "分布式文件系统为应用提供了跨设备文件拷贝的能力，开发者可以通过基础文件接口进行跨设备拷贝文件。本文档介绍了跨设备文件拷贝的完整开发步骤。",
-      "key_topics": ["跨设备拷贝", "分布式文件系统", "分布式组网", "文件拷贝"]
+      "summary": "本文档介绍分布式文件系统为应用提供的跨设备文件拷贝能力。开发者可以通过基础文件接口进行跨设备拷贝文件，适用于多设备数据流转场景。",
+      "key_topics": [ "跨设备文件拷贝", "分布式文件系统", "数据流转", "分布式组网", "权限授权" ]
+    },
+    {
+      "doc_id": "file-persistPermission",
+      "title": "授权持久化",
+      "path": "../../docs/zh-cn/application-dev/file-management/file-persistPermission.md",
+      "summary": "本文档介绍HarmonyOS应用中文件授权持久化的机制和使用方法。应用通过Picker获取临时授权后，可以使用persistpersistPermission接口进行持久化授权。",
+      "key_topics": [ "授权持久化", "persistPermission", "activatePermission", "revokePermission", "权限管理" ]
+    },
+    {
+      "doc_id": "distributed-fs-overview",
+      "title": "分布式文件系统概述",
+      "path": "../../docs/zh-cn/application-dev/file-management/distributed-fs-overview.md",
+      "summary": "本文档介绍OpenHarmony分布式文件系统（hmdfs）的基本概念和架构设计。hmdfs提供跨设备的文件访问能力。",
+      "key_topics": [ "分布式文件系统", "hmdfs", "跨设备访问", "缓存管理", "冲突处理" ]
+    },
+    {
+      "doc_id": "file-access-across-devices",
+      "title": "跨设备文件共享和访问",
+      "path": "../../docs/zh-cn/application-dev/file-management/file-access-across-devices.md",
+      "summary": "本文档介绍了分布式文件系统为应用提供的跨设备文件访问能力。开发者在两个设备上安装同一应用时，通过基础文件接口，可跨设备读写另一个设备上该应用分布式目录下的文件。",
+      "key_topics": [ "跨设备文件访问", "分布式文件系统", "connectDfs", "分布式目录", "权限授权" ]
+    },
+    {
+      "doc_id": "core-file-kit-intro",
+      "title": "Core File Kit简介",
+      "path": "../../docs/zh-cn/application-dev/file-management/core-file-kit-intro.md",
+      "summary": "Core File Kit（文件基础服务）为开发者提供一套访问和管理应用文件和用户文件的能力，帮助用户更高效地管理、查找和备份各类文件。",
+      "key_topics": [ "Core File Kit", "文件分类", "文件系统", "沙箱隔离", "应用分享" ]
+    },
+    {
+      "doc_id": "dev-user-file-manager-sys",
+      "title": "开发用户文件管理器（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/file-management/dev-user-file-manager-sys.md",
+      "summary": "本文档介绍了如何在OpenHarmony系统中开发用户文件管理器，主要面向系统应用开发者。文档详细说明了开发步骤，包括权限配置、模块导入、设备列表查询、目录浏览、文件操作等内容。",
+      "key_topics": [ "用户文件管理器", "fileAccess", "系统应用", "设备管理", "文件操作" ]
+    },
+    {
+      "doc_id": "app-sandbox-directory",
+      "title": "应用沙箱目录",
+      "path": "../../docs/zh-cn/application-dev/file-management/app-sandbox-directory.md",
+      "summary": "本文档介绍应用沙箱目录的概念、结构和使用方法。应用沙箱是一种安全隔离机制，限制应用只能访问自己的应用文件目录和少量系统文件。",
+      "key_topics": [ "应用沙箱", "沙箱目录", "加密级别", "EL1-EL5", "路径映射" ]
+    },
+    {
+      "doc_id": "app-fs-space-statistics",
+      "title": "应用及文件系统空间统计",
+      "path": "../../docs/zh-cn/application-dev/file-management/app-fs-space-statistics.md",
+      "summary": "本文档介绍如何获取应用及文件系统的空间统计信息，包括系统剩余空间、应用自身占用空间大小等。文档提供了storageStatistics和statvfs两个模块的接口说明。",
+      "key_topics": [ "空间统计", "storageStatistics", "statvfs", "BundleStats", "存储空间" ]
+    },
+    {
+      "doc_id": "Readme-CN",
+      "title": "Core File Kit（文件基础服务）",
+      "path": "../../docs/zh-cn/application-dev/file-management/Readme-CN.md",
+      "summary": "Core File Kit（文件基础服务）目录文件，包含应用文件、用户文件和分布式文件系统等相关文档的导航链接。",
+      "key_topics": [ "Core File Kit", "文档导航", "文件管理" ]
+    },
+    {
+      "doc_id": "app-file-backup-sys",
+      "title": "应用触发数据备份/恢复（仅对系统应用开放）",
+      "path": "../../docs/zh-cn/application-dev/file-management/app-file-backup-sys.md",
+      "summary": "备份恢复框架是为设备上的应用、服务提供自身数据备份和恢复的解决方案。本文档介绍了系统应用开发者如何使用备份恢复API。",
+      "key_topics": [ "数据备份", "数据恢复", "备份恢复框架", "系统应用", "SessionBackup" ]
+    },
+    {
+      "doc_id": "app-file-backup-extension",
+      "title": "应用接入数据备份恢复",
+      "path": "../../docs/zh-cn/application-dev/file-management/app-file-backup-extension.md",
+      "summary": "本文档介绍如何通过BackupExtensionAbility实现应用接入数据备份恢复功能。BackupExtensionAbility是Stage模型中扩展组件ExtensionAbility的派生类。",
+      "key_topics": [ "BackupExtensionAbility", "数据备份恢复", "onBackup", "onRestore", "元数据配置" ]
+    },
+    {
+      "doc_id": "app-file-backup-overview",
+      "title": "应用数据备份恢复概述",
+      "path": "../../docs/zh-cn/application-dev/file-management/app-file-backup-overview.md",
+      "summary": "本文档介绍了应用数据备份恢复的概念和基本原理。BackupExtensionAbility是Stage模型中扩展组件ExtensionAbility的派生类，用于提供备份及恢复应用数据的能力。",
+      "key_topics": [ "数据备份恢复", "BackupExtensionAbility", "备份恢复框架" ]
+    },
+    {
+      "doc_id": "app-file-access",
+      "title": "应用文件访问(ArkTS)",
+      "path": "../../docs/zh-cn/application-dev/file-management/app-file-access.md",
+      "summary": "本文档介绍了应用对应用文件目录下的应用文件进行查看、创建、读写、删除、移动、复制、获取属性等访问操作的方法。",
+      "key_topics": [ "应用文件访问", "ohos.file.fs", "文件操作", "Stream", "ArkTS" ]
+    },
+    {
+      "doc_id": "app-file-overview",
+      "title": "应用文件概述",
+      "path": "../../docs/zh-cn/application-dev/file-management/app-file-overview.md",
+      "summary": "应用文件包括应用安装文件、应用资源文件和应用缓存文件，文件所有者是应用。设备上应用所使用及存储的数据，以文件、键值对、数据库等形式保存在一个应用专属的目录内。",
+      "key_topics": [ "应用文件", "应用沙箱", "文件所有者", "应用文件目录" ]
     },
     {
       "doc_id": "set-security-label",
       "title": "设置分布式文件数据等级",
       "path": "../../docs/zh-cn/application-dev/file-management/set-security-label.md",
       "summary": "OpenHarmony提供一套完整的数据分级、设备分级标准，并针对不同设备制定不同的数据流转策略，包括设置文件安全标签和获取文件安全标签的接口。",
-      "key_topics": ["数据等级", "安全标签", "数据流转策略", "securityLabel"]
-    },
-    {
-      "doc_id": "manage-external-storage-sys",
-      "title": "管理外置存储存储设备（仅对系统应用开放）",
-      "path": "../../docs/zh-cn/application-dev/file-management/manage-external-storage-sys.md",
-      "summary": "文档介绍了外置存储设备的管理功能，包括StorageManager和StorageDaemon两个服务的作用，以及如何通过订阅广播事件来管理外置存储设备。",
-      "key_topics": ["系统应用", "外置存储", "存储设备管理", "StorageManager"]
-    },
-    {
-      "doc_id": "dev-user-file-manager-sys",
-      "title": "开发用户文件管理器（仅对系统应用开放）",
-      "path": "../../docs/zh-cn/application-dev/file-management/dev-user-file-manager-sys.md",
-      "summary": "OpenHarmony预置了FileManager文件管理器。系统应用开发者可以根据需要自行开发文件管理器，包括权限配置、导入模块、查询设备列表、浏览目录、操作文件或目录等步骤，以及监听设备上下线功能。",
-      "key_topics": ["系统应用", "文件管理器", "设备列表", "目录浏览", "文件操作"]
-    },
-    {
-      "doc_id": "send-file-to-app-sandbox-sys",
-      "title": "向应用沙箱推送文件（仅对系统应用开放）",
-      "path": "../../docs/zh-cn/application-dev/file-management/send-file-to-app-sandbox-sys.md",
-      "summary": "介绍如何通过hdc工具向应用沙箱推送文件，包括开发示例和切换应用沙箱视角的方法。",
-      "key_topics": ["系统应用", "hdc工具", "沙箱推送", "应用沙箱"]
-    },
-    {
-      "doc_id": "Readme-CN",
-      "title": "Core File Kit（文件基础服务）",
-      "path": "../../docs/zh-cn/application-dev/file-management/Readme-CN.md",
-      "summary": "Core File Kit（文件基础服务）的目录索引，包含应用文件、用户文件、分布式文件系统等主要分类的文档链接。",
-      "key_topics": ["Core File Kit", "目录索引", "文档导航"]
+      "key_topics": [ "数据分级", "安全标签", "setSecurityLabel", "getSecurityLabel", "数据流转" ]
     }
-  ],
-  "learning_path": [
-    "core-file-kit-intro",
-    "app-file-overview",
-    "app-sandbox-directory",
-    "app-file-access",
-    "user-file-overview",
-    "user-file-uri-intro",
-    "select-user-file",
-    "save-user-file",
-    "share-app-file",
-    "file-persistPermission",
-    "distributed-fs-overview",
-    "file-access-across-devices",
-    "file-copy-across-devices",
-    "app-file-backup-overview",
-    "app-file-backup-extension"
-  ],
-  "quick_reference": {
-    "Core File Kit简介": "../../docs/zh-cn/application-dev/file-management/core-file-kit-intro.md",
-    "应用文件概述": "../../docs/zh-cn/application-dev/file-management/app-file-overview.md",
-    "应用沙箱目录": "../../docs/zh-cn/application-dev/file-management/app-sandbox-directory.md",
-    "应用文件访问": "../../docs/zh-cn/application-dev/file-management/app-file-access.md",
-    "应用文件访问(C/C++)": "../../docs/zh-cn/application-dev/file-management/native-fileio-guidelines.md",
-    "应用及文件系统空间统计": "../../docs/zh-cn/application-dev/file-management/app-fs-space-statistics.md",
-    "应用数据备份恢复概述": "../../docs/zh-cn/application-dev/file-management/app-file-backup-overview.md",
-    "应用接入数据备份恢复": "../../docs/zh-cn/application-dev/file-management/app-file-backup-extension.md",
-    "应用触发数据备份/恢复（仅对系统应用开放）": "../../docs/zh-cn/application-dev/file-management/app-file-backup-sys.md",
-    "用户文件概述": "../../docs/zh-cn/application-dev/file-management/user-file-overview.md",
-    "用户文件URI介绍": "../../docs/zh-cn/application-dev/file-management/user-file-uri-intro.md",
-    "选择用户文件": "../../docs/zh-cn/application-dev/file-management/select-user-file.md",
-    "保存用户文件": "../../docs/zh-cn/application-dev/file-management/save-user-file.md",
-    "获取并使用公共目录": "../../docs/zh-cn/application-dev/file-management/request-dir-permission.md",
-    "获取用户目录环境(C/C++)": "../../docs/zh-cn/application-dev/file-management/native-environment-guidelines.md",
-    "应用文件分享": "../../docs/zh-cn/application-dev/file-management/share-app-file.md",
-    "应用共享目录配置": "../../docs/zh-cn/application-dev/file-management/share-app-file-configuration.md",
-    "授权授权持久化": "../../docs/zh-cn/application-dev/file-management/file-persistPermission.md",
-    "授权持久化(C/C++)": "../../docs/zh-cn/application-dev/file-management/native-fileshare-guidelines.md",
-    "FileUri开发指导(C/C++)": "../../docs/zh-cn/application-dev/file-management/native-fileuri-guidelines.md",
-    "分布式文件系统概述": "../../docs/zh-cn/application-dev/file-management/distributed-fs-overview.md",
-    "跨设备文件共享和访问": "../../docs/zh-cn/application-dev/file-management/file-access-across-devices.md",
-    "跨设备文件拷贝": "../../docs/zh-cn/application-dev/file-management/file-copy-across-devices.md",
-    "设置分布式文件数据等级": "../../docs/zh-cn/application-dev/file-management/set-security-label.md",
-    "管理外置存储存储设备（仅对系统应用开放）": "../../docs/zh-cn/application-dev/file-management/manage-external-storage-sys.md",
-    "开发用户文件管理器（仅对系统应用开放）": "../../docs/zh-cn/application-dev/file-management/dev-user-file-manager-sys.md",
-    "向应用沙箱推送文件（仅对系统应用开放）": "../../docs/zh-cn/application-dev/file-management/send-file-to-app-sandbox-sys.md",
-    "Core File Kit（文件基础服务）": "../../docs/zh-cn/application-dev/file-management/Readme-CN.md"
-  },
-  "categories": {
-    "应用文件": [
-      "app-file-overview",
-      "app-sandbox-directory",
-      "app-file-access",
-      "native-fileio-guidelines",
-      "app-fs-space-statistics",
-      "app-file-backup-overview",
-      "app-file-backup-extension",
-      "app-file-backup-sys"
-    ],
-    "用户文件": [
-      "user-file-overview",
-      "user-file-uri-intro",
-      "select-user-file",
-      "save-user-file",
-      "request-dir-permission",
-      "native-environment-guidelines",
-      "share-app-file",
-      "share-app-file-configuration",
-      "file-persistPermission",
-      "native-fileshare-guidelines",
-      "native-fileuri-guidelines"
-    ],
-    "分布式文件系统": [
-      "distributed-fs-overview",
-      "file-access-across-devices",
-      "file-copy-across-devices",
-      "set-security-label"
-    ],
-    "系统应用": [
-      "manage-external-storage-sys",
-      "dev-user-file-manager-sys",
-      "send-file-to-app-sandbox-sys"
-    ],
-    "概述": [
-      "core-file-kit-intro",
-      "Readme-CN"
-    ]
-  }
+  ]
 }

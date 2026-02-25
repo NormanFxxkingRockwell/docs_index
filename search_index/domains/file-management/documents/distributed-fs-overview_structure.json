@@ -11,7 +11,7 @@
     "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
     "adviser": "@jinqiuheng"
   },
-  "summary": "分布式文件系统（hmdfs，OpenHarmony Distributed File System）提供跨设备的文件访问能力，适用于两台设备组网、平板保存的音乐车载系统播放、户外拍摄的照片回家访问等场景。hmdfs在分布式软总线动态组网的基础上，为网络上各个设备节点提供一个全局一致的访问视图，支持开发者通过基础文件系统的接口进行读写访问，具有高性能、低延时等优点。",
+  "summary": "本文档介绍OpenHarmony分布式文件系统（hmdfs）的基本概念、应用场景和架构设计。hmdfs提供跨设备的文件访问能力，支持两台设备组网后的文件互访、平板与车载系统的音乐共享、户外拍摄照片的跨设备访问等场景。文档详细阐述了分布式文件系统的架构组成，包括distributedfile_daemon和hmdfs内核模块，并深入讲解了缓存管理、文件访问、元数据管理和冲突处理等核心功能特性。",
   "structure": {
     "title": "分布式文件系统概述",
     "sections": [
@@ -21,7 +21,7 @@
         "level": 2,
         "line_start": 19,
         "line_end": 50,
-        "summary": "介绍分布式文件系统的架构，包括distributedfile_daemon和hmdfs的组成，以及缓存管理、文件访问、元数据管理、冲突处理等功能。"
+        "summary": "本章节介绍分布式文件系统的整体架构，包含两个核心组件：distributedfile_daemon负责设备上线监听、软总线链路建立和数据流转策略执行；hmdfs是内核网络文件系统，提供缓存管理、文件访问、元数据管理和冲突处理等功能。详细说明了了缓存管理的Close-to-Open一致性保证、文件访问的本地与远端同步机制、元数据的实时查看特性以及多种冲突处理策略。"
       }
     ]
   }

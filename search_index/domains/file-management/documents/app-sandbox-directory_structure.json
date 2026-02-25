@@ -1,7 +1,8 @@
 {
   "doc_id": "app-sandbox-directory",
   "title": "应用沙箱目录",
-  "domain": "file-management",
+  "path": "zh-cn/application-dev/file-management/app-sandbox-directory.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/app-sandbox-directory.md",
   "metadata": {
     "kit": "Core File Kit",
     "subsystem": "FileManagement",
@@ -10,37 +11,34 @@
     "tester": "@liuhaonan2",
     "adviser": "@jinqiuheng"
   },
-  "summary": "应用沙箱是一种以安全防护为目的的隔离机制，避免数据受到恶意路径穿越访问。本文档介绍了应用沙箱目录的概念、应用沙箱路径、应用文件目录结构以及应用沙箱路径与真实物理路径的对应关系。",
-  "sections": [
-    {
-      "level": 2,
-      "title": "应用沙箱目录与应用沙箱路径",
-      "description": "介绍应用沙箱保护机制下的路径视图，应用沙箱路径与真实物理路径的区别"
-    },
-    {
-      "level": 2,
-      "title": "应用文件目录与应用文件路径",
-      "description": "详细介绍应用文件目录结构，包括不同加密级别（EL1-EL5）和各子目录的用途"
-    },
-    {
-      "level": 2,
-      "title": "应用沙箱路径和真实物理路径的对应关系",
-      "description": "列出应用沙箱路径与真实物理路径的映射关系表"
-    }
-  ],
-  "keywords": [
-    "应用沙箱",
-    "沙箱目录",
-    "沙箱路径",
-    "应用文件目录",
-    "加密级别",
-    "EL1",
-    "EL2",
-    "EL3",
-    "EL4",
-    "EL5",
-    "物理路径"
-  ],
-  "file_path": "docs/zh-cn/application-dev/file-management/app-sandbox-directory.md",
-  "created_at": "2026-02-24"
+  "summary": "本文档介绍应用沙箱目录的概念、结构和使用方法。应用沙箱是一种安全隔离机制，限制应用只能访问自己的应用文件目录和少量系统文件。文档详细说明了应用沙箱路径与真实物理路径的对应关系，应用文件目录的层级结构（data/storage/el1~el5），以及不同加密级别（EL1-EL5）的特征和适用场景。还提供了各种应用文件路径（bundle、base、database、distributedfiles、files、cache、preferences、temp）的详细说明、Context属性名称和生命周期管理指导。",
+  "structure": {
+    "title": "应用沙箱目录",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "应用沙箱目录与应用沙箱路径",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 37,
+        "summary": "介绍应用沙箱保护机制下的路径隔离概念。普通应用视角下看到的路径称为应用沙箱路径，与系统进程视角的真实物理路径不同。沙箱路径总是少于物理路径，部分物理路径在应用沙箱目录下没有对应。开发者使用hdc shell调试时看到的是系统进程视角，需要理解沙箱路径与物理路径的映射关系。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "应用文件目录与应用文件路径",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 107,
+        "summary": "详细说明应用文件目录的层级结构：一级目录data/、二级目录storage/、三级目录el1~el5/（不同文件加密类型）。EL1提供设备级基础加密，EL2推荐使用提供首次认证后保护，EL3/EL4/EL5提供锁屏状态下的增强保护。四级、五级目录包括bundle、base、database、distributedfiles、files、cache、preferences、temp等子目录，每个目录都有特定的用途、Context属性名称和生命周期特征。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "应用沙箱路径和真实物理路径的对应关系",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 122,
+        "summary": "提供应用沙箱路径与真实物理路径的详细映射关系表。包括/data/storage/el1/bundle、/data/storage/el1/base、/data/storage/el2/base、/data/storage/el1/database、/data/storage/el2/database、/data/storage/el2/distributedfiles等路径的物理位置说明，区分非独立沙箱应用和独立沙箱运行的Extension应用的路径差异。"
+      }
+    ]
+  }
 }

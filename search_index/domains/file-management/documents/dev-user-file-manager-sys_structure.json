@@ -1,6 +1,8 @@
 {
   "doc_id": "dev-user-file-manager-sys",
   "title": "开发用户文件管理器（仅对系统应用开放）",
+  "path": "docs/zh-cn/application-dev/file-management/dev-user-file-manager-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/dev-user-file-manager-sys.md",
   "metadata": {
     "kit": "Core File Kit",
     "subsystem": "FileManagement",
@@ -9,17 +11,26 @@
     "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
     "adviser": "@jinqiuheng"
   },
-  "summary": "OpenHarmony预置了FileManager文件管理器。系统应用开发者可以根据需要自行开发文件管理器，包括权限配置、导入模块、查询设备列表、浏览目录、操作文件或目录等步骤，以及监听设备上下线功能。",
-  "sections": [
-    {
-      "title": "开发步骤",
-      "line": 11
-    },
-    {
-      "title": "监听设备上下线",
-      "line": 173
-    }
-  ],
-  "file_path": "docs/zh-cn/application-dev/file-management/dev-user-file-manager-sys.md",
-  "domain": "file-management"
+  "summary": "本文档介绍了如何在OpenHarmony系统中开发用户文件管理器，主要面向系统应用开发者。文档详细说明了开发步骤，包括权限配置、模块导入、设备列表查询、目录浏览、文件操作等内容。此外，还介绍了如何监听设备的上下线状态。开发用户文件管理器需要申请FILE_ACCESS_MANAGER和GET_BUNDLE_INFO_PRIVILEGED权限，并使用Core File Kit提供的fileAccess和fileExtensionInfo模块。",
+  "structure": {
+    "title": "开发用户文件管理器（仅对系统应用开放）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 172,
+        "summary": "详细介绍了开发用户文件管理器的完整步骤，包括：1. 权限配置和导入模块，需要申请FILE_ACCESS_MANAGER和GET_BUNDLE_INFO_PRIVILEGED权限；2. 导入依赖模块，使用fileAccess和fileExtensionInfo；3. 查询设备列表，通过getRoots()获取所有设备的RootInfo；4. 浏览目录，使用listFile和scanFile接口遍历或过滤文件；5. 操作文件或目录，包括创建、删除、重命名、移动等操作。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "监听设备上下线",
+        "level": 2,
+        "line_start": 173,
+        "line_end": 263,
+        "summary": "介绍了如何监听设备的上下线状态。主要步骤包括：1. 权限配置和导入模块；2. 导入依赖模块；3. 提供监听回调方法，处理NotifyMessage；4. 注册监听设备和取消设备监听，使用registerObserver()和unregisterObserver()方法，通过DEVICES_URI来监听设备的上线和下线状态。"
+      }
+    ]
+  }
 }

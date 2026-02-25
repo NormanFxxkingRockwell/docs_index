@@ -11,7 +11,7 @@
     "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
     "adviser": "@jinqiuheng"
   },
-  "summary": "介绍Core File Kit（文件基础服务）的概述、使用场景、能力范围、亮点特征、框架原理以及与相关Kit的关系，包括应用文件访问框架和用户文件访问框架。",
+  "summary": "Core File Kit（文件基础服务）为开发者提供一套访问和管理应用文件和用户文件的能力，帮助用户更高效地管理、查找和备份各类文件。该套件支持应用文件、用户文件和系统文件三种分类，以及本地文件系统和分布式文件系统两种文件系统类型。主要功能包括应用文件的查看、创建、读写、删除、移动、复制、获取属性等操作，应用文件上传下载，存储空间管理，应用间文件分享，数据备份恢复，用户文件访问框架，以及跨设备文件访问和拷贝能力。",
   "structure": {
     "title": "Core File Kit简介",
     "sections": [
@@ -20,8 +20,8 @@
         "title": "Core File Kit概述",
         "level": 2,
         "line_start": 11,
-        "line_end": 27,
-        "summary": "介绍Core File Kit的文件分类模型和文件系统分类模型，包括应用文件、用户文件、系统文件，以及本地文件系统和分布式文件系统。"
+        "line_end": 32,
+        "summary": "介绍了Core File Kit套件中的文件分类模型，包括应用文件（文件所有者为应用，如应用安装文件、应用资源文件、应用缓存文件等）、用户文件（文件所有者为登录到该终端设备的用户，如用户私有的图片、视频、音频、文档等）和系统文件（与应用和用户无关的其它文件）。同时介绍了文件系统分类模型，包括本地文件系统和分布式文件系统。"
       },
       {
         "section_id": "section-2",
@@ -29,7 +29,7 @@
         "level": 2,
         "line_start": 33,
         "line_end": 41,
-        "summary": "列举Core File Kit的常见使用场景。"
+        "summary": "列举了Core File Kit的常见使用场景，包括应用文件访问和文件分享、应用数据备份恢复、选择与保存用户文件、跨设备的文件访问和分享能力。"
       },
       {
         "section_id": "section-3",
@@ -37,7 +37,7 @@
         "level": 2,
         "line_start": 42,
         "line_end": 54,
-        "summary": "介绍Core File Kit的能力范围，包括应用文件访问和管理、应用数据备份恢复、选择与保存用户文件、跨设备文件访问和分享等。"
+        "summary": "详细说明了Core File Kit的能力范围，包括对应用文件的查看、创建、读写、删除、移动、复制、获取属性等访问操作，应用文件上传下载，存储空间大小获取，应用间文件分享，数据备份恢复接入和触发，用户文件访问框架，以及跨设备文件访问和拷贝能力。"
       },
       {
         "section_id": "section-4",
@@ -45,15 +45,15 @@
         "level": 2,
         "line_start": 55,
         "line_end": 71,
-        "summary": "介绍Core File Kit的亮点特征，包括沙箱隔离和应用分享的优点。"
+        "summary": "介绍了Core File Kit的主要亮点和特征，包括沙箱隔离（为每个应用提供专属的应用沙箱目录，具有隔离性和安全性优点）和应用分享（应用之间可以通过分享URI或文件描述符FD的方式进行文件共享，具有便携性、高效性、数据一致性和安全性优点）。"
       },
       {
         "section_id": "section-5",
         "title": "框架原理",
         "level": 2,
         "line_start": 72,
-        "line_end": 101,
-        "summary": "介绍应用文件访问框架和用户文件访问框架的原理和组成。"
+        "line_end": 97,
+        "summary": "介绍了Core File Kit的框架原理，包括应用文件访问框架（通过基础文件操作接口实现）和用户文件访问框架（File Access Framework，依托于OpenHarmony的ExtensionAbility组件机制）。用户文件访问框架包括FilePicker（系统预置应用，提供文件选择和保存能力）、FileManager（文件管理器应用）以及主要功能模块（File Access Helper、File Access ExtensionAbility、UserFileManager、ExternalFileManager）。"
       },
       {
         "section_id": "section-6",
@@ -61,7 +61,15 @@
         "level": 2,
         "line_start": 98,
         "line_end": 101,
-        "summary": "说明Core File Kit与Ability Kit的关系。"
+        "summary": "说明了Core File Kit与相关Kit的关系，Core File Kit中用户文件访问框架依赖Ability Kit提供的Extension基础能力，并受Ability Kit服务调度管理。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 102,
+        "line_end": 107,
+        "summary": "提供了针对Core File Kit开发的相关实例参考，包括文件管理（ArkTS）（Full SDK）（API10）等示例代码。"
       }
     ]
   }

@@ -1,99 +1,36 @@
 {
   "doc_id": "app-file-access",
-  "title": "应用文件访问",
-  "path": "docs/zh-cn/application-dev/file-management/app-file-access.md",
-  "domain": "file-management",
+  "title": "应用文件访问(ArkTS)",
+  "path": "zh-cn/application-dev/file-management/app-file-access.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/app-file-access.md",
   "metadata": {
     "kit": "Core File Kit",
     "subsystem": "FileManagement",
-    "owner": [
-      "@wangke25",
-      "@gsl_1234",
-      "@wuchengjun5"
-    ],
-    "designer": [
-      "@gsl_1234",
-      "@wangke25"
-    ],
-    "tester": [
-      "@liuhonggang123",
-      "@yue-ye2",
-      "@juxiaopang"
-    ],
-    "adviser": [
-      "@jinqiuheng"
-    ]
+    "owner": "@wangke25; @gsl_1234; @wuchengjun5",
+    "designer": "@gsl_1234; @wangke25",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
   },
-  "summary": "介绍应用文件访问能力，包括文件查看、创建、读写、删除、移动、复制、获取属性等操作。通过ohos.file.fs基础文件操作接口实现，支持同步和异步两种方式，提供access、close、copyFile、createStream、listFile、mkdir、moveFile、open、read、rename、rmdir、stat、unlink、write等接口及Stream相关操作。",
-  "sections": [
-    {
-      "level": 2,
-      "title": "接口说明",
-      "line": 11,
-      "content": "开发者通过基础文件操作接口（ohos.file.fs）实现应用文件访问能力，主要功能包括access、close、copyFile、createStream、listFile、mkdir、moveFile、open、read、rename、rmdir、stat、unlink、write等方法和Stream相关操作。耗时较长的操作建议使用异步接口避免应用崩溃。"
-    },
-    {
-      "level": 2,
-      "title": "开发示例",
-      "line": 45,
-      "content": "介绍应用文件访问的常用操作示例，包括新建并读写文件、读取文件内容并写入到另一个文件、以流的形式读写文件、查看文件列表、使用文件流、使用文件哈希流等场景。",
-      "subsections": [
-        {
-          "level": 3,
-          "title": "新建并读写一个文件",
-          "line": 51,
-          "content": "演示如何新建一个文件并对其读写，包括创建文件、写入内容、读取内容、关闭文件等操作。"
-        },
-        {
-          "level": 3,
-          "title": "读取文件内容并写入到另一个文件",
-          "line": 93,
-          "content": "演示如何从一个文件读写内容到另一个文件，包括打开源文件和目标文件、循环读取源文件内容并写入目标文件、关闭文件等操作。"
-        },
-        {
-          "level": 3,
-          "title": "以流的形式读写文件",
-          "line": 143,
-          "content": "演示如何使用流接口读取test.txt的文件内容并写入到destFile.txt文件中，包括创建输入输出文件流、以流形式读取源文件内容并写入目标文件、关闭文件流等操作。使用流接口时需注意流的及时关闭，避免同步异步接口混用，流接口不支持并发读写。"
-        },
-        {
-          "level": 3,
-          "title": "查看文件列表",
-          "line": 195,
-          "content": "演示如何查看文件列表，包括配置ListFileOptions参数（递归、列表数量、过滤条件）、调用listFileSync获取文件列表、遍历输出文件名等操作。"
-        },
-        {
-          "level": 3,
-          "title": "使用文件流",
-          "line": 230,
-          "content": "演示如何使用文件可读流和文件可写流，包括暂停模式拷贝文件（适用于对数据完整性和一致性要求较高的场景）和流动模式拷贝文件（适用于对数据实时性要求较高的场景）。"
-        },
-        {
-          "level": 3,
-          "title": "使用文件哈希流",
-          "line": 285,
-          "content": "演示如何使用文件哈希处理接口（ohos.file.hash）来处理文件哈希流，哈希流可以将任意长度的数据转换为固定长度的哈希值来验证数据的完整性和一致性。包括创建文件可读流、创建哈希流、更新哈希值、获取哈希结果等操作。"
-        }
-      ]
-    }
-  ],
-  "keywords": [
-    "应用文件访问",
-    "文件操作",
-    "读写文件",
-    "文件流",
-    "哈希流",
-    "ohos.file.fs",
-    "Core File Kit"
-  ],
-  "api_references": [
-    "ohos.file.fs",
-    "ohos.file.hash"
-  ],
-  "related_docs": [
-    "application-context-stage",
-    "uiability-usage",
-    "js-apis-file-fs",
-    "js-apis-file-hash"
-  ]
+  "summary": "本文档介绍了应用对应用文件目录下的应用文件进行查看、创建、读写、删除、移动、复制、获取属性等访问操作的方法。文档详细说明了基础文件操作接口（ohos.file.fs）的功能和使用方式，包括access、close、copyFile、createStream、listFile、mkdir、moveFile、open、read、rename、rmdir、stat、unlink、write等接口，以及Stream相关方法和属性。文档提供了多个开发示例，包括新建并读写文件、读取文件内容并写入到另一个文件、以流的形式读写文件、查看文件列表、使用文件流、使用文件哈希流等场景的完整代码示例。",
+  "structure": {
+    "title": "应用文件访问(ArkTS)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 44,
+        "summary": "介绍了开发者通过基础文件操作接口（ohos.file.fs）实现应用文件访问能力的主要功能，包括access、close、copyFile、createStream、listFile、mkdir、moveFile、open、read、rename、rmdir、stat、unlink、write等接口，以及Stream相关方法和属性。提供了接口功能对照表，并说明耗时较长的操作建议使用异步接口。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "开发示例",
+        "level": 2,
+        "line_start": 45,
+        "line_end": 321,
+        "summary": "提供了多个应用文件访问的开发示例，包括：新建并读写一个文件、读取文件内容并写入到另一个文件、以流的形式读写文件、查看文件列表、使用文件流（暂停模式和流动模式）、使用文件哈希流。每个示例都包含完整的TypeScript代码实现和详细说明。"
+      }
+    ]
+  }
 }

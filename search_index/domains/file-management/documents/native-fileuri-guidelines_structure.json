@@ -1,6 +1,8 @@
 {
   "doc_id": "native-fileuri-guidelines",
   "title": "FileUri开发指导(C/C++)",
+  "path": "zh-cn/application-dev/file-management/native-fileuri-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/native-fileuri-guidelines.md",
   "metadata": {
     "kit": "Core File Kit",
     "subsystem": "FileManagement",
@@ -9,34 +11,50 @@
     "tester": "@liuhonggang123",
     "adviser": "@jinqiuheng"
   },
-  "sections": [
-    {
-      "level": 2,
-      "title": "场景介绍",
-      "line": 9
-    },
-    {
-      "level": 2,
-      "title": "基本概念",
-      "line": 13
-    },
-    {
-      "level": 2,
-      "title": "约束限制",
-      "line": 17
-    },
-    {
-      "level": 2,
-      "title": "接口说明",
-      "line": 23
-    },
-    {
-      "level": 2,
-      "title": "开发步骤",
-      "line": 35
-    }
-  ],
-  "summary": "本文档介绍FileUri开发指导，提供关于文件URI的基本操作接口能力，包括URI与路径的相互转换、获取URI所在目录路径、判断URI格式有效性等。文档包含场景介绍、基本概念、约束限制、接口说明和开发步骤等章节，详细说明了5个主要接口的使用方法和示例代码。",
-  "source_file": "docs/zh-cn/application-dev/file-management/native-fileuri-guidelines.md",
-  "total_lines": 221
+  "summary": "本文档介绍了FileUri的C/C++开发指导，包括场景介绍、基本概念、约束限制、接口说明和开发步骤。FileUri提供了关于文件URI的基本操作，包括将URI转换成对应的沙箱路径、将应用沙箱路径转换成对应应用自己的URI、获取URI所在目录路径的URI等接口能力，方便应用对文件分享业务中URI的访问。",
+  "structure": {
+    "title": "FileUri开发指导(C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 11,
+        "summary": "FileUri提供了关于文件URI的基本操作，将URI转换成对应的沙箱路径、将应用沙箱路径转换成对应应用自己的URI、获取URI所在目录路径的URI等接口能力，方便应用对文件分享业务中URI的访问。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 15,
+        "summary": "定义了结果集的概念，即满足使用场景的路径或URI。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 21,
+        "summary": "规定了使用FileUri的约束限制：URI转路径时建议使用系统能力获取的URI；为保证数据准确性，在转换或判断过程中应保持单对象处理。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 33,
+        "summary": "列出了FileUri的主要接口，包括OH_FileUri_GetUriFromPath、OH_FileUri_GetPathFromUri、OH_FileUri_GetFullDirectoryUri、OH_FileUri_IsValidUri和OH_FileUri_GetFileName，并提供了各接口的功能描述。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 219,
+        "summary": "提供了详细的开发步骤，包括在CMake脚本中链接动态库、添加头文件，以及五个接口的完整示例代码：OH_FileUri_GetUriFromPath、OH_FileUri_GetPathFromUri、OH_FileUri_GetFullDirectoryUri、OH_FileUri_IsValidUri和OH_FileUri_GetFileName的使用示例。"
+      }
+    ]
+  }
 }

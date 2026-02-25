@@ -1,6 +1,8 @@
 {
   "doc_id": "file-persistPermission",
   "title": "授权持久化",
+  "path": "zh-cn/application-dev/file-management/file-persistPermission.md",
+  "relative_path": "../../docs/zh-cn/application/zh-cn/application-dev/file-management/file-persistPermission.md",
   "metadata": {
     "kit": "Core File Kit",
     "subsystem": "FileManagement",
@@ -9,34 +11,34 @@
     "tester": "@leiyuqian",
     "adviser": "@jinqiuheng"
   },
-  "summary": "介绍应用通过Picker获取临时授权后，如何对文件进行持久化授权，包括持久化授权、取消授权和激活已持久化权限的方法",
-  "sections": [
-    {
-      "title": "场景介绍",
-      "level": 2,
-      "content": "应用通过Picker获取临时授权，临时授权在应用退出后或者设备重启后会清除。如果应用重启或者设备重启后需要直接访问之前已访问过的文件，则对文件进行持久化授权。"
-    },
-    {
-      "title": "通过Picker获取临时授权并进行授权持久化",
-      "level": 2,
-      "content": "通过Picker选择文件或文件夹进行临时授权，然后应用可以按需通过文件分享接口（ohos.fileshare）进行持久化授权。包括persistPermission和revokePermission接口的使用示例和注意事项。"
-    },
-    {
-      "title": "激活已经持久化的权限访问文件或目录",
-      "level": 2,
-      "content": "对于应用已经持久化的授权，应用每次启动时实际未加载到内存中，需要应用按需进行手动激活已持久化授权的权限，通过activatePermission接口对已经持久化授权的权限进行使能操作。"
-    }
-  ],
-  "keywords": [
-    "持久化授权",
-    "临时授权",
-    "Picker",
-    "persistPermission",
-    "revokePermission",
-    "activatePermission",
-    "文件访问",
-    "权限管理"
-  ],
-  "file_path": "docs/zh-cn/application-dev/file-management/file-persistPermission.md",
-  "domain": "file-management"
+  "summary": "本文档介绍HarmonyOS应用中文件授权持久化的机制和使用方法。应用通过Picker获取临时授权后，可以使用persistpersistPermission接口进行持久化授权，使应用重启或设备重启后仍能直接访问之前已访问过的文件。文档详细说明了持久化授权、取消授权和激活的完整流程，包括权限申请、API调用示例和注意事项。",
+  "structure": {
+    "title": "授权持久化",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 12,
+        "summary": "介绍授权持久化的应用场景。应用通过Picker获取临时授权在应用退出或设备重启后会清除，如果需要重启后直接访问之前已访问过的文件，则则需要对文件进行持久化授权。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "通过Picker获取临时授权并进行授权持久化",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 132,
+        "summary": "详细介绍通过Picker获取临时授权并进行持久化的方法。包括两种使用场景：临时访问和长期访问。提供了persistPermission和revokePermission接口的完整代码示例，说明所需权限、系统能力检查和注意事项。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "激活已经持久化的权限访问文件或目录",
+        "level": 2,
+        "line_start": 133,
+        "line_end": 188,
+        "summary": "说明如何激活已持久化的授权权限。已持久化的授权在应用启动时未加载到内存，需要通过activatePermission接口手动激活。提供了完整的代码示例和错误处理说明。"
+      }
+    ]
+  }
 }

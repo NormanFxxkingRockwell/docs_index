@@ -1,8 +1,8 @@
 {
   "doc_id": "user-file-uri-intro",
   "title": "用户文件URI介绍",
-  "file_path": "docs/zh-cn/application-dev/file-management/user-file-uri-intro.md",
-  "domain": "file-management",
+  "path": "zh-cn/application-dev/file-management/user-file-uri-intro.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/user-file-uri-intro.md",
   "metadata": {
     "kit": "Core File Kit",
     "subsystem": "FileManagement",
@@ -11,28 +11,42 @@
     "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
     "adviser": "@jinqiuheng"
   },
-  "summary": "用户文件URI是文件的唯一标识，在对用户文件进行访问与修改等操作时往往都会使用到URI，不建议开发者解析URI中的片段用于业务代码开发，不同类型的URI使用方式将在下文详细介绍。",
-  "sections": [
-    {
-      "level": 2,
-      "title": "URI的类型",
-      "line": 11
-    },
-    {
-      "level": 2,
-      "title": "文档类URI",
-      "line": 20
-    },
-    {
-      "level": 2,
-      "title": "媒体文件URI",
-      "line": 114
-    },
-    {
-      "level": 2,
-      "title": "通过URI复制文件（仅对系统应用开放）",
-      "line": 262
-    }
-  ],
-  "total_lines": 331
+  "summary": "本文档介绍用户文件URI的概念、类型和使用方式。用户文件URI是文件的唯一标识，用于访问和修改用户文件。文档详细说明了文档类类URI和媒体文件URI两种类型，包括它们的格式、获取方式和使用方法。文档类URI格式为file://docs/storage/Users/currentUser/<relative_path>/filename，可通过picker接口或fileAccess模块获取。媒体文件URI格式包括图片、视频和音频三种，可通过photoAccessHelper或userFileManager模块获取。文档还介绍了不同应用等级（normal和system_basic）对URI的使用权限差异，以及通过URI复制文件的方法（仅对系统应用开放）。",
+  "structure": {
+    "title": "用户文件URI介绍",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "URI的类型",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 18,
+        "summary": "URI类型分为文档类URI和媒体文件URI两类。文档类URI由picker拉起文件管理器选择或保存返回，以及通过fileAccess模块获取。媒体文件URI由picker通过拉起图库选择图片或视频返回，通过photoAccessHelper模块获取图片或视频文件的URI，以及通过userFileManager模块获取图片、视频或音频文件的URI。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "文档类URI",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 112,
+        "summary": "文档类URI格式为file://docs/storage/Users/currentUser/<relative_path>/filename，包含文件管理器根目录、相对路径和文件名。获取方式包括：通过DocumentViewPicker或AudioViewPicker接口选择或保存文件返回URI，通过fileAccess模块获取文档类目录下的文件URI。normal等级应用只能通过fs模块处理，system_basic及以上应用还可通过fileAccess模块处理（需要声明FILE_ACCESS_MANAGER和GET_BUNDLE_INFO_PRIVILEGED权限）。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "媒体文件URI",
+        "level": 2,
+        "line_start": 114,
+        "line_end": 161,
+        "summary": "媒体文件URI包括图片、视频和音频三种格式。图片URI格式为file://media/Photo/<id>/IMG_datetime_0001/displayName.jpg，视频URI格式为file://media/Photo/<id>/VID_datetime_0001/displayName.mp4，音频URI格式为file://media/Audio/<id>/AUD_datetime_0001/displayName.mp3。获取方式包括：通过PhotoViewPicker选择媒体文件，通过photoAccessHelper模块的getAssets或createAsset接口，通过userFileManager模块的相关接口。normal等级应用可通过photoAccessHelper模块处理（需要READ_IMAGEVIDEO权限），system_basic及以上应用还可通过userFileManager模块处理。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "通过URI复制文件（仅对系统应用开放）",
+        "level": 2,
+        "line_start": 262,
+        "line_end": 330,
+        "summary": "介绍系统系统应用通过URI复制文件的方法。步骤包括：通过createFileAccessHelper创建fileAccessHelper helper，获取源文件的srcUri，获取目的路径的destUri，获取备用名fileName，使用helper.copyFile(srcUri, destUri, fileName)进行文件操作。此功能仅对系统应用开放。"
+      }
+    ]
+  }
 }

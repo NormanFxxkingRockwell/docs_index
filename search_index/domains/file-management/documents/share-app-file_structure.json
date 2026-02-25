@@ -1,6 +1,8 @@
 {
   "doc_id": "share-app-file",
   "title": "应用文件分享",
+  "path": "zh-cn/application-dev/file-management/share-app-file.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/share-app-file.md",
   "metadata": {
     "kit": "Core File Kit",
     "subsystem": "FileManagement",
@@ -9,25 +11,42 @@
     "tester": "@liuhonggang123",
     "adviser": "@jinqiuheng"
   },
-  "summary": "应用文件分享是应用之间通过分享URI（Uniform Resource Identifier）进行文件共享的过程。",
-  "sections": [
-    {
-      "title": "通过拉起文件处理类应用进行文件分享(startAbility)",
-      "level": 2
-    },
-    {
-      "title": "应用可分享目录",
-      "level": 2
-    },
-    {
-      "title": "文件URI规范",
-      "level": 2
-    },
-    {
-      "title": "相关实例",
-      "level": 2
-    }
-  ],
-  "source_path": "docs/zh-cn/application-dev/file-management/share-app-file.md",
-  "domain": "file-management"
+  "summary": "应用文件分享是应用之间通过分享URI（Uniform Resource Identifier）进行文件共享的过程。文档介绍了通过拉起文件处理类应用进行文件分享的方法、应用可分享的目录路径、文件URI规范以及相关实例参考。",
+  "structure": {
+    "title": "应用文件分享",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "通过拉起文件处理类应用进行文件分享(startAbility)",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 13,
+        "summary": "基于文件选择器(startAbility)的分享方式，应用可分享单个文件，通过ohos.app.ability.wantConstant的wantConstant.Flags接口以只读或读写权限授权给其他应用。被分享应用可通过ohos.file.fs的fs.open打开URI，并进行读写操作。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "应用可分享目录",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 21,
+        "summary": "列出了应用可分享的沙箱路径，包括/data/storage/el1/base（应用el1级别加密数据目录）、/data/storage/el2/base（应用el2级别加密数据目录）和/data/storage/el2/distributedfiles（应用el2加密级别有账号分布式数据融合目录）。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "文件URI规范",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 38,
+        "summary": "定义了文件URI的格式为file://<bundleName>/<path>，其中file是文件URI的标志，bundleName是文件资源的属主，path是文件资源在应用沙箱中的路径。注意事项：因URI处理涉及编解码，系统无法保证应用自行拼接的URI地址的可用性，推荐使用系统提供的接口获取URI。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 44,
+        "summary": "提供了应用文件分享的相关实例参考，包括文件分享与访问（ArkTS）（API9）示例代码。"
+      }
+    ]
+  }
 }

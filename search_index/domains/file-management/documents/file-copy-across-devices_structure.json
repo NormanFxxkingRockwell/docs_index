@@ -1,45 +1,28 @@
 {
   "doc_id": "file-copy-across-devices",
   "title": "跨设备文件拷贝",
-  "domain": "file-management",
-  "file_path": "docs/zh-cn/application-dev/file-management/file-copy-across-devices.md",
+  "path": "zh-cn/application-dev/file-management/file-copy-across-devices.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/file-copy-across-devices.md",
   "metadata": {
     "kit": "Core File Kit",
     "subsystem": "FileManagement",
-    "owner": [
-      "@wang_zhangjun",
-      "@gzhuangzhuang"
-    ],
-    "designer": [
-      "@wang_zhangjun",
-      "@gzhuangzhuang",
-      "@renguang1116"
-    ],
-    "tester": [
-      "@liuhonggang123",
-      "@yue-ye2",
-      "@juxiaopang"
-    ],
-    "adviser": [
-      "@jinqiuheng"
-    ]
+    "owner": "@wang_zhangjun; @gzhuangzhuang",
+    "designer": "@wang_zhangjun; @gzhuangzhuang; @renguang1116",
+    "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
+    "adviser": "@jinqiuheng"
   },
-  "summary": "分布式文件系统为应用提供了跨设备文件拷贝的能力，开发者可以通过基础文件接口进行跨设备拷贝文件。本文档介绍了跨设备文件拷贝的完整开发步骤，包括分布式组网、授权分布式数据同步权限、执行跨设备文件拷贝操作以及断开链路。",
-  "sections": [
-    {
-      "level": 2,
-      "title": "开发步骤",
-      "content": "完成分布式组网、授权分布式数据同步权限、执行跨设备文件拷贝操作、跨设备文件拷贝完成断开链路"
-    }
-  ],
-  "keywords": [
-    "跨设备文件拷贝",
-    "分布式文件系统",
-    "分布式组网",
-    "分布式数据同步",
-    "文件拷贝",
-    "DISTRIBUTED_DATASYNC"
-  ],
-  "created_at": "2026-02-24",
-  "updated_at": "2026-02-24"
+  "summary": "本文档介绍分布式文件系统为应用提供的跨设备文件拷贝能力。开发者可以通过基础文件接口进行跨设备拷贝文件，适用于多设备数据流转场景。文档详细说明了开发步骤，包括完成分布式组网、授权分布式数据同步权限、执行跨设备文件拷贝操作（从沙箱目录到分布式目录，以及从分布式目录到其他设备沙箱目录），以及跨设备文件拷贝完成后断开链路的方法。",
+  "structure": {
+    "title": "跨设备文件拷贝",
+    "sections": [
+      {
+        "section_id": "sectionsection-1",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 182,
+        "summary": "详细介绍了跨设备文件拷贝的完整开发流程，包括四个主要步骤：1. 完成分布式组网，确保两个设备登录同一账号并开启蓝牙和Wi-Fi；2. 授权分布式数据同步权限，使用user_grant方式通过requestPermissionsFromUser接口动态申请授权；3. 执行跨设备文件拷贝操作，包括将A设备沙箱文件拷贝到分布式目录，以及B设备从分布式目录拷贝文件到沙箱目录，包含完整的代码示例；4. 跨设备文件拷贝完成后断开链路，使用disconnectDfs方法关闭跨设备文件访问。"
+      }
+    ]
+  }
 }

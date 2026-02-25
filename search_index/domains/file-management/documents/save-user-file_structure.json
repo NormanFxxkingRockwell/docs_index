@@ -11,7 +11,7 @@
     "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
     "adviser": "@jinqiuheng"
   },
-  "summary": "介绍如何使用FilePicker提供的保存用户文件的能力，包括保存图片或视频类文件、保存文档类文件、保存音频类文件、DOWNLOAD模式保存文件等操作。",
+  "summary": "本文档介绍如何使用FilePicker提供的保存用户文件能力，包括保存图片、视频、文档和音频类文件的方法，以及DOWNLOAD模式保存文件的特殊用法。文档详细说明了权限管理、系统隔离、模块导入、配置选项和代码实现步骤。",
   "structure": {
     "title": "保存用户文件",
     "sections": [
@@ -21,7 +21,7 @@
         "level": 2,
         "line_start": 23,
         "line_end": 28,
-        "summary": "说明PhotoViewPicker在后续版本不再演进，建议使用Media Library Kit（媒体文件管理服务）中能力来保存媒体库资源。"
+        "summary": "介绍保存图片或视频类文件的方法，推荐使用Media Library Kit中的能力来保存媒体库资源，或使用PhotoAccessHelper.showAssetsCreationDialog接口进行保存操作。"
       },
       {
         "section_id": "section-2",
@@ -29,7 +29,7 @@
         "level": 2,
         "line_start": 29,
         "line_end": 100,
-        "summary": "详细介绍如何保存文档类文件，包括模块导入、配置保存选项、创建DocumentViewPicker实例、调用save接口拉起FilePicker界面、使用基础文件API进行文件读写操作等。"
+        "summary": "详细介绍保存文档类文件的完整流程，包括模块导入、配置保存选项、创建DocumentViewPicker实例、通过URI打开文件、使用文件描述符进行读写操作等步骤。"
       },
       {
         "section_id": "section-3",
@@ -37,7 +37,7 @@
         "level": 2,
         "line_start": 101,
         "line_end": 166,
-        "summary": "详细介绍如何保存音频类文件，包括模块导入、配置保存选项、创建AudioViewPicker实例、调用save接口拉起FilePicker界面、使用基础文件API进行文件读写操作等。"
+        "summary": "详细介绍保存音频类文件的完整流程，包括模块导入、配置AudioSaveOptions、创建AudioViewPicker实例、通过URI打开文件、使用文件描述符进行读写操作等步骤。"
       },
       {
         "section_id": "section-4",
@@ -45,7 +45,7 @@
         "level": 2,
         "line_start": 167,
         "line_end": 216,
-        "summary": "介绍DOWNLOAD模式保存文件的特点和开发步骤，包括自动创建在Download/包名/目录、跳过文件选择界面直接保存、返回的URI已具备持久化权限等。"
+        "summary": "介绍DOWNLOAD模式保存文件的特点和使用方法，该模式自动在Download/包名/目录创建文件，跳过文件选择界面直接保存，返回的URI已具备持久化权限。"
       }
     ]
   }

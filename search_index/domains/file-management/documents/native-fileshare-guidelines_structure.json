@@ -1,6 +1,8 @@
 {
   "doc_id": "native-fileshare-guidelines",
   "title": "授权持久化(C/C++)",
+  "path": "zh-cn/application-dev/file-management/native-fileshare-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/native-fileshare-guidelines.md",
   "metadata": {
     "kit": "Core File Kit",
     "subsystem": "FileManagement",
@@ -9,41 +11,42 @@
     "tester": "@leiyuqian",
     "adviser": "@jinqiuheng"
   },
-  "summary": "本文档介绍如何使用FileShare提供的Native API接口对文件及目录进行持久化授权、权限激活、权限查询等操作。文档包含场景介绍、接口说明、约束与限制和开发步骤，详细说明了OH_FileShare_PersistPermission、OH_FileShare_ActivatePermission、OH_FileShare_DeactivatePermission、OH_FileShare_RevokePermission和OH_FileShare_CheckPersistentPermission等接口的使用方法。",
-  "sections": [
-    {
-      "level": 2,
-      "title": "场景介绍",
-      "line": 9
-    },
-    {
-      "level": 2,
-      "title": "接口说明",
-      "line": 13
-    },
-    {
-      "level": 2,
-      "title": "约束与限制",
-      "line": 26
-    },
-    {
-      "level": 2,
-      "title": "开发步骤",
-      "line": 32
-    }
-  ],
-  "api_references": [
-    "OH_FileShare_PersistPermission",
-    "OH_FileShare_RevokePermission",
-    "OH_FileShare_ActivatePermission",
-    "OH_FileShare_DeactivatePermission",
-    "OH_FileShare_CheckPersistentPermission",
-    "OH_FileShare_ReleasePolicyErrorResult"
-  ],
-  "tags": [
-    "file-share",
-    "persistent-permission",
-    "native-api",
-    "c++"
-  ]
+  "summary": "本文档介绍如何使用FileShare提供的Native API接口对文件及目录进行持久化授权。主要内容包括场景介绍、接口说明、约束与限制和开发步骤。文档详细说明了OH_FileShare_PersistPermission、OH_FileShare_ActivatePermission、OH_FileShare_DeactivatePermission、OH_FileShare_RevokePermission和OH_FileShare_CheckPersistentPermission等接口的使用方法，包括添加动态链接库、头文件引用以及完整的代码示例。",
+  "structure": {
+    "title": "授权持久化(C/C++)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 12,
+        "summary": "介绍应用通过Picker获取临时授权的局限性，说明在应用重启或设备重启后需要直接访问之前已访问过的文件时，需要对文件进行持久化授权。FileShare提供了支持基于uri的文件及目录授予持久化权限、权限激活、权限查询等方法。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 25,
+        "summary": "提供FileShare相关接口的详细说明表格，包括OH_FileShare_PersistPermission（持久化授权）、OH_FileShare_RevokePermission（取消持久化授权）、OH_FileShare_ActivatePermission（激活授权）、OH_FileShare_DeactivatePermission（取消使能授权）、OH_FileShare_CheckPersistentPermission（校验持久化权限）和OH_FileShare_ReleasePolicyErrorResult（释放内存）等接口的功能描述。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "约束与限制",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 31,
+        "summary": "说明使用文件分享相关接口的约束条件：设备需具有SystemCapability.FileManagement.AppFileService.FolderAuthorization系统能力，调用接口前需要申请ohos.permission.FILE_ACCESS_PERSIST权限。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 150,
+        "summary": "详细描述使用FileShare Native API接口的开发步骤，包括添加动态链接库libohfileshare.so、引用头文件、创建FileShare_PolicyInfo实例并调用OH_FileShare_PersistPermission接口进行持久化授权、调用OH_FileShare_ActivatePermission激活授权、调用OH_FileShare_DeactivatePermission停止授权访问权限、调用OH_FileShare_RevokePermission撤销持久化权限、调用OH_FileShare_CheckPersistentPermission检查持久化权限等完整代码示例。"
+      }
+    ]
+  }
 }

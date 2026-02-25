@@ -1,7 +1,8 @@
 {
   "doc_id": "manage-external-storage-sys",
-  "title": "管理外置存储存储设备（仅对系统应用开放）",
-  "domain": "file-management",
+  "title": "管理外置存储存储（仅对系统应用开放）",
+  "path": "zh-cn/application-dev/file-management/manage-external-storage-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/manage-external-storage-sys.md",
   "metadata": {
     "kit": "Core File Kit",
     "subsystem": "FileManagement",
@@ -10,18 +11,26 @@
     "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
     "adviser": "@jinqiuheng"
   },
-  "sections": [
-    {
-      "level": 2,
-      "title": "接口说明",
-      "line": 28
-    },
-    {
-      "level": 2,
-      "title": "开发步骤",
-      "line": 44
-    }
-  ],
-  "summary": "文档介绍了外置存储设备的管理功能，包括StorageManager和StorageDaemon两个服务的作用，以及如何通过订阅广播事件来管理外置存储设备。",
-  "file_path": "docs/zh-cn/application-dev/file-management/manage-external-storage-sys.md"
+  "summary": "本文介绍如何管理外置存储设备，包括设备插拔事件监听及挂载功能。外置存储设备的管理由StorageManager和StorageDaemon两个服务完成。文档详细说明了外卡插入、检查、挂载、弹出和拔出的完整流程，以及各阶段的状态变化和广播通知机制。开发者通过订阅卷设备相关的广播事件来感知外置存储的插入，通过广播传递的信息获取卷设备信息后可以对卷设备进行查询以及管理操作。",
+  "structure": {
+    "title": "管理外置存储存储（仅对系统应用开放）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 43,
+        "summary": "介绍外置存储设备管理相关API的详细参考位置，以及各类广播传递的相关参数，包括VOLUME_REMOVED、VOLUME_UNMOUNTED、VOLUME_MOUNTED、VOLUME_BAD_REMOVAL和VOLUME_EJECT等广播类型及其参数说明。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 44,
+        "line_end": 103,
+        "summary": "提供完整的开发步骤指导，包括获取STORAGE_MANAGER权限、订阅广播事件（卷设备移除、卸载、挂载、异常移除、正在弹出），以及收到广播通知后获取卷设备信息的代码示例。"
+      }
+    ]
+  }
 }

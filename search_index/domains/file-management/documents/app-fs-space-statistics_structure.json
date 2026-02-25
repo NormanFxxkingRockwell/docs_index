@@ -1,7 +1,8 @@
 {
   "doc_id": "app-fs-space-statistics",
   "title": "应用及文件系统空间统计",
-  "domain": "file-management",
+  "path": "zh-cn/application-dev/file-management/app-fs-space-statistics.md",
+  "relative_path": "../../docs/zh-cn/application-dev/file-management/app-fs-space-statistics.md",
   "metadata": {
     "kit": "Core File Kit",
     "subsystem": "FileManagement",
@@ -10,33 +11,26 @@
     "tester": "@liuhonggang123; @yue-ye2; @juxiaopang",
     "adviser": "@jinqiuheng"
   },
-  "summary": "介绍如何获取文件系统空间统计和应用空间统计信息，包括获取当前应用的存储空间大小、内置存储的可用空间和总空间大小，以及指定文件系统的剩余空间和总空间大小。提供了多个API接口的详细说明和开发示例。",
-  "sections": [
-    {
-      "level": 2,
-      "title": "接口说明",
-      "content": "API的详细介绍请参见ohos.file.statvfs、ohos.file.storageStatistics。包含文件系统空间和应用空间统计的接口说明表格。",
-      "subsections": []
-    },
-    {
-      "level": 2,
-      "title": "开发示例",
-      "content": "提供多个代码示例，包括获取文件系统数据分区剩余空间大小、获取当前应用的存储空间大小、异步和同步获取内置存储的总空间大小、异步和同步获取内置存储的可用空间大小。",
-      "subsections": []
-    }
-  ],
-  "api_references": [
-    "ohos.file.statvfs",
-    "ohos.file.storageStatistics"
-  ],
-  "keywords": [
-    "文件系统空间统计",
-    "应用空间统计",
-    "存储空间",
-    "statvfs",
-    "storageStatistics",
-    "getFreeSize",
-    "getTotalSize",
-    "getCurrentBundleStats"
-  ]
+  "summary": "本文档介绍如何获取应用及文件系统的空间统计信息，包括系统剩余空间、应用自身占用空间大小等。文档提供了storageStatistics和statvfs两个模块的接口说明，包含getCurrentBundleStats、getFreeSize、getTotalSize等API的详细功能介绍，以及BundleStats属性的含义和统计路径说明。同时提供了多个开发示例，演示如何获取文件系统数据分区剩余空间、当前应用存储空间大小、内置存储总空间和可用空间等。",
+  "structure": {
+    "title": "应用及文件系统空间统计",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 41,
+        "summary": "介绍ohos.file.statvfs和ohos.file.storageStatistics两个模块的API接口，包括getCurrentBundleStats获取当前应用存储空间、getFreeSize获取可用空间、getTotalSize获取总空间大小等功能。详细说明了BundleStats属性的含义，包括appSize应用安装文件大小、cacheSize应用缓存文件大小、dataSize应用文件存储大小等，以及各属性对应的统计路径。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "开发示例",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 157,
+        "summary": "提供六个完整的开发示例代码，包括：使用statfs.getFreeSize获取文件系统数据分区剩余空间、使用storageStatistics.getCurrentBundleStats获取当前应用存储空间大小、使用storageStatistics.getTotalSize异步获取内置存储总空间、使用storageStatistics.getTotalSizeSync同步获取内置存储总空间、使用storageStatistics.getFreeSize异步获取内置存储可用空间、使用storageStatistics.getFreeSizeSync同步获取内置存储可用空间。每个示例都包含完整的TypeScript代码实现和错误处理逻辑。"
+      }
+    ]
+  }
 }
