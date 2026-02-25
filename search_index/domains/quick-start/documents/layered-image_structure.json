@@ -1,0 +1,57 @@
+{
+  "doc_id": "layered-image",
+  "title": "配置应用图标和名称",
+  "path": "docs/zh-cn/application-dev/quick-start/layered-image.md",
+  "relative_path": "application-dev/quick-start/layered-image.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本页面提供应用图标和名称的配置指导。应用图标分为单层图标和分层图标，单层图标包含一个图片，分层图标包含前景图和背景图。文档详细介绍了图标的使用场景、配置优先级和生成策略、单层图标和分层图标的配置方法（包括app.json5和module.json5两种配置方式），以及系统对无图标应用的管控规则。",
+  "structure": [
+    {
+      "section_id": "usage-scenarios",
+      "title": "使用场景",
+      "level": 2,
+      "line_start": 11,
+      "line_end": 21,
+      "summary": "介绍应用图标的使用场景，包括在应用界面内展示当前应用（如设置应用中的应用列表）和在设备桌面上展示当前应用（如桌面或最近任务列表）两种主要场景，并提供了效果图展示。"
+    },
+    {
+      "section_id": "configuration-priority",
+      "title": "配置优先级和生成策略",
+      "level": 2,
+      "line_start": 23,
+      "line_end": 44,
+      "summary": "详细说明了应用图标和名称的配置优先级规则：HAP中包含UIAbility时，优先返回module.json5中配置的icon和label（需满足特定skills条件），未设置则返回app.json5中的配置；HAP中不包含UIAbility时，直接返回app.json5中的配置。同时说明了AppScope目录资源文件会覆盖模块下同名文件，以及未配置入口UIAbility时的行为。"
+    },
+    {
+      "section_id": "single-layer-configuration",
+      "title": "配置单层图标和应用名称",
+      "level": 2,
+      "line_start": 46,
+      "line_end": 95,
+      "summary": "介绍单层图标和应用名称的两种配置方式：方式一是在app.json5中配置（适用于无UIAbility或未设置icon和label的情况），方式二是在module.json5中配置（需额外配置skills标签中的entities和actions）。提供了完整的配置示例代码。"
+    },
+    {
+      "section_id": "layered-configuration",
+      "title": "配置分层图标和应用名称",
+      "level": 2,
+      "line_start": 97,
+      "line_end": 186,
+      "summary": "详细介绍分层图标和应用名称的配置方法，包括两种配置方式：方式一是在app.json5中配置，需要将前景和背景资源文件放在AppScope/resources/base/media文件夹，并创建分层图标资源文件；方式二是在module.json5中配置，资源文件放在entry/src/main/resources/base/media文件夹。提供了完整的资源文件配置和引用示例。"
+    },
+    {
+      "section_id": "control-rules",
+      "title": "管控规则",
+      "level": 2,
+      "line_start": 189,
+      "line_end": 194,
+      "summary": "说明系统对无图标应用的管控规则，除预置应用外其他应用不支持隐藏桌面图标。预置应用如需隐藏桌面图标，必须配置AllowAppDesktopIconHide应用特权，配置后应用不会在桌面上显示。"
+    }
+  ]
+}

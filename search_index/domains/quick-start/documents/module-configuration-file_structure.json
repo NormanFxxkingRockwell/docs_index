@@ -1,0 +1,241 @@
+{
+  "doc_id": "module-configuration-file",
+  "title": "module.json5配置文件",
+  "path": "docs/zh-cn/application-dev/quick-start/module-configuration-file.md",
+  "relative_path": "application-dev/quick-start/module-configuration-file.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "模块级配置文件，包含模块的基本配置信息、UIAbility组件和ExtensionAbility组件信息，以及应用运行过程中需要的权限信息，用于向编译工具、操作系统和应用市场提供应用的基本信息。每个模块下必须包括一个module.json5配置文件。文档详细介绍了配置文件的结构、各个标签的含义和用法，包括配置文件示例、deviceTypes、pages、metadata、abilities、skills、extensionAbilities、shortcuts、distributionFilter、testRunner、atomicService、dependencies、proxyData、routerMap、appEnvironments、hnpPackages、fileContextMenu、startWindow、systemTheme、definePermissions等标签的详细说明。",
+  "structure": [
+    {
+      "section_id": "configuration-file-example",
+      "title": "配置文件示例",
+      "level": 2,
+      "line_start": 19,
+      "line_end": 107,
+      "summary": "通过一个完整的示例，整体了解module.json5配置文件的结构和基本配置项，包括module对象的name、type、description、mainElement、deviceTypes、deliveryWithInstall、pages、appStartup、metadata、abilities、requestPermissions、querySchemes、routerMap、appEnvironments、fileContextMenu、crossAppSharedConfig等属性。"
+    },
+    {
+      "section_id": "configuration-file-labels",
+      "title": "配置文件标签",
+      "level": 2,
+      "line_start": 108,
+      "line_end": 158,
+      "summary": "详细说明module.json5配置文件包含的所有标签，包括name、type、srcEntry、description、process、mainElement、deviceTypes、deliveryWithInstall、installationFree、virtualMachine、pages、metadata、abilities、extensionAbilities、definePermissions、requestPermissions、testRunner、atomicService、dependencies、targetModuleName、targetPriority、proxyData、isolationMode、generateBuildHash、compressNativeLibs、extractNativeLibs、libIsolation、fileContextMenu、querySchemes、routerMap、appEnvironments、appStartup、hnpPackages、systemTheme、abilitySrcEntryDelegator、abilityStageSrcEntryDelegator、crossAppSharedConfig、formWidgetModule、formExtensionModule、shareFiles等标签的含义、数据类型和是否可缺省。"
+    },
+    {
+      "section_id": "devicetypes-label",
+      "title": "deviceTypes标签",
+      "level": 2,
+      "line_start": 159,
+      "line_end": 190,
+      "summary": "说明deviceTypes标签用于标识当前Module可以运行在哪类设备上，支持的设备类型包括tablet（平板）、tv（智慧屏）、wearable（智能手表）、car（车机）、2in1（PC/2in1）、default（默认设备）等，并提供配置示例。"
+    },
+    {
+      "section_id": "pages-label",
+      "title": "pages标签",
+      "level": 2,
+      "line_start": 191,
+      "line_end": 235,
+      "summary": "说明pages标签是一个profile文件资源，用于指定描述页面信息的配置文件，包含src（页面路由信息）和window（显示窗口相关配置）两个子标签，并提供配置示例。"
+    },
+    {
+      "section_id": "metadata-label",
+      "title": "metadata标签",
+      "level": 2,
+      "line_start": 237,
+      "line_end": 267,
+      "summary": "说明metadata标签标识HAP的自定义元信息，标签值为数组类型，包含name、value、resource三个子标签，用于配置distributionFilter、shortcuts等信息，并提供配置示例。"
+    },
+    {
+      "section_id": "abilities-label",
+      "title": "abilities标签",
+      "level": 2,
+      "line_start": 268,
+      "line_end": 378,
+      "summary": "说明abilities标签描述UIAbility组件的配置信息，包括name、srcEntry、launchType、description、icon、label、permissions、metadata、exported、continuable、skills、backgroundModes、startWindow、startWindowIcon、startWindowBackground、removeMissionAfterTerminate、allowSelfRedirect、orientation、supportWindowMode、priority、maxWindowRatio、minWindowRatio、maxWindowWidth、minWindowWidth、maxWindowHeight、minWindowHeight、excludeFromMissions、recoverable、unclearableMission、isolationProcess、excludeFromDock、preferMultiWindowOrientation、continueType、continueBundleName、process等属性，并提供完整的配置示例。"
+    },
+    {
+      "section_id": "skills-label",
+      "title": "skills标签",
+      "level": 2,
+      "line_start": 379,
+      "line_end": 457,
+      "summary": "说明skills标签标识UIAbility组件或者ExtensionAbility组件能够接收的Want特征，包括actions、entities、uris、permissions、domainVerify等子标签，uris标签包含scheme、host、port、path、pathStartWith、pathRegex、type、utd、maxFileSupported、linkFeature等属性，并提供配置示例。"
+    },
+    {
+      "section_id": "extensionabilities-label",
+      "title": "extensionAbilities标签",
+      "level": 2,
+      "line_start": 458,
+      "line_end": 525,
+      "summary": "说明extensionAbilities标签描述ExtensionAbility组件的配置信息，包括name、srcEntry、description、icon、label、priority、type、permissions、appIdentifierAllowList、readPermission、writePermission、uri、skills、metadata、exported、extensionProcessMode、dataGroupIds、process、isolationProcess等属性，并提供完整的配置示例。"
+    },
+    {
+      "section_id": "shortcuts-label",
+      "title": "shortcuts标签",
+      "level": 2,
+      "line_start": 527,
+      "line_end": 610,
+      "summary": "说明shortcuts标签标识应用的快捷方式信息，包含shortcutId、label、icon、visible、wants等子标签，需要在metadata中指定shortcut信息，并提供shortcuts_config.json配置文件和module.json5中metadata标签的配置示例。"
+    },
+    {
+      "section_id": "wants-label",
+      "title": "wants标签",
+      "level": 3,
+      "line_start": 611,
+      "line_end": 640,
+      "summary": "说明wants标签用于标识快捷方式内定义的目标wants信息集合，包括bundleName、moduleName、abilityName、parameters等属性，并提供配置示例。"
+    },
+    {
+      "section_id": "distributionfilter-label",
+      "title": "distributionFilter标签",
+      "level": 2,
+      "line_start": 641,
+      "line_end": 796,
+      "summary": "说明distributionFilter标签用于定义HAP对应的细分设备规格的分发策略，包括screenShape、screenWindow、screenDensity、countryCode四个属性，适用于当工程中存在多个Entry且deviceTypes存在交集时需要区分的场景，并提供配置示例和配置规则说明。"
+    },
+    {
+      "section_id": "screeshape-label",
+      "title": "screenShape标签",
+      "level": 3,
+      "line_start": 704,
+      "line_end": 712,
+      "summary": "说明screenShape标签标识屏幕形状的支持策略，包括policy（exclude或include）和value（circle圆形、rect矩形）属性。"
+    },
+    {
+      "section_id": "screenwindow-label",
+      "title": "screenWindow标签",
+      "level": 3,
+      "line_start": 713,
+      "line_end": 721,
+      "summary": "说明screenWindow标签标识应用运行时的窗口分辨率的支持策略，包括policy（include）和value（宽*高格式）属性。"
+    },
+    {
+      "section_id": "screendensity-label",
+      "title": "screenDensity标签",
+      "level": 3,
+      "line_start": 722,
+      "line_end": 730,
+      "summary": "说明screenDensity标签标识屏幕的像素密度的支持策略，包括policy（exclude或include）和value（sdpi、mdpi、ldpi、xldpi、xxldpi、xxxldpi）属性。"
+    },
+    {
+      "section_id": "countrycode-label",
+      "title": "countryCode标签",
+      "level": 3,
+      "line_start": 731,
+      "line_end": 739,
+      "summary": "说明countryCode标签标识国家与地区的支持策略，包括policy（exclude或include）和value（国家地区码）属性，取值参考ISO-3166-1标准。"
+    },
+    {
+      "section_id": "testrunner-label",
+      "title": "testRunner标签",
+      "level": 2,
+      "line_start": 797,
+      "line_end": 824,
+      "summary": "说明testRunner标签用于支持对测试框架的配置，包括name（测试框架对象名称）和srcPath（测试框架代码路径）属性，并提供配置示例。"
+    },
+    {
+      "section_id": "atomicservice-label",
+      "title": "atomicService标签",
+      "level": 2,
+      "line_start": 825,
+      "line_end": 863,
+      "summary": "说明atomicService标签用于支持对原子化服务的配置，包括preloads（预加载列表）和resizeable（是否支持自适应窗口大小显示）属性，该标签仅在app.json5中将bundleType设置为atomicService时生效，并提供配置示例。"
+    },
+    {
+      "section_id": "dependencies-label",
+      "title": "dependencies标签",
+      "level": 2,
+      "line_start": 865,
+      "line_end": 895,
+      "summary": "说明dependencies标签标识模块运行时依赖的共享库列表，包括bundleName、moduleName、versionCode属性，并提供配置示例。"
+    },
+    {
+      "section_id": "proxydata-label",
+      "title": "proxyData标签",
+      "level": 2,
+      "line_start": 897,
+      "line_end": 931,
+      "summary": "说明proxyData标签标识模块提供的数据代理列表，仅限entry和feature配置，包括uri、requiredReadPermission、requiredWritePermission、metadata属性，并提供配置示例。"
+    },
+    {
+      "section_id": "routermap-label",
+      "title": "routerMap标签",
+      "level": 2,
+      "line_start": 933,
+      "line_end": 987,
+      "summary": "说明routerMap标签标识模块配置的路由表的路径，包括name、pageSourceFile、buildFunction、data、customData属性，需要在resources/base/profile目录下定义配置文件，并提供配置示例。"
+    },
+    {
+      "section_id": "data-label",
+      "title": "data标签",
+      "level": 3,
+      "line_start": 989,
+      "line_end": 1009,
+      "summary": "说明data标签用于支持在路由表中配置自定义的字符串数据，可以通过HapModuleInfo对象获取标签内容，并提供配置示例。"
+    },
+    {
+      "section_id": "customdata-label",
+      "title": "customData标签",
+      "level": 3,
+      "line_start": 1011,
+      "line_end": 1042,
+      "summary": "说明customData标签用于支持在路由表中配置自定义数据，可以配置任意类型的自定义数据，需要调用JSON.parse函数解析出具体内容，并提供配置示例。"
+    },
+    {
+      "section_id": "appenvironments-label",
+      "title": "appEnvironments标签",
+      "level": 2,
+      "line_start": 1044,
+      "line_end": 1072,
+      "summary": "说明appEnvironments标签标识模块配置的应用环境变量，只允许entry和feature模块配置，包括name和value属性，并提供配置示例。"
+    },
+    {
+      "section_id": "hnppackages-label",
+      "title": "hnpPackages标签",
+      "level": 2,
+      "line_start": 1074,
+      "line_end": 1106,
+      "summary": "说明hnpPackages标签标识应用包含的Native软件包信息，只允许entry类型模块配置，包括package、type、independentSign属性，并提供配置示例。"
+    },
+    {
+      "section_id": "filecontextmenu-label",
+      "title": "fileContextMenu标签",
+      "level": 2,
+      "line_start": 1107,
+      "line_end": 1193,
+      "summary": "说明fileContextMenu标签标识当前HAP的右键菜单配置项，是一个profile文件资源，仅在PC/2in1设备上生效，仅允许在entry类型模块中配置，包括abilityName、menuItem、menuHandler、menuContext等属性，并提供menu.json配置文件示例和响应行为说明。"
+    },
+    {
+      "section_id": "startwindow-label",
+      "title": "startWindow标签",
+      "level": 2,
+      "line_start": 1194,
+      "line_end": 1229,
+      "summary": "说明startWindow标签指向一个profile文件资源，用于指定UIAbility组件启动页面的配置文件，包括startWindowType、startWindowAppIcon、startWindowIllustration、startWindowBrandingImage、startWindowBackgroundColor、startWindowBackgroundImage、startWindowBackgroundImageFit属性，从API version 20开始支持使用该标签配置增强启动页，并提供配置示例。"
+    },
+    {
+      "section_id": "systemtheme-label",
+      "title": "systemTheme标签",
+      "level": 2,
+      "line_start": 1231,
+      "line_end": 1263,
+      "summary": "说明systemTheme标签指向一个profile文件资源，用于指定当前应用使用的系统主题配置文件，从API version 20开始支持该标签，需要在resources/base/profile目录下定义theme_config.json配置文件，并提供配置示例。"
+    },
+    {
+      "section_id": "definepermissions-label",
+      "title": "definePermissions标签",
+      "level": 2,
+      "line_start": 1267,
+      "line_end": 1306,
+      "summary": "说明definePermissions标签仅支持系统资源hap定义权限，不支持应用自定义权限，包括name、grantMode、availableLevel、provisionEnable、distributedSceneEnable、label、description属性，并提供配置示例。"
+    }
+  ]
+}

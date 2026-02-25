@@ -1,0 +1,49 @@
+{
+  "doc_id": "application-package-overview",
+  "title": "应用程序包概述",
+  "path": "docs/zh-cn/application-dev/quick-start/application-package-overview.md",
+  "relative_path": "application-dev/quick-start/application-package-overview.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档介绍了基于Stage模型开发应用前需要了解的基础知识，包括应用与应用程序包的概念、应用的多Module设计机制、Module类型（Ability类型和Library类型）以及如何选择合适的包类型（HAP、HAR、HSP）。文档详细阐述了HAP、HAR、HSP的功能特点、使用场景和规格对比，帮助开发者根据应用需求选择合适的包类型进行开发。",
+  "structure": [
+    {
+      "section_id": "应用与应用程序包",
+      "title": "应用与应用程序包",
+      "level": 2,
+      "line_start": 12,
+      "line_end": 17,
+      "summary": "介绍了用户应用程序和应用程序包的概念，以及系统提供的应用程序包开发、安装、查询、更新、卸载的管理机制。系统屏蔽了不同芯片平台的差异，保证应用程序包在不同芯片平台上都能安装运行。"
+    },
+    {
+      "section_id": "应用的多Module设计机制",
+      "title": "应用的多Module设计机制",
+      "level": 2,
+      "line_start": 18,
+      "line_end": 24,
+      "summary": "介绍了应用的多Module设计机制的两大优势：支持模块化开发和支持多设备适配。模块化开发允许将不同功能特性按模块划分和管理，每个Module可以独立编译；多设备适配允许根据设备类型进行精准筛选和匹配，合理组合和部署不同的包到对应的设备上。"
+    },
+    {
+      "section_id": "Module类型",
+      "title": "Module类型",
+      "level": 2,
+      "line_start": 25,
+      "line_end": 51,
+      "summary": "详细介绍了Module的两种类型：Ability类型和Library类型。Ability类型包括entry类型（应用主模块）和feature类型（动态特性模块），编译后生成HAP包；Library类型包括Static Library（生成HAR）和Shared Library（生成HSP），用于实现代码和资源的共享。文档还对比了HAR与HSP的主要区别。"
+    },
+    {
+      "section_id": "选择合适的包类型",
+      "title": "选择合适的包类型",
+      "level": 2,
+      "line_start": 52,
+      "line_end": 82,
+      "summary": "对比了HAP、HAR、HSP三者的功能、使用场景和规格支持情况。HAP是应用的功能模块，可独立安装运行；HAR是静态共享包，编译态复用；HSP是动态共享包，运行时复用。文档提供了详细的规格对比表和注意事项，帮助开发者根据具体应用需求选择合适的包类型。"
+    }
+  ]
+}

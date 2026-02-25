@@ -1,0 +1,233 @@
+{
+  "doc_id": "module-structure",
+  "title": "module对象内部结构",
+  "path": "D:/codeBase/ai-learning/doc_index_project/docs_index/docs/zh-cn/application-dev/quick-start/module-structure.md",
+  "relative_path": "docs/zh-cn/application-dev-dev/quick-start/module-structure.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档详细介绍了HarmonyOS应用开发中module对象的内部结构，包括HAP配置信息、各个子对象的结构说明（如distro、metadata、abilities、js、shortcuts、forms等）以及相关配置示例。涵盖了模块属性、权限申请、设备类型支持、Ability配置、卡片功能、分发策略等核心配置项，为开发者提供完整的module配置参考。",
+  "structure": [
+    {
+      "section_id": "distro",
+      "title": "distro对象内部结构",
+      "level": 2,
+      "line_start": 99,
+      "line_end": 120,
+      "summary": "介绍distro对象的内部结构，包括moduleName、moduleType、installationFree、deliveryWithInstall等属性，用于标识HAP发布的具体描述信息。"
+    },
+    {
+      "section_id": "metadata",
+      "title": "metadata对象内部结构",
+      "level": 2,
+      "line_start": 122,
+      "line_end": 183,
+      "summary": "介绍metadata对象的内部结构，包含parameters、results、customizeData等子对象，用于标识HAP的元信息。"
+    },
+    {
+      "section_id": "parameters",
+      "title": "parameters对象内部结构",
+      "level": 2,
+      "line_start": 132,
+      "line_end": 140,
+      "summary": "介绍parameters对象的内部结构，包含description、name、type等属性，用于标识调用Ability时所有调用参数的元信息。"
+    },
+    {
+      "section_id": "results",
+      "title": "results对象内部结构",
+      "level": 2,
+      "line_start": 142,
+      "line_end": 150,
+      "summary": "介绍results对象的内部结构，包含description、name、type等属性，用于标识Ability返回值的元信息。"
+    },
+    {
+      "section_id": "customizeData",
+      "title": "customizeData对象的内部结构",
+      "level": 2,
+      "line_start": 152,
+      "line_end": 160,
+      "summary": "介绍customizeData对象的内部结构，包含name、value、extra等属性，用于标识父级组件的自定义元信息。"
+    },
+    {
+      "section_id": "deviceType",
+      "title": "deviceType标签",
+      "level": 2,
+      "line_start": 185,
+      "line_end": 199,
+      "summary": "介绍deviceType标签的配置说明，列出了系统预定义的设备类型，包括tablet、tv、wearable、liteWearable、car、default、2in1等。"
+    },
+    {
+      "section_id": "abilities",
+      "title": "abilities对象的内部结构",
+      "level": 2,
+      "line_start": 201,
+      "line_end": 360,
+      "summary": "详细介绍abilities对象的内部结构，包含process、name、description、icon、label、uri、launchType、visible、permissions、skills、type、orientation等30多个属性，用于标识当前模块内的所有Ability。"
+    },
+    {
+      "section_id": "uriPermission",
+      "title": "uriPermission对象的内部结构",
+      "level": 2,
+      "line_start": 285,
+      "line_end": 292,
+      "summary": "介绍uriPermission对象的内部结构，包含path、mode等属性，用于标识该Ability有权访问的应用程序数据。"
+    },
+    {
+      "section_id": "skills",
+      "title": "skills对象的内部结构",
+      "level": 2,
+      "line_start": 361,
+      "line_end": 408,
+      "summary": "介绍skills对象的内部结构，包含actions、entities、uris等属性，用于标识Ability能够接收的want的特征。"
+    },
+    {
+      "section_id": "uris",
+      "title": "uris对象的内部结构",
+      "level": 2,
+      "line_start": 371,
+      "line_end": 383,
+      "summary": "介绍uris对象的内部结构，包含scheme、host、port、path、pathStartWith、pathRegx、type等属性，用于向want过滤器添加数据规范集合。"
+    },
+    {
+      "section_id": "reqPermissions",
+      "title": "reqPermissions权限申请",
+      "level": 2,
+      "line_start": 410,
+      "line_end": 418,
+      "summary": "介绍reqPermissions权限申请字段说明，包含name、reason、usedScene等属性，用于标识应用运行时向系统申请的权限。"
+    },
+    {
+      "section_id": "usedScene",
+      "title": "usedScene对象内部结构",
+      "level": 2,
+      "line_start": 420,
+      "line_end": 427,
+      "summary": "介绍usedScene对象的内部结构，包含ability、when等属性，用于描述权限使用的场景和时机。"
+    },
+    {
+      "section_id": "js",
+      "title": "js对象的内部结构",
+      "level": 2,
+      "line_start": 429,
+      "line_end": 481,
+      "summary": "介绍js对象的内部结构，包含name、pages、window、type、mode等属性，用于标识基于ArkUI框架开发的JS模块集合。"
+    },
+    {
+      "section_id": "window",
+      "title": "window对象的内部结构",
+      "level": 2,
+      "line_start": 441,
+      "line_end": 448,
+      "summary": "介绍window对象的内部结构，包含designWidth、autoDesignWidth等属性，用于定义与显示窗口相关的配置。"
+    },
+    {
+      "section_id": "mode",
+      "title": "mode对象的内部结构",
+      "level": 2,
+      "line_start": 450,
+      "line_end": 457,
+      "summary": "介绍mode对象的内部结构，包含type、syntax等属性，用于定义JS组件的开发模式。"
+    },
+    {
+      "section_id": "shortcuts",
+      "title": "shortcuts对象的内部结构",
+      "level": 2,
+      "line_start": 483,
+      "line_end": 519,
+      "summary": "介绍shortcuts对象的内部结构，包含shortcutId、label、icon、intents等属性，用于标识应用的快捷方式信息。"
+    },
+    {
+      "section_id": "intents",
+      "title": "intents对象的内部结构",
+      "level": 2,
+      "line_start": 494,
+      "line_end": 501,
+      "summary": "介绍intents对象的内部结构，包含targetClass、targetBundle等属性，用于标识快捷方式内定义的目标intent信息集合。"
+    },
+    {
+      "section_id": "forms",
+      "title": "forms对象的内部结构",
+      "level": 2,
+      "line_start": 521,
+      "line_end": 604,
+      "summary": "介绍forms对象的内部结构，包含name、description、isDefault、type、colorMode、supportDimensions、updateEnabled等属性，用于标识服务卡片的属性。"
+    },
+    {
+      "section_id": "distroFilter",
+      "title": "distroFilter对象的内部结构",
+      "level": 2,
+      "line_start": 606,
+      "line_end": 689,
+      "summary": "介绍distroFilter对象的内部结构，包含apiVersion、screenShape、screenWindow、screenDensity、countryCode等属性，用于定义HAP对应的细分设备规格的分发策略。"
+    },
+    {
+      "section_id": "apiVersion",
+      "title": "apiVersion对象的内部结构",
+      "level": 2,
+      "line_start": 618,
+      "line_end": 625,
+      "summary": "介绍apiVersion对象的内部结构，包含policy、value等属性，用于标识支持的apiVersion范围。"
+    },
+    {
+      "section_id": "screenShape",
+      "title": "screenShape对象的内部结构",
+      "level": 2,
+      "line_start": 627,
+      "line_end": 634,
+      "summary": "介绍screenShape对象的内部结构，包含policy、value等属性，用于标识屏幕形状的支持策略。"
+    },
+    {
+      "section_id": "screenWindow",
+      "title": "screenWindow对象的内部结构",
+      "level": 2,
+      "line_start": 636,
+      "line_end": 643,
+      "summary": "介绍screenWindow对象的内部结构，包含policy、value等属性，用于标识应用运行时窗口的分辨率支持策略。"
+    },
+    {
+      "section_id": "screenDensity",
+      "title": "screenDensity对象的内部结构",
+      "level": 2,
+      "line_start": 645,
+      "line_end": 652,
+      "summary": "介绍screenDensity对象的内部结构，包含policy、value等属性，用于标识屏幕的像素密度。"
+    },
+    {
+      "section_id": "countryCode",
+      "title": "countryCode对象的内部结构",
+      "level": 2,
+      "line_start": 654,
+      "line_end": 661,
+      "summary": "介绍countryCode对象的内部结构，包含policy、value等属性，用于标识分发应用时的国家码。"
+    },
+    {
+      "section_id": "commonEvents",
+      "title": "commonEvents对象的内部结构",
+      "level": 2,
+      "line_start": 691,
+      "line_end": 721,
+      "summary": "介绍commonEvents对象的内部结构，包含name、permission、data、type、events等属性，用于定义公共事件静态订阅者的信息。"
+    },
+    {
+      "section_id": "testRunner",
+      "title": "testRunner对象的内部结构",
+      "level": 2,
+      "line_start": 723,
+      "line_end": 737,
+      "summary": "介绍testRunner对象的内部结构，包含name、srcPath等属性，用于支持对测试框架的配置。"
+    },
+    {
+      "section_id": "definePermissions",
+      "title": "definePermissions对象内部结构",
+      "level": 2,
+      "line_start": 740,
+      "line_end": 755,
+      "summary": "介绍definePermissions对象的内部结构，包含name、grantMode、availableLevel、provisionEnable、distributedSceneEnabled、label、description等属性，仅支持系统应用配置。"
+    }
+  ]
+}

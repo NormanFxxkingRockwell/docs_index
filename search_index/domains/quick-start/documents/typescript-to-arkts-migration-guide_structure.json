@@ -1,0 +1,33 @@
+{
+  "doc_id": "typescript-to-arkts-migration-guide",
+  "title": "从TypeScript到ArkTS的适配规则",
+  "path": "docs/zh-cn/application-dev/quick-start/typescript-to-arkts-migration-guide.md",
+  "relative_path": "application-dev/quick-start/typescript-to-arkts-migration-guide.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "ArkCompiler",
+    "owner": "@husenlin",
+    "designer": "@qyhuo32",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档详细介绍了从TypeScript迁移到ArkTS的适配规则。ArkTS规范约束了TypeScript中影响开发正确性或增加运行时开销的特性。文档分为概述和约束说明两个主要部分，列出了ArkTS不支持或部分支持的TypeScript特性，包括强制使用静态类型、禁止运行时变更对象布局、限制运算符语义、不支持structural typing等核心约束。每个约束都提供了规则名称、级别（错误/警告）、错误码以及TypeScript和ArkTS的代码对比示例，帮助开发者理解如何重构代码以符合ArkTS规范。",
+  "structure": [
+    {
+      "section_id": "overview",
+      "title": "概述",
+      "level": 2,
+      "line_start": 52,
+      "line_end": 223,
+      "summary": "概述部分罗列了ArkTS不支持或部分支持的TypeScript特性。主要约束包括：强制使用静态类型（禁止any类型）、禁止在运行时变更对象布局（不能添加/删除属性或赋值任意类型）、限制运算符语义（一元运算符仅适用于数值类型）、不支持structural typing（类型必须通过继承或接口建立关系）。这些约束旨在提升代码性能和可维护性，虽然需要少量代码重构，但收益十分可观。"
+    },
+    {
+      "section_id": "constraint-specifications",
+      "title": "约束说明",
+      "level": 2,
+      "line_start": 224,
+      "line_end": 3562,
+      "summary": "约束说明部分详细列出了所有ArkTS的约束规则，每个规则包含规则名称、级别（错误/警告）、错误码以及详细的代码示例。主要约束包括：对象的属性名必须是合法的标识符、不支持Symbol()API、不支持以#开头的私有字段、类型和命名空间命名必须唯一、使用let而非var、使用具体类型而非any或unknown、使用class而非具有call signature的类型、仅支持一个静态块、不支持index signature、使用继承而非intersection type、不支持this类型、不支持条件类型、不支持在constructor中声明字段、接口中不支持构造签名、不支持索引访问类型、不支持通过索引访问字段、不支持structural typing、需要显式标注泛型函数类型实参、需要显式标注对象字面量的类型、对象字面量不能用于类型声明、数组字面量必须仅包含可推断类型的元素、使用箭头函数而非函数表达式、不支持使用类表达式、类不允许implements、不支持修改对象的方法、类型转换仅支持as T语法、不支持JSX表达式、一元运算符+、-和~仅适用于数值类型、不支持delete运算符、仅允许在表达式中使用typeof运算符、部分支持instanceof运算符、不支持in运算符、不支持解构赋值、逗号运算符仅用在for循环语句中、不支持解构变量声明、不支持在catch语句标注类型、不支持for..in、不支持映射类型、不支持with语句、限制throw语句中表达式的类型、限制省略函数返回类型标注、不支持参数解构的函数声明、不支持在函数内声明的地方函数、不支持在函数和类的静态方法中使用this、不支持生成器函数、使用instanceof和as进行类型保护、部分支持展开运算符、接口不能继承具有相同方法的两个接口、不支持声明合并、接口不能继承类、不支持构造函数类型、只能使用类型相同的编译时表达式初始化枚举成员、不支持enum声明合并、命名空间不能被用作对象、不支持命名空间中的非声明语句、不支持require和import赋值表达式、不支持export=...语法、不支持ambient module声明、不支持在模块名中使用通配符、不支持通用模块定义(UMD)、不支持new.target、不支持确定赋值断言、不支持在原型上赋值、不支持globalThis、不支持一些utility类型、不支持对函数声明属性、不支持Function.apply和Function.call、不支持Function.bind、不支持as const断言、不支持导入断言、限制使用标准库、强制进行严格类型检查、不允许通过注释关闭类型检查、允许.ets文件import.ets/.ts/.js文件源码但不允许.ts/.js文件import.ets文件源码、class不能被用作对象、不支持在import语句前使用其他语句、限制使用ESObject类型。"
+    }
+  ]
+}

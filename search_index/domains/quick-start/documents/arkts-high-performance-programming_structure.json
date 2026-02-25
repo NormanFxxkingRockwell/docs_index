@@ -1,0 +1,146 @@
+{
+  "doc_id": "arkts-high-performance-programming",
+  "title": "ArkTS高性能编程实践",
+  "path": "docs/zh-cn/application-dev/quick-start/arkts-high-performance-programming.md",
+  "relative_path": "arkts-high-performance-programming.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "ArkCompiler",
+    "owner": "@zhanyi819",
+    "designer": "@qyhuo32",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档提供了ArkTS高性能编程实践指南，涵盖声明与表达式、函数、数组、异常等方面的性能优化建议。文档通过对比优化前后的代码示例，帮助开发者理解高性能写法的原理，并在实现业务功能时应用这些优化技巧。",
+  "structure": [
+    {
+      "section_id": "overview",
+      "title": "概述",
+      "level": 2,
+      "line_start": 10,
+      "line_end": 13,
+      "summary": "介绍本文档的目的，即提供应用性能敏感场景下的高性能编程建议，帮助开发者编写高性能应用。建议在实现业务功能时同步思考并理解高性能写法的原理。",
+      "subsections": []
+    },
+    {
+      "section_id": "declarations-expressions",
+      "title": "声明与表达式",
+      "level": 2,
+      "line_start": 14,
+      "line_end": 92,
+      "summary": "涵盖变量声明、数值类型处理、循环优化等方面的最佳实践，包括使用const声明不变变量、避免整型和浮点型混用、数值计算避免溢出、循环中常量提取等优化技巧。",
+      "subsections": [
+        {
+          "section_id": "const-declaration",
+          "title": "使用const声明不变的变量",
+          "level": 3,
+          "line_start": 16,
+          "line_end": 24,
+          "summary": "推荐使用const声明不变的变量，以提升代码可读性和性能。"
+        },
+        {
+          "section_id": "number-type-mixing",
+          "title": "number类型变量避免整型和浮点型混用",
+          "level": 3,
+          "line_start": 26,
+          "line_end": 38,
+          "summary": "针对number类型，运行时在优化时会区分整型和浮点型数据，建议避免在初始化后改变数据类型。"
+        },
+        {
+          "section_id": "numeric-overflow",
+          "title": "数值计算避免溢出",
+          "level": 3,
+          "line_start": 40,
+          "line_end": 48,
+          "summary": "说明可能导致溢出的数值计算场景，溢出会导致引擎走入慢速的溢出逻辑分支处理，影响后续性能。"
+        },
+        {
+          "section_id": "loop-constant-extraction",
+          "title": "循环中常量提取，减少属性访问次数",
+          "level": 3,
+          "line_start": 49,
+          "line_end": 91,
+          "summary": "如果常量在循环中不会改变，可以将其提取到循环外部，减少访问次数，显著提升性能。"
+        }
+      ]
+    },
+    {
+      "section_id": "functions",
+      "title": "函数",
+      "level": 2,
+      "line_start": 93,
+      "line_end": 148,
+      "summary": "介绍函数性能优化技巧，包括使用参数传递函数外的变量替代闭包、避免使用可选参数等，以减少不必要的性能开销。",
+      "subsections": [
+        {
+          "section_id": "parameter-passing",
+          "title": "建议使用参数传递函数外的变量",
+          "level": 3,
+          "line_start": 95,
+          "line_end": 123,
+          "summary": "使用闭包会造成额外的开销，在性能敏感场景中，建议使用参数传递函数外的变量替代。"
+        },
+        {
+          "section_id": "avoid-optional-parameters",
+          "title": "避免使用可选参数",
+          "level": 3,
+          "line_start": 125,
+          "line_end": 147,
+          "summary": "函数的可选参数表示参数可能为undefined，在函数内部使用该参数时需要进行非空值判断，造成额外的开销。"
+        }
+      ]
+    },
+    {
+      "section_id": "arrays",
+      "title": "数组",
+      "level": 2,
+      "line_start": 149,
+      "line_end": 216,
+      "summary": "涵盖数组使用方面的性能优化建议，包括推荐使用TypedArray进行数值计算、避免使用稀疏数组、避免使用联合类型数组等。",
+      "subsections": [
+        {
+          "section_id": "typedarray",
+          "title": "数值数组推荐使用TypedArray",
+          "level": 3,
+          "line_start": 151,
+          "line_end": 179,
+          "summary": "涉及纯数值计算时，推荐使用TypedArray数据结构以提升性能。"
+        },
+        {
+          "section_id": "sparse-arrays",
+          "title": "避免使用稀疏数组",
+          "level": 3,
+          "line_start": 181,
+          "line_end": 195,
+          "summary": "运行时在分配超过1024大小的数组或稀疏数组时会采用hash表来存储元素，在该模式下访问数组元素速度较慢。"
+        },
+        {
+          "section_id": "union-type-arrays",
+          "title": "避免使用联合类型数组",
+          "level": 3,
+          "line_start": 197,
+          "line_end": 215,
+          "summary": "避免使用联合类型数组，避免在数值数组中混合使用整型数据和浮点型数据。"
+        }
+      ]
+    },
+    {
+      "section_id": "exceptions",
+      "title": "异常",
+      "level": 2,
+      "line_start": 217,
+      "line_end": 265,
+      "summary": "介绍异常处理方面的性能优化建议，主要是避免频繁抛出异常，因为创建异常时会构造异常的栈帧，造成性能损耗。",
+      "subsections": [
+        {
+          "section_id": "avoid-frequent-exceptions",
+          "title": "避免频繁抛出异常",
+          "level": 3,
+          "line_start": 219,
+          "line_end": 264,
+          "summary": "创建异常时会构造异常的栈帧，造成性能损耗。在性能敏感场景下，如for循环语句中，应避免频繁抛出异常。"
+        }
+      ]
+    }
+  ]
+}

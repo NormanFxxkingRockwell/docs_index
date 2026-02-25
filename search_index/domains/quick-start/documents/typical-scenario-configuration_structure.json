@@ -1,0 +1,41 @@
+{
+  "doc_id": "typical-scenario-configuration",
+  "title": "创建应用静态快捷方式",
+  "path": "docs/zh-cn/application-dev/quick-start/typical-scenario-configuration.md",
+  "relative_path": "typical-scenario-configuration.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档介绍了如何为应用创建静态快捷方式，以提升用户体验。快捷方式可以让用户快速启动应用并直达特定功能，如快速拍照、新建便签、常用地点导航等。文档详细说明了配置静态快捷方式的方法，包括配置资源文件、快捷方式配置文件以及在module.json5中配置metadata。此外，还介绍了如何通过接口隐藏或展示快捷方式。",
+  "structure": [
+    {
+      "section_id": "场景介绍",
+      "title": "场景介绍",
+      "level": 2,
+      "line_start": 11,
+      "line_end": 16,
+      "summary": "以导航场景为例，说明在地图应用中添加常去地点（如公司、家）的快捷方式，用户长按应用图标即可快速启动导航，提升操作效率。"
+    },
+    {
+      "section_id": "配置方法",
+      "title": "配置方法",
+      "level": 2,
+      "line_start": 17,
+      "line_end": 109,
+      "summary": "详细介绍了在工程中配置静态快捷方式的三个步骤：1. 配置string.json资源文件定义快捷方式标签；2. 在/resources/base/profile/目录下配置shortcuts_config.json文件，定义快捷方式的ID、标签、图标和目标能力；3. 在module.json5中配置metadata指向快捷方式配置文件。"
+    },
+    {
+      "section_id": "隐藏快捷方式",
+      "title": "隐藏快捷方式",
+      "level": 2,
+      "line_start": 110,
+      "line_end": 112,
+      "summary": "说明可以通过setShortcutVisibleForSelf接口来隐藏或展示快捷方式。"
+    }
+  ]
+}

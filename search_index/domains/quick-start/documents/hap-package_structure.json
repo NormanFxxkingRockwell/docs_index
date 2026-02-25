@@ -1,0 +1,57 @@
+{
+  "doc_id": "hap-package",
+  "title": "HAP",
+  "path": "docs/zh-cn/application-dev/quick-start/hap-package.md",
+  "relative_path": "docs/zh-cn/application-dev/quick-start/hap-package.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "HAP（Harmony Ability Package）是应用安装和运行的基本单元。HAP包是由代码、资源、第三方库、配置文件等打包生成的模块包，其主要分为两种类型：entry和feature。entry是应用的主模块，作为应用的入口，提供了应用的基础功能；feature是应用的动态特性模块，作为应用能力的扩展，可以根据用户的需求和设备类型进行选择性安装。文档介绍了HAP的使用场景、约束限制、创建方法、开发指南和调试方法。",
+  "structure": [
+    {
+      "section_id": "usage-scenarios",
+      "title": "使用场景",
+      "level": 2,
+      "line_start": 16,
+      "line_end": 21,
+      "summary": "介绍了HAP的两种使用场景：单HAP场景适用于只包含UIAbility组件的情况，推荐采用一个UIAbility+多个页面的方式；多HAP场景适用于功能复杂需要使用ExtensionAbility组件的情况，采用一个entry包+多个feature包的方式，但可能导致库文件重复打包问题。"
+    },
+    {
+      "section_id": "constraints",
+      "title": "约束限制",
+      "level": 2,
+      "line_start": 23,
+      "line_end": 31,
+      "summary": "列出了HAP的约束限制：不支持导出接口和ArkUI组件；多HAP场景下同一设备类型最多只能包含一个Entry类型的HAP；存在安装或更新的一致性校验；同一应用的所有HAP、HSP的签名证书要保持一致。"
+    },
+    {
+      "section_id": "creation",
+      "title": "创建",
+      "level": 2,
+      "line_start": 33,
+      "line_end": 43,
+      "summary": "介绍了通过DevEco Studio新建HAP模块的步骤：创建工程构建第一个ArkTS应用；在工程目录上右键选择New > Module；选择Empty Ability模板；配置Module name、Module Type和Device Type；配置Ability name完成创建。"
+    },
+    {
+      "section_id": "development",
+      "title": "开发",
+      "level": 2,
+      "line_start": 45,
+      "line_end": 49,
+      "summary": "介绍了HAP的开发内容：支持添加UIAbility组件或ExtensionAbility组件，以及pages页面；支持引用HAR或HSP共享包。"
+    },
+    {
+      "section_id": "debugging",
+      "title": "调试",
+      "level": 2,
+      "line_start": 51,
+      "line_end": 96,
+      "summary": "介绍了HAP的调试方法：通过DevEco Studio编译打包生成单个或多个HAP；支持根据不同环境定制编译为不同版本；可以使用DevEco Studio或hdc工具进行调试；提供了使用hdc安装、更新、卸载HAP的命令示例。"
+    }
+  ]
+}

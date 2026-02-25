@@ -1,0 +1,33 @@
+{
+  "doc_id": "multiInstance",
+  "title": "创建应用多实例",
+  "path": "docs/zh-cn/application-dev/quick-start/multiInstance.md",
+  "relative_path": "application-dev/quick-start/multiInstance.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "应用多实例允许一个应用同时运行多个进程，实现多个账号同时登录使用，且互不影响。主要应用场景包括社交账户多开和游戏大小号多开等，无需切换账号从而避免频繁登录的繁琐操作。桌面上的多个应用实例都是独立的进程，各个进程的运行、通知等都是彼此独立的；各实例共享数据，可通过账号进行切换。",
+  "structure": [
+    {
+      "section_id": "constraints",
+      "title": "约束限制",
+      "level": 2,
+      "line": 18,
+      "line_end": 20,
+      "summary": "应用多实例仅支持2in1设备。"
+    },
+    {
+      "section_id": "development_steps",
+      "title": "应用多实例的开发步骤",
+      "level": 2,
+      "line": 22,
+      "line_end": 45,
+      "summary": "介绍应用多实例的开发步骤，包括配置方法和创建应用多实例。配置方法是在工程项目中对App/app.json5配置文件配置multiAppMode字段。创建应用多实例需要将已配置好的工程编译打包安装到设备上，首次右击桌面应用图标启动一个应用进程，然后再次右击该应用图标，选择\"打开\"，此时桌面上会显示同一个应用的两个进程页面。"
+    }
+  ]
+}

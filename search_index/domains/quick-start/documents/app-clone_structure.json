@@ -1,0 +1,36 @@
+{
+  "doc_id": "app-clone",
+  "title": "创建应用分身",
+  "path": "zh-cn/application-dev/quick-start/app-clone.md",
+  "relative_path": "../../docs/zh-cn/application-dev/quick-start/app-clone.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档介绍如何创建应用分身功能。应用分身允许在一个设备上安装多个相同的应用，实现多个账号同时登录使用和运行并且互不影响。主要应用场景包括社交账号双开、游戏大小号双开等。文档详细说明了主应用与分身应用的关系、约束与限制，以及应用分身的开发步骤，包括配置multiAppMode字段和创建分身应用的具体操作。",
+  "structure": {
+    "title": "创建应用分身",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "约束与限制",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 24,
+        "summary": "说明输入法应用配置分身无效，无法创建应用分身的约束条件。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "应用分身的开发步骤",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 64,
+        "summary": "详细介绍应用分身的开发步骤，包括在AppScope/app.json5配置文件中配置multiAppMode字段，以及编译打包安装到设备后通过设置>系统>应用分身创建分身应用的具体操作流程。"
+      }
+    ]
+  }
+}

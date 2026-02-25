@@ -1,0 +1,57 @@
+{
+  "doc_id": "app-configuration-file",
+  "title": "app.json5配置文件",
+  "path": "D:/codeBase/ai-learning/doc_index_project/docs_index/docs/zh-cn/application-dev/quick-start/app-configuration-file.md",
+  "relative_path": "docs/zh-cn/application-dev/quick-start/app-configuration-file.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "应用级配置文件，包含应用的全局配置信息和特定设备类型的配置信息，用于向编译工具、操作系统和应用市场提供应用的基本信息。每个工程下必须包含一个app.json5配置文件，文件所在目录为工程名称/AppScope/app.json5。文档详细介绍了配置文件的结构、标签说明以及各属性的含义和取值规则。",
+  "structure": [
+    {
+      "section_id": "配置文件示例",
+      "title": "配置文件示例",
+      "level": 2,
+      "line_start": 19,
+      "line_end": 68,
+      "summary": "通过示例展示app.json5配置文件的结构和内容，包含bundleName、vendor、versionCode、versionName、icon、label等主要配置属性。"
+    },
+    {
+      "section_id": "配置文件标签",
+      "title": "配置文件标签",
+      "level": 2,
+      "line_start": 69,
+      "line_end": 115,
+      "summary": "详细说明app.json5配置文件包含的所有标签，包括bundleName、bundleType、debug、icon、label、description、vendor、versionCode、versionName等属性的含义、数据类型和是否可缺省。"
+    },
+    {
+      "section_id": "appEnvironments标签",
+      "title": "appEnvironments标签",
+      "level": 2,
+      "line_start": 116,
+      "line_end": 145,
+      "summary": "标识应用配置的环境变量，用于在工程配置文件中设置自定义环境变量，以供运行时使用。包含name和value两个属性。"
+    },
+    {
+      "section_id": "multiAppMode标签",
+      "title": "multiAppMode标签",
+      "level": 2,
+      "line_start": 146,
+      "line_end": 173,
+      "summary": "应用多开模式配置，包含multiAppModeType（多开模式类型）和maxCount（最大允许的多开个数）两个属性。"
+    },
+    {
+      "section_id": "configuration标签",
+      "title": "configuration标签",
+      "level": 2,
+      "line_start": 174,
+      "line_end": 211,
+      "summary": "配置应用字体大小是否跟随系统变更的profile文件资源，包含fontSizeScale和fontSizeMaxScale两个属性，用于控制应用字体大小的缩放行为。"
+    }
+  ]
+}

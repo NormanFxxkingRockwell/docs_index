@@ -1,0 +1,65 @@
+{
+  "doc_id": "start-with-ets-stage",
+  "title": "构建第一个ArkTS应用（Stage模型）",
+  "path": "docs/zh-cn/application-dev/quick-start/start-with-ets-stage.md",
+  "relative_path": "docs/zh-cn/application-dev/quick-start/start-with-ets-stage.md",
+  "metadata": {
+    "kit": "Common",
+    "subsystem": "Common",
+    "owner": "@ge-yafang",
+    "designer": "@ge-yafang",
+    "tester": "@ge-yafang",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍了如何使用ArkTS语言和Stage模型构建第一个OpenHarmony应用。内容包括创建ArkTS工程、了解工程目录结构、构建第一个和第二个页面、实现页面间跳转以及使用真机运行应用。文档详细说明了从DevEco Studio创建工程到最终在真机上运行应用的完整流程。",
+  "structure": [
+    {
+      "section_id": "create-arkts-project",
+      "title": "创建ArkTS工程",
+      "level": 2,
+      "line_start": 16,
+      "line_end": 61,
+      "summary": "介绍如何使用DevEco Studio创建ArkTS工程，包括选择Application应用开发、Empty Ability模板、配置Compatible SDK版本，以及将HarmonyOS工程修改为OpenHarmony工程的步骤，包括修改build-profile.json5文件中的compileSdkVersion、compatibleSdkVersion和runtimeOS字段。"
+    },
+    {
+      "section_id": "arkts-project-structure",
+      "title": "ArkTS工程目录结构（Stage模型）",
+      "level": 2,
+      "line_start": 62,
+      "line_end": 89,
+      "summary": "详细说明ArkTS工程（Stage模型）的目录结构，包括AppScope/app.json5应用全局配置、entry模块（ets源码、entryability入口、pages页面、resources资源、module.json5模块配置、build-profile.json5编译配置、hvigorfile.ts编译脚本、obfuscation-rules.txt混淆规则）、oh_modules三方库依赖、工程级build-profile.json5和hvigorfile.ts。"
+    },
+    {
+      "section_id": "build-first-page",
+      "title": "构建第一个页面",
+      "level": 2,
+      "line_start": 91,
+      "line_end": 159,
+      "summary": "指导如何构建第一个页面，包括使用Text组件显示文本、添加Button组件响应用户点击，以及使用Previewer预览器查看页面效果。提供了完整的Index.ets代码示例，展示@Entry、@Component装饰器和@State状态变量的使用方法。"
+    },
+    {
+      "section_id": "build-second-page",
+      "title": "构建第二个页面",
+      "level": 2,
+      "line_start": 161,
+      "line_end": 219,
+      "summary": "介绍如何创建第二个页面，包括在pages文件夹中新建Second.ets文件、在main_pages.json中配置页面路由，以及添加Text和Button组件。提供了Second.ets文件的完整代码示例，说明两种创建页面的方式（ArkTS File和Empty Page模板）。"
+    },
+    {
+      "section_id": "implement-page-navigation",
+      "title": "实现页面间的跳转",
+      "level": 2,
+      "line_start": 222,
+      "line_end": 340,
+      "summary": "讲解如何实现页面间的导航跳转，使用页面路由router模块实现第一个页面跳转到第二个页面（通过router.pushUrl方法）和第二个页面返回到第一个页面（通过router.back方法）。提供了完整的代码示例，包括导入BusinessError、获取UIContext和router、处理Promise结果和异常捕获。"
+    },
+    {
+      "section_id": "run-on-real-device",
+      "title": "使用真机运行应用",
+      "level": 2,
+      "line_start": 343,
+      "line_end": 355,
+      "summary": "说明如何在真机上运行应用，包括将搭载OpenHarmony标准系统的开发板与电脑连接、在Project Structure中配置自动签名、点击运行按钮运行应用。完成这些步骤后，开发者将完成第一个OpenHarmony应用的开发和运行。"
+    }
+  ]
+}

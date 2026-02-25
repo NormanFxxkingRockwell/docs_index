@@ -1,0 +1,33 @@
+{
+  "doc_id": "app-structure",
+  "title": "app对象内部结构",
+  "path": "docs/zh-cn/application-dev/quick-start/app-structure.md",
+  "relative_path": "application-dev/quick-start/app-structure.md",
+  "metadata": {
+    "Kit": "Ability Kit",
+    "Subsystem": "BundleManager",
+    "Owner": "@wanghang904",
+    "Designer": "@hanfeng6",
+    "Tester": "@kongjing2",
+    "Adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档详细介绍了HarmonyOS应用配置文件中app对象的内部结构，包括bundleName、vendor、version、apiVersion等核心属性的定义和约束条件，并提供了version对象和apiVersion对象的详细结构说明及配置示例。",
+  "structure": [
+    {
+      "section_id": "version-object",
+      "title": "version对象内部结构",
+      "level": 2,
+      "line_start": 24,
+      "line_end": 33,
+      "summary": "version对象包含应用的版本信息，定义了name、code和minCompatibleVersionCode三个属性，分别用于向终端用户呈现版本号、操作系统管理版本号以及标识可兼容的最低版本号。"
+    },
+    {
+      "section_id": "apiversion-object",
+      "title": "apiVersion内部结构",
+      "level": 2,
+      "line_start": 34,
+      "line_end": 42,
+      "summary": "apiVersion对象标识应用程序所依赖的操作系统API版本，包含compatible（最低API版本）、target（运行时使用的API版本）和releaseType（SDK状态）三个属性，这些值由DevEco Studio从build.profile配置中自动填充。"
+    }
+  ]
+}

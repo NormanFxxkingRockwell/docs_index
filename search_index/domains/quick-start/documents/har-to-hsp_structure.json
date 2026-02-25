@@ -1,0 +1,25 @@
+{
+  "doc_id": "har-to-hsp",
+  "title": "HAR转HSP指导",
+  "path": "docs/zh-cn/application-dev/quick-start/har-to-hsp.md",
+  "relative_path": "application-dev/quick-start/har-to-hsp.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文介绍如何通过配置项的变更将HAR工程转换为HSP工程。HSP可以解决HAR使用存在的打包多份、包膨胀问题，减少整体应用包体积。转换过程包括修改module.json5文件、新增profile和pages配置、修改hvigorfile.ts文件、配置oh-package.json5以及更新项目根目录的build-profile.json5文件等7个步骤。",
+  "structure": [
+    {
+      "section_id": "har-to-hsp-operations",
+      "title": "HAR转HSP的操作步骤",
+      "level": 2,
+      "line_start": 17,
+      "line_end": 115,
+      "summary": "详细说明HAR转HSP的7个操作步骤：1)修改module.json5文件设置type为shared并新增deliveryWithInstall和pages字段；2)在resources/base下新增profile文件夹和main_pages.json配置文件；3)在ets目录下新增pages目录和PageIndex.ets文件；4)删除build-profile.json5中的consumerFiles字段；5)修改hvigorfile.ts文件使用hspTasks；6)修改oh-package.json5新增packageType配置；7)修改项目根目录build-profile.json5新增targets标签。"
+    }
+  ]
+}

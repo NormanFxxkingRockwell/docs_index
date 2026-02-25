@@ -1,0 +1,25 @@
+{
+  "doc_id": "hsp-to-har",
+  "title": "HSP转HAR指导",
+  "path": "docs/zh-cn/application-dev/quick-start/hsp-to-har.md",
+  "relative_path": "docs/zh-cn/application-dev/quick-start/hsp-to-har.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档介绍了如何通过配置项的变更将HSP工程转换为HAR工程。HSP对bundleName和签名有一致性要求，在调试阶段需要先安装HSP包，这导致多模块集成开发场景下容易出现多种集成问题。在此场景下，建议使用HAR包来提供所需功能。文档详细说明了转换的5个操作步骤，包括修改module.json5、删除main_pages.json、修改hvigorfile.ts、修改oh-package.json5以及修改项目级build-profile.json5配置文件。",
+  "structure": [
+    {
+      "section_id": "hsp-to-har-steps",
+      "title": "HSP转HAR的操作步骤",
+      "level": 2,
+      "line_start": 19,
+      "line_end": 56,
+      "summary": "详细说明了将HSP转换为HAR的5个具体操作步骤：1. 修改HSP模块下的module.json5文件，将type字段值改为har，删除deliveryWithInstall和pages字段；2. 在resource\\base\\profile文件夹下，删除main_pages.json文件；3. 修改HSP模块的hvigorfile.ts文件，将内容替换为HAR编译任务；4. 修改HSP模块的oh-package.json5文件，删除packageType配置；5. 修改项目级的配置文件build-profile.json5，在modules模块下找到HSP的配置信息，删除HSP配置下的targets。"
+    }
+  ]
+}

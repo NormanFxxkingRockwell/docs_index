@@ -1,1 +1,283 @@
-}'
+{
+  "domain": "quick-start",
+  "domain_summary": "quick-start领域是OpenHarmony应用开发的快速入门指南，涵盖了从环境准备到应用开发的完整流程。主要内容包括ArkTS开发语言的基础知识、语法规范、编程实践和迁移指导；应用程序包结构（HAP、HAR、HSP）的概念和使用；Stage模型和FA模型的应用开发模式；应用配置文件（app.json5、module.json5）的详细说明；资源分类与访问方法；以及应用安装、卸载、更新和多实例管理等高级功能。该领域为初学者提供了系统性的学习路径，帮助开发者快速掌握OpenHarmony应用开发的核心技能。",
+  "core_concepts": [
+    "ArkTS语言",
+    "应用程序包结构",
+    "Stage模型",
+    "应用配置文件",
+    "资源管理",
+    "应用开发入门",
+    "应用安装与更新",
+    "应用多实例"
+  ],
+  "document_count": 38,
+  "documents": [
+    {
+      "doc_id": "typescript-to-arkts-migration-guide",
+      "title": "从TypeScript到ArkTS的适配规则",
+      "path": "docs/zh-cn/application-dev/quick-start/typescript-to-arkts-migration-guide.md",
+      "summary": "本文从TypeScript迁移到ArkTS的适配规则，包括强制使用静态类型、禁止运行时变更对象布局、限制运算符语义、不支持structural typing等核心约束。",
+      "key_topics": ["ArkTS", "TypeScript", "迁移适配", "静态类型", "约束规则"]
+    },
+    {
+      "doc_id": "typical-scenario-configuration",
+      "title": "创建应用静态快捷方式",
+      "path": "docs/zh-cn/application-dev/quick-start/typical-scenario-configuration.md",
+      "summary": "介绍如何为应用创建静态快捷方式，提升用户体验。详细说明了配置静态快捷方式的方法，包括配置资源文件、快捷方式配置文件以及在module.json5中配置metadata。",
+      "key_topics": ["快捷方式", "应用配置", "metadata", "shortcuts_config.json", "用户体验"]
+    },
+    {
+      "doc_id": "module-configuration-file",
+      "title": "module.json5配置文件",
+      "path": "docs/zh-cn/application-dev/quick-start/module-configuration-file.md",
+      "summary": "模块级配置文件，包含模块的基本配置信息、UIAbility组件和ExtensionAbility组件信息，以及应用运行过程中需要的权限信息。",
+      "key_topics": ["module.json5", "模块配置", "UIAbility", "ExtensionAbility", "权限配置"]
+    },
+    {
+      "doc_id": "start-with-ets-stage",
+      "title": "构建第一个ArkTS应用（Stage模型）",
+      "path": "docs/zh-cn/application-dev/quick-start/start-with-ets-stage.md",
+      "summary": "介绍如何使用ArkTS语言和Stage模型构建第一个OpenHarmony应用，包括创建ArkTS工程、了解工程目录结构、构建页面、实现页面间跳转以及使用真机运行应用。",
+      "key_topics": ["ArkTS", "Stage模型", "页面开发", "页面跳转", "真机运行"]
+    },
+    {
+      "doc_id": "resource-categories-and-access",
+      "title": "资源分类与访问",
+      "path": "D:/codeBase/ai-learning/doc_index_project/docs_index/docs/zh-cn/application-dev/quick-start/resource-categories-and-access.md",
+      "summary": "介绍应用开发中使用的资源分类与访问方法。资源分为应用资源和系统资源两大类，详细说明了资源目录结构、资源组目录的用途，限定词目录的命名规则。",
+      "key_topics": ["资源管理", "应用资源", "系统资源", "资源访问", "overlay机制"]
+    },
+    {
+      "doc_id": "start-overview",
+      "title": "开发准备",
+      "path": "docs/zh-cn/application-dev/quick-start/start-overview.md",
+      "summary": "适用于OpenHarmony应用开发的初学者，介绍开发准备工作，包括UI框架、应用模型（Stage模型和FA模型）的基本概念，以及DevEco Studio工具的安装准备。",
+      "key_topics": ["开发准备", "UI框架", "Stage模型", "FA模型", "DevEco Studio"]
+    },
+    {
+      "doc_id": "Readme-CN",
+      "title": "入门",
+      "path": "D:/codeBase/ai-learning/doc_index_project/docs_index/docs/zh-cn/application-dev/quick-start/Readme-CN.md",
+      "summary": "应用开发快速入门指南，提供了开发准备、构建第一个ArkTS应用、开发基础知识、资源分类与访问以及ArkTS语言学习等内容的导航索引。",
+      "key_topics": ["入门指南", "快速开始", "文档索引", "应用开发", "ArkTS"]
+    },
+    {
+      "doc_id": "module-structure",
+      "title": "module对象内部结构",
+      "path": "D:/codeBase/ai-learning/doc_index_project/docs_index/docs/zh-cn/application-dev/quick-start/module-structure.md",
+      "summary": "详细介绍HarmonyOS应用开发中module对象的内部结构，包括HAP配置信息、各个子对象的结构说明（如distro、metadata、abilities、js、shortcuts、forms等）。",
+      "key_topics": ["module对象", "HAP配置", "Ability配置", "权限申请", "分发策略"]
+    },
+    {
+      "doc_id": "multiInstance",
+      "title": "创建应用多实例",
+      "path": "docs/zh-cn/application-dev/quick-start/multiInstance.md",
+      "summary": "应用多实例允许一个应用同时运行多个进程，实现多个账号同时登录使用，且互不影响。主要应用场景包括社交账户多开和游戏大小号多开等。",
+      "key_topics": ["应用多实例", "多开", "multiAppMode", "进程管理", "账号管理"]
+    },
+    {
+      "doc_id": "introductionkt-arkts",
+      "title": "ArkTS语言介绍",
+      "path": "docs/zh-cn/application-dev/quick-start/introduction-to-arkts.md",
+      "summary": "ArkTS是一种设计用于构建高性能应用的编程语言，在继承TypeScript语法的基础上进行了优化。详细介绍了ArkTS的核心功能、语法和最佳实践。",
+      "key_topics": ["ArkTS", "语法", "类型系统", "函数", "类和接口"]
+    },
+    {
+      "doc_id": "layered-image",
+      "title": "配置应用图标和名称",
+      "path": "docs/zh-cn/application-dev/quick-start/layered-image.md",
+      "summary": "提供应用图标和名称的配置指导。应用图标分为单层图标和分层图标，详细介绍了图标的使用场景、配置优先级和生成策略、单层图标和分层图标的配置方法。",
+      "key_topics": ["应用图标", "应用名称", "单层图标", "分层图标", "配置优先级"]
+    },
+    {
+      "doc_id": "integrated-hsp",
+      "title": "集成态HSP",
+      "path": "D:\\codeBase\\ai-learning\\doc_index_project\\docs_index\\docs\\zh-cn\\application-dev\\quick-start\\integrated-hsp.md",
+      "summary": "集成态HSP是应用内HSP的中间编译产物，用于解决使用方的bundleName和签名之间的强耦合问题。集成态HSP可以给不同的bundleName的工程集成使用。",
+      "key_topics": ["集成态HSP", "bundleName", "签名", "代码共享", "跨工程集成"]
+    },
+    {
+      "doc_id": "install-and-update-consistency-verification",
+      "title": "应用安装与更新一致性校验",
+      "path": "docs/zh-cn/application-dev/quick-start/install-and-update-consistency-verification.md",
+      "summary": "介绍多模块应用在安装或更新过程中，签名证书和配置文件的一致性校验规则，保证应用的安全合法性。",
+      "key_topics": ["安装校验", "更新校验", "签名证书", "一致性校验", "应用安全"]
+    },
+    {
+      "doc_id": "in-app-hsp",
+      "title": "HSP",
+      "path": "docs/zh-cn/application-dev/quick-start/in-app-hsp.md",
+      "summary": "HSP（Harmony Shared Package）是动态共享包，包含代码、C++库、资源和配置文件，通过HSP可以实现代码和资源的共享。",
+      "key_topics": ["HSP", "动态共享包", "代码共享", "资源共享", "运行时加载"]
+    },
+    {
+      "doc_id": "har-to-hsp",
+      "title": "HAR转HSP指导",
+      "path": "docs/zh-cn/application-dev/quick-start/har-to-hsp.md",
+      "summary": "介绍如何通过配置项的变更将HAR工程转换为HSP工程。HSP可以解决HAR使用存在的问题的包膨胀问题，减少整体应用包体积。",
+      "key_topics": ["HAR转HSP", "包转换", "包体积优化", "配置修改", "模块转换"]
+    },
+    {
+      "doc_id": "hsp-to-har",
+      "title": "HSP转HAR指导",
+      "path": "docs/zh-cn/application-dev/quick-start/hsp-to-har.md",
+      "summary": "介绍了如何通过配置项的变更将HSP工程转换为HAR工程。在多模块集成开发场景下，建议使用HAR包来提供所需功能。",
+      "key_topics": ["HSP转HAR", "包转换", "调试优化", "配置修改", "模块转换"]
+    },
+    {
+      "doc_id": "har-package",
+      "title": "HAR",
+      "path": "docs/zh-cn/application-dev/quick-start/har-package.md",
+      "summary": "HAR（Harmony Archive）是静态共享包，可以包含代码、C++库、资源和配置文件。通过HAR可以实现多个模块或多个工程共享ArkUI组件、资源等相关代码。",
+      "key_topics": ["HAR", "静态共享包", "代码共享", "资源共享", "编译态复用"]
+    },
+    {
+      "doc_id": "hap-package",
+      "title": "HAP",
+      "path": "docs/zh-cn/application-dev/quick-start/hap-package.md",
+      "summary": "HAP（Harmony Ability Package）是应用安装和运行的基本单元。HAP包是由代码、资源、第三方库、配置文件等打包生成的模块包，主要分为entry和feature两种类型。",
+      "key_topics": ["HAP", "应用安装", "应用运行", "entry模块", "feature模块"]
+    },
+    {
+      "doc_id": "hap-to-har",
+      "title": "HAP转HAR指导",
+      "path": "docs/zh-cn/application-dev/quick-start/hap-to-har.md",
+      "summary": "HAP不支持导出接口或ArkUI组件给其他模块或应用使用，如果需要导出模块中的接口或ArkUI组件，可以使用HAR。本文介绍如何通过配置项的变更将HAP工程变成HAR工程。",
+      "key_topics": ["HAP转HAR", "包转换", "接口导出", "组件共享", "模块转换"]
+    },
+    {
+      "doc_id": "getting-started-with-arkts-for-swift-programmers",
+      "title": "从Swift到ArkTS的迁移指导",
+      "path": "docs/zh-cn/application-dev/quick-start/getting-started-with-arkts-for-swift-programmers.md",
+      "summary": "为Swift开发者提供ArkTS语言迁移指导，对比Swift与ArkTS在语法、类型系统和应用开发模式上的差异。",
+      "key_topics": ["Swift", "ArkTS", "迁移指导", "语法对比", "类型系统"]
+    },
+    {
+      "doc_id": "getting-started-with-arkts-for-java-programmers",
+      "title": "从Java到ArkTS的迁移指导",
+      "path": "D:\\codeBase\\ai-learning\\doc_index_project\\docs_index\\docs\\zh-cn\\application-dev\\quick-start\\getting-started-with-arkts-for-java-programmers.md",
+      "summary": "面向熟悉Java的开发者，系统介绍从Java迁移到ArkTS开发语言的指导。内容涵盖基础语法对比、语言结构差异、以及类型系统特性。",
+      "key_topics": ["Java", "ArkTS", "迁移指导", "语法对比", "类型系统"]
+    },
+    {
+      "doc_id": "arkts-more-cases",
+      "title": "适配指导案例",
+      "path": "docs/zh-cn/application-dev/quick-start/arkts-more-cases.md",
+      "summary": "通过具体应用场景中的案例，提供在ArkTS语法规则下将TS代码适配成ArkTS代码的建议。涵盖了标识符属性、类型声明、函数签名、构造函数、对象字面量等多个方面的适配指导。",
+      "key_topics": ["适配案例", "TS转ArkTS", "语法适配", "代码重构", "最佳实践"]
+    },
+    {
+      "doc_id": "deviceconfig-structure",
+      "title": "deviceConfig内部结构",
+      "path": "docs/zh-cn/application-dev/quick-start/deviceconfig-structure.md",
+      "summary": "详细说明了deviceConfig的内部结构，包括deviceConfig对象、deviceConfig设备对象、network对象、securityConfig对象和domainSettings对象的内部结构。",
+      "key_topics": ["deviceConfig", "设备配置", "网络安全", "securityConfig", "domainSettings"]
+    },
+    {
+      "doc_id": "arkts-migration-background",
+      "title": "ArkTS语法适配背景",
+      "path": "docs/zh-cn/application-dev/quick-start/arkts-migration-background.md",
+      "summary": "详细解释了为什么建议将TypeScript代码适配为ArkTS代码，涵盖程序稳定性、性能提升、.ets代码兼容性、与TS/JS的交互以及方舟运行时兼容性等方面。",
+      "key_topics": ["ArkTS", "TypeScript", "程序稳定性", "性能提升", "代码兼容性"]
+    },
+    {
+      "doc_id": "common-problem-of-application",
+      "title": "应用程序包常见问题",
+      "path": "docs/zh-cn/application-dev/quick-start/common-problem-of-application.md",
+      "summary": "介绍了应用程序包的常见问题，包括如何获取签名信息中的指纹信息、appIdentifier和appId的概念及获取方法。",
+      "key_topics": ["签名信息", "appIdentifier", "appId", "指纹信息", "bundleManager"]
+    },
+    {
+      "doc_id": "arkts-high-performance-programming",
+      "title": "ArkTS高性能编程实践",
+      "path": "docs/zh-cn/application-dev/quick-start/arkts-high-performance-programming.md",
+      "summary": "提供了ArkTS高性能编程实践指南，涵盖声明与表达式、函数、数组、异常等方面的性能优化建议。",
+      "key_topics": ["高性能编程", "性能优化", "声明与表达式", "函数优化", "数组优化"]
+    },
+    {
+      "doc_id": "arkts-coding-style-guide",
+      "title": "ArkTS编程规范",
+      "path": "docs/zh-cn/application-dev/quick-start/arkts-coding-style-guide.md",
+      "summary": "提供了ArkTS编程语言的编码规范指南，参考业界标准和实践，结合ArkTS语言特点，旨在提高代码的规范性、安全性和性能。",
+      "key_topics": ["编程规范", "命名规范", "代码格式", "编程实践", "代码质量"]
+    },
+    {
+      "doc_id": "arkts-get-started",
+      "title": "初识ArkTS语言",
+      "path": "docs/zh-cn/application-dev/quick-start/arkts-get-started.md",
+      "summary": "ArkTS是OpenHarmony应用的默认开发语言，在TypeScript生态基础上做了扩展，保持TS的基本风格。通过规范定义，强化了开发期的静态检查和分析，提升了程序执行的稳定性和性能。",
+      "key_topics": ["ArkTS", "开发语言", "静态类型", "类型检查", "性能优化"]
+    },
+    {
+      "doc_id": "application-package-structure-stage",
+      "title": "Stage模型应用程序包结构",
+      "path": "docs/zh-cn/application-dev/quick-start/application-package-structure-stage.md",
+      "summary": "介绍了Stage模型应用程序包在不同阶段的形态，包括开发态、编译态和发布态的应用程序结构。",
+      "key_topics": ["Stage模型", "应用程序包结构", "开发态", "编译态", "发布态"]
+    },
+    {
+      "doc_id": "application-package-structure-fa",
+      "title": "FA模型应用程序包结构",
+      "path": "docs/zh-cn/application-dev/quick-start/application-package-structure-fa.md",
+      "summary": "介绍了FA模型的应用程序包结构，包括config.json配置文件、assets资源文件夹、resources资源目录、resources.index索引表、js代码文件夹以及pack.info描述文件等组成部分。",
+      "key_topics": ["FA模型", "应用程序包结构", "config.json", "资源目录", "HAP结构"]
+    },
+    {
+      "doc_id": "application-package-overview",
+      "title": "应用程序包概述",
+      "path": "docs/zh-cn/application-dev/quick-start/application-package-overview.md",
+      "summary": "介绍了基于Stage模型开发应用前需要了解的基础知识，包括应用与应用程序包的概念、应用的多Module设计机制、Module类型以及如何选择合适的包类型（HAP、HAR、HSP）。",
+      "key_topics": ["应用程序包", "Module类型", "HAP", "HAR", "HSP"]
+    },
+    {
+      "doc_id": "application-package-glossary",
+      "title": "应用程序包术语",
+      "path": "docs/zh-cn/application-dev/quick-start/application-package-glossary.md",
+      "summary": "介绍了HarmonyOS应用开发中的核心术语，包括应用程序包、能力组件和模型等关键概念。涵盖APP、ExtensionAbility、FA、FA模型、HAP、HAR、HSP、Module、PA、Stage模型、UIAbility和系统级HSP等术语的定义和解释。",
+      "key_topics": ["术语", "应用程序包", "能力组件", "Stage模型", "FA模型"]
+    },
+    {
+      "doc_id": "application-package-install-uninstall",
+      "title": "应用安装卸载与更新开发指导",
+      "path": "docs/zh-cn/application-dev/quick-start/application-package-install-uninstall.md",
+      "summary": "介绍应用程序包的安装卸载流程和两种更新方式。涵盖开发者通过调试命令安装卸载应用、终端设备用户通过应用市场安装应用，以及应用市场内更新和应用内检测升级两种更新方式。",
+      "key_topics": ["应用安装", "应用卸载", "应用更新", "调试命令", "应用市场"]
+    },
+    {
+      "doc_id": "application-configuration-file-overview-stage",
+      "title": "应用配置文件概述（Stage模型）",
+      "path": "docs/zh-cn/application-dev/quick-start/application-configuration-file-overview-stage.md",
+      "summary": "介绍了基于Stage模型开发的应用项目中的配置文件结构，包括app.json5和module.json5配置文件的作用和内容。",
+      "key_topics": ["Stage模型", "app.json5", "module.json5", "配置文件", "应用配置"]
+    },
+    {
+      "doc_id": "application-configuration-file-overview-fa",
+      "title": "应用配置文件概述（FA模型）",
+      "path": "docs/zh-cn/application-dev/quick-start/application-configuration-file-overview-fa.md",
+      "summary": "介绍了FA模型应用配置文件概述，说明每个应用项目必须在代码目录下加入配置文件，向编译工具、操作系统和应用市场提供描述应用的基本信息。",
+      "key_topics": ["FA模型", "config.json", "配置文件", "应用配置", "Bundle名称"]
+    },
+    {
+      "doc_id": "app-structure",
+      "title": "app对象内部结构",
+      "path": "docs/zh-cn/application-dev/quick-start/app-structure.md",
+      "summary": "详细介绍了HarmonyOS应用配置文件中app对象的内部结构，包括bundleName、vendor、version、apiVersion等核心属性的定义和约束条件。",
+      "key_topics": ["app对象", "bundleName", "version", "apiVersion", "应用配置"]
+    },
+    {
+      "doc_id": "app-configuration-file",
+      "title": "app.json5配置文件",
+      "path": "D:/codeBase/ai-learning/doc_index_project/docs_index/docs/zh-cn/application-dev/quick-start/app-configuration-file.md",
+      "summary": "应用级配置文件，包含应用的全局配置信息和特定设备类型的配置信息，用于向编译工具、操作系统和应用市场提供应用的基本信息。",
+      "key_topics": ["app.json5", "应用级配置", "全局配置", "bundleName", "versionCode"]
+    },
+    {
+      "doc_id": "app-clone",
+      "title": "创建应用分身",
+      "path": "zh-cn/application-dev/quick-start/app-clone.md",
+      "summary": "介绍如何创建应用分身功能。应用分身允许在一个设备上安装多个相同的应用，实现多个账号同时登录使用和运行并且互不影响。",
+      "key_topics": ["应用分身", "多开", "multiAppMode", "账号管理", "应用安装"]
+    }
+  ]
+}

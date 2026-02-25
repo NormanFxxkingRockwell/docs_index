@@ -1,0 +1,57 @@
+{
+  "doc_id": "deviceconfig-structure",
+  "title": "deviceConfig内部结构",
+  "path": "docs/zh-cn/application-dev/quick-start/deviceconfig-structure.md",
+  "relative_path": "docs/zh-cn/application-dev/quick-start/deviceconfig-structure.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档详细说明了deviceConfig的内部结构，包括deviceConfig对象、deviceConfig设备对象、network对象、securityConfig对象和domainSettings对象的内部结构。deviceConfig包含设备上的应用配置信息，支持default、tv、car、wearable等属性，并提供了完整的配置示例。",
+  "structure": [
+    {
+      "section_id": "deviceconfig-object-internal-structure",
+      "title": "deviceConfig对象内部结构",
+      "level": 2,
+      "line_start": 11,
+      "line_end": 28,
+      "summary": "说明了deviceConfig对象支持的设备类型属性，包括default、tablet、tv、car、wearable、2in1等，每个属性标识不同设备特有的应用配置信息。"
+    },
+    {
+      "section_id": "deviceconfig-device-object-internal-structure",
+      "title": "deviceConfig设备对象内部结构",
+      "level": 2,
+      "line_start": 29,
+      "line_end": 40,
+      "summary": "详细说明了deviceConfig设备对象的内部结构，包括process（进程名）、keepAlive（是否保持运行）、supportBackup（是否支持备份恢复）、compressNativeLibs（libs库压缩存储）和network（网络安全配置）等属性。"
+    },
+    {
+      "section_id": "network-object-internal-structure",
+      "title": "network对象内部结构",
+      "level": 2,
+      "line_start": 41,
+      "line_end": 49,
+      "summary": "说明了network对象的内部结构，包括cleartextTraffic（是否允许明文网络流量）和securityConfig（网络安全配置信息）两个属性。"
+    },
+    {
+      "section_id": "securityconfig-object-internal-structure",
+      "title": "securityConfig对象内部结构",
+      "level": 2,
+      "line_start": 50,
+      "line_end": 57,
+      "summary": "说明了securityConfig对象的内部结构，包含domainSettings属性，用于标识自定义网域范围的安全配置，支持多层嵌套。"
+    },
+    {
+      "section_id": "domainsettings-object-internal-structure",
+      "title": "domainSettings对象内部结构",
+      "level": 2,
+      "line_start": 58,
+      "line_end": 91,
+      "summary": "说明了domainSettings对象的内部结构，包括cleartextPermitted（是否允许明文流量传输）和domains（域名配置信息）两个属性，并提供了完整的deviceConfig配置示例。"
+    }
+  ]
+}

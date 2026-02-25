@@ -1,0 +1,57 @@
+{
+  "doc_id": "in-app-hsp",
+  "title": "HSP",
+  "path": "docs/zh-cn/application-dev/quick-start/in-app-hsp.md",
+  "relative_path": "application-dev/quick-start/in-app-hsp.md",
+  "metadata": {
+    "Kit": "Ability Kit",
+    "Subsystem": "BundleManager",
+    "Owner": "@wanghang904",
+    "Designer": "@hanfeng6",
+    "Tester": "@kongjing2",
+    "Adviser": "@Brilliantry_Rui"
+  },
+  "summary": "HSP（Harmony Shared Package）是动态共享包，包含代码、C++库、资源和配置文件，通过HSP可以实现代码和资源的共享。本文档介绍了HSP的使用场景、约束限制、创建方法、开发方式（包括导出ArkUI组件、类和方法、native方法资源）以及如何在应用中引用HSP接口和实现页面跳转。",
+  "structure": [
+    {
+      "section_id": "usage-scenarios",
+      "title": "使用场景",
+      "level": 2,
+      "line_start": 19,
+      "line_end": 25,
+      "summary": "HSP的使用场景包括：多个HAP/HSP共用代码和资源、运行时按需加载提升性能、同一组织之间使用集成态HSP实现代码和资源共享。"
+    },
+    {
+      "section_id": "constraints",
+      "title": "约束限制",
+      "level": 2,
+      "line_start": 26,
+      "line_end": 38,
+      "summary": "HSP的约束限制包括：与依赖HAP一起安装运行、从API 14开始支持声明UIAbility但不支持入口能力、从API 18开始支持声明ExtensionAbility、不支持循环依赖和依赖传递。"
+    },
+    {
+      "section_id": "creation",
+      "title": "创建",
+      "level": 2,
+      "line_start": 40,
+      "line_end": 59,
+      "summary": "使用DevEco Studio创建HSP模块，启用Enable native选项，创建包含C++代码的HSP模块。基本的工程目录结构包括src/main/cpp、src/main/ets、resources、module.json5等文件。"
+    },
+    {
+      "section_id": "development",
+      "title": "开发",
+      "level": 2,
+      "line_start": 61,
+      "line_end": 208,
+      "summary": "介绍如何导出HSP的ArkUI组件、接口、资源，供应用内的其他HAP/HSP引用。包括导出ArkUI组件、导出类和方法、导出native方法、通过$r访问HSP中的资源、导出HSP中的资源等内容。"
+    },
+    {
+      "section_id": "usage",
+      "title": "使用",
+      "level": 2,
+      "line_start": 210,
+      "line_end": 495,
+      "summary": "介绍如何引用HSP中的接口，以及如何通过页面路由实现HSP的pages页面跳转与返回。包括引用HSP中的接口、页面跳转和返回、配置route_map.json文件等内容。"
+    }
+  ]
+}

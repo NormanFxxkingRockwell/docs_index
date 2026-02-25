@@ -1,0 +1,81 @@
+{
+  "doc_id": "har-package",
+  "title": "HAR",
+  "path": "docs/zh-cn/application-dev/quick-start/har-package.md",
+  "relative_path": "har-package.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "HAR（Harmony Archive）是静态共享包，可以包含代码、C++库、资源和配置文件。通过HAR可以实现多个模块或多个工程共享ArkUI组件、资源等相关代码。文档详细介绍了HAR的使用场景、约束限制、创建方法、开发指南、使用方式、构建配置和发布流程。",
+  "structure": [
+    {
+      "section_id": "usage-scenarios",
+      "title": "使用场景",
+      "level": 2,
+      "line_start": 11,
+      "line_end": 15,
+      "summary": "HAR支持应用内共享，也可以作为二方库（SDK）、三方库（SDK）发布后供其他应用使用。作为二方库可发布到OHPM私仓供公司内部使用，作为三方库可发布到OHPM中心仓供其他应用使用。"
+    },
+    {
+      "section_id": "constraints",
+      "title": "约束限制",
+      "level": 2,
+      "line_start": 16,
+      "line_end": 38,
+      "summary": "HAR不支持在设备上单独安装或运行，只能作为应用模块的依赖项被引用。从API version 14开始支持UIAbility，从API version 18开始支持ExtensionAbility但不支持具有入口能力的ExtensionAbility。不支持在配置文件中声明pages页面，不支持引用AppScope目录中的资源。HAR可以依赖其他HAR或者HSP，但不支持循环依赖，也不支持依赖传递。"
+    },
+    {
+      "section_id": "creation",
+      "title": "创建",
+      "level": 2,
+      "line_start": 40,
+      "line_end": 41,
+      "summary": "开发者可以通过DevEco Studio创建一个用于调用C++代码的HAR模块，创建过程中需要在Configure New Module界面中开启Enable native。"
+    },
+    {
+      "section_id": "development",
+      "title": "开发",
+      "level": 2,
+      "line_start": 44,
+      "line_end": 193,
+      "summary": "介绍如何导出HAR的ArkUI组件、接口、资源，供其他应用或当前应用的其他模块引用。Index.ets文件是HAR导出声明文件的入口，支持导出ArkUI组件、类和方法、native方法以及资源。资源合并时遵循优先级规则：AppScope > HAP包自身模块 > 依赖的HAR模块。"
+    },
+    {
+      "section_id": "usage",
+      "title": "使用",
+      "level": 2,
+      "line_start": 195,
+      "line_end": 358,
+      "summary": "介绍如何配置HAR依赖，并引用HAR的ArkUI组件、接口、资源。引用HAR前需要先配置对HAR的依赖，然后通过import引入HAR导出的ArkUI组件、类和方法、native方法，通过$r引用HAR中的资源。"
+    },
+    {
+      "section_id": "build",
+      "title": "构建",
+      "level": 2,
+      "line_start": 360,
+      "line_end": 406,
+      "summary": "介绍HAR的构建和混淆配置。HAR模块原先默认开启混淆能力，从DevEco Studio 5.0.3.600开始，新建工程默认关闭代码混淆功能，可以在HAR模块的build-profile.json5文件中的ruleOptions字段下的enable进行开启混淆。"
+    },
+    {
+      "section_id": "publish",
+      "title": "发布",
+      "level": 2,
+      "line_start": 408,
+      "line_end": 410,
+      "summary": "HAR可以发布到OHPM私仓或OHPM中心仓供其他应用使用。"
+    },
+    {
+      "section_id": "examples",
+      "title": "相关实例",
+      "level": 2,
+      "line_start": 412,
+      "line_end": 414,
+      "summary": "提供了购物示例应用作为HAR使用的参考实例。"
+    }
+  ]
+}

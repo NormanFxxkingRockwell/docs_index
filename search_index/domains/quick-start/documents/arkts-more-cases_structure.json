@@ -1,0 +1,329 @@
+{
+  "doc_id": "arkts-more-cases",
+  "title": "适配指导案例",
+  "path": "docs/zh-cn/application-dev/quick-start/arkts-more-cases.md",
+  "relative_path": "application-dev/quick-start/arkts-more-cases.md",
+  "metadata": {
+    "Kit": "ArkTS",
+    "Subsystem": "ArkCompiler",
+    "Owner": "@anxuesm",
+    "Designer": "@qyhuo32",
+    "Tester": "@kirl75; @zsw_zhushiwei",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "本文通过具体应用场景中的案例，提供在ArkTS语法规则下将TS代码适配成ArkTS代码的建议。各章以ArkTS语法规则的英文名称命名，每个案例展示适配前的TS代码和适配后的ArkTS代码。文档涵盖了标识符属性、类型声明、函数签名、构造函数、对象字面量、数组字面、方法重赋值、类型查询、解构赋值、异常处理、循环、映射类型、this使用、扩展运算符、标准库、严格模式检查、导入导出、类使用、拷贝操作和状态管理等多个方面的适配指导。",
+  "structure": [
+    {
+      "section_id": "arkts-identifiers-as-prop-names",
+      "title": "arkts-identifiers-as-prop-names",
+      "level": 2,
+      "line_start": 12,
+      "line_end": 50,
+      "summary": "当属性名是有效的标识符（即不包含特殊字符、空格等，并且不以数字开头），可以直接使用而无需引号。展示了对象属性使用引号和不使用引号的对比。"
+    },
+    {
+      "section_id": "arkts-no-any-unknown",
+      "title": "arkts-no-any-unknown",
+      "level": 2,
+      "line_start": 52,
+      "line_end": 142,
+      "summary": "按照业务逻辑，将代码中的any, unknown改为具体的类型。包括标注JSON.parse返回值类型、使用Record类型等案例。"
+    },
+    {
+      "section_id": "arkts-no-call-signature",
+      "title": "arkts-no-call-signature",
+      "level": 2,
+      "line_start": 144,
+      "line_end": 181,
+      "summary": "使用函数类型进行替代。展示了接口中的可调用签名如何改为type定义的函数类型。"
+    },
+    {
+      "section_id": "arkts-no-ctor-signatures-type",
+      "title": "arkts-no-ctor-signatures-type",
+      "level": 2,
+      "line_start": 183,
+      "line_end": 248,
+      "summary": "使用工厂函数（() => Instance）替代构造函数签名。展示了如何将构造函数类型改为工厂函数类型。"
+    },
+    {
+      "section_id": "arkts-no-indexed-signatures",
+      "title": "arkts-no-indexed-signatures",
+      "level": 2,
+      "line_start": 250,
+      "line_end": 276,
+      "summary": "使用Record类型进行替代。展示了如何将索引签名改为Record类型。"
+    },
+    {
+      "section_id": "arkts-no-typing-with-this",
+      "title": "arkts-no-typing-with-this",
+      "level": 2,
+      "line_start": 278,
+      "line_end": 304,
+      "summary": "使用具体类型替代this。展示了类方法返回类型中使用this的问题及改法。"
+    },
+    {
+      "section_id": "arkts-no-ctor-prop-decls",
+      "title": "arkts-no-ctor-prop-decls",
+      "level": 2,
+      "line_start": 306,
+      "line_end": 339,
+      "summary": "显式声明类属性，并在构造函数中手动赋值。展示了构造函数参数属性声明的改法。"
+    },
+    {
+      "section_id": "arkts-no-ctor-signatures-iface",
+      "title": "arkts-no-ctor-signatures-iface",
+      "level": 2,
+      "line_start": 341,
+      "line_end": 406,
+      "summary": "使用type定义工厂函数或普通函数类型。展示了接口中构造函数签名的改法。"
+    },
+    {
+      "section_id": "arkts-no-props-by-index",
+      "title": "arkts-no-props-by-index",
+      "level": 2,
+      "line_start": 408,
+      "line_end": 432,
+      "summary": "可以将对象转换为Record类型，以便访问其属性。展示了通过索引访问对象属性的改法。"
+    },
+    {
+      "section_id": "arkts-no-inferred-generic-params",
+      "title": "arkts-no-inferred-generic-params",
+      "level": 2,
+      "line_start": 434,
+      "line_end": 473,
+      "summary": "所有泛型调用都应显式标注泛型参数类型，如 Map<string, T>、.map<T>()。展示了泛型参数显式标注的案例。"
+    },
+    {
+      "section_id": "arkts-no-regexp-literals",
+      "title": "arkts-no-regexp-literals",
+      "level": 2,
+      "line_start": 475,
+      "line_end": 497,
+      "summary": "使用new RegExp(pattern, flags) 构造函数替代RegExp字面量。展示了正则表达式字面量的改法。"
+    },
+    {
+      "section_id": "arkts-no-untyped-obj-literals",
+      "title": "arkts-no-untyped-obj-literals",
+      "level": 2,
+      "line_start": 499,
+      "line_end": 768,
+      "summary": "从SDK中导入类型标注object literal类型，用class为object literal标注类型，使用Record类型为object literal标注类型等。涵盖了多个对象字面量类型标注的场景。"
+    },
+    {
+      "section_id": "arkts-no-obj-literals-as-types",
+      "title": "arkts-no-obj-literals-as-types",
+      "level": 2,
+      "line_start": 897,
+      "line_end": 918,
+      "summary": "使用interface显式定义结构类型。展示了type中使用对象字面量作为类型的改法。"
+    },
+    {
+      "section_id": "arkts-no-noninferrable-arr-literals",
+      "title": "arkts-no-noninferrable-arr-literals",
+      "level": 2,
+      "line_start": 920,
+      "line_end": 953,
+      "summary": "显式声明数组元素的类型（使用interface或class），并为数组变量添加类型注解。展示了数组字面量类型推断的改法。"
+    },
+    {
+      "section_id": "arkts-no-method-reassignment",
+      "title": "arkts-no-method-reassignment",
+      "level": 2,
+      "line_start": 955,
+      "line_end": 996,
+      "summary": "使用函数类型的类字段（class field）代替原型方法。展示了方法重赋值的改法。"
+    },
+    {
+      "section_id": "arkts-no-polymorphic-unops",
+      "title": "arkts-no-polymorphic-unops",
+      "level": 2,
+      "line_start": 998,
+      "line_end": 1022,
+      "summary": "使用 Number.parseInt()、new Number() 等显式转换函数。展示了多态一元运算符的改法。"
+    },
+    {
+      "section_id": "arkts-no-type-query",
+      "title": "arkts-no-type-query",
+      "level": 2,
+      "line_start": 1024,
+      "line_end": 1068,
+      "summary": "使用类、接口或类型别名替代typeof，避免依赖变量做类型推导。展示了typeof类型查询的改法。"
+    },
+    {
+      "section_id": "arkts-no-in",
+      "title": "arkts-no-in",
+      "level": 2,
+      "line_start": 1070,
+      "line_end": 1097,
+      "summary": "使用Object.keys判断属性是否存在。展示了in运算符的改法。"
+    },
+    {
+      "section_id": "arkts-no-destruct-assignment",
+      "title": "arkts-no-destruct-assignment",
+      "level": 2,
+      "line_start": 1099,
+      "line_end": 1131,
+      "summary": "使用索引访问元素或手动赋值代替解构赋值。展示了解构赋值的改法。"
+    },
+    {
+      "section_id": "arkts-no-types-in-catch",
+      "title": "arkts-no-types-in-catch",
+      "level": 2,
+      "line_start": 1133,
+      "line_end": 1162,
+      "summary": "使用无类型 catch (error)，然后通过类型断言处理。展示了catch块中类型注解的改法。"
+    },
+    {
+      "section_id": "arkts-no-for-in",
+      "title": "arkts-no-for-in",
+      "level": 2,
+      "line_start": 1164,
+      "line_end": 1200,
+      "summary": "使用 Object.entries(obj) + for of 替代 for in。展示了for...in循环的改法。"
+    },
+    {
+      "section_id": "arkts-no-mapped-types",
+      "title": "arkts-no-mapped-types",
+      "level": 2,
+      "line_start": 1202,
+      "line_end": 1233,
+      "summary": "使用 Record<K, T> 替代映射类型。展示了映射类型的改法。"
+    },
+    {
+      "section_id": "arkts-limited-throw",
+      "title": "arkts-limited-throw",
+      "level": 2,
+      "line_start": 1235,
+      "line_end": 1261,
+      "summary": "将对象转换为Error，或创建新的Error实例抛出。展示了throw语句的改法。"
+    },
+    {
+      "section_id": "arkts-no-standalone-this",
+      "title": "arkts-no-standalone-this",
+      "level": 2,
+      "line_start": 1267,
+      "line_end": 1371,
+      "summary": "使用类的方法实现，将this作为参数传入，将属性作为参数传入。涵盖了函数内使用this和类静态方法内使用this的场景。"
+    },
+    {
+      "section_id": "arkts-no-spread",
+      "title": "arkts-no-spread",
+      "level": 2,
+      "line_start": 1373,
+      "line_end": 1432,
+      "summary": "使用Object.assign()、手动赋值或数组方法替代扩展运算符。展示了扩展运算符的改法。"
+    },
+    {
+      "section_id": "arkts-no-ctor-signatures-funcs",
+      "title": "arkts-no-ctor-signatures-funcs",
+      "level": 2,
+      "line_start": 1434,
+      "line_end": 1492,
+      "summary": "在class内声明属性，而不是在构造函数上。展示了构造函数签名类型的改法。"
+    },
+    {
+      "section_id": "arkts-no-globalthis",
+      "title": "arkts-no-globalthis",
+      "level": 2,
+      "line_start": 1494,
+    "line_end": 1581,
+      "summary": "ArkTS不支持globalThis。建议按照业务逻辑根据import/export语法实现数据在不同模块的传递，或通过构造的单例对象来实现全局对象的功能。"
+    },
+    {
+      "section_id": "arkts-no-func-apply-bind-call",
+      "title": "arkts-no-func-apply-bind-call",
+      "level": 2,
+      "line_start": 1583,
+      "line_end": 1726,
+      "summary": "使用标准库中接口，使用箭头函数替代bind，使用参数传递替代apply。涵盖了函数的apply、bind、call方法的改法。"
+    },
+    {
+      "section_id": "arkts-limited-stdlib",
+      "title": "arkts-limited-stdlib",
+      "level": 2,
+      "line_start": 1728,
+      "line_end": 1761,
+      "summary": "展示了Object.fromEntries()等标准库方法的改法。"
+    },
+    {
+      "section_id": "strict-mode-check",
+      "title": "严格模式检查(StrictModeError)",
+      "level": 2,
+      "line_start": 1763,
+      "line_end": 2209,
+      "summary": "涵盖了strictPropertyInitialization、严格函数类型检查、严格空值检查、函数返回类型不匹配等多个严格模式检查场景的改法。"
+    },
+    {
+      "section_id": "arkts-strict-typing-required",
+      "title": "arkts-strict-typing-required",
+      "level": 2,
+      "line_start": 2211,
+      "line_end": 2234,
+      "summary": "删除忽略注释，为所有变量显式声明类型。展示了@ts-ignore等忽略注释的改法。"
+    },
+    {
+      "section_id": "arkts-no-tsdeps",
+      "title": "arkts-no-tsdeps",
+      "level": 2,
+      "line_start": 2238,
+      "line_end": 2246,
+      "summary": "不允许.ts、.js文件import.ets文件源码。提供了两种改法：将.ts文件改为.ets或将依赖代码抽取到.ts文件。"
+    },
+    {
+      "section_id": "arkts-no-special-imports",
+      "title": "arkts-no-special-imports",
+      "level": 2,
+      "line_start": 2248,
+      "line_end": 2263,
+      "summary": "改为使用普通import { ... } from '...' 导入类型。展示了import type的改法。"
+    },
+    {
+      "section_id": "arkts-no-classes-as-obj",
+      "title": "arkts-no-classes-as-obj",
+      "level": 2,
+      "line_start": 2265,
+      "line_end": 2377,
+      "summary": "使用class构造实例，直接访问静态属性。涵盖了将类作为对象使用和访问静态属性的场景。"
+    },
+    {
+      "section_id": "arkts-no-side-effects-imports",
+      "title": "arkts-no-side-effects-imports",
+      "level": 2,
+      "line_start": 2379,
+      "line_end": 2395,
+      "summary": "改用动态import。展示了副作用导入的改法。"
+    },
+    {
+      "section_id": "arkts-no-func-props",
+      "title": "arkts-no-func-props",
+      "level": 2,
+      "line_start": 2397,
+      "line_end": 2438,
+      "summary": "使用class来组织多个相关函数。展示了函数属性的改法。"
+    },
+    {
+      "section_id": "arkts-limited-esobj",
+      "title": "arkts-limited-esobj",
+      "level": 2,
+      "line_start": 2440,
+      "line_end": 2495,
+      "summary": "使用具体类型（如number, string）或接口代替不明确的ESObject。展示了ESObject类型的改法。"
+    },
+    {
+      "section_id": "copy",
+      "title": "拷贝",
+      "level": 2,
+      "line_start": 2497,
+      "line_end": 2563,
+      "summary": "涵盖了浅拷贝和深拷贝的实现。展示了在ArkTS中如何实现对象的浅拷贝和深拷贝。"
+    },
+    {
+      "section_id": "state-management",
+      "title": "状态管理使用典型场景",
+      "level": 2,
+      "line_start": 2565,
+      "line_end": 2790,
+      "summary": "涵盖了Struct组件外使用状态变量和Struct支持联合类型的方案。展示了状态管理在ArkTS中的最佳实践。"
+    }
+  ]
+}

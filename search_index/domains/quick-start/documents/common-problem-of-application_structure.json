@@ -1,0 +1,57 @@
+{
+  "doc_id": "common-problem-of-application",
+  "title": "应用程序包常见问题",
+  "path": "docs/zh-cn/application-dev/quick-start/common-problem-of-application.md",
+  "relative_path": "application-dev/quick-start/common-problem-of-application.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档介绍了应用程序包的常见问题，包括如何获取签名信息中的指纹信息、appIdentifier和appId的概念及获取方法。文档详细说明了通过bundleManager接口、bm工具、证书文件和keytool工具等多种方式获取这些信息的方法。",
+  "structure": [
+    {
+      "section_id": "section-1",
+      "title": "如何获取签名信息中的指纹信息",
+      "level": 2,
+      "line_start": 9,
+      "line_end": 48,
+      "summary": "介绍了四种获取签名信息中指纹信息的方法：通过调用bundleManager.getBundleInfoForSelf接口获取、通过bm工具获取、通过.cer证书文件获取、通过keytool工具获取。提供了TypeScript代码示例和shell命令示例。"
+    },
+    {
+      "section_id": "section-2",
+      "title": "什么是appIdentifier",
+      "level": 2,
+      "line_start": 50,
+      "line_end": 57,
+      "summary": "解释了appIdentifier是Profile签名文件中的应用唯一标识，在应用签名时生成。说明了通过DevEco Studio工具自动签名和手动配置签名两种生成方式的区别，并推荐在跨设备调试等场景下使用手动签名。"
+    },
+    {
+      "section_id": "section-3",
+      "title": "如何获取应用信息中的appIdentifier",
+      "level": 2,
+      "line_start": 59,
+      "line_end": 92,
+      "summary": "介绍了两种获取应用信息中appIdentifier的方法：通过调用bundleManager.getBundleInfoForSelf接口获取和通过bm工具获取。提供了TypeScript代码示例和shell命令示例。"
+    },
+    {
+      "section_id": "section-4",
+      "title": "什么是appId",
+      "level": 2,
+      "line_start": 95,
+      "line_end": 97,
+      "summary": "解释了appId是应用的唯一标识，由包名、下划线和证书公钥的Base64编码组成。由于appId和签名信息相关，如果签名证书的公钥更换，appId也会跟随变化，因此推荐使用appIdentifier作为应用的唯一标识。"
+    },
+    {
+      "section_id": "section-5",
+      "title": "如何获取应用信息中的appId",
+      "level": 2,
+      "line_start": 99,
+      "line_end": 131,
+      "summary": "介绍了两种获取应用信息中appId的方法：通过调用bundleManager.getBundleInfoForSelf接口获取和通过bm工具获取。提供了TypeScript代码示例和shell命令示例。"
+    }
+  ]
+}

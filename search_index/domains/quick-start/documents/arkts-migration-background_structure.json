@@ -1,0 +1,57 @@
+{
+  "doc_id": "arkts-migration-background",
+  "title": "ArkTS语法适配背景",
+  "path": "docs/zh-cn/application-dev/quick-start/arkts-migration-background.md",
+  "relative_path": "docs/zh-cn/application-dev/quick-start/arkts-migration-background.md",
+  "metadata": {
+    "kit": "ArkTS",
+    "subsystem": "ArkCompiler",
+    "owner": "@Fouckttt1",
+    "designer": "@qyhuo32",
+    "tester": "@kirl75; @zsw_zhushiwei",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "本文详细解释了为什么建议将TypeScript代码适配为ArkTS代码，涵盖程序稳定性、性能提升、.ets代码兼容性、与TS/JS的交互以及方舟运行时兼容性等方面。",
+  "structure": [
+    {
+      "section_id": "program-stability",
+      "title": "程序稳定性",
+      "level": 2,
+      "line_start": 12,
+      "line_end": 88,
+      "summary": "介绍ArkTS通过强制强制类型系统克服TypeScript的局限，实施更严格的类型验证机制，最大限度减少运行时错误。展示了显式初始化类属性的示例代码。"
+    },
+    {
+      "section_id": "program-performance",
+      "title": "程序性能",
+      "level": 2,
+      "line_start": 89,
+      "line_end": 138,
+      "summary": "说明ArkTS通过启用静态类型检查，代码被编译成方舟字节码文件而非JavaScript代码，从而提升运行速度。介绍了Null Safety特性和性能优化原理。"
+    },
+    {
+      "section_id": "ets-code-compatibility",
+      "title": ".ets代码兼容性",
+      "level": 2,
+      "line_start": 139,
+      "line_end": 147,
+      "summary": "说明从API version 10起，ArkTS明确定义语法规则，SDK增加了对.ets文件的ArkTS语法检查。介绍了标准模式和兼容模式的区别。"
+    },
+    {
+      "section_id": "ts-js-interaction",
+      "title": "支持与TS/JS的交互",
+      "level": 2,
+      "line_start": 148,
+      "line_end": 169,
+      "summary": "介绍ArkTS支持与TS/JS的高效互操作，但直接复用TS/JS的数据和对象可能规避静态类型检查机制，引发运行时异常或性能损耗。"
+    },
+    {
+      "section_id": "arkts-runtime-compatibility",
+      "title": "方舟运行时兼容TS/JS",
+      "level": 2,
+      "line_start": 170,
+      "line_end": 207,
+      "summary": "介绍方舟运行时对TS/JS的支持，包括应用环境限制（强制严格模式、禁止eval等）以及与标准TS/JS的差异（如支持科学计数法）。"
+    }
+  ]
+}

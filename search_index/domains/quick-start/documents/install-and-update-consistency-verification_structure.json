@@ -1,0 +1,33 @@
+{
+  "doc_id": "install-and-update-consistency-verification",
+  "title": "应用安装与更新一致性校验",
+  "path": "docs/zh-cn/application-dev/quick-start/install-and-update-consistency-verification.md",
+  "relative_path": "docs/zh-cn/application-dev/quick-start/install-and-update-consistency-verification.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文介绍多模块应用在安装或更新过程中，签名证书和配置文件的一致性校验规则，保证应用的安全合法性。详细说明了appId、appIdentifier、appDistributionType、appProvisionType、apl、bundleName、versionCode、apiReleaseType、singleton、appType、isStage、targetBundleName、targetPriority、bundleType、installationFree、debug、moduleType等字段的安装和更新一致性校验规则。",
+  "structure": [
+    {
+      "section_id": "section-0",
+      "title": "签名证书一致性校验",
+      "level": 2,
+      "line_start": 18,
+      "line_end": 27,
+      "summary": "介绍签名证书相关字段的一致性校验规则，包括appId、appIdentifier、appDistributionType、appProvisionType和apl字段。安装时这些字段都需要进行一致性校验，更新时appId和appIdentifier任一相同即可，其他字段在不同版本更新时无校验，同版本更新时有校验。"
+    },
+    {
+      "section_id": "section-1",
+      "title": "配置文件一致性校验",
+      "level": 2,
+      "line_start": 29,
+      "line_end": 45,
+      "summary": "介绍配置文件相关字段的一致性校验规则，包括bundleName、versionCode、apiReleaseType、singleton、appType、isStage、targetBundleName、targetPriority、bundleType、installationFree、debug、moduleType等字段。不同字段在安装和更新时有不同的校验规则，部分字段在同版本更新时有特殊限制。"
+    }
+  ]
+}

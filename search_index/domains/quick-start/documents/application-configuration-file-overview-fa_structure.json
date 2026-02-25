@@ -1,0 +1,25 @@
+{
+  "doc_id": "application-configuration-file-overview-fa",
+  "title": "应用配置文件概述（FA模型）",
+  "path": "docs/zh-cn/application-dev/quick-start/application-configuration-file-overview-fa.md",
+  "relative_path": "application-dev/quick-start/application-configuration-file-overview-fa.md",
+  "metadata": {
+    "kit": "Ability Kit",
+    "subsystem": "BundleManager",
+    "owner": "@wanghang904",
+    "designer": "@hanfeng6",
+    "tester": "@kongjing2",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档介绍了FA模型应用配置文件概述，说明每个应用项目必须在代码目录下加入配置文件，向编译工具、操作系统和应用市场提供描述应用的基本信息。应用配置文件需要声明应用的软件Bundle名称、开发厂商、版本号等基本配置信息，应用的组件基本信息，以及应用在具体设备上的配置信息。在FA模型应用开发过程中，需要在config.json配置文件中对应用的包结构进行声明。",
+  "structure": [
+    {
+      "section_id": "配置文件的内部结构",
+      "title": "配置文件的内部结构",
+      "level": 2,
+      "line_start": 26,
+      "line_end": 123,
+      "summary": "config.json由app、deviceConfig和module三个部分组成，缺一不可。app标识应用应用的全局配置信息，同一个应用的不同HAP的app配置必须保持一致；deviceConfig标识应用在具体设备上的配置信息；module标识HAP的配置信息，该标签下的配置只对当前HAP生效。文档提供了config.json的完整示例，包含app、deviceConfig和module三个对象的详细配置。"
+    }
+  ]
+}

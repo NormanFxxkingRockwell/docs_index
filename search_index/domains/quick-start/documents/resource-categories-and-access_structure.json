@@ -1,0 +1,73 @@
+{
+  "doc_id": "resource-categories-and-access",
+  "title": "资源分类与访问",
+  "path": "D:/codeBase/ai-learning/doc_index_project/docs_index/docs/zh-cn/application-dev/quick-start/resource-categories-and-access.md",
+  "relative_path": "docs/zh-cn/application-dev/quick-start/resource-categories-and-access.md",
+  "metadata": {
+    "kit": "Localization Kit",
+    "subsystem": "Global",
+    "owner": "@liule_123",
+    "designer": "@buda_wy",
+    "tester": "@lpw_work",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档介绍应用开发中使用的资源分类与访问方法。资源分为应用资源和系统资源两大类，应用资源是开发者自定义的资源，系统资源由系统提供。文档详细说明了资源目录结构（base、限定词目录、rawfile、resfile）和资源组目录（element、media、profile）的用途，限定词目录的命名规则，以及如何创建资源目录和资源文件。还介绍了资源可翻译特性、多种资源访问方式（单HAP包、跨HAP/HSP包、系统资源）、资源匹配规则、overlay机制等高级特性。",
+  "structure": [
+    {
+      "section_id": "resource_classification",
+      "title": "资源分类",
+      "level": 2,
+      "line_start": 18,
+      "line_end": 197,
+      "summary": "介绍应用开发中使用的各类资源文件目录结构，包括base目录、限定词目录、rawfile目录和resfile目录四种资源目录，以及element、media、profile三种资源组目录。详细说明了每种目录的用途、存储方式、访问方式，以及媒体资源类型（图片、音视频）的格式支持。还介绍了限定词目录的命名规则和取值范围，包括移动国家码、语言、文字、国家地区、横竖屏、设备类型、颜色模式和屏幕密度等限定词。最后提供了color.json、float.json、string.json、plural.json等资源文件的示例内容。"
+    },
+    {
+      "section_id": "create_resource_directory_and_files",
+      "title": "创建资源目录和资源文件",
+      "level": 2,
+      "line_start": 198,
+      "line_end": 237,
+      "summary": "介绍在DevEco Studio中创建资源目录和资源文件的方法，包括同时创建资源目录和资源文件、单独创建资源目录、单独创建资源文件三种方式。详细说明了如何通过右键菜单创建资源，如何选择限定词和资源组类型，以及限定词的组合规则。最后以创建中文和英文字符串资源文件为例，演示了完整的创建过程。"
+    },
+    {
+      "section_id": "resource_translatable_feature",
+      "title": "资源可翻译特性",
+      "level": 2,
+      "line_start": 238,
+      "line_end": 287,
+      "summary": "介绍资源可翻译特性，用于标记字符串资源的翻译范围和翻译状态。attr属性包含translatable（标记是否需要翻译）和priority（标记翻译状态）两个属性。该特性适用于base目录下string、strarray、plural类型资源。提供了string资源配置attr属性的示例，演示如何标记字符串为不需要翻译或需要翻译且翻译已验证。"
+    },
+    {
+      "section_id": "resource_access",
+      "title": "资源访问",
+      "level": 2,
+      "line_start": 288,
+      "line_end": 448,
+      "summary": "介绍多种资源访问方式。单HAP包应用资源可通过$r或$rawfile访问，也可通过ResourceManager接口访问。跨HAP/HSP包应用资源可通过createModuleContext创建上下文后访问，或使用[模块名].type.name形式访问。系统资源可通过$r('sys.type.name')形式访问，包括color、float、string、media、symbol等类型。提供了TypeScript代码示例，演示如何访问应用资源、HSP资源和系统资源。"
+    },
+    {
+      "section_id": "resource_matching",
+      "title": "资源匹配",
+      "level": 2,
+      "line_start": 449,
+      "line_end": 593,
+      "summary": "介绍资源匹配规则，系统会根据当前设备状态优先从匹配的限定词目录中寻找资源。限定词目录匹配优先级从高到低为：移动国家码和移动网络码 > 区域 > 横竖屏 > 设备类型 > 颜色模式 > 屏幕密度。还介绍了获取指定配置资源的方法，包括getOverrideResourceManager、getOverrideConfiguration、updateOverrideConfiguration三个接口。提供了获取非当前系统语言资源的完整示例，演示如何获取中文、英文、日文三种语言的资源。"
+    },
+    {
+      "section_id": "overlay_mechanism",
+      "title": "overlay机制",
+      "level": 2,
+      "line_start": 594,
+      "line_end": 685,
+      "summary": "介绍overlay资源替换机制，用于在不重新打包HAP的情况下实现应用界面风格变换。overlay资源包只包含资源文件、资源索引文件和配置文件。支持动态overlay使用方式（通过addResource和removeResource接口）和静态overlay配置方式。详细说明了overlay资源包的app.json5和module.json5配置文件格式，包括targetModuleName和targetPriority字段的作用和配置方法。"
+    },
+    {
+      "section_id": "related_examples",
+      "title": "相关实例",
+      "level": 2,
+      "line_start": 686,
+      "line_end": 691,
+      "summary": "提供资源管理相关的实例参考，包括资源管理（ArkTS）（API10）示例。"
+    }
+  ]
+}

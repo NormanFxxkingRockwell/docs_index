@@ -1,53 +1,202 @@
 {
-  "domain": "Quick Start",
-  "overview": "Quick Start 领域涵盖 OpenHarmony 应用开发的入门知识，包括开发准备、ArkTS 语言学习、应用程序包基础知识、配置文件管理、资源分类与访问、包类型转换（HAP/HAR/HSP）、应用安装卸载更新、以及编程规范和高性能编程实践等核心内容。支持 Stage 模型和 FA 模型两种应用模型，提供从零开始到构建第一个应用的完整学习路径。",
+  "domain": "quick-start",
+  "overview": "quick-start领域是OpenHarmony应用开发的快速入门指南，涵盖了从环境准备到应用开发的完整流程。主要内容包括ArkTS开发语言的基础知识、语法规范、编程实践和迁移指导；应用程序包结构（HAP、HAR、HSP）的概念和使用；Stage模型和FA模型的应用开发模式；应用配置文件（app.json5、module.json5）的详细说明；资源分类与访问方法；以及应用安装、卸载、更新和多实例管理等高级功能。该领域为初学者提供了系统性的学习路径，帮助开发者快速掌握OpenHarmony应用开发的核心技能。",
   "core_concepts": [
     "ArkTS语言",
+    "应用程序包结构",
     "Stage模型",
-    "FA模型",
-    "应用程序包",
-    "HAP",
-    "HAR",
-    "HSP",
-    "配置文件",
+    "应用配置文件",
     "资源管理",
-    "应用安装卸载"
+    "应用开发入门",
+    "应用安装与更新",
+    "应用多实例"
   ],
   "learning_path": [
-    "../../docs/zh-cn/application-dev/quick-start/Readme-CN.md",
-    "../../docs/zh-cn/application-dev/quick-start/start-overview.md",
-    "../../docs/zh-cn/application-dev/quick-start/start-with-ets-stage.md",
-    "../../docs/zh-cn/application-dev/quick-start/arkts-get-started.md",
-    "../../docs/zh-cn/application-dev/quick-start/introduction-to-arkts.md",
-    "../../docs/zh-cn/application-dev/quick-start/arkts-coding-style-guide.md",
-    "../../docs/zh-cn/application-dev/quick-start/application-package-overview.md",
-    "../../docs/zh-cn/application-dev/quick-start/application-configuration-file-overview-stage.md",
-    "../../docs/zh-cn/application-dev/quick-start/app-configuration-file.md",
-    "../../docs/zh-cn/application-dev/quick-start/module-configuration-file.md",
-    "../../docs/zh-cn/application-dev/quick-start/hap-package.md",
-    "../../docs/zh-cn/application-dev/quick-start/har-package.md",
-    "../../docs/zh-cn/application-dev/quick-start/in-app-hsp.md",
-    "../../docs/zh-cn/application-dev/quick-start/resource-categories-and-access.md",
-    "../../docs/zh-cn/application-dev/quick-start/application-package-structure-stage.md",
-    "../../docs/zh-cn/application-dev/quick-start/application-package-install-uninstall.md",
-    "../../docs/zh-cn/application-dev/quick-start/typescript-to-arkts-migration-guide.md",
-    "../../docs/zh-cn/application-dev/quick-start/arkts-high-performance-programming.md"
+    {
+      "phase": "入门基础",
+      "documents": [
+        {
+          "doc_id": "Readme-CN",
+          "title": "入门",
+          "priority": 1,
+          "description": "应用开发快速入门指南，提供文档导航索引"
+        },
+        {
+          "doc_id": "start-overview",
+          "title": "开发准备",
+          "priority": 2,
+          "description": "介绍开发准备工作，包括UI框架、应用模型和DevEco Studio"
+        },
+        {
+          "doc_id": "arkts-get-started",
+          "title": "初识ArkTS语言",
+          "priority": 3,
+          "description": "了解ArkTS开发语言的基本概念和特点"
+        },
+        {
+          "doc_id": "introductionkt-arkts",
+          "title": "ArkTS语言介绍",
+          "priority": 4,
+          "description": "详细介绍ArkTS的核心功能、语法和最佳实践"
+        }
+      ]
+    },
+    {
+      "phase": "应用开发",
+      "documents": [
+        {
+          "doc_id": "start-with-ets-stage",
+          "title": "构建第一个ArkTS应用（Stage模型）",
+          "priority": 5,
+          "description": "使用ArkTS和Stage模型构建第一个应用"
+        },
+        {
+          "doc_id": "application-package-overview",
+          "title": "应用程序包概述",
+          "priority": 6,
+          "description": "了解应用与应用程序包的概念和Module类型"
+        },
+        {
+          "doc_id": "application-package-structure-stage",
+          "title": "Stage模型应用程序包结构",
+          "priority": 7,
+          "description": "了解Stage模型应用程序包在不同阶段的形态"
+        },
+        {
+          "doc_id": "application-package-structure-fa",
+          "title": "FA模型应用程序包结构",
+          "priority": 8,
+          "description": "了解FA模型的应用程序包结构"
+        }
+      ]
+    },
+    {
+      "phase": "配置文件",
+      "documents": [
+        {
+          "doc_id": "application-configuration-file-overview-stage",
+          "title": "应用配置文件概述（Stage模型）",
+          "priority": 9,
+          "description": "了解Stage模型的配置文件结构"
+        },
+        {
+          "doc_id": "app-configuration-file",
+          "title": "app.json5配置文件",
+          "priority": 10,
+          "description": "应用级配置文件的详细说明"
+        },
+        {
+          "doc_id": "module-configuration-file",
+          "title": "module.json5配置文件",
+          "priority": 11,
+          "description": "模块级配置文件的详细说明"
+        },
+        {
+          "doc_id": "resource-categories-and-access",
+          "title": "资源分类与访问",
+          "priority": 12,
+          "description": "了解应用资源的分类与访问方法"
+        }
+      ]
+    },
+    {
+      "phase": "包结构详解",
+      "documents": [
+        {
+          "doc_id": "hap-package",
+          "title": "HAP",
+          "priority": 13,
+          "description": "了解HAP应用安装和运行的基本单元"
+        },
+        {
+          "doc_id": "har-package",
+          "title": "HAR",
+          "priority": 14,
+          "description": "了解HAR静态共享包的使用"
+        },
+        {
+          "doc_id": "in-app-hsp",
+          "title": "HSP",
+          "priority": 15,
+          "description": "了解HSP动态共享包的使用"
+        },
+        {
+          "doc_id": "integrated-hsp",
+          "title": "集成态HSP",
+          "priority": 16,
+          "description": "了解集成态HSP的跨工程集成"
+        }
+      ]
+    },
+    {
+      "phase": "应用管理",
+      "documents": [
+        {
+          "doc_id": "application-package-install-uninstall",
+          "title": "应用安装卸载与更新开发指导",
+          "priority": 17,
+          "description": "了解应用的安装、卸载和更新流程"
+        },
+        {
+          "doc_id": "install-and-update-consistency-verification",
+          "title": "应用安装与更新一致性校验",
+          "priority": 18,
+          "description": "了解签名证书和配置文件的一致性校验"
+        },
+        {
+          "doc_id": "app-clone",
+          "title": "创建应用分身",
+          "priority": 19,
+          "description": "了解应用分身功能的实现"
+        },
+        {
+          "doc_id": "multiInstance",
+          "title": "创建应用多实例",
+          "priority": 20,
+          "description": "了解应用多实例的实现"
+        }
+      ]
+    }
   ],
   "quick_reference": {
-    "开发准备": "../../docs/zh-cn/application-dev/quick-start/start-overview.md",
-    "构建第一个应用": "../../docs/zh-cn/application-dev/quick-start/start-with-ets-stage.md",
-    "ArkTS语言": "../../docs/zh-cn/application-dev/quick-start/introduction-to-arkts.md",
-    "编程规范": "../../docs/zh-cn/application-dev/quick-start/arkts-coding-style-guide.md",
-    "高性能编程": "../../docs/zh-cn/application-dev/quick-start/arkts-high-performance-programming.md",
-    "应用程序包概述": "../../docs/zh-cn/application-dev/quick-start/application-package-overview.md",
-    "HAP": "../../docs/zh-cn/application-dev/quick-start/hap-package.md",
-    "HAR": "../../docs/zh-cn/application-dev/quick-start/har-package.md",
-    "HSP": "../../docs/zh-cn/application-dev/quick-start/in-app-hsp.md",
-    "配置文件": "../../docs/zh-cn/application-dev/quick-start/application-configuration-file-overview-stage.md",
-    "资源管理": "../../docs/zh-cn/application-dev/quick-start/resource-categories-and-access.md",
-    "应用安装卸载": "../../docs/zh-cn/application-dev/quick-start/application-package-install-uninstall.md",
-    "TypeScript适配": "../../docs/zh-cn/application-dev/quick-start/typescript-to-arkts-migration-guide.md",
-    "常见问题": "../../docs/zh-cn/application-dev/quick-start/common-problem-of-application.md"
+    "入门": "docs/zh-cn/application-dev/quick-start/Readme-CN.md",
+    "开发准备": "docs/zh-cn/application-dev/quick-start/start-overview.md",
+    "初识ArkTS语言": "docs/zh-cn/application-dev/quick-start/arkts-get-started.md",
+    "ArkTS语言介绍": "docs/zh-cn/application-dev/quick-start/introduction-to-arkts.md",
+    "构建第一个ArkTS应用（Stage模型）": "docs/zh-cn/application-dev/quick-start/start-with-ets-stage.md",
+    "应用程序包概述": "docs/zh-cn/application-dev/quick-start/application-package-overview.md",
+    "应用程序包术语": "docs/zh-cn/application-dev/quick-start/application-package-glossary.md",
+    "Stage模型应用程序包结构": "docs/zh-cn/application-dev/quick-start/application-package-structure-stage.md",
+    "FA模型应用程序包结构": "docs/zh-cn/application-dev/quick-start/application-package-structure-fa.md",
+    "应用配置文件概述（Stage模型）": "docs/zh-cn/application-dev/quick-start/application-configuration-file-overview-stage.md",
+    "应用配置文件概述（FA模型）": "docs/zh-cn/application-dev/quick-start/application-configuration-file-overview-fa.md",
+    "app.json5配置文件": "docs/zh-cn/application-dev/quick-start/app-configuration-file.md",
+    "module.json5配置文件": "docs/zh-cn/application-dev/quick-start/module-configuration-file.md",
+    "app对象内部结构": "docs/zh-cn/application-dev/quick-start/app-structure.md",
+    "module对象内部结构": "docs/zh-cn/application-dev/quick-start/module-structure.md",
+    "deviceConfig内部结构": "docs/zh-cn/application-dev/quick-start/deviceconfig-structure.md",
+    "资源分类与访问": "docs/zh-cn/application-dev/quick-start/resource-categories-and-access.md",
+    "HAP": "docs/zh-cn/application-dev/quick-start/hap-package.md",
+    "HAR": "docs/zh-cn/application-dev/quick-start/har-package.md",
+    "HSP": "docs/zh-cn/application-dev/quick-start/in-app-hsp.md",
+    "集成态HSP": "docs/zh-cn/application-dev/quick-start/integrated-hsp.md",
+    "HAP转HAR指导": "docs/zh-cn/application-dev/quick-start/hap-to-har.md",
+    "HAR转HSP指导": "docs/zh-cn/application-dev/quick-start/har-to-hsp.md",
+    "HSP转HAR指导": "docs/zh-cn/application-dev/quick-start/hsp-to-har.md",
+    "应用安装卸载与更新开发指导": "docs/zh-cn/application-dev/quick-start/application-package-install-uninstall.md",
+    "应用安装与更新一致性校验": "docs/zh-cn/application-dev/quick-start/install-and-update-consistency-verification.md",
+    "应用程序包常见问题": "docs/zh-cn/application-dev/quick-start/common-problem-of-application.md",
+    "创建应用分身": "zh-cn/application-dev/quick-start/app-clone.md",
+    "创建应用多实例": "docs/zh-cn/application-dev/quick-start/multiInstance.md",
+    "配置应用图标和名称": "docs/zh-cn/application-dev/quick-start/layered-image.md",
+    "创建应用静态快捷方式": "docs/zh-cn/application-dev/quick-start/typical-scenario-configuration.md",
+    "从TypeScript到ArkTS的适配规则": "docs/zh-cn/application-dev/quick-start/typescript-to-arkts-migration-guide.md",
+    "ArkTS语法适配背景": "docs/zh-cn/application-dev/quick-start/arkts-migration-background.md",
+    "适配指导案例": "docs/zh-cn/application-dev/quick-start/arkts-more-cases.md",
+    "从Swift到ArkTS的迁移指导": "docs/zh-cn/application-dev/quick-start/getting-started-with-arkts-for-swift-programmers.md",
+    "从Java到ArkTS的迁移指导": "docs/zh-cn/application-dev/quick-start/getting-started-with-arkts-for-java-programmers.md",
+    "ArkTS编程规范": "docs/zh-cn/application-dev/quick-start/arkts-coding-style-guide.md",
+    "ArkTS高性能编程实践": "docs/zh-cn/application-dev/quick-start/arkts-high-performance-programming.md"
   },
   "document_count": 38
 }
