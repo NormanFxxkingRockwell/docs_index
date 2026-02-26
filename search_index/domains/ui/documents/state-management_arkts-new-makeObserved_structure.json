@@ -1,0 +1,60 @@
+{
+  "doc_id": "state-management_arkts-new-makeObserved",
+  "title": "makeObserved接口：将非观察数据变为可观察数据",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-new-makeObserved.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-new-makeObserved.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@liwenzhen3",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍makeObserved接口的使用方法，该接口用于将普通不可观察数据变为可观察数据，适用于@Trace无法标记的场景，包括三方包中的class定义、@Sendable装饰的class、interface或JSON.parse返回的匿名对象等。详细说明了接口的限制条件、支持类型、观察变化机制以及多种使用场景。",
+  "structure": {
+    "title": "makeObserved接口：将非观察数据变为可观察数据",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 40,
+        "summary": "介绍makeObserved接口的主要应用场景，包括三方包中的class定义、@Sendable装饰的class、interface或JSON.parse返回的等无法使用@Trace标记的场景。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 41,
+        "line_end": 124,
+        "summary": "说明makeObserved的使用限制，包括仅支持非空对象类型、不支持@ObservedV2/@Observed装饰的类实例、不能与V1状态变量装饰器配合使用等。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "支持类型和观察变化",
+        "level": 2,
+        "line_start": 125,
+        "line_end": 152,
+        "summary": "列出makeObserved支持的数据类型，包括普通类、Array、Map、Set、Date、collections容器、JSON.parse返回对象和@Sendable类，以及各类型可观测变化的API列表。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 153,
+        "line_end": 538,
+        "summary": "详细介绍makeObserved的多种使用场景，包括与@Sendable装饰的class配合使用、与collections.Array/Set/Map配合使用、处理JSON.parse返回值、与V2装饰器配合使用、在@Component内使用等。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "常见问题",
+        "level": 2,
+        "line_start": 539,
+        "line_end": 574,
+        "summary": "解答常见问题，说明getTarget后的数据可以正常赋值但无法触发UI刷新的原因，因为getTarget获取的是代理前的原始对象。"
+      }
+    ]
+  }
+}

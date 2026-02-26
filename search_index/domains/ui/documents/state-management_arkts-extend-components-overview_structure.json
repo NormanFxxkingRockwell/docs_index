@@ -1,0 +1,92 @@
+{
+  "doc_id": "state-management_arkts-extend-components-overview",
+  "title": "组件扩展概述",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-extend-components-overview.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-extend-components-overview.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zhangboren",
+    "designer": "@zhangboren",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍ArkUI框架中的组件扩展机制，包括@Builder、@LocalBuilder、@BuilderParam装饰器以及wrapBuilder、mutableBuilder机制，用于构建模块化、可复用的UI结构体系，同时涵盖@Styles、@Extend、stateStyles和@AnimatableExtend等样式扩展机制。",
+  "structure": {
+    "title": "组件扩展概述",
+    "sections": [
+      {
+        "section_id": "builder",
+        "title": "@Builder装饰器",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 15,
+        "summary": "介绍@Builder装饰器用于构建模块化、可复用的UI结构，内部禁止定义状态变量和调用组件生命周期方法。"
+      },
+      {
+        "section_id": "local-builder",
+        "title": "@LocalBuilder装饰器",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 19,
+        "summary": "介绍@LocalBuilder装饰器用于解决组件树父子关系与状态管理父子关系不一致的问题。"
+      },
+      {
+        "section_id": "builder-param",
+        "title": "@BuilderParam装饰器",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 23,
+        "summary": "介绍@BuilderParam装饰器用于接收并封装@Builder函数，实现类似slot占位符机制的扩展功能。"
+      },
+      {
+        "section_id": "wrap-builder",
+        "title": "wrapBuilder机制",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 27,
+        "summary": "介绍wrapBuilder机制用于简化页面中多个不同UI结构的全局@Builder函数的维护工作。"
+      },
+      {
+        "section_id": "mutable-builder",
+        "title": "mutableBuilder机制",
+        "level": 2,
+        "line_start": 29,
+        "line_end": 31,
+        "summary": "介绍mutableBuilder机制用于支持@Builder的动态切换，解决wrapBuilder不支持二次赋值的问题。"
+      },
+      {
+        "section_id": "styles",
+        "title": "@Styles装饰器",
+        "level": 2,
+        "line_start": 33,
+        "line_end": 35,
+        "summary": "介绍@Styles装饰器用于定义组件重用样式，将多条通用样式设置提炼成一个方法供调用。"
+      },
+      {
+        "section_id": "extend",
+        "title": "@Extend装饰器",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 39,
+        "summary": "介绍@Extend装饰器用于定义指定组件的重用样式，提炼私有属性和私有事件设置供调用。"
+      },
+      {
+        "section_id": "state-styles",
+        "title": "stateStyles机制",
+        "level": 2,
+        "line_start": 41,
+        "line_end": 43,
+        "summary": "介绍stateStyles机制用于根据组件内部状态的不同，快速设置不同的样式。"
+      },
+      {
+        "section_id": "animatable-extend",
+        "title": "@AnimatableExtend装饰器",
+        "level": 2,
+        "line_start": 45,
+        "line_end": 47,
+        "summary": "介绍@AnimatableExtend装饰器用于自定义可动画的属性方法，通过逐帧回调修改不可动画属性实现动画效果。"
+      }
+    ]
+  }
+}

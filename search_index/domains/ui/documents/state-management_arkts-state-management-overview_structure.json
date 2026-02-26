@@ -1,0 +1,73 @@
+{
+  "doc_id": "state-management_arkts-state-management-overview",
+  "title": "状态管理概述",
+  "domain": "ui",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@jiyujia926",
+    "Designer": "@s10021109",
+    "Tester": "@TerryTsao",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档介绍了ArkUI状态管理机制，包括V1和V2两个版本。状态管理是声明式UI编程的核心，通过状态变量驱动UI更新。V2是V1的增强版本，支持深度观测、属性级更新等高级功能，建议新应用直接使用V2版本。文档详细说明了各版本装饰器的使用方法和能力对比。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "状态管理版本介绍",
+      "line": 33,
+      "summary": "当前状态管理分为V1和V2两个版本。V2是V1的增强版本，正在持续迭代优化。对于新开发的应用，建议直接使用V2版本。已使用V1的应用如果功能和性能满足需求，不必立即切换。"
+    },
+    {
+      "level": 2,
+      "title": "状态管理（V1）",
+      "line": 40,
+      "summary": "状态管理V1提供了多种装饰器用于管理组件内状态和应用级状态。包括@State、@Prop、@Link、@Provide/@Consume等组件级装饰器，以及AppStorage、LocalStorage等应用级状态管理。"
+    },
+    {
+      "level": 3,
+      "title": "装饰器总览",
+      "line": 44,
+      "summary": "ArkUI状态管理V1装饰器分为管理组件内状态和管理应用级状态两类。组件级装饰器可观察同一页面内变量变化，应用级装饰器可观察不同页面甚至不同UIAbility的状态变化。"
+    },
+    {
+      "level": 3,
+      "title": "其他状态管理V1功能",
+      "line": 89,
+      "summary": "其他状态管理V1功能包括@Watch装饰器用于监听状态变量变化，以及$$运算符用于给系统组件提供TS变量引用，实现TS变量和系统组件内部状态的同步。"
+    },
+    {
+      "level": 3,
+      "title": "相关实例",
+      "line": 96,
+      "summary": "提供了状态管理和目标管理的相关实例参考，包括状态管理ArkTS API9示例和目标管理ArkTS API9示例，帮助开发者理解和应用状态管理功能。"
+    },
+    {
+      "level": 2,
+      "title": "状态管理（V2）",
+      "line": 104,
+      "summary": "状态管理V2增强了V1版本的能力，支持深度观察、属性级更新等功能。V2使数据本身可观察，更改数据时会触发相应视图更新，具有更好的性能和易用性。"
+    },
+    {
+      "level": 3,
+      "title": "状态管理V1现状以及V2优点",
+      "line": 108,
+      "summary": "V1使用代理观察数据，存在无法深度观测、冗余更新等限制。V2增强了数据观察能力，支持深度观测和深度监听，支持属性级精准更新，装饰器易用性高，有利于组件化。"
+    },
+    {
+      "level": 3,
+      "title": "装饰器总览",
+      "line": 131,
+      "summary": "状态管理V2提供了一套全新装饰器，包括@ObservedV2、@Trace、@ComponentV2、@Local、@Param、@Event、@Once、@Monitor、@Provider、@Consumer、@Computed等，以及!!双向绑定语法糖。"
+    },
+    {
+      "level": 3,
+      "title": "状态管理V1与V2能力对比",
+      "line": 157,
+      "summary": "详细对比了V1和V2的装饰器能力差异，包括@Observed与@ObservedV2、@State与@Local/@Param、@Prop与@Param、@Link与@Param@Event等，以及LocalStorage、AppStorage、Environment等功能的对应关系。"
+    }
+  ],
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-state-management-overview.md",
+  "total_lines": 185,
+  "created_at": "2026-02-26"
+}

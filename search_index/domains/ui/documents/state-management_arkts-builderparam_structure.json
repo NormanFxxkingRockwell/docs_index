@@ -1,0 +1,52 @@
+{
+  "doc_id": "state-management_arkts-builderparam",
+  "title": "@BuilderParam装饰器：引用@Builder函数",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-builderparam.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-builderparam.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zhangboren",
+    "designer": "@zhangboren",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍@BuilderParam装饰器的使用方法和应用场景，该装饰器用于装饰指向@Builder方法的变量，支持在自定义组件初始化时通过参数修改、尾随闭包等方式对@BuilderParam装饰的自定义构建函数进行传参赋值，从API version 7开始支持，支持ArkTS卡片和原子化服务。",
+  "structure": {
+    "title": "@BuilderParam装饰器：引用@Builder函数",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "装饰器使用说明",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 158,
+        "summary": "介绍@BuilderParam装饰方法的初始化方式，包括使用所属自定义组件的自定义构建函数或全局自定义构建函数在本地初始化，以及使用父组件自定义构建函数初始化子组件@BuilderParam装饰的方法，同时说明this指向的注意事项。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 166,
+        "summary": "说明@BuilderParam装饰器的使用限制，包括只能通过@Builder函数初始化、与@Require装饰器联合使用时必须初始化、尾随闭包场景下的特殊要求等条件。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 167,
+        "line_end": 702,
+        "summary": "介绍@BuilderParam装饰器的多种使用场景，包括参数初始化组件、尾随闭包初始化组件、隔离多组件对@Builder跳转逻辑的调用、使用全局和局部@Builder初始化@BuilderParam、在@ComponentV2装饰的自定义组件中使用@BuilderParam等场景。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "常见问题",
+        "level": 2,
+        "line_start": 703,
+        "line_end": 954,
+        "summary": "解答@BuilderParam装饰器使用过程中的常见问题，包括内容UI不刷新的问题及解决方法、@Require装饰器和@BuilderParam装饰器联合使用的要求、@BuilderParam装饰器初始化的值必须为@Builder的限制等。"
+      }
+    ]
+  }
+}

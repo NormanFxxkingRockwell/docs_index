@@ -1,0 +1,68 @@
+{
+  "doc_id": "ndk-styled-string",
+  "title": "Text组件的文本绘制与显示",
+  "path": "zh-cn/application-dev/ui/ndk-styled-string.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/ndk-styled-string.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@hddgzw",
+    "designer": "@xiangyuan6",
+    "tester": "@jiaoaozihao",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍如何使用Text组件的NODE_TEXT_CONTENT_WITH_STYLED_STRING接口直接渲染方舟文本引擎生成的文本，包括创建Text组件、设置段落与文本样式、添加占位、文本布局与绘制以及对象销毁等完整流程。",
+  "structure": {
+    "title": "Text组件的文本绘制与显示",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "创建Text组件",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 47,
+        "summary": "介绍如何创建Text组件，设置基础通用属性如宽度和高度，组件会自动适应文本的宽度和高度。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "设置段落与文本样式",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 97,
+        "summary": "介绍如何设置段落样式定义文字整体属性，以及按顺序调用PushTextStyle、AddText、PopTextStyle接口设置不同内容的文本样式。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "添加占位",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 126,
+        "summary": "介绍如何在文本中添加占位保留指定大小的空白区域，此区域不绘制文字但参与布局测量，影响文字排版。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "文本布局与绘制",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 157,
+        "summary": "介绍如何调用字体引擎接口对文本进行布局，传入最大宽度使超宽文字自动换行，以及将StyledString对象传递给Text组件进行绘制。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "销毁对象",
+        "level": 2,
+        "line_start": 158,
+        "line_end": 172,
+        "summary": "介绍Text组件不管理对象生命周期，需开发者自行负责销毁文本样式、段落样式等对象，确保Text组件不再使用时才释放。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "完整示例",
+        "level": 2,
+        "line_start": 173,
+        "line_end": 236,
+        "summary": "提供完整的示例代码，展示从创建Text组件、设置样式、添加占位、布局绘制到资源释放的完整流程。"
+      }
+    ]
+  }
+}

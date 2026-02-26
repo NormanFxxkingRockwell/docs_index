@@ -1,0 +1,44 @@
+{
+  "doc_id": "arkts-shared-element-transition",
+  "title": "共享元素转场 (一镜到底)",
+  "path": "zh-cn/application-dev/ui/arkts-shared-element-transition.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-shared-element-transition.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@CCFFWW",
+    "designer": "@CCFFWW",
+    "tester": "@lxl007",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "介绍共享元素转场（一镜到底）的概念和多种实现方式，包括不新建容器直接变化原容器、新建容器并跨容器迁移组件、使用geometryTransition共享元素转场等方法，提供详细的代码示例和实现步骤。",
+  "structure": {
+    "title": "共享元素转场 (一镜到底)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "不新建容器并直接变化原容器",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 196,
+        "summary": "通过在已有容器上增删组件触发transition，搭配组件属性动画实现一镜到底效果，适用于转场开销小的简单场景。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "新建容器并跨容器迁移组件",
+        "level": 2,
+        "line_start": 197,
+        "line_end": 1929,
+        "summary": "利用NodeContainer和NodeController实现组件跨节点迁移，配合属性动画实现一镜到底效果，可结合导航转场、半模态转场等使用。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "使用geometryTransition共享元素转场",
+        "level": 2,
+        "line_start": 1930,
+        "line_end": 2194,
+        "summary": "提供组件内隐式共享元素转场能力，通过绑定同一id实现两个组件间的一镜到底动效，适用于不同对象之间的平滑过渡。"
+      }
+    ]
+  }
+}

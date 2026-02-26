@@ -1,0 +1,116 @@
+{
+  "doc_id": "state-management_arkts-new-syncmonitor",
+  "title": "@SyncMonitor装饰器：状态变量修改同步监听",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-new-syncmonitor.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-new-syncmonitor.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "@SyncMonitor装饰器用于同步监听V2状态变量的修改，提供深度监听能力。支持在@ComponentV2装饰的自定义组件和@ObservedV2装饰的类中使用，可监听多个属性、嵌套对象、多维数组、对象数组的变化。与@Monitor不同，@SyncMonitor的回调在属性每次改变时立即同步执行，而@Monitor在事件处理结束后异步执行一次。支持通配符(*)进行模糊监听，便于从@Watch装饰器迁移到V2状态管理。",
+  "structure": {
+    "title": "@SyncMonitor装饰器：状态变量修改同步监听",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 26,
+        "summary": "@SyncMonitor装饰器用于同步监听状态变量修改，使状态变量具有深度监听能力，支持在@ComponentV2装饰的自定义组件中使用。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "装饰器使用规则说明",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 42,
+        "summary": "介绍@SyncMonitor装饰器的使用规则，包括与@ObservedV2和@Trace的配合使用、监听多个属性、深度监听嵌套类和数组的能力。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "比较@Monitor，@SyncMonitor和@Watch",
+        "level": 2,
+        "line_start": 43,
+        "line_end": 66,
+        "summary": "详细比较@Monitor、@SyncMonitor和@Watch三个装饰器的用法和功能差异，包括参数、监听类型、回调时机等。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "装饰器说明",
+        "level": 2,
+        "line_start": 141,
+        "line_end": 146,
+        "summary": "说明@SyncMonitor装饰器的参数和装饰内容，参数为字符串类型的对象属性名称，装饰内容为以IMonitor类型为参数的成员方法。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "监听路径中通配符的说明",
+        "level": 2,
+        "line_start": 147,
+        "line_end": 175,
+        "summary": "说明通配符(*)在监听路径中的使用规则和语法，通配符只能出现在路径末尾，用于监听任意属性或数组项的变化。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 176,
+        "line_end": 178,
+        "summary": "提供IMonitor类型和IMonitorValue<T>类型的接口说明参考链接。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "监听变化",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 417,
+        "summary": "详细介绍如何在@ComponentV2和@ObservedV2装饰的类中使用@SyncMonitor监听状态变量和属性的变化，包括监听多个变量、深层属性、继承类场景。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "通用监听能力",
+        "level": 2,
+        "line_start": 419,
+        "line_end": 714,
+        "summary": "介绍@SyncMonitor的通用监听能力，包括监听数组项、多维数组、对象数组、Map、Set、Date等内置类型的变化。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "观察路径中的通配符",
+        "level": 2,
+        "line_start": 716,
+        "line_end": 1087,
+        "summary": "详细说明通配符在观察路径中的使用，包括监听对象属性变化、数组项变化、嵌套对象属性变化、多维数组项变化等场景。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 1089,
+        "line_end": 1257,
+        "summary": "说明使用@SyncMonitor时的限制条件，包括不建议对同一属性多次监听、参数必须为字符串字面量、避免在回调中修改被监听属性等。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 1258,
+        "line_end": 1315,
+        "summary": "提供@SyncMonitor的使用场景示例，展示如何监听深层属性变化并根据变化前后值做分类处理。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "常见问题",
+        "level": 2,
+        "line_start": 1318,
+        "line_end": 1908,
+        "summary": "解答关于@SyncMonitor的常见问题，包括在自定义组件和类中的生效及失效时间、正确设置入参、无效路径、监听变量可访问性变化等。"
+      }
+    ]
+  }
+}

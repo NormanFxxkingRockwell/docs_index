@@ -1,0 +1,186 @@
+{
+  "doc_id": "state-management_arkts-state-management-glossary",
+  "domain": "ui",
+  "title": "状态管理术语",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@zany_pink",
+    "Designer": "@s10021109",
+    "Tester": "@zhangwenhan12",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档是ArkUI状态管理术语表，按字母顺序组织，涵盖了状态管理中的核心概念和术语定义，包括属性级更新、数据源、深度监听、标脏、最小化更新、状态变量等关键术语的解释，帮助开发者理解状态管理框架的基本概念。",
+  "sections": [
+    {
+      "title": "A",
+      "level": 2,
+      "summary": "包含属性级精准更新术语，解释了状态管理框架如何通过类属性装饰器实现对类对象中属性的观测能力，实现只刷新变化属性绑定的组件。",
+      "subsections": [
+        {
+          "title": "属性级精准更新（Attribute-Level Updates）",
+          "level": 3,
+          "summary": "状态管理框架使用类属性装饰器可以实现对类对象中属性的观测能力，当属性发生变化时，只刷新该属性绑定的组件，其他未发生变化的属性绑定的组件将不会被连带刷新。"
+        }
+      ]
+    },
+    {
+      "title": "D",
+      "level": 2,
+      "summary": "包含数据源、深度监听、深度观察等术语，解释了状态变量的原始来源、监听数据变化的机制以及UI观察能力。",
+      "subsections": [
+        {
+          "title": "数据源/同步源（Data Source）",
+          "level": 3,
+          "summary": "状态变量的原始来源，可以同步给不同的状态数据。通常为父组件传给子组件的数据。"
+        },
+        {
+          "title": "深度监听（Deep Monitor）",
+          "level": 3,
+          "summary": "@Monitor装饰器用于监听数据的变化，深度监听会递归监听对象或数组的所有嵌套属性。"
+        },
+        {
+          "title": "深度观察（Deep Observation）",
+          "level": 3,
+          "summary": "深度观察能力指的是UI能够递归观察到对象或数组的所有嵌套属性。"
+        }
+      ]
+    },
+    {
+      "title": "L",
+      "level": 2,
+      "summary": "包含本地初始化术语，解释了在变量声明时赋值作为变量默认值的机制。",
+      "subsections": [
+        {
+          "title": "本地初始化（Local Initialization）",
+          "level": 3,
+          "summary": "在变量声明的时候赋值，作为变量的默认值。"
+        }
+      ]
+    },
+    {
+      "title": "M",
+      "level": 2,
+      "summary": "包含标脏和最小化更新术语，解释了状态变量变化时的标记机制和UI框架的优化策略。",
+      "subsections": [
+        {
+          "title": "标脏（Mark Dirty）",
+          "level": 3,
+          "summary": "当状态变量发生变化时，框架会将依赖于该变量的系统组件以及该变量所属的自定义组件标记为脏，在后续UI渲染过程中重新刷新。"
+        },
+        {
+          "title": "最小化更新（Minimum Updates）",
+          "level": 3,
+          "summary": "最小化更新是UI框架的一种优化策略，确保只更新实际发生变化的部分，即只刷新与发生变化的状态变量绑定的系统组件，避免不必要的渲染操作。"
+        }
+      ]
+    },
+    {
+      "title": "N",
+      "level": 2,
+      "summary": "包含命名参数机制术语，解释了父组件通过指定参数传递给子组件状态变量的主要手段。",
+      "subsections": [
+        {
+          "title": "命名参数机制（Named Parameter Mechanism）",
+          "level": 3,
+          "summary": "父组件通过指定参数传递给子组件的状态变量，为父子传递同步参数的主要手段。"
+        }
+      ]
+    },
+    {
+      "title": "O",
+      "level": 2,
+      "summary": "包含一层监听、一层观察和单向同步术语，解释了数据监听和流动的机制。",
+      "subsections": [
+        {
+          "title": "一层监听（One-Layer Monitor）",
+          "level": 3,
+          "summary": "@Watch装饰器用于监听数据的变化，一层监听只能监听对象或数组的第一层属性的变化，不会递归监听嵌套属性。"
+        },
+        {
+          "title": "一层观察（One-Layer Observation）",
+          "level": 3,
+          "summary": "UI能够观察到@State、@Prop等V1装饰器装饰的状态变量一层属性的变化。"
+        },
+        {
+          "title": "单向同步（One-Way Sync）",
+          "level": 3,
+          "summary": "数据只能从一个方向流动，通常是从父组件到子组件。子组件可以接收父组件的数据，但不能直接修改父组件的数据源。"
+        }
+      ]
+    },
+    {
+      "title": "R",
+      "level": 2,
+      "summary": "包含引用传递、常规变量和渲染过程术语，解释了变量传递方式、常规变量特性以及UI渲染流程。",
+      "subsections": [
+        {
+          "title": "引用传递（Reference Transmission）",
+          "level": 3,
+          "summary": "在函数调用或变量赋值时，传递的是变量本身，包含收集依赖和触发更新的逻辑。"
+        },
+        {
+          "title": "常规变量（Regular Variables）",
+          "level": 3,
+          "summary": "没有被状态装饰器装饰的变量，通常应用于辅助计算。它的改变永远不会引起UI的刷新。"
+        },
+        {
+          "title": "渲染过程（Render Phase）",
+          "level": 3,
+          "summary": "渲染过程是状态管理触发更新流程中的一个阶段，指组件标脏完成后，下一帧信号到来时刷新UI的这段流程。在此过程中，框架遍历脏自定义组件列表，调用系统生成的rerender方法，遍历脏系统组件，刷新组件并更新依赖。"
+        }
+      ]
+    },
+    {
+      "title": "S",
+      "level": 2,
+      "summary": "包含状态变量术语，解释了被状态装饰器装饰的变量及其对UI渲染更新的影响。",
+      "subsections": [
+        {
+          "title": "状态变量（State Variables）",
+          "level": 3,
+          "summary": "被状态装饰器装饰的变量，状态变量值的改变会引起UI的渲染更新。"
+        }
+      ]
+    },
+    {
+      "title": "T",
+      "level": 2,
+      "summary": "包含尾随闭包和双向同步术语，解释了ArkTS语法特性和数据双向流动机制。",
+      "subsections": [
+        {
+          "title": "尾随闭包（Trailing Lambda）",
+          "level": 3,
+          "summary": "尾随闭包是ArkTS中的一种语法特性，当闭包作为函数的最后一个参数时，可以将该闭包表达式写在函数调用括号之后，以提高代码可读性。"
+        },
+        {
+          "title": "双向同步（Two-way Sync）",
+          "level": 3,
+          "summary": "数据可以在两个方向上流动，父子组件可以相互修改。"
+        }
+      ]
+    },
+    {
+      "title": "V",
+      "level": 2,
+      "summary": "包含值传递和视图术语，解释了变量值传递方式和UI界面的概念。",
+      "subsections": [
+        {
+          "title": "值传递（Value Transmission）",
+          "level": 3,
+          "summary": "在函数调用或变量赋值时，传递的是变量的值，而非变量本身，不包含收集依赖和触发更新的逻辑。"
+        },
+        {
+          "title": "视图（View）",
+          "level": 3,
+          "summary": "视图指的是UI界面。"
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total_sections": 10,
+    "total_subsections": 15,
+    "word_count": 103
+  }
+}

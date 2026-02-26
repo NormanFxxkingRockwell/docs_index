@@ -1,0 +1,52 @@
+{
+  "doc_id": "arkts-particle-animation",
+  "title": "粒子动画",
+  "path": "zh-cn/application-dev/ui/arkts-particle-animation.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-particle-animation.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@CCFFWW",
+    "designer": "@CCFFWW",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍ArkUI框架中粒子动画的实现方法，通过Particle组件在限定区域内生成大量粒子的运动效果。涵盖粒子发射器配置、颜色设置、生命周期管理、扰动场应用等核心功能，支持粒子在颜色、透明度、大小、速度、加速度等多个维度的动态变化，可模拟下雪等自然场景。",
+  "structure": {
+    "title": "粒子动画",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "实现粒子发射器",
+        "level": 2,
+        "line_start": 45,
+        "line_end": 64,
+        "summary": "介绍粒子发射器的定义和配置方法，通过emitter方法调整粒子发射器的位置、发射速率和发射窗口大小，实现发射器位置的动态更新。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "设置粒子颜色",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 80,
+        "summary": "说明如何通过range确定粒子的初始颜色范围，使用distributionType指定粒子初始颜色随机值的分布方式，支持均匀分布或高斯分布。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "粒子的生命周期",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 105,
+        "summary": "介绍粒子生命周期的概念，通过设置EmitterParticleOptions的lifetime和lifetimeRange属性来指定粒子从生成至消亡的存活时间长度。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "设置粒子扰动场",
+        "level": 2,
+        "line_start": 108,
+        "line_end": 161,
+        "summary": "说明扰动场的作用机制，通过在粒子所在空间区域内施加特定的力来改变粒子轨迹和行为，实现复杂和自然的动画效果。"
+      }
+    ]
+  }
+}

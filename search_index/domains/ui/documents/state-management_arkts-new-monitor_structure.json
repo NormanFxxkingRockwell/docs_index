@@ -1,0 +1,92 @@
+{
+  "doc_id": "state-management_arkts-new-monitor",
+  "title": "@Monitor装饰器：状态变量修改异步监听",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-new-monitor.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-new-monitor.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍@Monitor装饰器的使用方法和特性，用于监听V2状态变量的深度变化。支持在@ComponentV2和@ObservedV2类中使用，能够监听嵌套对象、多维数组、对象数组中指定项的变化，并获取变化前后的值。相比@Watch装饰器，@Monitor提供更强的监听能力和更灵活的使用方式。",
+  "structure": {
+    "title": "@Monitor装饰器：状态变量修改异步监听",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 34,
+        "summary": "介绍@Monitor装饰器的基本功能和特性，包括在@ComponentV2和@ObservedV2类中的使用方式、深度监听能力、多属性监听等核心特性。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "状态管理V1版本@Watch装饰器的局限性",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 91,
+        "summary": "分析@Watch装饰器的局限性，说明无法监听对象、数组中单个属性或数组项变化，且无法获取变化前的值，引出@Monitor装饰器的必要性。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "装饰器说明",
+        "level": 2,
+        "line_start": 93,
+        "line_end": 98,
+        "summary": "说明@Monitor装饰器的参数和装饰对象，包括属性名参数、回调方法参数以及IMonitor类型接口的使用。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 100,
+        "line_end": 102,
+        "summary": "提供IMonitor类型和IMonitorValue<T>类型接口的API文档参考链接。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "监听变化",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 564,
+        "summary": "详细介绍@Monitor在不同场景下的使用方法，包括在@ComponentV2组件中监听、在@ObservedV2类中监听、通用监听能力如数组监听、深层属性监听等。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 566,
+        "line_end": 756,
+        "summary": "说明使用@Monitor时需要注意的限制条件，包括重复监听、参数类型限制、避免无限循环等重要注意事项。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "@Monitor与@Watch对比",
+        "level": 2,
+        "line_start": 758,
+        "line_end": 769,
+        "summary": "通过表格形式对比@Monitor和@Watch装饰器在参数、监听目标数、监听能力、获取变化前值、监听条件、使用限制等方面的差异。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 771,
+        "line_end": 830,
+        "summary": "提供@Monitor的实际使用场景示例，展示如何监听深层属性变化并根据变化幅度进行分类处理。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "常见问题",
+        "level": 2,
+        "line_start": 832,
+        "line_end": 1495,
+        "summary": "解答开发者使用@Monitor时常见的问题，包括监听生效和失效时间、正确设置入参、无法监听可访问性变化等问题的解决方案。"
+      }
+    ]
+  }
+}

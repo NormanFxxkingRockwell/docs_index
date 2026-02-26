@@ -1,0 +1,68 @@
+{
+  "doc_id": "state-management_arkts-localBuilder",
+  "title": "@LocalBuilder装饰器： 维持组件关系",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-localBuilder.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-localBuilder.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zhangboren",
+    "designer": "@zhangboren",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍@LocalBuilder装饰器的使用方法和功能，该装饰器用于维持组件关系，解决局部@Builder使用.bind(this)方式时组件父子关系与状态管理父子关系不一致的问题。@LocalBuilder拥有和局部@Builder相同的功能，但能更好地确定组件的父子关系和状态管理的父子关系，支持在ArkTS卡片和原子化服务中使用。",
+  "structure": {
+    "title": "@LocalBuilder装饰器： 维持组件关系",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "装饰器使用说明",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 47,
+        "summary": "介绍@LocalBuilder装饰器的定义语法和使用方法，包括在自定义组件内定义自定义构建函数的规则，说明this指代当前所属组件，组件的状态变量可以在自定义构建函数内访问。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "@LocalBuilder和局部@Builder使用区别",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 102,
+        "summary": "对比@LocalBuilder和局部@Builder的使用区别，说明@LocalBuilder无论是否使用.bind(this)都不会改变组件的父子关系，而局部@Builder使用.bind(this)会导致组件父子关系与状态管理父子关系不一致。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 103,
+        "line_end": 109,
+        "summary": "列出@LocalBuilder装饰器的限制条件，包括只能在所属组件内声明、不能与内置装饰器或自定义装饰器一起使用、不能用来装饰静态函数等规则。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "参数传递规则",
+        "level": 2,
+        "line_start": 110,
+        "line_end": 346,
+        "summary": "介绍@LocalBuilder函数的参数传递规则，包括按回调传递、按引用传递和按值传递三种方式，详细说明每种传递方式的适用场景、刷新机制和使用注意事项。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 347,
+        "line_end": 454,
+        "summary": "展示@LocalBuilder在@ComponentV2修饰的自定义组件中的使用场景，说明在ArkTS卡片和原子化服务中的支持情况，以及修改变量时触发UI刷新的机制。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "常见问题",
+        "level": 2,
+        "line_start": 456,
+        "line_end": 560,
+        "summary": "解答@LocalBuilder函数和$$参数一起使用UI不刷新的常见问题，提供反例和正例对比，说明正确的使用方式和状态变量刷新机制。"
+      }
+    ]
+  }
+}

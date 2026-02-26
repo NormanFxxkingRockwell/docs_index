@@ -1,0 +1,68 @@
+{
+  "doc_id": "state-management_arkts-new-provider-and-consumer",
+  "title": "@Provider装饰器和@Consumer装饰器：跨组件层级双向同步",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-new-provider-and-consumer.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-new-provider-and-consumer.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@liwenzhen3",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍@Provider和@Consumer装饰器的使用方法，用于跨组件层级数据双向同步。包括基本规则、变量传递、使用限制、使用场景等，支持装饰Array、Date、Map、Set等类型变量，可与@Trace配合使用观察复杂类型变化，支持跨BuilderNode场景。",
+  "structure": {
+    "title": "@Provider装饰器和@Consumer装饰器：跨组件层级双向同步",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 40,
+        "summary": "介绍@Provider和@Consumer的基本概念，@Provider为数据提供方，@Consumer为数据消费方，通过相同key实现跨组件层级数据双向同步。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "@Provider和@Consumer vs @Provide和@Consume能力对比",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 67,
+        "summary": "对比状态管理V2的@Provider/@Consumer与V1的@Provide/@Consume的差异，包括本地初始化、支持类型、观察能力、alias匹配规则等方面的区别。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "装饰器说明",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 151,
+        "summary": "详细说明@Provider和@Consumer装饰器的语法、参数、支持类型、初始化规则和观察能力，以及aliasName和属性名的匹配规则。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "变量传递",
+        "level": 2,
+        "line_start": 153,
+        "line_end": 162,
+        "summary": "说明@Provider和@Consumer装饰变量的传递规则，仅允许本地初始化，可初始化子组件中@Param装饰的变量。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "使用限制",
+        "level": 2,
+        "line_start": 164,
+        "line_end": 173,
+        "summary": "列出@Provider和@Consumer的使用限制，只能装饰自定义组件属性，只能在@ComponentV2中使用，只支持本地初始化。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 175,
+        "line_end": 721,
+        "summary": "提供多个使用场景示例，包括双向同步、装饰Array/Date/Map/Set类型变量、装饰回调事件、配合@Trace使用、Provider重名查找、初始化@Param、跨BuilderNode场景等。"
+      }
+    ]
+  }
+}

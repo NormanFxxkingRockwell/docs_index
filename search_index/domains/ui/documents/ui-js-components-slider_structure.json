@@ -1,0 +1,45 @@
+{
+  "doc_id": "ui-js-components-slider",
+  "title": "slider开发指导",
+  "path": "zh-cn/application-dev/ui/ui-js-components-slider.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/ui-js-components-slider.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@liyi0309",
+    "designer": "@liyi0309",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "slider为滑动条组件，用来快速调节音量、亮度等。介绍如何创建slider组件、设置样式和属性（color、selected-color、block-color、min、max、value、step、mode等）、绑定change事件、场景示例（调整滑动条值改变图片大小）。",
+  "structure": {
+    "title": "slider开发指导",
+    "sections": [
+      {
+        "level": 2,
+        "title": "创建slider组件",
+        "content": "在pages/index目录下的hml文件中创建一个slider组件。"
+      },
+      {
+        "level": 2,
+        "title": "设置样式和属性",
+        "content": "slider组件通过color、selected-color、block-color样式分别为滑动条设置背景颜色、已选择颜色和滑块颜色。通过添加min、max、value、step、mode属性分别为滑动条设置最小值、最大值、初始值、滑动步长和滑动条样式。mode属性可选值为outset（滑块在滑杆上）和inset（滑块在滑杆内）。"
+      },
+      {
+        "level": 2,
+        "title": "绑定事件",
+        "content": "向slider组件添加change事件，添加时需要传入ChangeEvent参数，包含mode（start、move、end）和value属性。"
+      },
+      {
+        "level": 2,
+        "title": "场景示例",
+        "content": "开发者可以通过调整滑动条的值来改变图片大小，并且动态打印当前图片的宽和高。"
+      },
+      {
+        "level": 2,
+        "title": "相关实例",
+        "content": "slider组件的使用（JS）（API9）、简易视频播放器（JS）（API9）。"
+      }
+    ]
+  }
+}

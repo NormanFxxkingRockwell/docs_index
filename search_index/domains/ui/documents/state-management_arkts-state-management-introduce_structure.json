@@ -1,0 +1,59 @@
+{
+  "doc_id": "state-management_arkts-state-management-introduce",
+  "title": "状态管理原理介绍",
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-state-management-introduce.md",
+  "domain": "ui",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@zany_pink",
+    "Designer": "@s10021109",
+    "Tester": "@zhangwenhan12",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "本文介绍状态管理的基本原理，包括收集依赖和触发更新两个核心阶段。收集依赖建立状态变量与组件的数据绑定关系，触发更新在状态变量改变时通知相关UI组件刷新。文章通过示例代码详细说明了依赖收集过程、触发更新的三个步骤，以及状态管理在渲染管线中的完整流程，最后对比了状态管理V1和V2的更新机制差异。",
+  "sections": [
+    {
+      "title": "收集依赖",
+      "level": 2,
+      "line_start": 11,
+      "line_end": 48,
+      "summary": "收集依赖建立状态变量与组件之间的数据绑定关系。UI渲染时框架观察哪些状态变量被读取并记录依赖关系，确保修改状态变量时仅刷新相关组件。通过示例代码展示了依赖收集的具体步骤，每个状态变量维护一个Set集合保存绑定组件信息。"
+    },
+    {
+      "title": "触发更新",
+      "level": 2,
+      "line_start": 49,
+      "line_end": 71,
+      "summary": "触发更新在状态变量改变时通知所有依赖的UI组件重新计算并刷新。过程包括计算新值、修改值并标脏组件、刷新脏节点并重新收集依赖。更新以自定义组件为单位，通过维护脏系统组件集合实现最小化更新。"
+    },
+    {
+      "title": "状态管理在渲染管线中的流程",
+      "level": 2,
+      "line_start": 72,
+      "line_end": 102,
+      "summary": "状态管理在渲染管线中的流程包括事件触发状态变量改变、刷新脏节点、布局三个步骤。通过Profiler工具的trace图展示了从手势事件到UI更新的完整流程，包括VSync回调、脏组件刷新、布局等关键节点。"
+    }
+  ],
+  "structure": {
+    "total_sections": 3,
+    "code_blocks": 1,
+    "images": 3,
+    "has_tables": false,
+    "has_code_examples": true
+  },
+  "keywords": [
+    "状态管理",
+    "收集依赖",
+    "触发更新",
+    "UI渲染",
+    "状态变量",
+    "组件绑定",
+    "脏节点",
+    "渲染管线"
+  ],
+  "related_docs": [
+    "arkts-v1-v2-update-difference.md",
+    "ui-inspector-profiler.md"
+  ]
+}

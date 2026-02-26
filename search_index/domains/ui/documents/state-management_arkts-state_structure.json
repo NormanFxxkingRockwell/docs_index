@@ -1,0 +1,93 @@
+{
+  "doc_id": "state-management_arkts-state",
+  "title": "@State装饰器：组件内状态",
+  "domain": "ui",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@jiyujia926",
+    "Designer": "@s10021109",
+    "Tester": "@TerryTsao",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "@State装饰器是ArkUI状态管理中最基础的装饰器，用于将普通变量转换为状态变量。被@State装饰的变量改变时会触发其直接绑定的UI组件渲染更新。@State变量是私有的，只能在组件内部访问，生命周期与所属组件相同。支持object、class、string、number、boolean、enum、Array、Date、Map、Set等多种数据类型，从API version 9开始支持在ArkTS卡片中使用，从API version 11开始支持在原子化服务中使用。",
+  "sections": [
+    {
+      "title": "概述",
+      "level": 2,
+      "summary": "@State装饰的变量是私有的，只能从组件内部访问，声明时必须指定类型并完成本地初始化。其生命周期与所属自定义组件的生命周期相同。"
+    },
+    {
+      "title": "装饰器使用规则说明",
+      "level": 2,
+      "summary": "定义了@State装饰器的参数、同步类型、允许和不允许装饰的变量类型以及初始值要求。@State无参数，不与父组件变量同步，支持多种类型但不支持Function类型，必须本地初始化。"
+    },
+    {
+      "title": "变量的传递/访问规则说明",
+      "level": 2,
+      "summary": "说明了@State变量的传递和访问规则，包括可以从父组件初始化、支持初始化子组件、不支持组件外访问等特性。父组件传入非undefined值时覆盖本地初始值。"
+    },
+    {
+      "title": "观察变化和行为表现",
+      "level": 2,
+      "summary": "介绍了什么样的修改才能被框架观察到，以及观察到变化后框架的行为表现。只有可以被框架观察到的修改才会引起UI刷新，框架会查询依赖该状态变量的组件并执行更新方法。"
+    },
+    {
+      "title": "观察变化",
+      "level": 3,
+      "summary": "详细说明了不同数据类型的观察变化规则：简单类型可观察到数值变化，class/Object可观察到自身赋值和属性赋值，Array可观察到整体赋值和元素赋值，Date、Map、Set等类型也有相应的观察规则。"
+    },
+    {
+      "title": "框架行为",
+      "level": 3,
+      "summary": "当状态变量改变时，框架会查询依赖该状态变量的组件，并执行依赖该状态变量的组件更新方法，实现组件更新渲染。"
+    },
+    {
+      "title": "限制条件",
+      "level": 2,
+      "summary": "@State装饰的变量必须初始化，不支持装饰Function类型变量，父组件传入undefined时仍使用本地默认值进行初始化。从API version 23开始，添加对@State装饰Function类型变量的编译期校验。"
+    },
+    {
+      "title": "使用场景",
+      "level": 2,
+      "summary": "提供了@State装饰器的多种使用场景示例，包括装饰简单类型、class对象类型、Array类型、Map类型、Set类型、Date类型变量以及联合类型实例的具体代码示例。"
+    },
+    {
+      "title": "装饰简单类型的变量",
+      "level": 3,
+      "summary": "展示了@State装饰简单类型变量的示例，count被@State装饰成为状态变量，count的改变引起Button组件的刷新，实现按需刷新。"
+    },
+    {
+      "title": "装饰class对象类型的变量",
+      "level": 3,
+      "summary": "展示了@State装饰class对象类型变量的示例，定义了Model类和Person类，@State装饰的title和count变量变化会触发UI更新。详细说明了变量的初始化机制。"
+    },
+    {
+      "title": "装饰Array类型变量",
+      "level": 3,
+      "summary": "展示了@State装饰Array类型变量的示例，可以观察到Array整体的赋值及数组元素的赋值，支持调用Array的接口更新数据，但数组项中嵌套的属性赋值无法观察。"
+    },
+    {
+      "title": "装饰Map类型变量",
+      "level": 3,
+      "summary": "展示了@State装饰Map类型变量的示例，从API version 11开始支持。可以观察到Map整体的赋值，通过调用Map的接口set、clear、delete更新Map的值。"
+    },
+    {
+      "title": "装饰Set类型变量",
+      "level": 3,
+      "summary": "展示了@State装饰Set类型变量的示例，从API version 11开始支持。可以观察到Set整体的赋值，通过调用Set的接口add、clear、delete更新Set的值。"
+    },
+    {
+      "title": "装饰Date类型变量",
+      "level": 3,
+      "summary": "展示了@State装饰Date类型变量的示例，可以观察到Date的赋值，以及通过调用Date的接口setFullYear、setMonth、setDate等更新Date的属性。"
+    },
+    {
+      "title": "State支持联合类型实例",
+      "level": 3,
+      "summary": "展示了@State支持联合类型和undefined和null的示例，count类型为number | undefined，可以在number和undefined之间切换，触发UI刷新。"
+    }
+  ],
+  "source_file": "docs/zh-cn/application-dev/ui/state-management/arkts-state.md",
+  "created_at": "2026-02-26"
+}

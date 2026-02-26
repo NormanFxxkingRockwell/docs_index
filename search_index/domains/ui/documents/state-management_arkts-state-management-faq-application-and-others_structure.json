@@ -1,0 +1,38 @@
+{
+  "doc_id": "state-management_arkts-state-management-faq-application-and-others",
+  "title": "应用内状态管理和其他常见问题",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@zany_pink",
+    "Designer": "@s10021109",
+    "Tester": "@zhangwenhan12",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "本文介绍应用内状态管理的常见问题，重点讲解在并发线程中使用ArkUI装饰器导致的报错问题。主要内容包括懒加载包含装饰器的文件以及装饰器使用隔离两种解决方案，通过正反示例对比展示如何正确处理Worker线程中状态管理装饰器的使用。",
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "在并发线程中使用ArkUI装饰器导致报错",
+      "level": 2,
+      "summary": "讲解状态管理装饰器仅限于UI线程使用，在并发线程中使用会导致ReferenceError错误。通过懒加载和装饰器使用隔离两种方案解决该问题。",
+      "subsections": [
+        {
+          "id": "section-1-1",
+          "title": "懒加载包含装饰器的文件",
+          "level": 3,
+          "summary": "使用lazy import懒加载包含装饰器的文件，避免子线程加载到对应文件，从而解决ReferenceError错误问题。"
+        },
+        {
+          "id": "section-1-2",
+          "title": "装饰器使用隔离",
+          "level": 3,
+          "summary": "当调用的函数与状态管理装饰器定义在同一文件时，将调用函数移出该文件单独定义，实现装饰器使用的隔离。"
+        }
+      ]
+    }
+  ],
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-state-management-faq-application-and-others.md",
+  "domain": "ui",
+  "created_at": "2026-02-26"
+}

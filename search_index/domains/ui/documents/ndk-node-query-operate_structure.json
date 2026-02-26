@@ -1,0 +1,68 @@
+{
+  "doc_id": "ndk-node-query-operate",
+  "title": "查询和操作自定义节点",
+  "path": "zh-cn/application-dev/ui/ndk-node-query-operate.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/ndk-node-query-operate.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xiang-shouxing",
+    "designer": "@xiang-shouxing",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍NDK提供的节点查询、遍历、操作能力，包括通过uniqueId获取节点、通过用户id获取节点、移动节点、触发节点属性更新、获取子节点以及查询节点渲染状态等功能。",
+  "structure": {
+    "title": "查询和操作自定义节点",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "查询节点uniqueId及通过uniqueId获取节点信息",
+        "level": 2,
+        "line_start": 13,
+        "line_end": 49,
+        "summary": "介绍如何获取节点的uniqueId以及通过uniqueId获取节点指针，使用OH_ArkUI_NodeUtils_GetNodeUniqueId和OH_ArkUI_NodeUtils_GetNodeHandleByUniqueId接口。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "通过用户id获取节点信息",
+        "level": 2,
+        "line_start": 50,
+        "line_end": 147,
+        "summary": "介绍如何使用OH_ArkUI_NodeUtils_GetAttachedNodeHandleById接口通过用户设置的id获取目标节点指针，包含ArkTS侧接入和Native侧实现。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "移动节点",
+        "level": 2,
+        "line_start": 148,
+        "line_end": 291,
+        "summary": "介绍如何使用OH_ArkUI_NodeUtils_MoveTo接口将Native节点移动到新的父节点下，支持ARKUI_NODE_STACK等特定节点类型的移动操作。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "在当前即时帧触发节点属性更新",
+        "level": 2,
+        "line_start": 292,
+        "line_end": 392,
+        "summary": "介绍如何使用OH_ArkUI_NativeModule_InvalidateAttributes接口在当前帧即时触发节点属性更新，避免组件切换过程中出现闪烁。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "用不同的展开模式获取对应下标的子节点",
+        "level": 2,
+        "line_start": 393,
+        "line_end": 575,
+        "summary": "介绍如何通过不同的展开方式获取目标节点下的有效节点信息，支持LazyForEach场景，使用OH_ArkUI_NodeUtils_GetChildWithExpandMode等接口。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "节点是否处于渲染状态",
+        "level": 2,
+        "line_start": 576,
+        "line_end": 647,
+        "summary": "介绍如何使用OH_ArkUI_NativeModule_IsInRenderState接口查询节点是否在渲染树上，用于判断节点的渲染状态。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "doc_id": "state-management_arkts-v1-v2-update-difference",
+  "title": "状态管理V1和V2更新机制差异",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@s10021109",
+    "designer": "@s10021109",
+    "tester": "@zhangwenhan12",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "本文详细介绍了ArkUI状态管理V1和V2版本之间的差异。V1使用代理观察数据，存在状态变量不能独立于UI存在、只能感知对象属性第一层变化等限制。V2增强了数据的观察能力，支持深度观测、属性级精准更新，装饰器易用性更高。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "V1状态管理演进到V2状态管理背景",
+      "summary": "对比V1和V2的优缺点，V2支持状态变量独立于UI、深度观测和属性级精准更新，装饰器更易用。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "状态变量变化自动触发UI更新",
+      "summary": "解释了V1和V2在状态变量变化时触发UI更新的机制差异，通过代码示例说明V2具有深度观察能力，能观测嵌套对象属性和数组项变化。",
+      "subsections": []
+    },
+    {
+      "level": 2,
+      "title": "V1的@Watch和V2的@Monitor差异",
+      "summary": "对比了@Watch的同步执行和@Monitor的异步执行机制，V1的@Watch在状态变量修改时立即执行，而V2的@Monitor在事件逻辑执行完成后才执行。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "@Watch同步执行",
+          "summary": "V1的@Watch在装饰变量赋值时同步执行，状态变量被修改多次时@Watch函数会同步执行多次。"
+        },
+        {
+          "level": 3,
+          "title": "@Monitor异步执行",
+          "summary": "V2的@Monitor在装饰变量赋值时异步执行，状态变量被修改多次时@Monitor函数只会执行一次。"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "V1状态变量更新和V2状态变量更新差异",
+      "summary": "通过流程图和步骤说明，V2相比V1新增了异步执行@Computed、@Monitor和节点标脏的步骤，状态更新机制更加灵活。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "V1组件的更新",
+          "summary": "V1组件更新流程包括事件触发修改状态变量、执行@Watch回调、执行节点标脏、更新脏节点列表等步骤。"
+        },
+        {
+          "level": 3,
+          "title": "V2组件的更新",
+          "summary": "状态变量变化时，V2组件更新流程包括抛出Promise异步任务、执行@Computed变量更新、执行@Monitor回调、执行节点标脏等步骤。"
+        }
+      ]
+    }
+  ],
+  "file_path": "docs/zh-cn/application-dev/uiui/state-management/arkts-v1-v2-update-difference.md",
+  "domain": "ui",
+  "language": "zh-cn"
+}

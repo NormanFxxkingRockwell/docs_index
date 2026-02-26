@@ -1,0 +1,54 @@
+{
+  "doc_id": "state-management_arkts-statestyles",
+  "title": "stateStyles：多态样式",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@yihao-lin",
+    "Designer": "@piggyguy",
+    "Tester": "@songyanhong",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "stateStyles是多态样式属性方法，可根据组件内部状态设置不同样式。支持focused、normal、pressed、disabled、clicked、selected六种状态，类似于CSS伪类但语法不同。仅支持通用属性，私有属性需使用attributeModifier解决。",
+  "sections": [
+    {
+      "title": "概述",
+      "level": 2,
+      "summary": "stateStyles是属性方法，根据UI内部状态设置样式。提供focused、normal、pressed、disabled、clicked、selected六种状态。获焦态仅支持外接键盘触发，不支持嵌套滚动组件场景。",
+      "line_start": 16,
+      "line_end": 35
+    },
+    {
+      "title": "使用场景",
+      "level": 2,
+      "summary": "介绍stateStyles的多种使用场景，包括基础场景、与@Styles联合使用、在stateStyles里使用常规变量和状态变量等实际应用示例。",
+      "line_start": 37,
+      "line_end": 166
+    },
+    {
+      "title": "基础场景",
+      "level": 3,
+      "summary": "展示stateStyles最基本的使用场景，通过Button组件演示focused、pressed、normal三种状态的样式切换效果，包括获焦态和按压态的交互示例。",
+      "line_start": 40,
+      "line_end": 87
+    },
+    {
+      "title": "@Styles和stateStyles联合使用",
+      "level": 3,
+      "summary": "演示如何通过@Styles装饰器定义样式方法，并在stateStyles中引用这些方法，实现正常态和按压态的样式切换，提高代码复用性。",
+      "line_start": 89,
+      "line_end": 124
+    },
+    {
+      "title": "在stateStyles里使用常规变量和状态变量",
+      "level": 3,
+      "summary": "展示stateStyles可以通过this绑定组件内的常规变量和状态变量，实现动态样式控制。示例演示点击事件改变获焦态颜色的效果。",
+      "line_start": 126,
+      "line_end": 166
+    }
+  ],
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-statestyles.md",
+  "domain": "ui",
+  "language": "zh-cn",
+  "total_lines": 166
+}

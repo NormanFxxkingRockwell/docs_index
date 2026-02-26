@@ -1,0 +1,35 @@
+{
+  "doc_id": "arkts-attribute-animation-apis",
+  "title": "实现属性动画",
+  "path": "zh-cn/application-dev/ui/arkts-attribute-animation-apis.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-attribute-animation-apis.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@CCFFWW",
+    "designer": "@CCFFWW",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "属性动画是最基础易懂的动画，通过可动画属性改变引起UI上产生的连续视觉效果。ArkUI提供三种动画接口：animateTo（对闭包前界面和闭包中的状态变量引起的界面之间的差异做动画）、animation（识别组件的可动画属性变化，自动添加动画）和keyframeAnimateTo（多个闭包内改变属性引起的分段属性动画）。文档详细介绍了三种接口的使用方法和示例代码。",
+  "structure": {
+    "title": "实现属性动画",
+    "sections": [
+      {
+        "level": 2,
+        "title": "使用animateTo产生属性动画",
+        "content": "介绍animateTo接口的使用方法，通过闭包内改变属性引起的界面变化产生动画，适用于对多个可动画属性配置相同动画参数的场景。"
+      },
+      {
+        "level": 2,
+        "title": "使用animation产生属性动画",
+        "content": "介绍animation接口的使用方法，无需使用闭包，只需将其加在要做动画的可动画属性后即可，适用于对多个可动画属性配置不同参数动画的场景。"
+      },
+      {
+        "level": 2,
+        "title": "使用keyframeAnimateTo产生属性动画",
+        "content": "介绍keyframeAnimateTo接口的使用方法，适用于同一属性需要做连续多个动画的场景，每一段动画可单独控制动画参数。"
+      }
+    ]
+  }
+}

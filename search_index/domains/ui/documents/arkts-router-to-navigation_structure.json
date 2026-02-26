@@ -1,0 +1,100 @@
+{
+  "doc_id": "arkts-router-to-navigation",
+  "title": "Router切换Navigation",
+  "path": "zh-cn/application-dev/ui/arkts-router-to-navigation.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-router-to-navigation.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@mayaolll",
+    "designer": "@jiangdayuan",
+    "tester": "@Giacinta",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "详细介绍如何从Router切换到Navigation导航组件，涵盖页面结构、路由操作、生命周期、转场动画、共享元素转场、跨包路由、动态路由、生命周期监听、页面信息查询和路由拦截等方面的对比和实现方法。",
+  "structure": {
+    "title": "Router切换Navigation",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "页面结构",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 184,
+        "summary": "对比Router和Navigation的页面结构差异，Router使用@Entry修饰的Component并在main_page.json中声明，Navigation分为导航页Navbar和子页NavDestination，需要在router_map.json中配置。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "路由操作",
+        "level": 2,
+        "line_start": 186,
+        "line_end": 398,
+        "summary": "介绍Router和Navigation的路由操作方法，包括页面跳转、返回、替换、清空等操作，以及Navigation中获取NavPathStack的四种方式：@Provide/@Consume、OnReady回调、AppStorage和queryNavigationInfo。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "生命周期",
+        "level": 2,
+        "line_start": 400,
+        "line_end": 476,
+        "summary": "说明Router和Navigation生命周期的区别，Router使用@Entry页面中的通用方法，Navigation的生命周期承载在NavDestination组件上，以组件事件形式开放。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "转场动画",
+        "level": 2,
+        "line_start": 478,
+        "line_end": 484,
+        "summary": "介绍Router和Navigation的转场动画实现方式，Router通过pageTransition()方法，Navigation通过customNavContentTransition事件提供自定义转场动画能力。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "共享元素转场",
+        "level": 2,
+        "line_start": 486,
+        "line_end": 492,
+        "summary": "说明Router和Navigation的共享元素转场实现，Router通过sharedTransition属性，Navigation配合geometryTransition属性实现共享元素一镜到底的转场能力。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "跨包路由",
+        "level": 2,
+        "line_start": 494,
+        "line_end": 644,
+        "summary": "介绍Router和Navigation的跨包路由实现方法，Router通过命名路由方式，Navigation默认支持跨包跳转，通过导入HSP/HAR中的自定义组件并添加到pageMap中实现。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "动态路由",
+        "level": 2,
+        "line_start": 648,
+        "line_end": 683,
+        "summary": "说明动态路由的设计目的和优势，Router通过定义、注册和跳转三个过程实现，Navigation提供自定义路由表和系统路由表两种方案，从API 12开始支持系统跨模块路由表。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "生命周期监听",
+        "level": 2,
+        "line_start": 685,
+        "line_end": 746,
+        "summary": "介绍Router和Navigation的生命周期监听实现，Router通过uiObserver.on('routerPageUpdate')注册监听，Navigation通过uiObserver.on('navDestinationUpdate')监听页面状态变化。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "页面信息查询",
+        "level": 2,
+        "line_start": 748,
+        "line_end": 822,
+        "summary": "说明Router和Navigation的页面信息查询接口，Router通过queryRouterPageInfo查询页面信息，Navigation通过queryNavDestinationInfo查询NavDestination组件信息。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "路由拦截",
+        "level": 2,
+        "line_start": 824,
+        "line_end": 829,
+        "summary": "对比Router和Navigation的路由拦截能力，Router没有提供路由拦截能力需要自行封装，Navigation通过setInterception方法设置页面跳转拦截回调。"
+      }
+    ]
+  }
+}

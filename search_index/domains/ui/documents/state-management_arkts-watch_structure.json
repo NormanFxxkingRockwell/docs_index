@@ -1,0 +1,68 @@
+{
+  "doc_id": "state-management_arkts-watch",
+  "title": "@Watch装饰器：状态变量更改通知",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "@Watch装饰器用于监听ArkUI状态变量的变化，当状态变量变化时触发回调方法。本文档详细介绍了@Watch的装饰器说明、语法、观察变化和行为表现、限制条件以及多种使用场景，包括与@Prop、@Link、@ObjectLink的组合使用。适用于需要关注状态变量值变化的开发者。",
+  "chapters": [
+    {
+      "title": "概述",
+      "level": 2,
+      "summary": "@Watch用于监听状态变量的变化，当状态变量变化时，@Watch的回调方法将被调用。@Watch在ArkUI框架内部判断数值有无更新使用的是严格相等（===）。"
+    },
+    {
+      "title": "装饰器说明",
+      "level": 2,
+      "summary": "介绍了@Watch装饰器的参数要求、可装饰的变量类型、装饰器顺序以及触发时机。装饰器参数为必填的常量字符串，可监听所有装饰器装饰的状态变量。"
+    },
+    {
+      "title": "语法说明",
+      "level": 2,
+      "summary": "说明了@Watch回调函数的类型定义，该函数是自定义组件的成员函数，接收changedPropertyName参数作为被watch的属性名，不返回任何内容。"
+    },
+    {
+      "title": "观察变化和行为表现",
+      "level": 2,
+      "summary": "描述了@Watch的四个主要行为：观察状态变量变化时触发回调、在属性变更后同步执行、可改变其他状态变量引起连锁反应、初始化时不调用。"
+    },
+    {
+      "title": "限制条件",
+      "level": 2,
+      "summary": "列出了使用@Watch时的限制：避免无限循环、关注性能仅执行快速运算、不建议使用async await、参数必选且为string类型、参数必须是声明的方法名、不能装饰常规变量。"
+    },
+    {
+      "title": "使用场景",
+      "level": 2,
+      "summary": "提供了多个实际使用示例，包括@Watch和自定义组件更新、@Watch与@Link组合使用、@Watch的触发时机、使用changedPropertyName进行不同的逻辑处理等场景。"
+    },
+    {
+      "title": "@Watch和自定义组件更新",
+      "level": 3,
+      "summary": "展示了组件更新和@Watch的处理步骤，当@State变量更改时，子组件中的@Prop被更新，@Watch方法被调用，更新子组件中的变量并重新渲染。"
+    },
+    {
+      "title": "@Watch与@Link组合使用",
+      "level": 3,
+      "summary": "说明了如何在子组件中观察@Link变量，当@Link装饰的变量发生变化时，@Watch函数被调用更新相关状态，ForEach组件会渲染构建新的Item项。"
+    },
+    {
+      "title": "@Watch的触发时机",
+      "level": 3,
+      "summary": "展示了@Watch回调触发时间是根据状态变量真正变化的时间，通过对比@Link和@ObjectLink的触发顺序，说明@Link是同步触发，而@ObjectLink需要等父组件更新。"
+    },
+    {
+      "title": "使用changedPropertyName进行不同的逻辑处理",
+      "level": 3,
+      "summary": "说明了如何在@Watch函数中使用changedPropertyName参数进行不同的逻辑处理，可以根据发生变化的状态变量名执行不同的业务逻辑。"
+    }
+  ],
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-watch.md",
+  "domain": "ui",
+  "created_at": "2026-02-26"
+}

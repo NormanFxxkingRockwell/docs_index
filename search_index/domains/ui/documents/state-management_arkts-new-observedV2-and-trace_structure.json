@@ -1,0 +1,76 @@
+{
+  "doc_id": "state-management_arkts-new-observedV2-and-trace",
+  "title": "@ObservedV2装饰器和@Trace装饰器：类属性变化观测",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-new-observedV2-and-trace.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-new-observedV2-and-trace.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍@ObservedV2和@Trace装饰器的使用方法，这两个装饰器配合使用可以实现对类对象中属性的深度观测能力，支持嵌套类、继承类、数组、Map、Set、Date等多种数据类型的属性变化观测，是状态管理V2的核心能力之一。",
+  "structure": {
+    "title": "@ObservedV2装饰器和@Trace装饰器：类属性变化观测",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 33,
+        "summary": "介绍@ObservedV2和@Trace装饰器的基本概念和配合使用规则，说明它们提供对嵌套类对象属性变化的直接观测能力。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "状态管理V1版本对嵌套类对象属性变化直接观测的局限性",
+        "level": 2,
+        "line_start": 34,
+        "line_end": 78,
+        "summary": "说明状态管理V1版本无法实现对嵌套类对象属性变化的直接观测，需要使用@ObjectLink装饰器和自定义组件来实现观测。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "装饰器说明",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 88,
+        "summary": "详细介绍@ObservedV2类装饰器和@Trace成员变量装饰器的参数、使用方式和可装饰的变量类型。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "观察变化",
+        "level": 2,
+        "line_start": 89,
+        "line_end": 167,
+        "summary": "说明使用@ObservedV2和@Trace装饰器后，属性值变化会触发UI组件刷新，包括嵌套类、继承类、静态属性以及内置类型的观测。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "使用限制",
+        "level": 2,
+        "line_start": 168,
+        "line_end": 267,
+        "summary": "列出@ObservedV2和@Trace装饰器的使用限制，包括不能单独使用、不能与V1装饰器混用、需要通过new实例化等规则。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 268,
+        "line_end": 577,
+        "summary": "提供多个使用场景示例，包括嵌套类、继承类、数组、对象数组、Map、Set、Date等类型的装饰和观测方法。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "常见问题",
+        "level": 2,
+        "line_start": 578,
+        "line_end": 678,
+        "summary": "解答常见问题，包括@ObservedV2装饰对象的序列化与反序列化、router传递@ObservedV2类型显示异常等问题。"
+      }
+    ]
+  }
+}

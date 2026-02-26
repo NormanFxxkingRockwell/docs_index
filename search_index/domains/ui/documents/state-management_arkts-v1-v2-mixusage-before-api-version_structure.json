@@ -1,0 +1,110 @@
+{
+  "doc_id": "state-management_arkts-v1-v2-mixusage-before-api-version",
+  "title": "状态管理V1和V2混用指导（API version 19前）",
+  "domain": "ui",
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-v1-v2-mixusage-before-api-version.md",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@zzq212050299",
+    "Designer": "@s10021109",
+    "Tester": "@TerryTsao",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档详细说明了在API version 19之前，状态管理V1与V2的混用规则和限制条件。涵盖了V1向V2传递变量、V2向V1传递变量的各种场景，包括不传递变量、传递普通变量、传递简单类型状态变量、传递class类型状态变量、传递嵌套对象等。文档提供了大量代码示例，帮助开发者理解在混用场景下的正确使用方式，并总结了混用场景的最佳实践建议。",
+  "sections": [
+    {
+      "title": "概述",
+      "level": 2,
+      "line_start": 9,
+      "line_end": 41,
+      "summary": "介绍了状态管理V1与V2混用的基本规则，包括V1->V2和V2->V1的规则总结。说明了在组件间变量传递时的限制条件，以及不同装饰器的使用约束。"
+    },
+    {
+      "title": "限制条件",
+      "level": 2,
+      "line_start": 43,
+      "line_end": 72,
+      "summary": "列出了V1和V2混用的详细限制条件，包括装饰器混用限制、状态变量传递类型限制、装饰器组合限制等，并提供了错误代码示例。"
+    },
+    {
+      "title": "V1中使用V2的自定义组件",
+      "level": 2,
+      "line_start": 74,
+      "line_end": 665,
+      "summary": "详细说明了在V1组件中使用V2自定义组件的各种场景，包括不传递变量、传递未被装饰的变量、传递简单类型状态变量、传递class类型状态变量、传递嵌套对象等，提供了完整的代码示例和实现方案。"
+    },
+    {
+      "title": "不传递变量",
+      "level": 3,
+      "line_start": 77,
+      "line_end": 120,
+      "summary": "展示了在V1中使用无参数V2组件的示例代码，说明了在不存在变量传递时的使用方式。"
+    },
+    {
+      "title": "传递未被装饰的变量",
+      "level": 3,
+      "line_start": 123,
+      "line_end": 213,
+      "summary": "说明了将未被装饰器装饰的变量传递给V2时的规则，V2必须通过@Param装饰器接收数据，并提供了包含简单类型、Class类型和内置类型的完整示例。"
+    },
+    {
+      "title": "传递简单类型状态变量",
+      "level": 3,
+      "line_start": 216,
+      "line_end": 291,
+      "summary": "介绍了V1向V2传递简单类型状态变量的规则，V1装饰器仅支持修饰boolean、number、string、null、undefined等简单类型数据，并说明了传递复杂类型会导致编译错误。"
+    },
+    {
+      "title": "传递class类型状态变量",
+      "level": 3,
+      "line_start": 294,
+      "line_end": 462,
+      "summary": "提供了传递@Observed装饰的class和@ObservedV2装饰的class的迁移方案，包括使用桥接组件的设计模式，以及如何正确处理class类型数据传递。"
+    },
+    {
+      "title": "传递嵌套对象",
+      "level": 3,
+      "line_start": 465,
+      "line_end": 665,
+      "summary": "讨论了嵌套对象的传递规则，包括@Observed装饰的class嵌套@ObservedV2装饰的class，以及@ObservedV2+@Trace观察class嵌套类的场景，说明了深层次观测能力的差异。"
+    },
+    {
+      "title": "V2组件使用V1组件",
+      "level": 2,
+      "line_start": 668,
+      "line_end": 856,
+      "summary": "说明了V2状态变量传递给V1自定义组件时的限制，包括V1可以不使用装饰器接收数据、仅可通过@State、@Prop、@Provide接收、不支持内置类型数据等规则。"
+    },
+    {
+      "title": "传递简单类型状态变量",
+      "level": 3,
+      "line_start": 679,
+      "line_end": 711,
+      "summary": "展示了V2向V1自定义组件传递简单类型状态变量的示例，V1仅能通过@State、@Prop、@Provide装饰器接收数据。"
+    },
+    {
+      "title": "传递class类型",
+      "level": 3,
+      "line_start": 714,
+      "line_end": 812,
+      "summary": "介绍了传递普通class和@ObservedV2修饰的class的场景，说明了V1装饰器不能和@ObservedV2一起使用的限制，以及如何利用@ObservedV2+@Trace的观测能力。"
+    },
+    {
+      "title": "传递普通内置类型",
+      "level": 3,
+      "line_start": 815,
+      "line_end": 856,
+      "summary": "说明了V2向V1传递内置类型时的规则，V2定义内置类型的装饰器和V1接收内置类型的装饰器是互斥的，并提供了Set类型传递的示例。"
+    },
+    {
+      "title": "混用场景总结",
+      "level": 2,
+      "line_start": 859,
+      "line_end": 868,
+      "summary": "总结了V1和V2混用场景的整体情况，建议开发者在代码开发过程中不混用V1和V2版本，但在代码迁移方面可以逐步将代码从V1迁移到V2。"
+    }
+  ],
+  "total_lines": 868,
+  "created_at": "2026-02-26"
+}

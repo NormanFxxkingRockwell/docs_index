@@ -1,0 +1,140 @@
+{
+  "doc_id": "ndk-build-on-multi-thread",
+  "title": "NDK支持多线程创建组件",
+  "path": "zh-cn/application-dev/ui/ndk-build-on-multi-thread.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/ndk-build-on-multi-thread.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@wangyang2022",
+    "designer": "@lightningHo",
+    "tester": "@liujiang077",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍API version 22引入的NDK多线程支持能力，允许开发者在任意线程创建UI组件并设置属性，无需通过任务队列提交到UI线程。支持多线程并发调用，充分利用多核CPU，降低页面创建耗时，提升应用性能和用户体验。",
+  "structure": {
+    "title": "NDK支持多线程创建组件",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 36,
+        "summary": "介绍API version 22之前UI组件创建必须在UI线程执行的局限性，以及多线程支持带来的简化调用流程、性能优化和灵活性提升等优势。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "多线程NDK接口使用方式",
+        "level": 2,
+        "line_start": 38,
+        "line_end": 61,
+        "summary": "说明如何通过OH_ArkUI_GetModuleInterface接口获取多线程NDK接口集合，以及使用OH_ArkUI_PostAsyncUITask等接口分发和执行任务的方法。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "多线程NDK接口适配说明",
+        "level": 2,
+        "line_start": 63,
+        "line_end": 73,
+        "summary": "提供多线程NDK接口适用的场景建议，包括页面跳转和列表滑动等高负载场景，以及线程数量和组件预创建的优化建议。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "多线程NDK接口调用规范",
+        "level": 2,
+        "line_start": 75,
+        "line_end": 118,
+        "summary": "详细说明UI组件的Free和Attached两种状态，以及状态转换规则和线程安全约束，包括禁止多线程同时操作同一组件等使用规范。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "多线程NDK接口的错误与异常",
+        "level": 2,
+        "line_start": 120,
+        "line_end": 128,
+        "summary": "说明多线程NDK接口调用时可能返回的错误码，包括在非UI线程调用不支持多线程的接口或操作Attached状态组件时的错误处理。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "多线程NDK接口集合规格",
+        "level": 2,
+        "line_start": 130,
+        "line_end": 134,
+        "summary": "概述多线程NDK接口集合的分类，包括支持多线程调用的接口和仅支持UI线程调用的接口类型。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "组件创建销毁",
+        "level": 2,
+        "line_start": 136,
+        "line_end": 142,
+        "summary": "列出组件创建和销毁相关的接口，包括createNode和disposeNode，说明其多线程调用支持情况和使用规范。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "组件属性读写",
+        "level": 2,
+        "line_start": 144,
+        "line_end": 154,
+        "summary": "列出组件属性读写相关接口，包括setAttribute、getAttribute、resetAttribute和setLengthMetricUnit，说明其多线程调用支持。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "组件事件注册解注册",
+        "level": 2,
+        "line_start": 156,
+        "line_end": 178,
+        "summary": "列出组件事件注册和解注册相关接口，包括registerNodeEvent、unregisterNodeEvent等，说明其多线程调用支持情况。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "组件树操作",
+        "level": 2,
+        "line_start": 180,
+        "line_end": 207,
+        "summary": "列出组件树操作相关接口，包括addChild、removeChild、insertChildAfter等，说明其多线程调用支持和状态转换规则。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "组件自定义数据读写",
+        "level": 2,
+        "line_start": 209,
+        "line_end": 216,
+        "summary": "列出组件自定义数据读写接口，包括setUserData和getUserData，说明其多线程调用支持情况和使用规范。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "全局事件注册解注册",
+        "level": 2,
+        "line_start": 218,
+        "line_end": 230,
+        "summary": "列出全局事件注册和解注册接口，说明这些接口仅支持UI线程调用，不支持多线程调用的限制。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "组件测算布局",
+        "level": 2,
+        "line_start": 232,
+        "line_end": 248,
+        "summary": "列出组件测算和布局相关接口，包括measureNode、layoutNode、markDirty等，说明这些接口仅支持UI线程调用。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "多线程NDK接口使用示例",
+        "level": 2,
+        "line_start": 250,
+        "line_end": 449,
+        "summary": "提供完整的多线程创建UI组件示例代码，包括ArkTS页面代码、TypeScript声明、CMakeLists.txt配置和C++实现代码。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 451,
+        "line_end": 455,
+        "summary": "提供高负载组件创建场景下使用多线程NDK接口的实例链接，展示如何优化页面跳转场景的响应时延。"
+      }
+    ]
+  }
+}

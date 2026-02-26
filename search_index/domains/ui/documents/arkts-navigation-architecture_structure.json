@@ -1,0 +1,84 @@
+{
+  "doc_id": "arkts-navigation-architecture",
+  "title": "Navigation基础架构介绍",
+  "path": "zh-cn/application-dev/ui/arkts-navigation-architecture.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-navigation-architecture.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@mayaolll",
+    "designer": "@jiangdayuan",
+    "tester": "@Giacinta",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "Navigation基础架构是ArkUI中的核心导航组件，用于实现页面间的灵活跳转。该架构支持单栏和分栏两种布局模式，提供页面栈管理、参数传递和转场动画控制等功能，开发者可以方便地构建复杂的应用导航系统。",
+  "structure": {
+    "title": "Navigation基础架构介绍",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "Navigation整体架构",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 56,
+        "summary": "介绍导航组件的核心概念和布局模式，包括单栏和分栏两种显示方式，为开发者提供灵活的页面导航解决方案。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "Navigation（导航容器）",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 70,
+        "summary": "作为路由导航的根视图容器，提供Stack、Split和Auto三种显示模式，支持全局路由管理和页面栈操作。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "NavDestination（子页面容器）",
+        "level": 2,
+        "line_start": 71,
+        "line_end": 78,
+        "summary": "每个子页面的根容器，支持页面生命周期、工具栏、标题栏和菜单栏等丰富属性。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "NavBar（导航栏）",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 123,
+        "summary": "Navigation的直接子节点，在单栏模式下作为首页，分栏模式下作为固定导航栏，支持自定义内容和显隐控制。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "NavPathStack（导航控制器）",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 130,
+        "summary": "管理Navigation子页面栈的核心控制器，提供push、pop等基础路由切换方法，支持路由拦截和转场动画。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "标题栏",
+        "level": 2,
+        "line_start": 131,
+        "line_end": 166,
+        "summary": "位于界面顶部，支持Mini和Full两种模式，用于展示界面名称和操作入口，可根据页面需求灵活配置。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "菜单栏",
+        "level": 2,
+        "line_start": 167,
+        "line_end": 219,
+        "summary": "位于组件顶部，支持Array和CustomBuilder两种类型，竖屏最多显示3个图标，横屏最多显示5个图标。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "工具栏",
+        "level": 2,
+        "line_start": 220,
+        "line_end": 238,
+        "summary": "位于组件底部，支持自定义工具栏配置，为用户提供快速操作入口，增强界面交互性。"
+      }
+    ]
+  }
+}

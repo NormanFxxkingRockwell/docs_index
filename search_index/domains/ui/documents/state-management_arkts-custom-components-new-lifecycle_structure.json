@@ -1,0 +1,52 @@
+{
+  "doc_id": "state-management_arkts-custom-components-new-lifecycle",
+  "title": "自定义组件生命周期（推荐）",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-custom-components-new-lifecycle.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-custom-components-new-lifecycle.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@seaside_wu1; @xin11112",
+    "designer": "@chenbenzhi",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍HarmonyOS ArkUI推荐的自定义组件生命周期回调函数，包括@ComponentInit、@ComponentAppear、@ComponentBuilt、@ComponentDisappear、@ComponentReuse和@ComponentRecycle装饰器的使用方法、限制条件和调用时机，以及与旧版生命周期回调函数的区别。",
+  "structure": {
+    "title": "自定义组件生命周期（推荐）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 47,
+        "summary": "介绍新的自定义组件生命周期回调函数的背景和优势，说明新生命周期受状态机限制，调用时机符合预期，避免旧版生命周期回调函数触发顺序不符合预期的问题。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 66,
+        "summary": "说明新生命周期装饰器的使用限制，包括只能在@Component或@ComponentV2装饰的struct中使用，函数入参限制，以及与其他装饰器联合使用的注意事项。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 483,
+        "summary": "通过代码示例详细说明自定义组件在嵌套使用、回收复用和注册监听场景下的生命周期调用时序，展示懒展开特性和父子组件删除顺序。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "生命周期回调函数的区别",
+        "level": 2,
+        "line_start": 484,
+        "line_end": 764,
+        "summary": "对比新生命周期装饰器与旧版生命周期回调函数的区别，说明@ComponentAppear/@ComponentDisappear与aboutToAppear/aboutToDisappear的调用顺序差异，以及@ComponentReuse/@ComponentRecycle与aboutToReuse/aboutToRecycle的区别。"
+      }
+    ]
+  }
+}

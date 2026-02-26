@@ -1,0 +1,90 @@
+{
+  "doc_id": "state-management_arkts-reusable",
+  "title": "@Reusable装饰器：V1组件复用",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@liyujie43",
+    "designer": "@lizhan",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "@Reusable装饰器用于标记可复用的自定义组件，通过缓存池机制避免重复创建和销毁组件，提升UI渲染性能。适用于长列表滚动、动态布局更新等场景，支持aboutToRecycle和aboutToReuse生命周期回调，可实现组件回收和复用时的业务逻辑处理。从API version 10开始支持，在ArkTS中使用。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "概述",
+      "line": 17,
+      "summary": "@Reusable用于装饰自定义组件，表示该组件具有被复用的能力。组件复用是优化UI性能的重要方法，通过复用先前创建并已下树的组件对象，降低组件创建和销毁频率，减小计算开销，提升UI渲染效率，特别适用于长列表快速滑动等场景。"
+    },
+    {
+      "level": 2,
+      "title": "限制条件",
+      "line": 29,
+      "summary": "@Reusable仅用于自定义组件，不支持@ComponentV2搭配使用，不支持@Builder和ComponentContent。复用组件应保持结构不变，子组件aboutToReuse中修改父组件状态变量不会生效，建议使用setTimeout延迟执行。不建议嵌套使用，会增加内存和降低复用效率。"
+    },
+    {
+      "level": 2,
+      "title": "使用场景",
+      "line": 538,
+      "summary": "@Reusable适用于多种UI场景，包括动态布局更新、列表滚动配合LazyForEach、Grid、WaterFlow、Swiper、ListItemGroup等组件的复用，以及多种条目类型的复用场景。通过复用机制避免频繁创建和销毁视图，提升滚动流畅度和整体性能。"
+    },
+    {
+      "level": 3,
+      "title": "动态布局更新",
+      "line": 540,
+      "summary": "重复创建与移除视图可能引起频繁的布局计算，影响帧率。采用组件复用可以避免不必要的视图创建与布局计算，提升性能。示例展示了如何通过Button点击更新Child组件，触发复用机制。"
+    },
+    {
+      "level": 3,
+      "title": "列表滚动配合LazyForEach使用",
+      "line": 602,
+      "summary": "当应用展示大量数据的列表并进行滚动操作时，频繁创建和销毁列表项视图可能导致卡顿。使用列表组件的组件复用机制可以重用已创建的列表项视图，提高滚动流畅度。示例展示了CardView组件的复用实现。"
+    },
+    {
+      "level": 3,
+      "title": "列表滚动-if使用场景",
+      "line": 687,
+      "summary": "设置reuseId可为复用组件分配复用组，相同reuseId的组件将在同一复用组中复用。使用reuseId标识复用组件，可避免重复执行if语句的删除和重新创建逻辑，提高复用效率和性能。示例展示了OneMoment组件的复用。"
+    },
+    {
+      "level": 3,
+      "title": "列表滚动-Foreach使用场景",
+      "line": 824,
+      "summary": "使用Foreach创建可复用的自定义组件，由于Foreach渲染控制语法的全展开属性，导致复用组件无法复用。数据刷新成功但滑动列表时无法复用，符合一帧内重复创建多个已被销毁的自定义组件的条件时才能复用。"
+    },
+    {
+      "level": 3,
+      "title": "Grid使用场景",
+      "line": 968,
+      "summary": "使用@Reusable装饰器修饰GridItem中的自定义组件，使其具备组件复用能力。aboutToReuse在Grid滑动时从复用缓存中加入到组件树之前触发，可更新组件状态变量展示正确内容。无需对自动更新值的状态变量进行更新。"
+    },
+    {
+      "level": 3,
+      "title": "WaterFlow使用场景",
+      "line": 1065,
+      "summary": "在WaterFlow滑动场景中，FlowItem及其子组件频繁创建和销毁。可以将FlowItem中的组件封装成自定义组件，并使用@Reusable装饰器修饰，实现组件复用。示例展示了ReusableFlowItem的复用实现和生命周期回调。"
+    },
+    {
+      "level": 3,
+      "title": "Swiper使用场景",
+      "line": 1213,
+      "summary": "在Swiper滑动场景中，条目中的子组件频繁创建和销毁。可以将这些子组件封装成自定义组件，并使用@Reusable装饰器修饰，以实现组件复用。示例展示了QuestionSwiperItem组件的复用实现。"
+    },
+    {
+      "level": 3,
+      "title": "列表滚动-ListItemGroup使用场景",
+      "line": 1359,
+      "summary": "可以视作特殊List滑动场景，将ListItem需要移除重建的子组件封装成自定义组件，并使用@Reusable装饰器修饰，使其具备组件复用能力。示例展示了Inner组件在ListItemGroup中的复用实现。"
+    },
+    {
+      "level": 3,
+      "title": "多种条目类型使用场景",
+      "line": 1552,
+      "summary": "包括标准型、有限变化型和组合型三种场景。标准型布局相同；有限变化型可通过设置不同reuseId实现复用；组合型将共享子组件统一置于父组件下，缓存池在父组件层面实现共享，减少资源消耗。"
+    }
+  ],
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-reusable.md",
+  "total_lines": 1856,
+  "generated_at": "2026-02-26"
+}

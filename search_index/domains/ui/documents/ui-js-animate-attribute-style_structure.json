@@ -1,0 +1,50 @@
+{
+  "doc_id": "ui-js-animate-attribute-style",
+  "title": "属性样式动画",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@CCFFWW",
+    "designer": "@CCFFWW",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档介绍了如何在ArkUI中使用关键帧动画实现属性样式动画效果。通过在关键帧中动态设置父组件的width和height实现组件大小变化，子组件设置scale属性实现缩放，再设置opacity实现显示与隐藏。文档提供了完整的HTML和CSS代码示例，展示了颜色变化、父组件大小变化和子组件文字缩放的动画实现方法。",
+  "sections": [
+    {
+      "title": "属性样式动画",
+      "level": 1,
+      "summary": "介绍属性样式动画的基本概念和应用场景，通过关键帧动态设置组件属性实现动画效果。"
+    }
+  ],
+  "code_blocks": [
+    {
+      "language": "html",
+      "line_start": 12,
+      "line_end": 22,
+      "description": "HTML结构示例，包含容器和两个动画div组件"
+    },
+    {
+      "language": "css",
+      "line_start": 25,
+      "line_end": 89,
+      "description": "CSS样式和关键帧动画定义，包含容器样式、动画类和三个keyframes动画"
+    }
+  ],
+  "figures": [
+    {
+      "name": "zh-cn_image_0000001217168141",
+      "path": "figures/zh-cn_image_0000001217168141.gif",
+      "line": 92
+    }
+  ],
+  "notes": [
+    {
+      "type": "说明",
+      "line": 95,
+      "content": "animation取值不区分先后，duration/delay按照出现的先后顺序解析。必须设置animation-duration样式，否则时长为0则不会有动画效果。当设置animation-fill-mode属性为forwards时，组件直接展示最后一帧的样式。"
+    }
+  ],
+  "file_path": "docs/zh-cn/application-dev/ui/ui-js-animate-attribute-style.md",
+  "total_lines": 99
+}

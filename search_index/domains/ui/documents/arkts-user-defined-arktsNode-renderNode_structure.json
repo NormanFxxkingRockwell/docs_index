@@ -1,0 +1,84 @@
+{
+  "doc_id": "arkts-user-defined-arktsNode-renderNode",
+  "title": "自定义渲染节点 (RenderNode)",
+  "path": "zh-cn/application-dev/ui/arkts-user-defined-arktsNode-renderNode.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-user-defined-arktsNode-renderNode.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xiang-shouxing",
+    "designer": "@xiang-shouxing",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍RenderNode自定义渲染节点的使用方法，包括节点创建删除、节点树操作、渲染属性设置、自定义绘制、Canvas变换矩阵调整、标签设置和引用状态查询等功能，为第三方框架提供轻量化的渲染和动画支持。",
+  "structure": {
+    "title": "自定义渲染节点 (RenderNode)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 16,
+        "summary": "介绍RenderNode是轻量化的渲染节点，仅具备渲染相关功能，为第三方框架提供基础渲染和动画支持。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "创建和删除节点",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 21,
+        "summary": "介绍通过RenderNode构造函数创建节点，通过dispose接口解除与实体节点的绑定关系。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "操作节点树",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 96,
+        "summary": "介绍RenderNode的节点增删查改能力，包括父子节点查询操作，以及如何将RenderNode挂载到FrameNode上。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "设置和获取渲染相关属性",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 293,
+        "summary": "介绍RenderNode支持的渲染属性设置，包括背景色、透明度、位置、缩放、旋转、阴影、边框、遮罩等属性。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "自定义绘制",
+        "level": 2,
+        "line_start": 295,
+        "line_end": 385,
+        "summary": "介绍通过重写draw方法实现自定义绘制内容，通过invalidate接口触发重新绘制，支持ArkTS和Node-API两种方式。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "调整自定义绘制Canvas的变换矩阵",
+        "level": 2,
+        "line_start": 387,
+        "line_end": 540,
+        "summary": "介绍通过concatMatrix调整Canvas变换矩阵，区分getTotalMatrix和setMatrix的使用场景，提供ArkTS和Node-API示例。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "设置标签",
+        "level": 2,
+        "line_start": 542,
+        "line_end": 584,
+        "summary": "介绍通过label接口为RenderNode设置标签信息，便于在节点Inspector中区分各节点。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "查询当前RenderNode是否解除引用",
+        "level": 2,
+        "line_start": 586,
+        "line_end": 639,
+        "summary": "介绍通过isDisposed接口查询RenderNode是否已解除与后端实体节点的引用关系，避免操作无效节点。"
+      }
+    ]
+  }
+}

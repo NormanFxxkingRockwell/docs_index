@@ -1,0 +1,92 @@
+{
+  "doc_id": "arkts-common-events-focus-event",
+  "title": "支持焦点处理",
+  "path": "zh-cn/application-dev/ui/arkts-common-events-focus-event.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-common-events-focus-event.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yihao-lin",
+    "designer": "@piggyguy",
+    "tester": "@songyanhong",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍HarmonyOS应用中焦点处理的核心概念和实现方法，包括焦点、焦点链、走焦、焦点激活态等基础概念，以及获焦/失焦事件、组件可获焦设置、焦点样式定制、主动获焦/失焦、自定义走焦顺序等开发要点。",
+  "structure": {
+    "title": "支持焦点处理",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "基础概念与规范",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 393,
+        "summary": "介绍焦点处理的基础概念，包括焦点、焦点链、走焦、焦点激活态、层级页面、根容器等核心概念，以及焦点传递规则、走焦规范和走焦算法等实现细节。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "获焦/失焦事件",
+        "level": 2,
+        "line_start": 394,
+        "line_end": 555,
+        "summary": "介绍onFocus和onBlur事件的使用方法，通过示例演示如何监听组件的获焦和失焦事件，以及父子节点同时存在获焦和失焦事件时的响应顺序。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "设置组件是否可获焦",
+        "level": 2,
+        "line_start": 556,
+        "line_end": 713,
+        "summary": "介绍focusable、enabled、visibility、focusOnTouch等属性的使用，说明组件获焦能力的分类和设置方法，以及容器组件获焦的特殊规则。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "设置容器绘制焦点框",
+        "level": 2,
+        "line_start": 714,
+        "line_end": 781,
+        "summary": "介绍如何为容器组件配置焦点框绘制能力，说明容器绘制焦点框的前提条件和实现方式，通过示例演示焦点框的显示效果。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "设置焦点停留在容器上",
+        "level": 2,
+        "line_start": 782,
+        "line_end": 825,
+        "summary": "介绍tabStop属性的使用，说明如何控制焦点在走焦时是否停留在容器上，通过示例演示焦点在容器和子组件之间的切换行为。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "默认焦点",
+        "level": 2,
+        "line_start": 826,
+        "line_end": 961,
+        "summary": "介绍defaultFocus属性的使用，说明层级页面和容器的默认焦点设置方法，以及整体获焦与非整体获焦的焦点链形成规则。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "焦点样式",
+        "level": 2,
+        "line_start": 962,
+        "line_end": 1013,
+        "summary": "介绍focusBox属性的使用，说明如何自定义焦点框的样式，包括边距、边框颜色、边框宽度等样式参数的设置方法。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "主动获焦/失焦",
+        "level": 2,
+        "line_start": 1014,
+        "line_end": 1126,
+        "summary": "介绍FocusController和focusControl中requestFocus和clearFocus方法的使用，说明如何主动控制组件的获焦和失焦状态，比较两种方法的差异。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "自定义组件走焦顺序",
+        "level": 2,
+        "line_start": 1127,
+        "line_end": 1288,
+        "summary": "介绍nextFocus和tabIndex属性的使用，说明如何自定义组件的走焦顺序，包括Tab键和方向键的自定义走焦规则和实现示例。"
+      }
+    ]
+  }
+}

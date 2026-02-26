@@ -1,0 +1,76 @@
+{
+  "doc_id": "arkts-interaction-basic-principles",
+  "title": "交互基础机制说明",
+  "path": "zh-cn/application-dev/ui/arkts-interaction-basic-principles.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-interaction-basic-principles.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yihao-lin",
+    "designer": "@piggyguy",
+    "tester": "@songyanhong",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍ArkUI框架的事件交互基础机制，包括触摸事件、鼠标事件等指向性事件的命中测试和响应链收集机制。详细说明了事件交互流程的三个步骤：事件产生、收集响应链并分发事件、触发回调，以及触摸测试、事件冒泡、事件拦截等核心概念。",
+  "structure": {
+    "title": "交互基础机制说明",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "事件交互流程",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 46,
+        "summary": "介绍ArkUI事件交互流程的三个步骤：事件产生、收集事件响应链并分发事件、触发回调。详细说明了触摸测试、事件分发、手势识别和事件拦截等环节。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "事件响应链",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 58,
+        "summary": "说明ArkUI事件响应链通过触摸测试进行收集，遵循右子树优先的后序遍历规则。通过组件树示例解释响应链的收集过程和组件命中机制。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "触摸测试",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 181,
+        "summary": "详细介绍触摸测试的实现原理和命中测试过程，包括触摸热区设置、触摸测试控制、自定义事件拦截等干预命中结果的方式，以及各种HitTestMode模式的用法。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "禁用控制",
+        "level": 2,
+        "line_start": 182,
+        "line_end": 185,
+        "summary": "说明设置了禁用控制的组件及其子组件不会发起触摸测试过程，而是直接返回到父组件继续触摸测试。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "安全组件",
+        "level": 2,
+        "line_start": 186,
+        "line_end": 191,
+        "summary": "介绍ArkUI安全组件（如粘贴控件、保存控件）对触摸测试的影响，当有组件的z序比安全组件靠前且遮盖安全组件时的处理方式。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "事件冒泡",
+        "level": 2,
+        "line_start": 192,
+        "line_end": 203,
+        "summary": "说明基础事件在响应链上的传递遵循冒泡机制，最内层组件优先处理。介绍stopPropagation接口如何终止冒泡，以及终止冒泡对手势响应的影响。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "Cancel事件",
+        "level": 2,
+        "line_start": 204,
+        "line_end": 208,
+        "summary": "介绍Cancel类型事件的含义和触发场景，如在拖拽操作中当拖拽动作开始时系统会发送Cancel事件告知应用普通基础事件已结束。"
+      }
+    ]
+  }
+}

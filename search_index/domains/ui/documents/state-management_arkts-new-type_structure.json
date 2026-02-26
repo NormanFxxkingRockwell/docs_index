@@ -1,0 +1,52 @@
+{
+  "doc_id": "state-management_arkts-new-type",
+  "title": "@Type装饰器：标记类属性的类型",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-new-type.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-new-type.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zzq212050299",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍@Type装饰器的使用方法和限制，用于标记类属性类型，配合PersistenceV2实现类属性序列化时不丢失类型信息，支持Object class、Array、Date、Map、Set等内嵌类型。",
+  "structure": {
+    "title": "@Type装饰器：标记类属性的类型",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 19,
+        "summary": "@Type标记类属性，使得类属性序列化时不丢失类型信息，便于类的反序列化。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "装饰器说明",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 25,
+        "summary": "说明@Type装饰器的参数和可装饰的类型，包括type参数和Object class、Array、Date、Map、Set等内嵌类型。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "使用限制",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 63,
+        "summary": "列出@Type装饰器的5个使用限制，包括只能用在@ObservedV2装饰的类中、不支持collections类型、不支持非built-in类型等。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 97,
+        "summary": "展示@Type装饰器在持久化数据场景下的使用示例，演示如何配合PersistenceV2实现复杂对象的持久化。"
+      }
+    ]
+  }
+}

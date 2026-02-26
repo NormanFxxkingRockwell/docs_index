@@ -1,0 +1,99 @@
+{
+  "doc_id": "state-management_arkts-persiststorage",
+  "title": "PersistentStorage：持久化存储UI状态",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@zzq212050299",
+    "Designer": "@s10021109",
+    "Tester": "@TerryTsao",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "PersistentStorage是应用程序中的可选单例对象，用于持久化存储选定的AppStorage属性，确保应用重启时保持状态。它依赖AppStorage实现双向同步，支持简单类型、Map、Set、Date等数据类型的持久化。推荐使用PersistenceV2的globalConnect接口替代。",
+  "chapters": [
+    {
+      "id": "overview",
+      "title": "概述",
+      "level": 2,
+      "summary": "PersistentStorage将选定的AppStorage属性保留在设备磁盘上，与AppStorage建立双向同步。存储路径为module级别，功能上耦合了AppStorage，推荐使用PersistenceV2替代。",
+      "line_start": 15,
+      "line_end": 23
+    },
+    {
+      "id": "limitations",
+      "title": "限制条件",
+      "level": 2,
+      "summary": "PersistentStorage支持number、string、boolean、enum、Map、Set、Date等类型，不支持嵌套对象。持久化变量应小于2kb，需要在UI实例初始化成功后调用。",
+      "line_start": 25,
+      "line_end": 61
+    },
+    {
+      "id": "usage-scenarios",
+      "title": "使用场景",
+      "level": 2,
+      "summary": "提供从AppStorage访问PersistentStorage初始化属性、持久化联合类型、Date类型、Map类型、Set类型变量等多种使用场景示例。",
+      "line_start": 64,
+      "line_end": 405
+    },
+    {
+      "id": "access-from-appstorage",
+      "title": "从AppStorage中访问PersistentStorage初始化的属性",
+      "level": 3,
+      "summary": "演示如何初始化PersistentStorage并在AppStorage中获取对应属性，包括首次启动运行、触发点击事件和后续启动应用的完整流程。",
+      "line_start": 68,
+      "line_end": 137
+    },
+    {
+      "id": "access-before-persistentstorage",
+      "title": "在PersistentStorage之前访问AppStorage中的属性",
+      "level": 3,
+      "summary": "反例说明在调用PersistentStorage之前访问AppStorage属性会导致丢失上一次运行中的属性值。",
+      "line_start": 140,
+      "line_end": 152
+    },
+    {
+      "id": "access-after-persistentstorage",
+      "title": "在PersistentStorage之后访问AppStorage中的属性",
+      "level": 3,
+      "summary": "说明可以先判断是否需要覆盖PersistentStorage中的值，再调用AppStorage接口进行修改。",
+      "line_start": 155,
+      "line_end": 173
+    },
+    {
+      "id": "persist-union-type",
+      "title": "持久化联合类型变量",
+      "level": 3,
+      "summary": "演示如何持久化联合类型变量，支持number | undefined | null类型，点击按钮改变值会刷新视图并持久化存储。",
+      "line_start": 176,
+      "line_end": 217
+    },
+    {
+      "id": "persist-date-type",
+      "title": "持久化Date类型变量",
+      "level": 3,
+      "summary": "演示如何持久化Date类型变量，@StorageLink装饰的Date类型变量改变会刷新视图并持久化存储。",
+      "line_start": 220,
+      "line_end": 278
+    },
+    {
+      "id": "persist-map-type",
+      "title": "持久化Map类型变量",
+      "level": 3,
+      "summary": "演示如何持久化Map类型变量，Map<number, string>类型变量改变会刷新视图并持久化存储。",
+      "line_start": 281,
+      "line_end": 331
+    },
+    {
+      "id": "persist-set-type",
+      "title": "持久化Set类型变量",
+      "level": 3,
+      "summary": "演示如何持久化Set类型变量，Set<number>类型变量改变会刷新视图并持久化存储，包括添加和清除操作。",
+      "line_start": 334,
+      "line_end": 405
+    }
+  ],
+  "source_file": "docs/zh-cn/application-dev/ui/state-management/arkts-persiststorage.md",
+  "domain": "ui",
+  "total_lines": 406,
+  "created_at": "2026-02-26"
+}

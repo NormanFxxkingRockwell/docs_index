@@ -1,0 +1,60 @@
+{
+  "doc_id": "arkts-interaction-development-guide-touch-screen",
+  "title": "支持触屏输入事件",
+  "path": "zh-cn/application-dev/ui/arkts-interaction-development-guide-touch-screen.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-interaction-development-guide-touch-screen.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiangtao92",
+    "designer": "@piggyguy",
+    "tester": "@songyanhong",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍如何处理触屏输入事件，包括触摸事件的接收、事件冒泡控制、多点触控支持、触控笔操作等。文档详细说明了触摸事件的上报机制、重采样与历史点处理、多指触控信息的获取方法，以及触控笔的夹角信息等高级特性。",
+  "structure": {
+    "title": "支持触屏输入事件",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "触摸事件",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 25,
+        "summary": "介绍触摸事件的基本概念和接收方式，通过onTouch回调在组件上接收触摸事件，说明多点触控的支持和事件信息获取方法。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "阻止冒泡",
+        "level": 2,
+        "line_start": 27,
+        "line_end": 75,
+        "summary": "说明如何通过stopPropagation方法阻止触摸事件冒泡，提供完整示例代码展示在子组件区域点击时阻止父组件接收事件。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "重采样与历史点",
+        "level": 2,
+        "line_start": 77,
+        "line_end": 125,
+        "summary": "解释触摸事件的重采样机制，说明系统如何将高频输入事件降采样到屏幕刷新率，介绍如何通过getHistoricalPoints获取原始点信息。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "多指信息",
+        "level": 2,
+        "line_start": 127,
+        "line_end": 208,
+        "summary": "介绍多指触控的处理方法，说明如何通过touches获取所有触点信息，提供示例展示多指按下和抬起的检测逻辑。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "触控笔",
+        "level": 2,
+        "line_start": 211,
+        "line_end": 218,
+        "summary": "说明触控笔操作与手指操作的异同，介绍触控笔的夹角信息获取方法，包括tiltX、tiltY和rollAngle等属性。"
+      }
+    ]
+  }
+}

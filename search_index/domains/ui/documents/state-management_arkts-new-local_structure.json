@@ -1,0 +1,92 @@
+{
+  "doc_id": "state-management_arkts-new-local",
+  "title": "@Local装饰器：组件内部状态",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-new-local.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-new-local.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍@Local装饰器的功能和使用方法，用于在@ComponentV2装饰的自定义组件中定义组件内部状态，支持多种数据类型的观测和UI自动刷新，包括基本类型、对象、数组、Map、Set、Date等。",
+  "structure": {
+    "title": "@Local装饰器：组件内部状态",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 29,
+        "summary": "介绍@Local装饰器的基本概念和功能，用于定义组件内部状态，使变量具有观察变化的能力，支持多种数据类型。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "状态管理V1版本@State装饰器的局限性",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 54,
+        "summary": "说明@State装饰器在作为组件内部状态使用时的局限性，由于可以从外部初始化，无法确保初始值一定为组件内部定义的值。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "装饰器说明",
+        "level": 2,
+        "line_start": 55,
+        "line_end": 61,
+        "summary": "列出@Local装饰器的参数、可装饰的变量类型以及变量初始值的要求，强调必须本地初始化，不允许外部传入。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "变量传递",
+        "level": 2,
+        "line_start": 62,
+        "line_end": 68,
+        "summary": "说明@Local装饰变量的传递规则，仅允许本地初始化，无法从外部传入，但可以初始化子组件中@Param装饰的变量。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "观察变化",
+        "level": 2,
+        "line_start": 69,
+        "line_end": 256,
+        "summary": "详细说明@Local装饰变量观察变化的能力，包括基本类型、类对象、数组、嵌套对象以及内置类型（Array、Date、Map、Set）的观测规则。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 257,
+        "line_end": 278,
+        "summary": "列出@Local装饰器的使用限制，只能在@ComponentV2装饰的自定义组件中使用，且不允许从外部传入初始化。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "@Local与@State对比",
+        "level": 2,
+        "line_start": 279,
+        "line_end": 290,
+        "summary": "对比@Local和@State装饰器的用法和功能差异，包括从父组件初始化、观察能力和数据传递等方面的区别。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 291,
+        "line_end": 530,
+        "summary": "提供@Local装饰器的典型使用场景示例，包括观测对象整体变化、装饰Array、Date、Map、Set类型变量以及联合类型的使用方法。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "常见问题",
+        "level": 2,
+        "line_start": 531,
+        "line_end": 608,
+        "summary": "解答使用@Local装饰器时的常见问题，包括在状态管理V2中使用animateTo动画效果异常的问题及解决方案。"
+      }
+    ]
+  }
+}

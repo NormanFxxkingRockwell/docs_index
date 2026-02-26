@@ -1,0 +1,60 @@
+{
+  "doc_id": "arkts-stability-crash-issues",
+  "title": "UI相关应用崩溃常见问题",
+  "path": "zh-cn/application-dev/ui/arkts-stability-crash-issues.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-stability-crash-issues.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@caoruihong",
+    "designer": "@dutie123",
+    "tester": "@fredyuan0912",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档收集整理了常见的会导致应用崩溃的ArkUI API错误用法，包括OH_NativeXComponent回调函数对象被提前释放、OH_NativeXComponent对象被提前释放、@Consume缺少匹配的@Provide、@Link数据源类型错误、@Provide缺少重写声明等问题，旨在帮助开发者避免在实际应用开发过程中犯类似错误。",
+  "structure": {
+    "title": "UI相关应用崩溃常见问题",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "OH_NativeXComponent注册的回调函数对象被提前释放",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 51,
+        "summary": "介绍OH_NativeXComponent回调函数对象被提前释放导致的崩溃问题，说明应用必须确保在onSurfaceDestroy回调执行前，回调函数对象保持有效，避免Use-After-Free问题。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "OH_NativeXComponent对象被提前释放",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 76,
+        "summary": "介绍OH_NativeXComponent对象被提前释放导致的崩溃问题，说明应用必须确保在onSurfaceDestroy回调执行完毕后不再调用相关接口，避免Use-After-Free问题。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "@Consume缺少匹配的@Provide",
+        "level": 2,
+        "line_start": 78,
+        "line_end": 98,
+        "summary": "介绍@Consume初始化时缺少匹配@Provide导致的崩溃问题，说明@Consume需要通过key匹配对应的@Provide变量，必须在祖先组件中定义。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "@Link数据源类型错误",
+        "level": 2,
+        "line_start": 100,
+        "line_end": 124,
+        "summary": "介绍@Link数据源类型错误导致的崩溃问题，说明@Link初始化时数据源类型必须完全一致，且不能使用常量初始化，否则会导致错误。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "@Provide缺少重写声明",
+        "level": 2,
+        "line_start": 126,
+        "line_end": 153,
+        "summary": "介绍@Provide缺少重写声明导致的崩溃问题，说明@Provide重写需要声明allowOverride，未声明且存在重复别名或属性名将导致错误。"
+      }
+    ]
+  }
+}

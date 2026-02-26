@@ -1,0 +1,44 @@
+{
+  "doc_id": "arkts-gesture-events-gesture-judge",
+  "title": "手势冲突处理",
+  "path": "zh-cn/application-dev/ui/arkts-gesture-events-gesture-judge.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-gesture-events-gesture-judge.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yihao-lin",
+    "designer": "@piggyguy",
+    "tester": "@songyanhong",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍手势冲突的概念和解决方法，包括自定义手势判定、手势并行动态控制和阻止手势参与识别三种方式，帮助开发者处理多个手势识别器在同一组件或重叠区域同时识别时产生的竞争问题。",
+  "structure": {
+    "title": "手势冲突处理",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "自定义手势判定",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 141,
+        "summary": "介绍如何通过onGestureJudgeBegin和onGestureRecognizerJudgeBegin接口自定义手势判定逻辑，解决手势冲突问题。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "手势并行动态控制",
+        "level": 2,
+        "line_start": 142,
+        "line_end": 241,
+        "summary": "介绍如何通过shouldBuiltInRecognizerParallelWith、onGestureRecognizerJudgeBegin和parallelGesture接口动态控制手势并行。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "阻止手势参与识别",
+        "level": 2,
+        "line_start": 242,
+        "line_end": 467,
+        "summary": "介绍如何通过onTouchTestDone和preventBegin接口阻止特定手势参与识别，解决手势冲突。"
+      }
+    ]
+  }
+}

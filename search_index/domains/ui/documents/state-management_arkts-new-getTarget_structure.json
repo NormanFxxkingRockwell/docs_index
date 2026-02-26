@@ -1,0 +1,44 @@
+{
+  "doc_id": "state-management_arkts-new-getTarget",
+  "title": "getTarget接口：获取状态管理框架代理前的原始对象",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-new-getTarget.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-new-getTarget.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍UIUtils中的getTarget接口，用于获取状态管理框架代理前的原始对象。支持状态管理V1和V2两种场景，包括@Observed装饰的类实例、状态变量装饰器装饰的复杂类型对象等。详细说明了限制条件、使用场景以及与NAPI接口的交互注意事项。",
+  "structure": {
+    "title": "getTarget接口：获取状态管理框架代理前的原始对象",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 28,
+        "summary": "说明状态管理框架会给class、Date、Map、Set、Array类型的原始对象添加代理，用于观测属性变化与API调用，使用getTarget接口可以获取这些代理对象的原始对象。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 30,
+        "line_end": 77,
+        "summary": "说明getTarget仅支持对象类型传参，且更改获取的原始对象中的内容不会被观察到变化，也不会触发UI刷新。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 254,
+        "summary": "介绍在状态管理V1和V2中获取代理前原始对象的使用使用场景，包括@Observed装饰的类实例、状态变量装饰器装饰的复杂类型对象等。"
+      }
+    ]
+  }
+}

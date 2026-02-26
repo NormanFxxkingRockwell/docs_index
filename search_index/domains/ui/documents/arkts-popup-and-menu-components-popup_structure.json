@@ -1,0 +1,92 @@
+{
+  "doc_id": "arkts-popup-and-menu-components-popup",
+  "title": "气泡提示（Popup）",
+  "path": "zh-cn/application-dev/ui/arkts-popup-and-menu-components-popup.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-popup-and-menu-components-popup.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@liyi0309",
+    "designer": "@liyi0309",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍ArkUI中的气泡提示组件Popup，包括系统提供的PopupOptions和自定义的CustomPopupOptions两种类型，支持文本提示、按钮交互、动画效果、样式定制、软键盘避让、多态效果和中轴避让等功能，适用于信息弹出提醒和屏幕录制等场景。",
+  "structure": {
+    "title": "气泡提示（Popup）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "文本提示气泡",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 39,
+        "summary": "介绍基本的文本提示气泡使用方法，通过bindPopup属性绑定组件，当show为true时弹出气泡，适用于无交互的信息展示场景。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "添加气泡状态变化的事件",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 67,
+        "summary": "介绍通过onStateChange属性为气泡添加状态变化事件回调，可以监听气泡的显示和隐藏状态，实现自动关闭等功能。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "带按钮的提示气泡",
+        "level": 2,
+        "line_start": 68,
+        "line_end": 104,
+        "summary": "介绍通过primaryButton和secondaryButton属性为气泡设置最多两个按钮，实现简单的用户交互操作，通过action参数触发自定义逻辑。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "气泡的动画",
+        "level": 2,
+        "line_start": 105,
+        "line_end": 159,
+        "summary": "介绍通过transition属性控制气泡的进场和出场动画效果，支持透明度、平移、缩放等多种动画组合，提升用户体验。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "自定义气泡",
+        "level": 2,
+        "line_start": 160,
+        "line_end": 193,
+        "summary": "介绍使用CustomPopupOptions的builder创建自定义气泡内容，支持在@Builder中放置任意自定义组件，并可配置popupColor等样式参数。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "气泡样式",
+        "level": 2,
+        "line_start": 194,
+        "line_end": 226,
+        "summary": "介绍气泡的样式配置，包括背景颜色、蒙层样式、显示大小和显示位置等，通过PopupOptions的多个属性实现样式定制。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "气泡避让软键盘",
+        "level": 2,
+        "line_start": 227,
+        "line_end": 262,
+        "summary": "介绍从API version 15开始支持气泡避让软键盘功能，通过设置keyboardAvoidMode属性使气泡自动避让键盘，避免被覆盖。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "设置气泡内的多态效果",
+        "level": 2,
+        "line_start": 263,
+        "line_end": 336,
+        "summary": "介绍通过@Component新建组件实现气泡内内容的多态样式效果，支持按下时背景变色等交互反馈，提升用户体验。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "气泡支持避让中轴",
+        "level": 2,
+        "line_start": 337,
+        "line_end": 423,
+        "summary": "介绍从API version 18起支持气泡中轴避让功能，在2in1设备瀑布模式下自动避让中轴，通过enableHoverMode属性控制。"
+      }
+    ]
+  }
+}

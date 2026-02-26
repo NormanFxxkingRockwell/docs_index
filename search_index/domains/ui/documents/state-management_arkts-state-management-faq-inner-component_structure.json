@@ -1,0 +1,78 @@
+{
+  "doc_id": "state-management_arkts-state-management-faq-inner-component",
+  "title": "组件内状态管理常见问题",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zany_pink",
+    "designer": "@s10021109",
+    "tester": "@zhangwenhan12",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "本文介绍ArkUI应用开发中组件内状态管理的常见问题与解决方案，包括build函数中更改状态变量导致appfreeze、回调未解注册导致内存泄漏、使用a.b(this.object)形式调用不触发UI刷新、复杂类型常量重复赋值触发不必要刷新、@Prop导致不必要深拷贝、状态变量关联组件数过多导致性能下降、循环中频繁读取状态变量、频繁修改状态变量、LazyForEach重建机制刷新UI、ForEach和对象数组结合使用导致UI不刷新等问题。",
+  "sections": [
+    {
+      "title": "build函数中更改状态变量导致appfreeze",
+      "summary": "不允许在build方法中改变状态变量，框架会报error日志。虽然简单情况下可能不造成严重后果，但随着工程复杂度升级，可能导致组件循环刷新，最终造成系统长时间无响应和appfreeze。",
+      "line_start": 11,
+      "line_end": 87
+    },
+    {
+      "title": "注册回调中更改状态变量未解注册导致内存泄漏",
+      "summary": "开发者可以在aboutToAppear中注册箭头函数改变组件中的状态变量，但需要在aboutToDisappear中将注册的函数置空，以避免箭头函数捕获自定义组件的this实例，导致自定义组件无法被释放，从而造成内存泄漏。",
+      "line_start": 88,
+      "line_end": 152
+    },
+    {
+      "title": "使用a.b(this.object)形式调用，不会触发UI刷新",
+      "summary": "当@State装饰的变量是Object类型，且通过a.b(this.object)形式调用时，框架会将代理对象转换为原始对象，修改其属性无法触发UI刷新。解决方案是先将this.object赋值给临时变量，再使用临时变量完成调用原来逻辑。",
+      "line_start": 153,
+      "line_end": 257
+    },
+    {
+      "title": "复杂类型常量重复赋值给状态变量触发不必要的刷新",
+      "summary": "在状态管理V1和V2中，会给复杂类型对象添加代理层用于观测变化。当复杂类型常量重复赋值给状态变量时，可能会由于加了代理而判断为新旧值不相等，导致不必要的刷新。可通过@Observed装饰类或使用UIUtils.getTarget()获取原始对象提前判断新旧值来避免。",
+      "line_start": 258,
+      "line_end": 487
+    },
+    {
+      "title": "子组件无需修改状态变量时，使用@Prop导致不必要的深拷贝",
+      "summary": "如果子组件不需要修改父组件传递的状态变量，使用@Prop装饰器会增加组件创建时间并影响性能，因为@Prop会深拷贝数据。此时建议改用@ObjectLink，它不会深拷贝，是比@Prop更优的选择。",
+      "line_start": 488,
+      "line_end": 577
+    },
+    {
+      "title": "状态变量关联的组件数过多导致性能下降",
+      "summary": "建议每个状态变量关联的组件数少于20个。精准控制状态变量关联的组件数量可减少不必要的组件刷新。将同一状态变量绑定在多个同级组件上会导致这些组件同步更新，而将其绑定在父组件上可以减少需要刷新的组件数。",
+      "line_start": 578,
+      "line_end": 703
+    },
+    {
+      "title": "在for、while等循环逻辑中频繁读取状态变量导致性能下降",
+      "summary": "应避免在循环逻辑中频繁读取状态变量，而是应该放在循环外面读取。通过将状态变量赋值给临时变量，然后在循环中使用临时变量，可以减少不必要的性能开销。",
+      "line_start": 704,
+      "line_end": 780
+    },
+    {
+      "title": "频繁修改状态变量导致性能下降",
+      "summary": "应尽量减少对状态变量的直接赋值，通过临时变量完成数据计算操作。状态变量变化时，ArkUI会查询依赖该状态变量的组件并执行更新方法。使用临时变量计算可使ArkUI仅在最后一次状态变量变更时查询并渲染组件，减少不必要的操作。",
+      "line_start": 781,
+      "line_end": 890
+    },
+    {
+      "title": "使用LazyForEach的重建机制刷新UI导致性能下降",
+      "summary": "使用LazyForEach刷新会对组件进行重建，性能开销较大。推荐使用状态变量来触发LazyForEach中的组件刷新，通过自定义组件配合@Observed和@ObjectLink直接更改组件内的状态变量实现刷新，而不需要利用LazyForEach进行重建。",
+      "line_start": 891,
+      "line_end": 1196
+    },
+    {
+      "title": "ForEach和对象数组结合使用导致UI不刷新",
+      "summary": "ForEach中虽然可以观测到数组对象的变化，但ForEach中生成的item是一个常量，当点击改变item中的内容时，没有办法观测到UI刷新。需要使用自定义组件，配合@ObjectLink来实现观测的能力，使子组件内部的状态变量具有被观测的能力。",
+      "line_start": 1197,
+      "line_end": 1334
+    }
+  ],
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-state-management-faq-inner-component.md",
+  "domain": "ui",
+  "created_at": "2026-02-26"
+}

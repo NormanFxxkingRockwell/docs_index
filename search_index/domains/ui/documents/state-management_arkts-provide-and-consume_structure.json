@@ -1,0 +1,61 @@
+{
+  "doc_id": "state-management_arkts-provide-and-consume",
+  "title": "@Provide装饰器和@Consume装饰器：与后代组件双向同步",
+  "domain": "ui",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@liwenzhen3",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "@Provide和@Consume装饰器用于实现与后代组件的双向数据同步，支持跨层级状态传递。@Provide在祖先组件中提供状态变量，@Consume在后代组件中消费这些变量，建立双向同步关系。支持多种数据类型包括Object、class、string、number、boolean、enum、Array、Date、Map、Set等。从API version 20开始支持@Consume设置默认值和跨BuilderNode场景。",
+  "sections": [
+    {
+      "title": "概述",
+      "level": 2,
+      "summary": "@Provide装饰的状态变量自动对所有后代组件可用，无需多次传递。@Consume获取@Provide提供的变量，建立双向数据同步。支持通过变量名或别名绑定，类型必须相同。",
+      "line_start": 27,
+      "line_end": 54
+    },
+    {
+      "title": "装饰器说明",
+      "level": 2,
+      "summary": "详细说明@Provide和@Consume装饰器的参数、允许装饰的变量类型、初始化规则和同步规则。@Provide支持别名和allowOverride参数，@Consume从API version 20开始支持默认值。",
+      "line_start": 56,
+      "line_end": 81
+    },
+    {
+      "title": "观察变化和行为表现",
+      "level": 2,
+      "summary": "说明不同数据类型的变化观察机制，包括boolean、string、number、class、Object、Array、Date、Map、Set。描述框架的初始渲染、@Provide变化和@Consume变化时的行为。",
+      "line_start": 83,
+      "line_end": 115
+    },
+    {
+      "title": "限制条件",
+      "level": 2,
+      "summary": "列出@Provide/@Consume的使用限制，包括参数key必须为string类型、@Consume不能在构造参数中初始化、key重复定义错误、类型一致性要求等。",
+      "line_start": 117,
+      "line_end": 377
+    },
+    {
+      "title": "使用场景",
+      "level": 2,
+      "summary": "提供多个使用场景示例，包括双向绑定、装饰Array/Map/Set/Date类型变量、支持联合类型、allowOverride参数、@Consume默认值、跨BuilderNode场景等。",
+      "line_start": 379,
+      "line_end": 1079
+    },
+    {
+      "title": "常见问题",
+      "level": 2,
+      "summary": "解答@BuilderParam尾随闭包情况下@Provide未定义错误的问题，提供错误示例和正确示例，说明this指向对@Provide查找的影响。",
+      "line_start": 1081,
+      "line_end": 1211
+    }
+  ],
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-provide-and-consume.md",
+  "total_lines": 1212,
+  "created_at": "2026-02-26"
+}

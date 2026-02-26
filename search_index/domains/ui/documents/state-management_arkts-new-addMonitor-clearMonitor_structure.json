@@ -1,0 +1,60 @@
+{
+  "doc_id": "state-management_arkts-new-addMonitor-clearMonitor",
+  "title": "addMonitor/clearMonitor接口：动态添加/取消监听",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-new-addMonitor-clearMonitor.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-new-addMonitor-clearMonitor.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@liwenzhen3",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍如何使用addMonitor和clearMonitor接口动态添加或删除状态管理V2的状态变量监听函数，包括使用规则、限制条件、监听变化规则和各种使用场景，支持同步监听、独立监听path、监听变量可访问性变化等功能。",
+  "structure": {
+    "title": "addMonitor/clearMonitor接口：动态添加/取消监听",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 31,
+        "summary": "介绍addMonitor和clearMonitor接口的作用和基本使用方法，说明与@Monitor装饰器的区别，需要导入UIUtils工具，仅支持监听状态管理V2的状态变量。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用规则",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 250,
+        "summary": "详细介绍addMonitor和clearMonitor的使用规则，包括数组批量添加监听、添加多个监听函数、同步监听配置、删除指定或全部监听函数等场景和注意事项。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 252,
+        "line_end": 396,
+        "summary": "说明addMonitor和clearMonitor的使用限制，包括仅支持@ObservedV2和@ComponentV2实例、路径必须为字符串或数组、回调函数必须为方法类型且不能为匿名函数等条件。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "addMonitor监听变化的规则",
+        "level": 2,
+        "line_start": 398,
+        "line_end": 411,
+        "summary": "对比addMonitor和@Monitor监听变化的规则差异，说明addMonitor支持独立监听path、配置同步监听、监听构造函数中同步修改等@Monitor不支持的功能。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 413,
+        "line_end": 837,
+        "summary": "提供addMonitor的各种使用场景示例，包括监听@ObservedV2类和@ComponentV2组件状态变量、监听数组下标和length、独立监听path、监听变量可访问性变化、配置同步监听等。"
+      }
+    ]
+  }
+}

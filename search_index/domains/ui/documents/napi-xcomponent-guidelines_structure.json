@@ -1,0 +1,68 @@
+{
+  "doc_id": "napi-xcomponent-guidelines",
+  "title": "自定义渲染 (XComponent)",
+  "path": "zh-cn/application-dev/ui/napi-xcomponent-guidelines.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/napi-xcomponent-guidelines.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zjsxstar",
+    "designer": "@dutie123",
+    "tester": "@liuli0427",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍XComponent自定义渲染组件的使用方法，支持EGL/OpenGLES和媒体数据写入，通过NativeWindow实现高性能渲染和媒体数据处理。详细说明了XComponent的渲染原理、Surface生命周期管理、五种开发范式，以及从OH_NativeXComponent到OH_ArkUI_SurfaceHolder的迁移方法。",
+  "structure": {
+    "title": "自定义渲染 (XComponent)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 21,
+        "summary": "介绍XComponent组件的基本概念和用途，支持两种渲染类型SURFACE和TEXTURE，主要用于高性能渲染和媒体数据处理场景。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "约束与限制",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 24,
+        "summary": "说明当绘制内容包含透明元素时，Surface区域会与下方内容进行合成展示的约束条件。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "XComponent渲染上屏原理",
+        "level": 2,
+        "line_start": 26,
+        "line_end": 37,
+        "summary": "详细说明XComponent通过Surface和BufferQueue实现渲染上屏的完整流程，包括RequestBuffer、FlushBuffer等关键操作。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "创建XComponent和管理Surface生命周期",
+        "level": 2,
+        "lineX_start": 38,
+        "line_end": 464,
+        "summary": "介绍三种创建XComponent的方式和两种Surface生命周期管理方式，详细说明五种开发范式及其代码示例。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "OH_NativeXComponent向OH_ArkUI_SurfaceHolder的迁移",
+        "level": 2,
+        "line_start": 465,
+        "line_end": 688,
+        "summary": "说明从OH_NativeXComponent迁移到OH_ArkUI_SurfaceHolder的原因和方法，包括组件创建、生命周期绑定、NativeWindow获取和事件监听的差异。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "开发示例",
+        "level": 2,
+        "line_start": 690,
+        "line_end": 968,
+        "summary": "提供在Native侧使用NativeWindow进行渲染绘制的完整开发示例，包括接口说明和详细的开发步骤。"
+      }
+    ]
+  }
+}

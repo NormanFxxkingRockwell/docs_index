@@ -1,0 +1,76 @@
+{
+  "doc_id": "arkts-uicontext-custom-dialog",
+  "title": "不依赖UI组件的全局自定义弹出框 (openCustomDialog)",
+  "path": "zh-cn/application-dev/ui/arkts-uicontext-custom-dialog.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-uicontext-custom-dialog.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@houguobiao",
+    "designer": "@houguobiao",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍如何使用UIContext中获取到的PromptAction对象提供的openCustomDialog接口实现自定义弹出框，包括弹出框的打开与关闭、内容更新、属性更新、动画效果设置以及软键盘避让等功能，支持ComponentContent和builder两种入参方式。",
+  "structure": {
+    "title": "不依赖UI组件的全局自定义弹出框 (openCustomDialog)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "生命周期",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 38,
+        "summary": "介绍弹出框提供的生命周期函数，包括onDidAppear、onDidDisappear、onWillAppear和onWillDisappear的触发时序和用途。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "自定义弹出框的打开与关闭",
+        "level": 2,
+        "line_start": 40,
+        "line_end": 86,
+        "summary": "详细说明如何创建ComponentContent、打开和关闭自定义弹出框的完整流程，包括接口调用和资源释放方法。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "更新自定义弹出框的内容",
+        "level": 2,
+        "line_start": 88,
+        "line_end": 94,
+        "summary": "解释使用ComponentContent的update方法动态更新弹出框中自定义组件内容的方法和限制。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "更新自定义弹出框的属性",
+        "level": 2,
+        "line_start": 96,
+        "line_end": 117,
+        "summary": "介绍通过updateCustomDialog接口动态更新弹出框属性的方法，包括对齐方式、偏移量、自动关闭和蒙层颜色等属性配置。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "为弹出框内容和蒙层设置不同的动画效果",
+        "level": 2,
+        "line_start": 119,
+        "line_end": 193,
+        "summary": "阐述如何通过BaseDialogOptions中的dialogTransition和maskTransition属性为弹出框内容和蒙层设置不同的动画效果。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "设置弹出框避让软键盘的距离",
+        "level": 2,
+        "line_start": 195,
+        "line_end": 265,
+        "summary": "说明如何配置弹出框在软键盘弹出时的避让行为，包括keyboardAvoidMode和keyboardAvoidDistance两个配置项。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "完整示例",
+        "level": 2,
+        "line_start": 267,
+        "line_end": 382,
+        "summary": "提供完整的代码示例，展示自定义弹出框的创建、打开、关闭、更新等功能的实际应用。"
+      }
+    ]
+  }
+}

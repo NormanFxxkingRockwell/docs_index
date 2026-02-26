@@ -1,0 +1,52 @@
+{
+  "doc_id": "state-management_arkts-new-event",
+  "title": "@Event装饰器：规范组件输出",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-new-event.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-new-event.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍@Event装饰器的使用方法和规范，用于实现子组件向父组件更新@Param装饰变量的能力，实现数据的双向同步。文档包括概述、装饰器说明、限制条件和使用场景，通过示例演示如何更改父组件变量并同步回子组件。",
+  "structure": {
+    "title": "@Event装饰器：规范组件输出",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 34,
+        "summary": "介绍@Event装饰器的作用和原理，用于装饰组件对外输出的方法，配合@Param实现数据的双向同步。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "装饰器说明",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 42,
+        "summary": "说明@Event装饰器的属性、允许装饰的变量类型和允许传入的函数类型，装饰器无参数，只能装饰回调方法。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 43,
+        "line_end": 58,
+        "summary": "说明@Event只能用在@ComponentV2装饰的自定义组件中，装饰非方法类型的变量不会有任何作用。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 60,
+        "line_end": 167,
+        "summary": "演示如何使用@Event更改父组件中变量，当该变量作为子组件@Param变量的数据源时，变化会同步回子组件的@Param变量。"
+      }
+    ]
+  }
+}

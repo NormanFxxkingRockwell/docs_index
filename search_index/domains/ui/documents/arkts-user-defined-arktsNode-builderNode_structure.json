@@ -1,0 +1,180 @@
+{
+  "doc_id": "arkts-user-defined-arktsNode-builderNode",
+  "title": "自定义声明式节点 (BuilderNode)",
+  "path": "zh-cn/application-dev/ui/arkts-user-defined-arktsNode-builderNode.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-user-defined-arktsNode-builderNode.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xiang-shouxing",
+    "designer": "@xiang-shouxing",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍自定义声明式节点BuilderNode的功能和使用方法，包括创建组件树、更新组件树、解除实体节点引用、注入触摸事件、节点复用能力、跨页面复用、LocalStorage使用、冻结能力设置等核心特性，支持与系统组件和自定义节点的混合显示，提供组件预创建和纹理导出功能。",
+  "structure": {
+    "title": "自定义声明式节点 (BuilderNode)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 19,
+        "summary": "介绍BuilderNode的基本功能，提供挂载系统组件的能力，支持通过全局自定义构建函数定制组件树，可实现混合显示和纹理导出功能。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 41,
+        "summary": "定义系统组件和实体节点的基本概念，说明BuilderNode作为叶子节点的使用限制和更新建议。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "创建BuilderNode对象",
+        "level": 2,
+        "line_start": 42,
+        "line_end": 45,
+        "summary": "说明BuilderNode对象的创建方式，作为模板类需要在创建时指定类型，类型需与build方法中的WrappedBuilder类型一致。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "创建组件树",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 201,
+        "summary": "介绍通过build方法创建组件树的方法，包括与FrameNode结合使用、与RenderNode结合使用两种场景，提供完整的代码示例。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "更新组件树",
+        "level": 2,
+        "line_start": 202,
+        "line_end": 316,
+        "summary": "说明组件树的更新机制，遵循状态管理的更新机制，介绍使用update和updateConfiguration方法触发更新的方式。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "解除实体节点引用关系",
+        "level": 2,
+        "line_start": 317,
+        "line_end": 326,
+        "summary": "介绍通过dispose方法与实体节点解除引用关系，释放后端节点对象，避免内存泄漏的最佳实践。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "注入触摸事件",
+        "level": 2,
+        "line_start": 327,
+        "line_end": 413,
+        "summary": "说明通过postTouchEvent接口向BuilderNode中绑定的组件注入触摸事件，实现事件的模拟转发功能。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "BuilderNode内的BuilderProxyNode导致树结构发生变化",
+        "level": 2,
+        "line_start": 414,
+        "line_end": 672,
+        "summary": "解释当Builder的根节点为语法节点或自定义组件时会生成BuilderProxyNode，说明其对树结构和触摸测试传递的影响及解决方案。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "BuilderNode调用reuse和recycle接口实现节点复用能力",
+        "level": 2,
+        "line_start": 673,
+        "line_end": 863,
+        "summary": "介绍通过reuse和recycle接口传递复用和回收事件，实现BuilderNode节点内部自定义组件的复用能力。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "BuilderNode在子自定义组件中使用@Reusable装饰器",
+        "level": 2,
+        "line_start": 864,
+        "line_end": 964,
+        "summary": "说明BuilderNode节点的复用机制与@Reusable装饰器的冲突问题，提供使用普通自定义组件包裹的解决方案。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "通过系统环境变化更新节点",
+        "level": 2,
+        "line_start": 965,
+        "line_end": 1111,
+        "summary": "介绍使用updateConfiguration监听系统环境变化事件，触发节点全量更新的方法和应用场景。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "跨页面复用注意事项",
+        "level": 2,
+        "line_start": 1112,
+        "line_end": 1329,
+        "summary": "说明在使用路由接口操作页面时BuilderNode跨页面复用的注意事项，包括API version 16前后的行为差异。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "BuilderNode中使用LocalStorage",
+        "level": 2,
+        "line_start": 1330,
+        "line_end": 1410,
+        "summary": "介绍从API version 12开始支持自定义组件接收LocalStorage实例，使用相关装饰器的方法。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "查询当前BuilderNode是否解除引用",
+        "level": 2,
+        "line_start": 1411,
+        "line_end": 1494,
+        "summary": "提供查询BuilderNode是否已解除引用关系的方法，用于节点状态检查。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "设置BuilderNode继承冻结能力",
+        "level": 2,
+        "line_start": 1495,
+        "line_end": 1516,
+        "summary": "介绍设置BuilderNode继承冻结能力的方法，优化节点性能和内存管理。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "BuilderNode常用冻结场景（状态管理V1）",
+        "level": 2,
+        "line_start": 1517,
+        "line_end": 1719,
+        "summary": "提供状态管理V1版本下BuilderNode的常用冻结场景和应用示例。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "BuilderNode常用冻结场景（状态管理V2）",
+        "level": 2,
+        "line_start": 1720,
+        "line_end": 2451,
+        "summary": "提供状态管理V2版本下BuilderNode的常用冻结场景和应用示例。"
+      },
+      {
+        "section_id": "section-18",
+        "title": "设置BuilderNode支持内部@Consume接收外部的@Provide数据（状态管理V1）",
+        "level": 2,
+        "line_start": 2452,
+        "line_end": 2457,
+        "summary": "介绍状态管理V1版本下设置BuilderNode支持内部@Consume接收外部@Provide数据的方法。"
+      },
+      {
+        "section_id": "section-19",
+        "title": "设置BuilderNode支持内部@Consumer接收外部的@Provider数据（状态管理V2）",
+        "level": 2,
+        "line_start": 2458,
+        "line_end": 2463,
+        "summary": "介绍状态管理V2版本下设置BuilderNode支持内部@Consumer接收外部@Provider数据的方法。"
+      },
+      {
+        "section_id": "section-20",
+        "title": "BuilderNode结合ArkWeb组件实现预渲染页面",
+        "level": 2,
+        "line_start": 2464,
+        "line_end": 2630,
+        "summary": "介绍BuilderNode结合ArkWeb组件实现预渲染页面的方法，优化页面加载性能。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "doc_id": "state-management_arkts-environment",
+  "title": "Environment：设备环境查询",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-environment.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-environment.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zzq212050299",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍Environment设备环境查询功能，用于获取应用程序运行设备的环境参数（如多语言、深浅色模式等），通过AppStorage提供应用程序运行状态的属性，支持读取系统环境变量并将其值写入AppStorage。",
+  "structure": {
+    "title": "Environment：设备环境查询",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "Environment内置参数",
+        "level": 2,
+        "line_start": 17,
+        "line_end": 27,
+        "summary": "列出Environment提供的内置参数，包括accessibilityEnabled、colorMode、fontScale、fontWeightScale、layoutDirection、languageCode等设备环境变量。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 28,
+        "line_end": 50,
+        "summary": "说明Environment需要与UIContext关联，在UIContext明确时才能调用接口，通过runScopedTask调用明确上下文。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 120,
+        "summary": "介绍从UI中访问Environment参数和应用逻辑使用Environment两种场景，包括使用envProp将环境变量存入AppStorage和通过@StorageProp获取值。"
+      }
+    ]
+  }
+}

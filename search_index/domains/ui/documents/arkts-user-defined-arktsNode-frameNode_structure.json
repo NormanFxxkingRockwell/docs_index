@@ -1,0 +1,156 @@
+{
+  "doc_id": "arkts-user-defined-arktsNode-frameNode",
+  "title": "自定义组件节点 (FrameNode)",
+  "path": "zh-cn/application-dev/ui/arkts-user-defined-arktsNode-frameNode.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-user-defined-arktsNode-frameNode.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xiang-shouxing",
+    "designer": "@xiang-shouxing",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "FrameNode是ArkUI中用于构建自定义节点树的核心接口，支持动态创建、修改和删除节点，可与NodeContainer配合使用实现自定义UI。提供了节点操作、属性设置、事件回调、自定义测量布局绘制等完整功能，同时支持获取系统组件代理节点信息。",
+  "structure": {
+    "title": "自定义组件节点 (FrameNode)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 22,
+        "summary": "介绍FrameNode的设计初衷和基本概念，用于解决第三方框架DSL转换问题，支持与系统组件混合显示。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "创建和删除节点",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 34,
+        "summary": "说明如何通过FrameNode构造函数创建自定义节点，以及使用dispose接口解除与实体节点的绑定关系。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "判断节点是否可修改",
+        "level": 2,
+        "line_start": 35,
+        "line_end": 38,
+        "summary": "介绍isModifiable接口用于查询节点是否为系统组件代理节点，代理节点不可修改属性和子节点结构。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "获取对应的RenderNode节点",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 48,
+        "summary": "说明通过getRenderNode接口获取FrameNode中的RenderNode对象，用于动态修改绘制相关属性。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "操作节点树",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 354,
+        "summary": "详细介绍FrameNode提供的节点增删查改能力，包括appendChild、insertChildAfter、removeChild等接口及完整代码示例。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "使用moveTo移动命令式节点",
+        "level": 2,
+        "line_start": 355,
+        "line_end": 431,
+        "summary": "介绍使用moveTo接口将FrameNode节点移动到新父节点下，支持Stack和XComponent等特定类型的节点移动。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "设置节点通用属性和事件回调",
+        "level": 2,
+        "line_start": 432,
+        "line_end": 624,
+        "summary": "说明通过commonAttribute和commonEvent对象设置节点的通用属性和事件回调，包括点击事件等基础事件处理。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "自定义测量布局与绘制",
+        "level": 2,
+        "line_start": 625,
+        "line_end": 793,
+        "summary": "介绍如何重写onDraw、onMeasure、onLayout方法实现自定义绘制、测量和布局，提供完整的自定义FrameNode示例。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "查找节点及获取基础信息",
+        "level": 2,
+        "line_start": 794,
+        "line_end": 817,
+        "summary": "说明通过getFrameNodeById、getFrameNodeByUniqueId和无感监听三种方式查找节点，并列出可查询的节点信息接口。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "获取节点位置偏移信息",
+        "level": 2,
+        "line_start": 818,
+        "line_end": 949,
+        "summary": "介绍多个位置查询接口，包括相对窗口、父组件、屏幕的位置偏移信息，以及带变换属性的位置查询接口。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "通过typeNode创建具体类型的FrameNode节点",
+        "level": 2,
+        "line_start": 950,
+        "line_end": 1272,
+        "summary": "说明如何通过TypeNode创建具体类型的FrameNode节点，并使用属性获取接口检索用户设置的属性信息。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "解除当前FrameNode对象对实体FrameNode节点的引用关系",
+        "level": 2,
+        "line_start": 1273,
+        "line_end": 1389,
+        "summary": "介绍dispose接口的使用，用于解除FrameNode对象对实体节点的引用关系，释放相关资源。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "查询当前FrameNode是否解除引用",
+        "level": 2,
+        "line_start": 1390,
+        "line_end": 1460,
+        "summary": "说明如何查询FrameNode对象是否已经解除了对实体节点的引用关系。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "FrameNode的数据懒加载能力",
+        "level": 2,
+        "line_start": 1461,
+        "line_end": 1682,
+        "summary": "介绍FrameNode支持的数据懒加载能力，可以在需要时才加载数据，提升性能。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "查询LazyForEach中的FrameNode节点信息",
+        "level": 2,
+        "line_start": 1683,
+        "line_end": 1959,
+        "summary": "说明如何在LazyForEach场景下查询FrameNode节点信息，处理懒加载列表中的节点。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "调整自定义绘制Canvas的变换矩阵",
+        "level": 2,
+        "line_start": 1960,
+        "line_end": 2111,
+        "summary": "介绍如何调整自定义绘制Canvas的变换矩阵，实现更灵活的绘制效果。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "更新当前帧节点",
+        "level": 2,
+        "line_start": 2112,
+        "line_end": 2184,
+        "summary": "说明如何更新当前帧节点，实现动态刷新和更新操作。"
+      }
+    ]
+  }
+}

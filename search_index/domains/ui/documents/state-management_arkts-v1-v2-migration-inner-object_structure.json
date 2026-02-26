@@ -1,0 +1,79 @@
+{
+  "doc_id": "state-management_arkts-v1-v2-migration-inner-object",
+  "title": "内置对象的迁移",
+  "domain": "ui",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档主要介绍组件内置对象从V1向V2的迁移，涉及滚动组件场景和Modifier场景。在V1中使用@State装饰器观察变化，在V2中使用makeObserved、@ObservedV2和@Trace装饰器替代。文档详细说明了List、WaterFlow、attributeModifier、CommonModifier、组件Modifier和AttributeUpdater等场景的迁移方法。",
+  "sections": [
+    {
+      "title": "滚动组件",
+      "level": 2,
+      "summary": "介绍滚动组件场景的迁移，包括List和WaterFlow组件的内置对象迁移方法，使用makeObserved替代@State装饰器来观察框架定义对象的变化。",
+      "subsections": [
+        {
+          "title": "List",
+          "level": 3,
+          "summary": "介绍List组件中ChildrenMainSize的迁移，V1使用@State装饰，V2使用makeObserved或直接使用@Local标注来观察ChildrenMainSize对象的变化。"
+        },
+        {
+          "title": "WaterFlow",
+          "level": 3,
+          "summary": "介绍WaterFlow组件中WaterFlowSections的迁移，V1使用@State装饰，V2使用makeObserved来观察WaterFlowSections对象的变化，需注意数组长度与SectionOptions的itemsCount总和一致。"
+        }
+      ]
+    },
+    {
+      "title": "Modifier",
+      "level": 2,
+      "summary": "介绍Modifier场景的迁移，包括attributeModifier、CommonModifier、组件Modifier和AttributeUpdater的迁移方法，使用makeObserved、@ObservedV2和@Trace装饰器替代@State。",
+      "subsections": [
+        {
+          "title": "attributeModifier",
+          "level": 3,
+          "summary": "介绍attributeModifier的迁移，V1使用@State装饰观察变化，V2使用makeObserved来观察attributeModifier的属性变化。"
+        },
+        {
+          "title": "CommonModifier",
+          "level": 3,
+          "summary": "介绍CommonModifier的迁移，V1使用@State装饰观察变化，V2使用makeObserved来观测CommonModifier的属性变化。"
+        },
+        {
+          "title": "组件Modifier",
+          "level": 3,
+          "summary": "介绍组件Modifier（如TextModifier）的迁移，V1使用@State装饰观察变化，V2使用makeObserved来观测组件Modifier的属性变化。"
+        },
+        {
+          "title": "AttributeUpdater",
+          "level": 3,
+          "summary": "介绍AttributeUpdater的迁移，V1使用@State装饰监听变化，V2需添加@ObservedV2装饰器和@Trace装饰属性，并在initializeModifier中读取属性以建立关联。"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "内置对象迁移",
+    "状态管理",
+    "V1",
+    "V2",
+    "List",
+    "WaterFlow",
+    "Modifier",
+    "attributeModifier",
+    "CommonModifier",
+    "AttributeUpdater",
+    "makeObserved",
+    "@ObservedV2",
+    "@Trace",
+    "@State",
+    "@Local"
+  ],
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-v1-v2-migration-inner-object.md",
+  "generated_at": "2026-02-26"
+}

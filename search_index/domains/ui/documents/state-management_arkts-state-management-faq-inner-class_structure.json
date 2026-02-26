@@ -1,0 +1,47 @@
+{
+  "doc_id": "state-management_arkts-state-management-faq-inner-class",
+  "title": "数据对象状态管理常见问题",
+  "domain": "ui",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zany_pink",
+    "designer": "@s10021109",
+    "tester": "@zhangwenhan12",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "本文介绍大型应用中数据对象状态管理的常见问题及解决方案。重点讲解了构造函数中this捕获、箭头函数使用、冗余刷新、数据重置等场景下的状态管理陷阱，帮助开发者正确使用ArkTS状态管理机制，避免UI不刷新或性能问题。",
+  "chapters": [
+    {
+      "title": "类的构造函数中通过捕获this修改变量无法观察",
+      "level": 2,
+      "summary": "在构造函数中初始化修改状态的箭头函数时，实例尚未被代理封装，this指向原始实例，导致状态管理无法观测到变化。解决方案是将状态变量的修改放在类的普通方法中，此时对象已完成代理封装。",
+      "line_start": 22,
+      "line_end": 134
+    },
+    {
+      "title": "使用箭头函数改变状态变量未生效",
+      "level": 2,
+      "summary": "箭头函数体内的this指向定义时所在作用域的对象，而非调用时所在作用域。解决方案是将状态变量的代理对象传入箭头函数，调用代理的属性赋值。",
+      "line_start": 135,
+      "line_end": 226
+    },
+    {
+      "title": "冗余刷新",
+      "level": 2,
+      "summary": "介绍两种导致冗余刷新的场景：使用简单属性数组和使用多属性类对象。修改数组中一个元素或类中一个属性时，会导致所有元素或属性绑定的组件都刷新。解决方案是使用对象数组配合自定义组件，或使用@Track装饰器实现精准控制更新范围。",
+      "line_start": 227,
+      "line_end": 904
+    },
+    {
+      "title": "数据重置导致UI不刷新",
+      "level": 2,
+      "summary": "将新创建的对象赋值给状态变量时，如果新对象类型不具备观测能力，会导致UI不刷新。解决方案是确保重置时使用具有观测能力的类对象（如使用@Observed装饰的类）。",
+      "line_start": 1080,
+      "line_end": 1446
+    }
+  ],
+  "total_lines": 1446,
+  "source_file": "docs/zh-cn/application-dev/ui/state-management/arkts-state-management-faq-inner-class.md",
+  "created_at": "2026-02-26"
+}

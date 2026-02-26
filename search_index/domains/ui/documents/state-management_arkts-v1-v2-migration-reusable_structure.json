@@ -1,0 +1,113 @@
+{
+  "doc_id": "state-management_arkts-v1-v2-migration-reusable",
+  "title": "组件复用迁移",
+  "path": "docs/zh-cn/application-dev/ui/state-management/arkts-v1-v2-migration-reusable.md",
+  "domain": "ui",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@jiyujia926",
+    "Designer": "@s10021109",
+    "Tester": "@zhangwenhan12",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档介绍组件复用从V1向V2的迁移指导，涉及@Reusable到@ReusableV2装饰器的迁移规则。详细说明了组件迁移、生命周期方法变更、reuseId到reuse属性替换、组件冻结机制变化以及LazyForEach到Repeat的迁移方案。提供了多种使用场景的完整代码示例，包括if条件、列表滚动、Grid、WaterFlow、Swiper、ListItemGroup以及多种条目类型复用场景。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "@Reusable->@ReusableV2迁移规则",
+      "summary": "介绍从@Reusable到@ReusableV2的迁移规则，包括组件装饰器替换、生命周期方法优化、属性名称变更、组件冻结机制变化以及LazyForEach到Repeat的迁移建议。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "V1->V2组件迁移",
+          "summary": "说明将@Component装饰的父组件迁移至@ComponentV2，将@Reusable装饰的子组件迁移为@ReusableV2，并参考组件内状态变量迁移指导。"
+        },
+        {
+          "level": 3,
+          "title": "aboutToRecycle与aboutToReuse迁移",
+          "summary": "aboutToRecycle生命周期无需改动，aboutToReuse在V2中优化了参数传递和状态变量自动重置机制，无需手动赋值回初始值。"
+        },
+        {
+          "level": 3,
+          "title": "reuseId->reuse",
+          "summary": "V1中使用reuseId属性标记组件复用组，V2中需更换使用reuse属性，语法从reuseId('groupA')改为reuse({reuseId: () => 'groupA'})。"
+        },
+        {
+          "level": 3,
+          "title": "组件冻结",
+          "summary": "V1中需要手动开启freezeWhenInactive开关才会冻结复用池组件，V2中自动开启冻结功能，优化了内存管理。"
+        },
+        {
+          "level": 3,
+          "title": "LazyForEach->Repeat",
+          "summary": "推荐使用Repeat替代LazyForEach实现高性能懒加载，Repeat自身具备组件复用能力，API更简洁且性能更好。"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "@Reusable->@ReusableV2迁移示例",
+      "summary": "提供多种实际使用场景的完整代码示例，涵盖if条件渲染、列表滚动配合Repeat、Grid网格布局、WaterFlow瀑布流、Swiper轮播、ListItemGroup分组列表以及多种条目类型复用场景。",
+      "subsections": [
+        {
+          "level": 3,
+          "title": "if使用场景",
+          "summary": "演示在条件渲染中使用@ReusableV2组件的场景，通过switch状态控制组件显示与隐藏，展示reuse属性的基本用法。"
+        },
+        {
+          "level": 3,
+          "title": "列表滚动-Repeat使用场景",
+          "summary": "展示在List组件中使用Repeat实现虚拟滚动列表，配合@ReusableV2组件实现高性能列表渲染，演示数据源和组件复用的完整实现。"
+        },
+        {
+          "level": 3,
+          "title": "列表滚动-if使用场景",
+          "summary": "演示在列表中根据条件动态选择不同复用组件的场景，通过设置不同的reuseId实现组件分组复用，适用于图片和文本混合列表。"
+        },
+        {
+          "level": 3,
+          "title": "列表滚动-Repeat全量加载使用场景",
+          "summary": "展示使用Repeat全量加载模式替代ForEach实现循环渲染，支持动态数据更新和组件复用，适用于数据频繁变化的列表场景。"
+        },
+        {
+          "level": 3,
+          "title": "Grid使用场景",
+          "summary": "演示在Grid网格布局中使用Repeat和@ReusableV2组件，实现高性能网格列表渲染，包含虚拟滚动和缓存配置。"
+        },
+        {
+          "level": 3,
+          "title": "WaterFlow使用场景",
+          "summary": "展示在WaterFlow瀑布流布局中使用@ReusableV2组件，实现动态高度的瀑布流列表，支持动态加载和滚动优化。"
+        },
+        {
+          "level": 3,
+          "title": "Swiper使用场景",
+          "summary": "演示在Swiper轮播组件中使用Repeat和@ReusableV2组件，实现高性能轮播内容渲染，适用于问卷、图片轮播等场景。"
+        },
+        {
+          "level": 3,
+          "title": "列表滚动-ListItemGroup使用场景",
+          "summary": "展示在ListItemGroup分组列表中使用嵌套Repeat和@ReusableV2组件，实现分组头和分组内容的复用渲染。"
+        },
+        {
+          "level": 3,
+          "title": "多种条目类型使用场景",
+          "summary": "演示标准型、有限变化型和组合型三种复用场景，包括相同布局复用、有限差异复用和组合型Builder函数复用等多种实现方式。"
+        }
+      ]
+    }
+  ],
+  "code_examples": 12,
+  "total_lines": 979,
+  "language": "TypeScript",
+  "tags": [
+    "组件复用",
+    "V1到V2迁移",
+    "@Reusable",
+    "@ReusableV2",
+    "生命周期",
+    "虚拟滚动",
+    "性能优化"
+  ]
+}

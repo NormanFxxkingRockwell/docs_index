@@ -1,0 +1,156 @@
+{
+  "doc_id": "arkts-layout-development-create-list",
+  "title": "创建列表",
+  "path": "zh-cn/application-dev/ui/arkts-layout-development-create-list.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-layout-development-create-list.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@yylong",
+    "designer": "@yylong",
+    "tester": "@liuzhenshuo",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍如何使用List组件创建列表，包括列表的布局与约束、开发布局、ListItem生命周期、数据显示、迭代列表内容、自定义列表样式、滚动控制、分组列表、粘性标题、侧滑操作、标记添加、下拉刷新与上拉加载、编辑列表等功能。",
+  "structure": {
+    "title": "创建列表",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 8,
+        "line_end": 20,
+        "summary": "介绍List组件的基本概念和用途，说明列表是一种复杂的容器，当列表项超过屏幕大小时可自动滚动，适合显示同类数据类型集合。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "布局与约束",
+        "level": 2,
+        "line_start": 21,
+        "line_end": 78,
+        "summary": "说明List组件的布局能力，包括垂直和水平布局、多列布局、主轴与交叉轴的概念以及尺寸约束规则。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "开发布局",
+        "level": 2,
+        "line_start": 79,
+        "line_end": 123,
+        "summary": "介绍如何设置List组件的主轴方向和交叉轴布局，包括listDirection、lanes和alignListItem属性的使用方法。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "ListItem生命周期",
+        "level": 2,
+        "line_start": 124,
+        "line_end": 172,
+        "summary": "详细说明使用ForEach、LazyForEach和Repeat创建ListItem时的生命周期差异，包括创建、布局、销毁和复用机制。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "在列表中显示数据",
+        "level": 2,
+        "line_start": 173,
+        "line_end": 227,
+        "summary": "介绍如何在List中静态创建ListItem内容，以及如何将多个组件元素封装到容器组件内构建复杂的列表项。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "迭代列表内容",
+        "level": 2,
+        "line_start": 228,
+        "line_end": 266,
+        "summary": "说明如何使用ForEach循环渲染从数据源中迭代获取数据，动态创建列表项以降低代码复杂度。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "自定义列表样式",
+        "level": 2,
+        "line_start": 267,
+        "line_end": 344,
+        "summary": "介绍如何设置列表项间距、添加分隔线、控制滚动条显示等自定义列表样式的方法。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "添加外置滚动条",
+        "level": 2,
+        "line_start": 345,
+        "line_end": 376,
+        "summary": "说明如何将List组件与ScrollBar组件配合使用，通过绑定Scroller滚动控制器对象实现外置滚动条联动。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "支持分组列表",
+        "level": 2,
+        "line_start": 377,
+        "line_end": 408,
+        "summary": "介绍如何在List中使用ListItemGroup对项目进行分组展示，构建二维列表以提高数据查找效率。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "添加粘性标题",
+        "level": 2,
+        "line_start": 409,
+        "line_end": 472,
+        "summary": "说明如何通过List组件的sticky属性配合ListItemGroup实现粘性标题效果，使分组标题在滚动时保持吸顶或吸底。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "控制滚动位置",
+        "level": 2,
+        "line_start": 473,
+        "line_end": 501,
+        "summary": "介绍如何通过Scroller对象的scrollToIndex方法控制列表滚动到指定位置，实现快速定位功能。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "响应滚动位置",
+        "level": 2,
+        "line_start": 502,
+        "line_end": 543,
+        "summary": "说明如何监听List组件的onScrollIndex事件响应滚动位置变化，结合AlphabetIndexer组件实现字母索引联动。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "响应列表项侧滑",
+        "level": 2,
+        "line_start": 544,
+        "line_end": 579,
+        "summary": "介绍如何使用ListItem的swipeAction属性实现列表项的左右滑动功能，实现侧滑删除等操作。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "给列表项添加标记",
+        "level": 2,
+        "line_start": 580,
+        "line_end": 606,
+        "summary": "说明如何在ListItem中使用Badge组件给列表项添加标记，用于显示通知或将注意力集中到某个区域。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "下拉刷新与上拉加载",
+        "level": 2,
+        "line_start": 607,
+        "line_end": 631,
+        "summary": "介绍下拉刷新与上拉加载的实现原理，推荐使用Refresh组件实现下拉刷新功能。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "编辑列表",
+        "level": 2,
+        "line_start": 632,
+        "line_end": 717,
+        "summary": "说明如何在列表编辑模式下实现新增和删除列表项功能，以待办事项管理为例介绍具体实现流程。"
+      },
+      {
+        "section_id": "section-17",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 718,
+        "line_end": 724,
+        "summary": "提供相关的实例代码和参考资源，帮助开发者更好地理解和应用List组件。"
+      }
+    ]
+  }
+}

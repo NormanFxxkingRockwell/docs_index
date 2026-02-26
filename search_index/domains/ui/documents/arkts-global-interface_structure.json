@@ -1,0 +1,60 @@
+{
+  "doc_id": "arkts-global-interface",
+  "title": "使用UI上下文接口操作界面（UIContext）",
+  "path": "zh-cn/application-dev/ui/arkts-global-interface.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-global-interface.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xiang-shouxing",
+    "designer": "@xiang-shouxing",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍多UI实例涉及的概念，包括UI实例、UI上下文、全局接口和调用作用域，说明使用UIContext接口替换全局接口的原因和方案，提供了在自定义组件、窗口对象、静态方法、封装接口等多种场景下的替换示例。",
+  "structure": {
+    "title": "使用UI上下文接口操作界面（UIContext）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 7,
+        "line_end": 24,
+        "summary": "介绍UI实例、UI上下文、全局接口和调用作用域的基本概念，说明UI实例管理用户界面，UI上下文是UI实例运行环境的抽象，全局接口自动作用于相应的UI实例。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "UI上下文不明确",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 40,
+        "summary": "说明UI上下文不明确是指调用ArkUI全局接口时无法明确识别UI实例的问题，FA模型不存在此问题，Stage模型中需要使用UIContext接口替换全局接口。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "UIContext接口替换全局接口的关系",
+        "level": 2,
+        "line_start": 41,
+        "line_end": 82,
+        "summary": "列出UIContext接口与全局接口的对应关系表格，包括animator、componentSnapshot、router、promptAction等接口的替换方案。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "常见UIContext接口替换全局接口的场景",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 608,
+        "summary": "提供通过自定义组件、窗口对象、静态方法、封装接口、多窗场景获取UIContext的示例，以及执行绑定UI实例的闭包的方法。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "特殊全局接口替换示例",
+        "level": 2,
+        "line_start": 609,
+        "line_end": 1227,
+        "summary": "说明像素单位转换接口、getContext接口、LocalStorage接口在替换为UIContext接口时的特殊调用场景和注意事项。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "doc_id": "state-management_arkts-mutableBuilder",
+  "title": "mutableBuilder：实现全局@Builder动态更新",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-mutableBuilder.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-mutableBuilder.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zhangboren",
+    "designer": "@zhangboren",
+    "tester": "@zhangwenhan",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍mutableBuilder功能，用于实现全局@Builder的动态切换，解决wrapBuilder不支持二次赋值的问题。支持在自定义组件内动态切换不同的全局@Builder函数，实现UI效果的动态更新，从API version 22开始支持。",
+  "structure": {
+    "title": "mutableBuilder：实现全局@Builder动态更新",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "wrapBuilder不支持动态全局@Builder",
+        "level": 2,
+        "line_start": 22,
+        "line_end": 61,
+        "summary": "说明wrapBuilder不支持二次赋值的问题，通过示例代码展示更改@Builder时UI不会发生变化，引出mutableBuilder作为解决方案。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 63,
+        "line_end": 102,
+        "summary": "介绍mutableBuilder模板函数和MutableBuilder类的接口定义，说明模板参数需要匹配@Builder函数参数的类型，提供基本使用方法。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 196,
+        "summary": "列出mutableBuilder的三条限制条件：只能传入全局@Builder方法、builder属性仅限在自定义组件内部使用、不建议与wrapBuilder混合使用。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "动态更改全局@Builder实例",
+        "level": 2,
+        "line_start": 198,
+        "line_end": 243,
+        "summary": "通过完整示例演示如何使用mutableBuilder实现全局@Builder的动态切换，解决wrapBuilder不支持二次赋值的问题，包含动态切换效果展示。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "使用mutableBuilder显示弹出菜单",
+        "level": 2,
+        "line_start": 245,
+        "line_end": 279,
+        "summary": "展示mutableBuilder对应的@Builder方法可作为bindMenu入参，支持点击弹出菜单，提供List和bindMenu结合使用的示例代码。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "观察mutableBuilder中@Builder的变化",
+        "level": 2,
+        "line_start": 281,
+        "line_end": 342,
+        "summary": "介绍如何使用MutableBinding包裹状态变量，并通过@Monitor或addMonitor监听mutableBuilder中@Builder的变化，提供完整示例和效果说明。"
+      }
+    ]
+  }
+}

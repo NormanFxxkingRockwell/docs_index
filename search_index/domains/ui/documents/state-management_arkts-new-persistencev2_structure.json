@@ -1,0 +1,68 @@
+{
+  "doc_id": "state-management_arkts-new-persistencev2",
+  "title": "PersistenceV2: 持久化存储UI状态",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-new-persistencev2.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-new-persistencev2.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zzq212050299",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍PersistenceV2持久化存储UI状态的能力，通过connect和globalConnect接口实现状态变量持久化，确保应用重启后数据保持一致，支持多种数据类型和加密级别配置。",
+  "structure": {
+    "title": "PersistenceV2: 持久化存储UI状态",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 36,
+        "summary": "介绍PersistenceV2作为应用级单例对象的作用，提供UI状态数据的中心存储和磁盘持久化能力，支持多UIAbility实例间状态共享。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 37,
+        "line_end": 50,
+        "summary": "说明PersistenceV2的主要接口使用方法，包括globalConnect创建获取数据、remove删除数据、keys返回所有键、save手动持久化等操作。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "使用限制",
+        "level": 2,
+        "line_start": 51,
+        "line_end": 407,
+        "summary": "详细说明PersistenceV2的使用限制，包括线程要求、支持的数据类型、API版本差异、数据大小限制、循环引用支持等注意事项和示例代码。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "globalConnect支持的类型",
+        "level": 2,
+        "line_start": 408,
+        "line_end": 583,
+        "summary": "说明globalConnect支持的顶层和非顶层数据类型，包括class对象、容器类型Array/Map/Set、collections集合类型及其元素类型要求。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 584,
+        "line_end": 1070,
+        "summary": "提供多个实际使用场景示例，包括页面间数据存储、globalConnect存储数据、不同module中使用connect和globalConnect的区别及完整代码示例。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "使用建议",
+        "level": 2,
+        "line_start": 1071,
+        "line_end": 1219,
+        "summary": "建议开发者使用globalConnect接口，提供connect向globalConnect迁移的实现方法和示例代码，说明迁移过程和注意事项。"
+      }
+    ]
+  }
+}

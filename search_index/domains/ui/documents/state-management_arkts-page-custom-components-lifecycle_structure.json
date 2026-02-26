@@ -1,0 +1,38 @@
+{
+  "doc_id": "state-management_arkts-page-custom-components-lifecycle",
+  "title": "自定义组件生命周期",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926; @huyisuo",
+    "designer": "@zhangboren",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档详细介绍了ArkUI框架中自定义组件的生命周期机制，包括aboutToAppear、onDidBuild和aboutToDisappear三个核心生命周期接口。文档阐述了组件从创建、渲染到删除的完整流程，说明了生命周期函数的执行时机和调用顺序，并提供了嵌套组件使用的示例代码，帮助开发者理解组件生命周期的懒展开特性和最小化更新机制。",
+  "sections": [
+    {
+      "title": "自定义组件的创建和渲染流程",
+      "level": 2,
+      "summary": "详细说明自定义组件的创建过程，包括实例创建、成员变量初始化、aboutToAppear执行、build方法渲染和onDidBuild回调五个步骤，强调状态变量与组件映射关系的记录机制。"
+    },
+    {
+      "title": "自定义组件重新渲染",
+      "level": 2,
+      "summary": "阐述当状态变量或存储属性变化时触发的重新渲染机制，说明框架通过状态变量与组件的映射关系实现最小化更新，仅刷新相关联的组件。"
+    },
+    {
+      "title": "自定义组件的删除",
+      "level": 2,
+      "summary": "描述组件删除时的生命周期处理，包括aboutToDisappear调用、节点销毁机制、同步变量取消注册，并警告在aboutToDisappear中使用异步操作可能阻止垃圾回收。"
+    },
+    {
+      "title": "自定义组件嵌套使用与示例",
+      "level": 2,
+      "summary": "通过父组件Parent和子组件Child的嵌套示例，详细展示生命周期函数的调用时序，说明懒展开特性、删除顺序以及不同场景下的执行流程。"
+    }
+  ],
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-page-custom-components-lifecycle.md",
+  "domain": "ui",
+  "language": "zh-cn"
+}

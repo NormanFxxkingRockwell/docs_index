@@ -1,0 +1,100 @@
+{
+  "doc_id": "arkts-layout-development-create-grid",
+  "title": "创建网格",
+  "path": "zh-cn/application-dev/ui/arkts-layout-development-create-grid.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-layout-development-create-grid.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zcdqs; @fangyuhao",
+    "designer": "@zcdqs",
+    "tester": "@liuzhenshuo",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍如何使用Grid和GridItem组件构建网格布局，包括行列数量与占比设置、子组件跨行列布局、主轴方向控制、数据显示、行列间距设置、可滚动布局、滚动位置控制、外置滚动条添加以及性能优化等内容，适用于九宫格、日历、计算器等场景。",
+  "structure": {
+    "title": "创建网格",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 22,
+        "summary": "介绍网格布局的基本概念和使用场景，说明Grid和GridItem组件的作用及支持的条件渲染、循环渲染和懒加载方式。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "布局与约束",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 54,
+        "summary": "说明Grid与GridItem组件的关系，介绍网格布局的二维布局特性、自适应能力以及三种布局情况：行列数量与占比同时设置、只设置其中一个、都不设置。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "设置排列方式",
+        "level": 2,
+        "line_start": 56,
+        "line_end": 160,
+        "summary": "介绍如何通过rowsTemplate和columnsTemplate设置行列数量与占比，使用GridLayoutOptions实现子组件跨行列布局，以及通过layoutDirection设置主轴方向。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "在网格布局中显示数据",
+        "level": 2,
+        "line_start": 162,
+        "line_end": 218,
+        "summary": "演示如何使用GridItem组件显示数据，推荐使用ForEach语句嵌套GridItem的形式减少重复代码，提供通用办公服务示例。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "设置行列间距",
+        "level": 2,
+        "line_start": 220,
+        "line_end": 245,
+        "summary": "介绍如何通过rowsGap和columnsGap属性设置网格布局的行列间距，以计算器为例说明行间距和列间距的设置方法。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "构建可滚动的网格布局",
+        "level": 2,
+        "line_start": 247,
+        "line_end": 295,
+        "summary": "说明如何通过仅设置rowsTemplate或columnsTemplate属性实现可滚动网格布局，适用于文件管理、购物或视频列表等页面。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "控制滚动位置",
+        "level": 2,
+        "line_start": 297,
+        "line_end": 341,
+        "summary": "介绍如何通过绑定Scroller对象控制GridG的滚动位置，以日历翻页功能为例演示scrollPage方法的使用。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "添加外置滚动条",
+        "level": 2,
+        "line_start": 343,
+        "line_end": 400,
+        "summary": "说明如何将Grid组件与ScrollBar组件配合使用，通过绑定同一个Scroller对象实现联动，介绍在圆形屏幕设备上使用ArcScrollBar的方法。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "性能优化",
+        "level": 2,
+        "line_start": 402,
+        "line_end": 431,
+        "summary": "推荐在构建大量网格项的可滚动布局时使用LazyForEach懒加载方式，并通过cachedCount属性设置GridItem的预加载数量以提升滚动体验。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 433,
+        "line_end": 437,
+        "summary": "提供网格开发相关的实例参考，包括游戏2048和分布式计算器等示例项目。"
+      }
+    ]
+  }
+}

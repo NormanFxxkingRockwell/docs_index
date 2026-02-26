@@ -1,0 +1,60 @@
+{
+  "doc_id": "arkts-user-defined-extension-attributeUpdater",
+  "title": "属性更新器 (AttributeUpdater)",
+  "path": "zh-cn/application-dev/ui/arkts-user-defined-extension-attributeUpdater.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-user-defined-extension-attributeUpdater.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xiang-shouxing",
+    "designer": "@xiang-shouxing",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "AttributeUpdater是一个特殊的AttributeModifier，用于在大量属性频繁更新的场景下提升性能。它提供了直接获取属性对象的能力，开发者可以直接更新对应属性，无需经过状态变量，从而实现自定义的更新策略。需要注意的是，AttributeUpdater无法限制单一数据源规则，在与状态变量同时更新同一属性时可能存在相互覆盖的情况。",
+  "structure": {
+    "title": "属性更新器 (AttributeUpdater)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 22,
+        "summary": "介绍了AttributeUpdater的背景和用途，用于解决大量属性频繁更新场景下的性能问题。它继承AttributeModifier功能，提供直接获取属性对象的能力，实现自定义更新策略。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口定义",
+        "level": 2,
+        "line_start": 24,
+        "line_end": 37,
+        "summary": "定义了AttributeUpdater类的接口，包括applyNormalAttribute、initializeModifier、attribute属性和updateConstructorParams等核心方法和属性。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 39,
+        "line_end": 55,
+        "summary": "详细说明了AttributeUpdater的使用方法，包括继承类、通过attributeModifier设置、获取attribute对象、直接修改属性等注意事项和规则。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "通过modifier直接修改属性",
+        "level": 2,
+        "line_start": 57,
+        "line_end": 97,
+        "summary": "提供了通过AttributeUpdater实例的attribute属性方法直接修改组件属性的示例代码，展示了如何在组件初始化后获取属性对象并立即触发更新。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "通过modifier更新组件的构造参数",
+        "level": 2,
+        "line_start": 99,
+        "line_end": 140,
+        "summary": "提供了通过updateConstructorParams方法直接更新组件构造参数的示例代码，展示了如何在点击事件中调用该方法更新Text组件的内容。"
+      }
+    ]
+  }
+}

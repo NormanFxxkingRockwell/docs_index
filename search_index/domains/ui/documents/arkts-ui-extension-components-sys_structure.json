@@ -1,0 +1,52 @@
+{
+  "doc_id": "arkts-ui-extension-components-sys",
+  "title": "跨进程应用能力扩展（UIExtension，仅对系统应用开放）",
+  "path": "zh-cn/application-dev/ui/arkts-ui-extension-components-sys.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-ui-extension-components-sys.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@dutie123",
+    "designer": "@dutie123",
+    "tester": "@fredyuan0912",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍UIExtension跨进程应用能力扩展机制，允许系统应用创建可嵌入到其他应用窗口的界面扩展。涵盖基本概念、实现原理、能力范围以及约束与限制，包括组件基本能力、UIExtensionAbility进程可用能力范围、安全能力约束、嵌套约束和事件处理机制等核心内容。",
+  "structure": {
+    "title": "跨进程应用能力扩展（UIExtension，仅对系统应用开放）",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 29,
+        "summary": "介绍UIExtensionComponent和UIExtensionAbility两个核心组件的基本概念，分别在使用方应用和提供方应用中定义，实现跨进程的界面嵌入能力。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "实现原理",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 51,
+        "summary": "说明UIExtension跨进程应用组件共享机制，通过AMS调度拉起提供方应用独立进程，完成界面渲染与交互，并提供双向数据通信能力。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "能力范围",
+        "level": 2,
+        "line_start": 53,
+        "line_end": 242,
+        "summary": "详细说明UIExtension的能力范围，包括组件基本能力、UIExtensionAbility进程应用可用能力范围，涵盖通用属性、组件、Node-API接口的支持情况及限制。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "约束与限制",
+        "level": 2,
+        "line_start": 244,
+        "line_end": 366,
+        "summary": "阐述UIExtension的约束与限制，包括安全能力约束、嵌套约束、事件处理机制约束和页面渲染效果体验约束，确保应用开发者正确使用该能力。"
+      }
+    ]
+  }
+}

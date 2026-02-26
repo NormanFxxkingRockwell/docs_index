@@ -1,0 +1,84 @@
+{
+  "doc_id": "state-management_arkts-new-reusableV2",
+  "title": "@ReusableV2装饰器：V2组件复用",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-new-reusableV2.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-new-reusableV2.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍@ReusableV2装饰器的使用方法和特性，用于装饰V2的自定义组件实现组件复用，降低反复创建销毁自定义组件带来的性能开销。详细说明了装饰器的使用限制、生命周期、冻结机制、状态变量重置规则以及在if、Repeat、ForEach、LazyForEach等组件中的具体使用场景。",
+  "structure": {
+    "title": "@ReusableV2装饰器：V2组件复用",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 40,
+        "summary": "介绍@ReusableV2装饰器的基本概念和用途，说明其仅能装饰V2的自定义组件，提供了aboutToRecycle和aboutToReuse生命周期，支持组件回收和复用时的自动状态重置和冻结机制。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "装饰器说明",
+        "level": 2,
+        "line_start": 41,
+        "line_end": 58,
+        "summary": "说明@ReusableV2装饰器的参数、可装饰的组件类型和装饰器作用，提供基本使用示例，展示如何装饰ComponentV2组件并实现复用功能。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 59,
+        "line_end": 80,
+        "summary": "介绍reuse、ReuseOptions、ReuseIdCallback等接口的使用方法，提供完整示例展示如何指定reuseId以及未指定时的默认行为。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "使用限制",
+        "level": 2,
+        "line_start": 81,
+        "line_end": 198,
+        "summary": "详细说明@ReusableV2的使用限制，包括仅能在V2自定义组件中使用、V1和V2组件的混用规则、以及在Repeat组件template中的使用限制。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "回收与复用的生命周期",
+        "level": 2,
+        "line_start": 199,
+        "line_end": 297,
+        "summary": "介绍aboutToRecycle和aboutToReuse生命周期的触发时机和调用顺序，通过if组件的使用场景详细演示组件创建、回收、复用和销毁的完整生命周期流程。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "复用阶段的冻结",
+        "level": 2,
+        "line_start": 298,
+        "line_end": 375,
+        "summary": "说明V2组件在复用期间自动冻结的机制，在aboutToRecycle到aboutToReuse期间无法触发UI刷新和@Monitor回调，直到解除冻结状态后才能正常响应变化。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "复用前的组件内状态变量重置",
+        "level": 2,
+        "line_start": 376,
+        "line_end": 559,
+        "summary": "详细说明复用前组件内状态变量的重置规则，包括@Local、@Param、@Event、@Provider、@Consumer、@Computed、@Monitor等装饰器的重置方法，以及常量不重置的特性。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 560,
+        "line_end": 842,
+        "summary": "提供@ReusableV2在if组件、Repeat组件、Repeat组件非懒加载场景、ForEach组件和LazyForEach组件中的具体使用示例，展示不同场景下的回收和复用行为。"
+      }
+    ]
+  }
+}

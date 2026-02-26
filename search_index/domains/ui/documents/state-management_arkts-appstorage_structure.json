@@ -1,0 +1,68 @@
+{
+  "doc_id": "state-management_arkts-appstorage",
+  "title": "AppStorage：应用全局的UI状态存储",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-appstorage.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-appstorage.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zzq212050299",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "AppStorage是应用进程绑定的全局UI状态存储中心，由UI框架在应用启动时创建，实现应用级全局状态共享。提供@StorageProp和@StorageLink装饰器，支持单向和双向数据同步，支持多种数据类型包括Object、Array、Map、Set、Date等，可与PersistentStorage和Environment配合使用，实现跨ability的UI状态数据共享。",
+  "structure": {
+    "title": "AppStorage：应用全局的UI状态存储",
+    "sections": [
+      {
+        "section_id": "overview",
+        "title": "概述",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 30,
+        "summary": "AppStorage是应用启动时创建的单例，提供应用状态数据的中心存储，支持应用级访问和UI组件同步，可在主线程内多个UIAbility实例间共享UI状态数据。"
+      },
+      {
+        "section_id": "storageprop",
+        "title": "@StorageProp",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 82,
+        "summary": "@StorageProp与AppStorage中对应的属性建立单向数据同步，从AppStorage到组件状态变量，组件本地修改会被AppStorage变化覆盖，支持多种数据类型包括Object、Array、Map、Set、Date等。"
+      },
+      {
+        "section_id": "storagelink",
+        "title": "@StorageLink",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 138,
+        "summary": "@StorageLink与AppStorage中对应的属性建立双向数据同步，组件修改会同步回AppStorage，AppStorage变化也会同步到所有绑定的组件，支持多种数据类型，变化会触发组件重新渲染。"
+      },
+      {
+        "section_id": "limitations",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 139,
+        "line_end": 174,
+        "summary": "装饰器参数必须为string类型，不支持装饰Function类型变量，与PersistentStorage和Environment配合使用时需要注意调用顺序，AppStorage同一进程内共享但跨进程不共享。"
+      },
+      {
+        "section_id": "usage-scenarios",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 175,
+        "line_end": 651,
+        "summary": "提供从应用逻辑和UI内部使用AppStorage的示例，包括@StorageLink和@StorageProp的使用、支持联合类型、装饰Array/Map/Set/Date类型变量、在多页面中共享使用等场景。"
+      },
+      {
+        "section_id": "usage-recommendations",
+        "title": "AppStorage使用建议",
+        "level": 2,
+        "line_start": 652,
+        "line_end": 984,
+        "summary": "不建议借助@StorageLink的双向同步机制实现事件通知，推荐使用emitter方式。@StorageProp和AppStorage接口配合使用时需要注意更新规则，避免因值相同导致不通知更新的情况。"
+      }
+    ]
+  }
+}

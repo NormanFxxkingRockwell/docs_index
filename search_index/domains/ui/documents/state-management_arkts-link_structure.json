@@ -1,0 +1,68 @@
+{
+  "doc_id": "state-management_arkts-link",
+  "title": "@Link装饰器：父子双向同步",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-link.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-link.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍@Link装饰器的使用方法和特性，用于在子组件和父组件之间建立双向数据绑定。支持多种数据类型包括Object、class、string、number、boolean、enum、数组、Map、Set、Date等，详细说明了装饰器使用规则、变量传递规则、观察变化机制、限制条件以及各种使用场景示例。",
+  "structure": {
+    "title": "@Link装饰器：父子双向同步",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 34,
+        "summary": "说明@Link装饰的变量与其父组件中的数据源共享相同的值，实现父子组件间的双向数据绑定。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "装饰器使用规则说明",
+        "level": 2,
+        "line_start": 36,
+        "line_end": 46,
+        "summary": "详细说明@Link装饰器的使用规则，包括装饰器参数、同步类型、允许装饰的变量类型以及被装饰变量的初始值要求。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "变量的传递/访问规则说明",
+        "level": 2,
+        "line_start": 48,
+        "line_end": 62,
+        "summary": "说明@Link变量的传递和访问规则，包括从父组件初始化和更新、用于初始化子组件以及组件外访问的权限限制。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "观察变化和行为表现",
+        "level": 2,
+        "line_start": 65,
+        "line_end": 109,
+        "summary": "详细说明@Link观察变化的机制和框架行为，包括对不同数据类型的观察能力、初始渲染流程、数据源更新流程以及双向同步机制。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 112,
+        "line_end": 239,
+        "summary": "列举@Link装饰器的限制条件，包括不建议在@Entry组件中使用、禁止本地初始化、类型必须一致、必须由状态变量初始化、不支持Function类型等。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 241,
+        "line_end": 549,
+        "summary": "提供多个@Link使用场景示例，包括简单类型和类对象类型、数组类型、Map类型、Set类型、Date类型、使用@Watch更改本地变量以及支持联合类型的实例。"
+      }
+    ]
+  }
+}

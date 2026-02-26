@@ -1,0 +1,77 @@
+{
+  "doc_id": "ui-dark-light-color-adaptation",
+  "title": "应用深浅色适配",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@lushi871202",
+    "designer": "@lushi871202",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "本文档详细介绍了应用深浅色适配的两种主要方式：应用跟随系统的深浅色模式和应用主动设置深浅色模式。涵盖了颜色适配、图片资源适配、Web组件适配、自定义节点适配、监听深浅色模式切换事件、局部深浅色适配等内容。同时提供了系统判定应用深浅色模式的规则、使用建议与注意事项、优化深浅色模式切换开销的方法，以及利用反色能力快速适配深色模式的高级特性。",
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "概述",
+      "level": 2,
+      "line_start": 9,
+      "line_end": 16,
+      "summary": "介绍了应用深浅色适配的两种主要情况：应用跟随系统的深浅色模式和应用主动设置深浅色模式，为用户提供更好的使用体验。"
+    },
+    {
+      "id": "section-2",
+      "title": "应用跟随系统的深浅色模式",
+      "level": 2,
+      "line_start": 17,
+      "line_end": 185,
+      "summary": "详细说明了应用跟随系统深浅色模式的实现方法，包括颜色适配（自定义资源和系统资源）、图片资源适配、Web组件适配、自定义节点适配、监听深浅色模式切换事件以及局部深浅色适配的具体实现步骤和代码示例。"
+    },
+    {
+      "id": "section-3",
+      "title": "应用主动设置深浅色模式",
+      "level": 2,
+      "line_start": 186,
+      "line_end": 206,
+      "summary": "介绍了如何通过setColorMode接口主动设置应用的深浅色风格，使应用的深浅色模式固定，不会随系统改变，提供了完整的代码实现示例。"
+    },
+    {
+      "id": "section-4",
+      "title": "系统判定应用深浅色模式的规则",
+      "level": 2,
+      "line_start": 208,
+      "line_end": 229,
+      "summary": "说明了系统判定应用深浅色模式的优先级规则：应用主动设置的深浅色优先级最高，其次根据dark目录下是否有深色资源来决定系统组件的深浅色表现。"
+    },
+    {
+      "id": "section-5",
+      "title": "深浅色模式的使用建议与注意事项",
+      "level": 2,
+      "line_start": 231,
+      "line_end": 258,
+      "summary": "提供了深浅色模式使用的建议方法（采用AbilityStage或Ability的监听回调）和不推荐方法（通过函数返回值实现深浅色切换），并说明了不推荐方法的潜在问题。"
+    },
+    {
+      "id": "section-6",
+      "title": "优化深浅色模式切换开销",
+      "level": 2,
+      "line_start": 259,
+      "line_end": 425,
+      "summary": "介绍了从API version 20开始提供的高性能深浅色切换流程，通过metadata配置项开启优化能力，减少深浅色切换时的性能开销，并提供了三个典型适配场景的代码示例。"
+    },
+    {
+      "id": "section-7",
+      "title": "利用反色能力快速适配深色模式",
+      "level": 2,
+      "line_start": 427,
+      "line_end": 512,
+      "summary": "介绍了从API version 20开始提供的反色能力，通过OH_ArkUI_SetForceDarkConfig接口快速实现全量深色模式适配，包括反色能力使用方法、生效优先级说明和逃生通道（allowForceDark属性）。"
+    }
+  ],
+  "stats": {
+    "total_lines": 512,
+    "section_count": 7,
+    "code_blocks": 18,
+    "word_count": 2850
+  }
+}

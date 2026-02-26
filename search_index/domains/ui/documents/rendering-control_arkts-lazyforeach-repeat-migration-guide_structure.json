@@ -1,0 +1,44 @@
+{
+  "doc_id": "rendering-control/arkts-lazyforeach-repeat-migration-guide",
+  "title": "LazyForEach迁移Repeat指南",
+  "path": "zh-cn/application-dev/ui/rendering-control/arkts-lazyforeach-repeat-migration-guide.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/rendering-control/arkts-lazyforeach-repeat-migration-guide.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@maorh",
+    "designer": "@keerecles",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "Repeat是ArkUI在API version 12中新引入的循环渲染组件，相比LazyForEach具有更简洁的API、更丰富的功能以及更强的性能优化能力。本指南详细介绍了如何将LazyForEach平滑地迁移到Repeat，包括基础用法迁移、数据更新操作、典型场景迁移等内容。",
+  "structure": {
+    "title": "LazyForEach迁移Repeat指南",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "基础用法迁移",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 425,
+        "summary": "介绍LazyForEach到Repeat的基础用法迁移，包括数据首次渲染和数据更新操作两个场景。详细说明了使用状态管理V2装饰器、迁移数据源、迁移组件生成函数和键值生成函数、配置懒加载功能等步骤。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "典型场景迁移",
+        "level": 2,
+        "line_start": 426,
+        "line_end": 1521,
+        "summary": "介绍典型场景下的LazyForEach到Repeat迁移，包括修改数据子属性、状态管理V2观测组件内部状态、状态管理V2观测组件外部输入、拖拽排序、组件复用、模板渲染等场景的迁移方案和代码示例。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "BasicDataSourceDataSource示例代码",
+        "level": 2,
+        "line_start": 1522,
+        "line_end": 1671,
+        "summary": "提供BasicDataSource的完整示例代码，包括string类型数组和StringData类型数组的BasicDataSource实现，用于管理listener监听以及通知LazyForEach数据更新。"
+      }
+    ]
+  }
+}

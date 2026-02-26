@@ -1,0 +1,68 @@
+{
+  "doc_id": "arkts-navigation-animation-faq",
+  "title": "Navigation动画常见问题",
+  "path": "zh-cn/application-dev/ui/arkts-navigation-animation-faq.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-navigation-animation-faq.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@mayaolll",
+    "designer": "@jiangdayuan",
+    "tester": "@Giacinta",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍Navigation和NavDestination组件在动画方面的常见问题及解决方案，包括Dialog类型蒙层动画、router与navigation动画冲突、pop/push动画执行顺序、共享元素转场、zIndex设置异常等问题。",
+  "structure": {
+    "title": "Navigation动画常见问题",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "Dialog类型NavDestination蒙层动画不流畅",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 72,
+        "summary": "介绍Dialog类型NavDestination的蒙层动画问题及通过onWillAppear和onWillDisappear生命周期实现渐隐渐现的解决方案。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "router、navigation动画冲突",
+        "level": 2,
+        "line_start": 73,
+        "line_end": 102,
+        "summary": "说明router跳转到navigation页面时动画冲突问题，通过关闭aboutToAppear中push的动画来解决。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "pop、push同时进行却执行pop动画",
+        "level": 2,
+        "line_start": 104,
+        "line_end": 132,
+        "summary": "解释pop和push同时执行时的动画行为，通过设置NEW_INSTANCE模式实现push动画。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "跳转动画是否有结束回调",
+        "level": 2,
+        "line_start": 134,
+        "line_end": 136,
+        "summary": "说明系统动画不提供结束回调，仅自定义转场动画支持回调，需自行实现自定义转场。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "如何实现Navigation和NavDestination之间的共享元素转场",
+        "level": 2,
+        "line_start": 138,
+        "line_end": 148,
+        "summary": "介绍NavDestination间共享元素转场的实现方式，需配合geometryTransition接口并关闭默认转场。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "给NavDestination设置zIndex后跳转动画异常",
+        "level": 2,
+        "line_start": 150,
+        "line_end": 155,
+        "summary": "说明给NavDestination设置zIndex会覆盖系统层级导致动画异常，建议将属性设置在内容节点上。"
+      }
+    ]
+  }
+}

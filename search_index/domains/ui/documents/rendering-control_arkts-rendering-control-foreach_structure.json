@@ -1,0 +1,148 @@
+{
+  "doc_id": "rendering-control_arkts-rendering-control-foreach",
+  "title": "ForEach：循环渲染",
+  "path": "zh-cn/application-dev/ui/rendering-control/arkts-rendering-control-foreach.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/rendering-control/arkts-rendering-control-foreach.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@maorh",
+    "designer": "@keerecles",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍ForEach循环渲染接口的使用方法和注意事项，包括键值生成规则、组件创建规则、使用场景和常见问题，帮助开发者正确使用ForEach实现高效的列表渲染。",
+  "structure": {
+    "title": "ForEach：循环渲染",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "键值生成规则",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 71,
+        "summary": "介绍ForEach键值生成规则，包括keyGenerator参数的使用和默认键值生成函数，以及键值生成时的注意事项和判断逻辑。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "组件创建规则",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 169,
+        "summary": "说明ForEach组件创建规则，包括首次渲染和非首次渲染两种情况下的组件创建和复用机制。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "首次渲染",
+        "level": 3,
+        "line_start": 78,
+        "line_end": 121,
+        "summary": "介绍ForEach首次渲染时的组件创建过程，包括键值生成和组件创建示例。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "非首次渲染",
+        "level": 3,
+        "line_start": 122,
+        "line_end": 169,
+        "summary": "说明ForEach非首次渲染时的组件复用机制，包括键值检查和组件更新逻辑。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 170,
+        "line_end": 417,
+        "summary": "介绍ForEach的主要使用场景，包括数据源不变、数据源数组项变化、数据源数组项子属性变化和拖拽排序等场景。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "数据源不变",
+        "level": 3,
+        "line_start": 176,
+        "line_end": 212,
+        "summary": "说明数据源不变场景下的ForEach使用方法，适用于骨架屏等静态列表渲染。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "数据源数组项发生变化",
+        "level": 3,
+        "line_start": 213,
+        "line_end": 281,
+        "summary": "介绍数据源数组项变化场景下的ForEach使用，包括数组插入、删除操作的处理方法。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "数据源数组项子属性变化",
+        "level": 3,
+        "line_start": 282,
+        "line_end": 353,
+        "summary": "说明数据源数组项子属性变化场景下的ForEach使用，需要结合@Observed和@ObjectLink装饰器实现。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "拖拽排序",
+        "level": 3,
+        "line_start": 354,
+        "line_end": 417,
+        "summary": "介绍在List组件中使用ForEach实现拖拽排序的方法，包括onMove事件的使用和数据源更新。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "使用建议",
+        "level": 2,
+        "line_start": 418,
+        "line_end": 432,
+        "summary": "提供ForEach使用的最佳实践建议，包括键值唯一性、性能优化和注意事项。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "常见问题",
+        "level": 2,
+        "line_start": 433,
+        "line_end": 727,
+        "summary": "介绍ForEach使用过程中的常见问题及解决方案，包括渲染结果非预期、性能降低等问题。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "渲染结果非预期",
+        "level": 3,
+        "line_start": 437,
+        "line_end": 489,
+        "summary": "分析键值包含索引导致的渲染结果非预期问题，说明问题原因和解决方法。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "渲染性能降低",
+        "level": 3,
+        "line_start": 490,
+        "line_end": 561,
+        "summary": "分析未定义keyGenerator导致的性能降低问题，说明组件重复创建的性能影响。"
+      },
+      {
+        "section_id": "section-14",
+        "title": "数据变化不渲染",
+        "level": 3,
+        "line_start": 562,
+        "line_end": 631,
+        "summary": "说明数组项替换导致的数据变化不渲染问题，分析原因并提供解决方案。"
+      },
+      {
+        "section_id": "section-15",
+        "title": "非必要内存消耗",
+        "level": 3,
+        "line_start": 632,
+        "line_end": 682,
+        "summary": "分析使用默认键值生成函数导致的内存消耗问题，对比自定义keyGenerator的内存优化效果。"
+      },
+      {
+        "section_id": "section-16",
+        "title": "键值生成失败",
+        "level": 3,
+        "line_start": 683,
+        "line_end": 727,
+        "summary": "说明默认键值生成函数在处理特殊数据结构时的失败情况，如bigint序列化失败问题。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "doc_id": "state-management_arkts-wrapBuilder",
+  "title": "wrapBuilder：封装全局@Builder",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zhangboren",
+    "designer": "@zhangboren",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "wrapBuilder是用于封装全局@Builder函数的工具，解决@Builder方法赋值给变量或数组后无法在UI方法中使用的问题。从API version 11开始支持，API version 12支持原子化服务，API version 22推荐使用mutableBuilder替代。wrapBuilder返回WrappedBuilder对象，用于全局@Builder的赋值和传递，使代码更加整洁易维护。",
+  "sections": [
+    {
+      "title": "接口说明",
+      "level": 2,
+      "line_start": 40,
+      "line_end": 68,
+      "summary": "wrapBuilder是模板函数，返回WrappedBuilder对象。模板参数Args需要匹配@Builder函数参数类型。支持将@Builder方法赋值给变量或数组，便于在UI中灵活使用。",
+      "code_examples": 2
+    },
+    {
+      "title": "限制条件",
+      "level": 2,
+      "line_start": 71,
+      "line_end": 76,
+      "summary": "wrapBuilder方法只能传入全局@Builder方法，WrappedBuilder对象的builder属性方法仅限在struct内部使用。",
+      "code_examples": 0
+    },
+    {
+      "title": "@Builder方法赋值给变量",
+      "level": 2,
+      "line_start": 77,
+      "line_end": 107,
+      "summary": "演示如何使用wrapBuilder将@Builder方法赋值给变量，解决@Builder方法赋值后无法使用的问题。通过globalBuilder.builder()方法在组件中调用封装的构建函数。",
+      "code_examples": 1
+    },
+    {
+      "title": "@Builder方法赋值给变量在UI语法中使用",
+      "level": 2,
+      "line_start": 109,
+      "line_end": 152,
+      "summary": "展示如何在自定义组件中使用ForEach和wrapBuilder数组实现不同@Builder函数的渲染，使整体代码更加整洁，便于管理多个构建函数。",
+      "code_examples": 1
+    },
+    {
+      "title": "@Builder方法赋值给类或者接口的属性",
+      "level": 2,
+      "line_start": 155,
+      "line_end": 195,
+      "summary": "演示如何将wrapBuilder返回值赋值给接口属性，以数据形式传递给子组件调用，实现组件间的构建函数传递和复用。",
+      "code_examples": 1
+    },
+    {
+      "title": "引用传递",
+      "level": 2,
+      "line_start": 197,
+      "line_end": 231,
+      "summary": "说明按引用传递参数时，状态变量的改变会引起@Builder方法内的UI刷新，实现动态更新UI内容的效果。",
+      "code_examples": 1
+    },
+    {
+      "title": "常见问题",
+      "level": 2,
+      "line_start": 233,
+      "line_end": 281,
+      "summary": "说明重复定义wrapBuilder会失效的问题。在同一个自定义组件内，同一个wrapBuilder只能初始化一次，再次赋值不会生效。",
+      "code_examples": 1
+    }
+  ],
+  "api_version": {
+    "min": 11,
+    "notes": [
+      "API version 11开始支持",
+      "API version 12支持原子化服务",
+      "API version 22推荐使用mutableBuilder"
+    ]
+  },
+  "related_docs": [
+    "arkts-builder.md",
+    "arkts-mutableBuilder.md"
+  ],
+  "total_lines": 282,
+  "code_example_count": 7,
+  "tags": [
+    "wrapBuilder",
+    "@Builder",
+    "状态管理",
+    "UI构建",
+    "ArkUI"
+  ]
+}

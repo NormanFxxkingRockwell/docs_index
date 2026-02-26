@@ -1,0 +1,52 @@
+{
+  "doc_id": "arkts-navigation-cross-package",
+  "title": "Navigation跨包路由",
+  "path": "zh-cn/application-dev/ui/arkts-navigation-cross-package.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-navigation-cross-package.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@mayaolll",
+    "designer": "@jiangdayuan",
+    "tester": "@Giacinta",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍Navigation跨包路由功能，包括系统路由表和自定义路由表两种实现方式，支持本包和跨包页面跳转。系统路由表无需import页面文件，支持动态加载；自定义路由表可扩展性更强，支持静态和动态import两种方式。",
+  "structure": {
+    "title": "Navigation跨包路由",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "路由表能力对比",
+        "level": 2,
+        "line_start": 16,
+        "line_end": 31,
+        "summary": "对比系统路由表和自定义路由表在跨包跳转能力、可扩展性和易用性方面的差异，帮助开发者根据项目特点选择合适的路由方式。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "系统路由表",
+        "level": 2,
+        "line_start": 32,
+        "line_end": 83,
+        "summary": "介绍系统路由表的实现方式，包括在module.json5中配置routerMap、创建router_map.json文件、配置入口Builder函数以及通过pushPathByName进行页面跳转的完整步骤。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "自定义路由表",
+        "level": 2,
+        "line_start": 84,
+        "line_end": 177,
+        "summary": "介绍自定义路由表的实现方式，包括动态import和静态import两种方式。动态import支持模块解耦和按需加载，静态import实现简单但存在模块耦合问题。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "开发步骤",
+        "level": 2,
+        "line_start": 178,
+        "line_end": 263,
+        "summary": "展示基于系统路由表的跨包跳转完整开发步骤，包括配置路由表、开发跳转功能和编译构建，实现HAP、HSP、HAR三个包中六个页面的相互跳转。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "doc_id": "arkts-rotation-transition-animation",
+  "title": "旋转屏动画",
+  "path": "zh-cn/application-dev/ui/arkts-rotation-transition-animation.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-rotation-transition-animation.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@CCFFWW",
+    "designer": "@CCFFWW",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍HarmonyOS中旋转屏动画的实现方式，包括布局切换的旋转屏动画和透明度变化的旋转屏动画两种类型。布局切换动画通过配置module.json5实现，透明度变化动画需要预备两套视图并在屏幕旋转时切换，实现流畅的视觉过渡效果。",
+  "structure": {
+    "title": "旋转屏动画",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "布局切换的旋转屏动画",
+        "level": 2,
+        "line_start": 11,
+        "line_end": 45,
+        "summary": "介绍布局切换时的旋转屏动画，系统默认支持窗口与应用视图同步旋转的大小和位置过渡动画，需要在module.json5中配置orientation为auto_rotation即可实现。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "透明度变化的旋转屏动画",
+        "level": 2,
+        "line_start": 47,
+        "line_end": 148,
+        "summary": "介绍透明度变化的旋转屏动画，通过监听窗口旋转事件切换组件视图，为消失的视图添加渐隐效果，新出现的视图添加渐显效果，实现优雅的视觉体验。"
+      }
+    ]
+  }
+}

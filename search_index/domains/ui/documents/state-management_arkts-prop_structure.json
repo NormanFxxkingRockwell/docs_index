@@ -1,0 +1,142 @@
+{
+  "doc_id": "state-management_arkts-prop",
+  "title": "@Prop装饰器：父子单向同步",
+  "path": "docs/zh-cn/application-dev/ui/state-management/arkts-prop.md",
+  "domain": "ui",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@jiyujia926",
+    "Designer": "@s10021109",
+    "Tester": "@TerryTsao",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "@Prop装饰器用于实现父子组件间的单向数据同步。@Prop装饰的变量可以和父组件建立单向同步关系，允许本地修改但不会同步回父组件。当数据源更改时，@Prop变量会被更新并覆盖本地所有更改。支持Object、class、string、number、boolean、enum类型及其数组，API version 10起支持Date类型，API version 11起支持Map、Set、undefined、null类型及ArkUI框架定义的联合类型。",
+  "chapters": [
+    {
+      "title": "概述",
+      "level": 2,
+      "summary": "@Prop装饰的变量允许本地修改但修改不会同步回父组件，当数据源更改时会更新并覆盖本地所有更改。"
+    },
+    {
+      "title": "装饰器使用规则说明",
+      "level": 2,
+      "summary": "定义了@Prop装饰器的参数、同步类型、允许装饰的变量类型、嵌套传递层数限制和被装饰变量的初始值规则。"
+    },
+    {
+      "title": "变量的传递/访问规则说明",
+      "level": 2,
+      "summary": "说明了@Prop变量从父组件初始化、用于初始化子组件以及是否支持组件外访问的规则。"
+    },
+    {
+      "title": "观察变化和行为表现",
+      "level": 2,
+      "summary": "详细说明了@Prop装饰的数据可以观察到的变化类型，包括简单类型、复杂类型、数组、Date、Map、Set等，以及框架的初始渲染和更新行为。"
+    },
+    {
+      "title": "观察变化",
+      "level": 3,
+      "summary": "@Prop可以观察到赋值变化、Object或class类型的第一层属性变化、数组的添加删除更新、Date、Map、Set类型的变化。"
+    },
+    {
+      "title": "框架行为",
+      "level": 3,
+      "summary": "描述了父组件和子组件的初始渲染和更新流程，包括@Prop更新时不会同步回父组件，父组件更新时会覆盖子组件本地修改。"
+    },
+    {
+      "title": "限制条件",
+      "level": 2,
+      "summary": "@Prop装饰变量时会进行深拷贝，不支持Function类型，父组件传入undefined时仍使用本地默认值初始化。"
+    },
+    {
+      "title": "使用场景",
+      "level": 2,
+      "summary": "提供了多个实际使用场景示例，包括简单数据类型同步、数组项同步、类对象属性同步、本地初始化、嵌套场景等。"
+    },
+    {
+      "title": "父组件@State到子组件@Prop简单数据类型同步",
+      "level": 3,
+      "summary": "演示了父组件@State变量初始化子组件@Prop变量，父组件修改会同步给子组件，子组件修改不会同步给父组件。"
+    },
+    {
+      "title": "父组件@State数组项到子组件@Prop简单数据类型同步",
+      "level": 3,
+      "summary": "展示了父组件@State数组项初始化子组件@Prop变量的场景，包括数组更新和ForEach的diff算法行为。"
+    },
+    {
+      "title": "从父组件中的@State类对象属性到@Prop简单类型的同步",
+      "level": 3,
+      "summary": "说明了@Prop图书对象的本地更改不会同步给父组件@State图书对象，每位用户可以独立标记图书为已读。"
+    },
+    {
+      "title": "从父组件中的@State数组项到@Prop class类型的同步",
+      "level": 3,
+      "summary": "展示了@State数组中Book对象属性的变化，使用@Observed装饰class可以观察到属性变化并触发UI更新。"
+    },
+    {
+      "title": "@Prop本地初始化不和父组件同步",
+      "level": 3,
+      "summary": "支持@Prop本地初始化，使父组件向子组件传递数据源变为可选，有本地初始化时父组件同步是可选的。"
+    },
+    {
+      "title": "@Prop嵌套场景",
+      "level": 3,
+      "summary": "在嵌套场景下，每一层都要用@Observed装饰且每一层都要被@Prop接收，这样才能观察到嵌套场景的变化。"
+    },
+    {
+      "title": "装饰Array类型变量",
+      "level": 3,
+      "summary": "演示了@Prop装饰数组类型变量，可以观察到数组整体赋值、数组项的添加删除和更新。"
+    },
+    {
+      "title": "装饰Map类型变量",
+      "level": 3,
+      "summary": "演示了@Prop装饰Map类型变量，可以观察到Map整体赋值以及通过set、clear、delete接口更新Map的值。"
+    },
+    {
+      "title": "装饰Set类型变量",
+      "level": 3,
+      "summary": "演示了@Prop装饰Set类型变量，可以观察到Set整体赋值以及通过add、clear、delete接口更新Set的值。"
+    },
+    {
+      "title": "装饰Date类型变量",
+      "level": 3,
+      "summary": "演示了@Prop装饰Date类型变量，可以观察到Date整体赋值以及通过Date接口更新Date的属性。"
+    },
+    {
+      "title": "Prop支持联合类型实例",
+      "level": 3,
+      "summary": "演示了@Prop支持联合类型和undefined、null，可以动态改变变量的属性或类型并触发UI刷新。"
+    }
+  ],
+  "tags": [
+    "@Prop",
+    "状态管理",
+    "父子组件",
+    "单向同步",
+    "ArkUI",
+    "装饰器"
+  ],
+  "related_docs": [
+    "arkts-state.md",
+    "arkts-link.md",
+    "arkts-provide-and-consume.md",
+    "arkts-observed-and-objectlink.md",
+    "arkts-appstorage.md",
+    "arkts-localstorage.md",
+    "arkts-require.md"
+  ],
+  "api_versions": {
+    "introduced": "9",
+    "features": {
+      "card_support": "9",
+      "atomic_service_support": "11",
+      "date_type_support": "10",
+      "map_set_support": "11",
+      "union_type_support": "11",
+      "function_validation": "23"
+    }
+  },
+  "examples_count": 13,
+  "last_updated": "2026-02-26"
+}

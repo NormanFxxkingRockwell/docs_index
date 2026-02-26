@@ -1,0 +1,79 @@
+{
+  "doc_id": "state-management_arkts-v1-v2-migration-application",
+  "title": "应用内状态变量迁移",
+  "path": "docs/zh-cn/application-dev/ui/state-management/arkts-v1-v2-migration-application.md",
+  "domain": "ui",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档介绍ArkTS状态管理V1到V2的应用内状态变量迁移方案，涵盖LocalStorage、AppStorage、Environment、PersistentStorage等场景的迁移规则和代码示例，帮助开发者理解如何使用@ObservedV2、@Trace、AppStorageV2、PersistenceV2等新特性替代原有状态管理机制。",
+  "sections": [
+    {
+      "id": "localstorage-to-observedv2-trace",
+      "title": "LocalStorage->@ObservedV2/@Trace",
+      "level": 2,
+      "summary": "介绍LocalStorage迁移到@ObservedV2和@Trace的规则，V2将状态观察能力内嵌到数据本身，不再与View层耦合，开发者可通过创建@ObservedV2和@Trace装饰类的实例实现页面间状态变量共享。",
+      "subsections": [
+        {
+          "id": "basic-scenario",
+          "title": "基本场景",
+          "level": 3,
+          "summary": "展示V1中使用windowStage.loadContent和getSharedLocalStorage实现页面间状态共享的代码示例，以及V2中使用@ObservedV2和@Trace装饰类实现单例模式的迁移方案。"
+        },
+        {
+          "id": "custom-component-localstorage",
+          "title": "自定义组件接收LocalStorage实例场景",
+          "level": 3,
+          "summary": "说明LocalStorage作为自定义组件入参传递给子组件的场景，V2可通过创建多个全局@ObservedV2和@Trace装饰类的实例进行替代，通过@Param传递给子组件。"
+        },
+        {
+          "id": "multi-instance-localstorage",
+          "title": "多实例场景LocalStorage的迁移",
+          "level": 3,
+          "summary": "介绍LocalStorage支持跨Ability存取数据的多实例场景，V2可结合@ObservedV2+@Trace创建可观测的全局单例对象，定义Map类型存储不同Ability页面的数据。"
+        }
+      ]
+    },
+    {
+      "id": "appstorage-to-appstoragev2",
+      "title": "AppStorage->AppStorageV2",
+      "level": 2,
+      "summary": "说明AppStorage与应用进程绑定支持跨Ability数据共享的特性，V2使用AppStorageV2实现跨Ability共享，通过AppStorageV2.connect方法连接和创建全局存储实例。"
+    },
+    {
+      "id": "environment-to-context-config",
+      "title": "Environment->调用Ability接口直接获取系统环境变量",
+      "level": 2,
+      "summary": "V1中通过Environment获取环境变量需配合AppStorage使用，V2中可直接通过UIAbilityContext的config属性获取系统环境变量，包括language、colorMode、fontSizeScale等配置信息。"
+    },
+    {
+      "id": "persistentstorage-to-persistencev2",
+      "title": "PersistentStorage->PersistenceV2",
+      "level": 2,
+      "summary": "对比V1的PersistentStorage和V2的PersistenceV2，V2提供更方便的持久化接口，与@ObservedV2对象的@Trace属性关联可自动触发持久化，也支持手动调用save和globalConnect方法。"
+    }
+  ],
+  "keywords": [
+    "状态管理",
+    "迁移",
+    "LocalStorage",
+    "AppStorage",
+    "Environment",
+    "PersistentStorage",
+    "@Observed",
+    "@Trace",
+    "AppStorageV2",
+    "PersistenceV2",
+    "跨Ability",
+    "页面间共享",
+    "持久化"
+  ],
+  "code_examples": 24,
+  "total_lines": 1508,
+  "last_updated": "2026-02-26"
+}

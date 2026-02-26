@@ -1,0 +1,52 @@
+{
+  "doc_id": "state-management_arkts-new-canBeObserved",
+  "title": "canBeObserved接口：判断对象是否可被观察",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-new-canBeObserved.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-new-canBeObserved.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "介绍canBeObserved接口的使用方法，该接口用于判断对象是否为可被观察对象，并获取对象关联的组件信息，帮助开发者定位和分析UI不刷新问题，支持V1和V2组件的多种可观察场景。",
+  "structure": {
+    "title": "canBeObserved接口：判断对象是否可被观察",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 18,
+        "line_end": 29,
+        "summary": "介绍canBeObserved接口的用途，帮助开发者定位和分析UI不刷新问题，可判断对象是否可被观察并获取关联组件信息。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 31,
+        "line_end": 47,
+        "summary": "说明canBeObserved接口的限制，仅支持非空对象类型传参，传入undefined或null返回false，非Object类型会编译报错。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "对象可被观察场景",
+        "level": 2,
+        "line_start": 49,
+        "line_end": 392,
+        "summary": "详细说明V1组件、V2组件以及V1和V2组件混用时的对象可被观察场景，包括各种装饰器和包装方法的使用。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "状态管理常见不刷新问题分析",
+        "level": 2,
+        "line_start": 394,
+        "line_end": 741,
+        "summary": "通过实际案例分析如何使用canBeObserved接口分析和定位UI不刷新问题，包括a.b调用、组件关联过多、ForEach使用和数据重置等场景。"
+      }
+    ]
+  }
+}

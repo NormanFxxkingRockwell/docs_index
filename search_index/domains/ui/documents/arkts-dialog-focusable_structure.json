@@ -1,0 +1,44 @@
+{
+  "doc_id": "arkts-dialog-focusable",
+  "title": "弹出框焦点策略",
+  "path": "zh-cn/application-dev/ui/arkts-dialog-focusable.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-dialog-focusable.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@houguobiao",
+    "designer": "@houguobiao",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI的弹出框焦点策略允许开发者设定弹出框是否获取焦点，从而控制是否中断用户当前操作。当弹出框不获取焦点时，新弹出时不会关闭软键盘，焦点仍保留在原组件中，适用于不希望打断用户输入的场景。",
+  "structure": {
+    "title": "弹出框焦点策略",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "使用约束",
+        "level": 2,
+        "line_start": 12,
+        "line_end": 18,
+        "summary": "介绍openCustomDialog和CustomDialog支持focusable参数，只有覆盖在当前窗口之上的弹出框才可以获取焦点。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "创建不获取焦点的弹出框",
+        "level": 2.0,
+        "line_start": 20,
+        "line_end": 70,
+        "summary": "演示如何通过设置focusable参数为false创建不获取焦点的弹出框，保持用户在TextInput中的焦点和软键盘。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "完整示例",
+        "level": 2,
+        "line_start": 72,
+        "line_end": 122,
+        "summary": "提供完整的代码示例，展示在用户输入时弹出对话框但不中断输入流程的实现方式。"
+      }
+    ]
+  }
+}

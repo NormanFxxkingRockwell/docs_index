@@ -1,0 +1,68 @@
+{
+  "doc_id": "arktsuserdefinedextensionattributeModifier",
+  "title": "属性修改器",
+  "path": "zh-cn/application-dev/ui/arkts-user-defined-extension-attributeModifier.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-user-defined-extension-attributeModifier.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xiang-shouxing",
+    "designer": "@xiang-shouxing",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍ArkUI的AttributeModifier机制，用于动态修改组件属性。相比@Styles和@Extend，AttributeModifier支持跨文件导出、参数传递、业务逻辑编写和多态样式，提供更强的能力和灵活性。文档包含接口定义、使用说明、属性设置示例以及属性和事件的支持情况说明。",
+  "structure": {
+    "title": "属性修改器",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 8,
+        "line_end": 41,
+        "summary": "介绍AttributeModifier机制的设计背景和优势，对比@Styles和@Extend的受限场景，展示AttributeModifier在跨文件导出、参数传递、业务逻辑和多态样式等方面的能力优势。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "接口定义",
+        "level": 2,
+        "line_start": 43,
+        "line_end": 78,
+        "summary": "定义AttributeModifier接口和CommonMethod类，说明applyXxxAttribute方法的使用方式，支持Normal、Pressed、Focused、Disabled、Selected等多态场景的属性设置。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "使用说明",
+        "level": 2,
+        "line_start": 80,
+        "line_end": 104,
+        "summary": "说明AttributeModifier的使用方法，包括组件通用方法attributeModifier的使用、回调触发时机、属性覆盖原则以及Modifier实例的复用机制。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "设置和修改组件属性",
+        "level": 2,
+        "line_start": 106,
+        "line_end": 278,
+        "summary": "通过多个代码示例展示如何使用AttributeModifier设置和修改组件属性，包括支持参数传递、业务逻辑编写、状态变量触发刷新以及属性覆盖原则的应用。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "设置多态样式、事件",
+        "level": 2,
+        "line_start": 280,
+        "line_end": 346,
+        "summary": "介绍如何使用AttributeModifier设置多态样式和事件，实现事件逻辑的复用，通过示例展示Normal、Pressed等多态状态的属性设置方法。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "属性或事件对attributeModifier的支持情况",
+        "level": 2,
+        "line_start": 348,
+        "line_end": 538,
+        "summary": "详细说明attributeModifier对属性和事件的支持情况，包括不支持attributeModifier的属性或事件列表，以及属性或事件的起始版本与支持attributeModifier版本不一致的情况。"
+      }
+    ]
+  }
+}

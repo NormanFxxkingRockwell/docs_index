@@ -1,0 +1,80 @@
+{
+  "docid": "state-management_arkts-v1-v2-migration-inner-component",
+  "title": "组件内状态变量迁移",
+  "path": "docs/zh-cn/application-dev/ui/state-management/arkts-v1-v2-migration-inner-component.md",
+  "domain": "ui",
+  "metadata": {
+    "Kit": "ArkArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@liwenzhen3",
+    "Designer": "@s10021109",
+    "Tester": "@TerryTsao",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档详细介绍了ArkTS状态管理从V1到V2的迁移场景，涵盖@State、@Prop、@Link、@ObjectLink、@Provide、@Consume、@Watch等装饰器的迁移规则和示例。文档提供了每种装饰器的迁移策略，包括简单类型、复杂类型、外部初始化等不同场景的处理方法，以及新增的@Computed计算属性和!!双向绑定语法糖的使用方法。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "各装饰器迁移示例",
+      "summary": "详细介绍了各个装饰器从V1到V2的迁移示例，包括@State到@Local、@Link到@Param/@Event、@Prop到@Param、@Provide/@Consume到@Provider/@Consumer、@Watch到@Monitor的迁移规则和代码示例。"
+    },
+    {
+      "level": 3,
+      "title": "@State -> @Local",
+      "summary": "介绍了@State装饰器迁移到@Local的规则，包括简单类型直接替换、复杂类型使用@ObservedV2和@Trace、外部初始化使用@Param和@Once等场景的迁移策略。"
+    },
+    {
+      "level": 3,
+      "title": "@Link -> @Param/@Event",
+      "summary": "说明了@Link双向数据绑定迁移到V2的实现方式，使用@Param实现父到子传递，配合@Event回调实现子到父的数据同步。"
+    },
+    {
+      "level": 3,
+      "title": "@Prop -> @Param",
+      "summary": "详细描述了@Prop迁移到@Param的三种策略：简单类型直接替换、复杂类型深拷贝实现单向绑定、子组件修改变量使用@Param和@Once。"
+    },
+    {
+      "level": 3,
+      "title": "@Provide/@Consume -> @Provider/@Consumer",
+      "summary": "阐述了@Provide/@Consume迁移到@Provider/@Consumer的差异，包括alias匹配规则、本地初始化支持、外部初始化限制和重载支持等方面的变化。"
+    },
+    {
+      "level": 3,
+      "title": "@Watch -> @Monitor",
+      "summary": "介绍了@Watch迁移到@Monitor的方法，包括单变量监听直接替代、多变量监听及获取变化前后值的增强功能。"
+    },
+    {
+      "level": 3,
+      "title": "重复计算 -> @Computed计算属性",
+      "summary": "说明了V2新增的@Computed装饰器用于减少重复计算，通过计算属性实现依赖变量变化时的自动更新。"
+    },
+    {
+      "level": 3,
+      "title": "双向绑定由$$迁移!!",
+      "summary": "介绍了系统组件双向绑定从$$语法迁移到!!语法糖的方法，V2中推荐使用!!统一处理双向绑定。"
+    }
+  ],
+  "keywords": [
+    "状态管理",
+    "迁移",
+    "ArkTS",
+    "V1到V2",
+    "装饰器",
+    "@State",
+    "@Local",
+    "@Prop",
+    "@Param",
+    "@Link",
+    "@Event",
+    "@Provide",
+    "@Consume",
+    "@Provider",
+    "@Consumer",
+    "@Watch",
+    "@Monitor",
+    "@Computed",
+    "双向绑定",
+    "组件通信"
+  ],
+  "last_modified": "2026-02-26"
+}

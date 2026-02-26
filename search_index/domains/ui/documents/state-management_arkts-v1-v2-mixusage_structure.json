@@ -1,0 +1,139 @@
+{
+  "doc_id": "state-management_arkts-v1-v2-mixusage",
+  "title": "状态管理V1和V2混用指导（API version 19及之后）",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@liwenzhen3",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档介绍了从API version 19开始，状态管理V1和V2混用的指导原则和最佳实践。详细说明了V1和V2混用的限制条件、新增的makeV1Observed和enableV2Compatibility接口的使用方法、混用规则，以及在不同场景下（传递class类型、内置类型、二维数组、嵌套类型）V1中使用V2组件和V2中使用V1组件的具体实现方式和注意事项。",
+  "sections": [
+    {
+      "title": "概述",
+      "level": 2,
+      "summary": "介绍状态管理V1和V2混用指导的背景，从API version 19开始减少了对混用场景的约束，提供enableV2Compatibility和makeV1Observed方法帮助开发者解决迁移过程中的混用问题。",
+      "line_start": 9,
+      "line_end": 16
+    },
+    {
+      "title": "限制条件",
+      "level": 2,
+      "summary": "列出V1和V2混的三个主要限制：V1装饰器不能和@ObservedV2一起使用、V2->V1时V1不支持用装饰器接收@ObservedV2装饰的class、V1中@Link只能被V1状态变量初始化。",
+      "line_start": 18,
+      "line_end": 26
+    },
+    {
+      "title": "新增接口",
+      "level": 2,
+      "summary": "介绍makeV1Observed和enableV2Compatibility两个新增接口的功能、使用场景、接口说明和限制条件，帮助开发者实现V1和V2之间的数据传递和观察能力兼容。",
+      "line_start": 27,
+      "line_end": 78
+    },
+    {
+      "title": "makeV1Observed",
+      "level": 3,
+      "summary": "将不可观察的对象包装成状态管理V1可观察的对象，能力等同于@Observed，主要和enableV2Compatibility搭配使用实现V2->V1的传递，支持普通class、Array、Map、Set、Date类型转换。",
+      "line_start": 29,
+      "line_end": 54
+    },
+    {
+      "title": "enableV2Compatibility",
+      "level": 3,
+      "summary": "将V1的状态变量使能V2的观察能力，让V1状态变量可以在@ComponentV2中观察到变化，主要应用于V1->V2的场景，会递归遍历class的所有属性和Array/Set/Map的所有子项。",
+      "line_start": 56,
+      "line_end": 78
+    },
+    {
+      "title": "混用规则",
+      "level": 2,
+      "summary": "详细说明V1和V2混用的具体规则，包括V1->V2和V2->V1传递复杂类型数据的方法、enableV2Compatibility和makeV1Observed的组合使用、观察能力的差异、双重代理问题的避免等。",
+      "line_start": 79,
+      "line_end": 124
+    },
+    {
+      "title": "V1中使用V2的自定义组件",
+      "level": 2,
+      "summary": "介绍在V1组件中使用V2自定义组件时，如何传递class类型、内置类型、二维数组和嵌套类型数据，通过enableV2Compatibility实现V1状态变量在V2中的观察能力。",
+      "line_start": 126,
+      "line_end": 485
+    },
+    {
+      "title": "传递class类型（V1->V2）",
+      "level": 3,
+      "summary": "展示V1的状态变量传递给V2时调用enableV2Compatibility接口的代码示例，包括普通class和@Observed+@Track装饰的class两种情况，说明@Track装饰属性在V1和V2中的不同观察行为。",
+      "line_start": 129,
+      "line_end": 234
+    },
+    {
+      "title": "传递内置类型（V1->V2）",
+      "level": 3,
+      "summary": "以Array为例，展示调用enableV2Compatibility和makeV1Observed避免V1和V2双重代理问题的代码示例，实现V1和V2之间的数据联动刷新。",
+      "line_start": 236,
+      "line_end": 279
+    },
+    {
+      "title": "传递二维数组（V1->V2）",
+      "level": 3,
+      "summary": "展示使用makeV1Observed将二维数组的内层数组变成V1状态变量，在传递给V2子组件时调用enableV2Compatibility使其具有V2观察能力的完整代码示例。",
+      "line_start": 281,
+      "line_end": 347
+    },
+    {
+      "title": "传递嵌套类型（V1->V2）",
+      "level": 3,
+      "summary": "展示基于@Observed和@ObjectLink实现深度观测的嵌套场景代码示例，说明@State、@ObjectLink和@Param在观察不同层级数据变化时的行为差异。",
+      "line_start": 349,
+      "line_end": 485
+    },
+    {
+      "title": "V2中使用V1的自定义组件",
+      "level": 2,
+      "summary": "介绍在V2组件中使用V1自定义组件时，如何传递class类型、内置类型、二维数组和嵌套类型数据，通过enableV2Compatibility和makeV1Observed的组合使用实现数据联动。",
+      "line_start": 486,
+      "line_end": 829
+    },
+    {
+      "title": "传递class类型（V2->V1）",
+      "level": 3,
+      "summary": "展示V2中调用UIUtils.enableV2Compatibility(UIUtils.makeV1Observed())传递数据给V1的代码示例，包括普通class和@Observed+@Track装饰的class两种情况，说明观察能力的拉齐。",
+      "line_start": 489,
+      "line_end": 592
+    },
+    {
+      "title": "传递内置类型（V2->V1）",
+      "level": 3,
+      "summary": "展示在V2中定义@Local arr并调用UIUtils.enableV2Compatibility(UIUtils.makeV1Observed())使V1中可以观察属性变化的代码示例，实现V2和V1之间的双向同步。",
+      "line_start": 594,
+      "line_end": 635
+    },
+    {
+      "title": "传递二维数组（V2->V1）",
+      "level": 3,
+      "summary": "展示使用makeV1Observed将二维数组的内层数组变成V1状态变量，调用enableV2Compatibility使其具有V2观察能力，在V1中使用@ObjectLink接收的完整代码示例。",
+      "line_start": 637,
+      "line_end": 704
+    },
+    {
+      "title": "传递嵌套类型（V2->V1）",
+      "level": 3,
+      "summary": "展示V2中调用UIUtils.enableV2Compatibility且每一层都是UIUtils.makeV1Observed返回值实现深度观察，V1中配合多层@ObjectLink接收实现深度观察能力的完整代码示例。",
+      "line_start": 706,
+      "line_end": 829
+    }
+  ],
+  "total_lines": 829,
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-v1-v2-mixusage.md",
+  "domain": "ui",
+  "tags": [
+    "状态管理",
+    "V1",
+    "V2",
+    "混用",
+    "enableV2Compatibility",
+    "makeV1Observed",
+    "API version 19"
+  ]
+}

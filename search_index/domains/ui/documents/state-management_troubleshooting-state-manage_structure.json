@@ -1,0 +1,85 @@
+{
+  "doc_id": "state-management_troubleshooting-state-manage",
+  "title": "状态变量改变不触发组件刷新问题常用定位方法",
+  "path": "docs/zh-cn/application-dev/ui/state-management/troubleshooting-state-manage.md",
+  "domain": "ui",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@liwenzhen3",
+    "Designer": "@s10021109",
+    "Tester": "@zhangwenhan12",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档针对声明式UI编程框架中状态变量改变不触发组件刷新的常见问题，提供系统化的定位方法和解决方案。文档详细阐述了五步定位流程：检查状态变量依赖收集、验证状态变量值变化、判断赋值可观察性、确认数据源与同步对象关联关系、验证组件更新函数执行。同时提供了状态管理V1和V2的具体调试工具和常见案例分析，帮助开发者快速定位和解决状态管理相关的不刷新问题。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "定位状态变量不刷新问题的主要方法",
+      "line_start": 13,
+      "line_end": 505,
+      "summary": "介绍状态变量触发UI刷新的两步流程（收集依赖和触发更新），详细阐述五步定位方法。第一步使用ArkUI Inspector或hidumper检查依赖收集；第二步通过日志验证状态变量值变化；第三步判断赋值是否可被观察，区分状态管理V1和V2的不同处理方式；第四步检查数据源与同步对象关联关系，重点说明ForEach/LazyForEach断链问题；第五步验证组件更新函数执行，避免在同步回调中修改状态变量。"
+    },
+    {
+      "level": 3,
+      "title": "第一步：状态变量收集依赖",
+      "line_start": 19,
+      "line_end": 25,
+      "summary": "说明状态变量触发UI组件更新的前提是收集到UI组件的依赖，即在组件初始化时触发状态变量的读操作。提供ArkUI Inspector和hidumper两种工具来检查状态变量是否收集到组件ID。"
+    },
+    {
+      "level": 3,
+      "title": "第二步：状态变量发生改变",
+      "line_start": 26,
+      "line_end": 50,
+      "summary": "解释状态管理框架会检查赋值前后值是否有变化，无变化则不做操作。提供通过打印修改前后值来排查的简单示例，展示日志输出验证状态变量值是否发生改变。"
+    },
+    {
+      "level": 3,
+      "title": "第三步：状态变量的赋值是否可被观察",
+      "line_start": 51,
+      "line_end": 241,
+      "summary": "详细说明状态管理V1和V2中判断赋值可观察性的不同方法。V1可通过@Watch监听、getTarget接口、Profiler工具判断，重点讲解@Observed装饰器的作用和错误示例。V2区分普通类和内置类型，普通类通过@Trace装饰和Profiler判断，Array/Map/Set可通过getTarget判断。提供完整代码示例和Profiler泳道截图说明。"
+    },
+    {
+      "level": 3,
+      "title": "第四步：数据源和被同步的对象是否有关联关系",
+      "line_start": 242,
+      "line_end": 386,
+      "summary": "解释状态管理中数据源通过双向或单向机制通知同步对象。V1存在同步对象概念和依赖组件更新函数两种同步方式；V2依赖@Param组件所属组件的更新函数。重点分析ForEach和LazyForEach联用导致断链的场景，提供错误示例和正确示例，说明key生成函数的重要性。"
+    },
+    {
+      "level": 3,
+      "title": "第五步：是否执行组件的更新函数",
+      "line_start": 388,
+      "line_end": 505,
+      "summary": "说明在同步回调中修改状态变量会导致组件被忽略刷新的问题。以Image组件的onComplete接口为例，展示错误场景和日志输出。提供正确解决方案：使用setTimeout将同步回调转换为异步执行，避免在渲染过程中修改状态变量。"
+    },
+    {
+      "level": 2,
+      "title": "总结",
+      "line_start": 506,
+      "line_end": 512,
+      "summary": "总结定位不刷新问题的核心思路：检查状态变量是否收集到组件ID、赋值是否为可观察变化、组件是否执行更新函数。建议开发者依据定位流程或三点疑问排查代码，提高问题定位效率。"
+    }
+  ],
+  "keywords": [
+    "状态管理",
+    "状态变量",
+    "组件刷新",
+    "ArkUI",
+    "不刷新问题",
+    "依赖收集",
+    "可观察",
+    "@Observed",
+    "@ObjectLink",
+    "@Watch",
+    "ForEach",
+    "断链",
+    "Profiler",
+    "Inspector",
+    "hidumper"
+  ],
+  "word_count": 512,
+  "created_at": "2026-02-26"
+}

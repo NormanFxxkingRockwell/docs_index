@@ -1,0 +1,60 @@
+{
+  "doc_id": "arkts-user-defined-extension-drawModifier",
+  "title": "自定义绘制修改器 (DrawModifier)",
+  "path": "zh-cn/application-dev/ui/arkts-user-defined-extension-drawModifier.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-user-defined-extension-drawModifier.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@xiang-shouxing",
+    "designer": "@xiang-shouxing",
+    "tester": "@sally__",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍ArkUI框架中的自定义绘制修改器DrawModifier，用于在组件原有绘制基础上进行部分或全部自定义绘制，支持在多个层级（内容背景、内容、内容前景、前景、遮罩层前景）进行绘制，实现独特的按钮形状、文字和图像混合图标等效果。",
+  "structure": {
+    "title": "自定义绘制修改器 (DrawModifier)",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 8,
+        "line_end": 13,
+        "summary": "介绍DrawModifier的用途和适用场景，当组件本身绘制内容不满足需求时，可使用组件自定义绘制功能，在原有组件基础上部分绘制或全部自行绘制。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "使用DrawModifier接口",
+        "level": 2,
+        "line_start": 14,
+        "line_end": 45,
+        "summary": "介绍DrawModifier接口的五个绘制方法（drawBehind、drawContent、drawFront、drawForeground、drawOverlay）和invalidate重绘方法，说明各方法的调用时机和注意事项。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "通过drawFront、drawContent、drawBehind进行自定义绘制",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 164,
+        "summary": "提供完整的代码示例，演示如何通过重载drawFront、drawContent、drawBehind三个方法，在Text组件的内容前景、内容和内容背景三个层级上进行自定义绘制，实现动态缩放效果。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "通过drawForeground进行自定义绘制",
+        "level": 2,
+        "line_start": 165,
+        "line_end": 218,
+        "summary": "提供代码示例，演示如何通过重载drawForeground方法，在Column组件的前景层级上进行自定义绘制，实现组件前景的矩形绘制效果。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "调整自定义绘制Canvas的变换矩阵",
+        "level": 2,
+        "line_start": 219,
+        "line_end": 290,
+        "summary": "介绍从API version 12开始，如何通过concatMatrix调整自定义绘制画布的变换矩阵，对比concatMatrix和setMatrix的区别，并提供完整的代码示例。"
+      }
+    ]
+  }
+}

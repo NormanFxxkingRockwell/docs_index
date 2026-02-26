@@ -1,0 +1,76 @@
+{
+  "doc_id": "arkts-popup-and-menu-components-menu",
+  "title": "菜单控制",
+  "path": "zh-cn/application-dev/ui/arkts-popup-and-menu-components-menu.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-popup-and-menu-components-menu.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@Armstrong15",
+    "designer": "@zhanghaibo0",
+    "tester": "@lxl007",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍HarmonyOS中Menu菜单接口的使用方法，包括创建默认样式和自定义样式菜单、支持右键或长按触发、菜单弹出振动效果、中轴避让功能、子窗菜单事件透传控制以及基于绑定组件指定位置弹出等高级功能。",
+  "structure": {
+    "title": "菜单控制",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "创建默认样式的菜单",
+        "level": 2,
+        "line_start": 19,
+        "line_end": 45,
+        "summary": "介绍使用bindMenu接口创建默认样式菜单的方法，通过绑定组件点击事件弹出菜单。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "创建自定义样式的菜单",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 144,
+        "summary": "讲解使用@Builder装饰器自定义菜单内容，通过bindMenu接口绑定自定义菜单组件。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "创建支持右键或长按的菜单",
+        "level": 2,
+        "line_start": 145,
+        "line_end": 158,
+        "summary": "说明使用bindContextMenu接口设置菜单弹出触发方式为右键或长按，菜单在独立子窗口显示。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "菜单弹出时振动效果",
+        "level": 2,
+        "line_start": 159,
+        "line_end": 192,
+        "summary": "介绍通过ContextMenuOptions的hapticFeedbackMode属性设置菜单弹出时的振动模式，需要配置VIBRATE权限。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "菜单支持避让中轴",
+        "level": 2,
+        "line_start": 193,
+        "line_end": 247,
+        "summary": "讲解从API 18起菜单支持中轴避让功能，可通过enableHoverMode属性控制，在2in1设备瀑布模式下生效。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "控制子窗菜单的事件透传",
+        "level": 2,
+        "line_start": 248,
+        "line_end": 277,
+        "summary": "说明从API 20开始通过modalMode属性设置子菜单弹出时的模态模式，控制菜单周围事件是否传递。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "基于绑定组件指定位置弹出菜单",
+        "level": 2,
+        "line_start": 278,
+        "line_end": 327,
+        "summary": "介绍通过anchorPosition属性设置菜单相对于绑定组件的弹出位置，支持水平和垂直偏移量控制。"
+      }
+    ]
+  }
+}

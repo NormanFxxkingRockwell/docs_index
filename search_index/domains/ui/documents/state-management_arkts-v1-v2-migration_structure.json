@@ -1,0 +1,48 @@
+{
+  "doc_id": "state-management_arkts-v1-v2-migration",
+  "title": "V1-V2迁移概述",
+  "domain": "ui",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@katabanga",
+    "Designer": "@s10021109",
+    "Tester": "@TerryTsao",
+    "Adviser": "@zhang_yyixin13"
+  },
+  "summary": "本文档提供了状态管理V1向V2的迁移指导，涵盖V1与V2的差异对比、使用指引、能力对照迁移表以及逐步迁移策略。V2是V1的增强版本，增强了对数据对象的深度观察与管理能力，如@Monitor能获取变化前后的数据。文档详细说明了各装饰器的迁移映射关系，帮助开发者实现从V1到V2的平滑过渡。",
+  "sections": [
+    {
+      "level": 2,
+      "title": "概述",
+      "line": 9,
+      "summary": "介绍状态管理V1和V2的基本特点。V1侧重组件层级状态管理，需要通过@ObjectLink逐层拆解嵌套类。V2增强了对数据对象的深度观察能力，@Monitor可获取变化前后的数据，提供更灵活的数据操控和高效UI刷新。"
+    },
+    {
+      "level": 2,
+      "title": "V1V2使用指引",
+      "line": 20,
+      "summary": "提供V1与V2的使用建议。新开发应用建议直接使用V2；已使用V1的应用如满足需求无需立即切换；需要混用场景时需遵循相关文档规则，避免双重代理等问题。"
+    },
+    {
+      "level": 2,
+      "title": "V1与V2差异对比",
+      "line": 31,
+      "summary": "说明V1与V2的差异对比内容，可参考状态管理概述和更新机制差异文档，帮助开发者理解V1与V2运行背后的差异点，提升适配效率。"
+    },
+    {
+      "level": 2,
+      "title": "V1与V2能力对照迁移表",
+      "line": 36,
+      "summary": "提供V1与V2装饰器和API的详细对照表，包括@Component/@ComponentV2、@State/@Local/@Param、@Prop/@Param、@Link/@Param/@Event等映射关系及迁移说明。"
+    },
+    {
+      "level": 2,
+      "title": "状态管理V1向V2逐步迁移策略",
+      "line": 56,
+      "summary": "针对大型应用提供逐步迁移FromV1到V2的策略。建议分批次、分组件迁移，先迁移V1组件为V2组件，处理V1与V2混用场景，最终完成全量适配。"
+    }
+  ],
+  "source_file": "docs/zh-cn/application-dev/ui/state-management/arkts-v1-v2-migration.md",
+  "total_lines": 61
+}

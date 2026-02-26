@@ -1,0 +1,60 @@
+{
+  "doc_id": "state-management_arkts-localstorage",
+  "title": "LocalStorage：页面级UI状态存储",
+  "path": "zh-cn/application-dev/ui/state-management/arkts-localstorage.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/state-management/arkts-localstorage.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@zzq212050299",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "LocalStorage是页面级的UI状态存储，支持通过@Entry装饰器在页面内共享LocalStorage实例，也支持UIAbility实例内多个页面间状态共享。本文介绍LocalStorage的使用场景和相关装饰器@LocalStorageProp和@LocalStorageLink，包括单向同步和双向同步机制、装饰器使用规则、变量传递规则、限制条件以及丰富的使用场景示例。",
+  "structure": {
+    "title": "LocalStorage：页面级UI状态存储",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "概述",
+        "level": 2,
+        "line_start": 25,
+        "line_end": 45,
+        "summary": "LocalStorage是ArkTS为构建页面级别状态变量提供存储的内存数据库，支持页面内共享和跨页面、跨UIAbility实例共享。提供了@LocalStorageProp单向同步和@LocalStorageLink双向同步两个装饰器。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "@LocalStorageProp",
+        "level": 2,
+        "line_start": 46,
+        "line_end": 116,
+        "summary": "@LocalStorageProp装饰器与LocalStorage中给定属性建立单向同步关系，支持从LocalStorage到组件的单向数据同步。详细介绍了装饰器使用规则、变量传递访问规则、观察变化和行为表现。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "@LocalStorageLink",
+        "level": 2,
+        "line_start": 117,
+        "line_end": 184,
+        "summary": "@LocalStorageLink装饰器与LocalStorage中给定属性建立双向同步关系，支持组件到LocalStorage和LocalStorage到组件的双向数据同步。详细介绍了装饰器使用规则、变量传递访问规则、观察变化和行为表现。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "限制条件",
+        "level": 2,
+        "line_start": 185,
+        "line_end": 209,
+        "summary": "列出了@LocalStorageProp和@LocalStorageLink的使用限制条件，包括参数必须为string类型、不支持装饰Function类型变量、LocalStorage创建后命名属性类型不可更改等。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "使用场景",
+        "level": 2,
+        "line_start": 210,
+        "line_end": 748,
+        "summary": "提供了丰富的LocalStorage使用场景示例，包括应用逻辑使用LocalStorage、从UI内部使用LocalStorage、单向同步和双向同步场景、兄弟组件同步、跨页面共享、自定义组件接收LocalStorage实例、Navigation组件联合使用、支持联合类型、装饰Array/Date/Map/Set类型变量等。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "doc_id": "state-management_arkts-style",
+  "title": "@Styles装饰器：定义组件重用样式",
+  "domain": "ui",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@BlYynNe",
+    "Designer": "@VictorS67",
+    "Tester": "@TerryTsao",
+    "Adviser": "@BIYynNe"
+  },
+  "summary": "@Styles装饰器用于提炼公共样式进行复用，将多条样式设置提炼成一个方法，直接在组件声明的位置调用。支持从API version 9开始使用，支持ArkTS卡片和原子化服务。可以在组件内或全局定义，组件内定义的优先级高于全局定义。",
+  "sections": [
+    {
+      "title": "装饰器使用说明",
+      "level": 2,
+      "summary": "@Styles仅支持通用属性和通用事件。可以定义在组件内或全局，组件内定义时不需要function关键字，全局定义时需要添加。组件内@Styles优先级高于全局@Styles。只能在当前文件内使用，不支持export。",
+      "line_start": 21,
+      "line_end": 65
+    },
+    {
+      "title": "限制条件",
+      "level": 2,
+      "summary": "@Styles方法不能有参数，编译期会报错。不支持在@Styles方法内使用逻辑组件，逻辑组件内的属性不生效。只能直接设置样式属性，不能包含条件判断等逻辑。",
+      "line_start": 67,
+      "line_end": 111
+    },
+    {
+      "title": "使用场景",
+      "level": 2,
+      "summary": "展示了组件内@Styles和全局@Styles的用法对比。全局定义了@Styles需要添加function关键字，组件内定义的@Styles可以访问组件的常量和状态变量，并可以通过事件改变状态变量的值。",
+      "line_start": 113,
+      "line_end": 159
+    }
+  ],
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-style.md",
+  "total_lines": 159
+}

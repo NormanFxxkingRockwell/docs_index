@@ -1,0 +1,124 @@
+{
+  "doc_id": "arkts-layout-development-create-looping",
+  "title": "创建轮播",
+  "path": "zh-cn/application-dev/ui/arkts-layout-development-create-looping.md",
+  "relative_path": "../../docs/zh-cn/application-dev/ui/arkts-layout-development-create-looping.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@Hu_ZeQi",
+    "designer": "@jiangdayuan",
+    "tester": "@Giacinta",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "介绍Swiper轮播组件的使用方法，包括布局约束、循环播放、自动轮播、导航点样式、页面切换方式、轮播方向、多页面显示、自定义切换动画、与Tabs联动等功能，适用于应用首页内容轮播展示场景。",
+  "structure": {
+    "title": "创建轮播",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "布局与约束",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 18,
+        "summary": "介绍Swiper组件的尺寸约束规则，包括设置自身尺寸属性时的生效方式，以及未设置尺寸时根据prevMargin、nextMargin或子组件大小自动调整的机制。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "循环播放",
+        "level": 2,
+        "line_start": 20,
+        "line_end": 71,
+        "summary": "通过loop属性控制是否循环播放，true时在第一页和最后一页可继续切换，false时无法继续切换，提供两种模式的代码示例和效果演示。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "自动轮播",
+        "level": 2,
+        "line_start": 74,
+        "line_end": 92,
+        "summary": "通过autoPlay属性控制自动轮播，配合interval属性设置播放间隔，默认间隔3000毫秒，提供自动轮播的代码实现示例。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "导航点样式",
+        "level": 2,
+        "line_start": 95,
+        "line_end": 194,
+        "summary": "介绍导航点的默认样式和自定义样式，包括位置、尺寸、颜色等设置，以及导航点箭头的显示控制，提供默认和自定义样式的代码示例。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "页面切换方式",
+        "level": 2,
+        "line_start": 196,
+        "line_end": 288,
+        "summary": "支持手指滑动、点击导航点和控制器三种页面切换方式，重点展示通过SwiperController的showNext、showPrevious和changeIndex方法实现页面切换。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "轮播方向",
+        "level": 2,
+        "line_start": 291,
+        "line_end": 333,
+        "summary": "通过vertical属性控制轮播方向，true为垂直方向轮播，false为水平方向轮播，提供水平和垂直轮播的代码示例和效果对比。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "每页显示多个子页面",
+        "level": 2,
+        "line_start": 336,
+        "line_end": 375,
+        "summary": "通过displayCount属性设置一页内同时显示的子组件数量，支持同时展示多个子页面的布局方式，提供每页显示两个子页面的示例。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "自定义切换动画",
+        "level": 2,
+        "line_start": 377,
+        "line_end": 462,
+        "summary": "通过customContentTransition属性设置自定义切换动画，可在回调中逐帧设置透明度、缩放、位移、渲染层级等属性，实现复杂的自定义切换效果。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "Swiper与Tabs联动",
+        "level": 2,
+        "line_start": 464,
+        "line_end": 574,
+        "summary": "通过onSelected回调事件获取当前选中元素索引，调用tabsController.changeIndex方法实现Tabs页签与Swiper的联动切换，提供完整的联动实现代码。"
+      },
+      {
+        "section_id": "section-10",
+        "title": "设置圆点导航点间距",
+        "level": 2,
+        "line_start": 576,
+        "line_end": 592,
+        "summary": "通过DotIndicator的space属性设置圆点导航点之间的间距，提供调整导航点间距的代码实现方法。"
+      },
+      {
+        "section_id": "section-11",
+        "title": "导航点忽略组件大小",
+        "level": 2,
+        "line_start": 594,
+        "line_end": 737,
+        "summary": "通过bottom属性的ignoreSize参数忽略导航点组件大小，消除导航点底部与Swiper底部的间距，支持圆点和数字导航点两种类型。"
+      },
+      {
+        "section_id": "section-12",
+        "title": "保持可见内容位置不变",
+        "level": 2,
+        "line_start": 739,
+        "line_end": 841,
+        "summary": "通过maintainVisibleContentPosition属性在使用LazyForEach懒加载数据时保持当前可见内容位置不变，避免数据增删导致的视图跳动。"
+      },
+      {
+        "section_id": "section-13",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 843,
+        "line_end": 850,
+        "summary": "提供Swiper组件开发的相关实例参考，包括电子相册和Swiper使用示例的Codelabs链接。"
+      }
+    ]
+  }
+}

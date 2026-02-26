@@ -1,0 +1,53 @@
+{
+  "doc_id": "state-management_arkts-v1-v2-migration-animateTo",
+  "title": "AnimateTo使用迁移",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@jiyujia926",
+    "designer": "@s10021109",
+    "tester": "@TerryTsao",
+    "adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档介绍在状态管理从V1迁移至V2过程中，animateTo执行动画前修改状态变量的适配方案。文档通过代码示例展示了V1与V2的差异，提供了两种迁移方案：API version 22之前使用animateToImmediately，API version 22及以后使用applySync接口。",
+  "chapters": [
+    {
+      "chapter_id": "chapter_1",
+      "title": "执行动画前重新定义初始态场景",
+      "level": 2,
+      "summary": "展示了V1实现代码和V2迁移代码，说明了animateTo与V2刷新机制不兼容导致的问题，通过代码示例和效果图对比说明差异。"
+    },
+    {
+      "chapter_id": "chapter_2",
+      "title": "迁移方案",
+      "level": 2,
+      "summary": "提供了针对不同API版本的迁移方案，包括API version 22之前使用animateToImmediately和API version 22及以后使用applySync接口的具体实现方法。",
+      "subsections": [
+        {
+          "chapter_id": "chapter_2_1",
+          "title": "API version 22之前的迁移方案",
+          "level": 3,
+          "summary": "使用duration为0的animateToImmediately将额外的修改先刷新，再执行原来的动画达成预期效果，提供完整代码示例。"
+        },
+        {
+          "chapter_id": "chapter_2_2",
+          "title": "API version 22及以后的迁移方案",
+          "level": 3,
+          "summary": "使用applySync接口同步刷新闭包函数内的状态变量变化，再执行原来的动画达成预期效果，提供完整代码示例和原理说明。"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "animateTo",
+    "状态管理",
+    "V1迁移V2",
+    "动画",
+    "animateToImmediately",
+    "applySync",
+    "状态变量",
+    "刷新机制"
+  ],
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-v1-v2-migration-animateTo.md",
+  "generated_at": "2026-02-26"
+}

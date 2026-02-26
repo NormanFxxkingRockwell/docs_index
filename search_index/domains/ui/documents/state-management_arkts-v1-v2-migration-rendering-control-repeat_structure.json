@@ -1,0 +1,95 @@
+{
+  "doc_id": "state-management_arkts-v1-v2-migration-rendering-control-repeat",
+  "title": "循环渲染迁移",
+  "metadata": {
+    "Kit": "ArkUI",
+    "Subsystem": "ArkUI",
+    "Owner": "@maorh",
+    "Designer": "@keerecles",
+    "Tester": "@TerryTsao",
+    "Adviser": "@zhang_yixin13"
+  },
+  "summary": "本文档详细介绍了ArkUI组件循环渲染从V1向V2的迁移指南，重点讲解了ForEach和LazyForEach迁移到Repeat组件的方法。内容涵盖数据首次渲染、更新操作、子属性观测、组件状态管理、拖拽排序、组件复用和模板渲染等核心场景。通过多个示例代码，展示了如何使用状态管理V2装饰器实现深度观测和高效渲染，为开发者提供完整的迁移路径和最佳实践。",
+  "sections": [
+    {
+      "title": "ForEach迁移Repeat",
+      "level": 2,
+      "summary": "介绍如何将ForEach组件迁移到Repeat。主要步骤包括使用@ObservedV2和@Trace装饰器替代@Observed进行深度观测，遵循V1到V2装饰器迁移规则，直接将ForEach循环结构替换为Repeat结构，实现更高效的状态管理和渲染控制。"
+    },
+    {
+      "title": "LazyForEach迁移Repeat",
+      "level": 2,
+      "summary": "详细讲解LazyForEach迁移到Repeat的完整流程。包括数据首次渲染、数据更新操作、子属性观测、组件状态管理、拖拽排序、组件复用和模板渲染等多个场景的迁移方法，每个场景都提供了详细的迁移步骤和代码示例。"
+    },
+    {
+      "title": "数据首次渲染",
+      "level": 3,
+      "summary": "介绍LazyForEach首次渲染数据的迁移步骤。需要使用状态管理V2装饰器，将IDataSource数据源迁移为@Local装饰的数组，调整组件生成函数和键值生成函数的语法，并通过virtualScroll属性启用懒加载功能。"
+    },
+    {
+      "title": "数据更新操作",
+      "level": 3,
+      "summary": "讲解数据更新操作的迁移方法。LazyForEach需要手动调用通知接口，而Repeat由状态管理V2自动监听数据源变化，开发者直接修改数据源即可触发更新，无需额外操作，简化了数据更新流程。"
+    },
+    {
+      "title": "修改数据子属性",
+      "level": 3,
+      "summary": "介绍如何观测和修改数据子属性。LazyForEach使用@Observed和@ObjectLink装饰器，迁移到Repeat后使用@ObservedV2和@Trace装饰器实现深度观测，当子属性变化时仅更新相关组件，提高渲染性能。"
+    },
+    {
+      "title": "状态管理V2观测组件内部状态",
+      "level": 3,
+      "summary": "讲解如何使用@Local装饰器观测组件内部状态变量。被@Local装饰的变量变化时会通知组件更新，Repeat本身支持与状态管理V2联合使用，将LazyForEach修改为Repeat后即可实现内部状态观测。"
+    },
+    {
+      "title": "状态管理V2观测组件外部输入",
+      "level": 3,
+      "summary": "介绍如何使用@Param装饰器观测组件外部输入变量，实现父子组件间数据同步。Repeat支持与状态管理V2联合使用，将LazyForEach修改为Repeat后即可实现外部输入状态观测，保持父子组件数据一致性。"
+    },
+    {
+      "title": "拖拽排序",
+      "level": 3,
+      "summary": "讲解拖拽排序功能的迁移。LazyForEach和Repeat都支持onMove属性实现拖拽排序。迁移时将LazyForEach相关代码修改为Repeat，保留onMove属性即可实现相同的拖拽排序功能，支持用户交互式列表重排。"
+    },
+    {
+      "title": "组件复用",
+      "level": 3,
+      "summary": "介绍组件复用的两种实现方案。Repeat自身具备组件复用能力且默认开启，也可使用@ReusableV2装饰器实现复用。若使用@ReusableV2装饰器，需要通过virtualScroll({ reusable: false })关闭Repeat自身复用功能。"
+    },
+    {
+      "title": "模板渲染",
+      "level": 3,
+      "summary": "讲解模板渲染能力的迁移。Repeat具备模板渲染能力，可通过templateId方法为不同数据项选择模板，通过template方法配置组件生成函数。也可由开发者自己实现逻辑判断，但需要关闭Repeat自身复用功能避免渲染异常。"
+    },
+    {
+      "title": "BasicDataSource示例代码",
+      "level": 2,
+      "summary": "提供BasicDataSource类的完整示例代码，包括string类型和StringData类型两种实现。BasicDataSource实现了IDataSource接口，用于管理listener监听以及通知LazyForEach数据更新，是LazyForEach数据源的基础实现。"
+    },
+    {
+      "title": "string类型数组的BasicDataSource代码",
+      "level": 3,
+      "summary": "提供管理string类型数组的BasicDataSource实现。实现了IDataSource接口的所有方法，包括注册/注销监听器、通知数据重载、添加、修改、删除、移动等操作，为LazyForEach提供完整的数据源支持。"
+    },
+    {
+      "title": "StringData类型数组的BasicDataSource代码",
+      "level": 3,
+      "summary": "提供管理StringData类型数组的BasicDataSource实现。与string类型实现类似，但数据源类型为StringData对象数组，适用于需要观测对象子属性的场景，配合@Observed和@ObjectLink装饰器使用。"
+    }
+  ],
+  "tags": [
+    "循环渲染",
+    "ForEach",
+    "LazyForEach",
+    "Repeat",
+    "状态管理V2",
+    "迁移",
+    "渲染控制",
+    "组件复用",
+    "懒加载",
+    "模板渲染"
+  ],
+  "file_path": "docs/zh-cn/application-dev/ui/state-management/arkts-v1-v2-migration-rendering-control-repeat.md",
+  "language": "zh-cn",
+  "domain": "ui"
+}
