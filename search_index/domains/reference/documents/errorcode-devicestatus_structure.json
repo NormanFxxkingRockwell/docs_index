@@ -1,7 +1,7 @@
 {
-  "doc_id": "errorcode-deviceStatus",
+  "doc_id": "errorcode-devicestatus",
   "title": "设备状态感知错误码",
-  "path": "zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-deviceStatus.md",
+  "path": "docs/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-deviceStatus.md",
   "relative_path": "../../docs/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-deviceStatus.md",
   "metadata": {
     "kit": "Multimodal Awareness Kit",
@@ -11,7 +11,8 @@
     "tester": "@judan",
     "adviser": "@hu-zhiqiong"
   },
-  "summary": "Multimodal Awareness Kit MultimodalAwareness 模块的 设备状态感知错误码，提供相关接口和功能说明。",
+  "summary": "本模块介绍设备状态感知模块的特有错误码，包括服务异常、订阅失败和取消订阅失败三个错误码，每个错误码包含错误信息、错误描述、可能原因和处理步骤。",
+  "content": "# 设备状态感知错误码\n\n<!--Kit: Multimodal Awareness Kit-->\n<!--Subsystem: MultimodalAwareness-->\n<!--Owner: @dilligencer-->\n<!--Designer: @zou_ye-->\n<!--Tester: @judan-->\n<!--Adviser: @hu-zhiqiong-->\n\n> **说明：**\n>\n> 以下仅介绍本模块特有错误码，通用错误码请参考[通用错误码](../errorcode-universal.md)说明文档。\n\n## 32500001 服务异常\n\n**错误信息**\n\nService exception.\n\n**错误描述**\n\n当调用deviceStatus模块on、off接口时，若服务异常，会报此错误码。\n\n**可能原因**\n\n服务状态异常。\n\n**处理步骤**\n\n1. 定时重试操作，如间隔1s或者按照指数增长间隔重试。\n2. 连续重试3次不可用则停止尝试，期间可优先尝试获取器件列表方式进一步获取设备可用性。\n\n## 32500002 订阅失败\n\n**错误信息**\n\nSubscription failed.\n\n**错误描述**\n\n当调用deviceStatus模块on接口时，若订阅失败，会报此错误码。\n\n**可能原因**\n\n订阅异常。\n\n**处理步骤**\n\n1. 定时重试操作，如间隔1s或者按照指数增长间隔重试。\n2. 连续重试3次不可用则停止尝试。\n\n## 32500003 取消订阅失败\n\n**错误信息**\n\nUnsubscription failed.\n\n**错误描述**\n\n当调用deviceStatus模块off接口时，若取消订阅失败，会报此错误码。\n\n**可能原因**\n\n取消订阅异常。\n\n**处理步骤**\n\n1. 定时重试操作，如间隔1s或者按照指数增长间隔重试。\n2. 连续重试3次不可用则停止尝试。",
   "structure": {
     "title": "设备状态感知错误码",
     "sections": [
@@ -21,7 +22,7 @@
         "level": 2,
         "line_start": 13,
         "line_end": 31,
-        "summary": "**错误信息**\n\nService exception.\n\n**错误描述**\n\n当调用deviceStatus模块on、off接口时，若服务异常，会报此错误码。\n\n**可能原因**\n\n服务状态异常。"
+        "summary": "介绍服务异常错误码32500001，包括错误信息、错误描述、可能原因和处理步骤。当调用deviceStatus模块on、off接口时若服务异常会报此错误码。"
       },
       {
         "section_id": "section-2",
@@ -29,7 +30,7 @@
         "level": 2,
         "line_start": 32,
         "line_end": 50,
-        "summary": "**错误信息**\n\nSubscription failed.\n\n**错误描述**\n\n当调用deviceStatus模块on接口时，若订阅失败，会报此错误码。\n\n**可能原因**\n\n订阅异常。\n\n**"
+        "summary": "介绍订阅失败错误码32500002，包括错误信息、错误描述、可能原因和处理步骤。当调用deviceStatus模块on接口时若订阅失败会报此错误码。"
       },
       {
         "section_id": "section-3",
@@ -37,7 +38,7 @@
         "level": 2,
         "line_start": 51,
         "line_end": 68,
-        "summary": "**错误信息**\n\nUnsubscription failed.\n\n**错误描述**\n\n当调用deviceStatus模块off接口时，若取消订阅失败，会报此错误码。\n\n**可能原因**\n\n取消订阅"
+        "summary": "介绍取消订阅失败错误码32500003，包括错误信息、错误描述、可能原因和处理步骤。当调用deviceStatus模块off接口时若取消订阅失败会报此错误码。"
       }
     ]
   }
