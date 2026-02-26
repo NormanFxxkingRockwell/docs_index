@@ -351,7 +351,7 @@ echo "Index: $idx_count, Docs: $doc_count"
 
 ## 当前索引进展（2026-02-26）
 
-### 已完成领域（43个）
+### 已完成领域（45个）
 - IDL: 1
 - ads-service: 3
 - ai: 12
@@ -388,6 +388,7 @@ echo "Index: $idx_count, Docs: $doc_count"
 - onlyfortest: 22
 - performance: 72
 - quick-start: 38
+- reference: 3242
 - security: 265
 - task-management: 8
 - telephony: 4
@@ -396,17 +397,12 @@ echo "Index: $idx_count, Docs: $doc_count"
 - web: 58
 - webgl: 2
 - windowmanager: 14
-
-### 未完成领域（（1个）
-- reference: 3241/3295
-
+### 未完成领域（0个）
 ### 总体统计
 - 总领域数：45
-- 已完成：44 (97.8%)
-- 未完成：1 (2.2%)
+- 已完成：45 (100%)
+- 未完成：0 (0%)
 - 总文档数：约 5,621
-
 ## 下一步建议
 
-建议按以下顺序继续完成未完成的领域（按文档数量从少到多）：
-1. reference (3295个文档，已完成3241个，还差54个)
+所有领域索引已完成！项目达到 100% 完成度。
