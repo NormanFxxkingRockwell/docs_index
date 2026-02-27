@@ -387,10 +387,10 @@ echo "Index: $idx_count, Docs: $doc_count"
 - notification: 17
 - onlyfortest: 22
 - performance: 72
-YZ|- quick-start: 38
-#VT|- reference: 3295
-#TJ|- security: 265
-#BV|- reference: 3242
+- quick-start: 38
+- reference: 3295
+- security: 265
+- reference: 3242
 - security: 265
 - task-management: 8
 - telephony: 4
@@ -399,16 +399,15 @@ YZ|- quick-start: 38
 - web: 58
 - webgl: 2
 - windowmanager: 14
-KP|### 未完成领域（0个）
-KW|### 总体统计
-ZR|- 总领域数：46
-YM|- 已完成：46 (100%)
-ZB|- 未完成：0 (0%)
-ZM|- 总文档数：约 5,674
-HP|## 下一步建议
+### 未完成领域（0个）
+### 总体统计
+- 总领域数：46
+- 已完成：46 (100%)
+- 未完成：0 (0%)
+- 总文档数：约 5,674
+## 下一步建议
 
-BY|
-XB|所有领域索引已完成！项目达到 100% 完成度。
+所有领域索引已完成！项目达到 100% 完成度。
 ### 总体统计
 - 总领域数：45
 - 已完成：45 (100%)
