@@ -65,10 +65,126 @@ npm run build
 - Roo Code
 - 自定义 Agent (需支持 MCP)
 
-## Getting Started
+## 快速开始
 
-After cloning the repository, initialize and update the submodule:
+克隆仓库后，按照以下步骤初始化和运行：
+
+### 1. 初始化子模块
+
+HarmonyOS 文档作为 Git 子模块存储，首次克隆后需要初始化。
+
+**重要**：docs 仓约 2GB+，必须使用浅克隆 + 指定 commit：
 
 ```bash
-git submodule update --init --recursive
+# 1. 初始化子模块（浅克隆，只拉最新 1 个 commit）
+git submodule update --init --depth=1 --recursive
+
+# 2. 检出与索引匹配的特定 commit（必须！否则会拉到最新版本，与索引不匹配）
+cd docs && git checkout 60f80f86de5f7418ea4472b031c0b73e5918183e
 ```
+
+**或一步到位**（推荐）：
+
+```bash
+# 仅初始化，不拉取任何文件
+git submodule init
+
+# 进入子模块，用浅克隆拉取特定 commit
+cd docs && git init && git remote add origin https://gitcode.com/openharmony/docs.git && git fetch --depth=1 origin 60f80f86de5f7418ea4472b031c0b73e5918183e && git checkout FETCH_HEAD
+```
+
+### 2. 构建 MCP Server（如需使用 MCP 服务）
+
+```bash
+# 进入 MCP Server 目录
+cd harmonyos-navigator-mcp
+
+# 安装依赖
+npm install
+
+# 编译 TypeScript
+npm run build
+```
+
+### 3. 验证安装
+
+```bash
+# 测试 MCP Server 是否正常运行
+node dist/index.js
+# 输出: HarmonyOS Navigator MCP Server running on stdio
+```
+
+---
+
+## 目录结构
+
+```
+docs_index/
+├── docs/                      # HarmonyOS 官方文档（子模块）
+├── search_index/               # 文档索引
+│   ├── master_map.json        # 总地图（46个领域 + 51个API Kit映射）
+│   ├── domains/               # 各领域索引
+│   │   ├── network/
+│   │   ├── ui/
+│   │   └── ...
+│   └── skills/               # AI Agent 导航流程
+├── harmonyos-navigator-mcp/   # MCP Server
+│   ├── src/                  # 源代码
+│   └── dist/                 # 编译输出
+└── README.md
+```
+
+## 使用方式
+
+### 方式一：直接使用文档检索
+
+AI Agent 可直接读取 `search_index/` 目录下的索引文件：
+
+- `master_map.json` - 总领域映射
+- `domains/*/domain_index.json` - 各领域文档索引
+- `domains/*/*.json` - 具体文档内容
+
+### 方式二：使用 MCP Server
+
+1. 配置 MCP Client（OpenCode/Claude Desktop/Cursor 等）
+2. 调用 5 个工具进行完整工作流
+
+```json
+{
+  "mcpServers": {
+    "harmonyos-navigator": {
+      "command": "node",
+      "args": ["path/to/harmonyos-navigator-mcp/dist/index.js"]
+    }
+  }
+}
+```
+
+### MCP Server 工具
+
+| 工具 | 功能 |
+|------|------|
+| `harmonyos_entry_filter` | 判断问题是否与 HarmonyOS 相关 |
+| `harmonyos_domain_detect` | 识别问题涉及的领域 |
+| `harmonyos_search` | 检索开发文档和 API 参考 |
+| `harmonyos_read_doc` | 读取文档详细内容 |
+| `harmonyos_validate` | 验证检索结果是否正确 |
+
+## 完整工作流
+
+```
+用户问题 → harmonyos_entry_filter → harmonyos_domain_detect → harmonyos_search → harmonyos_read_doc → harmonyos_validate → 输出答案
+```
+
+---
+
+**重要**：使用浅克隆后，必须手动检出与索引匹配的特定 commit：
+
+```bash
+# 检出特定 commit（必须！确保与索引版本一致）
+cd docs && git checkout 60f80f86de5f7418ea4472b031c0b73e5918183e
+```
+
+**为什么必须指定 commit**：
+- docs 仓会持续更新，索引只与 `60f80f86de5f7418ea4472b031c0b73e5918183e` 匹配
+- 拉取最新版本会导致索引失效
