@@ -1,0 +1,348 @@
+{
+  "doc_id": "apis-arkui_Readme-CN",
+  "title": "ArkUI（方舟UI框架）",
+  "path": "zh-cn/application-dev/reference/apis-arkui/Readme-CN.md",
+  "relative_path": "../../docs/zh-cn/application-dev/reference/apis-arkui/Readme-CN.md",
+  "metadata": {
+    "kit": "ArkUI",
+    "subsystem": "ArkUI",
+    "owner": "@piggyguy; @xiang-shouxing; @yangfan229",
+    "designer": "@piggyguy; @xiang-shouxing; @yangfan229",
+    "tester": "@fredyuan912",
+    "adviser": "@Brilliantry_Rui"
+  },
+  "summary": "ArkUI（方舟UI框架）是HarmonyOS的声明式UI开发框架，提供ArkTS API、ArkTS组件、JS组件和C API等多种开发方式，支持UI界面、窗口管理、屏幕管理、动画、手势处理等完整功能，涵盖组件库、事件系统、状态管理、渲染控制等核心特性。",
+  "structure": {
+    "title": "ArkUI（方舟UI框架）",
+    "sections": [
+      {
+        "section_id": "section-arkts-api",
+        "title": "ArkTS API",
+        "level": 2,
+        "line_start": 9,
+        "line_end": 120,
+        "summary": "提供ArkTS语言的API接口，包括UI界面组件、窗口管理、屏幕管理等核心功能，以及已停止维护的接口列表。"
+      },
+      {
+        "section_id": "section-ui-interface",
+        "title": "UI界面",
+        "level": 3,
+        "line_start": 10,
+        "line_end": 85,
+        "summary": "包含动画、组件截图、componentUtils、拖拽控制器、DrawableDescriptor、布局回调、自定义节点、无感监听、预加载、形状、主题换肤、UIContext等UI相关API。"
+      },
+      {
+        "section_id": "section-window-manager",
+        "title": "窗口管理",
+        "level": 3,
+        "line_start": 86,
+        "line_end": 100,
+        "summary": "提供画中画窗口、闪控球窗口、窗口管理API，包括窗口动画管理等系统接口。"
+      },
+      {
+        "section_id": "section-screen-manager",
+        "title": "屏幕管理",
+        "level": 3,
+        "line_start": 101,
+        "line_end": 108,
+        "summary": "提供屏幕属性获取、屏幕截图等功能，支持系统级屏幕管理接口。"
+      },
+      {
+        "section_id": "section-deprecated-interfaces",
+        "title": "已停止维护的接口",
+        "level": 3,
+        "line_start": 109,
+        "line_end": 120,
+        "summary": "列出已停止维护的ArkTS API接口，包括弹窗、应用上下文、应用配置、媒体查询、页面路由等旧版接口。"
+      },
+      {
+        "section_id": "section-arkts-components",
+        "title": "ArkTS组件",
+        "level": 2,
+        "line_start": 121,
+        "line_end": 541,
+        "summary": "提供完整的ArkTS声明式UI组件库，包括通用事件、通用属性、手势处理、容器组件、基础组件、动画、弹窗、状态管理等。"
+      },
+      {
+        "section_id": "section-general-events",
+        "title": "通用事件",
+        "level": 3,
+        "line_start": 122,
+        "line_end": 160,
+        "summary": "涵盖基础输入事件（触摸、鼠标、轴、按键、表冠、焦点轴）、交互响应事件（点击、拖拽、焦点、悬浮、快捷键）、事件分发控制、无障碍事件、组件变化事件等。"
+      },
+      {
+        "section_id": "sectionsection-general-attributes",
+        "title": "通用属性",
+        "level": 3,
+        "line_start": 151,
+        "line_end": 228,
+        "summary": "包含基础属性（组件标识、显隐控制、背景、浮层、Z序）、布局与边框、视效与模糊、交互属性、多态样式、弹窗控制、无障碍属性、模态转场、动态属性与自定义等。"
+      },
+      {
+        "section_id": "section-gesture-handling",
+        "title": "手势处理",
+        "level": 3,
+        "line_start": 229,
+        "line_end": 245,
+        "summary": "提供完整的手势识别系统，包括支持绑定手势方法、基础手势（点击、长按、拖动、捏合、旋转、滑动）、组合手势、手势控制和公共接口。"
+      },
+      {
+        "section_id": "section-rows-columns-stacking",
+        "title": "行列与堆叠",
+        "level": 3,
+        "line_start": 246,
+        "line_end": 257,
+        "summary": "提供基础布局容器组件，包括Flex弹性布局、Column列容器、Row行容器、Stack堆叠容器、RelativeContainer相对容器等。"
+      },
+      {
+        "section_id": "section-grid-column-layout",
+        "title": "栅格与分栏",
+        "level": 3,
+        "line_start": 258,
+        "line_end": 263,
+        "summary": "提供栅格布局和分栏布局组件，包括GridRow栅格行、GridCol栅格列、ColumnSplit列分割、RowSplit行分割、SideBarContainer侧边栏容器等。"
+      },
+      {
+        "section_id": "section-scroll-swipe",
+        "title": "滚动与滑动",
+        "level": 3,
+        "line_start": 264,
+        "line_end": 284,
+        "summary": "提供滚动和滑动容器组件，包括List列表、Grid网格、Scroll滚动、Swiper滑动、WaterFlow瀑布流、ArcList弧形列表、刷新组件、滚动条等。"
+      },
+      {
+        "section_id": "section-navigation-switching",
+        "title": "导航与切换",
+        "level": 3,
+        "line_start": 285,
+        "line_end": 293,
+        "summary": "提供导航和切换组件，包括Indicator指示器、Navigation导航容器、NavDestination导航目的地、MultiNavigation多导航、Tabs标签页、ToolBarItem工具栏项等。"
+      },
+      {
+        "section_id": "section-buttons-selections",
+        "title": "按钮与选择",
+        "level": 3,
+        "line_start": 293,
+        "line_end": 312,
+        "summary": "提供按钮和选择器组件，包括Button按钮、Toggle开关、Checkbox复选框、Radio单选框、Slider滑块、各种选择器（日期、时间、文本、日历）、Rating评分、Select选择等。"
+      },
+      {
+        "section_id": "section-text-input",
+        "title": "文本与输入",
+        "level": 3,
+        "line_start": 313,
+        "line_end": 335,
+        "summary": "提供文本显示和输入组件，包括Text文本、TextArea文本域、TextInput输入框、RichEditor富文本编辑器、Search搜索框、Span文本片段、ImageSpan图片片段、Hyperlink超链接、RichText富文本等。"
+      },
+      {
+        "section_id": "section-images-videos",
+        "title": "图片与视频",
+        "level": 3,
+        "line_start": 336,
+        "line_end": 347,
+        "summary": "提供图片和视频显示组件，包括Image图片、ImageAnimator图片动画、Video视频播放器，以及SVG标签说明和图像类型定义。"
+      },
+      {
+        "section_id": "section-information-display",
+        "title": "信息展示",
+        "level": 3,
+        "line_start": 348,
+        "line_end": 362,
+        "summary": "提供信息展示组件，包括AlphabetIndexer字母索引、Badge徽标、Counter计数器、DataPanel数据面板、Gauge仪表盘、LoadingProgress加载进度、Marquee跑马灯、PatternLock图案锁、Progress进度条、QRCode二维码、TextClock文本时钟、TextTimer文本计时器等。"
+      },
+      {
+        "section_id": "section-blank-divider",
+        "title": "空白与分隔",
+        "level": 3,
+        "line_start": 363,
+        "line_end": 365,
+        "summary": "提供空白和分隔组件，包括Blank空白占位、Divider分隔线。"
+      },
+      {
+        "section_id": "section-canvas-drawing",
+        "title": "画布绘制",
+        "level": 3,
+        "line_start": 366,
+        "line_end": 377,
+        "summary": "提供2D画布绘制能力，包括Canvas画布、CanvasGradient渐变、CanvasPattern图案、CanvasRenderingContext2D渲染上下文、DrawingRenderingContext绘制上下文、ImageBitmap、ImageData、Matrix2D矩阵、OffscreenCanvas离屏画布、Path2D路径等。"
+      },
+      {
+        "section_id": "section-graphic-drawing",
+        "title": "图形绘制",
+        "level": 3,
+        "line_start": 378,
+        "line_end": 386,
+        "summary": "提供基础图形绘制组件，包括Circle圆形、Ellipse椭圆、Line线条、Polyline折线、Polygon多边形、Path路径、Rect矩形、Shape形状等。"
+      },
+      {
+        "section_id": "section-rendering-drawing",
+        "title": "渲染绘制",
+        "level": 3,
+        "line_start": 387,
+        "line_end": 393,
+        "summary": "提供渲染绘制组件，包括XComponent组件、Component3D三维组件、EmbeddedComponent嵌入式组件等。"
+      },
+      {
+        "section_id": "section-menus",
+        "title": "菜单",
+        "level": 3,
+        "line_start": 394,
+        "line_end": 398,
+        "summary": "提供菜单组件，包括Menu菜单、MenuItem菜单项、MenuItemGroup菜单项组、ContextMenu上下文菜单等。"
+      },
+      {
+        "section_id": "section-animation",
+        "title": "动画",
+        "level": 3,
+        "line_start": 399,
+        "line_end": 412,
+        "summary": "提供完整的动画系统，包括属性动画、显式动画、关键帧动画、页面间转场、组件内转场、共享元素转场、几何转场、路径动画、粒子动画等。"
+      },
+      {
+        "section_id": "section-dialog-boxes",
+        "title": "弹窗",
+        "level": 3,
+        "line_start": 413,
+        "line_end": 421,
+        "summary": "提供各种弹窗组件，包括警告弹窗、列表选择弹窗、自定义弹窗、日历选择器弹窗、日期选择器弹窗、时间选择器弹窗、文本选择器弹窗、弹出框等。"
+      },
+      {
+        "section_id": "section-cards",
+        "title": "卡片",
+        "level": 3,
+        "line_start": 422,
+        "line_end": 426,
+        "summary": "提供卡片相关组件，包括FormLink表单链接等。"
+      },
+      {
+        "section_id": "section-security",
+        "title": "安全",
+        "level": 3,
+        "line_start": 427,
+        "line_end": 434,
+        "summary": "提供安全控件，包括PasteButton粘贴按钮、SaveButton保存按钮及安全控件通用属性。"
+      },
+      {
+        "section_id": "section-themes",
+        "title": "主题",
+        "level": 3,
+        "line_start": 435,
+        "line_end": 436,
+        "summary": "提供主题相关组件，包括WithTheme主题容器。"
+      },
+      {
+        "section_id": "section-atomic-services",
+        "title": "AtomicService",
+        "level": 3,
+        "line_start": 437,
+        "line_end": 448,
+        "summary": "提供原子化服务相关组件，包括AtomicServiceNavigation导航、AtomicServiceSearch搜索、AtomicServiceTabs标签页、AtomicServiceWeb网页、InterstitialDialogAction插屏对话框、HalfScreenLaunchComponent半屏启动组件等。"
+      },
+      {
+        "section_id": "section-custom-placeholder-comp",
+        "title": "自定义占位组件",
+        "level": 3,
+        "line_start": 449,
+        "line_end": 451,
+        "summary": "提供自定义占位组件，包括NodeContainer节点容器、ContentSlot内容插槽。"
+      },
+      {
+        "section_id": "section-custom-comp",
+        "title": "自定义组件",
+        "level": 3,
+        "line_start": 452,
+        "line_end": 463,
+        "summary": "提供自定义组件相关功能，包括自定义组件的生命周期、自定义布局、内置方法、参数、组件扩展装饰器（@AnimatableExtend、@Entry、wrapBuilder、mutableBuilder）等。"
+      },
+      {
+        "section_id": "section-component-preview",
+        "title": "组件预览",
+        "level": 3,
+        "line_start": 464,
+        "line_end": 464,
+        "summary": "提供组件预览功能。"
+      },
+      {
+        "section_id": "section-system-preset-ui-component-library",
+        "title": "系统预置UI组件库",
+        "level": 3,
+        "line_start": 465,
+        "line_end": 499,
+        "summary": "提供系统预置的高级UI组件库，包括Chip、ChipGroup、ComposeListItem、ComposeTitleBar、DownloadFileButton、DialogV2、EditableTitleBar、ExceptionPrompt、Filter、FolderStack、FoldSplitContainer、FormMenu、FullScreenLaunchComponent、GridObjectSortComponent、Popup、ProgressButton、SegmentButton、SelectTitleBar、SelectionMenu、SplitLayout、SubHeader、SwipeRefresher、TabTitleBar、ToolBar、TreeView等。"
+      },
+      {
+        "section_id": "section-state-management-rendering-control",
+        "title": "状态管理与渲染控制",
+        "level": 3,
+        "line_start": 500,
+        "line_end": 510,
+        "summary": "提供状态管理和渲染控制功能，包括应用级变量的状态管理、状态管理V1装饰器参数、状态变量变化监听、内置环境变量说明、ForEach、LazyForEach、Repeat等渲染控制指令。"
+      },
+      {
+        "section_id": "section-responsive-env-system-property",
+        "title": "响应式环境变量",
+        "level": 3,
+        "line_start": 511,
+        "line_end": 51212,
+        "summary": "提供响应式环境变量，包括@Env环境变量装饰器。"
+      },
+      {
+        "section_id": "section-common-definitions",
+        "title": "公共定义",
+        "level": 3,
+        "line_start": 513,
+        "line_end": 520,
+        "summary": "提供公共类型定义，包括基础类型定义、像素单位、枚举说明、设置事件回调等。"
+      },
+      {
+        "section_id": "section-deprecated-components",
+        "title": "已停止维护的组件与接口",
+        "level": 3,
+        "line_start": 530,
+        "line_end": 541,
+        "summary": "列出已停止维护的ArkTS组件和接口，包括GridContainer、Panel、NavRouter、Navigator、Stepper等旧版组件。"
+      },
+      {
+        "section_id": "section-js-components",
+        "title": "JS组件",
+        "level": 2,
+        "line_start": 542,
+        "line_end": 545,
+        "summary": "提供兼容JS的类Web开发范式，包括ArkUI.Full完整版、ArkUI.Lite精简版以及JS服务卡片UI组件。"
+      },
+      {
+        "section_id": "section-c-api",
+        "title": "C API",
+        "level": 2,
+        "line_start": 546,
+        "line_end": 755,
+        "summary": "提供C语言原生API接口，包括ArkUI Native模块、头文件、结构体定义等，用于C/C++原生开发。"
+      },
+      {
+        "section_id": "section-arkui-module",
+        "title": "模块",
+        "level": 3,
+        "line_start": 547,
+        "line_end": 555,
+        "summary": "提供ArkUI C API模块，包括ArkUI_NativeModule、ArkUI_Accessibility、OH_NativeXComponent、ArkUI_EventModule、WindowManager、OH_DisplayManager、ArkUI_RenderNodeUtils等。"
+      },
+      {
+        "section_id": "section-arkui-headerfile",
+        "title": "头文件",
+        "level": 3,
+        "line_start": 556,
+        "line_end": 580,
+        "summary": "提供ArkUI C API头文件，包括拖拽、drawable_descriptor、动画、对话框、手势、native接口、按键事件、节点、渲染、类型、styled_string、UI输入事件、窗口、显示管理等头文件。"
+      },
+      {
+        "section_id": "section-arkui-struct",
+        "title": "结构体",
+        "level": 3,
+        "line_start": 581,
+        "line_end": 755,
+        "summary": "提供ArkUI C API结构体定义，包括事件结构体、上下文结构体、拖拽事件结构体、DrawableDescriptor结构体、动画相关结构体、手势识别结构体、无障碍结构体、XComponent相关结构体、节点相关结构体、布局相关结构体、矩阵变换结构体、窗口管理结构体、显示管理结构体等大量数据结构定义。"
+      }
+    ]
+  }
+}
