@@ -1,1 +1,92 @@
-{"doc_id":"data-sync-of-rdb-store","title":"关系型数据库跨设备数据同步","path":"zh-cn/application-dev/database/data-sync-of-rdb-store.md","relative_path":"../../docs/zh-cn/application-dev/database/data-sync-of-rdb-store.md","metadata":{"kit":"ArkData","subsystem":"DistributedDataManager","owner":"@baijidong","designer":"@widecode; @htt1997","tester":"@yippo; @logic42","adviser":"@ge-yafang"},"summary":"本文档介绍关系型数据库跨设备数据同步功能，包括场景介绍、基本概念、运作机制、约束限制、接口说明、使用多设备协同表模式进行数据同步、使用单版本表模式进行数据同步、配置schema文件等内容。","structure":{"title":"关系型数据库跨设备数据同步","sections":[{"section_id":"section-1","title":"场景介绍","level":2,"line_start":10,"line_end":12,"summary":"介绍关系型数据库跨设备数据同步的应用场景，包括将需要同步的表数据迁移到新的支持跨设备的表中，或在表创建时设置其支持跨设备。"},{"section_id":"section-2","title":"基本概念","level":2,"line_start":15,"line_end":21,"summary":"定义关系型数据库跨设备数据同步的基本概念，包括分布式表、数据同步、数据变化通知等核心概念。"},{"section_id":"section-3","title":"运作机制","level":2,"line_start":23,"line_end":65,"summary":"详细说明关系型数据库跨设备数据同步的运作机制，包括数据跨设备同步机制、数据变化通知机制和数据同步存储机制（多设备协同表模式和单版本表模式）。"},{"section_id":"section-4","title":"约束限制","level":2,"line_start":67,"line_end":82,"summary":"列出关系型数据库跨设备数据同步的约束限制条件，包括数据库数量限制、订阅回调数量限制、表类型限制等。"},{"section_id":"section-5","title":"接口说明","level":2,"line_start":83,"line_end":95,"summary":"提供关系型设备协同分布式数据库跨设备数据同步功能的相关接口列表，包括设置分布式同步表、分布式数据同步、订阅数据变化等接口。"},{"section_id":"section-6","title":"使用多设备协同表模式进行数据同步","level":2,"line_start":98,"line_end":313,"summary":"详细说明使用多设备协同表模式进行数据同步的完整开发步骤，包括导入模块、请求权限、创建关系型数据库、订阅数据变化消息、同步数据变化、拉取数据变化、远程查询等操作。"},{"section_id":"section-7","title":"使用单版本表模式进行数据同步","level":2,"line_start":315,"line_end":344,"summary":"说明使用单版本表模式进行数据同步的开发步骤，与多设备协同表模式相似，但需要将表设置为SINGLE_VERSION单版本类型。"},{"section_id":"section-8","title":"配置schema文件","level":2,"line_start":350,"line_end":1160,"summary":"详细说明单版本表模式下schema文件的配置要求，包括文件名及路径要求、文件内容层级及目录结构、schema示例、schema约束与示意等内容。"},{"section_id":"section-9","title":"相关实例","level":2,"line_start":1161,"line_end":1169,"summary":"提供关系型数据库开发的相关实例参考链接，包括分布式组网认证、分布式关系型数据库、分布式账号等实例。"}]}}
+{
+  "doc_id": "data-sync-of-rdb-store",
+  "title": "关系型数据库跨设备数据同步",
+  "path": "../../docs/zh-cn/application-dev/database/data-sync-of-rdb-store.md",
+  "relative_path": "../../docs/zh-cn/application-dev/database/data-sync-of-rdb-store.md",
+  "metadata": {
+    "kit": "ArkData",
+    "subsystem": "DistributedDataManager",
+    "owner": "@baijidong",
+    "designer": "@widecode; @htt1997",
+    "tester": "@yippo; @logic42",
+    "adviser": "@ge-yafang"
+  },
+  "summary": "本文档介绍关系型数据库跨设备数据同步功能，包括场景介绍、基本概念、运作机制、约束限制、接口说明、使用多设备协同表模式进行数据同步、使用单版本表模式进行数据同步、配置schema文件等内容。",
+  "structure": {
+    "title": "关系型数据库跨设备数据同步",
+    "sections": [
+      {
+        "section_id": "section-1",
+        "title": "场景介绍",
+        "level": 2,
+        "line_start": 10,
+        "line_end": 12,
+        "summary": "介绍关系型数据库跨设备数据同步的应用场景，包括将需要同步的表数据迁移到新的支持跨设备的表中，或在表创建时设置其支持跨设备。"
+      },
+      {
+        "section_id": "section-2",
+        "title": "基本概念",
+        "level": 2,
+        "line_start": 15,
+        "line_end": 21,
+        "summary": "定义关系型数据库跨设备数据同步的基本概念，包括分布式表、数据同步、数据变化通知等核心概念。"
+      },
+      {
+        "section_id": "section-3",
+        "title": "运作机制",
+        "level": 2,
+        "line_start": 23,
+        "line_end": 65,
+        "summary": "详细说明关系型数据库跨设备数据同步的运作机制，包括数据跨设备同步机制、数据变化通知机制和数据同步存储机制（多设备协同表模式和单版本表模式）。"
+      },
+      {
+        "section_id": "section-4",
+        "title": "约束限制",
+        "level": 2,
+        "line_start": 67,
+        "line_end": 82,
+        "summary": "列出关系型数据库跨设备数据同步的约束限制条件，包括数据库数量限制、订阅回调数量限制、表类型限制等。"
+      },
+      {
+        "section_id": "section-5",
+        "title": "接口说明",
+        "level": 2,
+        "line_start": 83,
+        "line_end": 95,
+        "summary": "提供关系型设备协同分布式数据库跨设备数据同步功能的相关接口列表，包括设置分布式同步表、分布式数据同步、订阅数据变化等接口。"
+      },
+      {
+        "section_id": "section-6",
+        "title": "使用多设备协同表模式进行数据同步",
+        "level": 2,
+        "line_start": 98,
+        "line_end": 313,
+        "summary": "详细说明使用多设备协同表模式进行数据同步的完整开发步骤，包括导入模块、请求权限、创建关系型数据库、订阅数据变化消息、同步数据变化、拉取数据变化、远程查询等操作。"
+      },
+      {
+        "section_id": "section-7",
+        "title": "使用单版本表模式进行数据同步",
+        "level": 2,
+        "line_start": 315,
+        "line_end": 344,
+        "summary": "说明使用单版本表模式进行数据同步的开发步骤，与多设备协同表模式相似，但需要将表设置为SINGLE_VERSION单版本类型。"
+      },
+      {
+        "section_id": "section-8",
+        "title": "配置schema文件",
+        "level": 2,
+        "line_start": 350,
+        "line_end": 1160,
+        "summary": "详细说明单版本表模式下schema文件的配置要求，包括文件名及路径要求、文件内容层级及目录结构、schema示例、schema约束与示意等内容。"
+      },
+      {
+        "section_id": "section-9",
+        "title": "相关实例",
+        "level": 2,
+        "line_start": 1161,
+        "line_end": 1169,
+        "summary": "提供关系型数据库开发的相关实例参考链接，包括分布式组网认证、分布式关系型数据库、分布式账号等实例。"
+      }
+    ]
+  }
+}
