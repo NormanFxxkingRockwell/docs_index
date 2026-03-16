@@ -5,6 +5,8 @@ import { readMarkdownFileByPath } from '../utils/file-reader.js';
 export interface ReadDocInput {
   path: string;
   max_lines?: number;
+  line_start?: number; // 新增: 起始行号
+  line_end?: number;   // 新增: 结束行号
 }
 
 export interface ReadDocOutput {
@@ -16,10 +18,21 @@ export interface ReadDocOutput {
 }
 
 export function harmonyosReadDoc(input: ReadDocInput): ReadDocOutput {
-  const { path, max_lines = 200 } = input;
+  const { path, max_lines = 200, line_start, line_end } = input;
   
   try {
-    const content = readMarkdownFileByPath(path, max_lines);
+    // If line_start/line_end are provided, read that interval (inclusive)
+    let content: string;
+    if (typeof line_start === 'number' || typeof line_end === 'number') {
+      const fullContent = readMarkdownFileByPath(path, Number.MAX_SAFE_INTEGER);
+      const lines = fullContent.split('\n');
+      const start = Math.max(1, line_start ?? 1);
+      const end = Math.min(lines.length, line_end ?? lines.length);
+      content = lines.slice(start - 1, end).join('\n');
+    } else {
+      // Backward-compatible behavior: read up to max_lines
+      content = readMarkdownFileByPath(path, max_lines);
+    }
     
     return {
       success: true,

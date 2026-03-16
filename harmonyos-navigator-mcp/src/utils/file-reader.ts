@@ -2,8 +2,39 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-const DOCS_BASE_PATH = path.join(process.cwd(), '..', 'docs');
-const SEARCH_INDEX_BASE_PATH = path.join(process.cwd(), '..', 'search_index');
+function resolveRepoRoot(): string {
+  const candidates = [
+    process.cwd(),
+    path.resolve(process.cwd(), '..'),
+  ];
+
+  for (const candidate of candidates) {
+    if (
+      fs.existsSync(path.join(candidate, 'search_index')) &&
+      fs.existsSync(path.join(candidate, 'docs'))
+    ) {
+      return candidate;
+    }
+  }
+
+  return process.cwd();
+}
+
+const REPO_ROOT = resolveRepoRoot();
+const DOCS_BASE_PATH = path.join(REPO_ROOT, 'docs');
+const SEARCH_INDEX_BASE_PATH = path.join(REPO_ROOT, 'search_index');
+
+export function getRepoRoot(): string {
+  return REPO_ROOT;
+}
+
+export function getDocsBasePath(): string {
+  return DOCS_BASE_PATH;
+}
+
+export function getSearchIndexBasePath(): string {
+  return SEARCH_INDEX_BASE_PATH;
+}
 
 export function readJsonFile(filePath: string): unknown {
   const fullPath = path.isAbsolute(filePath) ? filePath : path.join(SEARCH_INDEX_BASE_PATH, filePath);

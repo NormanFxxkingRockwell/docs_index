@@ -1,6 +1,8 @@
 // Tool 3: Search - 文档检索
 
 import { searchInDomain, searchInKit, getMasterMap } from '../utils/file-reader.js';
+import { normalizeQuery } from '../utils/query-normalizer.js';
+import { pageSearch, SearchMatch } from '../utils/page-search.js';
 
 export interface SearchInput {
   domains: string[];
@@ -8,8 +10,26 @@ export interface SearchInput {
   include_api?: boolean;
 }
 
+/**
+ * 章节级匹配结果（新增）
+ */
+export interface MatchedPage {
+  page_id: string;
+  domain: string;
+  doc_id: string;
+  doc_title: string;
+  section_id?: string;
+  section_title?: string;
+  path: string;
+  line_start: number;
+  line_end: number;
+  score: number;
+  match_reasons: string[];
+}
+
 export interface SearchOutput {
-  dev_documents: DevDocument[];
+  matched_pages?: MatchedPage[];      // 新增：章节级结果
+  dev_documents: DevDocument[];        // 保留：向后兼容
   api_documents: ApiDocument[];
 }
 
@@ -31,7 +51,31 @@ export interface ApiDocument {
 export function harmonyosSearch(input: SearchInput): SearchOutput {
   const { domains, question, include_api = true } = input;
   
-  // 提取关键词
+  // 新检索链路：使用 page_index
+  const allMatchedPages: MatchedPage[] = [];
+  
+  for (const domain of domains) {
+    // 归一化查询
+    const normalizedQuery = normalizeQuery(question);
+    
+    // 章节级检索
+    const result = pageSearch(domain, normalizedQuery, { topK: 15 });
+    
+    if (result.matched_pages) {
+      allMatchedPages.push(...result.matched_pages);
+    }
+  }
+  
+  // 去重（按 page_id）
+  const uniquePages = allMatchedPages.filter((page, index, self) =>
+    index === self.findIndex(p => p.page_id === page.page_id)
+  );
+  
+  // 按分数排序，取前 10
+  uniquePages.sort((a, b) => b.score - a.score);
+  const topMatchedPages = uniquePages.slice(0, 10);
+  
+  // 旧检索链路：保留向后兼容
   const keywords = question
     .replace(/[^\w\u4e00-\u9fa5]/g, ' ')
     .split(/\s+/)
@@ -49,7 +93,7 @@ export function harmonyosSearch(input: SearchInput): SearchOutput {
     // 如果无法读取，使用空映射
   }
   
-  // 检索每个领域的开发文档
+  // 检索每个领域的开发文档（旧链路）
   for (const domain of domains) {
     const docs = searchInDomain(domain, keywords);
     
@@ -90,7 +134,8 @@ export function harmonyosSearch(input: SearchInput): SearchOutput {
   );
   
   return {
-    dev_documents: uniqueDevDocs.slice(0, 10),
+    matched_pages: topMatchedPages,      // 新增：章节级结果
+    dev_documents: uniqueDevDocs.slice(0, 10),  // 保留：向后兼容
     api_documents: uniqueApiDocs.slice(0, 10)
   };
 }
