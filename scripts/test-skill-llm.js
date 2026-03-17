@@ -76,6 +76,7 @@ function callLLM(prompt) {
     return null;
   }
 }
+}
 
 /**
  * 步骤 1: 入口过滤
@@ -225,9 +226,22 @@ function main() {
   console.log(`测试问题数：${TEST_QUESTIONS.length}\n`);
   
   // 检查 LLM 配置
-  if (!process.env.LLM_API_KEY) {
-    console.error('❌ 错误：LLM_API_KEY 环境变量未设置');
-    console.error('请设置：export LLM_API_KEY=sk-your-key');
+  const configPath = path.join(__dirname, 'llm-config.json');
+  if (!fs.existsSync(configPath)) {
+    console.error('❌ 错误：llm-config.json 配置文件不存在');
+    console.error('请创建配置文件：scripts/llm-config.json');
+    console.error('参考示例：');
+    console.error(JSON.stringify({
+      provider: 'deepseek',
+      apiKey: 'sk-your-api-key',
+      model: 'deepseek-chat'
+    }, null, 2));
+    process.exit(1);
+  }
+  
+  const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+  if (!config.apiKey || config.apiKey === 'sk-your-api-key-here') {
+    console.error('❌ 错误：请在 llm-config.json 中配置 API Key');
     process.exit(1);
   }
   

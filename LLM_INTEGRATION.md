@@ -17,14 +17,20 @@
 
 ## 快速开始
 
-### 1. 安装配置
+### 1. 配置 LLM
 
-```bash
-# 设置环境变量
-export LLM_PROVIDER=deepseek
-export LLM_API_KEY=sk-your-api-key
-export LLM_MODEL=deepseek-chat  # 可选
+编辑配置文件 `scripts/llm-config.json`：
+
+```json
+{
+  "provider": "deepseek",
+  "apiKey": "sk-your-actual-api-key",
+  "model": "deepseek-chat",
+  "apiBase": "https://api.deepseek.com"
+}
 ```
+
+**重要**：将 `apiKey` 替换为你的实际 API Key。
 
 ### 2. 测试调用
 
@@ -42,23 +48,55 @@ node scripts/test-skill-llm.js
 
 ## 配置说明
 
-### 环境变量
+### 配置文件位置
 
-| 变量名 | 说明 | 默认值 | 必填 |
+`scripts/llm-config.json`
+
+### 配置项说明
+
+| 配置项 | 说明 | 默认值 | 必填 |
 |--------|------|--------|------|
-| `LLM_PROVIDER` | LLM 提供商 | `deepseek` | 否 |
-| `LLM_API_KEY` | API Key | - | **是** |
-| `LLM_MODEL` | 模型名称 | 各提供商默认 | 否 |
-| `LLM_CACHE_TTL` | 缓存有效期（秒） | `86400` (24h) | 否 |
+| `provider` | LLM 提供商名称 | `deepseek` | 否 |
+| `apiKey` | API Key | - | **是** |
+| `model` | 模型名称 | `deepseek-chat` | 否 |
+| `apiBase` | API 基础 URL | `https://api.deepseek.com` | 否 |
+| `timeout` | 超时时间（毫秒） | `30000` | 否 |
+| `temperature` | 温度参数 | `0.3` | 否 |
+| `maxTokens` | 最大 token 数 | `1000` | 否 |
+| `cache.enabled` | 是否启用缓存 | `true` | 否 |
+| `cache.ttl` | 缓存有效期（秒） | `86400` (24h) | 否 |
+| `concurrency.maxRequests` | 最大并发请求数 | `3` | 否 |
 
-### 提供商配置
+### 完整配置示例
 
-#### DeepSeek（推荐）
+```json
+{
+  "provider": "deepseek",
+  "apiKey": "sk-your-actual-api-key",
+  "model": "deepseek-chat",
+  "apiBase": "https://api.deepseek.com",
+  "timeout": 30000,
+  "temperature": 0.3,
+  "maxTokens": 1000,
+  "cache": {
+    "enabled": true,
+    "ttl": 86400
+  },
+  "concurrency": {
+    "maxRequests": 3
+  }
+}
+```
 
-```bash
-export LLM_PROVIDER=deepseek
-export LLM_API_KEY=sk-your-deepseek-key
-export LLM_MODEL=deepseek-chat
+### DeepSeek 配置（推荐）
+
+```json
+{
+  "provider": "deepseek",
+  "apiKey": "sk-your-deepseek-key",
+  "model": "deepseek-chat",
+  "apiBase": "https://api.deepseek.com"
+}
 ```
 
 **特点**：
@@ -66,37 +104,7 @@ export LLM_MODEL=deepseek-chat
 - ✅ 中文支持好
 - ✅ 响应速度快
 
-**API 文档**：https://platform.deepseek.com/api-docs/
-
-#### OpenAI
-
-```bash
-export LLM_PROVIDER=openai
-export LLM_API_KEY=sk-your-openai-key
-export LLM_MODEL=gpt-4o
-```
-
-**特点**：
-- ✅ 质量最好
-- ✅ 生态完善
-- ❌ 成本较高（$10/M tokens）
-
-**API 文档**：https://platform.openai.com/docs/
-
-#### Anthropic
-
-```bash
-export LLM_PROVIDER=anthropic
-export LLM_API_KEY=sk-your-anthropic-key
-export LLM_MODEL=claude-3-5-sonnet-20241022
-```
-
-**特点**：
-- ✅ 长上下文支持（200K）
-- ✅ 推理能力强
-- ❌ 需要海外网络
-
-**API 文档**：https://docs.anthropic.com/claude/reference/
+**获取 API Key**：https://platform.deepseek.com/
 
 ---
 
@@ -108,12 +116,6 @@ export LLM_MODEL=claude-3-5-sonnet-20241022
 
 ```bash
 node scripts/llm-chat.js --prompt="你的问题"
-```
-
-#### 指定提供商
-
-```bash
-node scripts/llm-chat.js --provider=openai --prompt="你的问题"
 ```
 
 #### 清理缓存
@@ -383,17 +385,20 @@ console.error('Response:', JSON.stringify(response, null, 2));
 
 #### 2. 禁用缓存
 
-临时禁用缓存进行测试：
-```bash
-LLM_CACHE_TTL=0 node scripts/llm-chat.js --prompt="..."
+临时禁用缓存进行测试，编辑 `llm-config.json`：
+```json
+{
+  "cache": {
+    "enabled": false
+  }
+}
 ```
 
 #### 3. 测试连接
 
 ```bash
-# DeepSeek
 curl -X POST https://api.deepseek.com/v1/models \
-  -H "Authorization: Bearer $LLM_API_KEY"
+  -H "Authorization: Bearer YOUR_API_KEY"
 
 # OpenAI
 curl -X POST https://api.openai.com/v1/models \
