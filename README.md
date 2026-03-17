@@ -19,10 +19,13 @@ cd docs && git init && git remote add origin https://gitcode.com/openharmony/doc
 
 **核心文件**：`search_index/skills/harmonyos/doc-navigator.md`
 
+**外部 Agent 调用**：
+- 详见：[search_index/skills/harmonyos/USAGE.md](search_index/skills/harmonyos/USAGE.md)
+
 **执行流程**：
 
 ```
-1. 读取导航指南 → search_index/skills/harmonyos-navigator.md
+1. 读取导航指南 → search_index/skills/harmonyos/doc-navigator.md
 2. 入口过滤 → 用 LLM 判断问题是否与 HarmonyOS 相关
 3. 领域识别 → 读取 master_map.json，识别问题涉及的领域
 4. 多路检索 → 根据识别的领域，读取对应的 domain_index.json 和 page_index.jsonl
@@ -43,13 +46,9 @@ cd docs && git init && git remote add origin https://gitcode.com/openharmony/doc
 
 **LLM 调用脚本**：
 ```bash
-# 配置环境变量
-export LLM_PROVIDER=deepseek
-export LLM_API_KEY=sk-your-api-key
-
+# 配置 LLM（编辑 scripts/llm-config.json）
 # 调用 LLM
 node scripts/llm-chat.js --prompt="你的问题"
-
 # 清理缓存
 node scripts/llm-chat.js --cleanup=true
 ```
