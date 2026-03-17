@@ -4,7 +4,7 @@
 
 这个 Skill 用于指导 AI Agent 处理 HarmonyOS 开发相关问题的文档检索。
 
-**重要**：AI Agent 直接使用此 Skill 和 master_map.json 来引导检索流程，不需要额外脚本。
+**重要**：AI Agent 直接使用此 Skill 和 `search_index/master_map.json` 来引导检索流程，无需 MCP Server。
 
 ---
 
@@ -14,32 +14,8 @@
 |------|------|------|
 | **总地图** | `search_index/master_map.json` | 领域映射、数据源 |
 | **Skill 指南** | `search_index/skills/harmonyos-navigator.md` | AI 执行指南 |
-
----
-
-## 数据源：master_map.json
-
-### 结构概览
-
-```json
-{
-  "version": "1.0",
-  "categories": [...],           // 10 个分类
-  "domains": {...},             // 46 个领域
-  "reference_kits": [...],      // 51 个 API Kit
-  "domain_kit_mapping": {...},  // 领域 ↔ Kit 双向映射
-  "question_patterns": {...}    // 问题模式识别
-}
-```
-
-### 关键字段说明
-
-| 字段 | 说明 |
-|------|------|
-| `domains.{domain}.kit` | 对应的 API Kit（用于查找 Reference） |
-| `domains.{domain}.doc_count` | 领域文档数量 |
-| `domain_kit_mapping.{domain}` | 快速获取 Kit 名称 |
-| `reference_kits` | 完整 Kit 列表及文档数 |
+| **领域索引** | `search_index/domains/{domain}/domain_index.json` | 领域文档列表 |
+| **章节索引** | `search_index/domains/{domain}/page_index.jsonl` | 章节级检索 |
 
 ---
 
@@ -55,9 +31,9 @@
 
 **目的**：判断问题是否与 HarmonyOS 相关
 
-**操作**：
+### 1.1 LLM 判断（推荐）
 
-使用 LLM 能力判断。判断标准：
+使用 LLM 能力判断，标准：
 
 **相关**（继续流程）：
 - 包含 "HarmonyOS"、"OpenHarmony"、"ArkUI"、"Ability"、"Network Kit" 等 HarmonyOS 特有关键词
@@ -75,36 +51,65 @@
 - ✗ "如何在 Android 中发起网络请求？" → 不相关（明确提到 Android）
 - ✗ "React Native 如何实现？" → 不相关（其他平台）
 
+### 1.2 关键词匹配（备用）
+
+如果无法使用 LLM，使用关键词匹配：
+
+```typescript
+// HarmonyOS 相关关键词
+const HARMONYOS_KEYWORDS = [
+  'harmonyos', 'openharmony', '鸿蒙', 'arkui', 'arkts',
+  'ability', 'uability', 'stage 模型', 'fa 模型',
+  'network kit', 'media kit', 'window', '窗口',
+  '@ohos.', '@kit.', 'module.json5', 'bundle'
+];
+
+// 非 HarmonyOS 关键词（明确排除）
+const NON_HARMONYOS_KEYWORDS = [
+  'android', 'ios', 'iphone', 'android studio', 'xcode',
+  'python', 'java', 'kotlin', 'swift', 'objective-c',
+  'react', 'vue', 'angular', 'flutter', 'uniapp',
+  '微信小程序', '支付宝小程序', '抖音小程序'
+];
+```
+
+**判断逻辑**：
+1. 包含非 HarmonyOS 关键词 → 不相关
+2. 包含 HarmonyOS 关键词 → 相关
+3. 都不包含 → 默认相关（用户主动询问）
+
+---
+
 ## 步骤 2: 领域识别 (Domain Recognition)
 
 **目的**：识别问题涉及的领域
 
-**操作**：
+### 2.1 读取领域映射
 
-1. 读取 `search_index/master_map.json` 中的 `domains` 和 `categories`
-2. 根据问题关键词匹配领域（支持模糊匹配）
-3. 考虑多领域情况
+读取 `search_index/master_map.json` 中的 `domains` 和 `categories`。
 
-**匹配规则**：
+### 2.2 领域关键词匹配
+
+| 分类 | 领域 | 关键词示例 |
+|------|------|------------|
+| 基础能力 | quick-start, arkts-utils, basic-services, tools, performance, application-models | 应用启动，ArkTS, 工具，性能，Ability |
+| UI 框架 | ui, web, form, webgl, graphics, graphics3d | Text, Button, 布局，动画，WebGL |
+| 媒体 | media, camera, image, audio | 视频，音频，图片，相机 |
+| 通信 | network, connectivity, ipc | HTTP, WebSocket, TCP, 蓝牙 |
+| 数据管理 | database, file-management | 数据库，文件，存储 |
+| 设备能力 | device, displaymanager, windowmanager | 屏幕，设备，窗口 |
+| 安全 | security | 加密，权限，证书 |
+| 系统服务 | notification, inputmethod, task-management, accessibility, dfx, distributedservice | 通知，输入法，任务管理 |
+| AI 能力 | ai | AI, 机器学习，推理 |
+
+### 2.3 匹配规则
+
 - **精确匹配**：问题中直接出现领域名称（如 "network"、"ui"）
 - **关键词匹配**：问题包含领域相关关键词（如 "HTTP" → network，"Text" → ui）
 - **Kit 匹配**：问题提到 Kit 名称（如 "Network Kit" → network）
 
-**可用领域**（从 master_map.json）：
+### 2.4 多领域处理
 
-| 分类 | 领域 | 关键词示例 |
-|------|------|------------|
-| 基础能力 | quick-start, arkts-utils, basic-services, tools, performance, application-models | 应用启动, ArkTS, 工具, 性能, Ability |
-| UI框架 | ui, web, form, webgl, graphics, graphics3d | Text, Button, 布局, 动画, WebGL |
-| 媒体 | media, camera, image, audio | 视频, 音频, 图片, 相机 |
-| 通信 | network, connectivity, ipc | HTTP, WebSocket, TCP, 蓝牙 |
-| 数据管理 | database, file-management | 数据库, 文件, 存储 |
-| 设备能力 | device, displaymanager, windowmanager | 屏幕,设备, 窗口 |
-| 安全 | security | 加密, 权限, 证书 |
-| 系统服务 | notification, inputmethod, task-management, accessibility, dfx, distributedservice | 通知, 输入法, 任务管理 |
-| AI能力 | ai | AI, 机器学习, 推理 |
-
-**多领域处理**：
 - 如果问题涉及多个领域，识别所有相关领域
 - 按关键词匹配度排序
 - 优先检索匹配度最高的领域
@@ -114,50 +119,70 @@
 - "Text 组件" → ui（关键词匹配）
 - "Ability 生命周期" → application-models（关键词匹配）
 
+---
+
 ## 步骤 3: 多路检索
 
 **目的**：并发检索开发文档 + API 参考
 
-**操作**：
-
-对于每个识别的领域，执行以下检索：
-
 ### 3.1 检索开发文档
 
-- 路径: `search_index/domains/{domain}/domain_index.json`
-- 内容: 领域概述、核心概念、文档列表
-- 优先级: 高（提供完整概念和示例）
+**路径**: `search_index/domains/{domain}/domain_index.json`
 
-### 3.2 检索开发文档详情
+**内容**: 领域概述、核心概念、文档列表
 
-- 路径: `search_index/domains/{domain}/documents/{doc_id}_structure.json`
-- 内容: 文档结构化内容
-- 优先级: 高
+**优先级**: 高（提供完整概念和示例）
 
-### 3.3 检索 API 参考
+### 3.2 检索章节索引（推荐）
+
+**路径**: `search_index/domains/{domain}/page_index.jsonl`
+
+**内容**: 章节级索引，支持精准定位到具体章节
+
+**优先级**: 高（提供章节级精度）
+
+**优势**:
+- 精准定位到具体章节，而非整篇文档
+- 包含 `line_start` 和 `line_end`，可直接读取指定行
+- 包含 `section_title`，便于理解章节内容
+
+### 3.3 检索开发文档详情
+
+**路径**: `search_index/domains/{domain}/documents/{doc_id}_structure.json`
+
+**内容**: 文档结构化内容（章节、行号）
+
+**优先级**: 高
+
+### 3.4 检索 API 参考
 
 1. 从 `domain_kit_mapping` 获取对应的 Kit
-2. 路径: `docs/zh-cn/application-dev/reference/{kit}/`
+2. **路径**: `docs/zh-cn/application-dev/reference/{kit}/`
 3. 查找匹配的 .md 文件（支持关键词搜索）
-- 优先级: 中（提供 API 细节）
+4. **优先级**: 中（提供 API 细节）
 
-### 3.4 并发执行策略
+### 3.5 并发执行策略
 
 - **优先级**：开发文档 > API 参考
 - **并发度**：同时检索所有识别的领域
 - **超时控制**：每个检索任务设置超时
 - **结果合并**：按优先级和相关性排序
 
-**路径处理规则**：
+### 3.6 路径处理规则
+
 - 相对路径 `../../docs/` 需要解析为绝对路径
 - Kit 路径格式：`reference/{kit}/{module}/{doc}.md`
 - 处理失败时返回错误和恢复建议
+
+---
 
 ## 步骤 4: 答案校验 (Answer Validation)
 
 **目的**：验证检索结果是否正确回答了问题
 
-**操作**：
+### 4.1 LLM 验证（推荐）
+
+使用 LLM 评估以下内容：
 
 1. **完整性检查**：
    - 检索结果是否覆盖问题所有方面
@@ -174,14 +199,107 @@
    - 说明是否清晰易懂
    - 是否包含必要的权限配置
 
-4. **缺失处理**：
-   - 如果不匹配，提示需要补充的领域
-   - 提供相关文档链接
-   - 建议查看相关 Kit
+### 4.2 规则验证（备用）
+
+如果无法使用 LLM，使用规则验证：
+
+**判断标准**：
+- 关键词覆盖率 ≥ 50%
+- 包含问题核心概念
+- 有可引用的代码示例
+
+### 4.3 缺失处理
+
+如果不匹配：
+- 提示需要补充的领域
+- 提供相关文档链接
+- 建议查看相关 Kit
+
+---
+
+## 步骤 5: LLM 集成（可选但推荐）
+
+### 5.1 何时调用 LLM
+
+**推荐在以下场景调用 LLM**：
+
+1. **入口过滤**（置信度要求高时）
+   - 问题模糊，关键词匹配无法确定
+   - 需要理解问题语义
+
+2. **领域识别**（多领域复杂问题）
+   - 问题涉及多个领域
+   - 需要理解问题的核心意图
+
+3. **答案校验**（质量保证）
+   - 验证检索结果是否覆盖问题要点
+   - 检测是否有幻觉风险
+   - 提供改进建议
+
+### 5.2 LLM 调用示例
+
+```typescript
+// 入口过滤
+const entryPrompt = `
+判断以下问题是否与 HarmonyOS/OpenHarmony 开发相关：
+
+问题：${question}
+
+相关标准：
+- 包含 HarmonyOS 特有关键词（ArkUI、Ability、ArkTS 等）
+- 涉及 HarmonyOS 技术栈
+- 不是其他平台（Android、iOS 等）
+
+请回答：相关/不相关，并说明理由。
+`;
+
+// 领域识别
+const domainPrompt = `
+识别以下问题涉及的 HarmonyOS 开发领域：
+
+问题：${question}
+
+可用领域：ui, network, database, media, application-models, ...
+
+请列出最相关的 1-3 个领域，按相关性排序。
+`;
+
+// 答案校验
+const validatePrompt = `
+验证检索结果是否正确回答了问题：
+
+问题：${question}
+检索到的文档：${documents}
+
+请评估：
+1. 是否覆盖了问题的所有方面？
+2. 是否有可引用的代码示例？
+3. 是否有幻觉风险？
+4. 置信度（0-1）是多少？
+`;
+```
+
+### 5.3 LLM 提供商选择
+
+**推荐**：
+- **DeepSeek** - 性价比高，适合中文场景
+- **GPT-4o** - 质量最好，成本较高
+- **Claude** - 长上下文友好
+- **本地模型** - 隐私友好（Ollama/vLLM）
+
+**配置示例**（环境变量）：
+```bash
+LLM_PROVIDER=deepseek
+LLM_API_KEY=sk-xxx
+LLM_MODEL=deepseek-chat
+```
+
+---
 
 ## 实际执行示例
 
 ### 示例问题 1：HTTP 请求
+
 ```
 "如何在 HarmonyOS 中发起 HTTP 请求？"
 ```
@@ -201,8 +319,10 @@
 
 并发执行：
 1. 读取 `search_index/domains/network/domain_index.json`
-   - 找到文档："使用HTTP访问网络"
-2. 读取 `docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-http.md`
+   - 找到文档："使用 HTTP 访问网络"
+2. 读取 `search_index/domains/network/page_index.jsonl`
+   - 找到章节："发起 HTTP 数据请求"（line_start: 24, line_end: 100）
+3. 读取 `docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-http.md`
    - 找到 API：@ohos.net.http
 
 **步骤 4: 校验**
@@ -218,6 +338,7 @@
 ---
 
 ### 示例问题 2：Text 组件
+
 ```
 "如何在 ArkUI 中使用 Text 组件？"
 ```
@@ -238,7 +359,9 @@
 并发执行：
 1. 读取 `search_index/domains/ui/domain_index.json`
    - 找到文档："文本显示 (Text/Span)"
-2. 读取 `docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-basic-components-text.md`
+2. 读取 `search_index/domains/ui/page_index.jsonl`
+   - 找到章节："Text 组件创建"（line_start: 13, line_end: 50）
+3. 读取 `docs/zh-cn/application-dev/reference/apis-arkui/arkui-ts/ts-basic-components-text.md`
    - 找到 API：Text 组件
 
 **步骤 4: 校验**
@@ -250,12 +373,15 @@
 - 返回 API 参考链接
 - 提供使用示例
 
+---
+
 ## 关键文件路径
 
 | 类型 | 路径格式 |
 |------|----------|
 | 开发文档索引 | `search_index/domains/{domain}/domain_index.json` |
-| 开发文档 | `search_index/domains/{domain}/documents/{doc_id}_structure.json` |
+| 章节索引 | `search_index/domains/{domain}/page_index.jsonl` |
+| 文档结构 | `search_index/domains/{domain}/documents/{doc_id}_structure.json` |
 | API 参考 | `docs/zh-cn/application-dev/reference/{kit}/{api_doc}.md` |
 | 相对路径 | `../../docs/zh-cn/application-dev/{domain}/{doc_id}.md` |
 
@@ -265,13 +391,14 @@
 
 | 情况 | 处理策略 | 用户提示 |
 |------|----------|----------|
-| 非 HarmonyOS 问题 | 终止流程，返回说明 | "此问题涉及 [平台]，不是 HarmonyOS 相关问题。HarmonyOS 文档导航系统仅处理 HarmonyOS/OpenHarmony 开发相关问题。" |
-| 无法识别领域 | 返回多个可能领域供选择 | "无法确定问题涉及的具体领域。可能相关的领域：[列表]。请提供更多上下文或选择最相关的领域。" |
-| 检索失败（文件不存在） | 返回错误和恢复建议 | "检索文档时出错：[错误信息]。建议：1. 检查文档索引是否最新；2. 尝试使用关键词搜索；3. 联系文档维护者。" |
+| 非 HarmonyOS 问题 | 终止流程，返回说明 | "此问题涉及 [平台]，不是 HarmonyOS 相关问题。" |
+| 无法识别领域 | 返回多个可能领域供选择 | "无法确定问题涉及的具体领域。可能相关的领域：[列表]。" |
+| 检索失败（文件不存在） | 返回错误和恢复建议 | "检索文档时出错：[错误信息]。建议检查文档索引是否最新。" |
 | 检索失败（权限问题） | 返回权限错误说明 | "无权限访问文档：[路径]。请检查文件系统权限。" |
-| 答案校验失败（不完整） | 返回改进建议和补充检索 | "检索结果可能不完整。建议查看：[补充领域]。是否需要继续检索相关文档？" |
-| 答案校验失败（版本不匹配） | 返回版本警告 | "注意：检索到的文档可能不是最新版本。当前 API Level：[版本]。建议查看最新文档。" |
-| 检索超时 | 返回部分结果和重试建议 | "检索超时，已返回部分结果。建议：1. 重试检索；2. 减少并发检索数量；3. 使用更具体的关键词。" |
+| 答案校验失败（不完整） | 返回改进建议和补充检索 | "检索结果可能不完整。建议查看：[补充领域]。" |
+| 答案校验失败（版本不匹配） | 返回版本警告 | "注意：检索到的文档可能不是最新版本。" |
+| 检索超时 | 返回部分结果和重试建议 | "检索超时，已返回部分结果。建议重试或减少并发数量。" |
+
 ---
 
 ## 使用方法
@@ -279,18 +406,60 @@
 当收到 HarmonyOS 开发相关问题时：
 
 1. **读取 master_map.json**：获取领域映射和 Kit 信息
-2. **执行入口过滤**：判断是否相关（返回置信度）
-3. **执行领域识别**：识别涉及领域（返回领域列表和置信度）
-4. **并发检索**：使用 parallel/read/grep 工具检索文档
+2. **执行入口过滤**：判断是否相关（LLM 或关键词匹配）
+3. **执行领域识别**：识别涉及领域（LLM 或关键词匹配）
+4. **并发检索**：
    - 优先检索开发文档（domain_index.json）
+   - 检索章节索引（page_index.jsonl）- 推荐
    - 并发检索 API 参考（对应 Kit 的 .md 文件）
    - 设置合理的超时时间
-5. **校验答案**：验证检索结果（完整性、可靠性、质量）
+5. **校验答案**：验证检索结果（LLM 或规则验证）
 6. **输出答案**：返回文档路径、摘要和代码示例
 7. **错误处理**：遇到错误时提供清晰的恢复建议
 
-**性能优化**：
+### 性能优化
+
 - 使用并发检索提高效率
 - 优先返回开发文档（包含完整示例）
 - API 参考按需检索（仅当需要 API 细节时）
+- **使用章节索引（page_index.jsonl）提高精度**
 - 缓存常用的 domain_index.json 结果
+
+---
+
+## 附录：领域 - Kit 映射表
+
+| 领域 | Kit |
+|------|-----|
+| network | apis-network-kit |
+| ui | apis-arkui |
+| web | apis-arkweb |
+| form | apis-form-kit |
+| media | apis-media-kit |
+| camera | apis-camera-kit |
+| image | apis-image-kit |
+| audio | apis-audio-kit |
+| database | apis-arkdata |
+| file-management | apis-core-file-kit |
+| connectivity | apis-connectivity-kit |
+| ipc | apis-ipc-kit |
+| security | apis-crypto-architecture-kit |
+| notification | apis-notification-kit |
+| inputmethod | apis-ime-kit |
+| task-management | apis-backgroundtasks-kit |
+| windowmanager | apis-arkui |
+| performance | apis-performance-analysis-kit |
+| arkts-utils | apis-arkts |
+| basic-services | apis-basic-services-kit |
+| application-models | apis-ability-kit |
+| ai | apis-mindspore-lite-kit |
+| graphics | apis-arkgraphics2d |
+| graphics3d | apis-arkgraphics3d |
+| webgl | apis-arkgraphics2d |
+| telephony | apis-telephony-kit |
+| location | apis-location-kit |
+| accessibility | apis-accessibility-kit |
+| internationalization | apis-localization-kit |
+| game-controller | apis-game-controller-kit |
+| distributedservice | apis-distributedservice-kit |
+| ffrt | apis-ffrt-kit |
