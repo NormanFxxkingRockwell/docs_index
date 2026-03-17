@@ -236,14 +236,26 @@ const NON_HARMONYOS_KEYWORDS = [
    - 检测是否有幻觉风险
    - 提供改进建议
 
-### 5.2 LLM 调用示例
+### 5.2 使用 LLM 调用脚本
 
-```typescript
-// 入口过滤
-const entryPrompt = `
+**项目提供统一的 LLM 调用脚本**：`scripts/llm-chat.js`
+
+**安装配置**：
+```bash
+# 设置环境变量
+export LLM_PROVIDER=deepseek
+export LLM_API_KEY=sk-your-api-key
+export LLM_MODEL=deepseek-chat  # 可选
+```
+
+**调用示例**：
+
+#### 入口过滤
+```bash
+node scripts/llm-chat.js --prompt="
 判断以下问题是否与 HarmonyOS/OpenHarmony 开发相关：
 
-问题：${question}
+问题：如何在 HarmonyOS 中发起 HTTP 请求？
 
 相关标准：
 - 包含 HarmonyOS 特有关键词（ArkUI、Ability、ArkTS 等）
@@ -251,48 +263,152 @@ const entryPrompt = `
 - 不是其他平台（Android、iOS 等）
 
 请回答：相关/不相关，并说明理由。
-`;
-
-// 领域识别
-const domainPrompt = `
-识别以下问题涉及的 HarmonyOS 开发领域：
-
-问题：${question}
-
-可用领域：ui, network, database, media, application-models, ...
-
-请列出最相关的 1-3 个领域，按相关性排序。
-`;
-
-// 答案校验
-const validatePrompt = `
-验证检索结果是否正确回答了问题：
-
-问题：${question}
-检索到的文档：${documents}
-
-请评估：
-1. 是否覆盖了问题的所有方面？
-2. 是否有可引用的代码示例？
-3. 是否有幻觉风险？
-4. 置信度（0-1）是多少？
-`;
+"
 ```
 
-### 5.3 LLM 提供商选择
+#### 领域识别
+```bash
+node scripts/llm-chat.js --prompt="
+识别以下问题涉及的 HarmonyOS 开发领域：
+
+问题：如何在 HarmonyOS 中发起 HTTP 请求？
+
+可用领域：
+- network（网络请求、HTTP、WebSocket）
+- ui（界面、组件、布局）
+- database（数据库、存储）
+- media（视频、音频）
+- application-models（Ability、应用模型）
+
+请列出最相关的 1-3 个领域，按相关性排序，并说明理由。
+"
+```
+
+#### 答案校验
+```bash
+node scripts/llm-chat.js --prompt="
+验证检索结果是否正确回答了问题：
+
+问题：如何在 HarmonyOS 中发起 HTTP 请求？
+
+检索到的文档：
+1. 使用 HTTP 访问网络 - search_index/domains/network/domain_index.json
+   摘要：介绍了如何使用@ohos.net.http 模块发起 HTTP 请求
+2. http 模块 API 参考 - docs/zh-cn/application-dev/reference/apis-network-kit/js-apis-http.md
+   摘要：提供了 HttpRequest 类的详细 API 说明
+
+请评估：
+1. 是否覆盖了问题的所有方面？（是/否，说明原因）
+2. 是否有可引用的代码示例？（是/否）
+3. 是否有幻觉风险？（低/中/高）
+4. 置信度（0-1）是多少？
+"
+```
+
+### 5.3 编程方式使用
+
+**Node.js 示例**：
+```javascript
+const { execSync } = require('child_process');
+
+function callLLM(prompt) {
+  const escapedPrompt = prompt.replace(/"/g, '\\"').replace(/\n/g, '\\n');
+  const command = `node scripts/llm-chat.js --prompt="${escapedPrompt}"`;
+  
+  try {
+    const output = execSync(command, { encoding: 'utf-8' });
+    return output.trim();
+  } catch (error) {
+    console.error('LLM call failed:', error.message);
+    return null;
+  }
+}
+
+// 使用
+const isRelated = callLLM(`判断问题是否与 HarmonyOS 相关：${question}`);
+const domains = callLLM(`识别问题涉及的领域：${question}`);
+const validation = callLLM(`验证答案覆盖度：${question}\n文档：${documents}`);
+```
+
+**Bash 脚本示例**：
+```bash
+#!/bin/bash
+
+# 入口过滤
+ENTRY_RESULT=$(node scripts/llm-chat.js --prompt="
+判断问题是否与 HarmonyOS 相关：$QUESTION
+回答格式：相关/不相关
+")
+
+if [[ "$ENTRY_RESULT" == *"不相关"* ]]; then
+  echo "非 HarmonyOS 问题，终止流程"
+  exit 0
+fi
+
+# 领域识别
+DOMAINS=$(node scripts/llm-chat.js --prompt="
+识别问题涉及的领域：$QUESTION
+只返回领域名称，用逗号分隔
+")
+
+echo "识别到领域：$DOMAINS"
+```
+
+### 5.4 LLM 提供商选择
 
 **推荐**：
-- **DeepSeek** - 性价比高，适合中文场景
+- **DeepSeek** - 性价比高，适合中文场景（推荐）
 - **GPT-4o** - 质量最好，成本较高
 - **Claude** - 长上下文友好
 - **本地模型** - 隐私友好（Ollama/vLLM）
 
-**配置示例**（环境变量）：
+**各提供商配置**：
+
+#### DeepSeek（推荐）
 ```bash
-LLM_PROVIDER=deepseek
-LLM_API_KEY=sk-xxx
-LLM_MODEL=deepseek-chat
+export LLM_PROVIDER=deepseek
+export LLM_API_KEY=sk-your-deepseek-key
+export LLM_MODEL=deepseek-chat
 ```
+
+API 文档：https://platform.deepseek.com/api-docs/
+
+#### OpenAI
+```bash
+export LLM_PROVIDER=openai
+export LLM_API_KEY=sk-your-openai-key
+export LLM_MODEL=gpt-4o
+```
+
+API 文档：https://platform.openai.com/docs/
+
+#### Anthropic
+```bash
+export LLM_PROVIDER=anthropic
+export LLM_API_KEY=sk-your-anthropic-key
+export LLM_MODEL=claude-3-5-sonnet-20241022
+```
+
+API 文档：https://docs.anthropic.com/claude/reference/
+
+### 5.5 最佳实践
+
+1. **温度设置**：
+   - 入口过滤/领域识别：0.1-0.3（确定性高）
+   - 答案校验：0.3-0.5（平衡创造性）
+
+2. **超时控制**：
+   - 设置 30 秒超时
+   - 失败时使用规则验证降级
+
+3. **缓存机制**：
+   - 相同问题缓存 LLM 结果
+   - 缓存有效期 24 小时
+
+4. **成本控制**：
+   - 简单问题优先使用规则匹配
+   - 复杂问题才调用 LLM
+   - 监控 API 调用次数
 
 ---
 
