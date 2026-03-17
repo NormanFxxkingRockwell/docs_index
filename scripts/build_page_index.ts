@@ -138,7 +138,23 @@ function normalizeDocPath(rawPath: string): string {
 }
 
 function resolveDocFilePath(repoRoot: string, rawPath: string): string {
-  const relativePath = normalizeDocPath(rawPath || '').replace(/^\.\.\/\.\.\/docs\//, '');
+  let relativePath = normalizeDocPath(rawPath || '');
+  
+  // 去掉 ../../ 前缀
+  relativePath = relativePath.replace(/^\.\.\/\.\.\//, '');
+  
+  // 去掉开头的所有 docs/ (处理重复：docs/docs/... → ...)
+  relativePath = relativePath.replace(/^(docs\/)+/, '');
+  
+  // 处理重复路径：docs/zh-cn/application-dev/media/docs/zh-cn/... → zh-cn/application-dev/media/...
+  const duplicateMatch = relativePath.match(/^(docs\/zh-cn\/application-dev\/[^/]+)\/\1\/(.*)$/);
+  if (duplicateMatch) {
+    relativePath = duplicateMatch[2];
+  }
+  
+  // 规范化路径分隔符
+  relativePath = relativePath.replace(/\\/g, '/');
+  
   return path.join(repoRoot, 'docs', relativePath);
 }
 
