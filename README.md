@@ -17,7 +17,7 @@ cd docs && git init && git remote add origin https://gitcode.com/openharmony/doc
 
 ### 第二步：使用 Skill 检索文档（唯一推荐方式）
 
-**核心文件**：`search_index/skills/harmonyos-navigator.md`
+**核心文件**：`search_index/skills/harmonyos/doc-navigator.md`
 
 **执行流程**：
 
@@ -59,7 +59,7 @@ node scripts/llm-chat.js --cleanup=true
 - ✅ 并发控制（最大 3 个并发请求）
 - ✅ 超时控制（30 秒超时）
 
-详见：[search_index/skills/harmonyos-navigator.md](search_index/skills/harmonyos-navigator.md)
+详见：[search_index/skills/harmonyos/doc-navigator.md](search_index/skills/harmonyos/doc-navigator.md)
 
 ---
 
@@ -74,8 +74,12 @@ docs_index/
 │   │   ├── network/
 │   │   ├── ui/
 │   │   └── ...
-│   └── skills/
-│       └── harmonyos-navigator.md  # AI Agent 检索流程指南
+│   └── skills/                # Skill 系统（通用 Agent 技能框架）
+│       ├── README.md          # Skill 系统说明
+│       ├── skill-template.md  # Skill 模板
+│       └── harmonyos/         # HarmonyOS 领域 Skills
+│           ├── doc-navigator.md  # 文档导航 Skill
+│           └── doc-indexer.md    # 文档索引 Skill
 └── scripts/                    # 构建脚本
     ├── build_page_index.ts    # 章节索引生成脚本
     ├── build_all_page_index.ts # 批量生成脚本

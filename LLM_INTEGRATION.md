@@ -419,7 +419,7 @@ curl -X POST https://api.openai.com/v1/models \
 
 ### 下一步
 
-- 阅读 [search_index/skills/harmonyos-navigator.md](search_index/skills/harmonyos-navigator.md) 了解完整的 Skill 流程
+- 阅读 [search_index/skills/harmonyos/doc-navigator.md](search_index/skills/harmonyos/doc-navigator.md) 了解完整的 Skill 流程
 - 运行 `node scripts/test-skill-llm.js` 测试 LLM 集成效果
 - 根据实际需求调整配置参数
 
