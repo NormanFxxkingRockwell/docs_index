@@ -41,6 +41,24 @@ cd docs && git init && git remote add origin https://gitcode.com/openharmony/doc
 - 领域识别：用 LLM 理解问题语义（支持多领域识别）
 - 答案校验：用 LLM 验证覆盖度（检测幻觉风险）
 
+**LLM 调用脚本**：
+```bash
+# 配置环境变量
+export LLM_PROVIDER=deepseek
+export LLM_API_KEY=sk-your-api-key
+
+# 调用 LLM
+node scripts/llm-chat.js --prompt="你的问题"
+
+# 清理缓存
+node scripts/llm-chat.js --cleanup=true
+```
+
+**性能优化**：
+- ✅ 缓存机制（默认 24 小时，降低 API 调用成本）
+- ✅ 并发控制（最大 3 个并发请求）
+- ✅ 超时控制（30 秒超时）
+
 详见：[search_index/skills/harmonyos-navigator.md](search_index/skills/harmonyos-navigator.md)
 
 ---
@@ -60,7 +78,9 @@ docs_index/
 │       └── harmonyos-navigator.md  # AI Agent 检索流程指南
 └── scripts/                    # 构建脚本
     ├── build_page_index.ts    # 章节索引生成脚本
-    └── build_all_page_index.ts # 批量生成脚本
+    ├── build_all_page_index.ts # 批量生成脚本
+    ├── llm-chat.js            # LLM 调用脚本（支持 DeepSeek/OpenAI/Anthropic）
+    └── test-skill-llm.js      # Skill + LLM 测试脚本（30 题测试集）
 ```
 
 ---
