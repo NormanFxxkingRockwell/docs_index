@@ -1,4 +1,4 @@
-# HarmonyOS 文档导航 Skill - 外部调用指南
+# HarmonyOS 文档检索 Skill - 外部调用指南
 
 ## 概述
 
@@ -8,7 +8,7 @@
 - 🔍 智能检索 HarmonyOS 开发文档
 - 📚 支持 46 个领域、51 个 API Kit
 - 🎯 章节级精准定位
-- 🤖 LLM 集成（入口过滤、领域识别、答案校验）
+- 🤖 LLM 集成
 
 ---
 
@@ -17,26 +17,25 @@
 ### 方式 1: Git 子模块（推荐）
 
 ```bash
-# 在你的项目中添加 docs_index 作为子模块
+# 添加子模块
 git submodule add https://github.com/NormanFxxkingRockwell/docs_index.git
 
 # 初始化
 cd docs_index
 git submodule update --init
+
+# 使用脚本助手
+node docs_index/search_index/skills/harmonyos/run.js "你的问题"
 ```
 
-**AI Agent 执行**：
-```
-读取 docs_index/search_index/skills/harmonyos/doc-navigator.md
-按步骤执行检索流程
-```
-
-### 方式 2: 直接下载
+### 方式 2: 直接复制
 
 ```bash
-# 下载最新 Release
-wget https://github.com/NormanFxxkingRockwell/docs_index/releases/download/v1.0.0/docs-index.zip
-unzip docs-index.zip
+# 复制 skills 目录
+cp -r docs_index/search_index/skills your-project/
+
+# 使用
+node your-project/skills/harmonyos/run.js "你的问题"
 ```
 
 ---
@@ -44,26 +43,19 @@ unzip docs-index.zip
 ## 调用接口
 
 ### 输入
-
-**用户问题**（字符串）：
 ```
-"如何在 HarmonyOS 中发起 HTTP 请求？"
+用户问题（字符串）："如何在 HarmonyOS 中发起 HTTP 请求？"
 ```
 
 ### 输出
-
-**检索结果**（对象）：
 ```json
 {
   "success": true,
   "domains": ["network"],
   "documents": [
     {
-      "doc_id": "network-http-guide",
       "doc_title": "使用 HTTP 访问网络",
-      "path": "../../docs/zh-cn/application-dev/network/http.md",
-      "summary": "介绍了如何使用@ohos.net.http 模块发起 HTTP 请求",
-      "relevance": 0.95
+      "path": "../../docs/zh-cn/application-dev/network/http.md"
     }
   ]
 }
@@ -71,22 +63,46 @@ unzip docs-index.zip
 
 ---
 
-## 执行流程
+## 使用方式
 
-```
-用户问题 → 入口过滤 → 领域识别 → 多路检索 → 答案校验 → 输出答案
+### 完整流程
+```bash
+node skills/harmonyos/run.js "如何在 HarmonyOS 中发起 HTTP 请求？"
 ```
 
-详见：`doc-navigator.md`
+### 单步执行
+
+```bash
+# Step 1: 入口过滤
+node skills/harmonyos/run.js --step=filter "问题"
+
+# Step 2: 领域识别
+node skills/harmonyos/run.js --step=domain "问题"
+
+# Step 3: 多路检索
+node skills/harmonyos/run.js --step=search --domain=network "问题"
+
+# Step 4: 答案校验
+node skills/harmonyos/run.js --step=validate "问题"
+```
+
+### 通用运行器
+
+```bash
+# 从项目根目录调用
+node scripts/skill-runner.js --skill=harmonyos "问题"
+
+# 指定步骤
+node scripts/skill-runner.js --skill=harmonyos --step=filter "问题"
+```
 
 ---
 
-## 配置说明
+## 配置
 
 ### LLM 配置
 
-**文件**：`scripts/llm-config.json`
-
+编辑 `scripts/llm-config.json`：
 ```json
 {
   "provider": "deepseek",
@@ -97,14 +113,34 @@ unzip docs-index.zip
 
 ---
 
+## 执行流程
+
+```
+用户问题
+    ↓
+入口过滤（LLM/关键词）
+    ↓
+领域识别（读取 master_map.json）
+    ↓
+多路检索（domain_index + page_index）
+    ↓
+答案校验（LLM/规则）
+    ↓
+输出答案
+```
+
+详见：`SKILL.md`
+
+---
+
 ## 常见问题
 
 ### Q: 如何在 Cursor 中使用？
 
 **A**: 
 1. 添加 docs_index 为 Git 子模块
-2. Cursor AI 读取 `search_index/skills/harmonyos/doc-navigator.md`
-3. 按步骤执行检索
+2. Cursor AI 读取 `SKILL.md`
+3. 调用 `run.js` 执行检索
 
 ### Q: 如何更新索引数据？
 
@@ -114,6 +150,10 @@ cd docs_index
 git pull origin main
 ```
 
+### Q: 可以不用 LLM 吗？
+
+**A**: 可以，使用关键词匹配（见 `SKILL.md`）
+
 ---
 
-**完整文档**：详见 `doc-navigator.md`
+**详细文档**：详见 `SKILL.md` 和 `doc-navigator.md`

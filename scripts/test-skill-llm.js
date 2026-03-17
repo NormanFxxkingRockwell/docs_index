@@ -76,7 +76,6 @@ function callLLM(prompt) {
     return null;
   }
 }
-}
 
 /**
  * 步骤 1: 入口过滤
