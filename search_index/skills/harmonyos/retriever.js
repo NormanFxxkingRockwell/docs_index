@@ -193,6 +193,106 @@ function extractTechTerms(text) {
   return [...new Map(terms.map(t => [t.term.toLowerCase(), t])).values()];
 }
 
+// ==================== RRF 混合融合（OpenCLaw 启发） ====================
+/**
+ * Reciprocal Rank Fusion (RRF) - 倒数排名融合
+ * 借鉴 OpenCLaw 的混合融合策略：70% 向量 + 30% 关键词
+ * 
+ * 当前实现：关键词检索内部的 RRF 变体
+ * 未来扩展：支持向量检索 + 关键词检索的混合
+ */
+
+/**
+ * RRF 融合多个检索结果列表
+ * @param {Array<Array>} resultLists - 多个检索结果列表
+ * @param {number} k - RRF 常数（默认 60）
+ * @returns {Array} 融合后的结果
+ */
+function rrfFuse(resultLists, k = 60) {
+  const scores = new Map();
+  
+  // 计算每个文档的 RRF 分数
+  resultLists.forEach(list => {
+    list.forEach((doc, rank) => {
+      const id = doc.page_id || doc.doc_id;
+      const currentScore = scores.get(id) || 0;
+      scores.set(id, currentScore + 1 / (k + rank + 1));
+    });
+  });
+  
+  // 按 RRF 分数排序
+  const sorted = Array.from(scores.entries())
+    .sort((a, b) => b[1] - a[1])
+    .map(([id]) => {
+      // 查找原始文档
+      for (const list of resultLists) {
+        const doc = list.find(d => (d.page_id || d.doc_id) === id);
+        if (doc) return doc;
+      }
+      return null;
+    })
+    .filter(Boolean);
+  
+  return sorted;
+}
+
+/**
+ * 加权分数融合（OpenCLaw 策略）
+ * 70% 向量分数 + 30% 关键词分数
+ * 
+ * @param {Array} vectorResults - 向量检索结果（带 vectorScore）
+ * @param {Array} keywordResults - 关键词检索结果（带 keywordScore）
+ * @param {Object} options - 配置选项
+ * @returns {Array} 融合后的结果
+ */
+function weightedFuse(vectorResults, keywordResults, options = {}) {
+  const vectorWeight = options.vectorWeight || 0.7;
+  const keywordWeight = options.keywordWeight || 0.3;
+  
+  // 归一化分数
+  const normalizeScores = (results) => {
+    if (results.length === 0) return [];
+    const maxScore = Math.max(...results.map(r => r.score));
+    const minScore = Math.min(...results.map(r => r.score));
+    const range = maxScore - minScore || 1;
+    return results.map(r => ({
+      ...r,
+      normalizedScore: (r.score - minScore) / range
+    }));
+  };
+  
+  const normalizedVector = normalizeScores(vectorResults);
+  const normalizedKeyword = normalizeScores(keywordResults);
+  
+  // 合并文档
+  const docMap = new Map();
+  
+  normalizedVector.forEach(doc => {
+    const id = doc.page_id || doc.doc_id;
+    docMap.set(id, { ...doc, vectorScore: doc.normalizedScore, keywordScore: 0 });
+  });
+  
+  normalizedKeyword.forEach(doc => {
+    const id = doc.page_id || doc.doc_id;
+    const existing = docMap.get(id);
+    if (existing) {
+      existing.keywordScore = doc.normalizedScore;
+    } else {
+      docMap.set(id, { ...doc, vectorScore: 0, keywordScore: doc.normalizedScore });
+    }
+  });
+  
+  // 计算加权分数并排序
+  const fused = Array.from(docMap.values())
+    .map(doc => ({
+      ...doc,
+      fusedScore: vectorWeight * doc.vectorScore + keywordWeight * doc.keywordScore
+    }))
+    .sort((a, b) => b.fusedScore - a.fusedScore);
+  
+  return fused;
+}
+
 // ==================== 领域关键词（供 AI Agent 参考） ====================
 function getDomainKeywords() {
   return domainKeywords;
@@ -214,7 +314,11 @@ module.exports = {
   saveToCache,
   clearCache,
   getDomainKeywords,
-  matchDomains
+  matchDomains,
+  // RRF 混合融合（OpenCLaw 启发）
+  rrfFuse,
+  weightedFuse,
+  extractTechTerms
 };
 
 // 命令行测试
