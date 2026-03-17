@@ -307,6 +307,104 @@ function matchDomains(question) {
   return matched;
 }
 
+// ==================== MMR 多样性重排（OpenCLaw 启发） ====================
+/**
+ * Maximal Marginal Relevance (MMR) - 最大边际相关性
+ * 借鉴 OpenCLaw 的多样性重排策略
+ * 
+ * 目标：避免返回 10 篇相似文档，提升结果多样性
+ * 平衡：相关性 vs 多样性
+ */
+
+/**
+ * 计算两个文档的相似度（简单 Jaccard 相似度）
+ * @param {Object} doc1 - 文档 1
+ * @param {Object} doc2 - 文档 2
+ * @returns {number} 相似度 (0-1)
+ */
+function docSimilarity(doc1, doc2) {
+  const text1 = JSON.stringify(doc1).toLowerCase();
+  const text2 = JSON.stringify(doc2).toLowerCase();
+  
+  // 提取词汇集合
+  const words1 = new Set(text1.split(/[\s,，。；：()（）]+/).filter(w => w.length >= 2));
+  const words2 = new Set(text2.split(/[\s,，。；：()（）]+/).filter(w => w.length >= 2));
+  
+  // 计算 Jaccard 相似度
+  const intersection = [...words1].filter(w => words2.has(w)).length;
+  const union = new Set([...words1, ...words2]).size;
+  
+  return union > 0 ? intersection / union : 0;
+}
+
+/**
+ * MMR 多样性重排
+ * @param {Array} documents - 文档列表
+ * @param {string} question - 用户问题
+ * @param {Object} options - 配置选项
+ * @param {number} options.lambda - 平衡参数 (0-1)，默认 0.5
+ *   - lambda=1.0: 只考虑相关性
+ *   - lambda=0.0: 只考虑多样性
+ * @param {number} options.topK - 返回数量，默认 10
+ * @returns {Array} 重排后的文档列表
+ */
+function mmrRerank(documents, question, options = {}) {
+  const lambda = options.lambda || 0.5;
+  const topK = options.topK || 10;
+  
+  if (documents.length <= 1) return documents;
+  
+  // 计算每个文档与问题的相关性分数
+  const questionKeywords = question.toLowerCase().split('').filter(c => c.trim().length > 0);
+  const relevanceScores = documents.map((doc, index) => {
+    const docText = JSON.stringify(doc).toLowerCase();
+    const score = questionKeywords.filter(kw => docText.includes(kw)).length;
+    return { doc, score, index };
+  });
+  
+  // MMR 选择
+  const selected = [];
+  const remaining = [...relevanceScores];
+  
+  while (selected.length < topK && remaining.length > 0) {
+    // 选择 MMR 分数最高的文档
+    let bestDoc = null;
+    let bestMMRScore = -Infinity;
+    let bestIndex = -1;
+    
+    remaining.forEach((item, idx) => {
+      // 相关性分数
+      const relevanceScore = item.score;
+      
+      // 多样性分数（与已选文档的最大相似度）
+      let maxSimilarity = 0;
+      if (selected.length > 0) {
+        const similarities = selected.map(selectedItem => {
+          if (!selectedItem || !item.doc) return 0;
+          return docSimilarity(item.doc, selectedItem);
+        });
+        maxSimilarity = Math.max(0, ...similarities);
+      }
+      
+      // MMR 分数 = lambda * 相关性 - (1 - lambda) * 最大相似度
+      const mmrScore = lambda * relevanceScore - (1 - lambda) * maxSimilarity;
+      
+      if (mmrScore > bestMMRScore) {
+        bestMMRScore = mmrScore;
+        bestDoc = item;
+        bestIndex = idx;
+      }
+    });
+    
+    if (bestDoc) {
+      selected.push(bestDoc.doc);
+      remaining.splice(bestIndex, 1);
+    }
+  }
+  
+  return selected;
+}
+
 // ==================== 导出 ====================
 module.exports = {
   search,
@@ -318,7 +416,10 @@ module.exports = {
   // RRF 混合融合（OpenCLaw 启发）
   rrfFuse,
   weightedFuse,
-  extractTechTerms
+  extractTechTerms,
+  // MMR 多样性重排（OpenCLaw 启发）
+  mmrRerank,
+  docSimilarity
 };
 
 // 命令行测试
