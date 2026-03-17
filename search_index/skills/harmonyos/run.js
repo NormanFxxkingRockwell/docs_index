@@ -1,175 +1,220 @@
 #!/usr/bin/env node
 /**
- * HarmonyOS Skill 执行助手
+ * HarmonyOS Skill 执行助手 - LLM 增强版
  * 
- * 使用方式：
- * node run.js "你的问题"
- * node run.js --step=filter "问题"
- * node run.js --step=domain "问题"
- * node run.js --step=search --domain=network "问题"
+ * 特性：
+ * 1. LLM 智能领域识别（替代关键词匹配）
+ * 2. LLM 重排检索结果
+ * 3. 缓存机制（避免重复检索）
  */
 
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
-// 调用 LLM
+// 缓存配置
+const CACHE_DIR = path.join(__dirname, '../../../.skill-cache');
+const CACHE_TTL = 24 * 60 * 60 * 1000;
+
+// 初始化缓存
+if (!fs.existsSync(CACHE_DIR)) {
+  fs.mkdirSync(CACHE_DIR, { recursive: true });
+}
+
+// 缓存函数
+function getCacheKey(type, data) {
+  return crypto.createHash('md5').update(`${type}:${JSON.stringify(data)}`).digest('hex');
+}
+
+function getFromCache(type, data) {
+  const key = getCacheKey(type, data);
+  const cacheFile = path.join(CACHE_DIR, `${key}.json`);
+  if (!fs.existsSync(cacheFile)) return null;
+  try {
+    const cache = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'));
+    if (Date.now() - cache.timestamp > CACHE_TTL) {
+      fs.unlinkSync(cacheFile);
+      return null;
+    }
+    return cache.result;
+  } catch (e) { return null; }
+}
+
+function saveToCache(type, data, result) {
+  const key = getCacheKey(type, data);
+  const cacheFile = path.join(CACHE_DIR, `${key}.json`);
+  try {
+    fs.writeFileSync(cacheFile, JSON.stringify({ timestamp: Date.now(), result }, null, 2), 'utf-8');
+  } catch (e) {}
+}
+
+// LLM 调用（由 AI Agent 实现）
 function callLLM(prompt) {
-  const scriptPath = path.join(__dirname, '../../../scripts/llm-chat.js');
-  const escapedPrompt = prompt.replace(/"/g, '\\"').replace(/\n/g, '\n');
-  return execSync(`node "${scriptPath}" --prompt="${escapedPrompt}"`, {
-    encoding: 'utf-8',
-    timeout: 30000
-  }).trim();
+  throw new Error('请 AI Agent 实现 callLLM 函数');
 }
 
-// Step 1: 入口过滤
+// Step 1: 入口过滤（LLM）
 function entryFilter(question) {
-  const result = callLLM(`判断问题是否与 HarmonyOS 相关：${question}。只回答：相关/不相关`);
-  const isRelated = result.includes('相关') && !result.includes('不相关');
-  return {
-    isRelated,
-    confidence: isRelated ? 0.95 : 0.3,
-    reason: result
-  };
+  const cached = getFromCache('entryFilter', question);
+  if (cached) { console.log('  [缓存命中] 入口过滤'); return cached; }
+  
+  const prompt = `判断问题是否与 HarmonyOS 相关：${question}。只回答：相关/不相关`;
+  
+  try {
+    const response = callLLM(prompt);
+    const isRelated = response.includes('相关') && !response.includes('不相关');
+    const result = { isRelated, confidence: isRelated ? 0.95 : 0.3, reason: response.trim() };
+    saveToCache('entryFilter', question, result);
+    return result;
+  } catch (error) {
+    const POSITIVE = ['harmonyos', 'openharmony', '鸿蒙', 'arkui', 'arkts', 'ability', '@ohos.'];
+    const matchCount = POSITIVE.filter(k => question.toLowerCase().includes(k)).length;
+    return { isRelated: matchCount > 0, confidence: matchCount > 0 ? 0.65 : 0.3, reason: `关键词匹配 ${matchCount} 个` };
+  }
 }
 
-// Step 2: 领域识别
+// Step 2: 领域识别（LLM）
 function domainDetect(question) {
-  const masterMapPath = path.join(__dirname, '../../../search_index/master_map.json');
-  const masterMap = JSON.parse(fs.readFileSync(masterMapPath, 'utf-8'));
+  const cached = getFromCache('domainDetect', question);
+  if (cached) { console.log('  [缓存命中] 领域识别'); return cached; }
   
-  const questionLower = question.toLowerCase();
-  const domainScores = {};
+  const prompt = `识别问题涉及的 HarmonyOS 领域：${question}\n可用领域：ui, network, database, file-management, application-models, system, security, media, device, communication\n只返回领域名称，用逗号分隔。`;
   
-  // 简单关键词匹配
-  const domainKeywords = {
-    'network': ['http', '网络', '请求', 'socket', 'websocket'],
-    'ui': ['界面', '组件', '布局', 'text', 'button', 'arkui'],
-    'database': ['数据库', '存储', 'rdb', 'preferences'],
-    'file-management': ['文件', 'file', '目录'],
-    'application-models': ['ability', '应用模型', '生命周期']
-  };
-  
-  for (const [domain, keywords] of Object.entries(domainKeywords)) {
-    const score = keywords.filter(k => questionLower.includes(k)).length;
-    if (score > 0) domainScores[domain] = score;
+  try {
+    const response = callLLM(prompt);
+    const domains = response.split(/[,,]/).map(d => d.trim().toLowerCase()).filter(d => d.length > 0).slice(0, 2);
+    const result = { domains: domains.length > 0 ? domains : ['network'], confidence: 0.9, reason: `LLM 识别：${domains.join(', ')}` };
+    saveToCache('domainDetect', question, result);
+    return result;
+  } catch (error) {
+    const domainKeywords = { 'ui': ['动效', '动画', '界面'], 'network': ['dns', 'http', '网络'], 'system': ['剪切板', '剪贴板'] };
+    const q = question.toLowerCase();
+    const matched = Object.entries(domainKeywords).filter(([_, kws]) => kws.some(k => q.includes(k))).map(([d]) => d);
+    return { domains: matched.length > 0 ? matched : ['network'], confidence: 0.7, reason: `关键词匹配：${matched.join(', ') || 'network'}` };
   }
-  
-  const domains = Object.entries(domainScores)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 2)
-    .map(([d]) => d);
-  
-  return {
-    domains: domains.length > 0 ? domains : ['network'],
-    confidence: 0.9,
-    reason: `识别到领域：${domains.join(', ')}`
-  };
 }
 
 // Step 3: 多路检索
 function search(domains, question) {
   const documents = [];
+  const keywords = question.toLowerCase().split('').filter(c => c.trim().length > 0);
   
   for (const domain of domains) {
     try {
-      const indexPath = path.join(__dirname, `../../../search_index/domains/${domain}/domain_index.json`);
-      if (fs.existsSync(indexPath)) {
-        const index = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
-        const matched = (index.documents || []).filter(doc =>
-          JSON.stringify(doc).toLowerCase().includes(question.toLowerCase())
-        ).slice(0, 5);
-        documents.push(...matched);
+      const domainIndexPath = path.join(__dirname, `../../../search_index/domains/${domain}/domain_index.json`);
+      if (fs.existsSync(domainIndexPath)) {
+        const index = JSON.parse(fs.readFileSync(domainIndexPath, 'utf-8'));
+        const matched = (index.documents || []).filter(doc => keywords.some(k => JSON.stringify(doc).toLowerCase().includes(k)));
+        documents.push(...matched.map(doc => ({ ...doc, source: 'domain_index', domain })));
       }
-    } catch (error) {
-      console.error(`Error searching ${domain}:`, error.message);
-    }
+      
+      const pageIndexPath = path.join(__dirname, `../../../search_index/domains/${domain}/page_index.jsonl`);
+      if (fs.existsSync(pageIndexPath)) {
+        const pages = fs.readFileSync(pageIndexPath, 'utf-8').split('\n').filter(l => l.trim()).map(l => JSON.parse(l));
+        const matched = pages.filter(page => keywords.some(k => JSON.stringify(page).toLowerCase().includes(k)));
+        documents.push(...matched.slice(0, 20).map(page => ({ doc_title: page.doc_title || '未命名', section_title: page.section_title, path: page.path, summary: page.summary, line_start: page.line_start, line_end: page.line_end, source: 'page_index', domain })));
+      }
+    } catch (error) { console.error(`Error searching ${domain}:`, error.message); }
   }
   
-  return {
-    documents: documents.slice(0, 10),
-    api_references: []
-  };
+  return { documents, api_references: [] };
 }
 
-// Step 4: 答案校验
-function validate(question, documents) {
-  if (!documents || documents.length === 0) {
-    return { isValid: false, confidence: 0, reasons: ['未检索到文档'] };
+// Step 3.5: LLM 重排
+function rerankWithLLM(question, documents) {
+  const cached = getFromCache('rerank', { question, docCount: documents.length });
+  if (cached) { console.log('  [缓存命中] LLM 重排'); return cached; }
+  if (documents.length === 0) return [];
+  
+  const prompt = `对检索结果重排，使其更好回答用户问题：\n\n问题：${question}\n\n检索结果：\n${documents.slice(0, 10).map((doc, i) => `${i+1}. ${doc.doc_title}`).join('\n')}\n\n返回重排后的序号（逗号分隔）：`;
+  
+  try {
+    const response = callLLM(prompt);
+    const order = response.split(/[,,\n]/).map(s => parseInt(s.trim())).filter(n => !isNaN(n) && n > 0 && n <= documents.length);
+    const reranked = order.map(i => documents[i - 1]).filter(Boolean);
+    const ordered = new Set(order);
+    documents.forEach((doc, i) => { if (!ordered.has(i + 1)) reranked.push(doc); });
+    const result = reranked.slice(0, 10);
+    saveToCache('rerank', { question, docCount: documents.length }, result);
+    return result;
+  } catch (error) {
+    console.error('LLM 重排失败，使用默认排序');
+    const keywords = question.toLowerCase().split('').filter(c => c.trim().length > 0);
+    return documents.sort((a, b) => keywords.filter(k => JSON.stringify(b).toLowerCase().includes(k)).length - keywords.filter(k => JSON.stringify(a).toLowerCase().includes(k)).length).slice(0, 10);
   }
+}
+
+// Step 4: 答案校验（LLM）
+function validate(question, documents) {
+  const cached = getFromCache('validate', { question, docCount: documents.length });
+  if (cached) { console.log('  [缓存命中] 答案校验'); return cached; }
+  if (!documents || documents.length === 0) return { isValid: false, confidence: 0, reasons: ['未检索到文档'] };
   
-  const keywords = question.toLowerCase().split(/\s+/).filter(k => k.length > 1);
-  const docText = JSON.stringify(documents).toLowerCase();
-  const matched = keywords.filter(k => docText.includes(k)).length;
-  const coverage = keywords.length > 0 ? matched / keywords.length : 0;
+  const prompt = `验证文档是否能回答问题：\n\n问题：${question}\n\n文档：\n${documents.slice(0, 3).map((doc, i) => `${i+1}. ${doc.doc_title} - ${doc.summary?.slice(0, 50)}`).join('\n')}\n\n评估：1.是否覆盖（是/否）2.置信度（0-1）3.理由\n只返回：是/否，置信度：0.x，理由`;
   
-  return {
-    isValid: coverage >= 0.5,
-    confidence: coverage,
-    reasons: [`关键词覆盖率：${(coverage * 100).toFixed(0)}%`]
-  };
+  try {
+    const response = callLLM(prompt);
+    const isValid = response.includes('是');
+    const confidenceMatch = response.match(/置信度 [::]\s*(0\.\d+)/);
+    const result = { isValid, confidence: confidenceMatch ? parseFloat(confidenceMatch[1]) : 0.5, reasons: [response.trim()] };
+    saveToCache('validate', { question, docCount: documents.length }, result);
+    return result;
+  } catch (error) {
+    const keywords = question.toLowerCase().split('').filter(c => c.trim().length > 0);
+    const coverage = keywords.filter(k => JSON.stringify(documents).toLowerCase().includes(k)).length / keywords.length;
+    return { isValid: coverage >= 0.3, confidence: coverage, reasons: [`关键词覆盖率：${(coverage * 100).toFixed(0)}%`] };
+  }
 }
 
 // 主函数
 async function run(question, options = {}) {
   console.log(`收到问题：${question}\n`);
   
-  // Step 1: 入口过滤
   if (options.step === 'filter' || !options.step) {
     const filter = entryFilter(question);
     console.log('Step 1: 入口过滤', filter);
-    if (!filter.isRelated) {
-      return { success: false, error: '非 HarmonyOS 问题', ...filter };
-    }
+    if (!filter.isRelated) return { success: false, error: '非 HarmonyOS 问题', ...filter };
   }
   
-  // Step 2: 领域识别
   if (options.step === 'domain' || !options.step) {
     const domain = domainDetect(question);
     console.log('Step 2: 领域识别', domain);
     options.domains = domain.domains;
   }
   
-  // Step 3: 多路检索
   if (options.step === 'search' || !options.step) {
     const result = search(options.domains || ['network'], question);
     console.log('Step 3: 多路检索', { count: result.documents.length });
-    options.documents = result.documents;
+    if (result.documents.length > 0) {
+      console.log('Step 3.5: LLM 重排...');
+      options.documents = await rerankWithLLM(question, result.documents);
+      console.log('  重排后', { count: options.documents.length });
+    } else { options.documents = []; }
   }
   
-  // Step 4: 答案校验
   if (options.step === 'validate' || !options.step) {
     const valid = validate(question, options.documents || []);
     console.log('Step 4: 答案校验', valid);
   }
   
-  return {
-    success: true,
-    domains: options.domains,
-    documents: options.documents
-  };
+  return { success: true, domains: options.domains, documents: options.documents };
 }
 
 // 命令行调用
 if (require.main === module) {
   const args = process.argv.slice(2);
   const question = args.find(a => !a.startsWith('--'));
-  const stepMatch = args.find(a => a.startsWith('--step='));
-  const domainMatch = args.find(a => a.startsWith('--domain='));
+  if (!question) { console.error('Usage: node run.js "你的问题"'); process.exit(1); }
   
-  if (!question) {
-    console.error('Usage: node run.js "你的问题"');
-    console.error('       node run.js --step=filter "问题"');
-    process.exit(1);
-  }
-  
-  const options = {
-    step: stepMatch ? stepMatch.split('=')[1] : null,
-    domain: domainMatch ? domainMatch.split('=')[1] : null
-  };
-  
-  run(question, options).then(console.log);
+  console.error('⚠️  需要 AI Agent 实现 callLLM 函数\n');
+  run(question).then(result => {
+    console.log('\n=== 检索结果 ===');
+    result.documents.forEach((doc, i) => {
+      console.log(`${i + 1}. ${doc.doc_title}${doc.section_title ? ` - ${doc.section_title}` : ''}`);
+      console.log(`   路径：${doc.path}`);
+      if (doc.summary) console.log(`   摘要：${doc.summary.slice(0, 150)}...`);
+    });
+  });
 }
 
-module.exports = { run, entryFilter, domainDetect, search, validate };
+module.exports = { run, entryFilter, domainDetect, search, rerankWithLLM, validate };
