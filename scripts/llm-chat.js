@@ -15,10 +15,14 @@
  *   LLM_PROVIDER - LLM 提供商（deepseek/openai/anthropic）
  *   LLM_API_KEY - API Key
  *   LLM_MODEL - 模型名称（可选）
+ *   LLM_CACHE_TTL - 缓存有效期（秒，默认 86400=24 小时）
  */
 
 const https = require('https');
 const http = require('http');
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
 
 // 配置
 const CONFIG = {
@@ -35,6 +39,131 @@ const CONFIG = {
     defaultModel: 'claude-3-5-sonnet-20241022',
   },
 };
+
+// 缓存配置
+const CACHE_DIR = path.join(__dirname, '..', '.llm-cache');
+const CACHE_TTL = parseInt(process.env.LLM_CACHE_TTL || '86400', 10); // 默认 24 小时
+
+// 并发控制
+const MAX_CONCURRENT_REQUESTS = 3;
+let currentRequests = 0;
+const requestQueue = [];
+
+/**
+ * 初始化缓存目录
+ */
+function initCache() {
+  if (!fs.existsSync(CACHE_DIR)) {
+    fs.mkdirSync(CACHE_DIR, { recursive: true });
+  }
+}
+
+/**
+ * 生成缓存键
+ */
+function getCacheKey(prompt, provider, model) {
+  const hash = crypto.createHash('md5');
+  hash.update(`${provider}:${model}:${prompt}`);
+  return hash.digest('hex');
+}
+
+/**
+ * 从缓存读取
+ */
+function readCache(key) {
+  const cacheFile = path.join(CACHE_DIR, `${key}.json`);
+  
+  if (!fs.existsSync(cacheFile)) {
+    return null;
+  }
+  
+  try {
+    const cache = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'));
+    const age = Date.now() - cache.timestamp;
+    
+    if (age > CACHE_TTL * 1000) {
+      // 缓存过期
+      fs.unlinkSync(cacheFile);
+      return null;
+    }
+    
+    return cache.response;
+  } catch (e) {
+    return null;
+  }
+}
+
+/**
+ * 写入缓存
+ */
+function writeCache(key, response) {
+  try {
+    const cacheFile = path.join(CACHE_DIR, `${key}.json`);
+    const cache = {
+      timestamp: Date.now(),
+      response: response,
+    };
+    fs.writeFileSync(cacheFile, JSON.stringify(cache, null, 2), 'utf-8');
+  } catch (e) {
+    // 缓存写入失败不影响主流程
+    console.error('Warning: Failed to write cache');
+  }
+}
+
+/**
+ * 清理过期缓存
+ */
+function cleanupCache() {
+  if (!fs.existsSync(CACHE_DIR)) {
+    return;
+  }
+  
+  const files = fs.readdirSync(CACHE_DIR);
+  let cleaned = 0;
+  
+  for (const file of files) {
+    try {
+      const cacheFile = path.join(CACHE_DIR, file);
+      const cache = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'));
+      const age = Date.now() - cache.timestamp;
+      
+      if (age > CACHE_TTL * 1000) {
+        fs.unlinkSync(cacheFile);
+        cleaned++;
+      }
+    } catch (e) {
+      // 忽略错误
+    }
+  }
+  
+  if (cleaned > 0) {
+    console.error(`Cleaned ${cleaned} expired cache files`);
+  }
+}
+
+/**
+ * 等待并发限制
+ */
+function waitForConcurrency() {
+  if (currentRequests < MAX_CONCURRENT_REQUESTS) {
+    return Promise.resolve();
+  }
+  
+  return new Promise(resolve => {
+    requestQueue.push(resolve);
+  });
+}
+
+/**
+ * 释放并发槽位
+ */
+function releaseConcurrency() {
+  currentRequests--;
+  if (requestQueue.length > 0) {
+    const next = requestQueue.shift();
+    next();
+  }
+}
 
 /**
  * 解析命令行参数
@@ -66,9 +195,9 @@ function getConfig(provider) {
 }
 
 /**
- * 发送 HTTP 请求
+ * 发送 HTTP 请求（带超时控制）
  */
-function sendRequest(url, data, headers) {
+function sendRequest(url, data, headers, timeout = 30000) {
   return new Promise((resolve, reject) => {
     const urlObj = new URL(url);
     const client = urlObj.protocol === 'https:' ? https : http;
@@ -82,6 +211,7 @@ function sendRequest(url, data, headers) {
         'Content-Type': 'application/json',
         ...headers,
       },
+      timeout: timeout,
     };
     
     const req = client.request(options, (res) => {
@@ -104,90 +234,161 @@ function sendRequest(url, data, headers) {
       reject(new Error(`Request failed: ${e.message}`));
     });
     
+    req.on('timeout', () => {
+      req.destroy();
+      reject(new Error(`Request timeout after ${timeout}ms`));
+    });
+    
     req.write(JSON.stringify(data));
     req.end();
   });
 }
 
 /**
- * 调用 DeepSeek API
+ * 调用 DeepSeek API（带缓存和并发控制）
  */
 async function callDeepSeek(prompt, config) {
-  const url = `${config.apiBase}/v1/chat/completions`;
-  const data = {
-    model: config.model,
-    messages: [
-      { role: 'user', content: prompt },
-    ],
-    temperature: 0.3,
-    max_tokens: 1000,
-  };
+  const cacheKey = getCacheKey(prompt, 'deepseek', config.model);
   
-  const headers = {
-    'Authorization': `Bearer ${config.apiKey}`,
-  };
-  
-  const response = await sendRequest(url, data, headers);
-  
-  if (response.error) {
-    throw new Error(`DeepSeek API error: ${response.error.message}`);
+  // 尝试读取缓存
+  const cached = readCache(cacheKey);
+  if (cached) {
+    console.error('  [Cache hit]');
+    return cached;
   }
   
-  return response.choices[0].message.content;
+  // 等待并发槽位
+  await waitForConcurrency();
+  currentRequests++;
+  
+  try {
+    const url = `${config.apiBase}/v1/chat/completions`;
+    const data = {
+      model: config.model,
+      messages: [
+        { role: 'user', content: prompt },
+      ],
+      temperature: 0.3,
+      max_tokens: 1000,
+    };
+    
+    const headers = {
+      'Authorization': `Bearer ${config.apiKey}`,
+    };
+    
+    const response = await sendRequest(url, data, headers, 30000);
+    
+    if (response.error) {
+      throw new Error(`DeepSeek API error: ${response.error.message}`);
+    }
+    
+    const result = response.choices[0].message.content;
+    
+    // 写入缓存
+    writeCache(cacheKey, result);
+    
+    return result;
+  } finally {
+    releaseConcurrency();
+  }
 }
 
 /**
- * 调用 OpenAI API
+ * 调用 OpenAI API（带缓存和并发控制）
  */
 async function callOpenAI(prompt, config) {
-  const url = `${config.apiBase}/v1/chat/completions`;
-  const data = {
-    model: config.model,
-    messages: [
-      { role: 'user', content: prompt },
-    ],
-    temperature: 0.3,
-    max_tokens: 1000,
-  };
+  const cacheKey = getCacheKey(prompt, 'openai', config.model);
   
-  const headers = {
-    'Authorization': `Bearer ${config.apiKey}`,
-  };
-  
-  const response = await sendRequest(url, data, headers);
-  
-  if (response.error) {
-    throw new Error(`OpenAI API error: ${response.error.message}`);
+  // 尝试读取缓存
+  const cached = readCache(cacheKey);
+  if (cached) {
+    console.error('  [Cache hit]');
+    return cached;
   }
   
-  return response.choices[0].message.content;
+  // 等待并发槽位
+  await waitForConcurrency();
+  currentRequests++;
+  
+  try {
+    const url = `${config.apiBase}/v1/chat/completions`;
+    const data = {
+      model: config.model,
+      messages: [
+        { role: 'user', content: prompt },
+      ],
+      temperature: 0.3,
+      max_tokens: 1000,
+    };
+    
+    const headers = {
+      'Authorization': `Bearer ${config.apiKey}`,
+    };
+    
+    const response = await sendRequest(url, data, headers, 30000);
+    
+    if (response.error) {
+      throw new Error(`OpenAI API error: ${response.error.message}`);
+    }
+    
+    const result = response.choices[0].message.content;
+    
+    // 写入缓存
+    writeCache(cacheKey, result);
+    
+    return result;
+  } finally {
+    releaseConcurrency();
+  }
 }
 
 /**
- * 调用 Anthropic API
+ * 调用 Anthropic API（带缓存和并发控制）
  */
 async function callAnthropic(prompt, config) {
-  const url = `${config.apiBase}/v1/messages`;
-  const data = {
-    model: config.model,
-    max_tokens: 1000,
-    messages: [
-      { role: 'user', content: prompt },
-    ],
-  };
+  const cacheKey = getCacheKey(prompt, 'anthropic', config.model);
   
-  const headers = {
-    'x-api-key': config.apiKey,
-    'anthropic-version': '2023-06-01',
-  };
-  
-  const response = await sendRequest(url, data, headers);
-  
-  if (response.error) {
-    throw new Error(`Anthropic API error: ${response.error.message}`);
+  // 尝试读取缓存
+  const cached = readCache(cacheKey);
+  if (cached) {
+    console.error('  [Cache hit]');
+    return cached;
   }
   
-  return response.content[0].text;
+  // 等待并发槽位
+  await waitForConcurrency();
+  currentRequests++;
+  
+  try {
+    const url = `${config.apiBase}/v1/messages`;
+    const data = {
+      model: config.model,
+      max_tokens: 1000,
+      messages: [
+        { role: 'user', content: prompt },
+      ],
+    };
+    
+    const headers = {
+      'x-api-key': config.apiKey,
+      'anthropic-version': '2023-06-01',
+    };
+    
+    const response = await sendRequest(url, data, headers, 30000);
+    
+    if (response.error) {
+      throw new Error(`Anthropic API error: ${response.error.message}`);
+    }
+    
+    const result = response.content[0].text;
+    
+    // 写入缓存
+    writeCache(cacheKey, result);
+    
+    return result;
+  } finally {
+    releaseConcurrency();
+  }
 }
 
 /**
@@ -197,9 +398,21 @@ async function main() {
   const args = parseArgs();
   const provider = args.provider || process.env.LLM_PROVIDER || 'deepseek';
   const prompt = args.prompt;
+  const cleanup = args.cleanup === 'true';
+  
+  // 初始化缓存
+  initCache();
+  
+  // 清理过期缓存
+  if (cleanup) {
+    cleanupCache();
+    console.log('Cache cleaned');
+    return;
+  }
   
   if (!prompt) {
     console.error('Usage: node scripts/llm-chat.js --prompt="your question"');
+    console.error('       node scripts/llm-chat.js --cleanup=true  # 清理缓存');
     console.error('       or set LLM_PROVIDER and use stdin');
     process.exit(1);
   }
