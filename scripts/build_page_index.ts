@@ -251,7 +251,23 @@ function buildDomainPageIndex(domain: string): { success: boolean; count: number
       const docKeywords = tokenizeKeywords([safeTitle, doc.summary || '', ...(doc.key_topics || [])]);
 
       if (doc.sections.length > 0) {
-        for (const section of doc.sections) {
+        // OpenCLaw 启发：分块重叠（20%）
+        const OVERLAP_RATIO = 0.2; // 20% 重叠
+        
+        for (let i = 0; i < doc.sections.length; i++) {
+          const section = doc.sections[i];
+          const prevSection = i > 0 ? doc.sections[i - 1] : null;
+          
+          // 计算与前一个章节的重叠
+          let overlapLines = 0;
+          if (prevSection) {
+            const prevLength = prevSection.line_end - prevSection.line_start + 1;
+            overlapLines = Math.floor(prevLength * OVERLAP_RATIO);
+          }
+          
+          // 应用重叠：line_start 向前延伸
+          const adjustedLineStart = Math.max(1, section.line_start - overlapLines);
+          
           const sectionKeywords = tokenizeKeywords([section.title, safeTitle, ...(doc.key_topics || [])]);
           records.push({
             page_id: generatePageId(domain, doc.doc_id, section.section_id),
@@ -262,12 +278,12 @@ function buildDomainPageIndex(domain: string): { success: boolean; count: number
             section_id: section.section_id,
             section_title: section.title,
             path: doc.path,
-            line_start: section.line_start,
+            line_start: adjustedLineStart,
             line_end: section.line_end,
             summary: doc.summary || section.title,
             keywords: mergeKeywords(docKeywords, sectionKeywords),
             aliases: [],
-            content_snippet: extractContentSnippet(markdownPath, section.line_start, section.line_end),
+            content_snippet: extractContentSnippet(markdownPath, adjustedLineStart, section.line_end),
             source_quality: 0.9,
           });
         }
