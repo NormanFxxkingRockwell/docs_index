@@ -53,6 +53,44 @@ async function getEmbedder() {
 }
 
 /**
+ * LLM 语义重排（新增）
+ * 使用大模型理解问题语义，重排检索结果
+ */
+async function llmRerank(question, documents, topK = 10) {
+  try {
+    const embedder = await getEmbedder();
+    if (!embedder) return documents.slice(0, topK);
+    
+    // 向量化问题
+    const queryVector = await embedder.embedText(question);
+    
+    // 向量化文档标题 + 摘要
+    const docTexts = documents.map(doc => 
+      `${doc.doc_title} ${doc.summary || ''} ${doc.section_title || ''}`.trim()
+    );
+    const docVectors = await Promise.all(docTexts.map(text => embedder.embedText(text)));
+    
+    // 计算余弦相似度
+    const scored = documents.map((doc, i) => {
+      let dotProduct = 0, norm1 = 0, norm2 = 0;
+      for (let j = 0; j < queryVector.length; j++) {
+        dotProduct += queryVector[j] * docVectors[i][j];
+        norm1 += queryVector[j] * queryVector[j];
+        norm2 += docVectors[i][j] * docVectors[i][j];
+      }
+      const similarity = norm1 > 0 && norm2 > 0 ? dotProduct / (Math.sqrt(norm1) * Math.sqrt(norm2)) : 0;
+      return { ...doc, semanticScore: similarity };
+    });
+    
+    // 按语义相似度排序
+    return scored.sort((a, b) => b.semanticScore - a.semanticScore).slice(0, topK);
+  } catch (error) {
+    console.error('⚠️  LLM 语义重排失败:', error.message);
+    return documents.slice(0, topK);
+  }
+}
+
+/**
  * 混合检索（向量 + 关键词）
  * @param {string} question - 用户问题
  * @param {Array<string>} domains - 领域列表
@@ -67,6 +105,7 @@ async function search(question, domains = [], options = {}) {
     vectorWeight = 0.7,
     keywordWeight = 0.3,
     useMMR = true,
+    useLLM = true,  // 新增：LLM 语义重排
     mmrLambda = 0.5
   } = options;
   
@@ -126,7 +165,13 @@ async function search(question, domains = [], options = {}) {
     results.stats.fusionMethod = 'keyword-only';
   }
   
-  // 4. MMR 多样性重排
+  // 4. LLM 语义重排（新增）
+  if (useLLM && results.documents.length > 0) {
+    results.documents = await llmRerank(question, results.documents, topK * 2);
+    results.stats.rerankMethod = 'llm-semantic';
+  }
+  
+  // 5. MMR 多样性重排
   if (useMMR && results.documents.length > 1) {
     const retriever = getRetriever();
     results.documents = retriever.mmrRerank(results.documents, question, {

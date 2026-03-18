@@ -92,9 +92,31 @@ function clearCache() {
  * const retriever = require('./retriever.js');
  * const result = await retriever.search(['network', 'ui'], 'DNS 怎么配置');
  */
+// 智能分词（中英文分离）
+function smartTokenize(text) {
+  const tokens = new Set();
+  
+  // 1. 提取英文术语（保持完整）
+  const englishPattern = /[a-zA-Z][a-zA-Z0-9_.()]*|[A-Z][a-zA-Z]+/g;
+  const englishMatches = text.match(englishPattern) || [];
+  englishMatches.forEach(term => tokens.add(term.toLowerCase()));
+  
+  // 2. 提取中文词语（2-4 字）
+  const chinesePattern = /[\u4e00-\u9fa5]{2,4}/g;
+  const chineseMatches = text.match(chinesePattern) || [];
+  chineseMatches.forEach(term => tokens.add(term.toLowerCase()));
+  
+  // 3. 提取 @ 开头的装饰器
+  const decoratorPattern = /@[A-Z][a-zA-Z]+/g;
+  const decoratorMatches = text.match(decoratorPattern) || [];
+  decoratorMatches.forEach(term => tokens.add(term.toLowerCase()));
+  
+  return Array.from(tokens);
+}
+
 async function search(domains, question) {
   const documents = [];
-  const keywords = question.toLowerCase().split('').filter(c => c.trim().length > 0);
+  const keywords = smartTokenize(question);
   
   // 提取技术术语（OpenCLaw 启发）
   const techTerms = extractTechTerms(question);
