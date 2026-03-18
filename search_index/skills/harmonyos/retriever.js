@@ -298,15 +298,24 @@ function getDomainKeywords() {
   return domainKeywords;
 }
 
-// 智能领域映射
+// 智能领域映射（按优先级排序）
 const smartDomainMap = {
-  '鸿蒙': 'application-models',
-  'harmonyos': 'application-models',
-  'openharmony': 'application-models',
+  // 技术术语优先
+  'http': 'network',
+  'dns': 'network',
+  'websocket': 'network',
+  '网络': 'network',
+  '位置': 'device',
+  '定位': 'device',
+  'gps': 'device',
   '屏幕': 'ui',
   '适配': 'ui',
   '深色模式': 'ui',
   '无障碍': 'accessibility',
+  // 通用术语
+  '鸿蒙': 'application-models',
+  'harmonyos': 'application-models',
+  'openharmony': 'application-models',
   '报错': 'tools',
   '错误': 'tools',
   '异常': 'tools',
