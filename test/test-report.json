@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-18T07:50:05.557Z",
+  "timestamp": "2026-03-18T07:54:47.885Z",
   "total": 91,
-  "passed": 50,
-  "failed": 41,
-  "passRate": "54.9",
+  "passed": 61,
+  "failed": 30,
+  "passRate": "67.0",
   "byCategory": {
     "basic": {
       "total": 20,
-      "passed": 15
+      "passed": 18
     },
     "edge": {
       "total": 15,
@@ -15,19 +15,19 @@
     },
     "multi-domain": {
       "total": 15,
-      "passed": 8
+      "passed": 9
     },
     "regression": {
       "total": 20,
-      "passed": 8
+      "passed": 13
     },
     "tech-terms": {
       "total": 20,
-      "passed": 15
+      "passed": 16
     },
     "vector": {
       "total": 1,
-      "passed": 0
+      "passed": 1
     }
   },
   "results": [
@@ -35,14 +35,15 @@
       "id": "basic-01",
       "category": "basic",
       "question": "如何在 HarmonyOS 中发起 HTTP 请求？",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0.6666666666666666,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
+        "network",
         "application-models"
       ],
       "resultCount": 10
@@ -323,15 +324,16 @@
       "id": "basic-19",
       "category": "basic",
       "question": "如何加密数据？",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
         "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
-        "database"
+        "database",
+        "security"
       ],
       "resultCount": 10
     },
@@ -339,15 +341,15 @@
       "id": "basic-20",
       "category": "basic",
       "question": "如何获取权限？",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0.5,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "security"
       ],
       "resultCount": 10
     },
@@ -387,15 +389,15 @@
       "id": "edge-03",
       "category": "edge",
       "question": "Stage 模型和 FA 模型哪个更好？",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "application-models"
       ],
       "resultCount": 10
     },
@@ -459,7 +461,8 @@
         "top3Relevant": true
       },
       "domains": [
-        "tools"
+        "tools",
+        "dfx"
       ],
       "resultCount": 10
     },
@@ -483,15 +486,15 @@
       "id": "edge-09",
       "category": "edge",
       "question": "如何适配不同屏幕尺寸？",
-      "passed": true,
+      "passed": false,
       "validations": {
-        "domainMatch": true,
+        "domainMatch": false,
         "hasResults": true,
-        "keywordCoverage": 0.6666666666666666,
+        "keywordCoverage": 0,
         "top3Relevant": true
       },
       "domains": [
-        "ui"
+        "network"
       ],
       "resultCount": 10
     },
@@ -499,15 +502,15 @@
       "id": "edge-10",
       "category": "edge",
       "question": "如何实现深色模式？",
-      "passed": true,
+      "passed": false,
       "validations": {
-        "domainMatch": true,
+        "domainMatch": false,
         "hasResults": true,
-        "keywordCoverage": 0.5,
+        "keywordCoverage": 0,
         "top3Relevant": true
       },
       "domains": [
-        "ui"
+        "network"
       ],
       "resultCount": 10
     },
@@ -535,11 +538,11 @@
       "validations": {
         "domainMatch": false,
         "hasResults": true,
-        "keywordCoverage": 0.5,
+        "keywordCoverage": 0,
         "top3Relevant": true
       },
       "domains": [
-        "ui"
+        "network"
       ],
       "resultCount": 10
     },
@@ -563,14 +566,15 @@
       "id": "edge-14",
       "category": "edge",
       "question": "如何分析崩溃日志？",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 0.6666666666666666,
         "top3Relevant": true
       },
       "domains": [
+        "dfx",
         "tools"
       ],
       "resultCount": 10
@@ -631,10 +635,11 @@
       "validations": {
         "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0.6666666666666666,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
+        "media",
         "file-management"
       ],
       "resultCount": 10
@@ -643,14 +648,15 @@
       "id": "multi-04",
       "category": "multi-domain",
       "question": "如何播放网络音频流？",
-      "passed": false,
+      "passed": true,
       "validations": {
         "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0.3333333333333333,
+        "keywordCoverage": 0.6666666666666666,
         "top3Relevant": true
       },
       "domains": [
+        "media",
         "network"
       ],
       "resultCount": 10
@@ -683,7 +689,8 @@
         "top3Relevant": true
       },
       "domains": [
-        "database"
+        "database",
+        "security"
       ],
       "resultCount": 10
     },
@@ -699,6 +706,7 @@
         "top3Relevant": true
       },
       "domains": [
+        "ui",
         "notification"
       ],
       "resultCount": 10
@@ -709,13 +717,14 @@
       "question": "如何通过蓝牙传输文件？",
       "passed": false,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 0.3333333333333333,
         "top3Relevant": true
       },
       "domains": [
-        "device"
+        "device",
+        "file-management"
       ],
       "resultCount": 10
     },
@@ -727,10 +736,11 @@
       "validations": {
         "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 1,
+        "keywordCoverage": 0.6666666666666666,
         "top3Relevant": true
       },
       "domains": [
+        "database",
         "application-models"
       ],
       "resultCount": 10
@@ -805,13 +815,13 @@
       "question": "如何扫描 QR 码并跳转？",
       "passed": false,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
         "keywordCoverage": 0,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "ui"
       ],
       "resultCount": 10
     },
@@ -836,14 +846,15 @@
       "id": "regress-01",
       "category": "regression",
       "question": "DNS 鸿蒙上接口怎么适配",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0.6666666666666666,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
+        "network",
         "application-models"
       ],
       "resultCount": 10
@@ -852,14 +863,15 @@
       "id": "regress-02",
       "category": "regression",
       "question": "鸿蒙上动效怎么写",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
+        "ui",
         "application-models"
       ],
       "resultCount": 10
@@ -870,12 +882,13 @@
       "question": "鸿蒙上剪切板怎么使用",
       "passed": false,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
         "keywordCoverage": 0,
         "top3Relevant": true
       },
       "domains": [
+        "file-management",
         "application-models"
       ],
       "resultCount": 10
@@ -980,14 +993,15 @@
       "id": "regress-10",
       "category": "regression",
       "question": "自定义组件渲染异常的排查方法",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 0.5,
         "top3Relevant": true
       },
       "domains": [
+        "ui",
         "tools"
       ],
       "resultCount": 10
@@ -1028,14 +1042,15 @@
       "id": "regress-13",
       "category": "regression",
       "question": "AlertDialog 警告弹窗有哪些配置选项",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0.3333333333333333,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
+        "ui",
         "application-models"
       ],
       "resultCount": 10
@@ -1060,15 +1075,16 @@
       "id": "regress-15",
       "category": "regression",
       "question": "如何配置权限",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
         "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
-        "application-models"
+        "application-models",
+        "security"
       ],
       "resultCount": 10
     },
@@ -1444,15 +1460,15 @@
       "id": "tech-19",
       "category": "tech-terms",
       "question": "Tabs 如何实现标签页？",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 0.5,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "ui"
       ],
       "resultCount": 10
     },
@@ -1476,14 +1492,15 @@
       "id": "vector-01",
       "category": "vector",
       "question": "DNS 怎么配置",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0.5,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
+        "network",
         "application-models"
       ],
       "resultCount": 10
