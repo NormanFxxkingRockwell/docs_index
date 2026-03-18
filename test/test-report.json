@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-03-18T07:54:47.885Z",
+  "timestamp": "2026-03-18T08:00:32.145Z",
   "total": 91,
-  "passed": 61,
-  "failed": 30,
-  "passRate": "67.0",
+  "passed": 71,
+  "failed": 20,
+  "passRate": "78.0",
   "byCategory": {
     "basic": {
       "total": 20,
-      "passed": 18
+      "passed": 19
     },
     "edge": {
       "total": 15,
-      "passed": 4
+      "passed": 5
     },
     "multi-domain": {
       "total": 15,
-      "passed": 9
+      "passed": 11
     },
     "regression": {
       "total": 20,
-      "passed": 13
+      "passed": 17
     },
     "tech-terms": {
       "total": 20,
-      "passed": 16
+      "passed": 18
     },
     "vector": {
       "total": 1,
@@ -92,7 +92,8 @@
         "top3Relevant": true
       },
       "domains": [
-        "ui"
+        "ui",
+        "application-models"
       ],
       "resultCount": 10
     },
@@ -308,15 +309,15 @@
       "id": "basic-18",
       "category": "basic",
       "question": "如何处理图片？",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 0.5,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "media"
       ],
       "resultCount": 10
     },
@@ -409,11 +410,11 @@
       "validations": {
         "domainMatch": false,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 0.5,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "tools"
       ],
       "resultCount": 10
     },
@@ -425,10 +426,11 @@
       "validations": {
         "domainMatch": false,
         "hasResults": true,
-        "keywordCoverage": 0.3333333333333333,
+        "keywordCoverage": 0.6666666666666666,
         "top3Relevant": true
       },
       "domains": [
+        "media",
         "tools"
       ],
       "resultCount": 10
@@ -445,7 +447,7 @@
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "dfx"
       ],
       "resultCount": 10
     },
@@ -478,6 +480,7 @@
         "top3Relevant": true
       },
       "domains": [
+        "application-models",
         "tools"
       ],
       "resultCount": 10
@@ -489,14 +492,14 @@
       "passed": false,
       "validations": {
         "domainMatch": false,
-        "hasResults": true,
+        "hasResults": false,
         "keywordCoverage": 0,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "accessibility"
       ],
-      "resultCount": 10
+      "resultCount": 0
     },
     {
       "id": "edge-10",
@@ -505,28 +508,28 @@
       "passed": false,
       "validations": {
         "domainMatch": false,
-        "hasResults": true,
+        "hasResults": false,
         "keywordCoverage": 0,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "accessibility"
       ],
-      "resultCount": 10
+      "resultCount": 0
     },
     {
       "id": "edge-11",
       "category": "edge",
       "question": "如何国际化多语言？",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "internationalization"
       ],
       "resultCount": 10
     },
@@ -536,15 +539,15 @@
       "question": "如何实现无障碍功能？",
       "passed": false,
       "validations": {
-        "domainMatch": false,
-        "hasResults": true,
+        "domainMatch": true,
+        "hasResults": false,
         "keywordCoverage": 0,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "accessibility"
       ],
-      "resultCount": 10
+      "resultCount": 0
     },
     {
       "id": "edge-13",
@@ -591,7 +594,7 @@
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "dfx"
       ],
       "resultCount": 10
     },
@@ -615,15 +618,16 @@
       "id": "multi-02",
       "category": "multi-domain",
       "question": "如何从数据库读取数据并在列表展示？",
-      "passed": false,
+      "passed": true,
       "validations": {
         "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0.25,
+        "keywordCoverage": 0.5,
         "top3Relevant": true
       },
       "domains": [
-        "database"
+        "database",
+        "ui"
       ],
       "resultCount": 10
     },
@@ -639,8 +643,8 @@
         "top3Relevant": true
       },
       "domains": [
-        "media",
-        "file-management"
+        "file-management",
+        "media"
       ],
       "resultCount": 10
     },
@@ -765,15 +769,16 @@
       "id": "multi-11",
       "category": "multi-domain",
       "question": "如何处理图片并保存到相册？",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "media",
+        "file-management"
       ],
       "resultCount": 10
     },
@@ -805,7 +810,8 @@
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "network",
+        "device"
       ],
       "resultCount": 10
     },
@@ -855,7 +861,8 @@
       },
       "domains": [
         "network",
-        "application-models"
+        "application-models",
+        "accessibility"
       ],
       "resultCount": 10
     },
@@ -953,7 +960,8 @@
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "network",
+        "tools"
       ],
       "resultCount": 10
     },
@@ -985,7 +993,8 @@
         "top3Relevant": true
       },
       "domains": [
-        "ui"
+        "ui",
+        "tools"
       ],
       "resultCount": 10
     },
@@ -1010,15 +1019,15 @@
       "id": "regress-11",
       "category": "regression",
       "question": "如何创建 HAP 包",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
         "keywordCoverage": 0.6666666666666666,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "application-models"
       ],
       "resultCount": 10
     },
@@ -1092,15 +1101,15 @@
       "id": "regress-16",
       "category": "regression",
       "question": "如何实现分布式能力",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0.5,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "distributedservice"
       ],
       "resultCount": 10
     },
@@ -1108,15 +1117,15 @@
       "id": "regress-17",
       "category": "regression",
       "question": "如何使用 NAPI 开发",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0.5,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "napi"
       ],
       "resultCount": 10
     },
@@ -1124,15 +1133,15 @@
       "id": "regress-18",
       "category": "regression",
       "question": "FFRT 任务调度如何使用",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 0.5,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "ffrt"
       ],
       "resultCount": 10
     },
@@ -1148,7 +1157,7 @@
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "napi"
       ],
       "resultCount": 10
     },
@@ -1188,15 +1197,15 @@
       "id": "tech-02",
       "category": "tech-terms",
       "question": "onClick 事件如何绑定？",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 0.6666666666666666,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "ui"
       ],
       "resultCount": 10
     },
@@ -1300,15 +1309,15 @@
       "id": "tech-09",
       "category": "tech-terms",
       "question": "animation.animateTo() 如何使用？",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "ui"
       ],
       "resultCount": 10
     },
@@ -1356,7 +1365,8 @@
         "top3Relevant": true
       },
       "domains": [
-        "ui"
+        "ui",
+        "media"
       ],
       "resultCount": 10
     },
