@@ -10,7 +10,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const retriever = require('../search_index/skills/harmonyos/retriever.js');
+const retriever = require('../lib/retriever.js');
 
 // 测试用例加载
 function loadTestCases(category) {
