@@ -23,8 +23,8 @@ async function initEmbedder() {
   
   try {
     const { pipeline } = await import('@xenova/transformers');
-    embedder = await pipeline('feature-extraction', 'Xenova/bge-small-zh-v1.5');
-    console.log('✅ 嵌入模型加载成功：bge-small-zh-v1.5');
+    embedder = await pipeline('feature-extraction', 'Xenova/bge-base-zh-v1.5');
+    console.log('✅ 嵌入模型加载成功：bge-base-zh-v1.5');
     return embedder;
   } catch (error) {
     console.error('⚠️  嵌入模型加载失败，使用模拟实现');
@@ -43,7 +43,7 @@ async function embedText(text) {
   const model = await initEmbedder();
   
   if (!model) {
-    // 模拟实现：返回随机向量（384 维，bge-small-zh-v1.5 的输出维度）
+    // 模拟实现：返回随机向量（384 维，bge-base-zh-v1.5 的输出维度）
     const vector = new Float32Array(384);
     for (let i = 0; i < 384; i++) {
       vector[i] = Math.random() * 2 - 1;

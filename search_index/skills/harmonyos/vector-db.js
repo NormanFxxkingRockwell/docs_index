@@ -79,7 +79,7 @@ function createVectorIndex(db, tableName) {
   try {
     db.exec(`
       CREATE VIRTUAL TABLE IF NOT EXISTS idx_${tableName} USING vec0(
-        embedding float[384]
+        embedding float[768]
       )
     `);
     console.log(`✅ 向量索引创建成功：idx_${tableName}`);
@@ -261,7 +261,7 @@ if (require.main === module) {
   const db = initDB();
   
   // 测试检索
-  const testVector = new Float32Array(384).fill(0.5);
+  const testVector = new Float32Array(768).fill(0.5);
   const results = vectorSearch(db, 'vectors_network', testVector, 5);
   
   console.log('\n测试结果:');
