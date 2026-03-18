@@ -1,118 +1,154 @@
 # HarmonyOS 文档检索 Skill
 
-> 智能检索 HarmonyOS 开发文档（46 个领域，51 个 API Kit，章节级精度）
+> 智能检索 HarmonyOS 开发文档（42 个领域，28K+ 文档，向量化检索）
 
 ---
 
 ## 快速开始
 
-**AI Agent 执行流程**：
-1. 用 LLM 判断问题是否与 HarmonyOS 相关
-2. 用 LLM 识别涉及的领域
-3. 调用 `retriever.search()` 检索文档
-4. 用 LLM 重排和验证结果
+```javascript
+const search = require('./harmonyos');
 
-**输入**：`"如何在 HarmonyOS 中发起 HTTP 请求？"`
+// 混合检索（向量 + 关键词）
+const results = await search('DNS 怎么配置', ['network'], {
+  topK: 10,
+  useVector: true,      // 启用向量检索
+  useKeyword: true,     // 启用关键词检索
+  vectorWeight: 0.7,    // 向量权重
+  keywordWeight: 0.3,   // 关键词权重
+  useMMR: true,         // 启用 MMR 重排
+  mmrLambda: 0.5        // 多样性参数
+});
 
-**输出**：
-```json
+console.log(results.documents);
+```
+
+---
+
+## API 文档
+
+### search(question, domains, options)
+
+**参数**:
+- `question` (string) - 用户问题
+- `domains` (Array<string>) - 领域列表
+- `options` (Object) - 配置选项
+  - `topK` (number) - 返回数量，默认 10
+  - `useVector` (boolean) - 启用向量检索，默认 true
+  - `useKeyword` (boolean) - 启用关键词检索，默认 true
+  - `vectorWeight` (number) - 向量权重，默认 0.7
+  - `keywordWeight` (number) - 关键词权重，默认 0.3
+  - `useMMR` (boolean) - 启用 MMR 重排，默认 true
+  - `mmrLambda` (number) - 多样性参数，默认 0.5
+
+**返回**:
+```javascript
 {
-  "success": true,
-  "domains": ["network"],
-  "documents": [{"doc_title": "使用 HTTP 访问网络", "path": "..."}]
+  question: 'DNS 怎么配置',
+  domains: ['network'],
+  documents: [...],
+  stats: {
+    keywordCount: 20,
+    vectorCount: 20,
+    fusionMethod: 'weighted',
+    rerankMethod: 'mmr',
+    finalCount: 10
+  }
 }
 ```
 
 ---
 
-## 工作流
+## 核心功能
 
+### 1. 混合检索
+
+```javascript
+// 向量 + 关键词混合
+const results = await search('问题', ['network'], {
+  vectorWeight: 0.7,
+  keywordWeight: 0.3
+});
 ```
-用户问题 → 入口过滤 → 领域识别 → 多路检索 → 结果重排 → 答案校验
-            ↓             ↓            ↓            ↓            ↓
-          LLM           LLM      retriever.js      LLM          LLM
+
+### 2. MMR 多样性重排
+
+```javascript
+// 避免返回 10 篇相似文档
+const results = await search('问题', ['network'], {
+  useMMR: true,
+  mmrLambda: 0.5  // 0=只考虑多样性，1=只考虑相关性
+});
+```
+
+### 3. 纯关键词检索
+
+```javascript
+const { keywordSearch } = require('./harmonyos');
+const results = await keywordSearch('问题', ['network'], 10);
+```
+
+### 4. 纯向量检索
+
+```javascript
+const { vectorSearch } = require('./harmonyos');
+const results = await vectorSearch('问题', ['network'], 10);
 ```
 
 ---
 
-## 执行步骤
-
-### 1. 入口过滤（LLM）
-
-```javascript
-const prompt = `判断问题是否与 HarmonyOS 相关：${question}`;
-const isRelated = (await callLLM(prompt)).includes('相关');
-```
-
-### 2. 领域识别（LLM）
-
-```javascript
-const prompt = `识别问题涉及的领域：${question}\n可用领域：ui, network, database...`;
-const domains = (await callLLM(prompt)).split(',').map(d => d.trim());
-```
-
-### 3. 文档检索（retriever.js）
-
-```javascript
-const retriever = require('./retriever.js');
-const result = await retriever.search(domains, question);
-```
-
-### 4. 结果重排（LLM）
-
-```javascript
-const prompt = `对检索结果重排：${question}\n\n结果：${docs.map(d => d.doc_title).join('\n')}`;
-const order = await callLLM(prompt);
-```
-
-### 5. 答案校验（LLM）
-
-```javascript
-const prompt = `验证文档是否回答问题：${question}`;
-const valid = (await callLLM(prompt)).includes('是');
-```
-
----
-
-## 配置
+## 性能优化
 
 ### 缓存
-- 目录：`.skill-cache/`
-- TTL：24 小时
-- 自动清理
 
-### 领域关键词
-见 `retriever.js` 中的 `domainKeywords` 常量
-
----
-
-## 使用方式
-
-### Git 子模块
-```bash
-git submodule add https://github.com/NormanFxxkingRockwell/docs_index.git
+```javascript
+// 自动缓存检索结果（24 小时）
+// 缓存目录：.skill-cache/
 ```
 
-### 直接复制
-```bash
-cp -r docs_index/search_index/skills your-project/
+### 批量检索
+
+```javascript
+// 批量检索多个问题
+const questions = ['问题 1', '问题 2', '问题 3'];
+const results = await Promise.all(
+  questions.map(q => search(q, ['network']))
+);
 ```
 
 ---
 
-## 完整示例
+## 测试
 
-详见：`AGENT-EXAMPLE.md`
+```bash
+# 运行测试
+node search_index/skills/harmonyos/index.js
+
+# 运行基准测试
+node test/benchmark.js
+
+# 运行完整测试套件
+node test/retrieval-test-framework.js
+```
+
+---
+
+## 技术栈
+
+- **嵌入模型**: bge-small-zh-v1.5 (384 维)
+- **向量数据库**: sqlite-vec
+- **检索算法**: RRF 混合融合 + MMR 重排
+- **缓存**: 文件系统缓存（24 小时 TTL）
 
 ---
 
 ## 相关文档
 
-| 文档 | 说明 |
-|------|------|
-| **AGENT-EXAMPLE.md** | AI Agent 完整集成示例（代码） |
-| **retriever.js** | 文档检索工具（API） |
+- `retriever.js` - 关键词检索 + RRF + MMR
+- `vector-search.js` - 向量化模块
+- `vector-db.js` - sqlite-vec 数据库
+- `index.js` - 统一检索接口
 
 ---
 
-**版本**：v4.0 | **更新**：2026-03-17
+**版本**: v5.0 | **更新**: 2026-03-18
