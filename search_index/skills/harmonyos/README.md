@@ -9,11 +9,11 @@
 ```javascript
 const search = require('./harmonyos');
 
-// 简单检索
-const results = await search('DNS 怎么配置', ['network']);
+// 简单检索（推荐）- 自动识别领域
+const results = await search('DNS 怎么配置');
 
-// 高级检索
-const results = await search('问题', ['network'], {
+// 高级检索 - 自定义配置
+const results = await search('问题', {
   topK: 10,
   useVector: true,    // 向量检索
   useKeyword: true,   // 关键词检索
@@ -21,15 +21,16 @@ const results = await search('问题', ['network'], {
 });
 ```
 
+**不需要指定领域！** 系统会自动识别问题涉及的领域。
+
 ---
 
 ## API
 
-### search(question, domains, options)
+### search(question, options)
 
 **参数**:
 - `question` (string) - 用户问题
-- `domains` (Array<string>) - 领域列表
 - `options` (Object) - 配置选项
   - `topK` (number) - 返回数量，默认 10
   - `useVector` (boolean) - 向量检索，默认 true
@@ -40,7 +41,7 @@ const results = await search('问题', ['network'], {
 ```javascript
 {
   question: 'DNS 怎么配置',
-  domains: ['network'],
+  domains: ['network'],  // 自动识别的领域
   documents: [
     {
       doc_id: 'http-request',
@@ -61,23 +62,49 @@ const results = await search('问题', ['network'], {
 
 ```javascript
 const search = require('./harmonyos');
-const results = await search('HTTP 请求', ['network']);
+const results = await search('HTTP 请求');
 console.log(results.documents);
 ```
 
 ### 示例 2: 指定返回数量
 
 ```javascript
-const results = await search('HTTP 请求', ['network'], { topK: 5 });
+const results = await search('HTTP 请求', { topK: 5 });
 ```
 
 ### 示例 3: 只使用关键词检索
 
 ```javascript
-const results = await search('HTTP 请求', ['network'], {
+const results = await search('HTTP 请求', {
   useVector: false,
   useKeyword: true
 });
+```
+
+### 示例 4: 查看识别的领域
+
+```javascript
+const results = await search('DNS 怎么配置');
+console.log('识别领域:', results.domains);  // ['network']
+```
+
+---
+
+## 高级用法
+
+### 指定领域检索
+
+```javascript
+const { searchInDomains } = require('./harmonyos');
+const results = await searchInDomains('HTTP 请求', ['network', 'web']);
+```
+
+### 领域识别
+
+```javascript
+const { matchDomains } = require('./harmonyos');
+const domains = matchDomains('DNS 怎么配置');
+console.log(domains);  // ['network']
 ```
 
 ---
@@ -85,17 +112,22 @@ const results = await search('HTTP 请求', ['network'], {
 ## 命令行使用
 
 ```bash
-# 简单检索
+# 简单检索（自动识别领域）
 node search_index/skills/harmonyos/index.js "DNS 怎么配置"
 
-# 指定领域
-node search_index/skills/harmonyos/index.js "HTTP 请求" network
+# 输出:
+# 检索问题：DNS 怎么配置
+# 识别领域：network
+# 检索到 20 篇文档
+# 1. 使用 HTTP 访问网络
+# 2. ...
 ```
 
 ---
 
 ## 技术栈
 
+- **领域识别**: 智能映射 + 关键词匹配
 - **检索方式**: 向量检索 + 关键词检索
 - **向量模型**: bge-base-zh-v1.5 (768 维)
 - **重排算法**: MMR (最大边际相关性)
@@ -111,4 +143,4 @@ node search_index/skills/harmonyos/index.js "HTTP 请求" network
 
 ---
 
-**版本**: v6.0 | **更新**: 2026-03-18
+**版本**: v7.0 | **更新**: 2026-03-18
