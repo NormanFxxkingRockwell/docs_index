@@ -300,11 +300,21 @@ function getDomainKeywords() {
 
 function matchDomains(question) {
   const q = question.toLowerCase();
+  
+  // 1. 智能映射优先
+  for (const [keyword, domain] of Object.entries(smartDomainMap)) {
+    if (q.includes(keyword.toLowerCase())) {
+      return [domain];
+    }
+  }
+  
+  // 2. 关键词匹配
   const matched = Object.entries(domainKeywords)
     .filter(([_, kws]) => kws.some(k => q.includes(k)))
     .sort((a, b) => b[1].filter(k => q.includes(k)).length - a[1].filter(k => q.includes(k)).length)
     .map(([d]) => d);
-  return matched;
+  
+  return matched.length > 0 ? matched : ['network'];
 }
 
 // ==================== MMR 多样性重排（OpenCLaw 启发） ====================
