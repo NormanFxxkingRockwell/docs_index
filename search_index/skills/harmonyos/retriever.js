@@ -108,7 +108,15 @@ async function search(domains, question) {
         const matched = (index.documents || []).filter(doc =>
           keywords.some(k => JSON.stringify(doc).toLowerCase().includes(k))
         );
-        documents.push(...matched.map(doc => ({ ...doc, source: 'domain_index', domain })));
+        documents.push(...matched.map(doc => ({
+          doc_id: doc.doc_id,
+          doc_title: doc.title || doc.doc_title || '未命名',
+          section_title: null,
+          path: doc.path || doc.relative_path || '',
+          summary: doc.summary || '',
+          source: 'domain_index',
+          domain
+        })));
       }
       
       // 2. 检索 page_index.jsonl（章节级索引）
