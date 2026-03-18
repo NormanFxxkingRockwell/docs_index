@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-03-18T01:45:38.773Z",
+  "timestamp": "2026-03-18T02:16:15.941Z",
   "total": 101,
-  "passed": 60,
-  "failed": 41,
-  "passRate": "59.4",
+  "passed": 59,
+  "failed": 42,
+  "passRate": "58.4",
   "byCategory": {
     "basic": {
       "total": 20,
-      "passed": 18
+      "passed": 17
     },
     "edge": {
       "total": 15,
-      "passed": 7
+      "passed": 8
     },
     "multi-domain": {
       "total": 15,
@@ -19,11 +19,11 @@
     },
     "performance": {
       "total": 10,
-      "passed": 0
+      "passed": 1
     },
     "regression": {
       "total": 20,
-      "passed": 14
+      "passed": 12
     },
     "tech-terms": {
       "total": 20,
@@ -39,15 +39,15 @@
       "id": "basic-01",
       "category": "basic",
       "question": "如何在 HarmonyOS 中发起 HTTP 请求？",
-      "passed": true,
+      "passed": false,
       "validations": {
-        "domainMatch": true,
+        "domainMatch": false,
         "hasResults": true,
-        "keywordCoverage": 1,
+        "keywordCoverage": 0.3333333333333333,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "application-models"
       ],
       "resultCount": 20
     },
@@ -364,12 +364,14 @@
       "question": "鸿蒙和 HarmonyOS 是一个东西吗？",
       "passed": false,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "application-models"
+      ],
       "resultCount": 20
     },
     {
@@ -415,7 +417,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -426,10 +430,12 @@
       "validations": {
         "domainMatch": false,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 0.6666666666666666,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "tools"
+      ],
       "resultCount": 20
     },
     {
@@ -486,12 +492,14 @@
       "question": "如何适配不同屏幕尺寸？",
       "passed": false,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 0.3333333333333333,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "ui"
+      ],
       "resultCount": 20
     },
     {
@@ -500,12 +508,14 @@
       "question": "如何实现深色模式？",
       "passed": false,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "ui"
+      ],
       "resultCount": 20
     },
     {
@@ -544,14 +554,16 @@
       "id": "edge-13",
       "category": "edge",
       "question": "如何热更新应用？",
-      "passed": false,
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
         "keywordCoverage": 0.5,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "application-models"
+      ],
       "resultCount": 20
     },
     {
@@ -813,7 +825,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -836,15 +850,17 @@
     {
       "id": "perf-01",
       "category": "performance",
-      "question": "快速检索测试 1",
-      "passed": false,
+      "question": "HTTP 请求",
+      "passed": true,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
-        "keywordCoverage": 0,
+        "keywordCoverage": 1,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -853,12 +869,14 @@
       "question": "快速检索测试 2",
       "passed": false,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -872,7 +890,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -886,7 +906,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -895,12 +917,14 @@
       "question": "快速检索测试 5",
       "passed": false,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -914,7 +938,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -923,12 +949,14 @@
       "question": "多关键词检索测试",
       "passed": false,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -942,7 +970,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -956,7 +986,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -965,27 +997,29 @@
       "question": "混合检索测试",
       "passed": false,
       "validations": {
-        "domainMatch": false,
+        "domainMatch": true,
         "hasResults": true,
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 13
     },
     {
       "id": "regress-01",
       "category": "regression",
       "question": "DNS 鸿蒙上接口怎么适配",
-      "passed": true,
+      "passed": false,
       "validations": {
-        "domainMatch": true,
+        "domainMatch": false,
         "hasResults": true,
-        "keywordCoverage": 0.6666666666666666,
+        "keywordCoverage": 0.3333333333333333,
         "top3Relevant": true
       },
       "domains": [
-        "network"
+        "application-models"
       ],
       "resultCount": 20
     },
@@ -993,15 +1027,15 @@
       "id": "regress-02",
       "category": "regression",
       "question": "鸿蒙上动效怎么写",
-      "passed": true,
+      "passed": false,
       "validations": {
-        "domainMatch": true,
+        "domainMatch": false,
         "hasResults": true,
-        "keywordCoverage": 1,
+        "keywordCoverage": 0,
         "top3Relevant": true
       },
       "domains": [
-        "ui"
+        "application-models"
       ],
       "resultCount": 20
     },
@@ -1011,13 +1045,13 @@
       "question": "鸿蒙上剪切板怎么使用",
       "passed": false,
       "validations": {
-        "domainMatch": true,
+        "domainMatch": false,
         "hasResults": true,
         "keywordCoverage": 0,
         "top3Relevant": true
       },
       "domains": [
-        "file-management"
+        "application-models"
       ],
       "resultCount": 20
     },
@@ -1048,7 +1082,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -1110,7 +1146,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -1119,13 +1157,13 @@
       "question": "自定义组件渲染异常的排查方法",
       "passed": false,
       "validations": {
-        "domainMatch": true,
+        "domainMatch": false,
         "hasResults": true,
         "keywordCoverage": 0,
         "top3Relevant": true
       },
       "domains": [
-        "ui"
+        "tools"
       ],
       "resultCount": 20
     },
@@ -1140,7 +1178,9 @@
         "keywordCoverage": 0.6666666666666666,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -1236,7 +1276,9 @@
         "keywordCoverage": 0.5,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -1315,7 +1357,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -1329,7 +1373,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -1375,7 +1421,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -1421,7 +1469,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {
@@ -1581,7 +1631,9 @@
         "keywordCoverage": 0,
         "top3Relevant": true
       },
-      "domains": [],
+      "domains": [
+        "network"
+      ],
       "resultCount": 20
     },
     {

@@ -298,6 +298,22 @@ function getDomainKeywords() {
   return domainKeywords;
 }
 
+// 智能领域映射
+const smartDomainMap = {
+  '鸿蒙': 'application-models',
+  'harmonyos': 'application-models',
+  'openharmony': 'application-models',
+  '屏幕': 'ui',
+  '适配': 'ui',
+  '深色模式': 'ui',
+  '无障碍': 'accessibility',
+  '报错': 'tools',
+  '错误': 'tools',
+  '异常': 'tools',
+  '崩溃': 'dfx',
+  '热更新': 'application-models'
+};
+
 function matchDomains(question) {
   const q = question.toLowerCase();
   
