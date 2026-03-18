@@ -8,7 +8,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { embedAndSave } = require('../search_index/skills/harmonyos/vector-search.js');
+const { embedAndSave } = require('../lib/vector-search.js');
 
 async function embedAllDocuments() {
   const domainsDir = path.join(__dirname, '..', 'search_index', 'domains');
