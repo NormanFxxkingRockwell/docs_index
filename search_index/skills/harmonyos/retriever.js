@@ -308,14 +308,33 @@ function getDomainKeywords() {
 
 // 智能领域映射（按优先级排序）
 const smartDomainMap = {
-  // 技术术语优先
+  // 技术术语优先 - UI
+  '@state': 'ui',
+  '@prop': 'ui',
+  '@link': 'ui',
+  '@builder': 'ui',
+  'onclick': 'ui',
+  'ontouch': 'ui',
+  'router': 'ui',
+  'pushurl': 'ui',
+  'navigation': 'ui',
+  ' animate': 'ui',
+  '动画': 'ui',
+  '组件': 'ui',
+  'button': 'ui',
+  'text': 'ui',
+  'column': 'ui',
+  'row': 'ui',
+  // 技术术语 - Network
   'http': 'network',
   'dns': 'network',
   'websocket': 'network',
   '网络': 'network',
+  // 技术术语 - Device
   '位置': 'device',
   '定位': 'device',
   'gps': 'device',
+  // 技术术语 - UI
   '屏幕': 'ui',
   '适配': 'ui',
   '深色模式': 'ui',
